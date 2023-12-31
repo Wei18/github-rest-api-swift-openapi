@@ -45,13 +45,20 @@ enum GitHubRestAPIOpenAPITag: String, CaseIterable {
     case classroom
     case desktop
 
+    var targetName: String {
+        let name = rawValue.replacingOccurrences(of: "-", with: "_").capitalized
+        return "GitHubRestAPI\(name)"
+    }
+    
     var target: PackageDescription.Target {
-        .target(
-            name: rawValue,
+        let targetName = targetName
+        return .target(
+            name: targetName,
             dependencies: [
                 .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
             ],
+            path: "Sources/\(rawValue)",
             plugins: [
                 .plugin(name: "OpenAPIGenerator", package: "swift-openapi-generator"),
             ]
@@ -59,23 +66,24 @@ enum GitHubRestAPIOpenAPITag: String, CaseIterable {
     }
 
     var library: PackageDescription.Product {
-        .library(
-            name: "GitHubRestAPI-\(rawValue)", 
-            targets: [rawValue]
+        let targetName = targetName
+        return .library(
+            name: targetName,
+            targets: [targetName]
         )
     }
     
     var testTarget: PackageDescription.Target {
-        .testTarget(
+        let targetName = targetName
+        return .testTarget(
             name: "UserTests",
-            dependencies: [
-                .target(name: rawValue)
-            ]
+            dependencies: [.target(name: targetName)]
         )
     }
+    
     static var allInOne: PackageDescription.Product = .library(
         name: "GitHubRestAPISwiftOpenAPI",
-        targets: GitHubRestAPIOpenAPITag.allCases.map(\.rawValue)
+        targets: GitHubRestAPIOpenAPITag.allCases.map(\.targetName)
     )
 }
 
