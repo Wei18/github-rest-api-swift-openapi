@@ -24,7 +24,7 @@ install: $(OPENAPI_FILES)
 
 .build/docs: ## Need env GITHUB_PAGES is created as 'true'
 	swift package --allow-writing-to-directory $@ generate-documentation \
-	--target GitHubRestAPISwiftOpenAPI \
+	--product GitHubRestAPISwiftOpenAPI \
 	--disable-indexing \
 	--output-path $@ \
 	--transform-for-static-hosting \
