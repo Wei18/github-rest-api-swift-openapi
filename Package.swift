@@ -2,6 +2,7 @@
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
+import Foundation
 
 /// The generator supports filtering the OpenAPI document prior to generation, 
 /// which can be useful when generating client code for a subset of a large API, 
@@ -74,6 +75,11 @@ enum GitHubRestAPIOpenAPITag: String, CaseIterable {
     }
 }
 
+let gitHubRestAPISwiftOpenAPITarget: PackageDescription.Target = .target(
+    name: "GitHubRestAPISwiftOpenAPI",
+    dependencies: GitHubRestAPIOpenAPITag.allCases.map { .target(name: $0.rawValue) }
+)
+
 let package = Package(
     name: "GitHubRestAPISwiftOpenAPI",
     platforms: [.macOS(.v10_15)],
@@ -84,6 +90,16 @@ let package = Package(
         .package(url: "https://github.com/apple/swift-openapi-urlsession", from: "1.0.0"),
     ],
     targets: GitHubRestAPIOpenAPITag.allCases.map(\.target) + [
-        GitHubRestAPIOpenAPITag.users.testTarget
+        gitHubRestAPISwiftOpenAPITarget,
+        GitHubRestAPIOpenAPITag.users.testTarget,
     ]
 )
+
+let isBuildDocC = ProcessInfo.processInfo.environment["GITHUB_PAGES"] == "true"
+
+// swift-docs is not needed for package users
+if isBuildDocC {
+    package.dependencies += [
+        .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.3.0"),
+    ]
+}
