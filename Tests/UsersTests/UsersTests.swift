@@ -1,5 +1,5 @@
 import XCTest
-import GitHubRestAPIusers
+import GitHubRestAPIUsers
 import OpenAPIRuntime
 import OpenAPIURLSession
 
