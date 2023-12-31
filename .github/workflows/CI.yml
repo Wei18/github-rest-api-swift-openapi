@@ -40,6 +40,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/workflows/actions/setup
+        with:
+          swift: ${{ matrix.swift }}
+          os: ${{ matrix.os }}
+      
       - run: make .build/docs
       - uses: actions/upload-pages-artifact@v2
         with:
