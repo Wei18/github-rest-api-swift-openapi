@@ -11,7 +11,7 @@ https://github.com/Wei18/github-rest-api-swift-openapi/blob/46bd7a951cd6a2bda9a9
 
 [OpenAPI](https://www.openapis.org/) serves as a standardized way to document HTTP services. It allows developers to automate workflows, such as generating code for making HTTP requests or implementing API servers. The Swift OpenAPI Generator is a Swift package plugin designed to generate code at build-time, ensuring it remains synchronized with the OpenAPI document.
 
-Use [Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) to clone [github/rest-api-description](https://github.com/github/ and then split openapi tags into multiple modules (Swift Package Products).
+Use [Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) to clone [github/rest-api-description](https://github.com/github/) and then split openapi tags into multiple modules (Swift Package Products).
 
 # Motivation
 
