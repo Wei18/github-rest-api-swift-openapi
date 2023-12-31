@@ -1,0 +1,30 @@
+name: Setup
+
+description: Setup for swift, cache, etc.
+
+inputs:
+  swift:
+    required: true
+  os:
+    required: true
+
+runs:
+  using: 'composite'
+  steps:
+  - uses: swift-actions/setup-swift@v1
+    with:
+      swift-version: ${{ inputs.swift }}
+
+  - if: contains(inputs.os, 'macos')
+    uses: irgaly/xcode-cache@v1
+    with:
+      key: xcode-cache-deriveddata-${{ github.workflow }}-${{ github.sha }}
+      restore-keys: xcode-cache-deriveddata-${{ github.workflow }}-
+      # There is no `Xcode/DerivedData`; use `.build` instead.
+      deriveddata-directory: .build
+
+# Hint: Use Composite Actions 
+# - https://stackoverflow.com/a/75735736/9801139
+# - https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#example-using-a-public-action-in-a-subdirectory
+# - https://docs.github.com/en/actions/creating-actions/creating-a-composite-action
+# - https://dev.to/n3wt0n/composite-actions-vs-reusable-workflows-what-is-the-difference-github-actions-11kd

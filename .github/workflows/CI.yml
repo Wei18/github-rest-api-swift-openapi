@@ -1,0 +1,24 @@
+name: CI
+
+on: [push]
+
+jobs:
+
+  test:
+    name: Swift ${{ matrix.swift }} on ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: 
+          - ubuntu-latest
+          # - macos-latest
+        swift: ["5.9"]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/workflows/actions/setup
+        with:
+          swift: ${{ matrix.swift }}
+          os: ${{ matrix.os }}
+
+      - run: swift build
+      - run: swift test
