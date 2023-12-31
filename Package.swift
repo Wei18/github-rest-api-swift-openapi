@@ -59,6 +59,10 @@ enum GitHubRestAPIOpenAPITag: String, CaseIterable {
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
             ],
             path: "Sources/\(rawValue)",
+            resources: [
+                .copy("openapi-generator-config.yml"),
+                .copy("openapi.yml"),
+            ],
             plugins: [
                 .plugin(name: "OpenAPIGenerator", package: "swift-openapi-generator"),
             ]
