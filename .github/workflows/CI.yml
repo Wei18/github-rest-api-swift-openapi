@@ -18,6 +18,8 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          submodules: true
       - uses: ./.github/workflows/actions/setup
         with:
           swift: ${{ matrix.swift }}
@@ -39,11 +41,13 @@ jobs:
       GITHUB_PAGES: "true"
     steps:
       - uses: actions/checkout@v4
+        with:
+          submodules: true
       - uses: ./.github/workflows/actions/setup
         with:
           swift: ${{ matrix.swift }}
           os: ${{ matrix.os }}
-      
+
       - run: make .build/docs
       - uses: actions/upload-pages-artifact@v2
         with:
