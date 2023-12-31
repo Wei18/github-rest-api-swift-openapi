@@ -21,3 +21,18 @@ Sources/%/openapi.yml: Submodule
 
 .PHONY: install
 install: $(OPENAPI_FILES)
+
+.build/docs: ## Need env GITHUB_PAGES is created as 'true'
+	swift package --allow-writing-to-directory $@ generate-documentation \
+	--target GitHubRestAPISwiftOpenAPI \
+	--disable-indexing \
+	--output-path $@ \
+	--transform-for-static-hosting \
+	--hosting-base-path github-rest-api-swift-openapi;
+
+.PHONY: help
+.SILENT: help
+help:
+	echo -----------------------------------------------------------------------
+	awk 'BEGIN {FS = ":.*##"; printf "Usage:\n  make \033[36m\033[0m\n"} /^[$$()% 0-9a-zA-Z_-]+:.*?##/ { printf "  \033[36m%-14s\033[0m %s\n", $$1, $$2 } /^##@/ { printf "\n\033[1m%s\033[0m\n", substr($$0, 5) } ' $(MAKEFILE_LIST)
+	echo -----------------------------------------------------------------------
