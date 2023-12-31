@@ -14,7 +14,7 @@ runs:
   - uses: swift-actions/setup-swift@v1
     with:
       swift-version: ${{ inputs.swift }}
-
+  - uses: irgaly/setup-mint@v1
   - if: contains(inputs.os, 'macos')
     uses: irgaly/xcode-cache@v1
     with:
