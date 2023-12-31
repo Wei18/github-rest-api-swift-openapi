@@ -63,6 +63,15 @@ enum GitHubRestAPIOpenAPITag: String, CaseIterable {
             targets: [rawValue]
         )
     }
+    
+    var testTarget: PackageDescription.Target {
+        .testTarget(
+            name: "UserTests",
+            dependencies: [
+                .target(name: rawValue)
+            ]
+        )
+    }
 }
 
 let package = Package(
@@ -75,6 +84,6 @@ let package = Package(
         .package(url: "https://github.com/apple/swift-openapi-urlsession", from: "1.0.0"),
     ],
     targets: GitHubRestAPIOpenAPITag.allCases.map(\.target) + [
-        .testTarget(name: "UserTests")
+        GitHubRestAPIOpenAPITag.users.testTarget
     ]
 )

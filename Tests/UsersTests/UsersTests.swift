@@ -1,5 +1,5 @@
 import XCTest
-@testable import GitHubRestAPI_users
+@testable import users
 import OpenAPIRuntime
 import OpenAPIURLSession
 
@@ -11,7 +11,7 @@ final class UsersTests: XCTestCase {
             transport: URLSessionTransport()
         )
         let list = try await client.users_sol_list()
-        XCTAssertGreaterThan(list.ok.body.json.count, 0)
+        XCTAssertGreaterThan(try list.ok.body.json.count, 0)
     }
     
 }
