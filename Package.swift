@@ -62,9 +62,6 @@ enum GitHubRestAPIOpenAPITag: String, CaseIterable {
             resources: [
                 .copy("openapi-generator-config.yml"),
                 .copy("openapi.yml"),
-            ],
-            plugins: [
-                .plugin(name: "OpenAPIGenerator", package: "swift-openapi-generator"),
             ]
         )
     }
@@ -91,7 +88,6 @@ let package = Package(
     platforms: [.macOS(.v10_15)],
     products: GitHubRestAPIOpenAPITag.allCases.map(\.library),
     dependencies: [
-        .package(url: "https://github.com/apple/swift-openapi-generator", from: "1.0.0"),
         .package(url: "https://github.com/apple/swift-openapi-runtime", from: "1.0.0"),
         .package(url: "https://github.com/apple/swift-openapi-urlsession", from: "1.0.0"),
     ],
@@ -100,10 +96,10 @@ let package = Package(
     ]
 )
 
-let isBuildDocC = ProcessInfo.processInfo.environment["GITHUB_PAGES"] == "true"
+let isBuildingDocC = ProcessInfo.processInfo.environment["GITHUB_PAGES"] == "true"
 
 // swift-docs is not needed for package users
-if isBuildDocC {
+if isBuildingDocC {
     package.dependencies += [
         .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.3.0"),
     ]
