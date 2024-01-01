@@ -84,19 +84,12 @@ enum GitHubRestAPIOpenAPITag: String, CaseIterable {
             dependencies: [.target(name: targetName)]
         )
     }
-    
-    static var allInOne: PackageDescription.Product = .library(
-        name: "GitHubRestAPISwiftOpenAPI",
-        targets: GitHubRestAPIOpenAPITag.allCases.map(\.targetName)
-    )
 }
 
 let package = Package(
     name: "GitHubRestAPISwiftOpenAPI",
     platforms: [.macOS(.v10_15)],
-    products: GitHubRestAPIOpenAPITag.allCases.map(\.library) + [
-        GitHubRestAPIOpenAPITag.allInOne
-    ],
+    products: GitHubRestAPIOpenAPITag.allCases.map(\.library),
     dependencies: [
         .package(url: "https://github.com/apple/swift-openapi-generator", from: "1.0.0"),
         .package(url: "https://github.com/apple/swift-openapi-runtime", from: "1.0.0"),

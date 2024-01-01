@@ -23,13 +23,11 @@ Sources/%/openapi.yml: Submodule
 install: $(OPENAPI_FILES)
 
 .build/docs: ## Need env GITHUB_PAGES is created as 'true'
-## FIXME: too slow.
-# 	swift package --allow-writing-to-directory $@ generate-documentation \
-# 	--product GitHubRestAPISwiftOpenAPI \
-# 	--disable-indexing \
-# 	--output-path $@ \
-# 	--transform-for-static-hosting \
-# 	--hosting-base-path github-rest-api-swift-openapi;
+	swift package --allow-writing-to-directory $@ generate-documentation \
+	--disable-indexing \
+	--output-path $@ \
+	--transform-for-static-hosting \
+	--hosting-base-path github-rest-api-swift-openapi;
 
 .PHONY: help
 .SILENT: help
