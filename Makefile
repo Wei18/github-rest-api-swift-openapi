@@ -19,11 +19,9 @@ OPENAPI_CONFIG_FILES := $(addsuffix /openapi-generator-config.yml, $(SUBDIRS))
 	echo "  - types" >> $@; \
 	echo "  - client" >> $@; \
 	echo "" >> $@; \
-	echo "" >> $@; \
 	echo "filter:" >> $@; \
 	echo "  tags:" >> $@; \
 	echo "    - $$tag_name" >> $@; \
-	echo "" >> $@; \
 	echo "" >> $@; \
 	echo "accessModifier: public" >> $@; \
 	echo "" >> $@;
@@ -46,7 +44,7 @@ SWIFT_FILES := $(addsuffix /Client.swift, $(SUBDIRS))
 
 check-submodule: Submodule
 	git submodule update --recursive --remote
-	@git add $@
+	@git add $^
 	@git commit -m "[Make]$$(git submodule status Submodule/github/rest-api-description)" && touch $^ || true
 	@echo "::notice:: make $@"
 
