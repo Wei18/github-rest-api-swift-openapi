@@ -5,11 +5,33 @@ on:
     branches:
       - main
 
+  schedule:
+    # 台灣的每隔 2 天的午夜 00:00 觸發
+    - cron: '0 16 */2 * *'
+
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
+
+  Sync:
+    strategy:
+      matrix:
+        os:
+          - ubuntu-latest
+          # - macos-latest
+        swift: ["5.9"]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+      - uses: ./.github/workflows/actions/setup
+        with:
+          swift: ${{ matrix.swift }}
+          os: ${{ matrix.os }}
+      - run: make install
 
   Test:
     strategy:
@@ -27,7 +49,6 @@ jobs:
         with:
           swift: ${{ matrix.swift }}
           os: ${{ matrix.os }}
-
       - run: swift build
       - run: swift test
 
