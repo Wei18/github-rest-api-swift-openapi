@@ -3,7 +3,8 @@
 # Special-Targets #
 # https://www.gnu.org/software/make/manual/html_node/Special-Targets.html
 .DEFAULT_GOAL := install
-SUBDIRS := $(wildcard Sources/*)
+OPENAPI_PATH := Submodule/github/rest-api-description/descriptions/api.github.com/api.github.com.yaml
+.SECONDARY: $(%.yml)
 
 .PHONY: force
 force: 
@@ -14,28 +15,47 @@ Submodule: force
 	git commit -m "[Make] Pull $$(git submodule status Submodule/github/rest-api-description)" || true
 	echo "::notice:: make $@"
 
-OPENAPI_FILES := $(addsuffix /openapi.yml, $(SUBDIRS))
-%/openapi.yml: Submodule
-	ln -sf ../../Submodule/github/rest-api-description/descriptions/api.github.com/api.github.com.yaml $@ 
-	git add $@
+TAG_NAMES := $(shell yq -r '.tags[].name' $(OPENAPI_PATH))
+SUBDIRS := $(addprefix Sources/, $(TAG_NAMES))
+OPENAPI_CONFIG_FILES := $(addsuffix /openapi-generator-config.yml, $(SUBDIRS))
+%/openapi-generator-config.yml: Submodule
+	mkdir -p "$(@D)"
+	@tag_name=$(shell basename $(shell dirname $@)); \
+	echo "generate:" > $@; \
+	echo "  - types" >> $@; \
+	echo "  - client" >> $@; \
+	echo "" >> $@; \
+	echo "" >> $@; \
+	echo "filter:" >> $@; \
+	echo "  tags:" >> $@; \
+	echo "    - $$tag_name" >> $@; \
+	echo "" >> $@; \
+	echo "" >> $@; \
+	echo "accessModifier: public" >> $@; \
+	echo "" >> $@;
+	# git add $@ # INTERMEDIATE file after *.swift
+
+%/openapi.yml: %/openapi-generator-config.yml Submodule
+	ln -sf ../../$(OPENAPI_PATH) $@
+	# git add $@ # INTERMEDIATE file after *.swift
 
 SWIFT_FILES := $(addsuffix /Client.swift, $(SUBDIRS))
-%.swift: $(OPENAPI_FILES)
+%/Client.swift: %/openapi.yml
 	mint run apple/swift-openapi-generator generate $(@D)/openapi.yml \
-	--config $(@D)/openapi-generator-config.yml \
-	--output-directory $(@D)
-	git add $@ $(@D)/Types.swift
+		--config $(@D)/openapi-generator-config.yml \
+		--output-directory $(@D)
+	git add $(@D)
+	git commit -m "[Make] Sync *.swift" || true
 
-install-files: $(SWIFT_FILES)
-	git commit -m "[Make] Re-link openapi.yml & re-gen swift files." || true
+install: $(SWIFT_FILES)
 	echo "::notice:: make $@"
-	
+
 #XCFrameworks:
 #	mint run giginet/Scipio create . \
-#	--embed-debug-symbols \
-#	--support-simulators
+#		--embed-debug-symbols \
+#		--support-simulators
 #	echo "::notice:: make $@"
-#
+
 #XCFRAMEWORKS := $(wildcard XCFrameworks/*.xcframework)
 #ZIP_FILES := $(XCFRAMEWORKS:%.xcframework=%.zip)
 #%.zip: %.xcframework
@@ -47,14 +67,12 @@ install-files: $(SWIFT_FILES)
 #	git commit -m "[Make] Re-gen framework zips" || true
 #	echo "::notice:: make $@"
 
-install: install-files
-
-.build/docs: ## Need env GITHUB_PAGES is created as 'true'
-	swift package --allow-writing-to-directory $@ generate-documentation \
-	--disable-indexing \
-	--output-path $@ \
-	--transform-for-static-hosting \
-	--hosting-base-path github-rest-api-swift-openapi;
+#.build/docs: ## Need env GITHUB_PAGES is created as 'true'
+#	swift package --allow-writing-to-directory $@ generate-documentation \
+#		--disable-indexing \
+#		--output-path $@ \
+#		--transform-for-static-hosting \
+#		--hosting-base-path github-rest-api-swift-openapi;
 
 .PHONY: help
 .SILENT: help
