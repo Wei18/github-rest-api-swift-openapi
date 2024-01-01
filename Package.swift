@@ -8,6 +8,7 @@ import Foundation
 /// which can be useful when generating client code for a subset of a large API, 
 /// or splitting an implementation of a server across multiple modules.
 enum GitHubRestAPIOpenAPITag: String, CaseIterable {
+    case actions
     case activity
     case apps
     case billing
