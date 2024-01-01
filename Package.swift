@@ -8,6 +8,7 @@ import Foundation
 /// which can be useful when generating client code for a subset of a large API, 
 /// or splitting an implementation of a server across multiple modules.
 enum GitHubRestAPIOpenAPITag: String, CaseIterable {
+    case actions
     case activity
     case apps
     case billing
@@ -59,9 +60,9 @@ enum GitHubRestAPIOpenAPITag: String, CaseIterable {
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
             ],
             path: "Sources/\(rawValue)",
-            resources: [
-                .copy("openapi-generator-config.yml"),
-                .copy("openapi.yml"),
+            exclude: [
+                "openapi-generator-config.yml",
+                "openapi.yml",
             ]
         )
     }
