@@ -6,14 +6,8 @@
 OPENAPI_PATH := Submodule/github/rest-api-description/descriptions/api.github.com/api.github.com.yaml
 .SECONDARY: $(%.yml)
 
-.PHONY: force
-force: 
-
-Submodule: force
-	git submodule update --recursive --remote
-	git add $@
-	git commit -m "[Make] Pull $$(git submodule status Submodule/github/rest-api-description)" || true
-	echo "::notice:: make $@"
+Submodule: 
+	@echo "::notice:: make $@"
 
 TAG_NAMES := $(shell yq -r '.tags[].name' $(OPENAPI_PATH))
 SUBDIRS := $(addprefix Sources/, $(TAG_NAMES))
@@ -33,22 +27,31 @@ OPENAPI_CONFIG_FILES := $(addsuffix /openapi-generator-config.yml, $(SUBDIRS))
 	echo "" >> $@; \
 	echo "accessModifier: public" >> $@; \
 	echo "" >> $@;
-	# git add $@ # INTERMEDIATE file after *.swift
+	@git add $@
+	@echo "::debug:: make $@"
 
-%/openapi.yml: %/openapi-generator-config.yml Submodule
-	ln -sf ../../$(OPENAPI_PATH) $@
-	# git add $@ # INTERMEDIATE file after *.swift
+%/openapi.yml: %/openapi-generator-config.yml
+	@ln -sf ../../$(OPENAPI_PATH) $@
+	@git add $@
+	@echo "::debug:: make $@"
 
 SWIFT_FILES := $(addsuffix /Client.swift, $(SUBDIRS))
-%/Client.swift: %/openapi.yml
+%/Client.swift: %/openapi.yml Submodule
 	mint run apple/swift-openapi-generator generate $(@D)/openapi.yml \
 		--config $(@D)/openapi-generator-config.yml \
 		--output-directory $(@D)
-	git add $(@D)
-	git commit -m "[Make] Sync *.swift" || true
+	@git add $(@D)
+	@git commit -m "[Make] Sync *.swift" || true
+	@echo "::debug:: make $@"
 
-install: $(SWIFT_FILES)
-	echo "::notice:: make $@"
+check-submodule: Submodule
+	git submodule update --recursive --remote
+	@git add $@
+	@git commit -m "[Make]$$(git submodule status Submodule/github/rest-api-description)" && touch $^ || true
+	@echo "::notice:: make $@"
+
+install: check-submodule $(SWIFT_FILES)
+	@echo "::notice:: make $@"
 
 #XCFrameworks:
 #	mint run giginet/Scipio create . \
