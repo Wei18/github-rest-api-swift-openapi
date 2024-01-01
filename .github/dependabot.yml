@@ -12,7 +12,5 @@ updates:
 
   - package-ecosystem: "gitsubmodule"
     directory: "/Submodule/github/rest-api-description"
-    allow:
-      - dependency-name: "contrib/proxy"
     schedule:
       interval: "weekly"
