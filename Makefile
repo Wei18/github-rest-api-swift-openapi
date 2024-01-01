@@ -11,16 +11,43 @@ force:
 Submodule: force
 	git submodule update --recursive --remote
 	git add $@
-	git commit -m "Update $$(git submodule status Submodule/github/rest-api-description)" || true
+	git commit -m "[Make] Pull $$(git submodule status Submodule/github/rest-api-description)" || true
+	echo "::notice:: make $@"
 
 OPENAPI_FILES := $(addsuffix /openapi.yml, $(SUBDIRS))
-Sources/%/openapi.yml: Submodule
+%/openapi.yml: Submodule
 	ln -sf ../../Submodule/github/rest-api-description/descriptions/api.github.com/api.github.com.yaml $@ 
 	git add $@
-	git commit -m "Relink $@" || true
 
-.PHONY: install
-install: $(OPENAPI_FILES)
+SWIFT_FILES := $(addsuffix /Client.swift, $(SUBDIRS))
+%.swift: $(OPENAPI_FILES)
+	mint run apple/swift-openapi-generator generate $(@D)/openapi.yml \
+	--config $(@D)/openapi-generator-config.yml \
+	--output-directory $(@D)
+	git add $@ $(@D)/Types.swift
+
+install-files: $(SWIFT_FILES)
+	git commit -m "[Make] Re-link openapi.yml & re-gen swift files." || true
+	echo "::notice:: make $@"
+	
+#XCFrameworks:
+#	mint run giginet/Scipio create . \
+#	--embed-debug-symbols \
+#	--support-simulators
+#	echo "::notice:: make $@"
+#
+#XCFRAMEWORKS := $(wildcard XCFrameworks/*.xcframework)
+#ZIP_FILES := $(XCFRAMEWORKS:%.xcframework=%.zip)
+#%.zip: %.xcframework
+#	zip -r "$@" "$^"
+#	rm -rf "$^"
+#	git add "$@"
+#
+#install-zips: XCFrameworks $(ZIP_FILES)
+#	git commit -m "[Make] Re-gen framework zips" || true
+#	echo "::notice:: make $@"
+
+install: install-files
 
 .build/docs: ## Need env GITHUB_PAGES is created as 'true'
 	swift package --allow-writing-to-directory $@ generate-documentation \
