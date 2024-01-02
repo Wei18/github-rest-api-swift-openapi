@@ -1,0 +1,32 @@
+
+name: Dependabot update commit
+
+on:
+  pull_request:
+    paths:
+      - 'Submodule/**' 
+    
+jobs:
+
+  DependabotSync:
+    if: github.actor == 'dependabot[bot]'
+    strategy:
+      matrix:
+        os:
+          - ubuntu-latest
+          # - macos-latest
+        swift: ["5.9"]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+      - uses: ./.github/workflows/actions/setup
+        with:
+          swift: ${{ matrix.swift }}
+          os: ${{ matrix.os }}
+      - run: |
+          git config user.name "${GITHUB_ACTOR}"
+          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+      - run: make install
+      - run: git push
