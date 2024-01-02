@@ -4,7 +4,8 @@
 import PackageDescription
 import Foundation
 
-let isBuildingCode = ProcessInfo.processInfo.environment["BUILD_CODE"] == "true"
+// let isBuildingCode = ProcessInfo.processInfo.environment["BUILD_CODE"] == "true"
+let isBuildingCode = true
 let isBuildingDocC = ProcessInfo.processInfo.environment["GITHUB_PAGES"] == "true"
 
 let package = Package(
