@@ -4,7 +4,36 @@
 import PackageDescription
 import Foundation
 
-/// The generator supports filtering the OpenAPI document prior to generation, 
+let isBuildingCode = ProcessInfo.processInfo.environment["BUILD_CODE"] == "true"
+let isBuildingDocC = ProcessInfo.processInfo.environment["GITHUB_PAGES"] == "true"
+
+let package = Package(
+    name: "GitHubRestAPISwiftOpenAPI",
+    platforms: [.macOS(.v10_15)],
+    products: GitHubRestAPIOpenAPITag.allCases.map(\.library),
+    dependencies: [
+        .package(url: "https://github.com/apple/swift-openapi-runtime", from: "1.0.0"),
+        .package(url: "https://github.com/apple/swift-openapi-urlsession", from: "1.0.0"),
+    ],
+    targets: GitHubRestAPIOpenAPITag.allCases.map(\.target)
+    + GitHubRestAPIOpenAPITag.allCases.compactMap(\.testTarget)
+)
+
+// dependencies is needed for package users
+if !isBuildingCode {
+    package.targets += [
+        GitHubRestAPIOpenAPITag.dependenciesTarget
+    ]
+}
+
+// swift-docs is not needed for package users
+if isBuildingDocC {
+    package.dependencies += [
+        .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.3.0"),
+    ]
+}
+
+/// The generator supports filtering the OpenAPI document prior to generation,
 /// which can be useful when generating client code for a subset of a large API, 
 /// or splitting an implementation of a server across multiple modules.
 enum GitHubRestAPIOpenAPITag: String, CaseIterable {
@@ -46,62 +75,70 @@ enum GitHubRestAPIOpenAPITag: String, CaseIterable {
     case classroom
     case desktop
 
-    var targetName: String {
+    var library: PackageDescription.Product {
+        let targetName = targetName
+        if isBuildingCode {
+            return .library(
+                name: targetName,
+                targets: [targetName]
+            )
+        } else {
+            return .library(
+                name: targetName,
+                targets: [targetName, Self.dependenciesTarget.name]
+            )
+        }
+    }
+
+    private var targetName: String {
         let name = rawValue.replacingOccurrences(of: "-", with: "_").capitalized
         return "GitHubRestAPI\(name)"
     }
     
     var target: PackageDescription.Target {
         let targetName = targetName
-        return .target(
-            name: targetName,
-            dependencies: [
-                .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
-                .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
-            ],
-            path: "Sources/\(rawValue)",
-            exclude: [
-                "openapi-generator-config.yml",
-                "openapi.yml",
+        if isBuildingCode {
+            return .target(
+                name: targetName,
+                dependencies: [
+                    .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
+                    .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
+                ],
+                path: "Sources/\(rawValue)",
+                exclude: [
+                    "openapi-generator-config.yml",
+                    "openapi.yml",
+                ]
+            )
+        } else {
+            return .binaryTarget(
+                name: targetName,
+                path: "XCFrameworks/\(targetName).zip")
+        }
+    }
+    
+    var testTarget: PackageDescription.Target? {
+        guard self == .users else { return nil }
+        let dependencies: [Target.Dependency] = [
+            .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
+            .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
+        ]
+        let targetName = targetName
+        return .testTarget(
+            name: "UserTests",
+            dependencies: dependencies + [
+                .target(name: targetName)
             ]
         )
     }
 
-    var library: PackageDescription.Product {
-        let targetName = targetName
-        return .library(
-            name: targetName,
-            targets: [targetName]
-        )
-    }
-    
-    var testTarget: PackageDescription.Target {
-        let targetName = targetName
-        return .testTarget(
-            name: "UserTests",
-            dependencies: [.target(name: targetName)]
-        )
-    }
-}
+    static var dependenciesTarget: PackageDescription.Target = .target(
+        name: "DependenciesTarget",
+        dependencies: [
+            .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
+            .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
+        ],
+        path: "XCFrameworks/DependenciesTarget"
+    )
 
-let package = Package(
-    name: "GitHubRestAPISwiftOpenAPI",
-    platforms: [.macOS(.v10_15)],
-    products: GitHubRestAPIOpenAPITag.allCases.map(\.library),
-    dependencies: [
-        .package(url: "https://github.com/apple/swift-openapi-runtime", from: "1.0.0"),
-        .package(url: "https://github.com/apple/swift-openapi-urlsession", from: "1.0.0"),
-    ],
-    targets: GitHubRestAPIOpenAPITag.allCases.map(\.target) + [
-        GitHubRestAPIOpenAPITag.users.testTarget,
-    ]
-)
-
-let isBuildingDocC = ProcessInfo.processInfo.environment["GITHUB_PAGES"] == "true"
-
-// swift-docs is not needed for package users
-if isBuildingDocC {
-    package.dependencies += [
-        .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.3.0"),
-    ]
 }
