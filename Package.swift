@@ -4,6 +4,9 @@
 import PackageDescription
 import Foundation
 
+let isBuildingCode = ProcessInfo.processInfo.environment["BUILD_CODE"] == "true"
+let isBuildingDocC = ProcessInfo.processInfo.environment["GITHUB_PAGES"] == "true"
+
 let package = Package(
     name: "GitHubRestAPISwiftOpenAPI",
     platforms: [.macOS(.v10_15)],
@@ -15,6 +18,20 @@ let package = Package(
     targets: GitHubRestAPIOpenAPITag.allCases.map(\.target)
     + GitHubRestAPIOpenAPITag.allCases.compactMap(\.testTarget)
 )
+
+// dependencies is needed for package users
+if !isBuildingCode {
+    package.targets += [
+        GitHubRestAPIOpenAPITag.dependenciesTarget
+    ]
+}
+
+// swift-docs is not needed for package users
+if isBuildingDocC {
+    package.dependencies += [
+        .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.3.0"),
+    ]
+}
 
 /// The generator supports filtering the OpenAPI document prior to generation,
 /// which can be useful when generating client code for a subset of a large API, 
@@ -124,22 +141,4 @@ enum GitHubRestAPIOpenAPITag: String, CaseIterable {
         path: "XCFrameworks/DependenciesTarget"
     )
 
-}
-
-let isBuildingCode = ProcessInfo.processInfo.environment["BUILD_CODE"] == "true"
-
-// dependencies is needed for package users
-if !isBuildingCode {
-    package.targets += [
-        GitHubRestAPIOpenAPITag.dependenciesTarget
-    ]
-}
-
-let isBuildingDocC = ProcessInfo.processInfo.environment["GITHUB_PAGES"] == "true"
-
-// swift-docs is not needed for package users
-if isBuildingDocC {
-    package.dependencies += [
-        .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.3.0"),
-    ]
 }
