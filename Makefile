@@ -43,10 +43,14 @@ SWIFT_FILES := $(addsuffix /Client.swift, $(SUBDIRS))
 	@echo "::debug:: make $@"
 
 check-submodule: Submodule
+ifdef GITHUB_ACTIONS ## https://docs.github.com/en/actions/learn-github-actions/variables
+	@echo "::notice:: make $@"
+else
 	git submodule update --recursive --remote
 	@git add $^
 	@git commit -m "[Make]$$(git submodule status Submodule/github/rest-api-description)" && touch $^ || true
 	@echo "::notice:: make $@"
+endif
 
 install: check-submodule $(SWIFT_FILES)
 	@echo "::notice:: make $@"
