@@ -8,7 +8,7 @@ on:
     
 jobs:
 
-  DependabotSync:
+  Sync:
     if: github.actor == 'dependabot[bot]'
     strategy:
       matrix:
