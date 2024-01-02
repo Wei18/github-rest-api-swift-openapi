@@ -55,22 +55,31 @@ endif
 install: check-submodule $(SWIFT_FILES)
 	@echo "::notice:: make $@"
 
-#XCFrameworks:
-#	mint run giginet/Scipio create . \
-#		--embed-debug-symbols \
-#		--support-simulators
-#	echo "::notice:: make $@"
+XCFrameworks:
+	mint run giginet/Scipio create . \
+		--static \
+		--embed-debug-symbols \
+		--support-simulators
+	@touch $@
+	@echo "::notice:: make $@"
 
-#XCFRAMEWORKS := $(wildcard XCFrameworks/*.xcframework)
-#ZIP_FILES := $(XCFRAMEWORKS:%.xcframework=%.zip)
-#%.zip: %.xcframework
-#	zip -r "$@" "$^"
-#	rm -rf "$^"
-#	git add "$@"
-#
-#install-zips: XCFrameworks $(ZIP_FILES)
-#	git commit -m "[Make] Re-gen framework zips" || true
-#	echo "::notice:: make $@"
+%.zip: %.xcframework
+	@zip -qr "$@" "$<"
+	@rm -rf "$<"
+	@git add "$@"
+	@echo "::debug:: make $@"
+
+install-zips: XCFrameworks
+	@$(MAKE) $(shell echo XCFrameworks/*.xcframework | sed 's/\.xcframework/\.zip/g');
+# 	@git commit -m "[Make] Modify xcframework zips" || true
+# 	@echo "::notice:: make $@"
+
+.PHONY: update-to-date
+update-to-date:
+	touch Submodule
+	touch Sources/**/openapi-generator-config.yml
+	touch Sources/**/openapi.yml
+	touch Sources/**/Client.swift
 
 #.build/docs: ## Need env GITHUB_PAGES is created as 'true'
 #	swift package --allow-writing-to-directory $@ generate-documentation \
