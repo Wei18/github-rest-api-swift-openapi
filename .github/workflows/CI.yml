@@ -19,7 +19,7 @@ jobs:
           - macos-latest
         swift: ["5.9"]
     runs-on: ${{ matrix.os }}
-    timeout-minutes: 10
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
         with:
