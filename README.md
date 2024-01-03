@@ -113,7 +113,52 @@ struct GitHubRestAPIIssuesExtension {
 }
 ```
 </details>
+
+<details>
+<summary>Example of code for the `GITHUB_TOKEN` to authenticate.</summary>
     
+```swift
+import Foundation
+import GitHubRestAPIUsers
+import OpenAPIRuntime
+import OpenAPIURLSession
+import HTTPTypes
+
+/// Example: ProcessInfo.processInfo.environment["GITHUB_TOKEN"] ?? ""
+let token: String = "***"
+
+let client = Client(
+    serverURL: try Servers.server1(),
+    transport: URLSessionTransport(),
+    middlewares: [AuthenticationMiddleware(token: token)]
+)
+
+/// Injects an authorization header to every request.
+struct AuthenticationMiddleware: ClientMiddleware {
+
+    private let token: String
+
+    init(token: String) {
+        self.token = token
+    }
+    private var header: [String: String] { ["Authorization": "Bearer \(token)" ] }
+
+    func intercept(
+        _ request: HTTPRequest,
+        body: HTTPBody?,
+        baseURL: URL,
+        operationID: String,
+        next: @Sendable (HTTPRequest, HTTPBody?, URL) async throws -> (HTTPResponse, HTTPBody?)
+    ) async throws -> (HTTPResponse, HTTPBody?) {
+        var request = request
+        request.headerFields.append(HTTPField(name: .authorization, value: "Bearer \(token)"))
+        return try await next(request, body, baseURL)
+    }
+
+}
+```
+</details>
+
 ## Installation
 
 ### Swift Package Manager
