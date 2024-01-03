@@ -33,6 +33,18 @@ runs:
       restore-keys: |
         ${{ runner.os }}-spm-
 
+  - name: "Compiling Cache"
+    uses: actions/cache@v3
+    with:
+      path: |
+        .build/*
+        !.build/repositories
+        !.build/checkouts
+        !.build/artifacts
+      key: ${{ runner.os }}-swift-build-${{ github.ref_name }}
+      restore-keys: |
+        ${{ runner.os }}-swift-build-
+
 # Hint: Use Composite Actions 
 # - https://stackoverflow.com/a/75735736/9801139
 # - https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#example-using-a-public-action-in-a-subdirectory
