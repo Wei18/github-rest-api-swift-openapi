@@ -36,11 +36,7 @@ runs:
   - name: "Compiling Cache"
     uses: actions/cache@v3
     with:
-      path: |
-        .build/*
-        !.build/repositories
-        !.build/checkouts
-        !.build/artifacts
+      path: ~/Library/Caches/org.swift.swiftpm/
       key: ${{ runner.os }}-swift-build-${{ github.ref_name }}
       restore-keys: |
         ${{ runner.os }}-swift-build-
