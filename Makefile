@@ -10,7 +10,8 @@
 OPENAPI_PATH := Submodule/github/rest-api-description/descriptions/api.github.com/api.github.com.yaml
 .SECONDARY: $(%.yml)
 
-Source/%/openapi.yml: $(OPENAPI_PATH)
+%/openapi.yml: $(OPENAPI_PATH)
+	@mkdir -p "$(@D)"
 	@ln -sf ../../$(OPENAPI_PATH) $@
 	@git add $@
 	@echo "::debug:: make $@"
@@ -19,7 +20,7 @@ TAG_NAMES := $(shell yq -r '.tags[].name' $(OPENAPI_PATH))
 SUBDIRS := $(addprefix Sources/, $(TAG_NAMES))
 OPENAPI_CONFIG_FILES := $(addsuffix /openapi-generator-config.yml, $(SUBDIRS))
 %/openapi-generator-config.yml: $(OPENAPI_PATH)
-	mkdir -p "$(@D)"
+	@mkdir -p "$(@D)"
 	@tag_name=$(shell basename $(shell dirname $@)); \
 	echo "generate:" > $@; \
 	echo "  - types" >> $@; \
