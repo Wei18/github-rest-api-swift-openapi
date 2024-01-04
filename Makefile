@@ -86,12 +86,12 @@ update-to-date:
 	touch Sources/**/openapi.yml
 	touch Sources/**/Client.swift
 
-#.build/docs: ## Need env GITHUB_PAGES is created as 'true'
-#	swift package --allow-writing-to-directory $@ generate-documentation \
-#		--disable-indexing \
-#		--output-path $@ \
-#		--transform-for-static-hosting \
-#		--hosting-base-path github-rest-api-swift-openapi;
+docs: ## Need env GITHUB_PAGES is created as 'true'
+	swift package --allow-writing-to-directory $@ generate-documentation \
+		--disable-indexing \
+		--transform-for-static-hosting \
+		--hosting-base-path github-rest-api-swift-openapi;
+	sh Script/setupDocsHtml.sh
 
 .PHONY: help
 .SILENT: help
