@@ -1,18 +1,24 @@
 #!make
 
+# Maintanence
+# The path and implemenet for OPENAPI_PATH.
+# The pattern and implemenet for TAG_NAMES.
+
 # Special-Targets #
 # https://www.gnu.org/software/make/manual/html_node/Special-Targets.html
 .DEFAULT_GOAL := install
 OPENAPI_PATH := Submodule/github/rest-api-description/descriptions/api.github.com/api.github.com.yaml
 .SECONDARY: $(%.yml)
 
-Submodule: 
-	@echo "::notice:: make $@"
+Source/%/openapi.yml: $(OPENAPI_PATH)
+	@ln -sf ../../$(OPENAPI_PATH) $@
+	@git add $@
+	@echo "::debug:: make $@"
 
 TAG_NAMES := $(shell yq -r '.tags[].name' $(OPENAPI_PATH))
 SUBDIRS := $(addprefix Sources/, $(TAG_NAMES))
 OPENAPI_CONFIG_FILES := $(addsuffix /openapi-generator-config.yml, $(SUBDIRS))
-%/openapi-generator-config.yml: Submodule
+%/openapi-generator-config.yml: $(OPENAPI_PATH)
 	mkdir -p "$(@D)"
 	@tag_name=$(shell basename $(shell dirname $@)); \
 	echo "generate:" > $@; \
@@ -28,31 +34,30 @@ OPENAPI_CONFIG_FILES := $(addsuffix /openapi-generator-config.yml, $(SUBDIRS))
 	@git add $@
 	@echo "::debug:: make $@"
 
-%/openapi.yml: %/openapi-generator-config.yml
-	@ln -sf ../../$(OPENAPI_PATH) $@
-	@git add $@
-	@echo "::debug:: make $@"
-
 SWIFT_FILES := $(addsuffix /Client.swift, $(SUBDIRS))
-%/Client.swift: %/openapi.yml Submodule
+%/Client.swift: %/openapi.yml %/openapi-generator-config.yml
 	mint run apple/swift-openapi-generator generate $(@D)/openapi.yml \
 		--config $(@D)/openapi-generator-config.yml \
 		--output-directory $(@D)
 	@git add $(@D)
-	@git commit -m "[Make] Sync *.swift" || true
-	@echo "::debug:: make $@"
+	@git commit -m "[Make] Sync *.swift" >/dev/null \
+	&& echo "::notice:: make $@" \
+	|| true
 
-check-submodule: Submodule
+.PHONY: install-$(OPENAPI_PATH)
+install-$(OPENAPI_PATH):
 ifdef GITHUB_ACTIONS ## https://docs.github.com/en/actions/learn-github-actions/variables
 	@echo "::notice:: make $@"
 else
 	git submodule update --recursive --remote
-	@git add $^
-	@git commit -m "[Make]$$(git submodule status Submodule/github/rest-api-description)" && touch $^ || true
-	@echo "::notice:: make $@"
+	@git add Submodule
+	@git commit -m "[Make]$$(git submodule status Submodule/github/rest-api-description)" >/dev/null \
+	&& touch $(OPENAPI_PATH) \
+	&& echo "::notice:: make $@" \
+	|| true
 endif
 
-install: check-submodule $(SWIFT_FILES)
+install: install-$(OPENAPI_PATH) $(SWIFT_FILES) 
 	@echo "::notice:: make $@"
 
 XCFrameworks:
@@ -76,7 +81,7 @@ install-zips: XCFrameworks
 
 .PHONY: update-to-date
 update-to-date:
-	touch Submodule
+	touch $(OPENAPI_PATH)
 	touch Sources/**/openapi-generator-config.yml
 	touch Sources/**/openapi.yml
 	touch Sources/**/Client.swift
