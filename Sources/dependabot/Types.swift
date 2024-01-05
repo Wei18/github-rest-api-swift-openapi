@@ -3259,11 +3259,11 @@ public enum Components {
     }
     /// Types generated from the `#/components/parameters` section of the OpenAPI document.
     public enum Parameters {
-        /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor.
+        /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/pagination-before`.
         public typealias pagination_hyphen_before = Swift.String
-        /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor.
+        /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/pagination-after`.
         public typealias pagination_hyphen_after = Swift.String
@@ -3274,11 +3274,11 @@ public enum Components {
             case asc = "asc"
             case desc = "desc"
         }
-        /// The number of results per page (max 100).
+        /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/per-page`.
         public typealias per_hyphen_page = Swift.Int
-        /// Page number of the results to fetch.
+        /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/page`.
         public typealias page = Swift.Int
@@ -3626,11 +3626,11 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/enterprises/{enterprise}/dependabot/alerts/GET/query/direction`.
                 public var direction: Components.Parameters.direction?
-                /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor.
+                /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/enterprises/{enterprise}/dependabot/alerts/GET/query/before`.
                 public var before: Components.Parameters.pagination_hyphen_before?
-                /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor.
+                /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/enterprises/{enterprise}/dependabot/alerts/GET/query/after`.
                 public var after: Components.Parameters.pagination_hyphen_after?
@@ -3646,7 +3646,7 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/enterprises/{enterprise}/dependabot/alerts/GET/query/last`.
                 public var last: Components.Parameters.pagination_hyphen_last?
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/enterprises/{enterprise}/dependabot/alerts/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
@@ -3660,11 +3660,11 @@ public enum Operations {
                 ///   - scope: The scope of the vulnerable dependency. If specified, only alerts with this scope will be returned.
                 ///   - sort: The property by which to sort the results.
                 ///   - direction: The direction to sort the results by.
-                ///   - before: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor.
-                ///   - after: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor.
+                ///   - before: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - after: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - first: **Deprecated**. The number of results per page (max 100), starting from the first matching result.
                 ///   - last: **Deprecated**. The number of results per page (max 100), starting from the last matching result.
-                ///   - per_page: The number of results per page (max 100).
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     state: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_states? = nil,
                     severity: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_severities? = nil,
@@ -3980,11 +3980,11 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/alerts/GET/query/direction`.
                 public var direction: Components.Parameters.direction?
-                /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor.
+                /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/alerts/GET/query/before`.
                 public var before: Components.Parameters.pagination_hyphen_before?
-                /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor.
+                /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/alerts/GET/query/after`.
                 public var after: Components.Parameters.pagination_hyphen_after?
@@ -4000,7 +4000,7 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/alerts/GET/query/last`.
                 public var last: Components.Parameters.pagination_hyphen_last?
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/alerts/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
@@ -4014,11 +4014,11 @@ public enum Operations {
                 ///   - scope: The scope of the vulnerable dependency. If specified, only alerts with this scope will be returned.
                 ///   - sort: The property by which to sort the results.
                 ///   - direction: The direction to sort the results by.
-                ///   - before: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor.
-                ///   - after: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor.
+                ///   - before: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - after: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - first: **Deprecated**. The number of results per page (max 100), starting from the first matching result.
                 ///   - last: **Deprecated**. The number of results per page (max 100), starting from the last matching result.
-                ///   - per_page: The number of results per page (max 100).
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     state: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_states? = nil,
                     severity: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_severities? = nil,
@@ -4306,19 +4306,19 @@ public enum Operations {
             public var path: Operations.dependabot_sol_list_hyphen_org_hyphen_secrets.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/GET/query`.
             public struct Query: Sendable, Hashable {
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/GET/query/page`.
                 public var page: Components.Parameters.page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100).
-                ///   - page: Page number of the results to fetch.
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     per_page: Components.Parameters.per_hyphen_page? = nil,
                     page: Components.Parameters.page? = nil
@@ -5097,19 +5097,19 @@ public enum Operations {
             public var path: Operations.dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/repositories/GET/query`.
             public struct Query: Sendable, Hashable {
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/repositories/GET/query/page`.
                 public var page: Components.Parameters.page?
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/repositories/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - page: Page number of the results to fetch.
-                ///   - per_page: The number of results per page (max 100).
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     page: Components.Parameters.page? = nil,
                     per_page: Components.Parameters.per_hyphen_page? = nil
@@ -5667,16 +5667,16 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/GET/query/page`.
                 @available(*, deprecated)
                 public var page: Swift.Int?
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/GET/query/per_page`.
                 @available(*, deprecated)
                 public var per_page: Swift.Int?
-                /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor.
+                /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/GET/query/before`.
                 public var before: Components.Parameters.pagination_hyphen_before?
-                /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor.
+                /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/GET/query/after`.
                 public var after: Components.Parameters.pagination_hyphen_after?
@@ -5704,9 +5704,9 @@ public enum Operations {
                 ///   - sort: The property by which to sort the results.
                 ///   - direction: The direction to sort the results by.
                 ///   - page: **Deprecated**. Page number of the results to fetch. Use cursor-based pagination with `before` or `after` instead.
-                ///   - per_page: The number of results per page (max 100).
-                ///   - before: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor.
-                ///   - after: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor.
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - before: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - after: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - first: **Deprecated**. The number of results per page (max 100), starting from the first matching result.
                 ///   - last: **Deprecated**. The number of results per page (max 100), starting from the last matching result.
                 public init(
@@ -6590,19 +6590,19 @@ public enum Operations {
             public var path: Operations.dependabot_sol_list_hyphen_repo_hyphen_secrets.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/secrets/GET/query`.
             public struct Query: Sendable, Hashable {
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/secrets/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/secrets/GET/query/page`.
                 public var page: Components.Parameters.page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100).
-                ///   - page: Page number of the results to fetch.
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     per_page: Components.Parameters.per_hyphen_page? = nil,
                     page: Components.Parameters.page? = nil
