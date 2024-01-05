@@ -15,7 +15,7 @@ runs:
     with:
       swift-version: ${{ inputs.swift }}
   - uses: irgaly/setup-mint@v1
-  - uses: chrisdickinson/setup-yq@latest
+  - uses: dcarbone/install-yq-action@v1.1.1
   
   # - name: "Xcode Cache"
   #   if: contains(inputs.os, 'macos')
