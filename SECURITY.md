@@ -10,6 +10,7 @@ currently being supported with security updates.
 | Package.swift                         |
 | Mintfile                              |
 | github-actions                        |
+| gitsubmodule (github/rest-api-description) |
 
 ## Reporting a Vulnerability
 
