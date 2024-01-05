@@ -1,4 +1,4 @@
-# GitHub's REST API Swift Language Code Generator
+# GitHub's REST API Swift Language Code
 
 [![Swift](https://img.shields.io/badge/Swift-5.9-orange?style=flat-square)](https://img.shields.io/badge/Swift-5.9-orange?style=flat-square)
 [![Platforms](https://img.shields.io/badge/Platforms-macOS-orange?style=flat-square)](https://img.shields.io/badge/Platforms-macOS-orange?style=flat-square)
