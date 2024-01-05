@@ -40,7 +40,7 @@ SWIFT_FILES   := $(addsuffix /Client.swift, $(SUBDIRS))
 		--config $(@D)/openapi-generator-config.yml \
 		--output-directory $(@D)
 	@git add $(@D)
-	@git commit -m "[Make] Sync *.swift" >/dev/null \
+	@git commit -m "[Make] Generate $(@D)/*.swift" >/dev/null \
 	&& echo "::notice:: make $@" \
 	|| true
 
