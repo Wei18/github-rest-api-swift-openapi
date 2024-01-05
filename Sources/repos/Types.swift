@@ -499,7 +499,7 @@ public protocol APIProtocol: Sendable {
     /// To rename the default branch:
     ///
     /// * Users must have admin or owner permissions.
-    /// * GitHub Apps must have the `administration:write` repository permission.
+    /// * GitHub Apps must have the `contents:write` and `administration:write` repository permissions.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/branches/{branch}/rename`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/branches/{branch}/rename/post(repos/rename-branch)`.
@@ -2865,7 +2865,7 @@ extension APIProtocol {
     /// To rename the default branch:
     ///
     /// * Users must have admin or owner permissions.
-    /// * GitHub Apps must have the `administration:write` repository permission.
+    /// * GitHub Apps must have the `contents:write` and `administration:write` repository permissions.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/branches/{branch}/rename`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/branches/{branch}/rename/post(repos/rename-branch)`.
@@ -22245,11 +22245,11 @@ public enum Components {
     }
     /// Types generated from the `#/components/parameters` section of the OpenAPI document.
     public enum Parameters {
-        /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor.
+        /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/pagination-before`.
         public typealias pagination_hyphen_before = Swift.String
-        /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor.
+        /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/pagination-after`.
         public typealias pagination_hyphen_after = Swift.String
@@ -22260,7 +22260,7 @@ public enum Components {
             case asc = "asc"
             case desc = "desc"
         }
-        /// The number of results per page (max 100).
+        /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/per-page`.
         public typealias per_hyphen_page = Swift.Int
@@ -22270,7 +22270,7 @@ public enum Components {
         public typealias cursor = Swift.String
         /// - Remark: Generated from `#/components/parameters/delivery-id`.
         public typealias delivery_hyphen_id = Swift.Int
-        /// Page number of the results to fetch.
+        /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/page`.
         public typealias page = Swift.Int
@@ -22889,11 +22889,11 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/repos/GET/query/direction`.
                 public var direction: Operations.repos_sol_list_hyphen_for_hyphen_org.Input.Query.directionPayload?
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/repos/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/repos/GET/query/page`.
                 public var page: Components.Parameters.page?
@@ -22903,8 +22903,8 @@ public enum Operations {
                 ///   - _type: Specifies the types of repositories you want returned.
                 ///   - sort: The property to sort the results by.
                 ///   - direction: The order to sort by. Default: `asc` when using `full_name`, otherwise `desc`.
-                ///   - per_page: The number of results per page (max 100).
-                ///   - page: Page number of the results to fetch.
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     _type: Operations.repos_sol_list_hyphen_for_hyphen_org.Input.Query._typePayload? = nil,
                     sort: Operations.repos_sol_list_hyphen_for_hyphen_org.Input.Query.sortPayload? = nil,
@@ -23586,19 +23586,19 @@ public enum Operations {
             public var path: Operations.repos_sol_get_hyphen_org_hyphen_rulesets.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/GET/query`.
             public struct Query: Sendable, Hashable {
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/GET/query/page`.
                 public var page: Components.Parameters.page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100).
-                ///   - page: Page number of the results to fetch.
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     per_page: Components.Parameters.per_hyphen_page? = nil,
                     page: Components.Parameters.page? = nil
@@ -24073,11 +24073,11 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/rule-suites/GET/query/rule_suite_result`.
                 public var rule_suite_result: Components.Parameters.rule_hyphen_suite_hyphen_result?
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/rule-suites/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/rule-suites/GET/query/page`.
                 public var page: Components.Parameters.page?
@@ -24088,8 +24088,8 @@ public enum Operations {
                 ///   - time_period: The time period to filter by.
                 ///   - actor_name: The handle for the GitHub user account to filter on. When specified, only rule evaluations triggered by this actor will be returned.
                 ///   - rule_suite_result: The rule results to filter on. When specified, only suites with this result will be returned.
-                ///   - per_page: The number of results per page (max 100).
-                ///   - page: Page number of the results to fetch.
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     repository_name: Components.Parameters.repository_hyphen_name_hyphen_in_hyphen_query? = nil,
                     time_period: Components.Parameters.time_hyphen_period? = nil,
@@ -26190,15 +26190,15 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/activity/GET/query/direction`.
                 public var direction: Components.Parameters.direction?
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/activity/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
-                /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor.
+                /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/activity/GET/query/before`.
                 public var before: Components.Parameters.pagination_hyphen_before?
-                /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor.
+                /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/activity/GET/query/after`.
                 public var after: Components.Parameters.pagination_hyphen_after?
@@ -26245,9 +26245,9 @@ public enum Operations {
                 ///
                 /// - Parameters:
                 ///   - direction: The direction to sort the results by.
-                ///   - per_page: The number of results per page (max 100).
-                ///   - before: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor.
-                ///   - after: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor.
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - before: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - after: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - ref: The Git reference for the activities you want to list.
                 ///   - actor: The GitHub username to use to filter by the actor who performed the activity.
                 ///   - time_period: The time period to filter by.
@@ -26463,14 +26463,14 @@ public enum Operations {
             public var path: Operations.repos_sol_list_hyphen_autolinks.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/autolinks/GET/query`.
             public struct Query: Sendable, Hashable {
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/autolinks/GET/query/page`.
                 public var page: Components.Parameters.page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - page: Page number of the results to fetch.
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(page: Components.Parameters.page? = nil) {
                     self.page = page
                 }
@@ -27491,11 +27491,11 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/GET/query/protected`.
                 public var protected: Swift.Bool?
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/GET/query/page`.
                 public var page: Components.Parameters.page?
@@ -27503,8 +27503,8 @@ public enum Operations {
                 ///
                 /// - Parameters:
                 ///   - protected: Setting to `true` returns only protected branches. When set to `false`, only unprotected branches are returned. Omitting this parameter returns all branches.
-                ///   - per_page: The number of results per page (max 100).
-                ///   - page: Page number of the results to fetch.
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     protected: Swift.Bool? = nil,
                     per_page: Components.Parameters.per_hyphen_page? = nil,
@@ -34717,7 +34717,7 @@ public enum Operations {
     /// To rename the default branch:
     ///
     /// * Users must have admin or owner permissions.
-    /// * GitHub Apps must have the `administration:write` repository permission.
+    /// * GitHub Apps must have the `contents:write` and `administration:write` repository permissions.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/branches/{branch}/rename`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/branches/{branch}/rename/post(repos/rename-branch)`.
@@ -35212,11 +35212,11 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/collaborators/GET/query/permission`.
                 public var permission: Operations.repos_sol_list_hyphen_collaborators.Input.Query.permissionPayload?
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/collaborators/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/collaborators/GET/query/page`.
                 public var page: Components.Parameters.page?
@@ -35225,8 +35225,8 @@ public enum Operations {
                 /// - Parameters:
                 ///   - affiliation: Filter collaborators returned by their affiliation. `outside` means all outside collaborators of an organization-owned repository. `direct` means all collaborators with permissions to an organization-owned repository, regardless of organization membership status. `all` means all collaborators the authenticated user can see.
                 ///   - permission: Filter collaborators by the permissions they have on the repository. If not specified, all collaborators will be returned.
-                ///   - per_page: The number of results per page (max 100).
-                ///   - page: Page number of the results to fetch.
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     affiliation: Operations.repos_sol_list_hyphen_collaborators.Input.Query.affiliationPayload? = nil,
                     permission: Operations.repos_sol_list_hyphen_collaborators.Input.Query.permissionPayload? = nil,
@@ -36182,19 +36182,19 @@ public enum Operations {
             public var path: Operations.repos_sol_list_hyphen_commit_hyphen_comments_hyphen_for_hyphen_repo.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/comments/GET/query`.
             public struct Query: Sendable, Hashable {
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/comments/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/comments/GET/query/page`.
                 public var page: Components.Parameters.page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100).
-                ///   - page: Page number of the results to fetch.
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     per_page: Components.Parameters.per_hyphen_page? = nil,
                     page: Components.Parameters.page? = nil
@@ -36929,11 +36929,11 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/GET/query/until`.
                 public var until: Foundation.Date?
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/GET/query/page`.
                 public var page: Components.Parameters.page?
@@ -36946,8 +36946,8 @@ public enum Operations {
                 ///   - committer: GitHub username or email address to use to filter by commit committer.
                 ///   - since: Only show results that were last updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
                 ///   - until: Only commits before this date will be returned. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
-                ///   - per_page: The number of results per page (max 100).
-                ///   - page: Page number of the results to fetch.
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     sha: Swift.String? = nil,
                     path: Swift.String? = nil,
@@ -37412,19 +37412,19 @@ public enum Operations {
             public var path: Operations.repos_sol_list_hyphen_comments_hyphen_for_hyphen_commit.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{commit_sha}/comments/GET/query`.
             public struct Query: Sendable, Hashable {
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{commit_sha}/comments/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{commit_sha}/comments/GET/query/page`.
                 public var page: Components.Parameters.page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100).
-                ///   - page: Page number of the results to fetch.
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     per_page: Components.Parameters.per_hyphen_page? = nil,
                     page: Components.Parameters.page? = nil
@@ -37875,19 +37875,19 @@ public enum Operations {
             public var path: Operations.repos_sol_list_hyphen_pull_hyphen_requests_hyphen_associated_hyphen_with_hyphen_commit.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{commit_sha}/pulls/GET/query`.
             public struct Query: Sendable, Hashable {
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{commit_sha}/pulls/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{commit_sha}/pulls/GET/query/page`.
                 public var page: Components.Parameters.page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100).
-                ///   - page: Page number of the results to fetch.
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     per_page: Components.Parameters.per_hyphen_page? = nil,
                     page: Components.Parameters.page? = nil
@@ -38104,19 +38104,19 @@ public enum Operations {
             public var path: Operations.repos_sol_get_hyphen_commit.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/GET/query`.
             public struct Query: Sendable, Hashable {
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/GET/query/page`.
                 public var page: Components.Parameters.page?
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - page: Page number of the results to fetch.
-                ///   - per_page: The number of results per page (max 100).
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     page: Components.Parameters.page? = nil,
                     per_page: Components.Parameters.per_hyphen_page? = nil
@@ -38378,19 +38378,19 @@ public enum Operations {
             public var path: Operations.repos_sol_get_hyphen_combined_hyphen_status_hyphen_for_hyphen_ref.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/status/GET/query`.
             public struct Query: Sendable, Hashable {
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/status/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/status/GET/query/page`.
                 public var page: Components.Parameters.page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100).
-                ///   - page: Page number of the results to fetch.
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     per_page: Components.Parameters.per_hyphen_page? = nil,
                     page: Components.Parameters.page? = nil
@@ -38578,19 +38578,19 @@ public enum Operations {
             public var path: Operations.repos_sol_list_hyphen_commit_hyphen_statuses_hyphen_for_hyphen_ref.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/statuses/GET/query`.
             public struct Query: Sendable, Hashable {
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/statuses/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/statuses/GET/query/page`.
                 public var page: Components.Parameters.page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100).
-                ///   - page: Page number of the results to fetch.
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     per_page: Components.Parameters.per_hyphen_page? = nil,
                     page: Components.Parameters.page? = nil
@@ -38990,19 +38990,19 @@ public enum Operations {
             public var path: Operations.repos_sol_compare_hyphen_commits.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/compare/{basehead}/GET/query`.
             public struct Query: Sendable, Hashable {
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/compare/{basehead}/GET/query/page`.
                 public var page: Components.Parameters.page?
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/compare/{basehead}/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - page: Page number of the results to fetch.
-                ///   - per_page: The number of results per page (max 100).
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     page: Components.Parameters.page? = nil,
                     per_page: Components.Parameters.per_hyphen_page? = nil
@@ -40363,11 +40363,11 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/contributors/GET/query/anon`.
                 public var anon: Swift.String?
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/contributors/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/contributors/GET/query/page`.
                 public var page: Components.Parameters.page?
@@ -40375,8 +40375,8 @@ public enum Operations {
                 ///
                 /// - Parameters:
                 ///   - anon: Set to `1` or `true` to include anonymous contributors in results.
-                ///   - per_page: The number of results per page (max 100).
-                ///   - page: Page number of the results to fetch.
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     anon: Swift.String? = nil,
                     per_page: Components.Parameters.per_hyphen_page? = nil,
@@ -40642,11 +40642,11 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/deployments/GET/query/environment`.
                 public var environment: Swift.String?
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/deployments/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/deployments/GET/query/page`.
                 public var page: Components.Parameters.page?
@@ -40657,8 +40657,8 @@ public enum Operations {
                 ///   - ref: The name of the ref. This can be a branch, tag, or SHA.
                 ///   - task: The name of the task for the deployment (e.g., `deploy` or `deploy:migrations`).
                 ///   - environment: The name of the environment that was deployed to (e.g., `staging` or `production`).
-                ///   - per_page: The number of results per page (max 100).
-                ///   - page: Page number of the results to fetch.
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     sha: Swift.String? = nil,
                     ref: Swift.String? = nil,
@@ -41643,19 +41643,19 @@ public enum Operations {
             public var path: Operations.repos_sol_list_hyphen_deployment_hyphen_statuses.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/deployments/{deployment_id}/statuses/GET/query`.
             public struct Query: Sendable, Hashable {
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/deployments/{deployment_id}/statuses/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/deployments/{deployment_id}/statuses/GET/query/page`.
                 public var page: Components.Parameters.page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100).
-                ///   - page: Page number of the results to fetch.
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     per_page: Components.Parameters.per_hyphen_page? = nil,
                     page: Components.Parameters.page? = nil
@@ -42516,19 +42516,19 @@ public enum Operations {
             public var path: Operations.repos_sol_get_hyphen_all_hyphen_environments.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/GET/query`.
             public struct Query: Sendable, Hashable {
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/GET/query/page`.
                 public var page: Components.Parameters.page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100).
-                ///   - page: Page number of the results to fetch.
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     per_page: Components.Parameters.per_hyphen_page? = nil,
                     page: Components.Parameters.page? = nil
@@ -43257,19 +43257,19 @@ public enum Operations {
             public var path: Operations.repos_sol_list_hyphen_deployment_hyphen_branch_hyphen_policies.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/GET/query`.
             public struct Query: Sendable, Hashable {
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/GET/query/page`.
                 public var page: Components.Parameters.page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100).
-                ///   - page: Page number of the results to fetch.
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     per_page: Components.Parameters.per_hyphen_page? = nil,
                     page: Components.Parameters.page? = nil
@@ -44441,19 +44441,19 @@ public enum Operations {
             public var path: Operations.repos_sol_list_hyphen_custom_hyphen_deployment_hyphen_rule_hyphen_integrations.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/apps/GET/query`.
             public struct Query: Sendable, Hashable {
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/apps/GET/query/page`.
                 public var page: Components.Parameters.page?
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/apps/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - page: Page number of the results to fetch.
-                ///   - per_page: The number of results per page (max 100).
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     page: Components.Parameters.page? = nil,
                     per_page: Components.Parameters.per_hyphen_page? = nil
@@ -44891,11 +44891,11 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/forks/GET/query/sort`.
                 public var sort: Operations.repos_sol_list_hyphen_forks.Input.Query.sortPayload?
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/forks/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/forks/GET/query/page`.
                 public var page: Components.Parameters.page?
@@ -44903,8 +44903,8 @@ public enum Operations {
                 ///
                 /// - Parameters:
                 ///   - sort: The sort order. `stargazers` will sort by star count.
-                ///   - per_page: The number of results per page (max 100).
-                ///   - page: Page number of the results to fetch.
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     sort: Operations.repos_sol_list_hyphen_forks.Input.Query.sortPayload? = nil,
                     per_page: Components.Parameters.per_hyphen_page? = nil,
@@ -45397,19 +45397,19 @@ public enum Operations {
             public var path: Operations.repos_sol_list_hyphen_webhooks.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/hooks/GET/query`.
             public struct Query: Sendable, Hashable {
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/hooks/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/hooks/GET/query/page`.
                 public var page: Components.Parameters.page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100).
-                ///   - page: Page number of the results to fetch.
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     per_page: Components.Parameters.per_hyphen_page? = nil,
                     page: Components.Parameters.page? = nil
@@ -46958,7 +46958,7 @@ public enum Operations {
             public var path: Operations.repos_sol_list_hyphen_webhook_hyphen_deliveries.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/hooks/{hook_id}/deliveries/GET/query`.
             public struct Query: Sendable, Hashable {
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/hooks/{hook_id}/deliveries/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
@@ -46971,7 +46971,7 @@ public enum Operations {
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100).
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - cursor: Used for pagination: the starting delivery from which the page of deliveries is fetched. Refer to the `link` header for the next and previous page cursors.
                 ///   - redelivery:
                 public init(
@@ -47861,19 +47861,19 @@ public enum Operations {
             public var path: Operations.repos_sol_list_hyphen_invitations.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/invitations/GET/query`.
             public struct Query: Sendable, Hashable {
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/invitations/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/invitations/GET/query/page`.
                 public var page: Components.Parameters.page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100).
-                ///   - page: Page number of the results to fetch.
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     per_page: Components.Parameters.per_hyphen_page? = nil,
                     page: Components.Parameters.page? = nil
@@ -48308,19 +48308,19 @@ public enum Operations {
             public var path: Operations.repos_sol_list_hyphen_deploy_hyphen_keys.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/keys/GET/query`.
             public struct Query: Sendable, Hashable {
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/keys/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/keys/GET/query/page`.
                 public var page: Components.Parameters.page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100).
-                ///   - page: Page number of the results to fetch.
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     per_page: Components.Parameters.per_hyphen_page? = nil,
                     page: Components.Parameters.page? = nil
@@ -50567,19 +50567,19 @@ public enum Operations {
             public var path: Operations.repos_sol_list_hyphen_pages_hyphen_builds.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pages/builds/GET/query`.
             public struct Query: Sendable, Hashable {
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pages/builds/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pages/builds/GET/query/page`.
                 public var page: Components.Parameters.page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100).
-                ///   - page: Page number of the results to fetch.
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     per_page: Components.Parameters.per_hyphen_page? = nil,
                     page: Components.Parameters.page? = nil
@@ -52630,19 +52630,19 @@ public enum Operations {
             public var path: Operations.repos_sol_list_hyphen_releases.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/releases/GET/query`.
             public struct Query: Sendable, Hashable {
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/releases/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/releases/GET/query/page`.
                 public var page: Components.Parameters.page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100).
-                ///   - page: Page number of the results to fetch.
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     per_page: Components.Parameters.per_hyphen_page? = nil,
                     page: Components.Parameters.page? = nil
@@ -54727,19 +54727,19 @@ public enum Operations {
             public var path: Operations.repos_sol_list_hyphen_release_hyphen_assets.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/releases/{release_id}/assets/GET/query`.
             public struct Query: Sendable, Hashable {
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/releases/{release_id}/assets/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/releases/{release_id}/assets/GET/query/page`.
                 public var page: Components.Parameters.page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100).
-                ///   - page: Page number of the results to fetch.
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     per_page: Components.Parameters.per_hyphen_page? = nil,
                     page: Components.Parameters.page? = nil
@@ -55149,19 +55149,19 @@ public enum Operations {
             public var path: Operations.repos_sol_get_hyphen_branch_hyphen_rules.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/rules/branches/{branch}/GET/query`.
             public struct Query: Sendable, Hashable {
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/rules/branches/{branch}/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/rules/branches/{branch}/GET/query/page`.
                 public var page: Components.Parameters.page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100).
-                ///   - page: Page number of the results to fetch.
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     per_page: Components.Parameters.per_hyphen_page? = nil,
                     page: Components.Parameters.page? = nil
@@ -55317,11 +55317,11 @@ public enum Operations {
             public var path: Operations.repos_sol_get_hyphen_repo_hyphen_rulesets.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/rulesets/GET/query`.
             public struct Query: Sendable, Hashable {
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/rulesets/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/rulesets/GET/query/page`.
                 public var page: Components.Parameters.page?
@@ -55332,8 +55332,8 @@ public enum Operations {
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100).
-                ///   - page: Page number of the results to fetch.
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - includes_parents: Include rulesets configured at higher levels that apply to this repository
                 public init(
                     per_page: Components.Parameters.per_hyphen_page? = nil,
@@ -55829,11 +55829,11 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/rulesets/rule-suites/GET/query/rule_suite_result`.
                 public var rule_suite_result: Components.Parameters.rule_hyphen_suite_hyphen_result?
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/rulesets/rule-suites/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/rulesets/rule-suites/GET/query/page`.
                 public var page: Components.Parameters.page?
@@ -55844,8 +55844,8 @@ public enum Operations {
                 ///   - time_period: The time period to filter by.
                 ///   - actor_name: The handle for the GitHub user account to filter on. When specified, only rule evaluations triggered by this actor will be returned.
                 ///   - rule_suite_result: The rule results to filter on. When specified, only suites with this result will be returned.
-                ///   - per_page: The number of results per page (max 100).
-                ///   - page: Page number of the results to fetch.
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     ref: Components.Parameters.ref_hyphen_in_hyphen_query? = nil,
                     time_period: Components.Parameters.time_hyphen_period? = nil,
@@ -58033,19 +58033,19 @@ public enum Operations {
             public var path: Operations.repos_sol_list_hyphen_tags.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/tags/GET/query`.
             public struct Query: Sendable, Hashable {
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/tags/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/tags/GET/query/page`.
                 public var page: Components.Parameters.page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100).
-                ///   - page: Page number of the results to fetch.
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     per_page: Components.Parameters.per_hyphen_page? = nil,
                     page: Components.Parameters.page? = nil
@@ -58904,19 +58904,19 @@ public enum Operations {
             public var path: Operations.repos_sol_list_hyphen_teams.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/teams/GET/query`.
             public struct Query: Sendable, Hashable {
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/teams/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/teams/GET/query/page`.
                 public var page: Components.Parameters.page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100).
-                ///   - page: Page number of the results to fetch.
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     per_page: Components.Parameters.per_hyphen_page? = nil,
                     page: Components.Parameters.page? = nil
@@ -59112,19 +59112,19 @@ public enum Operations {
             public var path: Operations.repos_sol_get_hyphen_all_hyphen_topics.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/topics/GET/query`.
             public struct Query: Sendable, Hashable {
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/topics/GET/query/page`.
                 public var page: Components.Parameters.page?
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/topics/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - page: Page number of the results to fetch.
-                ///   - per_page: The number of results per page (max 100).
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     page: Components.Parameters.page? = nil,
                     per_page: Components.Parameters.per_hyphen_page? = nil
@@ -61214,11 +61214,11 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/user/repos/GET/query/direction`.
                 public var direction: Operations.repos_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query.directionPayload?
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/user/repos/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/user/repos/GET/query/page`.
                 public var page: Components.Parameters.page?
@@ -61238,8 +61238,8 @@ public enum Operations {
                 ///   - _type: Limit results to repositories of the specified type. Will cause a `422` error if used in the same request as **visibility** or **affiliation**.
                 ///   - sort: The property to sort the results by.
                 ///   - direction: The order to sort by. Default: `asc` when using `full_name`, otherwise `desc`.
-                ///   - per_page: The number of results per page (max 100).
-                ///   - page: Page number of the results to fetch.
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - since: Only show repositories updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
                 ///   - before: Only show repositories updated before the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
                 public init(
@@ -62022,19 +62022,19 @@ public enum Operations {
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/repository_invitations/GET/query`.
             public struct Query: Sendable, Hashable {
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/user/repository_invitations/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/user/repository_invitations/GET/query/page`.
                 public var page: Components.Parameters.page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100).
-                ///   - page: Page number of the results to fetch.
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     per_page: Components.Parameters.per_hyphen_page? = nil,
                     page: Components.Parameters.page? = nil
@@ -62715,11 +62715,11 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/repos/GET/query/direction`.
                 public var direction: Operations.repos_sol_list_hyphen_for_hyphen_user.Input.Query.directionPayload?
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/repos/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/repos/GET/query/page`.
                 public var page: Components.Parameters.page?
@@ -62729,8 +62729,8 @@ public enum Operations {
                 ///   - _type: Limit results to repositories of the specified type.
                 ///   - sort: The property to sort the results by.
                 ///   - direction: The order to sort by. Default: `asc` when using `full_name`, otherwise `desc`.
-                ///   - per_page: The number of results per page (max 100).
-                ///   - page: Page number of the results to fetch.
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     _type: Operations.repos_sol_list_hyphen_for_hyphen_user.Input.Query._typePayload? = nil,
                     sort: Operations.repos_sol_list_hyphen_for_hyphen_user.Input.Query.sortPayload? = nil,
