@@ -15,10 +15,11 @@ jobs:
     strategy:
       matrix:
         os:
-          - ubuntu-latest
-          # - macos-latest
+          # - ubuntu-latest
+          - macos-latest
         swift: ["5.9"]
     runs-on: ${{ matrix.os }}
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
         with:
@@ -27,16 +28,16 @@ jobs:
         with:
           swift: ${{ matrix.swift }}
           os: ${{ matrix.os }}
-      - run: |
-          git config user.name "${GITHUB_ACTOR}"
-          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-      - run: touch Submodule
-      - run: make install
-      - run: git push
-      - env:
+      - name: "Sync code base"
+        env:
           PR_URL: ${{github.event.pull_request.html_url}}
           GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
         run: |
-          gh pr review --approve "$PR_URL"
-          gh pr merge --auto --merge "$PR_URL"
+          gh pr checkout ${{ github.event.pull_request.number }}
+          git config user.name "${GITHUB_ACTOR}"
+          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+          make install
+          git push
+          # gh pr review --approve "$PR_URL"
+          # gh pr merge --auto --merge "$PR_URL"
           

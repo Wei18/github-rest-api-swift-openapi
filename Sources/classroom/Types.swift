@@ -952,11 +952,11 @@ public enum Components {
     }
     /// Types generated from the `#/components/parameters` section of the OpenAPI document.
     public enum Parameters {
-        /// The number of results per page (max 100).
+        /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/per-page`.
         public typealias per_hyphen_page = Swift.Int
-        /// Page number of the results to fetch.
+        /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/page`.
         public typealias page = Swift.Int
@@ -1189,19 +1189,19 @@ public enum Operations {
             public var path: Operations.classroom_sol_list_hyphen_accepted_hyphen_assigments_hyphen_for_hyphen_an_hyphen_assignment.Input.Path
             /// - Remark: Generated from `#/paths/assignments/{assignment_id}/accepted_assignments/GET/query`.
             public struct Query: Sendable, Hashable {
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/assignments/{assignment_id}/accepted_assignments/GET/query/page`.
                 public var page: Components.Parameters.page?
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/assignments/{assignment_id}/accepted_assignments/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - page: Page number of the results to fetch.
-                ///   - per_page: The number of results per page (max 100).
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     page: Components.Parameters.page? = nil,
                     per_page: Components.Parameters.per_hyphen_page? = nil
@@ -1488,19 +1488,19 @@ public enum Operations {
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/classrooms/GET/query`.
             public struct Query: Sendable, Hashable {
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/classrooms/GET/query/page`.
                 public var page: Components.Parameters.page?
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/classrooms/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - page: Page number of the results to fetch.
-                ///   - per_page: The number of results per page (max 100).
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     page: Components.Parameters.page? = nil,
                     per_page: Components.Parameters.per_hyphen_page? = nil
@@ -1799,19 +1799,19 @@ public enum Operations {
             public var path: Operations.classroom_sol_list_hyphen_assignments_hyphen_for_hyphen_a_hyphen_classroom.Input.Path
             /// - Remark: Generated from `#/paths/classrooms/{classroom_id}/assignments/GET/query`.
             public struct Query: Sendable, Hashable {
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/classrooms/{classroom_id}/assignments/GET/query/page`.
                 public var page: Components.Parameters.page?
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/classrooms/{classroom_id}/assignments/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - page: Page number of the results to fetch.
-                ///   - per_page: The number of results per page (max 100).
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     page: Components.Parameters.page? = nil,
                     per_page: Components.Parameters.per_hyphen_page? = nil

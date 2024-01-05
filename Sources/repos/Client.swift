@@ -5436,7 +5436,7 @@ public struct Client: APIProtocol {
     /// To rename the default branch:
     ///
     /// * Users must have admin or owner permissions.
-    /// * GitHub Apps must have the `administration:write` repository permission.
+    /// * GitHub Apps must have the `contents:write` and `administration:write` repository permissions.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/branches/{branch}/rename`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/branches/{branch}/rename/post(repos/rename-branch)`.

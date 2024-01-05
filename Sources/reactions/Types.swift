@@ -1005,11 +1005,11 @@ public enum Components {
     }
     /// Types generated from the `#/components/parameters` section of the OpenAPI document.
     public enum Parameters {
-        /// The number of results per page (max 100).
+        /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/per-page`.
         public typealias per_hyphen_page = Swift.Int
-        /// Page number of the results to fetch.
+        /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/page`.
         public typealias page = Swift.Int
@@ -1222,11 +1222,11 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/GET/query/content`.
                 public var content: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Query.contentPayload?
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/GET/query/page`.
                 public var page: Components.Parameters.page?
@@ -1234,8 +1234,8 @@ public enum Operations {
                 ///
                 /// - Parameters:
                 ///   - content: Returns a single [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions). Omit this parameter to list all reactions to a team discussion comment.
-                ///   - per_page: The number of results per page (max 100).
-                ///   - page: Page number of the results to fetch.
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     content: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Query.contentPayload? = nil,
                     per_page: Components.Parameters.per_hyphen_page? = nil,
@@ -1781,11 +1781,11 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/GET/query/content`.
                 public var content: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Input.Query.contentPayload?
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/GET/query/page`.
                 public var page: Components.Parameters.page?
@@ -1793,8 +1793,8 @@ public enum Operations {
                 ///
                 /// - Parameters:
                 ///   - content: Returns a single [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions). Omit this parameter to list all reactions to a team discussion.
-                ///   - per_page: The number of results per page (max 100).
-                ///   - page: Page number of the results to fetch.
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     content: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Input.Query.contentPayload? = nil,
                     per_page: Components.Parameters.per_hyphen_page? = nil,
@@ -2324,11 +2324,11 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/comments/{comment_id}/reactions/GET/query/content`.
                 public var content: Operations.reactions_sol_list_hyphen_for_hyphen_commit_hyphen_comment.Input.Query.contentPayload?
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/comments/{comment_id}/reactions/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/comments/{comment_id}/reactions/GET/query/page`.
                 public var page: Components.Parameters.page?
@@ -2336,8 +2336,8 @@ public enum Operations {
                 ///
                 /// - Parameters:
                 ///   - content: Returns a single [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions). Omit this parameter to list all reactions to a commit comment.
-                ///   - per_page: The number of results per page (max 100).
-                ///   - page: Page number of the results to fetch.
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     content: Operations.reactions_sol_list_hyphen_for_hyphen_commit_hyphen_comment.Input.Query.contentPayload? = nil,
                     per_page: Components.Parameters.per_hyphen_page? = nil,
@@ -2911,11 +2911,11 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/GET/query/content`.
                 public var content: Operations.reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment.Input.Query.contentPayload?
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/GET/query/page`.
                 public var page: Components.Parameters.page?
@@ -2923,8 +2923,8 @@ public enum Operations {
                 ///
                 /// - Parameters:
                 ///   - content: Returns a single [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions). Omit this parameter to list all reactions to an issue comment.
-                ///   - per_page: The number of results per page (max 100).
-                ///   - page: Page number of the results to fetch.
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     content: Operations.reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment.Input.Query.contentPayload? = nil,
                     per_page: Components.Parameters.per_hyphen_page? = nil,
@@ -3498,11 +3498,11 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/reactions/GET/query/content`.
                 public var content: Operations.reactions_sol_list_hyphen_for_hyphen_issue.Input.Query.contentPayload?
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/reactions/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/reactions/GET/query/page`.
                 public var page: Components.Parameters.page?
@@ -3510,8 +3510,8 @@ public enum Operations {
                 ///
                 /// - Parameters:
                 ///   - content: Returns a single [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions). Omit this parameter to list all reactions to an issue.
-                ///   - per_page: The number of results per page (max 100).
-                ///   - page: Page number of the results to fetch.
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     content: Operations.reactions_sol_list_hyphen_for_hyphen_issue.Input.Query.contentPayload? = nil,
                     per_page: Components.Parameters.per_hyphen_page? = nil,
@@ -4108,11 +4108,11 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/GET/query/content`.
                 public var content: Operations.reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Input.Query.contentPayload?
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/GET/query/page`.
                 public var page: Components.Parameters.page?
@@ -4120,8 +4120,8 @@ public enum Operations {
                 ///
                 /// - Parameters:
                 ///   - content: Returns a single [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions). Omit this parameter to list all reactions to a pull request review comment.
-                ///   - per_page: The number of results per page (max 100).
-                ///   - page: Page number of the results to fetch.
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     content: Operations.reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Input.Query.contentPayload? = nil,
                     per_page: Components.Parameters.per_hyphen_page? = nil,
@@ -4693,11 +4693,11 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/releases/{release_id}/reactions/GET/query/content`.
                 public var content: Operations.reactions_sol_list_hyphen_for_hyphen_release.Input.Query.contentPayload?
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/releases/{release_id}/reactions/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/releases/{release_id}/reactions/GET/query/page`.
                 public var page: Components.Parameters.page?
@@ -4705,8 +4705,8 @@ public enum Operations {
                 ///
                 /// - Parameters:
                 ///   - content: Returns a single [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions). Omit this parameter to list all reactions to a release.
-                ///   - per_page: The number of results per page (max 100).
-                ///   - page: Page number of the results to fetch.
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     content: Operations.reactions_sol_list_hyphen_for_hyphen_release.Input.Query.contentPayload? = nil,
                     per_page: Components.Parameters.per_hyphen_page? = nil,
@@ -5280,11 +5280,11 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions/GET/query/content`.
                 public var content: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Query.contentPayload?
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions/GET/query/page`.
                 public var page: Components.Parameters.page?
@@ -5292,8 +5292,8 @@ public enum Operations {
                 ///
                 /// - Parameters:
                 ///   - content: Returns a single [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions). Omit this parameter to list all reactions to a team discussion comment.
-                ///   - per_page: The number of results per page (max 100).
-                ///   - page: Page number of the results to fetch.
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     content: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Query.contentPayload? = nil,
                     per_page: Components.Parameters.per_hyphen_page? = nil,
@@ -5676,11 +5676,11 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/reactions/GET/query/content`.
                 public var content: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy.Input.Query.contentPayload?
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/reactions/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/reactions/GET/query/page`.
                 public var page: Components.Parameters.page?
@@ -5688,8 +5688,8 @@ public enum Operations {
                 ///
                 /// - Parameters:
                 ///   - content: Returns a single [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions). Omit this parameter to list all reactions to a team discussion.
-                ///   - per_page: The number of results per page (max 100).
-                ///   - page: Page number of the results to fetch.
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     content: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy.Input.Query.contentPayload? = nil,
                     per_page: Components.Parameters.per_hyphen_page? = nil,

@@ -2172,11 +2172,11 @@ public enum Components {
     }
     /// Types generated from the `#/components/parameters` section of the OpenAPI document.
     public enum Parameters {
-        /// The number of results per page (max 100).
+        /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/per-page`.
         public typealias per_hyphen_page = Swift.Int
-        /// Page number of the results to fetch.
+        /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/page`.
         public typealias page = Swift.Int
@@ -2551,11 +2551,11 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/packages/GET/query/visibility`.
                 public var visibility: Components.Parameters.package_hyphen_visibility?
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/packages/GET/query/page`.
                 public var page: Swift.Int?
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/packages/GET/query/per_page`.
                 public var per_page: Swift.Int?
@@ -2564,8 +2564,8 @@ public enum Operations {
                 /// - Parameters:
                 ///   - package_type: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
                 ///   - visibility: The selected visibility of the packages.  This parameter is optional and only filters an existing result set.
-                ///   - page: Page number of the results to fetch.
-                ///   - per_page: The number of results per page (max 100).
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     package_type: Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_organization.Input.Query.package_typePayload,
                     visibility: Components.Parameters.package_hyphen_visibility? = nil,
@@ -3405,11 +3405,11 @@ public enum Operations {
             public var path: Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_org.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/versions/GET/query`.
             public struct Query: Sendable, Hashable {
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/versions/GET/query/page`.
                 public var page: Components.Parameters.page?
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/versions/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
@@ -3425,8 +3425,8 @@ public enum Operations {
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - page: Page number of the results to fetch.
-                ///   - per_page: The number of results per page (max 100).
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - state: The state of the package, either active or deleted.
                 public init(
                     page: Components.Parameters.page? = nil,
@@ -4367,11 +4367,11 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/user/packages/GET/query/visibility`.
                 public var visibility: Components.Parameters.package_hyphen_visibility?
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/user/packages/GET/query/page`.
                 public var page: Components.Parameters.page?
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/user/packages/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
@@ -4380,8 +4380,8 @@ public enum Operations {
                 /// - Parameters:
                 ///   - package_type: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
                 ///   - visibility: The selected visibility of the packages.  This parameter is optional and only filters an existing result set.
-                ///   - page: Page number of the results to fetch.
-                ///   - per_page: The number of results per page (max 100).
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     package_type: Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query.package_typePayload,
                     visibility: Components.Parameters.package_hyphen_visibility? = nil,
@@ -5141,11 +5141,11 @@ public enum Operations {
             public var path: Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_authenticated_hyphen_user.Input.Path
             /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/versions/GET/query`.
             public struct Query: Sendable, Hashable {
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/versions/GET/query/page`.
                 public var page: Components.Parameters.page?
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/versions/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
@@ -5161,8 +5161,8 @@ public enum Operations {
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - page: Page number of the results to fetch.
-                ///   - per_page: The number of results per page (max 100).
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - state: The state of the package, either active or deleted.
                 public init(
                     page: Components.Parameters.page? = nil,
@@ -6160,11 +6160,11 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/packages/GET/query/visibility`.
                 public var visibility: Components.Parameters.package_hyphen_visibility?
-                /// Page number of the results to fetch.
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/packages/GET/query/page`.
                 public var page: Components.Parameters.page?
-                /// The number of results per page (max 100).
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/packages/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
@@ -6173,8 +6173,8 @@ public enum Operations {
                 /// - Parameters:
                 ///   - package_type: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
                 ///   - visibility: The selected visibility of the packages.  This parameter is optional and only filters an existing result set.
-                ///   - page: Page number of the results to fetch.
-                ///   - per_page: The number of results per page (max 100).
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     package_type: Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_user.Input.Query.package_typePayload,
                     visibility: Components.Parameters.package_hyphen_visibility? = nil,
