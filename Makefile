@@ -58,7 +58,15 @@ else
 	|| true
 endif
 
-install: install-$(OPENAPI_PATH) $(SWIFT_FILES) 
+.PHONY: install-$(SWIFT_FILES)
+install-$(SWIFT_FILES): $(SWIFT_FILES)
+	swift PackageBuilder.swift
+	git add Package.swift
+	@git commit -m "[Make] Generate Package.swift" >/dev/null \
+	&& echo "::notice:: make $@" \
+	|| true
+
+install: install-$(OPENAPI_PATH) install-$(SWIFT_FILES)
 	@echo "::notice:: make $@"
 
 # XCFrameworks:
