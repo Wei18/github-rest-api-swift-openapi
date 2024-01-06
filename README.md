@@ -1,8 +1,9 @@
 # GitHub's REST API Swift Language Code
 
-[![Swift](https://img.shields.io/badge/Swift-5.9-orange?style=flat-square)](https://img.shields.io/badge/Swift-5.9-orange?style=flat-square)
-[![Platforms](https://img.shields.io/badge/Platforms-macOS-orange?style=flat-square)](https://img.shields.io/badge/Platforms-macOS-orange?style=flat-square)
-[![Swift Package Manager](https://img.shields.io/badge/Swift_Package_Manager-compatible-orange?style=flat-square)](https://img.shields.io/badge/Swift_Package_Manager-compatible-orange?style=flat-square)
+[![Release](https://img.shields.io/github/v/release/wei18/github-rest-api-swift-openapi)](https://github.com/wei18/github-rest-api-swift-openapi/releases)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fwei18%2Fgithub-rest-api-swift-openapi%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/wei18/github-rest-api-swift-openapi)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fwei18%2Fgithub-rest-api-swift-openapi%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/wei18/github-rest-api-swift-openapi)
+
 
 This Swift code generator is built upon the [Swift OpenAPI Generator](https://github.com/apple/swift-openapi-generator) and leverages the OpenAPI description for GitHub's REST API. The goal is to automate the creation of Swift language bindings, providing developers with a seamless way to interact with GitHub's REST API.
 
@@ -172,7 +173,7 @@ Once you have your Swift package set up, adding github-rest-api-swift-openapi as
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 dependencies: [
-    .package(url: "https://github.com/Wei18/github-rest-api-swift-openapi.git", from: "1.0.0"),
+    .package(url: "https://github.com/wei18/github-rest-api-swift-openapi.git", from: "1.0.0"),
 ]
 ```
 
