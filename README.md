@@ -5,7 +5,7 @@
 [![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fwei18%2Fgithub-rest-api-swift-openapi%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/wei18/github-rest-api-swift-openapi)
 
 
-This Swift code generator is built upon the [Swift OpenAPI Generator](https://github.com/apple/swift-openapi-generator) and leverages the OpenAPI description for GitHub's REST API. The goal is to automate the creation of Swift language bindings, providing developers with a seamless way to interact with GitHub's REST API.
+This Swift code generator is built upon the [Swift OpenAPI Generator](https://github.com/apple/swift-openapi-generator) and leverages the OpenAPI description for GitHub's REST API. The goal is to automate the creation of Swift language code, providing developers with a seamless way to interact with GitHub's REST API.
 
 ## Usage
 For example you can import these frameworks to fetch github users, or see reference [UsersTests.swift](https://github.com/Wei18/github-rest-api-swift-openapi/blob/46bd7a951cd6a2bda9a9d26d843d55bb12f769c3/Tests/UsersTests/UsersTests.swift#L8-L15).
@@ -17,7 +17,6 @@ import OpenAPIURLSession
 let client = Client(serverURL: try Servers.server1(), transport: URLSessionTransport()) 
 let users = try await client.users_sol_list().ok.body.json 
 ```
-
 
 <details>
 <summary>Full Supported Framworks</summary>
@@ -192,5 +191,7 @@ Wanna use Swift as the development language to create some convenient and user-f
 # Contributions
 
 Contributions are welcome! If you encounter issues or have suggestions for improvements, feel free to open an issue or submit a pull request.
+
 This repository is automatically kept up to date with the submodule [github/rest-api-description](https://github.com/github/rest-api-description).
-If you've identified a mismatch between GitHub API's swift code and these descriptions, or found an issue with the format of a schema, [please open an issue to github/rest-api-description](https://github.com/github/rest-api-description/issues/new?template=schema-inaccuracy.md) or [please open an issue to apple/swift-openapi-generator](https://github.com/apple/swift-openapi-generator/issues).
+
+If you've identified a mismatch between GitHub API's Swift code and these descriptions, or found an issue with the format of a schema, [please open an issue to github/rest-api-description](https://github.com/github/rest-api-description/issues/new?template=schema-inaccuracy.md) or [open an issue to apple/swift-openapi-generator](https://github.com/apple/swift-openapi-generator/issues).
