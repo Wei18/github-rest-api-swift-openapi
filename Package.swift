@@ -59,11 +59,7 @@ let package = Package(
                 .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
             ],
-            path: "Sources/repos",
-            exclude: [
-                "openapi-generator-config.yml",
-                "openapi.yml",
-            ]
+            path: "Sources/repos"
         ),
         .target(
             name: "GitHubRestAPIMigrations",
@@ -71,11 +67,7 @@ let package = Package(
                 .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
             ],
-            path: "Sources/migrations",
-            exclude: [
-                "openapi-generator-config.yml",
-                "openapi.yml",
-            ]
+            path: "Sources/migrations"
         ),
         .target(
             name: "GitHubRestAPIInteractions",
@@ -83,11 +75,7 @@ let package = Package(
                 .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
             ],
-            path: "Sources/interactions",
-            exclude: [
-                "openapi-generator-config.yml",
-                "openapi.yml",
-            ]
+            path: "Sources/interactions"
         ),
         .target(
             name: "GitHubRestAPIMerge_Queue",
@@ -95,11 +83,7 @@ let package = Package(
                 .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
             ],
-            path: "Sources/merge-queue",
-            exclude: [
-                "openapi-generator-config.yml",
-                "openapi.yml",
-            ]
+            path: "Sources/merge-queue"
         ),
         .target(
             name: "GitHubRestAPILicenses",
@@ -107,11 +91,7 @@ let package = Package(
                 .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
             ],
-            path: "Sources/licenses",
-            exclude: [
-                "openapi-generator-config.yml",
-                "openapi.yml",
-            ]
+            path: "Sources/licenses"
         ),
         .target(
             name: "GitHubRestAPICopilot",
@@ -119,11 +99,7 @@ let package = Package(
                 .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
             ],
-            path: "Sources/copilot",
-            exclude: [
-                "openapi-generator-config.yml",
-                "openapi.yml",
-            ]
+            path: "Sources/copilot"
         ),
         .target(
             name: "GitHubRestAPIActivity",
@@ -131,11 +107,7 @@ let package = Package(
                 .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
             ],
-            path: "Sources/activity",
-            exclude: [
-                "openapi-generator-config.yml",
-                "openapi.yml",
-            ]
+            path: "Sources/activity"
         ),
         .target(
             name: "GitHubRestAPIChecks",
@@ -143,11 +115,7 @@ let package = Package(
                 .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
             ],
-            path: "Sources/checks",
-            exclude: [
-                "openapi-generator-config.yml",
-                "openapi.yml",
-            ]
+            path: "Sources/checks"
         ),
         .target(
             name: "GitHubRestAPIMarkdown",
@@ -155,11 +123,7 @@ let package = Package(
                 .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
             ],
-            path: "Sources/markdown",
-            exclude: [
-                "openapi-generator-config.yml",
-                "openapi.yml",
-            ]
+            path: "Sources/markdown"
         ),
         .target(
             name: "GitHubRestAPIProjects",
@@ -167,11 +131,7 @@ let package = Package(
                 .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
             ],
-            path: "Sources/projects",
-            exclude: [
-                "openapi-generator-config.yml",
-                "openapi.yml",
-            ]
+            path: "Sources/projects"
         ),
         .target(
             name: "GitHubRestAPIReactions",
@@ -179,11 +139,7 @@ let package = Package(
                 .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
             ],
-            path: "Sources/reactions",
-            exclude: [
-                "openapi-generator-config.yml",
-                "openapi.yml",
-            ]
+            path: "Sources/reactions"
         ),
         .target(
             name: "GitHubRestAPIOidc",
@@ -191,11 +147,7 @@ let package = Package(
                 .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
             ],
-            path: "Sources/oidc",
-            exclude: [
-                "openapi-generator-config.yml",
-                "openapi.yml",
-            ]
+            path: "Sources/oidc"
         ),
         .target(
             name: "GitHubRestAPIMeta",
@@ -203,11 +155,7 @@ let package = Package(
                 .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
             ],
-            path: "Sources/meta",
-            exclude: [
-                "openapi-generator-config.yml",
-                "openapi.yml",
-            ]
+            path: "Sources/meta"
         ),
         .target(
             name: "GitHubRestAPIClassroom",
@@ -215,11 +163,7 @@ let package = Package(
                 .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
             ],
-            path: "Sources/classroom",
-            exclude: [
-                "openapi-generator-config.yml",
-                "openapi.yml",
-            ]
+            path: "Sources/classroom"
         ),
         .target(
             name: "GitHubRestAPIDesktop",
@@ -227,11 +171,7 @@ let package = Package(
                 .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
             ],
-            path: "Sources/desktop",
-            exclude: [
-                "openapi-generator-config.yml",
-                "openapi.yml",
-            ]
+            path: "Sources/desktop"
         ),
         .target(
             name: "GitHubRestAPIOrgs",
@@ -239,11 +179,7 @@ let package = Package(
                 .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
             ],
-            path: "Sources/orgs",
-            exclude: [
-                "openapi-generator-config.yml",
-                "openapi.yml",
-            ]
+            path: "Sources/orgs"
         ),
         .target(
             name: "GitHubRestAPISearch",
@@ -251,11 +187,7 @@ let package = Package(
                 .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
             ],
-            path: "Sources/search",
-            exclude: [
-                "openapi-generator-config.yml",
-                "openapi.yml",
-            ]
+            path: "Sources/search"
         ),
         .target(
             name: "GitHubRestAPICodespaces",
@@ -263,11 +195,7 @@ let package = Package(
                 .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
             ],
-            path: "Sources/codespaces",
-            exclude: [
-                "openapi-generator-config.yml",
-                "openapi.yml",
-            ]
+            path: "Sources/codespaces"
         ),
         .target(
             name: "GitHubRestAPICodes_Of_Conduct",
@@ -275,11 +203,7 @@ let package = Package(
                 .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
             ],
-            path: "Sources/codes-of-conduct",
-            exclude: [
-                "openapi-generator-config.yml",
-                "openapi.yml",
-            ]
+            path: "Sources/codes-of-conduct"
         ),
         .target(
             name: "GitHubRestAPIUsers",
@@ -287,11 +211,7 @@ let package = Package(
                 .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
             ],
-            path: "Sources/users",
-            exclude: [
-                "openapi-generator-config.yml",
-                "openapi.yml",
-            ]
+            path: "Sources/users"
         ),
         .target(
             name: "GitHubRestAPIPackages",
@@ -299,11 +219,7 @@ let package = Package(
                 .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
             ],
-            path: "Sources/packages",
-            exclude: [
-                "openapi-generator-config.yml",
-                "openapi.yml",
-            ]
+            path: "Sources/packages"
         ),
         .target(
             name: "GitHubRestAPIActions",
@@ -311,11 +227,7 @@ let package = Package(
                 .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
             ],
-            path: "Sources/actions",
-            exclude: [
-                "openapi-generator-config.yml",
-                "openapi.yml",
-            ]
+            path: "Sources/actions"
         ),
         .target(
             name: "GitHubRestAPITeams",
@@ -323,11 +235,7 @@ let package = Package(
                 .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
             ],
-            path: "Sources/teams",
-            exclude: [
-                "openapi-generator-config.yml",
-                "openapi.yml",
-            ]
+            path: "Sources/teams"
         ),
         .target(
             name: "GitHubRestAPIPulls",
@@ -335,11 +243,7 @@ let package = Package(
                 .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
             ],
-            path: "Sources/pulls",
-            exclude: [
-                "openapi-generator-config.yml",
-                "openapi.yml",
-            ]
+            path: "Sources/pulls"
         ),
         .target(
             name: "GitHubRestAPIDependency_Graph",
@@ -347,11 +251,7 @@ let package = Package(
                 .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
             ],
-            path: "Sources/dependency-graph",
-            exclude: [
-                "openapi-generator-config.yml",
-                "openapi.yml",
-            ]
+            path: "Sources/dependency-graph"
         ),
         .target(
             name: "GitHubRestAPIEmojis",
@@ -359,11 +259,7 @@ let package = Package(
                 .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
             ],
-            path: "Sources/emojis",
-            exclude: [
-                "openapi-generator-config.yml",
-                "openapi.yml",
-            ]
+            path: "Sources/emojis"
         ),
         .target(
             name: "GitHubRestAPICode_Scanning",
@@ -371,11 +267,7 @@ let package = Package(
                 .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
             ],
-            path: "Sources/code-scanning",
-            exclude: [
-                "openapi-generator-config.yml",
-                "openapi.yml",
-            ]
+            path: "Sources/code-scanning"
         ),
         .target(
             name: "GitHubRestAPISecurity_Advisories",
@@ -383,11 +275,7 @@ let package = Package(
                 .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
             ],
-            path: "Sources/security-advisories",
-            exclude: [
-                "openapi-generator-config.yml",
-                "openapi.yml",
-            ]
+            path: "Sources/security-advisories"
         ),
         .target(
             name: "GitHubRestAPIIssues",
@@ -395,11 +283,7 @@ let package = Package(
                 .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
             ],
-            path: "Sources/issues",
-            exclude: [
-                "openapi-generator-config.yml",
-                "openapi.yml",
-            ]
+            path: "Sources/issues"
         ),
         .target(
             name: "GitHubRestAPIApps",
@@ -407,11 +291,7 @@ let package = Package(
                 .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
             ],
-            path: "Sources/apps",
-            exclude: [
-                "openapi-generator-config.yml",
-                "openapi.yml",
-            ]
+            path: "Sources/apps"
         ),
         .target(
             name: "GitHubRestAPIGists",
@@ -419,11 +299,7 @@ let package = Package(
                 .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
             ],
-            path: "Sources/gists",
-            exclude: [
-                "openapi-generator-config.yml",
-                "openapi.yml",
-            ]
+            path: "Sources/gists"
         ),
         .target(
             name: "GitHubRestAPIBilling",
@@ -431,11 +307,7 @@ let package = Package(
                 .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
             ],
-            path: "Sources/billing",
-            exclude: [
-                "openapi-generator-config.yml",
-                "openapi.yml",
-            ]
+            path: "Sources/billing"
         ),
         .target(
             name: "GitHubRestAPIRate_Limit",
@@ -443,11 +315,7 @@ let package = Package(
                 .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
             ],
-            path: "Sources/rate-limit",
-            exclude: [
-                "openapi-generator-config.yml",
-                "openapi.yml",
-            ]
+            path: "Sources/rate-limit"
         ),
         .target(
             name: "GitHubRestAPIGit",
@@ -455,11 +323,7 @@ let package = Package(
                 .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
             ],
-            path: "Sources/git",
-            exclude: [
-                "openapi-generator-config.yml",
-                "openapi.yml",
-            ]
+            path: "Sources/git"
         ),
         .target(
             name: "GitHubRestAPIGitignore",
@@ -467,11 +331,7 @@ let package = Package(
                 .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
             ],
-            path: "Sources/gitignore",
-            exclude: [
-                "openapi-generator-config.yml",
-                "openapi.yml",
-            ]
+            path: "Sources/gitignore"
         ),
         .target(
             name: "GitHubRestAPISecret_Scanning",
@@ -479,11 +339,7 @@ let package = Package(
                 .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
             ],
-            path: "Sources/secret-scanning",
-            exclude: [
-                "openapi-generator-config.yml",
-                "openapi.yml",
-            ]
+            path: "Sources/secret-scanning"
         ),
         .target(
             name: "GitHubRestAPIDependabot",
@@ -491,11 +347,7 @@ let package = Package(
                 .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
             ],
-            path: "Sources/dependabot",
-            exclude: [
-                "openapi-generator-config.yml",
-                "openapi.yml",
-            ]
+            path: "Sources/dependabot"
         ),
         .testTarget(
             name: "UserTests",

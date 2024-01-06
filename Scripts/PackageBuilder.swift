@@ -37,11 +37,7 @@ struct SourcesBuilder {
                             .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
                             .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
                         ],
-                        path: "\#(sourcePath)",
-                        exclude: [
-                            "openapi-generator-config.yml",
-                            "openapi.yml",
-                        ]
+                        path: "\#(sourcePath)"
                     ),
             """#
         }
@@ -128,3 +124,15 @@ struct PackageBuilder {
 }
 
 try PackageBuilder().write()
+
+
+
+
+
+
+
+
+
+
+
+

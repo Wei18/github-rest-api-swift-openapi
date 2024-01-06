@@ -1,110 +1,56 @@
 #!make
-
-# Maintanence
-# The path and implemenet for OPENAPI_PATH.
-# The pattern and implemenet for TAG_NAMES.
-
-# Special-Targets #
+# Special-Targets
 # https://www.gnu.org/software/make/manual/html_node/Special-Targets.html
-.DEFAULT_GOAL := install
-OPENAPI_PATH  := Submodule/github/rest-api-description/descriptions/api.github.com/api.github.com.yaml
-TAG_NAMES     := $(shell yq -r '.tags[].name' $(OPENAPI_PATH))
-SUBDIRS       := $(addprefix Sources/, $(TAG_NAMES))
-SWIFT_FILES   := $(addsuffix /Client.swift, $(SUBDIRS))
-.SECONDARY    : $(%.yml)
 
-%/openapi.yml: $(OPENAPI_PATH)
-	@mkdir -p "$(@D)"
-	@ln -sf ../../$(OPENAPI_PATH) $@
-	@git add $@
-	@echo "::debug:: make $@"
+# Variables
+.DEFAULT_GOAL  := install
+OPENAPI_PATH   := Submodule/github/rest-api-description/descriptions/api.github.com/api.github.com.yaml
+FILTERED_NAMES := $(shell yq -r '.tags[].name' $(OPENAPI_PATH))
+SOURCE_DIRS    := $(addprefix Sources/, $(FILTERED_NAMES))
 
-%/openapi-generator-config.yml: $(OPENAPI_PATH)
-	@mkdir -p "$(@D)"
-	@tag_name=$(shell basename $(shell dirname $@)); \
-	echo "generate:" > $@; \
-	echo "  - types" >> $@; \
-	echo "  - client" >> $@; \
-	echo "" >> $@; \
-	echo "filter:" >> $@; \
-	echo "  tags:" >> $@; \
-	echo "    - $$tag_name" >> $@; \
-	echo "" >> $@; \
-	echo "accessModifier: public" >> $@; \
-	echo "" >> $@;
-	@git add $@
-	@echo "::debug:: make $@"
+# Helper
+.SILENT: commit
+.PHONY: commit
+commit:
+	git add "$(file)"
+	git commit -m "[Make] Update $(file)" >/dev/null \
+		&& echo "::notice:: make $(file)\n" \
+		|| true;
+	touch "$(file)";
 
-%/Client.swift: %/openapi.yml %/openapi-generator-config.yml
-	mint run apple/swift-openapi-generator generate $(@D)/openapi.yml \
-		--config $(@D)/openapi-generator-config.yml \
-		--output-directory $(@D)
-	@git add $(@D)
-	@git commit -m "[Make] Generate $(@D)/*.swift" >/dev/null \
-	&& echo "::notice:: make $@" \
-	|| true
+# Create sources
+%/openapi-generator-config.yml:
+	mkdir -p "$(@D)"; \
+		tag_name=$(shell basename $(shell dirname $@)); \
+		swift Scripts/GeneratorConfigBuilder.swift $$tag_name
 
-.PHONY: install-$(OPENAPI_PATH)
-install-$(OPENAPI_PATH):
+%/Client.swift: %/openapi-generator-config.yml $(OPENAPI_PATH)
+	mint run apple/swift-openapi-generator generate "$(OPENAPI_PATH)" \
+		--config "$(@D)/openapi-generator-config.yml" \
+		--output-directory "$(@D)";
+	@rm "$(@D)/openapi-generator-config.yml";
+	@echo ;
+
+Sources/%: Sources/%/Client.swift
+	@$(MAKE) commit file="$@"
+
+# Update openapi specification if needed
+Submodule:
 ifdef GITHUB_ACTIONS ## https://docs.github.com/en/actions/learn-github-actions/variables
-	@touch $(OPENAPI_PATH)
-	@echo "::notice:: make $@"
+	@touch "$(OPENAPI_PATH)"
 else
-	git submodule update --recursive --remote
-	@git add Submodule
-	@git commit -m "[Make] Bump$$(git submodule status Submodule/github/rest-api-description)" >/dev/null \
-	&& touch $(OPENAPI_PATH) \
-	&& echo "::notice:: make $@" \
-	|| true
+	@git submodule update --recursive --remote
+	@$(MAKE) commit file="$@"
+	@touch "$(OPENAPI_PATH)"
 endif
 
-.PHONY: install-$(SWIFT_FILES)
-install-$(SWIFT_FILES): $(SWIFT_FILES)
-	swift PackageBuilder.swift
-	git add Package.swift
-	@git commit -m "[Make] Generate Package.swift" >/dev/null \
-	&& echo "::notice:: make $@" \
-	|| true
+# Update Package.swift
+.DELETE_ON_ERROR: $(SOURCE_DIRS)
+Package.swift: $(SOURCE_DIRS)
+	swift Scripts/PackageBuilder.swift
+	@$(MAKE) commit file="$@"
 
-install: install-$(OPENAPI_PATH) install-$(SWIFT_FILES)
-	@echo "::notice:: make $@"
+# Install
+.PHONY: Submodule
+install: Submodule Package.swift
 
-# XCFrameworks:
-# 	mint run giginet/Scipio create . \
-# 		--static \
-# 		--embed-debug-symbols \
-# 		--support-simulators
-# 	@touch $@
-# 	@echo "::notice:: make $@"
-# 
-# %.zip: %.xcframework
-# 	@zip -qr "$@" "$<"
-# 	@rm -rf "$<"
-# 	@git add "$@"
-# 	@echo "::debug:: make $@"
-# 
-# install-zips: XCFrameworks
-# 	@$(MAKE) $(shell echo XCFrameworks/*.xcframework | sed 's/\.xcframework/\.zip/g');
-# 	@git commit -m "[Make] Modify xcframework zips" || true
-# 	@echo "::notice:: make $@"
-
-.PHONY: update-to-date
-update-to-date:
-	touch $(OPENAPI_PATH)
-	touch Sources/**/openapi-generator-config.yml
-	touch Sources/**/openapi.yml
-	touch Sources/**/Client.swift
-
-# docs: ## Need env GITHUB_PAGES is created as 'true'
-# 	swift package --allow-writing-to-directory $@ generate-documentation \
-# 		--disable-indexing \
-# 		--transform-for-static-hosting \
-# 		--hosting-base-path github-rest-api-swift-openapi;
-# 	sh Script/setupDocsHtml.sh
-
-.PHONY: help
-.SILENT: help
-help:
-	echo -----------------------------------------------------------------------
-	awk 'BEGIN {FS = ":.*##"; printf "Usage:\n  make \033[36m\033[0m\n"} /^[$$()% 0-9a-zA-Z_-]+:.*?##/ { printf "  \033[36m%-14s\033[0m %s\n", $$1, $$2 } /^##@/ { printf "\n\033[1m%s\033[0m\n", substr($$0, 5) } ' $(MAKEFILE_LIST)
-	echo -----------------------------------------------------------------------
