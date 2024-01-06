@@ -191,8 +191,6 @@ Wanna use Swift as the development language to create some convenient and user-f
 
 # Contributions
 
-Because this description is used across GitHub's whole API development experience, I don't currently accept pull requests that directly modify the description. This repository is automatically kept up to date with the [github/rest-api-description](https://github.com/github/rest-api-description).
-
+Contributions are welcome! If you encounter issues or have suggestions for improvements, feel free to open an issue or submit a pull request.
+This repository is automatically kept up to date with the submodule [github/rest-api-description](https://github.com/github/rest-api-description).
 If you've identified a mismatch between GitHub API's swift code and these descriptions, or found an issue with the format of a schema, [please open an issue to github/rest-api-description](https://github.com/github/rest-api-description/issues/new?template=schema-inaccuracy.md) or [please open an issue to apple/swift-openapi-generator](https://github.com/apple/swift-openapi-generator/issues).
-
-BTW, contributions are welcome! If you encounter issues or have suggestions for improvements, feel free to open an issue or submit a pull request.
