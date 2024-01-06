@@ -74,12 +74,59 @@ struct SourcesBuilder {
 }
 
 struct PackageBuilder {
-    func getTemplate() throws -> String {
+
+    enum SwiftVersion: String, CaseIterable {
+        case v5_9 = "5.9"
+        case v5_8 = "5.8"
+        case v5_7 = "5.7.1"
+
+        init?(rawValue: String) {
+            switch rawValue {
+            case SwiftVersion.v5_9.fileName: self = .v5_9
+            case SwiftVersion.v5_8.fileName: self = .v5_8
+            case SwiftVersion.v5_7.fileName: self = .v5_7
+            default: return nil
+            }
+        }
+
+        var fileName: String {
+            switch self {
+            case .v5_9: return "Package.swift"
+            case .v5_8: return "Package@swift-5.8.swift"
+            case .v5_7: return "Package@swift-5.7.swift"
+            }
+        }
+
+        var platformsString: String {
+            switch self {
+            case .v5_9:
+            #"""
+                    .macOS(.v10_15), .iOS(.v13), .tvOS(.v13), .watchOS(.v6), .visionOS(.v1),
+            """#
+            case .v5_8, .v5_7:
+            #"""
+                    .macOS(.v10_15), .iOS(.v13), .tvOS(.v13), .watchOS(.v6),
+            """#
+            }
+        }
+    }
+
+    private let version: PackageBuilder.SwiftVersion
+
+    init(version string: String) throws {
+        if let version = PackageBuilder.SwiftVersion(rawValue: string) {
+            self.version = version
+        } else {
+            throw ErrorMessage(message: "Convert string value `\(string)` to Type SwiftVersion failure.")
+        }
+    }
+
+    private func getTemplate() throws -> String {
         let sources = try SourcesBuilder().sources
         let productsString: String = sources.map(\.productString).joined(separator: "\n")
         let targetsString: String = sources.map(\.targetString).joined(separator: "\n")
         return #"""
-        // swift-tools-version: 5.9
+        // swift-tools-version: \#(version.rawValue)
         // The swift-tools-version declares the minimum version of Swift required to build this package.
 
         import PackageDescription
@@ -88,7 +135,7 @@ struct PackageBuilder {
         let package = Package(
             name: "GitHubRestAPISwiftOpenAPI",
             platforms: [
-                .macOS(.v10_15), .iOS(.v13), .tvOS(.v13), .watchOS(.v6), .visionOS(.v1),
+        \#(version.platformsString)
             ],
             products: [
         \#(productsString)
@@ -115,7 +162,7 @@ struct PackageBuilder {
     }
     func write() throws {
         let fileURL = URL(fileURLWithPath: FileManager.default.currentDirectoryPath)
-            .appending(path: "Package.swift")
+            .appending(path: version.fileName)
         let fileContent = try getTemplate()
         guard let data = fileContent.data(using: .utf8) else {
             throw ErrorMessage(message: "Variable data not found.")
@@ -125,7 +172,16 @@ struct PackageBuilder {
 
 }
 
-try PackageBuilder().write()
+if let argVersion = CommandLine.arguments[1]
+    .split(whereSeparator: \.isNewline)
+    .first {
+    let version = String(argVersion)
+    try PackageBuilder(version: version).write()
+} else {
+    throw ErrorMessage(message: "No tag not found.")
+}
+
+
 
 
 

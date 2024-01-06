@@ -7,6 +7,7 @@
 OPENAPI_PATH   := Submodule/github/rest-api-description/descriptions/api.github.com/api.github.com.yaml
 FILTERED_NAMES := $(shell yq -r '.tags[].name' $(OPENAPI_PATH))
 SOURCE_DIRS    := $(addprefix Sources/, $(FILTERED_NAMES))
+PACKAGE_PATHS  := Package.swift Package@swift-5.8.swift Package@swift-5.7.swift
 
 # Helper
 .SILENT: commit
@@ -46,11 +47,11 @@ endif
 
 # Update Package.swift
 .DELETE_ON_ERROR: $(SOURCE_DIRS)
-Package.swift: $(SOURCE_DIRS)
-	swift Scripts/PackageBuilder.swift
+$(PACKAGE_PATHS): $(SOURCE_DIRS)
+	swift Scripts/PackageBuilder.swift "$@"
 	@$(MAKE) commit file="$@"
 
 # Install
 .PHONY: Submodule
-install: Submodule Package.swift
+install: Submodule $(PACKAGE_PATHS)
 
