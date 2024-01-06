@@ -100,7 +100,7 @@ struct PackageBuilder {
             targets: [
         \#(targetsString)
                 .testTarget(
-                    name: "UserTests",
+                    name: "UsersTests",
                     dependencies: [
                         .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
                         .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),

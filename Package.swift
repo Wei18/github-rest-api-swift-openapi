@@ -350,7 +350,7 @@ let package = Package(
             path: "Sources/dependabot"
         ),
         .testTarget(
-            name: "UserTests",
+            name: "UsersTests",
             dependencies: [
                 .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
