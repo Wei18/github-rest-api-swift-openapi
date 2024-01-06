@@ -13,7 +13,7 @@ SOURCE_DIRS    := $(addprefix Sources/, $(FILTERED_NAMES))
 .PHONY: commit
 commit:
 	git add "$(file)"
-	git commit -m "[Make] Update $(file)" >/dev/null \
+	git commit -m "Commit via running $make $(file)" >/dev/null \
 		&& echo "::notice:: make $(file)\n" \
 		|| true;
 	touch "$(file)";
@@ -41,7 +41,7 @@ ifdef GITHUB_ACTIONS ## https://docs.github.com/en/actions/learn-github-actions/
 else
 	@git submodule update --recursive --remote
 	@$(MAKE) commit file="$@"
-	@touch "$(OPENAPI_PATH)"
+	# @touch "$(OPENAPI_PATH)" # Uncomment to force-install
 endif
 
 # Update Package.swift
