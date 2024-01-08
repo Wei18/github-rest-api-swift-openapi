@@ -62,6 +62,8 @@ import GitHubRestAPIUsers
 ```
 </details>
 
+The [tutorail](https://swiftpackageindex.com/wei18/github-rest-api-swift-openapi/tutorial/use-github-restapi-issues) show you the following example or refer below.
+
 <details>
 <summary>Example of code for enhanced issues comment API</summary>
 
