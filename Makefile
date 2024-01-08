@@ -7,7 +7,7 @@
 OPENAPI_PATH   := Submodule/github/rest-api-description/descriptions/api.github.com/api.github.com.yaml
 FILTERED_NAMES := $(shell yq -r '.tags[].name' $(OPENAPI_PATH))
 SOURCE_DIRS    := $(addprefix Sources/, $(FILTERED_NAMES))
-PACKAGE_PATHS  := Package.swift Package@swift-5.8.swift Package@swift-5.7.swift
+PACKAGE_PATHS  := Package.swift
 
 # Helper
 .SILENT: commit
