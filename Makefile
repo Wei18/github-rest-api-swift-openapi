@@ -51,7 +51,10 @@ $(PACKAGE_PATHS): $(SOURCE_DIRS)
 	swift Scripts/PackageBuilder.swift "$@"
 	@$(MAKE) commit file="$@"
 
+.spi.yml: $(PACKAGE_PATHS)
+	swift Scripts/SPIManifestBuilder.swift
+	@$(MAKE) commit file="$@"
+
 # Install
 .PHONY: Submodule
-install: Submodule $(PACKAGE_PATHS)
-
+install: Submodule .spi.yml
