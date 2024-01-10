@@ -11,13 +11,13 @@ permissions:
   
 jobs:
   Sync:
-    # if: github.actor == 'dependabot[bot]'
+    if: github.actor == 'dependabot[bot]'
     strategy:
       matrix:
         os:
-          # - ubuntu-latest
+          - ubuntu-latest
           # - macos-latest #Fix: The macos-latest workflow label currently uses the macOS 12 runner image.
-          - macos-13
+          # - macos-13
         swift: ["5.9"]
     runs-on: ${{ matrix.os }}
     timeout-minutes: 60
