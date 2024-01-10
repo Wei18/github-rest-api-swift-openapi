@@ -39,9 +39,9 @@ struct GeneratorConfigBuilder {
 
     func write() throws {
         let fileURL = URL(fileURLWithPath: FileManager.default.currentDirectoryPath)
-            .appending(path: "Sources")
-            .appending(path: tagString)
-            .appending(path: "openapi-generator-config.yml")
+            .appendingPathComponent("Sources")
+            .appendingPathComponent(tagString)
+            .appendingPathComponent("openapi-generator-config.yml")
         let fileContent = getTemplate()
         guard let data = fileContent.data(using: .utf8) else {
             throw ErrorMessage(message: "Variable data not found.")

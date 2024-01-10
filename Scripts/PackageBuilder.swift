@@ -47,7 +47,7 @@ struct SourcesBuilder {
 
     init() throws {
         let directoryURL = URL(fileURLWithPath: FileManager.default.currentDirectoryPath)
-            .appending(path: "Sources")
+            .appendingPathComponent("Sources")
         let resourceKeys = Set<URLResourceKey>([.nameKey, .isDirectoryKey])
 
         guard let directoryEnumerator = FileManager.default.enumerator(
@@ -163,7 +163,7 @@ struct PackageBuilder {
     }
     func write() throws {
         let fileURL = URL(fileURLWithPath: FileManager.default.currentDirectoryPath)
-            .appending(path: version.fileName)
+            .appendingPathComponent(version.fileName)
         let fileContent = try getTemplate()
         guard let data = fileContent.data(using: .utf8) else {
             throw ErrorMessage(message: "Variable data not found.")
