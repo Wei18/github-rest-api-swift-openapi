@@ -28,5 +28,9 @@ jobs:
         with:
           swift: ${{ matrix.swift }}
           os: ${{ matrix.os }}
-      - run: swift build
-      - run: swift test
+      - name: "Test Scripts work on ${{ matrix.os }}"
+        run: swift Scripts/SPIManifestBuilder.swift
+      - name: "Test Swift Package"
+        run: |
+          swift build
+          swift test
