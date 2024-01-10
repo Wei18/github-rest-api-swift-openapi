@@ -60,7 +60,8 @@ struct SourcesBuilder {
         let sourceURLs = directoryEnumerator.compactMap { $0 as? URL }.filter { fileURL in
             guard let resourceValues = try? fileURL.resourceValues(forKeys: resourceKeys),
                   let isDirectory = resourceValues.isDirectory,
-                  isDirectory
+                  isDirectory,
+                  fileURL.pathComponents.count == directoryURL.pathComponents.count + 1 // Check if it's a direct child
             else { return false }
             return true
         }
