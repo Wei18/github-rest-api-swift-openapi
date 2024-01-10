@@ -2,4 +2,40 @@ version: 1
 builder:
   configs:
   - documentation_targets:
+    - GitHubRestAPIRepos
+    - GitHubRestAPIMigrations
+    - GitHubRestAPIInteractions
+    - GitHubRestAPIMerge_Queue
+    - GitHubRestAPILicenses
+    - GitHubRestAPICopilot
+    - GitHubRestAPIActivity
+    - GitHubRestAPIChecks
+    - GitHubRestAPIMarkdown
+    - GitHubRestAPIProjects
+    - GitHubRestAPIReactions
+    - GitHubRestAPIOidc
+    - GitHubRestAPIMeta
+    - GitHubRestAPIClassroom
+    - GitHubRestAPIDesktop
+    - GitHubRestAPIOrgs
+    - GitHubRestAPISearch
+    - GitHubRestAPICodespaces
+    - GitHubRestAPICodes_Of_Conduct
+    - GitHubRestAPIUsers
+    - GitHubRestAPIPackages
+    - GitHubRestAPIActions
+    - GitHubRestAPITeams
+    - GitHubRestAPIPulls
+    - GitHubRestAPIDependency_Graph
+    - GitHubRestAPIEmojis
+    - GitHubRestAPICode_Scanning
+    - GitHubRestAPISecurity_Advisories
     - GitHubRestAPIIssues
+    - GitHubRestAPIApps
+    - GitHubRestAPIGists
+    - GitHubRestAPIBilling
+    - GitHubRestAPIRate_Limit
+    - GitHubRestAPIGit
+    - GitHubRestAPIGitignore
+    - GitHubRestAPISecret_Scanning
+    - GitHubRestAPIDependabot
