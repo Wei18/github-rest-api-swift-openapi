@@ -39,6 +39,8 @@ let package = Package(
         .library(name: "GitHubRestAPICode_Scanning", targets: ["GitHubRestAPICode_Scanning"]),
         .library(name: "GitHubRestAPISecurity_Advisories", targets: ["GitHubRestAPISecurity_Advisories"]),
         .library(name: "GitHubRestAPIIssues", targets: ["GitHubRestAPIIssues"]),
+        .library(name: "GitHubRestAPIDocumentation.Docc", targets: ["GitHubRestAPIDocumentation.Docc"]),
+        .library(name: "GitHubRestAPI_Resources", targets: ["GitHubRestAPI_Resources"]),
         .library(name: "GitHubRestAPIApps", targets: ["GitHubRestAPIApps"]),
         .library(name: "GitHubRestAPIGists", targets: ["GitHubRestAPIGists"]),
         .library(name: "GitHubRestAPIBilling", targets: ["GitHubRestAPIBilling"]),
@@ -284,6 +286,22 @@ let package = Package(
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
             ],
             path: "Sources/issues"
+        ),
+        .target(
+            name: "GitHubRestAPIDocumentation.Docc",
+            dependencies: [
+                .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
+                .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
+            ],
+            path: "Sources/Documentation.docc"
+        ),
+        .target(
+            name: "GitHubRestAPI_Resources",
+            dependencies: [
+                .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
+                .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
+            ],
+            path: "Sources/_Resources"
         ),
         .target(
             name: "GitHubRestAPIApps",
