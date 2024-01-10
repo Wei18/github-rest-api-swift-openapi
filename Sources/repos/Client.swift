@@ -16177,7 +16177,12 @@ public struct Client: APIProtocol {
     }
     /// Get the weekly commit activity
     ///
+    ///
     /// Returns a weekly aggregate of the number of additions and deletions pushed to a repository.
+    ///
+    /// **Note:** This endpoint can only be used for repositories with fewer than 10,000 commits. If the repository contains
+    /// 10,000 or more commits, a 422 status code will be returned.
+    ///
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/stats/code_frequency`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/stats/code_frequency/get(repos/get-code-frequency-stats)`.
@@ -16252,6 +16257,8 @@ public struct Client: APIProtocol {
                     return .accepted(.init(body: body))
                 case 204:
                     return .noContent(.init())
+                case 422:
+                    return .unprocessableContent(.init())
                 default:
                     return .undocumented(
                         statusCode: response.status.code,
@@ -16358,10 +16365,12 @@ public struct Client: APIProtocol {
     ///
     /// Returns the `total` number of commits authored by the contributor. In addition, the response includes a Weekly Hash (`weeks` array) with the following information:
     ///
-    /// *   `w` - Start of the week, given as a [Unix timestamp](http://en.wikipedia.org/wiki/Unix_time).
+    /// *   `w` - Start of the week, given as a [Unix timestamp](https://en.wikipedia.org/wiki/Unix_time).
     /// *   `a` - Number of additions
     /// *   `d` - Number of deletions
     /// *   `c` - Number of commits
+    ///
+    /// **Note:** This endpoint will return `0` values for all addition and deletion counts in repositories with 10,000 or more commits.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/stats/contributors`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/stats/contributors/get(repos/get-contributors-stats)`.

@@ -1640,7 +1640,12 @@ public protocol APIProtocol: Sendable {
     func repos_sol_delete_hyphen_repo_hyphen_ruleset(_ input: Operations.repos_sol_delete_hyphen_repo_hyphen_ruleset.Input) async throws -> Operations.repos_sol_delete_hyphen_repo_hyphen_ruleset.Output
     /// Get the weekly commit activity
     ///
+    ///
     /// Returns a weekly aggregate of the number of additions and deletions pushed to a repository.
+    ///
+    /// **Note:** This endpoint can only be used for repositories with fewer than 10,000 commits. If the repository contains
+    /// 10,000 or more commits, a 422 status code will be returned.
+    ///
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/stats/code_frequency`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/stats/code_frequency/get(repos/get-code-frequency-stats)`.
@@ -1657,10 +1662,12 @@ public protocol APIProtocol: Sendable {
     ///
     /// Returns the `total` number of commits authored by the contributor. In addition, the response includes a Weekly Hash (`weeks` array) with the following information:
     ///
-    /// *   `w` - Start of the week, given as a [Unix timestamp](http://en.wikipedia.org/wiki/Unix_time).
+    /// *   `w` - Start of the week, given as a [Unix timestamp](https://en.wikipedia.org/wiki/Unix_time).
     /// *   `a` - Number of additions
     /// *   `d` - Number of deletions
     /// *   `c` - Number of commits
+    ///
+    /// **Note:** This endpoint will return `0` values for all addition and deletion counts in repositories with 10,000 or more commits.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/stats/contributors`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/stats/contributors/get(repos/get-contributors-stats)`.
@@ -4940,7 +4947,12 @@ extension APIProtocol {
     }
     /// Get the weekly commit activity
     ///
+    ///
     /// Returns a weekly aggregate of the number of additions and deletions pushed to a repository.
+    ///
+    /// **Note:** This endpoint can only be used for repositories with fewer than 10,000 commits. If the repository contains
+    /// 10,000 or more commits, a 422 status code will be returned.
+    ///
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/stats/code_frequency`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/stats/code_frequency/get(repos/get-code-frequency-stats)`.
@@ -4973,10 +4985,12 @@ extension APIProtocol {
     ///
     /// Returns the `total` number of commits authored by the contributor. In addition, the response includes a Weekly Hash (`weeks` array) with the following information:
     ///
-    /// *   `w` - Start of the week, given as a [Unix timestamp](http://en.wikipedia.org/wiki/Unix_time).
+    /// *   `w` - Start of the week, given as a [Unix timestamp](https://en.wikipedia.org/wiki/Unix_time).
     /// *   `a` - Number of additions
     /// *   `d` - Number of deletions
     /// *   `c` - Number of commits
+    ///
+    /// **Note:** This endpoint will return `0` values for all addition and deletion counts in repositories with 10,000 or more commits.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/stats/contributors`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/stats/contributors/get(repos/get-contributors-stats)`.
@@ -56867,7 +56881,12 @@ public enum Operations {
     }
     /// Get the weekly commit activity
     ///
+    ///
     /// Returns a weekly aggregate of the number of additions and deletions pushed to a repository.
+    ///
+    /// **Note:** This endpoint can only be used for repositories with fewer than 10,000 commits. If the repository contains
+    /// 10,000 or more commits, a 422 status code will be returned.
+    ///
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/stats/code_frequency`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/stats/code_frequency/get(repos/get-code-frequency-stats)`.
@@ -57016,6 +57035,33 @@ public enum Operations {
                     default:
                         try throwUnexpectedResponseStatus(
                             expectedStatus: "noContent",
+                            response: self
+                        )
+                    }
+                }
+            }
+            public struct UnprocessableContent: Sendable, Hashable {
+                /// Creates a new `UnprocessableContent`.
+                public init() {}
+            }
+            /// Repository contains more than 10,000 commits
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/stats/code_frequency/get(repos/get-code-frequency-stats)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            case unprocessableContent(Operations.repos_sol_get_hyphen_code_hyphen_frequency_hyphen_stats.Output.UnprocessableContent)
+            /// The associated value of the enum case if `self` is `.unprocessableContent`.
+            ///
+            /// - Throws: An error if `self` is not `.unprocessableContent`.
+            /// - SeeAlso: `.unprocessableContent`.
+            public var unprocessableContent: Operations.repos_sol_get_hyphen_code_hyphen_frequency_hyphen_stats.Output.UnprocessableContent {
+                get throws {
+                    switch self {
+                    case let .unprocessableContent(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "unprocessableContent",
                             response: self
                         )
                     }
@@ -57244,10 +57290,12 @@ public enum Operations {
     ///
     /// Returns the `total` number of commits authored by the contributor. In addition, the response includes a Weekly Hash (`weeks` array) with the following information:
     ///
-    /// *   `w` - Start of the week, given as a [Unix timestamp](http://en.wikipedia.org/wiki/Unix_time).
+    /// *   `w` - Start of the week, given as a [Unix timestamp](https://en.wikipedia.org/wiki/Unix_time).
     /// *   `a` - Number of additions
     /// *   `d` - Number of deletions
     /// *   `c` - Number of commits
+    ///
+    /// **Note:** This endpoint will return `0` values for all addition and deletion counts in repositories with 10,000 or more commits.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/stats/contributors`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/stats/contributors/get(repos/get-contributors-stats)`.
