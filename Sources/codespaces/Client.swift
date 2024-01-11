@@ -1869,7 +1869,10 @@ public struct Client: APIProtocol {
     ///
     /// You must authenticate using an access token with the `codespace` scope to use this endpoint.
     ///
-    /// GitHub Apps must have read access to the `codespaces` repository permission to use this endpoint.
+    /// To use this endpoint with GitHub Apps:
+    ///
+    /// - The app must be authenticated on behalf of the user. For more information, see "[Authenticating with a GitHub App on behalf of a user](https://docs.github.com/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user)."
+    /// - The app must have read access to the `codespaces` repository permission.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/codespaces`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/codespaces/get(codespaces/list-in-repository-for-authenticated-user)`.
@@ -2040,7 +2043,10 @@ public struct Client: APIProtocol {
     ///
     /// You must authenticate using an access token with the `codespace` scope to use this endpoint.
     ///
-    /// GitHub Apps must have write access to the `codespaces` repository permission to use this endpoint.
+    /// To use this endpoint with GitHub Apps:
+    ///
+    /// - The app must be authenticated on behalf of the user. For more information, see "[Authenticating with a GitHub App on behalf of a user](https://docs.github.com/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user)."
+    /// - The app must have write access to the `codespaces` repository permission.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/codespaces`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/codespaces/post(codespaces/create-with-repo-for-authenticated-user)`.
@@ -2642,7 +2648,10 @@ public struct Client: APIProtocol {
     ///
     /// You must authenticate using an access token with the `codespace` scope to use this endpoint.
     ///
-    /// GitHub Apps must have write access to the `codespaces` repository permission to use this endpoint.
+    /// To use this endpoint with GitHub Apps:
+    ///
+    /// - The app must be authenticated on behalf of the user. For more information, see "[Authenticating with a GitHub App on behalf of a user](https://docs.github.com/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user)."
+    /// - The app must have write access to the `codespaces` repository permission.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/codespaces/new`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/codespaces/new/get(codespaces/pre-flight-with-repo-for-authenticated-user)`.
@@ -2791,7 +2800,10 @@ public struct Client: APIProtocol {
     ///
     /// You must authenticate using an access token with the `codespace` scope to use this endpoint.
     ///
-    /// GitHub Apps must have write access to the `codespaces` repository permission to use this endpoint.
+    /// To use this endpoint with GitHub Apps:
+    ///
+    /// - The app must be authenticated on behalf of the user. For more information, see "[Authenticating with a GitHub App on behalf of a user](https://docs.github.com/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user)."
+    /// - The app must have write access to the `codespaces` repository permission.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/codespaces/permissions_check`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/codespaces/permissions_check/get(codespaces/check-permissions-for-devcontainer)`.
@@ -3326,7 +3338,10 @@ public struct Client: APIProtocol {
     ///
     /// You must authenticate using an access token with the `codespace` scope to use this endpoint.
     ///
-    /// GitHub Apps must have write access to the `codespaces` repository permission to use this endpoint.
+    /// To use this endpoint with GitHub Apps:
+    ///
+    /// - The app must be authenticated on behalf of the user. For more information, see "[Authenticating with a GitHub App on behalf of a user](https://docs.github.com/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user)."
+    /// - The app must have write access to the `codespaces` repository permission.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/pulls/{pull_number}/codespaces`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/codespaces/post(codespaces/create-with-pr-for-authenticated-user)`.
@@ -3515,7 +3530,10 @@ public struct Client: APIProtocol {
     ///
     /// You must authenticate using an access token with the `codespace` scope to use this endpoint.
     ///
-    /// GitHub Apps must have read access to the `codespaces` repository permission to use this endpoint.
+    /// To use this endpoint with GitHub Apps:
+    ///
+    /// - The app must be authenticated on behalf of the user. For more information, see "[Authenticating with a GitHub App on behalf of a user](https://docs.github.com/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user)."
+    /// - The app must have read access to the `codespaces` repository permission.
     ///
     /// - Remark: HTTP `GET /user/codespaces`.
     /// - Remark: Generated from `#/paths//user/codespaces/get(codespaces/list-for-authenticated-user)`.
@@ -3694,7 +3712,10 @@ public struct Client: APIProtocol {
     ///
     /// You must authenticate using an access token with the `codespace` scope to use this endpoint.
     ///
-    /// GitHub Apps must have write access to the `codespaces` repository permission to use this endpoint.
+    /// To use this endpoint with GitHub Apps:
+    ///
+    /// - The app must be authenticated on behalf of the user. For more information, see "[Authenticating with a GitHub App on behalf of a user](https://docs.github.com/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user)."
+    /// - The app must have write access to the `codespaces` repository permission.
     ///
     /// - Remark: HTTP `POST /user/codespaces`.
     /// - Remark: Generated from `#/paths//user/codespaces/post(codespaces/create-for-authenticated-user)`.
@@ -4841,7 +4862,10 @@ public struct Client: APIProtocol {
     ///
     /// You must authenticate using an access token with the `codespace` scope to use this endpoint.
     ///
-    /// GitHub Apps must have read access to the `codespaces` repository permission to use this endpoint.
+    /// To use this endpoint with GitHub Apps:
+    ///
+    /// - The app must be authenticated on behalf of the user. For more information, see "[Authenticating with a GitHub App on behalf of a user](https://docs.github.com/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user)."
+    /// - The app must have read access to the `codespaces` repository permission.
     ///
     /// - Remark: HTTP `GET /user/codespaces/{codespace_name}`.
     /// - Remark: Generated from `#/paths//user/codespaces/{codespace_name}/get(codespaces/get-for-authenticated-user)`.
@@ -5001,7 +5025,10 @@ public struct Client: APIProtocol {
     ///
     /// You must authenticate using an access token with the `codespace` scope to use this endpoint.
     ///
-    /// GitHub Apps must have write access to the `codespaces` repository permission to use this endpoint.
+    /// To use this endpoint with GitHub Apps:
+    ///
+    /// - The app must be authenticated on behalf of the user. For more information, see "[Authenticating with a GitHub App on behalf of a user](https://docs.github.com/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user)."
+    /// - The app must have write access to the `codespaces` repository permission.
     ///
     /// - Remark: HTTP `PATCH /user/codespaces/{codespace_name}`.
     /// - Remark: Generated from `#/paths//user/codespaces/{codespace_name}/patch(codespaces/update-for-authenticated-user)`.
@@ -5146,7 +5173,10 @@ public struct Client: APIProtocol {
     ///
     /// You must authenticate using an access token with the `codespace` scope to use this endpoint.
     ///
-    /// GitHub Apps must have write access to the `codespaces` repository permission to use this endpoint.
+    /// To use this endpoint with GitHub Apps:
+    ///
+    /// - The app must be authenticated on behalf of the user. For more information, see "[Authenticating with a GitHub App on behalf of a user](https://docs.github.com/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user)."
+    /// - The app must have write access to the `codespaces` repository permission.
     ///
     /// - Remark: HTTP `DELETE /user/codespaces/{codespace_name}`.
     /// - Remark: Generated from `#/paths//user/codespaces/{codespace_name}/delete(codespaces/delete-for-authenticated-user)`.
@@ -5737,7 +5767,10 @@ public struct Client: APIProtocol {
     ///
     /// You must authenticate using a personal access token with the `codespace` scope to use this endpoint.
     ///
-    /// GitHub Apps must have write access to the `codespaces` repository permission to use this endpoint.
+    /// To use this endpoint with GitHub Apps:
+    ///
+    /// - The app must be authenticated on behalf of the user. For more information, see "[Authenticating with a GitHub App on behalf of a user](https://docs.github.com/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user)."
+    /// - The app must have write access to the `codespaces` repository permission.
     ///
     /// - Remark: HTTP `POST /user/codespaces/{codespace_name}/publish`.
     /// - Remark: Generated from `#/paths//user/codespaces/{codespace_name}/publish/post(codespaces/publish-for-authenticated-user)`.
