@@ -66,8 +66,8 @@ struct SourcesBuilder {
             return true
         }
 
-        sources = sourceURLs.map {
-            let folderName = $0.lastPathComponent
+        sources = sourceURLs.map(\.lastPathComponent).sorted().map {
+            let folderName = $0
             let targetName = folderName.replacingOccurrences(of: "-", with: "_").capitalized
             return Source(folderName: folderName, targetName: "GitHubRestAPI\(targetName)")
         }
@@ -87,6 +87,7 @@ struct SPIManifestBuilder {
           configs:
           - documentation_targets:
         \#(targetNamesString)
+        
         """#
     }
 
