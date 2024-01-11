@@ -2,40 +2,40 @@ version: 1
 builder:
   configs:
   - documentation_targets:
-    - GitHubRestAPIRepos
-    - GitHubRestAPIMigrations
-    - GitHubRestAPIInteractions
-    - GitHubRestAPIMerge_Queue
-    - GitHubRestAPILicenses
-    - GitHubRestAPICopilot
-    - GitHubRestAPIActivity
-    - GitHubRestAPIChecks
-    - GitHubRestAPIMarkdown
-    - GitHubRestAPIProjects
-    - GitHubRestAPIReactions
-    - GitHubRestAPIOidc
-    - GitHubRestAPIMeta
-    - GitHubRestAPIClassroom
-    - GitHubRestAPIDesktop
-    - GitHubRestAPIOrgs
     - GitHubRestAPISearch
-    - GitHubRestAPICodespaces
-    - GitHubRestAPICodes_Of_Conduct
+    - GitHubRestAPIReactions
+    - GitHubRestAPIMeta
+    - GitHubRestAPIGit
+    - GitHubRestAPIEmojis
+    - GitHubRestAPIInteractions
+    - GitHubRestAPIDependabot
+    - GitHubRestAPIMarkdown
+    - GitHubRestAPIChecks
+    - GitHubRestAPIApps
     - GitHubRestAPIUsers
-    - GitHubRestAPIPackages
-    - GitHubRestAPIActions
+    - GitHubRestAPICopilot
+    - GitHubRestAPIRepos
+    - GitHubRestAPIRate_Limit
     - GitHubRestAPITeams
     - GitHubRestAPIPulls
-    - GitHubRestAPIDependency_Graph
-    - GitHubRestAPIEmojis
-    - GitHubRestAPICode_Scanning
     - GitHubRestAPISecurity_Advisories
+    - GitHubRestAPIActions
+    - GitHubRestAPIMigrations
     - GitHubRestAPIIssues
-    - GitHubRestAPIApps
     - GitHubRestAPIGists
-    - GitHubRestAPIBilling
-    - GitHubRestAPIRate_Limit
-    - GitHubRestAPIGit
-    - GitHubRestAPIGitignore
+    - GitHubRestAPICodespaces
+    - GitHubRestAPICodes_Of_Conduct
     - GitHubRestAPISecret_Scanning
-    - GitHubRestAPIDependabot
+    - GitHubRestAPICode_Scanning
+    - GitHubRestAPIClassroom
+    - GitHubRestAPIProjects
+    - GitHubRestAPIOrgs
+    - GitHubRestAPIDependency_Graph
+    - GitHubRestAPILicenses
+    - GitHubRestAPIPackages
+    - GitHubRestAPIOidc
+    - GitHubRestAPIActivity
+    - GitHubRestAPIBilling
+    - GitHubRestAPIGitignore
+    - GitHubRestAPIDesktop
+    - GitHubRestAPIMerge_Queue
