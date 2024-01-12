@@ -1444,6 +1444,18 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/properties/values`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/properties/values/get(repos/get-custom-properties-values)`.
     func repos_sol_get_hyphen_custom_hyphen_properties_hyphen_values(_ input: Operations.repos_sol_get_hyphen_custom_hyphen_properties_hyphen_values.Input) async throws -> Operations.repos_sol_get_hyphen_custom_hyphen_properties_hyphen_values.Output
+    /// Create or update custom property values for a repository
+    ///
+    /// Create new or update existing custom property values for a repository.
+    /// Using a value of `null` for a custom property will remove or 'unset' the property value from the repository.
+    ///
+    /// Repository admins and other users with the repository-level "edit custom property values" fine-grained permission can use this endpoint.
+    ///
+    /// GitHub Apps must have the `repository_custom_properties:write` permission to use this endpoint.
+    ///
+    /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/properties/values`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/properties/values/patch(repos/create-or-update-custom-properties-values)`.
+    func repos_sol_create_hyphen_or_hyphen_update_hyphen_custom_hyphen_properties_hyphen_values(_ input: Operations.repos_sol_create_hyphen_or_hyphen_update_hyphen_custom_hyphen_properties_hyphen_values.Input) async throws -> Operations.repos_sol_create_hyphen_or_hyphen_update_hyphen_custom_hyphen_properties_hyphen_values.Output
     /// Get a repository README
     ///
     /// Gets the preferred README for a repository.
@@ -4545,6 +4557,28 @@ extension APIProtocol {
         try await repos_sol_get_hyphen_custom_hyphen_properties_hyphen_values(Operations.repos_sol_get_hyphen_custom_hyphen_properties_hyphen_values.Input(
             path: path,
             headers: headers
+        ))
+    }
+    /// Create or update custom property values for a repository
+    ///
+    /// Create new or update existing custom property values for a repository.
+    /// Using a value of `null` for a custom property will remove or 'unset' the property value from the repository.
+    ///
+    /// Repository admins and other users with the repository-level "edit custom property values" fine-grained permission can use this endpoint.
+    ///
+    /// GitHub Apps must have the `repository_custom_properties:write` permission to use this endpoint.
+    ///
+    /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/properties/values`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/properties/values/patch(repos/create-or-update-custom-properties-values)`.
+    public func repos_sol_create_hyphen_or_hyphen_update_hyphen_custom_hyphen_properties_hyphen_values(
+        path: Operations.repos_sol_create_hyphen_or_hyphen_update_hyphen_custom_hyphen_properties_hyphen_values.Input.Path,
+        headers: Operations.repos_sol_create_hyphen_or_hyphen_update_hyphen_custom_hyphen_properties_hyphen_values.Input.Headers = .init(),
+        body: Operations.repos_sol_create_hyphen_or_hyphen_update_hyphen_custom_hyphen_properties_hyphen_values.Input.Body
+    ) async throws -> Operations.repos_sol_create_hyphen_or_hyphen_update_hyphen_custom_hyphen_properties_hyphen_values.Output {
+        try await repos_sol_create_hyphen_or_hyphen_update_hyphen_custom_hyphen_properties_hyphen_values(Operations.repos_sol_create_hyphen_or_hyphen_update_hyphen_custom_hyphen_properties_hyphen_values.Input(
+            path: path,
+            headers: headers,
+            body: body
         ))
     }
     /// Get a repository README
@@ -11605,6 +11639,30 @@ public enum Components {
             public var code_of_conduct: Components.Schemas.code_hyphen_of_hyphen_conduct_hyphen_simple?
             /// - Remark: Generated from `#/components/schemas/full-repository/security_and_analysis`.
             public var security_and_analysis: Components.Schemas.security_hyphen_and_hyphen_analysis?
+            /// The custom properties that were defined for the repository. The keys are the custom property names, and the values are the corresponding custom property values.
+            ///
+            /// - Remark: Generated from `#/components/schemas/full-repository/custom_properties`.
+            public struct custom_propertiesPayload: Codable, Hashable, Sendable {
+                /// A container of undocumented properties.
+                public var additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer
+                /// Creates a new `custom_propertiesPayload`.
+                ///
+                /// - Parameters:
+                ///   - additionalProperties: A container of undocumented properties.
+                public init(additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer = .init()) {
+                    self.additionalProperties = additionalProperties
+                }
+                public init(from decoder: any Decoder) throws {
+                    additionalProperties = try decoder.decodeAdditionalProperties(knownKeys: [])
+                }
+                public func encode(to encoder: any Encoder) throws {
+                    try encoder.encodeAdditionalProperties(additionalProperties)
+                }
+            }
+            /// The custom properties that were defined for the repository. The keys are the custom property names, and the values are the corresponding custom property values.
+            ///
+            /// - Remark: Generated from `#/components/schemas/full-repository/custom_properties`.
+            public var custom_properties: Components.Schemas.full_hyphen_repository.custom_propertiesPayload?
             /// Creates a new `full_hyphen_repository`.
             ///
             /// - Parameters:
@@ -11710,6 +11768,7 @@ public enum Components {
             ///   - anonymous_access_enabled: Whether anonymous git access is allowed.
             ///   - code_of_conduct:
             ///   - security_and_analysis:
+            ///   - custom_properties: The custom properties that were defined for the repository. The keys are the custom property names, and the values are the corresponding custom property values.
             public init(
                 id: Swift.Int,
                 node_id: Swift.String,
@@ -11812,7 +11871,8 @@ public enum Components {
                 watchers: Swift.Int,
                 anonymous_access_enabled: Swift.Bool? = nil,
                 code_of_conduct: Components.Schemas.code_hyphen_of_hyphen_conduct_hyphen_simple? = nil,
-                security_and_analysis: Components.Schemas.security_hyphen_and_hyphen_analysis? = nil
+                security_and_analysis: Components.Schemas.security_hyphen_and_hyphen_analysis? = nil,
+                custom_properties: Components.Schemas.full_hyphen_repository.custom_propertiesPayload? = nil
             ) {
                 self.id = id
                 self.node_id = node_id
@@ -11916,6 +11976,7 @@ public enum Components {
                 self.anonymous_access_enabled = anonymous_access_enabled
                 self.code_of_conduct = code_of_conduct
                 self.security_and_analysis = security_and_analysis
+                self.custom_properties = custom_properties
             }
             public enum CodingKeys: String, CodingKey {
                 case id
@@ -12020,6 +12081,7 @@ public enum Components {
                 case anonymous_access_enabled
                 case code_of_conduct
                 case security_and_analysis
+                case custom_properties
             }
         }
         /// The enforcement level of the ruleset. `evaluate` allows admins to test rules before enforcing them. Admins can view insights on the Rule Insights page (`evaluate` is only available with GitHub Enterprise).
@@ -19942,78 +20004,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/hook/events`.
             public var events: [Swift.String]
             /// - Remark: Generated from `#/components/schemas/hook/config`.
-            public struct configPayload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/hook/config/email`.
-                public var email: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/hook/config/password`.
-                public var password: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/hook/config/room`.
-                public var room: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/hook/config/subdomain`.
-                public var subdomain: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/hook/config/url`.
-                public var url: Components.Schemas.webhook_hyphen_config_hyphen_url?
-                /// - Remark: Generated from `#/components/schemas/hook/config/insecure_ssl`.
-                public var insecure_ssl: Components.Schemas.webhook_hyphen_config_hyphen_insecure_hyphen_ssl?
-                /// - Remark: Generated from `#/components/schemas/hook/config/content_type`.
-                public var content_type: Components.Schemas.webhook_hyphen_config_hyphen_content_hyphen_type?
-                /// - Remark: Generated from `#/components/schemas/hook/config/digest`.
-                public var digest: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/hook/config/secret`.
-                public var secret: Components.Schemas.webhook_hyphen_config_hyphen_secret?
-                /// - Remark: Generated from `#/components/schemas/hook/config/token`.
-                public var token: Swift.String?
-                /// Creates a new `configPayload`.
-                ///
-                /// - Parameters:
-                ///   - email:
-                ///   - password:
-                ///   - room:
-                ///   - subdomain:
-                ///   - url:
-                ///   - insecure_ssl:
-                ///   - content_type:
-                ///   - digest:
-                ///   - secret:
-                ///   - token:
-                public init(
-                    email: Swift.String? = nil,
-                    password: Swift.String? = nil,
-                    room: Swift.String? = nil,
-                    subdomain: Swift.String? = nil,
-                    url: Components.Schemas.webhook_hyphen_config_hyphen_url? = nil,
-                    insecure_ssl: Components.Schemas.webhook_hyphen_config_hyphen_insecure_hyphen_ssl? = nil,
-                    content_type: Components.Schemas.webhook_hyphen_config_hyphen_content_hyphen_type? = nil,
-                    digest: Swift.String? = nil,
-                    secret: Components.Schemas.webhook_hyphen_config_hyphen_secret? = nil,
-                    token: Swift.String? = nil
-                ) {
-                    self.email = email
-                    self.password = password
-                    self.room = room
-                    self.subdomain = subdomain
-                    self.url = url
-                    self.insecure_ssl = insecure_ssl
-                    self.content_type = content_type
-                    self.digest = digest
-                    self.secret = secret
-                    self.token = token
-                }
-                public enum CodingKeys: String, CodingKey {
-                    case email
-                    case password
-                    case room
-                    case subdomain
-                    case url
-                    case insecure_ssl
-                    case content_type
-                    case digest
-                    case secret
-                    case token
-                }
-            }
-            /// - Remark: Generated from `#/components/schemas/hook/config`.
-            public var config: Components.Schemas.hook.configPayload
+            public var config: Components.Schemas.webhook_hyphen_config
             /// - Remark: Generated from `#/components/schemas/hook/updated_at`.
             public var updated_at: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/hook/created_at`.
@@ -20050,7 +20041,7 @@ public enum Components {
                 name: Swift.String,
                 active: Swift.Bool,
                 events: [Swift.String],
-                config: Components.Schemas.hook.configPayload,
+                config: Components.Schemas.webhook_hyphen_config,
                 updated_at: Foundation.Date,
                 created_at: Foundation.Date,
                 url: Swift.String,
@@ -45652,10 +45643,6 @@ public enum Operations {
                         public var secret: Components.Schemas.webhook_hyphen_config_hyphen_secret?
                         /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/hooks/POST/requestBody/json/config/insecure_ssl`.
                         public var insecure_ssl: Components.Schemas.webhook_hyphen_config_hyphen_insecure_hyphen_ssl?
-                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/hooks/POST/requestBody/json/config/token`.
-                        public var token: Swift.String?
-                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/hooks/POST/requestBody/json/config/digest`.
-                        public var digest: Swift.String?
                         /// Creates a new `configPayload`.
                         ///
                         /// - Parameters:
@@ -45663,30 +45650,22 @@ public enum Operations {
                         ///   - content_type:
                         ///   - secret:
                         ///   - insecure_ssl:
-                        ///   - token:
-                        ///   - digest:
                         public init(
                             url: Components.Schemas.webhook_hyphen_config_hyphen_url? = nil,
                             content_type: Components.Schemas.webhook_hyphen_config_hyphen_content_hyphen_type? = nil,
                             secret: Components.Schemas.webhook_hyphen_config_hyphen_secret? = nil,
-                            insecure_ssl: Components.Schemas.webhook_hyphen_config_hyphen_insecure_hyphen_ssl? = nil,
-                            token: Swift.String? = nil,
-                            digest: Swift.String? = nil
+                            insecure_ssl: Components.Schemas.webhook_hyphen_config_hyphen_insecure_hyphen_ssl? = nil
                         ) {
                             self.url = url
                             self.content_type = content_type
                             self.secret = secret
                             self.insecure_ssl = insecure_ssl
-                            self.token = token
-                            self.digest = digest
                         }
                         public enum CodingKeys: String, CodingKey {
                             case url
                             case content_type
                             case secret
                             case insecure_ssl
-                            case token
-                            case digest
                         }
                     }
                     /// Key/value pairs to provide settings for this webhook.
@@ -46169,59 +46148,8 @@ public enum Operations {
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/hooks/{hook_id}/PATCH/requestBody/json`.
                 public struct jsonPayload: Codable, Hashable, Sendable {
-                    /// Key/value pairs to provide settings for this webhook.
-                    ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/hooks/{hook_id}/PATCH/requestBody/json/config`.
-                    public struct configPayload: Codable, Hashable, Sendable {
-                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/hooks/{hook_id}/PATCH/requestBody/json/config/url`.
-                        public var url: Components.Schemas.webhook_hyphen_config_hyphen_url
-                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/hooks/{hook_id}/PATCH/requestBody/json/config/content_type`.
-                        public var content_type: Components.Schemas.webhook_hyphen_config_hyphen_content_hyphen_type?
-                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/hooks/{hook_id}/PATCH/requestBody/json/config/secret`.
-                        public var secret: Components.Schemas.webhook_hyphen_config_hyphen_secret?
-                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/hooks/{hook_id}/PATCH/requestBody/json/config/insecure_ssl`.
-                        public var insecure_ssl: Components.Schemas.webhook_hyphen_config_hyphen_insecure_hyphen_ssl?
-                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/hooks/{hook_id}/PATCH/requestBody/json/config/address`.
-                        public var address: Swift.String?
-                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/hooks/{hook_id}/PATCH/requestBody/json/config/room`.
-                        public var room: Swift.String?
-                        /// Creates a new `configPayload`.
-                        ///
-                        /// - Parameters:
-                        ///   - url:
-                        ///   - content_type:
-                        ///   - secret:
-                        ///   - insecure_ssl:
-                        ///   - address:
-                        ///   - room:
-                        public init(
-                            url: Components.Schemas.webhook_hyphen_config_hyphen_url,
-                            content_type: Components.Schemas.webhook_hyphen_config_hyphen_content_hyphen_type? = nil,
-                            secret: Components.Schemas.webhook_hyphen_config_hyphen_secret? = nil,
-                            insecure_ssl: Components.Schemas.webhook_hyphen_config_hyphen_insecure_hyphen_ssl? = nil,
-                            address: Swift.String? = nil,
-                            room: Swift.String? = nil
-                        ) {
-                            self.url = url
-                            self.content_type = content_type
-                            self.secret = secret
-                            self.insecure_ssl = insecure_ssl
-                            self.address = address
-                            self.room = room
-                        }
-                        public enum CodingKeys: String, CodingKey {
-                            case url
-                            case content_type
-                            case secret
-                            case insecure_ssl
-                            case address
-                            case room
-                        }
-                    }
-                    /// Key/value pairs to provide settings for this webhook.
-                    ///
-                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/hooks/{hook_id}/PATCH/requestBody/json/config`.
-                    public var config: Operations.repos_sol_update_hyphen_webhook.Input.Body.jsonPayload.configPayload?
+                    public var config: Components.Schemas.webhook_hyphen_config?
                     /// Determines what [events](https://docs.github.com/webhooks/event-payloads) the hook is triggered for. This replaces the entire array of events.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/hooks/{hook_id}/PATCH/requestBody/json/events`.
@@ -46241,13 +46169,13 @@ public enum Operations {
                     /// Creates a new `jsonPayload`.
                     ///
                     /// - Parameters:
-                    ///   - config: Key/value pairs to provide settings for this webhook.
+                    ///   - config:
                     ///   - events: Determines what [events](https://docs.github.com/webhooks/event-payloads) the hook is triggered for. This replaces the entire array of events.
                     ///   - add_events: Determines a list of events to be added to the list of events that the Hook triggers for.
                     ///   - remove_events: Determines a list of events to be removed from the list of events that the Hook triggers for.
                     ///   - active: Determines if notifications are sent when the webhook is triggered. Set to `true` to send notifications.
                     public init(
-                        config: Operations.repos_sol_update_hyphen_webhook.Input.Body.jsonPayload.configPayload? = nil,
+                        config: Components.Schemas.webhook_hyphen_config? = nil,
                         events: [Swift.String]? = nil,
                         add_events: [Swift.String]? = nil,
                         remove_events: [Swift.String]? = nil,
@@ -52135,6 +52063,200 @@ public enum Operations {
             /// Resource not found
             ///
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/properties/values/get(repos/get-custom-properties-values)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            case notFound(Components.Responses.not_found)
+            /// The associated value of the enum case if `self` is `.notFound`.
+            ///
+            /// - Throws: An error if `self` is not `.notFound`.
+            /// - SeeAlso: `.notFound`.
+            public var notFound: Components.Responses.not_found {
+                get throws {
+                    switch self {
+                    case let .notFound(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "notFound",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
+    /// Create or update custom property values for a repository
+    ///
+    /// Create new or update existing custom property values for a repository.
+    /// Using a value of `null` for a custom property will remove or 'unset' the property value from the repository.
+    ///
+    /// Repository admins and other users with the repository-level "edit custom property values" fine-grained permission can use this endpoint.
+    ///
+    /// GitHub Apps must have the `repository_custom_properties:write` permission to use this endpoint.
+    ///
+    /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/properties/values`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/properties/values/patch(repos/create-or-update-custom-properties-values)`.
+    public enum repos_sol_create_hyphen_or_hyphen_update_hyphen_custom_hyphen_properties_hyphen_values {
+        public static let id: Swift.String = "repos/create-or-update-custom-properties-values"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/properties/values/PATCH/path`.
+            public struct Path: Sendable, Hashable {
+                /// The account owner of the repository. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/properties/values/PATCH/path/owner`.
+                public var owner: Components.Parameters.owner
+                /// The name of the repository without the `.git` extension. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/properties/values/PATCH/path/repo`.
+                public var repo: Components.Parameters.repo
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - owner: The account owner of the repository. The name is not case sensitive.
+                ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
+                public init(
+                    owner: Components.Parameters.owner,
+                    repo: Components.Parameters.repo
+                ) {
+                    self.owner = owner
+                    self.repo = repo
+                }
+            }
+            public var path: Operations.repos_sol_create_hyphen_or_hyphen_update_hyphen_custom_hyphen_properties_hyphen_values.Input.Path
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/properties/values/PATCH/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.repos_sol_create_hyphen_or_hyphen_update_hyphen_custom_hyphen_properties_hyphen_values.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.repos_sol_create_hyphen_or_hyphen_update_hyphen_custom_hyphen_properties_hyphen_values.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.repos_sol_create_hyphen_or_hyphen_update_hyphen_custom_hyphen_properties_hyphen_values.Input.Headers
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/properties/values/PATCH/requestBody`.
+            @frozen public enum Body: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/properties/values/PATCH/requestBody/json`.
+                public struct jsonPayload: Codable, Hashable, Sendable {
+                    /// A list of custom property names and associated values to apply to the repositories.
+                    ///
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/properties/values/PATCH/requestBody/json/properties`.
+                    public var properties: [Components.Schemas.custom_hyphen_property_hyphen_value]
+                    /// Creates a new `jsonPayload`.
+                    ///
+                    /// - Parameters:
+                    ///   - properties: A list of custom property names and associated values to apply to the repositories.
+                    public init(properties: [Components.Schemas.custom_hyphen_property_hyphen_value]) {
+                        self.properties = properties
+                    }
+                    public enum CodingKeys: String, CodingKey {
+                        case properties
+                    }
+                }
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/properties/values/PATCH/requestBody/content/application\/json`.
+                case json(Operations.repos_sol_create_hyphen_or_hyphen_update_hyphen_custom_hyphen_properties_hyphen_values.Input.Body.jsonPayload)
+            }
+            public var body: Operations.repos_sol_create_hyphen_or_hyphen_update_hyphen_custom_hyphen_properties_hyphen_values.Input.Body
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - headers:
+            ///   - body:
+            public init(
+                path: Operations.repos_sol_create_hyphen_or_hyphen_update_hyphen_custom_hyphen_properties_hyphen_values.Input.Path,
+                headers: Operations.repos_sol_create_hyphen_or_hyphen_update_hyphen_custom_hyphen_properties_hyphen_values.Input.Headers = .init(),
+                body: Operations.repos_sol_create_hyphen_or_hyphen_update_hyphen_custom_hyphen_properties_hyphen_values.Input.Body
+            ) {
+                self.path = path
+                self.headers = headers
+                self.body = body
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct NoContent: Sendable, Hashable {
+                /// Creates a new `NoContent`.
+                public init() {}
+            }
+            /// No Content when custom property values are successfully created or updated
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/properties/values/patch(repos/create-or-update-custom-properties-values)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            case noContent(Operations.repos_sol_create_hyphen_or_hyphen_update_hyphen_custom_hyphen_properties_hyphen_values.Output.NoContent)
+            /// The associated value of the enum case if `self` is `.noContent`.
+            ///
+            /// - Throws: An error if `self` is not `.noContent`.
+            /// - SeeAlso: `.noContent`.
+            public var noContent: Operations.repos_sol_create_hyphen_or_hyphen_update_hyphen_custom_hyphen_properties_hyphen_values.Output.NoContent {
+                get throws {
+                    switch self {
+                    case let .noContent(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "noContent",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Forbidden
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/properties/values/patch(repos/create-or-update-custom-properties-values)/responses/403`.
+            ///
+            /// HTTP response code: `403 forbidden`.
+            case forbidden(Components.Responses.forbidden)
+            /// The associated value of the enum case if `self` is `.forbidden`.
+            ///
+            /// - Throws: An error if `self` is not `.forbidden`.
+            /// - SeeAlso: `.forbidden`.
+            public var forbidden: Components.Responses.forbidden {
+                get throws {
+                    switch self {
+                    case let .forbidden(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "forbidden",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Resource not found
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/properties/values/patch(repos/create-or-update-custom-properties-values)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
             case notFound(Components.Responses.not_found)
