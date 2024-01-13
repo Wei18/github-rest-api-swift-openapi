@@ -13909,6 +13909,109 @@ public struct Client: APIProtocol {
             }
         )
     }
+    /// Create or update custom property values for a repository
+    ///
+    /// Create new or update existing custom property values for a repository.
+    /// Using a value of `null` for a custom property will remove or 'unset' the property value from the repository.
+    ///
+    /// Repository admins and other users with the repository-level "edit custom property values" fine-grained permission can use this endpoint.
+    ///
+    /// GitHub Apps must have the `repository_custom_properties:write` permission to use this endpoint.
+    ///
+    /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/properties/values`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/properties/values/patch(repos/create-or-update-custom-properties-values)`.
+    public func repos_sol_create_hyphen_or_hyphen_update_hyphen_custom_hyphen_properties_hyphen_values(_ input: Operations.repos_sol_create_hyphen_or_hyphen_update_hyphen_custom_hyphen_properties_hyphen_values.Input) async throws -> Operations.repos_sol_create_hyphen_or_hyphen_update_hyphen_custom_hyphen_properties_hyphen_values.Output {
+        try await client.send(
+            input: input,
+            forOperation: Operations.repos_sol_create_hyphen_or_hyphen_update_hyphen_custom_hyphen_properties_hyphen_values.id,
+            serializer: { input in
+                let path = try converter.renderedPath(
+                    template: "/repos/{}/{}/properties/values",
+                    parameters: [
+                        input.path.owner,
+                        input.path.repo
+                    ]
+                )
+                var request: HTTPTypes.HTTPRequest = .init(
+                    soar_path: path,
+                    method: .patch
+                )
+                suppressMutabilityWarning(&request)
+                converter.setAcceptHeader(
+                    in: &request.headerFields,
+                    contentTypes: input.headers.accept
+                )
+                let body: OpenAPIRuntime.HTTPBody?
+                switch input.body {
+                case let .json(value):
+                    body = try converter.setRequiredRequestBodyAsJSON(
+                        value,
+                        headerFields: &request.headerFields,
+                        contentType: "application/json; charset=utf-8"
+                    )
+                }
+                return (request, body)
+            },
+            deserializer: { response, responseBody in
+                switch response.status.code {
+                case 204:
+                    return .noContent(.init())
+                case 403:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Components.Responses.forbidden.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Schemas.basic_hyphen_error.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .forbidden(.init(body: body))
+                case 404:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Components.Responses.not_found.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Schemas.basic_hyphen_error.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .notFound(.init(body: body))
+                default:
+                    return .undocumented(
+                        statusCode: response.status.code,
+                        .init(
+                            headerFields: response.headerFields,
+                            body: responseBody
+                        )
+                    )
+                }
+            }
+        )
+    }
     /// Get a repository README
     ///
     /// Gets the preferred README for a repository.
