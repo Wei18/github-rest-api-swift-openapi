@@ -1065,6 +1065,7 @@ public struct Client: APIProtocol {
     /// Get a code scanning analysis for a repository
     ///
     /// Gets a specified code scanning analysis for a repository.
+    ///
     /// You must use an access token with the `security_events` scope to use this endpoint with private repositories,
     /// the `public_repo` scope also grants permission to read security events on public repositories only.
     ///
@@ -1078,10 +1079,9 @@ public struct Client: APIProtocol {
     /// For very old analyses this data is not available,
     /// and `0` is returned in this field.
     ///
-    /// If you use the Accept header `application/sarif+json`,
-    /// the response contains the analysis data that was uploaded.
-    /// This is formatted as
-    /// [SARIF version 2.1.0](https://docs.oasis-open.org/sarif/sarif/v2.1.0/cs01/sarif-v2.1.0-cs01.html).
+    /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
+    ///
+    /// - **`application/sarif+json`**: Instead of returning a summary of the analysis, this endpoint returns a subset of the analysis data that was uploaded. The data is formatted as [SARIF version 2.1.0](https://docs.oasis-open.org/sarif/sarif/v2.1.0/cs01/sarif-v2.1.0-cs01.html). It also returns additional data such as the `github/alertNumber` and `github/alertUrl` properties.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}/get(code-scanning/get-analysis)`.
