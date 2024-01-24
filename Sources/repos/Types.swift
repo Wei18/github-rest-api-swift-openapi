@@ -611,19 +611,42 @@ public protocol APIProtocol: Sendable {
     func repos_sol_get_hyphen_collaborator_hyphen_permission_hyphen_level(_ input: Operations.repos_sol_get_hyphen_collaborator_hyphen_permission_hyphen_level.Input) async throws -> Operations.repos_sol_get_hyphen_collaborator_hyphen_permission_hyphen_level.Output
     /// List commit comments for a repository
     ///
-    /// Commit Comments use [these custom media types](https://docs.github.com/rest/overview/media-types). You can read more about the use of media types in the API [here](https://docs.github.com/rest/overview/media-types/).
+    /// Lists the commit comments for a specified repository. Comments are ordered by ascending ID.
     ///
-    /// Comments are ordered by ascending ID.
+    /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
+    ///
+    /// - **`application/vnd.github-commitcomment.raw+json`**: Returns the raw markdown body. Response will include `body`. This is the default if you do not pass any specific media type.
+    /// - **`application/vnd.github-commitcomment.text+json`**: Returns a text only representation of the markdown body. Response will include `body_text`.
+    /// - **`application/vnd.github-commitcomment.html+json`**: Returns HTML rendered from the body's markdown. Response will include `body_html`.
+    /// - **`application/vnd.github-commitcomment.full+json`**: Returns raw, text, and HTML representations. Response will include `body`, `body_text`, and `body_html`.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/comments`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/comments/get(repos/list-commit-comments-for-repo)`.
     func repos_sol_list_hyphen_commit_hyphen_comments_hyphen_for_hyphen_repo(_ input: Operations.repos_sol_list_hyphen_commit_hyphen_comments_hyphen_for_hyphen_repo.Input) async throws -> Operations.repos_sol_list_hyphen_commit_hyphen_comments_hyphen_for_hyphen_repo.Output
     /// Get a commit comment
     ///
+    /// Gets a specified commit comment.
+    ///
+    /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
+    ///
+    /// - **`application/vnd.github-commitcomment.raw+json`**: Returns the raw markdown body. Response will include `body`. This is the default if you do not pass any specific media type.
+    /// - **`application/vnd.github-commitcomment.text+json`**: Returns a text only representation of the markdown body. Response will include `body_text`.
+    /// - **`application/vnd.github-commitcomment.html+json`**: Returns HTML rendered from the body's markdown. Response will include `body_html`.
+    /// - **`application/vnd.github-commitcomment.full+json`**: Returns raw, text, and HTML representations. Response will include `body`, `body_text`, and `body_html`.
+    ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/comments/{comment_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/comments/{comment_id}/get(repos/get-commit-comment)`.
     func repos_sol_get_hyphen_commit_hyphen_comment(_ input: Operations.repos_sol_get_hyphen_commit_hyphen_comment.Input) async throws -> Operations.repos_sol_get_hyphen_commit_hyphen_comment.Output
     /// Update a commit comment
+    ///
+    /// Updates the contents of a specified commit comment.
+    ///
+    /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
+    ///
+    /// - **`application/vnd.github-commitcomment.raw+json`**: Returns the raw markdown body. Response will include `body`. This is the default if you do not pass any specific media type.
+    /// - **`application/vnd.github-commitcomment.text+json`**: Returns a text only representation of the markdown body. Response will include `body_text`.
+    /// - **`application/vnd.github-commitcomment.html+json`**: Returns HTML rendered from the body's markdown. Response will include `body_html`.
+    /// - **`application/vnd.github-commitcomment.full+json`**: Returns raw, text, and HTML representations. Response will include `body`, `body_text`, and `body_html`.
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/comments/{comment_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/comments/{comment_id}/patch(repos/update-commit-comment)`.
@@ -678,7 +701,14 @@ public protocol APIProtocol: Sendable {
     func repos_sol_list_hyphen_branches_hyphen_for_hyphen_head_hyphen_commit(_ input: Operations.repos_sol_list_hyphen_branches_hyphen_for_hyphen_head_hyphen_commit.Input) async throws -> Operations.repos_sol_list_hyphen_branches_hyphen_for_hyphen_head_hyphen_commit.Output
     /// List commit comments
     ///
-    /// Use the `:commit_sha` to specify the commit that will have its comments listed.
+    /// Lists the comments for a specified commit.
+    ///
+    /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
+    ///
+    /// - **`application/vnd.github-commitcomment.raw+json`**: Returns the raw markdown body. Response will include `body`. This is the default if you do not pass any specific media type.
+    /// - **`application/vnd.github-commitcomment.text+json`**: Returns a text only representation of the markdown body. Response will include `body_text`.
+    /// - **`application/vnd.github-commitcomment.html+json`**: Returns HTML rendered from the body's markdown. Response will include `body_html`.
+    /// - **`application/vnd.github-commitcomment.full+json`**: Returns raw, text, and HTML representations. Response will include `body`, `body_text`, and `body_html`.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/commits/{commit_sha}/comments`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/commits/{commit_sha}/comments/get(repos/list-comments-for-commit)`.
@@ -688,6 +718,13 @@ public protocol APIProtocol: Sendable {
     /// Create a comment for a commit using its `:commit_sha`.
     ///
     /// This endpoint triggers [notifications](https://docs.github.com/github/managing-subscriptions-and-notifications-on-github/about-notifications). Creating content too quickly using this endpoint may result in secondary rate limiting. For more information, see "[Rate limits for the API](https://docs.github.com/rest/overview/rate-limits-for-the-rest-api#about-secondary-rate-limits)" and "[Best practices for using the REST API](https://docs.github.com/rest/guides/best-practices-for-using-the-rest-api)."
+    ///
+    /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
+    ///
+    /// - **`application/vnd.github-commitcomment.raw+json`**: Returns the raw markdown body. Response will include `body`. This is the default if you do not pass any specific media type.
+    /// - **`application/vnd.github-commitcomment.text+json`**: Returns a text only representation of the markdown body. Response will include `body_text`.
+    /// - **`application/vnd.github-commitcomment.html+json`**: Returns HTML rendered from the body's markdown. Response will include `body_html`.
+    /// - **`application/vnd.github-commitcomment.full+json`**: Returns raw, text, and HTML representations. Response will include `body`, `body_text`, and `body_html`.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/commits/{commit_sha}/comments`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/commits/{commit_sha}/comments/post(repos/create-commit-comment)`.
@@ -707,9 +744,11 @@ public protocol APIProtocol: Sendable {
     ///
     /// **Note:** If there are more than 300 files in the commit diff, the response will include pagination link headers for the remaining files, up to a limit of 3000 files. Each page contains the static commit information, and the only changes are to the file listing.
     ///
-    /// You can pass the appropriate [media type](https://docs.github.com/rest/overview/media-types/#commits-commit-comparison-and-pull-requests) to  fetch `diff` and `patch` formats. Diffs with binary data will have no `patch` property.
+    /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
     ///
-    /// To return only the SHA-1 hash of the commit reference, you can provide the `sha` custom [media type](https://docs.github.com/rest/overview/media-types/#commits-commit-comparison-and-pull-requests) in the `Accept` header. You can use this endpoint to check if a remote reference's SHA-1 hash is the same as your local reference's SHA-1 hash by providing the local SHA-1 reference as the ETag.
+    /// - **`application/vnd.github.diff`**: Returns the diff of the commit.
+    /// - **`application/vnd.github.patch`**: Returns the patch of the commit. Diffs with binary data will have no `patch` property.
+    /// - **`application/vnd.github.sha`**: Returns the commit's SHA-1 hash. You can use this endpoint to check if a remote reference's SHA-1 hash is the same as your local reference's SHA-1 hash by providing the local SHA-1 reference as the ETag.
     ///
     /// **Signature verification object**
     ///
@@ -787,7 +826,12 @@ public protocol APIProtocol: Sendable {
     ///
     /// Compares two commits against one another. You can compare branches in the same repository, or you can compare branches that exist in different repositories within the same repository network, including fork branches. For more information about how to view a repository's network, see "[Understanding connections between repositories](https://docs.github.com/repositories/viewing-activity-and-data-for-your-repository/understanding-connections-between-repositories)."
     ///
-    /// This endpoint is equivalent to running the `git log BASE..HEAD` command, but it returns commits in a different order. The `git log BASE..HEAD` command returns commits in reverse chronological order, whereas the API returns commits in chronological order. You can pass the appropriate [media type](https://docs.github.com/rest/overview/media-types/#commits-commit-comparison-and-pull-requests) to fetch diff and patch formats.
+    /// This endpoint is equivalent to running the `git log BASE..HEAD` command, but it returns commits in a different order. The `git log BASE..HEAD` command returns commits in reverse chronological order, whereas the API returns commits in chronological order.
+    ///
+    /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
+    ///
+    /// - **`application/vnd.github.diff`**: Returns the diff of the commit.
+    /// - **`application/vnd.github.patch`**: Returns the patch of the commit. Diffs with binary data will have no `patch` property.
     ///
     /// The API response includes details about the files that were changed between the two commits. This includes the status of the change (if a file was added, removed, modified, or renamed), and details of the change itself. For example, files with a `renamed` status have a `previous_filename` field showing the previous filename of the file, and files with a `modified` status have a `patch` field showing the changes made to the file.
     ///
@@ -836,43 +880,31 @@ public protocol APIProtocol: Sendable {
     func repos_sol_compare_hyphen_commits(_ input: Operations.repos_sol_compare_hyphen_commits.Input) async throws -> Operations.repos_sol_compare_hyphen_commits.Output
     /// Get repository content
     ///
-    /// Gets the contents of a file or directory in a repository. Specify the file path or directory in `:path`. If you omit
-    /// `:path`, you will receive the contents of the repository's root directory. See the description below regarding what the API response includes for directories. 
+    /// Gets the contents of a file or directory in a repository. Specify the file path or directory with the `path` parameter. If you omit the `path` parameter, you will receive the contents of the repository's root directory.
     ///
-    /// Files and symlinks support [a custom media type](https://docs.github.com/rest/overview/media-types) for
-    /// retrieving the raw content or rendered HTML (when supported). All content types support [a custom media
-    /// type](https://docs.github.com/rest/overview/media-types) to ensure the content is returned in a consistent
-    /// object format.
+    /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
+    ///
+    /// - **`application/vnd.github.raw+json`**: Returns the raw file contents for files and symlinks.
+    /// - **`application/vnd.github.html+json`**: Returns the file contents in HTML. Markup languages are rendered to HTML using GitHub's open-source [Markup library](https://github.com/github/markup).
+    /// - **`application/vnd.github.object+json`**: Returns the contents in a consistent object format regardless of the content type. For example, instead of an array of objects for a directory, the response will be an object with an `entries` attribute containing the array of objects.
+    ///
+    /// If the content is a directory, the response will be an array of objects, one object for each item in the directory. When listing the contents of a directory, submodules have their "type" specified as "file". Logically, the value _should_ be "submodule". This behavior exists [for backwards compatibility purposes](https://git.io/v1YCW). In the next major version of the API, the type will be returned as "submodule".
+    ///
+    /// If the content is a symlink and the symlink's target is a normal file in the repository, then the API responds with the content of the file. Otherwise, the API responds with an object describing the symlink itself.
+    ///
+    /// If the content is a submodule, the `submodule_git_url` field identifies the location of the submodule repository, and the `sha` identifies a specific commit within the submodule repository. Git uses the given URL when cloning the submodule repository, and checks out the submodule at that specific commit. If the submodule repository is not hosted on github.com, the Git URLs (`git_url` and `_links["git"]`) and the github.com URLs (`html_url` and `_links["html"]`) will have null values.
     ///
     /// **Notes**:
-    /// *   To get a repository's contents recursively, you can [recursively get the tree](https://docs.github.com/rest/git/trees#get-a-tree).
-    /// *   This API has an upper limit of 1,000 files for a directory. If you need to retrieve more files, use the [Git Trees
-    /// API](https://docs.github.com/rest/git/trees#get-a-tree).
-    ///  *  Download URLs expire and are meant to be used just once. To ensure the download URL does not expire, please use the contents API to obtain a fresh download URL for each download.
-    ///  Size limits:
-    /// If the requested file's size is:
-    /// * 1 MB or smaller: All features of this endpoint are supported.
-    /// * Between 1-100 MB: Only the `raw` or `object` [custom media types](https://docs.github.com/rest/repos/contents#custom-media-types-for-repository-contents) are supported. Both will work as normal, except that when using the `object` media type, the `content` field will be an empty string and the `encoding` field will be `"none"`. To get the contents of these larger files, use the `raw` media type.
-    ///  * Greater than 100 MB: This endpoint is not supported.
     ///
-    ///  If the content is a directory:
-    /// The response will be an array of objects, one object for each item in the directory.
-    /// When listing the contents of a directory, submodules have their "type" specified as "file". Logically, the value
-    /// _should_ be "submodule". This behavior exists in API v3 [for backwards compatibility purposes](https://git.io/v1YCW).
-    /// In the next major version of the API, the type will be returned as "submodule".
-    ///
-    ///  If the content is a symlink: 
-    /// If the requested `:path` points to a symlink, and the symlink's target is a normal file in the repository, then the
-    /// API responds with the content of the file (in the format shown in the example. Otherwise, the API responds with an object 
-    /// describing the symlink itself.
-    ///
-    ///  If the content is a submodule:
-    /// The `submodule_git_url` identifies the location of the submodule repository, and the `sha` identifies a specific
-    /// commit within the submodule repository. Git uses the given URL when cloning the submodule repository, and checks out
-    /// the submodule at that specific commit.
-    ///
-    /// If the submodule repository is not hosted on github.com, the Git URLs (`git_url` and `_links["git"]`) and the
-    /// github.com URLs (`html_url` and `_links["html"]`) will have null values.
+    /// - To get a repository's contents recursively, you can [recursively get the tree](https://docs.github.com/rest/git/trees#get-a-tree).
+    /// - This API has an upper limit of 1,000 files for a directory. If you need to retrieve
+    /// more files, use the [Git Trees API](https://docs.github.com/rest/git/trees#get-a-tree).
+    /// - Download URLs expire and are meant to be used just once. To ensure the download URL does not expire, please use the contents API to obtain a fresh download URL for each download.
+    /// - If the requested file's size is:
+    ///   - 1 MB or smaller: All features of this endpoint are supported.
+    ///   - Between 1-100 MB: Only the `raw` or `object` custom media types are supported. Both will work as normal, except that when using the `object` media type, the `content` field will be an empty
+    /// string and the `encoding` field will be `"none"`. To get the contents of these larger files, use the `raw` media type.
+    ///   - Greater than 100 MB: This endpoint is not supported.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/contents/{path}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/contents/{path}/get(repos/get-content)`.
@@ -1406,9 +1438,27 @@ public protocol APIProtocol: Sendable {
     ///
     /// Users must have write permissions. GitHub Apps must have the `pages:write` permission to use this endpoint.
     ///
-    /// - Remark: HTTP `POST /repos/{owner}/{repo}/pages/deployment`.
-    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/deployment/post(repos/create-pages-deployment)`.
+    /// - Remark: HTTP `POST /repos/{owner}/{repo}/pages/deployments`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/deployments/post(repos/create-pages-deployment)`.
     func repos_sol_create_hyphen_pages_hyphen_deployment(_ input: Operations.repos_sol_create_hyphen_pages_hyphen_deployment.Input) async throws -> Operations.repos_sol_create_hyphen_pages_hyphen_deployment.Output
+    /// Get the status of a GitHub Pages deployment
+    ///
+    /// Gets the current status of a GitHub Pages deployment.
+    ///
+    /// Users must have read permission for the GitHub Pages site. GitHub Apps must have the `pages:read` permission.
+    ///
+    /// - Remark: HTTP `GET /repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}/get(repos/get-pages-deployment)`.
+    func repos_sol_get_hyphen_pages_hyphen_deployment(_ input: Operations.repos_sol_get_hyphen_pages_hyphen_deployment.Input) async throws -> Operations.repos_sol_get_hyphen_pages_hyphen_deployment.Output
+    /// Cancel a GitHub Pages deployment
+    ///
+    /// Cancels a GitHub Pages deployment.
+    ///
+    /// Users must have write permissions for the GitHub Pages site. GitHub Apps must have the `pages:write` permission to use this endpoint.
+    ///
+    /// - Remark: HTTP `POST /repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}/cancel`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}/cancel/post(repos/cancel-pages-deployment)`.
+    func repos_sol_cancel_hyphen_pages_hyphen_deployment(_ input: Operations.repos_sol_cancel_hyphen_pages_hyphen_deployment.Input) async throws -> Operations.repos_sol_cancel_hyphen_pages_hyphen_deployment.Output
     /// Get a DNS health check for GitHub Pages
     ///
     /// Gets a health check of the DNS settings for the `CNAME` record configured for a repository's GitHub Pages.
@@ -1460,7 +1510,10 @@ public protocol APIProtocol: Sendable {
     ///
     /// Gets the preferred README for a repository.
     ///
-    /// READMEs support [custom media types](https://docs.github.com/rest/overview/media-types) for retrieving the raw content or rendered HTML.
+    /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
+    ///
+    /// - **`application/vnd.github.raw+json`**: Returns the raw file contents. This is the default if you do not specify a media type.
+    /// - **`application/vnd.github.html+json`**: Returns the README in HTML. Markup languages are rendered to HTML using GitHub's open-source [Markup library](https://github.com/github/markup).
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/readme`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/readme/get(repos/get-readme)`.
@@ -1469,7 +1522,10 @@ public protocol APIProtocol: Sendable {
     ///
     /// Gets the README from a repository directory.
     ///
-    /// READMEs support [custom media types](https://docs.github.com/rest/overview/media-types) for retrieving the raw content or rendered HTML.
+    /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
+    ///
+    /// - **`application/vnd.github.raw+json`**: Returns the raw file contents. This is the default if you do not specify a media type.
+    /// - **`application/vnd.github.html+json`**: Returns the README in HTML. Markup languages are rendered to HTML using GitHub's open-source [Markup library](https://github.com/github/markup).
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/readme/{dir}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/readme/{dir}/get(repos/get-readme-in-directory)`.
@@ -3054,9 +3110,14 @@ extension APIProtocol {
     }
     /// List commit comments for a repository
     ///
-    /// Commit Comments use [these custom media types](https://docs.github.com/rest/overview/media-types). You can read more about the use of media types in the API [here](https://docs.github.com/rest/overview/media-types/).
+    /// Lists the commit comments for a specified repository. Comments are ordered by ascending ID.
     ///
-    /// Comments are ordered by ascending ID.
+    /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
+    ///
+    /// - **`application/vnd.github-commitcomment.raw+json`**: Returns the raw markdown body. Response will include `body`. This is the default if you do not pass any specific media type.
+    /// - **`application/vnd.github-commitcomment.text+json`**: Returns a text only representation of the markdown body. Response will include `body_text`.
+    /// - **`application/vnd.github-commitcomment.html+json`**: Returns HTML rendered from the body's markdown. Response will include `body_html`.
+    /// - **`application/vnd.github-commitcomment.full+json`**: Returns raw, text, and HTML representations. Response will include `body`, `body_text`, and `body_html`.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/comments`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/comments/get(repos/list-commit-comments-for-repo)`.
@@ -3073,6 +3134,15 @@ extension APIProtocol {
     }
     /// Get a commit comment
     ///
+    /// Gets a specified commit comment.
+    ///
+    /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
+    ///
+    /// - **`application/vnd.github-commitcomment.raw+json`**: Returns the raw markdown body. Response will include `body`. This is the default if you do not pass any specific media type.
+    /// - **`application/vnd.github-commitcomment.text+json`**: Returns a text only representation of the markdown body. Response will include `body_text`.
+    /// - **`application/vnd.github-commitcomment.html+json`**: Returns HTML rendered from the body's markdown. Response will include `body_html`.
+    /// - **`application/vnd.github-commitcomment.full+json`**: Returns raw, text, and HTML representations. Response will include `body`, `body_text`, and `body_html`.
+    ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/comments/{comment_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/comments/{comment_id}/get(repos/get-commit-comment)`.
     public func repos_sol_get_hyphen_commit_hyphen_comment(
@@ -3085,6 +3155,15 @@ extension APIProtocol {
         ))
     }
     /// Update a commit comment
+    ///
+    /// Updates the contents of a specified commit comment.
+    ///
+    /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
+    ///
+    /// - **`application/vnd.github-commitcomment.raw+json`**: Returns the raw markdown body. Response will include `body`. This is the default if you do not pass any specific media type.
+    /// - **`application/vnd.github-commitcomment.text+json`**: Returns a text only representation of the markdown body. Response will include `body_text`.
+    /// - **`application/vnd.github-commitcomment.html+json`**: Returns HTML rendered from the body's markdown. Response will include `body_html`.
+    /// - **`application/vnd.github-commitcomment.full+json`**: Returns raw, text, and HTML representations. Response will include `body`, `body_text`, and `body_html`.
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/comments/{comment_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/comments/{comment_id}/patch(repos/update-commit-comment)`.
@@ -3175,7 +3254,14 @@ extension APIProtocol {
     }
     /// List commit comments
     ///
-    /// Use the `:commit_sha` to specify the commit that will have its comments listed.
+    /// Lists the comments for a specified commit.
+    ///
+    /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
+    ///
+    /// - **`application/vnd.github-commitcomment.raw+json`**: Returns the raw markdown body. Response will include `body`. This is the default if you do not pass any specific media type.
+    /// - **`application/vnd.github-commitcomment.text+json`**: Returns a text only representation of the markdown body. Response will include `body_text`.
+    /// - **`application/vnd.github-commitcomment.html+json`**: Returns HTML rendered from the body's markdown. Response will include `body_html`.
+    /// - **`application/vnd.github-commitcomment.full+json`**: Returns raw, text, and HTML representations. Response will include `body`, `body_text`, and `body_html`.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/commits/{commit_sha}/comments`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/commits/{commit_sha}/comments/get(repos/list-comments-for-commit)`.
@@ -3195,6 +3281,13 @@ extension APIProtocol {
     /// Create a comment for a commit using its `:commit_sha`.
     ///
     /// This endpoint triggers [notifications](https://docs.github.com/github/managing-subscriptions-and-notifications-on-github/about-notifications). Creating content too quickly using this endpoint may result in secondary rate limiting. For more information, see "[Rate limits for the API](https://docs.github.com/rest/overview/rate-limits-for-the-rest-api#about-secondary-rate-limits)" and "[Best practices for using the REST API](https://docs.github.com/rest/guides/best-practices-for-using-the-rest-api)."
+    ///
+    /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
+    ///
+    /// - **`application/vnd.github-commitcomment.raw+json`**: Returns the raw markdown body. Response will include `body`. This is the default if you do not pass any specific media type.
+    /// - **`application/vnd.github-commitcomment.text+json`**: Returns a text only representation of the markdown body. Response will include `body_text`.
+    /// - **`application/vnd.github-commitcomment.html+json`**: Returns HTML rendered from the body's markdown. Response will include `body_html`.
+    /// - **`application/vnd.github-commitcomment.full+json`**: Returns raw, text, and HTML representations. Response will include `body`, `body_text`, and `body_html`.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/commits/{commit_sha}/comments`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/commits/{commit_sha}/comments/post(repos/create-commit-comment)`.
@@ -3234,9 +3327,11 @@ extension APIProtocol {
     ///
     /// **Note:** If there are more than 300 files in the commit diff, the response will include pagination link headers for the remaining files, up to a limit of 3000 files. Each page contains the static commit information, and the only changes are to the file listing.
     ///
-    /// You can pass the appropriate [media type](https://docs.github.com/rest/overview/media-types/#commits-commit-comparison-and-pull-requests) to  fetch `diff` and `patch` formats. Diffs with binary data will have no `patch` property.
+    /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
     ///
-    /// To return only the SHA-1 hash of the commit reference, you can provide the `sha` custom [media type](https://docs.github.com/rest/overview/media-types/#commits-commit-comparison-and-pull-requests) in the `Accept` header. You can use this endpoint to check if a remote reference's SHA-1 hash is the same as your local reference's SHA-1 hash by providing the local SHA-1 reference as the ETag.
+    /// - **`application/vnd.github.diff`**: Returns the diff of the commit.
+    /// - **`application/vnd.github.patch`**: Returns the patch of the commit. Diffs with binary data will have no `patch` property.
+    /// - **`application/vnd.github.sha`**: Returns the commit's SHA-1 hash. You can use this endpoint to check if a remote reference's SHA-1 hash is the same as your local reference's SHA-1 hash by providing the local SHA-1 reference as the ETag.
     ///
     /// **Signature verification object**
     ///
@@ -3352,7 +3447,12 @@ extension APIProtocol {
     ///
     /// Compares two commits against one another. You can compare branches in the same repository, or you can compare branches that exist in different repositories within the same repository network, including fork branches. For more information about how to view a repository's network, see "[Understanding connections between repositories](https://docs.github.com/repositories/viewing-activity-and-data-for-your-repository/understanding-connections-between-repositories)."
     ///
-    /// This endpoint is equivalent to running the `git log BASE..HEAD` command, but it returns commits in a different order. The `git log BASE..HEAD` command returns commits in reverse chronological order, whereas the API returns commits in chronological order. You can pass the appropriate [media type](https://docs.github.com/rest/overview/media-types/#commits-commit-comparison-and-pull-requests) to fetch diff and patch formats.
+    /// This endpoint is equivalent to running the `git log BASE..HEAD` command, but it returns commits in a different order. The `git log BASE..HEAD` command returns commits in reverse chronological order, whereas the API returns commits in chronological order.
+    ///
+    /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
+    ///
+    /// - **`application/vnd.github.diff`**: Returns the diff of the commit.
+    /// - **`application/vnd.github.patch`**: Returns the patch of the commit. Diffs with binary data will have no `patch` property.
     ///
     /// The API response includes details about the files that were changed between the two commits. This includes the status of the change (if a file was added, removed, modified, or renamed), and details of the change itself. For example, files with a `renamed` status have a `previous_filename` field showing the previous filename of the file, and files with a `modified` status have a `patch` field showing the changes made to the file.
     ///
@@ -3411,43 +3511,31 @@ extension APIProtocol {
     }
     /// Get repository content
     ///
-    /// Gets the contents of a file or directory in a repository. Specify the file path or directory in `:path`. If you omit
-    /// `:path`, you will receive the contents of the repository's root directory. See the description below regarding what the API response includes for directories. 
+    /// Gets the contents of a file or directory in a repository. Specify the file path or directory with the `path` parameter. If you omit the `path` parameter, you will receive the contents of the repository's root directory.
     ///
-    /// Files and symlinks support [a custom media type](https://docs.github.com/rest/overview/media-types) for
-    /// retrieving the raw content or rendered HTML (when supported). All content types support [a custom media
-    /// type](https://docs.github.com/rest/overview/media-types) to ensure the content is returned in a consistent
-    /// object format.
+    /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
+    ///
+    /// - **`application/vnd.github.raw+json`**: Returns the raw file contents for files and symlinks.
+    /// - **`application/vnd.github.html+json`**: Returns the file contents in HTML. Markup languages are rendered to HTML using GitHub's open-source [Markup library](https://github.com/github/markup).
+    /// - **`application/vnd.github.object+json`**: Returns the contents in a consistent object format regardless of the content type. For example, instead of an array of objects for a directory, the response will be an object with an `entries` attribute containing the array of objects.
+    ///
+    /// If the content is a directory, the response will be an array of objects, one object for each item in the directory. When listing the contents of a directory, submodules have their "type" specified as "file". Logically, the value _should_ be "submodule". This behavior exists [for backwards compatibility purposes](https://git.io/v1YCW). In the next major version of the API, the type will be returned as "submodule".
+    ///
+    /// If the content is a symlink and the symlink's target is a normal file in the repository, then the API responds with the content of the file. Otherwise, the API responds with an object describing the symlink itself.
+    ///
+    /// If the content is a submodule, the `submodule_git_url` field identifies the location of the submodule repository, and the `sha` identifies a specific commit within the submodule repository. Git uses the given URL when cloning the submodule repository, and checks out the submodule at that specific commit. If the submodule repository is not hosted on github.com, the Git URLs (`git_url` and `_links["git"]`) and the github.com URLs (`html_url` and `_links["html"]`) will have null values.
     ///
     /// **Notes**:
-    /// *   To get a repository's contents recursively, you can [recursively get the tree](https://docs.github.com/rest/git/trees#get-a-tree).
-    /// *   This API has an upper limit of 1,000 files for a directory. If you need to retrieve more files, use the [Git Trees
-    /// API](https://docs.github.com/rest/git/trees#get-a-tree).
-    ///  *  Download URLs expire and are meant to be used just once. To ensure the download URL does not expire, please use the contents API to obtain a fresh download URL for each download.
-    ///  Size limits:
-    /// If the requested file's size is:
-    /// * 1 MB or smaller: All features of this endpoint are supported.
-    /// * Between 1-100 MB: Only the `raw` or `object` [custom media types](https://docs.github.com/rest/repos/contents#custom-media-types-for-repository-contents) are supported. Both will work as normal, except that when using the `object` media type, the `content` field will be an empty string and the `encoding` field will be `"none"`. To get the contents of these larger files, use the `raw` media type.
-    ///  * Greater than 100 MB: This endpoint is not supported.
     ///
-    ///  If the content is a directory:
-    /// The response will be an array of objects, one object for each item in the directory.
-    /// When listing the contents of a directory, submodules have their "type" specified as "file". Logically, the value
-    /// _should_ be "submodule". This behavior exists in API v3 [for backwards compatibility purposes](https://git.io/v1YCW).
-    /// In the next major version of the API, the type will be returned as "submodule".
-    ///
-    ///  If the content is a symlink: 
-    /// If the requested `:path` points to a symlink, and the symlink's target is a normal file in the repository, then the
-    /// API responds with the content of the file (in the format shown in the example. Otherwise, the API responds with an object 
-    /// describing the symlink itself.
-    ///
-    ///  If the content is a submodule:
-    /// The `submodule_git_url` identifies the location of the submodule repository, and the `sha` identifies a specific
-    /// commit within the submodule repository. Git uses the given URL when cloning the submodule repository, and checks out
-    /// the submodule at that specific commit.
-    ///
-    /// If the submodule repository is not hosted on github.com, the Git URLs (`git_url` and `_links["git"]`) and the
-    /// github.com URLs (`html_url` and `_links["html"]`) will have null values.
+    /// - To get a repository's contents recursively, you can [recursively get the tree](https://docs.github.com/rest/git/trees#get-a-tree).
+    /// - This API has an upper limit of 1,000 files for a directory. If you need to retrieve
+    /// more files, use the [Git Trees API](https://docs.github.com/rest/git/trees#get-a-tree).
+    /// - Download URLs expire and are meant to be used just once. To ensure the download URL does not expire, please use the contents API to obtain a fresh download URL for each download.
+    /// - If the requested file's size is:
+    ///   - 1 MB or smaller: All features of this endpoint are supported.
+    ///   - Between 1-100 MB: Only the `raw` or `object` custom media types are supported. Both will work as normal, except that when using the `object` media type, the `content` field will be an empty
+    /// string and the `encoding` field will be `"none"`. To get the contents of these larger files, use the `raw` media type.
+    ///   - Greater than 100 MB: This endpoint is not supported.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/contents/{path}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/contents/{path}/get(repos/get-content)`.
@@ -4479,8 +4567,8 @@ extension APIProtocol {
     ///
     /// Users must have write permissions. GitHub Apps must have the `pages:write` permission to use this endpoint.
     ///
-    /// - Remark: HTTP `POST /repos/{owner}/{repo}/pages/deployment`.
-    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/deployment/post(repos/create-pages-deployment)`.
+    /// - Remark: HTTP `POST /repos/{owner}/{repo}/pages/deployments`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/deployments/post(repos/create-pages-deployment)`.
     public func repos_sol_create_hyphen_pages_hyphen_deployment(
         path: Operations.repos_sol_create_hyphen_pages_hyphen_deployment.Input.Path,
         headers: Operations.repos_sol_create_hyphen_pages_hyphen_deployment.Input.Headers = .init(),
@@ -4490,6 +4578,40 @@ extension APIProtocol {
             path: path,
             headers: headers,
             body: body
+        ))
+    }
+    /// Get the status of a GitHub Pages deployment
+    ///
+    /// Gets the current status of a GitHub Pages deployment.
+    ///
+    /// Users must have read permission for the GitHub Pages site. GitHub Apps must have the `pages:read` permission.
+    ///
+    /// - Remark: HTTP `GET /repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}/get(repos/get-pages-deployment)`.
+    public func repos_sol_get_hyphen_pages_hyphen_deployment(
+        path: Operations.repos_sol_get_hyphen_pages_hyphen_deployment.Input.Path,
+        headers: Operations.repos_sol_get_hyphen_pages_hyphen_deployment.Input.Headers = .init()
+    ) async throws -> Operations.repos_sol_get_hyphen_pages_hyphen_deployment.Output {
+        try await repos_sol_get_hyphen_pages_hyphen_deployment(Operations.repos_sol_get_hyphen_pages_hyphen_deployment.Input(
+            path: path,
+            headers: headers
+        ))
+    }
+    /// Cancel a GitHub Pages deployment
+    ///
+    /// Cancels a GitHub Pages deployment.
+    ///
+    /// Users must have write permissions for the GitHub Pages site. GitHub Apps must have the `pages:write` permission to use this endpoint.
+    ///
+    /// - Remark: HTTP `POST /repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}/cancel`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}/cancel/post(repos/cancel-pages-deployment)`.
+    public func repos_sol_cancel_hyphen_pages_hyphen_deployment(
+        path: Operations.repos_sol_cancel_hyphen_pages_hyphen_deployment.Input.Path,
+        headers: Operations.repos_sol_cancel_hyphen_pages_hyphen_deployment.Input.Headers = .init()
+    ) async throws -> Operations.repos_sol_cancel_hyphen_pages_hyphen_deployment.Output {
+        try await repos_sol_cancel_hyphen_pages_hyphen_deployment(Operations.repos_sol_cancel_hyphen_pages_hyphen_deployment.Input(
+            path: path,
+            headers: headers
         ))
     }
     /// Get a DNS health check for GitHub Pages
@@ -4585,7 +4707,10 @@ extension APIProtocol {
     ///
     /// Gets the preferred README for a repository.
     ///
-    /// READMEs support [custom media types](https://docs.github.com/rest/overview/media-types) for retrieving the raw content or rendered HTML.
+    /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
+    ///
+    /// - **`application/vnd.github.raw+json`**: Returns the raw file contents. This is the default if you do not specify a media type.
+    /// - **`application/vnd.github.html+json`**: Returns the README in HTML. Markup languages are rendered to HTML using GitHub's open-source [Markup library](https://github.com/github/markup).
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/readme`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/readme/get(repos/get-readme)`.
@@ -4604,7 +4729,10 @@ extension APIProtocol {
     ///
     /// Gets the README from a repository directory.
     ///
-    /// READMEs support [custom media types](https://docs.github.com/rest/overview/media-types) for retrieving the raw content or rendered HTML.
+    /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
+    ///
+    /// - **`application/vnd.github.raw+json`**: Returns the raw file contents. This is the default if you do not specify a media type.
+    /// - **`application/vnd.github.html+json`**: Returns the README in HTML. Markup languages are rendered to HTML using GitHub's open-source [Markup library](https://github.com/github/markup).
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/readme/{dir}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/readme/{dir}/get(repos/get-readme-in-directory)`.
@@ -9738,7 +9866,44 @@ public enum Components {
             /// The value assigned to the property
             ///
             /// - Remark: Generated from `#/components/schemas/custom-property-value/value`.
-            public var value: Swift.String?
+            @frozen public enum valuePayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/custom-property-value/value/case1`.
+                case case1(Swift.String)
+                /// - Remark: Generated from `#/components/schemas/custom-property-value/value/case2`.
+                case case2([Swift.String])
+                public init(from decoder: any Decoder) throws {
+                    var errors: [any Error] = []
+                    do {
+                        self = .case1(try decoder.decodeFromSingleValueContainer())
+                        return
+                    } catch {
+                        errors.append(error)
+                    }
+                    do {
+                        self = .case2(try decoder.decodeFromSingleValueContainer())
+                        return
+                    } catch {
+                        errors.append(error)
+                    }
+                    throw Swift.DecodingError.failedToDecodeOneOfSchema(
+                        type: Self.self,
+                        codingPath: decoder.codingPath,
+                        errors: errors
+                    )
+                }
+                public func encode(to encoder: any Encoder) throws {
+                    switch self {
+                    case let .case1(value):
+                        try encoder.encodeToSingleValueContainer(value)
+                    case let .case2(value):
+                        try encoder.encodeToSingleValueContainer(value)
+                    }
+                }
+            }
+            /// The value assigned to the property
+            ///
+            /// - Remark: Generated from `#/components/schemas/custom-property-value/value`.
+            public var value: Components.Schemas.custom_hyphen_property_hyphen_value.valuePayload?
             /// Creates a new `custom_hyphen_property_hyphen_value`.
             ///
             /// - Parameters:
@@ -9746,7 +9911,7 @@ public enum Components {
             ///   - value: The value assigned to the property
             public init(
                 property_name: Swift.String,
-                value: Swift.String? = nil
+                value: Components.Schemas.custom_hyphen_property_hyphen_value.valuePayload? = nil
             ) {
                 self.property_name = property_name
                 self.value = value
@@ -20545,6 +20710,39 @@ public enum Components {
                 case preview_url
             }
         }
+        /// - Remark: Generated from `#/components/schemas/pages-deployment-status`.
+        public struct pages_hyphen_deployment_hyphen_status: Codable, Hashable, Sendable {
+            /// The current status of the deployment.
+            ///
+            /// - Remark: Generated from `#/components/schemas/pages-deployment-status/status`.
+            @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                case deployment_in_progress = "deployment_in_progress"
+                case syncing_files = "syncing_files"
+                case finished_file_sync = "finished_file_sync"
+                case updating_pages = "updating_pages"
+                case purging_cdn = "purging_cdn"
+                case deployment_cancelled = "deployment_cancelled"
+                case deployment_failed = "deployment_failed"
+                case deployment_content_failed = "deployment_content_failed"
+                case deployment_attempt_error = "deployment_attempt_error"
+                case deployment_lost = "deployment_lost"
+                case succeed = "succeed"
+            }
+            /// The current status of the deployment.
+            ///
+            /// - Remark: Generated from `#/components/schemas/pages-deployment-status/status`.
+            public var status: Components.Schemas.pages_hyphen_deployment_hyphen_status.statusPayload?
+            /// Creates a new `pages_hyphen_deployment_hyphen_status`.
+            ///
+            /// - Parameters:
+            ///   - status: The current status of the deployment.
+            public init(status: Components.Schemas.pages_hyphen_deployment_hyphen_status.statusPayload? = nil) {
+                self.status = status
+            }
+            public enum CodingKeys: String, CodingKey {
+                case status
+            }
+        }
         /// Pages Health Check Status
         ///
         /// - Remark: Generated from `#/components/schemas/pages-health-check`.
@@ -22382,6 +22580,43 @@ public enum Components {
         ///
         /// - Remark: Generated from `#/components/parameters/key-id`.
         public typealias key_hyphen_id = Swift.Int
+        /// The ID of the Pages deployment. You can also give the commit SHA of the deployment.
+        ///
+        /// - Remark: Generated from `#/components/parameters/pages-deployment-id`.
+        @frozen public enum pages_hyphen_deployment_hyphen_id: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/parameters/pages-deployment-id/case1`.
+            case case1(Swift.Int)
+            /// - Remark: Generated from `#/components/parameters/pages-deployment-id/case2`.
+            case case2(Swift.String)
+            public init(from decoder: any Decoder) throws {
+                var errors: [any Error] = []
+                do {
+                    self = .case1(try decoder.decodeFromSingleValueContainer())
+                    return
+                } catch {
+                    errors.append(error)
+                }
+                do {
+                    self = .case2(try decoder.decodeFromSingleValueContainer())
+                    return
+                } catch {
+                    errors.append(error)
+                }
+                throw Swift.DecodingError.failedToDecodeOneOfSchema(
+                    type: Self.self,
+                    codingPath: decoder.codingPath,
+                    errors: errors
+                )
+            }
+            public func encode(to encoder: any Encoder) throws {
+                switch self {
+                case let .case1(value):
+                    try encoder.encodeToSingleValueContainer(value)
+                case let .case2(value):
+                    try encoder.encodeToSingleValueContainer(value)
+                }
+            }
+        }
         /// The unique identifier of the asset.
         ///
         /// - Remark: Generated from `#/components/parameters/asset-id`.
@@ -36152,9 +36387,14 @@ public enum Operations {
     }
     /// List commit comments for a repository
     ///
-    /// Commit Comments use [these custom media types](https://docs.github.com/rest/overview/media-types). You can read more about the use of media types in the API [here](https://docs.github.com/rest/overview/media-types/).
+    /// Lists the commit comments for a specified repository. Comments are ordered by ascending ID.
     ///
-    /// Comments are ordered by ascending ID.
+    /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
+    ///
+    /// - **`application/vnd.github-commitcomment.raw+json`**: Returns the raw markdown body. Response will include `body`. This is the default if you do not pass any specific media type.
+    /// - **`application/vnd.github-commitcomment.text+json`**: Returns a text only representation of the markdown body. Response will include `body_text`.
+    /// - **`application/vnd.github-commitcomment.html+json`**: Returns HTML rendered from the body's markdown. Response will include `body_html`.
+    /// - **`application/vnd.github-commitcomment.full+json`**: Returns raw, text, and HTML representations. Response will include `body`, `body_text`, and `body_html`.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/comments`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/comments/get(repos/list-commit-comments-for-repo)`.
@@ -36341,6 +36581,15 @@ public enum Operations {
     }
     /// Get a commit comment
     ///
+    /// Gets a specified commit comment.
+    ///
+    /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
+    ///
+    /// - **`application/vnd.github-commitcomment.raw+json`**: Returns the raw markdown body. Response will include `body`. This is the default if you do not pass any specific media type.
+    /// - **`application/vnd.github-commitcomment.text+json`**: Returns a text only representation of the markdown body. Response will include `body_text`.
+    /// - **`application/vnd.github-commitcomment.html+json`**: Returns HTML rendered from the body's markdown. Response will include `body_html`.
+    /// - **`application/vnd.github-commitcomment.full+json`**: Returns raw, text, and HTML representations. Response will include `body`, `body_text`, and `body_html`.
+    ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/comments/{comment_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/comments/{comment_id}/get(repos/get-commit-comment)`.
     public enum repos_sol_get_hyphen_commit_hyphen_comment {
@@ -36509,6 +36758,15 @@ public enum Operations {
         }
     }
     /// Update a commit comment
+    ///
+    /// Updates the contents of a specified commit comment.
+    ///
+    /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
+    ///
+    /// - **`application/vnd.github-commitcomment.raw+json`**: Returns the raw markdown body. Response will include `body`. This is the default if you do not pass any specific media type.
+    /// - **`application/vnd.github-commitcomment.text+json`**: Returns a text only representation of the markdown body. Response will include `body_text`.
+    /// - **`application/vnd.github-commitcomment.html+json`**: Returns HTML rendered from the body's markdown. Response will include `body_html`.
+    /// - **`application/vnd.github-commitcomment.full+json`**: Returns raw, text, and HTML representations. Response will include `body`, `body_text`, and `body_html`.
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/comments/{comment_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/comments/{comment_id}/patch(repos/update-commit-comment)`.
@@ -37377,7 +37635,14 @@ public enum Operations {
     }
     /// List commit comments
     ///
-    /// Use the `:commit_sha` to specify the commit that will have its comments listed.
+    /// Lists the comments for a specified commit.
+    ///
+    /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
+    ///
+    /// - **`application/vnd.github-commitcomment.raw+json`**: Returns the raw markdown body. Response will include `body`. This is the default if you do not pass any specific media type.
+    /// - **`application/vnd.github-commitcomment.text+json`**: Returns a text only representation of the markdown body. Response will include `body_text`.
+    /// - **`application/vnd.github-commitcomment.html+json`**: Returns HTML rendered from the body's markdown. Response will include `body_html`.
+    /// - **`application/vnd.github-commitcomment.full+json`**: Returns raw, text, and HTML representations. Response will include `body`, `body_text`, and `body_html`.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/commits/{commit_sha}/comments`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/commits/{commit_sha}/comments/get(repos/list-comments-for-commit)`.
@@ -37574,6 +37839,13 @@ public enum Operations {
     /// Create a comment for a commit using its `:commit_sha`.
     ///
     /// This endpoint triggers [notifications](https://docs.github.com/github/managing-subscriptions-and-notifications-on-github/about-notifications). Creating content too quickly using this endpoint may result in secondary rate limiting. For more information, see "[Rate limits for the API](https://docs.github.com/rest/overview/rate-limits-for-the-rest-api#about-secondary-rate-limits)" and "[Best practices for using the REST API](https://docs.github.com/rest/guides/best-practices-for-using-the-rest-api)."
+    ///
+    /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
+    ///
+    /// - **`application/vnd.github-commitcomment.raw+json`**: Returns the raw markdown body. Response will include `body`. This is the default if you do not pass any specific media type.
+    /// - **`application/vnd.github-commitcomment.text+json`**: Returns a text only representation of the markdown body. Response will include `body_text`.
+    /// - **`application/vnd.github-commitcomment.html+json`**: Returns HTML rendered from the body's markdown. Response will include `body_html`.
+    /// - **`application/vnd.github-commitcomment.full+json`**: Returns raw, text, and HTML representations. Response will include `body`, `body_text`, and `body_html`.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/commits/{commit_sha}/comments`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/commits/{commit_sha}/comments/post(repos/create-commit-comment)`.
@@ -38038,9 +38310,11 @@ public enum Operations {
     ///
     /// **Note:** If there are more than 300 files in the commit diff, the response will include pagination link headers for the remaining files, up to a limit of 3000 files. Each page contains the static commit information, and the only changes are to the file listing.
     ///
-    /// You can pass the appropriate [media type](https://docs.github.com/rest/overview/media-types/#commits-commit-comparison-and-pull-requests) to  fetch `diff` and `patch` formats. Diffs with binary data will have no `patch` property.
+    /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
     ///
-    /// To return only the SHA-1 hash of the commit reference, you can provide the `sha` custom [media type](https://docs.github.com/rest/overview/media-types/#commits-commit-comparison-and-pull-requests) in the `Accept` header. You can use this endpoint to check if a remote reference's SHA-1 hash is the same as your local reference's SHA-1 hash by providing the local SHA-1 reference as the ETag.
+    /// - **`application/vnd.github.diff`**: Returns the diff of the commit.
+    /// - **`application/vnd.github.patch`**: Returns the patch of the commit. Diffs with binary data will have no `patch` property.
+    /// - **`application/vnd.github.sha`**: Returns the commit's SHA-1 hash. You can use this endpoint to check if a remote reference's SHA-1 hash is the same as your local reference's SHA-1 hash by providing the local SHA-1 reference as the ETag.
     ///
     /// **Signature verification object**
     ///
@@ -38913,7 +39187,12 @@ public enum Operations {
     ///
     /// Compares two commits against one another. You can compare branches in the same repository, or you can compare branches that exist in different repositories within the same repository network, including fork branches. For more information about how to view a repository's network, see "[Understanding connections between repositories](https://docs.github.com/repositories/viewing-activity-and-data-for-your-repository/understanding-connections-between-repositories)."
     ///
-    /// This endpoint is equivalent to running the `git log BASE..HEAD` command, but it returns commits in a different order. The `git log BASE..HEAD` command returns commits in reverse chronological order, whereas the API returns commits in chronological order. You can pass the appropriate [media type](https://docs.github.com/rest/overview/media-types/#commits-commit-comparison-and-pull-requests) to fetch diff and patch formats.
+    /// This endpoint is equivalent to running the `git log BASE..HEAD` command, but it returns commits in a different order. The `git log BASE..HEAD` command returns commits in reverse chronological order, whereas the API returns commits in chronological order.
+    ///
+    /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
+    ///
+    /// - **`application/vnd.github.diff`**: Returns the diff of the commit.
+    /// - **`application/vnd.github.patch`**: Returns the patch of the commit. Diffs with binary data will have no `patch` property.
     ///
     /// The API response includes details about the files that were changed between the two commits. This includes the status of the change (if a file was added, removed, modified, or renamed), and details of the change itself. For example, files with a `renamed` status have a `previous_filename` field showing the previous filename of the file, and files with a `modified` status have a `patch` field showing the changes made to the file.
     ///
@@ -39199,43 +39478,31 @@ public enum Operations {
     }
     /// Get repository content
     ///
-    /// Gets the contents of a file or directory in a repository. Specify the file path or directory in `:path`. If you omit
-    /// `:path`, you will receive the contents of the repository's root directory. See the description below regarding what the API response includes for directories. 
+    /// Gets the contents of a file or directory in a repository. Specify the file path or directory with the `path` parameter. If you omit the `path` parameter, you will receive the contents of the repository's root directory.
     ///
-    /// Files and symlinks support [a custom media type](https://docs.github.com/rest/overview/media-types) for
-    /// retrieving the raw content or rendered HTML (when supported). All content types support [a custom media
-    /// type](https://docs.github.com/rest/overview/media-types) to ensure the content is returned in a consistent
-    /// object format.
+    /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
+    ///
+    /// - **`application/vnd.github.raw+json`**: Returns the raw file contents for files and symlinks.
+    /// - **`application/vnd.github.html+json`**: Returns the file contents in HTML. Markup languages are rendered to HTML using GitHub's open-source [Markup library](https://github.com/github/markup).
+    /// - **`application/vnd.github.object+json`**: Returns the contents in a consistent object format regardless of the content type. For example, instead of an array of objects for a directory, the response will be an object with an `entries` attribute containing the array of objects.
+    ///
+    /// If the content is a directory, the response will be an array of objects, one object for each item in the directory. When listing the contents of a directory, submodules have their "type" specified as "file". Logically, the value _should_ be "submodule". This behavior exists [for backwards compatibility purposes](https://git.io/v1YCW). In the next major version of the API, the type will be returned as "submodule".
+    ///
+    /// If the content is a symlink and the symlink's target is a normal file in the repository, then the API responds with the content of the file. Otherwise, the API responds with an object describing the symlink itself.
+    ///
+    /// If the content is a submodule, the `submodule_git_url` field identifies the location of the submodule repository, and the `sha` identifies a specific commit within the submodule repository. Git uses the given URL when cloning the submodule repository, and checks out the submodule at that specific commit. If the submodule repository is not hosted on github.com, the Git URLs (`git_url` and `_links["git"]`) and the github.com URLs (`html_url` and `_links["html"]`) will have null values.
     ///
     /// **Notes**:
-    /// *   To get a repository's contents recursively, you can [recursively get the tree](https://docs.github.com/rest/git/trees#get-a-tree).
-    /// *   This API has an upper limit of 1,000 files for a directory. If you need to retrieve more files, use the [Git Trees
-    /// API](https://docs.github.com/rest/git/trees#get-a-tree).
-    ///  *  Download URLs expire and are meant to be used just once. To ensure the download URL does not expire, please use the contents API to obtain a fresh download URL for each download.
-    ///  Size limits:
-    /// If the requested file's size is:
-    /// * 1 MB or smaller: All features of this endpoint are supported.
-    /// * Between 1-100 MB: Only the `raw` or `object` [custom media types](https://docs.github.com/rest/repos/contents#custom-media-types-for-repository-contents) are supported. Both will work as normal, except that when using the `object` media type, the `content` field will be an empty string and the `encoding` field will be `"none"`. To get the contents of these larger files, use the `raw` media type.
-    ///  * Greater than 100 MB: This endpoint is not supported.
     ///
-    ///  If the content is a directory:
-    /// The response will be an array of objects, one object for each item in the directory.
-    /// When listing the contents of a directory, submodules have their "type" specified as "file". Logically, the value
-    /// _should_ be "submodule". This behavior exists in API v3 [for backwards compatibility purposes](https://git.io/v1YCW).
-    /// In the next major version of the API, the type will be returned as "submodule".
-    ///
-    ///  If the content is a symlink: 
-    /// If the requested `:path` points to a symlink, and the symlink's target is a normal file in the repository, then the
-    /// API responds with the content of the file (in the format shown in the example. Otherwise, the API responds with an object 
-    /// describing the symlink itself.
-    ///
-    ///  If the content is a submodule:
-    /// The `submodule_git_url` identifies the location of the submodule repository, and the `sha` identifies a specific
-    /// commit within the submodule repository. Git uses the given URL when cloning the submodule repository, and checks out
-    /// the submodule at that specific commit.
-    ///
-    /// If the submodule repository is not hosted on github.com, the Git URLs (`git_url` and `_links["git"]`) and the
-    /// github.com URLs (`html_url` and `_links["html"]`) will have null values.
+    /// - To get a repository's contents recursively, you can [recursively get the tree](https://docs.github.com/rest/git/trees#get-a-tree).
+    /// - This API has an upper limit of 1,000 files for a directory. If you need to retrieve
+    /// more files, use the [Git Trees API](https://docs.github.com/rest/git/trees#get-a-tree).
+    /// - Download URLs expire and are meant to be used just once. To ensure the download URL does not expire, please use the contents API to obtain a fresh download URL for each download.
+    /// - If the requested file's size is:
+    ///   - 1 MB or smaller: All features of this endpoint are supported.
+    ///   - Between 1-100 MB: Only the `raw` or `object` custom media types are supported. Both will work as normal, except that when using the `object` media type, the `content` field will be an empty
+    /// string and the `encoding` field will be `"none"`. To get the contents of these larger files, use the `raw` media type.
+    ///   - Greater than 100 MB: This endpoint is not supported.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/contents/{path}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/contents/{path}/get(repos/get-content)`.
@@ -51101,20 +51368,20 @@ public enum Operations {
     ///
     /// Users must have write permissions. GitHub Apps must have the `pages:write` permission to use this endpoint.
     ///
-    /// - Remark: HTTP `POST /repos/{owner}/{repo}/pages/deployment`.
-    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/deployment/post(repos/create-pages-deployment)`.
+    /// - Remark: HTTP `POST /repos/{owner}/{repo}/pages/deployments`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/deployments/post(repos/create-pages-deployment)`.
     public enum repos_sol_create_hyphen_pages_hyphen_deployment {
         public static let id: Swift.String = "repos/create-pages-deployment"
         public struct Input: Sendable, Hashable {
-            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pages/deployment/POST/path`.
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pages/deployments/POST/path`.
             public struct Path: Sendable, Hashable {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
-                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pages/deployment/POST/path/owner`.
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pages/deployments/POST/path/owner`.
                 public var owner: Components.Parameters.owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
-                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pages/deployment/POST/path/repo`.
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pages/deployments/POST/path/repo`.
                 public var repo: Components.Parameters.repo
                 /// Creates a new `Path`.
                 ///
@@ -51130,7 +51397,7 @@ public enum Operations {
                 }
             }
             public var path: Operations.repos_sol_create_hyphen_pages_hyphen_deployment.Input.Path
-            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pages/deployment/POST/header`.
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pages/deployments/POST/header`.
             public struct Headers: Sendable, Hashable {
                 public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.repos_sol_create_hyphen_pages_hyphen_deployment.AcceptableContentType>]
                 /// Creates a new `Headers`.
@@ -51142,54 +51409,62 @@ public enum Operations {
                 }
             }
             public var headers: Operations.repos_sol_create_hyphen_pages_hyphen_deployment.Input.Headers
-            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pages/deployment/POST/requestBody`.
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pages/deployments/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// The object used to create GitHub Pages deployment
                 ///
-                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pages/deployment/POST/requestBody/json`.
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pages/deployments/POST/requestBody/json`.
                 public struct jsonPayload: Codable, Hashable, Sendable {
-                    /// The URL of an artifact that contains the .zip or .tar of static assets to deploy. The artifact belongs to the repository.
+                    /// The ID of an artifact that contains the .zip or .tar of static assets to deploy. The artifact belongs to the repository. Either `artifact_id` or `artifact_url` are required.
                     ///
-                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pages/deployment/POST/requestBody/json/artifact_url`.
-                    public var artifact_url: Swift.String
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pages/deployments/POST/requestBody/json/artifact_id`.
+                    public var artifact_id: Swift.Double?
+                    /// The URL of an artifact that contains the .zip or .tar of static assets to deploy. The artifact belongs to the repository. Either `artifact_id` or `artifact_url` are required.
+                    ///
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pages/deployments/POST/requestBody/json/artifact_url`.
+                    public var artifact_url: Swift.String?
                     /// The target environment for this GitHub Pages deployment.
                     ///
-                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pages/deployment/POST/requestBody/json/environment`.
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pages/deployments/POST/requestBody/json/environment`.
                     public var environment: Swift.String?
                     /// A unique string that represents the version of the build for this deployment.
                     ///
-                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pages/deployment/POST/requestBody/json/pages_build_version`.
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pages/deployments/POST/requestBody/json/pages_build_version`.
                     public var pages_build_version: Swift.String
                     /// The OIDC token issued by GitHub Actions certifying the origin of the deployment.
                     ///
-                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pages/deployment/POST/requestBody/json/oidc_token`.
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pages/deployments/POST/requestBody/json/oidc_token`.
                     public var oidc_token: Swift.String
                     /// Creates a new `jsonPayload`.
                     ///
                     /// - Parameters:
-                    ///   - artifact_url: The URL of an artifact that contains the .zip or .tar of static assets to deploy. The artifact belongs to the repository.
+                    ///   - artifact_id: The ID of an artifact that contains the .zip or .tar of static assets to deploy. The artifact belongs to the repository. Either `artifact_id` or `artifact_url` are required.
+                    ///   - artifact_url: The URL of an artifact that contains the .zip or .tar of static assets to deploy. The artifact belongs to the repository. Either `artifact_id` or `artifact_url` are required.
                     ///   - environment: The target environment for this GitHub Pages deployment.
                     ///   - pages_build_version: A unique string that represents the version of the build for this deployment.
                     ///   - oidc_token: The OIDC token issued by GitHub Actions certifying the origin of the deployment.
                     public init(
-                        artifact_url: Swift.String,
+                        artifact_id: Swift.Double? = nil,
+                        artifact_url: Swift.String? = nil,
                         environment: Swift.String? = nil,
                         pages_build_version: Swift.String,
                         oidc_token: Swift.String
                     ) {
+                        self.artifact_id = artifact_id
                         self.artifact_url = artifact_url
                         self.environment = environment
                         self.pages_build_version = pages_build_version
                         self.oidc_token = oidc_token
                     }
                     public enum CodingKeys: String, CodingKey {
+                        case artifact_id
                         case artifact_url
                         case environment
                         case pages_build_version
                         case oidc_token
                     }
                 }
-                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pages/deployment/POST/requestBody/content/application\/json`.
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pages/deployments/POST/requestBody/content/application\/json`.
                 case json(Operations.repos_sol_create_hyphen_pages_hyphen_deployment.Input.Body.jsonPayload)
             }
             public var body: Operations.repos_sol_create_hyphen_pages_hyphen_deployment.Input.Body
@@ -51211,9 +51486,9 @@ public enum Operations {
         }
         @frozen public enum Output: Sendable, Hashable {
             public struct Ok: Sendable, Hashable {
-                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pages/deployment/POST/responses/200/content`.
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pages/deployments/POST/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
-                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pages/deployment/POST/responses/200/content/application\/json`.
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pages/deployments/POST/responses/200/content/application\/json`.
                     case json(Components.Schemas.page_hyphen_deployment)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
@@ -51240,7 +51515,7 @@ public enum Operations {
             }
             /// Response
             ///
-            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/deployment/post(repos/create-pages-deployment)/responses/200`.
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/deployments/post(repos/create-pages-deployment)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
             case ok(Operations.repos_sol_create_hyphen_pages_hyphen_deployment.Output.Ok)
@@ -51263,7 +51538,7 @@ public enum Operations {
             }
             /// Bad Request
             ///
-            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/deployment/post(repos/create-pages-deployment)/responses/400`.
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/deployments/post(repos/create-pages-deployment)/responses/400`.
             ///
             /// HTTP response code: `400 badRequest`.
             case badRequest(Components.Responses.bad_request)
@@ -51286,7 +51561,7 @@ public enum Operations {
             }
             /// Validation failed, or the endpoint has been spammed.
             ///
-            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/deployment/post(repos/create-pages-deployment)/responses/422`.
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/deployments/post(repos/create-pages-deployment)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
             case unprocessableContent(Components.Responses.validation_failed)
@@ -51309,7 +51584,7 @@ public enum Operations {
             }
             /// Resource not found
             ///
-            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/deployment/post(repos/create-pages-deployment)/responses/404`.
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/deployments/post(repos/create-pages-deployment)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
             case notFound(Components.Responses.not_found)
@@ -51363,6 +51638,394 @@ public enum Operations {
                 [
                     .json,
                     .application_scim_plus_json
+                ]
+            }
+        }
+    }
+    /// Get the status of a GitHub Pages deployment
+    ///
+    /// Gets the current status of a GitHub Pages deployment.
+    ///
+    /// Users must have read permission for the GitHub Pages site. GitHub Apps must have the `pages:read` permission.
+    ///
+    /// - Remark: HTTP `GET /repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}/get(repos/get-pages-deployment)`.
+    public enum repos_sol_get_hyphen_pages_hyphen_deployment {
+        public static let id: Swift.String = "repos/get-pages-deployment"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}/GET/path`.
+            public struct Path: Sendable, Hashable {
+                /// The account owner of the repository. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}/GET/path/owner`.
+                public var owner: Components.Parameters.owner
+                /// The name of the repository without the `.git` extension. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}/GET/path/repo`.
+                public var repo: Components.Parameters.repo
+                /// - Remark: Generated from `#/components/parameters/pages-deployment-id`.
+                @frozen public enum pages_hyphen_deployment_hyphen_id: Codable, Hashable, Sendable {
+                    /// - Remark: Generated from `#/components/parameters/pages-deployment-id/case1`.
+                    case case1(Swift.Int)
+                    /// - Remark: Generated from `#/components/parameters/pages-deployment-id/case2`.
+                    case case2(Swift.String)
+                    public init(from decoder: any Decoder) throws {
+                        var errors: [any Error] = []
+                        do {
+                            self = .case1(try decoder.decodeFromSingleValueContainer())
+                            return
+                        } catch {
+                            errors.append(error)
+                        }
+                        do {
+                            self = .case2(try decoder.decodeFromSingleValueContainer())
+                            return
+                        } catch {
+                            errors.append(error)
+                        }
+                        throw Swift.DecodingError.failedToDecodeOneOfSchema(
+                            type: Self.self,
+                            codingPath: decoder.codingPath,
+                            errors: errors
+                        )
+                    }
+                    public func encode(to encoder: any Encoder) throws {
+                        switch self {
+                        case let .case1(value):
+                            try encoder.encodeToSingleValueContainer(value)
+                        case let .case2(value):
+                            try encoder.encodeToSingleValueContainer(value)
+                        }
+                    }
+                }
+                /// The ID of the Pages deployment. You can also give the commit SHA of the deployment.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}/GET/path/pages_deployment_id`.
+                public var pages_deployment_id: Components.Parameters.pages_hyphen_deployment_hyphen_id
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - owner: The account owner of the repository. The name is not case sensitive.
+                ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
+                ///   - pages_deployment_id: The ID of the Pages deployment. You can also give the commit SHA of the deployment.
+                public init(
+                    owner: Components.Parameters.owner,
+                    repo: Components.Parameters.repo,
+                    pages_deployment_id: Components.Parameters.pages_hyphen_deployment_hyphen_id
+                ) {
+                    self.owner = owner
+                    self.repo = repo
+                    self.pages_deployment_id = pages_deployment_id
+                }
+            }
+            public var path: Operations.repos_sol_get_hyphen_pages_hyphen_deployment.Input.Path
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}/GET/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.repos_sol_get_hyphen_pages_hyphen_deployment.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.repos_sol_get_hyphen_pages_hyphen_deployment.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.repos_sol_get_hyphen_pages_hyphen_deployment.Input.Headers
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - headers:
+            public init(
+                path: Operations.repos_sol_get_hyphen_pages_hyphen_deployment.Input.Path,
+                headers: Operations.repos_sol_get_hyphen_pages_hyphen_deployment.Input.Headers = .init()
+            ) {
+                self.path = path
+                self.headers = headers
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Ok: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}/GET/responses/200/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}/GET/responses/200/content/application\/json`.
+                    case json(Components.Schemas.pages_hyphen_deployment_hyphen_status)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Components.Schemas.pages_hyphen_deployment_hyphen_status {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.repos_sol_get_hyphen_pages_hyphen_deployment.Output.Ok.Body
+                /// Creates a new `Ok`.
+                ///
+                /// - Parameters:
+                ///   - body: Received HTTP response body
+                public init(body: Operations.repos_sol_get_hyphen_pages_hyphen_deployment.Output.Ok.Body) {
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}/get(repos/get-pages-deployment)/responses/200`.
+            ///
+            /// HTTP response code: `200 ok`.
+            case ok(Operations.repos_sol_get_hyphen_pages_hyphen_deployment.Output.Ok)
+            /// The associated value of the enum case if `self` is `.ok`.
+            ///
+            /// - Throws: An error if `self` is not `.ok`.
+            /// - SeeAlso: `.ok`.
+            public var ok: Operations.repos_sol_get_hyphen_pages_hyphen_deployment.Output.Ok {
+                get throws {
+                    switch self {
+                    case let .ok(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "ok",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Resource not found
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}/get(repos/get-pages-deployment)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            case notFound(Components.Responses.not_found)
+            /// The associated value of the enum case if `self` is `.notFound`.
+            ///
+            /// - Throws: An error if `self` is not `.notFound`.
+            /// - SeeAlso: `.notFound`.
+            public var notFound: Components.Responses.not_found {
+                get throws {
+                    switch self {
+                    case let .notFound(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "notFound",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
+    /// Cancel a GitHub Pages deployment
+    ///
+    /// Cancels a GitHub Pages deployment.
+    ///
+    /// Users must have write permissions for the GitHub Pages site. GitHub Apps must have the `pages:write` permission to use this endpoint.
+    ///
+    /// - Remark: HTTP `POST /repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}/cancel`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}/cancel/post(repos/cancel-pages-deployment)`.
+    public enum repos_sol_cancel_hyphen_pages_hyphen_deployment {
+        public static let id: Swift.String = "repos/cancel-pages-deployment"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}/cancel/POST/path`.
+            public struct Path: Sendable, Hashable {
+                /// The account owner of the repository. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}/cancel/POST/path/owner`.
+                public var owner: Components.Parameters.owner
+                /// The name of the repository without the `.git` extension. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}/cancel/POST/path/repo`.
+                public var repo: Components.Parameters.repo
+                /// - Remark: Generated from `#/components/parameters/pages-deployment-id`.
+                @frozen public enum pages_hyphen_deployment_hyphen_id: Codable, Hashable, Sendable {
+                    /// - Remark: Generated from `#/components/parameters/pages-deployment-id/case1`.
+                    case case1(Swift.Int)
+                    /// - Remark: Generated from `#/components/parameters/pages-deployment-id/case2`.
+                    case case2(Swift.String)
+                    public init(from decoder: any Decoder) throws {
+                        var errors: [any Error] = []
+                        do {
+                            self = .case1(try decoder.decodeFromSingleValueContainer())
+                            return
+                        } catch {
+                            errors.append(error)
+                        }
+                        do {
+                            self = .case2(try decoder.decodeFromSingleValueContainer())
+                            return
+                        } catch {
+                            errors.append(error)
+                        }
+                        throw Swift.DecodingError.failedToDecodeOneOfSchema(
+                            type: Self.self,
+                            codingPath: decoder.codingPath,
+                            errors: errors
+                        )
+                    }
+                    public func encode(to encoder: any Encoder) throws {
+                        switch self {
+                        case let .case1(value):
+                            try encoder.encodeToSingleValueContainer(value)
+                        case let .case2(value):
+                            try encoder.encodeToSingleValueContainer(value)
+                        }
+                    }
+                }
+                /// The ID of the Pages deployment. You can also give the commit SHA of the deployment.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}/cancel/POST/path/pages_deployment_id`.
+                public var pages_deployment_id: Components.Parameters.pages_hyphen_deployment_hyphen_id
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - owner: The account owner of the repository. The name is not case sensitive.
+                ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
+                ///   - pages_deployment_id: The ID of the Pages deployment. You can also give the commit SHA of the deployment.
+                public init(
+                    owner: Components.Parameters.owner,
+                    repo: Components.Parameters.repo,
+                    pages_deployment_id: Components.Parameters.pages_hyphen_deployment_hyphen_id
+                ) {
+                    self.owner = owner
+                    self.repo = repo
+                    self.pages_deployment_id = pages_deployment_id
+                }
+            }
+            public var path: Operations.repos_sol_cancel_hyphen_pages_hyphen_deployment.Input.Path
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}/cancel/POST/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.repos_sol_cancel_hyphen_pages_hyphen_deployment.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.repos_sol_cancel_hyphen_pages_hyphen_deployment.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.repos_sol_cancel_hyphen_pages_hyphen_deployment.Input.Headers
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - headers:
+            public init(
+                path: Operations.repos_sol_cancel_hyphen_pages_hyphen_deployment.Input.Path,
+                headers: Operations.repos_sol_cancel_hyphen_pages_hyphen_deployment.Input.Headers = .init()
+            ) {
+                self.path = path
+                self.headers = headers
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            /// A header with no content is returned.
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}/cancel/post(repos/cancel-pages-deployment)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            case noContent(Components.Responses.no_content)
+            /// The associated value of the enum case if `self` is `.noContent`.
+            ///
+            /// - Throws: An error if `self` is not `.noContent`.
+            /// - SeeAlso: `.noContent`.
+            public var noContent: Components.Responses.no_content {
+                get throws {
+                    switch self {
+                    case let .noContent(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "noContent",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Resource not found
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}/cancel/post(repos/cancel-pages-deployment)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            case notFound(Components.Responses.not_found)
+            /// The associated value of the enum case if `self` is `.notFound`.
+            ///
+            /// - Throws: An error if `self` is not `.notFound`.
+            /// - SeeAlso: `.notFound`.
+            public var notFound: Components.Responses.not_found {
+                get throws {
+                    switch self {
+                    case let .notFound(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "notFound",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
                 ]
             }
         }
@@ -52312,7 +52975,10 @@ public enum Operations {
     ///
     /// Gets the preferred README for a repository.
     ///
-    /// READMEs support [custom media types](https://docs.github.com/rest/overview/media-types) for retrieving the raw content or rendered HTML.
+    /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
+    ///
+    /// - **`application/vnd.github.raw+json`**: Returns the raw file contents. This is the default if you do not specify a media type.
+    /// - **`application/vnd.github.html+json`**: Returns the README in HTML. Markup languages are rendered to HTML using GitHub's open-source [Markup library](https://github.com/github/markup).
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/readme`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/readme/get(repos/get-readme)`.
@@ -52519,7 +53185,10 @@ public enum Operations {
     ///
     /// Gets the README from a repository directory.
     ///
-    /// READMEs support [custom media types](https://docs.github.com/rest/overview/media-types) for retrieving the raw content or rendered HTML.
+    /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
+    ///
+    /// - **`application/vnd.github.raw+json`**: Returns the raw file contents. This is the default if you do not specify a media type.
+    /// - **`application/vnd.github.html+json`**: Returns the README in HTML. Markup languages are rendered to HTML using GitHub's open-source [Markup library](https://github.com/github/markup).
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/readme/{dir}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/readme/{dir}/get(repos/get-readme-in-directory)`.
