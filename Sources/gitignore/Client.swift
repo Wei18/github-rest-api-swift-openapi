@@ -104,8 +104,11 @@ public struct Client: APIProtocol {
     }
     /// Get a gitignore template
     ///
-    /// The API also allows fetching the source of a single template.
-    /// Use the raw [media type](https://docs.github.com/rest/overview/media-types/) to get the raw contents.
+    /// Get the content of a gitignore template.
+    ///
+    /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
+    ///
+    /// - **`application/vnd.github.raw+json`**: Returns the raw .gitignore contents.
     ///
     /// - Remark: HTTP `GET /gitignore/templates/{name}`.
     /// - Remark: Generated from `#/paths//gitignore/templates/{name}/get(gitignore/get-template)`.
