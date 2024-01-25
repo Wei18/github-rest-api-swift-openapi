@@ -580,6 +580,13 @@ public struct Client: APIProtocol {
     }
     /// Get a gist
     ///
+    /// Gets a specified gist.
+    ///
+    /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
+    ///
+    /// - **`application/vnd.github.raw+json`**: Returns the raw markdown. This is the default if you do not pass any specific media type.
+    /// - **`application/vnd.github.base64+json`**: Returns the base64-encoded contents. This can be useful if your gist contains any invalid UTF-8 sequences.
+    ///
     /// - Remark: HTTP `GET /gists/{gist_id}`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/get(gists/get)`.
     public func gists_sol_get(_ input: Operations.gists_sol_get.Input) async throws -> Operations.gists_sol_get.Output {
@@ -688,8 +695,16 @@ public struct Client: APIProtocol {
     }
     /// Update a gist
     ///
-    /// Allows you to update a gist's description and to update, delete, or rename gist files. Files from the previous version of the gist that aren't explicitly changed during an edit are unchanged.
+    /// Allows you to update a gist's description and to update, delete, or rename gist files. Files
+    /// from the previous version of the gist that aren't explicitly changed during an edit
+    /// are unchanged.
+    ///
     /// At least one of `description` or `files` is required.
+    ///
+    /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
+    ///
+    /// - **`application/vnd.github.raw+json`**: Returns the raw markdown. This is the default if you do not pass any specific media type.
+    /// - **`application/vnd.github.base64+json`**: Returns the base64-encoded contents. This can be useful if your gist contains any invalid UTF-8 sequences.
     ///
     /// - Remark: HTTP `PATCH /gists/{gist_id}`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/patch(gists/update)`.
@@ -894,6 +909,13 @@ public struct Client: APIProtocol {
     }
     /// List gist comments
     ///
+    /// Lists the comments on a gist.
+    ///
+    /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
+    ///
+    /// - **`application/vnd.github.raw+json`**: Returns the raw markdown. This is the default if you do not pass any specific media type.
+    /// - **`application/vnd.github.base64+json`**: Returns the base64-encoded contents. This can be useful if your gist contains any invalid UTF-8 sequences.
+    ///
     /// - Remark: HTTP `GET /gists/{gist_id}/comments`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/comments/get(gists/list-comments)`.
     public func gists_sol_list_hyphen_comments(_ input: Operations.gists_sol_list_hyphen_comments.Input) async throws -> Operations.gists_sol_list_hyphen_comments.Output {
@@ -1024,6 +1046,13 @@ public struct Client: APIProtocol {
     }
     /// Create a gist comment
     ///
+    /// Creates a comment on a gist.
+    ///
+    /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
+    ///
+    /// - **`application/vnd.github.raw+json`**: Returns the raw markdown. This is the default if you do not pass any specific media type.
+    /// - **`application/vnd.github.base64+json`**: Returns the base64-encoded contents. This can be useful if your gist contains any invalid UTF-8 sequences.
+    ///
     /// - Remark: HTTP `POST /gists/{gist_id}/comments`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/comments/post(gists/create-comment)`.
     public func gists_sol_create_hyphen_comment(_ input: Operations.gists_sol_create_hyphen_comment.Input) async throws -> Operations.gists_sol_create_hyphen_comment.Output {
@@ -1149,6 +1178,13 @@ public struct Client: APIProtocol {
     }
     /// Get a gist comment
     ///
+    /// Gets a comment on a gist.
+    ///
+    /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
+    ///
+    /// - **`application/vnd.github.raw+json`**: Returns the raw markdown. This is the default if you do not pass any specific media type.
+    /// - **`application/vnd.github.base64+json`**: Returns the base64-encoded contents. This can be useful if your gist contains any invalid UTF-8 sequences.
+    ///
     /// - Remark: HTTP `GET /gists/{gist_id}/comments/{comment_id}`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/comments/{comment_id}/get(gists/get-comment)`.
     public func gists_sol_get_hyphen_comment(_ input: Operations.gists_sol_get_hyphen_comment.Input) async throws -> Operations.gists_sol_get_hyphen_comment.Output {
@@ -1257,6 +1293,13 @@ public struct Client: APIProtocol {
         )
     }
     /// Update a gist comment
+    ///
+    /// Updates a comment on a gist.
+    ///
+    /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
+    ///
+    /// - **`application/vnd.github.raw+json`**: Returns the raw markdown. This is the default if you do not pass any specific media type.
+    /// - **`application/vnd.github.base64+json`**: Returns the base64-encoded contents. This can be useful if your gist contains any invalid UTF-8 sequences.
     ///
     /// - Remark: HTTP `PATCH /gists/{gist_id}/comments/{comment_id}`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/comments/{comment_id}/patch(gists/update-comment)`.
@@ -2104,6 +2147,13 @@ public struct Client: APIProtocol {
         )
     }
     /// Get a gist revision
+    ///
+    /// Gets a specified gist revision.
+    ///
+    /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
+    ///
+    /// - **`application/vnd.github.raw+json`**: Returns the raw markdown. This is the default if you do not pass any specific media type.
+    /// - **`application/vnd.github.base64+json`**: Returns the base64-encoded contents. This can be useful if your gist contains any invalid UTF-8 sequences.
     ///
     /// - Remark: HTTP `GET /gists/{gist_id}/{sha}`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/{sha}/get(gists/get-revision)`.
