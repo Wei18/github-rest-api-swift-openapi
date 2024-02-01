@@ -1662,9 +1662,9 @@ public struct Client: APIProtocol {
             }
         )
     }
-    /// List all autolinks of a repository
+    /// Get all autolinks of a repository
     ///
-    /// This returns a list of autolinks configured for the given repository.
+    /// Gets all autolinks that are configured for a repository.
     ///
     /// Information about autolinks are only available to repository administrators.
     ///
@@ -1687,13 +1687,6 @@ public struct Client: APIProtocol {
                     method: .get
                 )
                 suppressMutabilityWarning(&request)
-                try converter.setQueryItemAsURI(
-                    in: &request,
-                    style: .form,
-                    explode: true,
-                    name: "page",
-                    value: input.query.page
-                )
                 converter.setAcceptHeader(
                     in: &request.headerFields,
                     contentTypes: input.headers.accept

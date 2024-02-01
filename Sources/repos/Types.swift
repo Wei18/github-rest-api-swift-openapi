@@ -121,9 +121,9 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/activity`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/activity/get(repos/list-activities)`.
     func repos_sol_list_hyphen_activities(_ input: Operations.repos_sol_list_hyphen_activities.Input) async throws -> Operations.repos_sol_list_hyphen_activities.Output
-    /// List all autolinks of a repository
+    /// Get all autolinks of a repository
     ///
-    /// This returns a list of autolinks configured for the given repository.
+    /// Gets all autolinks that are configured for a repository.
     ///
     /// Information about autolinks are only available to repository administrators.
     ///
@@ -2214,9 +2214,9 @@ extension APIProtocol {
             headers: headers
         ))
     }
-    /// List all autolinks of a repository
+    /// Get all autolinks of a repository
     ///
-    /// This returns a list of autolinks configured for the given repository.
+    /// Gets all autolinks that are configured for a repository.
     ///
     /// Information about autolinks are only available to repository administrators.
     ///
@@ -2224,12 +2224,10 @@ extension APIProtocol {
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/autolinks/get(repos/list-autolinks)`.
     public func repos_sol_list_hyphen_autolinks(
         path: Operations.repos_sol_list_hyphen_autolinks.Input.Path,
-        query: Operations.repos_sol_list_hyphen_autolinks.Input.Query = .init(),
         headers: Operations.repos_sol_list_hyphen_autolinks.Input.Headers = .init()
     ) async throws -> Operations.repos_sol_list_hyphen_autolinks.Output {
         try await repos_sol_list_hyphen_autolinks(Operations.repos_sol_list_hyphen_autolinks.Input(
             path: path,
-            query: query,
             headers: headers
         ))
     }
@@ -12440,6 +12438,79 @@ public enum Components {
                 case repository_id
             }
         }
+        /// Parameters for a targeting a repository property
+        ///
+        /// - Remark: Generated from `#/components/schemas/repository-ruleset-conditions-repository-property-spec`.
+        public struct repository_hyphen_ruleset_hyphen_conditions_hyphen_repository_hyphen_property_hyphen_spec: Codable, Hashable, Sendable {
+            /// The name of the repository property to target
+            ///
+            /// - Remark: Generated from `#/components/schemas/repository-ruleset-conditions-repository-property-spec/name`.
+            public var name: Swift.String
+            /// The values to match for the repository property
+            ///
+            /// - Remark: Generated from `#/components/schemas/repository-ruleset-conditions-repository-property-spec/property_values`.
+            public var property_values: [Swift.String]
+            /// Creates a new `repository_hyphen_ruleset_hyphen_conditions_hyphen_repository_hyphen_property_hyphen_spec`.
+            ///
+            /// - Parameters:
+            ///   - name: The name of the repository property to target
+            ///   - property_values: The values to match for the repository property
+            public init(
+                name: Swift.String,
+                property_values: [Swift.String]
+            ) {
+                self.name = name
+                self.property_values = property_values
+            }
+            public enum CodingKeys: String, CodingKey {
+                case name
+                case property_values
+            }
+        }
+        /// Parameters for a repository property condition
+        ///
+        /// - Remark: Generated from `#/components/schemas/repository-ruleset-conditions-repository-property-target`.
+        public struct repository_hyphen_ruleset_hyphen_conditions_hyphen_repository_hyphen_property_hyphen_target: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/repository-ruleset-conditions-repository-property-target/repository_property`.
+            public struct repository_propertyPayload: Codable, Hashable, Sendable {
+                /// The repository properties and values to include. All of these properties must match for the condition to pass.
+                ///
+                /// - Remark: Generated from `#/components/schemas/repository-ruleset-conditions-repository-property-target/repository_property/include`.
+                public var include: [Components.Schemas.repository_hyphen_ruleset_hyphen_conditions_hyphen_repository_hyphen_property_hyphen_spec]?
+                /// The repository properties and values to exclude. The condition will not pass if any of these properties match.
+                ///
+                /// - Remark: Generated from `#/components/schemas/repository-ruleset-conditions-repository-property-target/repository_property/exclude`.
+                public var exclude: [Components.Schemas.repository_hyphen_ruleset_hyphen_conditions_hyphen_repository_hyphen_property_hyphen_spec]?
+                /// Creates a new `repository_propertyPayload`.
+                ///
+                /// - Parameters:
+                ///   - include: The repository properties and values to include. All of these properties must match for the condition to pass.
+                ///   - exclude: The repository properties and values to exclude. The condition will not pass if any of these properties match.
+                public init(
+                    include: [Components.Schemas.repository_hyphen_ruleset_hyphen_conditions_hyphen_repository_hyphen_property_hyphen_spec]? = nil,
+                    exclude: [Components.Schemas.repository_hyphen_ruleset_hyphen_conditions_hyphen_repository_hyphen_property_hyphen_spec]? = nil
+                ) {
+                    self.include = include
+                    self.exclude = exclude
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case include
+                    case exclude
+                }
+            }
+            /// - Remark: Generated from `#/components/schemas/repository-ruleset-conditions-repository-property-target/repository_property`.
+            public var repository_property: Components.Schemas.repository_hyphen_ruleset_hyphen_conditions_hyphen_repository_hyphen_property_hyphen_target.repository_propertyPayload
+            /// Creates a new `repository_hyphen_ruleset_hyphen_conditions_hyphen_repository_hyphen_property_hyphen_target`.
+            ///
+            /// - Parameters:
+            ///   - repository_property:
+            public init(repository_property: Components.Schemas.repository_hyphen_ruleset_hyphen_conditions_hyphen_repository_hyphen_property_hyphen_target.repository_propertyPayload) {
+                self.repository_property = repository_property
+            }
+            public enum CodingKeys: String, CodingKey {
+                case repository_property
+            }
+        }
         /// Conditions for an organization ruleset. The conditions object should contain both `repository_name` and `ref_name` properties or both `repository_id` and `ref_name` properties.
         ///
         ///
@@ -12511,6 +12582,39 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/org-ruleset-conditions/case2`.
             case case2(Components.Schemas.org_hyphen_ruleset_hyphen_conditions.Case2Payload)
+            /// Conditions to target repositories by property and refs by name
+            ///
+            /// - Remark: Generated from `#/components/schemas/org-ruleset-conditions/case3`.
+            public struct Case3Payload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/org-ruleset-conditions/case3/value1`.
+                public var value1: Components.Schemas.repository_hyphen_ruleset_hyphen_conditions
+                /// - Remark: Generated from `#/components/schemas/org-ruleset-conditions/case3/value2`.
+                public var value2: Components.Schemas.repository_hyphen_ruleset_hyphen_conditions_hyphen_repository_hyphen_property_hyphen_target
+                /// Creates a new `Case3Payload`.
+                ///
+                /// - Parameters:
+                ///   - value1:
+                ///   - value2:
+                public init(
+                    value1: Components.Schemas.repository_hyphen_ruleset_hyphen_conditions,
+                    value2: Components.Schemas.repository_hyphen_ruleset_hyphen_conditions_hyphen_repository_hyphen_property_hyphen_target
+                ) {
+                    self.value1 = value1
+                    self.value2 = value2
+                }
+                public init(from decoder: any Decoder) throws {
+                    value1 = try .init(from: decoder)
+                    value2 = try .init(from: decoder)
+                }
+                public func encode(to encoder: any Encoder) throws {
+                    try value1.encode(to: encoder)
+                    try value2.encode(to: encoder)
+                }
+            }
+            /// Conditions to target repositories by property and refs by name
+            ///
+            /// - Remark: Generated from `#/components/schemas/org-ruleset-conditions/case3`.
+            case case3(Components.Schemas.org_hyphen_ruleset_hyphen_conditions.Case3Payload)
             public init(from decoder: any Decoder) throws {
                 var errors: [any Error] = []
                 do {
@@ -12521,6 +12625,12 @@ public enum Components {
                 }
                 do {
                     self = .case2(try .init(from: decoder))
+                    return
+                } catch {
+                    errors.append(error)
+                }
+                do {
+                    self = .case3(try .init(from: decoder))
                     return
                 } catch {
                     errors.append(error)
@@ -12536,6 +12646,8 @@ public enum Components {
                 case let .case1(value):
                     try value.encode(to: encoder)
                 case let .case2(value):
+                    try value.encode(to: encoder)
+                case let .case3(value):
                     try value.encode(to: encoder)
                 }
             }
@@ -26666,9 +26778,9 @@ public enum Operations {
             }
         }
     }
-    /// List all autolinks of a repository
+    /// Get all autolinks of a repository
     ///
-    /// This returns a list of autolinks configured for the given repository.
+    /// Gets all autolinks that are configured for a repository.
     ///
     /// Information about autolinks are only available to repository administrators.
     ///
@@ -26701,21 +26813,6 @@ public enum Operations {
                 }
             }
             public var path: Operations.repos_sol_list_hyphen_autolinks.Input.Path
-            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/autolinks/GET/query`.
-            public struct Query: Sendable, Hashable {
-                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
-                ///
-                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/autolinks/GET/query/page`.
-                public var page: Components.Parameters.page?
-                /// Creates a new `Query`.
-                ///
-                /// - Parameters:
-                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
-                public init(page: Components.Parameters.page? = nil) {
-                    self.page = page
-                }
-            }
-            public var query: Operations.repos_sol_list_hyphen_autolinks.Input.Query
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/autolinks/GET/header`.
             public struct Headers: Sendable, Hashable {
                 public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.repos_sol_list_hyphen_autolinks.AcceptableContentType>]
@@ -26732,15 +26829,12 @@ public enum Operations {
             ///
             /// - Parameters:
             ///   - path:
-            ///   - query:
             ///   - headers:
             public init(
                 path: Operations.repos_sol_list_hyphen_autolinks.Input.Path,
-                query: Operations.repos_sol_list_hyphen_autolinks.Input.Query = .init(),
                 headers: Operations.repos_sol_list_hyphen_autolinks.Input.Headers = .init()
             ) {
                 self.path = path
-                self.query = query
                 self.headers = headers
             }
         }
