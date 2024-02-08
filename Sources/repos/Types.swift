@@ -1148,7 +1148,7 @@ public protocol APIProtocol: Sendable {
     func repos_sol_delete_hyphen_deployment_hyphen_branch_hyphen_policy(_ input: Operations.repos_sol_delete_hyphen_deployment_hyphen_branch_hyphen_policy.Input) async throws -> Operations.repos_sol_delete_hyphen_deployment_hyphen_branch_hyphen_policy.Output
     /// Get all deployment protection rules for an environment
     ///
-    /// Gets all custom deployment protection rules that are enabled for an environment. Anyone with read access to the repository can use this endpoint. If the repository is private and you want to use a personal access token (classic), you must use an access token with the `repo` scope. GitHub Apps and fine-grained personal access tokens must have the `actions:read` permission to use this endpoint. For more information about environments, see "[Using environments for deployment](https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment)."
+    /// Gets all custom deployment protection rules that are enabled for an environment. Anyone with read access to the repository can use this endpoint. If the repository is private and you want to use a personal access token (classic), you must use an access token with the `repo` scope. GitHub Apps and fine-grained personal access tokens must have the `actions:read` permission to use this endpoint. For more information about environments, see "[Using environments for deployment](https://docs.github.com/actions/deployment/targeting-different-environments/using-environments-for-deployment)."
     ///
     /// For more information about the app that is providing this custom deployment rule, see the [documentation for the `GET /apps/{app_slug}` endpoint](https://docs.github.com/rest/apps/apps#get-an-app).
     ///
@@ -1170,7 +1170,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// Gets all custom deployment protection rule integrations that are available for an environment. Anyone with read access to the repository can use this endpoint. If the repository is private and you want to use a personal access token (classic), you must use an access token with the `repo` scope. GitHub Apps and fine-grained personal access tokens must have the `actions:read` permission to use this endpoint.
     ///
-    /// For more information about environments, see "[Using environments for deployment](https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment)."
+    /// For more information about environments, see "[Using environments for deployment](https://docs.github.com/actions/deployment/targeting-different-environments/using-environments-for-deployment)."
     ///
     /// For more information about the app that is providing this custom deployment rule, see "[GET an app](https://docs.github.com/rest/apps/apps#get-an-app)".
     ///
@@ -1179,7 +1179,7 @@ public protocol APIProtocol: Sendable {
     func repos_sol_list_hyphen_custom_hyphen_deployment_hyphen_rule_hyphen_integrations(_ input: Operations.repos_sol_list_hyphen_custom_hyphen_deployment_hyphen_rule_hyphen_integrations.Input) async throws -> Operations.repos_sol_list_hyphen_custom_hyphen_deployment_hyphen_rule_hyphen_integrations.Output
     /// Get a custom deployment protection rule
     ///
-    /// Gets an enabled custom deployment protection rule for an environment. Anyone with read access to the repository can use this endpoint. If the repository is private and you want to use a personal access token (classic), you must use an access token with the `repo` scope. GitHub Apps and fine-grained personal access tokens must have the `actions:read` permission to use this endpoint. For more information about environments, see "[Using environments for deployment](https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment)."
+    /// Gets an enabled custom deployment protection rule for an environment. Anyone with read access to the repository can use this endpoint. If the repository is private and you want to use a personal access token (classic), you must use an access token with the `repo` scope. GitHub Apps and fine-grained personal access tokens must have the `actions:read` permission to use this endpoint. For more information about environments, see "[Using environments for deployment](https://docs.github.com/actions/deployment/targeting-different-environments/using-environments-for-deployment)."
     ///
     /// For more information about the app that is providing this custom deployment rule, see [`GET /apps/{app_slug}`](https://docs.github.com/rest/apps/apps#get-an-app).
     ///
@@ -3961,7 +3961,7 @@ extension APIProtocol {
     }
     /// Get all deployment protection rules for an environment
     ///
-    /// Gets all custom deployment protection rules that are enabled for an environment. Anyone with read access to the repository can use this endpoint. If the repository is private and you want to use a personal access token (classic), you must use an access token with the `repo` scope. GitHub Apps and fine-grained personal access tokens must have the `actions:read` permission to use this endpoint. For more information about environments, see "[Using environments for deployment](https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment)."
+    /// Gets all custom deployment protection rules that are enabled for an environment. Anyone with read access to the repository can use this endpoint. If the repository is private and you want to use a personal access token (classic), you must use an access token with the `repo` scope. GitHub Apps and fine-grained personal access tokens must have the `actions:read` permission to use this endpoint. For more information about environments, see "[Using environments for deployment](https://docs.github.com/actions/deployment/targeting-different-environments/using-environments-for-deployment)."
     ///
     /// For more information about the app that is providing this custom deployment rule, see the [documentation for the `GET /apps/{app_slug}` endpoint](https://docs.github.com/rest/apps/apps#get-an-app).
     ///
@@ -4001,7 +4001,7 @@ extension APIProtocol {
     ///
     /// Gets all custom deployment protection rule integrations that are available for an environment. Anyone with read access to the repository can use this endpoint. If the repository is private and you want to use a personal access token (classic), you must use an access token with the `repo` scope. GitHub Apps and fine-grained personal access tokens must have the `actions:read` permission to use this endpoint.
     ///
-    /// For more information about environments, see "[Using environments for deployment](https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment)."
+    /// For more information about environments, see "[Using environments for deployment](https://docs.github.com/actions/deployment/targeting-different-environments/using-environments-for-deployment)."
     ///
     /// For more information about the app that is providing this custom deployment rule, see "[GET an app](https://docs.github.com/rest/apps/apps#get-an-app)".
     ///
@@ -4020,7 +4020,7 @@ extension APIProtocol {
     }
     /// Get a custom deployment protection rule
     ///
-    /// Gets an enabled custom deployment protection rule for an environment. Anyone with read access to the repository can use this endpoint. If the repository is private and you want to use a personal access token (classic), you must use an access token with the `repo` scope. GitHub Apps and fine-grained personal access tokens must have the `actions:read` permission to use this endpoint. For more information about environments, see "[Using environments for deployment](https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment)."
+    /// Gets an enabled custom deployment protection rule for an environment. Anyone with read access to the repository can use this endpoint. If the repository is private and you want to use a personal access token (classic), you must use an access token with the `repo` scope. GitHub Apps and fine-grained personal access tokens must have the `actions:read` permission to use this endpoint. For more information about environments, see "[Using environments for deployment](https://docs.github.com/actions/deployment/targeting-different-environments/using-environments-for-deployment)."
     ///
     /// For more information about the app that is providing this custom deployment rule, see [`GET /apps/{app_slug}`](https://docs.github.com/rest/apps/apps#get-an-app).
     ///
@@ -20789,6 +20789,47 @@ public enum Components {
         ///
         /// - Remark: Generated from `#/components/schemas/page-deployment`.
         public struct page_hyphen_deployment: Codable, Hashable, Sendable {
+            /// The ID of the GitHub Pages deployment. This is the Git SHA of the deployed commit.
+            ///
+            /// - Remark: Generated from `#/components/schemas/page-deployment/id`.
+            @frozen public enum idPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/page-deployment/id/case1`.
+                case case1(Swift.Int)
+                /// - Remark: Generated from `#/components/schemas/page-deployment/id/case2`.
+                case case2(Swift.String)
+                public init(from decoder: any Decoder) throws {
+                    var errors: [any Error] = []
+                    do {
+                        self = .case1(try decoder.decodeFromSingleValueContainer())
+                        return
+                    } catch {
+                        errors.append(error)
+                    }
+                    do {
+                        self = .case2(try decoder.decodeFromSingleValueContainer())
+                        return
+                    } catch {
+                        errors.append(error)
+                    }
+                    throw Swift.DecodingError.failedToDecodeOneOfSchema(
+                        type: Self.self,
+                        codingPath: decoder.codingPath,
+                        errors: errors
+                    )
+                }
+                public func encode(to encoder: any Encoder) throws {
+                    switch self {
+                    case let .case1(value):
+                        try encoder.encodeToSingleValueContainer(value)
+                    case let .case2(value):
+                        try encoder.encodeToSingleValueContainer(value)
+                    }
+                }
+            }
+            /// The ID of the GitHub Pages deployment. This is the Git SHA of the deployed commit.
+            ///
+            /// - Remark: Generated from `#/components/schemas/page-deployment/id`.
+            public var id: Components.Schemas.page_hyphen_deployment.idPayload
             /// The URI to monitor GitHub Pages deployment status.
             ///
             /// - Remark: Generated from `#/components/schemas/page-deployment/status_url`.
@@ -20804,19 +20845,23 @@ public enum Components {
             /// Creates a new `page_hyphen_deployment`.
             ///
             /// - Parameters:
+            ///   - id: The ID of the GitHub Pages deployment. This is the Git SHA of the deployed commit.
             ///   - status_url: The URI to monitor GitHub Pages deployment status.
             ///   - page_url: The URI to the deployed GitHub Pages.
             ///   - preview_url: The URI to the deployed GitHub Pages preview.
             public init(
+                id: Components.Schemas.page_hyphen_deployment.idPayload,
                 status_url: Swift.String,
                 page_url: Swift.String,
                 preview_url: Swift.String? = nil
             ) {
+                self.id = id
                 self.status_url = status_url
                 self.page_url = page_url
                 self.preview_url = preview_url
             }
             public enum CodingKeys: String, CodingKey {
+                case id
                 case status_url
                 case page_url
                 case preview_url
@@ -44410,7 +44455,7 @@ public enum Operations {
     }
     /// Get all deployment protection rules for an environment
     ///
-    /// Gets all custom deployment protection rules that are enabled for an environment. Anyone with read access to the repository can use this endpoint. If the repository is private and you want to use a personal access token (classic), you must use an access token with the `repo` scope. GitHub Apps and fine-grained personal access tokens must have the `actions:read` permission to use this endpoint. For more information about environments, see "[Using environments for deployment](https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment)."
+    /// Gets all custom deployment protection rules that are enabled for an environment. Anyone with read access to the repository can use this endpoint. If the repository is private and you want to use a personal access token (classic), you must use an access token with the `repo` scope. GitHub Apps and fine-grained personal access tokens must have the `actions:read` permission to use this endpoint. For more information about environments, see "[Using environments for deployment](https://docs.github.com/actions/deployment/targeting-different-environments/using-environments-for-deployment)."
     ///
     /// For more information about the app that is providing this custom deployment rule, see the [documentation for the `GET /apps/{app_slug}` endpoint](https://docs.github.com/rest/apps/apps#get-an-app).
     ///
@@ -44765,7 +44810,7 @@ public enum Operations {
     ///
     /// Gets all custom deployment protection rule integrations that are available for an environment. Anyone with read access to the repository can use this endpoint. If the repository is private and you want to use a personal access token (classic), you must use an access token with the `repo` scope. GitHub Apps and fine-grained personal access tokens must have the `actions:read` permission to use this endpoint.
     ///
-    /// For more information about environments, see "[Using environments for deployment](https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment)."
+    /// For more information about environments, see "[Using environments for deployment](https://docs.github.com/actions/deployment/targeting-different-environments/using-environments-for-deployment)."
     ///
     /// For more information about the app that is providing this custom deployment rule, see "[GET an app](https://docs.github.com/rest/apps/apps#get-an-app)".
     ///
@@ -44967,7 +45012,7 @@ public enum Operations {
     }
     /// Get a custom deployment protection rule
     ///
-    /// Gets an enabled custom deployment protection rule for an environment. Anyone with read access to the repository can use this endpoint. If the repository is private and you want to use a personal access token (classic), you must use an access token with the `repo` scope. GitHub Apps and fine-grained personal access tokens must have the `actions:read` permission to use this endpoint. For more information about environments, see "[Using environments for deployment](https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment)."
+    /// Gets an enabled custom deployment protection rule for an environment. Anyone with read access to the repository can use this endpoint. If the repository is private and you want to use a personal access token (classic), you must use an access token with the `repo` scope. GitHub Apps and fine-grained personal access tokens must have the `actions:read` permission to use this endpoint. For more information about environments, see "[Using environments for deployment](https://docs.github.com/actions/deployment/targeting-different-environments/using-environments-for-deployment)."
     ///
     /// For more information about the app that is providing this custom deployment rule, see [`GET /apps/{app_slug}`](https://docs.github.com/rest/apps/apps#get-an-app).
     ///
