@@ -3217,6 +3217,8 @@ public struct Client: APIProtocol {
     /// token with the `repo` scope to use this endpoint. GitHub Apps must have write access to the `codespaces_secrets`
     /// repository permission to use this endpoint.
     ///
+    /// This endpoint does not support fine-grained personal access tokens. For more information about personal access tokens, see "[Managing your personal access tokens](https://docs.github.com/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#personal-access-tokens-classic)."
+    ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/codespaces/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/codespaces/secrets/{secret_name}/put(codespaces/create-or-update-repo-secret)`.
     public func codespaces_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret(_ input: Operations.codespaces_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret.Input) async throws -> Operations.codespaces_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret.Output {
@@ -3293,6 +3295,7 @@ public struct Client: APIProtocol {
     /// Delete a repository secret
     ///
     /// Deletes a development environment secret in a repository using the secret name. You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have write access to the `codespaces_secrets` repository permission to use this endpoint.
+    /// This endpoint does not support fine-grained personal access tokens. For more information about personal access tokens, see "[Managing your personal access tokens](https://docs.github.com/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#personal-access-tokens-classic)."
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/codespaces/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/codespaces/secrets/{secret_name}/delete(codespaces/delete-repo-secret)`.

@@ -266,12 +266,15 @@ public protocol APIProtocol: Sendable {
     /// token with the `repo` scope to use this endpoint. GitHub Apps must have write access to the `codespaces_secrets`
     /// repository permission to use this endpoint.
     ///
+    /// This endpoint does not support fine-grained personal access tokens. For more information about personal access tokens, see "[Managing your personal access tokens](https://docs.github.com/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#personal-access-tokens-classic)."
+    ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/codespaces/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/codespaces/secrets/{secret_name}/put(codespaces/create-or-update-repo-secret)`.
     func codespaces_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret(_ input: Operations.codespaces_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret.Input) async throws -> Operations.codespaces_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret.Output
     /// Delete a repository secret
     ///
     /// Deletes a development environment secret in a repository using the secret name. You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have write access to the `codespaces_secrets` repository permission to use this endpoint.
+    /// This endpoint does not support fine-grained personal access tokens. For more information about personal access tokens, see "[Managing your personal access tokens](https://docs.github.com/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#personal-access-tokens-classic)."
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/codespaces/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/codespaces/secrets/{secret_name}/delete(codespaces/delete-repo-secret)`.
@@ -1027,6 +1030,8 @@ extension APIProtocol {
     /// token with the `repo` scope to use this endpoint. GitHub Apps must have write access to the `codespaces_secrets`
     /// repository permission to use this endpoint.
     ///
+    /// This endpoint does not support fine-grained personal access tokens. For more information about personal access tokens, see "[Managing your personal access tokens](https://docs.github.com/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#personal-access-tokens-classic)."
+    ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/codespaces/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/codespaces/secrets/{secret_name}/put(codespaces/create-or-update-repo-secret)`.
     public func codespaces_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret(
@@ -1043,6 +1048,7 @@ extension APIProtocol {
     /// Delete a repository secret
     ///
     /// Deletes a development environment secret in a repository using the secret name. You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have write access to the `codespaces_secrets` repository permission to use this endpoint.
+    /// This endpoint does not support fine-grained personal access tokens. For more information about personal access tokens, see "[Managing your personal access tokens](https://docs.github.com/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#personal-access-tokens-classic)."
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/codespaces/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/codespaces/secrets/{secret_name}/delete(codespaces/delete-repo-secret)`.
@@ -6773,6 +6779,30 @@ public enum Components {
             public var code_of_conduct: Components.Schemas.code_hyphen_of_hyphen_conduct_hyphen_simple?
             /// - Remark: Generated from `#/components/schemas/full-repository/security_and_analysis`.
             public var security_and_analysis: Components.Schemas.security_hyphen_and_hyphen_analysis?
+            /// The custom properties that were defined for the repository. The keys are the custom property names, and the values are the corresponding custom property values.
+            ///
+            /// - Remark: Generated from `#/components/schemas/full-repository/custom_properties`.
+            public struct custom_propertiesPayload: Codable, Hashable, Sendable {
+                /// A container of undocumented properties.
+                public var additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer
+                /// Creates a new `custom_propertiesPayload`.
+                ///
+                /// - Parameters:
+                ///   - additionalProperties: A container of undocumented properties.
+                public init(additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer = .init()) {
+                    self.additionalProperties = additionalProperties
+                }
+                public init(from decoder: any Decoder) throws {
+                    additionalProperties = try decoder.decodeAdditionalProperties(knownKeys: [])
+                }
+                public func encode(to encoder: any Encoder) throws {
+                    try encoder.encodeAdditionalProperties(additionalProperties)
+                }
+            }
+            /// The custom properties that were defined for the repository. The keys are the custom property names, and the values are the corresponding custom property values.
+            ///
+            /// - Remark: Generated from `#/components/schemas/full-repository/custom_properties`.
+            public var custom_properties: Components.Schemas.full_hyphen_repository.custom_propertiesPayload?
             /// Creates a new `full_hyphen_repository`.
             ///
             /// - Parameters:
@@ -6878,6 +6908,7 @@ public enum Components {
             ///   - anonymous_access_enabled: Whether anonymous git access is allowed.
             ///   - code_of_conduct:
             ///   - security_and_analysis:
+            ///   - custom_properties: The custom properties that were defined for the repository. The keys are the custom property names, and the values are the corresponding custom property values.
             public init(
                 id: Swift.Int,
                 node_id: Swift.String,
@@ -6980,7 +7011,8 @@ public enum Components {
                 watchers: Swift.Int,
                 anonymous_access_enabled: Swift.Bool? = nil,
                 code_of_conduct: Components.Schemas.code_hyphen_of_hyphen_conduct_hyphen_simple? = nil,
-                security_and_analysis: Components.Schemas.security_hyphen_and_hyphen_analysis? = nil
+                security_and_analysis: Components.Schemas.security_hyphen_and_hyphen_analysis? = nil,
+                custom_properties: Components.Schemas.full_hyphen_repository.custom_propertiesPayload? = nil
             ) {
                 self.id = id
                 self.node_id = node_id
@@ -7084,6 +7116,7 @@ public enum Components {
                 self.anonymous_access_enabled = anonymous_access_enabled
                 self.code_of_conduct = code_of_conduct
                 self.security_and_analysis = security_and_analysis
+                self.custom_properties = custom_properties
             }
             public enum CodingKeys: String, CodingKey {
                 case id
@@ -7188,6 +7221,7 @@ public enum Components {
                 case anonymous_access_enabled
                 case code_of_conduct
                 case security_and_analysis
+                case custom_properties
             }
         }
         /// A description of the machine powering a codespace.
@@ -14287,6 +14321,8 @@ public enum Operations {
     /// token with the `repo` scope to use this endpoint. GitHub Apps must have write access to the `codespaces_secrets`
     /// repository permission to use this endpoint.
     ///
+    /// This endpoint does not support fine-grained personal access tokens. For more information about personal access tokens, see "[Managing your personal access tokens](https://docs.github.com/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#personal-access-tokens-classic)."
+    ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/codespaces/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/codespaces/secrets/{secret_name}/put(codespaces/create-or-update-repo-secret)`.
     public enum codespaces_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret {
@@ -14497,6 +14533,7 @@ public enum Operations {
     /// Delete a repository secret
     ///
     /// Deletes a development environment secret in a repository using the secret name. You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have write access to the `codespaces_secrets` repository permission to use this endpoint.
+    /// This endpoint does not support fine-grained personal access tokens. For more information about personal access tokens, see "[Managing your personal access tokens](https://docs.github.com/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#personal-access-tokens-classic)."
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/codespaces/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/codespaces/secrets/{secret_name}/delete(codespaces/delete-repo-secret)`.
