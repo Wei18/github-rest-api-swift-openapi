@@ -27,7 +27,11 @@ public protocol APIProtocol: Sendable {
     func dependency_hyphen_graph_sol_export_hyphen_sbom(_ input: Operations.dependency_hyphen_graph_sol_export_hyphen_sbom.Input) async throws -> Operations.dependency_hyphen_graph_sol_export_hyphen_sbom.Output
     /// Create a snapshot of dependencies for a repository
     ///
-    /// Create a new snapshot of a repository's dependencies. You must authenticate using an access token with the `repo` scope to use this endpoint for a repository that the requesting user has access to.
+    /// Create a new snapshot of a repository's dependencies.
+    ///
+    /// The authenticated user must have access to the repository.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/dependency-graph/snapshots`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependency-graph/snapshots/post(dependency-graph/create-repository-snapshot)`.
@@ -70,7 +74,11 @@ extension APIProtocol {
     }
     /// Create a snapshot of dependencies for a repository
     ///
-    /// Create a new snapshot of a repository's dependencies. You must authenticate using an access token with the `repo` scope to use this endpoint for a repository that the requesting user has access to.
+    /// Create a new snapshot of a repository's dependencies.
+    ///
+    /// The authenticated user must have access to the repository.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/dependency-graph/snapshots`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependency-graph/snapshots/post(dependency-graph/create-repository-snapshot)`.
@@ -1590,7 +1598,11 @@ public enum Operations {
     }
     /// Create a snapshot of dependencies for a repository
     ///
-    /// Create a new snapshot of a repository's dependencies. You must authenticate using an access token with the `repo` scope to use this endpoint for a repository that the requesting user has access to.
+    /// Create a new snapshot of a repository's dependencies.
+    ///
+    /// The authenticated user must have access to the repository.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/dependency-graph/snapshots`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependency-graph/snapshots/post(dependency-graph/create-repository-snapshot)`.
