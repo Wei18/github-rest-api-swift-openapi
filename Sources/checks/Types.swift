@@ -15,7 +15,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// Creates a new check run for a specific commit in a repository.
     ///
-    /// To create a check run, you must use a GitHub App with the `checks:write` permission. OAuth apps and authenticated users are not able to create a check suite.
+    /// To create a check run, you must use a GitHub App. OAuth apps and authenticated users are not able to create a check suite.
     ///
     /// In a check suite, GitHub limits the number of check runs with the same name to 1000. Once these check runs exceed 1000, GitHub will start to automatically delete older check runs.
     ///
@@ -28,9 +28,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Gets a single check run using its `id`.
     ///
-    /// GitHub Apps must have the `checks:read` permission on a private repository or pull access to a public repository to get check runs. OAuth apps and authenticated users must have the `repo` scope to get check runs in a private repository.
-    ///
     /// **Note:** The Checks API only looks for pushes in the repository where the check suite or check run were created. Pushes to a branch in a forked repository are not detected and return an empty `pull_requests` array.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint on a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/check-runs/{check_run_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-runs/{check_run_id}/get(checks/get)`.
@@ -39,9 +39,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Updates a check run for a specific commit in a repository.
     ///
-    /// To update a check run, you must use a GitHub App with the `checks:write` permission. OAuth apps and authenticated users are not able to update a check run.
-    ///
     /// **Note:** The endpoints to manage checks only look for pushes in the repository where the check suite or check run were created. Pushes to a branch in a forked repository are not detected and return an empty `pull_requests` array.
+    ///
+    /// OAuth apps and personal access tokens (classic) cannot use this endpoint.
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/check-runs/{check_run_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-runs/{check_run_id}/patch(checks/update)`.
@@ -50,11 +50,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// Lists annotations for a check run using the annotation `id`.
     ///
-    /// GitHub Apps
-    /// must have the `checks:read` permission on a private repository or pull access to
-    /// a public repository to get annotations for a check run. OAuth apps and authenticated
-    /// users must have the `repo` scope to get annotations for a check run in a private
-    /// repository.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint on a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/check-runs/{check_run_id}/annotations`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-runs/{check_run_id}/annotations/get(checks/list-annotations)`.
@@ -63,9 +59,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Triggers GitHub to rerequest an existing check run, without pushing new code to a repository. This endpoint will trigger the [`check_run` webhook](https://docs.github.com/webhooks/event-payloads/#check_run) event with the action `rerequested`. When a check run is `rerequested`, its `status` is reset to `queued` and the `conclusion` is cleared.
     ///
-    /// To rerequest a check run, you must use a GitHub App with the `checks:read` permission on a private repository or pull access to a public repository. OAuth apps and authenticated users are not able to rerequest a check run.
-    ///
     /// For more information about how to re-run GitHub Actions jobs, see "[Re-run a job from a workflow run](https://docs.github.com/rest/actions/workflow-runs#re-run-a-job-from-a-workflow-run)".
+    ///
+    /// OAuth apps and personal access tokens (classic) cannot use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/check-runs/{check_run_id}/rerequest`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-runs/{check_run_id}/rerequest/post(checks/rerequest-run)`.
@@ -74,9 +70,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Creates a check suite manually. By default, check suites are automatically created when you create a [check run](https://docs.github.com/rest/checks/runs). You only need to use this endpoint for manually creating check suites when you've disabled automatic creation using "[Update repository preferences for check suites](https://docs.github.com/rest/checks/suites#update-repository-preferences-for-check-suites)".
     ///
-    /// To create a check suite, you must use a GitHub App with the `checks:write` permission. OAuth apps and authenticated users are not able to create a check suite.
-    ///
     /// **Note:** The Checks API only looks for pushes in the repository where the check suite or check run were created. Pushes to a branch in a forked repository are not detected and return an empty `pull_requests` array and a `null` value for `head_branch`.
+    ///
+    /// OAuth apps and personal access tokens (classic) cannot use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/check-suites`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-suites/post(checks/create-suite)`.
@@ -93,9 +89,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Gets a single check suite using its `id`.
     ///
-    /// GitHub Apps must have the `checks:read` permission on a private repository or pull access to a public repository to get check suites. OAuth apps and authenticated users must have the `repo` scope to get check suites in a private repository.
-    ///
     /// **Note:** The Checks API only looks for pushes in the repository where the check suite or check run were created. Pushes to a branch in a forked repository are not detected and return an empty `pull_requests` array and a `null` value for `head_branch`.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint on a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/check-suites/{check_suite_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-suites/{check_suite_id}/get(checks/get-suite)`.
@@ -104,9 +100,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Lists check runs for a check suite using its `id`.
     ///
-    /// GitHub Apps must have the `checks:read` permission on a private repository or pull access to a public repository to get check runs. OAuth apps and authenticated users must have the `repo` scope to get check runs in a private repository.
-    ///
     /// **Note:** The endpoints to manage checks only look for pushes in the repository where the check suite or check run were created. Pushes to a branch in a forked repository are not detected and return an empty `pull_requests` array.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint on a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/check-suites/{check_suite_id}/check-runs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-suites/{check_suite_id}/check-runs/get(checks/list-for-suite)`.
@@ -115,7 +111,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// Triggers GitHub to rerequest an existing check suite, without pushing new code to a repository. This endpoint will trigger the [`check_suite` webhook](https://docs.github.com/webhooks/event-payloads/#check_suite) event with the action `rerequested`. When a check suite is `rerequested`, its `status` is reset to `queued` and the `conclusion` is cleared.
     ///
-    /// To rerequest a check suite, you must use a GitHub App with the `checks:write` permission on a private repository or pull access to a public repository. OAuth apps and authenticated users are not able to rerequest a check suite.
+    /// OAuth apps and personal access tokens (classic) cannot use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/check-suites/{check_suite_id}/rerequest`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-suites/{check_suite_id}/rerequest/post(checks/rerequest-suite)`.
@@ -124,11 +120,11 @@ public protocol APIProtocol: Sendable {
     ///
     /// Lists check runs for a commit ref. The `ref` can be a SHA, branch name, or a tag name.
     ///
-    /// GitHub Apps must have the `checks:read` permission on a private repository or pull access to a public repository to get check runs. OAuth apps and authenticated users must have the `repo` scope to get check runs in a private repository.
-    ///
     /// **Note:** The endpoints to manage checks only look for pushes in the repository where the check suite or check run were created. Pushes to a branch in a forked repository are not detected and return an empty `pull_requests` array.
     ///
     /// If there are more than 1000 check suites on a single git reference, this endpoint will limit check runs to the 1000 most recent check suites. To iterate over all possible check runs, use the [List check suites for a Git reference](https://docs.github.com/rest/reference/checks#list-check-suites-for-a-git-reference) endpoint and provide the `check_suite_id` parameter to the [List check runs in a check suite](https://docs.github.com/rest/reference/checks#list-check-runs-in-a-check-suite) endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint on a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/commits/{ref}/check-runs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/commits/{ref}/check-runs/get(checks/list-for-ref)`.
@@ -137,9 +133,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Lists check suites for a commit `ref`. The `ref` can be a SHA, branch name, or a tag name.
     ///
-    /// GitHub Apps must have the `checks:read` permission on a private repository or pull access to a public repository to list check suites. OAuth apps and authenticated users must have the `repo` scope to get check suites in a private repository.
-    ///
     /// **Note:** The endpoints to manage checks only look for pushes in the repository where the check suite or check run were created. Pushes to a branch in a forked repository are not detected and return an empty `pull_requests` array and a `null` value for `head_branch`.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint on a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/commits/{ref}/check-suites`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/commits/{ref}/check-suites/get(checks/list-suites-for-ref)`.
@@ -152,7 +148,7 @@ extension APIProtocol {
     ///
     /// Creates a new check run for a specific commit in a repository.
     ///
-    /// To create a check run, you must use a GitHub App with the `checks:write` permission. OAuth apps and authenticated users are not able to create a check suite.
+    /// To create a check run, you must use a GitHub App. OAuth apps and authenticated users are not able to create a check suite.
     ///
     /// In a check suite, GitHub limits the number of check runs with the same name to 1000. Once these check runs exceed 1000, GitHub will start to automatically delete older check runs.
     ///
@@ -175,9 +171,9 @@ extension APIProtocol {
     ///
     /// Gets a single check run using its `id`.
     ///
-    /// GitHub Apps must have the `checks:read` permission on a private repository or pull access to a public repository to get check runs. OAuth apps and authenticated users must have the `repo` scope to get check runs in a private repository.
-    ///
     /// **Note:** The Checks API only looks for pushes in the repository where the check suite or check run were created. Pushes to a branch in a forked repository are not detected and return an empty `pull_requests` array.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint on a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/check-runs/{check_run_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-runs/{check_run_id}/get(checks/get)`.
@@ -194,9 +190,9 @@ extension APIProtocol {
     ///
     /// Updates a check run for a specific commit in a repository.
     ///
-    /// To update a check run, you must use a GitHub App with the `checks:write` permission. OAuth apps and authenticated users are not able to update a check run.
-    ///
     /// **Note:** The endpoints to manage checks only look for pushes in the repository where the check suite or check run were created. Pushes to a branch in a forked repository are not detected and return an empty `pull_requests` array.
+    ///
+    /// OAuth apps and personal access tokens (classic) cannot use this endpoint.
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/check-runs/{check_run_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-runs/{check_run_id}/patch(checks/update)`.
@@ -215,11 +211,7 @@ extension APIProtocol {
     ///
     /// Lists annotations for a check run using the annotation `id`.
     ///
-    /// GitHub Apps
-    /// must have the `checks:read` permission on a private repository or pull access to
-    /// a public repository to get annotations for a check run. OAuth apps and authenticated
-    /// users must have the `repo` scope to get annotations for a check run in a private
-    /// repository.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint on a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/check-runs/{check_run_id}/annotations`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-runs/{check_run_id}/annotations/get(checks/list-annotations)`.
@@ -238,9 +230,9 @@ extension APIProtocol {
     ///
     /// Triggers GitHub to rerequest an existing check run, without pushing new code to a repository. This endpoint will trigger the [`check_run` webhook](https://docs.github.com/webhooks/event-payloads/#check_run) event with the action `rerequested`. When a check run is `rerequested`, its `status` is reset to `queued` and the `conclusion` is cleared.
     ///
-    /// To rerequest a check run, you must use a GitHub App with the `checks:read` permission on a private repository or pull access to a public repository. OAuth apps and authenticated users are not able to rerequest a check run.
-    ///
     /// For more information about how to re-run GitHub Actions jobs, see "[Re-run a job from a workflow run](https://docs.github.com/rest/actions/workflow-runs#re-run-a-job-from-a-workflow-run)".
+    ///
+    /// OAuth apps and personal access tokens (classic) cannot use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/check-runs/{check_run_id}/rerequest`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-runs/{check_run_id}/rerequest/post(checks/rerequest-run)`.
@@ -257,9 +249,9 @@ extension APIProtocol {
     ///
     /// Creates a check suite manually. By default, check suites are automatically created when you create a [check run](https://docs.github.com/rest/checks/runs). You only need to use this endpoint for manually creating check suites when you've disabled automatic creation using "[Update repository preferences for check suites](https://docs.github.com/rest/checks/suites#update-repository-preferences-for-check-suites)".
     ///
-    /// To create a check suite, you must use a GitHub App with the `checks:write` permission. OAuth apps and authenticated users are not able to create a check suite.
-    ///
     /// **Note:** The Checks API only looks for pushes in the repository where the check suite or check run were created. Pushes to a branch in a forked repository are not detected and return an empty `pull_requests` array and a `null` value for `head_branch`.
+    ///
+    /// OAuth apps and personal access tokens (classic) cannot use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/check-suites`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-suites/post(checks/create-suite)`.
@@ -296,9 +288,9 @@ extension APIProtocol {
     ///
     /// Gets a single check suite using its `id`.
     ///
-    /// GitHub Apps must have the `checks:read` permission on a private repository or pull access to a public repository to get check suites. OAuth apps and authenticated users must have the `repo` scope to get check suites in a private repository.
-    ///
     /// **Note:** The Checks API only looks for pushes in the repository where the check suite or check run were created. Pushes to a branch in a forked repository are not detected and return an empty `pull_requests` array and a `null` value for `head_branch`.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint on a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/check-suites/{check_suite_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-suites/{check_suite_id}/get(checks/get-suite)`.
@@ -315,9 +307,9 @@ extension APIProtocol {
     ///
     /// Lists check runs for a check suite using its `id`.
     ///
-    /// GitHub Apps must have the `checks:read` permission on a private repository or pull access to a public repository to get check runs. OAuth apps and authenticated users must have the `repo` scope to get check runs in a private repository.
-    ///
     /// **Note:** The endpoints to manage checks only look for pushes in the repository where the check suite or check run were created. Pushes to a branch in a forked repository are not detected and return an empty `pull_requests` array.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint on a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/check-suites/{check_suite_id}/check-runs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-suites/{check_suite_id}/check-runs/get(checks/list-for-suite)`.
@@ -336,7 +328,7 @@ extension APIProtocol {
     ///
     /// Triggers GitHub to rerequest an existing check suite, without pushing new code to a repository. This endpoint will trigger the [`check_suite` webhook](https://docs.github.com/webhooks/event-payloads/#check_suite) event with the action `rerequested`. When a check suite is `rerequested`, its `status` is reset to `queued` and the `conclusion` is cleared.
     ///
-    /// To rerequest a check suite, you must use a GitHub App with the `checks:write` permission on a private repository or pull access to a public repository. OAuth apps and authenticated users are not able to rerequest a check suite.
+    /// OAuth apps and personal access tokens (classic) cannot use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/check-suites/{check_suite_id}/rerequest`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-suites/{check_suite_id}/rerequest/post(checks/rerequest-suite)`.
@@ -353,11 +345,11 @@ extension APIProtocol {
     ///
     /// Lists check runs for a commit ref. The `ref` can be a SHA, branch name, or a tag name.
     ///
-    /// GitHub Apps must have the `checks:read` permission on a private repository or pull access to a public repository to get check runs. OAuth apps and authenticated users must have the `repo` scope to get check runs in a private repository.
-    ///
     /// **Note:** The endpoints to manage checks only look for pushes in the repository where the check suite or check run were created. Pushes to a branch in a forked repository are not detected and return an empty `pull_requests` array.
     ///
     /// If there are more than 1000 check suites on a single git reference, this endpoint will limit check runs to the 1000 most recent check suites. To iterate over all possible check runs, use the [List check suites for a Git reference](https://docs.github.com/rest/reference/checks#list-check-suites-for-a-git-reference) endpoint and provide the `check_suite_id` parameter to the [List check runs in a check suite](https://docs.github.com/rest/reference/checks#list-check-runs-in-a-check-suite) endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint on a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/commits/{ref}/check-runs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/commits/{ref}/check-runs/get(checks/list-for-ref)`.
@@ -376,9 +368,9 @@ extension APIProtocol {
     ///
     /// Lists check suites for a commit `ref`. The `ref` can be a SHA, branch name, or a tag name.
     ///
-    /// GitHub Apps must have the `checks:read` permission on a private repository or pull access to a public repository to list check suites. OAuth apps and authenticated users must have the `repo` scope to get check suites in a private repository.
-    ///
     /// **Note:** The endpoints to manage checks only look for pushes in the repository where the check suite or check run were created. Pushes to a branch in a forked repository are not detected and return an empty `pull_requests` array and a `null` value for `head_branch`.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint on a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/commits/{ref}/check-suites`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/commits/{ref}/check-suites/get(checks/list-suites-for-ref)`.
@@ -2706,7 +2698,7 @@ public enum Operations {
     ///
     /// Creates a new check run for a specific commit in a repository.
     ///
-    /// To create a check run, you must use a GitHub App with the `checks:write` permission. OAuth apps and authenticated users are not able to create a check suite.
+    /// To create a check run, you must use a GitHub App. OAuth apps and authenticated users are not able to create a check suite.
     ///
     /// In a check suite, GitHub limits the number of check runs with the same name to 1000. Once these check runs exceed 1000, GitHub will start to automatically delete older check runs.
     ///
@@ -2977,9 +2969,9 @@ public enum Operations {
     ///
     /// Gets a single check run using its `id`.
     ///
-    /// GitHub Apps must have the `checks:read` permission on a private repository or pull access to a public repository to get check runs. OAuth apps and authenticated users must have the `repo` scope to get check runs in a private repository.
-    ///
     /// **Note:** The Checks API only looks for pushes in the repository where the check suite or check run were created. Pushes to a branch in a forked repository are not detected and return an empty `pull_requests` array.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint on a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/check-runs/{check_run_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-runs/{check_run_id}/get(checks/get)`.
@@ -3129,9 +3121,9 @@ public enum Operations {
     ///
     /// Updates a check run for a specific commit in a repository.
     ///
-    /// To update a check run, you must use a GitHub App with the `checks:write` permission. OAuth apps and authenticated users are not able to update a check run.
-    ///
     /// **Note:** The endpoints to manage checks only look for pushes in the repository where the check suite or check run were created. Pushes to a branch in a forked repository are not detected and return an empty `pull_requests` array.
+    ///
+    /// OAuth apps and personal access tokens (classic) cannot use this endpoint.
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/check-runs/{check_run_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-runs/{check_run_id}/patch(checks/update)`.
@@ -3415,11 +3407,7 @@ public enum Operations {
     ///
     /// Lists annotations for a check run using the annotation `id`.
     ///
-    /// GitHub Apps
-    /// must have the `checks:read` permission on a private repository or pull access to
-    /// a public repository to get annotations for a check run. OAuth apps and authenticated
-    /// users must have the `repo` scope to get annotations for a check run in a private
-    /// repository.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint on a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/check-runs/{check_run_id}/annotations`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-runs/{check_run_id}/annotations/get(checks/list-annotations)`.
@@ -3615,9 +3603,9 @@ public enum Operations {
     ///
     /// Triggers GitHub to rerequest an existing check run, without pushing new code to a repository. This endpoint will trigger the [`check_run` webhook](https://docs.github.com/webhooks/event-payloads/#check_run) event with the action `rerequested`. When a check run is `rerequested`, its `status` is reset to `queued` and the `conclusion` is cleared.
     ///
-    /// To rerequest a check run, you must use a GitHub App with the `checks:read` permission on a private repository or pull access to a public repository. OAuth apps and authenticated users are not able to rerequest a check run.
-    ///
     /// For more information about how to re-run GitHub Actions jobs, see "[Re-run a job from a workflow run](https://docs.github.com/rest/actions/workflow-runs#re-run-a-job-from-a-workflow-run)".
+    ///
+    /// OAuth apps and personal access tokens (classic) cannot use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/check-runs/{check_run_id}/rerequest`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-runs/{check_run_id}/rerequest/post(checks/rerequest-run)`.
@@ -3892,9 +3880,9 @@ public enum Operations {
     ///
     /// Creates a check suite manually. By default, check suites are automatically created when you create a [check run](https://docs.github.com/rest/checks/runs). You only need to use this endpoint for manually creating check suites when you've disabled automatic creation using "[Update repository preferences for check suites](https://docs.github.com/rest/checks/suites#update-repository-preferences-for-check-suites)".
     ///
-    /// To create a check suite, you must use a GitHub App with the `checks:write` permission. OAuth apps and authenticated users are not able to create a check suite.
-    ///
     /// **Note:** The Checks API only looks for pushes in the repository where the check suite or check run were created. Pushes to a branch in a forked repository are not detected and return an empty `pull_requests` array and a `null` value for `head_branch`.
+    ///
+    /// OAuth apps and personal access tokens (classic) cannot use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/check-suites`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-suites/post(checks/create-suite)`.
@@ -4313,9 +4301,9 @@ public enum Operations {
     ///
     /// Gets a single check suite using its `id`.
     ///
-    /// GitHub Apps must have the `checks:read` permission on a private repository or pull access to a public repository to get check suites. OAuth apps and authenticated users must have the `repo` scope to get check suites in a private repository.
-    ///
     /// **Note:** The Checks API only looks for pushes in the repository where the check suite or check run were created. Pushes to a branch in a forked repository are not detected and return an empty `pull_requests` array and a `null` value for `head_branch`.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint on a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/check-suites/{check_suite_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-suites/{check_suite_id}/get(checks/get-suite)`.
@@ -4465,9 +4453,9 @@ public enum Operations {
     ///
     /// Lists check runs for a check suite using its `id`.
     ///
-    /// GitHub Apps must have the `checks:read` permission on a private repository or pull access to a public repository to get check runs. OAuth apps and authenticated users must have the `repo` scope to get check runs in a private repository.
-    ///
     /// **Note:** The endpoints to manage checks only look for pushes in the repository where the check suite or check run were created. Pushes to a branch in a forked repository are not detected and return an empty `pull_requests` array.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint on a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/check-suites/{check_suite_id}/check-runs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-suites/{check_suite_id}/check-runs/get(checks/list-for-suite)`.
@@ -4718,7 +4706,7 @@ public enum Operations {
     ///
     /// Triggers GitHub to rerequest an existing check suite, without pushing new code to a repository. This endpoint will trigger the [`check_suite` webhook](https://docs.github.com/webhooks/event-payloads/#check_suite) event with the action `rerequested`. When a check suite is `rerequested`, its `status` is reset to `queued` and the `conclusion` is cleared.
     ///
-    /// To rerequest a check suite, you must use a GitHub App with the `checks:write` permission on a private repository or pull access to a public repository. OAuth apps and authenticated users are not able to rerequest a check suite.
+    /// OAuth apps and personal access tokens (classic) cannot use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/check-suites/{check_suite_id}/rerequest`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-suites/{check_suite_id}/rerequest/post(checks/rerequest-suite)`.
@@ -4868,11 +4856,11 @@ public enum Operations {
     ///
     /// Lists check runs for a commit ref. The `ref` can be a SHA, branch name, or a tag name.
     ///
-    /// GitHub Apps must have the `checks:read` permission on a private repository or pull access to a public repository to get check runs. OAuth apps and authenticated users must have the `repo` scope to get check runs in a private repository.
-    ///
     /// **Note:** The endpoints to manage checks only look for pushes in the repository where the check suite or check run were created. Pushes to a branch in a forked repository are not detected and return an empty `pull_requests` array.
     ///
     /// If there are more than 1000 check suites on a single git reference, this endpoint will limit check runs to the 1000 most recent check suites. To iterate over all possible check runs, use the [List check suites for a Git reference](https://docs.github.com/rest/reference/checks#list-check-suites-for-a-git-reference) endpoint and provide the `check_suite_id` parameter to the [List check runs in a check suite](https://docs.github.com/rest/reference/checks#list-check-runs-in-a-check-suite) endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint on a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/commits/{ref}/check-runs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/commits/{ref}/check-runs/get(checks/list-for-ref)`.
@@ -5128,9 +5116,9 @@ public enum Operations {
     ///
     /// Lists check suites for a commit `ref`. The `ref` can be a SHA, branch name, or a tag name.
     ///
-    /// GitHub Apps must have the `checks:read` permission on a private repository or pull access to a public repository to list check suites. OAuth apps and authenticated users must have the `repo` scope to get check suites in a private repository.
-    ///
     /// **Note:** The endpoints to manage checks only look for pushes in the repository where the check suite or check run were created. Pushes to a branch in a forked repository are not detected and return an empty `pull_requests` array and a `null` value for `head_branch`.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint on a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/commits/{ref}/check-suites`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/commits/{ref}/check-suites/get(checks/list-suites-for-ref)`.
