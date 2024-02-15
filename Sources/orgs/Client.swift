@@ -128,9 +128,15 @@ public struct Client: APIProtocol {
     }
     /// Get an organization
     ///
-    /// To see many of the organization response values, you need to be an authenticated organization owner with the `admin:org` scope. When the value of `two_factor_requirement_enabled` is `true`, the organization requires all members, billing managers, and outside collaborators to enable [two-factor authentication](https://docs.github.com/articles/securing-your-account-with-two-factor-authentication-2fa/).
+    /// Gets information about an organization.
     ///
-    /// GitHub Apps with the `Organization plan` permission can use this endpoint to retrieve information about an organization's GitHub plan. See "[Authenticating with GitHub Apps](https://docs.github.com/apps/building-github-apps/authenticating-with-github-apps/)" for details. For an example response, see 'Response with GitHub plan information' below."
+    /// When the value of `two_factor_requirement_enabled` is `true`, the organization requires all members, billing managers, and outside collaborators to enable [two-factor authentication](https://docs.github.com/articles/securing-your-account-with-two-factor-authentication-2fa/).
+    ///
+    /// To see the full details about an organization, the authenticated user must be an organization owner.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to see the full details about an organization.
+    ///
+    /// To see information about an organization's GitHub plan, GitHub Apps need the `Organization plan` permission.
     ///
     /// - Remark: HTTP `GET /orgs/{org}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/get(orgs/get)`.
@@ -218,7 +224,11 @@ public struct Client: APIProtocol {
     ///
     /// **Parameter Deprecation Notice:** GitHub will replace and discontinue `members_allowed_repository_creation_type` in favor of more granular permissions. The new input parameters are `members_can_create_public_repositories`, `members_can_create_private_repositories` for all organizations and `members_can_create_internal_repositories` for organizations associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+. For more information, see the [blog post](https://developer.github.com/changes/2019-12-03-internal-visibility-changes).
     ///
-    /// Enables an authenticated organization owner with the `admin:org` scope or the `repo` scope to update the organization's profile and member privileges.
+    /// Updates the organization's profile and member privileges.
+    ///
+    /// The authenticated user must be an organization owner to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` or `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PATCH /orgs/{org}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/patch(orgs/update)`.
@@ -1317,7 +1327,7 @@ public struct Client: APIProtocol {
     ///
     /// Returns the webhook configuration for an organization. To get more information about the webhook, including the `active` state and `events`, use "[Get an organization webhook ](/rest/orgs/webhooks#get-an-organization-webhook)."
     ///
-    /// Access tokens must have the `admin:org_hook` scope, and GitHub Apps must have the `organization_hooks:read` permission.
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org_hook` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/hooks/{hook_id}/config`.
     /// - Remark: Generated from `#/paths//orgs/{org}/hooks/{hook_id}/config/get(orgs/get-webhook-config-for-org)`.
@@ -1384,7 +1394,7 @@ public struct Client: APIProtocol {
     ///
     /// Updates the webhook configuration for an organization. To update more information about the webhook, including the `active` state and `events`, use "[Update an organization webhook ](/rest/orgs/webhooks#update-an-organization-webhook)."
     ///
-    /// Access tokens must have the `admin:org_hook` scope, and GitHub Apps must have the `organization_hooks:write` permission.
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org_hook` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PATCH /orgs/{org}/hooks/{hook_id}/config`.
     /// - Remark: Generated from `#/paths//orgs/{org}/hooks/{hook_id}/config/patch(orgs/update-webhook-config-for-org)`.
@@ -1904,7 +1914,12 @@ public struct Client: APIProtocol {
     }
     /// List app installations for an organization
     ///
-    /// Lists all GitHub Apps in an organization. The installation count includes all GitHub Apps installed on repositories in the organization. You must be an organization owner with `admin:read` scope to use this endpoint.
+    /// Lists all GitHub Apps in an organization. The installation count includes
+    /// all GitHub Apps installed on repositories in the organization.
+    ///
+    /// The authenticated user must be an organization owner to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:read` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/installations`.
     /// - Remark: Generated from `#/paths//orgs/{org}/installations/get(orgs/list-app-installations)`.
@@ -3010,8 +3025,7 @@ public struct Client: APIProtocol {
     /// - An administrator for the organization.
     /// - A user, or a user on a team, with the fine-grained permissions of `read_organization_custom_org_role` in the organization.
     ///
-    /// The authenticated user needs an access token with `admin:org` scope or a fine-grained personal access token with the `organization_custom_roles:read` permission to use this endpoint.
-    /// GitHub Apps must have the `organization_custom_org_roles:read` organization permission to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/organization-fine-grained-permissions`.
     /// - Remark: Generated from `#/paths//orgs/{org}/organization-fine-grained-permissions/get(orgs/list-organization-fine-grained-permissions)`.
@@ -3119,17 +3133,14 @@ public struct Client: APIProtocol {
     }
     /// Get all organization roles for an organization
     ///
-    /// Lists the organization roles available in this organization.
+    /// Lists the organization roles available in this organization. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
     ///
     /// To use this endpoint, the authenticated user must be one of:
     ///
     /// - An administrator for the organization.
     /// - A user, or a user on a team, with the fine-grained permissions of `read_organization_custom_org_role` in the organization.
     ///
-    /// The authenticated user needs an access token with `admin:org` scope or a fine-grained personal access token with the `organization_custom_roles:read` permission to use this endpoint.
-    /// GitHub Apps must have the `organization_custom_org_roles:read` organization permission to use this endpoint.
-    ///
-    /// For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/organization-roles`.
     /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/get(orgs/list-org-roles)`.
@@ -3237,17 +3248,14 @@ public struct Client: APIProtocol {
     }
     /// Create a custom organization role
     ///
-    /// Creates a custom organization role that can be assigned to users and teams, granting them specific permissions over the organization.
+    /// Creates a custom organization role that can be assigned to users and teams, granting them specific permissions over the organization. For more information on custom organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
     ///
     /// To use this endpoint, the authenticated user must be one of:
     ///
     /// - An administrator for the organization.
     /// - A user, or a user on a team, with the fine-grained permissions of `write_organization_custom_org_role` in the organization.
     ///
-    /// The authenticated user needs an access token with `admin:org` scope or a fine-grained personal access token with the `organization_custom_roles:write` permission to use this endpoint.
-    /// GitHub Apps must have the `organization_custom_org_roles:write` organization permission to use this endpoint.
-    ///
-    /// For more information on custom organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/organization-roles`.
     /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/post(orgs/create-custom-organization-role)`.
@@ -3386,12 +3394,11 @@ public struct Client: APIProtocol {
     }
     /// Remove all organization roles for a team
     ///
-    /// Removes all assigned organization roles from a team.
+    /// Removes all assigned organization roles from a team. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
     ///
-    /// To use this endpoint, you must be an administrator for the organization, and you must use an access token with the `admin:org` scope.
-    /// GitHub Apps must have the `members:write` organization permission to use this endpoint.
+    /// The authenticated user must be an administrator for the organization to use this endpoint.
     ///
-    /// For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/organization-roles/teams/{team_slug}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/teams/{team_slug}/delete(orgs/revoke-all-org-roles-team)`.
@@ -3432,11 +3439,11 @@ public struct Client: APIProtocol {
     }
     /// Assign an organization role to a team
     ///
-    /// Assigns an organization role to a team in an organization.
-    /// To use this endpoint, you must be an administrator for the organization, and you must use an access token with the `admin:org` scope.
-    /// GitHub Apps must have the `members` organization read-write permission to use this endpoint.
+    /// Assigns an organization role to a team in an organization. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
     ///
-    /// For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// The authenticated user must be an administrator for the organization to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/organization-roles/teams/{team_slug}/{role_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/teams/{team_slug}/{role_id}/put(orgs/assign-team-to-org-role)`.
@@ -3482,12 +3489,11 @@ public struct Client: APIProtocol {
     }
     /// Remove an organization role from a team
     ///
-    /// Removes an organization role from a team.
+    /// Removes an organization role from a team. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
     ///
-    /// To use this endpoint, you must be an administrator for the organization, and you must use an access token with the `admin:org` scope.
-    /// GitHub Apps must have the `members:write` organization permission to use this endpoint.
+    /// The authenticated user must be an administrator for the organization to use this endpoint.
     ///
-    /// For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/organization-roles/teams/{team_slug}/{role_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/teams/{team_slug}/{role_id}/delete(orgs/revoke-org-role-team)`.
@@ -3529,12 +3535,11 @@ public struct Client: APIProtocol {
     }
     /// Remove all organization roles for a user
     ///
-    /// Revokes all assigned organization roles from a user.
+    /// Revokes all assigned organization roles from a user. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
     ///
-    /// To use this endpoint, you must be an administrator for the organization, and you must use an access token with the `admin:org` scope.
-    /// GitHub Apps must have the `members:write` organization permission to use this endpoint.
+    /// The authenticated user must be an administrator for the organization to use this endpoint.
     ///
-    /// For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/organization-roles/users/{username}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/users/{username}/delete(orgs/revoke-all-org-roles-user)`.
@@ -3575,11 +3580,11 @@ public struct Client: APIProtocol {
     }
     /// Assign an organization role to a user
     ///
-    /// Assigns an organization role to a member of an organization.
-    /// To use this endpoint, you must be an administrator for the organization, and you must use an access token with the `admin:org` scope.
-    /// GitHub Apps must have the `members` organization read-write permission to use this endpoint.
+    /// Assigns an organization role to a member of an organization. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
     ///
-    /// For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// The authenticated user must be an administrator for the organization to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/organization-roles/users/{username}/{role_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/users/{username}/{role_id}/put(orgs/assign-user-to-org-role)`.
@@ -3625,12 +3630,11 @@ public struct Client: APIProtocol {
     }
     /// Remove an organization role from a user
     ///
-    /// Remove an organization role from a user.
+    /// Remove an organization role from a user. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
     ///
-    /// To use this endpoint, you must be an administrator for the organization, and you must use an access token with the `admin:org` scope.
-    /// GitHub Apps must have the `members:write` organization permission to use this endpoint.
+    /// The authenticated user must be an administrator for the organization to use this endpoint.
     ///
-    /// For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/organization-roles/users/{username}/{role_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/users/{username}/{role_id}/delete(orgs/revoke-org-role-user)`.
@@ -3672,17 +3676,14 @@ public struct Client: APIProtocol {
     }
     /// Get an organization role
     ///
-    /// Gets an organization role that is available to this organization.
+    /// Gets an organization role that is available to this organization. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
     ///
     /// To use this endpoint, the authenticated user must be one of:
     ///
     /// - An administrator for the organization.
     /// - A user, or a user on a team, with the fine-grained permissions of `read_organization_custom_org_role` in the organization.
     ///
-    /// The authenticated user needs an access token with `admin:org` scope or a fine-grained personal access token with the `organization_custom_roles:read` permission to use this endpoint.
-    /// GitHub Apps must have the `organization_custom_org_roles:read` organization permission to use this endpoint.
-    ///
-    /// For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/organization-roles/{role_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/{role_id}/get(orgs/get-org-role)`.
@@ -3791,17 +3792,15 @@ public struct Client: APIProtocol {
     }
     /// Update a custom organization role
     ///
-    /// Updates an existing custom organization role. Permission changes will apply to all assignees.
+    /// Updates an existing custom organization role. Permission changes will apply to all assignees. For more information on custom organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    ///
     ///
     /// To use this endpoint, the authenticated user must be one of:
     ///
     /// - An administrator for the organization.
     /// - A user, or a user on a team, with the fine-grained permissions of `write_organization_custom_org_role` in the organization.
     ///
-    /// The authenticated user needs an access token with `admin:org` scope or a fine-grained personal access token with the `organization_custom_roles:write` permission to use this endpoint.
-    /// GitHub Apps must have the `organization_custom_org_roles:write` organization permission to use this endpoint.
-    ///
-    /// For more information on custom organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PATCH /orgs/{org}/organization-roles/{role_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/{role_id}/patch(orgs/patch-custom-organization-role)`.
@@ -3941,17 +3940,14 @@ public struct Client: APIProtocol {
     }
     /// Delete a custom organization role.
     ///
-    /// Deletes a custom organization role.
+    /// Deletes a custom organization role. For more information on custom organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
     ///
     /// To use this endpoint, the authenticated user must be one of:
     ///
     /// - An administrator for the organization.
     /// - A user, or a user on a team, with the fine-grained permissions of `write_organization_custom_org_role` in the organization.
     ///
-    /// The authenticated user needs an access token with `admin:org` scope or a fine-grained personal access token with the `organization_custom_roles:write` permission to use this endpoint.
-    /// GitHub Apps must have the `organization_custom_org_roles:write` organization permission to use this endpoint.
-    ///
-    /// For more information on custom organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/organization-roles/{role_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/{role_id}/delete(orgs/delete-custom-organization-role)`.
@@ -3992,12 +3988,11 @@ public struct Client: APIProtocol {
     }
     /// List teams that are assigned to an organization role
     ///
-    /// Lists the teams that are assigned to an organization role.
+    /// Lists the teams that are assigned to an organization role. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
     ///
-    /// To use this endpoint, you must be an administrator for the organization, and you must use an access token with the `admin:org` scope.
-    /// GitHub Apps must have the `members` organization read permission to use this endpoint.
+    /// To use this endpoint, you must be an administrator for the organization.
     ///
-    /// For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/organization-roles/{role_id}/teams`.
     /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/{role_id}/teams/get(orgs/list-org-role-teams)`.
@@ -4088,12 +4083,11 @@ public struct Client: APIProtocol {
     }
     /// List users that are assigned to an organization role
     ///
-    /// Lists organization members that are assigned to an organization role.
+    /// Lists organization members that are assigned to an organization role. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
     ///
-    /// To use this endpoint, you must be an administrator for the organization, and you must use an access token with the `admin:org` scope.
-    /// GitHub Apps must have the `members` organization read permission to use this endpoint.
+    /// To use this endpoint, you must be an administrator for the organization.
     ///
-    /// For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/organization-roles/{role_id}/users`.
     /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/{role_id}/users/get(orgs/list-org-role-users)`.
@@ -4446,10 +4440,9 @@ public struct Client: APIProtocol {
     }
     /// List requests to access organization resources with fine-grained personal access tokens
     ///
-    /// Lists requests from organization members to access organization resources with a fine-grained personal access token. Only GitHub Apps can call this API,
-    /// using the `organization_personal_access_token_requests: read` permission.
+    /// Lists requests from organization members to access organization resources with a fine-grained personal access token.
     ///
-    /// **Note**: Fine-grained PATs are in public beta. Related APIs, events, and functionality are subject to change.
+    /// Only GitHub Apps can use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/personal-access-token-requests`.
     /// - Remark: Generated from `#/paths//orgs/{org}/personal-access-token-requests/get(orgs/list-pat-grant-requests)`.
@@ -4672,10 +4665,9 @@ public struct Client: APIProtocol {
     }
     /// Review requests to access organization resources with fine-grained personal access tokens
     ///
-    /// Approves or denies multiple pending requests to access organization resources via a fine-grained personal access token. Only GitHub Apps can call this API,
-    /// using the `organization_personal_access_token_requests: write` permission.
+    /// Approves or denies multiple pending requests to access organization resources via a fine-grained personal access token.
     ///
-    /// **Note**: Fine-grained PATs are in public beta. Related APIs, events, and functionality are subject to change.
+    /// Only GitHub Apps can use this endpoint.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/personal-access-token-requests`.
     /// - Remark: Generated from `#/paths//orgs/{org}/personal-access-token-requests/post(orgs/review-pat-grant-requests-in-bulk)`.
@@ -4836,10 +4828,9 @@ public struct Client: APIProtocol {
     }
     /// Review a request to access organization resources with a fine-grained personal access token
     ///
-    /// Approves or denies a pending request to access organization resources via a fine-grained personal access token. Only GitHub Apps can call this API,
-    /// using the `organization_personal_access_token_requests: write` permission.
+    /// Approves or denies a pending request to access organization resources via a fine-grained personal access token.
     ///
-    /// **Note**: Fine-grained PATs are in public beta. Related APIs, events, and functionality are subject to change.
+    /// Only GitHub Apps can use this endpoint.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/personal-access-token-requests/{pat_request_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/personal-access-token-requests/{pat_request_id}/post(orgs/review-pat-grant-request)`.
@@ -4981,10 +4972,9 @@ public struct Client: APIProtocol {
     }
     /// List repositories requested to be accessed by a fine-grained personal access token
     ///
-    /// Lists the repositories a fine-grained personal access token request is requesting access to. Only GitHub Apps can call this API,
-    /// using the `organization_personal_access_token_requests: read` permission.
+    /// Lists the repositories a fine-grained personal access token request is requesting access to.
     ///
-    /// **Note**: Fine-grained PATs are in public beta. Related APIs, events, and functionality are subject to change.
+    /// Only GitHub Apps can use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/personal-access-token-requests/{pat_request_id}/repositories`.
     /// - Remark: Generated from `#/paths//orgs/{org}/personal-access-token-requests/{pat_request_id}/repositories/get(orgs/list-pat-grant-request-repositories)`.
@@ -5137,10 +5127,9 @@ public struct Client: APIProtocol {
     }
     /// List fine-grained personal access tokens with access to organization resources
     ///
-    /// Lists approved fine-grained personal access tokens owned by organization members that can access organization resources. Only GitHub Apps can call this API,
-    /// using the `organization_personal_access_tokens: read` permission.
+    /// Lists approved fine-grained personal access tokens owned by organization members that can access organization resources.
     ///
-    /// **Note**: Fine-grained PATs are in public beta. Related APIs, events, and functionality are subject to change.
+    /// Only GitHub Apps can use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/personal-access-tokens`.
     /// - Remark: Generated from `#/paths//orgs/{org}/personal-access-tokens/get(orgs/list-pat-grants)`.
@@ -5363,10 +5352,9 @@ public struct Client: APIProtocol {
     }
     /// Update the access to organization resources via fine-grained personal access tokens
     ///
-    /// Updates the access organization members have to organization resources via fine-grained personal access tokens. Limited to revoking a token's existing access. Only GitHub Apps can call this API,
-    /// using the `organization_personal_access_tokens: write` permission.
+    /// Updates the access organization members have to organization resources via fine-grained personal access tokens. Limited to revoking a token's existing access.
     ///
-    /// **Note**: Fine-grained PATs are in public beta. Related APIs, events, and functionality are subject to change.
+    /// Only GitHub Apps can use this endpoint.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/personal-access-tokens`.
     /// - Remark: Generated from `#/paths//orgs/{org}/personal-access-tokens/post(orgs/update-pat-accesses)`.
@@ -5527,10 +5515,9 @@ public struct Client: APIProtocol {
     }
     /// Update the access a fine-grained personal access token has to organization resources
     ///
-    /// Updates the access an organization member has to organization resources via a fine-grained personal access token. Limited to revoking the token's existing access. Limited to revoking a token's existing access. Only GitHub Apps can call this API,
-    /// using the `organization_personal_access_tokens: write` permission.
+    /// Updates the access an organization member has to organization resources via a fine-grained personal access token. Limited to revoking the token's existing access. Limited to revoking a token's existing access.
     ///
-    /// **Note**: Fine-grained PATs are in public beta. Related APIs, events, and functionality are subject to change.
+    /// Only GitHub Apps can use this endpoint.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/personal-access-tokens/{pat_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/personal-access-tokens/{pat_id}/post(orgs/update-pat-access)`.
@@ -5672,10 +5659,9 @@ public struct Client: APIProtocol {
     }
     /// List repositories a fine-grained personal access token has access to
     ///
-    /// Lists the repositories a fine-grained personal access token has access to. Only GitHub Apps can call this API,
-    /// using the `organization_personal_access_tokens: read` permission.
+    /// Lists the repositories a fine-grained personal access token has access to.
     ///
-    /// **Note**: Fine-grained PATs are in public beta. Related APIs, events, and functionality are subject to change.
+    /// Only GitHub Apps can use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/personal-access-tokens/{pat_id}/repositories`.
     /// - Remark: Generated from `#/paths//orgs/{org}/personal-access-tokens/{pat_id}/repositories/get(orgs/list-pat-grant-repositories)`.
@@ -5831,8 +5817,6 @@ public struct Client: APIProtocol {
     /// Gets all custom properties defined for an organization.
     /// Organization members can read these properties.
     ///
-    /// GitHub Apps must have the `organization_custom_properties:read` organization permission to use this endpoint.
-    ///
     /// - Remark: HTTP `GET /orgs/{org}/properties/schema`.
     /// - Remark: Generated from `#/paths//orgs/{org}/properties/schema/get(orgs/get-all-custom-properties)`.
     public func orgs_sol_get_hyphen_all_hyphen_custom_hyphen_properties(_ input: Operations.orgs_sol_get_hyphen_all_hyphen_custom_hyphen_properties.Input) async throws -> Operations.orgs_sol_get_hyphen_all_hyphen_custom_hyphen_properties.Output {
@@ -5944,8 +5928,6 @@ public struct Client: APIProtocol {
     /// To use this endpoint, the authenticated user must be one of:
     ///   - An administrator for the organization.
     ///   - A user, or a user on a team, with the fine-grained permission of `custom_properties_org_definitions_manager` in the organization.
-    ///
-    /// GitHub Apps must have the `organization_custom_properties:admin` organization permission to use this endpoint.
     ///
     /// - Remark: HTTP `PATCH /orgs/{org}/properties/schema`.
     /// - Remark: Generated from `#/paths//orgs/{org}/properties/schema/patch(orgs/create-or-update-custom-properties)`.
@@ -6065,8 +6047,6 @@ public struct Client: APIProtocol {
     /// Gets a custom property that is defined for an organization.
     /// Organization members can read these properties.
     ///
-    /// GitHub Apps must have the `organization_custom_properties:read` organization permission to use this endpoint.
-    ///
     /// - Remark: HTTP `GET /orgs/{org}/properties/schema/{custom_property_name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/properties/schema/{custom_property_name}/get(orgs/get-custom-property)`.
     public func orgs_sol_get_hyphen_custom_hyphen_property(_ input: Operations.orgs_sol_get_hyphen_custom_hyphen_property.Input) async throws -> Operations.orgs_sol_get_hyphen_custom_hyphen_property.Output {
@@ -6179,8 +6159,6 @@ public struct Client: APIProtocol {
     /// To use this endpoint, the authenticated user must be one of:
     /// - An administrator for the organization.
     /// - A user, or a user on a team, with the fine-grained permission of `custom_properties_org_definitions_manager` in the organization.
-    ///
-    /// GitHub Apps must have the `organization_custom_properties:admin` organization permission to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/properties/schema/{custom_property_name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/properties/schema/{custom_property_name}/put(orgs/create-or-update-custom-property)`.
@@ -6304,8 +6282,6 @@ public struct Client: APIProtocol {
     ///   - An administrator for the organization.
     ///   - A user, or a user on a team, with the fine-grained permission of `custom_properties_org_definitions_manager` in the organization.
     ///
-    /// GitHub Apps must have the `organization_custom_properties:admin` organization permission to use this endpoint.
-    ///
     /// - Remark: HTTP `DELETE /orgs/{org}/properties/schema/{custom_property_name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/properties/schema/{custom_property_name}/delete(orgs/remove-custom-property)`.
     public func orgs_sol_remove_hyphen_custom_hyphen_property(_ input: Operations.orgs_sol_remove_hyphen_custom_hyphen_property.Input) async throws -> Operations.orgs_sol_remove_hyphen_custom_hyphen_property.Output {
@@ -6395,8 +6371,6 @@ public struct Client: APIProtocol {
     ///
     /// Lists organization repositories with all of their custom property values.
     /// Organization members can read these properties.
-    ///
-    /// GitHub Apps must have the `organization_custom_properties:read` organization permission to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/properties/values`.
     /// - Remark: Generated from `#/paths//orgs/{org}/properties/values/get(orgs/list-custom-properties-values-for-repos)`.
@@ -6544,8 +6518,6 @@ public struct Client: APIProtocol {
     ///   - An administrator for the organization.
     ///   - A user, or a user on a team, with the fine-grained permission of `custom_properties_org_values_editor` in the organization.
     ///
-    /// GitHub Apps must have the `organization_custom_properties:write` organization permission to use this endpoint.
-    ///
     /// - Remark: HTTP `PATCH /orgs/{org}/properties/values`.
     /// - Remark: Generated from `#/paths//orgs/{org}/properties/values/patch(orgs/create-or-update-custom-properties-values-for-repos)`.
     public func orgs_sol_create_hyphen_or_hyphen_update_hyphen_custom_hyphen_properties_hyphen_values_hyphen_for_hyphen_repos(_ input: Operations.orgs_sol_create_hyphen_or_hyphen_update_hyphen_custom_hyphen_properties_hyphen_values_hyphen_for_hyphen_repos.Input) async throws -> Operations.orgs_sol_create_hyphen_or_hyphen_update_hyphen_custom_hyphen_properties_hyphen_values_hyphen_for_hyphen_repos.Output {
@@ -6627,6 +6599,28 @@ public struct Client: APIProtocol {
                         preconditionFailure("bestContentType chose an invalid content type.")
                     }
                     return .notFound(.init(body: body))
+                case 422:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Components.Responses.validation_failed.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Schemas.validation_hyphen_error.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .unprocessableContent(.init(body: body))
                 default:
                     return .undocumented(
                         statusCode: response.status.code,
@@ -6882,9 +6876,9 @@ public struct Client: APIProtocol {
     ///
     /// Lists teams that are security managers for an organization. For more information, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."
     ///
-    /// To use this endpoint, you must be an administrator or security manager for the organization, and you must use an access token with the `read:org` scope.
+    /// The authenticated user must be an administrator or security manager for the organization to use this endpoint.
     ///
-    /// GitHub Apps must have the `administration` organization read permission to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `read:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/security-managers`.
     /// - Remark: Generated from `#/paths//orgs/{org}/security-managers/get(orgs/list-security-manager-teams)`.
@@ -6950,9 +6944,9 @@ public struct Client: APIProtocol {
     ///
     /// Adds a team as a security manager for an organization. For more information, see "[Managing security for an organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization) for an organization."
     ///
-    /// To use this endpoint, you must be an administrator for the organization, and you must use an access token with the `write:org` scope.
+    /// The authenticated user must be an administrator for the organization to use this endpoint.
     ///
-    /// GitHub Apps must have the `administration` organization read-write permission to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `write:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/security-managers/teams/{team_slug}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/security-managers/teams/{team_slug}/put(orgs/add-security-manager-team)`.
@@ -6997,9 +6991,9 @@ public struct Client: APIProtocol {
     ///
     /// Removes the security manager role from a team for an organization. For more information, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization) team from an organization."
     ///
-    /// To use this endpoint, you must be an administrator for the organization, and you must use an access token with the `admin:org` scope.
+    /// The authenticated user must be an administrator for the organization to use this endpoint.
     ///
-    /// GitHub Apps must have the `administration` organization read-write permission to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/security-managers/teams/{team_slug}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/security-managers/teams/{team_slug}/delete(orgs/remove-security-manager-team)`.
@@ -7040,14 +7034,11 @@ public struct Client: APIProtocol {
     }
     /// Enable or disable a security feature for an organization
     ///
-    /// Enables or disables the specified security feature for all eligible repositories in an organization.
+    /// Enables or disables the specified security feature for all eligible repositories in an organization. For more information, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."
     ///
-    /// To use this endpoint, you must be an organization owner or be member of a team with the security manager role.
-    /// A token with the 'write:org' scope is also required.
+    /// The authenticated user must be an organization owner or be member of a team with the security manager role to use this endpoint.
     ///
-    /// GitHub Apps must have the `organization_administration:write` permission to use this endpoint.
-    ///
-    /// For more information, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."
+    /// OAuth app tokens and personal access tokens (classic) need the `write:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/{security_product}/{enablement}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/{security_product}/{enablement}/post(orgs/enable-or-disable-security-product-on-all-org-repos)`.
@@ -7510,9 +7501,7 @@ public struct Client: APIProtocol {
     ///
     /// List organizations for the authenticated user.
     ///
-    /// **OAuth scope requirements**
-    ///
-    /// This only lists organizations that your authorization allows you to operate on in some way (e.g., you can list teams with `read:org` scope, you can publicize your organization membership with `user` scope, etc.). Therefore, this API requires at least `user` or `read:org` scope. OAuth requests with insufficient scope receive a `403 Forbidden` response.
+    /// For OAuth app tokens and personal access tokens (classic), this endpoint only lists organizations that your authorization allows you to operate on in some way (e.g., you can list teams with `read:org` scope, you can publicize your organization membership with `user` scope, etc.). Therefore, this API requires at least `user` or `read:org` scope for OAuth app tokens and personal access tokens (classic). Requests with insufficient scope will receive a `403 Forbidden` response.
     ///
     /// - Remark: HTTP `GET /user/orgs`.
     /// - Remark: Generated from `#/paths//user/orgs/get(orgs/list-for-authenticated-user)`.
