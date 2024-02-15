@@ -348,7 +348,9 @@ public struct Client: APIProtocol {
     ///
     /// Lists repository security advisories for an organization.
     ///
-    /// To use this endpoint, you must be an owner or security manager for the organization, and you must use an access token with the `repo` scope or `repository_advisories:write` permission.
+    /// The authenticated user must be an owner or security manager for the organization to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` or `repository_advisories:write` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/security-advisories`.
     /// - Remark: Generated from `#/paths//orgs/{org}/security-advisories/get(security-advisories/list-org-repository-advisories)`.
@@ -508,10 +510,10 @@ public struct Client: APIProtocol {
     /// List repository security advisories
     ///
     /// Lists security advisories in a repository.
-    /// You must authenticate using an access token with the `repo` scope or `repository_advisories:read` permission
-    /// in order to get published security advisories in a private repository, or any unpublished security advisories that you have access to.
     ///
-    /// You can access unpublished security advisories from a repository if you are a security manager or administrator of that repository, or if you are a collaborator on any security advisory.
+    /// The authenticated user can access unpublished security advisories from a repository if they are a security manager or administrator of that repository, or if they are a collaborator on any security advisory.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` or `repository_advisories:read` scope to to get a published security advisory in a private repository, or any unpublished security advisory that the authenticated user has access to.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/security-advisories`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/get(security-advisories/list-repository-advisories)`.
@@ -672,9 +674,10 @@ public struct Client: APIProtocol {
     /// Create a repository security advisory
     ///
     /// Creates a new repository security advisory.
-    /// You must authenticate using an access token with the `repo` scope or `repository_advisories:write` permission to use this endpoint.
     ///
-    /// In order to create a draft repository security advisory, you must be a security manager or administrator of that repository.
+    /// In order to create a draft repository security advisory, the authenticated user must be a security manager or administrator of that repository.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` or `repository_advisories:write` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/security-advisories`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/post(security-advisories/create-repository-advisory)`.
@@ -956,12 +959,13 @@ public struct Client: APIProtocol {
     /// Get a repository security advisory
     ///
     /// Get a repository security advisory using its GitHub Security Advisory (GHSA) identifier.
-    /// You can access any published security advisory on a public repository.
-    /// You must authenticate using an access token with the `repo` scope or `repository_advisories:read` permission
-    /// in order to get a published security advisory in a private repository, or any unpublished security advisory that you have access to.
     ///
-    /// You can access an unpublished security advisory from a repository if you are a security manager or administrator of that repository, or if you are a
+    /// Anyone can access any published security advisory on a public repository.
+    ///
+    /// The authenticated user can access an unpublished security advisory from a repository if they are a security manager or administrator of that repository, or if they are a
     /// collaborator on the security advisory.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` or `repository_advisories:read` scope to to get a published security advisory in a private repository, or any unpublished security advisory that the authenticated user has access to.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/security-advisories/{ghsa_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/{ghsa_id}/get(security-advisories/get-repository-advisory)`.
@@ -1072,10 +1076,11 @@ public struct Client: APIProtocol {
     /// Update a repository security advisory
     ///
     /// Update a repository security advisory using its GitHub Security Advisory (GHSA) identifier.
-    /// You must authenticate using an access token with the `repo` scope or `repository_advisories:write` permission to use this endpoint.
     ///
-    /// In order to update any security advisory, you must be a security manager or administrator of that repository,
+    /// In order to update any security advisory, the authenticated user must be a security manager or administrator of that repository,
     /// or a collaborator on the repository security advisory.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` or `repository_advisories:write` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/security-advisories/{ghsa_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/{ghsa_id}/patch(security-advisories/update-repository-advisory)`.
@@ -1220,9 +1225,9 @@ public struct Client: APIProtocol {
     ///
     /// You may request a CVE for public repositories, but cannot do so for private repositories.
     ///
-    /// You must authenticate using an access token with the `repo` scope or `repository_advisories:write` permission to use this endpoint.
+    /// In order to request a CVE for a repository security advisory, the authenticated user must be a security manager or administrator of that repository.
     ///
-    /// In order to request a CVE for a repository security advisory, you must be a security manager or administrator of that repository.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` or `repository_advisories:write` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/security-advisories/{ghsa_id}/cve`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/{ghsa_id}/cve/post(security-advisories/create-repository-advisory-cve-request)`.
