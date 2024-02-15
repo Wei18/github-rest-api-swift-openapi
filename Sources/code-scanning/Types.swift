@@ -15,9 +15,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Lists code scanning alerts for the default branch for all eligible repositories in an organization. Eligible repositories are repositories that are owned by organizations that you own or for which you are a security manager. For more information, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."
     ///
-    /// To use this endpoint, you must be an owner or security manager for the organization, and you must use an access token with the `repo` scope or `security_events` scope.
+    /// The authenticated user must be an owner or security manager for the organization to use this endpoint.
     ///
-    /// For public repositories, you may instead use the `public_repo` scope.
+    /// OAuth app tokens and personal access tokens (classic) need the `security_events` or `repo`s cope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/code-scanning/alerts`.
     /// - Remark: Generated from `#/paths//orgs/{org}/code-scanning/alerts/get(code-scanning/list-alerts-for-org)`.
@@ -26,25 +26,28 @@ public protocol APIProtocol: Sendable {
     ///
     /// Lists code scanning alerts.
     ///
-    /// To use this endpoint, you must use an access token with the `security_events` scope or, for alerts from public repositories only, an access token with the `public_repo` scope.
-    ///
     /// The response includes a `most_recent_instance` object.
     /// This provides details of the most recent instance of this alert
     /// for the default branch (or for the specified Git reference if you used `ref` in the request).
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/alerts`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/get(code-scanning/list-alerts-for-repo)`.
     func code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo(_ input: Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Input) async throws -> Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Output
     /// Get a code scanning alert
     ///
-    /// Gets a single code scanning alert. You must use an access token with the `security_events` scope to use this endpoint with private repositories, the `public_repo` scope also grants permission to read security events on public repositories only.
+    /// Gets a single code scanning alert.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/get(code-scanning/get-alert)`.
     func code_hyphen_scanning_sol_get_hyphen_alert(_ input: Operations.code_hyphen_scanning_sol_get_hyphen_alert.Input) async throws -> Operations.code_hyphen_scanning_sol_get_hyphen_alert.Output
     /// Update a code scanning alert
     ///
-    /// Updates the status of a single code scanning alert. You must use an access token with the `security_events` scope to use this endpoint with private repositories. You can also use tokens with the `public_repo` scope for public repositories only.
+    /// Updates the status of a single code scanning alert.
+    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/patch(code-scanning/update-alert)`.
@@ -52,8 +55,8 @@ public protocol APIProtocol: Sendable {
     /// List instances of a code scanning alert
     ///
     /// Lists all instances of the specified code scanning alert.
-    /// You must use an access token with the `security_events` scope to use this endpoint with private repositories,
-    /// the `public_repo` scope also grants permission to read security events on public repositories only.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/instances`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/instances/get(code-scanning/list-alert-instances)`.
@@ -71,11 +74,10 @@ public protocol APIProtocol: Sendable {
     /// For very old analyses this data is not available,
     /// and `0` is returned in this field.
     ///
-    /// You must use an access token with the `security_events` scope to use this endpoint with private repositories,
-    /// the `public_repo` scope also grants permission to read security events on public repositories only.
-    ///
     /// **Deprecation notice**:
     /// The `tool_name` field is deprecated and will, in future, not be included in the response for this endpoint. The example response reflects this change. The tool name can now be found inside the `tool` field.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/analyses`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/analyses/get(code-scanning/list-recent-analyses)`.
@@ -83,9 +85,6 @@ public protocol APIProtocol: Sendable {
     /// Get a code scanning analysis for a repository
     ///
     /// Gets a specified code scanning analysis for a repository.
-    ///
-    /// You must use an access token with the `security_events` scope to use this endpoint with private repositories,
-    /// the `public_repo` scope also grants permission to read security events on public repositories only.
     ///
     /// The default JSON response contains fields that describe the analysis.
     /// This includes the Git reference and commit SHA to which the analysis relates,
@@ -101,15 +100,14 @@ public protocol APIProtocol: Sendable {
     ///
     /// - **`application/sarif+json`**: Instead of returning a summary of the analysis, this endpoint returns a subset of the analysis data that was uploaded. The data is formatted as [SARIF version 2.1.0](https://docs.oasis-open.org/sarif/sarif/v2.1.0/cs01/sarif-v2.1.0-cs01.html). It also returns additional data such as the `github/alertNumber` and `github/alertUrl` properties.
     ///
+    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
+    ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}/get(code-scanning/get-analysis)`.
     func code_hyphen_scanning_sol_get_hyphen_analysis(_ input: Operations.code_hyphen_scanning_sol_get_hyphen_analysis.Input) async throws -> Operations.code_hyphen_scanning_sol_get_hyphen_analysis.Output
     /// Delete a code scanning analysis from a repository
     ///
-    /// Deletes a specified code scanning analysis from a repository. For
-    /// private repositories, you must use an access token with the `repo` scope. For public repositories,
-    /// you must use an access token with `public_repo` scope.
-    /// GitHub Apps must have the `security_events` write permission to use this endpoint.
+    /// Deletes a specified code scanning analysis from a repository.
     ///
     /// You can delete one analysis at a time.
     /// To delete a series of analyses, start with the most recent analysis and work backwards.
@@ -172,6 +170,8 @@ public protocol APIProtocol: Sendable {
     ///
     /// The above process assumes that you want to remove all trace of the tool's analyses from the GitHub user interface, for the specified repository, and it therefore uses the `confirm_delete_url` value. Alternatively, you could use the `next_analysis_url` value, which would leave the last analysis in each set undeleted to avoid removing a tool's analysis entirely.
     ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
+    ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}/delete(code-scanning/delete-analysis)`.
     func code_hyphen_scanning_sol_delete_hyphen_analysis(_ input: Operations.code_hyphen_scanning_sol_delete_hyphen_analysis.Input) async throws -> Operations.code_hyphen_scanning_sol_delete_hyphen_analysis.Output
@@ -179,8 +179,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// Lists the CodeQL databases that are available in a repository.
     ///
-    /// For private repositories, you must use an access token with the `security_events` scope.
-    /// For public repositories, you can use tokens with the `security_events` or `public_repo` scope.
+    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/codeql/databases`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/databases/get(code-scanning/list-codeql-databases)`.
@@ -195,8 +194,7 @@ public protocol APIProtocol: Sendable {
     /// your HTTP client is configured to follow redirects or use the `Location` header
     /// to make a second request to get the redirect URL.
     ///
-    /// For private repositories, you must use an access token with the `security_events` scope.
-    /// For public repositories, you can use tokens with the `security_events` or `public_repo` scope.
+    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/codeql/databases/{language}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/get(code-scanning/get-codeql-database)`.
@@ -204,8 +202,8 @@ public protocol APIProtocol: Sendable {
     /// Get a code scanning default setup configuration
     ///
     /// Gets a code scanning default setup configuration.
-    /// You must use an access token with the `repo` scope to use this endpoint with private repositories or the `public_repo`
-    /// scope for public repositories.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/default-setup`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/default-setup/get(code-scanning/get-default-setup)`.
@@ -213,15 +211,15 @@ public protocol APIProtocol: Sendable {
     /// Update a code scanning default setup configuration
     ///
     /// Updates a code scanning default setup configuration.
-    /// You must use an access token with the `repo` scope to use this endpoint with private repositories or the `public_repo`
-    /// scope for public repositories.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/code-scanning/default-setup`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/default-setup/patch(code-scanning/update-default-setup)`.
     func code_hyphen_scanning_sol_update_hyphen_default_hyphen_setup(_ input: Operations.code_hyphen_scanning_sol_update_hyphen_default_hyphen_setup.Input) async throws -> Operations.code_hyphen_scanning_sol_update_hyphen_default_hyphen_setup.Output
     /// Upload an analysis as SARIF data
     ///
-    /// Uploads SARIF data containing the results of a code scanning analysis to make the results available in a repository. You must use an access token with the `security_events` scope to use this endpoint for private repositories. You can also use tokens with the `public_repo` scope for public repositories only. GitHub Apps must have the `security_events` write permission to use this endpoint. For troubleshooting information, see "[Troubleshooting SARIF uploads](https://docs.github.com/code-security/code-scanning/troubleshooting-sarif)."
+    /// Uploads SARIF data containing the results of a code scanning analysis to make the results available in a repository. For troubleshooting information, see "[Troubleshooting SARIF uploads](https://docs.github.com/code-security/code-scanning/troubleshooting-sarif)."
     ///
     /// There are two places where you can upload code scanning results.
     ///  - If you upload to a pull request, for example `--ref refs/pull/42/merge` or `--ref refs/pull/42/head`, then the results appear as alerts in a pull request check. For more information, see "[Triaging code scanning alerts in pull requests](/code-security/secure-coding/triaging-code-scanning-alerts-in-pull-requests)."
@@ -252,12 +250,15 @@ public protocol APIProtocol: Sendable {
     /// You can use this ID to check the status of the upload by using it in the `/sarifs/{sarif_id}` endpoint.
     /// For more information, see "[Get information about a SARIF upload](/rest/code-scanning/code-scanning#get-information-about-a-sarif-upload)."
     ///
+    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
+    ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/code-scanning/sarifs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/sarifs/post(code-scanning/upload-sarif)`.
     func code_hyphen_scanning_sol_upload_hyphen_sarif(_ input: Operations.code_hyphen_scanning_sol_upload_hyphen_sarif.Input) async throws -> Operations.code_hyphen_scanning_sol_upload_hyphen_sarif.Output
     /// Get information about a SARIF upload
     ///
-    /// Gets information about a SARIF upload, including the status and the URL of the analysis that was uploaded so that you can retrieve details of the analysis. For more information, see "[Get a code scanning analysis for a repository](/rest/code-scanning/code-scanning#get-a-code-scanning-analysis-for-a-repository)." You must use an access token with the `security_events` scope to use this endpoint with private repositories, the `public_repo` scope also grants permission to read security events on public repositories only.
+    /// Gets information about a SARIF upload, including the status and the URL of the analysis that was uploaded so that you can retrieve details of the analysis. For more information, see "[Get a code scanning analysis for a repository](/rest/code-scanning/code-scanning#get-a-code-scanning-analysis-for-a-repository)."
+    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/sarifs/{sarif_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/sarifs/{sarif_id}/get(code-scanning/get-sarif)`.
@@ -270,9 +271,9 @@ extension APIProtocol {
     ///
     /// Lists code scanning alerts for the default branch for all eligible repositories in an organization. Eligible repositories are repositories that are owned by organizations that you own or for which you are a security manager. For more information, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."
     ///
-    /// To use this endpoint, you must be an owner or security manager for the organization, and you must use an access token with the `repo` scope or `security_events` scope.
+    /// The authenticated user must be an owner or security manager for the organization to use this endpoint.
     ///
-    /// For public repositories, you may instead use the `public_repo` scope.
+    /// OAuth app tokens and personal access tokens (classic) need the `security_events` or `repo`s cope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/code-scanning/alerts`.
     /// - Remark: Generated from `#/paths//orgs/{org}/code-scanning/alerts/get(code-scanning/list-alerts-for-org)`.
@@ -291,11 +292,11 @@ extension APIProtocol {
     ///
     /// Lists code scanning alerts.
     ///
-    /// To use this endpoint, you must use an access token with the `security_events` scope or, for alerts from public repositories only, an access token with the `public_repo` scope.
-    ///
     /// The response includes a `most_recent_instance` object.
     /// This provides details of the most recent instance of this alert
     /// for the default branch (or for the specified Git reference if you used `ref` in the request).
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/alerts`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/get(code-scanning/list-alerts-for-repo)`.
@@ -312,7 +313,9 @@ extension APIProtocol {
     }
     /// Get a code scanning alert
     ///
-    /// Gets a single code scanning alert. You must use an access token with the `security_events` scope to use this endpoint with private repositories, the `public_repo` scope also grants permission to read security events on public repositories only.
+    /// Gets a single code scanning alert.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/get(code-scanning/get-alert)`.
@@ -327,7 +330,8 @@ extension APIProtocol {
     }
     /// Update a code scanning alert
     ///
-    /// Updates the status of a single code scanning alert. You must use an access token with the `security_events` scope to use this endpoint with private repositories. You can also use tokens with the `public_repo` scope for public repositories only.
+    /// Updates the status of a single code scanning alert.
+    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/patch(code-scanning/update-alert)`.
@@ -345,8 +349,8 @@ extension APIProtocol {
     /// List instances of a code scanning alert
     ///
     /// Lists all instances of the specified code scanning alert.
-    /// You must use an access token with the `security_events` scope to use this endpoint with private repositories,
-    /// the `public_repo` scope also grants permission to read security events on public repositories only.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/instances`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/instances/get(code-scanning/list-alert-instances)`.
@@ -374,11 +378,10 @@ extension APIProtocol {
     /// For very old analyses this data is not available,
     /// and `0` is returned in this field.
     ///
-    /// You must use an access token with the `security_events` scope to use this endpoint with private repositories,
-    /// the `public_repo` scope also grants permission to read security events on public repositories only.
-    ///
     /// **Deprecation notice**:
     /// The `tool_name` field is deprecated and will, in future, not be included in the response for this endpoint. The example response reflects this change. The tool name can now be found inside the `tool` field.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/analyses`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/analyses/get(code-scanning/list-recent-analyses)`.
@@ -397,9 +400,6 @@ extension APIProtocol {
     ///
     /// Gets a specified code scanning analysis for a repository.
     ///
-    /// You must use an access token with the `security_events` scope to use this endpoint with private repositories,
-    /// the `public_repo` scope also grants permission to read security events on public repositories only.
-    ///
     /// The default JSON response contains fields that describe the analysis.
     /// This includes the Git reference and commit SHA to which the analysis relates,
     /// the datetime of the analysis, the name of the code scanning tool,
@@ -414,6 +414,8 @@ extension APIProtocol {
     ///
     /// - **`application/sarif+json`**: Instead of returning a summary of the analysis, this endpoint returns a subset of the analysis data that was uploaded. The data is formatted as [SARIF version 2.1.0](https://docs.oasis-open.org/sarif/sarif/v2.1.0/cs01/sarif-v2.1.0-cs01.html). It also returns additional data such as the `github/alertNumber` and `github/alertUrl` properties.
     ///
+    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
+    ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}/get(code-scanning/get-analysis)`.
     public func code_hyphen_scanning_sol_get_hyphen_analysis(
@@ -427,10 +429,7 @@ extension APIProtocol {
     }
     /// Delete a code scanning analysis from a repository
     ///
-    /// Deletes a specified code scanning analysis from a repository. For
-    /// private repositories, you must use an access token with the `repo` scope. For public repositories,
-    /// you must use an access token with `public_repo` scope.
-    /// GitHub Apps must have the `security_events` write permission to use this endpoint.
+    /// Deletes a specified code scanning analysis from a repository.
     ///
     /// You can delete one analysis at a time.
     /// To delete a series of analyses, start with the most recent analysis and work backwards.
@@ -493,6 +492,8 @@ extension APIProtocol {
     ///
     /// The above process assumes that you want to remove all trace of the tool's analyses from the GitHub user interface, for the specified repository, and it therefore uses the `confirm_delete_url` value. Alternatively, you could use the `next_analysis_url` value, which would leave the last analysis in each set undeleted to avoid removing a tool's analysis entirely.
     ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
+    ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}/delete(code-scanning/delete-analysis)`.
     public func code_hyphen_scanning_sol_delete_hyphen_analysis(
@@ -510,8 +511,7 @@ extension APIProtocol {
     ///
     /// Lists the CodeQL databases that are available in a repository.
     ///
-    /// For private repositories, you must use an access token with the `security_events` scope.
-    /// For public repositories, you can use tokens with the `security_events` or `public_repo` scope.
+    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/codeql/databases`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/databases/get(code-scanning/list-codeql-databases)`.
@@ -534,8 +534,7 @@ extension APIProtocol {
     /// your HTTP client is configured to follow redirects or use the `Location` header
     /// to make a second request to get the redirect URL.
     ///
-    /// For private repositories, you must use an access token with the `security_events` scope.
-    /// For public repositories, you can use tokens with the `security_events` or `public_repo` scope.
+    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/codeql/databases/{language}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/get(code-scanning/get-codeql-database)`.
@@ -551,8 +550,8 @@ extension APIProtocol {
     /// Get a code scanning default setup configuration
     ///
     /// Gets a code scanning default setup configuration.
-    /// You must use an access token with the `repo` scope to use this endpoint with private repositories or the `public_repo`
-    /// scope for public repositories.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/default-setup`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/default-setup/get(code-scanning/get-default-setup)`.
@@ -568,8 +567,8 @@ extension APIProtocol {
     /// Update a code scanning default setup configuration
     ///
     /// Updates a code scanning default setup configuration.
-    /// You must use an access token with the `repo` scope to use this endpoint with private repositories or the `public_repo`
-    /// scope for public repositories.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/code-scanning/default-setup`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/default-setup/patch(code-scanning/update-default-setup)`.
@@ -586,7 +585,7 @@ extension APIProtocol {
     }
     /// Upload an analysis as SARIF data
     ///
-    /// Uploads SARIF data containing the results of a code scanning analysis to make the results available in a repository. You must use an access token with the `security_events` scope to use this endpoint for private repositories. You can also use tokens with the `public_repo` scope for public repositories only. GitHub Apps must have the `security_events` write permission to use this endpoint. For troubleshooting information, see "[Troubleshooting SARIF uploads](https://docs.github.com/code-security/code-scanning/troubleshooting-sarif)."
+    /// Uploads SARIF data containing the results of a code scanning analysis to make the results available in a repository. For troubleshooting information, see "[Troubleshooting SARIF uploads](https://docs.github.com/code-security/code-scanning/troubleshooting-sarif)."
     ///
     /// There are two places where you can upload code scanning results.
     ///  - If you upload to a pull request, for example `--ref refs/pull/42/merge` or `--ref refs/pull/42/head`, then the results appear as alerts in a pull request check. For more information, see "[Triaging code scanning alerts in pull requests](/code-security/secure-coding/triaging-code-scanning-alerts-in-pull-requests)."
@@ -617,6 +616,8 @@ extension APIProtocol {
     /// You can use this ID to check the status of the upload by using it in the `/sarifs/{sarif_id}` endpoint.
     /// For more information, see "[Get information about a SARIF upload](/rest/code-scanning/code-scanning#get-information-about-a-sarif-upload)."
     ///
+    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
+    ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/code-scanning/sarifs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/sarifs/post(code-scanning/upload-sarif)`.
     public func code_hyphen_scanning_sol_upload_hyphen_sarif(
@@ -632,7 +633,8 @@ extension APIProtocol {
     }
     /// Get information about a SARIF upload
     ///
-    /// Gets information about a SARIF upload, including the status and the URL of the analysis that was uploaded so that you can retrieve details of the analysis. For more information, see "[Get a code scanning analysis for a repository](/rest/code-scanning/code-scanning#get-a-code-scanning-analysis-for-a-repository)." You must use an access token with the `security_events` scope to use this endpoint with private repositories, the `public_repo` scope also grants permission to read security events on public repositories only.
+    /// Gets information about a SARIF upload, including the status and the URL of the analysis that was uploaded so that you can retrieve details of the analysis. For more information, see "[Get a code scanning analysis for a repository](/rest/code-scanning/code-scanning#get-a-code-scanning-analysis-for-a-repository)."
+    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/sarifs/{sarif_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/sarifs/{sarif_id}/get(code-scanning/get-sarif)`.
@@ -3015,9 +3017,9 @@ public enum Operations {
     ///
     /// Lists code scanning alerts for the default branch for all eligible repositories in an organization. Eligible repositories are repositories that are owned by organizations that you own or for which you are a security manager. For more information, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."
     ///
-    /// To use this endpoint, you must be an owner or security manager for the organization, and you must use an access token with the `repo` scope or `security_events` scope.
+    /// The authenticated user must be an owner or security manager for the organization to use this endpoint.
     ///
-    /// For public repositories, you may instead use the `public_repo` scope.
+    /// OAuth app tokens and personal access tokens (classic) need the `security_events` or `repo`s cope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/code-scanning/alerts`.
     /// - Remark: Generated from `#/paths//orgs/{org}/code-scanning/alerts/get(code-scanning/list-alerts-for-org)`.
@@ -3309,11 +3311,11 @@ public enum Operations {
     ///
     /// Lists code scanning alerts.
     ///
-    /// To use this endpoint, you must use an access token with the `security_events` scope or, for alerts from public repositories only, an access token with the `public_repo` scope.
-    ///
     /// The response includes a `most_recent_instance` object.
     /// This provides details of the most recent instance of this alert
     /// for the default branch (or for the specified Git reference if you used `ref` in the request).
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/alerts`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/get(code-scanning/list-alerts-for-repo)`.
@@ -3632,7 +3634,9 @@ public enum Operations {
     }
     /// Get a code scanning alert
     ///
-    /// Gets a single code scanning alert. You must use an access token with the `security_events` scope to use this endpoint with private repositories, the `public_repo` scope also grants permission to read security events on public repositories only.
+    /// Gets a single code scanning alert.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/get(code-scanning/get-alert)`.
@@ -3872,7 +3876,8 @@ public enum Operations {
     }
     /// Update a code scanning alert
     ///
-    /// Updates the status of a single code scanning alert. You must use an access token with the `security_events` scope to use this endpoint with private repositories. You can also use tokens with the `public_repo` scope for public repositories only.
+    /// Updates the status of a single code scanning alert.
+    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/patch(code-scanning/update-alert)`.
@@ -4128,8 +4133,8 @@ public enum Operations {
     /// List instances of a code scanning alert
     ///
     /// Lists all instances of the specified code scanning alert.
-    /// You must use an access token with the `security_events` scope to use this endpoint with private repositories,
-    /// the `public_repo` scope also grants permission to read security events on public repositories only.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/instances`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/instances/get(code-scanning/list-alert-instances)`.
@@ -4391,11 +4396,10 @@ public enum Operations {
     /// For very old analyses this data is not available,
     /// and `0` is returned in this field.
     ///
-    /// You must use an access token with the `security_events` scope to use this endpoint with private repositories,
-    /// the `public_repo` scope also grants permission to read security events on public repositories only.
-    ///
     /// **Deprecation notice**:
     /// The `tool_name` field is deprecated and will, in future, not be included in the response for this endpoint. The example response reflects this change. The tool name can now be found inside the `tool` field.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/analyses`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/analyses/get(code-scanning/list-recent-analyses)`.
@@ -4685,9 +4689,6 @@ public enum Operations {
     ///
     /// Gets a specified code scanning analysis for a repository.
     ///
-    /// You must use an access token with the `security_events` scope to use this endpoint with private repositories,
-    /// the `public_repo` scope also grants permission to read security events on public repositories only.
-    ///
     /// The default JSON response contains fields that describe the analysis.
     /// This includes the Git reference and commit SHA to which the analysis relates,
     /// the datetime of the analysis, the name of the code scanning tool,
@@ -4701,6 +4702,8 @@ public enum Operations {
     /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
     ///
     /// - **`application/sarif+json`**: Instead of returning a summary of the analysis, this endpoint returns a subset of the analysis data that was uploaded. The data is formatted as [SARIF version 2.1.0](https://docs.oasis-open.org/sarif/sarif/v2.1.0/cs01/sarif-v2.1.0-cs01.html). It also returns additional data such as the `github/alertNumber` and `github/alertUrl` properties.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}/get(code-scanning/get-analysis)`.
@@ -4947,10 +4950,7 @@ public enum Operations {
     }
     /// Delete a code scanning analysis from a repository
     ///
-    /// Deletes a specified code scanning analysis from a repository. For
-    /// private repositories, you must use an access token with the `repo` scope. For public repositories,
-    /// you must use an access token with `public_repo` scope.
-    /// GitHub Apps must have the `security_events` write permission to use this endpoint.
+    /// Deletes a specified code scanning analysis from a repository.
     ///
     /// You can delete one analysis at a time.
     /// To delete a series of analyses, start with the most recent analysis and work backwards.
@@ -5012,6 +5012,8 @@ public enum Operations {
     ///   * Parse the response for the value of `confirm_delete_url` and, if found, use this in the next iteration.
     ///
     /// The above process assumes that you want to remove all trace of the tool's analyses from the GitHub user interface, for the specified repository, and it therefore uses the `confirm_delete_url` value. Alternatively, you could use the `next_analysis_url` value, which would leave the last analysis in each set undeleted to avoid removing a tool's analysis entirely.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}/delete(code-scanning/delete-analysis)`.
@@ -5277,8 +5279,7 @@ public enum Operations {
     ///
     /// Lists the CodeQL databases that are available in a repository.
     ///
-    /// For private repositories, you must use an access token with the `security_events` scope.
-    /// For public repositories, you can use tokens with the `security_events` or `public_repo` scope.
+    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/codeql/databases`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/databases/get(code-scanning/list-codeql-databases)`.
@@ -5496,8 +5497,7 @@ public enum Operations {
     /// your HTTP client is configured to follow redirects or use the `Location` header
     /// to make a second request to get the redirect URL.
     ///
-    /// For private repositories, you must use an access token with the `security_events` scope.
-    /// For public repositories, you can use tokens with the `security_events` or `public_repo` scope.
+    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/codeql/databases/{language}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/get(code-scanning/get-codeql-database)`.
@@ -5738,8 +5738,8 @@ public enum Operations {
     /// Get a code scanning default setup configuration
     ///
     /// Gets a code scanning default setup configuration.
-    /// You must use an access token with the `repo` scope to use this endpoint with private repositories or the `public_repo`
-    /// scope for public repositories.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/default-setup`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/default-setup/get(code-scanning/get-default-setup)`.
@@ -5950,8 +5950,8 @@ public enum Operations {
     /// Update a code scanning default setup configuration
     ///
     /// Updates a code scanning default setup configuration.
-    /// You must use an access token with the `repo` scope to use this endpoint with private repositories or the `public_repo`
-    /// scope for public repositories.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/code-scanning/default-setup`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/default-setup/patch(code-scanning/update-default-setup)`.
@@ -6244,7 +6244,7 @@ public enum Operations {
     }
     /// Upload an analysis as SARIF data
     ///
-    /// Uploads SARIF data containing the results of a code scanning analysis to make the results available in a repository. You must use an access token with the `security_events` scope to use this endpoint for private repositories. You can also use tokens with the `public_repo` scope for public repositories only. GitHub Apps must have the `security_events` write permission to use this endpoint. For troubleshooting information, see "[Troubleshooting SARIF uploads](https://docs.github.com/code-security/code-scanning/troubleshooting-sarif)."
+    /// Uploads SARIF data containing the results of a code scanning analysis to make the results available in a repository. For troubleshooting information, see "[Troubleshooting SARIF uploads](https://docs.github.com/code-security/code-scanning/troubleshooting-sarif)."
     ///
     /// There are two places where you can upload code scanning results.
     ///  - If you upload to a pull request, for example `--ref refs/pull/42/merge` or `--ref refs/pull/42/head`, then the results appear as alerts in a pull request check. For more information, see "[Triaging code scanning alerts in pull requests](/code-security/secure-coding/triaging-code-scanning-alerts-in-pull-requests)."
@@ -6274,6 +6274,8 @@ public enum Operations {
     /// The `202 Accepted` response includes an `id` value.
     /// You can use this ID to check the status of the upload by using it in the `/sarifs/{sarif_id}` endpoint.
     /// For more information, see "[Get information about a SARIF upload](/rest/code-scanning/code-scanning#get-information-about-a-sarif-upload)."
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/code-scanning/sarifs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/sarifs/post(code-scanning/upload-sarif)`.
@@ -6649,7 +6651,8 @@ public enum Operations {
     }
     /// Get information about a SARIF upload
     ///
-    /// Gets information about a SARIF upload, including the status and the URL of the analysis that was uploaded so that you can retrieve details of the analysis. For more information, see "[Get a code scanning analysis for a repository](/rest/code-scanning/code-scanning#get-a-code-scanning-analysis-for-a-repository)." You must use an access token with the `security_events` scope to use this endpoint with private repositories, the `public_repo` scope also grants permission to read security events on public repositories only.
+    /// Gets information about a SARIF upload, including the status and the URL of the analysis that was uploaded so that you can retrieve details of the analysis. For more information, see "[Get a code scanning analysis for a repository](/rest/code-scanning/code-scanning#get-a-code-scanning-analysis-for-a-repository)."
+    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/sarifs/{sarif_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/sarifs/{sarif_id}/get(code-scanning/get-sarif)`.
