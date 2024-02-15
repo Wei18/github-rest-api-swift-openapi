@@ -567,9 +567,11 @@ public struct Client: APIProtocol {
     }
     /// List discussions
     ///
-    /// List all discussions on a team's page. OAuth access tokens require the `read:discussion` [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+    /// List all discussions on a team's page.
     ///
     /// **Note:** You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/{org_id}/team/{team_id}/discussions`.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `read:discussion` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/discussions`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/get(teams/list-discussions-in-org)`.
@@ -670,11 +672,13 @@ public struct Client: APIProtocol {
     }
     /// Create a discussion
     ///
-    /// Creates a new discussion post on a team's page. OAuth access tokens require the `write:discussion` [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+    /// Creates a new discussion post on a team's page.
     ///
     /// This endpoint triggers [notifications](https://docs.github.com/github/managing-subscriptions-and-notifications-on-github/about-notifications). Creating content too quickly using this endpoint may result in secondary rate limiting. For more information, see "[Rate limits for the API](https://docs.github.com/rest/overview/rate-limits-for-the-rest-api#about-secondary-rate-limits)" and "[Best practices for using the REST API](https://docs.github.com/rest/guides/best-practices-for-using-the-rest-api)."
     ///
     /// **Note:** You can also specify a team by `org_id` and `team_id` using the route `POST /organizations/{org_id}/team/{team_id}/discussions`.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `write:discussion` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/teams/{team_slug}/discussions`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/post(teams/create-discussion-in-org)`.
@@ -748,9 +752,11 @@ public struct Client: APIProtocol {
     }
     /// Get a discussion
     ///
-    /// Get a specific discussion on a team's page. OAuth access tokens require the `read:discussion` [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+    /// Get a specific discussion on a team's page.
     ///
     /// **Note:** You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/{org_id}/team/{team_id}/discussions/{discussion_number}`.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `read:discussion` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/get(teams/get-discussion-in-org)`.
@@ -816,9 +822,11 @@ public struct Client: APIProtocol {
     }
     /// Update a discussion
     ///
-    /// Edits the title and body text of a discussion post. Only the parameters you provide are updated. OAuth access tokens require the `write:discussion` [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+    /// Edits the title and body text of a discussion post. Only the parameters you provide are updated.
     ///
     /// **Note:** You can also specify a team by `org_id` and `team_id` using the route `PATCH /organizations/{org_id}/team/{team_id}/discussions/{discussion_number}`.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `write:discussion` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PATCH /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/patch(teams/update-discussion-in-org)`.
@@ -895,9 +903,11 @@ public struct Client: APIProtocol {
     }
     /// Delete a discussion
     ///
-    /// Delete a discussion from a team's page. OAuth access tokens require the `write:discussion` [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+    /// Delete a discussion from a team's page.
     ///
     /// **Note:** You can also specify a team by `org_id` and `team_id` using the route `DELETE /organizations/{org_id}/team/{team_id}/discussions/{discussion_number}`.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `write:discussion` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/delete(teams/delete-discussion-in-org)`.
@@ -939,9 +949,11 @@ public struct Client: APIProtocol {
     }
     /// List discussion comments
     ///
-    /// List all comments on a team discussion. OAuth access tokens require the `read:discussion` [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+    /// List all comments on a team discussion.
     ///
     /// **Note:** You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/{org_id}/team/{team_id}/discussions/{discussion_number}/comments`.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `read:discussion` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/get(teams/list-discussion-comments-in-org)`.
@@ -1036,11 +1048,13 @@ public struct Client: APIProtocol {
     }
     /// Create a discussion comment
     ///
-    /// Creates a new comment on a team discussion. OAuth access tokens require the `write:discussion` [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+    /// Creates a new comment on a team discussion.
     ///
     /// This endpoint triggers [notifications](https://docs.github.com/github/managing-subscriptions-and-notifications-on-github/about-notifications). Creating content too quickly using this endpoint may result in secondary rate limiting. For more information, see "[Rate limits for the API](https://docs.github.com/rest/overview/rate-limits-for-the-rest-api#about-secondary-rate-limits)" and "[Best practices for using the REST API](https://docs.github.com/rest/guides/best-practices-for-using-the-rest-api)."
     ///
     /// **Note:** You can also specify a team by `org_id` and `team_id` using the route `POST /organizations/{org_id}/team/{team_id}/discussions/{discussion_number}/comments`.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `write:discussion` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/post(teams/create-discussion-comment-in-org)`.
@@ -1115,9 +1129,11 @@ public struct Client: APIProtocol {
     }
     /// Get a discussion comment
     ///
-    /// Get a specific comment on a team discussion. OAuth access tokens require the `read:discussion` [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+    /// Get a specific comment on a team discussion.
     ///
     /// **Note:** You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/{org_id}/team/{team_id}/discussions/{discussion_number}/comments/{comment_number}`.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `read:discussion` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/get(teams/get-discussion-comment-in-org)`.
@@ -1184,9 +1200,11 @@ public struct Client: APIProtocol {
     }
     /// Update a discussion comment
     ///
-    /// Edits the body text of a discussion comment. OAuth access tokens require the `write:discussion` [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+    /// Edits the body text of a discussion comment.
     ///
     /// **Note:** You can also specify a team by `org_id` and `team_id` using the route `PATCH /organizations/{org_id}/team/{team_id}/discussions/{discussion_number}/comments/{comment_number}`.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `write:discussion` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PATCH /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/patch(teams/update-discussion-comment-in-org)`.
@@ -1262,9 +1280,11 @@ public struct Client: APIProtocol {
     }
     /// Delete a discussion comment
     ///
-    /// Deletes a comment on a team discussion. OAuth access tokens require the `write:discussion` [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+    /// Deletes a comment on a team discussion.
     ///
     /// **Note:** You can also specify a team by `org_id` and `team_id` using the route `DELETE /organizations/{org_id}/team/{team_id}/discussions/{discussion_number}/comments/{comment_number}`.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `write:discussion` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/delete(teams/delete-discussion-comment-in-org)`.
@@ -2702,7 +2722,9 @@ public struct Client: APIProtocol {
     ///
     /// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [`List discussions`](https://docs.github.com/rest/teams/discussions#list-discussions) endpoint.
     ///
-    /// List all discussions on a team's page. OAuth access tokens require the `read:discussion` [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+    /// List all discussions on a team's page.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `read:discussion` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /teams/{team_id}/discussions`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/get(teams/list-discussions-legacy)`.
@@ -2798,9 +2820,11 @@ public struct Client: APIProtocol {
     ///
     /// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [`Create a discussion`](https://docs.github.com/rest/teams/discussions#create-a-discussion) endpoint.
     ///
-    /// Creates a new discussion post on a team's page. OAuth access tokens require the `write:discussion` [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+    /// Creates a new discussion post on a team's page.
     ///
     /// This endpoint triggers [notifications](https://docs.github.com/github/managing-subscriptions-and-notifications-on-github/about-notifications). Creating content too quickly using this endpoint may result in secondary rate limiting. For more information, see "[Rate limits for the API](https://docs.github.com/rest/overview/rate-limits-for-the-rest-api#about-secondary-rate-limits)" and "[Best practices for using the REST API](https://docs.github.com/rest/guides/best-practices-for-using-the-rest-api)."
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `write:discussion` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /teams/{team_id}/discussions`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/post(teams/create-discussion-legacy)`.
@@ -2876,7 +2900,9 @@ public struct Client: APIProtocol {
     ///
     /// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [Get a discussion](https://docs.github.com/rest/teams/discussions#get-a-discussion) endpoint.
     ///
-    /// Get a specific discussion on a team's page. OAuth access tokens require the `read:discussion` [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+    /// Get a specific discussion on a team's page.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `read:discussion` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /teams/{team_id}/discussions/{discussion_number}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/get(teams/get-discussion-legacy)`.
@@ -2944,7 +2970,9 @@ public struct Client: APIProtocol {
     ///
     /// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [Update a discussion](https://docs.github.com/rest/teams/discussions#update-a-discussion) endpoint.
     ///
-    /// Edits the title and body text of a discussion post. Only the parameters you provide are updated. OAuth access tokens require the `write:discussion` [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+    /// Edits the title and body text of a discussion post. Only the parameters you provide are updated.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `write:discussion` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PATCH /teams/{team_id}/discussions/{discussion_number}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/patch(teams/update-discussion-legacy)`.
@@ -3023,7 +3051,9 @@ public struct Client: APIProtocol {
     ///
     /// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [`Delete a discussion`](https://docs.github.com/rest/teams/discussions#delete-a-discussion) endpoint.
     ///
-    /// Delete a discussion from a team's page. OAuth access tokens require the `write:discussion` [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+    /// Delete a discussion from a team's page.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `write:discussion` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /teams/{team_id}/discussions/{discussion_number}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/delete(teams/delete-discussion-legacy)`.
@@ -3067,7 +3097,9 @@ public struct Client: APIProtocol {
     ///
     /// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [List discussion comments](https://docs.github.com/rest/teams/discussion-comments#list-discussion-comments) endpoint.
     ///
-    /// List all comments on a team discussion. OAuth access tokens require the `read:discussion` [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+    /// List all comments on a team discussion.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `read:discussion` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /teams/{team_id}/discussions/{discussion_number}/comments`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/comments/get(teams/list-discussion-comments-legacy)`.
@@ -3164,9 +3196,11 @@ public struct Client: APIProtocol {
     ///
     /// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [Create a discussion comment](https://docs.github.com/rest/teams/discussion-comments#create-a-discussion-comment) endpoint.
     ///
-    /// Creates a new comment on a team discussion. OAuth access tokens require the `write:discussion` [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+    /// Creates a new comment on a team discussion.
     ///
     /// This endpoint triggers [notifications](https://docs.github.com/github/managing-subscriptions-and-notifications-on-github/about-notifications). Creating content too quickly using this endpoint may result in secondary rate limiting. For more information, see "[Rate limits for the API](https://docs.github.com/rest/overview/rate-limits-for-the-rest-api#about-secondary-rate-limits)" and "[Best practices for using the REST API](https://docs.github.com/rest/guides/best-practices-for-using-the-rest-api)."
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `write:discussion` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /teams/{team_id}/discussions/{discussion_number}/comments`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/comments/post(teams/create-discussion-comment-legacy)`.
@@ -3243,7 +3277,9 @@ public struct Client: APIProtocol {
     ///
     /// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [Get a discussion comment](https://docs.github.com/rest/teams/discussion-comments#get-a-discussion-comment) endpoint.
     ///
-    /// Get a specific comment on a team discussion. OAuth access tokens require the `read:discussion` [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+    /// Get a specific comment on a team discussion.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `read:discussion` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/get(teams/get-discussion-comment-legacy)`.
@@ -3312,7 +3348,9 @@ public struct Client: APIProtocol {
     ///
     /// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [Update a discussion comment](https://docs.github.com/rest/teams/discussion-comments#update-a-discussion-comment) endpoint.
     ///
-    /// Edits the body text of a discussion comment. OAuth access tokens require the `write:discussion` [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+    /// Edits the body text of a discussion comment.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `write:discussion` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PATCH /teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/patch(teams/update-discussion-comment-legacy)`.
@@ -3390,7 +3428,9 @@ public struct Client: APIProtocol {
     ///
     /// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [Delete a discussion comment](https://docs.github.com/rest/teams/discussion-comments#delete-a-discussion-comment) endpoint.
     ///
-    /// Deletes a comment on a team discussion. OAuth access tokens require the `write:discussion` [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+    /// Deletes a comment on a team discussion.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `write:discussion` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/delete(teams/delete-discussion-comment-legacy)`.
@@ -4968,7 +5008,12 @@ public struct Client: APIProtocol {
     }
     /// List teams for the authenticated user
     ///
-    /// List all of the teams across all of the organizations to which the authenticated user belongs. This method requires `user`, `repo`, or `read:org` [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/) when authenticating via [OAuth](https://docs.github.com/apps/building-oauth-apps/). When using a fine-grained personal access token, the resource owner of the token [must be a single organization](https://docs.github.com/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#fine-grained-personal-access-tokens), and have at least read-only member organization permissions. The response payload only contains the teams from a single organization when using a fine-grained personal access token.
+    /// List all of the teams across all of the organizations to which the authenticated
+    /// user belongs.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `user`, `repo`, or `read:org` scope to use this endpoint.
+    ///
+    /// When using a fine-grained personal access token, the resource owner of the token must be a single organization, and the response will only include the teams from that organization.
     ///
     /// - Remark: HTTP `GET /user/teams`.
     /// - Remark: Generated from `#/paths//user/teams/get(teams/list-for-authenticated-user)`.
