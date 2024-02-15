@@ -42,7 +42,7 @@ public struct Client: APIProtocol {
     ///
     /// Lists the codespaces associated to a specified organization.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope or the `Organization codespaces` read permission to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/codespaces`.
     /// - Remark: Generated from `#/paths//orgs/{org}/codespaces/get(codespaces/list-in-organization)`.
@@ -211,7 +211,7 @@ public struct Client: APIProtocol {
     /// Manage access control for organization codespaces
     ///
     /// Sets which users can access codespaces in an organization. This is synonymous with granting or revoking codespaces access permissions for users according to the visibility.
-    /// You must authenticate using an access token with the `admin:org` scope or the `Organization codespaces settings` write permission to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/codespaces/access`.
     /// - Remark: Generated from `#/paths//orgs/{org}/codespaces/access/put(codespaces/set-codespaces-access)`.
@@ -340,7 +340,7 @@ public struct Client: APIProtocol {
     /// To use this endpoint, the access settings for the organization must be set to `selected_members`.
     /// For information on how to change this setting, see "[Manage access control for organization codespaces](https://docs.github.com/rest/codespaces/organizations#manage-access-control-for-organization-codespaces)."
     ///
-    /// You must authenticate using an access token with the `admin:org` scope or the `Organization codespaces settings` write permission to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/codespaces/access/selected_users`.
     /// - Remark: Generated from `#/paths//orgs/{org}/codespaces/access/selected_users/post(codespaces/set-codespaces-access-users)`.
@@ -469,7 +469,7 @@ public struct Client: APIProtocol {
     /// To use this endpoint, the access settings for the organization must be set to `selected_members`.
     /// For information on how to change this setting, see "[Manage access control for organization codespaces](https://docs.github.com/rest/codespaces/organizations#manage-access-control-for-organization-codespaces)."
     ///
-    /// You must authenticate using an access token with the `admin:org` scope or the `Organization codespaces settings` write permission to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/codespaces/access/selected_users`.
     /// - Remark: Generated from `#/paths//orgs/{org}/codespaces/access/selected_users/delete(codespaces/delete-codespaces-access-users)`.
@@ -593,8 +593,10 @@ public struct Client: APIProtocol {
     }
     /// List organization secrets
     ///
-    /// Lists all Codespaces development environment secrets available at the organization-level without revealing their encrypted values.
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
+    /// Lists all Codespaces development environment secrets available at the organization-level without revealing their encrypted
+    /// values.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/codespaces/secrets`.
     /// - Remark: Generated from `#/paths//orgs/{org}/codespaces/secrets/get(codespaces/list-org-secrets)`.
@@ -680,7 +682,8 @@ public struct Client: APIProtocol {
     }
     /// Get an organization public key
     ///
-    /// Gets a public key for an organization, which is required in order to encrypt secrets. You need to encrypt the value of a secret before you can create or update secrets. You must authenticate using an access token with the `admin:org` scope to use this endpoint.
+    /// Gets a public key for an organization, which is required in order to encrypt secrets. You need to encrypt the value of a secret before you can create or update secrets.
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/codespaces/secrets/public-key`.
     /// - Remark: Generated from `#/paths//orgs/{org}/codespaces/secrets/public-key/get(codespaces/get-org-public-key)`.
@@ -745,7 +748,8 @@ public struct Client: APIProtocol {
     /// Get an organization secret
     ///
     /// Gets an organization development environment secret without revealing its encrypted value.
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/codespaces/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/codespaces/secrets/{secret_name}/get(codespaces/get-org-secret)`.
@@ -821,8 +825,7 @@ public struct Client: APIProtocol {
     /// Creates or updates an organization development environment secret with an encrypted value. Encrypt your secret using
     /// [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages). For more information, see "[Encrypting secrets for the REST API](https://docs.github.com/rest/guides/encrypting-secrets-for-the-rest-api)."
     ///
-    /// You must authenticate using an access
-    /// token with the `admin:org` scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/codespaces/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/codespaces/secrets/{secret_name}/put(codespaces/create-or-update-org-secret)`.
@@ -942,7 +945,9 @@ public struct Client: APIProtocol {
     }
     /// Delete an organization secret
     ///
-    /// Deletes an organization development environment secret using the secret name. You must authenticate using an access token with the `admin:org` scope to use this endpoint.
+    /// Deletes an organization development environment secret using the secret name.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/codespaces/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/codespaces/secrets/{secret_name}/delete(codespaces/delete-org-secret)`.
@@ -1009,7 +1014,10 @@ public struct Client: APIProtocol {
     }
     /// List selected repositories for an organization secret
     ///
-    /// Lists all repositories that have been selected when the `visibility` for repository access to a secret is set to `selected`. You must authenticate using an access token with the `admin:org` scope to use this endpoint.
+    /// Lists all repositories that have been selected when the `visibility`
+    /// for repository access to a secret is set to `selected`.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/codespaces/secrets/{secret_name}/repositories`.
     /// - Remark: Generated from `#/paths//orgs/{org}/codespaces/secrets/{secret_name}/repositories/get(codespaces/list-selected-repos-for-org-secret)`.
@@ -1110,7 +1118,11 @@ public struct Client: APIProtocol {
     }
     /// Set selected repositories for an organization secret
     ///
-    /// Replaces all repositories for an organization development environment secret when the `visibility` for repository access is set to `selected`. The visibility is set when you [Create or update an organization secret](https://docs.github.com/rest/codespaces/organization-secrets#create-or-update-an-organization-secret). You must authenticate using an access token with the `admin:org` scope to use this endpoint.
+    /// Replaces all repositories for an organization development environment secret when the `visibility`
+    /// for repository access is set to `selected`. The visibility is set when you [Create
+    /// or update an organization secret](https://docs.github.com/rest/codespaces/organization-secrets#create-or-update-an-organization-secret).
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/codespaces/secrets/{secret_name}/repositories`.
     /// - Remark: Generated from `#/paths//orgs/{org}/codespaces/secrets/{secret_name}/repositories/put(codespaces/set-selected-repos-for-org-secret)`.
@@ -1188,7 +1200,8 @@ public struct Client: APIProtocol {
     }
     /// Add selected repository to an organization secret
     ///
-    /// Adds a repository to an organization development environment secret when the `visibility` for repository access is set to `selected`. The visibility is set when you [Create or update an organization secret](https://docs.github.com/rest/codespaces/organization-secrets#create-or-update-an-organization-secret). You must authenticate using an access token with the `admin:org` scope to use this endpoint.
+    /// Adds a repository to an organization development environment secret when the `visibility` for repository access is set to `selected`. The visibility is set when you [Create or update an organization secret](https://docs.github.com/rest/codespaces/organization-secrets#create-or-update-an-organization-secret).
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/codespaces/secrets/{secret_name}/repositories/{repository_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/codespaces/secrets/{secret_name}/repositories/{repository_id}/put(codespaces/add-selected-repo-to-org-secret)`.
@@ -1280,7 +1293,11 @@ public struct Client: APIProtocol {
     }
     /// Remove selected repository from an organization secret
     ///
-    /// Removes a repository from an organization development environment secret when the `visibility` for repository access is set to `selected`. The visibility is set when you [Create or update an organization secret](https://docs.github.com/rest/codespaces/organization-secrets#create-or-update-an-organization-secret). You must authenticate using an access token with the `admin:org` scope to use this endpoint.
+    /// Removes a repository from an organization development environment secret when the `visibility`
+    /// for repository access is set to `selected`. The visibility is set when you [Create
+    /// or update an organization secret](https://docs.github.com/rest/codespaces/organization-secrets#create-or-update-an-organization-secret).
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/codespaces/secrets/{secret_name}/repositories/{repository_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/codespaces/secrets/{secret_name}/repositories/{repository_id}/delete(codespaces/remove-selected-repo-from-org-secret)`.
@@ -1374,7 +1391,7 @@ public struct Client: APIProtocol {
     ///
     /// Lists the codespaces that a member of an organization has for repositories in that organization.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope or the `Organization codespaces` read permission to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/members/{username}/codespaces`.
     /// - Remark: Generated from `#/paths//orgs/{org}/members/{username}/codespaces/get(codespaces/get-codespaces-for-user-in-org)`.
@@ -1545,10 +1562,7 @@ public struct Client: APIProtocol {
     ///
     /// Deletes a user's codespace.
     ///
-    /// To use this endpoint you must authenticate using one of the following methods:
-    ///
-    /// - An access token with the `admin:org` scope
-    /// - An access token with write permissions for `Codespaces` on the specific repository and write permissions for `Organization codespaces`
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/members/{username}/codespaces/{codespace_name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/members/{username}/codespaces/{codespace_name}/delete(codespaces/delete-from-organization)`.
@@ -1706,10 +1720,7 @@ public struct Client: APIProtocol {
     ///
     /// Stops a user's codespace.
     ///
-    /// To use this endpoint you must authenticate using one of the following methods:
-    ///
-    /// - An access token with the `admin:org` scope
-    /// - An access token with write permissions for `Codespaces lifecycle admin` on the specific repository and write permissions for `Organization codespaces`
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/members/{username}/codespaces/{codespace_name}/stop`.
     /// - Remark: Generated from `#/paths//orgs/{org}/members/{username}/codespaces/{codespace_name}/stop/post(codespaces/stop-in-organization)`.
@@ -1867,12 +1878,7 @@ public struct Client: APIProtocol {
     ///
     /// Lists the codespaces associated to a specified repository and the authenticated user.
     ///
-    /// You must authenticate using an access token with the `codespace` scope to use this endpoint.
-    ///
-    /// To use this endpoint with GitHub Apps:
-    ///
-    /// - The app must be authenticated on behalf of the user. For more information, see "[Authenticating with a GitHub App on behalf of a user](https://docs.github.com/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user)."
-    /// - The app must have read access to the `codespaces` repository permission.
+    /// OAuth app tokens and personal access tokens (classic) need the `codespace` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/codespaces`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/codespaces/get(codespaces/list-in-repository-for-authenticated-user)`.
@@ -2041,12 +2047,7 @@ public struct Client: APIProtocol {
     ///
     /// Creates a codespace owned by the authenticated user in the specified repository.
     ///
-    /// You must authenticate using an access token with the `codespace` scope to use this endpoint.
-    ///
-    /// To use this endpoint with GitHub Apps:
-    ///
-    /// - The app must be authenticated on behalf of the user. For more information, see "[Authenticating with a GitHub App on behalf of a user](https://docs.github.com/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user)."
-    /// - The app must have write access to the `codespaces` repository permission.
+    /// OAuth app tokens and personal access tokens (classic) need the `codespace` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/codespaces`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/codespaces/post(codespaces/create-with-repo-for-authenticated-user)`.
@@ -2264,9 +2265,7 @@ public struct Client: APIProtocol {
     /// Lists the devcontainer.json files associated with a specified repository and the authenticated user. These files
     /// specify launchpoint configurations for codespaces created within the repository.
     ///
-    /// You must authenticate using an access token with the `codespace` scope to use this endpoint.
-    ///
-    /// GitHub Apps must have read access to the `codespaces_metadata` repository permission to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `codespace` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/codespaces/devcontainers`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/codespaces/devcontainers/get(codespaces/list-devcontainers-in-repository-for-authenticated-user)`.
@@ -2466,9 +2465,7 @@ public struct Client: APIProtocol {
     ///
     /// List the machine types available for a given repository based on its configuration.
     ///
-    /// You must authenticate using an access token with the `codespace` scope to use this endpoint.
-    ///
-    /// GitHub Apps must have write access to the `codespaces_metadata` repository permission to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `codespace` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/codespaces/machines`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/codespaces/machines/get(codespaces/repo-machines-for-authenticated-user)`.
@@ -2646,12 +2643,7 @@ public struct Client: APIProtocol {
     ///
     /// Gets the default attributes for codespaces created by the user with the repository.
     ///
-    /// You must authenticate using an access token with the `codespace` scope to use this endpoint.
-    ///
-    /// To use this endpoint with GitHub Apps:
-    ///
-    /// - The app must be authenticated on behalf of the user. For more information, see "[Authenticating with a GitHub App on behalf of a user](https://docs.github.com/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user)."
-    /// - The app must have write access to the `codespaces` repository permission.
+    /// OAuth app tokens and personal access tokens (classic) need the `codespace` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/codespaces/new`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/codespaces/new/get(codespaces/pre-flight-with-repo-for-authenticated-user)`.
@@ -2798,12 +2790,7 @@ public struct Client: APIProtocol {
     ///
     /// Checks whether the permissions defined by a given devcontainer configuration have been accepted by the authenticated user.
     ///
-    /// You must authenticate using an access token with the `codespace` scope to use this endpoint.
-    ///
-    /// To use this endpoint with GitHub Apps:
-    ///
-    /// - The app must be authenticated on behalf of the user. For more information, see "[Authenticating with a GitHub App on behalf of a user](https://docs.github.com/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user)."
-    /// - The app must have write access to the `codespaces` repository permission.
+    /// OAuth app tokens and personal access tokens (classic) need the `codespace` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/codespaces/permissions_check`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/codespaces/permissions_check/get(codespaces/check-permissions-for-devcontainer)`.
@@ -2992,7 +2979,10 @@ public struct Client: APIProtocol {
     }
     /// List repository secrets
     ///
-    /// Lists all development environment secrets available in a repository without revealing their encrypted values. You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have write access to the `codespaces_secrets` repository permission to use this endpoint.
+    /// Lists all development environment secrets available in a repository without revealing their encrypted
+    /// values.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/codespaces/secrets`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/codespaces/secrets/get(codespaces/list-repo-secrets)`.
@@ -3079,7 +3069,12 @@ public struct Client: APIProtocol {
     }
     /// Get a repository public key
     ///
-    /// Gets your public key, which you need to encrypt secrets. You need to encrypt a secret before you can create or update secrets. Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have write access to the `codespaces_secrets` repository permission to use this endpoint.
+    /// Gets your public key, which you need to encrypt secrets. You need to
+    /// encrypt a secret before you can create or update secrets.
+    ///
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// If the repository is private, OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/codespaces/secrets/public-key`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/codespaces/secrets/public-key/get(codespaces/get-repo-public-key)`.
@@ -3144,7 +3139,9 @@ public struct Client: APIProtocol {
     }
     /// Get a repository secret
     ///
-    /// Gets a single repository development environment secret without revealing its encrypted value. You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have write access to the `codespaces_secrets` repository permission to use this endpoint.
+    /// Gets a single repository development environment secret without revealing its encrypted value.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/codespaces/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/codespaces/secrets/{secret_name}/get(codespaces/get-repo-secret)`.
@@ -3213,11 +3210,7 @@ public struct Client: APIProtocol {
     /// Creates or updates a repository development environment secret with an encrypted value. Encrypt your secret using
     /// [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages). For more information, see "[Encrypting secrets for the REST API](https://docs.github.com/rest/guides/encrypting-secrets-for-the-rest-api)."
     ///
-    /// You must authenticate using an access
-    /// token with the `repo` scope to use this endpoint. GitHub Apps must have write access to the `codespaces_secrets`
-    /// repository permission to use this endpoint.
-    ///
-    /// This endpoint does not support fine-grained personal access tokens. For more information about personal access tokens, see "[Managing your personal access tokens](https://docs.github.com/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#personal-access-tokens-classic)."
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/codespaces/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/codespaces/secrets/{secret_name}/put(codespaces/create-or-update-repo-secret)`.
@@ -3294,8 +3287,9 @@ public struct Client: APIProtocol {
     }
     /// Delete a repository secret
     ///
-    /// Deletes a development environment secret in a repository using the secret name. You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have write access to the `codespaces_secrets` repository permission to use this endpoint.
-    /// This endpoint does not support fine-grained personal access tokens. For more information about personal access tokens, see "[Managing your personal access tokens](https://docs.github.com/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#personal-access-tokens-classic)."
+    /// Deletes a development environment secret in a repository using the secret name.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/codespaces/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/codespaces/secrets/{secret_name}/delete(codespaces/delete-repo-secret)`.
@@ -3339,12 +3333,7 @@ public struct Client: APIProtocol {
     ///
     /// Creates a codespace owned by the authenticated user for the specified pull request.
     ///
-    /// You must authenticate using an access token with the `codespace` scope to use this endpoint.
-    ///
-    /// To use this endpoint with GitHub Apps:
-    ///
-    /// - The app must be authenticated on behalf of the user. For more information, see "[Authenticating with a GitHub App on behalf of a user](https://docs.github.com/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user)."
-    /// - The app must have write access to the `codespaces` repository permission.
+    /// OAuth app tokens and personal access tokens (classic) need the `codespace` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/pulls/{pull_number}/codespaces`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/codespaces/post(codespaces/create-with-pr-for-authenticated-user)`.
@@ -3531,12 +3520,7 @@ public struct Client: APIProtocol {
     ///
     /// Lists the authenticated user's codespaces.
     ///
-    /// You must authenticate using an access token with the `codespace` scope to use this endpoint.
-    ///
-    /// To use this endpoint with GitHub Apps:
-    ///
-    /// - The app must be authenticated on behalf of the user. For more information, see "[Authenticating with a GitHub App on behalf of a user](https://docs.github.com/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user)."
-    /// - The app must have read access to the `codespaces` repository permission.
+    /// OAuth app tokens and personal access tokens (classic) need the `codespace` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /user/codespaces`.
     /// - Remark: Generated from `#/paths//user/codespaces/get(codespaces/list-for-authenticated-user)`.
@@ -3713,12 +3697,7 @@ public struct Client: APIProtocol {
     ///
     /// This endpoint requires either a `repository_id` OR a `pull_request` but not both.
     ///
-    /// You must authenticate using an access token with the `codespace` scope to use this endpoint.
-    ///
-    /// To use this endpoint with GitHub Apps:
-    ///
-    /// - The app must be authenticated on behalf of the user. For more information, see "[Authenticating with a GitHub App on behalf of a user](https://docs.github.com/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user)."
-    /// - The app must have write access to the `codespaces` repository permission.
+    /// OAuth app tokens and personal access tokens (classic) need the `codespace` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /user/codespaces`.
     /// - Remark: Generated from `#/paths//user/codespaces/post(codespaces/create-for-authenticated-user)`.
@@ -3902,9 +3881,9 @@ public struct Client: APIProtocol {
     /// Lists all development environment secrets available for a user's codespaces without revealing their
     /// encrypted values.
     ///
-    /// You must authenticate using an access token with the `codespace` or `codespace:secrets` scope to use this endpoint. User must have Codespaces access to use this endpoint.
+    /// The authenticated user must have Codespaces access to use this endpoint.
     ///
-    /// GitHub Apps must have read access to the `codespaces_user_secrets` user permission to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `codespace` or `codespace:secrets` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /user/codespaces/secrets`.
     /// - Remark: Generated from `#/paths//user/codespaces/secrets/get(codespaces/list-secrets-for-authenticated-user)`.
@@ -3990,9 +3969,9 @@ public struct Client: APIProtocol {
     ///
     /// Gets your public key, which you need to encrypt secrets. You need to encrypt a secret before you can create or update secrets.
     ///
-    /// You must authenticate using an access token with the `codespace` or `codespace:secrets` scope to use this endpoint. User must have Codespaces access to use this endpoint.
+    /// The authenticated user must have Codespaces access to use this endpoint.
     ///
-    /// GitHub Apps must have read access to the `codespaces_user_secrets` user permission to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `codespace` or `codespace:secrets` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /user/codespaces/secrets/public-key`.
     /// - Remark: Generated from `#/paths//user/codespaces/secrets/public-key/get(codespaces/get-public-key-for-authenticated-user)`.
@@ -4056,9 +4035,9 @@ public struct Client: APIProtocol {
     ///
     /// Gets a development environment secret available to a user's codespaces without revealing its encrypted value.
     ///
-    /// You must authenticate using an access token with the `codespace` or `codespace:secrets` scope to use this endpoint. User must have Codespaces access to use this endpoint.
+    /// The authenticated user must have Codespaces access to use this endpoint.
     ///
-    /// GitHub Apps must have read access to the `codespaces_user_secrets` user permission to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `codespace` or `codespace:secrets` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /user/codespaces/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//user/codespaces/secrets/{secret_name}/get(codespaces/get-secret-for-authenticated-user)`.
@@ -4125,9 +4104,9 @@ public struct Client: APIProtocol {
     /// Creates or updates a development environment secret for a user's codespace with an encrypted value. Encrypt your secret using
     /// [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages). For more information, see "[Encrypting secrets for the REST API](https://docs.github.com/rest/guides/encrypting-secrets-for-the-rest-api)."
     ///
-    /// You must authenticate using an access token with the `codespace` or `codespace:secrets` scope to use this endpoint. User must also have Codespaces access to use this endpoint.
+    /// The authenticated user must have Codespaces access to use this endpoint.
     ///
-    /// GitHub Apps must have write access to the `codespaces_user_secrets` user permission and `codespaces_secrets` repository permission on all referenced repositories to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `codespace` or `codespace:secrets` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /user/codespaces/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//user/codespaces/secrets/{secret_name}/put(codespaces/create-or-update-secret-for-authenticated-user)`.
@@ -4248,9 +4227,9 @@ public struct Client: APIProtocol {
     ///
     /// Deletes a development environment secret from a user's codespaces using the secret name. Deleting the secret will remove access from all codespaces that were allowed to access the secret.
     ///
-    /// You must authenticate using an access token with the `codespace` or `codespace:secrets` scope to use this endpoint. User must have Codespaces access to use this endpoint.
+    /// The authenticated user must have Codespaces access to use this endpoint.
     ///
-    /// GitHub Apps must have write access to the `codespaces_user_secrets` user permission to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `codespace` or `codespace:secrets` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /user/codespaces/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//user/codespaces/secrets/{secret_name}/delete(codespaces/delete-secret-for-authenticated-user)`.
@@ -4292,9 +4271,9 @@ public struct Client: APIProtocol {
     ///
     /// List the repositories that have been granted the ability to use a user's development environment secret.
     ///
-    /// You must authenticate using an access token with the `codespace` or `codespace:secrets` scope to use this endpoint. User must have Codespaces access to use this endpoint.
+    /// The authenticated user must have Codespaces access to use this endpoint.
     ///
-    /// GitHub Apps must have read access to the `codespaces_user_secrets` user permission and write access to the `codespaces_secrets` repository permission on all referenced repositories to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `codespace` or `codespace:secrets` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /user/codespaces/secrets/{secret_name}/repositories`.
     /// - Remark: Generated from `#/paths//user/codespaces/secrets/{secret_name}/repositories/get(codespaces/list-repositories-for-secret-for-authenticated-user)`.
@@ -4448,9 +4427,9 @@ public struct Client: APIProtocol {
     ///
     /// Select the repositories that will use a user's development environment secret.
     ///
-    /// You must authenticate using an access token with the `codespace` or `codespace:secrets` scope to use this endpoint. User must have Codespaces access to use this endpoint.
+    /// The authenticated user must have Codespaces access to use this endpoint.
     ///
-    /// GitHub Apps must have write access to the `codespaces_user_secrets` user permission and write access to the `codespaces_secrets` repository permission on all referenced repositories to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `codespace` or `codespace:secrets` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /user/codespaces/secrets/{secret_name}/repositories`.
     /// - Remark: Generated from `#/paths//user/codespaces/secrets/{secret_name}/repositories/put(codespaces/set-repositories-for-secret-for-authenticated-user)`.
@@ -4592,8 +4571,10 @@ public struct Client: APIProtocol {
     /// Add a selected repository to a user secret
     ///
     /// Adds a repository to the selected repositories for a user's development environment secret.
-    /// You must authenticate using an access token with the `codespace` or `codespace:secrets` scope to use this endpoint. User must have Codespaces access to use this endpoint.
-    /// GitHub Apps must have write access to the `codespaces_user_secrets` user permission and write access to the `codespaces_secrets` repository permission on the referenced repository to use this endpoint.
+    ///
+    /// The authenticated user must have Codespaces access to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `codespace` or `codespace:secrets` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /user/codespaces/secrets/{secret_name}/repositories/{repository_id}`.
     /// - Remark: Generated from `#/paths//user/codespaces/secrets/{secret_name}/repositories/{repository_id}/put(codespaces/add-repository-for-secret-for-authenticated-user)`.
@@ -4727,8 +4708,10 @@ public struct Client: APIProtocol {
     /// Remove a selected repository from a user secret
     ///
     /// Removes a repository from the selected repositories for a user's development environment secret.
-    /// You must authenticate using an access token with the `codespace` or `codespace:secrets` scope to use this endpoint. User must have Codespaces access to use this endpoint.
-    /// GitHub Apps must have write access to the `codespaces_user_secrets` user permission to use this endpoint.
+    ///
+    /// The authenticated user must have Codespaces access to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `codespace` or `codespace:secrets` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /user/codespaces/secrets/{secret_name}/repositories/{repository_id}`.
     /// - Remark: Generated from `#/paths//user/codespaces/secrets/{secret_name}/repositories/{repository_id}/delete(codespaces/remove-repository-for-secret-for-authenticated-user)`.
@@ -4863,12 +4846,7 @@ public struct Client: APIProtocol {
     ///
     /// Gets information about a user's codespace.
     ///
-    /// You must authenticate using an access token with the `codespace` scope to use this endpoint.
-    ///
-    /// To use this endpoint with GitHub Apps:
-    ///
-    /// - The app must be authenticated on behalf of the user. For more information, see "[Authenticating with a GitHub App on behalf of a user](https://docs.github.com/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user)."
-    /// - The app must have read access to the `codespaces` repository permission.
+    /// OAuth app tokens and personal access tokens (classic) need the `codespace` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /user/codespaces/{codespace_name}`.
     /// - Remark: Generated from `#/paths//user/codespaces/{codespace_name}/get(codespaces/get-for-authenticated-user)`.
@@ -5026,12 +5004,7 @@ public struct Client: APIProtocol {
     ///
     /// If you specify a new machine type it will be applied the next time your codespace is started.
     ///
-    /// You must authenticate using an access token with the `codespace` scope to use this endpoint.
-    ///
-    /// To use this endpoint with GitHub Apps:
-    ///
-    /// - The app must be authenticated on behalf of the user. For more information, see "[Authenticating with a GitHub App on behalf of a user](https://docs.github.com/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user)."
-    /// - The app must have write access to the `codespaces` repository permission.
+    /// OAuth app tokens and personal access tokens (classic) need the `codespace` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PATCH /user/codespaces/{codespace_name}`.
     /// - Remark: Generated from `#/paths//user/codespaces/{codespace_name}/patch(codespaces/update-for-authenticated-user)`.
@@ -5174,12 +5147,7 @@ public struct Client: APIProtocol {
     ///
     /// Deletes a user's codespace.
     ///
-    /// You must authenticate using an access token with the `codespace` scope to use this endpoint.
-    ///
-    /// To use this endpoint with GitHub Apps:
-    ///
-    /// - The app must be authenticated on behalf of the user. For more information, see "[Authenticating with a GitHub App on behalf of a user](https://docs.github.com/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user)."
-    /// - The app must have write access to the `codespaces` repository permission.
+    /// OAuth app tokens and personal access tokens (classic) need the `codespace` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /user/codespaces/{codespace_name}`.
     /// - Remark: Generated from `#/paths//user/codespaces/{codespace_name}/delete(codespaces/delete-for-authenticated-user)`.
@@ -5337,9 +5305,7 @@ public struct Client: APIProtocol {
     ///
     /// If changes cannot be pushed to the codespace's repository, they will be pushed to a new or previously-existing fork instead.
     ///
-    /// You must authenticate using a personal access token with the `codespace` scope to use this endpoint.
-    ///
-    /// GitHub Apps must have write access to the `codespaces_lifecycle_admin` repository permission to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `codespace` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /user/codespaces/{codespace_name}/exports`.
     /// - Remark: Generated from `#/paths//user/codespaces/{codespace_name}/exports/post(codespaces/export-for-authenticated-user)`.
@@ -5515,9 +5481,7 @@ public struct Client: APIProtocol {
     ///
     /// Gets information about an export of a codespace.
     ///
-    /// You must authenticate using a personal access token with the `codespace` scope to use this endpoint.
-    ///
-    /// GitHub Apps must have read access to the `codespaces_lifecycle_admin` repository permission to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `codespace` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /user/codespaces/{codespace_name}/exports/{export_id}`.
     /// - Remark: Generated from `#/paths//user/codespaces/{codespace_name}/exports/{export_id}/get(codespaces/get-export-details-for-authenticated-user)`.
@@ -5606,9 +5570,7 @@ public struct Client: APIProtocol {
     ///
     /// List the machine types a codespace can transition to use.
     ///
-    /// You must authenticate using an access token with the `codespace` scope to use this endpoint.
-    ///
-    /// GitHub Apps must have read access to the `codespaces_metadata` repository permission to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `codespace` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /user/codespaces/{codespace_name}/machines`.
     /// - Remark: Generated from `#/paths//user/codespaces/{codespace_name}/machines/get(codespaces/codespace-machines-for-authenticated-user)`.
@@ -5768,12 +5730,7 @@ public struct Client: APIProtocol {
     ///
     /// This will fail for a codespace that is already published, meaning it has an associated repository.
     ///
-    /// You must authenticate using a personal access token with the `codespace` scope to use this endpoint.
-    ///
-    /// To use this endpoint with GitHub Apps:
-    ///
-    /// - The app must be authenticated on behalf of the user. For more information, see "[Authenticating with a GitHub App on behalf of a user](https://docs.github.com/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user)."
-    /// - The app must have write access to the `codespaces` repository permission.
+    /// OAuth app tokens and personal access tokens (classic) need the `codespace` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /user/codespaces/{codespace_name}/publish`.
     /// - Remark: Generated from `#/paths//user/codespaces/{codespace_name}/publish/post(codespaces/publish-for-authenticated-user)`.
@@ -5936,9 +5893,7 @@ public struct Client: APIProtocol {
     ///
     /// Starts a user's codespace.
     ///
-    /// You must authenticate using an access token with the `codespace` scope to use this endpoint.
-    ///
-    /// GitHub Apps must have write access to the `codespaces_lifecycle_admin` repository permission to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `codespace` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /user/codespaces/{codespace_name}/start`.
     /// - Remark: Generated from `#/paths//user/codespaces/{codespace_name}/start/post(codespaces/start-for-authenticated-user)`.
@@ -6169,9 +6124,7 @@ public struct Client: APIProtocol {
     ///
     /// Stops a user's codespace.
     ///
-    /// You must authenticate using an access token with the `codespace` scope to use this endpoint.
-    ///
-    /// GitHub Apps must have write access to the `codespaces_lifecycle_admin` repository permission to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `codespace` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /user/codespaces/{codespace_name}/stop`.
     /// - Remark: Generated from `#/paths//user/codespaces/{codespace_name}/stop/post(codespaces/stop-for-authenticated-user)`.
