@@ -40,9 +40,7 @@ public struct Client: APIProtocol {
     }
     /// Get the authenticated user
     ///
-    /// If the authenticated user is authenticated with an OAuth token with the `user` scope, then the response lists public and private profile information.
-    ///
-    /// If the authenticated user is authenticated through OAuth without the `user` scope, then the response lists only public profile information.
+    /// OAuth app tokens and personal access tokens (classic) need the `user` scope in order for the response to include private profile information.
     ///
     /// - Remark: HTTP `GET /user`.
     /// - Remark: Generated from `#/paths//user/get(users/get-authenticated)`.
@@ -976,7 +974,10 @@ public struct Client: APIProtocol {
     }
     /// List email addresses for the authenticated user
     ///
-    /// Lists all of your email addresses, and specifies which one is visible to the public. This endpoint is accessible with the `user:email` scope.
+    /// Lists all of your email addresses, and specifies which one is visible
+    /// to the public.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `user:email` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /user/emails`.
     /// - Remark: Generated from `#/paths//user/emails/get(users/list-emails-for-authenticated-user)`.
@@ -1128,7 +1129,7 @@ public struct Client: APIProtocol {
     }
     /// Add an email address for the authenticated user
     ///
-    /// This endpoint is accessible with the `user` scope.
+    /// OAuth app tokens and personal access tokens (classic) need the `user` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /user/emails`.
     /// - Remark: Generated from `#/paths//user/emails/post(users/add-email-for-authenticated-user)`.
@@ -1291,7 +1292,7 @@ public struct Client: APIProtocol {
     }
     /// Delete an email address for the authenticated user
     ///
-    /// This endpoint is accessible with the `user` scope.
+    /// OAuth app tokens and personal access tokens (classic) need the `user` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /user/emails`.
     /// - Remark: Generated from `#/paths//user/emails/delete(users/delete-email-for-authenticated-user)`.
@@ -1806,7 +1807,7 @@ public struct Client: APIProtocol {
     ///
     /// Note that you'll need to set `Content-Length` to zero when calling out to this endpoint. For more information, see "[HTTP verbs](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#http-method)."
     ///
-    /// Following a user requires the user to be logged in and authenticated with basic auth or OAuth with the `user:follow` scope.
+    /// OAuth app tokens and personal access tokens (classic) need the `user:follow` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /user/following/{username}`.
     /// - Remark: Generated from `#/paths//user/following/{username}/put(users/follow)`.
@@ -1918,7 +1919,7 @@ public struct Client: APIProtocol {
     }
     /// Unfollow a user
     ///
-    /// Unfollowing a user requires the user to be logged in and authenticated with basic auth or OAuth with the `user:follow` scope.
+    /// OAuth app tokens and personal access tokens (classic) need the `user:follow` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /user/following/{username}`.
     /// - Remark: Generated from `#/paths//user/following/{username}/delete(users/unfollow)`.
@@ -2030,7 +2031,9 @@ public struct Client: APIProtocol {
     }
     /// List GPG keys for the authenticated user
     ///
-    /// Lists the current user's GPG keys. Requires that you are authenticated via Basic Auth or via OAuth with at least `read:gpg_key` [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+    /// Lists the current user's GPG keys.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `read:gpg_key` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /user/gpg_keys`.
     /// - Remark: Generated from `#/paths//user/gpg_keys/get(users/list-gpg-keys-for-authenticated-user)`.
@@ -2182,7 +2185,9 @@ public struct Client: APIProtocol {
     }
     /// Create a GPG key for the authenticated user
     ///
-    /// Adds a GPG key to the authenticated user's GitHub account. Requires that you are authenticated via Basic Auth, or OAuth with at least `write:gpg_key` [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+    /// Adds a GPG key to the authenticated user's GitHub account.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `write:gpg_key` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /user/gpg_keys`.
     /// - Remark: Generated from `#/paths//user/gpg_keys/post(users/create-gpg-key-for-authenticated-user)`.
@@ -2343,7 +2348,9 @@ public struct Client: APIProtocol {
     }
     /// Get a GPG key for the authenticated user
     ///
-    /// View extended details for a single GPG key. Requires that you are authenticated via Basic Auth or via OAuth with at least `read:gpg_key` [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+    /// View extended details for a single GPG key.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `read:gpg_key` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /user/gpg_keys/{gpg_key_id}`.
     /// - Remark: Generated from `#/paths//user/gpg_keys/{gpg_key_id}/get(users/get-gpg-key-for-authenticated-user)`.
@@ -2475,7 +2482,9 @@ public struct Client: APIProtocol {
     }
     /// Delete a GPG key for the authenticated user
     ///
-    /// Removes a GPG key from the authenticated user's GitHub account. Requires that you are authenticated via Basic Auth or via OAuth with at least `admin:gpg_key` [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+    /// Removes a GPG key from the authenticated user's GitHub account.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:gpg_key` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /user/gpg_keys/{gpg_key_id}`.
     /// - Remark: Generated from `#/paths//user/gpg_keys/{gpg_key_id}/delete(users/delete-gpg-key-for-authenticated-user)`.
@@ -2609,7 +2618,9 @@ public struct Client: APIProtocol {
     }
     /// List public SSH keys for the authenticated user
     ///
-    /// Lists the public SSH keys for the authenticated user's GitHub account. Requires that you are authenticated via Basic Auth or via OAuth with at least `read:public_key` [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+    /// Lists the public SSH keys for the authenticated user's GitHub account.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `read:public_key` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /user/keys`.
     /// - Remark: Generated from `#/paths//user/keys/get(users/list-public-ssh-keys-for-authenticated-user)`.
@@ -2761,7 +2772,9 @@ public struct Client: APIProtocol {
     }
     /// Create a public SSH key for the authenticated user
     ///
-    /// Adds a public SSH key to the authenticated user's GitHub account. Requires that you are authenticated via Basic Auth, or OAuth with at least `write:public_key` [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+    /// Adds a public SSH key to the authenticated user's GitHub account.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `write:gpg_key` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /user/keys`.
     /// - Remark: Generated from `#/paths//user/keys/post(users/create-public-ssh-key-for-authenticated-user)`.
@@ -2922,7 +2935,9 @@ public struct Client: APIProtocol {
     }
     /// Get a public SSH key for the authenticated user
     ///
-    /// View extended details for a single public SSH key. Requires that you are authenticated via Basic Auth or via OAuth with at least `read:public_key` [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+    /// View extended details for a single public SSH key.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `read:public_key` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /user/keys/{key_id}`.
     /// - Remark: Generated from `#/paths//user/keys/{key_id}/get(users/get-public-ssh-key-for-authenticated-user)`.
@@ -3054,7 +3069,9 @@ public struct Client: APIProtocol {
     }
     /// Delete a public SSH key for the authenticated user
     ///
-    /// Removes a public SSH key from the authenticated user's GitHub account. Requires that you are authenticated via Basic Auth or via OAuth with at least `admin:public_key` [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+    /// Removes a public SSH key from the authenticated user's GitHub account.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:public_key` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /user/keys/{key_id}`.
     /// - Remark: Generated from `#/paths//user/keys/{key_id}/delete(users/delete-public-ssh-key-for-authenticated-user)`.
@@ -3166,7 +3183,11 @@ public struct Client: APIProtocol {
     }
     /// List public email addresses for the authenticated user
     ///
-    /// Lists your publicly visible email address, which you can set with the [Set primary email visibility for the authenticated user](https://docs.github.com/rest/users/emails#set-primary-email-visibility-for-the-authenticated-user) endpoint. This endpoint is accessible with the `user:email` scope.
+    /// Lists your publicly visible email address, which you can set with the
+    /// [Set primary email visibility for the authenticated user](https://docs.github.com/rest/users/emails#set-primary-email-visibility-for-the-authenticated-user)
+    /// endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `user:email` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /user/public_emails`.
     /// - Remark: Generated from `#/paths//user/public_emails/get(users/list-public-emails-for-authenticated-user)`.
@@ -3470,7 +3491,9 @@ public struct Client: APIProtocol {
     }
     /// Add social accounts for the authenticated user
     ///
-    /// Add one or more social accounts to the authenticated user's profile. This endpoint is accessible with the `user` scope.
+    /// Add one or more social accounts to the authenticated user's profile.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `user` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /user/social_accounts`.
     /// - Remark: Generated from `#/paths//user/social_accounts/post(users/add-social-account-for-authenticated-user)`.
@@ -3631,7 +3654,9 @@ public struct Client: APIProtocol {
     }
     /// Delete social accounts for the authenticated user
     ///
-    /// Deletes one or more social accounts from the authenticated user's profile. This endpoint is accessible with the `user` scope.
+    /// Deletes one or more social accounts from the authenticated user's profile.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `user` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /user/social_accounts`.
     /// - Remark: Generated from `#/paths//user/social_accounts/delete(users/delete-social-account-for-authenticated-user)`.
@@ -3772,7 +3797,9 @@ public struct Client: APIProtocol {
     }
     /// List SSH signing keys for the authenticated user
     ///
-    /// Lists the SSH signing keys for the authenticated user's GitHub account. You must authenticate with Basic Authentication, or you must authenticate with OAuth with at least `read:ssh_signing_key` scope. For more information, see "[Understanding scopes for OAuth apps](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/)."
+    /// Lists the SSH signing keys for the authenticated user's GitHub account.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `read:ssh_signing_key` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /user/ssh_signing_keys`.
     /// - Remark: Generated from `#/paths//user/ssh_signing_keys/get(users/list-ssh-signing-keys-for-authenticated-user)`.
@@ -3924,7 +3951,9 @@ public struct Client: APIProtocol {
     }
     /// Create a SSH signing key for the authenticated user
     ///
-    /// Creates an SSH signing key for the authenticated user's GitHub account. You must authenticate with Basic Authentication, or you must authenticate with OAuth with at least `write:ssh_signing_key` scope. For more information, see "[Understanding scopes for OAuth apps](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/)."
+    /// Creates an SSH signing key for the authenticated user's GitHub account.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `write:ssh_signing_key` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /user/ssh_signing_keys`.
     /// - Remark: Generated from `#/paths//user/ssh_signing_keys/post(users/create-ssh-signing-key-for-authenticated-user)`.
@@ -4085,7 +4114,9 @@ public struct Client: APIProtocol {
     }
     /// Get an SSH signing key for the authenticated user
     ///
-    /// Gets extended details for an SSH signing key. You must authenticate with Basic Authentication, or you must authenticate with OAuth with at least `read:ssh_signing_key` scope. For more information, see "[Understanding scopes for OAuth apps](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/)."
+    /// Gets extended details for an SSH signing key.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `read:ssh_signing_key` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /user/ssh_signing_keys/{ssh_signing_key_id}`.
     /// - Remark: Generated from `#/paths//user/ssh_signing_keys/{ssh_signing_key_id}/get(users/get-ssh-signing-key-for-authenticated-user)`.
@@ -4217,7 +4248,9 @@ public struct Client: APIProtocol {
     }
     /// Delete an SSH signing key for the authenticated user
     ///
-    /// Deletes an SSH signing key from the authenticated user's GitHub account. You must authenticate with Basic Authentication, or you must authenticate with OAuth with at least `admin:ssh_signing_key` scope. For more information, see "[Understanding scopes for OAuth apps](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/)."
+    /// Deletes an SSH signing key from the authenticated user's GitHub account.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:ssh_signing_key` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /user/ssh_signing_keys/{ssh_signing_key_id}`.
     /// - Remark: Generated from `#/paths//user/ssh_signing_keys/{ssh_signing_key_id}/delete(users/delete-ssh-signing-key-for-authenticated-user)`.
@@ -4418,8 +4451,6 @@ public struct Client: APIProtocol {
     /// Get a user
     ///
     /// Provides publicly available information about someone with a GitHub account.
-    ///
-    /// GitHub Apps with the `Plan` user permission can use this endpoint to retrieve information about a user's GitHub plan. The GitHub App must be authenticated as a user. See "[Identifying and authorizing users for GitHub Apps](https://docs.github.com/apps/building-github-apps/identifying-and-authorizing-users-for-github-apps/)" for details about authentication. For an example response, see 'Response with GitHub plan information' below"
     ///
     /// The `email` key in the following response is the publicly visible email address from your GitHub [profile page](https://github.com/settings/profile). When setting up your profile, you can select a primary email address to be “public” which provides an email entry for this endpoint. If you do not set a public email address for `email`, then it will have a value of `null`. You only see publicly visible email addresses when authenticated with GitHub. For more information, see [Authentication](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#authentication).
     ///
@@ -4808,7 +4839,7 @@ public struct Client: APIProtocol {
     }
     /// Get contextual information for a user
     ///
-    /// Provides hovercard information when authenticated through basic auth or OAuth with the `repo` scope. You can find out more about someone in relation to their pull requests, issues, repositories, and organizations.
+    /// Provides hovercard information. You can find out more about someone in relation to their pull requests, issues, repositories, and organizations.
     ///
     /// The `subject_type` and `subject_id` parameters provide context for the person's hovercard, which returns more information than without the parameters. For example, if you wanted to find out more about `octocat` who owns the `Spoon-Knife` repository via cURL, it would look like this:
     ///
@@ -4816,6 +4847,8 @@ public struct Client: APIProtocol {
     ///  curl -u username:token
     ///   https://api.github.com/users/octocat/hovercard?subject_type=repository&subject_id=1300192
     /// ```
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /users/{username}/hovercard`.
     /// - Remark: Generated from `#/paths//users/{username}/hovercard/get(users/get-context-for-user)`.
