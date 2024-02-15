@@ -24,12 +24,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// Creates a new repository in the specified organization. The authenticated user must be a member of the organization.
     ///
-    /// **OAuth scope requirements**
-    ///
-    /// When using [OAuth](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/), authorizations must include:
-    ///
-    /// *   `public_repo` scope or `repo` scope to create a public repository
-    /// *   `repo` scope to create a private repository
+    /// OAuth app tokens and personal access tokens (classic) need the `public_repo` or `repo` scope to create a public repository, and `repo` scope to create a private repository.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/repos`.
     /// - Remark: Generated from `#/paths//orgs/{org}/repos/post(repos/create-in-org)`.
@@ -103,10 +98,12 @@ public protocol APIProtocol: Sendable {
     func repos_sol_update(_ input: Operations.repos_sol_update.Input) async throws -> Operations.repos_sol_update.Output
     /// Delete a repository
     ///
-    /// Deleting a repository requires admin access. If OAuth is used, the `delete_repo` scope is required.
+    /// Deleting a repository requires admin access.
     ///
     /// If an organization owner has configured the organization to prevent members from deleting organization-owned
     /// repositories, you will get a `403 Forbidden` response.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `delete_repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/delete(repos/delete)`.
@@ -367,7 +364,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
     ///
-    /// Lists the GitHub Apps that have push access to this branch. Only installed GitHub Apps with `write` access to the `contents` permission can be added as authorized actors on a protected branch.
+    /// Lists the GitHub Apps that have push access to this branch. Only GitHub Apps that are installed on the repository and that have been granted write access to the repository contents can be added as authorized actors on a protected branch.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps/get(repos/get-apps-with-access-to-protected-branch)`.
@@ -376,7 +373,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
     ///
-    /// Grants the specified apps push access for this branch. Only installed GitHub Apps with `write` access to the `contents` permission can be added as authorized actors on a protected branch.
+    /// Grants the specified apps push access for this branch. Only GitHub Apps that are installed on the repository and that have been granted write access to the repository contents can be added as authorized actors on a protected branch.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps/post(repos/add-app-access-restrictions)`.
@@ -385,7 +382,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
     ///
-    /// Replaces the list of apps that have push access to this branch. This removes all apps that previously had push access and grants push access to the new list of apps. Only installed GitHub Apps with `write` access to the `contents` permission can be added as authorized actors on a protected branch.
+    /// Replaces the list of apps that have push access to this branch. This removes all apps that previously had push access and grants push access to the new list of apps. Only GitHub Apps that are installed on the repository and that have been granted write access to the repository contents can be added as authorized actors on a protected branch.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps/put(repos/set-app-access-restrictions)`.
@@ -394,7 +391,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
     ///
-    /// Removes the ability of an app to push to this branch. Only installed GitHub Apps with `write` access to the `contents` permission can be added as authorized actors on a protected branch.
+    /// Removes the ability of an app to push to this branch. Only GitHub Apps that are installed on the repository and that have been granted write access to the repository contents can be added as authorized actors on a protected branch.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps/delete(repos/remove-app-access-restrictions)`.
@@ -489,17 +486,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// **Note:** Although the API responds immediately, the branch rename process might take some extra time to complete in the background. You won't be able to push to the old branch name while the rename process is in progress. For more information, see "[Renaming a branch](https://docs.github.com/github/administering-a-repository/renaming-a-branch)".
     ///
-    /// The permissions required to use this endpoint depends on whether you are renaming the default branch.
+    /// The authenticated user must have push access to the branch. If the branch is the default branch, the authenticated user must also have admin or owner permissions.
     ///
-    /// To rename a non-default branch:
-    ///
-    /// * Users must have push access.
-    /// * GitHub Apps must have the `contents:write` repository permission.
-    ///
-    /// To rename the default branch:
-    ///
-    /// * Users must have admin or owner permissions.
-    /// * GitHub Apps must have the `contents:write` and `administration:write` repository permissions.
+    /// In order to rename the default branch, fine-grained access tokens also need the `administration:write` repository permission.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/branches/{branch}/rename`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/branches/{branch}/rename/post(repos/rename-branch)`.
@@ -522,9 +511,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Team members will include the members of child teams.
     ///
-    /// You must authenticate using an access token with the `read:org` and `repo` scopes with push access to use this
-    /// endpoint. GitHub Apps must have the `members` organization permission and `metadata` repository permission to use this
-    /// endpoint.
+    /// The authenticated user must have push access to the repository to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `read:org` and `repo` scopes to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/collaborators`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/collaborators/get(repos/list-collaborators)`.
@@ -535,9 +524,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Team members will include the members of child teams.
     ///
-    /// You must authenticate using an access token with the `read:org` and `repo` scopes with push access to use this
-    /// endpoint. GitHub Apps must have the `members` organization permission and `metadata` repository permission to use this
-    /// endpoint.
+    /// The authenticated user must have push access to the repository to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `read:org` and `repo` scopes to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/collaborators/{username}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/collaborators/{username}/get(repos/check-collaborator)`.
@@ -911,9 +900,11 @@ public protocol APIProtocol: Sendable {
     func repos_sol_get_hyphen_content(_ input: Operations.repos_sol_get_hyphen_content.Input) async throws -> Operations.repos_sol_get_hyphen_content.Output
     /// Create or update file contents
     ///
-    /// Creates a new file or replaces an existing file in a repository. You must authenticate using an access token with the `repo` scope to use this endpoint. If you want to modify files in the `.github/workflows` directory, you must authenticate using an access token with the `workflow` scope.
+    /// Creates a new file or replaces an existing file in a repository.
     ///
     /// **Note:** If you use this endpoint and the "[Delete a file](https://docs.github.com/rest/repos/contents/#delete-a-file)" endpoint in parallel, the concurrent requests will conflict and you will receive errors. You must use these endpoints serially instead.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint. The `workflow` scope is also required in order to modify files in the `.github/workflows` directory.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/contents/{path}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/contents/{path}/put(repos/create-or-update-file-contents)`.
@@ -977,8 +968,6 @@ public protocol APIProtocol: Sendable {
     /// be `deploy:migrations` to run schema changes on the system. In the compiled world this could be a flag to compile an
     /// application with debugging enabled.
     ///
-    /// Users with `repo` or `repo_deployment` scopes can create a deployment for a given ref.
-    ///
     /// Merged branch response:
     ///
     /// You will see this response when GitHub automatically merges the base branch into the topic branch instead of creating
@@ -1000,6 +989,8 @@ public protocol APIProtocol: Sendable {
     /// This error happens when the `required_contexts` parameter indicates that one or more contexts need to have a `success`
     /// status for the commit to be deployed, but one or more of the required contexts do not have a state of `success`.
     ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` or `repo_deployment` scope to use this endpoint.
+    ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/deployments`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/deployments/post(repos/create-deployment)`.
     func repos_sol_create_hyphen_deployment(_ input: Operations.repos_sol_create_hyphen_deployment.Input) async throws -> Operations.repos_sol_create_hyphen_deployment.Output
@@ -1010,7 +1001,7 @@ public protocol APIProtocol: Sendable {
     func repos_sol_get_hyphen_deployment(_ input: Operations.repos_sol_get_hyphen_deployment.Input) async throws -> Operations.repos_sol_get_hyphen_deployment.Output
     /// Delete a deployment
     ///
-    /// If the repository only has one deployment, you can delete the deployment regardless of its status. If the repository has more than one deployment, you can only delete inactive deployments. This ensures that repositories with multiple deployments will always have an active deployment. Anyone with `repo` or `repo_deployment` scopes can delete a deployment.
+    /// If the repository only has one deployment, you can delete the deployment regardless of its status. If the repository has more than one deployment, you can only delete inactive deployments. This ensures that repositories with multiple deployments will always have an active deployment.
     ///
     /// To set a deployment as inactive, you must:
     ///
@@ -1018,6 +1009,8 @@ public protocol APIProtocol: Sendable {
     /// *   Mark the active deployment as inactive by adding any non-successful deployment status.
     ///
     /// For more information, see "[Create a deployment](https://docs.github.com/rest/deployments/deployments/#create-a-deployment)" and "[Create a deployment status](https://docs.github.com/rest/deployments/statuses#create-a-deployment-status)."
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` or `repo_deployment` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/deployments/{deployment_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/deployments/{deployment_id}/delete(repos/delete-deployment)`.
@@ -1033,7 +1026,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// Users with `push` access can create deployment statuses for a given deployment.
     ///
-    /// GitHub Apps require `read & write` access to "Deployments" and `read-only` access to "Repo contents" (for private repos). OAuth apps require the `repo_deployment` scope.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo_deployment` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/deployments/{deployment_id}/statuses`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/deployments/{deployment_id}/statuses/post(repos/create-deployment-status)`.
@@ -1051,12 +1044,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// The `client_payload` parameter is available for any extra information that your workflow might need. This parameter is a JSON payload that will be passed on when the webhook event is dispatched. For example, the `client_payload` can include a message that a user would like to send using a GitHub Actions workflow. Or the `client_payload` can be used as a test to debug your workflow.
     ///
-    /// This endpoint requires write access to the repository by providing either:
-    ///
-    ///   - Personal access tokens with `repo` scope. For more information, see "[Creating a personal access token for the command line](https://docs.github.com/articles/creating-a-personal-access-token-for-the-command-line)" in the GitHub Help documentation.
-    ///   - GitHub Apps with both `metadata:read` and `contents:read&write` permissions.
-    ///
     /// This input example shows how you can use the `client_payload` as a test to debug your workflow.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/dispatches`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dispatches/post(repos/create-dispatch-event)`.
@@ -1065,7 +1055,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Lists the environments for a repository.
     ///
-    /// Anyone with read access to the repository can use this endpoint. If the repository is private, you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/environments`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/get(repos/get-all-environments)`.
@@ -1074,9 +1066,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// **Note:** To get information about name patterns that branches must match in order to deploy to this environment, see "[Get a deployment branch policy](/rest/deployments/branch-policies#get-a-deployment-branch-policy)."
     ///
-    /// Anyone with read access to the repository can use this endpoint. If the
-    /// repository is private, you must use an access token with the `repo` scope. GitHub
-    /// Apps must have the `actions:read` permission to use this endpoint.
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/environments/{environment_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/get(repos/get-environment)`.
@@ -1089,14 +1081,14 @@ public protocol APIProtocol: Sendable {
     ///
     /// **Note:** To create or update secrets for an environment, see "[GitHub Actions secrets](/rest/actions/secrets)."
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `administration:write` permission for the repository to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/environments/{environment_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/put(repos/create-or-update-environment)`.
     func repos_sol_create_hyphen_or_hyphen_update_hyphen_environment(_ input: Operations.repos_sol_create_hyphen_or_hyphen_update_hyphen_environment.Input) async throws -> Operations.repos_sol_create_hyphen_or_hyphen_update_hyphen_environment.Output
     /// Delete an environment
     ///
-    /// You must authenticate using an access token with the repo scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/environments/{environment_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/delete(repos/delete-an-environment)`.
@@ -1105,7 +1097,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Lists the deployment branch policies for an environment.
     ///
-    /// Anyone with read access to the repository can use this endpoint. If the repository is private, you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/get(repos/list-deployment-branch-policies)`.
@@ -1114,7 +1108,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// Creates a deployment branch or tag policy for an environment.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `administration:write` permission for the repository to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/post(repos/create-deployment-branch-policy)`.
@@ -1123,7 +1117,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Gets a deployment branch or tag policy for an environment.
     ///
-    /// Anyone with read access to the repository can use this endpoint. If the repository is private, you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/{branch_policy_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/{branch_policy_id}/get(repos/get-deployment-branch-policy)`.
@@ -1132,7 +1128,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// Updates a deployment branch or tag policy for an environment.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `administration:write` permission for the repository to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/{branch_policy_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/{branch_policy_id}/put(repos/update-deployment-branch-policy)`.
@@ -1141,16 +1137,18 @@ public protocol APIProtocol: Sendable {
     ///
     /// Deletes a deployment branch or tag policy for an environment.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `administration:write` permission for the repository to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/{branch_policy_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/{branch_policy_id}/delete(repos/delete-deployment-branch-policy)`.
     func repos_sol_delete_hyphen_deployment_hyphen_branch_hyphen_policy(_ input: Operations.repos_sol_delete_hyphen_deployment_hyphen_branch_hyphen_policy.Input) async throws -> Operations.repos_sol_delete_hyphen_deployment_hyphen_branch_hyphen_policy.Output
     /// Get all deployment protection rules for an environment
     ///
-    /// Gets all custom deployment protection rules that are enabled for an environment. Anyone with read access to the repository can use this endpoint. If the repository is private and you want to use a personal access token (classic), you must use an access token with the `repo` scope. GitHub Apps and fine-grained personal access tokens must have the `actions:read` permission to use this endpoint. For more information about environments, see "[Using environments for deployment](https://docs.github.com/actions/deployment/targeting-different-environments/using-environments-for-deployment)."
+    /// Gets all custom deployment protection rules that are enabled for an environment. Anyone with read access to the repository can use this endpoint. For more information about environments, see "[Using environments for deployment](https://docs.github.com/actions/deployment/targeting-different-environments/using-environments-for-deployment)."
     ///
     /// For more information about the app that is providing this custom deployment rule, see the [documentation for the `GET /apps/{app_slug}` endpoint](https://docs.github.com/rest/apps/apps#get-an-app).
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/get(repos/get-all-deployment-protection-rules)`.
@@ -1159,29 +1157,35 @@ public protocol APIProtocol: Sendable {
     ///
     /// Enable a custom deployment protection rule for an environment.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. Enabling a custom protection rule requires admin or owner permissions to the repository. GitHub Apps must have the `actions:write` permission to use this endpoint.
+    /// The authenticated user must have admin or owner permissions to the repository to use this endpoint.
     ///
     /// For more information about the app that is providing this custom deployment rule, see the [documentation for the `GET /apps/{app_slug}` endpoint](https://docs.github.com/rest/apps/apps#get-an-app).
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/post(repos/create-deployment-protection-rule)`.
     func repos_sol_create_hyphen_deployment_hyphen_protection_hyphen_rule(_ input: Operations.repos_sol_create_hyphen_deployment_hyphen_protection_hyphen_rule.Input) async throws -> Operations.repos_sol_create_hyphen_deployment_hyphen_protection_hyphen_rule.Output
     /// List custom deployment rule integrations available for an environment
     ///
-    /// Gets all custom deployment protection rule integrations that are available for an environment. Anyone with read access to the repository can use this endpoint. If the repository is private and you want to use a personal access token (classic), you must use an access token with the `repo` scope. GitHub Apps and fine-grained personal access tokens must have the `actions:read` permission to use this endpoint.
+    /// Gets all custom deployment protection rule integrations that are available for an environment. Anyone with read access to the repository can use this endpoint.
     ///
     /// For more information about environments, see "[Using environments for deployment](https://docs.github.com/actions/deployment/targeting-different-environments/using-environments-for-deployment)."
     ///
     /// For more information about the app that is providing this custom deployment rule, see "[GET an app](https://docs.github.com/rest/apps/apps#get-an-app)".
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/apps`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/apps/get(repos/list-custom-deployment-rule-integrations)`.
     func repos_sol_list_hyphen_custom_hyphen_deployment_hyphen_rule_hyphen_integrations(_ input: Operations.repos_sol_list_hyphen_custom_hyphen_deployment_hyphen_rule_hyphen_integrations.Input) async throws -> Operations.repos_sol_list_hyphen_custom_hyphen_deployment_hyphen_rule_hyphen_integrations.Output
     /// Get a custom deployment protection rule
     ///
-    /// Gets an enabled custom deployment protection rule for an environment. Anyone with read access to the repository can use this endpoint. If the repository is private and you want to use a personal access token (classic), you must use an access token with the `repo` scope. GitHub Apps and fine-grained personal access tokens must have the `actions:read` permission to use this endpoint. For more information about environments, see "[Using environments for deployment](https://docs.github.com/actions/deployment/targeting-different-environments/using-environments-for-deployment)."
+    /// Gets an enabled custom deployment protection rule for an environment. Anyone with read access to the repository can use this endpoint. For more information about environments, see "[Using environments for deployment](https://docs.github.com/actions/deployment/targeting-different-environments/using-environments-for-deployment)."
     ///
     /// For more information about the app that is providing this custom deployment rule, see [`GET /apps/{app_slug}`](https://docs.github.com/rest/apps/apps#get-an-app).
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/{protection_rule_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/{protection_rule_id}/get(repos/get-custom-deployment-protection-rule)`.
@@ -1190,7 +1194,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Disables a custom deployment protection rule for an environment.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. Removing a custom protection rule requires admin or owner permissions to the repository. GitHub Apps must have the `actions:write` permission to use this endpoint. For more information, see "[Get an app](https://docs.github.com/rest/apps/apps#get-an-app)".
+    /// The authenticated user must have admin or owner permissions to the repository to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/{protection_rule_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/{protection_rule_id}/delete(repos/disable-deployment-protection-rule)`.
@@ -1249,7 +1255,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// Returns the webhook configuration for a repository. To get more information about the webhook, including the `active` state and `events`, use "[Get a repository webhook](/rest/webhooks/repos#get-a-repository-webhook)."
     ///
-    /// Access tokens must have the `read:repo_hook` or `repo` scope, and GitHub Apps must have the `repository_hooks:read` permission.
+    /// OAuth app tokens and personal access tokens (classic) need the `read:repo_hook` or `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/hooks/{hook_id}/config`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/hooks/{hook_id}/config/get(repos/get-webhook-config-for-repo)`.
@@ -1258,7 +1264,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// Updates the webhook configuration for a repository. To update more information about the webhook, including the `active` state and `events`, use "[Update a repository webhook](/rest/webhooks/repos#update-a-repository-webhook)."
     ///
-    /// Access tokens must have the `write:repo_hook` or `repo` scope, and GitHub Apps must have the `repository_hooks:write` permission.
+    /// OAuth app tokens and personal access tokens (classic) need the `write:repo_hook` or `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/hooks/{hook_id}/config`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/hooks/{hook_id}/config/patch(repos/update-webhook-config-for-repo)`.
@@ -1364,7 +1370,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// Gets information about a GitHub Pages site.
     ///
-    /// A token with the `repo` scope is required. GitHub Apps must have the `pages:read` permission.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pages`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/get(repos/get-pages)`.
@@ -1373,7 +1379,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Configures a GitHub Pages site. For more information, see "[About GitHub Pages](/github/working-with-github-pages/about-github-pages)."
     ///
-    /// To use this endpoint, you must be a repository administrator, maintainer, or have the 'manage GitHub Pages settings' permission. A token with the `repo` scope or Pages write permission is required. GitHub Apps must have the `administration:write` and `pages:write` permissions.
+    /// The authenticated user must be a repository administrator, maintainer, or have the 'manage GitHub Pages settings' permission.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/pages`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/post(repos/create-pages-site)`.
@@ -1382,7 +1390,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Updates information for a GitHub Pages site. For more information, see "[About GitHub Pages](/github/working-with-github-pages/about-github-pages).
     ///
-    /// To use this endpoint, you must be a repository administrator, maintainer, or have the 'manage GitHub Pages settings' permission. A token with the `repo` scope or Pages write permission is required. GitHub Apps must have the `administration:write` and `pages:write` permissions.
+    /// The authenticated user must be a repository administrator, maintainer, or have the 'manage GitHub Pages settings' permission.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/pages`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/put(repos/update-information-about-pages-site)`.
@@ -1391,7 +1401,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Deletes a GitHub Pages site. For more information, see "[About GitHub Pages](/github/working-with-github-pages/about-github-pages).
     ///
-    /// To use this endpoint, you must be a repository administrator, maintainer, or have the 'manage GitHub Pages settings' permission. A token with the `repo` scope or Pages write permission is required. GitHub Apps must have the `administration:write` and `pages:write` permissions.
+    /// The authenticated user must be a repository administrator, maintainer, or have the 'manage GitHub Pages settings' permission.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/pages`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/delete(repos/delete-pages-site)`.
@@ -1400,7 +1412,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// Lists builts of a GitHub Pages site.
     ///
-    /// A token with the `repo` scope is required. GitHub Apps must have the `pages:read` permission.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pages/builds`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/builds/get(repos/list-pages-builds)`.
@@ -1418,7 +1430,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// Gets information about the single most recent build of a GitHub Pages site.
     ///
-    /// A token with the `repo` scope is required. GitHub Apps must have the `pages:read` permission.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pages/builds/latest`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/builds/latest/get(repos/get-latest-pages-build)`.
@@ -1427,7 +1439,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// Gets information about a GitHub Pages build.
     ///
-    /// A token with the `repo` scope is required. GitHub Apps must have the `pages:read` permission.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pages/builds/{build_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/builds/{build_id}/get(repos/get-pages-build)`.
@@ -1436,7 +1448,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// Create a GitHub Pages deployment for a repository.
     ///
-    /// Users must have write permissions. GitHub Apps must have the `pages:write` permission to use this endpoint.
+    /// The authenticated user must have write permission to the repository.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/pages/deployments`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/deployments/post(repos/create-pages-deployment)`.
@@ -1445,7 +1457,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// Gets the current status of a GitHub Pages deployment.
     ///
-    /// Users must have read permission for the GitHub Pages site. GitHub Apps must have the `pages:read` permission.
+    /// The authenticated user must have read permission for the GitHub Pages site.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}/get(repos/get-pages-deployment)`.
@@ -1454,7 +1466,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// Cancels a GitHub Pages deployment.
     ///
-    /// Users must have write permissions for the GitHub Pages site. GitHub Apps must have the `pages:write` permission to use this endpoint.
+    /// The authenticated user must have write permissions for the GitHub Pages site.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}/cancel`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}/cancel/post(repos/cancel-pages-deployment)`.
@@ -1465,7 +1477,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// The first request to this endpoint returns a `202 Accepted` status and starts an asynchronous background task to get the results for the domain. After the background task completes, subsequent requests to this endpoint return a `200 OK` status with the health check results in the response.
     ///
-    /// To use this endpoint, you must be a repository administrator, maintainer, or have the 'manage GitHub Pages settings' permission. A token with the `repo` scope or Pages write permission is required. GitHub Apps must have the `administrative:write` and `pages:write` permissions.
+    /// The authenticated user must be a repository administrator, maintainer, or have the 'manage GitHub Pages settings' permission to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pages/health`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/health/get(repos/get-pages-health-check)`.
@@ -1489,8 +1503,6 @@ public protocol APIProtocol: Sendable {
     /// Gets all custom property values that are set for a repository.
     /// Users with read access to the repository can use this endpoint.
     ///
-    /// GitHub Apps must have the `metadata:read` repository permission to use this endpoint.
-    ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/properties/values`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/properties/values/get(repos/get-custom-properties-values)`.
     func repos_sol_get_hyphen_custom_hyphen_properties_hyphen_values(_ input: Operations.repos_sol_get_hyphen_custom_hyphen_properties_hyphen_values.Input) async throws -> Operations.repos_sol_get_hyphen_custom_hyphen_properties_hyphen_values.Output
@@ -1500,8 +1512,6 @@ public protocol APIProtocol: Sendable {
     /// Using a value of `null` for a custom property will remove or 'unset' the property value from the repository.
     ///
     /// Repository admins and other users with the repository-level "edit custom property values" fine-grained permission can use this endpoint.
-    ///
-    /// GitHub Apps must have the `repository_custom_properties:write` permission to use this endpoint.
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/properties/values`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/properties/values/patch(repos/create-or-update-custom-properties-values)`.
@@ -1819,11 +1829,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// For a public repository, a team is listed only if that team added the public repository explicitly.
     ///
-    /// Personal access tokens require the following scopes:
-    /// * `public_repo` to call this endpoint on a public repository
-    /// * `repo` to call this endpoint on a private repository (this scope also includes public repositories)
-    ///
-    /// This endpoint is not compatible with fine-grained personal access tokens.
+    /// OAuth app tokens and personal access tokens (classic) need the `public_repo` or `repo` scope to use this endpoint with a public repository, and `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/teams`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/teams/get(repos/list-teams)`.
@@ -1869,7 +1875,6 @@ public protocol APIProtocol: Sendable {
     /// Transfer a repository
     ///
     /// A transfer request will need to be accepted by the new owner when transferring a personal repository to another user. The response will contain the original `owner`, and the transfer will continue asynchronously. For more details on the requirements to transfer personal and organization-owned repositories, see [about repository transfers](https://docs.github.com/articles/about-repository-transfers/).
-    /// You must use a personal access token (classic) or an OAuth token for this endpoint. An installation access token or a fine-grained personal access token cannot be used because they are only granted access to a single account.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/transfer`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/transfer/post(repos/transfer)`.
@@ -1912,12 +1917,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// Creates a new repository using a repository template. Use the `template_owner` and `template_repo` route parameters to specify the repository to use as the template. If the repository is not public, the authenticated user must own or be a member of an organization that owns the repository. To check if a repository is available to use as a template, get the repository's information using the [Get a repository](https://docs.github.com/rest/repos/repos#get-a-repository) endpoint and check that the `is_template` key is `true`.
     ///
-    /// **OAuth scope requirements**
-    ///
-    /// When using [OAuth](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/), authorizations must include:
-    ///
-    /// *   `public_repo` scope or `repo` scope to create a public repository
-    /// *   `repo` scope to create a private repository
+    /// OAuth app tokens and personal access tokens (classic) need the `public_repo` or `repo` scope to create a public repository, and `repo` scope to create a private repository.
     ///
     /// - Remark: HTTP `POST /repos/{template_owner}/{template_repo}/generate`.
     /// - Remark: Generated from `#/paths//repos/{template_owner}/{template_repo}/generate/post(repos/create-using-template)`.
@@ -1946,12 +1946,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// Creates a new repository for the authenticated user.
     ///
-    /// **OAuth scope requirements**
-    ///
-    /// When using [OAuth](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/), authorizations must include:
-    ///
-    /// *   `public_repo` scope or `repo` scope to create a public repository
-    /// *   `repo` scope to create a private repository
+    /// OAuth app tokens and personal access tokens (classic) need the `public_repo` or `repo` scope to create a public repository, and `repo` scope to create a private repository.
     ///
     /// - Remark: HTTP `POST /user/repos`.
     /// - Remark: Generated from `#/paths//user/repos/post(repos/create-for-authenticated-user)`.
@@ -2007,12 +2002,7 @@ extension APIProtocol {
     ///
     /// Creates a new repository in the specified organization. The authenticated user must be a member of the organization.
     ///
-    /// **OAuth scope requirements**
-    ///
-    /// When using [OAuth](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/), authorizations must include:
-    ///
-    /// *   `public_repo` scope or `repo` scope to create a public repository
-    /// *   `repo` scope to create a private repository
+    /// OAuth app tokens and personal access tokens (classic) need the `public_repo` or `repo` scope to create a public repository, and `repo` scope to create a private repository.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/repos`.
     /// - Remark: Generated from `#/paths//orgs/{org}/repos/post(repos/create-in-org)`.
@@ -2178,10 +2168,12 @@ extension APIProtocol {
     }
     /// Delete a repository
     ///
-    /// Deleting a repository requires admin access. If OAuth is used, the `delete_repo` scope is required.
+    /// Deleting a repository requires admin access.
     ///
     /// If an organization owner has configured the organization to prevent members from deleting organization-owned
     /// repositories, you will get a `403 Forbidden` response.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `delete_repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/delete(repos/delete)`.
@@ -2692,7 +2684,7 @@ extension APIProtocol {
     ///
     /// Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
     ///
-    /// Lists the GitHub Apps that have push access to this branch. Only installed GitHub Apps with `write` access to the `contents` permission can be added as authorized actors on a protected branch.
+    /// Lists the GitHub Apps that have push access to this branch. Only GitHub Apps that are installed on the repository and that have been granted write access to the repository contents can be added as authorized actors on a protected branch.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps/get(repos/get-apps-with-access-to-protected-branch)`.
@@ -2709,7 +2701,7 @@ extension APIProtocol {
     ///
     /// Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
     ///
-    /// Grants the specified apps push access for this branch. Only installed GitHub Apps with `write` access to the `contents` permission can be added as authorized actors on a protected branch.
+    /// Grants the specified apps push access for this branch. Only GitHub Apps that are installed on the repository and that have been granted write access to the repository contents can be added as authorized actors on a protected branch.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps/post(repos/add-app-access-restrictions)`.
@@ -2728,7 +2720,7 @@ extension APIProtocol {
     ///
     /// Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
     ///
-    /// Replaces the list of apps that have push access to this branch. This removes all apps that previously had push access and grants push access to the new list of apps. Only installed GitHub Apps with `write` access to the `contents` permission can be added as authorized actors on a protected branch.
+    /// Replaces the list of apps that have push access to this branch. This removes all apps that previously had push access and grants push access to the new list of apps. Only GitHub Apps that are installed on the repository and that have been granted write access to the repository contents can be added as authorized actors on a protected branch.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps/put(repos/set-app-access-restrictions)`.
@@ -2747,7 +2739,7 @@ extension APIProtocol {
     ///
     /// Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
     ///
-    /// Removes the ability of an app to push to this branch. Only installed GitHub Apps with `write` access to the `contents` permission can be added as authorized actors on a protected branch.
+    /// Removes the ability of an app to push to this branch. Only GitHub Apps that are installed on the repository and that have been granted write access to the repository contents can be added as authorized actors on a protected branch.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps/delete(repos/remove-app-access-restrictions)`.
@@ -2928,17 +2920,9 @@ extension APIProtocol {
     ///
     /// **Note:** Although the API responds immediately, the branch rename process might take some extra time to complete in the background. You won't be able to push to the old branch name while the rename process is in progress. For more information, see "[Renaming a branch](https://docs.github.com/github/administering-a-repository/renaming-a-branch)".
     ///
-    /// The permissions required to use this endpoint depends on whether you are renaming the default branch.
+    /// The authenticated user must have push access to the branch. If the branch is the default branch, the authenticated user must also have admin or owner permissions.
     ///
-    /// To rename a non-default branch:
-    ///
-    /// * Users must have push access.
-    /// * GitHub Apps must have the `contents:write` repository permission.
-    ///
-    /// To rename the default branch:
-    ///
-    /// * Users must have admin or owner permissions.
-    /// * GitHub Apps must have the `contents:write` and `administration:write` repository permissions.
+    /// In order to rename the default branch, fine-grained access tokens also need the `administration:write` repository permission.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/branches/{branch}/rename`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/branches/{branch}/rename/post(repos/rename-branch)`.
@@ -2981,9 +2965,9 @@ extension APIProtocol {
     ///
     /// Team members will include the members of child teams.
     ///
-    /// You must authenticate using an access token with the `read:org` and `repo` scopes with push access to use this
-    /// endpoint. GitHub Apps must have the `members` organization permission and `metadata` repository permission to use this
-    /// endpoint.
+    /// The authenticated user must have push access to the repository to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `read:org` and `repo` scopes to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/collaborators`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/collaborators/get(repos/list-collaborators)`.
@@ -3004,9 +2988,9 @@ extension APIProtocol {
     ///
     /// Team members will include the members of child teams.
     ///
-    /// You must authenticate using an access token with the `read:org` and `repo` scopes with push access to use this
-    /// endpoint. GitHub Apps must have the `members` organization permission and `metadata` repository permission to use this
-    /// endpoint.
+    /// The authenticated user must have push access to the repository to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `read:org` and `repo` scopes to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/collaborators/{username}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/collaborators/{username}/get(repos/check-collaborator)`.
@@ -3550,9 +3534,11 @@ extension APIProtocol {
     }
     /// Create or update file contents
     ///
-    /// Creates a new file or replaces an existing file in a repository. You must authenticate using an access token with the `repo` scope to use this endpoint. If you want to modify files in the `.github/workflows` directory, you must authenticate using an access token with the `workflow` scope.
+    /// Creates a new file or replaces an existing file in a repository.
     ///
     /// **Note:** If you use this endpoint and the "[Delete a file](https://docs.github.com/rest/repos/contents/#delete-a-file)" endpoint in parallel, the concurrent requests will conflict and you will receive errors. You must use these endpoints serially instead.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint. The `workflow` scope is also required in order to modify files in the `.github/workflows` directory.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/contents/{path}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/contents/{path}/put(repos/create-or-update-file-contents)`.
@@ -3656,8 +3642,6 @@ extension APIProtocol {
     /// be `deploy:migrations` to run schema changes on the system. In the compiled world this could be a flag to compile an
     /// application with debugging enabled.
     ///
-    /// Users with `repo` or `repo_deployment` scopes can create a deployment for a given ref.
-    ///
     /// Merged branch response:
     ///
     /// You will see this response when GitHub automatically merges the base branch into the topic branch instead of creating
@@ -3678,6 +3662,8 @@ extension APIProtocol {
     ///
     /// This error happens when the `required_contexts` parameter indicates that one or more contexts need to have a `success`
     /// status for the commit to be deployed, but one or more of the required contexts do not have a state of `success`.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` or `repo_deployment` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/deployments`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/deployments/post(repos/create-deployment)`.
@@ -3707,7 +3693,7 @@ extension APIProtocol {
     }
     /// Delete a deployment
     ///
-    /// If the repository only has one deployment, you can delete the deployment regardless of its status. If the repository has more than one deployment, you can only delete inactive deployments. This ensures that repositories with multiple deployments will always have an active deployment. Anyone with `repo` or `repo_deployment` scopes can delete a deployment.
+    /// If the repository only has one deployment, you can delete the deployment regardless of its status. If the repository has more than one deployment, you can only delete inactive deployments. This ensures that repositories with multiple deployments will always have an active deployment.
     ///
     /// To set a deployment as inactive, you must:
     ///
@@ -3715,6 +3701,8 @@ extension APIProtocol {
     /// *   Mark the active deployment as inactive by adding any non-successful deployment status.
     ///
     /// For more information, see "[Create a deployment](https://docs.github.com/rest/deployments/deployments/#create-a-deployment)" and "[Create a deployment status](https://docs.github.com/rest/deployments/statuses#create-a-deployment-status)."
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` or `repo_deployment` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/deployments/{deployment_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/deployments/{deployment_id}/delete(repos/delete-deployment)`.
@@ -3748,7 +3736,7 @@ extension APIProtocol {
     ///
     /// Users with `push` access can create deployment statuses for a given deployment.
     ///
-    /// GitHub Apps require `read & write` access to "Deployments" and `read-only` access to "Repo contents" (for private repos). OAuth apps require the `repo_deployment` scope.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo_deployment` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/deployments/{deployment_id}/statuses`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/deployments/{deployment_id}/statuses/post(repos/create-deployment-status)`.
@@ -3784,12 +3772,9 @@ extension APIProtocol {
     ///
     /// The `client_payload` parameter is available for any extra information that your workflow might need. This parameter is a JSON payload that will be passed on when the webhook event is dispatched. For example, the `client_payload` can include a message that a user would like to send using a GitHub Actions workflow. Or the `client_payload` can be used as a test to debug your workflow.
     ///
-    /// This endpoint requires write access to the repository by providing either:
-    ///
-    ///   - Personal access tokens with `repo` scope. For more information, see "[Creating a personal access token for the command line](https://docs.github.com/articles/creating-a-personal-access-token-for-the-command-line)" in the GitHub Help documentation.
-    ///   - GitHub Apps with both `metadata:read` and `contents:read&write` permissions.
-    ///
     /// This input example shows how you can use the `client_payload` as a test to debug your workflow.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/dispatches`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dispatches/post(repos/create-dispatch-event)`.
@@ -3808,7 +3793,9 @@ extension APIProtocol {
     ///
     /// Lists the environments for a repository.
     ///
-    /// Anyone with read access to the repository can use this endpoint. If the repository is private, you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/environments`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/get(repos/get-all-environments)`.
@@ -3827,9 +3814,9 @@ extension APIProtocol {
     ///
     /// **Note:** To get information about name patterns that branches must match in order to deploy to this environment, see "[Get a deployment branch policy](/rest/deployments/branch-policies#get-a-deployment-branch-policy)."
     ///
-    /// Anyone with read access to the repository can use this endpoint. If the
-    /// repository is private, you must use an access token with the `repo` scope. GitHub
-    /// Apps must have the `actions:read` permission to use this endpoint.
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/environments/{environment_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/get(repos/get-environment)`.
@@ -3850,7 +3837,7 @@ extension APIProtocol {
     ///
     /// **Note:** To create or update secrets for an environment, see "[GitHub Actions secrets](/rest/actions/secrets)."
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `administration:write` permission for the repository to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/environments/{environment_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/put(repos/create-or-update-environment)`.
@@ -3867,7 +3854,7 @@ extension APIProtocol {
     }
     /// Delete an environment
     ///
-    /// You must authenticate using an access token with the repo scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/environments/{environment_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/delete(repos/delete-an-environment)`.
@@ -3878,7 +3865,9 @@ extension APIProtocol {
     ///
     /// Lists the deployment branch policies for an environment.
     ///
-    /// Anyone with read access to the repository can use this endpoint. If the repository is private, you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/get(repos/list-deployment-branch-policies)`.
@@ -3897,7 +3886,7 @@ extension APIProtocol {
     ///
     /// Creates a deployment branch or tag policy for an environment.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `administration:write` permission for the repository to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/post(repos/create-deployment-branch-policy)`.
@@ -3916,7 +3905,9 @@ extension APIProtocol {
     ///
     /// Gets a deployment branch or tag policy for an environment.
     ///
-    /// Anyone with read access to the repository can use this endpoint. If the repository is private, you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/{branch_policy_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/{branch_policy_id}/get(repos/get-deployment-branch-policy)`.
@@ -3933,7 +3924,7 @@ extension APIProtocol {
     ///
     /// Updates a deployment branch or tag policy for an environment.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `administration:write` permission for the repository to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/{branch_policy_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/{branch_policy_id}/put(repos/update-deployment-branch-policy)`.
@@ -3952,7 +3943,7 @@ extension APIProtocol {
     ///
     /// Deletes a deployment branch or tag policy for an environment.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `administration:write` permission for the repository to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/{branch_policy_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/{branch_policy_id}/delete(repos/delete-deployment-branch-policy)`.
@@ -3961,9 +3952,11 @@ extension APIProtocol {
     }
     /// Get all deployment protection rules for an environment
     ///
-    /// Gets all custom deployment protection rules that are enabled for an environment. Anyone with read access to the repository can use this endpoint. If the repository is private and you want to use a personal access token (classic), you must use an access token with the `repo` scope. GitHub Apps and fine-grained personal access tokens must have the `actions:read` permission to use this endpoint. For more information about environments, see "[Using environments for deployment](https://docs.github.com/actions/deployment/targeting-different-environments/using-environments-for-deployment)."
+    /// Gets all custom deployment protection rules that are enabled for an environment. Anyone with read access to the repository can use this endpoint. For more information about environments, see "[Using environments for deployment](https://docs.github.com/actions/deployment/targeting-different-environments/using-environments-for-deployment)."
     ///
     /// For more information about the app that is providing this custom deployment rule, see the [documentation for the `GET /apps/{app_slug}` endpoint](https://docs.github.com/rest/apps/apps#get-an-app).
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/get(repos/get-all-deployment-protection-rules)`.
@@ -3980,9 +3973,11 @@ extension APIProtocol {
     ///
     /// Enable a custom deployment protection rule for an environment.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. Enabling a custom protection rule requires admin or owner permissions to the repository. GitHub Apps must have the `actions:write` permission to use this endpoint.
+    /// The authenticated user must have admin or owner permissions to the repository to use this endpoint.
     ///
     /// For more information about the app that is providing this custom deployment rule, see the [documentation for the `GET /apps/{app_slug}` endpoint](https://docs.github.com/rest/apps/apps#get-an-app).
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/post(repos/create-deployment-protection-rule)`.
@@ -3999,11 +3994,13 @@ extension APIProtocol {
     }
     /// List custom deployment rule integrations available for an environment
     ///
-    /// Gets all custom deployment protection rule integrations that are available for an environment. Anyone with read access to the repository can use this endpoint. If the repository is private and you want to use a personal access token (classic), you must use an access token with the `repo` scope. GitHub Apps and fine-grained personal access tokens must have the `actions:read` permission to use this endpoint.
+    /// Gets all custom deployment protection rule integrations that are available for an environment. Anyone with read access to the repository can use this endpoint.
     ///
     /// For more information about environments, see "[Using environments for deployment](https://docs.github.com/actions/deployment/targeting-different-environments/using-environments-for-deployment)."
     ///
     /// For more information about the app that is providing this custom deployment rule, see "[GET an app](https://docs.github.com/rest/apps/apps#get-an-app)".
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/apps`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/apps/get(repos/list-custom-deployment-rule-integrations)`.
@@ -4020,9 +4017,11 @@ extension APIProtocol {
     }
     /// Get a custom deployment protection rule
     ///
-    /// Gets an enabled custom deployment protection rule for an environment. Anyone with read access to the repository can use this endpoint. If the repository is private and you want to use a personal access token (classic), you must use an access token with the `repo` scope. GitHub Apps and fine-grained personal access tokens must have the `actions:read` permission to use this endpoint. For more information about environments, see "[Using environments for deployment](https://docs.github.com/actions/deployment/targeting-different-environments/using-environments-for-deployment)."
+    /// Gets an enabled custom deployment protection rule for an environment. Anyone with read access to the repository can use this endpoint. For more information about environments, see "[Using environments for deployment](https://docs.github.com/actions/deployment/targeting-different-environments/using-environments-for-deployment)."
     ///
     /// For more information about the app that is providing this custom deployment rule, see [`GET /apps/{app_slug}`](https://docs.github.com/rest/apps/apps#get-an-app).
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/{protection_rule_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/{protection_rule_id}/get(repos/get-custom-deployment-protection-rule)`.
@@ -4039,7 +4038,9 @@ extension APIProtocol {
     ///
     /// Disables a custom deployment protection rule for an environment.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. Removing a custom protection rule requires admin or owner permissions to the repository. GitHub Apps must have the `actions:write` permission to use this endpoint. For more information, see "[Get an app](https://docs.github.com/rest/apps/apps#get-an-app)".
+    /// The authenticated user must have admin or owner permissions to the repository to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/{protection_rule_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/{protection_rule_id}/delete(repos/disable-deployment-protection-rule)`.
@@ -4166,7 +4167,7 @@ extension APIProtocol {
     ///
     /// Returns the webhook configuration for a repository. To get more information about the webhook, including the `active` state and `events`, use "[Get a repository webhook](/rest/webhooks/repos#get-a-repository-webhook)."
     ///
-    /// Access tokens must have the `read:repo_hook` or `repo` scope, and GitHub Apps must have the `repository_hooks:read` permission.
+    /// OAuth app tokens and personal access tokens (classic) need the `read:repo_hook` or `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/hooks/{hook_id}/config`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/hooks/{hook_id}/config/get(repos/get-webhook-config-for-repo)`.
@@ -4183,7 +4184,7 @@ extension APIProtocol {
     ///
     /// Updates the webhook configuration for a repository. To update more information about the webhook, including the `active` state and `events`, use "[Update a repository webhook](/rest/webhooks/repos#update-a-repository-webhook)."
     ///
-    /// Access tokens must have the `write:repo_hook` or `repo` scope, and GitHub Apps must have the `repository_hooks:write` permission.
+    /// OAuth app tokens and personal access tokens (classic) need the `write:repo_hook` or `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/hooks/{hook_id}/config`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/hooks/{hook_id}/config/patch(repos/update-webhook-config-for-repo)`.
@@ -4421,7 +4422,7 @@ extension APIProtocol {
     ///
     /// Gets information about a GitHub Pages site.
     ///
-    /// A token with the `repo` scope is required. GitHub Apps must have the `pages:read` permission.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pages`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/get(repos/get-pages)`.
@@ -4438,7 +4439,9 @@ extension APIProtocol {
     ///
     /// Configures a GitHub Pages site. For more information, see "[About GitHub Pages](/github/working-with-github-pages/about-github-pages)."
     ///
-    /// To use this endpoint, you must be a repository administrator, maintainer, or have the 'manage GitHub Pages settings' permission. A token with the `repo` scope or Pages write permission is required. GitHub Apps must have the `administration:write` and `pages:write` permissions.
+    /// The authenticated user must be a repository administrator, maintainer, or have the 'manage GitHub Pages settings' permission.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/pages`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/post(repos/create-pages-site)`.
@@ -4457,7 +4460,9 @@ extension APIProtocol {
     ///
     /// Updates information for a GitHub Pages site. For more information, see "[About GitHub Pages](/github/working-with-github-pages/about-github-pages).
     ///
-    /// To use this endpoint, you must be a repository administrator, maintainer, or have the 'manage GitHub Pages settings' permission. A token with the `repo` scope or Pages write permission is required. GitHub Apps must have the `administration:write` and `pages:write` permissions.
+    /// The authenticated user must be a repository administrator, maintainer, or have the 'manage GitHub Pages settings' permission.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/pages`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/put(repos/update-information-about-pages-site)`.
@@ -4476,7 +4481,9 @@ extension APIProtocol {
     ///
     /// Deletes a GitHub Pages site. For more information, see "[About GitHub Pages](/github/working-with-github-pages/about-github-pages).
     ///
-    /// To use this endpoint, you must be a repository administrator, maintainer, or have the 'manage GitHub Pages settings' permission. A token with the `repo` scope or Pages write permission is required. GitHub Apps must have the `administration:write` and `pages:write` permissions.
+    /// The authenticated user must be a repository administrator, maintainer, or have the 'manage GitHub Pages settings' permission.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/pages`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/delete(repos/delete-pages-site)`.
@@ -4493,7 +4500,7 @@ extension APIProtocol {
     ///
     /// Lists builts of a GitHub Pages site.
     ///
-    /// A token with the `repo` scope is required. GitHub Apps must have the `pages:read` permission.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pages/builds`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/builds/get(repos/list-pages-builds)`.
@@ -4529,7 +4536,7 @@ extension APIProtocol {
     ///
     /// Gets information about the single most recent build of a GitHub Pages site.
     ///
-    /// A token with the `repo` scope is required. GitHub Apps must have the `pages:read` permission.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pages/builds/latest`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/builds/latest/get(repos/get-latest-pages-build)`.
@@ -4546,7 +4553,7 @@ extension APIProtocol {
     ///
     /// Gets information about a GitHub Pages build.
     ///
-    /// A token with the `repo` scope is required. GitHub Apps must have the `pages:read` permission.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pages/builds/{build_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/builds/{build_id}/get(repos/get-pages-build)`.
@@ -4563,7 +4570,7 @@ extension APIProtocol {
     ///
     /// Create a GitHub Pages deployment for a repository.
     ///
-    /// Users must have write permissions. GitHub Apps must have the `pages:write` permission to use this endpoint.
+    /// The authenticated user must have write permission to the repository.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/pages/deployments`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/deployments/post(repos/create-pages-deployment)`.
@@ -4582,7 +4589,7 @@ extension APIProtocol {
     ///
     /// Gets the current status of a GitHub Pages deployment.
     ///
-    /// Users must have read permission for the GitHub Pages site. GitHub Apps must have the `pages:read` permission.
+    /// The authenticated user must have read permission for the GitHub Pages site.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}/get(repos/get-pages-deployment)`.
@@ -4599,7 +4606,7 @@ extension APIProtocol {
     ///
     /// Cancels a GitHub Pages deployment.
     ///
-    /// Users must have write permissions for the GitHub Pages site. GitHub Apps must have the `pages:write` permission to use this endpoint.
+    /// The authenticated user must have write permissions for the GitHub Pages site.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}/cancel`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}/cancel/post(repos/cancel-pages-deployment)`.
@@ -4618,7 +4625,9 @@ extension APIProtocol {
     ///
     /// The first request to this endpoint returns a `202 Accepted` status and starts an asynchronous background task to get the results for the domain. After the background task completes, subsequent requests to this endpoint return a `200 OK` status with the health check results in the response.
     ///
-    /// To use this endpoint, you must be a repository administrator, maintainer, or have the 'manage GitHub Pages settings' permission. A token with the `repo` scope or Pages write permission is required. GitHub Apps must have the `administrative:write` and `pages:write` permissions.
+    /// The authenticated user must be a repository administrator, maintainer, or have the 'manage GitHub Pages settings' permission to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pages/health`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/health/get(repos/get-pages-health-check)`.
@@ -4666,8 +4675,6 @@ extension APIProtocol {
     /// Gets all custom property values that are set for a repository.
     /// Users with read access to the repository can use this endpoint.
     ///
-    /// GitHub Apps must have the `metadata:read` repository permission to use this endpoint.
-    ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/properties/values`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/properties/values/get(repos/get-custom-properties-values)`.
     public func repos_sol_get_hyphen_custom_hyphen_properties_hyphen_values(
@@ -4685,8 +4692,6 @@ extension APIProtocol {
     /// Using a value of `null` for a custom property will remove or 'unset' the property value from the repository.
     ///
     /// Repository admins and other users with the repository-level "edit custom property values" fine-grained permission can use this endpoint.
-    ///
-    /// GitHub Apps must have the `repository_custom_properties:write` permission to use this endpoint.
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/properties/values`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/properties/values/patch(repos/create-or-update-custom-properties-values)`.
@@ -5306,11 +5311,7 @@ extension APIProtocol {
     ///
     /// For a public repository, a team is listed only if that team added the public repository explicitly.
     ///
-    /// Personal access tokens require the following scopes:
-    /// * `public_repo` to call this endpoint on a public repository
-    /// * `repo` to call this endpoint on a private repository (this scope also includes public repositories)
-    ///
-    /// This endpoint is not compatible with fine-grained personal access tokens.
+    /// OAuth app tokens and personal access tokens (classic) need the `public_repo` or `repo` scope to use this endpoint with a public repository, and `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/teams`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/teams/get(repos/list-teams)`.
@@ -5422,7 +5423,6 @@ extension APIProtocol {
     /// Transfer a repository
     ///
     /// A transfer request will need to be accepted by the new owner when transferring a personal repository to another user. The response will contain the original `owner`, and the transfer will continue asynchronously. For more details on the requirements to transfer personal and organization-owned repositories, see [about repository transfers](https://docs.github.com/articles/about-repository-transfers/).
-    /// You must use a personal access token (classic) or an OAuth token for this endpoint. An installation access token or a fine-grained personal access token cannot be used because they are only granted access to a single account.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/transfer`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/transfer/post(repos/transfer)`.
@@ -5483,12 +5483,7 @@ extension APIProtocol {
     ///
     /// Creates a new repository using a repository template. Use the `template_owner` and `template_repo` route parameters to specify the repository to use as the template. If the repository is not public, the authenticated user must own or be a member of an organization that owns the repository. To check if a repository is available to use as a template, get the repository's information using the [Get a repository](https://docs.github.com/rest/repos/repos#get-a-repository) endpoint and check that the `is_template` key is `true`.
     ///
-    /// **OAuth scope requirements**
-    ///
-    /// When using [OAuth](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/), authorizations must include:
-    ///
-    /// *   `public_repo` scope or `repo` scope to create a public repository
-    /// *   `repo` scope to create a private repository
+    /// OAuth app tokens and personal access tokens (classic) need the `public_repo` or `repo` scope to create a public repository, and `repo` scope to create a private repository.
     ///
     /// - Remark: HTTP `POST /repos/{template_owner}/{template_repo}/generate`.
     /// - Remark: Generated from `#/paths//repos/{template_owner}/{template_repo}/generate/post(repos/create-using-template)`.
@@ -5543,12 +5538,7 @@ extension APIProtocol {
     ///
     /// Creates a new repository for the authenticated user.
     ///
-    /// **OAuth scope requirements**
-    ///
-    /// When using [OAuth](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/), authorizations must include:
-    ///
-    /// *   `public_repo` scope or `repo` scope to create a public repository
-    /// *   `repo` scope to create a private repository
+    /// OAuth app tokens and personal access tokens (classic) need the `public_repo` or `repo` scope to create a public repository, and `repo` scope to create a private repository.
     ///
     /// - Remark: HTTP `POST /user/repos`.
     /// - Remark: Generated from `#/paths//user/repos/post(repos/create-for-authenticated-user)`.
@@ -6873,8 +6863,6 @@ public enum Components {
             public var full_name: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/license`.
             public var license: Components.Schemas.nullable_hyphen_license_hyphen_simple?
-            /// - Remark: Generated from `#/components/schemas/repository/organization`.
-            public var organization: Components.Schemas.nullable_hyphen_simple_hyphen_user?
             /// - Remark: Generated from `#/components/schemas/repository/forks`.
             public var forks: Swift.Int
             /// - Remark: Generated from `#/components/schemas/repository/permissions`.
@@ -7087,767 +7075,6 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/repository/allow_rebase_merge`.
             public var allow_rebase_merge: Swift.Bool?
-            /// - Remark: Generated from `#/components/schemas/repository/template_repository`.
-            public struct template_repositoryPayload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/id`.
-                public var id: Swift.Int?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/node_id`.
-                public var node_id: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/name`.
-                public var name: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/full_name`.
-                public var full_name: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner`.
-                public struct ownerPayload: Codable, Hashable, Sendable {
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/login`.
-                    public var login: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/id`.
-                    public var id: Swift.Int?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/node_id`.
-                    public var node_id: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/avatar_url`.
-                    public var avatar_url: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/gravatar_id`.
-                    public var gravatar_id: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/url`.
-                    public var url: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/html_url`.
-                    public var html_url: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/followers_url`.
-                    public var followers_url: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/following_url`.
-                    public var following_url: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/gists_url`.
-                    public var gists_url: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/starred_url`.
-                    public var starred_url: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/subscriptions_url`.
-                    public var subscriptions_url: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/organizations_url`.
-                    public var organizations_url: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/repos_url`.
-                    public var repos_url: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/events_url`.
-                    public var events_url: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/received_events_url`.
-                    public var received_events_url: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/type`.
-                    public var _type: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/site_admin`.
-                    public var site_admin: Swift.Bool?
-                    /// Creates a new `ownerPayload`.
-                    ///
-                    /// - Parameters:
-                    ///   - login:
-                    ///   - id:
-                    ///   - node_id:
-                    ///   - avatar_url:
-                    ///   - gravatar_id:
-                    ///   - url:
-                    ///   - html_url:
-                    ///   - followers_url:
-                    ///   - following_url:
-                    ///   - gists_url:
-                    ///   - starred_url:
-                    ///   - subscriptions_url:
-                    ///   - organizations_url:
-                    ///   - repos_url:
-                    ///   - events_url:
-                    ///   - received_events_url:
-                    ///   - _type:
-                    ///   - site_admin:
-                    public init(
-                        login: Swift.String? = nil,
-                        id: Swift.Int? = nil,
-                        node_id: Swift.String? = nil,
-                        avatar_url: Swift.String? = nil,
-                        gravatar_id: Swift.String? = nil,
-                        url: Swift.String? = nil,
-                        html_url: Swift.String? = nil,
-                        followers_url: Swift.String? = nil,
-                        following_url: Swift.String? = nil,
-                        gists_url: Swift.String? = nil,
-                        starred_url: Swift.String? = nil,
-                        subscriptions_url: Swift.String? = nil,
-                        organizations_url: Swift.String? = nil,
-                        repos_url: Swift.String? = nil,
-                        events_url: Swift.String? = nil,
-                        received_events_url: Swift.String? = nil,
-                        _type: Swift.String? = nil,
-                        site_admin: Swift.Bool? = nil
-                    ) {
-                        self.login = login
-                        self.id = id
-                        self.node_id = node_id
-                        self.avatar_url = avatar_url
-                        self.gravatar_id = gravatar_id
-                        self.url = url
-                        self.html_url = html_url
-                        self.followers_url = followers_url
-                        self.following_url = following_url
-                        self.gists_url = gists_url
-                        self.starred_url = starred_url
-                        self.subscriptions_url = subscriptions_url
-                        self.organizations_url = organizations_url
-                        self.repos_url = repos_url
-                        self.events_url = events_url
-                        self.received_events_url = received_events_url
-                        self._type = _type
-                        self.site_admin = site_admin
-                    }
-                    public enum CodingKeys: String, CodingKey {
-                        case login
-                        case id
-                        case node_id
-                        case avatar_url
-                        case gravatar_id
-                        case url
-                        case html_url
-                        case followers_url
-                        case following_url
-                        case gists_url
-                        case starred_url
-                        case subscriptions_url
-                        case organizations_url
-                        case repos_url
-                        case events_url
-                        case received_events_url
-                        case _type = "type"
-                        case site_admin
-                    }
-                }
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner`.
-                public var owner: Components.Schemas.repository.template_repositoryPayload.ownerPayload?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/private`.
-                public var _private: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/html_url`.
-                public var html_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/description`.
-                public var description: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/fork`.
-                public var fork: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/url`.
-                public var url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/archive_url`.
-                public var archive_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/assignees_url`.
-                public var assignees_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/blobs_url`.
-                public var blobs_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/branches_url`.
-                public var branches_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/collaborators_url`.
-                public var collaborators_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/comments_url`.
-                public var comments_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/commits_url`.
-                public var commits_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/compare_url`.
-                public var compare_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/contents_url`.
-                public var contents_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/contributors_url`.
-                public var contributors_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/deployments_url`.
-                public var deployments_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/downloads_url`.
-                public var downloads_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/events_url`.
-                public var events_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/forks_url`.
-                public var forks_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/git_commits_url`.
-                public var git_commits_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/git_refs_url`.
-                public var git_refs_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/git_tags_url`.
-                public var git_tags_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/git_url`.
-                public var git_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/issue_comment_url`.
-                public var issue_comment_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/issue_events_url`.
-                public var issue_events_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/issues_url`.
-                public var issues_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/keys_url`.
-                public var keys_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/labels_url`.
-                public var labels_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/languages_url`.
-                public var languages_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/merges_url`.
-                public var merges_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/milestones_url`.
-                public var milestones_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/notifications_url`.
-                public var notifications_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/pulls_url`.
-                public var pulls_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/releases_url`.
-                public var releases_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/ssh_url`.
-                public var ssh_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/stargazers_url`.
-                public var stargazers_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/statuses_url`.
-                public var statuses_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/subscribers_url`.
-                public var subscribers_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/subscription_url`.
-                public var subscription_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/tags_url`.
-                public var tags_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/teams_url`.
-                public var teams_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/trees_url`.
-                public var trees_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/clone_url`.
-                public var clone_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/mirror_url`.
-                public var mirror_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/hooks_url`.
-                public var hooks_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/svn_url`.
-                public var svn_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/homepage`.
-                public var homepage: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/language`.
-                public var language: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/forks_count`.
-                public var forks_count: Swift.Int?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/stargazers_count`.
-                public var stargazers_count: Swift.Int?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/watchers_count`.
-                public var watchers_count: Swift.Int?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/size`.
-                public var size: Swift.Int?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/default_branch`.
-                public var default_branch: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/open_issues_count`.
-                public var open_issues_count: Swift.Int?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/is_template`.
-                public var is_template: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/topics`.
-                public var topics: [Swift.String]?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/has_issues`.
-                public var has_issues: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/has_projects`.
-                public var has_projects: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/has_wiki`.
-                public var has_wiki: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/has_pages`.
-                public var has_pages: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/has_downloads`.
-                public var has_downloads: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/archived`.
-                public var archived: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/disabled`.
-                public var disabled: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/visibility`.
-                public var visibility: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/pushed_at`.
-                public var pushed_at: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/created_at`.
-                public var created_at: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/updated_at`.
-                public var updated_at: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/permissions`.
-                public struct permissionsPayload: Codable, Hashable, Sendable {
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/permissions/admin`.
-                    public var admin: Swift.Bool?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/permissions/maintain`.
-                    public var maintain: Swift.Bool?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/permissions/push`.
-                    public var push: Swift.Bool?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/permissions/triage`.
-                    public var triage: Swift.Bool?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/permissions/pull`.
-                    public var pull: Swift.Bool?
-                    /// Creates a new `permissionsPayload`.
-                    ///
-                    /// - Parameters:
-                    ///   - admin:
-                    ///   - maintain:
-                    ///   - push:
-                    ///   - triage:
-                    ///   - pull:
-                    public init(
-                        admin: Swift.Bool? = nil,
-                        maintain: Swift.Bool? = nil,
-                        push: Swift.Bool? = nil,
-                        triage: Swift.Bool? = nil,
-                        pull: Swift.Bool? = nil
-                    ) {
-                        self.admin = admin
-                        self.maintain = maintain
-                        self.push = push
-                        self.triage = triage
-                        self.pull = pull
-                    }
-                    public enum CodingKeys: String, CodingKey {
-                        case admin
-                        case maintain
-                        case push
-                        case triage
-                        case pull
-                    }
-                }
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/permissions`.
-                public var permissions: Components.Schemas.repository.template_repositoryPayload.permissionsPayload?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/allow_rebase_merge`.
-                public var allow_rebase_merge: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/temp_clone_token`.
-                public var temp_clone_token: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/allow_squash_merge`.
-                public var allow_squash_merge: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/allow_auto_merge`.
-                public var allow_auto_merge: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/delete_branch_on_merge`.
-                public var delete_branch_on_merge: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/allow_update_branch`.
-                public var allow_update_branch: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/use_squash_pr_title_as_default`.
-                public var use_squash_pr_title_as_default: Swift.Bool?
-                /// The default value for a squash merge commit title:
-                ///
-                /// - `PR_TITLE` - default to the pull request's title.
-                /// - `COMMIT_OR_PR_TITLE` - default to the commit's title (if only one commit) or the pull request's title (when more than one commit).
-                ///
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/squash_merge_commit_title`.
-                @frozen public enum squash_merge_commit_titlePayload: String, Codable, Hashable, Sendable {
-                    case PR_TITLE = "PR_TITLE"
-                    case COMMIT_OR_PR_TITLE = "COMMIT_OR_PR_TITLE"
-                }
-                /// The default value for a squash merge commit title:
-                ///
-                /// - `PR_TITLE` - default to the pull request's title.
-                /// - `COMMIT_OR_PR_TITLE` - default to the commit's title (if only one commit) or the pull request's title (when more than one commit).
-                ///
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/squash_merge_commit_title`.
-                public var squash_merge_commit_title: Components.Schemas.repository.template_repositoryPayload.squash_merge_commit_titlePayload?
-                /// The default value for a squash merge commit message:
-                ///
-                /// - `PR_BODY` - default to the pull request's body.
-                /// - `COMMIT_MESSAGES` - default to the branch's commit messages.
-                /// - `BLANK` - default to a blank commit message.
-                ///
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/squash_merge_commit_message`.
-                @frozen public enum squash_merge_commit_messagePayload: String, Codable, Hashable, Sendable {
-                    case PR_BODY = "PR_BODY"
-                    case COMMIT_MESSAGES = "COMMIT_MESSAGES"
-                    case BLANK = "BLANK"
-                }
-                /// The default value for a squash merge commit message:
-                ///
-                /// - `PR_BODY` - default to the pull request's body.
-                /// - `COMMIT_MESSAGES` - default to the branch's commit messages.
-                /// - `BLANK` - default to a blank commit message.
-                ///
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/squash_merge_commit_message`.
-                public var squash_merge_commit_message: Components.Schemas.repository.template_repositoryPayload.squash_merge_commit_messagePayload?
-                /// The default value for a merge commit title.
-                ///
-                /// - `PR_TITLE` - default to the pull request's title.
-                /// - `MERGE_MESSAGE` - default to the classic title for a merge message (e.g., Merge pull request #123 from branch-name).
-                ///
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/merge_commit_title`.
-                @frozen public enum merge_commit_titlePayload: String, Codable, Hashable, Sendable {
-                    case PR_TITLE = "PR_TITLE"
-                    case MERGE_MESSAGE = "MERGE_MESSAGE"
-                }
-                /// The default value for a merge commit title.
-                ///
-                /// - `PR_TITLE` - default to the pull request's title.
-                /// - `MERGE_MESSAGE` - default to the classic title for a merge message (e.g., Merge pull request #123 from branch-name).
-                ///
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/merge_commit_title`.
-                public var merge_commit_title: Components.Schemas.repository.template_repositoryPayload.merge_commit_titlePayload?
-                /// The default value for a merge commit message.
-                ///
-                /// - `PR_TITLE` - default to the pull request's title.
-                /// - `PR_BODY` - default to the pull request's body.
-                /// - `BLANK` - default to a blank commit message.
-                ///
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/merge_commit_message`.
-                @frozen public enum merge_commit_messagePayload: String, Codable, Hashable, Sendable {
-                    case PR_BODY = "PR_BODY"
-                    case PR_TITLE = "PR_TITLE"
-                    case BLANK = "BLANK"
-                }
-                /// The default value for a merge commit message.
-                ///
-                /// - `PR_TITLE` - default to the pull request's title.
-                /// - `PR_BODY` - default to the pull request's body.
-                /// - `BLANK` - default to a blank commit message.
-                ///
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/merge_commit_message`.
-                public var merge_commit_message: Components.Schemas.repository.template_repositoryPayload.merge_commit_messagePayload?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/allow_merge_commit`.
-                public var allow_merge_commit: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/subscribers_count`.
-                public var subscribers_count: Swift.Int?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/network_count`.
-                public var network_count: Swift.Int?
-                /// Creates a new `template_repositoryPayload`.
-                ///
-                /// - Parameters:
-                ///   - id:
-                ///   - node_id:
-                ///   - name:
-                ///   - full_name:
-                ///   - owner:
-                ///   - _private:
-                ///   - html_url:
-                ///   - description:
-                ///   - fork:
-                ///   - url:
-                ///   - archive_url:
-                ///   - assignees_url:
-                ///   - blobs_url:
-                ///   - branches_url:
-                ///   - collaborators_url:
-                ///   - comments_url:
-                ///   - commits_url:
-                ///   - compare_url:
-                ///   - contents_url:
-                ///   - contributors_url:
-                ///   - deployments_url:
-                ///   - downloads_url:
-                ///   - events_url:
-                ///   - forks_url:
-                ///   - git_commits_url:
-                ///   - git_refs_url:
-                ///   - git_tags_url:
-                ///   - git_url:
-                ///   - issue_comment_url:
-                ///   - issue_events_url:
-                ///   - issues_url:
-                ///   - keys_url:
-                ///   - labels_url:
-                ///   - languages_url:
-                ///   - merges_url:
-                ///   - milestones_url:
-                ///   - notifications_url:
-                ///   - pulls_url:
-                ///   - releases_url:
-                ///   - ssh_url:
-                ///   - stargazers_url:
-                ///   - statuses_url:
-                ///   - subscribers_url:
-                ///   - subscription_url:
-                ///   - tags_url:
-                ///   - teams_url:
-                ///   - trees_url:
-                ///   - clone_url:
-                ///   - mirror_url:
-                ///   - hooks_url:
-                ///   - svn_url:
-                ///   - homepage:
-                ///   - language:
-                ///   - forks_count:
-                ///   - stargazers_count:
-                ///   - watchers_count:
-                ///   - size:
-                ///   - default_branch:
-                ///   - open_issues_count:
-                ///   - is_template:
-                ///   - topics:
-                ///   - has_issues:
-                ///   - has_projects:
-                ///   - has_wiki:
-                ///   - has_pages:
-                ///   - has_downloads:
-                ///   - archived:
-                ///   - disabled:
-                ///   - visibility:
-                ///   - pushed_at:
-                ///   - created_at:
-                ///   - updated_at:
-                ///   - permissions:
-                ///   - allow_rebase_merge:
-                ///   - temp_clone_token:
-                ///   - allow_squash_merge:
-                ///   - allow_auto_merge:
-                ///   - delete_branch_on_merge:
-                ///   - allow_update_branch:
-                ///   - use_squash_pr_title_as_default:
-                ///   - squash_merge_commit_title: The default value for a squash merge commit title:
-                ///   - squash_merge_commit_message: The default value for a squash merge commit message:
-                ///   - merge_commit_title: The default value for a merge commit title.
-                ///   - merge_commit_message: The default value for a merge commit message.
-                ///   - allow_merge_commit:
-                ///   - subscribers_count:
-                ///   - network_count:
-                public init(
-                    id: Swift.Int? = nil,
-                    node_id: Swift.String? = nil,
-                    name: Swift.String? = nil,
-                    full_name: Swift.String? = nil,
-                    owner: Components.Schemas.repository.template_repositoryPayload.ownerPayload? = nil,
-                    _private: Swift.Bool? = nil,
-                    html_url: Swift.String? = nil,
-                    description: Swift.String? = nil,
-                    fork: Swift.Bool? = nil,
-                    url: Swift.String? = nil,
-                    archive_url: Swift.String? = nil,
-                    assignees_url: Swift.String? = nil,
-                    blobs_url: Swift.String? = nil,
-                    branches_url: Swift.String? = nil,
-                    collaborators_url: Swift.String? = nil,
-                    comments_url: Swift.String? = nil,
-                    commits_url: Swift.String? = nil,
-                    compare_url: Swift.String? = nil,
-                    contents_url: Swift.String? = nil,
-                    contributors_url: Swift.String? = nil,
-                    deployments_url: Swift.String? = nil,
-                    downloads_url: Swift.String? = nil,
-                    events_url: Swift.String? = nil,
-                    forks_url: Swift.String? = nil,
-                    git_commits_url: Swift.String? = nil,
-                    git_refs_url: Swift.String? = nil,
-                    git_tags_url: Swift.String? = nil,
-                    git_url: Swift.String? = nil,
-                    issue_comment_url: Swift.String? = nil,
-                    issue_events_url: Swift.String? = nil,
-                    issues_url: Swift.String? = nil,
-                    keys_url: Swift.String? = nil,
-                    labels_url: Swift.String? = nil,
-                    languages_url: Swift.String? = nil,
-                    merges_url: Swift.String? = nil,
-                    milestones_url: Swift.String? = nil,
-                    notifications_url: Swift.String? = nil,
-                    pulls_url: Swift.String? = nil,
-                    releases_url: Swift.String? = nil,
-                    ssh_url: Swift.String? = nil,
-                    stargazers_url: Swift.String? = nil,
-                    statuses_url: Swift.String? = nil,
-                    subscribers_url: Swift.String? = nil,
-                    subscription_url: Swift.String? = nil,
-                    tags_url: Swift.String? = nil,
-                    teams_url: Swift.String? = nil,
-                    trees_url: Swift.String? = nil,
-                    clone_url: Swift.String? = nil,
-                    mirror_url: Swift.String? = nil,
-                    hooks_url: Swift.String? = nil,
-                    svn_url: Swift.String? = nil,
-                    homepage: Swift.String? = nil,
-                    language: Swift.String? = nil,
-                    forks_count: Swift.Int? = nil,
-                    stargazers_count: Swift.Int? = nil,
-                    watchers_count: Swift.Int? = nil,
-                    size: Swift.Int? = nil,
-                    default_branch: Swift.String? = nil,
-                    open_issues_count: Swift.Int? = nil,
-                    is_template: Swift.Bool? = nil,
-                    topics: [Swift.String]? = nil,
-                    has_issues: Swift.Bool? = nil,
-                    has_projects: Swift.Bool? = nil,
-                    has_wiki: Swift.Bool? = nil,
-                    has_pages: Swift.Bool? = nil,
-                    has_downloads: Swift.Bool? = nil,
-                    archived: Swift.Bool? = nil,
-                    disabled: Swift.Bool? = nil,
-                    visibility: Swift.String? = nil,
-                    pushed_at: Swift.String? = nil,
-                    created_at: Swift.String? = nil,
-                    updated_at: Swift.String? = nil,
-                    permissions: Components.Schemas.repository.template_repositoryPayload.permissionsPayload? = nil,
-                    allow_rebase_merge: Swift.Bool? = nil,
-                    temp_clone_token: Swift.String? = nil,
-                    allow_squash_merge: Swift.Bool? = nil,
-                    allow_auto_merge: Swift.Bool? = nil,
-                    delete_branch_on_merge: Swift.Bool? = nil,
-                    allow_update_branch: Swift.Bool? = nil,
-                    use_squash_pr_title_as_default: Swift.Bool? = nil,
-                    squash_merge_commit_title: Components.Schemas.repository.template_repositoryPayload.squash_merge_commit_titlePayload? = nil,
-                    squash_merge_commit_message: Components.Schemas.repository.template_repositoryPayload.squash_merge_commit_messagePayload? = nil,
-                    merge_commit_title: Components.Schemas.repository.template_repositoryPayload.merge_commit_titlePayload? = nil,
-                    merge_commit_message: Components.Schemas.repository.template_repositoryPayload.merge_commit_messagePayload? = nil,
-                    allow_merge_commit: Swift.Bool? = nil,
-                    subscribers_count: Swift.Int? = nil,
-                    network_count: Swift.Int? = nil
-                ) {
-                    self.id = id
-                    self.node_id = node_id
-                    self.name = name
-                    self.full_name = full_name
-                    self.owner = owner
-                    self._private = _private
-                    self.html_url = html_url
-                    self.description = description
-                    self.fork = fork
-                    self.url = url
-                    self.archive_url = archive_url
-                    self.assignees_url = assignees_url
-                    self.blobs_url = blobs_url
-                    self.branches_url = branches_url
-                    self.collaborators_url = collaborators_url
-                    self.comments_url = comments_url
-                    self.commits_url = commits_url
-                    self.compare_url = compare_url
-                    self.contents_url = contents_url
-                    self.contributors_url = contributors_url
-                    self.deployments_url = deployments_url
-                    self.downloads_url = downloads_url
-                    self.events_url = events_url
-                    self.forks_url = forks_url
-                    self.git_commits_url = git_commits_url
-                    self.git_refs_url = git_refs_url
-                    self.git_tags_url = git_tags_url
-                    self.git_url = git_url
-                    self.issue_comment_url = issue_comment_url
-                    self.issue_events_url = issue_events_url
-                    self.issues_url = issues_url
-                    self.keys_url = keys_url
-                    self.labels_url = labels_url
-                    self.languages_url = languages_url
-                    self.merges_url = merges_url
-                    self.milestones_url = milestones_url
-                    self.notifications_url = notifications_url
-                    self.pulls_url = pulls_url
-                    self.releases_url = releases_url
-                    self.ssh_url = ssh_url
-                    self.stargazers_url = stargazers_url
-                    self.statuses_url = statuses_url
-                    self.subscribers_url = subscribers_url
-                    self.subscription_url = subscription_url
-                    self.tags_url = tags_url
-                    self.teams_url = teams_url
-                    self.trees_url = trees_url
-                    self.clone_url = clone_url
-                    self.mirror_url = mirror_url
-                    self.hooks_url = hooks_url
-                    self.svn_url = svn_url
-                    self.homepage = homepage
-                    self.language = language
-                    self.forks_count = forks_count
-                    self.stargazers_count = stargazers_count
-                    self.watchers_count = watchers_count
-                    self.size = size
-                    self.default_branch = default_branch
-                    self.open_issues_count = open_issues_count
-                    self.is_template = is_template
-                    self.topics = topics
-                    self.has_issues = has_issues
-                    self.has_projects = has_projects
-                    self.has_wiki = has_wiki
-                    self.has_pages = has_pages
-                    self.has_downloads = has_downloads
-                    self.archived = archived
-                    self.disabled = disabled
-                    self.visibility = visibility
-                    self.pushed_at = pushed_at
-                    self.created_at = created_at
-                    self.updated_at = updated_at
-                    self.permissions = permissions
-                    self.allow_rebase_merge = allow_rebase_merge
-                    self.temp_clone_token = temp_clone_token
-                    self.allow_squash_merge = allow_squash_merge
-                    self.allow_auto_merge = allow_auto_merge
-                    self.delete_branch_on_merge = delete_branch_on_merge
-                    self.allow_update_branch = allow_update_branch
-                    self.use_squash_pr_title_as_default = use_squash_pr_title_as_default
-                    self.squash_merge_commit_title = squash_merge_commit_title
-                    self.squash_merge_commit_message = squash_merge_commit_message
-                    self.merge_commit_title = merge_commit_title
-                    self.merge_commit_message = merge_commit_message
-                    self.allow_merge_commit = allow_merge_commit
-                    self.subscribers_count = subscribers_count
-                    self.network_count = network_count
-                }
-                public enum CodingKeys: String, CodingKey {
-                    case id
-                    case node_id
-                    case name
-                    case full_name
-                    case owner
-                    case _private = "private"
-                    case html_url
-                    case description
-                    case fork
-                    case url
-                    case archive_url
-                    case assignees_url
-                    case blobs_url
-                    case branches_url
-                    case collaborators_url
-                    case comments_url
-                    case commits_url
-                    case compare_url
-                    case contents_url
-                    case contributors_url
-                    case deployments_url
-                    case downloads_url
-                    case events_url
-                    case forks_url
-                    case git_commits_url
-                    case git_refs_url
-                    case git_tags_url
-                    case git_url
-                    case issue_comment_url
-                    case issue_events_url
-                    case issues_url
-                    case keys_url
-                    case labels_url
-                    case languages_url
-                    case merges_url
-                    case milestones_url
-                    case notifications_url
-                    case pulls_url
-                    case releases_url
-                    case ssh_url
-                    case stargazers_url
-                    case statuses_url
-                    case subscribers_url
-                    case subscription_url
-                    case tags_url
-                    case teams_url
-                    case trees_url
-                    case clone_url
-                    case mirror_url
-                    case hooks_url
-                    case svn_url
-                    case homepage
-                    case language
-                    case forks_count
-                    case stargazers_count
-                    case watchers_count
-                    case size
-                    case default_branch
-                    case open_issues_count
-                    case is_template
-                    case topics
-                    case has_issues
-                    case has_projects
-                    case has_wiki
-                    case has_pages
-                    case has_downloads
-                    case archived
-                    case disabled
-                    case visibility
-                    case pushed_at
-                    case created_at
-                    case updated_at
-                    case permissions
-                    case allow_rebase_merge
-                    case temp_clone_token
-                    case allow_squash_merge
-                    case allow_auto_merge
-                    case delete_branch_on_merge
-                    case allow_update_branch
-                    case use_squash_pr_title_as_default
-                    case squash_merge_commit_title
-                    case squash_merge_commit_message
-                    case merge_commit_title
-                    case merge_commit_message
-                    case allow_merge_commit
-                    case subscribers_count
-                    case network_count
-                }
-            }
-            /// - Remark: Generated from `#/components/schemas/repository/template_repository`.
-            public var template_repository: Components.Schemas.repository.template_repositoryPayload?
             /// - Remark: Generated from `#/components/schemas/repository/temp_clone_token`.
             public var temp_clone_token: Swift.String?
             /// Whether to allow squash merges for pull requests.
@@ -7957,10 +7184,6 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/repository/web_commit_signoff_required`.
             public var web_commit_signoff_required: Swift.Bool?
-            /// - Remark: Generated from `#/components/schemas/repository/subscribers_count`.
-            public var subscribers_count: Swift.Int?
-            /// - Remark: Generated from `#/components/schemas/repository/network_count`.
-            public var network_count: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/repository/open_issues`.
             public var open_issues: Swift.Int
             /// - Remark: Generated from `#/components/schemas/repository/watchers`.
@@ -7981,7 +7204,6 @@ public enum Components {
             ///   - name: The name of the repository.
             ///   - full_name:
             ///   - license:
-            ///   - organization:
             ///   - forks:
             ///   - permissions:
             ///   - owner:
@@ -8054,7 +7276,6 @@ public enum Components {
             ///   - created_at:
             ///   - updated_at:
             ///   - allow_rebase_merge: Whether to allow rebase merges for pull requests.
-            ///   - template_repository:
             ///   - temp_clone_token:
             ///   - allow_squash_merge: Whether to allow squash merges for pull requests.
             ///   - allow_auto_merge: Whether to allow Auto-merge to be used on pull requests.
@@ -8068,8 +7289,6 @@ public enum Components {
             ///   - allow_merge_commit: Whether to allow merge commits for pull requests.
             ///   - allow_forking: Whether to allow forking this repo
             ///   - web_commit_signoff_required: Whether to require contributors to sign off on web-based commits
-            ///   - subscribers_count:
-            ///   - network_count:
             ///   - open_issues:
             ///   - watchers:
             ///   - master_branch:
@@ -8081,7 +7300,6 @@ public enum Components {
                 name: Swift.String,
                 full_name: Swift.String,
                 license: Components.Schemas.nullable_hyphen_license_hyphen_simple? = nil,
-                organization: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
                 forks: Swift.Int,
                 permissions: Components.Schemas.repository.permissionsPayload? = nil,
                 owner: Components.Schemas.simple_hyphen_user,
@@ -8154,7 +7372,6 @@ public enum Components {
                 created_at: Foundation.Date? = nil,
                 updated_at: Foundation.Date? = nil,
                 allow_rebase_merge: Swift.Bool? = nil,
-                template_repository: Components.Schemas.repository.template_repositoryPayload? = nil,
                 temp_clone_token: Swift.String? = nil,
                 allow_squash_merge: Swift.Bool? = nil,
                 allow_auto_merge: Swift.Bool? = nil,
@@ -8168,8 +7385,6 @@ public enum Components {
                 allow_merge_commit: Swift.Bool? = nil,
                 allow_forking: Swift.Bool? = nil,
                 web_commit_signoff_required: Swift.Bool? = nil,
-                subscribers_count: Swift.Int? = nil,
-                network_count: Swift.Int? = nil,
                 open_issues: Swift.Int,
                 watchers: Swift.Int,
                 master_branch: Swift.String? = nil,
@@ -8181,7 +7396,6 @@ public enum Components {
                 self.name = name
                 self.full_name = full_name
                 self.license = license
-                self.organization = organization
                 self.forks = forks
                 self.permissions = permissions
                 self.owner = owner
@@ -8254,7 +7468,6 @@ public enum Components {
                 self.created_at = created_at
                 self.updated_at = updated_at
                 self.allow_rebase_merge = allow_rebase_merge
-                self.template_repository = template_repository
                 self.temp_clone_token = temp_clone_token
                 self.allow_squash_merge = allow_squash_merge
                 self.allow_auto_merge = allow_auto_merge
@@ -8268,8 +7481,6 @@ public enum Components {
                 self.allow_merge_commit = allow_merge_commit
                 self.allow_forking = allow_forking
                 self.web_commit_signoff_required = web_commit_signoff_required
-                self.subscribers_count = subscribers_count
-                self.network_count = network_count
                 self.open_issues = open_issues
                 self.watchers = watchers
                 self.master_branch = master_branch
@@ -8282,7 +7493,6 @@ public enum Components {
                 case name
                 case full_name
                 case license
-                case organization
                 case forks
                 case permissions
                 case owner
@@ -8355,7 +7565,6 @@ public enum Components {
                 case created_at
                 case updated_at
                 case allow_rebase_merge
-                case template_repository
                 case temp_clone_token
                 case allow_squash_merge
                 case allow_auto_merge
@@ -8369,8 +7578,6 @@ public enum Components {
                 case allow_merge_commit
                 case allow_forking
                 case web_commit_signoff_required
-                case subscribers_count
-                case network_count
                 case open_issues
                 case watchers
                 case master_branch
@@ -9937,8 +9144,6 @@ public enum Components {
             public var full_name: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-repository/license`.
             public var license: Components.Schemas.nullable_hyphen_license_hyphen_simple?
-            /// - Remark: Generated from `#/components/schemas/nullable-repository/organization`.
-            public var organization: Components.Schemas.nullable_hyphen_simple_hyphen_user?
             /// - Remark: Generated from `#/components/schemas/nullable-repository/forks`.
             public var forks: Swift.Int
             /// - Remark: Generated from `#/components/schemas/nullable-repository/permissions`.
@@ -10151,767 +9356,6 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-repository/allow_rebase_merge`.
             public var allow_rebase_merge: Swift.Bool?
-            /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository`.
-            public struct template_repositoryPayload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/id`.
-                public var id: Swift.Int?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/node_id`.
-                public var node_id: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/name`.
-                public var name: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/full_name`.
-                public var full_name: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/owner`.
-                public struct ownerPayload: Codable, Hashable, Sendable {
-                    /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/owner/login`.
-                    public var login: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/owner/id`.
-                    public var id: Swift.Int?
-                    /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/owner/node_id`.
-                    public var node_id: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/owner/avatar_url`.
-                    public var avatar_url: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/owner/gravatar_id`.
-                    public var gravatar_id: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/owner/url`.
-                    public var url: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/owner/html_url`.
-                    public var html_url: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/owner/followers_url`.
-                    public var followers_url: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/owner/following_url`.
-                    public var following_url: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/owner/gists_url`.
-                    public var gists_url: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/owner/starred_url`.
-                    public var starred_url: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/owner/subscriptions_url`.
-                    public var subscriptions_url: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/owner/organizations_url`.
-                    public var organizations_url: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/owner/repos_url`.
-                    public var repos_url: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/owner/events_url`.
-                    public var events_url: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/owner/received_events_url`.
-                    public var received_events_url: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/owner/type`.
-                    public var _type: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/owner/site_admin`.
-                    public var site_admin: Swift.Bool?
-                    /// Creates a new `ownerPayload`.
-                    ///
-                    /// - Parameters:
-                    ///   - login:
-                    ///   - id:
-                    ///   - node_id:
-                    ///   - avatar_url:
-                    ///   - gravatar_id:
-                    ///   - url:
-                    ///   - html_url:
-                    ///   - followers_url:
-                    ///   - following_url:
-                    ///   - gists_url:
-                    ///   - starred_url:
-                    ///   - subscriptions_url:
-                    ///   - organizations_url:
-                    ///   - repos_url:
-                    ///   - events_url:
-                    ///   - received_events_url:
-                    ///   - _type:
-                    ///   - site_admin:
-                    public init(
-                        login: Swift.String? = nil,
-                        id: Swift.Int? = nil,
-                        node_id: Swift.String? = nil,
-                        avatar_url: Swift.String? = nil,
-                        gravatar_id: Swift.String? = nil,
-                        url: Swift.String? = nil,
-                        html_url: Swift.String? = nil,
-                        followers_url: Swift.String? = nil,
-                        following_url: Swift.String? = nil,
-                        gists_url: Swift.String? = nil,
-                        starred_url: Swift.String? = nil,
-                        subscriptions_url: Swift.String? = nil,
-                        organizations_url: Swift.String? = nil,
-                        repos_url: Swift.String? = nil,
-                        events_url: Swift.String? = nil,
-                        received_events_url: Swift.String? = nil,
-                        _type: Swift.String? = nil,
-                        site_admin: Swift.Bool? = nil
-                    ) {
-                        self.login = login
-                        self.id = id
-                        self.node_id = node_id
-                        self.avatar_url = avatar_url
-                        self.gravatar_id = gravatar_id
-                        self.url = url
-                        self.html_url = html_url
-                        self.followers_url = followers_url
-                        self.following_url = following_url
-                        self.gists_url = gists_url
-                        self.starred_url = starred_url
-                        self.subscriptions_url = subscriptions_url
-                        self.organizations_url = organizations_url
-                        self.repos_url = repos_url
-                        self.events_url = events_url
-                        self.received_events_url = received_events_url
-                        self._type = _type
-                        self.site_admin = site_admin
-                    }
-                    public enum CodingKeys: String, CodingKey {
-                        case login
-                        case id
-                        case node_id
-                        case avatar_url
-                        case gravatar_id
-                        case url
-                        case html_url
-                        case followers_url
-                        case following_url
-                        case gists_url
-                        case starred_url
-                        case subscriptions_url
-                        case organizations_url
-                        case repos_url
-                        case events_url
-                        case received_events_url
-                        case _type = "type"
-                        case site_admin
-                    }
-                }
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/owner`.
-                public var owner: Components.Schemas.nullable_hyphen_repository.template_repositoryPayload.ownerPayload?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/private`.
-                public var _private: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/html_url`.
-                public var html_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/description`.
-                public var description: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/fork`.
-                public var fork: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/url`.
-                public var url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/archive_url`.
-                public var archive_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/assignees_url`.
-                public var assignees_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/blobs_url`.
-                public var blobs_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/branches_url`.
-                public var branches_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/collaborators_url`.
-                public var collaborators_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/comments_url`.
-                public var comments_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/commits_url`.
-                public var commits_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/compare_url`.
-                public var compare_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/contents_url`.
-                public var contents_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/contributors_url`.
-                public var contributors_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/deployments_url`.
-                public var deployments_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/downloads_url`.
-                public var downloads_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/events_url`.
-                public var events_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/forks_url`.
-                public var forks_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/git_commits_url`.
-                public var git_commits_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/git_refs_url`.
-                public var git_refs_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/git_tags_url`.
-                public var git_tags_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/git_url`.
-                public var git_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/issue_comment_url`.
-                public var issue_comment_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/issue_events_url`.
-                public var issue_events_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/issues_url`.
-                public var issues_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/keys_url`.
-                public var keys_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/labels_url`.
-                public var labels_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/languages_url`.
-                public var languages_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/merges_url`.
-                public var merges_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/milestones_url`.
-                public var milestones_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/notifications_url`.
-                public var notifications_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/pulls_url`.
-                public var pulls_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/releases_url`.
-                public var releases_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/ssh_url`.
-                public var ssh_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/stargazers_url`.
-                public var stargazers_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/statuses_url`.
-                public var statuses_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/subscribers_url`.
-                public var subscribers_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/subscription_url`.
-                public var subscription_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/tags_url`.
-                public var tags_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/teams_url`.
-                public var teams_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/trees_url`.
-                public var trees_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/clone_url`.
-                public var clone_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/mirror_url`.
-                public var mirror_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/hooks_url`.
-                public var hooks_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/svn_url`.
-                public var svn_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/homepage`.
-                public var homepage: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/language`.
-                public var language: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/forks_count`.
-                public var forks_count: Swift.Int?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/stargazers_count`.
-                public var stargazers_count: Swift.Int?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/watchers_count`.
-                public var watchers_count: Swift.Int?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/size`.
-                public var size: Swift.Int?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/default_branch`.
-                public var default_branch: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/open_issues_count`.
-                public var open_issues_count: Swift.Int?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/is_template`.
-                public var is_template: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/topics`.
-                public var topics: [Swift.String]?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/has_issues`.
-                public var has_issues: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/has_projects`.
-                public var has_projects: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/has_wiki`.
-                public var has_wiki: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/has_pages`.
-                public var has_pages: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/has_downloads`.
-                public var has_downloads: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/archived`.
-                public var archived: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/disabled`.
-                public var disabled: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/visibility`.
-                public var visibility: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/pushed_at`.
-                public var pushed_at: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/created_at`.
-                public var created_at: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/updated_at`.
-                public var updated_at: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/permissions`.
-                public struct permissionsPayload: Codable, Hashable, Sendable {
-                    /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/permissions/admin`.
-                    public var admin: Swift.Bool?
-                    /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/permissions/maintain`.
-                    public var maintain: Swift.Bool?
-                    /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/permissions/push`.
-                    public var push: Swift.Bool?
-                    /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/permissions/triage`.
-                    public var triage: Swift.Bool?
-                    /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/permissions/pull`.
-                    public var pull: Swift.Bool?
-                    /// Creates a new `permissionsPayload`.
-                    ///
-                    /// - Parameters:
-                    ///   - admin:
-                    ///   - maintain:
-                    ///   - push:
-                    ///   - triage:
-                    ///   - pull:
-                    public init(
-                        admin: Swift.Bool? = nil,
-                        maintain: Swift.Bool? = nil,
-                        push: Swift.Bool? = nil,
-                        triage: Swift.Bool? = nil,
-                        pull: Swift.Bool? = nil
-                    ) {
-                        self.admin = admin
-                        self.maintain = maintain
-                        self.push = push
-                        self.triage = triage
-                        self.pull = pull
-                    }
-                    public enum CodingKeys: String, CodingKey {
-                        case admin
-                        case maintain
-                        case push
-                        case triage
-                        case pull
-                    }
-                }
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/permissions`.
-                public var permissions: Components.Schemas.nullable_hyphen_repository.template_repositoryPayload.permissionsPayload?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/allow_rebase_merge`.
-                public var allow_rebase_merge: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/temp_clone_token`.
-                public var temp_clone_token: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/allow_squash_merge`.
-                public var allow_squash_merge: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/allow_auto_merge`.
-                public var allow_auto_merge: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/delete_branch_on_merge`.
-                public var delete_branch_on_merge: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/allow_update_branch`.
-                public var allow_update_branch: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/use_squash_pr_title_as_default`.
-                public var use_squash_pr_title_as_default: Swift.Bool?
-                /// The default value for a squash merge commit title:
-                ///
-                /// - `PR_TITLE` - default to the pull request's title.
-                /// - `COMMIT_OR_PR_TITLE` - default to the commit's title (if only one commit) or the pull request's title (when more than one commit).
-                ///
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/squash_merge_commit_title`.
-                @frozen public enum squash_merge_commit_titlePayload: String, Codable, Hashable, Sendable {
-                    case PR_TITLE = "PR_TITLE"
-                    case COMMIT_OR_PR_TITLE = "COMMIT_OR_PR_TITLE"
-                }
-                /// The default value for a squash merge commit title:
-                ///
-                /// - `PR_TITLE` - default to the pull request's title.
-                /// - `COMMIT_OR_PR_TITLE` - default to the commit's title (if only one commit) or the pull request's title (when more than one commit).
-                ///
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/squash_merge_commit_title`.
-                public var squash_merge_commit_title: Components.Schemas.nullable_hyphen_repository.template_repositoryPayload.squash_merge_commit_titlePayload?
-                /// The default value for a squash merge commit message:
-                ///
-                /// - `PR_BODY` - default to the pull request's body.
-                /// - `COMMIT_MESSAGES` - default to the branch's commit messages.
-                /// - `BLANK` - default to a blank commit message.
-                ///
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/squash_merge_commit_message`.
-                @frozen public enum squash_merge_commit_messagePayload: String, Codable, Hashable, Sendable {
-                    case PR_BODY = "PR_BODY"
-                    case COMMIT_MESSAGES = "COMMIT_MESSAGES"
-                    case BLANK = "BLANK"
-                }
-                /// The default value for a squash merge commit message:
-                ///
-                /// - `PR_BODY` - default to the pull request's body.
-                /// - `COMMIT_MESSAGES` - default to the branch's commit messages.
-                /// - `BLANK` - default to a blank commit message.
-                ///
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/squash_merge_commit_message`.
-                public var squash_merge_commit_message: Components.Schemas.nullable_hyphen_repository.template_repositoryPayload.squash_merge_commit_messagePayload?
-                /// The default value for a merge commit title.
-                ///
-                /// - `PR_TITLE` - default to the pull request's title.
-                /// - `MERGE_MESSAGE` - default to the classic title for a merge message (e.g., Merge pull request #123 from branch-name).
-                ///
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/merge_commit_title`.
-                @frozen public enum merge_commit_titlePayload: String, Codable, Hashable, Sendable {
-                    case PR_TITLE = "PR_TITLE"
-                    case MERGE_MESSAGE = "MERGE_MESSAGE"
-                }
-                /// The default value for a merge commit title.
-                ///
-                /// - `PR_TITLE` - default to the pull request's title.
-                /// - `MERGE_MESSAGE` - default to the classic title for a merge message (e.g., Merge pull request #123 from branch-name).
-                ///
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/merge_commit_title`.
-                public var merge_commit_title: Components.Schemas.nullable_hyphen_repository.template_repositoryPayload.merge_commit_titlePayload?
-                /// The default value for a merge commit message.
-                ///
-                /// - `PR_TITLE` - default to the pull request's title.
-                /// - `PR_BODY` - default to the pull request's body.
-                /// - `BLANK` - default to a blank commit message.
-                ///
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/merge_commit_message`.
-                @frozen public enum merge_commit_messagePayload: String, Codable, Hashable, Sendable {
-                    case PR_BODY = "PR_BODY"
-                    case PR_TITLE = "PR_TITLE"
-                    case BLANK = "BLANK"
-                }
-                /// The default value for a merge commit message.
-                ///
-                /// - `PR_TITLE` - default to the pull request's title.
-                /// - `PR_BODY` - default to the pull request's body.
-                /// - `BLANK` - default to a blank commit message.
-                ///
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/merge_commit_message`.
-                public var merge_commit_message: Components.Schemas.nullable_hyphen_repository.template_repositoryPayload.merge_commit_messagePayload?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/allow_merge_commit`.
-                public var allow_merge_commit: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/subscribers_count`.
-                public var subscribers_count: Swift.Int?
-                /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository/network_count`.
-                public var network_count: Swift.Int?
-                /// Creates a new `template_repositoryPayload`.
-                ///
-                /// - Parameters:
-                ///   - id:
-                ///   - node_id:
-                ///   - name:
-                ///   - full_name:
-                ///   - owner:
-                ///   - _private:
-                ///   - html_url:
-                ///   - description:
-                ///   - fork:
-                ///   - url:
-                ///   - archive_url:
-                ///   - assignees_url:
-                ///   - blobs_url:
-                ///   - branches_url:
-                ///   - collaborators_url:
-                ///   - comments_url:
-                ///   - commits_url:
-                ///   - compare_url:
-                ///   - contents_url:
-                ///   - contributors_url:
-                ///   - deployments_url:
-                ///   - downloads_url:
-                ///   - events_url:
-                ///   - forks_url:
-                ///   - git_commits_url:
-                ///   - git_refs_url:
-                ///   - git_tags_url:
-                ///   - git_url:
-                ///   - issue_comment_url:
-                ///   - issue_events_url:
-                ///   - issues_url:
-                ///   - keys_url:
-                ///   - labels_url:
-                ///   - languages_url:
-                ///   - merges_url:
-                ///   - milestones_url:
-                ///   - notifications_url:
-                ///   - pulls_url:
-                ///   - releases_url:
-                ///   - ssh_url:
-                ///   - stargazers_url:
-                ///   - statuses_url:
-                ///   - subscribers_url:
-                ///   - subscription_url:
-                ///   - tags_url:
-                ///   - teams_url:
-                ///   - trees_url:
-                ///   - clone_url:
-                ///   - mirror_url:
-                ///   - hooks_url:
-                ///   - svn_url:
-                ///   - homepage:
-                ///   - language:
-                ///   - forks_count:
-                ///   - stargazers_count:
-                ///   - watchers_count:
-                ///   - size:
-                ///   - default_branch:
-                ///   - open_issues_count:
-                ///   - is_template:
-                ///   - topics:
-                ///   - has_issues:
-                ///   - has_projects:
-                ///   - has_wiki:
-                ///   - has_pages:
-                ///   - has_downloads:
-                ///   - archived:
-                ///   - disabled:
-                ///   - visibility:
-                ///   - pushed_at:
-                ///   - created_at:
-                ///   - updated_at:
-                ///   - permissions:
-                ///   - allow_rebase_merge:
-                ///   - temp_clone_token:
-                ///   - allow_squash_merge:
-                ///   - allow_auto_merge:
-                ///   - delete_branch_on_merge:
-                ///   - allow_update_branch:
-                ///   - use_squash_pr_title_as_default:
-                ///   - squash_merge_commit_title: The default value for a squash merge commit title:
-                ///   - squash_merge_commit_message: The default value for a squash merge commit message:
-                ///   - merge_commit_title: The default value for a merge commit title.
-                ///   - merge_commit_message: The default value for a merge commit message.
-                ///   - allow_merge_commit:
-                ///   - subscribers_count:
-                ///   - network_count:
-                public init(
-                    id: Swift.Int? = nil,
-                    node_id: Swift.String? = nil,
-                    name: Swift.String? = nil,
-                    full_name: Swift.String? = nil,
-                    owner: Components.Schemas.nullable_hyphen_repository.template_repositoryPayload.ownerPayload? = nil,
-                    _private: Swift.Bool? = nil,
-                    html_url: Swift.String? = nil,
-                    description: Swift.String? = nil,
-                    fork: Swift.Bool? = nil,
-                    url: Swift.String? = nil,
-                    archive_url: Swift.String? = nil,
-                    assignees_url: Swift.String? = nil,
-                    blobs_url: Swift.String? = nil,
-                    branches_url: Swift.String? = nil,
-                    collaborators_url: Swift.String? = nil,
-                    comments_url: Swift.String? = nil,
-                    commits_url: Swift.String? = nil,
-                    compare_url: Swift.String? = nil,
-                    contents_url: Swift.String? = nil,
-                    contributors_url: Swift.String? = nil,
-                    deployments_url: Swift.String? = nil,
-                    downloads_url: Swift.String? = nil,
-                    events_url: Swift.String? = nil,
-                    forks_url: Swift.String? = nil,
-                    git_commits_url: Swift.String? = nil,
-                    git_refs_url: Swift.String? = nil,
-                    git_tags_url: Swift.String? = nil,
-                    git_url: Swift.String? = nil,
-                    issue_comment_url: Swift.String? = nil,
-                    issue_events_url: Swift.String? = nil,
-                    issues_url: Swift.String? = nil,
-                    keys_url: Swift.String? = nil,
-                    labels_url: Swift.String? = nil,
-                    languages_url: Swift.String? = nil,
-                    merges_url: Swift.String? = nil,
-                    milestones_url: Swift.String? = nil,
-                    notifications_url: Swift.String? = nil,
-                    pulls_url: Swift.String? = nil,
-                    releases_url: Swift.String? = nil,
-                    ssh_url: Swift.String? = nil,
-                    stargazers_url: Swift.String? = nil,
-                    statuses_url: Swift.String? = nil,
-                    subscribers_url: Swift.String? = nil,
-                    subscription_url: Swift.String? = nil,
-                    tags_url: Swift.String? = nil,
-                    teams_url: Swift.String? = nil,
-                    trees_url: Swift.String? = nil,
-                    clone_url: Swift.String? = nil,
-                    mirror_url: Swift.String? = nil,
-                    hooks_url: Swift.String? = nil,
-                    svn_url: Swift.String? = nil,
-                    homepage: Swift.String? = nil,
-                    language: Swift.String? = nil,
-                    forks_count: Swift.Int? = nil,
-                    stargazers_count: Swift.Int? = nil,
-                    watchers_count: Swift.Int? = nil,
-                    size: Swift.Int? = nil,
-                    default_branch: Swift.String? = nil,
-                    open_issues_count: Swift.Int? = nil,
-                    is_template: Swift.Bool? = nil,
-                    topics: [Swift.String]? = nil,
-                    has_issues: Swift.Bool? = nil,
-                    has_projects: Swift.Bool? = nil,
-                    has_wiki: Swift.Bool? = nil,
-                    has_pages: Swift.Bool? = nil,
-                    has_downloads: Swift.Bool? = nil,
-                    archived: Swift.Bool? = nil,
-                    disabled: Swift.Bool? = nil,
-                    visibility: Swift.String? = nil,
-                    pushed_at: Swift.String? = nil,
-                    created_at: Swift.String? = nil,
-                    updated_at: Swift.String? = nil,
-                    permissions: Components.Schemas.nullable_hyphen_repository.template_repositoryPayload.permissionsPayload? = nil,
-                    allow_rebase_merge: Swift.Bool? = nil,
-                    temp_clone_token: Swift.String? = nil,
-                    allow_squash_merge: Swift.Bool? = nil,
-                    allow_auto_merge: Swift.Bool? = nil,
-                    delete_branch_on_merge: Swift.Bool? = nil,
-                    allow_update_branch: Swift.Bool? = nil,
-                    use_squash_pr_title_as_default: Swift.Bool? = nil,
-                    squash_merge_commit_title: Components.Schemas.nullable_hyphen_repository.template_repositoryPayload.squash_merge_commit_titlePayload? = nil,
-                    squash_merge_commit_message: Components.Schemas.nullable_hyphen_repository.template_repositoryPayload.squash_merge_commit_messagePayload? = nil,
-                    merge_commit_title: Components.Schemas.nullable_hyphen_repository.template_repositoryPayload.merge_commit_titlePayload? = nil,
-                    merge_commit_message: Components.Schemas.nullable_hyphen_repository.template_repositoryPayload.merge_commit_messagePayload? = nil,
-                    allow_merge_commit: Swift.Bool? = nil,
-                    subscribers_count: Swift.Int? = nil,
-                    network_count: Swift.Int? = nil
-                ) {
-                    self.id = id
-                    self.node_id = node_id
-                    self.name = name
-                    self.full_name = full_name
-                    self.owner = owner
-                    self._private = _private
-                    self.html_url = html_url
-                    self.description = description
-                    self.fork = fork
-                    self.url = url
-                    self.archive_url = archive_url
-                    self.assignees_url = assignees_url
-                    self.blobs_url = blobs_url
-                    self.branches_url = branches_url
-                    self.collaborators_url = collaborators_url
-                    self.comments_url = comments_url
-                    self.commits_url = commits_url
-                    self.compare_url = compare_url
-                    self.contents_url = contents_url
-                    self.contributors_url = contributors_url
-                    self.deployments_url = deployments_url
-                    self.downloads_url = downloads_url
-                    self.events_url = events_url
-                    self.forks_url = forks_url
-                    self.git_commits_url = git_commits_url
-                    self.git_refs_url = git_refs_url
-                    self.git_tags_url = git_tags_url
-                    self.git_url = git_url
-                    self.issue_comment_url = issue_comment_url
-                    self.issue_events_url = issue_events_url
-                    self.issues_url = issues_url
-                    self.keys_url = keys_url
-                    self.labels_url = labels_url
-                    self.languages_url = languages_url
-                    self.merges_url = merges_url
-                    self.milestones_url = milestones_url
-                    self.notifications_url = notifications_url
-                    self.pulls_url = pulls_url
-                    self.releases_url = releases_url
-                    self.ssh_url = ssh_url
-                    self.stargazers_url = stargazers_url
-                    self.statuses_url = statuses_url
-                    self.subscribers_url = subscribers_url
-                    self.subscription_url = subscription_url
-                    self.tags_url = tags_url
-                    self.teams_url = teams_url
-                    self.trees_url = trees_url
-                    self.clone_url = clone_url
-                    self.mirror_url = mirror_url
-                    self.hooks_url = hooks_url
-                    self.svn_url = svn_url
-                    self.homepage = homepage
-                    self.language = language
-                    self.forks_count = forks_count
-                    self.stargazers_count = stargazers_count
-                    self.watchers_count = watchers_count
-                    self.size = size
-                    self.default_branch = default_branch
-                    self.open_issues_count = open_issues_count
-                    self.is_template = is_template
-                    self.topics = topics
-                    self.has_issues = has_issues
-                    self.has_projects = has_projects
-                    self.has_wiki = has_wiki
-                    self.has_pages = has_pages
-                    self.has_downloads = has_downloads
-                    self.archived = archived
-                    self.disabled = disabled
-                    self.visibility = visibility
-                    self.pushed_at = pushed_at
-                    self.created_at = created_at
-                    self.updated_at = updated_at
-                    self.permissions = permissions
-                    self.allow_rebase_merge = allow_rebase_merge
-                    self.temp_clone_token = temp_clone_token
-                    self.allow_squash_merge = allow_squash_merge
-                    self.allow_auto_merge = allow_auto_merge
-                    self.delete_branch_on_merge = delete_branch_on_merge
-                    self.allow_update_branch = allow_update_branch
-                    self.use_squash_pr_title_as_default = use_squash_pr_title_as_default
-                    self.squash_merge_commit_title = squash_merge_commit_title
-                    self.squash_merge_commit_message = squash_merge_commit_message
-                    self.merge_commit_title = merge_commit_title
-                    self.merge_commit_message = merge_commit_message
-                    self.allow_merge_commit = allow_merge_commit
-                    self.subscribers_count = subscribers_count
-                    self.network_count = network_count
-                }
-                public enum CodingKeys: String, CodingKey {
-                    case id
-                    case node_id
-                    case name
-                    case full_name
-                    case owner
-                    case _private = "private"
-                    case html_url
-                    case description
-                    case fork
-                    case url
-                    case archive_url
-                    case assignees_url
-                    case blobs_url
-                    case branches_url
-                    case collaborators_url
-                    case comments_url
-                    case commits_url
-                    case compare_url
-                    case contents_url
-                    case contributors_url
-                    case deployments_url
-                    case downloads_url
-                    case events_url
-                    case forks_url
-                    case git_commits_url
-                    case git_refs_url
-                    case git_tags_url
-                    case git_url
-                    case issue_comment_url
-                    case issue_events_url
-                    case issues_url
-                    case keys_url
-                    case labels_url
-                    case languages_url
-                    case merges_url
-                    case milestones_url
-                    case notifications_url
-                    case pulls_url
-                    case releases_url
-                    case ssh_url
-                    case stargazers_url
-                    case statuses_url
-                    case subscribers_url
-                    case subscription_url
-                    case tags_url
-                    case teams_url
-                    case trees_url
-                    case clone_url
-                    case mirror_url
-                    case hooks_url
-                    case svn_url
-                    case homepage
-                    case language
-                    case forks_count
-                    case stargazers_count
-                    case watchers_count
-                    case size
-                    case default_branch
-                    case open_issues_count
-                    case is_template
-                    case topics
-                    case has_issues
-                    case has_projects
-                    case has_wiki
-                    case has_pages
-                    case has_downloads
-                    case archived
-                    case disabled
-                    case visibility
-                    case pushed_at
-                    case created_at
-                    case updated_at
-                    case permissions
-                    case allow_rebase_merge
-                    case temp_clone_token
-                    case allow_squash_merge
-                    case allow_auto_merge
-                    case delete_branch_on_merge
-                    case allow_update_branch
-                    case use_squash_pr_title_as_default
-                    case squash_merge_commit_title
-                    case squash_merge_commit_message
-                    case merge_commit_title
-                    case merge_commit_message
-                    case allow_merge_commit
-                    case subscribers_count
-                    case network_count
-                }
-            }
-            /// - Remark: Generated from `#/components/schemas/nullable-repository/template_repository`.
-            public var template_repository: Components.Schemas.nullable_hyphen_repository.template_repositoryPayload?
             /// - Remark: Generated from `#/components/schemas/nullable-repository/temp_clone_token`.
             public var temp_clone_token: Swift.String?
             /// Whether to allow squash merges for pull requests.
@@ -11021,10 +9465,6 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-repository/web_commit_signoff_required`.
             public var web_commit_signoff_required: Swift.Bool?
-            /// - Remark: Generated from `#/components/schemas/nullable-repository/subscribers_count`.
-            public var subscribers_count: Swift.Int?
-            /// - Remark: Generated from `#/components/schemas/nullable-repository/network_count`.
-            public var network_count: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/nullable-repository/open_issues`.
             public var open_issues: Swift.Int
             /// - Remark: Generated from `#/components/schemas/nullable-repository/watchers`.
@@ -11045,7 +9485,6 @@ public enum Components {
             ///   - name: The name of the repository.
             ///   - full_name:
             ///   - license:
-            ///   - organization:
             ///   - forks:
             ///   - permissions:
             ///   - owner:
@@ -11118,7 +9557,6 @@ public enum Components {
             ///   - created_at:
             ///   - updated_at:
             ///   - allow_rebase_merge: Whether to allow rebase merges for pull requests.
-            ///   - template_repository:
             ///   - temp_clone_token:
             ///   - allow_squash_merge: Whether to allow squash merges for pull requests.
             ///   - allow_auto_merge: Whether to allow Auto-merge to be used on pull requests.
@@ -11132,8 +9570,6 @@ public enum Components {
             ///   - allow_merge_commit: Whether to allow merge commits for pull requests.
             ///   - allow_forking: Whether to allow forking this repo
             ///   - web_commit_signoff_required: Whether to require contributors to sign off on web-based commits
-            ///   - subscribers_count:
-            ///   - network_count:
             ///   - open_issues:
             ///   - watchers:
             ///   - master_branch:
@@ -11145,7 +9581,6 @@ public enum Components {
                 name: Swift.String,
                 full_name: Swift.String,
                 license: Components.Schemas.nullable_hyphen_license_hyphen_simple? = nil,
-                organization: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
                 forks: Swift.Int,
                 permissions: Components.Schemas.nullable_hyphen_repository.permissionsPayload? = nil,
                 owner: Components.Schemas.simple_hyphen_user,
@@ -11218,7 +9653,6 @@ public enum Components {
                 created_at: Foundation.Date? = nil,
                 updated_at: Foundation.Date? = nil,
                 allow_rebase_merge: Swift.Bool? = nil,
-                template_repository: Components.Schemas.nullable_hyphen_repository.template_repositoryPayload? = nil,
                 temp_clone_token: Swift.String? = nil,
                 allow_squash_merge: Swift.Bool? = nil,
                 allow_auto_merge: Swift.Bool? = nil,
@@ -11232,8 +9666,6 @@ public enum Components {
                 allow_merge_commit: Swift.Bool? = nil,
                 allow_forking: Swift.Bool? = nil,
                 web_commit_signoff_required: Swift.Bool? = nil,
-                subscribers_count: Swift.Int? = nil,
-                network_count: Swift.Int? = nil,
                 open_issues: Swift.Int,
                 watchers: Swift.Int,
                 master_branch: Swift.String? = nil,
@@ -11245,7 +9677,6 @@ public enum Components {
                 self.name = name
                 self.full_name = full_name
                 self.license = license
-                self.organization = organization
                 self.forks = forks
                 self.permissions = permissions
                 self.owner = owner
@@ -11318,7 +9749,6 @@ public enum Components {
                 self.created_at = created_at
                 self.updated_at = updated_at
                 self.allow_rebase_merge = allow_rebase_merge
-                self.template_repository = template_repository
                 self.temp_clone_token = temp_clone_token
                 self.allow_squash_merge = allow_squash_merge
                 self.allow_auto_merge = allow_auto_merge
@@ -11332,8 +9762,6 @@ public enum Components {
                 self.allow_merge_commit = allow_merge_commit
                 self.allow_forking = allow_forking
                 self.web_commit_signoff_required = web_commit_signoff_required
-                self.subscribers_count = subscribers_count
-                self.network_count = network_count
                 self.open_issues = open_issues
                 self.watchers = watchers
                 self.master_branch = master_branch
@@ -11346,7 +9774,6 @@ public enum Components {
                 case name
                 case full_name
                 case license
-                case organization
                 case forks
                 case permissions
                 case owner
@@ -11419,7 +9846,6 @@ public enum Components {
                 case created_at
                 case updated_at
                 case allow_rebase_merge
-                case template_repository
                 case temp_clone_token
                 case allow_squash_merge
                 case allow_auto_merge
@@ -11433,8 +9859,6 @@ public enum Components {
                 case allow_merge_commit
                 case allow_forking
                 case web_commit_signoff_required
-                case subscribers_count
-                case network_count
                 case open_issues
                 case watchers
                 case master_branch
@@ -23451,12 +21875,7 @@ public enum Operations {
     ///
     /// Creates a new repository in the specified organization. The authenticated user must be a member of the organization.
     ///
-    /// **OAuth scope requirements**
-    ///
-    /// When using [OAuth](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/), authorizations must include:
-    ///
-    /// *   `public_repo` scope or `repo` scope to create a public repository
-    /// *   `repo` scope to create a private repository
+    /// OAuth app tokens and personal access tokens (classic) need the `public_repo` or `repo` scope to create a public repository, and `repo` scope to create a private repository.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/repos`.
     /// - Remark: Generated from `#/paths//orgs/{org}/repos/post(repos/create-in-org)`.
@@ -26302,10 +24721,12 @@ public enum Operations {
     }
     /// Delete a repository
     ///
-    /// Deleting a repository requires admin access. If OAuth is used, the `delete_repo` scope is required.
+    /// Deleting a repository requires admin access.
     ///
     /// If an organization owner has configured the organization to prevent members from deleting organization-owned
     /// repositories, you will get a `403 Forbidden` response.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `delete_repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/delete(repos/delete)`.
@@ -32441,7 +30862,7 @@ public enum Operations {
     ///
     /// Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
     ///
-    /// Lists the GitHub Apps that have push access to this branch. Only installed GitHub Apps with `write` access to the `contents` permission can be added as authorized actors on a protected branch.
+    /// Lists the GitHub Apps that have push access to this branch. Only GitHub Apps that are installed on the repository and that have been granted write access to the repository contents can be added as authorized actors on a protected branch.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps/get(repos/get-apps-with-access-to-protected-branch)`.
@@ -32614,7 +31035,7 @@ public enum Operations {
     ///
     /// Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
     ///
-    /// Grants the specified apps push access for this branch. Only installed GitHub Apps with `write` access to the `contents` permission can be added as authorized actors on a protected branch.
+    /// Grants the specified apps push access for this branch. Only GitHub Apps that are installed on the repository and that have been granted write access to the repository contents can be added as authorized actors on a protected branch.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps/post(repos/add-app-access-restrictions)`.
@@ -32848,7 +31269,7 @@ public enum Operations {
     ///
     /// Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
     ///
-    /// Replaces the list of apps that have push access to this branch. This removes all apps that previously had push access and grants push access to the new list of apps. Only installed GitHub Apps with `write` access to the `contents` permission can be added as authorized actors on a protected branch.
+    /// Replaces the list of apps that have push access to this branch. This removes all apps that previously had push access and grants push access to the new list of apps. Only GitHub Apps that are installed on the repository and that have been granted write access to the repository contents can be added as authorized actors on a protected branch.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps/put(repos/set-app-access-restrictions)`.
@@ -33082,7 +31503,7 @@ public enum Operations {
     ///
     /// Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
     ///
-    /// Removes the ability of an app to push to this branch. Only installed GitHub Apps with `write` access to the `contents` permission can be added as authorized actors on a protected branch.
+    /// Removes the ability of an app to push to this branch. Only GitHub Apps that are installed on the repository and that have been granted write access to the repository contents can be added as authorized actors on a protected branch.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps/delete(repos/remove-app-access-restrictions)`.
@@ -35086,17 +33507,9 @@ public enum Operations {
     ///
     /// **Note:** Although the API responds immediately, the branch rename process might take some extra time to complete in the background. You won't be able to push to the old branch name while the rename process is in progress. For more information, see "[Renaming a branch](https://docs.github.com/github/administering-a-repository/renaming-a-branch)".
     ///
-    /// The permissions required to use this endpoint depends on whether you are renaming the default branch.
+    /// The authenticated user must have push access to the branch. If the branch is the default branch, the authenticated user must also have admin or owner permissions.
     ///
-    /// To rename a non-default branch:
-    ///
-    /// * Users must have push access.
-    /// * GitHub Apps must have the `contents:write` repository permission.
-    ///
-    /// To rename the default branch:
-    ///
-    /// * Users must have admin or owner permissions.
-    /// * GitHub Apps must have the `contents:write` and `administration:write` repository permissions.
+    /// In order to rename the default branch, fine-grained access tokens also need the `administration:write` repository permission.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/branches/{branch}/rename`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/branches/{branch}/rename/post(repos/rename-branch)`.
@@ -35534,9 +33947,9 @@ public enum Operations {
     ///
     /// Team members will include the members of child teams.
     ///
-    /// You must authenticate using an access token with the `read:org` and `repo` scopes with push access to use this
-    /// endpoint. GitHub Apps must have the `members` organization permission and `metadata` repository permission to use this
-    /// endpoint.
+    /// The authenticated user must have push access to the repository to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `read:org` and `repo` scopes to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/collaborators`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/collaborators/get(repos/list-collaborators)`.
@@ -35778,9 +34191,9 @@ public enum Operations {
     ///
     /// Team members will include the members of child teams.
     ///
-    /// You must authenticate using an access token with the `read:org` and `repo` scopes with push access to use this
-    /// endpoint. GitHub Apps must have the `members` organization permission and `metadata` repository permission to use this
-    /// endpoint.
+    /// The authenticated user must have push access to the repository to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `read:org` and `repo` scopes to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/collaborators/{username}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/collaborators/{username}/get(repos/check-collaborator)`.
@@ -39961,9 +38374,11 @@ public enum Operations {
     }
     /// Create or update file contents
     ///
-    /// Creates a new file or replaces an existing file in a repository. You must authenticate using an access token with the `repo` scope to use this endpoint. If you want to modify files in the `.github/workflows` directory, you must authenticate using an access token with the `workflow` scope.
+    /// Creates a new file or replaces an existing file in a repository.
     ///
     /// **Note:** If you use this endpoint and the "[Delete a file](https://docs.github.com/rest/repos/contents/#delete-a-file)" endpoint in parallel, the concurrent requests will conflict and you will receive errors. You must use these endpoints serially instead.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint. The `workflow` scope is also required in order to modify files in the `.github/workflows` directory.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/contents/{path}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/contents/{path}/put(repos/create-or-update-file-contents)`.
@@ -41245,8 +39660,6 @@ public enum Operations {
     /// be `deploy:migrations` to run schema changes on the system. In the compiled world this could be a flag to compile an
     /// application with debugging enabled.
     ///
-    /// Users with `repo` or `repo_deployment` scopes can create a deployment for a given ref.
-    ///
     /// Merged branch response:
     ///
     /// You will see this response when GitHub automatically merges the base branch into the topic branch instead of creating
@@ -41267,6 +39680,8 @@ public enum Operations {
     ///
     /// This error happens when the `required_contexts` parameter indicates that one or more contexts need to have a `success`
     /// status for the commit to be deployed, but one or more of the required contexts do not have a state of `success`.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` or `repo_deployment` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/deployments`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/deployments/post(repos/create-deployment)`.
@@ -41837,7 +40252,7 @@ public enum Operations {
     }
     /// Delete a deployment
     ///
-    /// If the repository only has one deployment, you can delete the deployment regardless of its status. If the repository has more than one deployment, you can only delete inactive deployments. This ensures that repositories with multiple deployments will always have an active deployment. Anyone with `repo` or `repo_deployment` scopes can delete a deployment.
+    /// If the repository only has one deployment, you can delete the deployment regardless of its status. If the repository has more than one deployment, you can only delete inactive deployments. This ensures that repositories with multiple deployments will always have an active deployment.
     ///
     /// To set a deployment as inactive, you must:
     ///
@@ -41845,6 +40260,8 @@ public enum Operations {
     /// *   Mark the active deployment as inactive by adding any non-successful deployment status.
     ///
     /// For more information, see "[Create a deployment](https://docs.github.com/rest/deployments/deployments/#create-a-deployment)" and "[Create a deployment status](https://docs.github.com/rest/deployments/statuses#create-a-deployment-status)."
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` or `repo_deployment` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/deployments/{deployment_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/deployments/{deployment_id}/delete(repos/delete-deployment)`.
@@ -42233,7 +40650,7 @@ public enum Operations {
     ///
     /// Users with `push` access can create deployment statuses for a given deployment.
     ///
-    /// GitHub Apps require `read & write` access to "Deployments" and `read-only` access to "Repo contents" (for private repos). OAuth apps require the `repo_deployment` scope.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo_deployment` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/deployments/{deployment_id}/statuses`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/deployments/{deployment_id}/statuses/post(repos/create-deployment-status)`.
@@ -42691,12 +41108,9 @@ public enum Operations {
     ///
     /// The `client_payload` parameter is available for any extra information that your workflow might need. This parameter is a JSON payload that will be passed on when the webhook event is dispatched. For example, the `client_payload` can include a message that a user would like to send using a GitHub Actions workflow. Or the `client_payload` can be used as a test to debug your workflow.
     ///
-    /// This endpoint requires write access to the repository by providing either:
-    ///
-    ///   - Personal access tokens with `repo` scope. For more information, see "[Creating a personal access token for the command line](https://docs.github.com/articles/creating-a-personal-access-token-for-the-command-line)" in the GitHub Help documentation.
-    ///   - GitHub Apps with both `metadata:read` and `contents:read&write` permissions.
-    ///
     /// This input example shows how you can use the `client_payload` as a test to debug your workflow.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/dispatches`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dispatches/post(repos/create-dispatch-event)`.
@@ -42894,7 +41308,9 @@ public enum Operations {
     ///
     /// Lists the environments for a repository.
     ///
-    /// Anyone with read access to the repository can use this endpoint. If the repository is private, you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/environments`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/get(repos/get-all-environments)`.
@@ -43089,9 +41505,9 @@ public enum Operations {
     ///
     /// **Note:** To get information about name patterns that branches must match in order to deploy to this environment, see "[Get a deployment branch policy](/rest/deployments/branch-policies#get-a-deployment-branch-policy)."
     ///
-    /// Anyone with read access to the repository can use this endpoint. If the
-    /// repository is private, you must use an access token with the `repo` scope. GitHub
-    /// Apps must have the `actions:read` permission to use this endpoint.
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/environments/{environment_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/get(repos/get-environment)`.
@@ -43245,7 +41661,7 @@ public enum Operations {
     ///
     /// **Note:** To create or update secrets for an environment, see "[GitHub Actions secrets](/rest/actions/secrets)."
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `administration:write` permission for the repository to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/environments/{environment_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/put(repos/create-or-update-environment)`.
@@ -43544,7 +41960,7 @@ public enum Operations {
     }
     /// Delete an environment
     ///
-    /// You must authenticate using an access token with the repo scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/environments/{environment_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/delete(repos/delete-an-environment)`.
@@ -43628,7 +42044,9 @@ public enum Operations {
     ///
     /// Lists the deployment branch policies for an environment.
     ///
-    /// Anyone with read access to the repository can use this endpoint. If the repository is private, you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/get(repos/list-deployment-branch-policies)`.
@@ -43830,7 +42248,7 @@ public enum Operations {
     ///
     /// Creates a deployment branch or tag policy for an environment.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `administration:write` permission for the repository to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/post(repos/create-deployment-branch-policy)`.
@@ -44043,7 +42461,9 @@ public enum Operations {
     ///
     /// Gets a deployment branch or tag policy for an environment.
     ///
-    /// Anyone with read access to the repository can use this endpoint. If the repository is private, you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/{branch_policy_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/{branch_policy_id}/get(repos/get-deployment-branch-policy)`.
@@ -44200,7 +42620,7 @@ public enum Operations {
     ///
     /// Updates a deployment branch or tag policy for an environment.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `administration:write` permission for the repository to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/{branch_policy_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/{branch_policy_id}/put(repos/update-deployment-branch-policy)`.
@@ -44366,7 +42786,7 @@ public enum Operations {
     ///
     /// Deletes a deployment branch or tag policy for an environment.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `administration:write` permission for the repository to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/{branch_policy_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/{branch_policy_id}/delete(repos/delete-deployment-branch-policy)`.
@@ -44455,9 +42875,11 @@ public enum Operations {
     }
     /// Get all deployment protection rules for an environment
     ///
-    /// Gets all custom deployment protection rules that are enabled for an environment. Anyone with read access to the repository can use this endpoint. If the repository is private and you want to use a personal access token (classic), you must use an access token with the `repo` scope. GitHub Apps and fine-grained personal access tokens must have the `actions:read` permission to use this endpoint. For more information about environments, see "[Using environments for deployment](https://docs.github.com/actions/deployment/targeting-different-environments/using-environments-for-deployment)."
+    /// Gets all custom deployment protection rules that are enabled for an environment. Anyone with read access to the repository can use this endpoint. For more information about environments, see "[Using environments for deployment](https://docs.github.com/actions/deployment/targeting-different-environments/using-environments-for-deployment)."
     ///
     /// For more information about the app that is providing this custom deployment rule, see the [documentation for the `GET /apps/{app_slug}` endpoint](https://docs.github.com/rest/apps/apps#get-an-app).
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/get(repos/get-all-deployment-protection-rules)`.
@@ -44632,9 +43054,11 @@ public enum Operations {
     ///
     /// Enable a custom deployment protection rule for an environment.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. Enabling a custom protection rule requires admin or owner permissions to the repository. GitHub Apps must have the `actions:write` permission to use this endpoint.
+    /// The authenticated user must have admin or owner permissions to the repository to use this endpoint.
     ///
     /// For more information about the app that is providing this custom deployment rule, see the [documentation for the `GET /apps/{app_slug}` endpoint](https://docs.github.com/rest/apps/apps#get-an-app).
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/post(repos/create-deployment-protection-rule)`.
@@ -44808,11 +43232,13 @@ public enum Operations {
     }
     /// List custom deployment rule integrations available for an environment
     ///
-    /// Gets all custom deployment protection rule integrations that are available for an environment. Anyone with read access to the repository can use this endpoint. If the repository is private and you want to use a personal access token (classic), you must use an access token with the `repo` scope. GitHub Apps and fine-grained personal access tokens must have the `actions:read` permission to use this endpoint.
+    /// Gets all custom deployment protection rule integrations that are available for an environment. Anyone with read access to the repository can use this endpoint.
     ///
     /// For more information about environments, see "[Using environments for deployment](https://docs.github.com/actions/deployment/targeting-different-environments/using-environments-for-deployment)."
     ///
     /// For more information about the app that is providing this custom deployment rule, see "[GET an app](https://docs.github.com/rest/apps/apps#get-an-app)".
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/apps`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/apps/get(repos/list-custom-deployment-rule-integrations)`.
@@ -45012,9 +43438,11 @@ public enum Operations {
     }
     /// Get a custom deployment protection rule
     ///
-    /// Gets an enabled custom deployment protection rule for an environment. Anyone with read access to the repository can use this endpoint. If the repository is private and you want to use a personal access token (classic), you must use an access token with the `repo` scope. GitHub Apps and fine-grained personal access tokens must have the `actions:read` permission to use this endpoint. For more information about environments, see "[Using environments for deployment](https://docs.github.com/actions/deployment/targeting-different-environments/using-environments-for-deployment)."
+    /// Gets an enabled custom deployment protection rule for an environment. Anyone with read access to the repository can use this endpoint. For more information about environments, see "[Using environments for deployment](https://docs.github.com/actions/deployment/targeting-different-environments/using-environments-for-deployment)."
     ///
     /// For more information about the app that is providing this custom deployment rule, see [`GET /apps/{app_slug}`](https://docs.github.com/rest/apps/apps#get-an-app).
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/{protection_rule_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/{protection_rule_id}/get(repos/get-custom-deployment-protection-rule)`.
@@ -45171,7 +43599,9 @@ public enum Operations {
     ///
     /// Disables a custom deployment protection rule for an environment.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. Removing a custom protection rule requires admin or owner permissions to the repository. GitHub Apps must have the `actions:write` permission to use this endpoint. For more information, see "[Get an app](https://docs.github.com/rest/apps/apps#get-an-app)".
+    /// The authenticated user must have admin or owner permissions to the repository to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/{protection_rule_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/{protection_rule_id}/delete(repos/disable-deployment-protection-rule)`.
@@ -46899,7 +45329,7 @@ public enum Operations {
     ///
     /// Returns the webhook configuration for a repository. To get more information about the webhook, including the `active` state and `events`, use "[Get a repository webhook](/rest/webhooks/repos#get-a-repository-webhook)."
     ///
-    /// Access tokens must have the `read:repo_hook` or `repo` scope, and GitHub Apps must have the `repository_hooks:read` permission.
+    /// OAuth app tokens and personal access tokens (classic) need the `read:repo_hook` or `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/hooks/{hook_id}/config`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/hooks/{hook_id}/config/get(repos/get-webhook-config-for-repo)`.
@@ -47049,7 +45479,7 @@ public enum Operations {
     ///
     /// Updates the webhook configuration for a repository. To update more information about the webhook, including the `active` state and `events`, use "[Update a repository webhook](/rest/webhooks/repos#update-a-repository-webhook)."
     ///
-    /// Access tokens must have the `write:repo_hook` or `repo` scope, and GitHub Apps must have the `repository_hooks:write` permission.
+    /// OAuth app tokens and personal access tokens (classic) need the `write:repo_hook` or `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/hooks/{hook_id}/config`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/hooks/{hook_id}/config/patch(repos/update-webhook-config-for-repo)`.
@@ -49964,7 +48394,7 @@ public enum Operations {
     ///
     /// Gets information about a GitHub Pages site.
     ///
-    /// A token with the `repo` scope is required. GitHub Apps must have the `pages:read` permission.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pages`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/get(repos/get-pages)`.
@@ -50130,7 +48560,9 @@ public enum Operations {
     ///
     /// Configures a GitHub Pages site. For more information, see "[About GitHub Pages](/github/working-with-github-pages/about-github-pages)."
     ///
-    /// To use this endpoint, you must be a repository administrator, maintainer, or have the 'manage GitHub Pages settings' permission. A token with the `repo` scope or Pages write permission is required. GitHub Apps must have the `administration:write` and `pages:write` permissions.
+    /// The authenticated user must be a repository administrator, maintainer, or have the 'manage GitHub Pages settings' permission.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/pages`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/post(repos/create-pages-site)`.
@@ -50385,7 +48817,9 @@ public enum Operations {
     ///
     /// Updates information for a GitHub Pages site. For more information, see "[About GitHub Pages](/github/working-with-github-pages/about-github-pages).
     ///
-    /// To use this endpoint, you must be a repository administrator, maintainer, or have the 'manage GitHub Pages settings' permission. A token with the `repo` scope or Pages write permission is required. GitHub Apps must have the `administration:write` and `pages:write` permissions.
+    /// The authenticated user must be a repository administrator, maintainer, or have the 'manage GitHub Pages settings' permission.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/pages`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/put(repos/update-information-about-pages-site)`.
@@ -50694,7 +49128,9 @@ public enum Operations {
     ///
     /// Deletes a GitHub Pages site. For more information, see "[About GitHub Pages](/github/working-with-github-pages/about-github-pages).
     ///
-    /// To use this endpoint, you must be a repository administrator, maintainer, or have the 'manage GitHub Pages settings' permission. A token with the `repo` scope or Pages write permission is required. GitHub Apps must have the `administration:write` and `pages:write` permissions.
+    /// The authenticated user must be a repository administrator, maintainer, or have the 'manage GitHub Pages settings' permission.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/pages`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/delete(repos/delete-pages-site)`.
@@ -50882,7 +49318,7 @@ public enum Operations {
     ///
     /// Lists builts of a GitHub Pages site.
     ///
-    /// A token with the `repo` scope is required. GitHub Apps must have the `pages:read` permission.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pages/builds`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/builds/get(repos/list-pages-builds)`.
@@ -51214,7 +49650,7 @@ public enum Operations {
     ///
     /// Gets information about the single most recent build of a GitHub Pages site.
     ///
-    /// A token with the `repo` scope is required. GitHub Apps must have the `pages:read` permission.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pages/builds/latest`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/builds/latest/get(repos/get-latest-pages-build)`.
@@ -51357,7 +49793,7 @@ public enum Operations {
     ///
     /// Gets information about a GitHub Pages build.
     ///
-    /// A token with the `repo` scope is required. GitHub Apps must have the `pages:read` permission.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pages/builds/{build_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/builds/{build_id}/get(repos/get-pages-build)`.
@@ -51505,7 +49941,7 @@ public enum Operations {
     ///
     /// Create a GitHub Pages deployment for a repository.
     ///
-    /// Users must have write permissions. GitHub Apps must have the `pages:write` permission to use this endpoint.
+    /// The authenticated user must have write permission to the repository.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/pages/deployments`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/deployments/post(repos/create-pages-deployment)`.
@@ -51785,7 +50221,7 @@ public enum Operations {
     ///
     /// Gets the current status of a GitHub Pages deployment.
     ///
-    /// Users must have read permission for the GitHub Pages site. GitHub Apps must have the `pages:read` permission.
+    /// The authenticated user must have read permission for the GitHub Pages site.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}/get(repos/get-pages-deployment)`.
@@ -51993,7 +50429,7 @@ public enum Operations {
     ///
     /// Cancels a GitHub Pages deployment.
     ///
-    /// Users must have write permissions for the GitHub Pages site. GitHub Apps must have the `pages:write` permission to use this endpoint.
+    /// The authenticated user must have write permissions for the GitHub Pages site.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}/cancel`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}/cancel/post(repos/cancel-pages-deployment)`.
@@ -52175,7 +50611,9 @@ public enum Operations {
     ///
     /// The first request to this endpoint returns a `202 Accepted` status and starts an asynchronous background task to get the results for the domain. After the background task completes, subsequent requests to this endpoint return a `200 OK` status with the health check results in the response.
     ///
-    /// To use this endpoint, you must be a repository administrator, maintainer, or have the 'manage GitHub Pages settings' permission. A token with the `repo` scope or Pages write permission is required. GitHub Apps must have the `administrative:write` and `pages:write` permissions.
+    /// The authenticated user must be a repository administrator, maintainer, or have the 'manage GitHub Pages settings' permission to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pages/health`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/health/get(repos/get-pages-health-check)`.
@@ -52731,8 +51169,6 @@ public enum Operations {
     /// Gets all custom property values that are set for a repository.
     /// Users with read access to the repository can use this endpoint.
     ///
-    /// GitHub Apps must have the `metadata:read` repository permission to use this endpoint.
-    ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/properties/values`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/properties/values/get(repos/get-custom-properties-values)`.
     public enum repos_sol_get_hyphen_custom_hyphen_properties_hyphen_values {
@@ -52923,8 +51359,6 @@ public enum Operations {
     ///
     /// Repository admins and other users with the repository-level "edit custom property values" fine-grained permission can use this endpoint.
     ///
-    /// GitHub Apps must have the `repository_custom_properties:write` permission to use this endpoint.
-    ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/properties/values`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/properties/values/patch(repos/create-or-update-custom-properties-values)`.
     public enum repos_sol_create_hyphen_or_hyphen_update_hyphen_custom_hyphen_properties_hyphen_values {
@@ -53074,6 +51508,29 @@ public enum Operations {
                     default:
                         try throwUnexpectedResponseStatus(
                             expectedStatus: "notFound",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Validation failed, or the endpoint has been spammed.
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/properties/values/patch(repos/create-or-update-custom-properties-values)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            case unprocessableContent(Components.Responses.validation_failed)
+            /// The associated value of the enum case if `self` is `.unprocessableContent`.
+            ///
+            /// - Throws: An error if `self` is not `.unprocessableContent`.
+            /// - SeeAlso: `.unprocessableContent`.
+            public var unprocessableContent: Components.Responses.validation_failed {
+                get throws {
+                    switch self {
+                    case let .unprocessableContent(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "unprocessableContent",
                             response: self
                         )
                     }
@@ -59845,11 +58302,7 @@ public enum Operations {
     ///
     /// For a public repository, a team is listed only if that team added the public repository explicitly.
     ///
-    /// Personal access tokens require the following scopes:
-    /// * `public_repo` to call this endpoint on a public repository
-    /// * `repo` to call this endpoint on a private repository (this scope also includes public repositories)
-    ///
-    /// This endpoint is not compatible with fine-grained personal access tokens.
+    /// OAuth app tokens and personal access tokens (classic) need the `public_repo` or `repo` scope to use this endpoint with a public repository, and `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/teams`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/teams/get(repos/list-teams)`.
@@ -61162,7 +59615,6 @@ public enum Operations {
     /// Transfer a repository
     ///
     /// A transfer request will need to be accepted by the new owner when transferring a personal repository to another user. The response will contain the original `owner`, and the transfer will continue asynchronously. For more details on the requirements to transfer personal and organization-owned repositories, see [about repository transfers](https://docs.github.com/articles/about-repository-transfers/).
-    /// You must use a personal access token (classic) or an OAuth token for this endpoint. An installation access token or a fine-grained personal access token cannot be used because they are only granted access to a single account.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/transfer`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/transfer/post(repos/transfer)`.
@@ -61706,12 +60158,7 @@ public enum Operations {
     ///
     /// Creates a new repository using a repository template. Use the `template_owner` and `template_repo` route parameters to specify the repository to use as the template. If the repository is not public, the authenticated user must own or be a member of an organization that owns the repository. To check if a repository is available to use as a template, get the repository's information using the [Get a repository](https://docs.github.com/rest/repos/repos#get-a-repository) endpoint and check that the `is_template` key is `true`.
     ///
-    /// **OAuth scope requirements**
-    ///
-    /// When using [OAuth](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/), authorizations must include:
-    ///
-    /// *   `public_repo` scope or `repo` scope to create a public repository
-    /// *   `repo` scope to create a private repository
+    /// OAuth app tokens and personal access tokens (classic) need the `public_repo` or `repo` scope to create a public repository, and `repo` scope to create a private repository.
     ///
     /// - Remark: HTTP `POST /repos/{template_owner}/{template_repo}/generate`.
     /// - Remark: Generated from `#/paths//repos/{template_owner}/{template_repo}/generate/post(repos/create-using-template)`.
@@ -62447,12 +60894,7 @@ public enum Operations {
     ///
     /// Creates a new repository for the authenticated user.
     ///
-    /// **OAuth scope requirements**
-    ///
-    /// When using [OAuth](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/), authorizations must include:
-    ///
-    /// *   `public_repo` scope or `repo` scope to create a public repository
-    /// *   `repo` scope to create a private repository
+    /// OAuth app tokens and personal access tokens (classic) need the `public_repo` or `repo` scope to create a public repository, and `repo` scope to create a private repository.
     ///
     /// - Remark: HTTP `POST /user/repos`.
     /// - Remark: Generated from `#/paths//user/repos/post(repos/create-for-authenticated-user)`.
