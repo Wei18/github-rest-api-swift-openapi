@@ -41,7 +41,12 @@ public struct Client: APIProtocol {
     /// List secret scanning alerts for an enterprise
     ///
     /// Lists secret scanning alerts for eligible repositories in an enterprise, from newest to oldest.
-    /// To use this endpoint, you must be a member of the enterprise, and you must use an access token with the `repo` scope or `security_events` scope. Alerts are only returned for organizations in the enterprise for which you are an organization owner or a [security manager](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization).
+    ///
+    /// Alerts are only returned for organizations in the enterprise for which the authenticated user is an organization owner or a [security manager](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization).
+    ///
+    /// The authenticated user must be a member of the enterprise in order to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope or `security_events` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /enterprises/{enterprise}/secret-scanning/alerts`.
     /// - Remark: Generated from `#/paths//enterprises/{enterprise}/secret-scanning/alerts/get(secret-scanning/list-alerts-for-enterprise)`.
@@ -221,10 +226,10 @@ public struct Client: APIProtocol {
     /// List secret scanning alerts for an organization
     ///
     /// Lists secret scanning alerts for eligible repositories in an organization, from newest to oldest.
-    /// To use this endpoint, you must be an administrator or security manager for the organization, and you must use an access token with the `repo` scope or `security_events` scope.
-    /// For public repositories, you may instead use the `public_repo` scope.
     ///
-    /// GitHub Apps must have the `secret_scanning_alerts` read permission to use this endpoint.
+    /// The authenticated user must be an administrator or security manager for the organization to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` or `security_events` scope to use this endpoint. If this endpoint is only used with public repositories, the token can use the `public_repo` scope instead.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/secret-scanning/alerts`.
     /// - Remark: Generated from `#/paths//orgs/{org}/secret-scanning/alerts/get(secret-scanning/list-alerts-for-org)`.
@@ -411,10 +416,10 @@ public struct Client: APIProtocol {
     /// List secret scanning alerts for a repository
     ///
     /// Lists secret scanning alerts for an eligible repository, from newest to oldest.
-    /// To use this endpoint, you must be an administrator for the repository or for the organization that owns the repository, and you must use a personal access token with the `repo` scope or `security_events` scope.
-    /// For public repositories, you may instead use the `public_repo` scope.
     ///
-    /// GitHub Apps must have the `secret_scanning_alerts` read permission to use this endpoint.
+    /// The authenticated user must be an administrator for the repository or for the organization that owns the repository to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` or `security_events` scope to use this endpoint. If this endpoint is only used with public repositories, the token can use the `public_repo` scope instead.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/secret-scanning/alerts`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/alerts/get(secret-scanning/list-alerts-for-repo)`.
@@ -574,10 +579,10 @@ public struct Client: APIProtocol {
     /// Get a secret scanning alert
     ///
     /// Gets a single secret scanning alert detected in an eligible repository.
-    /// To use this endpoint, you must be an administrator for the repository or for the organization that owns the repository, and you must use a personal access token with the `repo` scope or `security_events` scope.
-    /// For public repositories, you may instead use the `public_repo` scope.
     ///
-    /// GitHub Apps must have the `secret_scanning_alerts` read permission to use this endpoint.
+    /// The authenticated user must be an administrator for the repository or for the organization that owns the repository to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` or `security_events` scope to use this endpoint. If this endpoint is only used with public repositories, the token can use the `public_repo` scope instead.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/get(secret-scanning/get-alert)`.
@@ -670,10 +675,10 @@ public struct Client: APIProtocol {
     /// Update a secret scanning alert
     ///
     /// Updates the status of a secret scanning alert in an eligible repository.
-    /// To use this endpoint, you must be an administrator for the repository or for the organization that owns the repository, and you must use a personal access token with the `repo` scope or `security_events` scope.
-    /// For public repositories, you may instead use the `public_repo` scope.
     ///
-    /// GitHub Apps must have the `secret_scanning_alerts` write permission to use this endpoint.
+    /// The authenticated user must be an administrator for the repository or for the organization that owns the repository to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` or `security_events` scope to use this endpoint. If this endpoint is only used with public repositories, the token can use the `public_repo` scope instead.
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/patch(secret-scanning/update-alert)`.
@@ -777,10 +782,10 @@ public struct Client: APIProtocol {
     /// List locations for a secret scanning alert
     ///
     /// Lists all locations for a given secret scanning alert for an eligible repository.
-    /// To use this endpoint, you must be an administrator for the repository or for the organization that owns the repository, and you must use a personal access token with the `repo` scope or `security_events` scope.
-    /// For public repositories, you may instead use the `public_repo` scope.
     ///
-    /// GitHub Apps must have the `secret_scanning_alerts` read permission to use this endpoint.
+    /// The authenticated user must be an administrator for the repository or for the organization that owns the repository to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` or `security_events` scope to use this endpoint. If this endpoint is only used with public repositories, the token can use the `public_repo` scope instead.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/locations`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/locations/get(secret-scanning/list-locations-for-alert)`.

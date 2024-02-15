@@ -14,8 +14,8 @@ public protocol APIProtocol: Sendable {
     /// Get the customization template for an OIDC subject claim for an organization
     ///
     /// Gets the customization template for an OpenID Connect (OIDC) subject claim.
-    /// You must authenticate using an access token with the `read:org` scope to use this endpoint.
-    /// GitHub Apps must have the `organization_administration:write` permission to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `read:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/oidc/customization/sub`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/oidc/customization/sub/get(oidc/get-oidc-custom-sub-template-for-org)`.
@@ -23,8 +23,8 @@ public protocol APIProtocol: Sendable {
     /// Set the customization template for an OIDC subject claim for an organization
     ///
     /// Creates or updates the customization template for an OpenID Connect (OIDC) subject claim.
-    /// You must authenticate using an access token with the `write:org` scope to use this endpoint.
-    /// GitHub Apps must have the `admin:org` permission to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `write:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/actions/oidc/customization/sub`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/oidc/customization/sub/put(oidc/update-oidc-custom-sub-template-for-org)`.
@@ -36,8 +36,8 @@ extension APIProtocol {
     /// Get the customization template for an OIDC subject claim for an organization
     ///
     /// Gets the customization template for an OpenID Connect (OIDC) subject claim.
-    /// You must authenticate using an access token with the `read:org` scope to use this endpoint.
-    /// GitHub Apps must have the `organization_administration:write` permission to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `read:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/oidc/customization/sub`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/oidc/customization/sub/get(oidc/get-oidc-custom-sub-template-for-org)`.
@@ -53,8 +53,8 @@ extension APIProtocol {
     /// Set the customization template for an OIDC subject claim for an organization
     ///
     /// Creates or updates the customization template for an OpenID Connect (OIDC) subject claim.
-    /// You must authenticate using an access token with the `write:org` scope to use this endpoint.
-    /// GitHub Apps must have the `admin:org` permission to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `write:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/actions/oidc/customization/sub`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/oidc/customization/sub/put(oidc/update-oidc-custom-sub-template-for-org)`.
@@ -229,8 +229,8 @@ public enum Operations {
     /// Get the customization template for an OIDC subject claim for an organization
     ///
     /// Gets the customization template for an OpenID Connect (OIDC) subject claim.
-    /// You must authenticate using an access token with the `read:org` scope to use this endpoint.
-    /// GitHub Apps must have the `organization_administration:write` permission to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `read:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/oidc/customization/sub`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/oidc/customization/sub/get(oidc/get-oidc-custom-sub-template-for-org)`.
@@ -363,8 +363,8 @@ public enum Operations {
     /// Set the customization template for an OIDC subject claim for an organization
     ///
     /// Creates or updates the customization template for an OpenID Connect (OIDC) subject claim.
-    /// You must authenticate using an access token with the `write:org` scope to use this endpoint.
-    /// GitHub Apps must have the `admin:org` permission to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `write:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/actions/oidc/customization/sub`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/oidc/customization/sub/put(oidc/update-oidc-custom-sub-template-for-org)`.

@@ -15,7 +15,8 @@ public protocol APIProtocol: Sendable {
     ///
     /// Gets the total GitHub Actions cache usage for an organization.
     /// The data fetched using this API is refreshed approximately every 5 minutes, so values returned from this endpoint may take at least 5 minutes to get updated.
-    /// You must authenticate using an access token with the `read:org` scope to use this endpoint. GitHub Apps must have the `organization_admistration:read` permission to use this endpoint.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `read:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/cache/usage`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/cache/usage/get(actions/get-actions-cache-usage-for-org)`.
@@ -24,7 +25,8 @@ public protocol APIProtocol: Sendable {
     ///
     /// Lists repositories and their GitHub Actions cache usage for an organization.
     /// The data fetched using this API is refreshed approximately every 5 minutes, so values returned from this endpoint may take at least 5 minutes to get updated.
-    /// You must authenticate using an access token with the `read:org` scope to use this endpoint. GitHub Apps must have the `organization_admistration:read` permission to use this endpoint.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `read:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/cache/usage-by-repository`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/cache/usage-by-repository/get(actions/get-actions-cache-usage-by-repo-for-org)`.
@@ -33,7 +35,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// Gets the GitHub Actions permissions policy for repositories and allowed actions and reusable workflows in an organization.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint. GitHub Apps must have the `administration` organization permission to use this API.
+    /// OAuth tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/permissions`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/permissions/get(actions/get-github-actions-permissions-organization)`.
@@ -42,7 +44,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// Sets the GitHub Actions permissions policy for repositories and allowed actions and reusable workflows in an organization.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint. GitHub Apps must have the `administration` organization permission to use this API.
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/actions/permissions`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/permissions/put(actions/set-github-actions-permissions-organization)`.
@@ -51,7 +53,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// Lists the selected repositories that are enabled for GitHub Actions in an organization. To use this endpoint, the organization permission policy for `enabled_repositories` must be configured to `selected`. For more information, see "[Set GitHub Actions permissions for an organization](#set-github-actions-permissions-for-an-organization)."
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint. GitHub Apps must have the `administration` organization permission to use this API.
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/permissions/repositories`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/permissions/repositories/get(actions/list-selected-repositories-enabled-github-actions-organization)`.
@@ -60,7 +62,8 @@ public protocol APIProtocol: Sendable {
     ///
     /// Replaces the list of selected repositories that are enabled for GitHub Actions in an organization. To use this endpoint, the organization permission policy for `enabled_repositories` must be configured to `selected`. For more information, see "[Set GitHub Actions permissions for an organization](#set-github-actions-permissions-for-an-organization)."
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint. GitHub Apps must have the `administration` organization permission to use this API.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/actions/permissions/repositories`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/permissions/repositories/put(actions/set-selected-repositories-enabled-github-actions-organization)`.
@@ -69,7 +72,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// Adds a repository to the list of selected repositories that are enabled for GitHub Actions in an organization. To use this endpoint, the organization permission policy for `enabled_repositories` must be must be configured to `selected`. For more information, see "[Set GitHub Actions permissions for an organization](#set-github-actions-permissions-for-an-organization)."
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint. GitHub Apps must have the `administration` organization permission to use this API.
+    /// OAuth tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/actions/permissions/repositories/{repository_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/permissions/repositories/{repository_id}/put(actions/enable-selected-repository-github-actions-organization)`.
@@ -78,16 +81,16 @@ public protocol APIProtocol: Sendable {
     ///
     /// Removes a repository from the list of selected repositories that are enabled for GitHub Actions in an organization. To use this endpoint, the organization permission policy for `enabled_repositories` must be configured to `selected`. For more information, see "[Set GitHub Actions permissions for an organization](#set-github-actions-permissions-for-an-organization)."
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint. GitHub Apps must have the `administration` organization permission to use this API.
+    /// OAuth tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/actions/permissions/repositories/{repository_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/permissions/repositories/{repository_id}/delete(actions/disable-selected-repository-github-actions-organization)`.
     func actions_sol_disable_hyphen_selected_hyphen_repository_hyphen_github_hyphen_actions_hyphen_organization(_ input: Operations.actions_sol_disable_hyphen_selected_hyphen_repository_hyphen_github_hyphen_actions_hyphen_organization.Input) async throws -> Operations.actions_sol_disable_hyphen_selected_hyphen_repository_hyphen_github_hyphen_actions_hyphen_organization.Output
     /// Get allowed actions and reusable workflows for an organization
     ///
-    /// Gets the selected actions and reusable workflows that are allowed in an organization. To use this endpoint, the organization permission policy for `allowed_actions` must be configured to `selected`. For more information, see "[Set GitHub Actions permissions for an organization](#set-github-actions-permissions-for-an-organization).""
+    /// Gets the selected actions and reusable workflows that are allowed in an organization. To use this endpoint, the organization permission policy for `allowed_actions` must be configured to `selected`. For more information, see "[Set GitHub Actions permissions for an organization](#set-github-actions-permissions-for-an-organization)."
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint. GitHub Apps must have the `administration` organization permission to use this API.
+    /// OAuth tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/permissions/selected-actions`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/permissions/selected-actions/get(actions/get-allowed-actions-organization)`.
@@ -96,7 +99,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// Sets the actions and reusable workflows that are allowed in an organization. To use this endpoint, the organization permission policy for `allowed_actions` must be configured to `selected`. For more information, see "[Set GitHub Actions permissions for an organization](#set-github-actions-permissions-for-an-organization)."
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint. GitHub Apps must have the `administration` organization permission to use this API.
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/actions/permissions/selected-actions`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/permissions/selected-actions/put(actions/set-allowed-actions-organization)`.
@@ -107,7 +110,7 @@ public protocol APIProtocol: Sendable {
     /// as well as whether GitHub Actions can submit approving pull request reviews. For more information, see
     /// "[Setting the permissions of the GITHUB_TOKEN for your organization](https://docs.github.com/organizations/managing-organization-settings/disabling-or-limiting-github-actions-for-your-organization#setting-the-permissions-of-the-github_token-for-your-organization)."
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint. GitHub Apps must have the `administration` organization permission to use this API.
+    /// OAuth tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/permissions/workflow`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/permissions/workflow/get(actions/get-github-actions-default-workflow-permissions-organization)`.
@@ -118,7 +121,7 @@ public protocol APIProtocol: Sendable {
     /// can submit approving pull request reviews. For more information, see
     /// "[Setting the permissions of the GITHUB_TOKEN for your organization](https://docs.github.com/organizations/managing-organization-settings/disabling-or-limiting-github-actions-for-your-organization#setting-the-permissions-of-the-github_token-for-your-organization)."
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint. GitHub Apps must have the `administration` organization permission to use this API.
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/actions/permissions/workflow`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/permissions/workflow/put(actions/set-github-actions-default-workflow-permissions-organization)`.
@@ -127,10 +130,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Lists all self-hosted runners configured in an organization.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the organization to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, the `repo` scope is also required.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/runners`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/runners/get(actions/list-self-hosted-runners-for-org)`.
@@ -139,10 +141,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Lists binaries for the runner application that you can download and run.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the organization to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.  If the repository is private, the `repo` scope is also required.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/runners/downloads`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/runners/downloads/get(actions/list-runner-applications-for-org)`.
@@ -151,10 +152,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Generates a configuration that can be passed to the runner application at startup.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// The authenticated user must have admin access to the organization.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the`admin:org` scope to use this endpoint. If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/actions/runners/generate-jitconfig`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/runners/generate-jitconfig/post(actions/generate-runner-jitconfig-for-org)`.
@@ -163,18 +163,15 @@ public protocol APIProtocol: Sendable {
     ///
     /// Returns a token that you can pass to the `config` script. The token expires after one hour.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
-    ///
-    /// Example using registration token: 
-    ///
-    /// Configure your self-hosted runner, replacing `TOKEN` with the registration token provided by this endpoint.
+    /// For example, you can replace `TOKEN` in the following example with the registration token provided by this endpoint to configure your self-hosted runner:
     ///
     /// ```
     /// ./config.sh --url https://github.com/octo-org --token TOKEN
     /// ```
+    ///
+    /// Authenticated users must have admin access to the organization to use this endpoint.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the`admin:org` scope to use this endpoint. If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/actions/runners/registration-token`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/runners/registration-token/post(actions/create-registration-token-for-org)`.
@@ -183,19 +180,15 @@ public protocol APIProtocol: Sendable {
     ///
     /// Returns a token that you can pass to the `config` script to remove a self-hosted runner from an organization. The token expires after one hour.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
-    ///
-    /// Example using remove token:
-    ///
-    /// To remove your self-hosted runner from an organization, replace `TOKEN` with the remove token provided by this
-    /// endpoint.
+    /// For example, you can replace `TOKEN` in the following example with the registration token provided by this endpoint to remove your self-hosted runner from an organization:
     ///
     /// ```
     /// ./config.sh remove --token TOKEN
     /// ```
+    ///
+    /// Authenticated users must have admin access to the organization to use this endpoint.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the`admin:org` scope to use this endpoint. If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/actions/runners/remove-token`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/runners/remove-token/post(actions/create-remove-token-for-org)`.
@@ -204,10 +197,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Gets a specific self-hosted runner configured in an organization.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the organization to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, the `repo` scope is also required.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/runners/{runner_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/runners/{runner_id}/get(actions/get-self-hosted-runner-for-org)`.
@@ -216,10 +208,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Forces the removal of a self-hosted runner from an organization. You can use this endpoint to completely remove the runner when the machine you were using no longer exists.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the organization to use this endpoint.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the`admin:org` scope to use this endpoint. If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/actions/runners/{runner_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/runners/{runner_id}/delete(actions/delete-self-hosted-runner-from-org)`.
@@ -228,22 +219,20 @@ public protocol APIProtocol: Sendable {
     ///
     /// Lists all labels for a self-hosted runner configured in an organization.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the organization to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, the `repo` scope is also required.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/runners/{runner_id}/labels`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/runners/{runner_id}/labels/get(actions/list-labels-for-self-hosted-runner-for-org)`.
     func actions_sol_list_hyphen_labels_hyphen_for_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org(_ input: Operations.actions_sol_list_hyphen_labels_hyphen_for_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input) async throws -> Operations.actions_sol_list_hyphen_labels_hyphen_for_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Output
     /// Add custom labels to a self-hosted runner for an organization
     ///
-    /// Add custom labels to a self-hosted runner configured in an organization.
+    /// Adds custom labels to a self-hosted runner configured in an organization.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the organization to use this endpoint.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/actions/runners/{runner_id}/labels`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/runners/{runner_id}/labels/post(actions/add-custom-labels-to-self-hosted-runner-for-org)`.
@@ -253,10 +242,9 @@ public protocol APIProtocol: Sendable {
     /// Remove all previous custom labels and set the new custom labels for a specific
     /// self-hosted runner configured in an organization.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the organization to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, the `repo` scope is also required.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/actions/runners/{runner_id}/labels`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/runners/{runner_id}/labels/put(actions/set-custom-labels-for-self-hosted-runner-for-org)`.
@@ -266,10 +254,9 @@ public protocol APIProtocol: Sendable {
     /// Remove all custom labels from a self-hosted runner configured in an
     /// organization. Returns the remaining read-only labels from the runner.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the organization to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, the `repo` scope is also required.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/actions/runners/{runner_id}/labels`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/runners/{runner_id}/labels/delete(actions/remove-all-custom-labels-from-self-hosted-runner-for-org)`.
@@ -282,10 +269,9 @@ public protocol APIProtocol: Sendable {
     /// This endpoint returns a `404 Not Found` status if the custom label is not
     /// present on the runner.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the organization to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, the `repo` scope is also required.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/actions/runners/{runner_id}/labels/{name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/runners/{runner_id}/labels/{name}/delete(actions/remove-custom-label-from-self-hosted-runner-for-org)`.
@@ -295,10 +281,9 @@ public protocol APIProtocol: Sendable {
     /// Lists all secrets available in an organization without revealing their
     /// encrypted values.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `secrets` organization permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, the `repo` scope is also required.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/secrets`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/secrets/get(actions/list-org-secrets)`.
@@ -308,10 +293,9 @@ public protocol APIProtocol: Sendable {
     /// Gets your public key, which you need to encrypt secrets. You need to
     /// encrypt a secret before you can create or update secrets.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `secrets` organization permission to use this endpoint.
-    /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    /// The authenticated user must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the`admin:org` scope to use this endpoint. If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/secrets/public-key`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/secrets/public-key/get(actions/get-org-public-key)`.
@@ -320,10 +304,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Gets a single organization secret without revealing its encrypted value.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `secrets` organization permission to use this endpoint.
-    /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    /// The authenticated user must have collaborator access to a repository to create, update, or read secrets
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the`admin:org` scope to use this endpoint. If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/secrets/{secret_name}/get(actions/get-org-secret)`.
@@ -333,10 +316,9 @@ public protocol APIProtocol: Sendable {
     /// Creates or updates an organization secret with an encrypted value. Encrypt your secret using
     /// [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages). For more information, see "[Encrypting secrets for the REST API](https://docs.github.com/rest/guides/encrypting-secrets-for-the-rest-api)."
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `secrets` organization permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the`admin:org` scope to use this endpoint. If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/actions/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/secrets/{secret_name}/put(actions/create-or-update-org-secret)`.
@@ -345,10 +327,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Deletes a secret in an organization using the secret name.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `secrets` organization permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the`admin:org` scope to use this endpoint. If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/actions/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/secrets/{secret_name}/delete(actions/delete-org-secret)`.
@@ -358,10 +339,9 @@ public protocol APIProtocol: Sendable {
     /// Lists all repositories that have been selected when the `visibility`
     /// for repository access to a secret is set to `selected`.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `secrets` organization permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, the `repo` scope is also required.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/secrets/{secret_name}/repositories`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/secrets/{secret_name}/repositories/get(actions/list-selected-repos-for-org-secret)`.
@@ -372,10 +352,9 @@ public protocol APIProtocol: Sendable {
     /// for repository access is set to `selected`. The visibility is set when you [Create
     /// or update an organization secret](https://docs.github.com/rest/actions/secrets#create-or-update-an-organization-secret).
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `secrets` organization permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, the `repo` scope is also required.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/actions/secrets/{secret_name}/repositories`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/secrets/{secret_name}/repositories/put(actions/set-selected-repos-for-org-secret)`.
@@ -383,13 +362,12 @@ public protocol APIProtocol: Sendable {
     /// Add selected repository to an organization secret
     ///
     /// Adds a repository to an organization secret when the `visibility` for
-    /// repository access is set to `selected`. The visibility is set when you [Create or
+    /// repository access is set to `selected`. For more information about setting the visibility, see [Create or
     /// update an organization secret](https://docs.github.com/rest/actions/secrets#create-or-update-an-organization-secret).
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `secrets` organization permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/actions/secrets/{secret_name}/repositories/{repository_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/secrets/{secret_name}/repositories/{repository_id}/put(actions/add-selected-repo-to-org-secret)`.
@@ -400,10 +378,9 @@ public protocol APIProtocol: Sendable {
     /// for repository access is set to `selected`. The visibility is set when you [Create
     /// or update an organization secret](https://docs.github.com/rest/actions/secrets#create-or-update-an-organization-secret).
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `secrets` organization permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, the `repo` scope is also required.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/actions/secrets/{secret_name}/repositories/{repository_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/secrets/{secret_name}/repositories/{repository_id}/delete(actions/remove-selected-repo-from-org-secret)`.
@@ -411,7 +388,10 @@ public protocol APIProtocol: Sendable {
     /// List organization variables
     ///
     /// Lists all organization variables.
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint. If the repository is private, you must use an access token with the `repo` scope. GitHub Apps must have the `organization_actions_variables:read` organization permission to use this endpoint. Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, the `repo` scope is also required.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/variables`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/variables/get(actions/list-org-variables)`.
@@ -420,10 +400,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Creates an organization variable that you can reference in a GitHub Actions workflow.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `organization_actions_variables:write` organization permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the`admin:org` scope to use this endpoint. If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/actions/variables`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/variables/post(actions/create-org-variable)`.
@@ -432,10 +411,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Gets a specific variable in an organization.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `organization_actions_variables:read` organization permission to use this endpoint.
-    /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    /// The authenticated user must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the`admin:org` scope to use this endpoint. If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/variables/{name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/variables/{name}/get(actions/get-org-variable)`.
@@ -444,10 +422,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Updates an organization variable that you can reference in a GitHub Actions workflow.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `organization_actions_variables:write` organization permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, the `repo` scope is also required.
     ///
     /// - Remark: HTTP `PATCH /orgs/{org}/actions/variables/{name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/variables/{name}/patch(actions/update-org-variable)`.
@@ -456,10 +433,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Deletes an organization variable using the variable name.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `organization_actions_variables:write` organization permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the`admin:org` scope to use this endpoint. If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/actions/variables/{name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/variables/{name}/delete(actions/delete-org-variable)`.
@@ -469,10 +445,9 @@ public protocol APIProtocol: Sendable {
     /// Lists all repositories that can access an organization variable
     /// that is available to selected repositories.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `organization_actions_variables:read` organization permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, the `repo` scope is also required.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/variables/{name}/repositories`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/variables/{name}/repositories/get(actions/list-selected-repos-for-org-variable)`.
@@ -483,11 +458,9 @@ public protocol APIProtocol: Sendable {
     /// to selected repositories. Organization variables that are available to selected
     /// repositories have their `visibility` field set to `selected`.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `organization_actions_variables:write` organization permission to use this
-    /// endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, the `repo` scope is also required.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/actions/variables/{name}/repositories`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/variables/{name}/repositories/put(actions/set-selected-repos-for-org-variable)`.
@@ -497,10 +470,9 @@ public protocol APIProtocol: Sendable {
     /// Adds a repository to an organization variable that is available to selected repositories.
     /// Organization variables that are available to selected repositories have their `visibility` field set to `selected`.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `organization_actions_variables:write` organization permission to use this endpoint.
-    /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/actions/variables/{name}/repositories/{repository_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/variables/{name}/repositories/{repository_id}/put(actions/add-selected-repo-to-org-variable)`.
@@ -511,31 +483,39 @@ public protocol APIProtocol: Sendable {
     /// available to selected repositories. Organization variables that are available to
     /// selected repositories have their `visibility` field set to `selected`.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `organization_actions_variables:write` organization permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, the `repo` scope is also required.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/actions/variables/{name}/repositories/{repository_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/variables/{name}/repositories/{repository_id}/delete(actions/remove-selected-repo-from-org-variable)`.
     func actions_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_variable(_ input: Operations.actions_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_variable.Input) async throws -> Operations.actions_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_variable.Output
     /// List artifacts for a repository
     ///
-    /// Lists all artifacts for a repository. Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// Lists all artifacts for a repository.
+    ///
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/artifacts`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/artifacts/get(actions/list-artifacts-for-repo)`.
     func actions_sol_list_hyphen_artifacts_hyphen_for_hyphen_repo(_ input: Operations.actions_sol_list_hyphen_artifacts_hyphen_for_hyphen_repo.Input) async throws -> Operations.actions_sol_list_hyphen_artifacts_hyphen_for_hyphen_repo.Output
     /// Get an artifact
     ///
-    /// Gets a specific artifact for a workflow run. Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// Gets a specific artifact for a workflow run.
+    ///
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/artifacts/{artifact_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/artifacts/{artifact_id}/get(actions/get-artifact)`.
     func actions_sol_get_hyphen_artifact(_ input: Operations.actions_sol_get_hyphen_artifact.Input) async throws -> Operations.actions_sol_get_hyphen_artifact.Output
     /// Delete an artifact
     ///
-    /// Deletes an artifact for a workflow run. You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `actions:write` permission to use this endpoint.
+    /// Deletes an artifact for a workflow run.
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/actions/artifacts/{artifact_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/artifacts/{artifact_id}/delete(actions/delete-artifact)`.
@@ -545,8 +525,7 @@ public protocol APIProtocol: Sendable {
     /// Gets a redirect URL to download an archive for a repository. This URL expires after 1 minute. Look for `Location:` in
     /// the response header to find the URL for the download. The `:archive_format` must be `zip`.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/artifacts/{artifact_id}/{archive_format}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/artifacts/{artifact_id}/{archive_format}/get(actions/download-artifact)`.
@@ -555,7 +534,10 @@ public protocol APIProtocol: Sendable {
     ///
     /// Gets GitHub Actions cache usage for a repository.
     /// The data fetched using this API is refreshed approximately every 5 minutes, so values returned from this endpoint may take at least 5 minutes to get updated.
-    /// Anyone with read access to the repository can use this endpoint. If the repository is private, you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    ///
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/cache/usage`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/cache/usage/get(actions/get-actions-cache-usage)`.
@@ -563,8 +545,8 @@ public protocol APIProtocol: Sendable {
     /// List GitHub Actions caches for a repository
     ///
     /// Lists the GitHub Actions caches for a repository.
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `actions:read` permission to use this endpoint.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/caches`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/caches/get(actions/get-actions-cache-list)`.
@@ -573,9 +555,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// Deletes one or more GitHub Actions caches for a repository, using a complete cache key. By default, all caches that match the provided key are deleted, but you can optionally provide a Git ref to restrict deletions to caches that match both the provided key and the Git ref.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    ///
-    /// GitHub Apps must have the `actions:write` permission to use this endpoint.
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/actions/caches`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/caches/delete(actions/delete-actions-cache-by-key)`.
@@ -584,16 +564,18 @@ public protocol APIProtocol: Sendable {
     ///
     /// Deletes a GitHub Actions cache for a repository, using a cache ID.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    ///
-    /// GitHub Apps must have the `actions:write` permission to use this endpoint.
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/actions/caches/{cache_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/caches/{cache_id}/delete(actions/delete-actions-cache-by-id)`.
     func actions_sol_delete_hyphen_actions_hyphen_cache_hyphen_by_hyphen_id(_ input: Operations.actions_sol_delete_hyphen_actions_hyphen_cache_hyphen_by_hyphen_id.Input) async throws -> Operations.actions_sol_delete_hyphen_actions_hyphen_cache_hyphen_by_hyphen_id.Output
     /// Get a job for a workflow run
     ///
-    /// Gets a specific job in a workflow run. Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// Gets a specific job in a workflow run.
+    ///
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/jobs/{job_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/jobs/{job_id}/get(actions/get-job-for-workflow-run)`.
@@ -601,9 +583,11 @@ public protocol APIProtocol: Sendable {
     /// Download job logs for a workflow run
     ///
     /// Gets a redirect URL to download a plain text file of logs for a workflow job. This link expires after 1 minute. Look
-    /// for `Location:` in the response header to find the URL for the download. Anyone with read access to the repository can
-    /// use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must
-    /// have the `actions:read` permission to use this endpoint.
+    /// for `Location:` in the response header to find the URL for the download.
+    ///
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/jobs/{job_id}/logs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/jobs/{job_id}/logs/get(actions/download-job-logs-for-workflow-run)`.
@@ -612,8 +596,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// Re-run a job and its dependent jobs in a workflow run.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `actions:write` permission to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/actions/jobs/{job_id}/rerun`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/jobs/{job_id}/rerun/post(actions/re-run-job-for-workflow-run)`.
@@ -621,8 +604,8 @@ public protocol APIProtocol: Sendable {
     /// Get the customization template for an OIDC subject claim for a repository
     ///
     /// Gets the customization template for an OpenID Connect (OIDC) subject claim.
-    /// You must authenticate using an access token with the `repo` scope to use this
-    /// endpoint. GitHub Apps must have the `organization_administration:read` permission to use this endpoint.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/oidc/customization/sub`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/oidc/customization/sub/get(actions/get-custom-oidc-sub-claim-for-repo)`.
@@ -630,8 +613,8 @@ public protocol APIProtocol: Sendable {
     /// Set the customization template for an OIDC subject claim for a repository
     ///
     /// Sets the customization template and `opt-in` or `opt-out` flag for an OpenID Connect (OIDC) subject claim for a repository.
-    /// You must authenticate using an access token with the `repo` scope to use this
-    /// endpoint. GitHub Apps must have the `actions:write` permission to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/actions/oidc/customization/sub`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/oidc/customization/sub/put(actions/set-custom-oidc-sub-claim-for-repo)`.
@@ -641,20 +624,20 @@ public protocol APIProtocol: Sendable {
     /// Lists all organization secrets shared with a repository without revealing their encrypted
     /// values.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `secrets` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/organization-secrets`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/organization-secrets/get(actions/list-repo-organization-secrets)`.
     func actions_sol_list_hyphen_repo_hyphen_organization_hyphen_secrets(_ input: Operations.actions_sol_list_hyphen_repo_hyphen_organization_hyphen_secrets.Input) async throws -> Operations.actions_sol_list_hyphen_repo_hyphen_organization_hyphen_secrets.Output
     /// List repository organization variables
     ///
-    /// Lists all organiation variables shared with a repository.
+    /// Lists all organization variables shared with a repository.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `actions_variables:read` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/organization-variables`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/organization-variables/get(actions/list-repo-organization-variables)`.
@@ -663,7 +646,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// Gets the GitHub Actions permissions policy for a repository, including whether GitHub Actions is enabled and the actions and reusable workflows allowed to run in the repository.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `administration` repository permission to use this API.
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/permissions`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/permissions/get(actions/get-github-actions-permissions-repository)`.
@@ -672,7 +655,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// Sets the GitHub Actions permissions policy for enabling GitHub Actions and allowed actions and reusable workflows in the repository.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `administration` repository permission to use this API.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/actions/permissions`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/permissions/put(actions/set-github-actions-permissions-repository)`.
@@ -683,8 +666,7 @@ public protocol APIProtocol: Sendable {
     /// This endpoint only applies to private repositories.
     /// For more information, see "[Allowing access to components in a private repository](https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository#allowing-access-to-components-in-a-private-repository)."
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the
-    /// repository `administration` permission to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/permissions/access`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/permissions/access/get(actions/get-workflow-access-to-repository)`.
@@ -695,8 +677,7 @@ public protocol APIProtocol: Sendable {
     /// This endpoint only applies to private repositories.
     /// For more information, see "[Allowing access to components in a private repository](https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository#allowing-access-to-components-in-a-private-repository)".
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the
-    /// repository `administration` permission to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/actions/permissions/access`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/permissions/access/put(actions/set-workflow-access-to-repository)`.
@@ -705,7 +686,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// Gets the settings for selected actions and reusable workflows that are allowed in a repository. To use this endpoint, the repository policy for `allowed_actions` must be configured to `selected`. For more information, see "[Set GitHub Actions permissions for a repository](#set-github-actions-permissions-for-a-repository)."
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `administration` repository permission to use this API.
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/permissions/selected-actions`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/permissions/selected-actions/get(actions/get-allowed-actions-repository)`.
@@ -714,7 +695,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// Sets the actions and reusable workflows that are allowed in a repository. To use this endpoint, the repository permission policy for `allowed_actions` must be configured to `selected`. For more information, see "[Set GitHub Actions permissions for a repository](#set-github-actions-permissions-for-a-repository)."
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `administration` repository permission to use this API.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/actions/permissions/selected-actions`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/permissions/selected-actions/put(actions/set-allowed-actions-repository)`.
@@ -725,7 +706,7 @@ public protocol APIProtocol: Sendable {
     /// as well as if GitHub Actions can submit approving pull request reviews.
     /// For more information, see "[Setting the permissions of the GITHUB_TOKEN for your repository](https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository#setting-the-permissions-of-the-github_token-for-your-repository)."
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the repository `administration` permission to use this API.
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/permissions/workflow`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/permissions/workflow/get(actions/get-github-actions-default-workflow-permissions-repository)`.
@@ -736,7 +717,7 @@ public protocol APIProtocol: Sendable {
     /// can submit approving pull request reviews.
     /// For more information, see "[Setting the permissions of the GITHUB_TOKEN for your repository](https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository#setting-the-permissions-of-the-github_token-for-your-repository)."
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the repository `administration` permission to use this API.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/actions/permissions/workflow`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/permissions/workflow/put(actions/set-github-actions-default-workflow-permissions-repository)`.
@@ -745,9 +726,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Lists all self-hosted runners configured in a repository.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the repository to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runners`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runners/get(actions/list-self-hosted-runners-for-repo)`.
@@ -756,9 +737,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Lists binaries for the runner application that you can download and run.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the repository to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runners/downloads`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runners/downloads/get(actions/list-runner-applications-for-repo)`.
@@ -767,47 +748,43 @@ public protocol APIProtocol: Sendable {
     ///
     /// Generates a configuration that can be passed to the runner application at startup.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// The authenticated user must have admin access to the repository.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the`repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/actions/runners/generate-jitconfig`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runners/generate-jitconfig/post(actions/generate-runner-jitconfig-for-repo)`.
     func actions_sol_generate_hyphen_runner_hyphen_jitconfig_hyphen_for_hyphen_repo(_ input: Operations.actions_sol_generate_hyphen_runner_hyphen_jitconfig_hyphen_for_hyphen_repo.Input) async throws -> Operations.actions_sol_generate_hyphen_runner_hyphen_jitconfig_hyphen_for_hyphen_repo.Output
     /// Create a registration token for a repository
     ///
-    /// Returns a token that you can pass to the `config` script. The token
-    /// expires after one hour.
+    /// Returns a token that you can pass to the `config` script. The token expires after one hour.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// For example, you can replace `TOKEN` in the following example with the registration token provided by this endpoint to configure your self-hosted runner:
     ///
-    /// Example using registration token:
+    /// ```
+    /// ./config.sh --url https://github.com/octo-org --token TOKEN
+    /// ```
     ///
-    /// Configure your self-hosted runner, replacing `TOKEN` with the registration token provided
-    /// by this endpoint.
+    /// Authenticated users must have admin access to the repository to use this endpoint.
     ///
-    /// ```config.sh --url https://github.com/octo-org/octo-repo-artifacts --token TOKEN```
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/actions/runners/registration-token`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runners/registration-token/post(actions/create-registration-token-for-repo)`.
     func actions_sol_create_hyphen_registration_hyphen_token_hyphen_for_hyphen_repo(_ input: Operations.actions_sol_create_hyphen_registration_hyphen_token_hyphen_for_hyphen_repo.Input) async throws -> Operations.actions_sol_create_hyphen_registration_hyphen_token_hyphen_for_hyphen_repo.Output
     /// Create a remove token for a repository
     ///
-    /// Returns a token that you can pass to remove a self-hosted runner from
-    /// a repository. The token expires after one hour.
+    /// Returns a token that you can pass to the `config` script to remove a self-hosted runner from an repository. The token expires after one hour.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// For example, you can replace `TOKEN` in the following example with the registration token provided by this endpoint to remove your self-hosted runner from an organization:
     ///
-    /// Example using remove token:
+    /// ```
+    /// ./config.sh remove --token TOKEN
+    /// ```
     ///
-    /// To remove your self-hosted runner from a repository, replace TOKEN with
-    /// the remove token provided by this endpoint.
+    /// Authenticated users must have admin access to the repository to use this endpoint.
     ///
-    /// ```config.sh remove --token TOKEN```
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/actions/runners/remove-token`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runners/remove-token/post(actions/create-remove-token-for-repo)`.
@@ -816,9 +793,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Gets a specific self-hosted runner configured in a repository.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the repository to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runners/{runner_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runners/{runner_id}/get(actions/get-self-hosted-runner-for-repo)`.
@@ -827,9 +804,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Forces the removal of a self-hosted runner from a repository. You can use this endpoint to completely remove the runner when the machine you were using no longer exists.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the repository to use this endpoint.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/actions/runners/{runner_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runners/{runner_id}/delete(actions/delete-self-hosted-runner-from-repo)`.
@@ -838,20 +815,20 @@ public protocol APIProtocol: Sendable {
     ///
     /// Lists all labels for a self-hosted runner configured in a repository.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the repository to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runners/{runner_id}/labels`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runners/{runner_id}/labels/get(actions/list-labels-for-self-hosted-runner-for-repo)`.
     func actions_sol_list_hyphen_labels_hyphen_for_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_repo(_ input: Operations.actions_sol_list_hyphen_labels_hyphen_for_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_repo.Input) async throws -> Operations.actions_sol_list_hyphen_labels_hyphen_for_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_repo.Output
     /// Add custom labels to a self-hosted runner for a repository
     ///
-    /// Add custom labels to a self-hosted runner configured in a repository.
+    /// Adds custom labels to a self-hosted runner configured in a repository.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the organization to use this endpoint.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/actions/runners/{runner_id}/labels`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runners/{runner_id}/labels/post(actions/add-custom-labels-to-self-hosted-runner-for-repo)`.
@@ -861,9 +838,9 @@ public protocol APIProtocol: Sendable {
     /// Remove all previous custom labels and set the new custom labels for a specific
     /// self-hosted runner configured in a repository.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the repository to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/actions/runners/{runner_id}/labels`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runners/{runner_id}/labels/put(actions/set-custom-labels-for-self-hosted-runner-for-repo)`.
@@ -873,9 +850,9 @@ public protocol APIProtocol: Sendable {
     /// Remove all custom labels from a self-hosted runner configured in a
     /// repository. Returns the remaining read-only labels from the runner.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the repository to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/actions/runners/{runner_id}/labels`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runners/{runner_id}/labels/delete(actions/remove-all-custom-labels-from-self-hosted-runner-for-repo)`.
@@ -888,9 +865,9 @@ public protocol APIProtocol: Sendable {
     /// This endpoint returns a `404 Not Found` status if the custom label is not
     /// present on the runner.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the repository to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/actions/runners/{runner_id}/labels/{name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runners/{runner_id}/labels/{name}/delete(actions/remove-custom-label-from-self-hosted-runner-for-repo)`.
@@ -899,30 +876,40 @@ public protocol APIProtocol: Sendable {
     ///
     /// Lists all workflow runs for a repository. You can use parameters to narrow the list of results. For more information about using parameters, see [Parameters](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#parameters).
     ///
-    /// Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/get(actions/list-workflow-runs-for-repo)`.
     func actions_sol_list_hyphen_workflow_hyphen_runs_hyphen_for_hyphen_repo(_ input: Operations.actions_sol_list_hyphen_workflow_hyphen_runs_hyphen_for_hyphen_repo.Input) async throws -> Operations.actions_sol_list_hyphen_workflow_hyphen_runs_hyphen_for_hyphen_repo.Output
     /// Get a workflow run
     ///
-    /// Gets a specific workflow run. Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// Gets a specific workflow run.
+    ///
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runs/{run_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/get(actions/get-workflow-run)`.
     func actions_sol_get_hyphen_workflow_hyphen_run(_ input: Operations.actions_sol_get_hyphen_workflow_hyphen_run.Input) async throws -> Operations.actions_sol_get_hyphen_workflow_hyphen_run.Output
     /// Delete a workflow run
     ///
-    /// Delete a specific workflow run. Anyone with write access to the repository can use this endpoint. If the repository is
-    /// private you must use an access token with the `repo` scope. GitHub Apps must have the `actions:write` permission to use
-    /// this endpoint.
+    /// Deletes a specific workflow run.
+    ///
+    /// Anyone with write access to the repository can use this endpoint.
+    ///
+    /// If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/actions/runs/{run_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/delete(actions/delete-workflow-run)`.
     func actions_sol_delete_hyphen_workflow_hyphen_run(_ input: Operations.actions_sol_delete_hyphen_workflow_hyphen_run.Input) async throws -> Operations.actions_sol_delete_hyphen_workflow_hyphen_run.Output
     /// Get the review history for a workflow run
     ///
-    /// Anyone with read access to the repository can use this endpoint. If the repository is private, you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runs/{run_id}/approvals`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/approvals/get(actions/get-reviews-for-run)`.
@@ -931,31 +918,41 @@ public protocol APIProtocol: Sendable {
     ///
     /// Approves a workflow run for a pull request from a public fork of a first time contributor. For more information, see ["Approving workflow runs from public forks](https://docs.github.com/actions/managing-workflow-runs/approving-workflow-runs-from-public-forks)."
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `actions:write` permission to use this endpoint.
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/actions/runs/{run_id}/approve`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/approve/post(actions/approve-workflow-run)`.
     func actions_sol_approve_hyphen_workflow_hyphen_run(_ input: Operations.actions_sol_approve_hyphen_workflow_hyphen_run.Input) async throws -> Operations.actions_sol_approve_hyphen_workflow_hyphen_run.Output
     /// List workflow run artifacts
     ///
-    /// Lists artifacts for a workflow run. Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// Lists artifacts for a workflow run.
+    ///
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runs/{run_id}/artifacts`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/artifacts/get(actions/list-workflow-run-artifacts)`.
     func actions_sol_list_hyphen_workflow_hyphen_run_hyphen_artifacts(_ input: Operations.actions_sol_list_hyphen_workflow_hyphen_run_hyphen_artifacts.Input) async throws -> Operations.actions_sol_list_hyphen_workflow_hyphen_run_hyphen_artifacts.Output
     /// Get a workflow run attempt
     ///
-    /// Gets a specific workflow run attempt. Anyone with read access to the repository
-    /// can use this endpoint. If the repository is private you must use an access token
-    /// with the `repo` scope. GitHub Apps must have the `actions:read` permission to
-    /// use this endpoint.
+    /// Gets a specific workflow run attempt.
+    ///
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runs/{run_id}/attempts/{attempt_number}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/attempts/{attempt_number}/get(actions/get-workflow-run-attempt)`.
     func actions_sol_get_hyphen_workflow_hyphen_run_hyphen_attempt(_ input: Operations.actions_sol_get_hyphen_workflow_hyphen_run_hyphen_attempt.Input) async throws -> Operations.actions_sol_get_hyphen_workflow_hyphen_run_hyphen_attempt.Output
     /// List jobs for a workflow run attempt
     ///
-    /// Lists jobs for a specific workflow run attempt. Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint. You can use parameters to narrow the list of results. For more information about using parameters, see [Parameters](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#parameters).
+    /// Lists jobs for a specific workflow run attempt. You can use parameters to narrow the list of results. For more information
+    /// about using parameters, see [Parameters](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#parameters).
+    ///
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint  with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runs/{run_id}/attempts/{attempt_number}/jobs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/attempts/{attempt_number}/jobs/get(actions/list-jobs-for-workflow-run-attempt)`.
@@ -963,9 +960,11 @@ public protocol APIProtocol: Sendable {
     /// Download workflow run attempt logs
     ///
     /// Gets a redirect URL to download an archive of log files for a specific workflow run attempt. This link expires after
-    /// 1 minute. Look for `Location:` in the response header to find the URL for the download. Anyone with read access to
-    /// the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// 1 minute. Look for `Location:` in the response header to find the URL for the download.
+    ///
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runs/{run_id}/attempts/{attempt_number}/logs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/attempts/{attempt_number}/logs/get(actions/download-workflow-run-attempt-logs)`.
@@ -974,8 +973,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// Cancels a workflow run using its `id`.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `actions:write` permission to use this endpoint.
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/actions/runs/{run_id}/cancel`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/cancel/post(actions/cancel-workflow-run)`.
@@ -987,8 +985,7 @@ public protocol APIProtocol: Sendable {
     /// **Note:** GitHub Apps can only review their own custom deployment protection rules.
     /// To approve or reject pending deployments that are waiting for review from a specific person or team, see [`POST /repos/{owner}/{repo}/actions/runs/{run_id}/pending_deployments`](/rest/actions/workflow-runs#review-pending-deployments-for-a-workflow-run).
     ///
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have read and write permission for **Deployments** to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/actions/runs/{run_id}/deployment_protection_rule`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/deployment_protection_rule/post(actions/review-custom-gates-for-run)`.
@@ -998,15 +995,19 @@ public protocol APIProtocol: Sendable {
     /// Cancels a workflow run and bypasses conditions that would otherwise cause a workflow execution to continue, such as an `always()` condition on a job.
     /// You should only use this endpoint to cancel a workflow run when the workflow run is not responding to [`POST /repos/{owner}/{repo}/actions/runs/{run_id}/cancel`](/rest/actions/workflow-runs#cancel-a-workflow-run).
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `actions:write` permission to use this endpoint.
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/actions/runs/{run_id}/force-cancel`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/force-cancel/post(actions/force-cancel-workflow-run)`.
     func actions_sol_force_hyphen_cancel_hyphen_workflow_hyphen_run(_ input: Operations.actions_sol_force_hyphen_cancel_hyphen_workflow_hyphen_run.Input) async throws -> Operations.actions_sol_force_hyphen_cancel_hyphen_workflow_hyphen_run.Output
     /// List jobs for a workflow run
     ///
-    /// Lists jobs for a workflow run. Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint. You can use parameters to narrow the list of results. For more information about using parameters, see [Parameters](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#parameters).
+    /// Lists jobs for a workflow run. You can use parameters to narrow the list of results. For more information
+    /// about using parameters, see [Parameters](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#parameters).
+    ///
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runs/{run_id}/jobs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/jobs/get(actions/list-jobs-for-workflow-run)`.
@@ -1014,16 +1015,20 @@ public protocol APIProtocol: Sendable {
     /// Download workflow run logs
     ///
     /// Gets a redirect URL to download an archive of log files for a workflow run. This link expires after 1 minute. Look for
-    /// `Location:` in the response header to find the URL for the download. Anyone with read access to the repository can use
-    /// this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have
-    /// the `actions:read` permission to use this endpoint.
+    /// `Location:` in the response header to find the URL for the download.
+    ///
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runs/{run_id}/logs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/logs/get(actions/download-workflow-run-logs)`.
     func actions_sol_download_hyphen_workflow_hyphen_run_hyphen_logs(_ input: Operations.actions_sol_download_hyphen_workflow_hyphen_run_hyphen_logs.Input) async throws -> Operations.actions_sol_download_hyphen_workflow_hyphen_run_hyphen_logs.Output
     /// Delete workflow run logs
     ///
-    /// Deletes all logs for a workflow run. You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `actions:write` permission to use this endpoint.
+    /// Deletes all logs for a workflow run.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/actions/runs/{run_id}/logs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/logs/delete(actions/delete-workflow-run-logs)`.
@@ -1032,7 +1037,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Get all deployment environments for a workflow run that are waiting for protection rules to pass.
     ///
-    /// Anyone with read access to the repository can use this endpoint. If the repository is private, you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runs/{run_id}/pending_deployments`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/pending_deployments/get(actions/get-pending-deployments-for-run)`.
@@ -1041,21 +1048,27 @@ public protocol APIProtocol: Sendable {
     ///
     /// Approve or reject pending deployments that are waiting on approval by a required reviewer.
     ///
-    /// Required reviewers with read access to the repository contents and deployments can use this endpoint. Required reviewers must authenticate using an access token with the `repo` scope to use this endpoint.
+    /// Required reviewers with read access to the repository contents and deployments can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/actions/runs/{run_id}/pending_deployments`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/pending_deployments/post(actions/review-pending-deployments-for-run)`.
     func actions_sol_review_hyphen_pending_hyphen_deployments_hyphen_for_hyphen_run(_ input: Operations.actions_sol_review_hyphen_pending_hyphen_deployments_hyphen_for_hyphen_run.Input) async throws -> Operations.actions_sol_review_hyphen_pending_hyphen_deployments_hyphen_for_hyphen_run.Output
     /// Re-run a workflow
     ///
-    /// Re-runs your workflow run using its `id`. You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `actions:write` permission to use this endpoint.
+    /// Re-runs your workflow run using its `id`.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/actions/runs/{run_id}/rerun`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/rerun/post(actions/re-run-workflow)`.
     func actions_sol_re_hyphen_run_hyphen_workflow(_ input: Operations.actions_sol_re_hyphen_run_hyphen_workflow.Input) async throws -> Operations.actions_sol_re_hyphen_run_hyphen_workflow.Output
     /// Re-run failed jobs from a workflow run
     ///
-    /// Re-run all of the failed jobs and their dependent jobs in a workflow run using the `id` of the workflow run. You must authenticate using an access token with the `repo` scope to use this endpoint.
+    /// Re-run all of the failed jobs and their dependent jobs in a workflow run using the `id` of the workflow run.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/actions/runs/{run_id}/rerun-failed-jobs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/rerun-failed-jobs/post(actions/re-run-workflow-failed-jobs)`.
@@ -1064,7 +1077,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Gets the number of billable minutes and total run time for a specific workflow run. Billable minutes only apply to workflows in private repositories that use GitHub-hosted runners. Usage is listed for each GitHub-hosted runner operating system in milliseconds. Any job re-runs are also included in the usage. The usage does not include the multiplier for macOS and Windows runners and is not rounded up to the nearest whole minute. For more information, see "[Managing billing for GitHub Actions](https://docs.github.com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-actions)".
     ///
-    /// Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runs/{run_id}/timing`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/timing/get(actions/get-workflow-run-usage)`.
@@ -1074,9 +1089,9 @@ public protocol APIProtocol: Sendable {
     /// Lists all secrets available in a repository without revealing their encrypted
     /// values.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `secrets` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/secrets`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/secrets/get(actions/list-repo-secrets)`.
@@ -1087,9 +1102,8 @@ public protocol APIProtocol: Sendable {
     /// encrypt a secret before you can create or update secrets.
     ///
     /// Anyone with read access to the repository can use this endpoint.
-    /// If the repository is private you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `secrets` repository permission to use this endpoint.
-    /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/secrets/public-key`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/secrets/public-key/get(actions/get-repo-public-key)`.
@@ -1098,9 +1112,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Gets a single repository secret without revealing its encrypted value.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `secrets` repository permission to use this endpoint.
-    /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    /// The authenticated user must have collaborator access to the repository to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/secrets/{secret_name}/get(actions/get-repo-secret)`.
@@ -1110,9 +1124,9 @@ public protocol APIProtocol: Sendable {
     /// Creates or updates a repository secret with an encrypted value. Encrypt your secret using
     /// [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages). For more information, see "[Encrypting secrets for the REST API](https://docs.github.com/rest/guides/encrypting-secrets-for-the-rest-api)."
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `secrets` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/actions/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/secrets/{secret_name}/put(actions/create-or-update-repo-secret)`.
@@ -1121,9 +1135,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Deletes a secret in a repository using the secret name.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `secrets` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/actions/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/secrets/{secret_name}/delete(actions/delete-repo-secret)`.
@@ -1131,9 +1145,10 @@ public protocol APIProtocol: Sendable {
     /// List repository variables
     ///
     /// Lists all repository variables.
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `actions_variables:read` repository permission to use this endpoint.
+    ///
     /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/variables`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/variables/get(actions/list-repo-variables)`.
@@ -1142,9 +1157,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Creates a repository variable that you can reference in a GitHub Actions workflow.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `actions_variables:write` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/actions/variables`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/variables/post(actions/create-repo-variable)`.
@@ -1153,9 +1168,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Gets a specific variable in a repository.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `actions_variables:read` repository permission to use this endpoint.
-    /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    /// The authenticated user must have collaborator access to the repository to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/variables/{name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/variables/{name}/get(actions/get-repo-variable)`.
@@ -1164,9 +1179,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Updates a repository variable that you can reference in a GitHub Actions workflow.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `actions_variables:write` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/actions/variables/{name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/variables/{name}/patch(actions/update-repo-variable)`.
@@ -1175,23 +1190,32 @@ public protocol APIProtocol: Sendable {
     ///
     /// Deletes a repository variable using the variable name.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `actions_variables:write` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/actions/variables/{name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/variables/{name}/delete(actions/delete-repo-variable)`.
     func actions_sol_delete_hyphen_repo_hyphen_variable(_ input: Operations.actions_sol_delete_hyphen_repo_hyphen_variable.Input) async throws -> Operations.actions_sol_delete_hyphen_repo_hyphen_variable.Output
     /// List repository workflows
     ///
-    /// Lists the workflows in a repository. Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// Lists the workflows in a repository.
+    ///
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/workflows`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/workflows/get(actions/list-repo-workflows)`.
     func actions_sol_list_hyphen_repo_hyphen_workflows(_ input: Operations.actions_sol_list_hyphen_repo_hyphen_workflows.Input) async throws -> Operations.actions_sol_list_hyphen_repo_hyphen_workflows.Output
     /// Get a workflow
     ///
-    /// Gets a specific workflow. You can replace `workflow_id` with the workflow file name. For example, you could use `main.yaml`. Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// Gets a specific workflow. You can replace `workflow_id` with the workflow
+    /// file name. For example, you could use `main.yaml`.
+    ///
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/workflows/{workflow_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/workflows/{workflow_id}/get(actions/get-workflow)`.
@@ -1200,7 +1224,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// Disables a workflow and sets the `state` of the workflow to `disabled_manually`. You can replace `workflow_id` with the workflow file name. For example, you could use `main.yaml`.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `actions:write` permission to use this endpoint.
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/actions/workflows/{workflow_id}/disable`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/workflows/{workflow_id}/disable/put(actions/disable-workflow)`.
@@ -1211,7 +1235,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// You must configure your GitHub Actions workflow to run when the [`workflow_dispatch` webhook](/developers/webhooks-and-events/webhook-events-and-payloads#workflow_dispatch) event occurs. The `inputs` are configured in the workflow file. For more information about how to configure the `workflow_dispatch` event in the workflow file, see "[Events that trigger workflows](/actions/reference/events-that-trigger-workflows#workflow_dispatch)."
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `actions:write` permission to use this endpoint. For more information, see "[Creating a personal access token for the command line](https://docs.github.com/articles/creating-a-personal-access-token-for-the-command-line)."
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches/post(actions/create-workflow-dispatch)`.
@@ -1220,7 +1244,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// Enables a workflow and sets the `state` of the workflow to `active`. You can replace `workflow_id` with the workflow file name. For example, you could use `main.yaml`.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `actions:write` permission to use this endpoint.
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/actions/workflows/{workflow_id}/enable`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/workflows/{workflow_id}/enable/put(actions/enable-workflow)`.
@@ -1229,7 +1253,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// List all workflow runs for a workflow. You can replace `workflow_id` with the workflow file name. For example, you could use `main.yaml`. You can use parameters to narrow the list of results. For more information about using parameters, see [Parameters](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#parameters).
     ///
-    /// Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope.
+    /// Anyone with read access to the repository can use this endpoint
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/workflows/{workflow_id}/runs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/workflows/{workflow_id}/runs/get(actions/list-workflow-runs)`.
@@ -1238,7 +1264,11 @@ public protocol APIProtocol: Sendable {
     ///
     /// Gets the number of billable minutes used by a specific workflow during the current billing cycle. Billable minutes only apply to workflows in private repositories that use GitHub-hosted runners. Usage is listed for each GitHub-hosted runner operating system in milliseconds. Any job re-runs are also included in the usage. The usage does not include the multiplier for macOS and Windows runners and is not rounded up to the nearest whole minute. For more information, see "[Managing billing for GitHub Actions](https://docs.github.com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-actions)".
     ///
-    /// You can replace `workflow_id` with the workflow file name. For example, you could use `main.yaml`. Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// You can replace `workflow_id` with the workflow file name. For example, you could use `main.yaml`.
+    ///
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/workflows/{workflow_id}/timing`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/workflows/{workflow_id}/timing/get(actions/get-workflow-usage)`.
@@ -1248,9 +1278,9 @@ public protocol APIProtocol: Sendable {
     /// Lists all secrets available in an environment without revealing their
     /// encrypted values.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `secrets` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repositories/{repository_id}/environments/{environment_name}/secrets`.
     /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/secrets/get(actions/list-environment-secrets)`.
@@ -1261,9 +1291,8 @@ public protocol APIProtocol: Sendable {
     /// secrets. You need to encrypt a secret before you can create or update secrets.
     ///
     /// Anyone with read access to the repository can use this endpoint.
-    /// If the repository is private you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `secrets` repository permission to use this endpoint.
-    /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repositories/{repository_id}/environments/{environment_name}/secrets/public-key`.
     /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/secrets/public-key/get(actions/get-environment-public-key)`.
@@ -1272,9 +1301,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Gets a single environment secret without revealing its encrypted value.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `secrets` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}/get(actions/get-environment-secret)`.
@@ -1284,9 +1313,9 @@ public protocol APIProtocol: Sendable {
     /// Creates or updates an environment secret with an encrypted value. Encrypt your secret using
     /// [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages). For more information, see "[Encrypting secrets for the REST API](https://docs.github.com/rest/guides/encrypting-secrets-for-the-rest-api)."
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `secrets` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}/put(actions/create-or-update-environment-secret)`.
@@ -1295,9 +1324,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Deletes a secret in an environment using the secret name.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `secrets` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}/delete(actions/delete-environment-secret)`.
@@ -1306,9 +1335,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Lists all environment variables.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `environments:read` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repositories/{repository_id}/environments/{environment_name}/variables`.
     /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/variables/get(actions/list-environment-variables)`.
@@ -1317,9 +1346,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Create an environment variable that you can reference in a GitHub Actions workflow.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `environment:write` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repositories/{repository_id}/environments/{environment_name}/variables`.
     /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/variables/post(actions/create-environment-variable)`.
@@ -1328,9 +1357,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Gets a specific variable in an environment.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `environments:read` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repositories/{repository_id}/environments/{environment_name}/variables/{name}`.
     /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/variables/{name}/get(actions/get-environment-variable)`.
@@ -1339,9 +1368,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Updates an environment variable that you can reference in a GitHub Actions workflow.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `environment:write` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PATCH /repositories/{repository_id}/environments/{environment_name}/variables/{name}`.
     /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/variables/{name}/patch(actions/update-environment-variable)`.
@@ -1350,9 +1379,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Deletes an environment variable using the variable name.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `environment:write` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repositories/{repository_id}/environments/{environment_name}/variables/{name}`.
     /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/variables/{name}/delete(actions/delete-environment-variable)`.
@@ -1365,7 +1394,8 @@ extension APIProtocol {
     ///
     /// Gets the total GitHub Actions cache usage for an organization.
     /// The data fetched using this API is refreshed approximately every 5 minutes, so values returned from this endpoint may take at least 5 minutes to get updated.
-    /// You must authenticate using an access token with the `read:org` scope to use this endpoint. GitHub Apps must have the `organization_admistration:read` permission to use this endpoint.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `read:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/cache/usage`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/cache/usage/get(actions/get-actions-cache-usage-for-org)`.
@@ -1382,7 +1412,8 @@ extension APIProtocol {
     ///
     /// Lists repositories and their GitHub Actions cache usage for an organization.
     /// The data fetched using this API is refreshed approximately every 5 minutes, so values returned from this endpoint may take at least 5 minutes to get updated.
-    /// You must authenticate using an access token with the `read:org` scope to use this endpoint. GitHub Apps must have the `organization_admistration:read` permission to use this endpoint.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `read:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/cache/usage-by-repository`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/cache/usage-by-repository/get(actions/get-actions-cache-usage-by-repo-for-org)`.
@@ -1401,7 +1432,7 @@ extension APIProtocol {
     ///
     /// Gets the GitHub Actions permissions policy for repositories and allowed actions and reusable workflows in an organization.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint. GitHub Apps must have the `administration` organization permission to use this API.
+    /// OAuth tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/permissions`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/permissions/get(actions/get-github-actions-permissions-organization)`.
@@ -1418,7 +1449,7 @@ extension APIProtocol {
     ///
     /// Sets the GitHub Actions permissions policy for repositories and allowed actions and reusable workflows in an organization.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint. GitHub Apps must have the `administration` organization permission to use this API.
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/actions/permissions`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/permissions/put(actions/set-github-actions-permissions-organization)`.
@@ -1435,7 +1466,7 @@ extension APIProtocol {
     ///
     /// Lists the selected repositories that are enabled for GitHub Actions in an organization. To use this endpoint, the organization permission policy for `enabled_repositories` must be configured to `selected`. For more information, see "[Set GitHub Actions permissions for an organization](#set-github-actions-permissions-for-an-organization)."
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint. GitHub Apps must have the `administration` organization permission to use this API.
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/permissions/repositories`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/permissions/repositories/get(actions/list-selected-repositories-enabled-github-actions-organization)`.
@@ -1454,7 +1485,8 @@ extension APIProtocol {
     ///
     /// Replaces the list of selected repositories that are enabled for GitHub Actions in an organization. To use this endpoint, the organization permission policy for `enabled_repositories` must be configured to `selected`. For more information, see "[Set GitHub Actions permissions for an organization](#set-github-actions-permissions-for-an-organization)."
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint. GitHub Apps must have the `administration` organization permission to use this API.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/actions/permissions/repositories`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/permissions/repositories/put(actions/set-selected-repositories-enabled-github-actions-organization)`.
@@ -1471,7 +1503,7 @@ extension APIProtocol {
     ///
     /// Adds a repository to the list of selected repositories that are enabled for GitHub Actions in an organization. To use this endpoint, the organization permission policy for `enabled_repositories` must be must be configured to `selected`. For more information, see "[Set GitHub Actions permissions for an organization](#set-github-actions-permissions-for-an-organization)."
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint. GitHub Apps must have the `administration` organization permission to use this API.
+    /// OAuth tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/actions/permissions/repositories/{repository_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/permissions/repositories/{repository_id}/put(actions/enable-selected-repository-github-actions-organization)`.
@@ -1482,7 +1514,7 @@ extension APIProtocol {
     ///
     /// Removes a repository from the list of selected repositories that are enabled for GitHub Actions in an organization. To use this endpoint, the organization permission policy for `enabled_repositories` must be configured to `selected`. For more information, see "[Set GitHub Actions permissions for an organization](#set-github-actions-permissions-for-an-organization)."
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint. GitHub Apps must have the `administration` organization permission to use this API.
+    /// OAuth tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/actions/permissions/repositories/{repository_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/permissions/repositories/{repository_id}/delete(actions/disable-selected-repository-github-actions-organization)`.
@@ -1491,9 +1523,9 @@ extension APIProtocol {
     }
     /// Get allowed actions and reusable workflows for an organization
     ///
-    /// Gets the selected actions and reusable workflows that are allowed in an organization. To use this endpoint, the organization permission policy for `allowed_actions` must be configured to `selected`. For more information, see "[Set GitHub Actions permissions for an organization](#set-github-actions-permissions-for-an-organization).""
+    /// Gets the selected actions and reusable workflows that are allowed in an organization. To use this endpoint, the organization permission policy for `allowed_actions` must be configured to `selected`. For more information, see "[Set GitHub Actions permissions for an organization](#set-github-actions-permissions-for-an-organization)."
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint. GitHub Apps must have the `administration` organization permission to use this API.
+    /// OAuth tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/permissions/selected-actions`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/permissions/selected-actions/get(actions/get-allowed-actions-organization)`.
@@ -1510,7 +1542,7 @@ extension APIProtocol {
     ///
     /// Sets the actions and reusable workflows that are allowed in an organization. To use this endpoint, the organization permission policy for `allowed_actions` must be configured to `selected`. For more information, see "[Set GitHub Actions permissions for an organization](#set-github-actions-permissions-for-an-organization)."
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint. GitHub Apps must have the `administration` organization permission to use this API.
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/actions/permissions/selected-actions`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/permissions/selected-actions/put(actions/set-allowed-actions-organization)`.
@@ -1529,7 +1561,7 @@ extension APIProtocol {
     /// as well as whether GitHub Actions can submit approving pull request reviews. For more information, see
     /// "[Setting the permissions of the GITHUB_TOKEN for your organization](https://docs.github.com/organizations/managing-organization-settings/disabling-or-limiting-github-actions-for-your-organization#setting-the-permissions-of-the-github_token-for-your-organization)."
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint. GitHub Apps must have the `administration` organization permission to use this API.
+    /// OAuth tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/permissions/workflow`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/permissions/workflow/get(actions/get-github-actions-default-workflow-permissions-organization)`.
@@ -1548,7 +1580,7 @@ extension APIProtocol {
     /// can submit approving pull request reviews. For more information, see
     /// "[Setting the permissions of the GITHUB_TOKEN for your organization](https://docs.github.com/organizations/managing-organization-settings/disabling-or-limiting-github-actions-for-your-organization#setting-the-permissions-of-the-github_token-for-your-organization)."
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint. GitHub Apps must have the `administration` organization permission to use this API.
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/actions/permissions/workflow`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/permissions/workflow/put(actions/set-github-actions-default-workflow-permissions-organization)`.
@@ -1565,10 +1597,9 @@ extension APIProtocol {
     ///
     /// Lists all self-hosted runners configured in an organization.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the organization to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, the `repo` scope is also required.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/runners`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/runners/get(actions/list-self-hosted-runners-for-org)`.
@@ -1587,10 +1618,9 @@ extension APIProtocol {
     ///
     /// Lists binaries for the runner application that you can download and run.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the organization to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.  If the repository is private, the `repo` scope is also required.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/runners/downloads`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/runners/downloads/get(actions/list-runner-applications-for-org)`.
@@ -1607,10 +1637,9 @@ extension APIProtocol {
     ///
     /// Generates a configuration that can be passed to the runner application at startup.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// The authenticated user must have admin access to the organization.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the`admin:org` scope to use this endpoint. If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/actions/runners/generate-jitconfig`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/runners/generate-jitconfig/post(actions/generate-runner-jitconfig-for-org)`.
@@ -1629,18 +1658,15 @@ extension APIProtocol {
     ///
     /// Returns a token that you can pass to the `config` script. The token expires after one hour.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
-    ///
-    /// Example using registration token: 
-    ///
-    /// Configure your self-hosted runner, replacing `TOKEN` with the registration token provided by this endpoint.
+    /// For example, you can replace `TOKEN` in the following example with the registration token provided by this endpoint to configure your self-hosted runner:
     ///
     /// ```
     /// ./config.sh --url https://github.com/octo-org --token TOKEN
     /// ```
+    ///
+    /// Authenticated users must have admin access to the organization to use this endpoint.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the`admin:org` scope to use this endpoint. If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/actions/runners/registration-token`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/runners/registration-token/post(actions/create-registration-token-for-org)`.
@@ -1657,19 +1683,15 @@ extension APIProtocol {
     ///
     /// Returns a token that you can pass to the `config` script to remove a self-hosted runner from an organization. The token expires after one hour.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
-    ///
-    /// Example using remove token:
-    ///
-    /// To remove your self-hosted runner from an organization, replace `TOKEN` with the remove token provided by this
-    /// endpoint.
+    /// For example, you can replace `TOKEN` in the following example with the registration token provided by this endpoint to remove your self-hosted runner from an organization:
     ///
     /// ```
     /// ./config.sh remove --token TOKEN
     /// ```
+    ///
+    /// Authenticated users must have admin access to the organization to use this endpoint.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the`admin:org` scope to use this endpoint. If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/actions/runners/remove-token`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/runners/remove-token/post(actions/create-remove-token-for-org)`.
@@ -1686,10 +1708,9 @@ extension APIProtocol {
     ///
     /// Gets a specific self-hosted runner configured in an organization.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the organization to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, the `repo` scope is also required.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/runners/{runner_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/runners/{runner_id}/get(actions/get-self-hosted-runner-for-org)`.
@@ -1706,10 +1727,9 @@ extension APIProtocol {
     ///
     /// Forces the removal of a self-hosted runner from an organization. You can use this endpoint to completely remove the runner when the machine you were using no longer exists.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the organization to use this endpoint.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the`admin:org` scope to use this endpoint. If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/actions/runners/{runner_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/runners/{runner_id}/delete(actions/delete-self-hosted-runner-from-org)`.
@@ -1720,10 +1740,9 @@ extension APIProtocol {
     ///
     /// Lists all labels for a self-hosted runner configured in an organization.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the organization to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, the `repo` scope is also required.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/runners/{runner_id}/labels`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/runners/{runner_id}/labels/get(actions/list-labels-for-self-hosted-runner-for-org)`.
@@ -1738,12 +1757,11 @@ extension APIProtocol {
     }
     /// Add custom labels to a self-hosted runner for an organization
     ///
-    /// Add custom labels to a self-hosted runner configured in an organization.
+    /// Adds custom labels to a self-hosted runner configured in an organization.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the organization to use this endpoint.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/actions/runners/{runner_id}/labels`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/runners/{runner_id}/labels/post(actions/add-custom-labels-to-self-hosted-runner-for-org)`.
@@ -1763,10 +1781,9 @@ extension APIProtocol {
     /// Remove all previous custom labels and set the new custom labels for a specific
     /// self-hosted runner configured in an organization.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the organization to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, the `repo` scope is also required.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/actions/runners/{runner_id}/labels`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/runners/{runner_id}/labels/put(actions/set-custom-labels-for-self-hosted-runner-for-org)`.
@@ -1786,10 +1803,9 @@ extension APIProtocol {
     /// Remove all custom labels from a self-hosted runner configured in an
     /// organization. Returns the remaining read-only labels from the runner.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the organization to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, the `repo` scope is also required.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/actions/runners/{runner_id}/labels`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/runners/{runner_id}/labels/delete(actions/remove-all-custom-labels-from-self-hosted-runner-for-org)`.
@@ -1810,10 +1826,9 @@ extension APIProtocol {
     /// This endpoint returns a `404 Not Found` status if the custom label is not
     /// present on the runner.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the organization to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, the `repo` scope is also required.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/actions/runners/{runner_id}/labels/{name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/runners/{runner_id}/labels/{name}/delete(actions/remove-custom-label-from-self-hosted-runner-for-org)`.
@@ -1831,10 +1846,9 @@ extension APIProtocol {
     /// Lists all secrets available in an organization without revealing their
     /// encrypted values.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `secrets` organization permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, the `repo` scope is also required.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/secrets`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/secrets/get(actions/list-org-secrets)`.
@@ -1854,10 +1868,9 @@ extension APIProtocol {
     /// Gets your public key, which you need to encrypt secrets. You need to
     /// encrypt a secret before you can create or update secrets.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `secrets` organization permission to use this endpoint.
-    /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    /// The authenticated user must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the`admin:org` scope to use this endpoint. If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/secrets/public-key`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/secrets/public-key/get(actions/get-org-public-key)`.
@@ -1874,10 +1887,9 @@ extension APIProtocol {
     ///
     /// Gets a single organization secret without revealing its encrypted value.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `secrets` organization permission to use this endpoint.
-    /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    /// The authenticated user must have collaborator access to a repository to create, update, or read secrets
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the`admin:org` scope to use this endpoint. If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/secrets/{secret_name}/get(actions/get-org-secret)`.
@@ -1895,10 +1907,9 @@ extension APIProtocol {
     /// Creates or updates an organization secret with an encrypted value. Encrypt your secret using
     /// [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages). For more information, see "[Encrypting secrets for the REST API](https://docs.github.com/rest/guides/encrypting-secrets-for-the-rest-api)."
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `secrets` organization permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the`admin:org` scope to use this endpoint. If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/actions/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/secrets/{secret_name}/put(actions/create-or-update-org-secret)`.
@@ -1917,10 +1928,9 @@ extension APIProtocol {
     ///
     /// Deletes a secret in an organization using the secret name.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `secrets` organization permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the`admin:org` scope to use this endpoint. If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/actions/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/secrets/{secret_name}/delete(actions/delete-org-secret)`.
@@ -1932,10 +1942,9 @@ extension APIProtocol {
     /// Lists all repositories that have been selected when the `visibility`
     /// for repository access to a secret is set to `selected`.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `secrets` organization permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, the `repo` scope is also required.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/secrets/{secret_name}/repositories`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/secrets/{secret_name}/repositories/get(actions/list-selected-repos-for-org-secret)`.
@@ -1956,10 +1965,9 @@ extension APIProtocol {
     /// for repository access is set to `selected`. The visibility is set when you [Create
     /// or update an organization secret](https://docs.github.com/rest/actions/secrets#create-or-update-an-organization-secret).
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `secrets` organization permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, the `repo` scope is also required.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/actions/secrets/{secret_name}/repositories`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/secrets/{secret_name}/repositories/put(actions/set-selected-repos-for-org-secret)`.
@@ -1975,13 +1983,12 @@ extension APIProtocol {
     /// Add selected repository to an organization secret
     ///
     /// Adds a repository to an organization secret when the `visibility` for
-    /// repository access is set to `selected`. The visibility is set when you [Create or
+    /// repository access is set to `selected`. For more information about setting the visibility, see [Create or
     /// update an organization secret](https://docs.github.com/rest/actions/secrets#create-or-update-an-organization-secret).
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `secrets` organization permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/actions/secrets/{secret_name}/repositories/{repository_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/secrets/{secret_name}/repositories/{repository_id}/put(actions/add-selected-repo-to-org-secret)`.
@@ -1994,10 +2001,9 @@ extension APIProtocol {
     /// for repository access is set to `selected`. The visibility is set when you [Create
     /// or update an organization secret](https://docs.github.com/rest/actions/secrets#create-or-update-an-organization-secret).
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `secrets` organization permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, the `repo` scope is also required.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/actions/secrets/{secret_name}/repositories/{repository_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/secrets/{secret_name}/repositories/{repository_id}/delete(actions/remove-selected-repo-from-org-secret)`.
@@ -2007,7 +2013,10 @@ extension APIProtocol {
     /// List organization variables
     ///
     /// Lists all organization variables.
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint. If the repository is private, you must use an access token with the `repo` scope. GitHub Apps must have the `organization_actions_variables:read` organization permission to use this endpoint. Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, the `repo` scope is also required.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/variables`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/variables/get(actions/list-org-variables)`.
@@ -2026,10 +2035,9 @@ extension APIProtocol {
     ///
     /// Creates an organization variable that you can reference in a GitHub Actions workflow.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `organization_actions_variables:write` organization permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the`admin:org` scope to use this endpoint. If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/actions/variables`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/variables/post(actions/create-org-variable)`.
@@ -2048,10 +2056,9 @@ extension APIProtocol {
     ///
     /// Gets a specific variable in an organization.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `organization_actions_variables:read` organization permission to use this endpoint.
-    /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    /// The authenticated user must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the`admin:org` scope to use this endpoint. If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/variables/{name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/variables/{name}/get(actions/get-org-variable)`.
@@ -2068,10 +2075,9 @@ extension APIProtocol {
     ///
     /// Updates an organization variable that you can reference in a GitHub Actions workflow.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `organization_actions_variables:write` organization permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, the `repo` scope is also required.
     ///
     /// - Remark: HTTP `PATCH /orgs/{org}/actions/variables/{name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/variables/{name}/patch(actions/update-org-variable)`.
@@ -2088,10 +2094,9 @@ extension APIProtocol {
     ///
     /// Deletes an organization variable using the variable name.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `organization_actions_variables:write` organization permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the`admin:org` scope to use this endpoint. If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/actions/variables/{name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/variables/{name}/delete(actions/delete-org-variable)`.
@@ -2103,10 +2108,9 @@ extension APIProtocol {
     /// Lists all repositories that can access an organization variable
     /// that is available to selected repositories.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `organization_actions_variables:read` organization permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, the `repo` scope is also required.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/variables/{name}/repositories`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/variables/{name}/repositories/get(actions/list-selected-repos-for-org-variable)`.
@@ -2127,11 +2131,9 @@ extension APIProtocol {
     /// to selected repositories. Organization variables that are available to selected
     /// repositories have their `visibility` field set to `selected`.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `organization_actions_variables:write` organization permission to use this
-    /// endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, the `repo` scope is also required.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/actions/variables/{name}/repositories`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/variables/{name}/repositories/put(actions/set-selected-repos-for-org-variable)`.
@@ -2149,10 +2151,9 @@ extension APIProtocol {
     /// Adds a repository to an organization variable that is available to selected repositories.
     /// Organization variables that are available to selected repositories have their `visibility` field set to `selected`.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `organization_actions_variables:write` organization permission to use this endpoint.
-    /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/actions/variables/{name}/repositories/{repository_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/variables/{name}/repositories/{repository_id}/put(actions/add-selected-repo-to-org-variable)`.
@@ -2165,10 +2166,9 @@ extension APIProtocol {
     /// available to selected repositories. Organization variables that are available to
     /// selected repositories have their `visibility` field set to `selected`.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `organization_actions_variables:write` organization permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, the `repo` scope is also required.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/actions/variables/{name}/repositories/{repository_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/variables/{name}/repositories/{repository_id}/delete(actions/remove-selected-repo-from-org-variable)`.
@@ -2177,7 +2177,11 @@ extension APIProtocol {
     }
     /// List artifacts for a repository
     ///
-    /// Lists all artifacts for a repository. Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// Lists all artifacts for a repository.
+    ///
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/artifacts`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/artifacts/get(actions/list-artifacts-for-repo)`.
@@ -2194,7 +2198,11 @@ extension APIProtocol {
     }
     /// Get an artifact
     ///
-    /// Gets a specific artifact for a workflow run. Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// Gets a specific artifact for a workflow run.
+    ///
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/artifacts/{artifact_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/artifacts/{artifact_id}/get(actions/get-artifact)`.
@@ -2209,7 +2217,8 @@ extension APIProtocol {
     }
     /// Delete an artifact
     ///
-    /// Deletes an artifact for a workflow run. You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `actions:write` permission to use this endpoint.
+    /// Deletes an artifact for a workflow run.
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/actions/artifacts/{artifact_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/artifacts/{artifact_id}/delete(actions/delete-artifact)`.
@@ -2221,8 +2230,7 @@ extension APIProtocol {
     /// Gets a redirect URL to download an archive for a repository. This URL expires after 1 minute. Look for `Location:` in
     /// the response header to find the URL for the download. The `:archive_format` must be `zip`.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/artifacts/{artifact_id}/{archive_format}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/artifacts/{artifact_id}/{archive_format}/get(actions/download-artifact)`.
@@ -2239,7 +2247,10 @@ extension APIProtocol {
     ///
     /// Gets GitHub Actions cache usage for a repository.
     /// The data fetched using this API is refreshed approximately every 5 minutes, so values returned from this endpoint may take at least 5 minutes to get updated.
-    /// Anyone with read access to the repository can use this endpoint. If the repository is private, you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    ///
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/cache/usage`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/cache/usage/get(actions/get-actions-cache-usage)`.
@@ -2255,8 +2266,8 @@ extension APIProtocol {
     /// List GitHub Actions caches for a repository
     ///
     /// Lists the GitHub Actions caches for a repository.
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `actions:read` permission to use this endpoint.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/caches`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/caches/get(actions/get-actions-cache-list)`.
@@ -2275,9 +2286,7 @@ extension APIProtocol {
     ///
     /// Deletes one or more GitHub Actions caches for a repository, using a complete cache key. By default, all caches that match the provided key are deleted, but you can optionally provide a Git ref to restrict deletions to caches that match both the provided key and the Git ref.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    ///
-    /// GitHub Apps must have the `actions:write` permission to use this endpoint.
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/actions/caches`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/caches/delete(actions/delete-actions-cache-by-key)`.
@@ -2296,9 +2305,7 @@ extension APIProtocol {
     ///
     /// Deletes a GitHub Actions cache for a repository, using a cache ID.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    ///
-    /// GitHub Apps must have the `actions:write` permission to use this endpoint.
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/actions/caches/{cache_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/caches/{cache_id}/delete(actions/delete-actions-cache-by-id)`.
@@ -2307,7 +2314,11 @@ extension APIProtocol {
     }
     /// Get a job for a workflow run
     ///
-    /// Gets a specific job in a workflow run. Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// Gets a specific job in a workflow run.
+    ///
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/jobs/{job_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/jobs/{job_id}/get(actions/get-job-for-workflow-run)`.
@@ -2323,9 +2334,11 @@ extension APIProtocol {
     /// Download job logs for a workflow run
     ///
     /// Gets a redirect URL to download a plain text file of logs for a workflow job. This link expires after 1 minute. Look
-    /// for `Location:` in the response header to find the URL for the download. Anyone with read access to the repository can
-    /// use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must
-    /// have the `actions:read` permission to use this endpoint.
+    /// for `Location:` in the response header to find the URL for the download.
+    ///
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/jobs/{job_id}/logs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/jobs/{job_id}/logs/get(actions/download-job-logs-for-workflow-run)`.
@@ -2336,8 +2349,7 @@ extension APIProtocol {
     ///
     /// Re-run a job and its dependent jobs in a workflow run.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `actions:write` permission to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/actions/jobs/{job_id}/rerun`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/jobs/{job_id}/rerun/post(actions/re-run-job-for-workflow-run)`.
@@ -2355,8 +2367,8 @@ extension APIProtocol {
     /// Get the customization template for an OIDC subject claim for a repository
     ///
     /// Gets the customization template for an OpenID Connect (OIDC) subject claim.
-    /// You must authenticate using an access token with the `repo` scope to use this
-    /// endpoint. GitHub Apps must have the `organization_administration:read` permission to use this endpoint.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/oidc/customization/sub`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/oidc/customization/sub/get(actions/get-custom-oidc-sub-claim-for-repo)`.
@@ -2372,8 +2384,8 @@ extension APIProtocol {
     /// Set the customization template for an OIDC subject claim for a repository
     ///
     /// Sets the customization template and `opt-in` or `opt-out` flag for an OpenID Connect (OIDC) subject claim for a repository.
-    /// You must authenticate using an access token with the `repo` scope to use this
-    /// endpoint. GitHub Apps must have the `actions:write` permission to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/actions/oidc/customization/sub`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/oidc/customization/sub/put(actions/set-custom-oidc-sub-claim-for-repo)`.
@@ -2393,9 +2405,9 @@ extension APIProtocol {
     /// Lists all organization secrets shared with a repository without revealing their encrypted
     /// values.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `secrets` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/organization-secrets`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/organization-secrets/get(actions/list-repo-organization-secrets)`.
@@ -2412,11 +2424,11 @@ extension APIProtocol {
     }
     /// List repository organization variables
     ///
-    /// Lists all organiation variables shared with a repository.
+    /// Lists all organization variables shared with a repository.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `actions_variables:read` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/organization-variables`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/organization-variables/get(actions/list-repo-organization-variables)`.
@@ -2435,7 +2447,7 @@ extension APIProtocol {
     ///
     /// Gets the GitHub Actions permissions policy for a repository, including whether GitHub Actions is enabled and the actions and reusable workflows allowed to run in the repository.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `administration` repository permission to use this API.
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/permissions`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/permissions/get(actions/get-github-actions-permissions-repository)`.
@@ -2452,7 +2464,7 @@ extension APIProtocol {
     ///
     /// Sets the GitHub Actions permissions policy for enabling GitHub Actions and allowed actions and reusable workflows in the repository.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `administration` repository permission to use this API.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/actions/permissions`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/permissions/put(actions/set-github-actions-permissions-repository)`.
@@ -2471,8 +2483,7 @@ extension APIProtocol {
     /// This endpoint only applies to private repositories.
     /// For more information, see "[Allowing access to components in a private repository](https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository#allowing-access-to-components-in-a-private-repository)."
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the
-    /// repository `administration` permission to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/permissions/access`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/permissions/access/get(actions/get-workflow-access-to-repository)`.
@@ -2491,8 +2502,7 @@ extension APIProtocol {
     /// This endpoint only applies to private repositories.
     /// For more information, see "[Allowing access to components in a private repository](https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository#allowing-access-to-components-in-a-private-repository)".
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the
-    /// repository `administration` permission to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/actions/permissions/access`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/permissions/access/put(actions/set-workflow-access-to-repository)`.
@@ -2509,7 +2519,7 @@ extension APIProtocol {
     ///
     /// Gets the settings for selected actions and reusable workflows that are allowed in a repository. To use this endpoint, the repository policy for `allowed_actions` must be configured to `selected`. For more information, see "[Set GitHub Actions permissions for a repository](#set-github-actions-permissions-for-a-repository)."
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `administration` repository permission to use this API.
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/permissions/selected-actions`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/permissions/selected-actions/get(actions/get-allowed-actions-repository)`.
@@ -2526,7 +2536,7 @@ extension APIProtocol {
     ///
     /// Sets the actions and reusable workflows that are allowed in a repository. To use this endpoint, the repository permission policy for `allowed_actions` must be configured to `selected`. For more information, see "[Set GitHub Actions permissions for a repository](#set-github-actions-permissions-for-a-repository)."
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `administration` repository permission to use this API.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/actions/permissions/selected-actions`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/permissions/selected-actions/put(actions/set-allowed-actions-repository)`.
@@ -2545,7 +2555,7 @@ extension APIProtocol {
     /// as well as if GitHub Actions can submit approving pull request reviews.
     /// For more information, see "[Setting the permissions of the GITHUB_TOKEN for your repository](https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository#setting-the-permissions-of-the-github_token-for-your-repository)."
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the repository `administration` permission to use this API.
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/permissions/workflow`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/permissions/workflow/get(actions/get-github-actions-default-workflow-permissions-repository)`.
@@ -2564,7 +2574,7 @@ extension APIProtocol {
     /// can submit approving pull request reviews.
     /// For more information, see "[Setting the permissions of the GITHUB_TOKEN for your repository](https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository#setting-the-permissions-of-the-github_token-for-your-repository)."
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the repository `administration` permission to use this API.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/actions/permissions/workflow`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/permissions/workflow/put(actions/set-github-actions-default-workflow-permissions-repository)`.
@@ -2581,9 +2591,9 @@ extension APIProtocol {
     ///
     /// Lists all self-hosted runners configured in a repository.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the repository to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runners`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runners/get(actions/list-self-hosted-runners-for-repo)`.
@@ -2602,9 +2612,9 @@ extension APIProtocol {
     ///
     /// Lists binaries for the runner application that you can download and run.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the repository to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runners/downloads`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runners/downloads/get(actions/list-runner-applications-for-repo)`.
@@ -2621,9 +2631,9 @@ extension APIProtocol {
     ///
     /// Generates a configuration that can be passed to the runner application at startup.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// The authenticated user must have admin access to the repository.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the`repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/actions/runners/generate-jitconfig`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runners/generate-jitconfig/post(actions/generate-runner-jitconfig-for-repo)`.
@@ -2640,19 +2650,17 @@ extension APIProtocol {
     }
     /// Create a registration token for a repository
     ///
-    /// Returns a token that you can pass to the `config` script. The token
-    /// expires after one hour.
+    /// Returns a token that you can pass to the `config` script. The token expires after one hour.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// For example, you can replace `TOKEN` in the following example with the registration token provided by this endpoint to configure your self-hosted runner:
     ///
-    /// Example using registration token:
+    /// ```
+    /// ./config.sh --url https://github.com/octo-org --token TOKEN
+    /// ```
     ///
-    /// Configure your self-hosted runner, replacing `TOKEN` with the registration token provided
-    /// by this endpoint.
+    /// Authenticated users must have admin access to the repository to use this endpoint.
     ///
-    /// ```config.sh --url https://github.com/octo-org/octo-repo-artifacts --token TOKEN```
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/actions/runners/registration-token`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runners/registration-token/post(actions/create-registration-token-for-repo)`.
@@ -2667,19 +2675,17 @@ extension APIProtocol {
     }
     /// Create a remove token for a repository
     ///
-    /// Returns a token that you can pass to remove a self-hosted runner from
-    /// a repository. The token expires after one hour.
+    /// Returns a token that you can pass to the `config` script to remove a self-hosted runner from an repository. The token expires after one hour.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// For example, you can replace `TOKEN` in the following example with the registration token provided by this endpoint to remove your self-hosted runner from an organization:
     ///
-    /// Example using remove token:
+    /// ```
+    /// ./config.sh remove --token TOKEN
+    /// ```
     ///
-    /// To remove your self-hosted runner from a repository, replace TOKEN with
-    /// the remove token provided by this endpoint.
+    /// Authenticated users must have admin access to the repository to use this endpoint.
     ///
-    /// ```config.sh remove --token TOKEN```
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/actions/runners/remove-token`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runners/remove-token/post(actions/create-remove-token-for-repo)`.
@@ -2696,9 +2702,9 @@ extension APIProtocol {
     ///
     /// Gets a specific self-hosted runner configured in a repository.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the repository to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runners/{runner_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runners/{runner_id}/get(actions/get-self-hosted-runner-for-repo)`.
@@ -2715,9 +2721,9 @@ extension APIProtocol {
     ///
     /// Forces the removal of a self-hosted runner from a repository. You can use this endpoint to completely remove the runner when the machine you were using no longer exists.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the repository to use this endpoint.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/actions/runners/{runner_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runners/{runner_id}/delete(actions/delete-self-hosted-runner-from-repo)`.
@@ -2728,9 +2734,9 @@ extension APIProtocol {
     ///
     /// Lists all labels for a self-hosted runner configured in a repository.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the repository to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runners/{runner_id}/labels`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runners/{runner_id}/labels/get(actions/list-labels-for-self-hosted-runner-for-repo)`.
@@ -2745,11 +2751,11 @@ extension APIProtocol {
     }
     /// Add custom labels to a self-hosted runner for a repository
     ///
-    /// Add custom labels to a self-hosted runner configured in a repository.
+    /// Adds custom labels to a self-hosted runner configured in a repository.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the organization to use this endpoint.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/actions/runners/{runner_id}/labels`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runners/{runner_id}/labels/post(actions/add-custom-labels-to-self-hosted-runner-for-repo)`.
@@ -2769,9 +2775,9 @@ extension APIProtocol {
     /// Remove all previous custom labels and set the new custom labels for a specific
     /// self-hosted runner configured in a repository.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the repository to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/actions/runners/{runner_id}/labels`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runners/{runner_id}/labels/put(actions/set-custom-labels-for-self-hosted-runner-for-repo)`.
@@ -2791,9 +2797,9 @@ extension APIProtocol {
     /// Remove all custom labels from a self-hosted runner configured in a
     /// repository. Returns the remaining read-only labels from the runner.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the repository to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/actions/runners/{runner_id}/labels`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runners/{runner_id}/labels/delete(actions/remove-all-custom-labels-from-self-hosted-runner-for-repo)`.
@@ -2814,9 +2820,9 @@ extension APIProtocol {
     /// This endpoint returns a `404 Not Found` status if the custom label is not
     /// present on the runner.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the repository to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/actions/runners/{runner_id}/labels/{name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runners/{runner_id}/labels/{name}/delete(actions/remove-custom-label-from-self-hosted-runner-for-repo)`.
@@ -2833,7 +2839,9 @@ extension APIProtocol {
     ///
     /// Lists all workflow runs for a repository. You can use parameters to narrow the list of results. For more information about using parameters, see [Parameters](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#parameters).
     ///
-    /// Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/get(actions/list-workflow-runs-for-repo)`.
@@ -2850,7 +2858,11 @@ extension APIProtocol {
     }
     /// Get a workflow run
     ///
-    /// Gets a specific workflow run. Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// Gets a specific workflow run.
+    ///
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runs/{run_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/get(actions/get-workflow-run)`.
@@ -2867,9 +2879,11 @@ extension APIProtocol {
     }
     /// Delete a workflow run
     ///
-    /// Delete a specific workflow run. Anyone with write access to the repository can use this endpoint. If the repository is
-    /// private you must use an access token with the `repo` scope. GitHub Apps must have the `actions:write` permission to use
-    /// this endpoint.
+    /// Deletes a specific workflow run.
+    ///
+    /// Anyone with write access to the repository can use this endpoint.
+    ///
+    /// If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/actions/runs/{run_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/delete(actions/delete-workflow-run)`.
@@ -2878,7 +2892,9 @@ extension APIProtocol {
     }
     /// Get the review history for a workflow run
     ///
-    /// Anyone with read access to the repository can use this endpoint. If the repository is private, you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runs/{run_id}/approvals`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/approvals/get(actions/get-reviews-for-run)`.
@@ -2895,7 +2911,7 @@ extension APIProtocol {
     ///
     /// Approves a workflow run for a pull request from a public fork of a first time contributor. For more information, see ["Approving workflow runs from public forks](https://docs.github.com/actions/managing-workflow-runs/approving-workflow-runs-from-public-forks)."
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `actions:write` permission to use this endpoint.
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/actions/runs/{run_id}/approve`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/approve/post(actions/approve-workflow-run)`.
@@ -2910,7 +2926,11 @@ extension APIProtocol {
     }
     /// List workflow run artifacts
     ///
-    /// Lists artifacts for a workflow run. Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// Lists artifacts for a workflow run.
+    ///
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runs/{run_id}/artifacts`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/artifacts/get(actions/list-workflow-run-artifacts)`.
@@ -2927,10 +2947,11 @@ extension APIProtocol {
     }
     /// Get a workflow run attempt
     ///
-    /// Gets a specific workflow run attempt. Anyone with read access to the repository
-    /// can use this endpoint. If the repository is private you must use an access token
-    /// with the `repo` scope. GitHub Apps must have the `actions:read` permission to
-    /// use this endpoint.
+    /// Gets a specific workflow run attempt.
+    ///
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runs/{run_id}/attempts/{attempt_number}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/attempts/{attempt_number}/get(actions/get-workflow-run-attempt)`.
@@ -2947,7 +2968,12 @@ extension APIProtocol {
     }
     /// List jobs for a workflow run attempt
     ///
-    /// Lists jobs for a specific workflow run attempt. Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint. You can use parameters to narrow the list of results. For more information about using parameters, see [Parameters](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#parameters).
+    /// Lists jobs for a specific workflow run attempt. You can use parameters to narrow the list of results. For more information
+    /// about using parameters, see [Parameters](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#parameters).
+    ///
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint  with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runs/{run_id}/attempts/{attempt_number}/jobs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/attempts/{attempt_number}/jobs/get(actions/list-jobs-for-workflow-run-attempt)`.
@@ -2965,9 +2991,11 @@ extension APIProtocol {
     /// Download workflow run attempt logs
     ///
     /// Gets a redirect URL to download an archive of log files for a specific workflow run attempt. This link expires after
-    /// 1 minute. Look for `Location:` in the response header to find the URL for the download. Anyone with read access to
-    /// the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// 1 minute. Look for `Location:` in the response header to find the URL for the download.
+    ///
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runs/{run_id}/attempts/{attempt_number}/logs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/attempts/{attempt_number}/logs/get(actions/download-workflow-run-attempt-logs)`.
@@ -2978,8 +3006,7 @@ extension APIProtocol {
     ///
     /// Cancels a workflow run using its `id`.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `actions:write` permission to use this endpoint.
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/actions/runs/{run_id}/cancel`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/cancel/post(actions/cancel-workflow-run)`.
@@ -2999,8 +3026,7 @@ extension APIProtocol {
     /// **Note:** GitHub Apps can only review their own custom deployment protection rules.
     /// To approve or reject pending deployments that are waiting for review from a specific person or team, see [`POST /repos/{owner}/{repo}/actions/runs/{run_id}/pending_deployments`](/rest/actions/workflow-runs#review-pending-deployments-for-a-workflow-run).
     ///
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have read and write permission for **Deployments** to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/actions/runs/{run_id}/deployment_protection_rule`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/deployment_protection_rule/post(actions/review-custom-gates-for-run)`.
@@ -3018,8 +3044,7 @@ extension APIProtocol {
     /// Cancels a workflow run and bypasses conditions that would otherwise cause a workflow execution to continue, such as an `always()` condition on a job.
     /// You should only use this endpoint to cancel a workflow run when the workflow run is not responding to [`POST /repos/{owner}/{repo}/actions/runs/{run_id}/cancel`](/rest/actions/workflow-runs#cancel-a-workflow-run).
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `actions:write` permission to use this endpoint.
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/actions/runs/{run_id}/force-cancel`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/force-cancel/post(actions/force-cancel-workflow-run)`.
@@ -3034,7 +3059,12 @@ extension APIProtocol {
     }
     /// List jobs for a workflow run
     ///
-    /// Lists jobs for a workflow run. Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint. You can use parameters to narrow the list of results. For more information about using parameters, see [Parameters](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#parameters).
+    /// Lists jobs for a workflow run. You can use parameters to narrow the list of results. For more information
+    /// about using parameters, see [Parameters](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#parameters).
+    ///
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runs/{run_id}/jobs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/jobs/get(actions/list-jobs-for-workflow-run)`.
@@ -3052,9 +3082,11 @@ extension APIProtocol {
     /// Download workflow run logs
     ///
     /// Gets a redirect URL to download an archive of log files for a workflow run. This link expires after 1 minute. Look for
-    /// `Location:` in the response header to find the URL for the download. Anyone with read access to the repository can use
-    /// this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have
-    /// the `actions:read` permission to use this endpoint.
+    /// `Location:` in the response header to find the URL for the download.
+    ///
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runs/{run_id}/logs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/logs/get(actions/download-workflow-run-logs)`.
@@ -3063,7 +3095,9 @@ extension APIProtocol {
     }
     /// Delete workflow run logs
     ///
-    /// Deletes all logs for a workflow run. You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `actions:write` permission to use this endpoint.
+    /// Deletes all logs for a workflow run.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/actions/runs/{run_id}/logs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/logs/delete(actions/delete-workflow-run-logs)`.
@@ -3080,7 +3114,9 @@ extension APIProtocol {
     ///
     /// Get all deployment environments for a workflow run that are waiting for protection rules to pass.
     ///
-    /// Anyone with read access to the repository can use this endpoint. If the repository is private, you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runs/{run_id}/pending_deployments`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/pending_deployments/get(actions/get-pending-deployments-for-run)`.
@@ -3097,7 +3133,9 @@ extension APIProtocol {
     ///
     /// Approve or reject pending deployments that are waiting on approval by a required reviewer.
     ///
-    /// Required reviewers with read access to the repository contents and deployments can use this endpoint. Required reviewers must authenticate using an access token with the `repo` scope to use this endpoint.
+    /// Required reviewers with read access to the repository contents and deployments can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/actions/runs/{run_id}/pending_deployments`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/pending_deployments/post(actions/review-pending-deployments-for-run)`.
@@ -3114,7 +3152,9 @@ extension APIProtocol {
     }
     /// Re-run a workflow
     ///
-    /// Re-runs your workflow run using its `id`. You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `actions:write` permission to use this endpoint.
+    /// Re-runs your workflow run using its `id`.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/actions/runs/{run_id}/rerun`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/rerun/post(actions/re-run-workflow)`.
@@ -3131,7 +3171,9 @@ extension APIProtocol {
     }
     /// Re-run failed jobs from a workflow run
     ///
-    /// Re-run all of the failed jobs and their dependent jobs in a workflow run using the `id` of the workflow run. You must authenticate using an access token with the `repo` scope to use this endpoint.
+    /// Re-run all of the failed jobs and their dependent jobs in a workflow run using the `id` of the workflow run.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/actions/runs/{run_id}/rerun-failed-jobs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/rerun-failed-jobs/post(actions/re-run-workflow-failed-jobs)`.
@@ -3150,7 +3192,9 @@ extension APIProtocol {
     ///
     /// Gets the number of billable minutes and total run time for a specific workflow run. Billable minutes only apply to workflows in private repositories that use GitHub-hosted runners. Usage is listed for each GitHub-hosted runner operating system in milliseconds. Any job re-runs are also included in the usage. The usage does not include the multiplier for macOS and Windows runners and is not rounded up to the nearest whole minute. For more information, see "[Managing billing for GitHub Actions](https://docs.github.com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-actions)".
     ///
-    /// Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runs/{run_id}/timing`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/timing/get(actions/get-workflow-run-usage)`.
@@ -3168,9 +3212,9 @@ extension APIProtocol {
     /// Lists all secrets available in a repository without revealing their encrypted
     /// values.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `secrets` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/secrets`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/secrets/get(actions/list-repo-secrets)`.
@@ -3191,9 +3235,8 @@ extension APIProtocol {
     /// encrypt a secret before you can create or update secrets.
     ///
     /// Anyone with read access to the repository can use this endpoint.
-    /// If the repository is private you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `secrets` repository permission to use this endpoint.
-    /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/secrets/public-key`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/secrets/public-key/get(actions/get-repo-public-key)`.
@@ -3210,9 +3253,9 @@ extension APIProtocol {
     ///
     /// Gets a single repository secret without revealing its encrypted value.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `secrets` repository permission to use this endpoint.
-    /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    /// The authenticated user must have collaborator access to the repository to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/secrets/{secret_name}/get(actions/get-repo-secret)`.
@@ -3230,9 +3273,9 @@ extension APIProtocol {
     /// Creates or updates a repository secret with an encrypted value. Encrypt your secret using
     /// [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages). For more information, see "[Encrypting secrets for the REST API](https://docs.github.com/rest/guides/encrypting-secrets-for-the-rest-api)."
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `secrets` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/actions/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/secrets/{secret_name}/put(actions/create-or-update-repo-secret)`.
@@ -3251,9 +3294,9 @@ extension APIProtocol {
     ///
     /// Deletes a secret in a repository using the secret name.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `secrets` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/actions/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/secrets/{secret_name}/delete(actions/delete-repo-secret)`.
@@ -3263,9 +3306,10 @@ extension APIProtocol {
     /// List repository variables
     ///
     /// Lists all repository variables.
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `actions_variables:read` repository permission to use this endpoint.
+    ///
     /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/variables`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/variables/get(actions/list-repo-variables)`.
@@ -3284,9 +3328,9 @@ extension APIProtocol {
     ///
     /// Creates a repository variable that you can reference in a GitHub Actions workflow.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `actions_variables:write` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/actions/variables`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/variables/post(actions/create-repo-variable)`.
@@ -3305,9 +3349,9 @@ extension APIProtocol {
     ///
     /// Gets a specific variable in a repository.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `actions_variables:read` repository permission to use this endpoint.
-    /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    /// The authenticated user must have collaborator access to the repository to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/variables/{name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/variables/{name}/get(actions/get-repo-variable)`.
@@ -3324,9 +3368,9 @@ extension APIProtocol {
     ///
     /// Updates a repository variable that you can reference in a GitHub Actions workflow.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `actions_variables:write` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/actions/variables/{name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/variables/{name}/patch(actions/update-repo-variable)`.
@@ -3343,9 +3387,9 @@ extension APIProtocol {
     ///
     /// Deletes a repository variable using the variable name.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `actions_variables:write` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/actions/variables/{name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/variables/{name}/delete(actions/delete-repo-variable)`.
@@ -3354,7 +3398,11 @@ extension APIProtocol {
     }
     /// List repository workflows
     ///
-    /// Lists the workflows in a repository. Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// Lists the workflows in a repository.
+    ///
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/workflows`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/workflows/get(actions/list-repo-workflows)`.
@@ -3371,7 +3419,12 @@ extension APIProtocol {
     }
     /// Get a workflow
     ///
-    /// Gets a specific workflow. You can replace `workflow_id` with the workflow file name. For example, you could use `main.yaml`. Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// Gets a specific workflow. You can replace `workflow_id` with the workflow
+    /// file name. For example, you could use `main.yaml`.
+    ///
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/workflows/{workflow_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/workflows/{workflow_id}/get(actions/get-workflow)`.
@@ -3388,7 +3441,7 @@ extension APIProtocol {
     ///
     /// Disables a workflow and sets the `state` of the workflow to `disabled_manually`. You can replace `workflow_id` with the workflow file name. For example, you could use `main.yaml`.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `actions:write` permission to use this endpoint.
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/actions/workflows/{workflow_id}/disable`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/workflows/{workflow_id}/disable/put(actions/disable-workflow)`.
@@ -3401,7 +3454,7 @@ extension APIProtocol {
     ///
     /// You must configure your GitHub Actions workflow to run when the [`workflow_dispatch` webhook](/developers/webhooks-and-events/webhook-events-and-payloads#workflow_dispatch) event occurs. The `inputs` are configured in the workflow file. For more information about how to configure the `workflow_dispatch` event in the workflow file, see "[Events that trigger workflows](/actions/reference/events-that-trigger-workflows#workflow_dispatch)."
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `actions:write` permission to use this endpoint. For more information, see "[Creating a personal access token for the command line](https://docs.github.com/articles/creating-a-personal-access-token-for-the-command-line)."
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches/post(actions/create-workflow-dispatch)`.
@@ -3418,7 +3471,7 @@ extension APIProtocol {
     ///
     /// Enables a workflow and sets the `state` of the workflow to `active`. You can replace `workflow_id` with the workflow file name. For example, you could use `main.yaml`.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `actions:write` permission to use this endpoint.
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/actions/workflows/{workflow_id}/enable`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/workflows/{workflow_id}/enable/put(actions/enable-workflow)`.
@@ -3429,7 +3482,9 @@ extension APIProtocol {
     ///
     /// List all workflow runs for a workflow. You can replace `workflow_id` with the workflow file name. For example, you could use `main.yaml`. You can use parameters to narrow the list of results. For more information about using parameters, see [Parameters](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#parameters).
     ///
-    /// Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope.
+    /// Anyone with read access to the repository can use this endpoint
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/workflows/{workflow_id}/runs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/workflows/{workflow_id}/runs/get(actions/list-workflow-runs)`.
@@ -3448,7 +3503,11 @@ extension APIProtocol {
     ///
     /// Gets the number of billable minutes used by a specific workflow during the current billing cycle. Billable minutes only apply to workflows in private repositories that use GitHub-hosted runners. Usage is listed for each GitHub-hosted runner operating system in milliseconds. Any job re-runs are also included in the usage. The usage does not include the multiplier for macOS and Windows runners and is not rounded up to the nearest whole minute. For more information, see "[Managing billing for GitHub Actions](https://docs.github.com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-actions)".
     ///
-    /// You can replace `workflow_id` with the workflow file name. For example, you could use `main.yaml`. Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// You can replace `workflow_id` with the workflow file name. For example, you could use `main.yaml`.
+    ///
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/workflows/{workflow_id}/timing`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/workflows/{workflow_id}/timing/get(actions/get-workflow-usage)`.
@@ -3466,9 +3525,9 @@ extension APIProtocol {
     /// Lists all secrets available in an environment without revealing their
     /// encrypted values.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `secrets` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repositories/{repository_id}/environments/{environment_name}/secrets`.
     /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/secrets/get(actions/list-environment-secrets)`.
@@ -3489,9 +3548,8 @@ extension APIProtocol {
     /// secrets. You need to encrypt a secret before you can create or update secrets.
     ///
     /// Anyone with read access to the repository can use this endpoint.
-    /// If the repository is private you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `secrets` repository permission to use this endpoint.
-    /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repositories/{repository_id}/environments/{environment_name}/secrets/public-key`.
     /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/secrets/public-key/get(actions/get-environment-public-key)`.
@@ -3508,9 +3566,9 @@ extension APIProtocol {
     ///
     /// Gets a single environment secret without revealing its encrypted value.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `secrets` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}/get(actions/get-environment-secret)`.
@@ -3528,9 +3586,9 @@ extension APIProtocol {
     /// Creates or updates an environment secret with an encrypted value. Encrypt your secret using
     /// [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages). For more information, see "[Encrypting secrets for the REST API](https://docs.github.com/rest/guides/encrypting-secrets-for-the-rest-api)."
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `secrets` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}/put(actions/create-or-update-environment-secret)`.
@@ -3549,9 +3607,9 @@ extension APIProtocol {
     ///
     /// Deletes a secret in an environment using the secret name.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `secrets` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}/delete(actions/delete-environment-secret)`.
@@ -3562,9 +3620,9 @@ extension APIProtocol {
     ///
     /// Lists all environment variables.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `environments:read` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repositories/{repository_id}/environments/{environment_name}/variables`.
     /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/variables/get(actions/list-environment-variables)`.
@@ -3583,9 +3641,9 @@ extension APIProtocol {
     ///
     /// Create an environment variable that you can reference in a GitHub Actions workflow.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `environment:write` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repositories/{repository_id}/environments/{environment_name}/variables`.
     /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/variables/post(actions/create-environment-variable)`.
@@ -3604,9 +3662,9 @@ extension APIProtocol {
     ///
     /// Gets a specific variable in an environment.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `environments:read` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repositories/{repository_id}/environments/{environment_name}/variables/{name}`.
     /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/variables/{name}/get(actions/get-environment-variable)`.
@@ -3623,9 +3681,9 @@ extension APIProtocol {
     ///
     /// Updates an environment variable that you can reference in a GitHub Actions workflow.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `environment:write` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PATCH /repositories/{repository_id}/environments/{environment_name}/variables/{name}`.
     /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/variables/{name}/patch(actions/update-environment-variable)`.
@@ -3642,9 +3700,9 @@ extension APIProtocol {
     ///
     /// Deletes an environment variable using the variable name.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `environment:write` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repositories/{repository_id}/environments/{environment_name}/variables/{name}`.
     /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/variables/{name}/delete(actions/delete-environment-variable)`.
@@ -4129,8 +4187,6 @@ public enum Components {
             public var full_name: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/license`.
             public var license: Components.Schemas.nullable_hyphen_license_hyphen_simple?
-            /// - Remark: Generated from `#/components/schemas/repository/organization`.
-            public var organization: Components.Schemas.nullable_hyphen_simple_hyphen_user?
             /// - Remark: Generated from `#/components/schemas/repository/forks`.
             public var forks: Swift.Int
             /// - Remark: Generated from `#/components/schemas/repository/permissions`.
@@ -4343,767 +4399,6 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/repository/allow_rebase_merge`.
             public var allow_rebase_merge: Swift.Bool?
-            /// - Remark: Generated from `#/components/schemas/repository/template_repository`.
-            public struct template_repositoryPayload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/id`.
-                public var id: Swift.Int?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/node_id`.
-                public var node_id: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/name`.
-                public var name: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/full_name`.
-                public var full_name: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner`.
-                public struct ownerPayload: Codable, Hashable, Sendable {
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/login`.
-                    public var login: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/id`.
-                    public var id: Swift.Int?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/node_id`.
-                    public var node_id: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/avatar_url`.
-                    public var avatar_url: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/gravatar_id`.
-                    public var gravatar_id: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/url`.
-                    public var url: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/html_url`.
-                    public var html_url: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/followers_url`.
-                    public var followers_url: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/following_url`.
-                    public var following_url: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/gists_url`.
-                    public var gists_url: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/starred_url`.
-                    public var starred_url: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/subscriptions_url`.
-                    public var subscriptions_url: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/organizations_url`.
-                    public var organizations_url: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/repos_url`.
-                    public var repos_url: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/events_url`.
-                    public var events_url: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/received_events_url`.
-                    public var received_events_url: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/type`.
-                    public var _type: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/site_admin`.
-                    public var site_admin: Swift.Bool?
-                    /// Creates a new `ownerPayload`.
-                    ///
-                    /// - Parameters:
-                    ///   - login:
-                    ///   - id:
-                    ///   - node_id:
-                    ///   - avatar_url:
-                    ///   - gravatar_id:
-                    ///   - url:
-                    ///   - html_url:
-                    ///   - followers_url:
-                    ///   - following_url:
-                    ///   - gists_url:
-                    ///   - starred_url:
-                    ///   - subscriptions_url:
-                    ///   - organizations_url:
-                    ///   - repos_url:
-                    ///   - events_url:
-                    ///   - received_events_url:
-                    ///   - _type:
-                    ///   - site_admin:
-                    public init(
-                        login: Swift.String? = nil,
-                        id: Swift.Int? = nil,
-                        node_id: Swift.String? = nil,
-                        avatar_url: Swift.String? = nil,
-                        gravatar_id: Swift.String? = nil,
-                        url: Swift.String? = nil,
-                        html_url: Swift.String? = nil,
-                        followers_url: Swift.String? = nil,
-                        following_url: Swift.String? = nil,
-                        gists_url: Swift.String? = nil,
-                        starred_url: Swift.String? = nil,
-                        subscriptions_url: Swift.String? = nil,
-                        organizations_url: Swift.String? = nil,
-                        repos_url: Swift.String? = nil,
-                        events_url: Swift.String? = nil,
-                        received_events_url: Swift.String? = nil,
-                        _type: Swift.String? = nil,
-                        site_admin: Swift.Bool? = nil
-                    ) {
-                        self.login = login
-                        self.id = id
-                        self.node_id = node_id
-                        self.avatar_url = avatar_url
-                        self.gravatar_id = gravatar_id
-                        self.url = url
-                        self.html_url = html_url
-                        self.followers_url = followers_url
-                        self.following_url = following_url
-                        self.gists_url = gists_url
-                        self.starred_url = starred_url
-                        self.subscriptions_url = subscriptions_url
-                        self.organizations_url = organizations_url
-                        self.repos_url = repos_url
-                        self.events_url = events_url
-                        self.received_events_url = received_events_url
-                        self._type = _type
-                        self.site_admin = site_admin
-                    }
-                    public enum CodingKeys: String, CodingKey {
-                        case login
-                        case id
-                        case node_id
-                        case avatar_url
-                        case gravatar_id
-                        case url
-                        case html_url
-                        case followers_url
-                        case following_url
-                        case gists_url
-                        case starred_url
-                        case subscriptions_url
-                        case organizations_url
-                        case repos_url
-                        case events_url
-                        case received_events_url
-                        case _type = "type"
-                        case site_admin
-                    }
-                }
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner`.
-                public var owner: Components.Schemas.repository.template_repositoryPayload.ownerPayload?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/private`.
-                public var _private: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/html_url`.
-                public var html_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/description`.
-                public var description: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/fork`.
-                public var fork: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/url`.
-                public var url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/archive_url`.
-                public var archive_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/assignees_url`.
-                public var assignees_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/blobs_url`.
-                public var blobs_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/branches_url`.
-                public var branches_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/collaborators_url`.
-                public var collaborators_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/comments_url`.
-                public var comments_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/commits_url`.
-                public var commits_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/compare_url`.
-                public var compare_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/contents_url`.
-                public var contents_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/contributors_url`.
-                public var contributors_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/deployments_url`.
-                public var deployments_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/downloads_url`.
-                public var downloads_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/events_url`.
-                public var events_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/forks_url`.
-                public var forks_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/git_commits_url`.
-                public var git_commits_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/git_refs_url`.
-                public var git_refs_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/git_tags_url`.
-                public var git_tags_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/git_url`.
-                public var git_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/issue_comment_url`.
-                public var issue_comment_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/issue_events_url`.
-                public var issue_events_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/issues_url`.
-                public var issues_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/keys_url`.
-                public var keys_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/labels_url`.
-                public var labels_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/languages_url`.
-                public var languages_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/merges_url`.
-                public var merges_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/milestones_url`.
-                public var milestones_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/notifications_url`.
-                public var notifications_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/pulls_url`.
-                public var pulls_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/releases_url`.
-                public var releases_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/ssh_url`.
-                public var ssh_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/stargazers_url`.
-                public var stargazers_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/statuses_url`.
-                public var statuses_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/subscribers_url`.
-                public var subscribers_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/subscription_url`.
-                public var subscription_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/tags_url`.
-                public var tags_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/teams_url`.
-                public var teams_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/trees_url`.
-                public var trees_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/clone_url`.
-                public var clone_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/mirror_url`.
-                public var mirror_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/hooks_url`.
-                public var hooks_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/svn_url`.
-                public var svn_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/homepage`.
-                public var homepage: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/language`.
-                public var language: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/forks_count`.
-                public var forks_count: Swift.Int?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/stargazers_count`.
-                public var stargazers_count: Swift.Int?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/watchers_count`.
-                public var watchers_count: Swift.Int?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/size`.
-                public var size: Swift.Int?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/default_branch`.
-                public var default_branch: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/open_issues_count`.
-                public var open_issues_count: Swift.Int?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/is_template`.
-                public var is_template: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/topics`.
-                public var topics: [Swift.String]?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/has_issues`.
-                public var has_issues: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/has_projects`.
-                public var has_projects: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/has_wiki`.
-                public var has_wiki: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/has_pages`.
-                public var has_pages: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/has_downloads`.
-                public var has_downloads: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/archived`.
-                public var archived: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/disabled`.
-                public var disabled: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/visibility`.
-                public var visibility: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/pushed_at`.
-                public var pushed_at: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/created_at`.
-                public var created_at: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/updated_at`.
-                public var updated_at: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/permissions`.
-                public struct permissionsPayload: Codable, Hashable, Sendable {
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/permissions/admin`.
-                    public var admin: Swift.Bool?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/permissions/maintain`.
-                    public var maintain: Swift.Bool?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/permissions/push`.
-                    public var push: Swift.Bool?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/permissions/triage`.
-                    public var triage: Swift.Bool?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/permissions/pull`.
-                    public var pull: Swift.Bool?
-                    /// Creates a new `permissionsPayload`.
-                    ///
-                    /// - Parameters:
-                    ///   - admin:
-                    ///   - maintain:
-                    ///   - push:
-                    ///   - triage:
-                    ///   - pull:
-                    public init(
-                        admin: Swift.Bool? = nil,
-                        maintain: Swift.Bool? = nil,
-                        push: Swift.Bool? = nil,
-                        triage: Swift.Bool? = nil,
-                        pull: Swift.Bool? = nil
-                    ) {
-                        self.admin = admin
-                        self.maintain = maintain
-                        self.push = push
-                        self.triage = triage
-                        self.pull = pull
-                    }
-                    public enum CodingKeys: String, CodingKey {
-                        case admin
-                        case maintain
-                        case push
-                        case triage
-                        case pull
-                    }
-                }
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/permissions`.
-                public var permissions: Components.Schemas.repository.template_repositoryPayload.permissionsPayload?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/allow_rebase_merge`.
-                public var allow_rebase_merge: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/temp_clone_token`.
-                public var temp_clone_token: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/allow_squash_merge`.
-                public var allow_squash_merge: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/allow_auto_merge`.
-                public var allow_auto_merge: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/delete_branch_on_merge`.
-                public var delete_branch_on_merge: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/allow_update_branch`.
-                public var allow_update_branch: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/use_squash_pr_title_as_default`.
-                public var use_squash_pr_title_as_default: Swift.Bool?
-                /// The default value for a squash merge commit title:
-                ///
-                /// - `PR_TITLE` - default to the pull request's title.
-                /// - `COMMIT_OR_PR_TITLE` - default to the commit's title (if only one commit) or the pull request's title (when more than one commit).
-                ///
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/squash_merge_commit_title`.
-                @frozen public enum squash_merge_commit_titlePayload: String, Codable, Hashable, Sendable {
-                    case PR_TITLE = "PR_TITLE"
-                    case COMMIT_OR_PR_TITLE = "COMMIT_OR_PR_TITLE"
-                }
-                /// The default value for a squash merge commit title:
-                ///
-                /// - `PR_TITLE` - default to the pull request's title.
-                /// - `COMMIT_OR_PR_TITLE` - default to the commit's title (if only one commit) or the pull request's title (when more than one commit).
-                ///
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/squash_merge_commit_title`.
-                public var squash_merge_commit_title: Components.Schemas.repository.template_repositoryPayload.squash_merge_commit_titlePayload?
-                /// The default value for a squash merge commit message:
-                ///
-                /// - `PR_BODY` - default to the pull request's body.
-                /// - `COMMIT_MESSAGES` - default to the branch's commit messages.
-                /// - `BLANK` - default to a blank commit message.
-                ///
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/squash_merge_commit_message`.
-                @frozen public enum squash_merge_commit_messagePayload: String, Codable, Hashable, Sendable {
-                    case PR_BODY = "PR_BODY"
-                    case COMMIT_MESSAGES = "COMMIT_MESSAGES"
-                    case BLANK = "BLANK"
-                }
-                /// The default value for a squash merge commit message:
-                ///
-                /// - `PR_BODY` - default to the pull request's body.
-                /// - `COMMIT_MESSAGES` - default to the branch's commit messages.
-                /// - `BLANK` - default to a blank commit message.
-                ///
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/squash_merge_commit_message`.
-                public var squash_merge_commit_message: Components.Schemas.repository.template_repositoryPayload.squash_merge_commit_messagePayload?
-                /// The default value for a merge commit title.
-                ///
-                /// - `PR_TITLE` - default to the pull request's title.
-                /// - `MERGE_MESSAGE` - default to the classic title for a merge message (e.g., Merge pull request #123 from branch-name).
-                ///
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/merge_commit_title`.
-                @frozen public enum merge_commit_titlePayload: String, Codable, Hashable, Sendable {
-                    case PR_TITLE = "PR_TITLE"
-                    case MERGE_MESSAGE = "MERGE_MESSAGE"
-                }
-                /// The default value for a merge commit title.
-                ///
-                /// - `PR_TITLE` - default to the pull request's title.
-                /// - `MERGE_MESSAGE` - default to the classic title for a merge message (e.g., Merge pull request #123 from branch-name).
-                ///
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/merge_commit_title`.
-                public var merge_commit_title: Components.Schemas.repository.template_repositoryPayload.merge_commit_titlePayload?
-                /// The default value for a merge commit message.
-                ///
-                /// - `PR_TITLE` - default to the pull request's title.
-                /// - `PR_BODY` - default to the pull request's body.
-                /// - `BLANK` - default to a blank commit message.
-                ///
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/merge_commit_message`.
-                @frozen public enum merge_commit_messagePayload: String, Codable, Hashable, Sendable {
-                    case PR_BODY = "PR_BODY"
-                    case PR_TITLE = "PR_TITLE"
-                    case BLANK = "BLANK"
-                }
-                /// The default value for a merge commit message.
-                ///
-                /// - `PR_TITLE` - default to the pull request's title.
-                /// - `PR_BODY` - default to the pull request's body.
-                /// - `BLANK` - default to a blank commit message.
-                ///
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/merge_commit_message`.
-                public var merge_commit_message: Components.Schemas.repository.template_repositoryPayload.merge_commit_messagePayload?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/allow_merge_commit`.
-                public var allow_merge_commit: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/subscribers_count`.
-                public var subscribers_count: Swift.Int?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/network_count`.
-                public var network_count: Swift.Int?
-                /// Creates a new `template_repositoryPayload`.
-                ///
-                /// - Parameters:
-                ///   - id:
-                ///   - node_id:
-                ///   - name:
-                ///   - full_name:
-                ///   - owner:
-                ///   - _private:
-                ///   - html_url:
-                ///   - description:
-                ///   - fork:
-                ///   - url:
-                ///   - archive_url:
-                ///   - assignees_url:
-                ///   - blobs_url:
-                ///   - branches_url:
-                ///   - collaborators_url:
-                ///   - comments_url:
-                ///   - commits_url:
-                ///   - compare_url:
-                ///   - contents_url:
-                ///   - contributors_url:
-                ///   - deployments_url:
-                ///   - downloads_url:
-                ///   - events_url:
-                ///   - forks_url:
-                ///   - git_commits_url:
-                ///   - git_refs_url:
-                ///   - git_tags_url:
-                ///   - git_url:
-                ///   - issue_comment_url:
-                ///   - issue_events_url:
-                ///   - issues_url:
-                ///   - keys_url:
-                ///   - labels_url:
-                ///   - languages_url:
-                ///   - merges_url:
-                ///   - milestones_url:
-                ///   - notifications_url:
-                ///   - pulls_url:
-                ///   - releases_url:
-                ///   - ssh_url:
-                ///   - stargazers_url:
-                ///   - statuses_url:
-                ///   - subscribers_url:
-                ///   - subscription_url:
-                ///   - tags_url:
-                ///   - teams_url:
-                ///   - trees_url:
-                ///   - clone_url:
-                ///   - mirror_url:
-                ///   - hooks_url:
-                ///   - svn_url:
-                ///   - homepage:
-                ///   - language:
-                ///   - forks_count:
-                ///   - stargazers_count:
-                ///   - watchers_count:
-                ///   - size:
-                ///   - default_branch:
-                ///   - open_issues_count:
-                ///   - is_template:
-                ///   - topics:
-                ///   - has_issues:
-                ///   - has_projects:
-                ///   - has_wiki:
-                ///   - has_pages:
-                ///   - has_downloads:
-                ///   - archived:
-                ///   - disabled:
-                ///   - visibility:
-                ///   - pushed_at:
-                ///   - created_at:
-                ///   - updated_at:
-                ///   - permissions:
-                ///   - allow_rebase_merge:
-                ///   - temp_clone_token:
-                ///   - allow_squash_merge:
-                ///   - allow_auto_merge:
-                ///   - delete_branch_on_merge:
-                ///   - allow_update_branch:
-                ///   - use_squash_pr_title_as_default:
-                ///   - squash_merge_commit_title: The default value for a squash merge commit title:
-                ///   - squash_merge_commit_message: The default value for a squash merge commit message:
-                ///   - merge_commit_title: The default value for a merge commit title.
-                ///   - merge_commit_message: The default value for a merge commit message.
-                ///   - allow_merge_commit:
-                ///   - subscribers_count:
-                ///   - network_count:
-                public init(
-                    id: Swift.Int? = nil,
-                    node_id: Swift.String? = nil,
-                    name: Swift.String? = nil,
-                    full_name: Swift.String? = nil,
-                    owner: Components.Schemas.repository.template_repositoryPayload.ownerPayload? = nil,
-                    _private: Swift.Bool? = nil,
-                    html_url: Swift.String? = nil,
-                    description: Swift.String? = nil,
-                    fork: Swift.Bool? = nil,
-                    url: Swift.String? = nil,
-                    archive_url: Swift.String? = nil,
-                    assignees_url: Swift.String? = nil,
-                    blobs_url: Swift.String? = nil,
-                    branches_url: Swift.String? = nil,
-                    collaborators_url: Swift.String? = nil,
-                    comments_url: Swift.String? = nil,
-                    commits_url: Swift.String? = nil,
-                    compare_url: Swift.String? = nil,
-                    contents_url: Swift.String? = nil,
-                    contributors_url: Swift.String? = nil,
-                    deployments_url: Swift.String? = nil,
-                    downloads_url: Swift.String? = nil,
-                    events_url: Swift.String? = nil,
-                    forks_url: Swift.String? = nil,
-                    git_commits_url: Swift.String? = nil,
-                    git_refs_url: Swift.String? = nil,
-                    git_tags_url: Swift.String? = nil,
-                    git_url: Swift.String? = nil,
-                    issue_comment_url: Swift.String? = nil,
-                    issue_events_url: Swift.String? = nil,
-                    issues_url: Swift.String? = nil,
-                    keys_url: Swift.String? = nil,
-                    labels_url: Swift.String? = nil,
-                    languages_url: Swift.String? = nil,
-                    merges_url: Swift.String? = nil,
-                    milestones_url: Swift.String? = nil,
-                    notifications_url: Swift.String? = nil,
-                    pulls_url: Swift.String? = nil,
-                    releases_url: Swift.String? = nil,
-                    ssh_url: Swift.String? = nil,
-                    stargazers_url: Swift.String? = nil,
-                    statuses_url: Swift.String? = nil,
-                    subscribers_url: Swift.String? = nil,
-                    subscription_url: Swift.String? = nil,
-                    tags_url: Swift.String? = nil,
-                    teams_url: Swift.String? = nil,
-                    trees_url: Swift.String? = nil,
-                    clone_url: Swift.String? = nil,
-                    mirror_url: Swift.String? = nil,
-                    hooks_url: Swift.String? = nil,
-                    svn_url: Swift.String? = nil,
-                    homepage: Swift.String? = nil,
-                    language: Swift.String? = nil,
-                    forks_count: Swift.Int? = nil,
-                    stargazers_count: Swift.Int? = nil,
-                    watchers_count: Swift.Int? = nil,
-                    size: Swift.Int? = nil,
-                    default_branch: Swift.String? = nil,
-                    open_issues_count: Swift.Int? = nil,
-                    is_template: Swift.Bool? = nil,
-                    topics: [Swift.String]? = nil,
-                    has_issues: Swift.Bool? = nil,
-                    has_projects: Swift.Bool? = nil,
-                    has_wiki: Swift.Bool? = nil,
-                    has_pages: Swift.Bool? = nil,
-                    has_downloads: Swift.Bool? = nil,
-                    archived: Swift.Bool? = nil,
-                    disabled: Swift.Bool? = nil,
-                    visibility: Swift.String? = nil,
-                    pushed_at: Swift.String? = nil,
-                    created_at: Swift.String? = nil,
-                    updated_at: Swift.String? = nil,
-                    permissions: Components.Schemas.repository.template_repositoryPayload.permissionsPayload? = nil,
-                    allow_rebase_merge: Swift.Bool? = nil,
-                    temp_clone_token: Swift.String? = nil,
-                    allow_squash_merge: Swift.Bool? = nil,
-                    allow_auto_merge: Swift.Bool? = nil,
-                    delete_branch_on_merge: Swift.Bool? = nil,
-                    allow_update_branch: Swift.Bool? = nil,
-                    use_squash_pr_title_as_default: Swift.Bool? = nil,
-                    squash_merge_commit_title: Components.Schemas.repository.template_repositoryPayload.squash_merge_commit_titlePayload? = nil,
-                    squash_merge_commit_message: Components.Schemas.repository.template_repositoryPayload.squash_merge_commit_messagePayload? = nil,
-                    merge_commit_title: Components.Schemas.repository.template_repositoryPayload.merge_commit_titlePayload? = nil,
-                    merge_commit_message: Components.Schemas.repository.template_repositoryPayload.merge_commit_messagePayload? = nil,
-                    allow_merge_commit: Swift.Bool? = nil,
-                    subscribers_count: Swift.Int? = nil,
-                    network_count: Swift.Int? = nil
-                ) {
-                    self.id = id
-                    self.node_id = node_id
-                    self.name = name
-                    self.full_name = full_name
-                    self.owner = owner
-                    self._private = _private
-                    self.html_url = html_url
-                    self.description = description
-                    self.fork = fork
-                    self.url = url
-                    self.archive_url = archive_url
-                    self.assignees_url = assignees_url
-                    self.blobs_url = blobs_url
-                    self.branches_url = branches_url
-                    self.collaborators_url = collaborators_url
-                    self.comments_url = comments_url
-                    self.commits_url = commits_url
-                    self.compare_url = compare_url
-                    self.contents_url = contents_url
-                    self.contributors_url = contributors_url
-                    self.deployments_url = deployments_url
-                    self.downloads_url = downloads_url
-                    self.events_url = events_url
-                    self.forks_url = forks_url
-                    self.git_commits_url = git_commits_url
-                    self.git_refs_url = git_refs_url
-                    self.git_tags_url = git_tags_url
-                    self.git_url = git_url
-                    self.issue_comment_url = issue_comment_url
-                    self.issue_events_url = issue_events_url
-                    self.issues_url = issues_url
-                    self.keys_url = keys_url
-                    self.labels_url = labels_url
-                    self.languages_url = languages_url
-                    self.merges_url = merges_url
-                    self.milestones_url = milestones_url
-                    self.notifications_url = notifications_url
-                    self.pulls_url = pulls_url
-                    self.releases_url = releases_url
-                    self.ssh_url = ssh_url
-                    self.stargazers_url = stargazers_url
-                    self.statuses_url = statuses_url
-                    self.subscribers_url = subscribers_url
-                    self.subscription_url = subscription_url
-                    self.tags_url = tags_url
-                    self.teams_url = teams_url
-                    self.trees_url = trees_url
-                    self.clone_url = clone_url
-                    self.mirror_url = mirror_url
-                    self.hooks_url = hooks_url
-                    self.svn_url = svn_url
-                    self.homepage = homepage
-                    self.language = language
-                    self.forks_count = forks_count
-                    self.stargazers_count = stargazers_count
-                    self.watchers_count = watchers_count
-                    self.size = size
-                    self.default_branch = default_branch
-                    self.open_issues_count = open_issues_count
-                    self.is_template = is_template
-                    self.topics = topics
-                    self.has_issues = has_issues
-                    self.has_projects = has_projects
-                    self.has_wiki = has_wiki
-                    self.has_pages = has_pages
-                    self.has_downloads = has_downloads
-                    self.archived = archived
-                    self.disabled = disabled
-                    self.visibility = visibility
-                    self.pushed_at = pushed_at
-                    self.created_at = created_at
-                    self.updated_at = updated_at
-                    self.permissions = permissions
-                    self.allow_rebase_merge = allow_rebase_merge
-                    self.temp_clone_token = temp_clone_token
-                    self.allow_squash_merge = allow_squash_merge
-                    self.allow_auto_merge = allow_auto_merge
-                    self.delete_branch_on_merge = delete_branch_on_merge
-                    self.allow_update_branch = allow_update_branch
-                    self.use_squash_pr_title_as_default = use_squash_pr_title_as_default
-                    self.squash_merge_commit_title = squash_merge_commit_title
-                    self.squash_merge_commit_message = squash_merge_commit_message
-                    self.merge_commit_title = merge_commit_title
-                    self.merge_commit_message = merge_commit_message
-                    self.allow_merge_commit = allow_merge_commit
-                    self.subscribers_count = subscribers_count
-                    self.network_count = network_count
-                }
-                public enum CodingKeys: String, CodingKey {
-                    case id
-                    case node_id
-                    case name
-                    case full_name
-                    case owner
-                    case _private = "private"
-                    case html_url
-                    case description
-                    case fork
-                    case url
-                    case archive_url
-                    case assignees_url
-                    case blobs_url
-                    case branches_url
-                    case collaborators_url
-                    case comments_url
-                    case commits_url
-                    case compare_url
-                    case contents_url
-                    case contributors_url
-                    case deployments_url
-                    case downloads_url
-                    case events_url
-                    case forks_url
-                    case git_commits_url
-                    case git_refs_url
-                    case git_tags_url
-                    case git_url
-                    case issue_comment_url
-                    case issue_events_url
-                    case issues_url
-                    case keys_url
-                    case labels_url
-                    case languages_url
-                    case merges_url
-                    case milestones_url
-                    case notifications_url
-                    case pulls_url
-                    case releases_url
-                    case ssh_url
-                    case stargazers_url
-                    case statuses_url
-                    case subscribers_url
-                    case subscription_url
-                    case tags_url
-                    case teams_url
-                    case trees_url
-                    case clone_url
-                    case mirror_url
-                    case hooks_url
-                    case svn_url
-                    case homepage
-                    case language
-                    case forks_count
-                    case stargazers_count
-                    case watchers_count
-                    case size
-                    case default_branch
-                    case open_issues_count
-                    case is_template
-                    case topics
-                    case has_issues
-                    case has_projects
-                    case has_wiki
-                    case has_pages
-                    case has_downloads
-                    case archived
-                    case disabled
-                    case visibility
-                    case pushed_at
-                    case created_at
-                    case updated_at
-                    case permissions
-                    case allow_rebase_merge
-                    case temp_clone_token
-                    case allow_squash_merge
-                    case allow_auto_merge
-                    case delete_branch_on_merge
-                    case allow_update_branch
-                    case use_squash_pr_title_as_default
-                    case squash_merge_commit_title
-                    case squash_merge_commit_message
-                    case merge_commit_title
-                    case merge_commit_message
-                    case allow_merge_commit
-                    case subscribers_count
-                    case network_count
-                }
-            }
-            /// - Remark: Generated from `#/components/schemas/repository/template_repository`.
-            public var template_repository: Components.Schemas.repository.template_repositoryPayload?
             /// - Remark: Generated from `#/components/schemas/repository/temp_clone_token`.
             public var temp_clone_token: Swift.String?
             /// Whether to allow squash merges for pull requests.
@@ -5213,10 +4508,6 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/repository/web_commit_signoff_required`.
             public var web_commit_signoff_required: Swift.Bool?
-            /// - Remark: Generated from `#/components/schemas/repository/subscribers_count`.
-            public var subscribers_count: Swift.Int?
-            /// - Remark: Generated from `#/components/schemas/repository/network_count`.
-            public var network_count: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/repository/open_issues`.
             public var open_issues: Swift.Int
             /// - Remark: Generated from `#/components/schemas/repository/watchers`.
@@ -5237,7 +4528,6 @@ public enum Components {
             ///   - name: The name of the repository.
             ///   - full_name:
             ///   - license:
-            ///   - organization:
             ///   - forks:
             ///   - permissions:
             ///   - owner:
@@ -5310,7 +4600,6 @@ public enum Components {
             ///   - created_at:
             ///   - updated_at:
             ///   - allow_rebase_merge: Whether to allow rebase merges for pull requests.
-            ///   - template_repository:
             ///   - temp_clone_token:
             ///   - allow_squash_merge: Whether to allow squash merges for pull requests.
             ///   - allow_auto_merge: Whether to allow Auto-merge to be used on pull requests.
@@ -5324,8 +4613,6 @@ public enum Components {
             ///   - allow_merge_commit: Whether to allow merge commits for pull requests.
             ///   - allow_forking: Whether to allow forking this repo
             ///   - web_commit_signoff_required: Whether to require contributors to sign off on web-based commits
-            ///   - subscribers_count:
-            ///   - network_count:
             ///   - open_issues:
             ///   - watchers:
             ///   - master_branch:
@@ -5337,7 +4624,6 @@ public enum Components {
                 name: Swift.String,
                 full_name: Swift.String,
                 license: Components.Schemas.nullable_hyphen_license_hyphen_simple? = nil,
-                organization: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
                 forks: Swift.Int,
                 permissions: Components.Schemas.repository.permissionsPayload? = nil,
                 owner: Components.Schemas.simple_hyphen_user,
@@ -5410,7 +4696,6 @@ public enum Components {
                 created_at: Foundation.Date? = nil,
                 updated_at: Foundation.Date? = nil,
                 allow_rebase_merge: Swift.Bool? = nil,
-                template_repository: Components.Schemas.repository.template_repositoryPayload? = nil,
                 temp_clone_token: Swift.String? = nil,
                 allow_squash_merge: Swift.Bool? = nil,
                 allow_auto_merge: Swift.Bool? = nil,
@@ -5424,8 +4709,6 @@ public enum Components {
                 allow_merge_commit: Swift.Bool? = nil,
                 allow_forking: Swift.Bool? = nil,
                 web_commit_signoff_required: Swift.Bool? = nil,
-                subscribers_count: Swift.Int? = nil,
-                network_count: Swift.Int? = nil,
                 open_issues: Swift.Int,
                 watchers: Swift.Int,
                 master_branch: Swift.String? = nil,
@@ -5437,7 +4720,6 @@ public enum Components {
                 self.name = name
                 self.full_name = full_name
                 self.license = license
-                self.organization = organization
                 self.forks = forks
                 self.permissions = permissions
                 self.owner = owner
@@ -5510,7 +4792,6 @@ public enum Components {
                 self.created_at = created_at
                 self.updated_at = updated_at
                 self.allow_rebase_merge = allow_rebase_merge
-                self.template_repository = template_repository
                 self.temp_clone_token = temp_clone_token
                 self.allow_squash_merge = allow_squash_merge
                 self.allow_auto_merge = allow_auto_merge
@@ -5524,8 +4805,6 @@ public enum Components {
                 self.allow_merge_commit = allow_merge_commit
                 self.allow_forking = allow_forking
                 self.web_commit_signoff_required = web_commit_signoff_required
-                self.subscribers_count = subscribers_count
-                self.network_count = network_count
                 self.open_issues = open_issues
                 self.watchers = watchers
                 self.master_branch = master_branch
@@ -5538,7 +4817,6 @@ public enum Components {
                 case name
                 case full_name
                 case license
-                case organization
                 case forks
                 case permissions
                 case owner
@@ -5611,7 +4889,6 @@ public enum Components {
                 case created_at
                 case updated_at
                 case allow_rebase_merge
-                case template_repository
                 case temp_clone_token
                 case allow_squash_merge
                 case allow_auto_merge
@@ -5625,8 +4902,6 @@ public enum Components {
                 case allow_merge_commit
                 case allow_forking
                 case web_commit_signoff_required
-                case subscribers_count
-                case network_count
                 case open_issues
                 case watchers
                 case master_branch
@@ -10275,7 +9550,8 @@ public enum Operations {
     ///
     /// Gets the total GitHub Actions cache usage for an organization.
     /// The data fetched using this API is refreshed approximately every 5 minutes, so values returned from this endpoint may take at least 5 minutes to get updated.
-    /// You must authenticate using an access token with the `read:org` scope to use this endpoint. GitHub Apps must have the `organization_admistration:read` permission to use this endpoint.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `read:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/cache/usage`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/cache/usage/get(actions/get-actions-cache-usage-for-org)`.
@@ -10428,7 +9704,8 @@ public enum Operations {
     ///
     /// Lists repositories and their GitHub Actions cache usage for an organization.
     /// The data fetched using this API is refreshed approximately every 5 minutes, so values returned from this endpoint may take at least 5 minutes to get updated.
-    /// You must authenticate using an access token with the `read:org` scope to use this endpoint. GitHub Apps must have the `organization_admistration:read` permission to use this endpoint.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `read:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/cache/usage-by-repository`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/cache/usage-by-repository/get(actions/get-actions-cache-usage-by-repo-for-org)`.
@@ -10631,7 +9908,7 @@ public enum Operations {
     ///
     /// Gets the GitHub Actions permissions policy for repositories and allowed actions and reusable workflows in an organization.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint. GitHub Apps must have the `administration` organization permission to use this API.
+    /// OAuth tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/permissions`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/permissions/get(actions/get-github-actions-permissions-organization)`.
@@ -10765,7 +10042,7 @@ public enum Operations {
     ///
     /// Sets the GitHub Actions permissions policy for repositories and allowed actions and reusable workflows in an organization.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint. GitHub Apps must have the `administration` organization permission to use this API.
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/actions/permissions`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/permissions/put(actions/set-github-actions-permissions-organization)`.
@@ -10867,7 +10144,7 @@ public enum Operations {
     ///
     /// Lists the selected repositories that are enabled for GitHub Actions in an organization. To use this endpoint, the organization permission policy for `enabled_repositories` must be configured to `selected`. For more information, see "[Set GitHub Actions permissions for an organization](#set-github-actions-permissions-for-an-organization)."
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint. GitHub Apps must have the `administration` organization permission to use this API.
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/permissions/repositories`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/permissions/repositories/get(actions/list-selected-repositories-enabled-github-actions-organization)`.
@@ -11051,7 +10328,8 @@ public enum Operations {
     ///
     /// Replaces the list of selected repositories that are enabled for GitHub Actions in an organization. To use this endpoint, the organization permission policy for `enabled_repositories` must be configured to `selected`. For more information, see "[Set GitHub Actions permissions for an organization](#set-github-actions-permissions-for-an-organization)."
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint. GitHub Apps must have the `administration` organization permission to use this API.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/actions/permissions/repositories`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/permissions/repositories/put(actions/set-selected-repositories-enabled-github-actions-organization)`.
@@ -11147,7 +10425,7 @@ public enum Operations {
     ///
     /// Adds a repository to the list of selected repositories that are enabled for GitHub Actions in an organization. To use this endpoint, the organization permission policy for `enabled_repositories` must be must be configured to `selected`. For more information, see "[Set GitHub Actions permissions for an organization](#set-github-actions-permissions-for-an-organization)."
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint. GitHub Apps must have the `administration` organization permission to use this API.
+    /// OAuth tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/actions/permissions/repositories/{repository_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/permissions/repositories/{repository_id}/put(actions/enable-selected-repository-github-actions-organization)`.
@@ -11224,7 +10502,7 @@ public enum Operations {
     ///
     /// Removes a repository from the list of selected repositories that are enabled for GitHub Actions in an organization. To use this endpoint, the organization permission policy for `enabled_repositories` must be configured to `selected`. For more information, see "[Set GitHub Actions permissions for an organization](#set-github-actions-permissions-for-an-organization)."
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint. GitHub Apps must have the `administration` organization permission to use this API.
+    /// OAuth tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/actions/permissions/repositories/{repository_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/permissions/repositories/{repository_id}/delete(actions/disable-selected-repository-github-actions-organization)`.
@@ -11299,9 +10577,9 @@ public enum Operations {
     }
     /// Get allowed actions and reusable workflows for an organization
     ///
-    /// Gets the selected actions and reusable workflows that are allowed in an organization. To use this endpoint, the organization permission policy for `allowed_actions` must be configured to `selected`. For more information, see "[Set GitHub Actions permissions for an organization](#set-github-actions-permissions-for-an-organization).""
+    /// Gets the selected actions and reusable workflows that are allowed in an organization. To use this endpoint, the organization permission policy for `allowed_actions` must be configured to `selected`. For more information, see "[Set GitHub Actions permissions for an organization](#set-github-actions-permissions-for-an-organization)."
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint. GitHub Apps must have the `administration` organization permission to use this API.
+    /// OAuth tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/permissions/selected-actions`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/permissions/selected-actions/get(actions/get-allowed-actions-organization)`.
@@ -11435,7 +10713,7 @@ public enum Operations {
     ///
     /// Sets the actions and reusable workflows that are allowed in an organization. To use this endpoint, the organization permission policy for `allowed_actions` must be configured to `selected`. For more information, see "[Set GitHub Actions permissions for an organization](#set-github-actions-permissions-for-an-organization)."
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint. GitHub Apps must have the `administration` organization permission to use this API.
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/actions/permissions/selected-actions`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/permissions/selected-actions/put(actions/set-allowed-actions-organization)`.
@@ -11516,7 +10794,7 @@ public enum Operations {
     /// as well as whether GitHub Actions can submit approving pull request reviews. For more information, see
     /// "[Setting the permissions of the GITHUB_TOKEN for your organization](https://docs.github.com/organizations/managing-organization-settings/disabling-or-limiting-github-actions-for-your-organization#setting-the-permissions-of-the-github_token-for-your-organization)."
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint. GitHub Apps must have the `administration` organization permission to use this API.
+    /// OAuth tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/permissions/workflow`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/permissions/workflow/get(actions/get-github-actions-default-workflow-permissions-organization)`.
@@ -11652,7 +10930,7 @@ public enum Operations {
     /// can submit approving pull request reviews. For more information, see
     /// "[Setting the permissions of the GITHUB_TOKEN for your organization](https://docs.github.com/organizations/managing-organization-settings/disabling-or-limiting-github-actions-for-your-organization#setting-the-permissions-of-the-github_token-for-your-organization)."
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint. GitHub Apps must have the `administration` organization permission to use this API.
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/actions/permissions/workflow`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/permissions/workflow/put(actions/set-github-actions-default-workflow-permissions-organization)`.
@@ -11731,10 +11009,9 @@ public enum Operations {
     ///
     /// Lists all self-hosted runners configured in an organization.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the organization to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, the `repo` scope is also required.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/runners`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/runners/get(actions/list-self-hosted-runners-for-org)`.
@@ -11944,10 +11221,9 @@ public enum Operations {
     ///
     /// Lists binaries for the runner application that you can download and run.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the organization to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.  If the repository is private, the `repo` scope is also required.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/runners/downloads`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/runners/downloads/get(actions/list-runner-applications-for-org)`.
@@ -12081,10 +11357,9 @@ public enum Operations {
     ///
     /// Generates a configuration that can be passed to the runner application at startup.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// The authenticated user must have admin access to the organization.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the`admin:org` scope to use this endpoint. If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/actions/runners/generate-jitconfig`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/runners/generate-jitconfig/post(actions/generate-runner-jitconfig-for-org)`.
@@ -12288,18 +11563,15 @@ public enum Operations {
     ///
     /// Returns a token that you can pass to the `config` script. The token expires after one hour.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
-    ///
-    /// Example using registration token: 
-    ///
-    /// Configure your self-hosted runner, replacing `TOKEN` with the registration token provided by this endpoint.
+    /// For example, you can replace `TOKEN` in the following example with the registration token provided by this endpoint to configure your self-hosted runner:
     ///
     /// ```
     /// ./config.sh --url https://github.com/octo-org --token TOKEN
     /// ```
+    ///
+    /// Authenticated users must have admin access to the organization to use this endpoint.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the`admin:org` scope to use this endpoint. If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/actions/runners/registration-token`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/runners/registration-token/post(actions/create-registration-token-for-org)`.
@@ -12433,19 +11705,15 @@ public enum Operations {
     ///
     /// Returns a token that you can pass to the `config` script to remove a self-hosted runner from an organization. The token expires after one hour.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
-    ///
-    /// Example using remove token:
-    ///
-    /// To remove your self-hosted runner from an organization, replace `TOKEN` with the remove token provided by this
-    /// endpoint.
+    /// For example, you can replace `TOKEN` in the following example with the registration token provided by this endpoint to remove your self-hosted runner from an organization:
     ///
     /// ```
     /// ./config.sh remove --token TOKEN
     /// ```
+    ///
+    /// Authenticated users must have admin access to the organization to use this endpoint.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the`admin:org` scope to use this endpoint. If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/actions/runners/remove-token`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/runners/remove-token/post(actions/create-remove-token-for-org)`.
@@ -12579,10 +11847,9 @@ public enum Operations {
     ///
     /// Gets a specific self-hosted runner configured in an organization.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the organization to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, the `repo` scope is also required.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/runners/{runner_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/runners/{runner_id}/get(actions/get-self-hosted-runner-for-org)`.
@@ -12725,10 +11992,9 @@ public enum Operations {
     ///
     /// Forces the removal of a self-hosted runner from an organization. You can use this endpoint to completely remove the runner when the machine you were using no longer exists.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the organization to use this endpoint.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the`admin:org` scope to use this endpoint. If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/actions/runners/{runner_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/runners/{runner_id}/delete(actions/delete-self-hosted-runner-from-org)`.
@@ -12805,10 +12071,9 @@ public enum Operations {
     ///
     /// Lists all labels for a self-hosted runner configured in an organization.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the organization to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, the `repo` scope is also required.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/runners/{runner_id}/labels`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/runners/{runner_id}/labels/get(actions/list-labels-for-self-hosted-runner-for-org)`.
@@ -12944,12 +12209,11 @@ public enum Operations {
     }
     /// Add custom labels to a self-hosted runner for an organization
     ///
-    /// Add custom labels to a self-hosted runner configured in an organization.
+    /// Adds custom labels to a self-hosted runner configured in an organization.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the organization to use this endpoint.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/actions/runners/{runner_id}/labels`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/runners/{runner_id}/labels/post(actions/add-custom-labels-to-self-hosted-runner-for-org)`.
@@ -13137,10 +12401,9 @@ public enum Operations {
     /// Remove all previous custom labels and set the new custom labels for a specific
     /// self-hosted runner configured in an organization.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the organization to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, the `repo` scope is also required.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/actions/runners/{runner_id}/labels`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/runners/{runner_id}/labels/put(actions/set-custom-labels-for-self-hosted-runner-for-org)`.
@@ -13328,10 +12591,9 @@ public enum Operations {
     /// Remove all custom labels from a self-hosted runner configured in an
     /// organization. Returns the remaining read-only labels from the runner.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the organization to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, the `repo` scope is also required.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/actions/runners/{runner_id}/labels`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/runners/{runner_id}/labels/delete(actions/remove-all-custom-labels-from-self-hosted-runner-for-org)`.
@@ -13473,10 +12735,9 @@ public enum Operations {
     /// This endpoint returns a `404 Not Found` status if the custom label is not
     /// present on the runner.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the organization to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, the `repo` scope is also required.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/actions/runners/{runner_id}/labels/{name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/runners/{runner_id}/labels/{name}/delete(actions/remove-custom-label-from-self-hosted-runner-for-org)`.
@@ -13645,10 +12906,9 @@ public enum Operations {
     /// Lists all secrets available in an organization without revealing their
     /// encrypted values.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `secrets` organization permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, the `repo` scope is also required.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/secrets`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/secrets/get(actions/list-org-secrets)`.
@@ -13852,10 +13112,9 @@ public enum Operations {
     /// Gets your public key, which you need to encrypt secrets. You need to
     /// encrypt a secret before you can create or update secrets.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `secrets` organization permission to use this endpoint.
-    /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    /// The authenticated user must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the`admin:org` scope to use this endpoint. If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/secrets/public-key`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/secrets/public-key/get(actions/get-org-public-key)`.
@@ -13989,10 +13248,9 @@ public enum Operations {
     ///
     /// Gets a single organization secret without revealing its encrypted value.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `secrets` organization permission to use this endpoint.
-    /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    /// The authenticated user must have collaborator access to a repository to create, update, or read secrets
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the`admin:org` scope to use this endpoint. If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/secrets/{secret_name}/get(actions/get-org-secret)`.
@@ -14136,10 +13394,9 @@ public enum Operations {
     /// Creates or updates an organization secret with an encrypted value. Encrypt your secret using
     /// [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages). For more information, see "[Encrypting secrets for the REST API](https://docs.github.com/rest/guides/encrypting-secrets-for-the-rest-api)."
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `secrets` organization permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the`admin:org` scope to use this endpoint. If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/actions/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/secrets/{secret_name}/put(actions/create-or-update-org-secret)`.
@@ -14369,10 +13626,9 @@ public enum Operations {
     ///
     /// Deletes a secret in an organization using the secret name.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `secrets` organization permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the`admin:org` scope to use this endpoint. If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/actions/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/secrets/{secret_name}/delete(actions/delete-org-secret)`.
@@ -14450,10 +13706,9 @@ public enum Operations {
     /// Lists all repositories that have been selected when the `visibility`
     /// for repository access to a secret is set to `selected`.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `secrets` organization permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, the `repo` scope is also required.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/secrets/{secret_name}/repositories`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/secrets/{secret_name}/repositories/get(actions/list-selected-repos-for-org-secret)`.
@@ -14648,10 +13903,9 @@ public enum Operations {
     /// for repository access is set to `selected`. The visibility is set when you [Create
     /// or update an organization secret](https://docs.github.com/rest/actions/secrets#create-or-update-an-organization-secret).
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `secrets` organization permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, the `repo` scope is also required.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/actions/secrets/{secret_name}/repositories`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/secrets/{secret_name}/repositories/put(actions/set-selected-repos-for-org-secret)`.
@@ -14755,13 +14009,12 @@ public enum Operations {
     /// Add selected repository to an organization secret
     ///
     /// Adds a repository to an organization secret when the `visibility` for
-    /// repository access is set to `selected`. The visibility is set when you [Create or
+    /// repository access is set to `selected`. For more information about setting the visibility, see [Create or
     /// update an organization secret](https://docs.github.com/rest/actions/secrets#create-or-update-an-organization-secret).
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `secrets` organization permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/actions/secrets/{secret_name}/repositories/{repository_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/secrets/{secret_name}/repositories/{repository_id}/put(actions/add-selected-repo-to-org-secret)`.
@@ -14872,10 +14125,9 @@ public enum Operations {
     /// for repository access is set to `selected`. The visibility is set when you [Create
     /// or update an organization secret](https://docs.github.com/rest/actions/secrets#create-or-update-an-organization-secret).
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `secrets` organization permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, the `repo` scope is also required.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/actions/secrets/{secret_name}/repositories/{repository_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/secrets/{secret_name}/repositories/{repository_id}/delete(actions/remove-selected-repo-from-org-secret)`.
@@ -14983,7 +14235,10 @@ public enum Operations {
     /// List organization variables
     ///
     /// Lists all organization variables.
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint. If the repository is private, you must use an access token with the `repo` scope. GitHub Apps must have the `organization_actions_variables:read` organization permission to use this endpoint. Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, the `repo` scope is also required.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/variables`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/variables/get(actions/list-org-variables)`.
@@ -15186,10 +14441,9 @@ public enum Operations {
     ///
     /// Creates an organization variable that you can reference in a GitHub Actions workflow.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `organization_actions_variables:write` organization permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the`admin:org` scope to use this endpoint. If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/actions/variables`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/variables/post(actions/create-org-variable)`.
@@ -15383,10 +14637,9 @@ public enum Operations {
     ///
     /// Gets a specific variable in an organization.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `organization_actions_variables:read` organization permission to use this endpoint.
-    /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    /// The authenticated user must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the`admin:org` scope to use this endpoint. If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/variables/{name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/variables/{name}/get(actions/get-org-variable)`.
@@ -15529,10 +14782,9 @@ public enum Operations {
     ///
     /// Updates an organization variable that you can reference in a GitHub Actions workflow.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `organization_actions_variables:write` organization permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, the `repo` scope is also required.
     ///
     /// - Remark: HTTP `PATCH /orgs/{org}/actions/variables/{name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/variables/{name}/patch(actions/update-org-variable)`.
@@ -15671,10 +14923,9 @@ public enum Operations {
     ///
     /// Deletes an organization variable using the variable name.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `organization_actions_variables:write` organization permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the`admin:org` scope to use this endpoint. If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/actions/variables/{name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/variables/{name}/delete(actions/delete-org-variable)`.
@@ -15752,10 +15003,9 @@ public enum Operations {
     /// Lists all repositories that can access an organization variable
     /// that is available to selected repositories.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `organization_actions_variables:read` organization permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, the `repo` scope is also required.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/variables/{name}/repositories`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/variables/{name}/repositories/get(actions/list-selected-repos-for-org-variable)`.
@@ -15977,11 +15227,9 @@ public enum Operations {
     /// to selected repositories. Organization variables that are available to selected
     /// repositories have their `visibility` field set to `selected`.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `organization_actions_variables:write` organization permission to use this
-    /// endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, the `repo` scope is also required.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/actions/variables/{name}/repositories`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/variables/{name}/repositories/put(actions/set-selected-repos-for-org-variable)`.
@@ -16114,10 +15362,9 @@ public enum Operations {
     /// Adds a repository to an organization variable that is available to selected repositories.
     /// Organization variables that are available to selected repositories have their `visibility` field set to `selected`.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `organization_actions_variables:write` organization permission to use this endpoint.
-    /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/actions/variables/{name}/repositories/{repository_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/variables/{name}/repositories/{repository_id}/put(actions/add-selected-repo-to-org-variable)`.
@@ -16228,10 +15475,9 @@ public enum Operations {
     /// available to selected repositories. Organization variables that are available to
     /// selected repositories have their `visibility` field set to `selected`.
     ///
-    /// You must authenticate using an access token with the `admin:org` scope to use this endpoint.
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `organization_actions_variables:write` organization permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint. If the repository is private, the `repo` scope is also required.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/actions/variables/{name}/repositories/{repository_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/variables/{name}/repositories/{repository_id}/delete(actions/remove-selected-repo-from-org-variable)`.
@@ -16338,7 +15584,11 @@ public enum Operations {
     }
     /// List artifacts for a repository
     ///
-    /// Lists all artifacts for a repository. Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// Lists all artifacts for a repository.
+    ///
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/artifacts`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/artifacts/get(actions/list-artifacts-for-repo)`.
@@ -16555,7 +15805,11 @@ public enum Operations {
     }
     /// Get an artifact
     ///
-    /// Gets a specific artifact for a workflow run. Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// Gets a specific artifact for a workflow run.
+    ///
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/artifacts/{artifact_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/artifacts/{artifact_id}/get(actions/get-artifact)`.
@@ -16703,7 +15957,8 @@ public enum Operations {
     }
     /// Delete an artifact
     ///
-    /// Deletes an artifact for a workflow run. You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `actions:write` permission to use this endpoint.
+    /// Deletes an artifact for a workflow run.
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/actions/artifacts/{artifact_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/artifacts/{artifact_id}/delete(actions/delete-artifact)`.
@@ -16788,8 +16043,7 @@ public enum Operations {
     /// Gets a redirect URL to download an archive for a repository. This URL expires after 1 minute. Look for `Location:` in
     /// the response header to find the URL for the download. The `:archive_format` must be `zip`.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/artifacts/{artifact_id}/{archive_format}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/artifacts/{artifact_id}/{archive_format}/get(actions/download-artifact)`.
@@ -16962,7 +16216,10 @@ public enum Operations {
     ///
     /// Gets GitHub Actions cache usage for a repository.
     /// The data fetched using this API is refreshed approximately every 5 minutes, so values returned from this endpoint may take at least 5 minutes to get updated.
-    /// Anyone with read access to the repository can use this endpoint. If the repository is private, you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    ///
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/cache/usage`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/cache/usage/get(actions/get-actions-cache-usage)`.
@@ -17104,8 +16361,8 @@ public enum Operations {
     /// List GitHub Actions caches for a repository
     ///
     /// Lists the GitHub Actions caches for a repository.
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `actions:read` permission to use this endpoint.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/caches`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/caches/get(actions/get-actions-cache-list)`.
@@ -17333,9 +16590,7 @@ public enum Operations {
     ///
     /// Deletes one or more GitHub Actions caches for a repository, using a complete cache key. By default, all caches that match the provided key are deleted, but you can optionally provide a Git ref to restrict deletions to caches that match both the provided key and the Git ref.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    ///
-    /// GitHub Apps must have the `actions:write` permission to use this endpoint.
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/actions/caches`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/caches/delete(actions/delete-actions-cache-by-key)`.
@@ -17505,9 +16760,7 @@ public enum Operations {
     ///
     /// Deletes a GitHub Actions cache for a repository, using a cache ID.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    ///
-    /// GitHub Apps must have the `actions:write` permission to use this endpoint.
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/actions/caches/{cache_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/caches/{cache_id}/delete(actions/delete-actions-cache-by-id)`.
@@ -17589,7 +16842,11 @@ public enum Operations {
     }
     /// Get a job for a workflow run
     ///
-    /// Gets a specific job in a workflow run. Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// Gets a specific job in a workflow run.
+    ///
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/jobs/{job_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/jobs/{job_id}/get(actions/get-job-for-workflow-run)`.
@@ -17738,9 +16995,11 @@ public enum Operations {
     /// Download job logs for a workflow run
     ///
     /// Gets a redirect URL to download a plain text file of logs for a workflow job. This link expires after 1 minute. Look
-    /// for `Location:` in the response header to find the URL for the download. Anyone with read access to the repository can
-    /// use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must
-    /// have the `actions:read` permission to use this endpoint.
+    /// for `Location:` in the response header to find the URL for the download.
+    ///
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/jobs/{job_id}/logs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/jobs/{job_id}/logs/get(actions/download-job-logs-for-workflow-run)`.
@@ -17843,8 +17102,7 @@ public enum Operations {
     ///
     /// Re-run a job and its dependent jobs in a workflow run.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `actions:write` permission to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/actions/jobs/{job_id}/rerun`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/jobs/{job_id}/rerun/post(actions/re-run-job-for-workflow-run)`.
@@ -18042,8 +17300,8 @@ public enum Operations {
     /// Get the customization template for an OIDC subject claim for a repository
     ///
     /// Gets the customization template for an OpenID Connect (OIDC) subject claim.
-    /// You must authenticate using an access token with the `repo` scope to use this
-    /// endpoint. GitHub Apps must have the `organization_administration:read` permission to use this endpoint.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/oidc/customization/sub`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/oidc/customization/sub/get(actions/get-custom-oidc-sub-claim-for-repo)`.
@@ -18237,8 +17495,8 @@ public enum Operations {
     /// Set the customization template for an OIDC subject claim for a repository
     ///
     /// Sets the customization template and `opt-in` or `opt-out` flag for an OpenID Connect (OIDC) subject claim for a repository.
-    /// You must authenticate using an access token with the `repo` scope to use this
-    /// endpoint. GitHub Apps must have the `actions:write` permission to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/actions/oidc/customization/sub`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/oidc/customization/sub/put(actions/set-custom-oidc-sub-claim-for-repo)`.
@@ -18495,9 +17753,9 @@ public enum Operations {
     /// Lists all organization secrets shared with a repository without revealing their encrypted
     /// values.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `secrets` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/organization-secrets`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/organization-secrets/get(actions/list-repo-organization-secrets)`.
@@ -18707,11 +17965,11 @@ public enum Operations {
     }
     /// List repository organization variables
     ///
-    /// Lists all organiation variables shared with a repository.
+    /// Lists all organization variables shared with a repository.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `actions_variables:read` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/organization-variables`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/organization-variables/get(actions/list-repo-organization-variables)`.
@@ -18923,7 +18181,7 @@ public enum Operations {
     ///
     /// Gets the GitHub Actions permissions policy for a repository, including whether GitHub Actions is enabled and the actions and reusable workflows allowed to run in the repository.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `administration` repository permission to use this API.
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/permissions`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/permissions/get(actions/get-github-actions-permissions-repository)`.
@@ -19066,7 +18324,7 @@ public enum Operations {
     ///
     /// Sets the GitHub Actions permissions policy for enabling GitHub Actions and allowed actions and reusable workflows in the repository.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `administration` repository permission to use this API.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/actions/permissions`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/permissions/put(actions/set-github-actions-permissions-repository)`.
@@ -19179,8 +18437,7 @@ public enum Operations {
     /// This endpoint only applies to private repositories.
     /// For more information, see "[Allowing access to components in a private repository](https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository#allowing-access-to-components-in-a-private-repository)."
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the
-    /// repository `administration` permission to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/permissions/access`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/permissions/access/get(actions/get-workflow-access-to-repository)`.
@@ -19325,8 +18582,7 @@ public enum Operations {
     /// This endpoint only applies to private repositories.
     /// For more information, see "[Allowing access to components in a private repository](https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository#allowing-access-to-components-in-a-private-repository)".
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the
-    /// repository `administration` permission to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/actions/permissions/access`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/permissions/access/put(actions/set-workflow-access-to-repository)`.
@@ -19414,7 +18670,7 @@ public enum Operations {
     ///
     /// Gets the settings for selected actions and reusable workflows that are allowed in a repository. To use this endpoint, the repository policy for `allowed_actions` must be configured to `selected`. For more information, see "[Set GitHub Actions permissions for a repository](#set-github-actions-permissions-for-a-repository)."
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `administration` repository permission to use this API.
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/permissions/selected-actions`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/permissions/selected-actions/get(actions/get-allowed-actions-repository)`.
@@ -19557,7 +18813,7 @@ public enum Operations {
     ///
     /// Sets the actions and reusable workflows that are allowed in a repository. To use this endpoint, the repository permission policy for `allowed_actions` must be configured to `selected`. For more information, see "[Set GitHub Actions permissions for a repository](#set-github-actions-permissions-for-a-repository)."
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `administration` repository permission to use this API.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/actions/permissions/selected-actions`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/permissions/selected-actions/put(actions/set-allowed-actions-repository)`.
@@ -19647,7 +18903,7 @@ public enum Operations {
     /// as well as if GitHub Actions can submit approving pull request reviews.
     /// For more information, see "[Setting the permissions of the GITHUB_TOKEN for your repository](https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository#setting-the-permissions-of-the-github_token-for-your-repository)."
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the repository `administration` permission to use this API.
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/permissions/workflow`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/permissions/workflow/get(actions/get-github-actions-default-workflow-permissions-repository)`.
@@ -19792,7 +19048,7 @@ public enum Operations {
     /// can submit approving pull request reviews.
     /// For more information, see "[Setting the permissions of the GITHUB_TOKEN for your repository](https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository#setting-the-permissions-of-the-github_token-for-your-repository)."
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the repository `administration` permission to use this API.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/actions/permissions/workflow`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/permissions/workflow/put(actions/set-github-actions-default-workflow-permissions-repository)`.
@@ -19907,9 +19163,9 @@ public enum Operations {
     ///
     /// Lists all self-hosted runners configured in a repository.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the repository to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runners`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runners/get(actions/list-self-hosted-runners-for-repo)`.
@@ -20128,9 +19384,9 @@ public enum Operations {
     ///
     /// Lists binaries for the runner application that you can download and run.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the repository to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runners/downloads`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runners/downloads/get(actions/list-runner-applications-for-repo)`.
@@ -20273,9 +19529,9 @@ public enum Operations {
     ///
     /// Generates a configuration that can be passed to the runner application at startup.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// The authenticated user must have admin access to the repository.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the`repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/actions/runners/generate-jitconfig`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runners/generate-jitconfig/post(actions/generate-runner-jitconfig-for-repo)`.
@@ -20486,19 +19742,17 @@ public enum Operations {
     }
     /// Create a registration token for a repository
     ///
-    /// Returns a token that you can pass to the `config` script. The token
-    /// expires after one hour.
+    /// Returns a token that you can pass to the `config` script. The token expires after one hour.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// For example, you can replace `TOKEN` in the following example with the registration token provided by this endpoint to configure your self-hosted runner:
     ///
-    /// Example using registration token:
+    /// ```
+    /// ./config.sh --url https://github.com/octo-org --token TOKEN
+    /// ```
     ///
-    /// Configure your self-hosted runner, replacing `TOKEN` with the registration token provided
-    /// by this endpoint.
+    /// Authenticated users must have admin access to the repository to use this endpoint.
     ///
-    /// ```config.sh --url https://github.com/octo-org/octo-repo-artifacts --token TOKEN```
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/actions/runners/registration-token`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runners/registration-token/post(actions/create-registration-token-for-repo)`.
@@ -20639,19 +19893,17 @@ public enum Operations {
     }
     /// Create a remove token for a repository
     ///
-    /// Returns a token that you can pass to remove a self-hosted runner from
-    /// a repository. The token expires after one hour.
+    /// Returns a token that you can pass to the `config` script to remove a self-hosted runner from an repository. The token expires after one hour.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// For example, you can replace `TOKEN` in the following example with the registration token provided by this endpoint to remove your self-hosted runner from an organization:
     ///
-    /// Example using remove token:
+    /// ```
+    /// ./config.sh remove --token TOKEN
+    /// ```
     ///
-    /// To remove your self-hosted runner from a repository, replace TOKEN with
-    /// the remove token provided by this endpoint.
+    /// Authenticated users must have admin access to the repository to use this endpoint.
     ///
-    /// ```config.sh remove --token TOKEN```
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/actions/runners/remove-token`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runners/remove-token/post(actions/create-remove-token-for-repo)`.
@@ -20794,9 +20046,9 @@ public enum Operations {
     ///
     /// Gets a specific self-hosted runner configured in a repository.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the repository to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runners/{runner_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runners/{runner_id}/get(actions/get-self-hosted-runner-for-repo)`.
@@ -20946,9 +20198,9 @@ public enum Operations {
     ///
     /// Forces the removal of a self-hosted runner from a repository. You can use this endpoint to completely remove the runner when the machine you were using no longer exists.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the repository to use this endpoint.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/actions/runners/{runner_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runners/{runner_id}/delete(actions/delete-self-hosted-runner-from-repo)`.
@@ -21032,9 +20284,9 @@ public enum Operations {
     ///
     /// Lists all labels for a self-hosted runner configured in a repository.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the repository to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runners/{runner_id}/labels`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runners/{runner_id}/labels/get(actions/list-labels-for-self-hosted-runner-for-repo)`.
@@ -21177,11 +20429,11 @@ public enum Operations {
     }
     /// Add custom labels to a self-hosted runner for a repository
     ///
-    /// Add custom labels to a self-hosted runner configured in a repository.
+    /// Adds custom labels to a self-hosted runner configured in a repository.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the organization to use this endpoint.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/actions/runners/{runner_id}/labels`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runners/{runner_id}/labels/post(actions/add-custom-labels-to-self-hosted-runner-for-repo)`.
@@ -21376,9 +20628,9 @@ public enum Operations {
     /// Remove all previous custom labels and set the new custom labels for a specific
     /// self-hosted runner configured in a repository.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the repository to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/actions/runners/{runner_id}/labels`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runners/{runner_id}/labels/put(actions/set-custom-labels-for-self-hosted-runner-for-repo)`.
@@ -21573,9 +20825,9 @@ public enum Operations {
     /// Remove all custom labels from a self-hosted runner configured in a
     /// repository. Returns the remaining read-only labels from the runner.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the repository to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/actions/runners/{runner_id}/labels`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runners/{runner_id}/labels/delete(actions/remove-all-custom-labels-from-self-hosted-runner-for-repo)`.
@@ -21724,9 +20976,9 @@ public enum Operations {
     /// This endpoint returns a `404 Not Found` status if the custom label is not
     /// present on the runner.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `administration` permission for repositories and the `organization_self_hosted_runners` permission for organizations.
-    /// Authenticated users must have admin access to repositories or organizations, or the `manage_runners:enterprise` scope for enterprises, to use these endpoints.
+    /// Authenticated users must have admin access to the repository to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/actions/runners/{runner_id}/labels/{name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runners/{runner_id}/labels/{name}/delete(actions/remove-custom-label-from-self-hosted-runner-for-repo)`.
@@ -21901,7 +21153,9 @@ public enum Operations {
     ///
     /// Lists all workflow runs for a repository. You can use parameters to narrow the list of results. For more information about using parameters, see [Parameters](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#parameters).
     ///
-    /// Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/get(actions/list-workflow-runs-for-repo)`.
@@ -22184,7 +21438,11 @@ public enum Operations {
     }
     /// Get a workflow run
     ///
-    /// Gets a specific workflow run. Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// Gets a specific workflow run.
+    ///
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runs/{run_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/get(actions/get-workflow-run)`.
@@ -22350,9 +21608,11 @@ public enum Operations {
     }
     /// Delete a workflow run
     ///
-    /// Delete a specific workflow run. Anyone with write access to the repository can use this endpoint. If the repository is
-    /// private you must use an access token with the `repo` scope. GitHub Apps must have the `actions:write` permission to use
-    /// this endpoint.
+    /// Deletes a specific workflow run.
+    ///
+    /// Anyone with write access to the repository can use this endpoint.
+    ///
+    /// If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/actions/runs/{run_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/delete(actions/delete-workflow-run)`.
@@ -22434,7 +21694,9 @@ public enum Operations {
     }
     /// Get the review history for a workflow run
     ///
-    /// Anyone with read access to the repository can use this endpoint. If the repository is private, you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runs/{run_id}/approvals`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/approvals/get(actions/get-reviews-for-run)`.
@@ -22584,7 +21846,7 @@ public enum Operations {
     ///
     /// Approves a workflow run for a pull request from a public fork of a first time contributor. For more information, see ["Approving workflow runs from public forks](https://docs.github.com/actions/managing-workflow-runs/approving-workflow-runs-from-public-forks)."
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `actions:write` permission to use this endpoint.
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/actions/runs/{run_id}/approve`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/approve/post(actions/approve-workflow-run)`.
@@ -22778,7 +22040,11 @@ public enum Operations {
     }
     /// List workflow run artifacts
     ///
-    /// Lists artifacts for a workflow run. Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// Lists artifacts for a workflow run.
+    ///
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runs/{run_id}/artifacts`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/artifacts/get(actions/list-workflow-run-artifacts)`.
@@ -23002,10 +22268,11 @@ public enum Operations {
     }
     /// Get a workflow run attempt
     ///
-    /// Gets a specific workflow run attempt. Anyone with read access to the repository
-    /// can use this endpoint. If the repository is private you must use an access token
-    /// with the `repo` scope. GitHub Apps must have the `actions:read` permission to
-    /// use this endpoint.
+    /// Gets a specific workflow run attempt.
+    ///
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runs/{run_id}/attempts/{attempt_number}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/attempts/{attempt_number}/get(actions/get-workflow-run-attempt)`.
@@ -23178,7 +22445,12 @@ public enum Operations {
     }
     /// List jobs for a workflow run attempt
     ///
-    /// Lists jobs for a specific workflow run attempt. Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint. You can use parameters to narrow the list of results. For more information about using parameters, see [Parameters](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#parameters).
+    /// Lists jobs for a specific workflow run attempt. You can use parameters to narrow the list of results. For more information
+    /// about using parameters, see [Parameters](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#parameters).
+    ///
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint  with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runs/{run_id}/attempts/{attempt_number}/jobs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/attempts/{attempt_number}/jobs/get(actions/list-jobs-for-workflow-run-attempt)`.
@@ -23426,9 +22698,11 @@ public enum Operations {
     /// Download workflow run attempt logs
     ///
     /// Gets a redirect URL to download an archive of log files for a specific workflow run attempt. This link expires after
-    /// 1 minute. Look for `Location:` in the response header to find the URL for the download. Anyone with read access to
-    /// the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// 1 minute. Look for `Location:` in the response header to find the URL for the download.
+    ///
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runs/{run_id}/attempts/{attempt_number}/logs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/attempts/{attempt_number}/logs/get(actions/download-workflow-run-attempt-logs)`.
@@ -23538,8 +22812,7 @@ public enum Operations {
     ///
     /// Cancels a workflow run using its `id`.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `actions:write` permission to use this endpoint.
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/actions/runs/{run_id}/cancel`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/cancel/post(actions/cancel-workflow-run)`.
@@ -23715,8 +22988,7 @@ public enum Operations {
     /// **Note:** GitHub Apps can only review their own custom deployment protection rules.
     /// To approve or reject pending deployments that are waiting for review from a specific person or team, see [`POST /repos/{owner}/{repo}/actions/runs/{run_id}/pending_deployments`](/rest/actions/workflow-runs#review-pending-deployments-for-a-workflow-run).
     ///
-    /// If the repository is private, you must use an access token with the `repo` scope.
-    /// GitHub Apps must have read and write permission for **Deployments** to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/actions/runs/{run_id}/deployment_protection_rule`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/deployment_protection_rule/post(actions/review-custom-gates-for-run)`.
@@ -23857,8 +23129,7 @@ public enum Operations {
     /// Cancels a workflow run and bypasses conditions that would otherwise cause a workflow execution to continue, such as an `always()` condition on a job.
     /// You should only use this endpoint to cancel a workflow run when the workflow run is not responding to [`POST /repos/{owner}/{repo}/actions/runs/{run_id}/cancel`](/rest/actions/workflow-runs#cancel-a-workflow-run).
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `actions:write` permission to use this endpoint.
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/actions/runs/{run_id}/force-cancel`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/force-cancel/post(actions/force-cancel-workflow-run)`.
@@ -24029,7 +23300,12 @@ public enum Operations {
     }
     /// List jobs for a workflow run
     ///
-    /// Lists jobs for a workflow run. Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint. You can use parameters to narrow the list of results. For more information about using parameters, see [Parameters](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#parameters).
+    /// Lists jobs for a workflow run. You can use parameters to narrow the list of results. For more information
+    /// about using parameters, see [Parameters](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#parameters).
+    ///
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runs/{run_id}/jobs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/jobs/get(actions/list-jobs-for-workflow-run)`.
@@ -24259,9 +23535,11 @@ public enum Operations {
     /// Download workflow run logs
     ///
     /// Gets a redirect URL to download an archive of log files for a workflow run. This link expires after 1 minute. Look for
-    /// `Location:` in the response header to find the URL for the download. Anyone with read access to the repository can use
-    /// this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have
-    /// the `actions:read` permission to use this endpoint.
+    /// `Location:` in the response header to find the URL for the download.
+    ///
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runs/{run_id}/logs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/logs/get(actions/download-workflow-run-logs)`.
@@ -24362,7 +23640,9 @@ public enum Operations {
     }
     /// Delete workflow run logs
     ///
-    /// Deletes all logs for a workflow run. You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `actions:write` permission to use this endpoint.
+    /// Deletes all logs for a workflow run.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/actions/runs/{run_id}/logs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/logs/delete(actions/delete-workflow-run-logs)`.
@@ -24534,7 +23814,9 @@ public enum Operations {
     ///
     /// Get all deployment environments for a workflow run that are waiting for protection rules to pass.
     ///
-    /// Anyone with read access to the repository can use this endpoint. If the repository is private, you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runs/{run_id}/pending_deployments`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/pending_deployments/get(actions/get-pending-deployments-for-run)`.
@@ -24684,7 +23966,9 @@ public enum Operations {
     ///
     /// Approve or reject pending deployments that are waiting on approval by a required reviewer.
     ///
-    /// Required reviewers with read access to the repository contents and deployments can use this endpoint. Required reviewers must authenticate using an access token with the `repo` scope to use this endpoint.
+    /// Required reviewers with read access to the repository contents and deployments can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/actions/runs/{run_id}/pending_deployments`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/pending_deployments/post(actions/review-pending-deployments-for-run)`.
@@ -24883,7 +24167,9 @@ public enum Operations {
     }
     /// Re-run a workflow
     ///
-    /// Re-runs your workflow run using its `id`. You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `actions:write` permission to use this endpoint.
+    /// Re-runs your workflow run using its `id`.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/actions/runs/{run_id}/rerun`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/rerun/post(actions/re-run-workflow)`.
@@ -25057,7 +24343,9 @@ public enum Operations {
     }
     /// Re-run failed jobs from a workflow run
     ///
-    /// Re-run all of the failed jobs and their dependent jobs in a workflow run using the `id` of the workflow run. You must authenticate using an access token with the `repo` scope to use this endpoint.
+    /// Re-run all of the failed jobs and their dependent jobs in a workflow run using the `id` of the workflow run.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/actions/runs/{run_id}/rerun-failed-jobs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/rerun-failed-jobs/post(actions/re-run-workflow-failed-jobs)`.
@@ -25233,7 +24521,9 @@ public enum Operations {
     ///
     /// Gets the number of billable minutes and total run time for a specific workflow run. Billable minutes only apply to workflows in private repositories that use GitHub-hosted runners. Usage is listed for each GitHub-hosted runner operating system in milliseconds. Any job re-runs are also included in the usage. The usage does not include the multiplier for macOS and Windows runners and is not rounded up to the nearest whole minute. For more information, see "[Managing billing for GitHub Actions](https://docs.github.com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-actions)".
     ///
-    /// Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runs/{run_id}/timing`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/timing/get(actions/get-workflow-run-usage)`.
@@ -25384,9 +24674,9 @@ public enum Operations {
     /// Lists all secrets available in a repository without revealing their encrypted
     /// values.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `secrets` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/secrets`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/secrets/get(actions/list-repo-secrets)`.
@@ -25600,9 +24890,8 @@ public enum Operations {
     /// encrypt a secret before you can create or update secrets.
     ///
     /// Anyone with read access to the repository can use this endpoint.
-    /// If the repository is private you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `secrets` repository permission to use this endpoint.
-    /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/secrets/public-key`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/secrets/public-key/get(actions/get-repo-public-key)`.
@@ -25745,9 +25034,9 @@ public enum Operations {
     ///
     /// Gets a single repository secret without revealing its encrypted value.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `secrets` repository permission to use this endpoint.
-    /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    /// The authenticated user must have collaborator access to the repository to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/secrets/{secret_name}/get(actions/get-repo-secret)`.
@@ -25898,9 +25187,9 @@ public enum Operations {
     /// Creates or updates a repository secret with an encrypted value. Encrypt your secret using
     /// [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages). For more information, see "[Encrypting secrets for the REST API](https://docs.github.com/rest/guides/encrypting-secrets-for-the-rest-api)."
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `secrets` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/actions/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/secrets/{secret_name}/put(actions/create-or-update-repo-secret)`.
@@ -26113,9 +25402,9 @@ public enum Operations {
     ///
     /// Deletes a secret in a repository using the secret name.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `secrets` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/actions/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/secrets/{secret_name}/delete(actions/delete-repo-secret)`.
@@ -26198,9 +25487,10 @@ public enum Operations {
     /// List repository variables
     ///
     /// Lists all repository variables.
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `actions_variables:read` repository permission to use this endpoint.
+    ///
     /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/variables`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/variables/get(actions/list-repo-variables)`.
@@ -26412,9 +25702,9 @@ public enum Operations {
     ///
     /// Creates a repository variable that you can reference in a GitHub Actions workflow.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `actions_variables:write` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/actions/variables`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/variables/post(actions/create-repo-variable)`.
@@ -26593,9 +25883,9 @@ public enum Operations {
     ///
     /// Gets a specific variable in a repository.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `actions_variables:read` repository permission to use this endpoint.
-    /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    /// The authenticated user must have collaborator access to the repository to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/variables/{name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/variables/{name}/get(actions/get-repo-variable)`.
@@ -26745,9 +26035,9 @@ public enum Operations {
     ///
     /// Updates a repository variable that you can reference in a GitHub Actions workflow.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `actions_variables:write` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/actions/variables/{name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/variables/{name}/patch(actions/update-repo-variable)`.
@@ -26869,9 +26159,9 @@ public enum Operations {
     ///
     /// Deletes a repository variable using the variable name.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `actions_variables:write` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/actions/variables/{name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/variables/{name}/delete(actions/delete-repo-variable)`.
@@ -26953,7 +26243,11 @@ public enum Operations {
     }
     /// List repository workflows
     ///
-    /// Lists the workflows in a repository. Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// Lists the workflows in a repository.
+    ///
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/workflows`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/workflows/get(actions/list-repo-workflows)`.
@@ -27163,7 +26457,12 @@ public enum Operations {
     }
     /// Get a workflow
     ///
-    /// Gets a specific workflow. You can replace `workflow_id` with the workflow file name. For example, you could use `main.yaml`. Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// Gets a specific workflow. You can replace `workflow_id` with the workflow
+    /// file name. For example, you could use `main.yaml`.
+    ///
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/workflows/{workflow_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/workflows/{workflow_id}/get(actions/get-workflow)`.
@@ -27348,7 +26647,7 @@ public enum Operations {
     ///
     /// Disables a workflow and sets the `state` of the workflow to `disabled_manually`. You can replace `workflow_id` with the workflow file name. For example, you could use `main.yaml`.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `actions:write` permission to use this endpoint.
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/actions/workflows/{workflow_id}/disable`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/workflows/{workflow_id}/disable/put(actions/disable-workflow)`.
@@ -27469,7 +26768,7 @@ public enum Operations {
     ///
     /// You must configure your GitHub Actions workflow to run when the [`workflow_dispatch` webhook](/developers/webhooks-and-events/webhook-events-and-payloads#workflow_dispatch) event occurs. The `inputs` are configured in the workflow file. For more information about how to configure the `workflow_dispatch` event in the workflow file, see "[Events that trigger workflows](/actions/reference/events-that-trigger-workflows#workflow_dispatch)."
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `actions:write` permission to use this endpoint. For more information, see "[Creating a personal access token for the command line](https://docs.github.com/articles/creating-a-personal-access-token-for-the-command-line)."
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches/post(actions/create-workflow-dispatch)`.
@@ -27646,7 +26945,7 @@ public enum Operations {
     ///
     /// Enables a workflow and sets the `state` of the workflow to `active`. You can replace `workflow_id` with the workflow file name. For example, you could use `main.yaml`.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `actions:write` permission to use this endpoint.
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/actions/workflows/{workflow_id}/enable`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/workflows/{workflow_id}/enable/put(actions/enable-workflow)`.
@@ -27765,7 +27064,9 @@ public enum Operations {
     ///
     /// List all workflow runs for a workflow. You can replace `workflow_id` with the workflow file name. For example, you could use `main.yaml`. You can use parameters to narrow the list of results. For more information about using parameters, see [Parameters](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#parameters).
     ///
-    /// Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope.
+    /// Anyone with read access to the repository can use this endpoint
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/workflows/{workflow_id}/runs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/workflows/{workflow_id}/runs/get(actions/list-workflow-runs)`.
@@ -28092,7 +27393,11 @@ public enum Operations {
     ///
     /// Gets the number of billable minutes used by a specific workflow during the current billing cycle. Billable minutes only apply to workflows in private repositories that use GitHub-hosted runners. Usage is listed for each GitHub-hosted runner operating system in milliseconds. Any job re-runs are also included in the usage. The usage does not include the multiplier for macOS and Windows runners and is not rounded up to the nearest whole minute. For more information, see "[Managing billing for GitHub Actions](https://docs.github.com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-actions)".
     ///
-    /// You can replace `workflow_id` with the workflow file name. For example, you could use `main.yaml`. Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// You can replace `workflow_id` with the workflow file name. For example, you could use `main.yaml`.
+    ///
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/workflows/{workflow_id}/timing`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/workflows/{workflow_id}/timing/get(actions/get-workflow-usage)`.
@@ -28278,9 +27583,9 @@ public enum Operations {
     /// Lists all secrets available in an environment without revealing their
     /// encrypted values.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `secrets` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repositories/{repository_id}/environments/{environment_name}/secrets`.
     /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/secrets/get(actions/list-environment-secrets)`.
@@ -28494,9 +27799,8 @@ public enum Operations {
     /// secrets. You need to encrypt a secret before you can create or update secrets.
     ///
     /// Anyone with read access to the repository can use this endpoint.
-    /// If the repository is private you must use an access token with the `repo` scope.
-    /// GitHub Apps must have the `secrets` repository permission to use this endpoint.
-    /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repositories/{repository_id}/environments/{environment_name}/secrets/public-key`.
     /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/secrets/public-key/get(actions/get-environment-public-key)`.
@@ -28639,9 +27943,9 @@ public enum Operations {
     ///
     /// Gets a single environment secret without revealing its encrypted value.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `secrets` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}/get(actions/get-environment-secret)`.
@@ -28792,9 +28096,9 @@ public enum Operations {
     /// Creates or updates an environment secret with an encrypted value. Encrypt your secret using
     /// [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages). For more information, see "[Encrypting secrets for the REST API](https://docs.github.com/rest/guides/encrypting-secrets-for-the-rest-api)."
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `secrets` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}/put(actions/create-or-update-environment-secret)`.
@@ -29007,9 +28311,9 @@ public enum Operations {
     ///
     /// Deletes a secret in an environment using the secret name.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `secrets` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}/delete(actions/delete-environment-secret)`.
@@ -29093,9 +28397,9 @@ public enum Operations {
     ///
     /// Lists all environment variables.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `environments:read` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repositories/{repository_id}/environments/{environment_name}/variables`.
     /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/variables/get(actions/list-environment-variables)`.
@@ -29307,9 +28611,9 @@ public enum Operations {
     ///
     /// Create an environment variable that you can reference in a GitHub Actions workflow.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `environment:write` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repositories/{repository_id}/environments/{environment_name}/variables`.
     /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/variables/post(actions/create-environment-variable)`.
@@ -29488,9 +28792,9 @@ public enum Operations {
     ///
     /// Gets a specific variable in an environment.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `environments:read` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repositories/{repository_id}/environments/{environment_name}/variables/{name}`.
     /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/variables/{name}/get(actions/get-environment-variable)`.
@@ -29640,9 +28944,9 @@ public enum Operations {
     ///
     /// Updates an environment variable that you can reference in a GitHub Actions workflow.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `environment:write` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PATCH /repositories/{repository_id}/environments/{environment_name}/variables/{name}`.
     /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/variables/{name}/patch(actions/update-environment-variable)`.
@@ -29764,9 +29068,9 @@ public enum Operations {
     ///
     /// Deletes an environment variable using the variable name.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint.
-    /// GitHub Apps must have the `environment:write` repository permission to use this endpoint.
     /// Authenticated users must have collaborator access to a repository to create, update, or read variables.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repositories/{repository_id}/environments/{environment_name}/variables/{name}`.
     /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/variables/{name}/delete(actions/delete-environment-variable)`.

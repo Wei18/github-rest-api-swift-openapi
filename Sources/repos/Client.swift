@@ -151,12 +151,7 @@ public struct Client: APIProtocol {
     ///
     /// Creates a new repository in the specified organization. The authenticated user must be a member of the organization.
     ///
-    /// **OAuth scope requirements**
-    ///
-    /// When using [OAuth](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/), authorizations must include:
-    ///
-    /// *   `public_repo` scope or `repo` scope to create a public repository
-    /// *   `repo` scope to create a private repository
+    /// OAuth app tokens and personal access tokens (classic) need the `public_repo` or `repo` scope to create a public repository, and `repo` scope to create a private repository.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/repos`.
     /// - Remark: Generated from `#/paths//orgs/{org}/repos/post(repos/create-in-org)`.
@@ -1396,10 +1391,12 @@ public struct Client: APIProtocol {
     }
     /// Delete a repository
     ///
-    /// Deleting a repository requires admin access. If OAuth is used, the `delete_repo` scope is required.
+    /// Deleting a repository requires admin access.
     ///
     /// If an organization owner has configured the organization to prevent members from deleting organization-owned
     /// repositories, you will get a `403 Forbidden` response.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `delete_repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/delete(repos/delete)`.
@@ -4226,7 +4223,7 @@ public struct Client: APIProtocol {
     ///
     /// Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
     ///
-    /// Lists the GitHub Apps that have push access to this branch. Only installed GitHub Apps with `write` access to the `contents` permission can be added as authorized actors on a protected branch.
+    /// Lists the GitHub Apps that have push access to this branch. Only GitHub Apps that are installed on the repository and that have been granted write access to the repository contents can be added as authorized actors on a protected branch.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps/get(repos/get-apps-with-access-to-protected-branch)`.
@@ -4316,7 +4313,7 @@ public struct Client: APIProtocol {
     ///
     /// Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
     ///
-    /// Grants the specified apps push access for this branch. Only installed GitHub Apps with `write` access to the `contents` permission can be added as authorized actors on a protected branch.
+    /// Grants the specified apps push access for this branch. Only GitHub Apps that are installed on the repository and that have been granted write access to the repository contents can be added as authorized actors on a protected branch.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps/post(repos/add-app-access-restrictions)`.
@@ -4417,7 +4414,7 @@ public struct Client: APIProtocol {
     ///
     /// Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
     ///
-    /// Replaces the list of apps that have push access to this branch. This removes all apps that previously had push access and grants push access to the new list of apps. Only installed GitHub Apps with `write` access to the `contents` permission can be added as authorized actors on a protected branch.
+    /// Replaces the list of apps that have push access to this branch. This removes all apps that previously had push access and grants push access to the new list of apps. Only GitHub Apps that are installed on the repository and that have been granted write access to the repository contents can be added as authorized actors on a protected branch.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps/put(repos/set-app-access-restrictions)`.
@@ -4518,7 +4515,7 @@ public struct Client: APIProtocol {
     ///
     /// Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
     ///
-    /// Removes the ability of an app to push to this branch. Only installed GitHub Apps with `write` access to the `contents` permission can be added as authorized actors on a protected branch.
+    /// Removes the ability of an app to push to this branch. Only GitHub Apps that are installed on the repository and that have been granted write access to the repository contents can be added as authorized actors on a protected branch.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps/delete(repos/remove-app-access-restrictions)`.
@@ -5419,17 +5416,9 @@ public struct Client: APIProtocol {
     ///
     /// **Note:** Although the API responds immediately, the branch rename process might take some extra time to complete in the background. You won't be able to push to the old branch name while the rename process is in progress. For more information, see "[Renaming a branch](https://docs.github.com/github/administering-a-repository/renaming-a-branch)".
     ///
-    /// The permissions required to use this endpoint depends on whether you are renaming the default branch.
+    /// The authenticated user must have push access to the branch. If the branch is the default branch, the authenticated user must also have admin or owner permissions.
     ///
-    /// To rename a non-default branch:
-    ///
-    /// * Users must have push access.
-    /// * GitHub Apps must have the `contents:write` repository permission.
-    ///
-    /// To rename the default branch:
-    ///
-    /// * Users must have admin or owner permissions.
-    /// * GitHub Apps must have the `contents:write` and `administration:write` repository permissions.
+    /// In order to rename the default branch, fine-grained access tokens also need the `administration:write` repository permission.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/branches/{branch}/rename`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/branches/{branch}/rename/post(repos/rename-branch)`.
@@ -5653,9 +5642,9 @@ public struct Client: APIProtocol {
     ///
     /// Team members will include the members of child teams.
     ///
-    /// You must authenticate using an access token with the `read:org` and `repo` scopes with push access to use this
-    /// endpoint. GitHub Apps must have the `members` organization permission and `metadata` repository permission to use this
-    /// endpoint.
+    /// The authenticated user must have push access to the repository to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `read:org` and `repo` scopes to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/collaborators`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/collaborators/get(repos/list-collaborators)`.
@@ -5782,9 +5771,9 @@ public struct Client: APIProtocol {
     ///
     /// Team members will include the members of child teams.
     ///
-    /// You must authenticate using an access token with the `read:org` and `repo` scopes with push access to use this
-    /// endpoint. GitHub Apps must have the `members` organization permission and `metadata` repository permission to use this
-    /// endpoint.
+    /// The authenticated user must have push access to the repository to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `read:org` and `repo` scopes to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/collaborators/{username}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/collaborators/{username}/get(repos/check-collaborator)`.
@@ -8046,9 +8035,11 @@ public struct Client: APIProtocol {
     }
     /// Create or update file contents
     ///
-    /// Creates a new file or replaces an existing file in a repository. You must authenticate using an access token with the `repo` scope to use this endpoint. If you want to modify files in the `.github/workflows` directory, you must authenticate using an access token with the `workflow` scope.
+    /// Creates a new file or replaces an existing file in a repository.
     ///
     /// **Note:** If you use this endpoint and the "[Delete a file](https://docs.github.com/rest/repos/contents/#delete-a-file)" endpoint in parallel, the concurrent requests will conflict and you will receive errors. You must use these endpoints serially instead.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint. The `workflow` scope is also required in order to modify files in the `.github/workflows` directory.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/contents/{path}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/contents/{path}/put(repos/create-or-update-file-contents)`.
@@ -8665,8 +8656,6 @@ public struct Client: APIProtocol {
     /// be `deploy:migrations` to run schema changes on the system. In the compiled world this could be a flag to compile an
     /// application with debugging enabled.
     ///
-    /// Users with `repo` or `repo_deployment` scopes can create a deployment for a given ref.
-    ///
     /// Merged branch response:
     ///
     /// You will see this response when GitHub automatically merges the base branch into the topic branch instead of creating
@@ -8687,6 +8676,8 @@ public struct Client: APIProtocol {
     ///
     /// This error happens when the `required_contexts` parameter indicates that one or more contexts need to have a `success`
     /// status for the commit to be deployed, but one or more of the required contexts do not have a state of `success`.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` or `repo_deployment` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/deployments`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/deployments/post(repos/create-deployment)`.
@@ -8892,7 +8883,7 @@ public struct Client: APIProtocol {
     }
     /// Delete a deployment
     ///
-    /// If the repository only has one deployment, you can delete the deployment regardless of its status. If the repository has more than one deployment, you can only delete inactive deployments. This ensures that repositories with multiple deployments will always have an active deployment. Anyone with `repo` or `repo_deployment` scopes can delete a deployment.
+    /// If the repository only has one deployment, you can delete the deployment regardless of its status. If the repository has more than one deployment, you can only delete inactive deployments. This ensures that repositories with multiple deployments will always have an active deployment.
     ///
     /// To set a deployment as inactive, you must:
     ///
@@ -8900,6 +8891,8 @@ public struct Client: APIProtocol {
     /// *   Mark the active deployment as inactive by adding any non-successful deployment status.
     ///
     /// For more information, see "[Create a deployment](https://docs.github.com/rest/deployments/deployments/#create-a-deployment)" and "[Create a deployment status](https://docs.github.com/rest/deployments/statuses#create-a-deployment-status)."
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` or `repo_deployment` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/deployments/{deployment_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/deployments/{deployment_id}/delete(repos/delete-deployment)`.
@@ -9101,7 +9094,7 @@ public struct Client: APIProtocol {
     ///
     /// Users with `push` access can create deployment statuses for a given deployment.
     ///
-    /// GitHub Apps require `read & write` access to "Deployments" and `read-only` access to "Repo contents" (for private repos). OAuth apps require the `repo_deployment` scope.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo_deployment` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/deployments/{deployment_id}/statuses`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/deployments/{deployment_id}/statuses/post(repos/create-deployment-status)`.
@@ -9299,12 +9292,9 @@ public struct Client: APIProtocol {
     ///
     /// The `client_payload` parameter is available for any extra information that your workflow might need. This parameter is a JSON payload that will be passed on when the webhook event is dispatched. For example, the `client_payload` can include a message that a user would like to send using a GitHub Actions workflow. Or the `client_payload` can be used as a test to debug your workflow.
     ///
-    /// This endpoint requires write access to the repository by providing either:
-    ///
-    ///   - Personal access tokens with `repo` scope. For more information, see "[Creating a personal access token for the command line](https://docs.github.com/articles/creating-a-personal-access-token-for-the-command-line)" in the GitHub Help documentation.
-    ///   - GitHub Apps with both `metadata:read` and `contents:read&write` permissions.
-    ///
     /// This input example shows how you can use the `client_payload` as a test to debug your workflow.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/dispatches`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dispatches/post(repos/create-dispatch-event)`.
@@ -9382,7 +9372,9 @@ public struct Client: APIProtocol {
     ///
     /// Lists the environments for a repository.
     ///
-    /// Anyone with read access to the repository can use this endpoint. If the repository is private, you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/environments`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/get(repos/get-all-environments)`.
@@ -9463,9 +9455,9 @@ public struct Client: APIProtocol {
     ///
     /// **Note:** To get information about name patterns that branches must match in order to deploy to this environment, see "[Get a deployment branch policy](/rest/deployments/branch-policies#get-a-deployment-branch-policy)."
     ///
-    /// Anyone with read access to the repository can use this endpoint. If the
-    /// repository is private, you must use an access token with the `repo` scope. GitHub
-    /// Apps must have the `actions:read` permission to use this endpoint.
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/environments/{environment_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/get(repos/get-environment)`.
@@ -9537,7 +9529,7 @@ public struct Client: APIProtocol {
     ///
     /// **Note:** To create or update secrets for an environment, see "[GitHub Actions secrets](/rest/actions/secrets)."
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `administration:write` permission for the repository to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/environments/{environment_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/put(repos/create-or-update-environment)`.
@@ -9636,7 +9628,7 @@ public struct Client: APIProtocol {
     }
     /// Delete an environment
     ///
-    /// You must authenticate using an access token with the repo scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/environments/{environment_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/delete(repos/delete-an-environment)`.
@@ -9680,7 +9672,9 @@ public struct Client: APIProtocol {
     ///
     /// Lists the deployment branch policies for an environment.
     ///
-    /// Anyone with read access to the repository can use this endpoint. If the repository is private, you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/get(repos/list-deployment-branch-policies)`.
@@ -9762,7 +9756,7 @@ public struct Client: APIProtocol {
     ///
     /// Creates a deployment branch or tag policy for an environment.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `administration:write` permission for the repository to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/post(repos/create-deployment-branch-policy)`.
@@ -9843,7 +9837,9 @@ public struct Client: APIProtocol {
     ///
     /// Gets a deployment branch or tag policy for an environment.
     ///
-    /// Anyone with read access to the repository can use this endpoint. If the repository is private, you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    /// Anyone with read access to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/{branch_policy_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/{branch_policy_id}/get(repos/get-deployment-branch-policy)`.
@@ -9912,7 +9908,7 @@ public struct Client: APIProtocol {
     ///
     /// Updates a deployment branch or tag policy for an environment.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `administration:write` permission for the repository to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/{branch_policy_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/{branch_policy_id}/put(repos/update-deployment-branch-policy)`.
@@ -9990,7 +9986,7 @@ public struct Client: APIProtocol {
     ///
     /// Deletes a deployment branch or tag policy for an environment.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `administration:write` permission for the repository to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/{branch_policy_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/{branch_policy_id}/delete(repos/delete-deployment-branch-policy)`.
@@ -10033,9 +10029,11 @@ public struct Client: APIProtocol {
     }
     /// Get all deployment protection rules for an environment
     ///
-    /// Gets all custom deployment protection rules that are enabled for an environment. Anyone with read access to the repository can use this endpoint. If the repository is private and you want to use a personal access token (classic), you must use an access token with the `repo` scope. GitHub Apps and fine-grained personal access tokens must have the `actions:read` permission to use this endpoint. For more information about environments, see "[Using environments for deployment](https://docs.github.com/actions/deployment/targeting-different-environments/using-environments-for-deployment)."
+    /// Gets all custom deployment protection rules that are enabled for an environment. Anyone with read access to the repository can use this endpoint. For more information about environments, see "[Using environments for deployment](https://docs.github.com/actions/deployment/targeting-different-environments/using-environments-for-deployment)."
     ///
     /// For more information about the app that is providing this custom deployment rule, see the [documentation for the `GET /apps/{app_slug}` endpoint](https://docs.github.com/rest/apps/apps#get-an-app).
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/get(repos/get-all-deployment-protection-rules)`.
@@ -10103,9 +10101,11 @@ public struct Client: APIProtocol {
     ///
     /// Enable a custom deployment protection rule for an environment.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. Enabling a custom protection rule requires admin or owner permissions to the repository. GitHub Apps must have the `actions:write` permission to use this endpoint.
+    /// The authenticated user must have admin or owner permissions to the repository to use this endpoint.
     ///
     /// For more information about the app that is providing this custom deployment rule, see the [documentation for the `GET /apps/{app_slug}` endpoint](https://docs.github.com/rest/apps/apps#get-an-app).
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/post(repos/create-deployment-protection-rule)`.
@@ -10180,11 +10180,13 @@ public struct Client: APIProtocol {
     }
     /// List custom deployment rule integrations available for an environment
     ///
-    /// Gets all custom deployment protection rule integrations that are available for an environment. Anyone with read access to the repository can use this endpoint. If the repository is private and you want to use a personal access token (classic), you must use an access token with the `repo` scope. GitHub Apps and fine-grained personal access tokens must have the `actions:read` permission to use this endpoint.
+    /// Gets all custom deployment protection rule integrations that are available for an environment. Anyone with read access to the repository can use this endpoint.
     ///
     /// For more information about environments, see "[Using environments for deployment](https://docs.github.com/actions/deployment/targeting-different-environments/using-environments-for-deployment)."
     ///
     /// For more information about the app that is providing this custom deployment rule, see "[GET an app](https://docs.github.com/rest/apps/apps#get-an-app)".
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/apps`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/apps/get(repos/list-custom-deployment-rule-integrations)`.
@@ -10264,9 +10266,11 @@ public struct Client: APIProtocol {
     }
     /// Get a custom deployment protection rule
     ///
-    /// Gets an enabled custom deployment protection rule for an environment. Anyone with read access to the repository can use this endpoint. If the repository is private and you want to use a personal access token (classic), you must use an access token with the `repo` scope. GitHub Apps and fine-grained personal access tokens must have the `actions:read` permission to use this endpoint. For more information about environments, see "[Using environments for deployment](https://docs.github.com/actions/deployment/targeting-different-environments/using-environments-for-deployment)."
+    /// Gets an enabled custom deployment protection rule for an environment. Anyone with read access to the repository can use this endpoint. For more information about environments, see "[Using environments for deployment](https://docs.github.com/actions/deployment/targeting-different-environments/using-environments-for-deployment)."
     ///
     /// For more information about the app that is providing this custom deployment rule, see [`GET /apps/{app_slug}`](https://docs.github.com/rest/apps/apps#get-an-app).
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/{protection_rule_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/{protection_rule_id}/get(repos/get-custom-deployment-protection-rule)`.
@@ -10335,7 +10339,9 @@ public struct Client: APIProtocol {
     ///
     /// Disables a custom deployment protection rule for an environment.
     ///
-    /// You must authenticate using an access token with the `repo` scope to use this endpoint. Removing a custom protection rule requires admin or owner permissions to the repository. GitHub Apps must have the `actions:write` permission to use this endpoint. For more information, see "[Get an app](https://docs.github.com/rest/apps/apps#get-an-app)".
+    /// The authenticated user must have admin or owner permissions to the repository to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/{protection_rule_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/{protection_rule_id}/delete(repos/disable-deployment-protection-rule)`.
@@ -11213,7 +11219,7 @@ public struct Client: APIProtocol {
     ///
     /// Returns the webhook configuration for a repository. To get more information about the webhook, including the `active` state and `events`, use "[Get a repository webhook](/rest/webhooks/repos#get-a-repository-webhook)."
     ///
-    /// Access tokens must have the `read:repo_hook` or `repo` scope, and GitHub Apps must have the `repository_hooks:read` permission.
+    /// OAuth app tokens and personal access tokens (classic) need the `read:repo_hook` or `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/hooks/{hook_id}/config`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/hooks/{hook_id}/config/get(repos/get-webhook-config-for-repo)`.
@@ -11281,7 +11287,7 @@ public struct Client: APIProtocol {
     ///
     /// Updates the webhook configuration for a repository. To update more information about the webhook, including the `active` state and `events`, use "[Update a repository webhook](/rest/webhooks/repos#update-a-repository-webhook)."
     ///
-    /// Access tokens must have the `write:repo_hook` or `repo` scope, and GitHub Apps must have the `repository_hooks:write` permission.
+    /// OAuth app tokens and personal access tokens (classic) need the `write:repo_hook` or `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/hooks/{hook_id}/config`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/hooks/{hook_id}/config/patch(repos/update-webhook-config-for-repo)`.
@@ -12662,7 +12668,7 @@ public struct Client: APIProtocol {
     ///
     /// Gets information about a GitHub Pages site.
     ///
-    /// A token with the `repo` scope is required. GitHub Apps must have the `pages:read` permission.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pages`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/get(repos/get-pages)`.
@@ -12751,7 +12757,9 @@ public struct Client: APIProtocol {
     ///
     /// Configures a GitHub Pages site. For more information, see "[About GitHub Pages](/github/working-with-github-pages/about-github-pages)."
     ///
-    /// To use this endpoint, you must be a repository administrator, maintainer, or have the 'manage GitHub Pages settings' permission. A token with the `repo` scope or Pages write permission is required. GitHub Apps must have the `administration:write` and `pages:write` permissions.
+    /// The authenticated user must be a repository administrator, maintainer, or have the 'manage GitHub Pages settings' permission.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/pages`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/post(repos/create-pages-site)`.
@@ -12871,7 +12879,9 @@ public struct Client: APIProtocol {
     ///
     /// Updates information for a GitHub Pages site. For more information, see "[About GitHub Pages](/github/working-with-github-pages/about-github-pages).
     ///
-    /// To use this endpoint, you must be a repository administrator, maintainer, or have the 'manage GitHub Pages settings' permission. A token with the `repo` scope or Pages write permission is required. GitHub Apps must have the `administration:write` and `pages:write` permissions.
+    /// The authenticated user must be a repository administrator, maintainer, or have the 'manage GitHub Pages settings' permission.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/pages`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/put(repos/update-information-about-pages-site)`.
@@ -13002,7 +13012,9 @@ public struct Client: APIProtocol {
     ///
     /// Deletes a GitHub Pages site. For more information, see "[About GitHub Pages](/github/working-with-github-pages/about-github-pages).
     ///
-    /// To use this endpoint, you must be a repository administrator, maintainer, or have the 'manage GitHub Pages settings' permission. A token with the `repo` scope or Pages write permission is required. GitHub Apps must have the `administration:write` and `pages:write` permissions.
+    /// The authenticated user must be a repository administrator, maintainer, or have the 'manage GitHub Pages settings' permission.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/pages`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/delete(repos/delete-pages-site)`.
@@ -13115,7 +13127,7 @@ public struct Client: APIProtocol {
     ///
     /// Lists builts of a GitHub Pages site.
     ///
-    /// A token with the `repo` scope is required. GitHub Apps must have the `pages:read` permission.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pages/builds`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/builds/get(repos/list-pages-builds)`.
@@ -13271,7 +13283,7 @@ public struct Client: APIProtocol {
     ///
     /// Gets information about the single most recent build of a GitHub Pages site.
     ///
-    /// A token with the `repo` scope is required. GitHub Apps must have the `pages:read` permission.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pages/builds/latest`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/builds/latest/get(repos/get-latest-pages-build)`.
@@ -13338,7 +13350,7 @@ public struct Client: APIProtocol {
     ///
     /// Gets information about a GitHub Pages build.
     ///
-    /// A token with the `repo` scope is required. GitHub Apps must have the `pages:read` permission.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pages/builds/{build_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/builds/{build_id}/get(repos/get-pages-build)`.
@@ -13406,7 +13418,7 @@ public struct Client: APIProtocol {
     ///
     /// Create a GitHub Pages deployment for a repository.
     ///
-    /// Users must have write permissions. GitHub Apps must have the `pages:write` permission to use this endpoint.
+    /// The authenticated user must have write permission to the repository.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/pages/deployments`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/deployments/post(repos/create-pages-deployment)`.
@@ -13557,7 +13569,7 @@ public struct Client: APIProtocol {
     ///
     /// Gets the current status of a GitHub Pages deployment.
     ///
-    /// Users must have read permission for the GitHub Pages site. GitHub Apps must have the `pages:read` permission.
+    /// The authenticated user must have read permission for the GitHub Pages site.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}/get(repos/get-pages-deployment)`.
@@ -13647,7 +13659,7 @@ public struct Client: APIProtocol {
     ///
     /// Cancels a GitHub Pages deployment.
     ///
-    /// Users must have write permissions for the GitHub Pages site. GitHub Apps must have the `pages:write` permission to use this endpoint.
+    /// The authenticated user must have write permissions for the GitHub Pages site.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}/cancel`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}/cancel/post(repos/cancel-pages-deployment)`.
@@ -13719,7 +13731,9 @@ public struct Client: APIProtocol {
     ///
     /// The first request to this endpoint returns a `202 Accepted` status and starts an asynchronous background task to get the results for the domain. After the background task completes, subsequent requests to this endpoint return a `200 OK` status with the health check results in the response.
     ///
-    /// To use this endpoint, you must be a repository administrator, maintainer, or have the 'manage GitHub Pages settings' permission. A token with the `repo` scope or Pages write permission is required. GitHub Apps must have the `administrative:write` and `pages:write` permissions.
+    /// The authenticated user must be a repository administrator, maintainer, or have the 'manage GitHub Pages settings' permission to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pages/health`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/health/get(repos/get-pages-health-check)`.
@@ -13987,8 +14001,6 @@ public struct Client: APIProtocol {
     /// Gets all custom property values that are set for a repository.
     /// Users with read access to the repository can use this endpoint.
     ///
-    /// GitHub Apps must have the `metadata:read` repository permission to use this endpoint.
-    ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/properties/values`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/properties/values/get(repos/get-custom-properties-values)`.
     public func repos_sol_get_hyphen_custom_hyphen_properties_hyphen_values(_ input: Operations.repos_sol_get_hyphen_custom_hyphen_properties_hyphen_values.Input) async throws -> Operations.repos_sol_get_hyphen_custom_hyphen_properties_hyphen_values.Output {
@@ -14101,8 +14113,6 @@ public struct Client: APIProtocol {
     ///
     /// Repository admins and other users with the repository-level "edit custom property values" fine-grained permission can use this endpoint.
     ///
-    /// GitHub Apps must have the `repository_custom_properties:write` permission to use this endpoint.
-    ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/properties/values`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/properties/values/patch(repos/create-or-update-custom-properties-values)`.
     public func repos_sol_create_hyphen_or_hyphen_update_hyphen_custom_hyphen_properties_hyphen_values(_ input: Operations.repos_sol_create_hyphen_or_hyphen_update_hyphen_custom_hyphen_properties_hyphen_values.Input) async throws -> Operations.repos_sol_create_hyphen_or_hyphen_update_hyphen_custom_hyphen_properties_hyphen_values.Output {
@@ -14185,6 +14195,28 @@ public struct Client: APIProtocol {
                         preconditionFailure("bestContentType chose an invalid content type.")
                     }
                     return .notFound(.init(body: body))
+                case 422:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Components.Responses.validation_failed.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Schemas.validation_hyphen_error.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .unprocessableContent(.init(body: body))
                 default:
                     return .undocumented(
                         statusCode: response.status.code,
@@ -17462,11 +17494,7 @@ public struct Client: APIProtocol {
     ///
     /// For a public repository, a team is listed only if that team added the public repository explicitly.
     ///
-    /// Personal access tokens require the following scopes:
-    /// * `public_repo` to call this endpoint on a public repository
-    /// * `repo` to call this endpoint on a private repository (this scope also includes public repositories)
-    ///
-    /// This endpoint is not compatible with fine-grained personal access tokens.
+    /// OAuth app tokens and personal access tokens (classic) need the `public_repo` or `repo` scope to use this endpoint with a public repository, and `repo` scope to use this endpoint with a private repository.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/teams`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/teams/get(repos/list-teams)`.
@@ -18153,7 +18181,6 @@ public struct Client: APIProtocol {
     /// Transfer a repository
     ///
     /// A transfer request will need to be accepted by the new owner when transferring a personal repository to another user. The response will contain the original `owner`, and the transfer will continue asynchronously. For more details on the requirements to transfer personal and organization-owned repositories, see [about repository transfers](https://docs.github.com/articles/about-repository-transfers/).
-    /// You must use a personal access token (classic) or an OAuth token for this endpoint. An installation access token or a fine-grained personal access token cannot be used because they are only granted access to a single account.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/transfer`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/transfer/post(repos/transfer)`.
@@ -18407,12 +18434,7 @@ public struct Client: APIProtocol {
     ///
     /// Creates a new repository using a repository template. Use the `template_owner` and `template_repo` route parameters to specify the repository to use as the template. If the repository is not public, the authenticated user must own or be a member of an organization that owns the repository. To check if a repository is available to use as a template, get the repository's information using the [Get a repository](https://docs.github.com/rest/repos/repos#get-a-repository) endpoint and check that the `is_template` key is `true`.
     ///
-    /// **OAuth scope requirements**
-    ///
-    /// When using [OAuth](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/), authorizations must include:
-    ///
-    /// *   `public_repo` scope or `repo` scope to create a public repository
-    /// *   `repo` scope to create a private repository
+    /// OAuth app tokens and personal access tokens (classic) need the `public_repo` or `repo` scope to create a public repository, and `repo` scope to create a private repository.
     ///
     /// - Remark: HTTP `POST /repos/{template_owner}/{template_repo}/generate`.
     /// - Remark: Generated from `#/paths//repos/{template_owner}/{template_repo}/generate/post(repos/create-using-template)`.
@@ -18796,12 +18818,7 @@ public struct Client: APIProtocol {
     ///
     /// Creates a new repository for the authenticated user.
     ///
-    /// **OAuth scope requirements**
-    ///
-    /// When using [OAuth](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/), authorizations must include:
-    ///
-    /// *   `public_repo` scope or `repo` scope to create a public repository
-    /// *   `repo` scope to create a private repository
+    /// OAuth app tokens and personal access tokens (classic) need the `public_repo` or `repo` scope to create a public repository, and `repo` scope to create a private repository.
     ///
     /// - Remark: HTTP `POST /user/repos`.
     /// - Remark: Generated from `#/paths//user/repos/post(repos/create-for-authenticated-user)`.

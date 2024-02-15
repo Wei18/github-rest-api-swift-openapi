@@ -40,9 +40,11 @@ public struct Client: APIProtocol {
     }
     /// List reactions for a team discussion comment
     ///
-    /// List the reactions to a [team discussion comment](https://docs.github.com/rest/teams/discussion-comments#get-a-discussion-comment). OAuth access tokens require the `read:discussion` [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+    /// List the reactions to a [team discussion comment](https://docs.github.com/rest/teams/discussion-comments#get-a-discussion-comment).
     ///
     /// **Note:** You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/:org_id/team/:team_id/discussions/:discussion_number/comments/:comment_number/reactions`.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `read:discussion` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/get(reactions/list-for-team-discussion-comment-in-org)`.
@@ -138,9 +140,13 @@ public struct Client: APIProtocol {
     }
     /// Create reaction for a team discussion comment
     ///
-    /// Create a reaction to a [team discussion comment](https://docs.github.com/rest/teams/discussion-comments#get-a-discussion-comment). OAuth access tokens require the `write:discussion` [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/). A response with an HTTP `200` status means that you already added the reaction type to this team discussion comment.
+    /// Create a reaction to a [team discussion comment](https://docs.github.com/rest/teams/discussion-comments#get-a-discussion-comment).
+    ///
+    /// A response with an HTTP `200` status means that you already added the reaction type to this team discussion comment.
     ///
     /// **Note:** You can also specify a team by `org_id` and `team_id` using the route `POST /organizations/:org_id/team/:team_id/discussions/:discussion_number/comments/:comment_number/reactions`.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `write:discussion` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/post(reactions/create-for-team-discussion-comment-in-org)`.
@@ -240,7 +246,9 @@ public struct Client: APIProtocol {
     ///
     /// **Note:** You can also specify a team or organization with `team_id` and `org_id` using the route `DELETE /organizations/:org_id/team/:team_id/discussions/:discussion_number/comments/:comment_number/reactions/:reaction_id`.
     ///
-    /// Delete a reaction to a [team discussion comment](https://docs.github.com/rest/teams/discussion-comments#get-a-discussion-comment). OAuth access tokens require the `write:discussion` [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+    /// Delete a reaction to a [team discussion comment](https://docs.github.com/rest/teams/discussion-comments#get-a-discussion-comment).
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `write:discussion` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/{reaction_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/{reaction_id}/delete(reactions/delete-for-team-discussion-comment)`.
@@ -284,9 +292,11 @@ public struct Client: APIProtocol {
     }
     /// List reactions for a team discussion
     ///
-    /// List the reactions to a [team discussion](https://docs.github.com/rest/teams/discussions#get-a-discussion). OAuth access tokens require the `read:discussion` [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+    /// List the reactions to a [team discussion](https://docs.github.com/rest/teams/discussions#get-a-discussion).
     ///
     /// **Note:** You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/:org_id/team/:team_id/discussions/:discussion_number/reactions`.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `read:discussion` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/get(reactions/list-for-team-discussion-in-org)`.
@@ -381,9 +391,13 @@ public struct Client: APIProtocol {
     }
     /// Create reaction for a team discussion
     ///
-    /// Create a reaction to a [team discussion](https://docs.github.com/rest/teams/discussions#get-a-discussion). OAuth access tokens require the `write:discussion` [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/). A response with an HTTP `200` status means that you already added the reaction type to this team discussion.
+    /// Create a reaction to a [team discussion](https://docs.github.com/rest/teams/discussions#get-a-discussion).
+    ///
+    /// A response with an HTTP `200` status means that you already added the reaction type to this team discussion.
     ///
     /// **Note:** You can also specify a team by `org_id` and `team_id` using the route `POST /organizations/:org_id/team/:team_id/discussions/:discussion_number/reactions`.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `write:discussion` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/post(reactions/create-for-team-discussion-in-org)`.
@@ -482,7 +496,9 @@ public struct Client: APIProtocol {
     ///
     /// **Note:** You can also specify a team or organization with `team_id` and `org_id` using the route `DELETE /organizations/:org_id/team/:team_id/discussions/:discussion_number/reactions/:reaction_id`.
     ///
-    /// Delete a reaction to a [team discussion](https://docs.github.com/rest/teams/discussions#get-a-discussion). OAuth access tokens require the `write:discussion` [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+    /// Delete a reaction to a [team discussion](https://docs.github.com/rest/teams/discussions#get-a-discussion).
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `write:discussion` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/{reaction_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/{reaction_id}/delete(reactions/delete-for-team-discussion)`.
@@ -1954,7 +1970,9 @@ public struct Client: APIProtocol {
     ///
     /// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [`List reactions for a team discussion comment`](https://docs.github.com/rest/reactions/reactions#list-reactions-for-a-team-discussion-comment) endpoint.
     ///
-    /// List the reactions to a [team discussion comment](https://docs.github.com/rest/teams/discussion-comments#get-a-discussion-comment). OAuth access tokens require the `read:discussion` [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+    /// List the reactions to a [team discussion comment](https://docs.github.com/rest/teams/discussion-comments#get-a-discussion-comment).
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `read:discussion` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions/get(reactions/list-for-team-discussion-comment-legacy)`.
@@ -2052,7 +2070,11 @@ public struct Client: APIProtocol {
     ///
     /// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new "[Create reaction for a team discussion comment](https://docs.github.com/rest/reactions/reactions#create-reaction-for-a-team-discussion-comment)" endpoint.
     ///
-    /// Create a reaction to a [team discussion comment](https://docs.github.com/rest/teams/discussion-comments#get-a-discussion-comment). OAuth access tokens require the `write:discussion` [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/). A response with an HTTP `200` status means that you already added the reaction type to this team discussion comment.
+    /// Create a reaction to a [team discussion comment](https://docs.github.com/rest/teams/discussion-comments#get-a-discussion-comment).
+    ///
+    /// A response with an HTTP `200` status means that you already added the reaction type to this team discussion comment.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `write:discussion` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions/post(reactions/create-for-team-discussion-comment-legacy)`.
@@ -2130,7 +2152,9 @@ public struct Client: APIProtocol {
     ///
     /// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [`List reactions for a team discussion`](https://docs.github.com/rest/reactions/reactions#list-reactions-for-a-team-discussion) endpoint.
     ///
-    /// List the reactions to a [team discussion](https://docs.github.com/rest/teams/discussions#get-a-discussion). OAuth access tokens require the `read:discussion` [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+    /// List the reactions to a [team discussion](https://docs.github.com/rest/teams/discussions#get-a-discussion).
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `read:discussion` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /teams/{team_id}/discussions/{discussion_number}/reactions`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/reactions/get(reactions/list-for-team-discussion-legacy)`.
@@ -2227,7 +2251,11 @@ public struct Client: APIProtocol {
     ///
     /// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [`Create reaction for a team discussion`](https://docs.github.com/rest/reactions/reactions#create-reaction-for-a-team-discussion) endpoint.
     ///
-    /// Create a reaction to a [team discussion](https://docs.github.com/rest/teams/discussions#get-a-discussion). OAuth access tokens require the `write:discussion` [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/). A response with an HTTP `200` status means that you already added the reaction type to this team discussion.
+    /// Create a reaction to a [team discussion](https://docs.github.com/rest/teams/discussions#get-a-discussion).
+    ///
+    /// A response with an HTTP `200` status means that you already added the reaction type to this team discussion.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `write:discussion` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /teams/{team_id}/discussions/{discussion_number}/reactions`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/reactions/post(reactions/create-for-team-discussion-legacy)`.

@@ -825,9 +825,9 @@ public struct Client: APIProtocol {
     }
     /// List installations for the authenticated app
     ///
-    /// You must use a [JWT](https://docs.github.com/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-a-github-app) to access this endpoint.
-    ///
     /// The permissions the installation has are included under the `permissions` key.
+    ///
+    /// You must use a [JWT](https://docs.github.com/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-a-github-app) to access this endpoint.
     ///
     /// - Remark: HTTP `GET /app/installations`.
     /// - Remark: Generated from `#/paths//app/installations/get(apps/list-installations)`.
@@ -1745,7 +1745,15 @@ public struct Client: APIProtocol {
     }
     /// Create a scoped access token
     ///
-    /// Use a non-scoped user access token to create a repository scoped and/or permission scoped user access token. You can specify which repositories the token can access and which permissions are granted to the token. You must use [Basic Authentication](https://docs.github.com/rest/overview/other-authentication-methods#basic-authentication) when accessing this endpoint, using the `client_id` and `client_secret` of the GitHub App as the username and password. Invalid tokens will return `404 NOT FOUND`.
+    /// Use a non-scoped user access token to create a repository-scoped and/or permission-scoped user access token. You can specify
+    /// which repositories the token can access and which permissions are granted to the
+    /// token.
+    ///
+    /// Invalid tokens will return `404 NOT FOUND`.
+    ///
+    /// You must use [Basic Authentication](https://docs.github.com/rest/overview/other-authentication-methods#basic-authentication)
+    /// when accessing this endpoint, using the `client_id` and `client_secret` of the GitHub App
+    /// as the username and password.
     ///
     /// - Remark: HTTP `POST /applications/{client_id}/token/scoped`.
     /// - Remark: Generated from `#/paths//applications/{client_id}/token/scoped/post(apps/scope-token)`.
@@ -1908,8 +1916,6 @@ public struct Client: APIProtocol {
     ///
     /// **Note**: The `:app_slug` is just the URL-friendly name of your GitHub App. You can find this on the settings page for your GitHub App (e.g., `https://github.com/settings/apps/:app_slug`).
     ///
-    /// If the GitHub App you specify is public, you can access this endpoint without authenticating. If the GitHub App you specify is private, you must authenticate with a [personal access token](https://docs.github.com/articles/creating-a-personal-access-token-for-the-command-line/) or an [installation access token](https://docs.github.com/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-an-installation) of the target app to access this endpoint.
-    ///
     /// - Remark: HTTP `GET /apps/{app_slug}`.
     /// - Remark: Generated from `#/paths//apps/{app_slug}/get(apps/get-by-slug)`.
     public func apps_sol_get_hyphen_by_hyphen_slug(_ input: Operations.apps_sol_get_hyphen_by_hyphen_slug.Input) async throws -> Operations.apps_sol_get_hyphen_by_hyphen_slug.Output {
@@ -2017,8 +2023,6 @@ public struct Client: APIProtocol {
     /// List repositories accessible to the app installation
     ///
     /// List repositories that an app installation can access.
-    ///
-    /// You must use an [installation access token](https://docs.github.com/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-an-installation) to access this endpoint.
     ///
     /// - Remark: HTTP `GET /installation/repositories`.
     /// - Remark: Generated from `#/paths//installation/repositories/get(apps/list-repos-accessible-to-installation)`.
@@ -2151,8 +2155,6 @@ public struct Client: APIProtocol {
     /// Revokes the installation token you're using to authenticate as an installation and access this endpoint.
     ///
     /// Once an installation token is revoked, the token is invalidated and cannot be used. Other endpoints that require the revoked installation token must have a new installation token to work. You can create a new token using the "[Create an installation access token for an app](https://docs.github.com/rest/apps/apps#create-an-installation-access-token-for-an-app)" endpoint.
-    ///
-    /// You must use an [installation access token](https://docs.github.com/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-an-installation) to access this endpoint.
     ///
     /// - Remark: HTTP `DELETE /installation/token`.
     /// - Remark: Generated from `#/paths//installation/token/delete(apps/revoke-installation-access-token)`.
@@ -3099,8 +3101,6 @@ public struct Client: APIProtocol {
     ///
     /// Lists installations of your GitHub App that the authenticated user has explicit permission (`:read`, `:write`, or `:admin`) to access.
     ///
-    /// You must use a [user access token](https://docs.github.com/apps/creating-github-apps/authenticating-with-a-github-app/generating-a-user-access-token-for-a-github-app), created for a user who has authorized your GitHub App, to access this endpoint.
-    ///
     /// The authenticated user has explicit permission to access repositories they own, repositories where they are a collaborator, and repositories that they can access through an organization membership.
     ///
     /// You can find the permissions for the installation under the `permissions` key.
@@ -3237,8 +3237,6 @@ public struct Client: APIProtocol {
     ///
     /// The authenticated user has explicit permission to access repositories they own, repositories where they are a collaborator, and repositories that they can access through an organization membership.
     ///
-    /// You must use a [user access token](https://docs.github.com/apps/creating-github-apps/authenticating-with-a-github-app/generating-a-user-access-token-for-a-github-app), created for a user who has authorized your GitHub App, to access this endpoint.
-    ///
     /// The access the user has to each repository is included in the hash under the `permissions` key.
     ///
     /// - Remark: HTTP `GET /user/installations/{installation_id}/repositories`.
@@ -3373,8 +3371,6 @@ public struct Client: APIProtocol {
     ///
     /// Add a single repository to an installation. The authenticated user must have admin access to the repository.
     ///
-    /// You must use a personal access token (which you can create via the [command line](https://docs.github.com/github/authenticating-to-github/creating-a-personal-access-token) or [Basic Authentication](https://docs.github.com/rest/overview/other-authentication-methods#basic-authentication)) to access this endpoint.
-    ///
     /// - Remark: HTTP `PUT /user/installations/{installation_id}/repositories/{repository_id}`.
     /// - Remark: Generated from `#/paths//user/installations/{installation_id}/repositories/{repository_id}/put(apps/add-repo-to-installation-for-authenticated-user)`.
     public func apps_sol_add_hyphen_repo_hyphen_to_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.apps_sol_add_hyphen_repo_hyphen_to_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.apps_sol_add_hyphen_repo_hyphen_to_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user.Output {
@@ -3465,8 +3461,6 @@ public struct Client: APIProtocol {
     /// Remove a repository from an app installation
     ///
     /// Remove a single repository from an installation. The authenticated user must have admin access to the repository. The installation must have the `repository_selection` of `selected`.
-    ///
-    /// You must use a personal access token (which you can create via the [command line](https://docs.github.com/github/authenticating-to-github/creating-a-personal-access-token) or [Basic Authentication](https://docs.github.com/rest/overview/other-authentication-methods#basic-authentication)) to access this endpoint.
     ///
     /// - Remark: HTTP `DELETE /user/installations/{installation_id}/repositories/{repository_id}`.
     /// - Remark: Generated from `#/paths//user/installations/{installation_id}/repositories/{repository_id}/delete(apps/remove-repo-from-installation-for-authenticated-user)`.
@@ -3559,7 +3553,7 @@ public struct Client: APIProtocol {
     }
     /// List subscriptions for the authenticated user
     ///
-    /// Lists the active subscriptions for the authenticated user. GitHub Apps must use a [user access token](https://docs.github.com/apps/creating-github-apps/authenticating-with-a-github-app/generating-a-user-access-token-for-a-github-app), created for a user who has authorized your GitHub App, to access this endpoint. OAuth apps must authenticate using an [OAuth token](https://docs.github.com/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps).
+    /// Lists the active subscriptions for the authenticated user.
     ///
     /// - Remark: HTTP `GET /user/marketplace_purchases`.
     /// - Remark: Generated from `#/paths//user/marketplace_purchases/get(apps/list-subscriptions-for-authenticated-user)`.
@@ -3689,7 +3683,7 @@ public struct Client: APIProtocol {
     }
     /// List subscriptions for the authenticated user (stubbed)
     ///
-    /// Lists the active subscriptions for the authenticated user. GitHub Apps must use a [user access token](https://docs.github.com/apps/creating-github-apps/authenticating-with-a-github-app/generating-a-user-access-token-for-a-github-app), created for a user who has authorized your GitHub App, to access this endpoint. OAuth apps must authenticate using an [OAuth token](https://docs.github.com/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps).
+    /// Lists the active subscriptions for the authenticated user.
     ///
     /// - Remark: HTTP `GET /user/marketplace_purchases/stubbed`.
     /// - Remark: Generated from `#/paths//user/marketplace_purchases/stubbed/get(apps/list-subscriptions-for-authenticated-user-stubbed)`.

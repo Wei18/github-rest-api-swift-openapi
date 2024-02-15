@@ -44,7 +44,7 @@ public struct Client: APIProtocol {
     ///
     /// Paid minutes only apply to workflows in private repositories that use GitHub-hosted runners. Minutes used is listed for each GitHub-hosted runner operating system. Any job re-runs are also included in the usage. The usage returned includes any minute multipliers for macOS and Windows runners, and is rounded up to the nearest whole minute. For more information, see "[Managing billing for GitHub Actions](https://docs.github.com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-actions)".
     ///
-    /// Access tokens must have the `repo` or `admin:org` scope.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` or `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/settings/billing/actions`.
     /// - Remark: Generated from `#/paths//orgs/{org}/settings/billing/actions/get(billing/get-github-actions-billing-org)`.
@@ -112,7 +112,7 @@ public struct Client: APIProtocol {
     ///
     /// Paid minutes only apply to packages stored for private repositories. For more information, see "[Managing billing for GitHub Packages](https://docs.github.com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-packages)."
     ///
-    /// Access tokens must have the `repo` or `admin:org` scope.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` or `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/settings/billing/packages`.
     /// - Remark: Generated from `#/paths//orgs/{org}/settings/billing/packages/get(billing/get-github-packages-billing-org)`.
@@ -180,7 +180,7 @@ public struct Client: APIProtocol {
     ///
     /// Paid minutes only apply to packages stored for private repositories. For more information, see "[Managing billing for GitHub Packages](https://docs.github.com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-packages)."
     ///
-    /// Access tokens must have the `repo` or `admin:org` scope.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` or `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/settings/billing/shared-storage`.
     /// - Remark: Generated from `#/paths//orgs/{org}/settings/billing/shared-storage/get(billing/get-shared-storage-billing-org)`.
@@ -248,7 +248,7 @@ public struct Client: APIProtocol {
     ///
     /// Paid minutes only apply to workflows in private repositories that use GitHub-hosted runners. Minutes used is listed for each GitHub-hosted runner operating system. Any job re-runs are also included in the usage. The usage returned includes any minute multipliers for macOS and Windows runners, and is rounded up to the nearest whole minute. For more information, see "[Managing billing for GitHub Actions](https://docs.github.com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-actions)".
     ///
-    /// Access tokens must have the `user` scope.
+    /// OAuth app tokens and personal access tokens (classic) need the `user` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /users/{username}/settings/billing/actions`.
     /// - Remark: Generated from `#/paths//users/{username}/settings/billing/actions/get(billing/get-github-actions-billing-user)`.
@@ -316,7 +316,7 @@ public struct Client: APIProtocol {
     ///
     /// Paid minutes only apply to packages stored for private repositories. For more information, see "[Managing billing for GitHub Packages](https://docs.github.com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-packages)."
     ///
-    /// Access tokens must have the `user` scope.
+    /// OAuth app tokens and personal access tokens (classic) need the `user` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /users/{username}/settings/billing/packages`.
     /// - Remark: Generated from `#/paths//users/{username}/settings/billing/packages/get(billing/get-github-packages-billing-user)`.
@@ -384,7 +384,7 @@ public struct Client: APIProtocol {
     ///
     /// Paid minutes only apply to packages stored for private repositories. For more information, see "[Managing billing for GitHub Packages](https://docs.github.com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-packages)."
     ///
-    /// Access tokens must have the `user` scope.
+    /// OAuth app tokens and personal access tokens (classic) need the `user` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /users/{username}/settings/billing/shared-storage`.
     /// - Remark: Generated from `#/paths//users/{username}/settings/billing/shared-storage/get(billing/get-shared-storage-billing-user)`.

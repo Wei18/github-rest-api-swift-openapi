@@ -41,9 +41,12 @@ public struct Client: APIProtocol {
     /// List Dependabot alerts for an enterprise
     ///
     /// Lists Dependabot alerts for repositories that are owned by the specified enterprise.
-    /// To use this endpoint, you must be a member of the enterprise, and you must use an
-    /// access token with the `repo` scope or `security_events` scope.
+    ///
+    /// The authenticated user must be a member of the enterprise to use this endpoint.
+    ///
     /// Alerts are only returned for organizations in the enterprise for which you are an organization owner or a security manager. For more information about security managers, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` or `security_events` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /enterprises/{enterprise}/dependabot/alerts`.
     /// - Remark: Generated from `#/paths//enterprises/{enterprise}/dependabot/alerts/get(dependabot/list-alerts-for-enterprise)`.
@@ -261,11 +264,9 @@ public struct Client: APIProtocol {
     ///
     /// Lists Dependabot alerts for an organization.
     ///
-    /// To use this endpoint, you must be an owner or security manager for the organization, and you must use an access token with the `repo` scope or `security_events` scope.
+    /// The authenticated user must be an owner or security manager for the organization to use this endpoint.
     ///
-    /// For public repositories, you may instead use the `public_repo` scope.
-    ///
-    /// GitHub Apps must have **Dependabot alerts** read permission to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint. If this endpoint is only used with public repositories, the token can use the `public_repo` scope instead.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/dependabot/alerts`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/alerts/get(dependabot/list-alerts-for-org)`.
@@ -512,7 +513,10 @@ public struct Client: APIProtocol {
     }
     /// List organization secrets
     ///
-    /// Lists all secrets available in an organization without revealing their encrypted values. You must authenticate using an access token with the `admin:org` scope to use this endpoint. GitHub Apps must have the `dependabot_secrets` organization permission to use this endpoint.
+    /// Lists all secrets available in an organization without revealing their
+    /// encrypted values.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/dependabot/secrets`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/get(dependabot/list-org-secrets)`.
@@ -598,7 +602,10 @@ public struct Client: APIProtocol {
     }
     /// Get an organization public key
     ///
-    /// Gets your public key, which you need to encrypt secrets. You need to encrypt a secret before you can create or update secrets. You must authenticate using an access token with the `admin:org` scope to use this endpoint. GitHub Apps must have the `dependabot_secrets` organization permission to use this endpoint.
+    /// Gets your public key, which you need to encrypt secrets. You need to
+    /// encrypt a secret before you can create or update secrets.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/dependabot/secrets/public-key`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/public-key/get(dependabot/get-org-public-key)`.
@@ -662,7 +669,9 @@ public struct Client: APIProtocol {
     }
     /// Get an organization secret
     ///
-    /// Gets a single organization secret without revealing its encrypted value. You must authenticate using an access token with the `admin:org` scope to use this endpoint. GitHub Apps must have the `dependabot_secrets` organization permission to use this endpoint.
+    /// Gets a single organization secret without revealing its encrypted value.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/dependabot/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/get(dependabot/get-org-secret)`.
@@ -730,9 +739,7 @@ public struct Client: APIProtocol {
     /// Creates or updates an organization secret with an encrypted value. Encrypt your secret using
     /// [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages). For more information, see "[Encrypting secrets for the REST API](https://docs.github.com/rest/guides/encrypting-secrets-for-the-rest-api)."
     ///
-    /// You must authenticate using an access
-    /// token with the `admin:org` scope to use this endpoint. GitHub Apps must have the `dependabot_secrets` organization
-    /// permission to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/dependabot/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/put(dependabot/create-or-update-org-secret)`.
@@ -808,7 +815,9 @@ public struct Client: APIProtocol {
     }
     /// Delete an organization secret
     ///
-    /// Deletes a secret in an organization using the secret name. You must authenticate using an access token with the `admin:org` scope to use this endpoint. GitHub Apps must have the `dependabot_secrets` organization permission to use this endpoint.
+    /// Deletes a secret in an organization using the secret name.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/dependabot/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/delete(dependabot/delete-org-secret)`.
@@ -849,7 +858,10 @@ public struct Client: APIProtocol {
     }
     /// List selected repositories for an organization secret
     ///
-    /// Lists all repositories that have been selected when the `visibility` for repository access to a secret is set to `selected`. You must authenticate using an access token with the `admin:org` scope to use this endpoint. GitHub Apps must have the `dependabot_secrets` organization permission to use this endpoint.
+    /// Lists all repositories that have been selected when the `visibility`
+    /// for repository access to a secret is set to `selected`.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/dependabot/secrets/{secret_name}/repositories`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/repositories/get(dependabot/list-selected-repos-for-org-secret)`.
@@ -928,7 +940,11 @@ public struct Client: APIProtocol {
     }
     /// Set selected repositories for an organization secret
     ///
-    /// Replaces all repositories for an organization secret when the `visibility` for repository access is set to `selected`. The visibility is set when you [Create or update an organization secret](https://docs.github.com/rest/dependabot/secrets#create-or-update-an-organization-secret). You must authenticate using an access token with the `admin:org` scope to use this endpoint. GitHub Apps must have the `dependabot_secrets` organization permission to use this endpoint.
+    /// Replaces all repositories for an organization secret when the `visibility`
+    /// for repository access is set to `selected`. The visibility is set when you [Create
+    /// or update an organization secret](https://docs.github.com/rest/dependabot/secrets#create-or-update-an-organization-secret).
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/dependabot/secrets/{secret_name}/repositories`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/repositories/put(dependabot/set-selected-repos-for-org-secret)`.
@@ -978,7 +994,11 @@ public struct Client: APIProtocol {
     }
     /// Add selected repository to an organization secret
     ///
-    /// Adds a repository to an organization secret when the `visibility` for repository access is set to `selected`. The visibility is set when you [Create or update an organization secret](https://docs.github.com/rest/dependabot/secrets#create-or-update-an-organization-secret). You must authenticate using an access token with the `admin:org` scope to use this endpoint. GitHub Apps must have the `dependabot_secrets` organization permission to use this endpoint.
+    /// Adds a repository to an organization secret when the `visibility` for
+    /// repository access is set to `selected`. The visibility is set when you [Create or
+    /// update an organization secret](https://docs.github.com/rest/dependabot/secrets#create-or-update-an-organization-secret).
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}/put(dependabot/add-selected-repo-to-org-secret)`.
@@ -1022,7 +1042,11 @@ public struct Client: APIProtocol {
     }
     /// Remove selected repository from an organization secret
     ///
-    /// Removes a repository from an organization secret when the `visibility` for repository access is set to `selected`. The visibility is set when you [Create or update an organization secret](https://docs.github.com/rest/dependabot/secrets#create-or-update-an-organization-secret). You must authenticate using an access token with the `admin:org` scope to use this endpoint. GitHub Apps must have the `dependabot_secrets` organization permission to use this endpoint.
+    /// Removes a repository from an organization secret when the `visibility`
+    /// for repository access is set to `selected`. The visibility is set when you [Create
+    /// or update an organization secret](https://docs.github.com/rest/dependabot/secrets#create-or-update-an-organization-secret).
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}/delete(dependabot/remove-selected-repo-from-org-secret)`.
@@ -1066,9 +1090,7 @@ public struct Client: APIProtocol {
     }
     /// List Dependabot alerts for a repository
     ///
-    /// You must use an access token with the `security_events` scope to use this endpoint with private repositories.
-    /// You can also use tokens with the `public_repo` scope for public repositories only.
-    /// GitHub Apps must have **Dependabot alerts** read permission to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint. If this endpoint is only used with public repositories, the token can use the `public_repo` scope instead.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/dependabot/alerts`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/alerts/get(dependabot/list-alerts-for-repo)`.
@@ -1330,9 +1352,7 @@ public struct Client: APIProtocol {
     }
     /// Get a Dependabot alert
     ///
-    /// You must use an access token with the `security_events` scope to use this endpoint with private repositories.
-    /// You can also use tokens with the `public_repo` scope for public repositories only.
-    /// GitHub Apps must have **Dependabot alerts** read permission to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint. If this endpoint is only used with public repositories, the token can use the `public_repo` scope instead.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/dependabot/alerts/{alert_number}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/alerts/{alert_number}/get(dependabot/get-alert)`.
@@ -1444,11 +1464,9 @@ public struct Client: APIProtocol {
     }
     /// Update a Dependabot alert
     ///
-    /// You must use an access token with the `security_events` scope to use this endpoint with private repositories.
-    /// You can also use tokens with the `public_repo` scope for public repositories only.
-    /// GitHub Apps must have **Dependabot alerts** write permission to use this endpoint.
+    /// The authenticated user must have access to security alerts for the repository to use this endpoint. For more information, see "[Granting access to security alerts](https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-security-and-analysis-settings-for-your-repository#granting-access-to-security-alerts)."
     ///
-    /// To use this endpoint, you must have access to security alerts for the repository. For more information, see "[Granting access to security alerts](https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-security-and-analysis-settings-for-your-repository#granting-access-to-security-alerts)."
+    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint. If this endpoint is only used with public repositories, the token can use the `public_repo` scope instead.
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/dependabot/alerts/{alert_number}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/alerts/{alert_number}/patch(dependabot/update-alert)`.
@@ -1642,7 +1660,10 @@ public struct Client: APIProtocol {
     }
     /// List repository secrets
     ///
-    /// Lists all secrets available in a repository without revealing their encrypted values. You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `dependabot_secrets` repository permission to use this endpoint.
+    /// Lists all secrets available in a repository without revealing their encrypted
+    /// values.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/dependabot/secrets`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/secrets/get(dependabot/list-repo-secrets)`.
@@ -1729,7 +1750,11 @@ public struct Client: APIProtocol {
     }
     /// Get a repository public key
     ///
-    /// Gets your public key, which you need to encrypt secrets. You need to encrypt a secret before you can create or update secrets. Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have the `dependabot_secrets` repository permission to use this endpoint.
+    /// Gets your public key, which you need to encrypt secrets. You need to
+    /// encrypt a secret before you can create or update secrets. Anyone with read access
+    /// to the repository can use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint if the repository is private.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/dependabot/secrets/public-key`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/secrets/public-key/get(dependabot/get-repo-public-key)`.
@@ -1794,7 +1819,9 @@ public struct Client: APIProtocol {
     }
     /// Get a repository secret
     ///
-    /// Gets a single repository secret without revealing its encrypted value. You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `dependabot_secrets` repository permission to use this endpoint.
+    /// Gets a single repository secret without revealing its encrypted value.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/dependabot/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/secrets/{secret_name}/get(dependabot/get-repo-secret)`.
@@ -1863,9 +1890,7 @@ public struct Client: APIProtocol {
     /// Creates or updates a repository secret with an encrypted value. Encrypt your secret using
     /// [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages). For more information, see "[Encrypting secrets for the REST API](https://docs.github.com/rest/guides/encrypting-secrets-for-the-rest-api)."
     ///
-    /// You must authenticate using an access
-    /// token with the `repo` scope to use this endpoint. GitHub Apps must have the `dependabot_secrets` repository
-    /// permission to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/dependabot/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/secrets/{secret_name}/put(dependabot/create-or-update-repo-secret)`.
@@ -1942,7 +1967,9 @@ public struct Client: APIProtocol {
     }
     /// Delete a repository secret
     ///
-    /// Deletes a secret in a repository using the secret name. You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `dependabot_secrets` repository permission to use this endpoint.
+    /// Deletes a secret in a repository using the secret name.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/dependabot/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/secrets/{secret_name}/delete(dependabot/delete-repo-secret)`.
