@@ -81,9 +81,9 @@ public protocol APIProtocol: Sendable {
     func apps_sol_list_hyphen_installation_hyphen_requests_hyphen_for_hyphen_authenticated_hyphen_app(_ input: Operations.apps_sol_list_hyphen_installation_hyphen_requests_hyphen_for_hyphen_authenticated_hyphen_app.Input) async throws -> Operations.apps_sol_list_hyphen_installation_hyphen_requests_hyphen_for_hyphen_authenticated_hyphen_app.Output
     /// List installations for the authenticated app
     ///
-    /// You must use a [JWT](https://docs.github.com/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-a-github-app) to access this endpoint.
-    ///
     /// The permissions the installation has are included under the `permissions` key.
+    ///
+    /// You must use a [JWT](https://docs.github.com/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-a-github-app) to access this endpoint.
     ///
     /// - Remark: HTTP `GET /app/installations`.
     /// - Remark: Generated from `#/paths//app/installations/get(apps/list-installations)`.
@@ -164,7 +164,15 @@ public protocol APIProtocol: Sendable {
     func apps_sol_delete_hyphen_token(_ input: Operations.apps_sol_delete_hyphen_token.Input) async throws -> Operations.apps_sol_delete_hyphen_token.Output
     /// Create a scoped access token
     ///
-    /// Use a non-scoped user access token to create a repository scoped and/or permission scoped user access token. You can specify which repositories the token can access and which permissions are granted to the token. You must use [Basic Authentication](https://docs.github.com/rest/overview/other-authentication-methods#basic-authentication) when accessing this endpoint, using the `client_id` and `client_secret` of the GitHub App as the username and password. Invalid tokens will return `404 NOT FOUND`.
+    /// Use a non-scoped user access token to create a repository-scoped and/or permission-scoped user access token. You can specify
+    /// which repositories the token can access and which permissions are granted to the
+    /// token.
+    ///
+    /// Invalid tokens will return `404 NOT FOUND`.
+    ///
+    /// You must use [Basic Authentication](https://docs.github.com/rest/overview/other-authentication-methods#basic-authentication)
+    /// when accessing this endpoint, using the `client_id` and `client_secret` of the GitHub App
+    /// as the username and password.
     ///
     /// - Remark: HTTP `POST /applications/{client_id}/token/scoped`.
     /// - Remark: Generated from `#/paths//applications/{client_id}/token/scoped/post(apps/scope-token)`.
@@ -173,16 +181,12 @@ public protocol APIProtocol: Sendable {
     ///
     /// **Note**: The `:app_slug` is just the URL-friendly name of your GitHub App. You can find this on the settings page for your GitHub App (e.g., `https://github.com/settings/apps/:app_slug`).
     ///
-    /// If the GitHub App you specify is public, you can access this endpoint without authenticating. If the GitHub App you specify is private, you must authenticate with a [personal access token](https://docs.github.com/articles/creating-a-personal-access-token-for-the-command-line/) or an [installation access token](https://docs.github.com/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-an-installation) of the target app to access this endpoint.
-    ///
     /// - Remark: HTTP `GET /apps/{app_slug}`.
     /// - Remark: Generated from `#/paths//apps/{app_slug}/get(apps/get-by-slug)`.
     func apps_sol_get_hyphen_by_hyphen_slug(_ input: Operations.apps_sol_get_hyphen_by_hyphen_slug.Input) async throws -> Operations.apps_sol_get_hyphen_by_hyphen_slug.Output
     /// List repositories accessible to the app installation
     ///
     /// List repositories that an app installation can access.
-    ///
-    /// You must use an [installation access token](https://docs.github.com/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-an-installation) to access this endpoint.
     ///
     /// - Remark: HTTP `GET /installation/repositories`.
     /// - Remark: Generated from `#/paths//installation/repositories/get(apps/list-repos-accessible-to-installation)`.
@@ -192,8 +196,6 @@ public protocol APIProtocol: Sendable {
     /// Revokes the installation token you're using to authenticate as an installation and access this endpoint.
     ///
     /// Once an installation token is revoked, the token is invalidated and cannot be used. Other endpoints that require the revoked installation token must have a new installation token to work. You can create a new token using the "[Create an installation access token for an app](https://docs.github.com/rest/apps/apps#create-an-installation-access-token-for-an-app)" endpoint.
-    ///
-    /// You must use an [installation access token](https://docs.github.com/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-an-installation) to access this endpoint.
     ///
     /// - Remark: HTTP `DELETE /installation/token`.
     /// - Remark: Generated from `#/paths//installation/token/delete(apps/revoke-installation-access-token)`.
@@ -274,8 +276,6 @@ public protocol APIProtocol: Sendable {
     ///
     /// Lists installations of your GitHub App that the authenticated user has explicit permission (`:read`, `:write`, or `:admin`) to access.
     ///
-    /// You must use a [user access token](https://docs.github.com/apps/creating-github-apps/authenticating-with-a-github-app/generating-a-user-access-token-for-a-github-app), created for a user who has authorized your GitHub App, to access this endpoint.
-    ///
     /// The authenticated user has explicit permission to access repositories they own, repositories where they are a collaborator, and repositories that they can access through an organization membership.
     ///
     /// You can find the permissions for the installation under the `permissions` key.
@@ -289,8 +289,6 @@ public protocol APIProtocol: Sendable {
     ///
     /// The authenticated user has explicit permission to access repositories they own, repositories where they are a collaborator, and repositories that they can access through an organization membership.
     ///
-    /// You must use a [user access token](https://docs.github.com/apps/creating-github-apps/authenticating-with-a-github-app/generating-a-user-access-token-for-a-github-app), created for a user who has authorized your GitHub App, to access this endpoint.
-    ///
     /// The access the user has to each repository is included in the hash under the `permissions` key.
     ///
     /// - Remark: HTTP `GET /user/installations/{installation_id}/repositories`.
@@ -300,8 +298,6 @@ public protocol APIProtocol: Sendable {
     ///
     /// Add a single repository to an installation. The authenticated user must have admin access to the repository.
     ///
-    /// You must use a personal access token (which you can create via the [command line](https://docs.github.com/github/authenticating-to-github/creating-a-personal-access-token) or [Basic Authentication](https://docs.github.com/rest/overview/other-authentication-methods#basic-authentication)) to access this endpoint.
-    ///
     /// - Remark: HTTP `PUT /user/installations/{installation_id}/repositories/{repository_id}`.
     /// - Remark: Generated from `#/paths//user/installations/{installation_id}/repositories/{repository_id}/put(apps/add-repo-to-installation-for-authenticated-user)`.
     func apps_sol_add_hyphen_repo_hyphen_to_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.apps_sol_add_hyphen_repo_hyphen_to_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.apps_sol_add_hyphen_repo_hyphen_to_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user.Output
@@ -309,21 +305,19 @@ public protocol APIProtocol: Sendable {
     ///
     /// Remove a single repository from an installation. The authenticated user must have admin access to the repository. The installation must have the `repository_selection` of `selected`.
     ///
-    /// You must use a personal access token (which you can create via the [command line](https://docs.github.com/github/authenticating-to-github/creating-a-personal-access-token) or [Basic Authentication](https://docs.github.com/rest/overview/other-authentication-methods#basic-authentication)) to access this endpoint.
-    ///
     /// - Remark: HTTP `DELETE /user/installations/{installation_id}/repositories/{repository_id}`.
     /// - Remark: Generated from `#/paths//user/installations/{installation_id}/repositories/{repository_id}/delete(apps/remove-repo-from-installation-for-authenticated-user)`.
     func apps_sol_remove_hyphen_repo_hyphen_from_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.apps_sol_remove_hyphen_repo_hyphen_from_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.apps_sol_remove_hyphen_repo_hyphen_from_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user.Output
     /// List subscriptions for the authenticated user
     ///
-    /// Lists the active subscriptions for the authenticated user. GitHub Apps must use a [user access token](https://docs.github.com/apps/creating-github-apps/authenticating-with-a-github-app/generating-a-user-access-token-for-a-github-app), created for a user who has authorized your GitHub App, to access this endpoint. OAuth apps must authenticate using an [OAuth token](https://docs.github.com/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps).
+    /// Lists the active subscriptions for the authenticated user.
     ///
     /// - Remark: HTTP `GET /user/marketplace_purchases`.
     /// - Remark: Generated from `#/paths//user/marketplace_purchases/get(apps/list-subscriptions-for-authenticated-user)`.
     func apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user.Output
     /// List subscriptions for the authenticated user (stubbed)
     ///
-    /// Lists the active subscriptions for the authenticated user. GitHub Apps must use a [user access token](https://docs.github.com/apps/creating-github-apps/authenticating-with-a-github-app/generating-a-user-access-token-for-a-github-app), created for a user who has authorized your GitHub App, to access this endpoint. OAuth apps must authenticate using an [OAuth token](https://docs.github.com/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps).
+    /// Lists the active subscriptions for the authenticated user.
     ///
     /// - Remark: HTTP `GET /user/marketplace_purchases/stubbed`.
     /// - Remark: Generated from `#/paths//user/marketplace_purchases/stubbed/get(apps/list-subscriptions-for-authenticated-user-stubbed)`.
@@ -463,9 +457,9 @@ extension APIProtocol {
     }
     /// List installations for the authenticated app
     ///
-    /// You must use a [JWT](https://docs.github.com/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-a-github-app) to access this endpoint.
-    ///
     /// The permissions the installation has are included under the `permissions` key.
+    ///
+    /// You must use a [JWT](https://docs.github.com/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-a-github-app) to access this endpoint.
     ///
     /// - Remark: HTTP `GET /app/installations`.
     /// - Remark: Generated from `#/paths//app/installations/get(apps/list-installations)`.
@@ -636,7 +630,15 @@ extension APIProtocol {
     }
     /// Create a scoped access token
     ///
-    /// Use a non-scoped user access token to create a repository scoped and/or permission scoped user access token. You can specify which repositories the token can access and which permissions are granted to the token. You must use [Basic Authentication](https://docs.github.com/rest/overview/other-authentication-methods#basic-authentication) when accessing this endpoint, using the `client_id` and `client_secret` of the GitHub App as the username and password. Invalid tokens will return `404 NOT FOUND`.
+    /// Use a non-scoped user access token to create a repository-scoped and/or permission-scoped user access token. You can specify
+    /// which repositories the token can access and which permissions are granted to the
+    /// token.
+    ///
+    /// Invalid tokens will return `404 NOT FOUND`.
+    ///
+    /// You must use [Basic Authentication](https://docs.github.com/rest/overview/other-authentication-methods#basic-authentication)
+    /// when accessing this endpoint, using the `client_id` and `client_secret` of the GitHub App
+    /// as the username and password.
     ///
     /// - Remark: HTTP `POST /applications/{client_id}/token/scoped`.
     /// - Remark: Generated from `#/paths//applications/{client_id}/token/scoped/post(apps/scope-token)`.
@@ -655,8 +657,6 @@ extension APIProtocol {
     ///
     /// **Note**: The `:app_slug` is just the URL-friendly name of your GitHub App. You can find this on the settings page for your GitHub App (e.g., `https://github.com/settings/apps/:app_slug`).
     ///
-    /// If the GitHub App you specify is public, you can access this endpoint without authenticating. If the GitHub App you specify is private, you must authenticate with a [personal access token](https://docs.github.com/articles/creating-a-personal-access-token-for-the-command-line/) or an [installation access token](https://docs.github.com/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-an-installation) of the target app to access this endpoint.
-    ///
     /// - Remark: HTTP `GET /apps/{app_slug}`.
     /// - Remark: Generated from `#/paths//apps/{app_slug}/get(apps/get-by-slug)`.
     public func apps_sol_get_hyphen_by_hyphen_slug(
@@ -671,8 +671,6 @@ extension APIProtocol {
     /// List repositories accessible to the app installation
     ///
     /// List repositories that an app installation can access.
-    ///
-    /// You must use an [installation access token](https://docs.github.com/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-an-installation) to access this endpoint.
     ///
     /// - Remark: HTTP `GET /installation/repositories`.
     /// - Remark: Generated from `#/paths//installation/repositories/get(apps/list-repos-accessible-to-installation)`.
@@ -690,8 +688,6 @@ extension APIProtocol {
     /// Revokes the installation token you're using to authenticate as an installation and access this endpoint.
     ///
     /// Once an installation token is revoked, the token is invalidated and cannot be used. Other endpoints that require the revoked installation token must have a new installation token to work. You can create a new token using the "[Create an installation access token for an app](https://docs.github.com/rest/apps/apps#create-an-installation-access-token-for-an-app)" endpoint.
-    ///
-    /// You must use an [installation access token](https://docs.github.com/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-an-installation) to access this endpoint.
     ///
     /// - Remark: HTTP `DELETE /installation/token`.
     /// - Remark: Generated from `#/paths//installation/token/delete(apps/revoke-installation-access-token)`.
@@ -842,8 +838,6 @@ extension APIProtocol {
     ///
     /// Lists installations of your GitHub App that the authenticated user has explicit permission (`:read`, `:write`, or `:admin`) to access.
     ///
-    /// You must use a [user access token](https://docs.github.com/apps/creating-github-apps/authenticating-with-a-github-app/generating-a-user-access-token-for-a-github-app), created for a user who has authorized your GitHub App, to access this endpoint.
-    ///
     /// The authenticated user has explicit permission to access repositories they own, repositories where they are a collaborator, and repositories that they can access through an organization membership.
     ///
     /// You can find the permissions for the installation under the `permissions` key.
@@ -865,8 +859,6 @@ extension APIProtocol {
     ///
     /// The authenticated user has explicit permission to access repositories they own, repositories where they are a collaborator, and repositories that they can access through an organization membership.
     ///
-    /// You must use a [user access token](https://docs.github.com/apps/creating-github-apps/authenticating-with-a-github-app/generating-a-user-access-token-for-a-github-app), created for a user who has authorized your GitHub App, to access this endpoint.
-    ///
     /// The access the user has to each repository is included in the hash under the `permissions` key.
     ///
     /// - Remark: HTTP `GET /user/installations/{installation_id}/repositories`.
@@ -886,8 +878,6 @@ extension APIProtocol {
     ///
     /// Add a single repository to an installation. The authenticated user must have admin access to the repository.
     ///
-    /// You must use a personal access token (which you can create via the [command line](https://docs.github.com/github/authenticating-to-github/creating-a-personal-access-token) or [Basic Authentication](https://docs.github.com/rest/overview/other-authentication-methods#basic-authentication)) to access this endpoint.
-    ///
     /// - Remark: HTTP `PUT /user/installations/{installation_id}/repositories/{repository_id}`.
     /// - Remark: Generated from `#/paths//user/installations/{installation_id}/repositories/{repository_id}/put(apps/add-repo-to-installation-for-authenticated-user)`.
     public func apps_sol_add_hyphen_repo_hyphen_to_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user(
@@ -903,8 +893,6 @@ extension APIProtocol {
     ///
     /// Remove a single repository from an installation. The authenticated user must have admin access to the repository. The installation must have the `repository_selection` of `selected`.
     ///
-    /// You must use a personal access token (which you can create via the [command line](https://docs.github.com/github/authenticating-to-github/creating-a-personal-access-token) or [Basic Authentication](https://docs.github.com/rest/overview/other-authentication-methods#basic-authentication)) to access this endpoint.
-    ///
     /// - Remark: HTTP `DELETE /user/installations/{installation_id}/repositories/{repository_id}`.
     /// - Remark: Generated from `#/paths//user/installations/{installation_id}/repositories/{repository_id}/delete(apps/remove-repo-from-installation-for-authenticated-user)`.
     public func apps_sol_remove_hyphen_repo_hyphen_from_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user(
@@ -918,7 +906,7 @@ extension APIProtocol {
     }
     /// List subscriptions for the authenticated user
     ///
-    /// Lists the active subscriptions for the authenticated user. GitHub Apps must use a [user access token](https://docs.github.com/apps/creating-github-apps/authenticating-with-a-github-app/generating-a-user-access-token-for-a-github-app), created for a user who has authorized your GitHub App, to access this endpoint. OAuth apps must authenticate using an [OAuth token](https://docs.github.com/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps).
+    /// Lists the active subscriptions for the authenticated user.
     ///
     /// - Remark: HTTP `GET /user/marketplace_purchases`.
     /// - Remark: Generated from `#/paths//user/marketplace_purchases/get(apps/list-subscriptions-for-authenticated-user)`.
@@ -933,7 +921,7 @@ extension APIProtocol {
     }
     /// List subscriptions for the authenticated user (stubbed)
     ///
-    /// Lists the active subscriptions for the authenticated user. GitHub Apps must use a [user access token](https://docs.github.com/apps/creating-github-apps/authenticating-with-a-github-app/generating-a-user-access-token-for-a-github-app), created for a user who has authorized your GitHub App, to access this endpoint. OAuth apps must authenticate using an [OAuth token](https://docs.github.com/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps).
+    /// Lists the active subscriptions for the authenticated user.
     ///
     /// - Remark: HTTP `GET /user/marketplace_purchases/stubbed`.
     /// - Remark: Generated from `#/paths//user/marketplace_purchases/stubbed/get(apps/list-subscriptions-for-authenticated-user-stubbed)`.
@@ -3312,8 +3300,6 @@ public enum Components {
             public var full_name: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/license`.
             public var license: Components.Schemas.nullable_hyphen_license_hyphen_simple?
-            /// - Remark: Generated from `#/components/schemas/repository/organization`.
-            public var organization: Components.Schemas.nullable_hyphen_simple_hyphen_user?
             /// - Remark: Generated from `#/components/schemas/repository/forks`.
             public var forks: Swift.Int
             /// - Remark: Generated from `#/components/schemas/repository/permissions`.
@@ -3526,767 +3512,6 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/repository/allow_rebase_merge`.
             public var allow_rebase_merge: Swift.Bool?
-            /// - Remark: Generated from `#/components/schemas/repository/template_repository`.
-            public struct template_repositoryPayload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/id`.
-                public var id: Swift.Int?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/node_id`.
-                public var node_id: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/name`.
-                public var name: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/full_name`.
-                public var full_name: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner`.
-                public struct ownerPayload: Codable, Hashable, Sendable {
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/login`.
-                    public var login: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/id`.
-                    public var id: Swift.Int?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/node_id`.
-                    public var node_id: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/avatar_url`.
-                    public var avatar_url: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/gravatar_id`.
-                    public var gravatar_id: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/url`.
-                    public var url: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/html_url`.
-                    public var html_url: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/followers_url`.
-                    public var followers_url: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/following_url`.
-                    public var following_url: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/gists_url`.
-                    public var gists_url: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/starred_url`.
-                    public var starred_url: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/subscriptions_url`.
-                    public var subscriptions_url: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/organizations_url`.
-                    public var organizations_url: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/repos_url`.
-                    public var repos_url: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/events_url`.
-                    public var events_url: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/received_events_url`.
-                    public var received_events_url: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/type`.
-                    public var _type: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner/site_admin`.
-                    public var site_admin: Swift.Bool?
-                    /// Creates a new `ownerPayload`.
-                    ///
-                    /// - Parameters:
-                    ///   - login:
-                    ///   - id:
-                    ///   - node_id:
-                    ///   - avatar_url:
-                    ///   - gravatar_id:
-                    ///   - url:
-                    ///   - html_url:
-                    ///   - followers_url:
-                    ///   - following_url:
-                    ///   - gists_url:
-                    ///   - starred_url:
-                    ///   - subscriptions_url:
-                    ///   - organizations_url:
-                    ///   - repos_url:
-                    ///   - events_url:
-                    ///   - received_events_url:
-                    ///   - _type:
-                    ///   - site_admin:
-                    public init(
-                        login: Swift.String? = nil,
-                        id: Swift.Int? = nil,
-                        node_id: Swift.String? = nil,
-                        avatar_url: Swift.String? = nil,
-                        gravatar_id: Swift.String? = nil,
-                        url: Swift.String? = nil,
-                        html_url: Swift.String? = nil,
-                        followers_url: Swift.String? = nil,
-                        following_url: Swift.String? = nil,
-                        gists_url: Swift.String? = nil,
-                        starred_url: Swift.String? = nil,
-                        subscriptions_url: Swift.String? = nil,
-                        organizations_url: Swift.String? = nil,
-                        repos_url: Swift.String? = nil,
-                        events_url: Swift.String? = nil,
-                        received_events_url: Swift.String? = nil,
-                        _type: Swift.String? = nil,
-                        site_admin: Swift.Bool? = nil
-                    ) {
-                        self.login = login
-                        self.id = id
-                        self.node_id = node_id
-                        self.avatar_url = avatar_url
-                        self.gravatar_id = gravatar_id
-                        self.url = url
-                        self.html_url = html_url
-                        self.followers_url = followers_url
-                        self.following_url = following_url
-                        self.gists_url = gists_url
-                        self.starred_url = starred_url
-                        self.subscriptions_url = subscriptions_url
-                        self.organizations_url = organizations_url
-                        self.repos_url = repos_url
-                        self.events_url = events_url
-                        self.received_events_url = received_events_url
-                        self._type = _type
-                        self.site_admin = site_admin
-                    }
-                    public enum CodingKeys: String, CodingKey {
-                        case login
-                        case id
-                        case node_id
-                        case avatar_url
-                        case gravatar_id
-                        case url
-                        case html_url
-                        case followers_url
-                        case following_url
-                        case gists_url
-                        case starred_url
-                        case subscriptions_url
-                        case organizations_url
-                        case repos_url
-                        case events_url
-                        case received_events_url
-                        case _type = "type"
-                        case site_admin
-                    }
-                }
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/owner`.
-                public var owner: Components.Schemas.repository.template_repositoryPayload.ownerPayload?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/private`.
-                public var _private: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/html_url`.
-                public var html_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/description`.
-                public var description: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/fork`.
-                public var fork: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/url`.
-                public var url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/archive_url`.
-                public var archive_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/assignees_url`.
-                public var assignees_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/blobs_url`.
-                public var blobs_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/branches_url`.
-                public var branches_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/collaborators_url`.
-                public var collaborators_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/comments_url`.
-                public var comments_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/commits_url`.
-                public var commits_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/compare_url`.
-                public var compare_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/contents_url`.
-                public var contents_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/contributors_url`.
-                public var contributors_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/deployments_url`.
-                public var deployments_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/downloads_url`.
-                public var downloads_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/events_url`.
-                public var events_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/forks_url`.
-                public var forks_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/git_commits_url`.
-                public var git_commits_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/git_refs_url`.
-                public var git_refs_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/git_tags_url`.
-                public var git_tags_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/git_url`.
-                public var git_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/issue_comment_url`.
-                public var issue_comment_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/issue_events_url`.
-                public var issue_events_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/issues_url`.
-                public var issues_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/keys_url`.
-                public var keys_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/labels_url`.
-                public var labels_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/languages_url`.
-                public var languages_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/merges_url`.
-                public var merges_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/milestones_url`.
-                public var milestones_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/notifications_url`.
-                public var notifications_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/pulls_url`.
-                public var pulls_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/releases_url`.
-                public var releases_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/ssh_url`.
-                public var ssh_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/stargazers_url`.
-                public var stargazers_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/statuses_url`.
-                public var statuses_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/subscribers_url`.
-                public var subscribers_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/subscription_url`.
-                public var subscription_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/tags_url`.
-                public var tags_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/teams_url`.
-                public var teams_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/trees_url`.
-                public var trees_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/clone_url`.
-                public var clone_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/mirror_url`.
-                public var mirror_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/hooks_url`.
-                public var hooks_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/svn_url`.
-                public var svn_url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/homepage`.
-                public var homepage: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/language`.
-                public var language: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/forks_count`.
-                public var forks_count: Swift.Int?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/stargazers_count`.
-                public var stargazers_count: Swift.Int?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/watchers_count`.
-                public var watchers_count: Swift.Int?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/size`.
-                public var size: Swift.Int?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/default_branch`.
-                public var default_branch: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/open_issues_count`.
-                public var open_issues_count: Swift.Int?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/is_template`.
-                public var is_template: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/topics`.
-                public var topics: [Swift.String]?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/has_issues`.
-                public var has_issues: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/has_projects`.
-                public var has_projects: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/has_wiki`.
-                public var has_wiki: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/has_pages`.
-                public var has_pages: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/has_downloads`.
-                public var has_downloads: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/archived`.
-                public var archived: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/disabled`.
-                public var disabled: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/visibility`.
-                public var visibility: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/pushed_at`.
-                public var pushed_at: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/created_at`.
-                public var created_at: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/updated_at`.
-                public var updated_at: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/permissions`.
-                public struct permissionsPayload: Codable, Hashable, Sendable {
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/permissions/admin`.
-                    public var admin: Swift.Bool?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/permissions/maintain`.
-                    public var maintain: Swift.Bool?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/permissions/push`.
-                    public var push: Swift.Bool?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/permissions/triage`.
-                    public var triage: Swift.Bool?
-                    /// - Remark: Generated from `#/components/schemas/repository/template_repository/permissions/pull`.
-                    public var pull: Swift.Bool?
-                    /// Creates a new `permissionsPayload`.
-                    ///
-                    /// - Parameters:
-                    ///   - admin:
-                    ///   - maintain:
-                    ///   - push:
-                    ///   - triage:
-                    ///   - pull:
-                    public init(
-                        admin: Swift.Bool? = nil,
-                        maintain: Swift.Bool? = nil,
-                        push: Swift.Bool? = nil,
-                        triage: Swift.Bool? = nil,
-                        pull: Swift.Bool? = nil
-                    ) {
-                        self.admin = admin
-                        self.maintain = maintain
-                        self.push = push
-                        self.triage = triage
-                        self.pull = pull
-                    }
-                    public enum CodingKeys: String, CodingKey {
-                        case admin
-                        case maintain
-                        case push
-                        case triage
-                        case pull
-                    }
-                }
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/permissions`.
-                public var permissions: Components.Schemas.repository.template_repositoryPayload.permissionsPayload?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/allow_rebase_merge`.
-                public var allow_rebase_merge: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/temp_clone_token`.
-                public var temp_clone_token: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/allow_squash_merge`.
-                public var allow_squash_merge: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/allow_auto_merge`.
-                public var allow_auto_merge: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/delete_branch_on_merge`.
-                public var delete_branch_on_merge: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/allow_update_branch`.
-                public var allow_update_branch: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/use_squash_pr_title_as_default`.
-                public var use_squash_pr_title_as_default: Swift.Bool?
-                /// The default value for a squash merge commit title:
-                ///
-                /// - `PR_TITLE` - default to the pull request's title.
-                /// - `COMMIT_OR_PR_TITLE` - default to the commit's title (if only one commit) or the pull request's title (when more than one commit).
-                ///
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/squash_merge_commit_title`.
-                @frozen public enum squash_merge_commit_titlePayload: String, Codable, Hashable, Sendable {
-                    case PR_TITLE = "PR_TITLE"
-                    case COMMIT_OR_PR_TITLE = "COMMIT_OR_PR_TITLE"
-                }
-                /// The default value for a squash merge commit title:
-                ///
-                /// - `PR_TITLE` - default to the pull request's title.
-                /// - `COMMIT_OR_PR_TITLE` - default to the commit's title (if only one commit) or the pull request's title (when more than one commit).
-                ///
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/squash_merge_commit_title`.
-                public var squash_merge_commit_title: Components.Schemas.repository.template_repositoryPayload.squash_merge_commit_titlePayload?
-                /// The default value for a squash merge commit message:
-                ///
-                /// - `PR_BODY` - default to the pull request's body.
-                /// - `COMMIT_MESSAGES` - default to the branch's commit messages.
-                /// - `BLANK` - default to a blank commit message.
-                ///
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/squash_merge_commit_message`.
-                @frozen public enum squash_merge_commit_messagePayload: String, Codable, Hashable, Sendable {
-                    case PR_BODY = "PR_BODY"
-                    case COMMIT_MESSAGES = "COMMIT_MESSAGES"
-                    case BLANK = "BLANK"
-                }
-                /// The default value for a squash merge commit message:
-                ///
-                /// - `PR_BODY` - default to the pull request's body.
-                /// - `COMMIT_MESSAGES` - default to the branch's commit messages.
-                /// - `BLANK` - default to a blank commit message.
-                ///
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/squash_merge_commit_message`.
-                public var squash_merge_commit_message: Components.Schemas.repository.template_repositoryPayload.squash_merge_commit_messagePayload?
-                /// The default value for a merge commit title.
-                ///
-                /// - `PR_TITLE` - default to the pull request's title.
-                /// - `MERGE_MESSAGE` - default to the classic title for a merge message (e.g., Merge pull request #123 from branch-name).
-                ///
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/merge_commit_title`.
-                @frozen public enum merge_commit_titlePayload: String, Codable, Hashable, Sendable {
-                    case PR_TITLE = "PR_TITLE"
-                    case MERGE_MESSAGE = "MERGE_MESSAGE"
-                }
-                /// The default value for a merge commit title.
-                ///
-                /// - `PR_TITLE` - default to the pull request's title.
-                /// - `MERGE_MESSAGE` - default to the classic title for a merge message (e.g., Merge pull request #123 from branch-name).
-                ///
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/merge_commit_title`.
-                public var merge_commit_title: Components.Schemas.repository.template_repositoryPayload.merge_commit_titlePayload?
-                /// The default value for a merge commit message.
-                ///
-                /// - `PR_TITLE` - default to the pull request's title.
-                /// - `PR_BODY` - default to the pull request's body.
-                /// - `BLANK` - default to a blank commit message.
-                ///
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/merge_commit_message`.
-                @frozen public enum merge_commit_messagePayload: String, Codable, Hashable, Sendable {
-                    case PR_BODY = "PR_BODY"
-                    case PR_TITLE = "PR_TITLE"
-                    case BLANK = "BLANK"
-                }
-                /// The default value for a merge commit message.
-                ///
-                /// - `PR_TITLE` - default to the pull request's title.
-                /// - `PR_BODY` - default to the pull request's body.
-                /// - `BLANK` - default to a blank commit message.
-                ///
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/merge_commit_message`.
-                public var merge_commit_message: Components.Schemas.repository.template_repositoryPayload.merge_commit_messagePayload?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/allow_merge_commit`.
-                public var allow_merge_commit: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/subscribers_count`.
-                public var subscribers_count: Swift.Int?
-                /// - Remark: Generated from `#/components/schemas/repository/template_repository/network_count`.
-                public var network_count: Swift.Int?
-                /// Creates a new `template_repositoryPayload`.
-                ///
-                /// - Parameters:
-                ///   - id:
-                ///   - node_id:
-                ///   - name:
-                ///   - full_name:
-                ///   - owner:
-                ///   - _private:
-                ///   - html_url:
-                ///   - description:
-                ///   - fork:
-                ///   - url:
-                ///   - archive_url:
-                ///   - assignees_url:
-                ///   - blobs_url:
-                ///   - branches_url:
-                ///   - collaborators_url:
-                ///   - comments_url:
-                ///   - commits_url:
-                ///   - compare_url:
-                ///   - contents_url:
-                ///   - contributors_url:
-                ///   - deployments_url:
-                ///   - downloads_url:
-                ///   - events_url:
-                ///   - forks_url:
-                ///   - git_commits_url:
-                ///   - git_refs_url:
-                ///   - git_tags_url:
-                ///   - git_url:
-                ///   - issue_comment_url:
-                ///   - issue_events_url:
-                ///   - issues_url:
-                ///   - keys_url:
-                ///   - labels_url:
-                ///   - languages_url:
-                ///   - merges_url:
-                ///   - milestones_url:
-                ///   - notifications_url:
-                ///   - pulls_url:
-                ///   - releases_url:
-                ///   - ssh_url:
-                ///   - stargazers_url:
-                ///   - statuses_url:
-                ///   - subscribers_url:
-                ///   - subscription_url:
-                ///   - tags_url:
-                ///   - teams_url:
-                ///   - trees_url:
-                ///   - clone_url:
-                ///   - mirror_url:
-                ///   - hooks_url:
-                ///   - svn_url:
-                ///   - homepage:
-                ///   - language:
-                ///   - forks_count:
-                ///   - stargazers_count:
-                ///   - watchers_count:
-                ///   - size:
-                ///   - default_branch:
-                ///   - open_issues_count:
-                ///   - is_template:
-                ///   - topics:
-                ///   - has_issues:
-                ///   - has_projects:
-                ///   - has_wiki:
-                ///   - has_pages:
-                ///   - has_downloads:
-                ///   - archived:
-                ///   - disabled:
-                ///   - visibility:
-                ///   - pushed_at:
-                ///   - created_at:
-                ///   - updated_at:
-                ///   - permissions:
-                ///   - allow_rebase_merge:
-                ///   - temp_clone_token:
-                ///   - allow_squash_merge:
-                ///   - allow_auto_merge:
-                ///   - delete_branch_on_merge:
-                ///   - allow_update_branch:
-                ///   - use_squash_pr_title_as_default:
-                ///   - squash_merge_commit_title: The default value for a squash merge commit title:
-                ///   - squash_merge_commit_message: The default value for a squash merge commit message:
-                ///   - merge_commit_title: The default value for a merge commit title.
-                ///   - merge_commit_message: The default value for a merge commit message.
-                ///   - allow_merge_commit:
-                ///   - subscribers_count:
-                ///   - network_count:
-                public init(
-                    id: Swift.Int? = nil,
-                    node_id: Swift.String? = nil,
-                    name: Swift.String? = nil,
-                    full_name: Swift.String? = nil,
-                    owner: Components.Schemas.repository.template_repositoryPayload.ownerPayload? = nil,
-                    _private: Swift.Bool? = nil,
-                    html_url: Swift.String? = nil,
-                    description: Swift.String? = nil,
-                    fork: Swift.Bool? = nil,
-                    url: Swift.String? = nil,
-                    archive_url: Swift.String? = nil,
-                    assignees_url: Swift.String? = nil,
-                    blobs_url: Swift.String? = nil,
-                    branches_url: Swift.String? = nil,
-                    collaborators_url: Swift.String? = nil,
-                    comments_url: Swift.String? = nil,
-                    commits_url: Swift.String? = nil,
-                    compare_url: Swift.String? = nil,
-                    contents_url: Swift.String? = nil,
-                    contributors_url: Swift.String? = nil,
-                    deployments_url: Swift.String? = nil,
-                    downloads_url: Swift.String? = nil,
-                    events_url: Swift.String? = nil,
-                    forks_url: Swift.String? = nil,
-                    git_commits_url: Swift.String? = nil,
-                    git_refs_url: Swift.String? = nil,
-                    git_tags_url: Swift.String? = nil,
-                    git_url: Swift.String? = nil,
-                    issue_comment_url: Swift.String? = nil,
-                    issue_events_url: Swift.String? = nil,
-                    issues_url: Swift.String? = nil,
-                    keys_url: Swift.String? = nil,
-                    labels_url: Swift.String? = nil,
-                    languages_url: Swift.String? = nil,
-                    merges_url: Swift.String? = nil,
-                    milestones_url: Swift.String? = nil,
-                    notifications_url: Swift.String? = nil,
-                    pulls_url: Swift.String? = nil,
-                    releases_url: Swift.String? = nil,
-                    ssh_url: Swift.String? = nil,
-                    stargazers_url: Swift.String? = nil,
-                    statuses_url: Swift.String? = nil,
-                    subscribers_url: Swift.String? = nil,
-                    subscription_url: Swift.String? = nil,
-                    tags_url: Swift.String? = nil,
-                    teams_url: Swift.String? = nil,
-                    trees_url: Swift.String? = nil,
-                    clone_url: Swift.String? = nil,
-                    mirror_url: Swift.String? = nil,
-                    hooks_url: Swift.String? = nil,
-                    svn_url: Swift.String? = nil,
-                    homepage: Swift.String? = nil,
-                    language: Swift.String? = nil,
-                    forks_count: Swift.Int? = nil,
-                    stargazers_count: Swift.Int? = nil,
-                    watchers_count: Swift.Int? = nil,
-                    size: Swift.Int? = nil,
-                    default_branch: Swift.String? = nil,
-                    open_issues_count: Swift.Int? = nil,
-                    is_template: Swift.Bool? = nil,
-                    topics: [Swift.String]? = nil,
-                    has_issues: Swift.Bool? = nil,
-                    has_projects: Swift.Bool? = nil,
-                    has_wiki: Swift.Bool? = nil,
-                    has_pages: Swift.Bool? = nil,
-                    has_downloads: Swift.Bool? = nil,
-                    archived: Swift.Bool? = nil,
-                    disabled: Swift.Bool? = nil,
-                    visibility: Swift.String? = nil,
-                    pushed_at: Swift.String? = nil,
-                    created_at: Swift.String? = nil,
-                    updated_at: Swift.String? = nil,
-                    permissions: Components.Schemas.repository.template_repositoryPayload.permissionsPayload? = nil,
-                    allow_rebase_merge: Swift.Bool? = nil,
-                    temp_clone_token: Swift.String? = nil,
-                    allow_squash_merge: Swift.Bool? = nil,
-                    allow_auto_merge: Swift.Bool? = nil,
-                    delete_branch_on_merge: Swift.Bool? = nil,
-                    allow_update_branch: Swift.Bool? = nil,
-                    use_squash_pr_title_as_default: Swift.Bool? = nil,
-                    squash_merge_commit_title: Components.Schemas.repository.template_repositoryPayload.squash_merge_commit_titlePayload? = nil,
-                    squash_merge_commit_message: Components.Schemas.repository.template_repositoryPayload.squash_merge_commit_messagePayload? = nil,
-                    merge_commit_title: Components.Schemas.repository.template_repositoryPayload.merge_commit_titlePayload? = nil,
-                    merge_commit_message: Components.Schemas.repository.template_repositoryPayload.merge_commit_messagePayload? = nil,
-                    allow_merge_commit: Swift.Bool? = nil,
-                    subscribers_count: Swift.Int? = nil,
-                    network_count: Swift.Int? = nil
-                ) {
-                    self.id = id
-                    self.node_id = node_id
-                    self.name = name
-                    self.full_name = full_name
-                    self.owner = owner
-                    self._private = _private
-                    self.html_url = html_url
-                    self.description = description
-                    self.fork = fork
-                    self.url = url
-                    self.archive_url = archive_url
-                    self.assignees_url = assignees_url
-                    self.blobs_url = blobs_url
-                    self.branches_url = branches_url
-                    self.collaborators_url = collaborators_url
-                    self.comments_url = comments_url
-                    self.commits_url = commits_url
-                    self.compare_url = compare_url
-                    self.contents_url = contents_url
-                    self.contributors_url = contributors_url
-                    self.deployments_url = deployments_url
-                    self.downloads_url = downloads_url
-                    self.events_url = events_url
-                    self.forks_url = forks_url
-                    self.git_commits_url = git_commits_url
-                    self.git_refs_url = git_refs_url
-                    self.git_tags_url = git_tags_url
-                    self.git_url = git_url
-                    self.issue_comment_url = issue_comment_url
-                    self.issue_events_url = issue_events_url
-                    self.issues_url = issues_url
-                    self.keys_url = keys_url
-                    self.labels_url = labels_url
-                    self.languages_url = languages_url
-                    self.merges_url = merges_url
-                    self.milestones_url = milestones_url
-                    self.notifications_url = notifications_url
-                    self.pulls_url = pulls_url
-                    self.releases_url = releases_url
-                    self.ssh_url = ssh_url
-                    self.stargazers_url = stargazers_url
-                    self.statuses_url = statuses_url
-                    self.subscribers_url = subscribers_url
-                    self.subscription_url = subscription_url
-                    self.tags_url = tags_url
-                    self.teams_url = teams_url
-                    self.trees_url = trees_url
-                    self.clone_url = clone_url
-                    self.mirror_url = mirror_url
-                    self.hooks_url = hooks_url
-                    self.svn_url = svn_url
-                    self.homepage = homepage
-                    self.language = language
-                    self.forks_count = forks_count
-                    self.stargazers_count = stargazers_count
-                    self.watchers_count = watchers_count
-                    self.size = size
-                    self.default_branch = default_branch
-                    self.open_issues_count = open_issues_count
-                    self.is_template = is_template
-                    self.topics = topics
-                    self.has_issues = has_issues
-                    self.has_projects = has_projects
-                    self.has_wiki = has_wiki
-                    self.has_pages = has_pages
-                    self.has_downloads = has_downloads
-                    self.archived = archived
-                    self.disabled = disabled
-                    self.visibility = visibility
-                    self.pushed_at = pushed_at
-                    self.created_at = created_at
-                    self.updated_at = updated_at
-                    self.permissions = permissions
-                    self.allow_rebase_merge = allow_rebase_merge
-                    self.temp_clone_token = temp_clone_token
-                    self.allow_squash_merge = allow_squash_merge
-                    self.allow_auto_merge = allow_auto_merge
-                    self.delete_branch_on_merge = delete_branch_on_merge
-                    self.allow_update_branch = allow_update_branch
-                    self.use_squash_pr_title_as_default = use_squash_pr_title_as_default
-                    self.squash_merge_commit_title = squash_merge_commit_title
-                    self.squash_merge_commit_message = squash_merge_commit_message
-                    self.merge_commit_title = merge_commit_title
-                    self.merge_commit_message = merge_commit_message
-                    self.allow_merge_commit = allow_merge_commit
-                    self.subscribers_count = subscribers_count
-                    self.network_count = network_count
-                }
-                public enum CodingKeys: String, CodingKey {
-                    case id
-                    case node_id
-                    case name
-                    case full_name
-                    case owner
-                    case _private = "private"
-                    case html_url
-                    case description
-                    case fork
-                    case url
-                    case archive_url
-                    case assignees_url
-                    case blobs_url
-                    case branches_url
-                    case collaborators_url
-                    case comments_url
-                    case commits_url
-                    case compare_url
-                    case contents_url
-                    case contributors_url
-                    case deployments_url
-                    case downloads_url
-                    case events_url
-                    case forks_url
-                    case git_commits_url
-                    case git_refs_url
-                    case git_tags_url
-                    case git_url
-                    case issue_comment_url
-                    case issue_events_url
-                    case issues_url
-                    case keys_url
-                    case labels_url
-                    case languages_url
-                    case merges_url
-                    case milestones_url
-                    case notifications_url
-                    case pulls_url
-                    case releases_url
-                    case ssh_url
-                    case stargazers_url
-                    case statuses_url
-                    case subscribers_url
-                    case subscription_url
-                    case tags_url
-                    case teams_url
-                    case trees_url
-                    case clone_url
-                    case mirror_url
-                    case hooks_url
-                    case svn_url
-                    case homepage
-                    case language
-                    case forks_count
-                    case stargazers_count
-                    case watchers_count
-                    case size
-                    case default_branch
-                    case open_issues_count
-                    case is_template
-                    case topics
-                    case has_issues
-                    case has_projects
-                    case has_wiki
-                    case has_pages
-                    case has_downloads
-                    case archived
-                    case disabled
-                    case visibility
-                    case pushed_at
-                    case created_at
-                    case updated_at
-                    case permissions
-                    case allow_rebase_merge
-                    case temp_clone_token
-                    case allow_squash_merge
-                    case allow_auto_merge
-                    case delete_branch_on_merge
-                    case allow_update_branch
-                    case use_squash_pr_title_as_default
-                    case squash_merge_commit_title
-                    case squash_merge_commit_message
-                    case merge_commit_title
-                    case merge_commit_message
-                    case allow_merge_commit
-                    case subscribers_count
-                    case network_count
-                }
-            }
-            /// - Remark: Generated from `#/components/schemas/repository/template_repository`.
-            public var template_repository: Components.Schemas.repository.template_repositoryPayload?
             /// - Remark: Generated from `#/components/schemas/repository/temp_clone_token`.
             public var temp_clone_token: Swift.String?
             /// Whether to allow squash merges for pull requests.
@@ -4396,10 +3621,6 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/repository/web_commit_signoff_required`.
             public var web_commit_signoff_required: Swift.Bool?
-            /// - Remark: Generated from `#/components/schemas/repository/subscribers_count`.
-            public var subscribers_count: Swift.Int?
-            /// - Remark: Generated from `#/components/schemas/repository/network_count`.
-            public var network_count: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/repository/open_issues`.
             public var open_issues: Swift.Int
             /// - Remark: Generated from `#/components/schemas/repository/watchers`.
@@ -4420,7 +3641,6 @@ public enum Components {
             ///   - name: The name of the repository.
             ///   - full_name:
             ///   - license:
-            ///   - organization:
             ///   - forks:
             ///   - permissions:
             ///   - owner:
@@ -4493,7 +3713,6 @@ public enum Components {
             ///   - created_at:
             ///   - updated_at:
             ///   - allow_rebase_merge: Whether to allow rebase merges for pull requests.
-            ///   - template_repository:
             ///   - temp_clone_token:
             ///   - allow_squash_merge: Whether to allow squash merges for pull requests.
             ///   - allow_auto_merge: Whether to allow Auto-merge to be used on pull requests.
@@ -4507,8 +3726,6 @@ public enum Components {
             ///   - allow_merge_commit: Whether to allow merge commits for pull requests.
             ///   - allow_forking: Whether to allow forking this repo
             ///   - web_commit_signoff_required: Whether to require contributors to sign off on web-based commits
-            ///   - subscribers_count:
-            ///   - network_count:
             ///   - open_issues:
             ///   - watchers:
             ///   - master_branch:
@@ -4520,7 +3737,6 @@ public enum Components {
                 name: Swift.String,
                 full_name: Swift.String,
                 license: Components.Schemas.nullable_hyphen_license_hyphen_simple? = nil,
-                organization: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
                 forks: Swift.Int,
                 permissions: Components.Schemas.repository.permissionsPayload? = nil,
                 owner: Components.Schemas.simple_hyphen_user,
@@ -4593,7 +3809,6 @@ public enum Components {
                 created_at: Foundation.Date? = nil,
                 updated_at: Foundation.Date? = nil,
                 allow_rebase_merge: Swift.Bool? = nil,
-                template_repository: Components.Schemas.repository.template_repositoryPayload? = nil,
                 temp_clone_token: Swift.String? = nil,
                 allow_squash_merge: Swift.Bool? = nil,
                 allow_auto_merge: Swift.Bool? = nil,
@@ -4607,8 +3822,6 @@ public enum Components {
                 allow_merge_commit: Swift.Bool? = nil,
                 allow_forking: Swift.Bool? = nil,
                 web_commit_signoff_required: Swift.Bool? = nil,
-                subscribers_count: Swift.Int? = nil,
-                network_count: Swift.Int? = nil,
                 open_issues: Swift.Int,
                 watchers: Swift.Int,
                 master_branch: Swift.String? = nil,
@@ -4620,7 +3833,6 @@ public enum Components {
                 self.name = name
                 self.full_name = full_name
                 self.license = license
-                self.organization = organization
                 self.forks = forks
                 self.permissions = permissions
                 self.owner = owner
@@ -4693,7 +3905,6 @@ public enum Components {
                 self.created_at = created_at
                 self.updated_at = updated_at
                 self.allow_rebase_merge = allow_rebase_merge
-                self.template_repository = template_repository
                 self.temp_clone_token = temp_clone_token
                 self.allow_squash_merge = allow_squash_merge
                 self.allow_auto_merge = allow_auto_merge
@@ -4707,8 +3918,6 @@ public enum Components {
                 self.allow_merge_commit = allow_merge_commit
                 self.allow_forking = allow_forking
                 self.web_commit_signoff_required = web_commit_signoff_required
-                self.subscribers_count = subscribers_count
-                self.network_count = network_count
                 self.open_issues = open_issues
                 self.watchers = watchers
                 self.master_branch = master_branch
@@ -4721,7 +3930,6 @@ public enum Components {
                 case name
                 case full_name
                 case license
-                case organization
                 case forks
                 case permissions
                 case owner
@@ -4794,7 +4002,6 @@ public enum Components {
                 case created_at
                 case updated_at
                 case allow_rebase_merge
-                case template_repository
                 case temp_clone_token
                 case allow_squash_merge
                 case allow_auto_merge
@@ -4808,8 +4015,6 @@ public enum Components {
                 case allow_merge_commit
                 case allow_forking
                 case web_commit_signoff_required
-                case subscribers_count
-                case network_count
                 case open_issues
                 case watchers
                 case master_branch
@@ -7189,9 +6394,9 @@ public enum Operations {
     }
     /// List installations for the authenticated app
     ///
-    /// You must use a [JWT](https://docs.github.com/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-a-github-app) to access this endpoint.
-    ///
     /// The permissions the installation has are included under the `permissions` key.
+    ///
+    /// You must use a [JWT](https://docs.github.com/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-a-github-app) to access this endpoint.
     ///
     /// - Remark: HTTP `GET /app/installations`.
     /// - Remark: Generated from `#/paths//app/installations/get(apps/list-installations)`.
@@ -8887,7 +8092,15 @@ public enum Operations {
     }
     /// Create a scoped access token
     ///
-    /// Use a non-scoped user access token to create a repository scoped and/or permission scoped user access token. You can specify which repositories the token can access and which permissions are granted to the token. You must use [Basic Authentication](https://docs.github.com/rest/overview/other-authentication-methods#basic-authentication) when accessing this endpoint, using the `client_id` and `client_secret` of the GitHub App as the username and password. Invalid tokens will return `404 NOT FOUND`.
+    /// Use a non-scoped user access token to create a repository-scoped and/or permission-scoped user access token. You can specify
+    /// which repositories the token can access and which permissions are granted to the
+    /// token.
+    ///
+    /// Invalid tokens will return `404 NOT FOUND`.
+    ///
+    /// You must use [Basic Authentication](https://docs.github.com/rest/overview/other-authentication-methods#basic-authentication)
+    /// when accessing this endpoint, using the `client_id` and `client_secret` of the GitHub App
+    /// as the username and password.
     ///
     /// - Remark: HTTP `POST /applications/{client_id}/token/scoped`.
     /// - Remark: Generated from `#/paths//applications/{client_id}/token/scoped/post(apps/scope-token)`.
@@ -9179,8 +8392,6 @@ public enum Operations {
     ///
     /// **Note**: The `:app_slug` is just the URL-friendly name of your GitHub App. You can find this on the settings page for your GitHub App (e.g., `https://github.com/settings/apps/:app_slug`).
     ///
-    /// If the GitHub App you specify is public, you can access this endpoint without authenticating. If the GitHub App you specify is private, you must authenticate with a [personal access token](https://docs.github.com/articles/creating-a-personal-access-token-for-the-command-line/) or an [installation access token](https://docs.github.com/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-an-installation) of the target app to access this endpoint.
-    ///
     /// - Remark: HTTP `GET /apps/{app_slug}`.
     /// - Remark: Generated from `#/paths//apps/{app_slug}/get(apps/get-by-slug)`.
     public enum apps_sol_get_hyphen_by_hyphen_slug {
@@ -9356,8 +8567,6 @@ public enum Operations {
     /// List repositories accessible to the app installation
     ///
     /// List repositories that an app installation can access.
-    ///
-    /// You must use an [installation access token](https://docs.github.com/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-an-installation) to access this endpoint.
     ///
     /// - Remark: HTTP `GET /installation/repositories`.
     /// - Remark: Generated from `#/paths//installation/repositories/get(apps/list-repos-accessible-to-installation)`.
@@ -9618,8 +8827,6 @@ public enum Operations {
     /// Revokes the installation token you're using to authenticate as an installation and access this endpoint.
     ///
     /// Once an installation token is revoked, the token is invalidated and cannot be used. Other endpoints that require the revoked installation token must have a new installation token to work. You can create a new token using the "[Create an installation access token for an app](https://docs.github.com/rest/apps/apps#create-an-installation-access-token-for-an-app)" endpoint.
-    ///
-    /// You must use an [installation access token](https://docs.github.com/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-an-installation) to access this endpoint.
     ///
     /// - Remark: HTTP `DELETE /installation/token`.
     /// - Remark: Generated from `#/paths//installation/token/delete(apps/revoke-installation-access-token)`.
@@ -11275,8 +10482,6 @@ public enum Operations {
     ///
     /// Lists installations of your GitHub App that the authenticated user has explicit permission (`:read`, `:write`, or `:admin`) to access.
     ///
-    /// You must use a [user access token](https://docs.github.com/apps/creating-github-apps/authenticating-with-a-github-app/generating-a-user-access-token-for-a-github-app), created for a user who has authorized your GitHub App, to access this endpoint.
-    ///
     /// The authenticated user has explicit permission to access repositories they own, repositories where they are a collaborator, and repositories that they can access through an organization membership.
     ///
     /// You can find the permissions for the installation under the `permissions` key.
@@ -11534,8 +10739,6 @@ public enum Operations {
     /// List repositories that the authenticated user has explicit permission (`:read`, `:write`, or `:admin`) to access for an installation.
     ///
     /// The authenticated user has explicit permission to access repositories they own, repositories where they are a collaborator, and repositories that they can access through an organization membership.
-    ///
-    /// You must use a [user access token](https://docs.github.com/apps/creating-github-apps/authenticating-with-a-github-app/generating-a-user-access-token-for-a-github-app), created for a user who has authorized your GitHub App, to access this endpoint.
     ///
     /// The access the user has to each repository is included in the hash under the `permissions` key.
     ///
@@ -11815,8 +11018,6 @@ public enum Operations {
     ///
     /// Add a single repository to an installation. The authenticated user must have admin access to the repository.
     ///
-    /// You must use a personal access token (which you can create via the [command line](https://docs.github.com/github/authenticating-to-github/creating-a-personal-access-token) or [Basic Authentication](https://docs.github.com/rest/overview/other-authentication-methods#basic-authentication)) to access this endpoint.
-    ///
     /// - Remark: HTTP `PUT /user/installations/{installation_id}/repositories/{repository_id}`.
     /// - Remark: Generated from `#/paths//user/installations/{installation_id}/repositories/{repository_id}/put(apps/add-repo-to-installation-for-authenticated-user)`.
     public enum apps_sol_add_hyphen_repo_hyphen_to_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user {
@@ -12002,8 +11203,6 @@ public enum Operations {
     /// Remove a repository from an app installation
     ///
     /// Remove a single repository from an installation. The authenticated user must have admin access to the repository. The installation must have the `repository_selection` of `selected`.
-    ///
-    /// You must use a personal access token (which you can create via the [command line](https://docs.github.com/github/authenticating-to-github/creating-a-personal-access-token) or [Basic Authentication](https://docs.github.com/rest/overview/other-authentication-methods#basic-authentication)) to access this endpoint.
     ///
     /// - Remark: HTTP `DELETE /user/installations/{installation_id}/repositories/{repository_id}`.
     /// - Remark: Generated from `#/paths//user/installations/{installation_id}/repositories/{repository_id}/delete(apps/remove-repo-from-installation-for-authenticated-user)`.
@@ -12216,7 +11415,7 @@ public enum Operations {
     }
     /// List subscriptions for the authenticated user
     ///
-    /// Lists the active subscriptions for the authenticated user. GitHub Apps must use a [user access token](https://docs.github.com/apps/creating-github-apps/authenticating-with-a-github-app/generating-a-user-access-token-for-a-github-app), created for a user who has authorized your GitHub App, to access this endpoint. OAuth apps must authenticate using an [OAuth token](https://docs.github.com/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps).
+    /// Lists the active subscriptions for the authenticated user.
     ///
     /// - Remark: HTTP `GET /user/marketplace_purchases`.
     /// - Remark: Generated from `#/paths//user/marketplace_purchases/get(apps/list-subscriptions-for-authenticated-user)`.
@@ -12445,7 +11644,7 @@ public enum Operations {
     }
     /// List subscriptions for the authenticated user (stubbed)
     ///
-    /// Lists the active subscriptions for the authenticated user. GitHub Apps must use a [user access token](https://docs.github.com/apps/creating-github-apps/authenticating-with-a-github-app/generating-a-user-access-token-for-a-github-app), created for a user who has authorized your GitHub App, to access this endpoint. OAuth apps must authenticate using an [OAuth token](https://docs.github.com/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps).
+    /// Lists the active subscriptions for the authenticated user.
     ///
     /// - Remark: HTTP `GET /user/marketplace_purchases/stubbed`.
     /// - Remark: Generated from `#/paths//user/marketplace_purchases/stubbed/get(apps/list-subscriptions-for-authenticated-user-stubbed)`.
