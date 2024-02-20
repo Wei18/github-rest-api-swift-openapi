@@ -11,13 +11,13 @@ import struct Foundation.Date
 #endif
 /// A type that performs HTTP operations defined by the OpenAPI document.
 public protocol APIProtocol: Sendable {
-    /// Get Copilot Business seat information and settings for an organization
+    /// Get Copilot seat information and settings for an organization
     ///
     /// **Note**: This endpoint is in beta and is subject to change.
     ///
-    /// Gets information about an organization's Copilot Business subscription, including seat breakdown
+    /// Gets information about an organization's Copilot subscription, including seat breakdown
     /// and code matching policies. To configure these settings, go to your organization's settings on GitHub.com.
-    /// For more information, see "[Managing policies for Copilot Business in your organization](https://docs.github.com/copilot/managing-copilot-business/managing-policies-for-copilot-business-in-your-organization)".
+    /// For more information, see "[Managing policies for Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-policies-for-copilot-business-in-your-organization)".
     ///
     /// Only organization owners can configure and view details about the organization's Copilot Business subscription.
     ///
@@ -26,47 +26,47 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /orgs/{org}/copilot/billing`.
     /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/get(copilot/get-copilot-organization-details)`.
     func copilot_sol_get_hyphen_copilot_hyphen_organization_hyphen_details(_ input: Operations.copilot_sol_get_hyphen_copilot_hyphen_organization_hyphen_details.Input) async throws -> Operations.copilot_sol_get_hyphen_copilot_hyphen_organization_hyphen_details.Output
-    /// List all Copilot Business seat assignments for an organization
+    /// List all Copilot seat assignments for an organization
     ///
     /// **Note**: This endpoint is in beta and is subject to change.
     ///
-    /// Lists all Copilot Business seat assignments for an organization that are currently being billed (either active or pending cancellation at the start of the next billing cycle).
+    /// Lists all Copilot seat assignments for an organization that are currently being billed (either active or pending cancellation at the start of the next billing cycle).
     ///
-    /// Only organization owners can configure and view details about the organization's Copilot Business subscription.
+    /// Only organization owners can configure and view details about the organization's Copilot Business or Enterprise subscription.
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `manage_billing:copilot` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/copilot/billing/seats`.
     /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/seats/get(copilot/list-copilot-seats)`.
     func copilot_sol_list_hyphen_copilot_hyphen_seats(_ input: Operations.copilot_sol_list_hyphen_copilot_hyphen_seats.Input) async throws -> Operations.copilot_sol_list_hyphen_copilot_hyphen_seats.Output
-    /// Add teams to the Copilot Business subscription for an organization
+    /// Add teams to the Copilot subscription for an organization
     ///
     /// **Note**: This endpoint is in beta and is subject to change.
     ///
-    ///  Purchases a GitHub Copilot Business seat for all users within each specified team.
-    ///  The organization will be billed accordingly. For more information about Copilot Business pricing, see "[Pricing for GitHub Copilot Business](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#pricing-for-github-copilot-business)".
+    /// Purchases a GitHub Copilot seat for all users within each specified team.
+    /// The organization will be billed accordingly. For more information about Copilot pricing, see "[Pricing for GitHub Copilot](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#about-billing-for-github-copilot)".
     ///
-    ///  Only organization owners can configure GitHub Copilot in their organization.
+    /// Only organization owners can configure GitHub Copilot in their organization.
     ///
-    ///  In order for an admin to use this endpoint, the organization must have a Copilot Business subscription and a configured suggestion matching policy.
-    ///  For more information about setting up a Copilot Business subscription, see "[Setting up a Copilot Business subscription for your organization](https://docs.github.com/billing/managing-billing-for-github-copilot/managing-your-github-copilot-subscription-for-your-organization-or-enterprise#setting-up-a-copilot-business-subscription-for-your-organization)".
-    ///  For more information about setting a suggestion matching policy, see "[Configuring suggestion matching policies for GitHub Copilot in your organization](https://docs.github.com/copilot/managing-copilot-business/managing-policies-for-copilot-business-in-your-organization#configuring-suggestion-matching-policies-for-github-copilot-in-your-organization)".
+    /// In order for an admin to use this endpoint, the organization must have a Copilot Business or Enterprise subscription and a configured suggestion matching policy.
+    /// For more information about setting up a Copilot subscription, see "[Setting up a Copilot subscription for your organization](https://docs.github.com/billing/managing-billing-for-github-copilot/managing-your-github-copilot-subscription-for-your-organization-or-enterprise)".
+    /// For more information about setting a suggestion matching policy, see "[Configuring suggestion matching policies for GitHub Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-policies-for-github-copilot-in-your-organization#configuring-suggestion-matching-policies-for-github-copilot-in-your-organization)".
     ///
-    ///  OAuth app tokens and personal access tokens (classic) need the `manage_billing:copilot` scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `manage_billing:copilot` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/copilot/billing/selected_teams`.
-    /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_teams/post(copilot/add-copilot-for-business-seats-for-teams)`.
-    func copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_teams(_ input: Operations.copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_teams.Input) async throws -> Operations.copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_teams.Output
-    /// Remove teams from the Copilot Business subscription for an organization
+    /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_teams/post(copilot/add-copilot-seats-for-teams)`.
+    func copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams(_ input: Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams.Input) async throws -> Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams.Output
+    /// Remove teams from the Copilot subscription for an organization
     ///
     /// **Note**: This endpoint is in beta and is subject to change.
     ///
-    /// Cancels the Copilot Business seat assignment for all members of each team specified.
+    /// Cancels the Copilot seat assignment for all members of each team specified.
     /// This will cause the members of the specified team(s) to lose access to GitHub Copilot at the end of the current billing cycle, and the organization will not be billed further for those users.
     ///
-    /// For more information about Copilot Business pricing, see "[Pricing for GitHub Copilot Business](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#pricing-for-github-copilot-business)".
+    /// For more information about Copilot pricing, see "[Pricing for GitHub Copilot](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#about-billing-for-github-copilot)".
     ///
-    /// For more information about disabling access to Copilot Business, see "[Revoking access to GitHub Copilot for specific users in your organization](https://docs.github.com/copilot/managing-copilot-business/managing-access-for-copilot-business-in-your-organization#revoking-access-to-github-copilot-for-specific-users-in-your-organization)".
+    /// For more information about disabling access to Copilot Business or Enterprise, see "[Revoking access to GitHub Copilot for specific users in your organization](https://docs.github.com/copilot/managing-copilot/managing-access-for-copilot-in-your-organization#revoking-access-to-github-copilot-for-specific-users-in-your-organization)".
     ///
     /// Only organization owners can configure GitHub Copilot in their organization.
     ///
@@ -75,34 +75,34 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `DELETE /orgs/{org}/copilot/billing/selected_teams`.
     /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_teams/delete(copilot/cancel-copilot-seat-assignment-for-teams)`.
     func copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_teams(_ input: Operations.copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_teams.Input) async throws -> Operations.copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_teams.Output
-    /// Add users to the Copilot Business subscription for an organization
+    /// Add users to the Copilot subscription for an organization
     ///
     /// **Note**: This endpoint is in beta and is subject to change.
     ///
-    /// Purchases a GitHub Copilot Business seat for each user specified.
-    /// The organization will be billed accordingly. For more information about Copilot Business pricing, see "[Pricing for GitHub Copilot Business](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#pricing-for-github-copilot-business)".
+    /// Purchases a GitHub Copilot seat for each user specified.
+    /// The organization will be billed accordingly. For more information about Copilot pricing, see "[Pricing for GitHub Copilot](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#about-billing-for-github-copilot)".
     ///
     /// Only organization owners can configure GitHub Copilot in their organization.
     ///
-    /// In order for an admin to use this endpoint, the organization must have a Copilot Business subscription and a configured suggestion matching policy.
-    /// For more information about setting up a Copilot Business subscription, see "[Setting up a Copilot Business subscription for your organization](https://docs.github.com/billing/managing-billing-for-github-copilot/managing-your-github-copilot-subscription-for-your-organization-or-enterprise#setting-up-a-copilot-business-subscription-for-your-organization)".
-    /// For more information about setting a suggestion matching policy, see "[Configuring suggestion matching policies for GitHub Copilot in your organization](https://docs.github.com/copilot/managing-copilot-business/managing-policies-for-copilot-business-in-your-organization#configuring-suggestion-matching-policies-for-github-copilot-in-your-organization)".
+    /// In order for an admin to use this endpoint, the organization must have a Copilot Business or Enterprise subscription and a configured suggestion matching policy.
+    /// For more information about setting up a Copilot subscription, see "[Setting up a Copilot subscription for your organization](https://docs.github.com/billing/managing-billing-for-github-copilot/managing-your-github-copilot-subscription-for-your-organization-or-enterprise)".
+    /// For more information about setting a suggestion matching policy, see "[Configuring suggestion matching policies for GitHub Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-policies-for-github-copilot-in-your-organization#configuring-suggestion-matching-policies-for-github-copilot-in-your-organization)".
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `manage_billing:copilot` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/copilot/billing/selected_users`.
-    /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_users/post(copilot/add-copilot-for-business-seats-for-users)`.
-    func copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_users(_ input: Operations.copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_users.Input) async throws -> Operations.copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_users.Output
-    /// Remove users from the Copilot Business subscription for an organization
+    /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_users/post(copilot/add-copilot-seats-for-users)`.
+    func copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users(_ input: Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users.Input) async throws -> Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users.Output
+    /// Remove users from the Copilot subscription for an organization
     ///
     /// **Note**: This endpoint is in beta and is subject to change.
     ///
-    /// Cancels the Copilot Business seat assignment for each user specified.
+    /// Cancels the Copilot seat assignment for each user specified.
     /// This will cause the specified users to lose access to GitHub Copilot at the end of the current billing cycle, and the organization will not be billed further for those users.
     ///
-    /// For more information about Copilot Business pricing, see "[Pricing for GitHub Copilot Business](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#pricing-for-github-copilot-business)"
+    /// For more information about Copilot pricing, see "[Pricing for GitHub Copilot](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#about-billing-for-github-copilot)".
     ///
-    /// For more information about disabling access to Copilot Business, see "[Revoking access to GitHub Copilot for specific users in your organization](https://docs.github.com/copilot/managing-copilot-business/managing-access-for-copilot-business-in-your-organization#revoking-access-to-github-copilot-for-specific-users-in-your-organization)".
+    /// For more information about disabling access to Copilot Business or Enterprise, see "[Revoking access to GitHub Copilot for specific users in your organization](https://docs.github.com/copilot/managing-copilot/managing-access-for-copilot-in-your-organization#revoking-access-to-github-copilot-for-specific-users-in-your-organization)".
     ///
     /// Only organization owners can configure GitHub Copilot in their organization.
     ///
@@ -111,11 +111,11 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `DELETE /orgs/{org}/copilot/billing/selected_users`.
     /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_users/delete(copilot/cancel-copilot-seat-assignment-for-users)`.
     func copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_users(_ input: Operations.copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_users.Input) async throws -> Operations.copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_users.Output
-    /// Get Copilot Business seat assignment details for a user
+    /// Get Copilot seat assignment details for a user
     ///
     /// **Note**: This endpoint is in beta and is subject to change.
     ///
-    /// Gets the GitHub Copilot Business seat assignment details for a member of an organization who currently has access to GitHub Copilot.
+    /// Gets the GitHub Copilot seat assignment details for a member of an organization who currently has access to GitHub Copilot.
     ///
     /// Organization owners can view GitHub Copilot seat assignment details for members in their organization.
     ///
@@ -128,13 +128,13 @@ public protocol APIProtocol: Sendable {
 
 /// Convenience overloads for operation inputs.
 extension APIProtocol {
-    /// Get Copilot Business seat information and settings for an organization
+    /// Get Copilot seat information and settings for an organization
     ///
     /// **Note**: This endpoint is in beta and is subject to change.
     ///
-    /// Gets information about an organization's Copilot Business subscription, including seat breakdown
+    /// Gets information about an organization's Copilot subscription, including seat breakdown
     /// and code matching policies. To configure these settings, go to your organization's settings on GitHub.com.
-    /// For more information, see "[Managing policies for Copilot Business in your organization](https://docs.github.com/copilot/managing-copilot-business/managing-policies-for-copilot-business-in-your-organization)".
+    /// For more information, see "[Managing policies for Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-policies-for-copilot-business-in-your-organization)".
     ///
     /// Only organization owners can configure and view details about the organization's Copilot Business subscription.
     ///
@@ -151,13 +151,13 @@ extension APIProtocol {
             headers: headers
         ))
     }
-    /// List all Copilot Business seat assignments for an organization
+    /// List all Copilot seat assignments for an organization
     ///
     /// **Note**: This endpoint is in beta and is subject to change.
     ///
-    /// Lists all Copilot Business seat assignments for an organization that are currently being billed (either active or pending cancellation at the start of the next billing cycle).
+    /// Lists all Copilot seat assignments for an organization that are currently being billed (either active or pending cancellation at the start of the next billing cycle).
     ///
-    /// Only organization owners can configure and view details about the organization's Copilot Business subscription.
+    /// Only organization owners can configure and view details about the organization's Copilot Business or Enterprise subscription.
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `manage_billing:copilot` scope to use this endpoint.
     ///
@@ -174,44 +174,44 @@ extension APIProtocol {
             headers: headers
         ))
     }
-    /// Add teams to the Copilot Business subscription for an organization
+    /// Add teams to the Copilot subscription for an organization
     ///
     /// **Note**: This endpoint is in beta and is subject to change.
     ///
-    ///  Purchases a GitHub Copilot Business seat for all users within each specified team.
-    ///  The organization will be billed accordingly. For more information about Copilot Business pricing, see "[Pricing for GitHub Copilot Business](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#pricing-for-github-copilot-business)".
+    /// Purchases a GitHub Copilot seat for all users within each specified team.
+    /// The organization will be billed accordingly. For more information about Copilot pricing, see "[Pricing for GitHub Copilot](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#about-billing-for-github-copilot)".
     ///
-    ///  Only organization owners can configure GitHub Copilot in their organization.
+    /// Only organization owners can configure GitHub Copilot in their organization.
     ///
-    ///  In order for an admin to use this endpoint, the organization must have a Copilot Business subscription and a configured suggestion matching policy.
-    ///  For more information about setting up a Copilot Business subscription, see "[Setting up a Copilot Business subscription for your organization](https://docs.github.com/billing/managing-billing-for-github-copilot/managing-your-github-copilot-subscription-for-your-organization-or-enterprise#setting-up-a-copilot-business-subscription-for-your-organization)".
-    ///  For more information about setting a suggestion matching policy, see "[Configuring suggestion matching policies for GitHub Copilot in your organization](https://docs.github.com/copilot/managing-copilot-business/managing-policies-for-copilot-business-in-your-organization#configuring-suggestion-matching-policies-for-github-copilot-in-your-organization)".
+    /// In order for an admin to use this endpoint, the organization must have a Copilot Business or Enterprise subscription and a configured suggestion matching policy.
+    /// For more information about setting up a Copilot subscription, see "[Setting up a Copilot subscription for your organization](https://docs.github.com/billing/managing-billing-for-github-copilot/managing-your-github-copilot-subscription-for-your-organization-or-enterprise)".
+    /// For more information about setting a suggestion matching policy, see "[Configuring suggestion matching policies for GitHub Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-policies-for-github-copilot-in-your-organization#configuring-suggestion-matching-policies-for-github-copilot-in-your-organization)".
     ///
-    ///  OAuth app tokens and personal access tokens (classic) need the `manage_billing:copilot` scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `manage_billing:copilot` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/copilot/billing/selected_teams`.
-    /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_teams/post(copilot/add-copilot-for-business-seats-for-teams)`.
-    public func copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_teams(
-        path: Operations.copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_teams.Input.Path,
-        headers: Operations.copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_teams.Input.Headers = .init(),
-        body: Operations.copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_teams.Input.Body
-    ) async throws -> Operations.copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_teams.Output {
-        try await copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_teams(Operations.copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_teams.Input(
+    /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_teams/post(copilot/add-copilot-seats-for-teams)`.
+    public func copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams(
+        path: Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams.Input.Path,
+        headers: Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams.Input.Headers = .init(),
+        body: Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams.Input.Body
+    ) async throws -> Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams.Output {
+        try await copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams(Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams.Input(
             path: path,
             headers: headers,
             body: body
         ))
     }
-    /// Remove teams from the Copilot Business subscription for an organization
+    /// Remove teams from the Copilot subscription for an organization
     ///
     /// **Note**: This endpoint is in beta and is subject to change.
     ///
-    /// Cancels the Copilot Business seat assignment for all members of each team specified.
+    /// Cancels the Copilot seat assignment for all members of each team specified.
     /// This will cause the members of the specified team(s) to lose access to GitHub Copilot at the end of the current billing cycle, and the organization will not be billed further for those users.
     ///
-    /// For more information about Copilot Business pricing, see "[Pricing for GitHub Copilot Business](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#pricing-for-github-copilot-business)".
+    /// For more information about Copilot pricing, see "[Pricing for GitHub Copilot](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#about-billing-for-github-copilot)".
     ///
-    /// For more information about disabling access to Copilot Business, see "[Revoking access to GitHub Copilot for specific users in your organization](https://docs.github.com/copilot/managing-copilot-business/managing-access-for-copilot-business-in-your-organization#revoking-access-to-github-copilot-for-specific-users-in-your-organization)".
+    /// For more information about disabling access to Copilot Business or Enterprise, see "[Revoking access to GitHub Copilot for specific users in your organization](https://docs.github.com/copilot/managing-copilot/managing-access-for-copilot-in-your-organization#revoking-access-to-github-copilot-for-specific-users-in-your-organization)".
     ///
     /// Only organization owners can configure GitHub Copilot in their organization.
     ///
@@ -230,44 +230,44 @@ extension APIProtocol {
             body: body
         ))
     }
-    /// Add users to the Copilot Business subscription for an organization
+    /// Add users to the Copilot subscription for an organization
     ///
     /// **Note**: This endpoint is in beta and is subject to change.
     ///
-    /// Purchases a GitHub Copilot Business seat for each user specified.
-    /// The organization will be billed accordingly. For more information about Copilot Business pricing, see "[Pricing for GitHub Copilot Business](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#pricing-for-github-copilot-business)".
+    /// Purchases a GitHub Copilot seat for each user specified.
+    /// The organization will be billed accordingly. For more information about Copilot pricing, see "[Pricing for GitHub Copilot](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#about-billing-for-github-copilot)".
     ///
     /// Only organization owners can configure GitHub Copilot in their organization.
     ///
-    /// In order for an admin to use this endpoint, the organization must have a Copilot Business subscription and a configured suggestion matching policy.
-    /// For more information about setting up a Copilot Business subscription, see "[Setting up a Copilot Business subscription for your organization](https://docs.github.com/billing/managing-billing-for-github-copilot/managing-your-github-copilot-subscription-for-your-organization-or-enterprise#setting-up-a-copilot-business-subscription-for-your-organization)".
-    /// For more information about setting a suggestion matching policy, see "[Configuring suggestion matching policies for GitHub Copilot in your organization](https://docs.github.com/copilot/managing-copilot-business/managing-policies-for-copilot-business-in-your-organization#configuring-suggestion-matching-policies-for-github-copilot-in-your-organization)".
+    /// In order for an admin to use this endpoint, the organization must have a Copilot Business or Enterprise subscription and a configured suggestion matching policy.
+    /// For more information about setting up a Copilot subscription, see "[Setting up a Copilot subscription for your organization](https://docs.github.com/billing/managing-billing-for-github-copilot/managing-your-github-copilot-subscription-for-your-organization-or-enterprise)".
+    /// For more information about setting a suggestion matching policy, see "[Configuring suggestion matching policies for GitHub Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-policies-for-github-copilot-in-your-organization#configuring-suggestion-matching-policies-for-github-copilot-in-your-organization)".
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `manage_billing:copilot` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/copilot/billing/selected_users`.
-    /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_users/post(copilot/add-copilot-for-business-seats-for-users)`.
-    public func copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_users(
-        path: Operations.copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_users.Input.Path,
-        headers: Operations.copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_users.Input.Headers = .init(),
-        body: Operations.copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_users.Input.Body
-    ) async throws -> Operations.copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_users.Output {
-        try await copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_users(Operations.copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_users.Input(
+    /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_users/post(copilot/add-copilot-seats-for-users)`.
+    public func copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users(
+        path: Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users.Input.Path,
+        headers: Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users.Input.Headers = .init(),
+        body: Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users.Input.Body
+    ) async throws -> Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users.Output {
+        try await copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users(Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users.Input(
             path: path,
             headers: headers,
             body: body
         ))
     }
-    /// Remove users from the Copilot Business subscription for an organization
+    /// Remove users from the Copilot subscription for an organization
     ///
     /// **Note**: This endpoint is in beta and is subject to change.
     ///
-    /// Cancels the Copilot Business seat assignment for each user specified.
+    /// Cancels the Copilot seat assignment for each user specified.
     /// This will cause the specified users to lose access to GitHub Copilot at the end of the current billing cycle, and the organization will not be billed further for those users.
     ///
-    /// For more information about Copilot Business pricing, see "[Pricing for GitHub Copilot Business](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#pricing-for-github-copilot-business)"
+    /// For more information about Copilot pricing, see "[Pricing for GitHub Copilot](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#about-billing-for-github-copilot)".
     ///
-    /// For more information about disabling access to Copilot Business, see "[Revoking access to GitHub Copilot for specific users in your organization](https://docs.github.com/copilot/managing-copilot-business/managing-access-for-copilot-business-in-your-organization#revoking-access-to-github-copilot-for-specific-users-in-your-organization)".
+    /// For more information about disabling access to Copilot Business or Enterprise, see "[Revoking access to GitHub Copilot for specific users in your organization](https://docs.github.com/copilot/managing-copilot/managing-access-for-copilot-in-your-organization#revoking-access-to-github-copilot-for-specific-users-in-your-organization)".
     ///
     /// Only organization owners can configure GitHub Copilot in their organization.
     ///
@@ -286,11 +286,11 @@ extension APIProtocol {
             body: body
         ))
     }
-    /// Get Copilot Business seat assignment details for a user
+    /// Get Copilot seat assignment details for a user
     ///
     /// **Note**: This endpoint is in beta and is subject to change.
     ///
-    /// Gets the GitHub Copilot Business seat assignment details for a member of an organization who currently has access to GitHub Copilot.
+    /// Gets the GitHub Copilot seat assignment details for a member of an organization who currently has access to GitHub Copilot.
     ///
     /// Organization owners can view GitHub Copilot seat assignment details for members in their organization.
     ///
@@ -1495,13 +1495,13 @@ public enum Components {
 
 /// API operations, with input and output types, generated from `#/paths` in the OpenAPI document.
 public enum Operations {
-    /// Get Copilot Business seat information and settings for an organization
+    /// Get Copilot seat information and settings for an organization
     ///
     /// **Note**: This endpoint is in beta and is subject to change.
     ///
-    /// Gets information about an organization's Copilot Business subscription, including seat breakdown
+    /// Gets information about an organization's Copilot subscription, including seat breakdown
     /// and code matching policies. To configure these settings, go to your organization's settings on GitHub.com.
-    /// For more information, see "[Managing policies for Copilot Business in your organization](https://docs.github.com/copilot/managing-copilot-business/managing-policies-for-copilot-business-in-your-organization)".
+    /// For more information, see "[Managing policies for Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-policies-for-copilot-business-in-your-organization)".
     ///
     /// Only organization owners can configure and view details about the organization's Copilot Business subscription.
     ///
@@ -1727,13 +1727,13 @@ public enum Operations {
             }
         }
     }
-    /// List all Copilot Business seat assignments for an organization
+    /// List all Copilot seat assignments for an organization
     ///
     /// **Note**: This endpoint is in beta and is subject to change.
     ///
-    /// Lists all Copilot Business seat assignments for an organization that are currently being billed (either active or pending cancellation at the start of the next billing cycle).
+    /// Lists all Copilot seat assignments for an organization that are currently being billed (either active or pending cancellation at the start of the next billing cycle).
     ///
-    /// Only organization owners can configure and view details about the organization's Copilot Business subscription.
+    /// Only organization owners can configure and view details about the organization's Copilot Business or Enterprise subscription.
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `manage_billing:copilot` scope to use this endpoint.
     ///
@@ -1829,7 +1829,7 @@ public enum Operations {
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/copilot/billing/seats/GET/responses/200/content/json`.
                     public struct jsonPayload: Codable, Hashable, Sendable {
-                        /// Total number of Copilot For Business seats for the organization currently being billed.
+                        /// Total number of Copilot seats for the organization currently being billed.
                         ///
                         /// - Remark: Generated from `#/paths/orgs/{org}/copilot/billing/seats/GET/responses/200/content/json/total_seats`.
                         public var total_seats: Swift.Int?
@@ -1838,7 +1838,7 @@ public enum Operations {
                         /// Creates a new `jsonPayload`.
                         ///
                         /// - Parameters:
-                        ///   - total_seats: Total number of Copilot For Business seats for the organization currently being billed.
+                        ///   - total_seats: Total number of Copilot seats for the organization currently being billed.
                         ///   - seats:
                         public init(
                             total_seats: Swift.Int? = nil,
@@ -2028,25 +2028,25 @@ public enum Operations {
             }
         }
     }
-    /// Add teams to the Copilot Business subscription for an organization
+    /// Add teams to the Copilot subscription for an organization
     ///
     /// **Note**: This endpoint is in beta and is subject to change.
     ///
-    ///  Purchases a GitHub Copilot Business seat for all users within each specified team.
-    ///  The organization will be billed accordingly. For more information about Copilot Business pricing, see "[Pricing for GitHub Copilot Business](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#pricing-for-github-copilot-business)".
+    /// Purchases a GitHub Copilot seat for all users within each specified team.
+    /// The organization will be billed accordingly. For more information about Copilot pricing, see "[Pricing for GitHub Copilot](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#about-billing-for-github-copilot)".
     ///
-    ///  Only organization owners can configure GitHub Copilot in their organization.
+    /// Only organization owners can configure GitHub Copilot in their organization.
     ///
-    ///  In order for an admin to use this endpoint, the organization must have a Copilot Business subscription and a configured suggestion matching policy.
-    ///  For more information about setting up a Copilot Business subscription, see "[Setting up a Copilot Business subscription for your organization](https://docs.github.com/billing/managing-billing-for-github-copilot/managing-your-github-copilot-subscription-for-your-organization-or-enterprise#setting-up-a-copilot-business-subscription-for-your-organization)".
-    ///  For more information about setting a suggestion matching policy, see "[Configuring suggestion matching policies for GitHub Copilot in your organization](https://docs.github.com/copilot/managing-copilot-business/managing-policies-for-copilot-business-in-your-organization#configuring-suggestion-matching-policies-for-github-copilot-in-your-organization)".
+    /// In order for an admin to use this endpoint, the organization must have a Copilot Business or Enterprise subscription and a configured suggestion matching policy.
+    /// For more information about setting up a Copilot subscription, see "[Setting up a Copilot subscription for your organization](https://docs.github.com/billing/managing-billing-for-github-copilot/managing-your-github-copilot-subscription-for-your-organization-or-enterprise)".
+    /// For more information about setting a suggestion matching policy, see "[Configuring suggestion matching policies for GitHub Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-policies-for-github-copilot-in-your-organization#configuring-suggestion-matching-policies-for-github-copilot-in-your-organization)".
     ///
-    ///  OAuth app tokens and personal access tokens (classic) need the `manage_billing:copilot` scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `manage_billing:copilot` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/copilot/billing/selected_teams`.
-    /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_teams/post(copilot/add-copilot-for-business-seats-for-teams)`.
-    public enum copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_teams {
-        public static let id: Swift.String = "copilot/add-copilot-for-business-seats-for-teams"
+    /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_teams/post(copilot/add-copilot-seats-for-teams)`.
+    public enum copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams {
+        public static let id: Swift.String = "copilot/add-copilot-seats-for-teams"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/copilot/billing/selected_teams/POST/path`.
             public struct Path: Sendable, Hashable {
@@ -2062,19 +2062,19 @@ public enum Operations {
                     self.org = org
                 }
             }
-            public var path: Operations.copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_teams.Input.Path
+            public var path: Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/copilot/billing/selected_teams/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_teams.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_teams.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_teams.Input.Headers
+            public var headers: Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams.Input.Headers
             /// - Remark: Generated from `#/paths/orgs/{org}/copilot/billing/selected_teams/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/orgs/{org}/copilot/billing/selected_teams/POST/requestBody/json`.
@@ -2095,9 +2095,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/orgs/{org}/copilot/billing/selected_teams/POST/requestBody/content/application\/json`.
-                case json(Operations.copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_teams.Input.Body.jsonPayload)
+                case json(Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams.Input.Body.jsonPayload)
             }
-            public var body: Operations.copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_teams.Input.Body
+            public var body: Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -2105,9 +2105,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_teams.Input.Path,
-                headers: Operations.copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_teams.Input.Headers = .init(),
-                body: Operations.copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_teams.Input.Body
+                path: Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams.Input.Path,
+                headers: Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams.Input.Headers = .init(),
+                body: Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -2136,12 +2136,12 @@ public enum Operations {
                         }
                     }
                     /// - Remark: Generated from `#/paths/orgs/{org}/copilot/billing/selected_teams/POST/responses/201/content/application\/json`.
-                    case json(Operations.copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_teams.Output.Created.Body.jsonPayload)
+                    case json(Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams.Output.Created.Body.jsonPayload)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Operations.copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_teams.Output.Created.Body.jsonPayload {
+                    public var json: Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams.Output.Created.Body.jsonPayload {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -2151,26 +2151,26 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_teams.Output.Created.Body
+                public var body: Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_teams.Output.Created.Body) {
+                public init(body: Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams.Output.Created.Body) {
                     self.body = body
                 }
             }
             /// OK
             ///
-            /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_teams/post(copilot/add-copilot-for-business-seats-for-teams)/responses/201`.
+            /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_teams/post(copilot/add-copilot-seats-for-teams)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_teams.Output.Created)
+            case created(Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_teams.Output.Created {
+            public var created: Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -2185,7 +2185,7 @@ public enum Operations {
             }
             /// Internal Error
             ///
-            /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_teams/post(copilot/add-copilot-for-business-seats-for-teams)/responses/500`.
+            /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_teams/post(copilot/add-copilot-seats-for-teams)/responses/500`.
             ///
             /// HTTP response code: `500 internalServerError`.
             case internalServerError(Components.Responses.internal_error)
@@ -2208,7 +2208,7 @@ public enum Operations {
             }
             /// Requires authentication
             ///
-            /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_teams/post(copilot/add-copilot-for-business-seats-for-teams)/responses/401`.
+            /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_teams/post(copilot/add-copilot-seats-for-teams)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
             case unauthorized(Components.Responses.requires_authentication)
@@ -2231,7 +2231,7 @@ public enum Operations {
             }
             /// Forbidden
             ///
-            /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_teams/post(copilot/add-copilot-for-business-seats-for-teams)/responses/403`.
+            /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_teams/post(copilot/add-copilot-seats-for-teams)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
             case forbidden(Components.Responses.forbidden)
@@ -2254,7 +2254,7 @@ public enum Operations {
             }
             /// Resource not found
             ///
-            /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_teams/post(copilot/add-copilot-for-business-seats-for-teams)/responses/404`.
+            /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_teams/post(copilot/add-copilot-seats-for-teams)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
             case notFound(Components.Responses.not_found)
@@ -2279,17 +2279,17 @@ public enum Operations {
                 /// Creates a new `UnprocessableContent`.
                 public init() {}
             }
-            /// Copilot Business is not enabled for this organization, billing has not been set up for this organization, a public code suggestions policy has not been set for this organization, or the organization's Copilot access setting is set to enable Copilot for all users or is unconfigured.
+            /// Copilot Business or Enterprise is not enabled for this organization, billing has not been set up for this organization, a public code suggestions policy has not been set for this organization, or the organization's Copilot access setting is set to enable Copilot for all users or is unconfigured.
             ///
-            /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_teams/post(copilot/add-copilot-for-business-seats-for-teams)/responses/422`.
+            /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_teams/post(copilot/add-copilot-seats-for-teams)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Operations.copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_teams.Output.UnprocessableContent)
+            case unprocessableContent(Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams.Output.UnprocessableContent)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Operations.copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_teams.Output.UnprocessableContent {
+            public var unprocessableContent: Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams.Output.UnprocessableContent {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -2333,16 +2333,16 @@ public enum Operations {
             }
         }
     }
-    /// Remove teams from the Copilot Business subscription for an organization
+    /// Remove teams from the Copilot subscription for an organization
     ///
     /// **Note**: This endpoint is in beta and is subject to change.
     ///
-    /// Cancels the Copilot Business seat assignment for all members of each team specified.
+    /// Cancels the Copilot seat assignment for all members of each team specified.
     /// This will cause the members of the specified team(s) to lose access to GitHub Copilot at the end of the current billing cycle, and the organization will not be billed further for those users.
     ///
-    /// For more information about Copilot Business pricing, see "[Pricing for GitHub Copilot Business](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#pricing-for-github-copilot-business)".
+    /// For more information about Copilot pricing, see "[Pricing for GitHub Copilot](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#about-billing-for-github-copilot)".
     ///
-    /// For more information about disabling access to Copilot Business, see "[Revoking access to GitHub Copilot for specific users in your organization](https://docs.github.com/copilot/managing-copilot-business/managing-access-for-copilot-business-in-your-organization#revoking-access-to-github-copilot-for-specific-users-in-your-organization)".
+    /// For more information about disabling access to Copilot Business or Enterprise, see "[Revoking access to GitHub Copilot for specific users in your organization](https://docs.github.com/copilot/managing-copilot/managing-access-for-copilot-in-your-organization#revoking-access-to-github-copilot-for-specific-users-in-your-organization)".
     ///
     /// Only organization owners can configure GitHub Copilot in their organization.
     ///
@@ -2584,7 +2584,7 @@ public enum Operations {
                 /// Creates a new `UnprocessableContent`.
                 public init() {}
             }
-            /// Copilot Business is not enabled for this organization, billing has not been set up for this organization, a public code suggestions policy has not been set for this organization, or the organization's Copilot access setting is set to enable Copilot for all users or is unconfigured.
+            /// Copilot Business or Enterprise is not enabled for this organization, billing has not been set up for this organization, a public code suggestions policy has not been set for this organization, or the organization's Copilot access setting is set to enable Copilot for all users or is unconfigured.
             ///
             /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_teams/delete(copilot/cancel-copilot-seat-assignment-for-teams)/responses/422`.
             ///
@@ -2638,25 +2638,25 @@ public enum Operations {
             }
         }
     }
-    /// Add users to the Copilot Business subscription for an organization
+    /// Add users to the Copilot subscription for an organization
     ///
     /// **Note**: This endpoint is in beta and is subject to change.
     ///
-    /// Purchases a GitHub Copilot Business seat for each user specified.
-    /// The organization will be billed accordingly. For more information about Copilot Business pricing, see "[Pricing for GitHub Copilot Business](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#pricing-for-github-copilot-business)".
+    /// Purchases a GitHub Copilot seat for each user specified.
+    /// The organization will be billed accordingly. For more information about Copilot pricing, see "[Pricing for GitHub Copilot](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#about-billing-for-github-copilot)".
     ///
     /// Only organization owners can configure GitHub Copilot in their organization.
     ///
-    /// In order for an admin to use this endpoint, the organization must have a Copilot Business subscription and a configured suggestion matching policy.
-    /// For more information about setting up a Copilot Business subscription, see "[Setting up a Copilot Business subscription for your organization](https://docs.github.com/billing/managing-billing-for-github-copilot/managing-your-github-copilot-subscription-for-your-organization-or-enterprise#setting-up-a-copilot-business-subscription-for-your-organization)".
-    /// For more information about setting a suggestion matching policy, see "[Configuring suggestion matching policies for GitHub Copilot in your organization](https://docs.github.com/copilot/managing-copilot-business/managing-policies-for-copilot-business-in-your-organization#configuring-suggestion-matching-policies-for-github-copilot-in-your-organization)".
+    /// In order for an admin to use this endpoint, the organization must have a Copilot Business or Enterprise subscription and a configured suggestion matching policy.
+    /// For more information about setting up a Copilot subscription, see "[Setting up a Copilot subscription for your organization](https://docs.github.com/billing/managing-billing-for-github-copilot/managing-your-github-copilot-subscription-for-your-organization-or-enterprise)".
+    /// For more information about setting a suggestion matching policy, see "[Configuring suggestion matching policies for GitHub Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-policies-for-github-copilot-in-your-organization#configuring-suggestion-matching-policies-for-github-copilot-in-your-organization)".
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `manage_billing:copilot` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/copilot/billing/selected_users`.
-    /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_users/post(copilot/add-copilot-for-business-seats-for-users)`.
-    public enum copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_users {
-        public static let id: Swift.String = "copilot/add-copilot-for-business-seats-for-users"
+    /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_users/post(copilot/add-copilot-seats-for-users)`.
+    public enum copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users {
+        public static let id: Swift.String = "copilot/add-copilot-seats-for-users"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/copilot/billing/selected_users/POST/path`.
             public struct Path: Sendable, Hashable {
@@ -2672,19 +2672,19 @@ public enum Operations {
                     self.org = org
                 }
             }
-            public var path: Operations.copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_users.Input.Path
+            public var path: Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/copilot/billing/selected_users/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_users.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_users.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_users.Input.Headers
+            public var headers: Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users.Input.Headers
             /// - Remark: Generated from `#/paths/orgs/{org}/copilot/billing/selected_users/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/orgs/{org}/copilot/billing/selected_users/POST/requestBody/json`.
@@ -2705,9 +2705,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/orgs/{org}/copilot/billing/selected_users/POST/requestBody/content/application\/json`.
-                case json(Operations.copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_users.Input.Body.jsonPayload)
+                case json(Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users.Input.Body.jsonPayload)
             }
-            public var body: Operations.copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_users.Input.Body
+            public var body: Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -2715,9 +2715,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_users.Input.Path,
-                headers: Operations.copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_users.Input.Headers = .init(),
-                body: Operations.copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_users.Input.Body
+                path: Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users.Input.Path,
+                headers: Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users.Input.Headers = .init(),
+                body: Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -2746,12 +2746,12 @@ public enum Operations {
                         }
                     }
                     /// - Remark: Generated from `#/paths/orgs/{org}/copilot/billing/selected_users/POST/responses/201/content/application\/json`.
-                    case json(Operations.copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_users.Output.Created.Body.jsonPayload)
+                    case json(Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users.Output.Created.Body.jsonPayload)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Operations.copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_users.Output.Created.Body.jsonPayload {
+                    public var json: Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users.Output.Created.Body.jsonPayload {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -2761,26 +2761,26 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_users.Output.Created.Body
+                public var body: Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_users.Output.Created.Body) {
+                public init(body: Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users.Output.Created.Body) {
                     self.body = body
                 }
             }
             /// OK
             ///
-            /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_users/post(copilot/add-copilot-for-business-seats-for-users)/responses/201`.
+            /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_users/post(copilot/add-copilot-seats-for-users)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_users.Output.Created)
+            case created(Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_users.Output.Created {
+            public var created: Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -2795,7 +2795,7 @@ public enum Operations {
             }
             /// Internal Error
             ///
-            /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_users/post(copilot/add-copilot-for-business-seats-for-users)/responses/500`.
+            /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_users/post(copilot/add-copilot-seats-for-users)/responses/500`.
             ///
             /// HTTP response code: `500 internalServerError`.
             case internalServerError(Components.Responses.internal_error)
@@ -2818,7 +2818,7 @@ public enum Operations {
             }
             /// Requires authentication
             ///
-            /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_users/post(copilot/add-copilot-for-business-seats-for-users)/responses/401`.
+            /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_users/post(copilot/add-copilot-seats-for-users)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
             case unauthorized(Components.Responses.requires_authentication)
@@ -2841,7 +2841,7 @@ public enum Operations {
             }
             /// Forbidden
             ///
-            /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_users/post(copilot/add-copilot-for-business-seats-for-users)/responses/403`.
+            /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_users/post(copilot/add-copilot-seats-for-users)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
             case forbidden(Components.Responses.forbidden)
@@ -2864,7 +2864,7 @@ public enum Operations {
             }
             /// Resource not found
             ///
-            /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_users/post(copilot/add-copilot-for-business-seats-for-users)/responses/404`.
+            /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_users/post(copilot/add-copilot-seats-for-users)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
             case notFound(Components.Responses.not_found)
@@ -2889,17 +2889,17 @@ public enum Operations {
                 /// Creates a new `UnprocessableContent`.
                 public init() {}
             }
-            /// Copilot Business is not enabled for this organization, billing has not been set up for this organization, a public code suggestions policy has not been set for this organization, or the organization's Copilot access setting is set to enable Copilot for all users or is unconfigured.
+            /// Copilot Business or Enterprise is not enabled for this organization, billing has not been set up for this organization, a public code suggestions policy has not been set for this organization, or the organization's Copilot access setting is set to enable Copilot for all users or is unconfigured.
             ///
-            /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_users/post(copilot/add-copilot-for-business-seats-for-users)/responses/422`.
+            /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_users/post(copilot/add-copilot-seats-for-users)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Operations.copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_users.Output.UnprocessableContent)
+            case unprocessableContent(Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users.Output.UnprocessableContent)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Operations.copilot_sol_add_hyphen_copilot_hyphen_for_hyphen_business_hyphen_seats_hyphen_for_hyphen_users.Output.UnprocessableContent {
+            public var unprocessableContent: Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users.Output.UnprocessableContent {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -2943,16 +2943,16 @@ public enum Operations {
             }
         }
     }
-    /// Remove users from the Copilot Business subscription for an organization
+    /// Remove users from the Copilot subscription for an organization
     ///
     /// **Note**: This endpoint is in beta and is subject to change.
     ///
-    /// Cancels the Copilot Business seat assignment for each user specified.
+    /// Cancels the Copilot seat assignment for each user specified.
     /// This will cause the specified users to lose access to GitHub Copilot at the end of the current billing cycle, and the organization will not be billed further for those users.
     ///
-    /// For more information about Copilot Business pricing, see "[Pricing for GitHub Copilot Business](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#pricing-for-github-copilot-business)"
+    /// For more information about Copilot pricing, see "[Pricing for GitHub Copilot](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#about-billing-for-github-copilot)".
     ///
-    /// For more information about disabling access to Copilot Business, see "[Revoking access to GitHub Copilot for specific users in your organization](https://docs.github.com/copilot/managing-copilot-business/managing-access-for-copilot-business-in-your-organization#revoking-access-to-github-copilot-for-specific-users-in-your-organization)".
+    /// For more information about disabling access to Copilot Business or Enterprise, see "[Revoking access to GitHub Copilot for specific users in your organization](https://docs.github.com/copilot/managing-copilot/managing-access-for-copilot-in-your-organization#revoking-access-to-github-copilot-for-specific-users-in-your-organization)".
     ///
     /// Only organization owners can configure GitHub Copilot in their organization.
     ///
@@ -3194,7 +3194,7 @@ public enum Operations {
                 /// Creates a new `UnprocessableContent`.
                 public init() {}
             }
-            /// Copilot Business is not enabled for this organization, billing has not been set up for this organization, a public code suggestions policy has not been set for this organization, the seat management setting is set to enable Copilot for all users or is unconfigured, or a user's seat cannot be cancelled because it was assigned to them via a team.
+            /// Copilot Business or Enterprise is not enabled for this organization, billing has not been set up for this organization, a public code suggestions policy has not been set for this organization, the seat management setting is set to enable Copilot for all users or is unconfigured, or a user's seat cannot be cancelled because it was assigned to them via a team.
             ///
             /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_users/delete(copilot/cancel-copilot-seat-assignment-for-users)/responses/422`.
             ///
@@ -3248,11 +3248,11 @@ public enum Operations {
             }
         }
     }
-    /// Get Copilot Business seat assignment details for a user
+    /// Get Copilot seat assignment details for a user
     ///
     /// **Note**: This endpoint is in beta and is subject to change.
     ///
-    /// Gets the GitHub Copilot Business seat assignment details for a member of an organization who currently has access to GitHub Copilot.
+    /// Gets the GitHub Copilot seat assignment details for a member of an organization who currently has access to GitHub Copilot.
     ///
     /// Organization owners can view GitHub Copilot seat assignment details for members in their organization.
     ///
@@ -3460,7 +3460,7 @@ public enum Operations {
                 /// Creates a new `UnprocessableContent`.
                 public init() {}
             }
-            /// Copilot Business is not enabled for this organization or the user has a pending organization invitation.
+            /// Copilot Business or Enterprise is not enabled for this organization or the user has a pending organization invitation.
             ///
             /// - Remark: Generated from `#/paths//orgs/{org}/members/{username}/copilot/get(copilot/get-copilot-seat-details-for-user)/responses/422`.
             ///
