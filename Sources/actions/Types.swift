@@ -1282,8 +1282,8 @@ public protocol APIProtocol: Sendable {
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
-    /// - Remark: HTTP `GET /repositories/{repository_id}/environments/{environment_name}/secrets`.
-    /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/secrets/get(actions/list-environment-secrets)`.
+    /// - Remark: HTTP `GET /repos/{owner}/{repo}/environments/{environment_name}/secrets`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/secrets/get(actions/list-environment-secrets)`.
     func actions_sol_list_hyphen_environment_hyphen_secrets(_ input: Operations.actions_sol_list_hyphen_environment_hyphen_secrets.Input) async throws -> Operations.actions_sol_list_hyphen_environment_hyphen_secrets.Output
     /// Get an environment public key
     ///
@@ -1294,8 +1294,8 @@ public protocol APIProtocol: Sendable {
     ///
     /// If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
-    /// - Remark: HTTP `GET /repositories/{repository_id}/environments/{environment_name}/secrets/public-key`.
-    /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/secrets/public-key/get(actions/get-environment-public-key)`.
+    /// - Remark: HTTP `GET /repos/{owner}/{repo}/environments/{environment_name}/secrets/public-key`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/secrets/public-key/get(actions/get-environment-public-key)`.
     func actions_sol_get_hyphen_environment_hyphen_public_hyphen_key(_ input: Operations.actions_sol_get_hyphen_environment_hyphen_public_hyphen_key.Input) async throws -> Operations.actions_sol_get_hyphen_environment_hyphen_public_hyphen_key.Output
     /// Get an environment secret
     ///
@@ -1305,8 +1305,8 @@ public protocol APIProtocol: Sendable {
     ///
     /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
-    /// - Remark: HTTP `GET /repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}`.
-    /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}/get(actions/get-environment-secret)`.
+    /// - Remark: HTTP `GET /repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}/get(actions/get-environment-secret)`.
     func actions_sol_get_hyphen_environment_hyphen_secret(_ input: Operations.actions_sol_get_hyphen_environment_hyphen_secret.Input) async throws -> Operations.actions_sol_get_hyphen_environment_hyphen_secret.Output
     /// Create or update an environment secret
     ///
@@ -1317,8 +1317,8 @@ public protocol APIProtocol: Sendable {
     ///
     /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
-    /// - Remark: HTTP `PUT /repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}`.
-    /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}/put(actions/create-or-update-environment-secret)`.
+    /// - Remark: HTTP `PUT /repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}/put(actions/create-or-update-environment-secret)`.
     func actions_sol_create_hyphen_or_hyphen_update_hyphen_environment_hyphen_secret(_ input: Operations.actions_sol_create_hyphen_or_hyphen_update_hyphen_environment_hyphen_secret.Input) async throws -> Operations.actions_sol_create_hyphen_or_hyphen_update_hyphen_environment_hyphen_secret.Output
     /// Delete an environment secret
     ///
@@ -1328,8 +1328,8 @@ public protocol APIProtocol: Sendable {
     ///
     /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
-    /// - Remark: HTTP `DELETE /repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}`.
-    /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}/delete(actions/delete-environment-secret)`.
+    /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}/delete(actions/delete-environment-secret)`.
     func actions_sol_delete_hyphen_environment_hyphen_secret(_ input: Operations.actions_sol_delete_hyphen_environment_hyphen_secret.Input) async throws -> Operations.actions_sol_delete_hyphen_environment_hyphen_secret.Output
     /// List environment variables
     ///
@@ -1339,8 +1339,8 @@ public protocol APIProtocol: Sendable {
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
-    /// - Remark: HTTP `GET /repositories/{repository_id}/environments/{environment_name}/variables`.
-    /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/variables/get(actions/list-environment-variables)`.
+    /// - Remark: HTTP `GET /repos/{owner}/{repo}/environments/{environment_name}/variables`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/variables/get(actions/list-environment-variables)`.
     func actions_sol_list_hyphen_environment_hyphen_variables(_ input: Operations.actions_sol_list_hyphen_environment_hyphen_variables.Input) async throws -> Operations.actions_sol_list_hyphen_environment_hyphen_variables.Output
     /// Create an environment variable
     ///
@@ -1350,8 +1350,8 @@ public protocol APIProtocol: Sendable {
     ///
     /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
-    /// - Remark: HTTP `POST /repositories/{repository_id}/environments/{environment_name}/variables`.
-    /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/variables/post(actions/create-environment-variable)`.
+    /// - Remark: HTTP `POST /repos/{owner}/{repo}/environments/{environment_name}/variables`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/variables/post(actions/create-environment-variable)`.
     func actions_sol_create_hyphen_environment_hyphen_variable(_ input: Operations.actions_sol_create_hyphen_environment_hyphen_variable.Input) async throws -> Operations.actions_sol_create_hyphen_environment_hyphen_variable.Output
     /// Get an environment variable
     ///
@@ -1361,8 +1361,8 @@ public protocol APIProtocol: Sendable {
     ///
     /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
-    /// - Remark: HTTP `GET /repositories/{repository_id}/environments/{environment_name}/variables/{name}`.
-    /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/variables/{name}/get(actions/get-environment-variable)`.
+    /// - Remark: HTTP `GET /repos/{owner}/{repo}/environments/{environment_name}/variables/{name}`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/variables/{name}/get(actions/get-environment-variable)`.
     func actions_sol_get_hyphen_environment_hyphen_variable(_ input: Operations.actions_sol_get_hyphen_environment_hyphen_variable.Input) async throws -> Operations.actions_sol_get_hyphen_environment_hyphen_variable.Output
     /// Update an environment variable
     ///
@@ -1372,8 +1372,8 @@ public protocol APIProtocol: Sendable {
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
-    /// - Remark: HTTP `PATCH /repositories/{repository_id}/environments/{environment_name}/variables/{name}`.
-    /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/variables/{name}/patch(actions/update-environment-variable)`.
+    /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/environments/{environment_name}/variables/{name}`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/variables/{name}/patch(actions/update-environment-variable)`.
     func actions_sol_update_hyphen_environment_hyphen_variable(_ input: Operations.actions_sol_update_hyphen_environment_hyphen_variable.Input) async throws -> Operations.actions_sol_update_hyphen_environment_hyphen_variable.Output
     /// Delete an environment variable
     ///
@@ -1383,8 +1383,8 @@ public protocol APIProtocol: Sendable {
     ///
     /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
-    /// - Remark: HTTP `DELETE /repositories/{repository_id}/environments/{environment_name}/variables/{name}`.
-    /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/variables/{name}/delete(actions/delete-environment-variable)`.
+    /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/environments/{environment_name}/variables/{name}`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/variables/{name}/delete(actions/delete-environment-variable)`.
     func actions_sol_delete_hyphen_environment_hyphen_variable(_ input: Operations.actions_sol_delete_hyphen_environment_hyphen_variable.Input) async throws -> Operations.actions_sol_delete_hyphen_environment_hyphen_variable.Output
 }
 
@@ -3529,8 +3529,8 @@ extension APIProtocol {
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
-    /// - Remark: HTTP `GET /repositories/{repository_id}/environments/{environment_name}/secrets`.
-    /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/secrets/get(actions/list-environment-secrets)`.
+    /// - Remark: HTTP `GET /repos/{owner}/{repo}/environments/{environment_name}/secrets`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/secrets/get(actions/list-environment-secrets)`.
     public func actions_sol_list_hyphen_environment_hyphen_secrets(
         path: Operations.actions_sol_list_hyphen_environment_hyphen_secrets.Input.Path,
         query: Operations.actions_sol_list_hyphen_environment_hyphen_secrets.Input.Query = .init(),
@@ -3551,8 +3551,8 @@ extension APIProtocol {
     ///
     /// If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
-    /// - Remark: HTTP `GET /repositories/{repository_id}/environments/{environment_name}/secrets/public-key`.
-    /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/secrets/public-key/get(actions/get-environment-public-key)`.
+    /// - Remark: HTTP `GET /repos/{owner}/{repo}/environments/{environment_name}/secrets/public-key`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/secrets/public-key/get(actions/get-environment-public-key)`.
     public func actions_sol_get_hyphen_environment_hyphen_public_hyphen_key(
         path: Operations.actions_sol_get_hyphen_environment_hyphen_public_hyphen_key.Input.Path,
         headers: Operations.actions_sol_get_hyphen_environment_hyphen_public_hyphen_key.Input.Headers = .init()
@@ -3570,8 +3570,8 @@ extension APIProtocol {
     ///
     /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
-    /// - Remark: HTTP `GET /repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}`.
-    /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}/get(actions/get-environment-secret)`.
+    /// - Remark: HTTP `GET /repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}/get(actions/get-environment-secret)`.
     public func actions_sol_get_hyphen_environment_hyphen_secret(
         path: Operations.actions_sol_get_hyphen_environment_hyphen_secret.Input.Path,
         headers: Operations.actions_sol_get_hyphen_environment_hyphen_secret.Input.Headers = .init()
@@ -3590,8 +3590,8 @@ extension APIProtocol {
     ///
     /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
-    /// - Remark: HTTP `PUT /repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}`.
-    /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}/put(actions/create-or-update-environment-secret)`.
+    /// - Remark: HTTP `PUT /repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}/put(actions/create-or-update-environment-secret)`.
     public func actions_sol_create_hyphen_or_hyphen_update_hyphen_environment_hyphen_secret(
         path: Operations.actions_sol_create_hyphen_or_hyphen_update_hyphen_environment_hyphen_secret.Input.Path,
         headers: Operations.actions_sol_create_hyphen_or_hyphen_update_hyphen_environment_hyphen_secret.Input.Headers = .init(),
@@ -3611,8 +3611,8 @@ extension APIProtocol {
     ///
     /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
-    /// - Remark: HTTP `DELETE /repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}`.
-    /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}/delete(actions/delete-environment-secret)`.
+    /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}/delete(actions/delete-environment-secret)`.
     public func actions_sol_delete_hyphen_environment_hyphen_secret(path: Operations.actions_sol_delete_hyphen_environment_hyphen_secret.Input.Path) async throws -> Operations.actions_sol_delete_hyphen_environment_hyphen_secret.Output {
         try await actions_sol_delete_hyphen_environment_hyphen_secret(Operations.actions_sol_delete_hyphen_environment_hyphen_secret.Input(path: path))
     }
@@ -3624,8 +3624,8 @@ extension APIProtocol {
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
-    /// - Remark: HTTP `GET /repositories/{repository_id}/environments/{environment_name}/variables`.
-    /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/variables/get(actions/list-environment-variables)`.
+    /// - Remark: HTTP `GET /repos/{owner}/{repo}/environments/{environment_name}/variables`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/variables/get(actions/list-environment-variables)`.
     public func actions_sol_list_hyphen_environment_hyphen_variables(
         path: Operations.actions_sol_list_hyphen_environment_hyphen_variables.Input.Path,
         query: Operations.actions_sol_list_hyphen_environment_hyphen_variables.Input.Query = .init(),
@@ -3645,8 +3645,8 @@ extension APIProtocol {
     ///
     /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
-    /// - Remark: HTTP `POST /repositories/{repository_id}/environments/{environment_name}/variables`.
-    /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/variables/post(actions/create-environment-variable)`.
+    /// - Remark: HTTP `POST /repos/{owner}/{repo}/environments/{environment_name}/variables`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/variables/post(actions/create-environment-variable)`.
     public func actions_sol_create_hyphen_environment_hyphen_variable(
         path: Operations.actions_sol_create_hyphen_environment_hyphen_variable.Input.Path,
         headers: Operations.actions_sol_create_hyphen_environment_hyphen_variable.Input.Headers = .init(),
@@ -3666,8 +3666,8 @@ extension APIProtocol {
     ///
     /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
-    /// - Remark: HTTP `GET /repositories/{repository_id}/environments/{environment_name}/variables/{name}`.
-    /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/variables/{name}/get(actions/get-environment-variable)`.
+    /// - Remark: HTTP `GET /repos/{owner}/{repo}/environments/{environment_name}/variables/{name}`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/variables/{name}/get(actions/get-environment-variable)`.
     public func actions_sol_get_hyphen_environment_hyphen_variable(
         path: Operations.actions_sol_get_hyphen_environment_hyphen_variable.Input.Path,
         headers: Operations.actions_sol_get_hyphen_environment_hyphen_variable.Input.Headers = .init()
@@ -3685,8 +3685,8 @@ extension APIProtocol {
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
-    /// - Remark: HTTP `PATCH /repositories/{repository_id}/environments/{environment_name}/variables/{name}`.
-    /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/variables/{name}/patch(actions/update-environment-variable)`.
+    /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/environments/{environment_name}/variables/{name}`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/variables/{name}/patch(actions/update-environment-variable)`.
     public func actions_sol_update_hyphen_environment_hyphen_variable(
         path: Operations.actions_sol_update_hyphen_environment_hyphen_variable.Input.Path,
         body: Operations.actions_sol_update_hyphen_environment_hyphen_variable.Input.Body
@@ -3704,8 +3704,8 @@ extension APIProtocol {
     ///
     /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
-    /// - Remark: HTTP `DELETE /repositories/{repository_id}/environments/{environment_name}/variables/{name}`.
-    /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/variables/{name}/delete(actions/delete-environment-variable)`.
+    /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/environments/{environment_name}/variables/{name}`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/variables/{name}/delete(actions/delete-environment-variable)`.
     public func actions_sol_delete_hyphen_environment_hyphen_variable(path: Operations.actions_sol_delete_hyphen_environment_hyphen_variable.Input.Path) async throws -> Operations.actions_sol_delete_hyphen_environment_hyphen_variable.Output {
         try await actions_sol_delete_hyphen_environment_hyphen_variable(Operations.actions_sol_delete_hyphen_environment_hyphen_variable.Input(path: path))
     }
@@ -27587,44 +27587,51 @@ public enum Operations {
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
-    /// - Remark: HTTP `GET /repositories/{repository_id}/environments/{environment_name}/secrets`.
-    /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/secrets/get(actions/list-environment-secrets)`.
+    /// - Remark: HTTP `GET /repos/{owner}/{repo}/environments/{environment_name}/secrets`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/secrets/get(actions/list-environment-secrets)`.
     public enum actions_sol_list_hyphen_environment_hyphen_secrets {
         public static let id: Swift.String = "actions/list-environment-secrets"
         public struct Input: Sendable, Hashable {
-            /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/secrets/GET/path`.
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/secrets/GET/path`.
             public struct Path: Sendable, Hashable {
-                /// The unique identifier of the repository.
+                /// The account owner of the repository. The name is not case sensitive.
                 ///
-                /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/secrets/GET/path/repository_id`.
-                public var repository_id: Components.Parameters.repository_hyphen_id
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/secrets/GET/path/owner`.
+                public var owner: Components.Parameters.owner
+                /// The name of the repository without the `.git` extension. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/secrets/GET/path/repo`.
+                public var repo: Components.Parameters.repo
                 /// The name of the environment. The name must be URL encoded. For example, any slashes in the name must be replaced with `%2F`.
                 ///
-                /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/secrets/GET/path/environment_name`.
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/secrets/GET/path/environment_name`.
                 public var environment_name: Components.Parameters.environment_hyphen_name
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - repository_id: The unique identifier of the repository.
+                ///   - owner: The account owner of the repository. The name is not case sensitive.
+                ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///   - environment_name: The name of the environment. The name must be URL encoded. For example, any slashes in the name must be replaced with `%2F`.
                 public init(
-                    repository_id: Components.Parameters.repository_hyphen_id,
+                    owner: Components.Parameters.owner,
+                    repo: Components.Parameters.repo,
                     environment_name: Components.Parameters.environment_hyphen_name
                 ) {
-                    self.repository_id = repository_id
+                    self.owner = owner
+                    self.repo = repo
                     self.environment_name = environment_name
                 }
             }
             public var path: Operations.actions_sol_list_hyphen_environment_hyphen_secrets.Input.Path
-            /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/secrets/GET/query`.
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/secrets/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
-                /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/secrets/GET/query/per_page`.
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/secrets/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
-                /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/secrets/GET/query/page`.
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/secrets/GET/query/page`.
                 public var page: Components.Parameters.page?
                 /// Creates a new `Query`.
                 ///
@@ -27640,7 +27647,7 @@ public enum Operations {
                 }
             }
             public var query: Operations.actions_sol_list_hyphen_environment_hyphen_secrets.Input.Query
-            /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/secrets/GET/header`.
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/secrets/GET/header`.
             public struct Headers: Sendable, Hashable {
                 public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.actions_sol_list_hyphen_environment_hyphen_secrets.AcceptableContentType>]
                 /// Creates a new `Headers`.
@@ -27670,9 +27677,9 @@ public enum Operations {
         }
         @frozen public enum Output: Sendable, Hashable {
             public struct Ok: Sendable, Hashable {
-                /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/secrets/GET/responses/200/headers`.
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/secrets/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
-                    /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/secrets/GET/responses/200/headers/Link`.
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/secrets/GET/responses/200/headers/Link`.
                     public var Link: Components.Headers.link?
                     /// Creates a new `Headers`.
                     ///
@@ -27684,13 +27691,13 @@ public enum Operations {
                 }
                 /// Received HTTP response headers
                 public var headers: Operations.actions_sol_list_hyphen_environment_hyphen_secrets.Output.Ok.Headers
-                /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/secrets/GET/responses/200/content`.
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/secrets/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
-                    /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/secrets/GET/responses/200/content/json`.
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/secrets/GET/responses/200/content/json`.
                     public struct jsonPayload: Codable, Hashable, Sendable {
-                        /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/secrets/GET/responses/200/content/json/total_count`.
+                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/secrets/GET/responses/200/content/json/total_count`.
                         public var total_count: Swift.Int
-                        /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/secrets/GET/responses/200/content/json/secrets`.
+                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/secrets/GET/responses/200/content/json/secrets`.
                         public var secrets: [Components.Schemas.actions_hyphen_secret]
                         /// Creates a new `jsonPayload`.
                         ///
@@ -27709,7 +27716,7 @@ public enum Operations {
                             case secrets
                         }
                     }
-                    /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/secrets/GET/responses/200/content/application\/json`.
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/secrets/GET/responses/200/content/application\/json`.
                     case json(Operations.actions_sol_list_hyphen_environment_hyphen_secrets.Output.Ok.Body.jsonPayload)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
@@ -27741,7 +27748,7 @@ public enum Operations {
             }
             /// Response
             ///
-            /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/secrets/get(actions/list-environment-secrets)/responses/200`.
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/secrets/get(actions/list-environment-secrets)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
             case ok(Operations.actions_sol_list_hyphen_environment_hyphen_secrets.Output.Ok)
@@ -27802,36 +27809,43 @@ public enum Operations {
     ///
     /// If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
-    /// - Remark: HTTP `GET /repositories/{repository_id}/environments/{environment_name}/secrets/public-key`.
-    /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/secrets/public-key/get(actions/get-environment-public-key)`.
+    /// - Remark: HTTP `GET /repos/{owner}/{repo}/environments/{environment_name}/secrets/public-key`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/secrets/public-key/get(actions/get-environment-public-key)`.
     public enum actions_sol_get_hyphen_environment_hyphen_public_hyphen_key {
         public static let id: Swift.String = "actions/get-environment-public-key"
         public struct Input: Sendable, Hashable {
-            /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/secrets/public-key/GET/path`.
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/secrets/public-key/GET/path`.
             public struct Path: Sendable, Hashable {
-                /// The unique identifier of the repository.
+                /// The account owner of the repository. The name is not case sensitive.
                 ///
-                /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/secrets/public-key/GET/path/repository_id`.
-                public var repository_id: Components.Parameters.repository_hyphen_id
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/secrets/public-key/GET/path/owner`.
+                public var owner: Components.Parameters.owner
+                /// The name of the repository without the `.git` extension. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/secrets/public-key/GET/path/repo`.
+                public var repo: Components.Parameters.repo
                 /// The name of the environment. The name must be URL encoded. For example, any slashes in the name must be replaced with `%2F`.
                 ///
-                /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/secrets/public-key/GET/path/environment_name`.
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/secrets/public-key/GET/path/environment_name`.
                 public var environment_name: Components.Parameters.environment_hyphen_name
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - repository_id: The unique identifier of the repository.
+                ///   - owner: The account owner of the repository. The name is not case sensitive.
+                ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///   - environment_name: The name of the environment. The name must be URL encoded. For example, any slashes in the name must be replaced with `%2F`.
                 public init(
-                    repository_id: Components.Parameters.repository_hyphen_id,
+                    owner: Components.Parameters.owner,
+                    repo: Components.Parameters.repo,
                     environment_name: Components.Parameters.environment_hyphen_name
                 ) {
-                    self.repository_id = repository_id
+                    self.owner = owner
+                    self.repo = repo
                     self.environment_name = environment_name
                 }
             }
             public var path: Operations.actions_sol_get_hyphen_environment_hyphen_public_hyphen_key.Input.Path
-            /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/secrets/public-key/GET/header`.
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/secrets/public-key/GET/header`.
             public struct Headers: Sendable, Hashable {
                 public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.actions_sol_get_hyphen_environment_hyphen_public_hyphen_key.AcceptableContentType>]
                 /// Creates a new `Headers`.
@@ -27858,9 +27872,9 @@ public enum Operations {
         }
         @frozen public enum Output: Sendable, Hashable {
             public struct Ok: Sendable, Hashable {
-                /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/secrets/public-key/GET/responses/200/content`.
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/secrets/public-key/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
-                    /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/secrets/public-key/GET/responses/200/content/application\/json`.
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/secrets/public-key/GET/responses/200/content/application\/json`.
                     case json(Components.Schemas.actions_hyphen_public_hyphen_key)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
@@ -27887,7 +27901,7 @@ public enum Operations {
             }
             /// Response
             ///
-            /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/secrets/public-key/get(actions/get-environment-public-key)/responses/200`.
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/secrets/public-key/get(actions/get-environment-public-key)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
             case ok(Operations.actions_sol_get_hyphen_environment_hyphen_public_hyphen_key.Output.Ok)
@@ -27947,43 +27961,50 @@ public enum Operations {
     ///
     /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
-    /// - Remark: HTTP `GET /repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}`.
-    /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}/get(actions/get-environment-secret)`.
+    /// - Remark: HTTP `GET /repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}/get(actions/get-environment-secret)`.
     public enum actions_sol_get_hyphen_environment_hyphen_secret {
         public static let id: Swift.String = "actions/get-environment-secret"
         public struct Input: Sendable, Hashable {
-            /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}/GET/path`.
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}/GET/path`.
             public struct Path: Sendable, Hashable {
-                /// The unique identifier of the repository.
+                /// The account owner of the repository. The name is not case sensitive.
                 ///
-                /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}/GET/path/repository_id`.
-                public var repository_id: Components.Parameters.repository_hyphen_id
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}/GET/path/owner`.
+                public var owner: Components.Parameters.owner
+                /// The name of the repository without the `.git` extension. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}/GET/path/repo`.
+                public var repo: Components.Parameters.repo
                 /// The name of the environment. The name must be URL encoded. For example, any slashes in the name must be replaced with `%2F`.
                 ///
-                /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}/GET/path/environment_name`.
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}/GET/path/environment_name`.
                 public var environment_name: Components.Parameters.environment_hyphen_name
                 /// The name of the secret.
                 ///
-                /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}/GET/path/secret_name`.
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}/GET/path/secret_name`.
                 public var secret_name: Components.Parameters.secret_hyphen_name
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - repository_id: The unique identifier of the repository.
+                ///   - owner: The account owner of the repository. The name is not case sensitive.
+                ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///   - environment_name: The name of the environment. The name must be URL encoded. For example, any slashes in the name must be replaced with `%2F`.
                 ///   - secret_name: The name of the secret.
                 public init(
-                    repository_id: Components.Parameters.repository_hyphen_id,
+                    owner: Components.Parameters.owner,
+                    repo: Components.Parameters.repo,
                     environment_name: Components.Parameters.environment_hyphen_name,
                     secret_name: Components.Parameters.secret_hyphen_name
                 ) {
-                    self.repository_id = repository_id
+                    self.owner = owner
+                    self.repo = repo
                     self.environment_name = environment_name
                     self.secret_name = secret_name
                 }
             }
             public var path: Operations.actions_sol_get_hyphen_environment_hyphen_secret.Input.Path
-            /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}/GET/header`.
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}/GET/header`.
             public struct Headers: Sendable, Hashable {
                 public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.actions_sol_get_hyphen_environment_hyphen_secret.AcceptableContentType>]
                 /// Creates a new `Headers`.
@@ -28010,9 +28031,9 @@ public enum Operations {
         }
         @frozen public enum Output: Sendable, Hashable {
             public struct Ok: Sendable, Hashable {
-                /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}/GET/responses/200/content`.
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
-                    /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}/GET/responses/200/content/application\/json`.
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}/GET/responses/200/content/application\/json`.
                     case json(Components.Schemas.actions_hyphen_secret)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
@@ -28039,7 +28060,7 @@ public enum Operations {
             }
             /// Response
             ///
-            /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}/get(actions/get-environment-secret)/responses/200`.
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}/get(actions/get-environment-secret)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
             case ok(Operations.actions_sol_get_hyphen_environment_hyphen_secret.Output.Ok)
@@ -28100,43 +28121,50 @@ public enum Operations {
     ///
     /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
-    /// - Remark: HTTP `PUT /repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}`.
-    /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}/put(actions/create-or-update-environment-secret)`.
+    /// - Remark: HTTP `PUT /repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}/put(actions/create-or-update-environment-secret)`.
     public enum actions_sol_create_hyphen_or_hyphen_update_hyphen_environment_hyphen_secret {
         public static let id: Swift.String = "actions/create-or-update-environment-secret"
         public struct Input: Sendable, Hashable {
-            /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}/PUT/path`.
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}/PUT/path`.
             public struct Path: Sendable, Hashable {
-                /// The unique identifier of the repository.
+                /// The account owner of the repository. The name is not case sensitive.
                 ///
-                /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}/PUT/path/repository_id`.
-                public var repository_id: Components.Parameters.repository_hyphen_id
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}/PUT/path/owner`.
+                public var owner: Components.Parameters.owner
+                /// The name of the repository without the `.git` extension. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}/PUT/path/repo`.
+                public var repo: Components.Parameters.repo
                 /// The name of the environment. The name must be URL encoded. For example, any slashes in the name must be replaced with `%2F`.
                 ///
-                /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}/PUT/path/environment_name`.
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}/PUT/path/environment_name`.
                 public var environment_name: Components.Parameters.environment_hyphen_name
                 /// The name of the secret.
                 ///
-                /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}/PUT/path/secret_name`.
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}/PUT/path/secret_name`.
                 public var secret_name: Components.Parameters.secret_hyphen_name
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - repository_id: The unique identifier of the repository.
+                ///   - owner: The account owner of the repository. The name is not case sensitive.
+                ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///   - environment_name: The name of the environment. The name must be URL encoded. For example, any slashes in the name must be replaced with `%2F`.
                 ///   - secret_name: The name of the secret.
                 public init(
-                    repository_id: Components.Parameters.repository_hyphen_id,
+                    owner: Components.Parameters.owner,
+                    repo: Components.Parameters.repo,
                     environment_name: Components.Parameters.environment_hyphen_name,
                     secret_name: Components.Parameters.secret_hyphen_name
                 ) {
-                    self.repository_id = repository_id
+                    self.owner = owner
+                    self.repo = repo
                     self.environment_name = environment_name
                     self.secret_name = secret_name
                 }
             }
             public var path: Operations.actions_sol_create_hyphen_or_hyphen_update_hyphen_environment_hyphen_secret.Input.Path
-            /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}/PUT/header`.
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}/PUT/header`.
             public struct Headers: Sendable, Hashable {
                 public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.actions_sol_create_hyphen_or_hyphen_update_hyphen_environment_hyphen_secret.AcceptableContentType>]
                 /// Creates a new `Headers`.
@@ -28148,17 +28176,17 @@ public enum Operations {
                 }
             }
             public var headers: Operations.actions_sol_create_hyphen_or_hyphen_update_hyphen_environment_hyphen_secret.Input.Headers
-            /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}/PUT/requestBody`.
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}/PUT/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
-                /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}/PUT/requestBody/json`.
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}/PUT/requestBody/json`.
                 public struct jsonPayload: Codable, Hashable, Sendable {
                     /// Value for your secret, encrypted with [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages) using the public key retrieved from the [Get an environment public key](https://docs.github.com/rest/actions/secrets#get-an-environment-public-key) endpoint.
                     ///
-                    /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}/PUT/requestBody/json/encrypted_value`.
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}/PUT/requestBody/json/encrypted_value`.
                     public var encrypted_value: Swift.String
                     /// ID of the key you used to encrypt the secret.
                     ///
-                    /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}/PUT/requestBody/json/key_id`.
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}/PUT/requestBody/json/key_id`.
                     public var key_id: Swift.String
                     /// Creates a new `jsonPayload`.
                     ///
@@ -28177,7 +28205,7 @@ public enum Operations {
                         case key_id
                     }
                 }
-                /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}/PUT/requestBody/content/application\/json`.
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}/PUT/requestBody/content/application\/json`.
                 case json(Operations.actions_sol_create_hyphen_or_hyphen_update_hyphen_environment_hyphen_secret.Input.Body.jsonPayload)
             }
             public var body: Operations.actions_sol_create_hyphen_or_hyphen_update_hyphen_environment_hyphen_secret.Input.Body
@@ -28199,9 +28227,9 @@ public enum Operations {
         }
         @frozen public enum Output: Sendable, Hashable {
             public struct Created: Sendable, Hashable {
-                /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}/PUT/responses/201/content`.
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}/PUT/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
-                    /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}/PUT/responses/201/content/application\/json`.
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}/PUT/responses/201/content/application\/json`.
                     case json(Components.Schemas.empty_hyphen_object)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
@@ -28228,7 +28256,7 @@ public enum Operations {
             }
             /// Response when creating a secret
             ///
-            /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}/put(actions/create-or-update-environment-secret)/responses/201`.
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}/put(actions/create-or-update-environment-secret)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
             case created(Operations.actions_sol_create_hyphen_or_hyphen_update_hyphen_environment_hyphen_secret.Output.Created)
@@ -28255,7 +28283,7 @@ public enum Operations {
             }
             /// Response when updating a secret
             ///
-            /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}/put(actions/create-or-update-environment-secret)/responses/204`.
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}/put(actions/create-or-update-environment-secret)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_create_hyphen_or_hyphen_update_hyphen_environment_hyphen_secret.Output.NoContent)
@@ -28315,37 +28343,44 @@ public enum Operations {
     ///
     /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
-    /// - Remark: HTTP `DELETE /repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}`.
-    /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}/delete(actions/delete-environment-secret)`.
+    /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}/delete(actions/delete-environment-secret)`.
     public enum actions_sol_delete_hyphen_environment_hyphen_secret {
         public static let id: Swift.String = "actions/delete-environment-secret"
         public struct Input: Sendable, Hashable {
-            /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}/DELETE/path`.
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}/DELETE/path`.
             public struct Path: Sendable, Hashable {
-                /// The unique identifier of the repository.
+                /// The account owner of the repository. The name is not case sensitive.
                 ///
-                /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}/DELETE/path/repository_id`.
-                public var repository_id: Components.Parameters.repository_hyphen_id
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}/DELETE/path/owner`.
+                public var owner: Components.Parameters.owner
+                /// The name of the repository without the `.git` extension. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}/DELETE/path/repo`.
+                public var repo: Components.Parameters.repo
                 /// The name of the environment. The name must be URL encoded. For example, any slashes in the name must be replaced with `%2F`.
                 ///
-                /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}/DELETE/path/environment_name`.
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}/DELETE/path/environment_name`.
                 public var environment_name: Components.Parameters.environment_hyphen_name
                 /// The name of the secret.
                 ///
-                /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}/DELETE/path/secret_name`.
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}/DELETE/path/secret_name`.
                 public var secret_name: Components.Parameters.secret_hyphen_name
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - repository_id: The unique identifier of the repository.
+                ///   - owner: The account owner of the repository. The name is not case sensitive.
+                ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///   - environment_name: The name of the environment. The name must be URL encoded. For example, any slashes in the name must be replaced with `%2F`.
                 ///   - secret_name: The name of the secret.
                 public init(
-                    repository_id: Components.Parameters.repository_hyphen_id,
+                    owner: Components.Parameters.owner,
+                    repo: Components.Parameters.repo,
                     environment_name: Components.Parameters.environment_hyphen_name,
                     secret_name: Components.Parameters.secret_hyphen_name
                 ) {
-                    self.repository_id = repository_id
+                    self.owner = owner
+                    self.repo = repo
                     self.environment_name = environment_name
                     self.secret_name = secret_name
                 }
@@ -28366,7 +28401,7 @@ public enum Operations {
             }
             /// Default response
             ///
-            /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}/delete(actions/delete-environment-secret)/responses/204`.
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}/delete(actions/delete-environment-secret)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_delete_hyphen_environment_hyphen_secret.Output.NoContent)
@@ -28401,44 +28436,51 @@ public enum Operations {
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
-    /// - Remark: HTTP `GET /repositories/{repository_id}/environments/{environment_name}/variables`.
-    /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/variables/get(actions/list-environment-variables)`.
+    /// - Remark: HTTP `GET /repos/{owner}/{repo}/environments/{environment_name}/variables`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/variables/get(actions/list-environment-variables)`.
     public enum actions_sol_list_hyphen_environment_hyphen_variables {
         public static let id: Swift.String = "actions/list-environment-variables"
         public struct Input: Sendable, Hashable {
-            /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/variables/GET/path`.
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/GET/path`.
             public struct Path: Sendable, Hashable {
-                /// The unique identifier of the repository.
+                /// The account owner of the repository. The name is not case sensitive.
                 ///
-                /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/variables/GET/path/repository_id`.
-                public var repository_id: Components.Parameters.repository_hyphen_id
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/GET/path/owner`.
+                public var owner: Components.Parameters.owner
+                /// The name of the repository without the `.git` extension. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/GET/path/repo`.
+                public var repo: Components.Parameters.repo
                 /// The name of the environment. The name must be URL encoded. For example, any slashes in the name must be replaced with `%2F`.
                 ///
-                /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/variables/GET/path/environment_name`.
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/GET/path/environment_name`.
                 public var environment_name: Components.Parameters.environment_hyphen_name
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - repository_id: The unique identifier of the repository.
+                ///   - owner: The account owner of the repository. The name is not case sensitive.
+                ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///   - environment_name: The name of the environment. The name must be URL encoded. For example, any slashes in the name must be replaced with `%2F`.
                 public init(
-                    repository_id: Components.Parameters.repository_hyphen_id,
+                    owner: Components.Parameters.owner,
+                    repo: Components.Parameters.repo,
                     environment_name: Components.Parameters.environment_hyphen_name
                 ) {
-                    self.repository_id = repository_id
+                    self.owner = owner
+                    self.repo = repo
                     self.environment_name = environment_name
                 }
             }
             public var path: Operations.actions_sol_list_hyphen_environment_hyphen_variables.Input.Path
-            /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/variables/GET/query`.
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The number of results per page (max 30). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
-                /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/variables/GET/query/per_page`.
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/GET/query/per_page`.
                 public var per_page: Components.Parameters.variables_hyphen_per_hyphen_page?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
-                /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/variables/GET/query/page`.
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/GET/query/page`.
                 public var page: Components.Parameters.page?
                 /// Creates a new `Query`.
                 ///
@@ -28454,7 +28496,7 @@ public enum Operations {
                 }
             }
             public var query: Operations.actions_sol_list_hyphen_environment_hyphen_variables.Input.Query
-            /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/variables/GET/header`.
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/GET/header`.
             public struct Headers: Sendable, Hashable {
                 public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.actions_sol_list_hyphen_environment_hyphen_variables.AcceptableContentType>]
                 /// Creates a new `Headers`.
@@ -28484,9 +28526,9 @@ public enum Operations {
         }
         @frozen public enum Output: Sendable, Hashable {
             public struct Ok: Sendable, Hashable {
-                /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/variables/GET/responses/200/headers`.
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
-                    /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/variables/GET/responses/200/headers/Link`.
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/GET/responses/200/headers/Link`.
                     public var Link: Components.Headers.link?
                     /// Creates a new `Headers`.
                     ///
@@ -28498,13 +28540,13 @@ public enum Operations {
                 }
                 /// Received HTTP response headers
                 public var headers: Operations.actions_sol_list_hyphen_environment_hyphen_variables.Output.Ok.Headers
-                /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/variables/GET/responses/200/content`.
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
-                    /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/variables/GET/responses/200/content/json`.
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/GET/responses/200/content/json`.
                     public struct jsonPayload: Codable, Hashable, Sendable {
-                        /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/variables/GET/responses/200/content/json/total_count`.
+                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/GET/responses/200/content/json/total_count`.
                         public var total_count: Swift.Int
-                        /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/variables/GET/responses/200/content/json/variables`.
+                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/GET/responses/200/content/json/variables`.
                         public var variables: [Components.Schemas.actions_hyphen_variable]
                         /// Creates a new `jsonPayload`.
                         ///
@@ -28523,7 +28565,7 @@ public enum Operations {
                             case variables
                         }
                     }
-                    /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/variables/GET/responses/200/content/application\/json`.
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/GET/responses/200/content/application\/json`.
                     case json(Operations.actions_sol_list_hyphen_environment_hyphen_variables.Output.Ok.Body.jsonPayload)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
@@ -28555,7 +28597,7 @@ public enum Operations {
             }
             /// Response
             ///
-            /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/variables/get(actions/list-environment-variables)/responses/200`.
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/variables/get(actions/list-environment-variables)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
             case ok(Operations.actions_sol_list_hyphen_environment_hyphen_variables.Output.Ok)
@@ -28615,36 +28657,43 @@ public enum Operations {
     ///
     /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
-    /// - Remark: HTTP `POST /repositories/{repository_id}/environments/{environment_name}/variables`.
-    /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/variables/post(actions/create-environment-variable)`.
+    /// - Remark: HTTP `POST /repos/{owner}/{repo}/environments/{environment_name}/variables`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/variables/post(actions/create-environment-variable)`.
     public enum actions_sol_create_hyphen_environment_hyphen_variable {
         public static let id: Swift.String = "actions/create-environment-variable"
         public struct Input: Sendable, Hashable {
-            /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/variables/POST/path`.
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/POST/path`.
             public struct Path: Sendable, Hashable {
-                /// The unique identifier of the repository.
+                /// The account owner of the repository. The name is not case sensitive.
                 ///
-                /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/variables/POST/path/repository_id`.
-                public var repository_id: Components.Parameters.repository_hyphen_id
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/POST/path/owner`.
+                public var owner: Components.Parameters.owner
+                /// The name of the repository without the `.git` extension. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/POST/path/repo`.
+                public var repo: Components.Parameters.repo
                 /// The name of the environment. The name must be URL encoded. For example, any slashes in the name must be replaced with `%2F`.
                 ///
-                /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/variables/POST/path/environment_name`.
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/POST/path/environment_name`.
                 public var environment_name: Components.Parameters.environment_hyphen_name
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - repository_id: The unique identifier of the repository.
+                ///   - owner: The account owner of the repository. The name is not case sensitive.
+                ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///   - environment_name: The name of the environment. The name must be URL encoded. For example, any slashes in the name must be replaced with `%2F`.
                 public init(
-                    repository_id: Components.Parameters.repository_hyphen_id,
+                    owner: Components.Parameters.owner,
+                    repo: Components.Parameters.repo,
                     environment_name: Components.Parameters.environment_hyphen_name
                 ) {
-                    self.repository_id = repository_id
+                    self.owner = owner
+                    self.repo = repo
                     self.environment_name = environment_name
                 }
             }
             public var path: Operations.actions_sol_create_hyphen_environment_hyphen_variable.Input.Path
-            /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/variables/POST/header`.
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/POST/header`.
             public struct Headers: Sendable, Hashable {
                 public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.actions_sol_create_hyphen_environment_hyphen_variable.AcceptableContentType>]
                 /// Creates a new `Headers`.
@@ -28656,17 +28705,17 @@ public enum Operations {
                 }
             }
             public var headers: Operations.actions_sol_create_hyphen_environment_hyphen_variable.Input.Headers
-            /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/variables/POST/requestBody`.
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
-                /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/variables/POST/requestBody/json`.
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/POST/requestBody/json`.
                 public struct jsonPayload: Codable, Hashable, Sendable {
                     /// The name of the variable.
                     ///
-                    /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/variables/POST/requestBody/json/name`.
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/POST/requestBody/json/name`.
                     public var name: Swift.String
                     /// The value of the variable.
                     ///
-                    /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/variables/POST/requestBody/json/value`.
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/POST/requestBody/json/value`.
                     public var value: Swift.String
                     /// Creates a new `jsonPayload`.
                     ///
@@ -28685,7 +28734,7 @@ public enum Operations {
                         case value
                     }
                 }
-                /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/variables/POST/requestBody/content/application\/json`.
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/POST/requestBody/content/application\/json`.
                 case json(Operations.actions_sol_create_hyphen_environment_hyphen_variable.Input.Body.jsonPayload)
             }
             public var body: Operations.actions_sol_create_hyphen_environment_hyphen_variable.Input.Body
@@ -28707,9 +28756,9 @@ public enum Operations {
         }
         @frozen public enum Output: Sendable, Hashable {
             public struct Created: Sendable, Hashable {
-                /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/variables/POST/responses/201/content`.
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
-                    /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/variables/POST/responses/201/content/application\/json`.
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/POST/responses/201/content/application\/json`.
                     case json(Components.Schemas.empty_hyphen_object)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
@@ -28736,7 +28785,7 @@ public enum Operations {
             }
             /// Response
             ///
-            /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/variables/post(actions/create-environment-variable)/responses/201`.
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/variables/post(actions/create-environment-variable)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
             case created(Operations.actions_sol_create_hyphen_environment_hyphen_variable.Output.Created)
@@ -28796,43 +28845,50 @@ public enum Operations {
     ///
     /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
-    /// - Remark: HTTP `GET /repositories/{repository_id}/environments/{environment_name}/variables/{name}`.
-    /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/variables/{name}/get(actions/get-environment-variable)`.
+    /// - Remark: HTTP `GET /repos/{owner}/{repo}/environments/{environment_name}/variables/{name}`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/variables/{name}/get(actions/get-environment-variable)`.
     public enum actions_sol_get_hyphen_environment_hyphen_variable {
         public static let id: Swift.String = "actions/get-environment-variable"
         public struct Input: Sendable, Hashable {
-            /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/variables/{name}/GET/path`.
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/{name}/GET/path`.
             public struct Path: Sendable, Hashable {
-                /// The unique identifier of the repository.
+                /// The account owner of the repository. The name is not case sensitive.
                 ///
-                /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/variables/{name}/GET/path/repository_id`.
-                public var repository_id: Components.Parameters.repository_hyphen_id
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/{name}/GET/path/owner`.
+                public var owner: Components.Parameters.owner
+                /// The name of the repository without the `.git` extension. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/{name}/GET/path/repo`.
+                public var repo: Components.Parameters.repo
                 /// The name of the environment. The name must be URL encoded. For example, any slashes in the name must be replaced with `%2F`.
                 ///
-                /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/variables/{name}/GET/path/environment_name`.
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/{name}/GET/path/environment_name`.
                 public var environment_name: Components.Parameters.environment_hyphen_name
                 /// The name of the variable.
                 ///
-                /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/variables/{name}/GET/path/name`.
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/{name}/GET/path/name`.
                 public var name: Components.Parameters.variable_hyphen_name
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - repository_id: The unique identifier of the repository.
+                ///   - owner: The account owner of the repository. The name is not case sensitive.
+                ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///   - environment_name: The name of the environment. The name must be URL encoded. For example, any slashes in the name must be replaced with `%2F`.
                 ///   - name: The name of the variable.
                 public init(
-                    repository_id: Components.Parameters.repository_hyphen_id,
+                    owner: Components.Parameters.owner,
+                    repo: Components.Parameters.repo,
                     environment_name: Components.Parameters.environment_hyphen_name,
                     name: Components.Parameters.variable_hyphen_name
                 ) {
-                    self.repository_id = repository_id
+                    self.owner = owner
+                    self.repo = repo
                     self.environment_name = environment_name
                     self.name = name
                 }
             }
             public var path: Operations.actions_sol_get_hyphen_environment_hyphen_variable.Input.Path
-            /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/variables/{name}/GET/header`.
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/{name}/GET/header`.
             public struct Headers: Sendable, Hashable {
                 public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.actions_sol_get_hyphen_environment_hyphen_variable.AcceptableContentType>]
                 /// Creates a new `Headers`.
@@ -28859,9 +28915,9 @@ public enum Operations {
         }
         @frozen public enum Output: Sendable, Hashable {
             public struct Ok: Sendable, Hashable {
-                /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/variables/{name}/GET/responses/200/content`.
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/{name}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
-                    /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/variables/{name}/GET/responses/200/content/application\/json`.
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/{name}/GET/responses/200/content/application\/json`.
                     case json(Components.Schemas.actions_hyphen_variable)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
@@ -28888,7 +28944,7 @@ public enum Operations {
             }
             /// Response
             ///
-            /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/variables/{name}/get(actions/get-environment-variable)/responses/200`.
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/variables/{name}/get(actions/get-environment-variable)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
             case ok(Operations.actions_sol_get_hyphen_environment_hyphen_variable.Output.Ok)
@@ -28948,53 +29004,60 @@ public enum Operations {
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
-    /// - Remark: HTTP `PATCH /repositories/{repository_id}/environments/{environment_name}/variables/{name}`.
-    /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/variables/{name}/patch(actions/update-environment-variable)`.
+    /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/environments/{environment_name}/variables/{name}`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/variables/{name}/patch(actions/update-environment-variable)`.
     public enum actions_sol_update_hyphen_environment_hyphen_variable {
         public static let id: Swift.String = "actions/update-environment-variable"
         public struct Input: Sendable, Hashable {
-            /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/variables/{name}/PATCH/path`.
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/{name}/PATCH/path`.
             public struct Path: Sendable, Hashable {
-                /// The unique identifier of the repository.
+                /// The account owner of the repository. The name is not case sensitive.
                 ///
-                /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/variables/{name}/PATCH/path/repository_id`.
-                public var repository_id: Components.Parameters.repository_hyphen_id
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/{name}/PATCH/path/owner`.
+                public var owner: Components.Parameters.owner
+                /// The name of the repository without the `.git` extension. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/{name}/PATCH/path/repo`.
+                public var repo: Components.Parameters.repo
                 /// The name of the variable.
                 ///
-                /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/variables/{name}/PATCH/path/name`.
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/{name}/PATCH/path/name`.
                 public var name: Components.Parameters.variable_hyphen_name
                 /// The name of the environment. The name must be URL encoded. For example, any slashes in the name must be replaced with `%2F`.
                 ///
-                /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/variables/{name}/PATCH/path/environment_name`.
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/{name}/PATCH/path/environment_name`.
                 public var environment_name: Components.Parameters.environment_hyphen_name
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - repository_id: The unique identifier of the repository.
+                ///   - owner: The account owner of the repository. The name is not case sensitive.
+                ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///   - name: The name of the variable.
                 ///   - environment_name: The name of the environment. The name must be URL encoded. For example, any slashes in the name must be replaced with `%2F`.
                 public init(
-                    repository_id: Components.Parameters.repository_hyphen_id,
+                    owner: Components.Parameters.owner,
+                    repo: Components.Parameters.repo,
                     name: Components.Parameters.variable_hyphen_name,
                     environment_name: Components.Parameters.environment_hyphen_name
                 ) {
-                    self.repository_id = repository_id
+                    self.owner = owner
+                    self.repo = repo
                     self.name = name
                     self.environment_name = environment_name
                 }
             }
             public var path: Operations.actions_sol_update_hyphen_environment_hyphen_variable.Input.Path
-            /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/variables/{name}/PATCH/requestBody`.
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/{name}/PATCH/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
-                /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/variables/{name}/PATCH/requestBody/json`.
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/{name}/PATCH/requestBody/json`.
                 public struct jsonPayload: Codable, Hashable, Sendable {
                     /// The name of the variable.
                     ///
-                    /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/variables/{name}/PATCH/requestBody/json/name`.
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/{name}/PATCH/requestBody/json/name`.
                     public var name: Swift.String?
                     /// The value of the variable.
                     ///
-                    /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/variables/{name}/PATCH/requestBody/json/value`.
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/{name}/PATCH/requestBody/json/value`.
                     public var value: Swift.String?
                     /// Creates a new `jsonPayload`.
                     ///
@@ -29013,7 +29076,7 @@ public enum Operations {
                         case value
                     }
                 }
-                /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/variables/{name}/PATCH/requestBody/content/application\/json`.
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/{name}/PATCH/requestBody/content/application\/json`.
                 case json(Operations.actions_sol_update_hyphen_environment_hyphen_variable.Input.Body.jsonPayload)
             }
             public var body: Operations.actions_sol_update_hyphen_environment_hyphen_variable.Input.Body
@@ -29037,7 +29100,7 @@ public enum Operations {
             }
             /// Response
             ///
-            /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/variables/{name}/patch(actions/update-environment-variable)/responses/204`.
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/variables/{name}/patch(actions/update-environment-variable)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_update_hyphen_environment_hyphen_variable.Output.NoContent)
@@ -29072,37 +29135,44 @@ public enum Operations {
     ///
     /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
-    /// - Remark: HTTP `DELETE /repositories/{repository_id}/environments/{environment_name}/variables/{name}`.
-    /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/variables/{name}/delete(actions/delete-environment-variable)`.
+    /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/environments/{environment_name}/variables/{name}`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/variables/{name}/delete(actions/delete-environment-variable)`.
     public enum actions_sol_delete_hyphen_environment_hyphen_variable {
         public static let id: Swift.String = "actions/delete-environment-variable"
         public struct Input: Sendable, Hashable {
-            /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/variables/{name}/DELETE/path`.
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/{name}/DELETE/path`.
             public struct Path: Sendable, Hashable {
-                /// The unique identifier of the repository.
+                /// The account owner of the repository. The name is not case sensitive.
                 ///
-                /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/variables/{name}/DELETE/path/repository_id`.
-                public var repository_id: Components.Parameters.repository_hyphen_id
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/{name}/DELETE/path/owner`.
+                public var owner: Components.Parameters.owner
+                /// The name of the repository without the `.git` extension. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/{name}/DELETE/path/repo`.
+                public var repo: Components.Parameters.repo
                 /// The name of the variable.
                 ///
-                /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/variables/{name}/DELETE/path/name`.
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/{name}/DELETE/path/name`.
                 public var name: Components.Parameters.variable_hyphen_name
                 /// The name of the environment. The name must be URL encoded. For example, any slashes in the name must be replaced with `%2F`.
                 ///
-                /// - Remark: Generated from `#/paths/repositories/{repository_id}/environments/{environment_name}/variables/{name}/DELETE/path/environment_name`.
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/environments/{environment_name}/variables/{name}/DELETE/path/environment_name`.
                 public var environment_name: Components.Parameters.environment_hyphen_name
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - repository_id: The unique identifier of the repository.
+                ///   - owner: The account owner of the repository. The name is not case sensitive.
+                ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///   - name: The name of the variable.
                 ///   - environment_name: The name of the environment. The name must be URL encoded. For example, any slashes in the name must be replaced with `%2F`.
                 public init(
-                    repository_id: Components.Parameters.repository_hyphen_id,
+                    owner: Components.Parameters.owner,
+                    repo: Components.Parameters.repo,
                     name: Components.Parameters.variable_hyphen_name,
                     environment_name: Components.Parameters.environment_hyphen_name
                 ) {
-                    self.repository_id = repository_id
+                    self.owner = owner
+                    self.repo = repo
                     self.name = name
                     self.environment_name = environment_name
                 }
@@ -29123,7 +29193,7 @@ public enum Operations {
             }
             /// Response
             ///
-            /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/variables/{name}/delete(actions/delete-environment-variable)/responses/204`.
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/variables/{name}/delete(actions/delete-environment-variable)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_delete_hyphen_environment_hyphen_variable.Output.NoContent)

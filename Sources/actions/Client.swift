@@ -8805,17 +8805,18 @@ public struct Client: APIProtocol {
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
-    /// - Remark: HTTP `GET /repositories/{repository_id}/environments/{environment_name}/secrets`.
-    /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/secrets/get(actions/list-environment-secrets)`.
+    /// - Remark: HTTP `GET /repos/{owner}/{repo}/environments/{environment_name}/secrets`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/secrets/get(actions/list-environment-secrets)`.
     public func actions_sol_list_hyphen_environment_hyphen_secrets(_ input: Operations.actions_sol_list_hyphen_environment_hyphen_secrets.Input) async throws -> Operations.actions_sol_list_hyphen_environment_hyphen_secrets.Output {
         try await client.send(
             input: input,
             forOperation: Operations.actions_sol_list_hyphen_environment_hyphen_secrets.id,
             serializer: { input in
                 let path = try converter.renderedPath(
-                    template: "/repositories/{}/environments/{}/secrets",
+                    template: "/repos/{}/{}/environments/{}/secrets",
                     parameters: [
-                        input.path.repository_id,
+                        input.path.owner,
+                        input.path.repo,
                         input.path.environment_name
                     ]
                 )
@@ -8897,17 +8898,18 @@ public struct Client: APIProtocol {
     ///
     /// If the repository is private, OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
-    /// - Remark: HTTP `GET /repositories/{repository_id}/environments/{environment_name}/secrets/public-key`.
-    /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/secrets/public-key/get(actions/get-environment-public-key)`.
+    /// - Remark: HTTP `GET /repos/{owner}/{repo}/environments/{environment_name}/secrets/public-key`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/secrets/public-key/get(actions/get-environment-public-key)`.
     public func actions_sol_get_hyphen_environment_hyphen_public_hyphen_key(_ input: Operations.actions_sol_get_hyphen_environment_hyphen_public_hyphen_key.Input) async throws -> Operations.actions_sol_get_hyphen_environment_hyphen_public_hyphen_key.Output {
         try await client.send(
             input: input,
             forOperation: Operations.actions_sol_get_hyphen_environment_hyphen_public_hyphen_key.id,
             serializer: { input in
                 let path = try converter.renderedPath(
-                    template: "/repositories/{}/environments/{}/secrets/public-key",
+                    template: "/repos/{}/{}/environments/{}/secrets/public-key",
                     parameters: [
-                        input.path.repository_id,
+                        input.path.owner,
+                        input.path.repo,
                         input.path.environment_name
                     ]
                 )
@@ -8966,17 +8968,18 @@ public struct Client: APIProtocol {
     ///
     /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
-    /// - Remark: HTTP `GET /repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}`.
-    /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}/get(actions/get-environment-secret)`.
+    /// - Remark: HTTP `GET /repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}/get(actions/get-environment-secret)`.
     public func actions_sol_get_hyphen_environment_hyphen_secret(_ input: Operations.actions_sol_get_hyphen_environment_hyphen_secret.Input) async throws -> Operations.actions_sol_get_hyphen_environment_hyphen_secret.Output {
         try await client.send(
             input: input,
             forOperation: Operations.actions_sol_get_hyphen_environment_hyphen_secret.id,
             serializer: { input in
                 let path = try converter.renderedPath(
-                    template: "/repositories/{}/environments/{}/secrets/{}",
+                    template: "/repos/{}/{}/environments/{}/secrets/{}",
                     parameters: [
-                        input.path.repository_id,
+                        input.path.owner,
+                        input.path.repo,
                         input.path.environment_name,
                         input.path.secret_name
                     ]
@@ -9037,17 +9040,18 @@ public struct Client: APIProtocol {
     ///
     /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
-    /// - Remark: HTTP `PUT /repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}`.
-    /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}/put(actions/create-or-update-environment-secret)`.
+    /// - Remark: HTTP `PUT /repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}/put(actions/create-or-update-environment-secret)`.
     public func actions_sol_create_hyphen_or_hyphen_update_hyphen_environment_hyphen_secret(_ input: Operations.actions_sol_create_hyphen_or_hyphen_update_hyphen_environment_hyphen_secret.Input) async throws -> Operations.actions_sol_create_hyphen_or_hyphen_update_hyphen_environment_hyphen_secret.Output {
         try await client.send(
             input: input,
             forOperation: Operations.actions_sol_create_hyphen_or_hyphen_update_hyphen_environment_hyphen_secret.id,
             serializer: { input in
                 let path = try converter.renderedPath(
-                    template: "/repositories/{}/environments/{}/secrets/{}",
+                    template: "/repos/{}/{}/environments/{}/secrets/{}",
                     parameters: [
-                        input.path.repository_id,
+                        input.path.owner,
+                        input.path.repo,
                         input.path.environment_name,
                         input.path.secret_name
                     ]
@@ -9118,17 +9122,18 @@ public struct Client: APIProtocol {
     ///
     /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
-    /// - Remark: HTTP `DELETE /repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}`.
-    /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}/delete(actions/delete-environment-secret)`.
+    /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}/delete(actions/delete-environment-secret)`.
     public func actions_sol_delete_hyphen_environment_hyphen_secret(_ input: Operations.actions_sol_delete_hyphen_environment_hyphen_secret.Input) async throws -> Operations.actions_sol_delete_hyphen_environment_hyphen_secret.Output {
         try await client.send(
             input: input,
             forOperation: Operations.actions_sol_delete_hyphen_environment_hyphen_secret.id,
             serializer: { input in
                 let path = try converter.renderedPath(
-                    template: "/repositories/{}/environments/{}/secrets/{}",
+                    template: "/repos/{}/{}/environments/{}/secrets/{}",
                     parameters: [
-                        input.path.repository_id,
+                        input.path.owner,
+                        input.path.repo,
                         input.path.environment_name,
                         input.path.secret_name
                     ]
@@ -9164,17 +9169,18 @@ public struct Client: APIProtocol {
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
-    /// - Remark: HTTP `GET /repositories/{repository_id}/environments/{environment_name}/variables`.
-    /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/variables/get(actions/list-environment-variables)`.
+    /// - Remark: HTTP `GET /repos/{owner}/{repo}/environments/{environment_name}/variables`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/variables/get(actions/list-environment-variables)`.
     public func actions_sol_list_hyphen_environment_hyphen_variables(_ input: Operations.actions_sol_list_hyphen_environment_hyphen_variables.Input) async throws -> Operations.actions_sol_list_hyphen_environment_hyphen_variables.Output {
         try await client.send(
             input: input,
             forOperation: Operations.actions_sol_list_hyphen_environment_hyphen_variables.id,
             serializer: { input in
                 let path = try converter.renderedPath(
-                    template: "/repositories/{}/environments/{}/variables",
+                    template: "/repos/{}/{}/environments/{}/variables",
                     parameters: [
-                        input.path.repository_id,
+                        input.path.owner,
+                        input.path.repo,
                         input.path.environment_name
                     ]
                 )
@@ -9255,17 +9261,18 @@ public struct Client: APIProtocol {
     ///
     /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
-    /// - Remark: HTTP `POST /repositories/{repository_id}/environments/{environment_name}/variables`.
-    /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/variables/post(actions/create-environment-variable)`.
+    /// - Remark: HTTP `POST /repos/{owner}/{repo}/environments/{environment_name}/variables`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/variables/post(actions/create-environment-variable)`.
     public func actions_sol_create_hyphen_environment_hyphen_variable(_ input: Operations.actions_sol_create_hyphen_environment_hyphen_variable.Input) async throws -> Operations.actions_sol_create_hyphen_environment_hyphen_variable.Output {
         try await client.send(
             input: input,
             forOperation: Operations.actions_sol_create_hyphen_environment_hyphen_variable.id,
             serializer: { input in
                 let path = try converter.renderedPath(
-                    template: "/repositories/{}/environments/{}/variables",
+                    template: "/repos/{}/{}/environments/{}/variables",
                     parameters: [
-                        input.path.repository_id,
+                        input.path.owner,
+                        input.path.repo,
                         input.path.environment_name
                     ]
                 )
@@ -9333,17 +9340,18 @@ public struct Client: APIProtocol {
     ///
     /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
-    /// - Remark: HTTP `GET /repositories/{repository_id}/environments/{environment_name}/variables/{name}`.
-    /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/variables/{name}/get(actions/get-environment-variable)`.
+    /// - Remark: HTTP `GET /repos/{owner}/{repo}/environments/{environment_name}/variables/{name}`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/variables/{name}/get(actions/get-environment-variable)`.
     public func actions_sol_get_hyphen_environment_hyphen_variable(_ input: Operations.actions_sol_get_hyphen_environment_hyphen_variable.Input) async throws -> Operations.actions_sol_get_hyphen_environment_hyphen_variable.Output {
         try await client.send(
             input: input,
             forOperation: Operations.actions_sol_get_hyphen_environment_hyphen_variable.id,
             serializer: { input in
                 let path = try converter.renderedPath(
-                    template: "/repositories/{}/environments/{}/variables/{}",
+                    template: "/repos/{}/{}/environments/{}/variables/{}",
                     parameters: [
-                        input.path.repository_id,
+                        input.path.owner,
+                        input.path.repo,
                         input.path.environment_name,
                         input.path.name
                     ]
@@ -9403,17 +9411,18 @@ public struct Client: APIProtocol {
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
-    /// - Remark: HTTP `PATCH /repositories/{repository_id}/environments/{environment_name}/variables/{name}`.
-    /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/variables/{name}/patch(actions/update-environment-variable)`.
+    /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/environments/{environment_name}/variables/{name}`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/variables/{name}/patch(actions/update-environment-variable)`.
     public func actions_sol_update_hyphen_environment_hyphen_variable(_ input: Operations.actions_sol_update_hyphen_environment_hyphen_variable.Input) async throws -> Operations.actions_sol_update_hyphen_environment_hyphen_variable.Output {
         try await client.send(
             input: input,
             forOperation: Operations.actions_sol_update_hyphen_environment_hyphen_variable.id,
             serializer: { input in
                 let path = try converter.renderedPath(
-                    template: "/repositories/{}/environments/{}/variables/{}",
+                    template: "/repos/{}/{}/environments/{}/variables/{}",
                     parameters: [
-                        input.path.repository_id,
+                        input.path.owner,
+                        input.path.repo,
                         input.path.environment_name,
                         input.path.name
                     ]
@@ -9458,17 +9467,18 @@ public struct Client: APIProtocol {
     ///
     /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
-    /// - Remark: HTTP `DELETE /repositories/{repository_id}/environments/{environment_name}/variables/{name}`.
-    /// - Remark: Generated from `#/paths//repositories/{repository_id}/environments/{environment_name}/variables/{name}/delete(actions/delete-environment-variable)`.
+    /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/environments/{environment_name}/variables/{name}`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/variables/{name}/delete(actions/delete-environment-variable)`.
     public func actions_sol_delete_hyphen_environment_hyphen_variable(_ input: Operations.actions_sol_delete_hyphen_environment_hyphen_variable.Input) async throws -> Operations.actions_sol_delete_hyphen_environment_hyphen_variable.Output {
         try await client.send(
             input: input,
             forOperation: Operations.actions_sol_delete_hyphen_environment_hyphen_variable.id,
             serializer: { input in
                 let path = try converter.renderedPath(
-                    template: "/repositories/{}/environments/{}/variables/{}",
+                    template: "/repos/{}/{}/environments/{}/variables/{}",
                     parameters: [
-                        input.path.repository_id,
+                        input.path.owner,
+                        input.path.repo,
                         input.path.environment_name,
                         input.path.name
                     ]
