@@ -84,10 +84,12 @@ extension APIProtocol {
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/license/get(licenses/get-for-repo)`.
     public func licenses_sol_get_hyphen_for_hyphen_repo(
         path: Operations.licenses_sol_get_hyphen_for_hyphen_repo.Input.Path,
+        query: Operations.licenses_sol_get_hyphen_for_hyphen_repo.Input.Query = .init(),
         headers: Operations.licenses_sol_get_hyphen_for_hyphen_repo.Input.Headers = .init()
     ) async throws -> Operations.licenses_sol_get_hyphen_for_hyphen_repo.Output {
         try await licenses_sol_get_hyphen_for_hyphen_repo(Operations.licenses_sol_get_hyphen_for_hyphen_repo.Input(
             path: path,
+            query: query,
             headers: headers
         ))
     }
@@ -333,6 +335,11 @@ public enum Components {
                 case featured
             }
         }
+        /// The Git reference, formatted as `refs/pull/<number>/merge`, `refs/pull/<number>/head`,
+        /// `refs/heads/<branch name>` or simply `<branch name>`.
+        ///
+        /// - Remark: Generated from `#/components/schemas/code-scanning-ref`.
+        public typealias code_hyphen_scanning_hyphen_ref = Swift.String
         /// License Content
         ///
         /// - Remark: Generated from `#/components/schemas/license-content`.
@@ -472,6 +479,10 @@ public enum Components {
         ///
         /// - Remark: Generated from `#/components/parameters/repo`.
         public typealias repo = Swift.String
+        /// The Git reference for the results you want to list. The `ref` for a branch can be formatted either as `refs/heads/<branch name>` or simply `<branch name>`. To reference a pull request use `refs/pull/<number>/merge`.
+        ///
+        /// - Remark: Generated from `#/components/parameters/git-ref`.
+        public typealias git_hyphen_ref = Components.Schemas.code_hyphen_scanning_hyphen_ref
     }
     /// Types generated from the `#/components/requestBodies` section of the OpenAPI document.
     public enum RequestBodies {}
@@ -950,6 +961,21 @@ public enum Operations {
                 }
             }
             public var path: Operations.licenses_sol_get_hyphen_for_hyphen_repo.Input.Path
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/license/GET/query`.
+            public struct Query: Sendable, Hashable {
+                /// The Git reference for the results you want to list. The `ref` for a branch can be formatted either as `refs/heads/<branch name>` or simply `<branch name>`. To reference a pull request use `refs/pull/<number>/merge`.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/license/GET/query/ref`.
+                public var ref: Components.Parameters.git_hyphen_ref?
+                /// Creates a new `Query`.
+                ///
+                /// - Parameters:
+                ///   - ref: The Git reference for the results you want to list. The `ref` for a branch can be formatted either as `refs/heads/<branch name>` or simply `<branch name>`. To reference a pull request use `refs/pull/<number>/merge`.
+                public init(ref: Components.Parameters.git_hyphen_ref? = nil) {
+                    self.ref = ref
+                }
+            }
+            public var query: Operations.licenses_sol_get_hyphen_for_hyphen_repo.Input.Query
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/license/GET/header`.
             public struct Headers: Sendable, Hashable {
                 public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.licenses_sol_get_hyphen_for_hyphen_repo.AcceptableContentType>]
@@ -966,12 +992,15 @@ public enum Operations {
             ///
             /// - Parameters:
             ///   - path:
+            ///   - query:
             ///   - headers:
             public init(
                 path: Operations.licenses_sol_get_hyphen_for_hyphen_repo.Input.Path,
+                query: Operations.licenses_sol_get_hyphen_for_hyphen_repo.Input.Query = .init(),
                 headers: Operations.licenses_sol_get_hyphen_for_hyphen_repo.Input.Headers = .init()
             ) {
                 self.path = path
+                self.query = query
                 self.headers = headers
             }
         }
