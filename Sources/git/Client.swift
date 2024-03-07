@@ -895,6 +895,8 @@ public struct Client: APIProtocol {
     }
     /// Update a reference
     ///
+    /// Updates the provided reference to point to a new SHA. For more information, see "[Git References](https://git-scm.com/book/en/v2/Git-Internals-Git-References)" in the Git documentation.
+    ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/git/refs/{ref}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/refs/{ref}/patch(git/update-ref)`.
     public func git_sol_update_hyphen_ref(_ input: Operations.git_sol_update_hyphen_ref.Input) async throws -> Operations.git_sol_update_hyphen_ref.Output {
@@ -989,6 +991,8 @@ public struct Client: APIProtocol {
         )
     }
     /// Delete a reference
+    ///
+    /// Deletes the provided reference.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/git/refs/{ref}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/refs/{ref}/delete(git/delete-ref)`.
