@@ -135,10 +135,14 @@ public protocol APIProtocol: Sendable {
     func git_sol_create_hyphen_ref(_ input: Operations.git_sol_create_hyphen_ref.Input) async throws -> Operations.git_sol_create_hyphen_ref.Output
     /// Update a reference
     ///
+    /// Updates the provided reference to point to a new SHA. For more information, see "[Git References](https://git-scm.com/book/en/v2/Git-Internals-Git-References)" in the Git documentation.
+    ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/git/refs/{ref}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/refs/{ref}/patch(git/update-ref)`.
     func git_sol_update_hyphen_ref(_ input: Operations.git_sol_update_hyphen_ref.Input) async throws -> Operations.git_sol_update_hyphen_ref.Output
     /// Delete a reference
+    ///
+    /// Deletes the provided reference.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/git/refs/{ref}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/refs/{ref}/delete(git/delete-ref)`.
@@ -426,6 +430,8 @@ extension APIProtocol {
     }
     /// Update a reference
     ///
+    /// Updates the provided reference to point to a new SHA. For more information, see "[Git References](https://git-scm.com/book/en/v2/Git-Internals-Git-References)" in the Git documentation.
+    ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/git/refs/{ref}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/refs/{ref}/patch(git/update-ref)`.
     public func git_sol_update_hyphen_ref(
@@ -440,6 +446,8 @@ extension APIProtocol {
         ))
     }
     /// Delete a reference
+    ///
+    /// Deletes the provided reference.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/git/refs/{ref}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/refs/{ref}/delete(git/delete-ref)`.
@@ -1422,10 +1430,10 @@ public enum Components {
         ///
         /// - Remark: Generated from `#/components/parameters/commit-sha`.
         public typealias commit_hyphen_sha = Swift.String
-        /// The commit reference. Can be a commit SHA, branch name (`heads/BRANCH_NAME`), or tag name (`tags/TAG_NAME`). For more information, see "[Git References](https://git-scm.com/book/en/v2/Git-Internals-Git-References)" in the Git documentation.
+        /// The Git reference. For more information, see "[Git References](https://git-scm.com/book/en/v2/Git-Internals-Git-References)" in the Git documentation.
         ///
-        /// - Remark: Generated from `#/components/parameters/commit-ref`.
-        public typealias commit_hyphen_ref = Swift.String
+        /// - Remark: Generated from `#/components/parameters/git-ref-only`.
+        public typealias git_hyphen_ref_hyphen_only = Swift.String
     }
     /// Types generated from the `#/components/requestBodies` section of the OpenAPI document.
     public enum RequestBodies {}
@@ -2030,6 +2038,29 @@ public enum Operations {
                     }
                 }
             }
+            /// Conflict
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/blobs/{file_sha}/get(git/get-blob)/responses/409`.
+            ///
+            /// HTTP response code: `409 conflict`.
+            case conflict(Components.Responses.conflict)
+            /// The associated value of the enum case if `self` is `.conflict`.
+            ///
+            /// - Throws: An error if `self` is not `.conflict`.
+            /// - SeeAlso: `.conflict`.
+            public var conflict: Components.Responses.conflict {
+                get throws {
+                    switch self {
+                    case let .conflict(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "conflict",
+                            response: self
+                        )
+                    }
+                }
+            }
             /// Undocumented response.
             ///
             /// A response with a code that is not documented in the OpenAPI document.
@@ -2407,6 +2438,29 @@ public enum Operations {
                     }
                 }
             }
+            /// Conflict
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/commits/post(git/create-commit)/responses/409`.
+            ///
+            /// HTTP response code: `409 conflict`.
+            case conflict(Components.Responses.conflict)
+            /// The associated value of the enum case if `self` is `.conflict`.
+            ///
+            /// - Throws: An error if `self` is not `.conflict`.
+            /// - SeeAlso: `.conflict`.
+            public var conflict: Components.Responses.conflict {
+                get throws {
+                    switch self {
+                    case let .conflict(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "conflict",
+                            response: self
+                        )
+                    }
+                }
+            }
             /// Undocumented response.
             ///
             /// A response with a code that is not documented in the OpenAPI document.
@@ -2609,6 +2663,29 @@ public enum Operations {
                     }
                 }
             }
+            /// Conflict
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/commits/{commit_sha}/get(git/get-commit)/responses/409`.
+            ///
+            /// HTTP response code: `409 conflict`.
+            case conflict(Components.Responses.conflict)
+            /// The associated value of the enum case if `self` is `.conflict`.
+            ///
+            /// - Throws: An error if `self` is not `.conflict`.
+            /// - SeeAlso: `.conflict`.
+            public var conflict: Components.Responses.conflict {
+                get throws {
+                    switch self {
+                    case let .conflict(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "conflict",
+                            response: self
+                        )
+                    }
+                }
+            }
             /// Undocumented response.
             ///
             /// A response with a code that is not documented in the OpenAPI document.
@@ -2665,20 +2742,20 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/matching-refs/{ref}/GET/path/repo`.
                 public var repo: Components.Parameters.repo
-                /// The commit reference. Can be a commit SHA, branch name (`heads/BRANCH_NAME`), or tag name (`tags/TAG_NAME`). For more information, see "[Git References](https://git-scm.com/book/en/v2/Git-Internals-Git-References)" in the Git documentation.
+                /// The Git reference. For more information, see "[Git References](https://git-scm.com/book/en/v2/Git-Internals-Git-References)" in the Git documentation.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/matching-refs/{ref}/GET/path/ref`.
-                public var ref: Components.Parameters.commit_hyphen_ref
+                public var ref: Components.Parameters.git_hyphen_ref_hyphen_only
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - ref: The commit reference. Can be a commit SHA, branch name (`heads/BRANCH_NAME`), or tag name (`tags/TAG_NAME`). For more information, see "[Git References](https://git-scm.com/book/en/v2/Git-Internals-Git-References)" in the Git documentation.
+                ///   - ref: The Git reference. For more information, see "[Git References](https://git-scm.com/book/en/v2/Git-Internals-Git-References)" in the Git documentation.
                 public init(
                     owner: Components.Parameters.owner,
                     repo: Components.Parameters.repo,
-                    ref: Components.Parameters.commit_hyphen_ref
+                    ref: Components.Parameters.git_hyphen_ref_hyphen_only
                 ) {
                     self.owner = owner
                     self.repo = repo
@@ -2782,6 +2859,29 @@ public enum Operations {
                     }
                 }
             }
+            /// Conflict
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/matching-refs/{ref}/get(git/list-matching-refs)/responses/409`.
+            ///
+            /// HTTP response code: `409 conflict`.
+            case conflict(Components.Responses.conflict)
+            /// The associated value of the enum case if `self` is `.conflict`.
+            ///
+            /// - Throws: An error if `self` is not `.conflict`.
+            /// - SeeAlso: `.conflict`.
+            public var conflict: Components.Responses.conflict {
+                get throws {
+                    switch self {
+                    case let .conflict(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "conflict",
+                            response: self
+                        )
+                    }
+                }
+            }
             /// Undocumented response.
             ///
             /// A response with a code that is not documented in the OpenAPI document.
@@ -2834,20 +2934,20 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/ref/{ref}/GET/path/repo`.
                 public var repo: Components.Parameters.repo
-                /// The commit reference. Can be a commit SHA, branch name (`heads/BRANCH_NAME`), or tag name (`tags/TAG_NAME`). For more information, see "[Git References](https://git-scm.com/book/en/v2/Git-Internals-Git-References)" in the Git documentation.
+                /// The Git reference. For more information, see "[Git References](https://git-scm.com/book/en/v2/Git-Internals-Git-References)" in the Git documentation.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/ref/{ref}/GET/path/ref`.
-                public var ref: Components.Parameters.commit_hyphen_ref
+                public var ref: Components.Parameters.git_hyphen_ref_hyphen_only
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - ref: The commit reference. Can be a commit SHA, branch name (`heads/BRANCH_NAME`), or tag name (`tags/TAG_NAME`). For more information, see "[Git References](https://git-scm.com/book/en/v2/Git-Internals-Git-References)" in the Git documentation.
+                ///   - ref: The Git reference. For more information, see "[Git References](https://git-scm.com/book/en/v2/Git-Internals-Git-References)" in the Git documentation.
                 public init(
                     owner: Components.Parameters.owner,
                     repo: Components.Parameters.repo,
-                    ref: Components.Parameters.commit_hyphen_ref
+                    ref: Components.Parameters.git_hyphen_ref_hyphen_only
                 ) {
                     self.owner = owner
                     self.repo = repo
@@ -2950,6 +3050,29 @@ public enum Operations {
                     default:
                         try throwUnexpectedResponseStatus(
                             expectedStatus: "notFound",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Conflict
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/ref/{ref}/get(git/get-ref)/responses/409`.
+            ///
+            /// HTTP response code: `409 conflict`.
+            case conflict(Components.Responses.conflict)
+            /// The associated value of the enum case if `self` is `.conflict`.
+            ///
+            /// - Throws: An error if `self` is not `.conflict`.
+            /// - SeeAlso: `.conflict`.
+            public var conflict: Components.Responses.conflict {
+                get throws {
+                    switch self {
+                    case let .conflict(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "conflict",
                             response: self
                         )
                     }
@@ -3174,6 +3297,29 @@ public enum Operations {
                     }
                 }
             }
+            /// Conflict
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/refs/post(git/create-ref)/responses/409`.
+            ///
+            /// HTTP response code: `409 conflict`.
+            case conflict(Components.Responses.conflict)
+            /// The associated value of the enum case if `self` is `.conflict`.
+            ///
+            /// - Throws: An error if `self` is not `.conflict`.
+            /// - SeeAlso: `.conflict`.
+            public var conflict: Components.Responses.conflict {
+                get throws {
+                    switch self {
+                    case let .conflict(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "conflict",
+                            response: self
+                        )
+                    }
+                }
+            }
             /// Undocumented response.
             ///
             /// A response with a code that is not documented in the OpenAPI document.
@@ -3207,6 +3353,8 @@ public enum Operations {
     }
     /// Update a reference
     ///
+    /// Updates the provided reference to point to a new SHA. For more information, see "[Git References](https://git-scm.com/book/en/v2/Git-Internals-Git-References)" in the Git documentation.
+    ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/git/refs/{ref}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/refs/{ref}/patch(git/update-ref)`.
     public enum git_sol_update_hyphen_ref {
@@ -3222,20 +3370,20 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/refs/{ref}/PATCH/path/repo`.
                 public var repo: Components.Parameters.repo
-                /// The name of the reference to update (for example, `heads/featureA`). Can be a branch name (`heads/BRANCH_NAME`) or tag name (`tags/TAG_NAME`). For more information, see "[Git References](https://git-scm.com/book/en/v2/Git-Internals-Git-References)" in the Git documentation.
+                /// The Git reference. For more information, see "[Git References](https://git-scm.com/book/en/v2/Git-Internals-Git-References)" in the Git documentation.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/refs/{ref}/PATCH/path/ref`.
-                public var ref: Swift.String
+                public var ref: Components.Parameters.git_hyphen_ref_hyphen_only
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - ref: The name of the reference to update (for example, `heads/featureA`). Can be a branch name (`heads/BRANCH_NAME`) or tag name (`tags/TAG_NAME`). For more information, see "[Git References](https://git-scm.com/book/en/v2/Git-Internals-Git-References)" in the Git documentation.
+                ///   - ref: The Git reference. For more information, see "[Git References](https://git-scm.com/book/en/v2/Git-Internals-Git-References)" in the Git documentation.
                 public init(
                     owner: Components.Parameters.owner,
                     repo: Components.Parameters.repo,
-                    ref: Swift.String
+                    ref: Components.Parameters.git_hyphen_ref_hyphen_only
                 ) {
                     self.owner = owner
                     self.repo = repo
@@ -3379,6 +3527,29 @@ public enum Operations {
                     }
                 }
             }
+            /// Conflict
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/refs/{ref}/patch(git/update-ref)/responses/409`.
+            ///
+            /// HTTP response code: `409 conflict`.
+            case conflict(Components.Responses.conflict)
+            /// The associated value of the enum case if `self` is `.conflict`.
+            ///
+            /// - Throws: An error if `self` is not `.conflict`.
+            /// - SeeAlso: `.conflict`.
+            public var conflict: Components.Responses.conflict {
+                get throws {
+                    switch self {
+                    case let .conflict(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "conflict",
+                            response: self
+                        )
+                    }
+                }
+            }
             /// Undocumented response.
             ///
             /// A response with a code that is not documented in the OpenAPI document.
@@ -3412,6 +3583,8 @@ public enum Operations {
     }
     /// Delete a reference
     ///
+    /// Deletes the provided reference.
+    ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/git/refs/{ref}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/refs/{ref}/delete(git/delete-ref)`.
     public enum git_sol_delete_hyphen_ref {
@@ -3427,20 +3600,20 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/refs/{ref}/DELETE/path/repo`.
                 public var repo: Components.Parameters.repo
-                /// The commit reference. Can be a commit SHA, branch name (`heads/BRANCH_NAME`), or tag name (`tags/TAG_NAME`). For more information, see "[Git References](https://git-scm.com/book/en/v2/Git-Internals-Git-References)" in the Git documentation.
+                /// The Git reference. For more information, see "[Git References](https://git-scm.com/book/en/v2/Git-Internals-Git-References)" in the Git documentation.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/refs/{ref}/DELETE/path/ref`.
-                public var ref: Components.Parameters.commit_hyphen_ref
+                public var ref: Components.Parameters.git_hyphen_ref_hyphen_only
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - ref: The commit reference. Can be a commit SHA, branch name (`heads/BRANCH_NAME`), or tag name (`tags/TAG_NAME`). For more information, see "[Git References](https://git-scm.com/book/en/v2/Git-Internals-Git-References)" in the Git documentation.
+                ///   - ref: The Git reference. For more information, see "[Git References](https://git-scm.com/book/en/v2/Git-Internals-Git-References)" in the Git documentation.
                 public init(
                     owner: Components.Parameters.owner,
                     repo: Components.Parameters.repo,
-                    ref: Components.Parameters.commit_hyphen_ref
+                    ref: Components.Parameters.git_hyphen_ref_hyphen_only
                 ) {
                     self.owner = owner
                     self.repo = repo
@@ -3519,6 +3692,29 @@ public enum Operations {
                     default:
                         try throwUnexpectedResponseStatus(
                             expectedStatus: "unprocessableContent",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Conflict
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/refs/{ref}/delete(git/delete-ref)/responses/409`.
+            ///
+            /// HTTP response code: `409 conflict`.
+            case conflict(Components.Responses.conflict)
+            /// The associated value of the enum case if `self` is `.conflict`.
+            ///
+            /// - Throws: An error if `self` is not `.conflict`.
+            /// - SeeAlso: `.conflict`.
+            public var conflict: Components.Responses.conflict {
+                get throws {
+                    switch self {
+                    case let .conflict(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "conflict",
                             response: self
                         )
                     }
@@ -3841,6 +4037,29 @@ public enum Operations {
                     }
                 }
             }
+            /// Conflict
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/tags/post(git/create-tag)/responses/409`.
+            ///
+            /// HTTP response code: `409 conflict`.
+            case conflict(Components.Responses.conflict)
+            /// The associated value of the enum case if `self` is `.conflict`.
+            ///
+            /// - Throws: An error if `self` is not `.conflict`.
+            /// - SeeAlso: `.conflict`.
+            public var conflict: Components.Responses.conflict {
+                get throws {
+                    switch self {
+                    case let .conflict(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "conflict",
+                            response: self
+                        )
+                    }
+                }
+            }
             /// Undocumented response.
             ///
             /// A response with a code that is not documented in the OpenAPI document.
@@ -4032,6 +4251,29 @@ public enum Operations {
                     default:
                         try throwUnexpectedResponseStatus(
                             expectedStatus: "notFound",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Conflict
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/tags/{tag_sha}/get(git/get-tag)/responses/409`.
+            ///
+            /// HTTP response code: `409 conflict`.
+            case conflict(Components.Responses.conflict)
+            /// The associated value of the enum case if `self` is `.conflict`.
+            ///
+            /// - Throws: An error if `self` is not `.conflict`.
+            /// - SeeAlso: `.conflict`.
+            public var conflict: Components.Responses.conflict {
+                get throws {
+                    switch self {
+                    case let .conflict(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "conflict",
                             response: self
                         )
                     }
@@ -4385,6 +4627,29 @@ public enum Operations {
                     }
                 }
             }
+            /// Conflict
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/trees/post(git/create-tree)/responses/409`.
+            ///
+            /// HTTP response code: `409 conflict`.
+            case conflict(Components.Responses.conflict)
+            /// The associated value of the enum case if `self` is `.conflict`.
+            ///
+            /// - Throws: An error if `self` is not `.conflict`.
+            /// - SeeAlso: `.conflict`.
+            public var conflict: Components.Responses.conflict {
+                get throws {
+                    switch self {
+                    case let .conflict(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "conflict",
+                            response: self
+                        )
+                    }
+                }
+            }
             /// Undocumented response.
             ///
             /// A response with a code that is not documented in the OpenAPI document.
@@ -4597,6 +4862,29 @@ public enum Operations {
                     default:
                         try throwUnexpectedResponseStatus(
                             expectedStatus: "notFound",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Conflict
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/trees/{tree_sha}/get(git/get-tree)/responses/409`.
+            ///
+            /// HTTP response code: `409 conflict`.
+            case conflict(Components.Responses.conflict)
+            /// The associated value of the enum case if `self` is `.conflict`.
+            ///
+            /// - Throws: An error if `self` is not `.conflict`.
+            /// - SeeAlso: `.conflict`.
+            public var conflict: Components.Responses.conflict {
+                get throws {
+                    switch self {
+                    case let .conflict(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "conflict",
                             response: self
                         )
                     }
