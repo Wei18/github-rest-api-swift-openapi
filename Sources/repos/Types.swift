@@ -1484,6 +1484,13 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pages/health`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/health/get(repos/get-pages-health-check)`.
     func repos_sol_get_hyphen_pages_hyphen_health_hyphen_check(_ input: Operations.repos_sol_get_hyphen_pages_hyphen_health_hyphen_check.Input) async throws -> Operations.repos_sol_get_hyphen_pages_hyphen_health_hyphen_check.Output
+    /// Check if private vulnerability reporting is enabled for a repository
+    ///
+    /// Returns a boolean indicating whether or not private vulnerability reporting is enabled for the repository. For more information, see "[Evaluating the security settings of a repository](https://docs.github.com/code-security/security-advisories/working-with-repository-security-advisories/evaluating-the-security-settings-of-a-repository)".
+    ///
+    /// - Remark: HTTP `GET /repos/{owner}/{repo}/private-vulnerability-reporting`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/private-vulnerability-reporting/get(repos/check-private-vulnerability-reporting)`.
+    func repos_sol_check_hyphen_private_hyphen_vulnerability_hyphen_reporting(_ input: Operations.repos_sol_check_hyphen_private_hyphen_vulnerability_hyphen_reporting.Input) async throws -> Operations.repos_sol_check_hyphen_private_hyphen_vulnerability_hyphen_reporting.Output
     /// Enable private vulnerability reporting for a repository
     ///
     /// Enables private vulnerability reporting for a repository. The authenticated user must have admin access to the repository. For more information, see "[Privately reporting a security vulnerability](https://docs.github.com/code-security/security-advisories/guidance-on-reporting-and-writing/privately-reporting-a-security-vulnerability)."
@@ -4636,6 +4643,21 @@ extension APIProtocol {
         headers: Operations.repos_sol_get_hyphen_pages_hyphen_health_hyphen_check.Input.Headers = .init()
     ) async throws -> Operations.repos_sol_get_hyphen_pages_hyphen_health_hyphen_check.Output {
         try await repos_sol_get_hyphen_pages_hyphen_health_hyphen_check(Operations.repos_sol_get_hyphen_pages_hyphen_health_hyphen_check.Input(
+            path: path,
+            headers: headers
+        ))
+    }
+    /// Check if private vulnerability reporting is enabled for a repository
+    ///
+    /// Returns a boolean indicating whether or not private vulnerability reporting is enabled for the repository. For more information, see "[Evaluating the security settings of a repository](https://docs.github.com/code-security/security-advisories/working-with-repository-security-advisories/evaluating-the-security-settings-of-a-repository)".
+    ///
+    /// - Remark: HTTP `GET /repos/{owner}/{repo}/private-vulnerability-reporting`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/private-vulnerability-reporting/get(repos/check-private-vulnerability-reporting)`.
+    public func repos_sol_check_hyphen_private_hyphen_vulnerability_hyphen_reporting(
+        path: Operations.repos_sol_check_hyphen_private_hyphen_vulnerability_hyphen_reporting.Input.Path,
+        headers: Operations.repos_sol_check_hyphen_private_hyphen_vulnerability_hyphen_reporting.Input.Headers = .init()
+    ) async throws -> Operations.repos_sol_check_hyphen_private_hyphen_vulnerability_hyphen_reporting.Output {
+        try await repos_sol_check_hyphen_private_hyphen_vulnerability_hyphen_reporting(Operations.repos_sol_check_hyphen_private_hyphen_vulnerability_hyphen_reporting.Input(
             path: path,
             headers: headers
         ))
@@ -36154,6 +36176,29 @@ public enum Operations {
                     }
                 }
             }
+            /// Conflict
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/commits/{commit_sha}/branches-where-head/get(repos/list-branches-for-head-commit)/responses/409`.
+            ///
+            /// HTTP response code: `409 conflict`.
+            case conflict(Components.Responses.conflict)
+            /// The associated value of the enum case if `self` is `.conflict`.
+            ///
+            /// - Throws: An error if `self` is not `.conflict`.
+            /// - SeeAlso: `.conflict`.
+            public var conflict: Components.Responses.conflict {
+                get throws {
+                    switch self {
+                    case let .conflict(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "conflict",
+                            response: self
+                        )
+                    }
+                }
+            }
             /// Undocumented response.
             ///
             /// A response with a code that is not documented in the OpenAPI document.
@@ -36825,6 +36870,29 @@ public enum Operations {
                     }
                 }
             }
+            /// Conflict
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/commits/{commit_sha}/pulls/get(repos/list-pull-requests-associated-with-commit)/responses/409`.
+            ///
+            /// HTTP response code: `409 conflict`.
+            case conflict(Components.Responses.conflict)
+            /// The associated value of the enum case if `self` is `.conflict`.
+            ///
+            /// - Throws: An error if `self` is not `.conflict`.
+            /// - SeeAlso: `.conflict`.
+            public var conflict: Components.Responses.conflict {
+                get throws {
+                    switch self {
+                    case let .conflict(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "conflict",
+                            response: self
+                        )
+                    }
+                }
+            }
             /// Undocumented response.
             ///
             /// A response with a code that is not documented in the OpenAPI document.
@@ -37124,6 +37192,29 @@ public enum Operations {
                     default:
                         try throwUnexpectedResponseStatus(
                             expectedStatus: "serviceUnavailable",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Conflict
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/commits/{ref}/get(repos/get-commit)/responses/409`.
+            ///
+            /// HTTP response code: `409 conflict`.
+            case conflict(Components.Responses.conflict)
+            /// The associated value of the enum case if `self` is `.conflict`.
+            ///
+            /// - Throws: An error if `self` is not `.conflict`.
+            /// - SeeAlso: `.conflict`.
+            public var conflict: Components.Responses.conflict {
+                get throws {
+                    switch self {
+                    case let .conflict(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "conflict",
                             response: self
                         )
                     }
@@ -50876,6 +50967,193 @@ public enum Operations {
             public static var allCases: [Self] {
                 [
                     .json
+                ]
+            }
+        }
+    }
+    /// Check if private vulnerability reporting is enabled for a repository
+    ///
+    /// Returns a boolean indicating whether or not private vulnerability reporting is enabled for the repository. For more information, see "[Evaluating the security settings of a repository](https://docs.github.com/code-security/security-advisories/working-with-repository-security-advisories/evaluating-the-security-settings-of-a-repository)".
+    ///
+    /// - Remark: HTTP `GET /repos/{owner}/{repo}/private-vulnerability-reporting`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/private-vulnerability-reporting/get(repos/check-private-vulnerability-reporting)`.
+    public enum repos_sol_check_hyphen_private_hyphen_vulnerability_hyphen_reporting {
+        public static let id: Swift.String = "repos/check-private-vulnerability-reporting"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/private-vulnerability-reporting/GET/path`.
+            public struct Path: Sendable, Hashable {
+                /// The account owner of the repository. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/private-vulnerability-reporting/GET/path/owner`.
+                public var owner: Components.Parameters.owner
+                /// The name of the repository without the `.git` extension. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/private-vulnerability-reporting/GET/path/repo`.
+                public var repo: Components.Parameters.repo
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - owner: The account owner of the repository. The name is not case sensitive.
+                ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
+                public init(
+                    owner: Components.Parameters.owner,
+                    repo: Components.Parameters.repo
+                ) {
+                    self.owner = owner
+                    self.repo = repo
+                }
+            }
+            public var path: Operations.repos_sol_check_hyphen_private_hyphen_vulnerability_hyphen_reporting.Input.Path
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/private-vulnerability-reporting/GET/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.repos_sol_check_hyphen_private_hyphen_vulnerability_hyphen_reporting.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.repos_sol_check_hyphen_private_hyphen_vulnerability_hyphen_reporting.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.repos_sol_check_hyphen_private_hyphen_vulnerability_hyphen_reporting.Input.Headers
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - headers:
+            public init(
+                path: Operations.repos_sol_check_hyphen_private_hyphen_vulnerability_hyphen_reporting.Input.Path,
+                headers: Operations.repos_sol_check_hyphen_private_hyphen_vulnerability_hyphen_reporting.Input.Headers = .init()
+            ) {
+                self.path = path
+                self.headers = headers
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Ok: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/private-vulnerability-reporting/GET/responses/200/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/private-vulnerability-reporting/GET/responses/200/content/json`.
+                    public struct jsonPayload: Codable, Hashable, Sendable {
+                        /// Whether or not private vulnerability reporting is enabled for the repository.
+                        ///
+                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/private-vulnerability-reporting/GET/responses/200/content/json/enabled`.
+                        public var enabled: Swift.Bool
+                        /// Creates a new `jsonPayload`.
+                        ///
+                        /// - Parameters:
+                        ///   - enabled: Whether or not private vulnerability reporting is enabled for the repository.
+                        public init(enabled: Swift.Bool) {
+                            self.enabled = enabled
+                        }
+                        public enum CodingKeys: String, CodingKey {
+                            case enabled
+                        }
+                    }
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/private-vulnerability-reporting/GET/responses/200/content/application\/json`.
+                    case json(Operations.repos_sol_check_hyphen_private_hyphen_vulnerability_hyphen_reporting.Output.Ok.Body.jsonPayload)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Operations.repos_sol_check_hyphen_private_hyphen_vulnerability_hyphen_reporting.Output.Ok.Body.jsonPayload {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.repos_sol_check_hyphen_private_hyphen_vulnerability_hyphen_reporting.Output.Ok.Body
+                /// Creates a new `Ok`.
+                ///
+                /// - Parameters:
+                ///   - body: Received HTTP response body
+                public init(body: Operations.repos_sol_check_hyphen_private_hyphen_vulnerability_hyphen_reporting.Output.Ok.Body) {
+                    self.body = body
+                }
+            }
+            /// Private vulnerability reporting status
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/private-vulnerability-reporting/get(repos/check-private-vulnerability-reporting)/responses/200`.
+            ///
+            /// HTTP response code: `200 ok`.
+            case ok(Operations.repos_sol_check_hyphen_private_hyphen_vulnerability_hyphen_reporting.Output.Ok)
+            /// The associated value of the enum case if `self` is `.ok`.
+            ///
+            /// - Throws: An error if `self` is not `.ok`.
+            /// - SeeAlso: `.ok`.
+            public var ok: Operations.repos_sol_check_hyphen_private_hyphen_vulnerability_hyphen_reporting.Output.Ok {
+                get throws {
+                    switch self {
+                    case let .ok(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "ok",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Bad Request
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/private-vulnerability-reporting/get(repos/check-private-vulnerability-reporting)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            case unprocessableContent(Components.Responses.bad_request)
+            /// The associated value of the enum case if `self` is `.unprocessableContent`.
+            ///
+            /// - Throws: An error if `self` is not `.unprocessableContent`.
+            /// - SeeAlso: `.unprocessableContent`.
+            public var unprocessableContent: Components.Responses.bad_request {
+                get throws {
+                    switch self {
+                    case let .unprocessableContent(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "unprocessableContent",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case application_scim_plus_json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                case "application/scim+json":
+                    self = .application_scim_plus_json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                case .application_scim_plus_json:
+                    return "application/scim+json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json,
+                    .application_scim_plus_json
                 ]
             }
         }
