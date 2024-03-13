@@ -186,6 +186,8 @@ public struct Client: APIProtocol {
                         preconditionFailure("bestContentType chose an invalid content type.")
                     }
                     return .notFound(.init(body: body))
+                case 422:
+                    return .unprocessableContent(.init())
                 default:
                     return .undocumented(
                         statusCode: response.status.code,

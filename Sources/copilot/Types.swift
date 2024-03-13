@@ -581,16 +581,40 @@ public enum Components {
             public var public_code_suggestions: Components.Schemas.copilot_hyphen_organization_hyphen_details.public_code_suggestionsPayload
             /// The organization policy for allowing or disallowing organization members to use Copilot Chat within their editor.
             ///
-            /// - Remark: Generated from `#/components/schemas/copilot-organization-details/copilot_chat`.
-            @frozen public enum copilot_chatPayload: String, Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/copilot-organization-details/ide_chat`.
+            @frozen public enum ide_chatPayload: String, Codable, Hashable, Sendable {
                 case enabled = "enabled"
                 case disabled = "disabled"
                 case unconfigured = "unconfigured"
             }
             /// The organization policy for allowing or disallowing organization members to use Copilot Chat within their editor.
             ///
-            /// - Remark: Generated from `#/components/schemas/copilot-organization-details/copilot_chat`.
-            public var copilot_chat: Components.Schemas.copilot_hyphen_organization_hyphen_details.copilot_chatPayload?
+            /// - Remark: Generated from `#/components/schemas/copilot-organization-details/ide_chat`.
+            public var ide_chat: Components.Schemas.copilot_hyphen_organization_hyphen_details.ide_chatPayload?
+            /// The organization policy for allowing or disallowing organization members to use Copilot features within github.com.
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-organization-details/platform_chat`.
+            @frozen public enum platform_chatPayload: String, Codable, Hashable, Sendable {
+                case enabled = "enabled"
+                case disabled = "disabled"
+                case unconfigured = "unconfigured"
+            }
+            /// The organization policy for allowing or disallowing organization members to use Copilot features within github.com.
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-organization-details/platform_chat`.
+            public var platform_chat: Components.Schemas.copilot_hyphen_organization_hyphen_details.platform_chatPayload?
+            /// The organization policy for allowing or disallowing organization members to use Copilot within their CLI.
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-organization-details/cli`.
+            @frozen public enum cliPayload: String, Codable, Hashable, Sendable {
+                case enabled = "enabled"
+                case disabled = "disabled"
+                case unconfigured = "unconfigured"
+            }
+            /// The organization policy for allowing or disallowing organization members to use Copilot within their CLI.
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-organization-details/cli`.
+            public var cli: Components.Schemas.copilot_hyphen_organization_hyphen_details.cliPayload?
             /// The mode of assigning new seats.
             ///
             /// - Remark: Generated from `#/components/schemas/copilot-organization-details/seat_management_setting`.
@@ -611,26 +635,34 @@ public enum Components {
             /// - Parameters:
             ///   - seat_breakdown:
             ///   - public_code_suggestions: The organization policy for allowing or disallowing Copilot to make suggestions that match public code.
-            ///   - copilot_chat: The organization policy for allowing or disallowing organization members to use Copilot Chat within their editor.
+            ///   - ide_chat: The organization policy for allowing or disallowing organization members to use Copilot Chat within their editor.
+            ///   - platform_chat: The organization policy for allowing or disallowing organization members to use Copilot features within github.com.
+            ///   - cli: The organization policy for allowing or disallowing organization members to use Copilot within their CLI.
             ///   - seat_management_setting: The mode of assigning new seats.
             ///   - additionalProperties: A container of undocumented properties.
             public init(
                 seat_breakdown: Components.Schemas.copilot_hyphen_seat_hyphen_breakdown,
                 public_code_suggestions: Components.Schemas.copilot_hyphen_organization_hyphen_details.public_code_suggestionsPayload,
-                copilot_chat: Components.Schemas.copilot_hyphen_organization_hyphen_details.copilot_chatPayload? = nil,
+                ide_chat: Components.Schemas.copilot_hyphen_organization_hyphen_details.ide_chatPayload? = nil,
+                platform_chat: Components.Schemas.copilot_hyphen_organization_hyphen_details.platform_chatPayload? = nil,
+                cli: Components.Schemas.copilot_hyphen_organization_hyphen_details.cliPayload? = nil,
                 seat_management_setting: Components.Schemas.copilot_hyphen_organization_hyphen_details.seat_management_settingPayload,
                 additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer = .init()
             ) {
                 self.seat_breakdown = seat_breakdown
                 self.public_code_suggestions = public_code_suggestions
-                self.copilot_chat = copilot_chat
+                self.ide_chat = ide_chat
+                self.platform_chat = platform_chat
+                self.cli = cli
                 self.seat_management_setting = seat_management_setting
                 self.additionalProperties = additionalProperties
             }
             public enum CodingKeys: String, CodingKey {
                 case seat_breakdown
                 case public_code_suggestions
-                case copilot_chat
+                case ide_chat
+                case platform_chat
+                case cli
                 case seat_management_setting
             }
             public init(from decoder: any Decoder) throws {
@@ -643,9 +675,17 @@ public enum Components {
                     Components.Schemas.copilot_hyphen_organization_hyphen_details.public_code_suggestionsPayload.self,
                     forKey: .public_code_suggestions
                 )
-                copilot_chat = try container.decodeIfPresent(
-                    Components.Schemas.copilot_hyphen_organization_hyphen_details.copilot_chatPayload.self,
-                    forKey: .copilot_chat
+                ide_chat = try container.decodeIfPresent(
+                    Components.Schemas.copilot_hyphen_organization_hyphen_details.ide_chatPayload.self,
+                    forKey: .ide_chat
+                )
+                platform_chat = try container.decodeIfPresent(
+                    Components.Schemas.copilot_hyphen_organization_hyphen_details.platform_chatPayload.self,
+                    forKey: .platform_chat
+                )
+                cli = try container.decodeIfPresent(
+                    Components.Schemas.copilot_hyphen_organization_hyphen_details.cliPayload.self,
+                    forKey: .cli
                 )
                 seat_management_setting = try container.decode(
                     Components.Schemas.copilot_hyphen_organization_hyphen_details.seat_management_settingPayload.self,
@@ -654,7 +694,9 @@ public enum Components {
                 additionalProperties = try decoder.decodeAdditionalProperties(knownKeys: [
                     "seat_breakdown",
                     "public_code_suggestions",
-                    "copilot_chat",
+                    "ide_chat",
+                    "platform_chat",
+                    "cli",
                     "seat_management_setting"
                 ])
             }
@@ -669,8 +711,16 @@ public enum Components {
                     forKey: .public_code_suggestions
                 )
                 try container.encodeIfPresent(
-                    copilot_chat,
-                    forKey: .copilot_chat
+                    ide_chat,
+                    forKey: .ide_chat
+                )
+                try container.encodeIfPresent(
+                    platform_chat,
+                    forKey: .platform_chat
+                )
+                try container.encodeIfPresent(
+                    cli,
+                    forKey: .cli
                 )
                 try container.encode(
                     seat_management_setting,
@@ -1691,6 +1741,33 @@ public enum Operations {
                     default:
                         try throwUnexpectedResponseStatus(
                             expectedStatus: "notFound",
+                            response: self
+                        )
+                    }
+                }
+            }
+            public struct UnprocessableContent: Sendable, Hashable {
+                /// Creates a new `UnprocessableContent`.
+                public init() {}
+            }
+            /// There is a problem with your account's associated payment method.
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/get(copilot/get-copilot-organization-details)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            case unprocessableContent(Operations.copilot_sol_get_hyphen_copilot_hyphen_organization_hyphen_details.Output.UnprocessableContent)
+            /// The associated value of the enum case if `self` is `.unprocessableContent`.
+            ///
+            /// - Throws: An error if `self` is not `.unprocessableContent`.
+            /// - SeeAlso: `.unprocessableContent`.
+            public var unprocessableContent: Operations.copilot_sol_get_hyphen_copilot_hyphen_organization_hyphen_details.Output.UnprocessableContent {
+                get throws {
+                    switch self {
+                    case let .unprocessableContent(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "unprocessableContent",
                             response: self
                         )
                     }
