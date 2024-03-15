@@ -19,7 +19,7 @@ jobs:
   generate-and-publish-docs:
     uses: sersoft-gmbh/oss-common-actions/.github/workflows/swift-generate-and-publish-docs.yml@main
     with:
-      os: macOS
+      os: ubuntu
       swift-version: '5.9'
       organisation: ${{ github.repository_owner }}
       repository: ${{ github.event.repository.name }}
