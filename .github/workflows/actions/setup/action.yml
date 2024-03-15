@@ -11,7 +11,7 @@ inputs:
 runs:
   using: 'composite'
   steps:
-  - uses: swift-actions/setup-swift@v1
+  - uses: swift-actions/setup-swift@v2
     with:
       swift-version: ${{ inputs.swift }}
   - uses: irgaly/setup-mint@v1
