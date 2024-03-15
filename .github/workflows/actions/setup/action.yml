@@ -17,14 +17,18 @@ runs:
   - uses: irgaly/setup-mint@v1
   - uses: dcarbone/install-yq-action@v1.1.1
   
-  # - name: "Xcode Cache"
+  - name: "Xcode Cache"
+    if: contains(inputs.os, 'macos')
+    uses: irgaly/xcode-cache@v1
+    with:
+      key: xcode-cache-deriveddata-${{ github.workflow }}-${{ github.sha }}
+      restore-keys: xcode-cache-deriveddata-${{ github.workflow }}-
+
+  # - name: "Set IgnoreFileSystemDeviceInodeChanges flag"
   #   if: contains(inputs.os, 'macos')
-  #   uses: irgaly/xcode-cache@v1
-  #   with:
-  #     key: xcode-cache-deriveddata-${{ github.workflow }}-${{ github.sha }}
-  #     restore-keys: |
-  #       xcode-cache-deriveddata-${{ github.workflow }}-
-  
+  #   shell: bash
+  #   run: defaults write com.apple.dt.XCBuild IgnoreFileSystemDeviceInodeChanges -bool YES
+    
   - name: "Swift Package Manager Cache"
     uses: actions/cache@v3
     with:
