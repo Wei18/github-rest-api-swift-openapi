@@ -30,7 +30,7 @@ runs:
   #   run: defaults write com.apple.dt.XCBuild IgnoreFileSystemDeviceInodeChanges -bool YES
     
   - name: "Swift Package Manager Cache"
-    uses: actions/cache@v3
+    uses: actions/cache@v4
     with:
       path: .build
       key: ${{ runner.os }}-spm-${{ hashFiles('**/Package.resolved') }}
@@ -38,7 +38,7 @@ runs:
         ${{ runner.os }}-spm-
 
   - name: "Compiling Cache"
-    uses: actions/cache@v3
+    uses: actions/cache@v4
     with:
       path: ~/Library/Caches/org.swift.swiftpm/
       key: ${{ runner.os }}-swift-build-${{ github.ref_name }}
