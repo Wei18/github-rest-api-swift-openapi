@@ -41341,6 +41341,29 @@ public enum Operations {
                     }
                 }
             }
+            /// Resource not found
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dispatches/post(repos/create-dispatch-event)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            case notFound(Components.Responses.not_found)
+            /// The associated value of the enum case if `self` is `.notFound`.
+            ///
+            /// - Throws: An error if `self` is not `.notFound`.
+            /// - SeeAlso: `.notFound`.
+            public var notFound: Components.Responses.not_found {
+                get throws {
+                    switch self {
+                    case let .notFound(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "notFound",
+                            response: self
+                        )
+                    }
+                }
+            }
             /// Validation failed, or the endpoint has been spammed.
             ///
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dispatches/post(repos/create-dispatch-event)/responses/422`.
