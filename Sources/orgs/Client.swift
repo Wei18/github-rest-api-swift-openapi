@@ -822,6 +822,11 @@ public struct Client: APIProtocol {
     }
     /// List organization webhooks
     ///
+    /// You must be an organization owner to use this endpoint. 
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit 
+    /// webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
+    ///
     /// - Remark: HTTP `GET /orgs/{org}/hooks`.
     /// - Remark: Generated from `#/paths//orgs/{org}/hooks/get(orgs/list-webhooks)`.
     public func orgs_sol_list_hyphen_webhooks(_ input: Operations.orgs_sol_list_hyphen_webhooks.Input) async throws -> Operations.orgs_sol_list_hyphen_webhooks.Output {
@@ -928,7 +933,12 @@ public struct Client: APIProtocol {
     }
     /// Create an organization webhook
     ///
-    /// Here's how you can create a hook that posts payloads in JSON format:
+    /// Create a hook that posts payloads in JSON format.
+    ///
+    /// You must be an organization owner to use this endpoint. 
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or 
+    /// edit webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/hooks`.
     /// - Remark: Generated from `#/paths//orgs/{org}/hooks/post(orgs/create-webhook)`.
@@ -1053,7 +1063,13 @@ public struct Client: APIProtocol {
     }
     /// Get an organization webhook
     ///
-    /// Returns a webhook configured in an organization. To get only the webhook `config` properties, see "[Get a webhook configuration for an organization](/rest/orgs/webhooks#get-a-webhook-configuration-for-an-organization)."
+    /// Returns a webhook configured in an organization. To get only the webhook
+    /// `config` properties, see "[Get a webhook configuration for an organization](/rest/orgs/webhooks#get-a-webhook-configuration-for-an-organization). 
+    ///
+    /// You must be an organization owner to use this endpoint. 
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit 
+    /// webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/hooks/{hook_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/hooks/{hook_id}/get(orgs/get-webhook)`.
@@ -1140,7 +1156,16 @@ public struct Client: APIProtocol {
     }
     /// Update an organization webhook
     ///
-    /// Updates a webhook configured in an organization. When you update a webhook, the `secret` will be overwritten. If you previously had a `secret` set, you must provide the same `secret` or set a new `secret` or the secret will be removed. If you are only updating individual webhook `config` properties, use "[Update a webhook configuration for an organization](/rest/orgs/webhooks#update-a-webhook-configuration-for-an-organization)."
+    /// Updates a webhook configured in an organization. When you update a webhook,
+    /// the `secret` will be overwritten. If you previously had a `secret` set, you must
+    /// provide the same `secret` or set a new `secret` or the secret will be removed. If
+    /// you are only updating individual webhook `config` properties, use "[Update a webhook
+    /// configuration for an organization](/rest/orgs/webhooks#update-a-webhook-configuration-for-an-organization)". 
+    ///
+    /// You must be an organization owner to use this endpoint. 
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit 
+    /// webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
     ///
     /// - Remark: HTTP `PATCH /orgs/{org}/hooks/{hook_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/hooks/{hook_id}/patch(orgs/update-webhook)`.
@@ -1260,6 +1285,11 @@ public struct Client: APIProtocol {
     }
     /// Delete an organization webhook
     ///
+    /// You must be an organization owner to use this endpoint. 
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit 
+    /// webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
+    ///
     /// - Remark: HTTP `DELETE /orgs/{org}/hooks/{hook_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/hooks/{hook_id}/delete(orgs/delete-webhook)`.
     public func orgs_sol_delete_hyphen_webhook(_ input: Operations.orgs_sol_delete_hyphen_webhook.Input) async throws -> Operations.orgs_sol_delete_hyphen_webhook.Output {
@@ -1327,7 +1357,10 @@ public struct Client: APIProtocol {
     ///
     /// Returns the webhook configuration for an organization. To get more information about the webhook, including the `active` state and `events`, use "[Get an organization webhook ](/rest/orgs/webhooks#get-an-organization-webhook)."
     ///
-    /// OAuth app tokens and personal access tokens (classic) need the `admin:org_hook` scope to use this endpoint.
+    /// You must be an organization owner to use this endpoint. 
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit 
+    /// webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/hooks/{hook_id}/config`.
     /// - Remark: Generated from `#/paths//orgs/{org}/hooks/{hook_id}/config/get(orgs/get-webhook-config-for-org)`.
@@ -1394,7 +1427,10 @@ public struct Client: APIProtocol {
     ///
     /// Updates the webhook configuration for an organization. To update more information about the webhook, including the `active` state and `events`, use "[Update an organization webhook ](/rest/orgs/webhooks#update-an-organization-webhook)."
     ///
-    /// OAuth app tokens and personal access tokens (classic) need the `admin:org_hook` scope to use this endpoint.
+    /// You must be an organization owner to use this endpoint. 
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit 
+    /// webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
     ///
     /// - Remark: HTTP `PATCH /orgs/{org}/hooks/{hook_id}/config`.
     /// - Remark: Generated from `#/paths//orgs/{org}/hooks/{hook_id}/config/patch(orgs/update-webhook-config-for-org)`.
@@ -1471,6 +1507,11 @@ public struct Client: APIProtocol {
     /// List deliveries for an organization webhook
     ///
     /// Returns a list of webhook deliveries for a webhook configured in an organization.
+    ///
+    /// You must be an organization owner to use this endpoint. 
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit 
+    /// webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/hooks/{hook_id}/deliveries`.
     /// - Remark: Generated from `#/paths//orgs/{org}/hooks/{hook_id}/deliveries/get(orgs/list-webhook-deliveries)`.
@@ -1611,6 +1652,11 @@ public struct Client: APIProtocol {
     ///
     /// Returns a delivery for a webhook configured in an organization.
     ///
+    /// You must be an organization owner to use this endpoint. 
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit 
+    /// webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
+    ///
     /// - Remark: HTTP `GET /orgs/{org}/hooks/{hook_id}/deliveries/{delivery_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/hooks/{hook_id}/deliveries/{delivery_id}/get(orgs/get-webhook-delivery)`.
     public func orgs_sol_get_hyphen_webhook_hyphen_delivery(_ input: Operations.orgs_sol_get_hyphen_webhook_hyphen_delivery.Input) async throws -> Operations.orgs_sol_get_hyphen_webhook_hyphen_delivery.Output {
@@ -1730,6 +1776,11 @@ public struct Client: APIProtocol {
     ///
     /// Redeliver a delivery for a webhook configured in an organization.
     ///
+    /// You must be an organization owner to use this endpoint. 
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit 
+    /// webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
+    ///
     /// - Remark: HTTP `POST /orgs/{org}/hooks/{hook_id}/deliveries/{delivery_id}/attempts`.
     /// - Remark: Generated from `#/paths//orgs/{org}/hooks/{hook_id}/deliveries/{delivery_id}/attempts/post(orgs/redeliver-webhook-delivery)`.
     public func orgs_sol_redeliver_hyphen_webhook_hyphen_delivery(_ input: Operations.orgs_sol_redeliver_hyphen_webhook_hyphen_delivery.Input) async throws -> Operations.orgs_sol_redeliver_hyphen_webhook_hyphen_delivery.Output {
@@ -1847,7 +1898,13 @@ public struct Client: APIProtocol {
     }
     /// Ping an organization webhook
     ///
-    /// This will trigger a [ping event](https://docs.github.com/webhooks/#ping-event) to be sent to the hook.
+    /// This will trigger a [ping event](https://docs.github.com/webhooks/#ping-event)
+    /// to be sent to the hook.
+    ///
+    /// You must be an organization owner to use this endpoint. 
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit 
+    /// webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/hooks/{hook_id}/pings`.
     /// - Remark: Generated from `#/paths//orgs/{org}/hooks/{hook_id}/pings/post(orgs/ping-webhook)`.
