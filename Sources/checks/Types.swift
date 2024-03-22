@@ -2026,15 +2026,18 @@ public enum Components {
             public var html_url: Swift.String?
             /// - Remark: Generated from `#/components/schemas/check-run/details_url`.
             public var details_url: Swift.String?
-            /// The phase of the lifecycle that the check is currently in.
+            /// The phase of the lifecycle that the check is currently in. Statuses of waiting, requested, and pending are reserved for GitHub Actions check runs.
             ///
             /// - Remark: Generated from `#/components/schemas/check-run/status`.
             @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
                 case queued = "queued"
                 case in_progress = "in_progress"
                 case completed = "completed"
+                case waiting = "waiting"
+                case requested = "requested"
+                case pending = "pending"
             }
-            /// The phase of the lifecycle that the check is currently in.
+            /// The phase of the lifecycle that the check is currently in. Statuses of waiting, requested, and pending are reserved for GitHub Actions check runs.
             ///
             /// - Remark: Generated from `#/components/schemas/check-run/status`.
             public var status: Components.Schemas.check_hyphen_run.statusPayload
@@ -2136,7 +2139,7 @@ public enum Components {
             ///   - url:
             ///   - html_url:
             ///   - details_url:
-            ///   - status: The phase of the lifecycle that the check is currently in.
+            ///   - status: The phase of the lifecycle that the check is currently in. Statuses of waiting, requested, and pending are reserved for GitHub Actions check runs.
             ///   - conclusion:
             ///   - started_at:
             ///   - completed_at:
@@ -2409,12 +2412,19 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/check-suite/head_sha`.
             public var head_sha: Swift.String
+            /// The phase of the lifecycle that the check suite is currently in. Statuses of waiting, requested, and pending are reserved for GitHub Actions check suites.
+            ///
             /// - Remark: Generated from `#/components/schemas/check-suite/status`.
             @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
                 case queued = "queued"
                 case in_progress = "in_progress"
                 case completed = "completed"
+                case waiting = "waiting"
+                case requested = "requested"
+                case pending = "pending"
             }
+            /// The phase of the lifecycle that the check suite is currently in. Statuses of waiting, requested, and pending are reserved for GitHub Actions check suites.
+            ///
             /// - Remark: Generated from `#/components/schemas/check-suite/status`.
             public var status: Components.Schemas.check_hyphen_suite.statusPayload?
             /// - Remark: Generated from `#/components/schemas/check-suite/conclusion`.
@@ -2465,7 +2475,7 @@ public enum Components {
             ///   - node_id:
             ///   - head_branch:
             ///   - head_sha: The SHA of the head commit that is being checked.
-            ///   - status:
+            ///   - status: The phase of the lifecycle that the check suite is currently in. Statuses of waiting, requested, and pending are reserved for GitHub Actions check suites.
             ///   - conclusion:
             ///   - url:
             ///   - before:
