@@ -1342,6 +1342,91 @@ public enum Components {
                 case commit_url
             }
         }
+        /// Represents a 'wiki_commit' secret scanning location type. This location type shows that a secret was detected inside a commit to a repository wiki.
+        ///
+        /// - Remark: Generated from `#/components/schemas/secret-scanning-location-wiki-commit`.
+        public struct secret_hyphen_scanning_hyphen_location_hyphen_wiki_hyphen_commit: Codable, Hashable, Sendable {
+            /// The file path of the wiki page
+            ///
+            /// - Remark: Generated from `#/components/schemas/secret-scanning-location-wiki-commit/path`.
+            public var path: Swift.String
+            /// Line number at which the secret starts in the file
+            ///
+            /// - Remark: Generated from `#/components/schemas/secret-scanning-location-wiki-commit/start_line`.
+            public var start_line: Swift.Double
+            /// Line number at which the secret ends in the file
+            ///
+            /// - Remark: Generated from `#/components/schemas/secret-scanning-location-wiki-commit/end_line`.
+            public var end_line: Swift.Double
+            /// The column at which the secret starts within the start line when the file is interpreted as 8-bit ASCII.
+            ///
+            /// - Remark: Generated from `#/components/schemas/secret-scanning-location-wiki-commit/start_column`.
+            public var start_column: Swift.Double
+            /// The column at which the secret ends within the end line when the file is interpreted as 8-bit ASCII.
+            ///
+            /// - Remark: Generated from `#/components/schemas/secret-scanning-location-wiki-commit/end_column`.
+            public var end_column: Swift.Double
+            /// SHA-1 hash ID of the associated blob
+            ///
+            /// - Remark: Generated from `#/components/schemas/secret-scanning-location-wiki-commit/blob_sha`.
+            public var blob_sha: Swift.String
+            /// The GitHub URL to get the associated wiki page
+            ///
+            /// - Remark: Generated from `#/components/schemas/secret-scanning-location-wiki-commit/page_url`.
+            public var page_url: Swift.String
+            /// SHA-1 hash ID of the associated commit
+            ///
+            /// - Remark: Generated from `#/components/schemas/secret-scanning-location-wiki-commit/commit_sha`.
+            public var commit_sha: Swift.String
+            /// The GitHub URL to get the associated wiki commit
+            ///
+            /// - Remark: Generated from `#/components/schemas/secret-scanning-location-wiki-commit/commit_url`.
+            public var commit_url: Swift.String
+            /// Creates a new `secret_hyphen_scanning_hyphen_location_hyphen_wiki_hyphen_commit`.
+            ///
+            /// - Parameters:
+            ///   - path: The file path of the wiki page
+            ///   - start_line: Line number at which the secret starts in the file
+            ///   - end_line: Line number at which the secret ends in the file
+            ///   - start_column: The column at which the secret starts within the start line when the file is interpreted as 8-bit ASCII.
+            ///   - end_column: The column at which the secret ends within the end line when the file is interpreted as 8-bit ASCII.
+            ///   - blob_sha: SHA-1 hash ID of the associated blob
+            ///   - page_url: The GitHub URL to get the associated wiki page
+            ///   - commit_sha: SHA-1 hash ID of the associated commit
+            ///   - commit_url: The GitHub URL to get the associated wiki commit
+            public init(
+                path: Swift.String,
+                start_line: Swift.Double,
+                end_line: Swift.Double,
+                start_column: Swift.Double,
+                end_column: Swift.Double,
+                blob_sha: Swift.String,
+                page_url: Swift.String,
+                commit_sha: Swift.String,
+                commit_url: Swift.String
+            ) {
+                self.path = path
+                self.start_line = start_line
+                self.end_line = end_line
+                self.start_column = start_column
+                self.end_column = end_column
+                self.blob_sha = blob_sha
+                self.page_url = page_url
+                self.commit_sha = commit_sha
+                self.commit_url = commit_url
+            }
+            public enum CodingKeys: String, CodingKey {
+                case path
+                case start_line
+                case end_line
+                case start_column
+                case end_column
+                case blob_sha
+                case page_url
+                case commit_sha
+                case commit_url
+            }
+        }
         /// Represents an 'issue_title' secret scanning location type. This location type shows that a secret was detected in the title of an issue.
         ///
         /// - Remark: Generated from `#/components/schemas/secret-scanning-location-issue-title`.
@@ -1558,6 +1643,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/secret-scanning-location/type`.
             @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
                 case commit = "commit"
+                case wiki_commit = "wiki_commit"
                 case issue_title = "issue_title"
                 case issue_body = "issue_body"
                 case issue_comment = "issue_comment"
@@ -1573,37 +1659,45 @@ public enum Components {
             /// The location type. Because secrets may be found in different types of resources (ie. code, comments, issues, pull requests, discussions), this field identifies the type of resource where the secret was found.
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-location/type`.
-            public var _type: Components.Schemas.secret_hyphen_scanning_hyphen_location._typePayload
+            public var _type: Components.Schemas.secret_hyphen_scanning_hyphen_location._typePayload?
             /// - Remark: Generated from `#/components/schemas/secret-scanning-location/details`.
             @frozen public enum detailsPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/secret-scanning-location/details/case1`.
                 case secret_hyphen_scanning_hyphen_location_hyphen_commit(Components.Schemas.secret_hyphen_scanning_hyphen_location_hyphen_commit)
                 /// - Remark: Generated from `#/components/schemas/secret-scanning-location/details/case2`.
-                case secret_hyphen_scanning_hyphen_location_hyphen_issue_hyphen_title(Components.Schemas.secret_hyphen_scanning_hyphen_location_hyphen_issue_hyphen_title)
+                case secret_hyphen_scanning_hyphen_location_hyphen_wiki_hyphen_commit(Components.Schemas.secret_hyphen_scanning_hyphen_location_hyphen_wiki_hyphen_commit)
                 /// - Remark: Generated from `#/components/schemas/secret-scanning-location/details/case3`.
-                case secret_hyphen_scanning_hyphen_location_hyphen_issue_hyphen_body(Components.Schemas.secret_hyphen_scanning_hyphen_location_hyphen_issue_hyphen_body)
+                case secret_hyphen_scanning_hyphen_location_hyphen_issue_hyphen_title(Components.Schemas.secret_hyphen_scanning_hyphen_location_hyphen_issue_hyphen_title)
                 /// - Remark: Generated from `#/components/schemas/secret-scanning-location/details/case4`.
-                case secret_hyphen_scanning_hyphen_location_hyphen_issue_hyphen_comment(Components.Schemas.secret_hyphen_scanning_hyphen_location_hyphen_issue_hyphen_comment)
+                case secret_hyphen_scanning_hyphen_location_hyphen_issue_hyphen_body(Components.Schemas.secret_hyphen_scanning_hyphen_location_hyphen_issue_hyphen_body)
                 /// - Remark: Generated from `#/components/schemas/secret-scanning-location/details/case5`.
-                case secret_hyphen_scanning_hyphen_location_hyphen_discussion_hyphen_title(Components.Schemas.secret_hyphen_scanning_hyphen_location_hyphen_discussion_hyphen_title)
+                case secret_hyphen_scanning_hyphen_location_hyphen_issue_hyphen_comment(Components.Schemas.secret_hyphen_scanning_hyphen_location_hyphen_issue_hyphen_comment)
                 /// - Remark: Generated from `#/components/schemas/secret-scanning-location/details/case6`.
-                case secret_hyphen_scanning_hyphen_location_hyphen_discussion_hyphen_body(Components.Schemas.secret_hyphen_scanning_hyphen_location_hyphen_discussion_hyphen_body)
+                case secret_hyphen_scanning_hyphen_location_hyphen_discussion_hyphen_title(Components.Schemas.secret_hyphen_scanning_hyphen_location_hyphen_discussion_hyphen_title)
                 /// - Remark: Generated from `#/components/schemas/secret-scanning-location/details/case7`.
-                case secret_hyphen_scanning_hyphen_location_hyphen_discussion_hyphen_comment(Components.Schemas.secret_hyphen_scanning_hyphen_location_hyphen_discussion_hyphen_comment)
+                case secret_hyphen_scanning_hyphen_location_hyphen_discussion_hyphen_body(Components.Schemas.secret_hyphen_scanning_hyphen_location_hyphen_discussion_hyphen_body)
                 /// - Remark: Generated from `#/components/schemas/secret-scanning-location/details/case8`.
-                case secret_hyphen_scanning_hyphen_location_hyphen_pull_hyphen_request_hyphen_title(Components.Schemas.secret_hyphen_scanning_hyphen_location_hyphen_pull_hyphen_request_hyphen_title)
+                case secret_hyphen_scanning_hyphen_location_hyphen_discussion_hyphen_comment(Components.Schemas.secret_hyphen_scanning_hyphen_location_hyphen_discussion_hyphen_comment)
                 /// - Remark: Generated from `#/components/schemas/secret-scanning-location/details/case9`.
-                case secret_hyphen_scanning_hyphen_location_hyphen_pull_hyphen_request_hyphen_body(Components.Schemas.secret_hyphen_scanning_hyphen_location_hyphen_pull_hyphen_request_hyphen_body)
+                case secret_hyphen_scanning_hyphen_location_hyphen_pull_hyphen_request_hyphen_title(Components.Schemas.secret_hyphen_scanning_hyphen_location_hyphen_pull_hyphen_request_hyphen_title)
                 /// - Remark: Generated from `#/components/schemas/secret-scanning-location/details/case10`.
-                case secret_hyphen_scanning_hyphen_location_hyphen_pull_hyphen_request_hyphen_comment(Components.Schemas.secret_hyphen_scanning_hyphen_location_hyphen_pull_hyphen_request_hyphen_comment)
+                case secret_hyphen_scanning_hyphen_location_hyphen_pull_hyphen_request_hyphen_body(Components.Schemas.secret_hyphen_scanning_hyphen_location_hyphen_pull_hyphen_request_hyphen_body)
                 /// - Remark: Generated from `#/components/schemas/secret-scanning-location/details/case11`.
-                case secret_hyphen_scanning_hyphen_location_hyphen_pull_hyphen_request_hyphen_review(Components.Schemas.secret_hyphen_scanning_hyphen_location_hyphen_pull_hyphen_request_hyphen_review)
+                case secret_hyphen_scanning_hyphen_location_hyphen_pull_hyphen_request_hyphen_comment(Components.Schemas.secret_hyphen_scanning_hyphen_location_hyphen_pull_hyphen_request_hyphen_comment)
                 /// - Remark: Generated from `#/components/schemas/secret-scanning-location/details/case12`.
+                case secret_hyphen_scanning_hyphen_location_hyphen_pull_hyphen_request_hyphen_review(Components.Schemas.secret_hyphen_scanning_hyphen_location_hyphen_pull_hyphen_request_hyphen_review)
+                /// - Remark: Generated from `#/components/schemas/secret-scanning-location/details/case13`.
                 case secret_hyphen_scanning_hyphen_location_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment(Components.Schemas.secret_hyphen_scanning_hyphen_location_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment)
                 public init(from decoder: any Decoder) throws {
                     var errors: [any Error] = []
                     do {
                         self = .secret_hyphen_scanning_hyphen_location_hyphen_commit(try .init(from: decoder))
+                        return
+                    } catch {
+                        errors.append(error)
+                    }
+                    do {
+                        self = .secret_hyphen_scanning_hyphen_location_hyphen_wiki_hyphen_commit(try .init(from: decoder))
                         return
                     } catch {
                         errors.append(error)
@@ -1684,6 +1778,8 @@ public enum Components {
                     switch self {
                     case let .secret_hyphen_scanning_hyphen_location_hyphen_commit(value):
                         try value.encode(to: encoder)
+                    case let .secret_hyphen_scanning_hyphen_location_hyphen_wiki_hyphen_commit(value):
+                        try value.encode(to: encoder)
                     case let .secret_hyphen_scanning_hyphen_location_hyphen_issue_hyphen_title(value):
                         try value.encode(to: encoder)
                     case let .secret_hyphen_scanning_hyphen_location_hyphen_issue_hyphen_body(value):
@@ -1710,15 +1806,15 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/secret-scanning-location/details`.
-            public var details: Components.Schemas.secret_hyphen_scanning_hyphen_location.detailsPayload
+            public var details: Components.Schemas.secret_hyphen_scanning_hyphen_location.detailsPayload?
             /// Creates a new `secret_hyphen_scanning_hyphen_location`.
             ///
             /// - Parameters:
             ///   - _type: The location type. Because secrets may be found in different types of resources (ie. code, comments, issues, pull requests, discussions), this field identifies the type of resource where the secret was found.
             ///   - details:
             public init(
-                _type: Components.Schemas.secret_hyphen_scanning_hyphen_location._typePayload,
-                details: Components.Schemas.secret_hyphen_scanning_hyphen_location.detailsPayload
+                _type: Components.Schemas.secret_hyphen_scanning_hyphen_location._typePayload? = nil,
+                details: Components.Schemas.secret_hyphen_scanning_hyphen_location.detailsPayload? = nil
             ) {
                 self._type = _type
                 self.details = details
