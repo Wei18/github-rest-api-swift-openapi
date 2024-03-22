@@ -15,7 +15,7 @@ PACKAGE_PATHS  := Package.swift
 commit:
 	git add "$(file)"
 	git commit -m "Commit via running $make $(file)" >/dev/null \
-		&& echo "::notice:: make $(file)\n" \
+		&& echo "::notice:: git commit $(file)\n" \
 		|| true;
 	touch "$(file)";
 
@@ -36,6 +36,7 @@ Sources/%: Sources/%/Client.swift
 	@$(MAKE) commit file="$@"
 
 # Update openapi specification if needed
+.PHONY: Submodule
 Submodule:
 ifdef GITHUB_ACTIONS ## https://docs.github.com/en/actions/learn-github-actions/variables
 	@touch "$(OPENAPI_PATH)"
@@ -56,5 +57,4 @@ $(PACKAGE_PATHS): $(SOURCE_DIRS)
 	@$(MAKE) commit file="$@"
 
 # Install
-.PHONY: Submodule
 install: Submodule .spi.yml

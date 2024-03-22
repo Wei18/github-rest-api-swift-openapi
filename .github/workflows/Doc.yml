@@ -5,12 +5,17 @@ on:
     types:
       - published
       - edited
+  push:
+    branches:
+      - 'main'
+    paths:
+      - '.github/workflows/Doc.yml'
 
 permissions:
   contents: write
 
 concurrency:
-  group: ${{ github.ref }}
+  group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
