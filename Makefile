@@ -25,14 +25,14 @@ commit:
 		tag_name=$(shell basename $(shell dirname $@)); \
 		swift Scripts/GeneratorConfigBuilder.swift $$tag_name
 
-%/Client.swift: %/openapi-generator-config.yml $(OPENAPI_PATH)
+%/Client.swift %/Types.swift: %/openapi-generator-config.yml $(OPENAPI_PATH)
 	mint run apple/swift-openapi-generator generate "$(OPENAPI_PATH)" \
 		--config "$(@D)/openapi-generator-config.yml" \
 		--output-directory "$(@D)";
 	@rm "$(@D)/openapi-generator-config.yml";
 	@echo ;
 
-Sources/%: Sources/%/Client.swift
+Sources/%: Sources/%/Client.swift Sources/%/Types.swift
 	@$(MAKE) commit file="$@"
 
 # Update openapi specification if needed

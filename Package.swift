@@ -1,6 +1,7 @@
 // swift-tools-version: 5.9
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
+import Foundation
 import PackageDescription
 
 /// Generated via `$swift PackageBuilder.swift`
@@ -360,3 +361,9 @@ let package = Package(
     ]
 )
 
+// swift-docc is not needed for package users
+if ProcessInfo.processInfo.environment["ENABLE_DOCC_SUPPORT"] == "1" {
+    package.dependencies += [
+        .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.3.0"),
+    ]
+}
