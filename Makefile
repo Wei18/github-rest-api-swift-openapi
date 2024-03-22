@@ -21,14 +21,18 @@ commit:
 
 # Create sources
 %/openapi-generator-config.yml:
-	mkdir -p "$(@D)"; \
+	@mkdir -p "$(@D)"; \
 		tag_name=$(shell basename $(shell dirname $@)); \
 		swift Scripts/GeneratorConfigBuilder.swift $$tag_name
 
-%/Client.swift %/Types.swift: %/openapi-generator-config.yml $(OPENAPI_PATH)
-	mint run apple/swift-openapi-generator generate "$(OPENAPI_PATH)" \
+%/Client.swift %/Types.swift: $(OPENAPI_PATH)
+	@echo "\n\nFolder $(@D) running"
+	@$(MAKE) "$(@D)/openapi-generator-config.yml"
+	mint run apple/swift-openapi-generator generate \
+		"$(OPENAPI_PATH)" \
 		--config "$(@D)/openapi-generator-config.yml" \
 		--output-directory "$(@D)";
+	@touch $(@D)/*.swift
 	@rm "$(@D)/openapi-generator-config.yml";
 	@echo ;
 
