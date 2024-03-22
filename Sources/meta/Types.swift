@@ -156,7 +156,8 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/root/gists_url`.
             public var gists_url: Swift.String
             /// - Remark: Generated from `#/components/schemas/root/hub_url`.
-            public var hub_url: Swift.String
+            @available(*, deprecated)
+            public var hub_url: Swift.String?
             /// - Remark: Generated from `#/components/schemas/root/issue_search_url`.
             public var issue_search_url: Swift.String
             /// - Remark: Generated from `#/components/schemas/root/issues_url`.
@@ -246,7 +247,7 @@ public enum Components {
                 followers_url: Swift.String,
                 following_url: Swift.String,
                 gists_url: Swift.String,
-                hub_url: Swift.String,
+                hub_url: Swift.String? = nil,
                 issue_search_url: Swift.String,
                 issues_url: Swift.String,
                 keys_url: Swift.String,
