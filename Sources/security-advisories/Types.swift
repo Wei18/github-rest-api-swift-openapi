@@ -6263,25 +6263,10 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/advisories/GET/query/cve_id`.
                 public var cve_id: Swift.String?
-                /// - Remark: Generated from `#/paths/advisories/GET/query/ecosystem`.
-                @frozen public enum ecosystemPayload: String, Codable, Hashable, Sendable {
-                    case actions = "actions"
-                    case composer = "composer"
-                    case erlang = "erlang"
-                    case go = "go"
-                    case maven = "maven"
-                    case npm = "npm"
-                    case nuget = "nuget"
-                    case other = "other"
-                    case pip = "pip"
-                    case pub = "pub"
-                    case rubygems = "rubygems"
-                    case rust = "rust"
-                }
                 /// If specified, only advisories for these ecosystems will be returned.
                 ///
                 /// - Remark: Generated from `#/paths/advisories/GET/query/ecosystem`.
-                public var ecosystem: Operations.security_hyphen_advisories_sol_list_hyphen_global_hyphen_advisories.Input.Query.ecosystemPayload?
+                public var ecosystem: Components.Schemas.security_hyphen_advisory_hyphen_ecosystems?
                 /// - Remark: Generated from `#/paths/advisories/GET/query/severity`.
                 @frozen public enum severityPayload: String, Codable, Hashable, Sendable {
                     case unknown = "unknown"
@@ -6452,7 +6437,7 @@ public enum Operations {
                     ghsa_id: Swift.String? = nil,
                     _type: Operations.security_hyphen_advisories_sol_list_hyphen_global_hyphen_advisories.Input.Query._typePayload? = nil,
                     cve_id: Swift.String? = nil,
-                    ecosystem: Operations.security_hyphen_advisories_sol_list_hyphen_global_hyphen_advisories.Input.Query.ecosystemPayload? = nil,
+                    ecosystem: Components.Schemas.security_hyphen_advisory_hyphen_ecosystems? = nil,
                     severity: Operations.security_hyphen_advisories_sol_list_hyphen_global_hyphen_advisories.Input.Query.severityPayload? = nil,
                     cwes: Operations.security_hyphen_advisories_sol_list_hyphen_global_hyphen_advisories.Input.Query.cwesPayload? = nil,
                     is_withdrawn: Swift.Bool? = nil,
