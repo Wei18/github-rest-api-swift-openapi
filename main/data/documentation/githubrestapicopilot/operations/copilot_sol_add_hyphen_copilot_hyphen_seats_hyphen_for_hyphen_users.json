@@ -1,0 +1,556 @@
+{
+  "abstract" : [
+    {
+      "text" : "Add users to the Copilot subscription for an organization",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Operations"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Operations\/copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_add_hyphen_f1_i7_seats_i5_for_I6_usersO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPICopilot"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Note",
+                  "type" : "text"
+                }
+              ],
+              "type" : "strong"
+            },
+            {
+              "text" : ": This endpoint is in beta and is subject to change.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Purchases a GitHub Copilot seat for each user specified.",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "The organization will be billed accordingly. For more information about Copilot pricing, see “",
+              "type" : "text"
+            },
+            {
+              "identifier" : "https:\/\/docs.github.com\/billing\/managing-billing-for-github-copilot\/about-billing-for-github-copilot#about-billing-for-github-copilot",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : "”.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Only organization owners can configure GitHub Copilot in their organization.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "In order for an admin to use this endpoint, the organization must have a Copilot Business or Enterprise subscription and a configured suggestion matching policy.",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "For more information about setting up a Copilot subscription, see “",
+              "type" : "text"
+            },
+            {
+              "identifier" : "https:\/\/docs.github.com\/billing\/managing-billing-for-github-copilot\/managing-your-github-copilot-subscription-for-your-organization-or-enterprise",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : "”.",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "For more information about setting a suggestion matching policy, see “",
+              "type" : "text"
+            },
+            {
+              "identifier" : "https:\/\/docs.github.com\/copilot\/managing-copilot\/managing-policies-for-github-copilot-in-your-organization#configuring-suggestion-matching-policies-for-github-copilot-in-your-organization",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : "”.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "OAuth app tokens and personal access tokens (classic) need the ",
+              "type" : "text"
+            },
+            {
+              "code" : "manage_billing:copilot",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " scope to use this endpoint.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "HTTP ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "POST \/orgs\/{org}\/copilot\/billing\/selected_users",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/\/orgs\/{org}\/copilot\/billing\/selected_users\/post(copilot\/add-copilot-seats-for-users)",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Operations\/copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users\/Input"
+      ],
+      "title" : "Structures"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Operations\/copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users\/id"
+      ],
+      "title" : "Type Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Operations\/copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users\/AcceptableContentType",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Operations\/copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users\/Output"
+      ],
+      "title" : "Enumerations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapicopilot\/operations\/copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPICopilot",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/operations"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Operations/copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users": {
+  "abstract" : [
+    {
+      "text" : "Add users to the Copilot subscription for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Operations\/copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/operations\/copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Operations/copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users/AcceptableContentType": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AcceptableContentType"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Operations\/copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users\/AcceptableContentType",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AcceptableContentType"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users.AcceptableContentType",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/operations\/copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users\/acceptablecontenttype"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Operations/copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Operations\/copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/operations\/copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users\/input"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Operations/copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Operations\/copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/operations\/copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users\/output"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Operations/copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users/id": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Operations\/copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users\/id",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/operations\/copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users\/id"
+},
+"https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#about-billing-for-github-copilot": {
+  "identifier" : "https:\/\/docs.github.com\/billing\/managing-billing-for-github-copilot\/about-billing-for-github-copilot#about-billing-for-github-copilot",
+  "title" : "Pricing for GitHub Copilot",
+  "titleInlineContent" : [
+    {
+      "text" : "Pricing for GitHub Copilot",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/billing\/managing-billing-for-github-copilot\/about-billing-for-github-copilot#about-billing-for-github-copilot"
+},
+"https://docs.github.com/billing/managing-billing-for-github-copilot/managing-your-github-copilot-subscription-for-your-organization-or-enterprise": {
+  "identifier" : "https:\/\/docs.github.com\/billing\/managing-billing-for-github-copilot\/managing-your-github-copilot-subscription-for-your-organization-or-enterprise",
+  "title" : "Setting up a Copilot subscription for your organization",
+  "titleInlineContent" : [
+    {
+      "text" : "Setting up a Copilot subscription for your organization",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/billing\/managing-billing-for-github-copilot\/managing-your-github-copilot-subscription-for-your-organization-or-enterprise"
+},
+"https://docs.github.com/copilot/managing-copilot/managing-policies-for-github-copilot-in-your-organization#configuring-suggestion-matching-policies-for-github-copilot-in-your-organization": {
+  "identifier" : "https:\/\/docs.github.com\/copilot\/managing-copilot\/managing-policies-for-github-copilot-in-your-organization#configuring-suggestion-matching-policies-for-github-copilot-in-your-organization",
+  "title" : "Configuring suggestion matching policies for GitHub Copilot in your organization",
+  "titleInlineContent" : [
+    {
+      "text" : "Configuring suggestion matching policies for GitHub Copilot in your organization",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/copilot\/managing-copilot\/managing-policies-for-github-copilot-in-your-organization#configuring-suggestion-matching-policies-for-github-copilot-in-your-organization"
+}
+}
+}

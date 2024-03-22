@@ -1,0 +1,698 @@
+{
+  "abstract" : [
+    {
+      "text" : "A type that performs HTTP operations defined by the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIGitignore\/documentation\/GitHubRestAPIGitignore"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIGitignore\/documentation\/GitHubRestAPIGitignore\/APIProtocol"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:22GitHubRestAPIGitignore11APIProtocolP",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "protocol"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "APIProtocol"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIGitignore"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "APIProtocol"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Protocol",
+    "symbolKind" : "protocol",
+    "title" : "APIProtocol"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "protocol"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "APIProtocol"
+            },
+            {
+              "kind" : "text",
+              "text" : " : "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:s8SendableP",
+              "text" : "Sendable"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIGitignore\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Inherits From",
+      "type" : "inheritsFrom"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIGitignore\/documentation\/GitHubRestAPIGitignore\/Client"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforming Types",
+      "type" : "conformingTypes"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIGitignore\/documentation\/GitHubRestAPIGitignore\/APIProtocol\/gitignore_sol_get_hyphen_all_hyphen_templates(_:)",
+        "doc:\/\/GitHubRestAPIGitignore\/documentation\/GitHubRestAPIGitignore\/APIProtocol\/gitignore_sol_get_hyphen_all_hyphen_templates(headers:)",
+        "doc:\/\/GitHubRestAPIGitignore\/documentation\/GitHubRestAPIGitignore\/APIProtocol\/gitignore_sol_get_hyphen_template(_:)",
+        "doc:\/\/GitHubRestAPIGitignore\/documentation\/GitHubRestAPIGitignore\/APIProtocol\/gitignore_sol_get_hyphen_template(path:headers:)"
+      ],
+      "title" : "Instance Methods"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapigitignore\/apiprotocol"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIGitignore/documentation/GitHubRestAPIGitignore": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGitignore\/documentation\/GitHubRestAPIGitignore",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIGitignore",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigitignore"
+},
+"doc://GitHubRestAPIGitignore/documentation/GitHubRestAPIGitignore/APIProtocol": {
+  "abstract" : [
+    {
+      "text" : "A type that performs HTTP operations defined by the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "APIProtocol"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGitignore\/documentation\/GitHubRestAPIGitignore\/APIProtocol",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "APIProtocol"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "APIProtocol",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigitignore\/apiprotocol"
+},
+"doc://GitHubRestAPIGitignore/documentation/GitHubRestAPIGitignore/APIProtocol/gitignore_sol_get_hyphen_all_hyphen_templates(_:)": {
+  "abstract" : [
+    {
+      "text" : "Get all gitignore templates",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "gitignore_sol_get_hyphen_all_hyphen_templates"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIGitignore10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIGitignore10OperationsO029gitignore_sol_get_hyphen_all_I10_templatesO",
+      "text" : "gitignore_sol_get_hyphen_all_hyphen_templates"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIGitignore10OperationsO029gitignore_sol_get_hyphen_all_I10_templatesO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIGitignore10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIGitignore10OperationsO029gitignore_sol_get_hyphen_all_I10_templatesO",
+      "text" : "gitignore_sol_get_hyphen_all_hyphen_templates"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIGitignore10OperationsO029gitignore_sol_get_hyphen_all_I10_templatesO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGitignore\/documentation\/GitHubRestAPIGitignore\/APIProtocol\/gitignore_sol_get_hyphen_all_hyphen_templates(_:)",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "gitignore_sol_get_hyphen_all_hyphen_templates(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigitignore\/apiprotocol\/gitignore_sol_get_hyphen_all_hyphen_templates(_:)"
+},
+"doc://GitHubRestAPIGitignore/documentation/GitHubRestAPIGitignore/APIProtocol/gitignore_sol_get_hyphen_all_hyphen_templates(headers:)": {
+  "abstract" : [
+    {
+      "text" : "Get all gitignore templates",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "gitignore_sol_get_hyphen_all_hyphen_templates"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIGitignore10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIGitignore10OperationsO029gitignore_sol_get_hyphen_all_I10_templatesO",
+      "text" : "gitignore_sol_get_hyphen_all_hyphen_templates"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIGitignore10OperationsO029gitignore_sol_get_hyphen_all_I10_templatesO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIGitignore10OperationsO029gitignore_sol_get_hyphen_all_I10_templatesO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIGitignore10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIGitignore10OperationsO029gitignore_sol_get_hyphen_all_I10_templatesO",
+      "text" : "gitignore_sol_get_hyphen_all_hyphen_templates"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIGitignore10OperationsO029gitignore_sol_get_hyphen_all_I10_templatesO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGitignore\/documentation\/GitHubRestAPIGitignore\/APIProtocol\/gitignore_sol_get_hyphen_all_hyphen_templates(headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "gitignore_sol_get_hyphen_all_hyphen_templates(headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigitignore\/apiprotocol\/gitignore_sol_get_hyphen_all_hyphen_templates(headers:)"
+},
+"doc://GitHubRestAPIGitignore/documentation/GitHubRestAPIGitignore/APIProtocol/gitignore_sol_get_hyphen_template(_:)": {
+  "abstract" : [
+    {
+      "text" : "Get a gitignore template",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "gitignore_sol_get_hyphen_template"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIGitignore10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIGitignore10OperationsO33gitignore_sol_get_hyphen_templateO",
+      "text" : "gitignore_sol_get_hyphen_template"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIGitignore10OperationsO33gitignore_sol_get_hyphen_templateO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIGitignore10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIGitignore10OperationsO33gitignore_sol_get_hyphen_templateO",
+      "text" : "gitignore_sol_get_hyphen_template"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIGitignore10OperationsO33gitignore_sol_get_hyphen_templateO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGitignore\/documentation\/GitHubRestAPIGitignore\/APIProtocol\/gitignore_sol_get_hyphen_template(_:)",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "gitignore_sol_get_hyphen_template(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigitignore\/apiprotocol\/gitignore_sol_get_hyphen_template(_:)"
+},
+"doc://GitHubRestAPIGitignore/documentation/GitHubRestAPIGitignore/APIProtocol/gitignore_sol_get_hyphen_template(path:headers:)": {
+  "abstract" : [
+    {
+      "text" : "Get a gitignore template",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "gitignore_sol_get_hyphen_template"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIGitignore10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIGitignore10OperationsO33gitignore_sol_get_hyphen_templateO",
+      "text" : "gitignore_sol_get_hyphen_template"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIGitignore10OperationsO33gitignore_sol_get_hyphen_templateO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIGitignore10OperationsO33gitignore_sol_get_hyphen_templateO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIGitignore10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIGitignore10OperationsO33gitignore_sol_get_hyphen_templateO",
+      "text" : "gitignore_sol_get_hyphen_template"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIGitignore10OperationsO33gitignore_sol_get_hyphen_templateO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIGitignore10OperationsO33gitignore_sol_get_hyphen_templateO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIGitignore10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIGitignore10OperationsO33gitignore_sol_get_hyphen_templateO",
+      "text" : "gitignore_sol_get_hyphen_template"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIGitignore10OperationsO33gitignore_sol_get_hyphen_templateO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGitignore\/documentation\/GitHubRestAPIGitignore\/APIProtocol\/gitignore_sol_get_hyphen_template(path:headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "gitignore_sol_get_hyphen_template(path:headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigitignore\/apiprotocol\/gitignore_sol_get_hyphen_template(path:headers:)"
+},
+"doc://GitHubRestAPIGitignore/documentation/GitHubRestAPIGitignore/Client": {
+  "abstract" : [
+    {
+      "text" : "GitHub’s v3 REST API.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGitignore\/documentation\/GitHubRestAPIGitignore\/Client",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Client",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigitignore\/client"
+},
+"doc://GitHubRestAPIGitignore/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPIGitignore\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

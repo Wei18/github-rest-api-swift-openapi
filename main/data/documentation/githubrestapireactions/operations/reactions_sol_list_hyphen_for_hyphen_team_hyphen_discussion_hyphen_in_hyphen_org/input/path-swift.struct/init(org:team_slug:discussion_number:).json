@@ -1,0 +1,832 @@
+{
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "Path",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions",
+        "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations",
+        "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org",
+        "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org\/Input",
+        "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org\/Input\/Path-swift.struct"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org\/Input\/Path-swift.struct\/init(org:team_slug:discussion_number:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:22GitHubRestAPIReactions10OperationsO030reactions_sol_list_hyphen_for_i6_team_i12_discussion_i4_in_I4_orgO5InputV4PathV0N00K5_slug0L7_numberAISS_SSSitcfc",
+    "fragments" : [
+      {
+        "kind" : "identifier",
+        "text" : "init"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "org"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:22GitHubRestAPIReactions10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:22GitHubRestAPIReactions10ComponentsO10ParametersO",
+        "text" : "Parameters"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:22GitHubRestAPIReactions10ComponentsO10ParametersO3orga",
+        "text" : "org"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "team_slug"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:22GitHubRestAPIReactions10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:22GitHubRestAPIReactions10ComponentsO10ParametersO",
+        "text" : "Parameters"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:22GitHubRestAPIReactions10ComponentsO10ParametersO16team_hyphen_sluga",
+        "text" : "team_hyphen_slug"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "discussion_number"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:22GitHubRestAPIReactions10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:22GitHubRestAPIReactions10ComponentsO10ParametersO",
+        "text" : "Parameters"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:22GitHubRestAPIReactions10ComponentsO10ParametersO24discussion_hyphen_numbera",
+        "text" : "discussion_hyphen_number"
+      },
+      {
+        "kind" : "text",
+        "text" : ")"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIReactions"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Initializer",
+    "symbolKind" : "init",
+    "title" : "init(org:team_slug:discussion_number:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "init"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "org"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:22GitHubRestAPIReactions10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Components\/Parameters",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:22GitHubRestAPIReactions10ComponentsO10ParametersO",
+              "text" : "Parameters"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Components\/Parameters\/org",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:22GitHubRestAPIReactions10ComponentsO10ParametersO3orga",
+              "text" : "org"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "team_slug"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:22GitHubRestAPIReactions10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Components\/Parameters",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:22GitHubRestAPIReactions10ComponentsO10ParametersO",
+              "text" : "Parameters"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Components\/Parameters\/team_hyphen_slug",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:22GitHubRestAPIReactions10ComponentsO10ParametersO16team_hyphen_sluga",
+              "text" : "team_hyphen_slug"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "discussion_number"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:22GitHubRestAPIReactions10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Components\/Parameters",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:22GitHubRestAPIReactions10ComponentsO10ParametersO",
+              "text" : "Parameters"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Components\/Parameters\/discussion_hyphen_number",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:22GitHubRestAPIReactions10ComponentsO10ParametersO24discussion_hyphen_numbera",
+              "text" : "discussion_hyphen_number"
+            },
+            {
+              "kind" : "text",
+              "text" : ")"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The organization name. The name is not case sensitive.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "org"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The slug of the team name.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "team_slug"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The number that identifies the discussion.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "discussion_number"
+        }
+      ]
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapireactions\/operations\/reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org\/input\/path-swift.struct\/init(org:team_slug:discussion_number:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIReactions/documentation/GitHubRestAPIReactions": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIReactions",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapireactions"
+},
+"doc://GitHubRestAPIReactions/documentation/GitHubRestAPIReactions/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapireactions\/components"
+},
+"doc://GitHubRestAPIReactions/documentation/GitHubRestAPIReactions/Components/Parameters": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/parameters",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Parameters"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Components\/Parameters",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Parameters"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapireactions\/components\/parameters"
+},
+"doc://GitHubRestAPIReactions/documentation/GitHubRestAPIReactions/Components/Parameters/discussion_hyphen_number": {
+  "abstract" : [
+    {
+      "text" : "The number that identifies the discussion.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "discussion_hyphen_number"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Components\/Parameters\/discussion_hyphen_number",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "discussion_hyphen_number"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.discussion_hyphen_number",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapireactions\/components\/parameters\/discussion_hyphen_number"
+},
+"doc://GitHubRestAPIReactions/documentation/GitHubRestAPIReactions/Components/Parameters/org": {
+  "abstract" : [
+    {
+      "text" : "The organization name. The name is not case sensitive.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "org"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Components\/Parameters\/org",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "org"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.org",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapireactions\/components\/parameters\/org"
+},
+"doc://GitHubRestAPIReactions/documentation/GitHubRestAPIReactions/Components/Parameters/team_hyphen_slug": {
+  "abstract" : [
+    {
+      "text" : "The slug of the team name.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "team_hyphen_slug"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Components\/Parameters\/team_hyphen_slug",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "team_hyphen_slug"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.team_hyphen_slug",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapireactions\/components\/parameters\/team_hyphen_slug"
+},
+"doc://GitHubRestAPIReactions/documentation/GitHubRestAPIReactions/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapireactions\/operations"
+},
+"doc://GitHubRestAPIReactions/documentation/GitHubRestAPIReactions/Operations/reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org": {
+  "abstract" : [
+    {
+      "text" : "List reactions for a team discussion",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapireactions\/operations\/reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org"
+},
+"doc://GitHubRestAPIReactions/documentation/GitHubRestAPIReactions/Operations/reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapireactions\/operations\/reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org\/input"
+},
+"doc://GitHubRestAPIReactions/documentation/GitHubRestAPIReactions/Operations/reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org/Input/Path-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Path"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org\/Input\/Path-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Path"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Input.Path",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapireactions\/operations\/reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org\/input\/path-swift.struct"
+},
+"doc://GitHubRestAPIReactions/documentation/GitHubRestAPIReactions/Operations/reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org/Input/Path-swift.struct/init(org:team_slug:discussion_number:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "Path",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "org"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIReactions10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIReactions10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIReactions10ComponentsO10ParametersO3orga",
+      "text" : "org"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "team_slug"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIReactions10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIReactions10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIReactions10ComponentsO10ParametersO16team_hyphen_sluga",
+      "text" : "team_hyphen_slug"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "discussion_number"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIReactions10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIReactions10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIReactions10ComponentsO10ParametersO24discussion_hyphen_numbera",
+      "text" : "discussion_hyphen_number"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org\/Input\/Path-swift.struct\/init(org:team_slug:discussion_number:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(org:team_slug:discussion_number:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapireactions\/operations\/reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org\/input\/path-swift.struct\/init(org:team_slug:discussion_number:)"
+}
+}
+}

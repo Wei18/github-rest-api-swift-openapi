@@ -1,0 +1,260 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "GitHubRestAPIMeta",
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIMeta"
+      }
+    ],
+    "role" : "collection",
+    "roleHeading" : "Framework",
+    "symbolKind" : "module",
+    "title" : "GitHubRestAPIMeta"
+  },
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/APIProtocol"
+      ],
+      "title" : "Protocols"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Client"
+      ],
+      "title" : "Structures"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Components",
+        "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Operations",
+        "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Servers"
+      ],
+      "title" : "Enumerations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapimeta"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIMeta/documentation/GitHubRestAPIMeta": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIMeta",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimeta"
+},
+"doc://GitHubRestAPIMeta/documentation/GitHubRestAPIMeta/APIProtocol": {
+  "abstract" : [
+    {
+      "text" : "A type that performs HTTP operations defined by the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "APIProtocol"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/APIProtocol",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "APIProtocol"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "APIProtocol",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimeta\/apiprotocol"
+},
+"doc://GitHubRestAPIMeta/documentation/GitHubRestAPIMeta/Client": {
+  "abstract" : [
+    {
+      "text" : "GitHub’s v3 REST API.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Client",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Client",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimeta\/client"
+},
+"doc://GitHubRestAPIMeta/documentation/GitHubRestAPIMeta/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimeta\/components"
+},
+"doc://GitHubRestAPIMeta/documentation/GitHubRestAPIMeta/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimeta\/operations"
+},
+"doc://GitHubRestAPIMeta/documentation/GitHubRestAPIMeta/Servers": {
+  "abstract" : [
+    {
+      "text" : "Server URLs defined in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Servers"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Servers",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Servers"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Servers",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimeta\/servers"
+}
+}
+}

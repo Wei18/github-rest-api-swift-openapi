@@ -1,0 +1,376 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/gists_sol_create",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/gists_sol_create\/Output",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/gists_sol_create\/Output\/Created-swift.struct",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/gists_sol_create\/Output\/Created-swift.struct\/Headers-swift.struct"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/gists_sol_create\/Output\/Created-swift.struct\/Headers-swift.struct\/Location"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:18GitHubRestAPIGists10OperationsO16gists_sol_createO6OutputO7CreatedV7HeadersV8LocationSSSgvp",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "Location"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : "?"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIGists"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "Location"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "var"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "Location"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : "?"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/gists\/POST\/responses\/201\/headers\/Location",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapigists\/operations\/gists_sol_create\/output\/created-swift.struct\/headers-swift.struct\/location"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIGists",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/operations"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Operations/gists_sol_create": {
+  "abstract" : [
+    {
+      "text" : "Create a gist",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "gists_sol_create"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/gists_sol_create",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "gists_sol_create"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.gists_sol_create",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/operations\/gists_sol_create"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Operations/gists_sol_create/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/gists_sol_create\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.gists_sol_create.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/operations\/gists_sol_create\/output"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Operations/gists_sol_create/Output/Created-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Created"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/gists_sol_create\/Output\/Created-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Created"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.gists_sol_create.Output.Created",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/operations\/gists_sol_create\/output\/created-swift.struct"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Operations/gists_sol_create/Output/Created-swift.struct/Headers-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Headers"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/gists_sol_create\/Output\/Created-swift.struct\/Headers-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Headers"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.gists_sol_create.Output.Created.Headers",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/operations\/gists_sol_create\/output\/created-swift.struct\/headers-swift.struct"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Operations/gists_sol_create/Output/Created-swift.struct/Headers-swift.struct/Location": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Location"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/gists_sol_create\/Output\/Created-swift.struct\/Headers-swift.struct\/Location",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Location",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/operations\/gists_sol_create\/output\/created-swift.struct\/headers-swift.struct\/location"
+}
+}
+}

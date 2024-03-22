@@ -1,0 +1,409 @@
+{
+  "abstract" : [
+    {
+      "text" : "A container of undocumented properties.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIEmojis\/documentation\/GitHubRestAPIEmojis",
+        "doc:\/\/GitHubRestAPIEmojis\/documentation\/GitHubRestAPIEmojis\/Operations",
+        "doc:\/\/GitHubRestAPIEmojis\/documentation\/GitHubRestAPIEmojis\/Operations\/emojis_sol_get",
+        "doc:\/\/GitHubRestAPIEmojis\/documentation\/GitHubRestAPIEmojis\/Operations\/emojis_sol_get\/Output",
+        "doc:\/\/GitHubRestAPIEmojis\/documentation\/GitHubRestAPIEmojis\/Operations\/emojis_sol_get\/Output\/Ok-swift.struct",
+        "doc:\/\/GitHubRestAPIEmojis\/documentation\/GitHubRestAPIEmojis\/Operations\/emojis_sol_get\/Output\/Ok-swift.struct\/Body-swift.enum",
+        "doc:\/\/GitHubRestAPIEmojis\/documentation\/GitHubRestAPIEmojis\/Operations\/emojis_sol_get\/Output\/Ok-swift.struct\/Body-swift.enum\/jsonPayload"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIEmojis\/documentation\/GitHubRestAPIEmojis\/Operations\/emojis_sol_get\/Output\/Ok-swift.struct\/Body-swift.enum\/jsonPayload\/additionalProperties"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:19GitHubRestAPIEmojis10OperationsO14emojis_sol_getO6OutputO2OkV4BodyO11jsonPayloadV20additionalPropertiesSDyS2SGvp",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "additionalProperties"
+      },
+      {
+        "kind" : "text",
+        "text" : ": ["
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : " : "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : "]"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIEmojis"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "additionalProperties"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "var"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "additionalProperties"
+            },
+            {
+              "kind" : "text",
+              "text" : ": ["
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : " : "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : "]"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiemojis\/operations\/emojis_sol_get\/output\/ok-swift.struct\/body-swift.enum\/jsonpayload\/additionalproperties"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIEmojis/documentation/GitHubRestAPIEmojis": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIEmojis\/documentation\/GitHubRestAPIEmojis",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIEmojis",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiemojis"
+},
+"doc://GitHubRestAPIEmojis/documentation/GitHubRestAPIEmojis/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIEmojis\/documentation\/GitHubRestAPIEmojis\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiemojis\/operations"
+},
+"doc://GitHubRestAPIEmojis/documentation/GitHubRestAPIEmojis/Operations/emojis_sol_get": {
+  "abstract" : [
+    {
+      "text" : "Get emojis",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "emojis_sol_get"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIEmojis\/documentation\/GitHubRestAPIEmojis\/Operations\/emojis_sol_get",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "emojis_sol_get"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.emojis_sol_get",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiemojis\/operations\/emojis_sol_get"
+},
+"doc://GitHubRestAPIEmojis/documentation/GitHubRestAPIEmojis/Operations/emojis_sol_get/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIEmojis\/documentation\/GitHubRestAPIEmojis\/Operations\/emojis_sol_get\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.emojis_sol_get.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiemojis\/operations\/emojis_sol_get\/output"
+},
+"doc://GitHubRestAPIEmojis/documentation/GitHubRestAPIEmojis/Operations/emojis_sol_get/Output/Ok-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Ok"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIEmojis\/documentation\/GitHubRestAPIEmojis\/Operations\/emojis_sol_get\/Output\/Ok-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Ok"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.emojis_sol_get.Output.Ok",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiemojis\/operations\/emojis_sol_get\/output\/ok-swift.struct"
+},
+"doc://GitHubRestAPIEmojis/documentation/GitHubRestAPIEmojis/Operations/emojis_sol_get/Output/Ok-swift.struct/Body-swift.enum": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIEmojis\/documentation\/GitHubRestAPIEmojis\/Operations\/emojis_sol_get\/Output\/Ok-swift.struct\/Body-swift.enum",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.emojis_sol_get.Output.Ok.Body",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiemojis\/operations\/emojis_sol_get\/output\/ok-swift.struct\/body-swift.enum"
+},
+"doc://GitHubRestAPIEmojis/documentation/GitHubRestAPIEmojis/Operations/emojis_sol_get/Output/Ok-swift.struct/Body-swift.enum/jsonPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "jsonPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIEmojis\/documentation\/GitHubRestAPIEmojis\/Operations\/emojis_sol_get\/Output\/Ok-swift.struct\/Body-swift.enum\/jsonPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "jsonPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.emojis_sol_get.Output.Ok.Body.jsonPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiemojis\/operations\/emojis_sol_get\/output\/ok-swift.struct\/body-swift.enum\/jsonpayload"
+},
+"doc://GitHubRestAPIEmojis/documentation/GitHubRestAPIEmojis/Operations/emojis_sol_get/Output/Ok-swift.struct/Body-swift.enum/jsonPayload/additionalProperties": {
+  "abstract" : [
+    {
+      "text" : "A container of undocumented properties.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "additionalProperties"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : " : "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "]"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIEmojis\/documentation\/GitHubRestAPIEmojis\/Operations\/emojis_sol_get\/Output\/Ok-swift.struct\/Body-swift.enum\/jsonPayload\/additionalProperties",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "additionalProperties",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiemojis\/operations\/emojis_sol_get\/output\/ok-swift.struct\/body-swift.enum\/jsonpayload\/additionalproperties"
+}
+}
+}

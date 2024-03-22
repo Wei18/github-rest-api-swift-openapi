@@ -1,0 +1,604 @@
+{
+  "abstract" : [
+    {
+      "text" : "The geographic area for this codespace. If not specified, the value is assigned by IP. This property replaces ",
+      "type" : "text"
+    },
+    {
+      "code" : "location",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ", which is being deprecated.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user\/Input",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user\/Input\/Body-swift.enum",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user\/Input\/Body-swift.enum\/jsonPayload"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user\/Input\/Body-swift.enum\/jsonPayload\/geoPayload"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:23GitHubRestAPICodespaces10OperationsO034codespaces_sol_create_hyphen_with_i4_pr_i5_for_i15_authenticated_I5_userO5InputV4BodyO11jsonPayloadV03geoR0O",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "geoPayload"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPICodespaces"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "geoPayload"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Operations.codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body.jsonPayload.geoPayload"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "geoPayload"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/repos\/{owner}\/{repo}\/pulls\/{pull_number}\/codespaces\/POST\/requestBody\/json\/geo",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICodespaces\/Se",
+        "doc:\/\/GitHubRestAPICodespaces\/SE",
+        "doc:\/\/GitHubRestAPICodespaces\/SQ",
+        "doc:\/\/GitHubRestAPICodespaces\/SH",
+        "doc:\/\/GitHubRestAPICodespaces\/SY",
+        "doc:\/\/GitHubRestAPICodespaces\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user\/Input\/Body-swift.enum\/jsonPayload\/geoPayload\/EuropeWest",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user\/Input\/Body-swift.enum\/jsonPayload\/geoPayload\/SoutheastAsia",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user\/Input\/Body-swift.enum\/jsonPayload\/geoPayload\/UsEast",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user\/Input\/Body-swift.enum\/jsonPayload\/geoPayload\/UsWest"
+      ],
+      "title" : "Enumeration Cases"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user\/Input\/Body-swift.enum\/jsonPayload\/geoPayload\/init(rawValue:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user\/Input\/Body-swift.enum\/jsonPayload\/geoPayload\/Equatable-Implementations",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user\/Input\/Body-swift.enum\/jsonPayload\/geoPayload\/RawRepresentable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapicodespaces\/operations\/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user\/input\/body-swift.enum\/jsonpayload\/geopayload"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPICodespaces/SE": {
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPICodespaces/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPICodespaces/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPICodespaces/SY": {
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/SY",
+  "title" : "Swift.RawRepresentable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPICodespaces/Se": {
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPICodespaces",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user": {
+  "abstract" : [
+    {
+      "text" : "Create a codespace from a pull request",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user\/input"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user/Input/Body-swift.enum": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user\/Input\/Body-swift.enum",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user\/input\/body-swift.enum"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user/Input/Body-swift.enum/jsonPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "jsonPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user\/Input\/Body-swift.enum\/jsonPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "jsonPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body.jsonPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user\/input\/body-swift.enum\/jsonpayload"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user/Input/Body-swift.enum/jsonPayload/geoPayload": {
+  "abstract" : [
+    {
+      "text" : "The geographic area for this codespace. If not specified, the value is assigned by IP. This property replaces ",
+      "type" : "text"
+    },
+    {
+      "code" : "location",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ", which is being deprecated.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "geoPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user\/Input\/Body-swift.enum\/jsonPayload\/geoPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "geoPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body.jsonPayload.geoPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user\/input\/body-swift.enum\/jsonpayload\/geopayload"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user/Input/Body-swift.enum/jsonPayload/geoPayload/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user\/Input\/Body-swift.enum\/jsonPayload\/geoPayload\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user\/input\/body-swift.enum\/jsonpayload\/geopayload\/equatable-implementations"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user/Input/Body-swift.enum/jsonPayload/geoPayload/EuropeWest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "EuropeWest"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user\/Input\/Body-swift.enum\/jsonPayload\/geoPayload\/EuropeWest",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body.jsonPayload.geoPayload.EuropeWest",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user\/input\/body-swift.enum\/jsonpayload\/geopayload\/europewest"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user/Input/Body-swift.enum/jsonPayload/geoPayload/RawRepresentable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user\/Input\/Body-swift.enum\/jsonPayload\/geoPayload\/RawRepresentable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "RawRepresentable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user\/input\/body-swift.enum\/jsonpayload\/geopayload\/rawrepresentable-implementations"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user/Input/Body-swift.enum/jsonPayload/geoPayload/SoutheastAsia": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "SoutheastAsia"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user\/Input\/Body-swift.enum\/jsonPayload\/geoPayload\/SoutheastAsia",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body.jsonPayload.geoPayload.SoutheastAsia",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user\/input\/body-swift.enum\/jsonpayload\/geopayload\/southeastasia"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user/Input/Body-swift.enum/jsonPayload/geoPayload/UsEast": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "UsEast"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user\/Input\/Body-swift.enum\/jsonPayload\/geoPayload\/UsEast",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body.jsonPayload.geoPayload.UsEast",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user\/input\/body-swift.enum\/jsonpayload\/geopayload\/useast"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user/Input/Body-swift.enum/jsonPayload/geoPayload/UsWest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "UsWest"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user\/Input\/Body-swift.enum\/jsonPayload\/geoPayload\/UsWest",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body.jsonPayload.geoPayload.UsWest",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user\/input\/body-swift.enum\/jsonpayload\/geopayload\/uswest"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user/Input/Body-swift.enum/jsonPayload/geoPayload/init(rawValue:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "?("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rawValue"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user\/Input\/Body-swift.enum\/jsonPayload\/geoPayload\/init(rawValue:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(rawValue:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user\/input\/body-swift.enum\/jsonpayload\/geopayload\/init(rawvalue:)"
+},
+"doc://GitHubRestAPICodespaces/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

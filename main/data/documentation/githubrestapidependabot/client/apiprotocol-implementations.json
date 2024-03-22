@@ -1,0 +1,3360 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Client"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Client\/APIProtocol-Implementations"
+  },
+  "kind" : "article",
+  "metadata" : {
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIDependabot"
+      }
+    ],
+    "role" : "collectionGroup",
+    "title" : "APIProtocol Implementations"
+  },
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Client\/dependabot_sol_add_hyphen_selected_hyphen_repo_hyphen_to_hyphen_org_hyphen_secret(path:)",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Client\/dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret(path:headers:body:)",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Client\/dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret(path:headers:body:)",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Client\/dependabot_sol_delete_hyphen_org_hyphen_secret(path:)",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Client\/dependabot_sol_delete_hyphen_repo_hyphen_secret(path:)",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Client\/dependabot_sol_get_hyphen_alert(path:headers:)",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Client\/dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key(path:headers:)",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Client\/dependabot_sol_get_hyphen_org_hyphen_secret(path:headers:)",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Client\/dependabot_sol_get_hyphen_repo_hyphen_public_hyphen_key(path:headers:)",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Client\/dependabot_sol_get_hyphen_repo_hyphen_secret(path:headers:)",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Client\/dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise(path:query:headers:)",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Client\/dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_org(path:query:headers:)",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Client\/dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_repo(path:query:headers:)",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Client\/dependabot_sol_list_hyphen_org_hyphen_secrets(path:query:headers:)",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Client\/dependabot_sol_list_hyphen_repo_hyphen_secrets(path:query:headers:)",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Client\/dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret(path:query:headers:)",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Client\/dependabot_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_secret(path:)",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Client\/dependabot_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret(path:body:)",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Client\/dependabot_sol_update_hyphen_alert(path:headers:body:)"
+      ],
+      "title" : "Instance Methods"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapidependabot\/client\/apiprotocol-implementations"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIDependabot",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Client": {
+  "abstract" : [
+    {
+      "text" : "GitHub’s v3 REST API.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Client",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Client",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/client"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Client/dependabot_sol_add_hyphen_selected_hyphen_repo_hyphen_to_hyphen_org_hyphen_secret(path:)": {
+  "abstract" : [
+    {
+      "text" : "Add selected repository to an organization secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_add_hyphen_selected_hyphen_repo_hyphen_to_hyphen_org_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO035dependabot_sol_add_hyphen_selected_i6_repo_i4_to_i5_org_I7_secretO",
+      "text" : "dependabot_sol_add_hyphen_selected_hyphen_repo_hyphen_to_hyphen_org_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO035dependabot_sol_add_hyphen_selected_i6_repo_i4_to_i5_org_I7_secretO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO035dependabot_sol_add_hyphen_selected_i6_repo_i4_to_i5_org_I7_secretO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO035dependabot_sol_add_hyphen_selected_i6_repo_i4_to_i5_org_I7_secretO",
+      "text" : "dependabot_sol_add_hyphen_selected_hyphen_repo_hyphen_to_hyphen_org_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO035dependabot_sol_add_hyphen_selected_i6_repo_i4_to_i5_org_I7_secretO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Client\/dependabot_sol_add_hyphen_selected_hyphen_repo_hyphen_to_hyphen_org_hyphen_secret(path:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "dependabot_sol_add_hyphen_selected_hyphen_repo_hyphen_to_hyphen_org_hyphen_secret(path:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/client\/dependabot_sol_add_hyphen_selected_hyphen_repo_hyphen_to_hyphen_org_hyphen_secret(path:)"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Client/dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret(path:headers:body:)": {
+  "abstract" : [
+    {
+      "text" : "Create or update an organization secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO032dependabot_sol_create_hyphen_or_i8_update_i5_org_I7_secretO",
+      "text" : "dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO032dependabot_sol_create_hyphen_or_i8_update_i5_org_I7_secretO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO032dependabot_sol_create_hyphen_or_i8_update_i5_org_I7_secretO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO032dependabot_sol_create_hyphen_or_i8_update_i5_org_I7_secretO",
+      "text" : "dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO032dependabot_sol_create_hyphen_or_i8_update_i5_org_I7_secretO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO032dependabot_sol_create_hyphen_or_i8_update_i5_org_I7_secretO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "body"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO032dependabot_sol_create_hyphen_or_i8_update_i5_org_I7_secretO",
+      "text" : "dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO032dependabot_sol_create_hyphen_or_i8_update_i5_org_I7_secretO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO032dependabot_sol_create_hyphen_or_i8_update_i5_org_I7_secretO5InputV4BodyO",
+      "text" : "Body"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO032dependabot_sol_create_hyphen_or_i8_update_i5_org_I7_secretO",
+      "text" : "dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO032dependabot_sol_create_hyphen_or_i8_update_i5_org_I7_secretO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Client\/dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret(path:headers:body:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret(path:headers:body:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/client\/dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret(path:headers:body:)"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Client/dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret(path:headers:body:)": {
+  "abstract" : [
+    {
+      "text" : "Create or update a repository secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO032dependabot_sol_create_hyphen_or_i8_update_i6_repo_I7_secretO",
+      "text" : "dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO032dependabot_sol_create_hyphen_or_i8_update_i6_repo_I7_secretO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO032dependabot_sol_create_hyphen_or_i8_update_i6_repo_I7_secretO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO032dependabot_sol_create_hyphen_or_i8_update_i6_repo_I7_secretO",
+      "text" : "dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO032dependabot_sol_create_hyphen_or_i8_update_i6_repo_I7_secretO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO032dependabot_sol_create_hyphen_or_i8_update_i6_repo_I7_secretO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "body"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO032dependabot_sol_create_hyphen_or_i8_update_i6_repo_I7_secretO",
+      "text" : "dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO032dependabot_sol_create_hyphen_or_i8_update_i6_repo_I7_secretO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO032dependabot_sol_create_hyphen_or_i8_update_i6_repo_I7_secretO5InputV4BodyO",
+      "text" : "Body"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO032dependabot_sol_create_hyphen_or_i8_update_i6_repo_I7_secretO",
+      "text" : "dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO032dependabot_sol_create_hyphen_or_i8_update_i6_repo_I7_secretO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Client\/dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret(path:headers:body:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret(path:headers:body:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/client\/dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret(path:headers:body:)"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Client/dependabot_sol_delete_hyphen_org_hyphen_secret(path:)": {
+  "abstract" : [
+    {
+      "text" : "Delete an organization secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_delete_hyphen_org_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO033dependabot_sol_delete_hyphen_org_I7_secretO",
+      "text" : "dependabot_sol_delete_hyphen_org_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO033dependabot_sol_delete_hyphen_org_I7_secretO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO033dependabot_sol_delete_hyphen_org_I7_secretO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO033dependabot_sol_delete_hyphen_org_I7_secretO",
+      "text" : "dependabot_sol_delete_hyphen_org_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO033dependabot_sol_delete_hyphen_org_I7_secretO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Client\/dependabot_sol_delete_hyphen_org_hyphen_secret(path:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "dependabot_sol_delete_hyphen_org_hyphen_secret(path:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/client\/dependabot_sol_delete_hyphen_org_hyphen_secret(path:)"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Client/dependabot_sol_delete_hyphen_repo_hyphen_secret(path:)": {
+  "abstract" : [
+    {
+      "text" : "Delete a repository secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_delete_hyphen_repo_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO034dependabot_sol_delete_hyphen_repo_I7_secretO",
+      "text" : "dependabot_sol_delete_hyphen_repo_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO034dependabot_sol_delete_hyphen_repo_I7_secretO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO034dependabot_sol_delete_hyphen_repo_I7_secretO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO034dependabot_sol_delete_hyphen_repo_I7_secretO",
+      "text" : "dependabot_sol_delete_hyphen_repo_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO034dependabot_sol_delete_hyphen_repo_I7_secretO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Client\/dependabot_sol_delete_hyphen_repo_hyphen_secret(path:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "dependabot_sol_delete_hyphen_repo_hyphen_secret(path:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/client\/dependabot_sol_delete_hyphen_repo_hyphen_secret(path:)"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Client/dependabot_sol_get_hyphen_alert(path:headers:)": {
+  "abstract" : [
+    {
+      "text" : "Get a Dependabot alert",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_get_hyphen_alert"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO31dependabot_sol_get_hyphen_alertO",
+      "text" : "dependabot_sol_get_hyphen_alert"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO31dependabot_sol_get_hyphen_alertO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO31dependabot_sol_get_hyphen_alertO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO31dependabot_sol_get_hyphen_alertO",
+      "text" : "dependabot_sol_get_hyphen_alert"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO31dependabot_sol_get_hyphen_alertO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO31dependabot_sol_get_hyphen_alertO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO31dependabot_sol_get_hyphen_alertO",
+      "text" : "dependabot_sol_get_hyphen_alert"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO31dependabot_sol_get_hyphen_alertO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Client\/dependabot_sol_get_hyphen_alert(path:headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "dependabot_sol_get_hyphen_alert(path:headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/client\/dependabot_sol_get_hyphen_alert(path:headers:)"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Client/dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key(path:headers:)": {
+  "abstract" : [
+    {
+      "text" : "Get an organization public key",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO030dependabot_sol_get_hyphen_org_i8_public_I4_keyO",
+      "text" : "dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO030dependabot_sol_get_hyphen_org_i8_public_I4_keyO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO030dependabot_sol_get_hyphen_org_i8_public_I4_keyO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO030dependabot_sol_get_hyphen_org_i8_public_I4_keyO",
+      "text" : "dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO030dependabot_sol_get_hyphen_org_i8_public_I4_keyO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO030dependabot_sol_get_hyphen_org_i8_public_I4_keyO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO030dependabot_sol_get_hyphen_org_i8_public_I4_keyO",
+      "text" : "dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO030dependabot_sol_get_hyphen_org_i8_public_I4_keyO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Client\/dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key(path:headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key(path:headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/client\/dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key(path:headers:)"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Client/dependabot_sol_get_hyphen_org_hyphen_secret(path:headers:)": {
+  "abstract" : [
+    {
+      "text" : "Get an organization secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_get_hyphen_org_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO030dependabot_sol_get_hyphen_org_I7_secretO",
+      "text" : "dependabot_sol_get_hyphen_org_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO030dependabot_sol_get_hyphen_org_I7_secretO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO030dependabot_sol_get_hyphen_org_I7_secretO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO030dependabot_sol_get_hyphen_org_I7_secretO",
+      "text" : "dependabot_sol_get_hyphen_org_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO030dependabot_sol_get_hyphen_org_I7_secretO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO030dependabot_sol_get_hyphen_org_I7_secretO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO030dependabot_sol_get_hyphen_org_I7_secretO",
+      "text" : "dependabot_sol_get_hyphen_org_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO030dependabot_sol_get_hyphen_org_I7_secretO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Client\/dependabot_sol_get_hyphen_org_hyphen_secret(path:headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "dependabot_sol_get_hyphen_org_hyphen_secret(path:headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/client\/dependabot_sol_get_hyphen_org_hyphen_secret(path:headers:)"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Client/dependabot_sol_get_hyphen_repo_hyphen_public_hyphen_key(path:headers:)": {
+  "abstract" : [
+    {
+      "text" : "Get a repository public key",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_get_hyphen_repo_hyphen_public_hyphen_key"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO031dependabot_sol_get_hyphen_repo_i8_public_I4_keyO",
+      "text" : "dependabot_sol_get_hyphen_repo_hyphen_public_hyphen_key"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO031dependabot_sol_get_hyphen_repo_i8_public_I4_keyO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO031dependabot_sol_get_hyphen_repo_i8_public_I4_keyO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO031dependabot_sol_get_hyphen_repo_i8_public_I4_keyO",
+      "text" : "dependabot_sol_get_hyphen_repo_hyphen_public_hyphen_key"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO031dependabot_sol_get_hyphen_repo_i8_public_I4_keyO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO031dependabot_sol_get_hyphen_repo_i8_public_I4_keyO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO031dependabot_sol_get_hyphen_repo_i8_public_I4_keyO",
+      "text" : "dependabot_sol_get_hyphen_repo_hyphen_public_hyphen_key"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO031dependabot_sol_get_hyphen_repo_i8_public_I4_keyO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Client\/dependabot_sol_get_hyphen_repo_hyphen_public_hyphen_key(path:headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "dependabot_sol_get_hyphen_repo_hyphen_public_hyphen_key(path:headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/client\/dependabot_sol_get_hyphen_repo_hyphen_public_hyphen_key(path:headers:)"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Client/dependabot_sol_get_hyphen_repo_hyphen_secret(path:headers:)": {
+  "abstract" : [
+    {
+      "text" : "Get a repository secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_get_hyphen_repo_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO031dependabot_sol_get_hyphen_repo_I7_secretO",
+      "text" : "dependabot_sol_get_hyphen_repo_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO031dependabot_sol_get_hyphen_repo_I7_secretO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO031dependabot_sol_get_hyphen_repo_I7_secretO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO031dependabot_sol_get_hyphen_repo_I7_secretO",
+      "text" : "dependabot_sol_get_hyphen_repo_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO031dependabot_sol_get_hyphen_repo_I7_secretO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO031dependabot_sol_get_hyphen_repo_I7_secretO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO031dependabot_sol_get_hyphen_repo_I7_secretO",
+      "text" : "dependabot_sol_get_hyphen_repo_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO031dependabot_sol_get_hyphen_repo_I7_secretO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Client\/dependabot_sol_get_hyphen_repo_hyphen_secret(path:headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "dependabot_sol_get_hyphen_repo_hyphen_secret(path:headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/client\/dependabot_sol_get_hyphen_repo_hyphen_secret(path:headers:)"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Client/dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise(path:query:headers:)": {
+  "abstract" : [
+    {
+      "text" : "List Dependabot alerts for an enterprise",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO034dependabot_sol_list_hyphen_alerts_i5_for_I11_enterpriseO",
+      "text" : "dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO034dependabot_sol_list_hyphen_alerts_i5_for_I11_enterpriseO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO034dependabot_sol_list_hyphen_alerts_i5_for_I11_enterpriseO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "query"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO034dependabot_sol_list_hyphen_alerts_i5_for_I11_enterpriseO",
+      "text" : "dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO034dependabot_sol_list_hyphen_alerts_i5_for_I11_enterpriseO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO034dependabot_sol_list_hyphen_alerts_i5_for_I11_enterpriseO5InputV5QueryV",
+      "text" : "Query"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO034dependabot_sol_list_hyphen_alerts_i5_for_I11_enterpriseO",
+      "text" : "dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO034dependabot_sol_list_hyphen_alerts_i5_for_I11_enterpriseO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO034dependabot_sol_list_hyphen_alerts_i5_for_I11_enterpriseO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO034dependabot_sol_list_hyphen_alerts_i5_for_I11_enterpriseO",
+      "text" : "dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO034dependabot_sol_list_hyphen_alerts_i5_for_I11_enterpriseO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Client\/dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise(path:query:headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise(path:query:headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/client\/dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise(path:query:headers:)"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Client/dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_org(path:query:headers:)": {
+  "abstract" : [
+    {
+      "text" : "List Dependabot alerts for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_org"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO034dependabot_sol_list_hyphen_alerts_i5_for_I4_orgO",
+      "text" : "dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_org"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO034dependabot_sol_list_hyphen_alerts_i5_for_I4_orgO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO034dependabot_sol_list_hyphen_alerts_i5_for_I4_orgO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "query"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO034dependabot_sol_list_hyphen_alerts_i5_for_I4_orgO",
+      "text" : "dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_org"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO034dependabot_sol_list_hyphen_alerts_i5_for_I4_orgO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO034dependabot_sol_list_hyphen_alerts_i5_for_I4_orgO5InputV5QueryV",
+      "text" : "Query"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO034dependabot_sol_list_hyphen_alerts_i5_for_I4_orgO",
+      "text" : "dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_org"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO034dependabot_sol_list_hyphen_alerts_i5_for_I4_orgO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO034dependabot_sol_list_hyphen_alerts_i5_for_I4_orgO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO034dependabot_sol_list_hyphen_alerts_i5_for_I4_orgO",
+      "text" : "dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_org"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO034dependabot_sol_list_hyphen_alerts_i5_for_I4_orgO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Client\/dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_org(path:query:headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_org(path:query:headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/client\/dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_org(path:query:headers:)"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Client/dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_repo(path:query:headers:)": {
+  "abstract" : [
+    {
+      "text" : "List Dependabot alerts for a repository",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_repo"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO034dependabot_sol_list_hyphen_alerts_i5_for_I5_repoO",
+      "text" : "dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_repo"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO034dependabot_sol_list_hyphen_alerts_i5_for_I5_repoO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO034dependabot_sol_list_hyphen_alerts_i5_for_I5_repoO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "query"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO034dependabot_sol_list_hyphen_alerts_i5_for_I5_repoO",
+      "text" : "dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_repo"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO034dependabot_sol_list_hyphen_alerts_i5_for_I5_repoO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO034dependabot_sol_list_hyphen_alerts_i5_for_I5_repoO5InputV5QueryV",
+      "text" : "Query"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO034dependabot_sol_list_hyphen_alerts_i5_for_I5_repoO",
+      "text" : "dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_repo"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO034dependabot_sol_list_hyphen_alerts_i5_for_I5_repoO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO034dependabot_sol_list_hyphen_alerts_i5_for_I5_repoO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO034dependabot_sol_list_hyphen_alerts_i5_for_I5_repoO",
+      "text" : "dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_repo"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO034dependabot_sol_list_hyphen_alerts_i5_for_I5_repoO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Client\/dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_repo(path:query:headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_repo(path:query:headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/client\/dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_repo(path:query:headers:)"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Client/dependabot_sol_list_hyphen_org_hyphen_secrets(path:query:headers:)": {
+  "abstract" : [
+    {
+      "text" : "List organization secrets",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_list_hyphen_org_hyphen_secrets"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO031dependabot_sol_list_hyphen_org_I8_secretsO",
+      "text" : "dependabot_sol_list_hyphen_org_hyphen_secrets"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO031dependabot_sol_list_hyphen_org_I8_secretsO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO031dependabot_sol_list_hyphen_org_I8_secretsO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "query"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO031dependabot_sol_list_hyphen_org_I8_secretsO",
+      "text" : "dependabot_sol_list_hyphen_org_hyphen_secrets"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO031dependabot_sol_list_hyphen_org_I8_secretsO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO031dependabot_sol_list_hyphen_org_I8_secretsO5InputV5QueryV",
+      "text" : "Query"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO031dependabot_sol_list_hyphen_org_I8_secretsO",
+      "text" : "dependabot_sol_list_hyphen_org_hyphen_secrets"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO031dependabot_sol_list_hyphen_org_I8_secretsO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO031dependabot_sol_list_hyphen_org_I8_secretsO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO031dependabot_sol_list_hyphen_org_I8_secretsO",
+      "text" : "dependabot_sol_list_hyphen_org_hyphen_secrets"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO031dependabot_sol_list_hyphen_org_I8_secretsO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Client\/dependabot_sol_list_hyphen_org_hyphen_secrets(path:query:headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "dependabot_sol_list_hyphen_org_hyphen_secrets(path:query:headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/client\/dependabot_sol_list_hyphen_org_hyphen_secrets(path:query:headers:)"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Client/dependabot_sol_list_hyphen_repo_hyphen_secrets(path:query:headers:)": {
+  "abstract" : [
+    {
+      "text" : "List repository secrets",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_list_hyphen_repo_hyphen_secrets"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO032dependabot_sol_list_hyphen_repo_I8_secretsO",
+      "text" : "dependabot_sol_list_hyphen_repo_hyphen_secrets"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO032dependabot_sol_list_hyphen_repo_I8_secretsO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO032dependabot_sol_list_hyphen_repo_I8_secretsO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "query"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO032dependabot_sol_list_hyphen_repo_I8_secretsO",
+      "text" : "dependabot_sol_list_hyphen_repo_hyphen_secrets"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO032dependabot_sol_list_hyphen_repo_I8_secretsO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO032dependabot_sol_list_hyphen_repo_I8_secretsO5InputV5QueryV",
+      "text" : "Query"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO032dependabot_sol_list_hyphen_repo_I8_secretsO",
+      "text" : "dependabot_sol_list_hyphen_repo_hyphen_secrets"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO032dependabot_sol_list_hyphen_repo_I8_secretsO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO032dependabot_sol_list_hyphen_repo_I8_secretsO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO032dependabot_sol_list_hyphen_repo_I8_secretsO",
+      "text" : "dependabot_sol_list_hyphen_repo_hyphen_secrets"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO032dependabot_sol_list_hyphen_repo_I8_secretsO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Client\/dependabot_sol_list_hyphen_repo_hyphen_secrets(path:query:headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "dependabot_sol_list_hyphen_repo_hyphen_secrets(path:query:headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/client\/dependabot_sol_list_hyphen_repo_hyphen_secrets(path:query:headers:)"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Client/dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret(path:query:headers:)": {
+  "abstract" : [
+    {
+      "text" : "List selected repositories for an organization secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO036dependabot_sol_list_hyphen_selected_i7_repos_i5_for_i5_org_I7_secretO",
+      "text" : "dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO036dependabot_sol_list_hyphen_selected_i7_repos_i5_for_i5_org_I7_secretO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO036dependabot_sol_list_hyphen_selected_i7_repos_i5_for_i5_org_I7_secretO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "query"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO036dependabot_sol_list_hyphen_selected_i7_repos_i5_for_i5_org_I7_secretO",
+      "text" : "dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO036dependabot_sol_list_hyphen_selected_i7_repos_i5_for_i5_org_I7_secretO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO036dependabot_sol_list_hyphen_selected_i7_repos_i5_for_i5_org_I7_secretO5InputV5QueryV",
+      "text" : "Query"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO036dependabot_sol_list_hyphen_selected_i7_repos_i5_for_i5_org_I7_secretO",
+      "text" : "dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO036dependabot_sol_list_hyphen_selected_i7_repos_i5_for_i5_org_I7_secretO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO036dependabot_sol_list_hyphen_selected_i7_repos_i5_for_i5_org_I7_secretO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO036dependabot_sol_list_hyphen_selected_i7_repos_i5_for_i5_org_I7_secretO",
+      "text" : "dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO036dependabot_sol_list_hyphen_selected_i7_repos_i5_for_i5_org_I7_secretO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Client\/dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret(path:query:headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret(path:query:headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/client\/dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret(path:query:headers:)"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Client/dependabot_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_secret(path:)": {
+  "abstract" : [
+    {
+      "text" : "Remove selected repository from an organization secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO038dependabot_sol_remove_hyphen_selected_i6_repo_i6_from_i5_org_I7_secretO",
+      "text" : "dependabot_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO038dependabot_sol_remove_hyphen_selected_i6_repo_i6_from_i5_org_I7_secretO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO038dependabot_sol_remove_hyphen_selected_i6_repo_i6_from_i5_org_I7_secretO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO038dependabot_sol_remove_hyphen_selected_i6_repo_i6_from_i5_org_I7_secretO",
+      "text" : "dependabot_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO038dependabot_sol_remove_hyphen_selected_i6_repo_i6_from_i5_org_I7_secretO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Client\/dependabot_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_secret(path:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "dependabot_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_secret(path:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/client\/dependabot_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_secret(path:)"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Client/dependabot_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret(path:body:)": {
+  "abstract" : [
+    {
+      "text" : "Set selected repositories for an organization secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO035dependabot_sol_set_hyphen_selected_i7_repos_i5_for_i5_org_I7_secretO",
+      "text" : "dependabot_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO035dependabot_sol_set_hyphen_selected_i7_repos_i5_for_i5_org_I7_secretO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO035dependabot_sol_set_hyphen_selected_i7_repos_i5_for_i5_org_I7_secretO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "body"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO035dependabot_sol_set_hyphen_selected_i7_repos_i5_for_i5_org_I7_secretO",
+      "text" : "dependabot_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO035dependabot_sol_set_hyphen_selected_i7_repos_i5_for_i5_org_I7_secretO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO035dependabot_sol_set_hyphen_selected_i7_repos_i5_for_i5_org_I7_secretO5InputV4BodyO",
+      "text" : "Body"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO035dependabot_sol_set_hyphen_selected_i7_repos_i5_for_i5_org_I7_secretO",
+      "text" : "dependabot_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO035dependabot_sol_set_hyphen_selected_i7_repos_i5_for_i5_org_I7_secretO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Client\/dependabot_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret(path:body:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "dependabot_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret(path:body:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/client\/dependabot_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret(path:body:)"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Client/dependabot_sol_update_hyphen_alert(path:headers:body:)": {
+  "abstract" : [
+    {
+      "text" : "Update a Dependabot alert",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_update_hyphen_alert"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO34dependabot_sol_update_hyphen_alertO",
+      "text" : "dependabot_sol_update_hyphen_alert"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO34dependabot_sol_update_hyphen_alertO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO34dependabot_sol_update_hyphen_alertO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO34dependabot_sol_update_hyphen_alertO",
+      "text" : "dependabot_sol_update_hyphen_alert"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO34dependabot_sol_update_hyphen_alertO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO34dependabot_sol_update_hyphen_alertO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "body"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO34dependabot_sol_update_hyphen_alertO",
+      "text" : "dependabot_sol_update_hyphen_alert"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO34dependabot_sol_update_hyphen_alertO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO34dependabot_sol_update_hyphen_alertO5InputV4BodyO",
+      "text" : "Body"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO34dependabot_sol_update_hyphen_alertO",
+      "text" : "dependabot_sol_update_hyphen_alert"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO34dependabot_sol_update_hyphen_alertO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Client\/dependabot_sol_update_hyphen_alert(path:headers:body:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "dependabot_sol_update_hyphen_alert(path:headers:body:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/client\/dependabot_sol_update_hyphen_alert(path:headers:body:)"
+}
+}
+}

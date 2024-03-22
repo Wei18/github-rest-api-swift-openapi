@@ -1,0 +1,424 @@
+{
+  "abstract" : [
+    {
+      "text" : "List project collaborators",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects",
+        "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Operations"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Operations\/projects_sol_list_hyphen_collaborators"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:21GitHubRestAPIProjects10OperationsO38projects_sol_list_hyphen_collaboratorsO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "projects_sol_list_hyphen_collaborators"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIProjects"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "projects_sol_list_hyphen_collaborators"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Operations.projects_sol_list_hyphen_collaborators"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "projects_sol_list_hyphen_collaborators"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Lists the collaborators for an organization project. For a project, the list of collaborators includes outside collaborators, organization members that are direct collaborators, organization members with access through team memberships, organization members with access through default organization permissions, and organization owners. You must be an organization owner or a project ",
+              "type" : "text"
+            },
+            {
+              "code" : "admin",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " to list collaborators.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "HTTP ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "GET \/projects\/{project_id}\/collaborators",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/\/projects\/{project_id}\/collaborators\/get(projects\/list-collaborators)",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Operations\/projects_sol_list_hyphen_collaborators\/Input"
+      ],
+      "title" : "Structures"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Operations\/projects_sol_list_hyphen_collaborators\/id"
+      ],
+      "title" : "Type Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Operations\/projects_sol_list_hyphen_collaborators\/AcceptableContentType",
+        "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Operations\/projects_sol_list_hyphen_collaborators\/Output"
+      ],
+      "title" : "Enumerations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiprojects\/operations\/projects_sol_list_hyphen_collaborators"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIProjects/documentation/GitHubRestAPIProjects": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIProjects",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprojects"
+},
+"doc://GitHubRestAPIProjects/documentation/GitHubRestAPIProjects/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprojects\/operations"
+},
+"doc://GitHubRestAPIProjects/documentation/GitHubRestAPIProjects/Operations/projects_sol_list_hyphen_collaborators": {
+  "abstract" : [
+    {
+      "text" : "List project collaborators",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "projects_sol_list_hyphen_collaborators"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Operations\/projects_sol_list_hyphen_collaborators",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "projects_sol_list_hyphen_collaborators"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.projects_sol_list_hyphen_collaborators",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprojects\/operations\/projects_sol_list_hyphen_collaborators"
+},
+"doc://GitHubRestAPIProjects/documentation/GitHubRestAPIProjects/Operations/projects_sol_list_hyphen_collaborators/AcceptableContentType": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AcceptableContentType"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Operations\/projects_sol_list_hyphen_collaborators\/AcceptableContentType",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AcceptableContentType"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.projects_sol_list_hyphen_collaborators.AcceptableContentType",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprojects\/operations\/projects_sol_list_hyphen_collaborators\/acceptablecontenttype"
+},
+"doc://GitHubRestAPIProjects/documentation/GitHubRestAPIProjects/Operations/projects_sol_list_hyphen_collaborators/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Operations\/projects_sol_list_hyphen_collaborators\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.projects_sol_list_hyphen_collaborators.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprojects\/operations\/projects_sol_list_hyphen_collaborators\/input"
+},
+"doc://GitHubRestAPIProjects/documentation/GitHubRestAPIProjects/Operations/projects_sol_list_hyphen_collaborators/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Operations\/projects_sol_list_hyphen_collaborators\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.projects_sol_list_hyphen_collaborators.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprojects\/operations\/projects_sol_list_hyphen_collaborators\/output"
+},
+"doc://GitHubRestAPIProjects/documentation/GitHubRestAPIProjects/Operations/projects_sol_list_hyphen_collaborators/id": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Operations\/projects_sol_list_hyphen_collaborators\/id",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprojects\/operations\/projects_sol_list_hyphen_collaborators\/id"
+}
+}
+}

@@ -1,0 +1,446 @@
+{
+  "abstract" : [
+    {
+      "text" : "List public gists",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/gists_sol_list_hyphen_public"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:18GitHubRestAPIGists10OperationsO28gists_sol_list_hyphen_publicO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "gists_sol_list_hyphen_public"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIGists"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "gists_sol_list_hyphen_public"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Operations.gists_sol_list_hyphen_public"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "gists_sol_list_hyphen_public"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "List public gists sorted by most recently updated to least recently updated.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Note: With ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "https:\/\/docs.github.com\/rest\/guides\/using-pagination-in-the-rest-api",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ", you can fetch up to 3000 gists. For example, you can fetch 100 pages with 30 gists per page or 30 pages with 100 gists per page.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "HTTP ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "GET \/gists\/public",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/\/gists\/public\/get(gists\/list-public)",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/gists_sol_list_hyphen_public\/Input"
+      ],
+      "title" : "Structures"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/gists_sol_list_hyphen_public\/id"
+      ],
+      "title" : "Type Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/gists_sol_list_hyphen_public\/AcceptableContentType",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/gists_sol_list_hyphen_public\/Output"
+      ],
+      "title" : "Enumerations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapigists\/operations\/gists_sol_list_hyphen_public"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIGists",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/operations"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Operations/gists_sol_list_hyphen_public": {
+  "abstract" : [
+    {
+      "text" : "List public gists",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "gists_sol_list_hyphen_public"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/gists_sol_list_hyphen_public",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "gists_sol_list_hyphen_public"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.gists_sol_list_hyphen_public",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/operations\/gists_sol_list_hyphen_public"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Operations/gists_sol_list_hyphen_public/AcceptableContentType": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AcceptableContentType"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/gists_sol_list_hyphen_public\/AcceptableContentType",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AcceptableContentType"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.gists_sol_list_hyphen_public.AcceptableContentType",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/operations\/gists_sol_list_hyphen_public\/acceptablecontenttype"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Operations/gists_sol_list_hyphen_public/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/gists_sol_list_hyphen_public\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.gists_sol_list_hyphen_public.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/operations\/gists_sol_list_hyphen_public\/input"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Operations/gists_sol_list_hyphen_public/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/gists_sol_list_hyphen_public\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.gists_sol_list_hyphen_public.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/operations\/gists_sol_list_hyphen_public\/output"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Operations/gists_sol_list_hyphen_public/id": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/gists_sol_list_hyphen_public\/id",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/operations\/gists_sol_list_hyphen_public\/id"
+},
+"https://docs.github.com/rest/guides/using-pagination-in-the-rest-api": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/guides\/using-pagination-in-the-rest-api",
+  "title" : "pagination",
+  "titleInlineContent" : [
+    {
+      "text" : "pagination",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/guides\/using-pagination-in-the-rest-api"
+}
+}
+}

@@ -1,0 +1,1133 @@
+{
+  "abstract" : [
+    {
+      "text" : "A version of a software package",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/package_hyphen_version"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:21GitHubRestAPIPackages10ComponentsO7SchemasO22package_hyphen_versionV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "package_hyphen_version"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIPackages"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "package_hyphen_version"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "Components.Schemas.package_hyphen_version"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "package_hyphen_version"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/components\/schemas\/package-version",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIPackages\/Se",
+        "doc:\/\/GitHubRestAPIPackages\/SE",
+        "doc:\/\/GitHubRestAPIPackages\/SQ",
+        "doc:\/\/GitHubRestAPIPackages\/SH",
+        "doc:\/\/GitHubRestAPIPackages\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/package_hyphen_version\/metadataPayload"
+      ],
+      "title" : "Structures"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/package_hyphen_version\/init(from:)",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/package_hyphen_version\/init(id:name:url:package_html_url:html_url:license:description:created_at:updated_at:deleted_at:metadata:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/package_hyphen_version\/created_at",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/package_hyphen_version\/deleted_at",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/package_hyphen_version\/description",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/package_hyphen_version\/html_url",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/package_hyphen_version\/id",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/package_hyphen_version\/license",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/package_hyphen_version\/metadata",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/package_hyphen_version\/name",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/package_hyphen_version\/package_html_url",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/package_hyphen_version\/updated_at",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/package_hyphen_version\/url"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/package_hyphen_version\/CodingKeys"
+      ],
+      "title" : "Enumerations"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/package_hyphen_version\/Equatable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapipackages\/components\/schemas\/package_hyphen_version"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIPackages/SE": {
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIPackages/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIPackages/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIPackages/Se": {
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIPackages",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/components"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/components\/schemas"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Components/Schemas/package_hyphen_version": {
+  "abstract" : [
+    {
+      "text" : "A version of a software package",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "package_hyphen_version"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/package_hyphen_version",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "package_hyphen_version"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.package_hyphen_version",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/components\/schemas\/package_hyphen_version"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Components/Schemas/package_hyphen_version/CodingKeys": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/package_hyphen_version\/CodingKeys",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.package_hyphen_version.CodingKeys",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/components\/schemas\/package_hyphen_version\/codingkeys"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Components/Schemas/package_hyphen_version/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/package_hyphen_version\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/components\/schemas\/package_hyphen_version\/equatable-implementations"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Components/Schemas/package_hyphen_version/created_at": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "created_at"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/package_hyphen_version\/created_at",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "created_at",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/components\/schemas\/package_hyphen_version\/created_at"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Components/Schemas/package_hyphen_version/deleted_at": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "deleted_at"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/package_hyphen_version\/deleted_at",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "deleted_at",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/components\/schemas\/package_hyphen_version\/deleted_at"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Components/Schemas/package_hyphen_version/description": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "description"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/package_hyphen_version\/description",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "description",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/components\/schemas\/package_hyphen_version\/description"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Components/Schemas/package_hyphen_version/html_url": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "html_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/package_hyphen_version\/html_url",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "html_url",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/components\/schemas\/package_hyphen_version\/html_url"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Components/Schemas/package_hyphen_version/id": {
+  "abstract" : [
+    {
+      "text" : "Unique identifier of the package version.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/package_hyphen_version\/id",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/components\/schemas\/package_hyphen_version\/id"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Components/Schemas/package_hyphen_version/init(from:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "from"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s7DecoderP",
+      "text" : "Decoder"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/package_hyphen_version\/init(from:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(from:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/components\/schemas\/package_hyphen_version\/init(from:)"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Components/Schemas/package_hyphen_version/init(id:name:url:package_html_url:html_url:license:description:created_at:updated_at:deleted_at:metadata:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "package_hyphen_version",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "name"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "package_html_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "html_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "license"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "description"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "created_at"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "updated_at"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "deleted_at"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "metadata"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIPackages10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIPackages10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIPackages10ComponentsO7SchemasO22package_hyphen_versionV",
+      "text" : "package_hyphen_version"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIPackages10ComponentsO7SchemasO22package_hyphen_versionV15metadataPayloadV",
+      "text" : "metadataPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?)"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/package_hyphen_version\/init(id:name:url:package_html_url:html_url:license:description:created_at:updated_at:deleted_at:metadata:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(id:name:url:package_html_url:html_url:license:description:created_at:updated_at:deleted_at:metadata:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/components\/schemas\/package_hyphen_version\/init(id:name:url:package_html_url:html_url:license:description:created_at:updated_at:deleted_at:metadata:)"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Components/Schemas/package_hyphen_version/license": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "license"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/package_hyphen_version\/license",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "license",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/components\/schemas\/package_hyphen_version\/license"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Components/Schemas/package_hyphen_version/metadata": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "metadata"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIPackages10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIPackages10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIPackages10ComponentsO7SchemasO22package_hyphen_versionV",
+      "text" : "package_hyphen_version"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIPackages10ComponentsO7SchemasO22package_hyphen_versionV15metadataPayloadV",
+      "text" : "metadataPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/package_hyphen_version\/metadata",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "metadata",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/components\/schemas\/package_hyphen_version\/metadata"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Components/Schemas/package_hyphen_version/metadataPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "metadataPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/package_hyphen_version\/metadataPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "metadataPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.package_hyphen_version.metadataPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/components\/schemas\/package_hyphen_version\/metadatapayload"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Components/Schemas/package_hyphen_version/name": {
+  "abstract" : [
+    {
+      "text" : "The name of the package version.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "name"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/package_hyphen_version\/name",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "name",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/components\/schemas\/package_hyphen_version\/name"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Components/Schemas/package_hyphen_version/package_html_url": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "package_html_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/package_hyphen_version\/package_html_url",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "package_html_url",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/components\/schemas\/package_hyphen_version\/package_html_url"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Components/Schemas/package_hyphen_version/updated_at": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "updated_at"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/package_hyphen_version\/updated_at",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "updated_at",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/components\/schemas\/package_hyphen_version\/updated_at"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Components/Schemas/package_hyphen_version/url": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/package_hyphen_version\/url",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "url",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/components\/schemas\/package_hyphen_version\/url"
+},
+"doc://GitHubRestAPIPackages/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

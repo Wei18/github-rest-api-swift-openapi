@@ -1,0 +1,451 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIEmojis\/documentation\/GitHubRestAPIEmojis",
+        "doc:\/\/GitHubRestAPIEmojis\/documentation\/GitHubRestAPIEmojis\/Operations",
+        "doc:\/\/GitHubRestAPIEmojis\/documentation\/GitHubRestAPIEmojis\/Operations\/emojis_sol_get"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIEmojis\/documentation\/GitHubRestAPIEmojis\/Operations\/emojis_sol_get\/Input"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:19GitHubRestAPIEmojis10OperationsO14emojis_sol_getO5InputV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "Input"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIEmojis"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "Input"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "Operations.emojis_sol_get.Input"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "Input"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIEmojis\/SQ",
+        "doc:\/\/GitHubRestAPIEmojis\/SH",
+        "doc:\/\/GitHubRestAPIEmojis\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIEmojis\/documentation\/GitHubRestAPIEmojis\/Operations\/emojis_sol_get\/Input\/Headers-swift.struct"
+      ],
+      "title" : "Structures"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIEmojis\/documentation\/GitHubRestAPIEmojis\/Operations\/emojis_sol_get\/Input\/init(headers:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIEmojis\/documentation\/GitHubRestAPIEmojis\/Operations\/emojis_sol_get\/Input\/headers-swift.property"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIEmojis\/documentation\/GitHubRestAPIEmojis\/Operations\/emojis_sol_get\/Input\/Equatable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiemojis\/operations\/emojis_sol_get\/input"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIEmojis/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPIEmojis\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIEmojis/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPIEmojis\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIEmojis/documentation/GitHubRestAPIEmojis": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIEmojis\/documentation\/GitHubRestAPIEmojis",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIEmojis",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiemojis"
+},
+"doc://GitHubRestAPIEmojis/documentation/GitHubRestAPIEmojis/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIEmojis\/documentation\/GitHubRestAPIEmojis\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiemojis\/operations"
+},
+"doc://GitHubRestAPIEmojis/documentation/GitHubRestAPIEmojis/Operations/emojis_sol_get": {
+  "abstract" : [
+    {
+      "text" : "Get emojis",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "emojis_sol_get"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIEmojis\/documentation\/GitHubRestAPIEmojis\/Operations\/emojis_sol_get",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "emojis_sol_get"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.emojis_sol_get",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiemojis\/operations\/emojis_sol_get"
+},
+"doc://GitHubRestAPIEmojis/documentation/GitHubRestAPIEmojis/Operations/emojis_sol_get/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIEmojis\/documentation\/GitHubRestAPIEmojis\/Operations\/emojis_sol_get\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.emojis_sol_get.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiemojis\/operations\/emojis_sol_get\/input"
+},
+"doc://GitHubRestAPIEmojis/documentation/GitHubRestAPIEmojis/Operations/emojis_sol_get/Input/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIEmojis\/documentation\/GitHubRestAPIEmojis\/Operations\/emojis_sol_get\/Input\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiemojis\/operations\/emojis_sol_get\/input\/equatable-implementations"
+},
+"doc://GitHubRestAPIEmojis/documentation/GitHubRestAPIEmojis/Operations/emojis_sol_get/Input/Headers-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Headers"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIEmojis\/documentation\/GitHubRestAPIEmojis\/Operations\/emojis_sol_get\/Input\/Headers-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Headers"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.emojis_sol_get.Input.Headers",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiemojis\/operations\/emojis_sol_get\/input\/headers-swift.struct"
+},
+"doc://GitHubRestAPIEmojis/documentation/GitHubRestAPIEmojis/Operations/emojis_sol_get/Input/headers-swift.property": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIEmojis10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIEmojis10OperationsO14emojis_sol_getO",
+      "text" : "emojis_sol_get"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIEmojis10OperationsO14emojis_sol_getO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIEmojis10OperationsO14emojis_sol_getO5InputV7HeadersV",
+      "text" : "Headers"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIEmojis\/documentation\/GitHubRestAPIEmojis\/Operations\/emojis_sol_get\/Input\/headers-swift.property",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "headers",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiemojis\/operations\/emojis_sol_get\/input\/headers-swift.property"
+},
+"doc://GitHubRestAPIEmojis/documentation/GitHubRestAPIEmojis/Operations/emojis_sol_get/Input/init(headers:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "Input",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIEmojis10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIEmojis10OperationsO14emojis_sol_getO",
+      "text" : "emojis_sol_get"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIEmojis10OperationsO14emojis_sol_getO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIEmojis10OperationsO14emojis_sol_getO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIEmojis\/documentation\/GitHubRestAPIEmojis\/Operations\/emojis_sol_get\/Input\/init(headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiemojis\/operations\/emojis_sol_get\/input\/init(headers:)"
+},
+"doc://GitHubRestAPIEmojis/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPIEmojis\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}
