@@ -7040,6 +7040,8 @@ public enum Components {
                 case in_progress = "in_progress"
                 case completed = "completed"
                 case waiting = "waiting"
+                case requested = "requested"
+                case pending = "pending"
             }
             /// The phase of the lifecycle that the job is currently in.
             ///
@@ -9070,7 +9072,7 @@ public enum Components {
         ///
         /// - Remark: Generated from `#/components/parameters/event`.
         public typealias event = Swift.String
-        /// Returns workflow runs with the check run `status` or `conclusion` that you specify. For example, a conclusion can be `success` or a status can be `in_progress`. Only GitHub can set a status of `waiting` or `requested`.
+        /// Returns workflow runs with the check run `status` or `conclusion` that you specify. For example, a conclusion can be `success` or a status can be `in_progress`. Only GitHub Actions can set a status of `waiting`, `pending`, or `requested`.
         ///
         /// - Remark: Generated from `#/components/parameters/workflow-run-status`.
         @frozen public enum workflow_hyphen_run_hyphen_status: String, Codable, Hashable, Sendable {
@@ -21217,7 +21219,7 @@ public enum Operations {
                     case waiting = "waiting"
                     case pending = "pending"
                 }
-                /// Returns workflow runs with the check run `status` or `conclusion` that you specify. For example, a conclusion can be `success` or a status can be `in_progress`. Only GitHub can set a status of `waiting` or `requested`.
+                /// Returns workflow runs with the check run `status` or `conclusion` that you specify. For example, a conclusion can be `success` or a status can be `in_progress`. Only GitHub Actions can set a status of `waiting`, `pending`, or `requested`.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/actions/runs/GET/query/status`.
                 public var status: Components.Parameters.workflow_hyphen_run_hyphen_status?
@@ -21251,7 +21253,7 @@ public enum Operations {
                 ///   - actor: Returns someone's workflow runs. Use the login for the user who created the `push` associated with the check suite or workflow run.
                 ///   - branch: Returns workflow runs associated with a branch. Use the name of the branch of the `push`.
                 ///   - event: Returns workflow run triggered by the event you specify. For example, `push`, `pull_request` or `issue`. For more information, see "[Events that trigger workflows](https://docs.github.com/actions/automating-your-workflow-with-github-actions/events-that-trigger-workflows)."
-                ///   - status: Returns workflow runs with the check run `status` or `conclusion` that you specify. For example, a conclusion can be `success` or a status can be `in_progress`. Only GitHub can set a status of `waiting` or `requested`.
+                ///   - status: Returns workflow runs with the check run `status` or `conclusion` that you specify. For example, a conclusion can be `success` or a status can be `in_progress`. Only GitHub Actions can set a status of `waiting`, `pending`, or `requested`.
                 ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - created: Returns workflow runs created within the given date-time range. For more information on the syntax, see "[Understanding the search syntax](https://docs.github.com/search-github/getting-started-with-searching-on-github/understanding-the-search-syntax#query-for-dates)."
@@ -27170,7 +27172,7 @@ public enum Operations {
                     case waiting = "waiting"
                     case pending = "pending"
                 }
-                /// Returns workflow runs with the check run `status` or `conclusion` that you specify. For example, a conclusion can be `success` or a status can be `in_progress`. Only GitHub can set a status of `waiting` or `requested`.
+                /// Returns workflow runs with the check run `status` or `conclusion` that you specify. For example, a conclusion can be `success` or a status can be `in_progress`. Only GitHub Actions can set a status of `waiting`, `pending`, or `requested`.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/actions/workflows/{workflow_id}/runs/GET/query/status`.
                 public var status: Components.Parameters.workflow_hyphen_run_hyphen_status?
@@ -27204,7 +27206,7 @@ public enum Operations {
                 ///   - actor: Returns someone's workflow runs. Use the login for the user who created the `push` associated with the check suite or workflow run.
                 ///   - branch: Returns workflow runs associated with a branch. Use the name of the branch of the `push`.
                 ///   - event: Returns workflow run triggered by the event you specify. For example, `push`, `pull_request` or `issue`. For more information, see "[Events that trigger workflows](https://docs.github.com/actions/automating-your-workflow-with-github-actions/events-that-trigger-workflows)."
-                ///   - status: Returns workflow runs with the check run `status` or `conclusion` that you specify. For example, a conclusion can be `success` or a status can be `in_progress`. Only GitHub can set a status of `waiting` or `requested`.
+                ///   - status: Returns workflow runs with the check run `status` or `conclusion` that you specify. For example, a conclusion can be `success` or a status can be `in_progress`. Only GitHub Actions can set a status of `waiting`, `pending`, or `requested`.
                 ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - created: Returns workflow runs created within the given date-time range. For more information on the syntax, see "[Understanding the search syntax](https://docs.github.com/search-github/getting-started-with-searching-on-github/understanding-the-search-syntax#query-for-dates)."
