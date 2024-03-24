@@ -1,0 +1,724 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta",
+        "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Client"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Client\/APIProtocol-Implementations"
+  },
+  "kind" : "article",
+  "metadata" : {
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIMeta"
+      }
+    ],
+    "role" : "collectionGroup",
+    "title" : "APIProtocol Implementations"
+  },
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Client\/meta_sol_get(headers:)",
+        "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Client\/meta_sol_get_hyphen_all_hyphen_versions(headers:)",
+        "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Client\/meta_sol_get_hyphen_octocat(query:headers:)",
+        "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Client\/meta_sol_get_hyphen_zen(headers:)",
+        "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Client\/meta_sol_root(headers:)"
+      ],
+      "title" : "Instance Methods"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapimeta\/client\/apiprotocol-implementations"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIMeta/documentation/GitHubRestAPIMeta": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIMeta",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimeta"
+},
+"doc://GitHubRestAPIMeta/documentation/GitHubRestAPIMeta/Client": {
+  "abstract" : [
+    {
+      "text" : "GitHub’s v3 REST API.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Client",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Client",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimeta\/client"
+},
+"doc://GitHubRestAPIMeta/documentation/GitHubRestAPIMeta/Client/meta_sol_get(headers:)": {
+  "abstract" : [
+    {
+      "text" : "Get GitHub meta information",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "meta_sol_get"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO12meta_sol_getO",
+      "text" : "meta_sol_get"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO12meta_sol_getO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO12meta_sol_getO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO12meta_sol_getO",
+      "text" : "meta_sol_get"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO12meta_sol_getO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Client\/meta_sol_get(headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "meta_sol_get(headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimeta\/client\/meta_sol_get(headers:)"
+},
+"doc://GitHubRestAPIMeta/documentation/GitHubRestAPIMeta/Client/meta_sol_get_hyphen_all_hyphen_versions(headers:)": {
+  "abstract" : [
+    {
+      "text" : "Get all API versions",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "meta_sol_get_hyphen_all_hyphen_versions"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO024meta_sol_get_hyphen_all_I9_versionsO",
+      "text" : "meta_sol_get_hyphen_all_hyphen_versions"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO024meta_sol_get_hyphen_all_I9_versionsO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO024meta_sol_get_hyphen_all_I9_versionsO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO024meta_sol_get_hyphen_all_I9_versionsO",
+      "text" : "meta_sol_get_hyphen_all_hyphen_versions"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO024meta_sol_get_hyphen_all_I9_versionsO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Client\/meta_sol_get_hyphen_all_hyphen_versions(headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "meta_sol_get_hyphen_all_hyphen_versions(headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimeta\/client\/meta_sol_get_hyphen_all_hyphen_versions(headers:)"
+},
+"doc://GitHubRestAPIMeta/documentation/GitHubRestAPIMeta/Client/meta_sol_get_hyphen_octocat(query:headers:)": {
+  "abstract" : [
+    {
+      "text" : "Get Octocat",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "meta_sol_get_hyphen_octocat"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "query"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO27meta_sol_get_hyphen_octocatO",
+      "text" : "meta_sol_get_hyphen_octocat"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO27meta_sol_get_hyphen_octocatO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO27meta_sol_get_hyphen_octocatO5InputV5QueryV",
+      "text" : "Query"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO27meta_sol_get_hyphen_octocatO",
+      "text" : "meta_sol_get_hyphen_octocat"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO27meta_sol_get_hyphen_octocatO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO27meta_sol_get_hyphen_octocatO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO27meta_sol_get_hyphen_octocatO",
+      "text" : "meta_sol_get_hyphen_octocat"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO27meta_sol_get_hyphen_octocatO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Client\/meta_sol_get_hyphen_octocat(query:headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "meta_sol_get_hyphen_octocat(query:headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimeta\/client\/meta_sol_get_hyphen_octocat(query:headers:)"
+},
+"doc://GitHubRestAPIMeta/documentation/GitHubRestAPIMeta/Client/meta_sol_get_hyphen_zen(headers:)": {
+  "abstract" : [
+    {
+      "text" : "Get the Zen of GitHub",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "meta_sol_get_hyphen_zen"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO23meta_sol_get_hyphen_zenO",
+      "text" : "meta_sol_get_hyphen_zen"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO23meta_sol_get_hyphen_zenO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO23meta_sol_get_hyphen_zenO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO23meta_sol_get_hyphen_zenO",
+      "text" : "meta_sol_get_hyphen_zen"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO23meta_sol_get_hyphen_zenO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Client\/meta_sol_get_hyphen_zen(headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "meta_sol_get_hyphen_zen(headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimeta\/client\/meta_sol_get_hyphen_zen(headers:)"
+},
+"doc://GitHubRestAPIMeta/documentation/GitHubRestAPIMeta/Client/meta_sol_root(headers:)": {
+  "abstract" : [
+    {
+      "text" : "GitHub API Root",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "meta_sol_root"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO13meta_sol_rootO",
+      "text" : "meta_sol_root"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO13meta_sol_rootO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO13meta_sol_rootO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO13meta_sol_rootO",
+      "text" : "meta_sol_root"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO13meta_sol_rootO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Client\/meta_sol_root(headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "meta_sol_root(headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimeta\/client\/meta_sol_root(headers:)"
+}
+}
+}

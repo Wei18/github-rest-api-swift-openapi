@@ -1,0 +1,664 @@
+{
+  "abstract" : [
+    {
+      "text" : "Get a package version for an organization",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Client"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Client\/packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization(_:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:21GitHubRestAPIPackages6ClientV032packages_sol_get_hyphen_package_i9_version_i5_for_I13_organizationyAA10OperationsOADO6OutputOAG5InputVYaKF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:21GitHubRestAPIPackages10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:21GitHubRestAPIPackages10OperationsO032packages_sol_get_hyphen_package_i9_version_i5_for_I13_organizationO",
+        "text" : "packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:21GitHubRestAPIPackages10OperationsO032packages_sol_get_hyphen_package_i9_version_i5_for_I13_organizationO5InputV",
+        "text" : "Input"
+      },
+      {
+        "kind" : "text",
+        "text" : ") "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "async"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "throws"
+      },
+      {
+        "kind" : "text",
+        "text" : " -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:21GitHubRestAPIPackages10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:21GitHubRestAPIPackages10OperationsO032packages_sol_get_hyphen_package_i9_version_i5_for_I13_organizationO",
+        "text" : "packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:21GitHubRestAPIPackages10OperationsO032packages_sol_get_hyphen_package_i9_version_i5_for_I13_organizationO6OutputO",
+        "text" : "Output"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIPackages"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Instance Method",
+    "symbolKind" : "method",
+    "title" : "packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization(_:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "func"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "_"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "internalParam",
+              "text" : "input"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:21GitHubRestAPIPackages10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:21GitHubRestAPIPackages10OperationsO032packages_sol_get_hyphen_package_i9_version_i5_for_I13_organizationO",
+              "text" : "packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization\/Input",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:21GitHubRestAPIPackages10OperationsO032packages_sol_get_hyphen_package_i9_version_i5_for_I13_organizationO5InputV",
+              "text" : "Input"
+            },
+            {
+              "kind" : "text",
+              "text" : ") "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "async"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "throws"
+            },
+            {
+              "kind" : "text",
+              "text" : " -> "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:21GitHubRestAPIPackages10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:21GitHubRestAPIPackages10OperationsO032packages_sol_get_hyphen_package_i9_version_i5_for_I13_organizationO",
+              "text" : "packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization\/Output",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:21GitHubRestAPIPackages10OperationsO032packages_sol_get_hyphen_package_i9_version_i5_for_I13_organizationO6OutputO",
+              "text" : "Output"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Gets a specific package version in an organization.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "OAuth app tokens and personal access tokens (classic) need the ",
+              "type" : "text"
+            },
+            {
+              "code" : "read:packages",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " scope to use this endpoint. If the ",
+              "type" : "text"
+            },
+            {
+              "code" : "package_type",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " belongs to a GitHub Packages registry that only supports repository-scoped permissions, the ",
+              "type" : "text"
+            },
+            {
+              "code" : "repo",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " scope is also required. For the list of these registries, see “",
+              "type" : "text"
+            },
+            {
+              "identifier" : "https:\/\/docs.github.com\/packages\/learn-github-packages\/about-permissions-for-github-packages#permissions-for-repository-scoped-packages",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ".”",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "HTTP ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "GET \/orgs\/{org}\/packages\/{package_type}\/{package_name}\/versions\/{package_version_id}",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/\/orgs\/{org}\/packages\/{package_type}\/{package_name}\/versions\/{package_version_id}\/get(packages\/get-package-version-for-organization)",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapipackages\/client\/packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization(_:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIPackages",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Client": {
+  "abstract" : [
+    {
+      "text" : "GitHub’s v3 REST API.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Client",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Client",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/client"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Client/packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization(_:)": {
+  "abstract" : [
+    {
+      "text" : "Get a package version for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIPackages10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIPackages10OperationsO032packages_sol_get_hyphen_package_i9_version_i5_for_I13_organizationO",
+      "text" : "packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIPackages10OperationsO032packages_sol_get_hyphen_package_i9_version_i5_for_I13_organizationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIPackages10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIPackages10OperationsO032packages_sol_get_hyphen_package_i9_version_i5_for_I13_organizationO",
+      "text" : "packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIPackages10OperationsO032packages_sol_get_hyphen_package_i9_version_i5_for_I13_organizationO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Client\/packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/client\/packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization(_:)"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/operations"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Operations/packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization": {
+  "abstract" : [
+    {
+      "text" : "Get a package version for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/operations\/packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Operations/packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/operations\/packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization\/input"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Operations/packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/operations\/packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization\/output"
+},
+"https://docs.github.com/packages/learn-github-packages/about-permissions-for-github-packages#permissions-for-repository-scoped-packages": {
+  "identifier" : "https:\/\/docs.github.com\/packages\/learn-github-packages\/about-permissions-for-github-packages#permissions-for-repository-scoped-packages",
+  "title" : "About permissions for GitHub Packages",
+  "titleInlineContent" : [
+    {
+      "text" : "About permissions for GitHub Packages",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/packages\/learn-github-packages\/about-permissions-for-github-packages#permissions-for-repository-scoped-packages"
+}
+}
+}

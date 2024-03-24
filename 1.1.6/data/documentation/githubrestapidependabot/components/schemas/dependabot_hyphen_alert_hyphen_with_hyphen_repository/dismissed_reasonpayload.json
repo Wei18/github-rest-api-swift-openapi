@@ -1,0 +1,553 @@
+{
+  "abstract" : [
+    {
+      "text" : "The reason that the alert was dismissed.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas\/dependabot_hyphen_alert_hyphen_with_hyphen_repository"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas\/dependabot_hyphen_alert_hyphen_with_hyphen_repository\/dismissed_reasonPayload"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:23GitHubRestAPIDependabot10ComponentsO7SchemasO024dependabot_hyphen_alert_h6_with_H11_repositoryV23dismissed_reasonPayloadO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "dismissed_reasonPayload"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIDependabot"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "dismissed_reasonPayload"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Components.Schemas.dependabot_hyphen_alert_hyphen_with_hyphen_repository.dismissed_reasonPayload"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "dismissed_reasonPayload"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/components\/schemas\/dependabot-alert-with-repository\/dismissed_reason",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIDependabot\/Se",
+        "doc:\/\/GitHubRestAPIDependabot\/SE",
+        "doc:\/\/GitHubRestAPIDependabot\/SQ",
+        "doc:\/\/GitHubRestAPIDependabot\/SH",
+        "doc:\/\/GitHubRestAPIDependabot\/SY",
+        "doc:\/\/GitHubRestAPIDependabot\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas\/dependabot_hyphen_alert_hyphen_with_hyphen_repository\/dismissed_reasonPayload\/fix_started",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas\/dependabot_hyphen_alert_hyphen_with_hyphen_repository\/dismissed_reasonPayload\/inaccurate",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas\/dependabot_hyphen_alert_hyphen_with_hyphen_repository\/dismissed_reasonPayload\/no_bandwidth",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas\/dependabot_hyphen_alert_hyphen_with_hyphen_repository\/dismissed_reasonPayload\/not_used",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas\/dependabot_hyphen_alert_hyphen_with_hyphen_repository\/dismissed_reasonPayload\/tolerable_risk"
+      ],
+      "title" : "Enumeration Cases"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas\/dependabot_hyphen_alert_hyphen_with_hyphen_repository\/dismissed_reasonPayload\/init(rawValue:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas\/dependabot_hyphen_alert_hyphen_with_hyphen_repository\/dismissed_reasonPayload\/Equatable-Implementations",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas\/dependabot_hyphen_alert_hyphen_with_hyphen_repository\/dismissed_reasonPayload\/RawRepresentable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapidependabot\/components\/schemas\/dependabot_hyphen_alert_hyphen_with_hyphen_repository\/dismissed_reasonpayload"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIDependabot/SE": {
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIDependabot/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIDependabot/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIDependabot/SY": {
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/SY",
+  "title" : "Swift.RawRepresentable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIDependabot/Se": {
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIDependabot",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/components"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/components\/schemas"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Components/Schemas/dependabot_hyphen_alert_hyphen_with_hyphen_repository": {
+  "abstract" : [
+    {
+      "text" : "A Dependabot alert.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_hyphen_alert_hyphen_with_hyphen_repository"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas\/dependabot_hyphen_alert_hyphen_with_hyphen_repository",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_hyphen_alert_hyphen_with_hyphen_repository"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.dependabot_hyphen_alert_hyphen_with_hyphen_repository",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/components\/schemas\/dependabot_hyphen_alert_hyphen_with_hyphen_repository"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Components/Schemas/dependabot_hyphen_alert_hyphen_with_hyphen_repository/dismissed_reasonPayload": {
+  "abstract" : [
+    {
+      "text" : "The reason that the alert was dismissed.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dismissed_reasonPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas\/dependabot_hyphen_alert_hyphen_with_hyphen_repository\/dismissed_reasonPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "dismissed_reasonPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.dependabot_hyphen_alert_hyphen_with_hyphen_repository.dismissed_reasonPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/components\/schemas\/dependabot_hyphen_alert_hyphen_with_hyphen_repository\/dismissed_reasonpayload"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Components/Schemas/dependabot_hyphen_alert_hyphen_with_hyphen_repository/dismissed_reasonPayload/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas\/dependabot_hyphen_alert_hyphen_with_hyphen_repository\/dismissed_reasonPayload\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/components\/schemas\/dependabot_hyphen_alert_hyphen_with_hyphen_repository\/dismissed_reasonpayload\/equatable-implementations"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Components/Schemas/dependabot_hyphen_alert_hyphen_with_hyphen_repository/dismissed_reasonPayload/RawRepresentable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas\/dependabot_hyphen_alert_hyphen_with_hyphen_repository\/dismissed_reasonPayload\/RawRepresentable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "RawRepresentable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/components\/schemas\/dependabot_hyphen_alert_hyphen_with_hyphen_repository\/dismissed_reasonpayload\/rawrepresentable-implementations"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Components/Schemas/dependabot_hyphen_alert_hyphen_with_hyphen_repository/dismissed_reasonPayload/fix_started": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "fix_started"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas\/dependabot_hyphen_alert_hyphen_with_hyphen_repository\/dismissed_reasonPayload\/fix_started",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.dependabot_hyphen_alert_hyphen_with_hyphen_repository.dismissed_reasonPayload.fix_started",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/components\/schemas\/dependabot_hyphen_alert_hyphen_with_hyphen_repository\/dismissed_reasonpayload\/fix_started"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Components/Schemas/dependabot_hyphen_alert_hyphen_with_hyphen_repository/dismissed_reasonPayload/inaccurate": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "inaccurate"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas\/dependabot_hyphen_alert_hyphen_with_hyphen_repository\/dismissed_reasonPayload\/inaccurate",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.dependabot_hyphen_alert_hyphen_with_hyphen_repository.dismissed_reasonPayload.inaccurate",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/components\/schemas\/dependabot_hyphen_alert_hyphen_with_hyphen_repository\/dismissed_reasonpayload\/inaccurate"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Components/Schemas/dependabot_hyphen_alert_hyphen_with_hyphen_repository/dismissed_reasonPayload/init(rawValue:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "?("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rawValue"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas\/dependabot_hyphen_alert_hyphen_with_hyphen_repository\/dismissed_reasonPayload\/init(rawValue:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(rawValue:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/components\/schemas\/dependabot_hyphen_alert_hyphen_with_hyphen_repository\/dismissed_reasonpayload\/init(rawvalue:)"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Components/Schemas/dependabot_hyphen_alert_hyphen_with_hyphen_repository/dismissed_reasonPayload/no_bandwidth": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "no_bandwidth"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas\/dependabot_hyphen_alert_hyphen_with_hyphen_repository\/dismissed_reasonPayload\/no_bandwidth",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.dependabot_hyphen_alert_hyphen_with_hyphen_repository.dismissed_reasonPayload.no_bandwidth",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/components\/schemas\/dependabot_hyphen_alert_hyphen_with_hyphen_repository\/dismissed_reasonpayload\/no_bandwidth"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Components/Schemas/dependabot_hyphen_alert_hyphen_with_hyphen_repository/dismissed_reasonPayload/not_used": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "not_used"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas\/dependabot_hyphen_alert_hyphen_with_hyphen_repository\/dismissed_reasonPayload\/not_used",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.dependabot_hyphen_alert_hyphen_with_hyphen_repository.dismissed_reasonPayload.not_used",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/components\/schemas\/dependabot_hyphen_alert_hyphen_with_hyphen_repository\/dismissed_reasonpayload\/not_used"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Components/Schemas/dependabot_hyphen_alert_hyphen_with_hyphen_repository/dismissed_reasonPayload/tolerable_risk": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "tolerable_risk"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas\/dependabot_hyphen_alert_hyphen_with_hyphen_repository\/dismissed_reasonPayload\/tolerable_risk",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.dependabot_hyphen_alert_hyphen_with_hyphen_repository.dismissed_reasonPayload.tolerable_risk",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/components\/schemas\/dependabot_hyphen_alert_hyphen_with_hyphen_repository\/dismissed_reasonpayload\/tolerable_risk"
+},
+"doc://GitHubRestAPIDependabot/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

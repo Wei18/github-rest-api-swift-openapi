@@ -1,0 +1,343 @@
+{
+  "abstract" : [
+    {
+      "text" : "The Git reference, formatted as ",
+      "type" : "text"
+    },
+    {
+      "code" : "refs\/pull\/<number>\/merge",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ", ",
+      "type" : "text"
+    },
+    {
+      "code" : "refs\/pull\/<number>\/head",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ",",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "code" : "refs\/heads\/<branch name>",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " or simply ",
+      "type" : "text"
+    },
+    {
+      "code" : "<branch name>",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses",
+        "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Components",
+        "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Components\/Schemas"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Components\/Schemas\/code_hyphen_scanning_hyphen_ref"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:21GitHubRestAPILicenses10ComponentsO7SchemasO021code_hyphen_scanning_H4_refa",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "typealias"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "code_hyphen_scanning_hyphen_ref"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPILicenses"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "code_hyphen_scanning_hyphen_ref"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Type Alias",
+    "symbolKind" : "typealias",
+    "title" : "Components.Schemas.code_hyphen_scanning_hyphen_ref"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "typealias"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "code_hyphen_scanning_hyphen_ref"
+            },
+            {
+              "kind" : "text",
+              "text" : " = "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/components\/schemas\/code-scanning-ref",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapilicenses\/components\/schemas\/code_hyphen_scanning_hyphen_ref"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPILicenses/documentation/GitHubRestAPILicenses": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPILicenses",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapilicenses"
+},
+"doc://GitHubRestAPILicenses/documentation/GitHubRestAPILicenses/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapilicenses\/components"
+},
+"doc://GitHubRestAPILicenses/documentation/GitHubRestAPILicenses/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapilicenses\/components\/schemas"
+},
+"doc://GitHubRestAPILicenses/documentation/GitHubRestAPILicenses/Components/Schemas/code_hyphen_scanning_hyphen_ref": {
+  "abstract" : [
+    {
+      "text" : "The Git reference, formatted as ",
+      "type" : "text"
+    },
+    {
+      "code" : "refs\/pull\/<number>\/merge",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ", ",
+      "type" : "text"
+    },
+    {
+      "code" : "refs\/pull\/<number>\/head",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ",",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "code" : "refs\/heads\/<branch name>",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " or simply ",
+      "type" : "text"
+    },
+    {
+      "code" : "<branch name>",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_scanning_hyphen_ref"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Components\/Schemas\/code_hyphen_scanning_hyphen_ref",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_scanning_hyphen_ref"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.code_hyphen_scanning_hyphen_ref",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapilicenses\/components\/schemas\/code_hyphen_scanning_hyphen_ref"
+}
+}
+}

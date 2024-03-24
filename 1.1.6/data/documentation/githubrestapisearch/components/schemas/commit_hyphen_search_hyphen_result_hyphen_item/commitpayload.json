@@ -1,0 +1,1127 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/commit_hyphen_search_hyphen_result_hyphen_item"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/commit_hyphen_search_hyphen_result_hyphen_item\/commitPayload"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:19GitHubRestAPISearch10ComponentsO7SchemasO021commit_hyphen_search_h8_result_H5_itemV0G7PayloadV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "commitPayload"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPISearch"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "commitPayload"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "Components.Schemas.commit_hyphen_search_hyphen_result_hyphen_item.commitPayload"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "commitPayload"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/components\/schemas\/commit-search-result-item\/commit",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPISearch\/Se",
+        "doc:\/\/GitHubRestAPISearch\/SE",
+        "doc:\/\/GitHubRestAPISearch\/SQ",
+        "doc:\/\/GitHubRestAPISearch\/SH",
+        "doc:\/\/GitHubRestAPISearch\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/commit_hyphen_search_hyphen_result_hyphen_item\/commitPayload\/authorPayload",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/commit_hyphen_search_hyphen_result_hyphen_item\/commitPayload\/treePayload"
+      ],
+      "title" : "Structures"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/commit_hyphen_search_hyphen_result_hyphen_item\/commitPayload\/init(author:committer:comment_count:message:tree:url:verification:)",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/commit_hyphen_search_hyphen_result_hyphen_item\/commitPayload\/init(from:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/commit_hyphen_search_hyphen_result_hyphen_item\/commitPayload\/author",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/commit_hyphen_search_hyphen_result_hyphen_item\/commitPayload\/comment_count",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/commit_hyphen_search_hyphen_result_hyphen_item\/commitPayload\/committer",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/commit_hyphen_search_hyphen_result_hyphen_item\/commitPayload\/message",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/commit_hyphen_search_hyphen_result_hyphen_item\/commitPayload\/tree",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/commit_hyphen_search_hyphen_result_hyphen_item\/commitPayload\/url",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/commit_hyphen_search_hyphen_result_hyphen_item\/commitPayload\/verification"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/commit_hyphen_search_hyphen_result_hyphen_item\/commitPayload\/CodingKeys"
+      ],
+      "title" : "Enumerations"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/commit_hyphen_search_hyphen_result_hyphen_item\/commitPayload\/Equatable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapisearch\/components\/schemas\/commit_hyphen_search_hyphen_result_hyphen_item\/commitpayload"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPISearch/SE": {
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPISearch/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPISearch/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPISearch/Se": {
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPISearch",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/commit_hyphen_search_hyphen_result_hyphen_item": {
+  "abstract" : [
+    {
+      "text" : "Commit Search Result Item",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "commit_hyphen_search_hyphen_result_hyphen_item"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/commit_hyphen_search_hyphen_result_hyphen_item",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "commit_hyphen_search_hyphen_result_hyphen_item"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.commit_hyphen_search_hyphen_result_hyphen_item",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/commit_hyphen_search_hyphen_result_hyphen_item"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/commit_hyphen_search_hyphen_result_hyphen_item/commitPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "commitPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/commit_hyphen_search_hyphen_result_hyphen_item\/commitPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "commitPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.commit_hyphen_search_hyphen_result_hyphen_item.commitPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/commit_hyphen_search_hyphen_result_hyphen_item\/commitpayload"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/commit_hyphen_search_hyphen_result_hyphen_item/commitPayload/CodingKeys": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/commit_hyphen_search_hyphen_result_hyphen_item\/commitPayload\/CodingKeys",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.commit_hyphen_search_hyphen_result_hyphen_item.commitPayload.CodingKeys",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/commit_hyphen_search_hyphen_result_hyphen_item\/commitpayload\/codingkeys"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/commit_hyphen_search_hyphen_result_hyphen_item/commitPayload/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/commit_hyphen_search_hyphen_result_hyphen_item\/commitPayload\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/commit_hyphen_search_hyphen_result_hyphen_item\/commitpayload\/equatable-implementations"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/commit_hyphen_search_hyphen_result_hyphen_item/commitPayload/author": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "author"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO7SchemasO021commit_hyphen_search_h8_result_H5_itemV",
+      "text" : "commit_hyphen_search_hyphen_result_hyphen_item"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO7SchemasO021commit_hyphen_search_h8_result_H5_itemV0G7PayloadV",
+      "text" : "commitPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO7SchemasO021commit_hyphen_search_h8_result_H5_itemV0G7PayloadV06authorL0V",
+      "text" : "authorPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/commit_hyphen_search_hyphen_result_hyphen_item\/commitPayload\/author",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "author",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/commit_hyphen_search_hyphen_result_hyphen_item\/commitpayload\/author"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/commit_hyphen_search_hyphen_result_hyphen_item/commitPayload/authorPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "authorPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/commit_hyphen_search_hyphen_result_hyphen_item\/commitPayload\/authorPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "authorPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.commit_hyphen_search_hyphen_result_hyphen_item.commitPayload.authorPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/commit_hyphen_search_hyphen_result_hyphen_item\/commitpayload\/authorpayload"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/commit_hyphen_search_hyphen_result_hyphen_item/commitPayload/comment_count": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "comment_count"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/commit_hyphen_search_hyphen_result_hyphen_item\/commitPayload\/comment_count",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "comment_count",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/commit_hyphen_search_hyphen_result_hyphen_item\/commitpayload\/comment_count"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/commit_hyphen_search_hyphen_result_hyphen_item/commitPayload/committer": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "committer"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO7SchemasO020nullable_hyphen_git_H5_userV",
+      "text" : "nullable_hyphen_git_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/commit_hyphen_search_hyphen_result_hyphen_item\/commitPayload\/committer",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "committer",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/commit_hyphen_search_hyphen_result_hyphen_item\/commitpayload\/committer"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/commit_hyphen_search_hyphen_result_hyphen_item/commitPayload/init(author:committer:comment_count:message:tree:url:verification:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "commitPayload",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "author"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO7SchemasO021commit_hyphen_search_h8_result_H5_itemV",
+      "text" : "commit_hyphen_search_hyphen_result_hyphen_item"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO7SchemasO021commit_hyphen_search_h8_result_H5_itemV0G7PayloadV",
+      "text" : "commitPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO7SchemasO021commit_hyphen_search_h8_result_H5_itemV0G7PayloadV06authorL0V",
+      "text" : "authorPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "committer"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO7SchemasO020nullable_hyphen_git_H5_userV",
+      "text" : "nullable_hyphen_git_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "comment_count"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "message"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "tree"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO7SchemasO021commit_hyphen_search_h8_result_H5_itemV",
+      "text" : "commit_hyphen_search_hyphen_result_hyphen_item"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO7SchemasO021commit_hyphen_search_h8_result_H5_itemV0G7PayloadV",
+      "text" : "commitPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO7SchemasO021commit_hyphen_search_h8_result_H5_itemV0G7PayloadV04treeL0V",
+      "text" : "treePayload"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "verification"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO7SchemasO12verificationV",
+      "text" : "verification"
+    },
+    {
+      "kind" : "text",
+      "text" : "?)"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/commit_hyphen_search_hyphen_result_hyphen_item\/commitPayload\/init(author:committer:comment_count:message:tree:url:verification:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(author:committer:comment_count:message:tree:url:verification:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/commit_hyphen_search_hyphen_result_hyphen_item\/commitpayload\/init(author:committer:comment_count:message:tree:url:verification:)"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/commit_hyphen_search_hyphen_result_hyphen_item/commitPayload/init(from:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "from"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s7DecoderP",
+      "text" : "Decoder"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/commit_hyphen_search_hyphen_result_hyphen_item\/commitPayload\/init(from:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(from:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/commit_hyphen_search_hyphen_result_hyphen_item\/commitpayload\/init(from:)"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/commit_hyphen_search_hyphen_result_hyphen_item/commitPayload/message": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "message"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/commit_hyphen_search_hyphen_result_hyphen_item\/commitPayload\/message",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "message",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/commit_hyphen_search_hyphen_result_hyphen_item\/commitpayload\/message"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/commit_hyphen_search_hyphen_result_hyphen_item/commitPayload/tree": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "tree"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO7SchemasO021commit_hyphen_search_h8_result_H5_itemV",
+      "text" : "commit_hyphen_search_hyphen_result_hyphen_item"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO7SchemasO021commit_hyphen_search_h8_result_H5_itemV0G7PayloadV",
+      "text" : "commitPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO7SchemasO021commit_hyphen_search_h8_result_H5_itemV0G7PayloadV04treeL0V",
+      "text" : "treePayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/commit_hyphen_search_hyphen_result_hyphen_item\/commitPayload\/tree",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "tree",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/commit_hyphen_search_hyphen_result_hyphen_item\/commitpayload\/tree"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/commit_hyphen_search_hyphen_result_hyphen_item/commitPayload/treePayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "treePayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/commit_hyphen_search_hyphen_result_hyphen_item\/commitPayload\/treePayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "treePayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.commit_hyphen_search_hyphen_result_hyphen_item.commitPayload.treePayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/commit_hyphen_search_hyphen_result_hyphen_item\/commitpayload\/treepayload"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/commit_hyphen_search_hyphen_result_hyphen_item/commitPayload/url": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/commit_hyphen_search_hyphen_result_hyphen_item\/commitPayload\/url",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "url",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/commit_hyphen_search_hyphen_result_hyphen_item\/commitpayload\/url"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/commit_hyphen_search_hyphen_result_hyphen_item/commitPayload/verification": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "verification"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO7SchemasO12verificationV",
+      "text" : "verification"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/commit_hyphen_search_hyphen_result_hyphen_item\/commitPayload\/verification",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "verification",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/commit_hyphen_search_hyphen_result_hyphen_item\/commitpayload\/verification"
+},
+"doc://GitHubRestAPISearch/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

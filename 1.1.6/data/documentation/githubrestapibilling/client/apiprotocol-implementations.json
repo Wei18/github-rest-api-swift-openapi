@@ -1,0 +1,1060 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Client"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Client\/APIProtocol-Implementations"
+  },
+  "kind" : "article",
+  "metadata" : {
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIBilling"
+      }
+    ],
+    "role" : "collectionGroup",
+    "title" : "APIProtocol Implementations"
+  },
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Client\/billing_sol_get_hyphen_github_hyphen_actions_hyphen_billing_hyphen_org(path:headers:)",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Client\/billing_sol_get_hyphen_github_hyphen_actions_hyphen_billing_hyphen_user(path:headers:)",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Client\/billing_sol_get_hyphen_github_hyphen_packages_hyphen_billing_hyphen_org(path:headers:)",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Client\/billing_sol_get_hyphen_github_hyphen_packages_hyphen_billing_hyphen_user(path:headers:)",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Client\/billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org(path:headers:)",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Client\/billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_user(path:headers:)"
+      ],
+      "title" : "Instance Methods"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapibilling\/client\/apiprotocol-implementations"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIBilling",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Client": {
+  "abstract" : [
+    {
+      "text" : "GitHub’s v3 REST API.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Client",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Client",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/client"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Client/billing_sol_get_hyphen_github_hyphen_actions_hyphen_billing_hyphen_org(path:headers:)": {
+  "abstract" : [
+    {
+      "text" : "Get GitHub Actions billing for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "billing_sol_get_hyphen_github_hyphen_actions_hyphen_billing_hyphen_org"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_github_i9_actions_i1_f1_I4_orgO",
+      "text" : "billing_sol_get_hyphen_github_hyphen_actions_hyphen_billing_hyphen_org"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_github_i9_actions_i1_f1_I4_orgO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_github_i9_actions_i1_f1_I4_orgO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_github_i9_actions_i1_f1_I4_orgO",
+      "text" : "billing_sol_get_hyphen_github_hyphen_actions_hyphen_billing_hyphen_org"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_github_i9_actions_i1_f1_I4_orgO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_github_i9_actions_i1_f1_I4_orgO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_github_i9_actions_i1_f1_I4_orgO",
+      "text" : "billing_sol_get_hyphen_github_hyphen_actions_hyphen_billing_hyphen_org"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_github_i9_actions_i1_f1_I4_orgO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Client\/billing_sol_get_hyphen_github_hyphen_actions_hyphen_billing_hyphen_org(path:headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "billing_sol_get_hyphen_github_hyphen_actions_hyphen_billing_hyphen_org(path:headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/client\/billing_sol_get_hyphen_github_hyphen_actions_hyphen_billing_hyphen_org(path:headers:)"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Client/billing_sol_get_hyphen_github_hyphen_actions_hyphen_billing_hyphen_user(path:headers:)": {
+  "abstract" : [
+    {
+      "text" : "Get GitHub Actions billing for a user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "billing_sol_get_hyphen_github_hyphen_actions_hyphen_billing_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_github_i9_actions_i1_f1_I5_userO",
+      "text" : "billing_sol_get_hyphen_github_hyphen_actions_hyphen_billing_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_github_i9_actions_i1_f1_I5_userO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_github_i9_actions_i1_f1_I5_userO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_github_i9_actions_i1_f1_I5_userO",
+      "text" : "billing_sol_get_hyphen_github_hyphen_actions_hyphen_billing_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_github_i9_actions_i1_f1_I5_userO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_github_i9_actions_i1_f1_I5_userO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_github_i9_actions_i1_f1_I5_userO",
+      "text" : "billing_sol_get_hyphen_github_hyphen_actions_hyphen_billing_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_github_i9_actions_i1_f1_I5_userO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Client\/billing_sol_get_hyphen_github_hyphen_actions_hyphen_billing_hyphen_user(path:headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "billing_sol_get_hyphen_github_hyphen_actions_hyphen_billing_hyphen_user(path:headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/client\/billing_sol_get_hyphen_github_hyphen_actions_hyphen_billing_hyphen_user(path:headers:)"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Client/billing_sol_get_hyphen_github_hyphen_packages_hyphen_billing_hyphen_org(path:headers:)": {
+  "abstract" : [
+    {
+      "text" : "Get GitHub Packages billing for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "billing_sol_get_hyphen_github_hyphen_packages_hyphen_billing_hyphen_org"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_github_i10_packages_i1_f1_I4_orgO",
+      "text" : "billing_sol_get_hyphen_github_hyphen_packages_hyphen_billing_hyphen_org"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_github_i10_packages_i1_f1_I4_orgO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_github_i10_packages_i1_f1_I4_orgO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_github_i10_packages_i1_f1_I4_orgO",
+      "text" : "billing_sol_get_hyphen_github_hyphen_packages_hyphen_billing_hyphen_org"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_github_i10_packages_i1_f1_I4_orgO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_github_i10_packages_i1_f1_I4_orgO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_github_i10_packages_i1_f1_I4_orgO",
+      "text" : "billing_sol_get_hyphen_github_hyphen_packages_hyphen_billing_hyphen_org"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_github_i10_packages_i1_f1_I4_orgO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Client\/billing_sol_get_hyphen_github_hyphen_packages_hyphen_billing_hyphen_org(path:headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "billing_sol_get_hyphen_github_hyphen_packages_hyphen_billing_hyphen_org(path:headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/client\/billing_sol_get_hyphen_github_hyphen_packages_hyphen_billing_hyphen_org(path:headers:)"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Client/billing_sol_get_hyphen_github_hyphen_packages_hyphen_billing_hyphen_user(path:headers:)": {
+  "abstract" : [
+    {
+      "text" : "Get GitHub Packages billing for a user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "billing_sol_get_hyphen_github_hyphen_packages_hyphen_billing_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_github_i10_packages_i1_f1_I5_userO",
+      "text" : "billing_sol_get_hyphen_github_hyphen_packages_hyphen_billing_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_github_i10_packages_i1_f1_I5_userO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_github_i10_packages_i1_f1_I5_userO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_github_i10_packages_i1_f1_I5_userO",
+      "text" : "billing_sol_get_hyphen_github_hyphen_packages_hyphen_billing_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_github_i10_packages_i1_f1_I5_userO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_github_i10_packages_i1_f1_I5_userO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_github_i10_packages_i1_f1_I5_userO",
+      "text" : "billing_sol_get_hyphen_github_hyphen_packages_hyphen_billing_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_github_i10_packages_i1_f1_I5_userO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Client\/billing_sol_get_hyphen_github_hyphen_packages_hyphen_billing_hyphen_user(path:headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "billing_sol_get_hyphen_github_hyphen_packages_hyphen_billing_hyphen_user(path:headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/client\/billing_sol_get_hyphen_github_hyphen_packages_hyphen_billing_hyphen_user(path:headers:)"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Client/billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org(path:headers:)": {
+  "abstract" : [
+    {
+      "text" : "Get shared storage billing for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_shared_i9_storage_i1_f1_I4_orgO",
+      "text" : "billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_shared_i9_storage_i1_f1_I4_orgO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_shared_i9_storage_i1_f1_I4_orgO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_shared_i9_storage_i1_f1_I4_orgO",
+      "text" : "billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_shared_i9_storage_i1_f1_I4_orgO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_shared_i9_storage_i1_f1_I4_orgO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_shared_i9_storage_i1_f1_I4_orgO",
+      "text" : "billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_shared_i9_storage_i1_f1_I4_orgO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Client\/billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org(path:headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org(path:headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/client\/billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org(path:headers:)"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Client/billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_user(path:headers:)": {
+  "abstract" : [
+    {
+      "text" : "Get shared storage billing for a user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_shared_i9_storage_i1_f1_I5_userO",
+      "text" : "billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_shared_i9_storage_i1_f1_I5_userO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_shared_i9_storage_i1_f1_I5_userO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_shared_i9_storage_i1_f1_I5_userO",
+      "text" : "billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_shared_i9_storage_i1_f1_I5_userO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_shared_i9_storage_i1_f1_I5_userO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_shared_i9_storage_i1_f1_I5_userO",
+      "text" : "billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_shared_i9_storage_i1_f1_I5_userO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Client\/billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_user(path:headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_user(path:headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/client\/billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_user(path:headers:)"
+}
+}
+}
