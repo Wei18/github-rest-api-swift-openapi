@@ -6923,6 +6923,34 @@ public enum Components {
                 self.body = body
             }
         }
+        public struct unacceptable: Sendable, Hashable {
+            /// - Remark: Generated from `#/components/responses/unacceptable/content`.
+            @frozen public enum Body: Sendable, Hashable {
+                /// - Remark: Generated from `#/components/responses/unacceptable/content/application\/json`.
+                case json(Components.Schemas.basic_hyphen_error)
+                /// The associated value of the enum case if `self` is `.json`.
+                ///
+                /// - Throws: An error if `self` is not `.json`.
+                /// - SeeAlso: `.json`.
+                public var json: Components.Schemas.basic_hyphen_error {
+                    get throws {
+                        switch self {
+                        case let .json(body):
+                            return body
+                        }
+                    }
+                }
+            }
+            /// Received HTTP response body
+            public var body: Components.Responses.unacceptable.Body
+            /// Creates a new `unacceptable`.
+            ///
+            /// - Parameters:
+            ///   - body: Received HTTP response body
+            public init(body: Components.Responses.unacceptable.Body) {
+                self.body = body
+            }
+        }
     }
     /// Types generated from the `#/components/headers` section of the OpenAPI document.
     public enum Headers {
@@ -8447,6 +8475,29 @@ public enum Operations {
                     default:
                         try throwUnexpectedResponseStatus(
                             expectedStatus: "notFound",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Unacceptable
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/get(pulls/get)/responses/406`.
+            ///
+            /// HTTP response code: `406 notAcceptable`.
+            case notAcceptable(Components.Responses.unacceptable)
+            /// The associated value of the enum case if `self` is `.notAcceptable`.
+            ///
+            /// - Throws: An error if `self` is not `.notAcceptable`.
+            /// - SeeAlso: `.notAcceptable`.
+            public var notAcceptable: Components.Responses.unacceptable {
+                get throws {
+                    switch self {
+                    case let .notAcceptable(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "notAcceptable",
                             response: self
                         )
                     }

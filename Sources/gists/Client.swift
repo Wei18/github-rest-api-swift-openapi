@@ -821,6 +821,8 @@ public struct Client: APIProtocol {
     }
     /// Delete a gist
     ///
+    ///
+    ///
     /// - Remark: HTTP `DELETE /gists/{gist_id}`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/delete(gists/delete)`.
     public func gists_sol_delete(_ input: Operations.gists_sol_delete.Input) async throws -> Operations.gists_sol_delete.Output {
@@ -1395,6 +1397,8 @@ public struct Client: APIProtocol {
     }
     /// Delete a gist comment
     ///
+    ///
+    ///
     /// - Remark: HTTP `DELETE /gists/{gist_id}/comments/{comment_id}`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/comments/{comment_id}/delete(gists/delete-comment)`.
     public func gists_sol_delete_hyphen_comment(_ input: Operations.gists_sol_delete_hyphen_comment.Input) async throws -> Operations.gists_sol_delete_hyphen_comment.Output {
@@ -1483,6 +1487,8 @@ public struct Client: APIProtocol {
         )
     }
     /// List gist commits
+    ///
+    ///
     ///
     /// - Remark: HTTP `GET /gists/{gist_id}/commits`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/commits/get(gists/list-commits)`.
@@ -1614,6 +1620,8 @@ public struct Client: APIProtocol {
     }
     /// List gist forks
     ///
+    ///
+    ///
     /// - Remark: HTTP `GET /gists/{gist_id}/forks`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/forks/get(gists/list-forks)`.
     public func gists_sol_list_hyphen_forks(_ input: Operations.gists_sol_list_hyphen_forks.Input) async throws -> Operations.gists_sol_list_hyphen_forks.Output {
@@ -1743,6 +1751,8 @@ public struct Client: APIProtocol {
         )
     }
     /// Fork a gist
+    ///
+    ///
     ///
     /// - Remark: HTTP `POST /gists/{gist_id}/forks`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/forks/post(gists/fork)`.
@@ -1881,6 +1891,8 @@ public struct Client: APIProtocol {
         )
     }
     /// Check if a gist is starred
+    ///
+    ///
     ///
     /// - Remark: HTTP `GET /gists/{gist_id}/star`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/star/get(gists/check-is-starred)`.
@@ -2059,6 +2071,8 @@ public struct Client: APIProtocol {
         )
     }
     /// Unstar a gist
+    ///
+    ///
     ///
     /// - Remark: HTTP `DELETE /gists/{gist_id}/star`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/star/delete(gists/unstar)`.

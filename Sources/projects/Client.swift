@@ -470,6 +470,8 @@ public struct Client: APIProtocol {
     }
     /// Update an existing project card
     ///
+    ///
+    ///
     /// - Remark: HTTP `PATCH /projects/columns/cards/{card_id}`.
     /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/patch(projects/update-card)`.
     public func projects_sol_update_hyphen_card(_ input: Operations.projects_sol_update_hyphen_card.Input) async throws -> Operations.projects_sol_update_hyphen_card.Output {
@@ -744,6 +746,8 @@ public struct Client: APIProtocol {
         )
     }
     /// Move a project card
+    ///
+    ///
     ///
     /// - Remark: HTTP `POST /projects/columns/cards/{card_id}/moves`.
     /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/moves/post(projects/move-card)`.
@@ -1037,6 +1041,8 @@ public struct Client: APIProtocol {
         )
     }
     /// Update an existing project column
+    ///
+    ///
     ///
     /// - Remark: HTTP `PATCH /projects/columns/{column_id}`.
     /// - Remark: Generated from `#/paths//projects/columns/{column_id}/patch(projects/update-column)`.
@@ -1384,6 +1390,8 @@ public struct Client: APIProtocol {
     }
     /// Create a project card
     ///
+    ///
+    ///
     /// - Remark: HTTP `POST /projects/columns/{column_id}/cards`.
     /// - Remark: Generated from `#/paths//projects/columns/{column_id}/cards/post(projects/create-card)`.
     public func projects_sol_create_hyphen_card(_ input: Operations.projects_sol_create_hyphen_card.Input) async throws -> Operations.projects_sol_create_hyphen_card.Output {
@@ -1544,6 +1552,8 @@ public struct Client: APIProtocol {
         )
     }
     /// Move a project column
+    ///
+    ///
     ///
     /// - Remark: HTTP `POST /projects/columns/{column_id}/moves`.
     /// - Remark: Generated from `#/paths//projects/columns/{column_id}/moves/post(projects/move-column)`.

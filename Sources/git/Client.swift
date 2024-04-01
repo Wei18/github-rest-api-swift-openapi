@@ -40,6 +40,8 @@ public struct Client: APIProtocol {
     }
     /// Create a blob
     ///
+    ///
+    ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/git/blobs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/blobs/post(git/create-blob)`.
     public func git_sol_create_hyphen_blob(_ input: Operations.git_sol_create_hyphen_blob.Input) async throws -> Operations.git_sol_create_hyphen_blob.Output {

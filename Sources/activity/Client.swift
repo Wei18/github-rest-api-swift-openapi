@@ -236,6 +236,8 @@ public struct Client: APIProtocol {
     }
     /// List public events for a network of repositories
     ///
+    ///
+    ///
     /// - Remark: HTTP `GET /networks/{owner}/{repo}/events`.
     /// - Remark: Generated from `#/paths//networks/{owner}/{repo}/events/get(activity/list-public-events-for-repo-network)`.
     public func activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_repo_hyphen_network(_ input: Operations.activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_repo_hyphen_network.Input) async throws -> Operations.activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_repo_hyphen_network.Output {
@@ -1226,6 +1228,8 @@ public struct Client: APIProtocol {
         )
     }
     /// List public organization events
+    ///
+    ///
     ///
     /// - Remark: HTTP `GET /orgs/{org}/events`.
     /// - Remark: Generated from `#/paths//orgs/{org}/events/get(activity/list-public-org-events)`.
@@ -2765,6 +2769,8 @@ public struct Client: APIProtocol {
     }
     /// List public events for a user
     ///
+    ///
+    ///
     /// - Remark: HTTP `GET /users/{username}/events/public`.
     /// - Remark: Generated from `#/paths//users/{username}/events/public/get(activity/list-public-events-for-user)`.
     public func activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_user(_ input: Operations.activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_user.Input) async throws -> Operations.activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_user.Output {
@@ -2918,6 +2924,8 @@ public struct Client: APIProtocol {
         )
     }
     /// List public events received by a user
+    ///
+    ///
     ///
     /// - Remark: HTTP `GET /users/{username}/received_events/public`.
     /// - Remark: Generated from `#/paths//users/{username}/received_events/public/get(activity/list-received-public-events-for-user)`.

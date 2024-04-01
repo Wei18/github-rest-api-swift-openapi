@@ -39,6 +39,8 @@ public protocol APIProtocol: Sendable {
     func activity_sol_get_hyphen_feeds(_ input: Operations.activity_sol_get_hyphen_feeds.Input) async throws -> Operations.activity_sol_get_hyphen_feeds.Output
     /// List public events for a network of repositories
     ///
+    ///
+    ///
     /// - Remark: HTTP `GET /networks/{owner}/{repo}/events`.
     /// - Remark: Generated from `#/paths//networks/{owner}/{repo}/events/get(activity/list-public-events-for-repo-network)`.
     func activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_repo_hyphen_network(_ input: Operations.activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_repo_hyphen_network.Input) async throws -> Operations.activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_repo_hyphen_network.Output
@@ -105,6 +107,8 @@ public protocol APIProtocol: Sendable {
     /// - Remark: Generated from `#/paths//notifications/threads/{thread_id}/subscription/delete(activity/delete-thread-subscription)`.
     func activity_sol_delete_hyphen_thread_hyphen_subscription(_ input: Operations.activity_sol_delete_hyphen_thread_hyphen_subscription.Input) async throws -> Operations.activity_sol_delete_hyphen_thread_hyphen_subscription.Output
     /// List public organization events
+    ///
+    ///
     ///
     /// - Remark: HTTP `GET /orgs/{org}/events`.
     /// - Remark: Generated from `#/paths//orgs/{org}/events/get(activity/list-public-org-events)`.
@@ -225,6 +229,8 @@ public protocol APIProtocol: Sendable {
     func activity_sol_list_hyphen_org_hyphen_events_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.activity_sol_list_hyphen_org_hyphen_events_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.activity_sol_list_hyphen_org_hyphen_events_hyphen_for_hyphen_authenticated_hyphen_user.Output
     /// List public events for a user
     ///
+    ///
+    ///
     /// - Remark: HTTP `GET /users/{username}/events/public`.
     /// - Remark: Generated from `#/paths//users/{username}/events/public/get(activity/list-public-events-for-user)`.
     func activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_user(_ input: Operations.activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_user.Input) async throws -> Operations.activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_user.Output
@@ -236,6 +242,8 @@ public protocol APIProtocol: Sendable {
     /// - Remark: Generated from `#/paths//users/{username}/received_events/get(activity/list-received-events-for-user)`.
     func activity_sol_list_hyphen_received_hyphen_events_hyphen_for_hyphen_user(_ input: Operations.activity_sol_list_hyphen_received_hyphen_events_hyphen_for_hyphen_user.Input) async throws -> Operations.activity_sol_list_hyphen_received_hyphen_events_hyphen_for_hyphen_user.Output
     /// List public events received by a user
+    ///
+    ///
     ///
     /// - Remark: HTTP `GET /users/{username}/received_events/public`.
     /// - Remark: Generated from `#/paths//users/{username}/received_events/public/get(activity/list-received-public-events-for-user)`.
@@ -299,6 +307,8 @@ extension APIProtocol {
         try await activity_sol_get_hyphen_feeds(Operations.activity_sol_get_hyphen_feeds.Input(headers: headers))
     }
     /// List public events for a network of repositories
+    ///
+    ///
     ///
     /// - Remark: HTTP `GET /networks/{owner}/{repo}/events`.
     /// - Remark: Generated from `#/paths//networks/{owner}/{repo}/events/get(activity/list-public-events-for-repo-network)`.
@@ -436,6 +446,8 @@ extension APIProtocol {
         ))
     }
     /// List public organization events
+    ///
+    ///
     ///
     /// - Remark: HTTP `GET /orgs/{org}/events`.
     /// - Remark: Generated from `#/paths//orgs/{org}/events/get(activity/list-public-org-events)`.
@@ -696,6 +708,8 @@ extension APIProtocol {
     }
     /// List public events for a user
     ///
+    ///
+    ///
     /// - Remark: HTTP `GET /users/{username}/events/public`.
     /// - Remark: Generated from `#/paths//users/{username}/events/public/get(activity/list-public-events-for-user)`.
     public func activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_user(
@@ -727,6 +741,8 @@ extension APIProtocol {
         ))
     }
     /// List public events received by a user
+    ///
+    ///
     ///
     /// - Remark: HTTP `GET /users/{username}/received_events/public`.
     /// - Remark: Generated from `#/paths//users/{username}/received_events/public/get(activity/list-received-public-events-for-user)`.
@@ -4994,6 +5010,8 @@ public enum Operations {
     }
     /// List public events for a network of repositories
     ///
+    ///
+    ///
     /// - Remark: HTTP `GET /networks/{owner}/{repo}/events`.
     /// - Remark: Generated from `#/paths//networks/{owner}/{repo}/events/get(activity/list-public-events-for-repo-network)`.
     public enum activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_repo_hyphen_network {
@@ -6824,6 +6842,8 @@ public enum Operations {
         }
     }
     /// List public organization events
+    ///
+    ///
     ///
     /// - Remark: HTTP `GET /orgs/{org}/events`.
     /// - Remark: Generated from `#/paths//orgs/{org}/events/get(activity/list-public-org-events)`.
@@ -9972,6 +9992,8 @@ public enum Operations {
     }
     /// List public events for a user
     ///
+    ///
+    ///
     /// - Remark: HTTP `GET /users/{username}/events/public`.
     /// - Remark: Generated from `#/paths//users/{username}/events/public/get(activity/list-public-events-for-user)`.
     public enum activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_user {
@@ -10287,6 +10309,8 @@ public enum Operations {
         }
     }
     /// List public events received by a user
+    ///
+    ///
     ///
     /// - Remark: HTTP `GET /users/{username}/received_events/public`.
     /// - Remark: Generated from `#/paths//users/{username}/received_events/public/get(activity/list-received-public-events-for-user)`.

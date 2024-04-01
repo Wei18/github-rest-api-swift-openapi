@@ -2141,6 +2141,8 @@ public struct Client: APIProtocol {
     }
     /// List branches
     ///
+    ///
+    ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/branches`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/branches/get(repos/list-branches)`.
     public func repos_sol_list_hyphen_branches(_ input: Operations.repos_sol_list_hyphen_branches.Input) async throws -> Operations.repos_sol_list_hyphen_branches.Output {
@@ -2254,6 +2256,8 @@ public struct Client: APIProtocol {
         )
     }
     /// Get a branch
+    ///
+    ///
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/branches/{branch}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/branches/{branch}/get(repos/get-branch)`.
@@ -6457,6 +6461,8 @@ public struct Client: APIProtocol {
     }
     /// Delete a commit comment
     ///
+    ///
+    ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/comments/{comment_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/comments/{comment_id}/delete(repos/delete-commit-comment)`.
     public func repos_sol_delete_hyphen_commit_hyphen_comment(_ input: Operations.repos_sol_delete_hyphen_commit_hyphen_comment.Input) async throws -> Operations.repos_sol_delete_hyphen_commit_hyphen_comment.Output {
@@ -8863,6 +8869,8 @@ public struct Client: APIProtocol {
     }
     /// Get a deployment
     ///
+    ///
+    ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/deployments/{deployment_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/deployments/{deployment_id}/get(repos/get-deployment)`.
     public func repos_sol_get_hyphen_deployment(_ input: Operations.repos_sol_get_hyphen_deployment.Input) async throws -> Operations.repos_sol_get_hyphen_deployment.Output {
@@ -10472,6 +10480,8 @@ public struct Client: APIProtocol {
     }
     /// List forks
     ///
+    ///
+    ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/forks`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/forks/get(repos/list-forks)`.
     public func repos_sol_list_hyphen_forks(_ input: Operations.repos_sol_list_hyphen_forks.Input) async throws -> Operations.repos_sol_list_hyphen_forks.Output {
@@ -11238,6 +11248,8 @@ public struct Client: APIProtocol {
         )
     }
     /// Delete a repository webhook
+    ///
+    ///
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/hooks/{hook_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/hooks/{hook_id}/delete(repos/delete-webhook)`.
@@ -12057,6 +12069,8 @@ public struct Client: APIProtocol {
     }
     /// Update a repository invitation
     ///
+    ///
+    ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/invitations/{invitation_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/invitations/{invitation_id}/patch(repos/update-invitation)`.
     public func repos_sol_update_hyphen_invitation(_ input: Operations.repos_sol_update_hyphen_invitation.Input) async throws -> Operations.repos_sol_update_hyphen_invitation.Output {
@@ -12132,6 +12146,8 @@ public struct Client: APIProtocol {
     }
     /// Delete a repository invitation
     ///
+    ///
+    ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/invitations/{invitation_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/invitations/{invitation_id}/delete(repos/delete-invitation)`.
     public func repos_sol_delete_hyphen_invitation(_ input: Operations.repos_sol_delete_hyphen_invitation.Input) async throws -> Operations.repos_sol_delete_hyphen_invitation.Output {
@@ -12171,6 +12187,8 @@ public struct Client: APIProtocol {
         )
     }
     /// List deploy keys
+    ///
+    ///
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/keys`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/keys/get(repos/list-deploy-keys)`.
@@ -12360,6 +12378,8 @@ public struct Client: APIProtocol {
         )
     }
     /// Get a deploy key
+    ///
+    ///
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/keys/{key_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/keys/{key_id}/get(repos/get-deploy-key)`.
@@ -12631,6 +12651,8 @@ public struct Client: APIProtocol {
         )
     }
     /// Merge a branch
+    ///
+    ///
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/merges`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/merges/post(repos/merge)`.
@@ -15064,6 +15086,8 @@ public struct Client: APIProtocol {
     }
     /// Delete a release asset
     ///
+    ///
+    ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/releases/assets/{asset_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/releases/assets/{asset_id}/delete(repos/delete-release-asset)`.
     public func repos_sol_delete_hyphen_release_hyphen_asset(_ input: Operations.repos_sol_delete_hyphen_release_hyphen_asset.Input) async throws -> Operations.repos_sol_delete_hyphen_release_hyphen_asset.Output {
@@ -15567,6 +15591,8 @@ public struct Client: APIProtocol {
         )
     }
     /// List release assets
+    ///
+    ///
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/releases/{release_id}/assets`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/releases/{release_id}/assets/get(repos/list-release-assets)`.
@@ -17218,6 +17244,8 @@ public struct Client: APIProtocol {
     }
     /// List repository tags
     ///
+    ///
+    ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/tags`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/tags/get(repos/list-tags)`.
     public func repos_sol_list_hyphen_tags(_ input: Operations.repos_sol_list_hyphen_tags.Input) async throws -> Operations.repos_sol_list_hyphen_tags.Output {
@@ -17787,6 +17815,8 @@ public struct Client: APIProtocol {
     }
     /// Get all repository topics
     ///
+    ///
+    ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/topics`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/topics/get(repos/get-all-topics)`.
     public func repos_sol_get_hyphen_all_hyphen_topics(_ input: Operations.repos_sol_get_hyphen_all_hyphen_topics.Input) async throws -> Operations.repos_sol_get_hyphen_all_hyphen_topics.Output {
@@ -17885,6 +17915,8 @@ public struct Client: APIProtocol {
         )
     }
     /// Replace all repository topics
+    ///
+    ///
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/topics`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/topics/put(repos/replace-all-topics)`.
@@ -19354,6 +19386,8 @@ public struct Client: APIProtocol {
     }
     /// Accept a repository invitation
     ///
+    ///
+    ///
     /// - Remark: HTTP `PATCH /user/repository_invitations/{invitation_id}`.
     /// - Remark: Generated from `#/paths//user/repository_invitations/{invitation_id}/patch(repos/accept-invitation-for-authenticated-user)`.
     public func repos_sol_accept_hyphen_invitation_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.repos_sol_accept_hyphen_invitation_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.repos_sol_accept_hyphen_invitation_hyphen_for_hyphen_authenticated_hyphen_user.Output {
@@ -19463,6 +19497,8 @@ public struct Client: APIProtocol {
         )
     }
     /// Decline a repository invitation
+    ///
+    ///
     ///
     /// - Remark: HTTP `DELETE /user/repository_invitations/{invitation_id}`.
     /// - Remark: Generated from `#/paths//user/repository_invitations/{invitation_id}/delete(repos/decline-invitation-for-authenticated-user)`.

@@ -1695,6 +1695,8 @@ public struct Client: APIProtocol {
     }
     /// Check if a person is followed by the authenticated user
     ///
+    ///
+    ///
     /// - Remark: HTTP `GET /user/following/{username}`.
     /// - Remark: Generated from `#/paths//user/following/{username}/get(users/check-person-is-followed-by-authenticated)`.
     public func users_sol_check_hyphen_person_hyphen_is_hyphen_followed_hyphen_by_hyphen_authenticated(_ input: Operations.users_sol_check_hyphen_person_hyphen_is_hyphen_followed_hyphen_by_hyphen_authenticated.Input) async throws -> Operations.users_sol_check_hyphen_person_hyphen_is_hyphen_followed_hyphen_by_hyphen_authenticated.Output {
@@ -4711,6 +4713,8 @@ public struct Client: APIProtocol {
         )
     }
     /// Check if a user follows another user
+    ///
+    ///
     ///
     /// - Remark: HTTP `GET /users/{username}/following/{target_user}`.
     /// - Remark: Generated from `#/paths//users/{username}/following/{target_user}/get(users/check-following-for-user)`.

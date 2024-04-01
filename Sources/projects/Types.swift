@@ -34,6 +34,8 @@ public protocol APIProtocol: Sendable {
     func projects_sol_get_hyphen_card(_ input: Operations.projects_sol_get_hyphen_card.Input) async throws -> Operations.projects_sol_get_hyphen_card.Output
     /// Update an existing project card
     ///
+    ///
+    ///
     /// - Remark: HTTP `PATCH /projects/columns/cards/{card_id}`.
     /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/patch(projects/update-card)`.
     func projects_sol_update_hyphen_card(_ input: Operations.projects_sol_update_hyphen_card.Input) async throws -> Operations.projects_sol_update_hyphen_card.Output
@@ -46,6 +48,8 @@ public protocol APIProtocol: Sendable {
     func projects_sol_delete_hyphen_card(_ input: Operations.projects_sol_delete_hyphen_card.Input) async throws -> Operations.projects_sol_delete_hyphen_card.Output
     /// Move a project card
     ///
+    ///
+    ///
     /// - Remark: HTTP `POST /projects/columns/cards/{card_id}/moves`.
     /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/moves/post(projects/move-card)`.
     func projects_sol_move_hyphen_card(_ input: Operations.projects_sol_move_hyphen_card.Input) async throws -> Operations.projects_sol_move_hyphen_card.Output
@@ -57,6 +61,8 @@ public protocol APIProtocol: Sendable {
     /// - Remark: Generated from `#/paths//projects/columns/{column_id}/get(projects/get-column)`.
     func projects_sol_get_hyphen_column(_ input: Operations.projects_sol_get_hyphen_column.Input) async throws -> Operations.projects_sol_get_hyphen_column.Output
     /// Update an existing project column
+    ///
+    ///
     ///
     /// - Remark: HTTP `PATCH /projects/columns/{column_id}`.
     /// - Remark: Generated from `#/paths//projects/columns/{column_id}/patch(projects/update-column)`.
@@ -77,10 +83,14 @@ public protocol APIProtocol: Sendable {
     func projects_sol_list_hyphen_cards(_ input: Operations.projects_sol_list_hyphen_cards.Input) async throws -> Operations.projects_sol_list_hyphen_cards.Output
     /// Create a project card
     ///
+    ///
+    ///
     /// - Remark: HTTP `POST /projects/columns/{column_id}/cards`.
     /// - Remark: Generated from `#/paths//projects/columns/{column_id}/cards/post(projects/create-card)`.
     func projects_sol_create_hyphen_card(_ input: Operations.projects_sol_create_hyphen_card.Input) async throws -> Operations.projects_sol_create_hyphen_card.Output
     /// Move a project column
+    ///
+    ///
     ///
     /// - Remark: HTTP `POST /projects/columns/{column_id}/moves`.
     /// - Remark: Generated from `#/paths//projects/columns/{column_id}/moves/post(projects/move-column)`.
@@ -231,6 +241,8 @@ extension APIProtocol {
     }
     /// Update an existing project card
     ///
+    ///
+    ///
     /// - Remark: HTTP `PATCH /projects/columns/cards/{card_id}`.
     /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/patch(projects/update-card)`.
     public func projects_sol_update_hyphen_card(
@@ -261,6 +273,8 @@ extension APIProtocol {
     }
     /// Move a project card
     ///
+    ///
+    ///
     /// - Remark: HTTP `POST /projects/columns/cards/{card_id}/moves`.
     /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/moves/post(projects/move-card)`.
     public func projects_sol_move_hyphen_card(
@@ -290,6 +304,8 @@ extension APIProtocol {
         ))
     }
     /// Update an existing project column
+    ///
+    ///
     ///
     /// - Remark: HTTP `PATCH /projects/columns/{column_id}`.
     /// - Remark: Generated from `#/paths//projects/columns/{column_id}/patch(projects/update-column)`.
@@ -338,6 +354,8 @@ extension APIProtocol {
     }
     /// Create a project card
     ///
+    ///
+    ///
     /// - Remark: HTTP `POST /projects/columns/{column_id}/cards`.
     /// - Remark: Generated from `#/paths//projects/columns/{column_id}/cards/post(projects/create-card)`.
     public func projects_sol_create_hyphen_card(
@@ -352,6 +370,8 @@ extension APIProtocol {
         ))
     }
     /// Move a project column
+    ///
+    ///
     ///
     /// - Remark: HTTP `POST /projects/columns/{column_id}/moves`.
     /// - Remark: Generated from `#/paths//projects/columns/{column_id}/moves/post(projects/move-column)`.
@@ -2320,6 +2340,8 @@ public enum Operations {
     }
     /// Update an existing project card
     ///
+    ///
+    ///
     /// - Remark: HTTP `PATCH /projects/columns/cards/{card_id}`.
     /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/patch(projects/update-card)`.
     public enum projects_sol_update_hyphen_card {
@@ -2857,6 +2879,8 @@ public enum Operations {
         }
     }
     /// Move a project card
+    ///
+    ///
     ///
     /// - Remark: HTTP `POST /projects/columns/cards/{card_id}/moves`.
     /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/moves/post(projects/move-card)`.
@@ -3553,6 +3577,8 @@ public enum Operations {
     }
     /// Update an existing project column
     ///
+    ///
+    ///
     /// - Remark: HTTP `PATCH /projects/columns/{column_id}`.
     /// - Remark: Generated from `#/paths//projects/columns/{column_id}/patch(projects/update-column)`.
     public enum projects_sol_update_hyphen_column {
@@ -4215,6 +4241,8 @@ public enum Operations {
     }
     /// Create a project card
     ///
+    ///
+    ///
     /// - Remark: HTTP `POST /projects/columns/{column_id}/cards`.
     /// - Remark: Generated from `#/paths//projects/columns/{column_id}/cards/post(projects/create-card)`.
     public enum projects_sol_create_hyphen_card {
@@ -4698,6 +4726,8 @@ public enum Operations {
         }
     }
     /// Move a project column
+    ///
+    ///
     ///
     /// - Remark: HTTP `POST /projects/columns/{column_id}/moves`.
     /// - Remark: Generated from `#/paths//projects/columns/{column_id}/moves/post(projects/move-column)`.

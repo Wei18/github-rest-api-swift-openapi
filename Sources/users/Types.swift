@@ -100,6 +100,8 @@ public protocol APIProtocol: Sendable {
     func users_sol_list_hyphen_followed_hyphen_by_hyphen_authenticated_hyphen_user(_ input: Operations.users_sol_list_hyphen_followed_hyphen_by_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.users_sol_list_hyphen_followed_hyphen_by_hyphen_authenticated_hyphen_user.Output
     /// Check if a person is followed by the authenticated user
     ///
+    ///
+    ///
     /// - Remark: HTTP `GET /user/following/{username}`.
     /// - Remark: Generated from `#/paths//user/following/{username}/get(users/check-person-is-followed-by-authenticated)`.
     func users_sol_check_hyphen_person_hyphen_is_hyphen_followed_hyphen_by_hyphen_authenticated(_ input: Operations.users_sol_check_hyphen_person_hyphen_is_hyphen_followed_hyphen_by_hyphen_authenticated.Input) async throws -> Operations.users_sol_check_hyphen_person_hyphen_is_hyphen_followed_hyphen_by_hyphen_authenticated.Output
@@ -298,6 +300,8 @@ public protocol APIProtocol: Sendable {
     /// - Remark: Generated from `#/paths//users/{username}/following/get(users/list-following-for-user)`.
     func users_sol_list_hyphen_following_hyphen_for_hyphen_user(_ input: Operations.users_sol_list_hyphen_following_hyphen_for_hyphen_user.Input) async throws -> Operations.users_sol_list_hyphen_following_hyphen_for_hyphen_user.Output
     /// Check if a user follows another user
+    ///
+    ///
     ///
     /// - Remark: HTTP `GET /users/{username}/following/{target_user}`.
     /// - Remark: Generated from `#/paths//users/{username}/following/{target_user}/get(users/check-following-for-user)`.
@@ -523,6 +527,8 @@ extension APIProtocol {
         ))
     }
     /// Check if a person is followed by the authenticated user
+    ///
+    ///
     ///
     /// - Remark: HTTP `GET /user/following/{username}`.
     /// - Remark: Generated from `#/paths//user/following/{username}/get(users/check-person-is-followed-by-authenticated)`.
@@ -910,6 +916,8 @@ extension APIProtocol {
         ))
     }
     /// Check if a user follows another user
+    ///
+    ///
     ///
     /// - Remark: HTTP `GET /users/{username}/following/{target_user}`.
     /// - Remark: Generated from `#/paths//users/{username}/following/{target_user}/get(users/check-following-for-user)`.
@@ -5706,6 +5714,8 @@ public enum Operations {
         }
     }
     /// Check if a person is followed by the authenticated user
+    ///
+    ///
     ///
     /// - Remark: HTTP `GET /user/following/{username}`.
     /// - Remark: Generated from `#/paths//user/following/{username}/get(users/check-person-is-followed-by-authenticated)`.
@@ -10937,6 +10947,8 @@ public enum Operations {
         }
     }
     /// Check if a user follows another user
+    ///
+    ///
     ///
     /// - Remark: HTTP `GET /users/{username}/following/{target_user}`.
     /// - Remark: Generated from `#/paths//users/{username}/following/{target_user}/get(users/check-following-for-user)`.

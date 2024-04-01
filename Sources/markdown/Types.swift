@@ -13,6 +13,8 @@ import struct Foundation.Date
 public protocol APIProtocol: Sendable {
     /// Render a Markdown document
     ///
+    ///
+    ///
     /// - Remark: HTTP `POST /markdown`.
     /// - Remark: Generated from `#/paths//markdown/post(markdown/render)`.
     func markdown_sol_render(_ input: Operations.markdown_sol_render.Input) async throws -> Operations.markdown_sol_render.Output
@@ -28,6 +30,8 @@ public protocol APIProtocol: Sendable {
 /// Convenience overloads for operation inputs.
 extension APIProtocol {
     /// Render a Markdown document
+    ///
+    ///
     ///
     /// - Remark: HTTP `POST /markdown`.
     /// - Remark: Generated from `#/paths//markdown/post(markdown/render)`.
@@ -94,6 +98,8 @@ public enum Components {
 /// API operations, with input and output types, generated from `#/paths` in the OpenAPI document.
 public enum Operations {
     /// Render a Markdown document
+    ///
+    ///
     ///
     /// - Remark: HTTP `POST /markdown`.
     /// - Remark: Generated from `#/paths//markdown/post(markdown/render)`.

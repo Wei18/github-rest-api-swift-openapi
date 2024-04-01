@@ -880,6 +880,8 @@ public protocol APIProtocol: Sendable {
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
+    /// This API will return up to 1,000 results for each search when using the following parameters: `actor`, `branch`, `check_suite_id`, `created`, `event`, `head_sha`, `status`.
+    ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/get(actions/list-workflow-runs-for-repo)`.
     func actions_sol_list_hyphen_workflow_hyphen_runs_hyphen_for_hyphen_repo(_ input: Operations.actions_sol_list_hyphen_workflow_hyphen_runs_hyphen_for_hyphen_repo.Input) async throws -> Operations.actions_sol_list_hyphen_workflow_hyphen_runs_hyphen_for_hyphen_repo.Output
@@ -2842,6 +2844,8 @@ extension APIProtocol {
     /// Anyone with read access to the repository can use this endpoint.
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
+    ///
+    /// This API will return up to 1,000 results for each search when using the following parameters: `actor`, `branch`, `check_suite_id`, `created`, `event`, `head_sha`, `status`.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/get(actions/list-workflow-runs-for-repo)`.
@@ -21158,6 +21162,8 @@ public enum Operations {
     /// Anyone with read access to the repository can use this endpoint.
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
+    ///
+    /// This API will return up to 1,000 results for each search when using the following parameters: `actor`, `branch`, `check_suite_id`, `created`, `event`, `head_sha`, `status`.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/get(actions/list-workflow-runs-for-repo)`.
