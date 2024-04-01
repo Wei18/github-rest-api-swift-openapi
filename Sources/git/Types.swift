@@ -13,6 +13,8 @@ import struct Foundation.Date
 public protocol APIProtocol: Sendable {
     /// Create a blob
     ///
+    ///
+    ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/git/blobs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/blobs/post(git/create-blob)`.
     func git_sol_create_hyphen_blob(_ input: Operations.git_sol_create_hyphen_blob.Input) async throws -> Operations.git_sol_create_hyphen_blob.Output
@@ -245,6 +247,8 @@ public protocol APIProtocol: Sendable {
 /// Convenience overloads for operation inputs.
 extension APIProtocol {
     /// Create a blob
+    ///
+    ///
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/git/blobs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/blobs/post(git/create-blob)`.
@@ -1562,6 +1566,8 @@ public enum Components {
 /// API operations, with input and output types, generated from `#/paths` in the OpenAPI document.
 public enum Operations {
     /// Create a blob
+    ///
+    ///
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/git/blobs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/blobs/post(git/create-blob)`.
