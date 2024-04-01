@@ -40,6 +40,8 @@ public struct Client: APIProtocol {
     }
     /// Render a Markdown document
     ///
+    ///
+    ///
     /// - Remark: HTTP `POST /markdown`.
     /// - Remark: Generated from `#/paths//markdown/post(markdown/render)`.
     public func markdown_sol_render(_ input: Operations.markdown_sol_render.Input) async throws -> Operations.markdown_sol_render.Output {
