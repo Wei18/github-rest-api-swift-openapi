@@ -4620,6 +4620,8 @@ public struct Client: APIProtocol {
     }
     /// Update a milestone
     ///
+    ///
+    ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/milestones/{milestone_number}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/milestones/{milestone_number}/patch(issues/update-milestone)`.
     public func issues_sol_update_hyphen_milestone(_ input: Operations.issues_sol_update_hyphen_milestone.Input) async throws -> Operations.issues_sol_update_hyphen_milestone.Output {
