@@ -73,6 +73,8 @@ public protocol APIProtocol: Sendable {
     func gists_sol_update(_ input: Operations.gists_sol_update.Input) async throws -> Operations.gists_sol_update.Output
     /// Delete a gist
     ///
+    ///
+    ///
     /// - Remark: HTTP `DELETE /gists/{gist_id}`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/delete(gists/delete)`.
     func gists_sol_delete(_ input: Operations.gists_sol_delete.Input) async throws -> Operations.gists_sol_delete.Output
@@ -126,25 +128,35 @@ public protocol APIProtocol: Sendable {
     func gists_sol_update_hyphen_comment(_ input: Operations.gists_sol_update_hyphen_comment.Input) async throws -> Operations.gists_sol_update_hyphen_comment.Output
     /// Delete a gist comment
     ///
+    ///
+    ///
     /// - Remark: HTTP `DELETE /gists/{gist_id}/comments/{comment_id}`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/comments/{comment_id}/delete(gists/delete-comment)`.
     func gists_sol_delete_hyphen_comment(_ input: Operations.gists_sol_delete_hyphen_comment.Input) async throws -> Operations.gists_sol_delete_hyphen_comment.Output
     /// List gist commits
+    ///
+    ///
     ///
     /// - Remark: HTTP `GET /gists/{gist_id}/commits`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/commits/get(gists/list-commits)`.
     func gists_sol_list_hyphen_commits(_ input: Operations.gists_sol_list_hyphen_commits.Input) async throws -> Operations.gists_sol_list_hyphen_commits.Output
     /// List gist forks
     ///
+    ///
+    ///
     /// - Remark: HTTP `GET /gists/{gist_id}/forks`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/forks/get(gists/list-forks)`.
     func gists_sol_list_hyphen_forks(_ input: Operations.gists_sol_list_hyphen_forks.Input) async throws -> Operations.gists_sol_list_hyphen_forks.Output
     /// Fork a gist
     ///
+    ///
+    ///
     /// - Remark: HTTP `POST /gists/{gist_id}/forks`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/forks/post(gists/fork)`.
     func gists_sol_fork(_ input: Operations.gists_sol_fork.Input) async throws -> Operations.gists_sol_fork.Output
     /// Check if a gist is starred
+    ///
+    ///
     ///
     /// - Remark: HTTP `GET /gists/{gist_id}/star`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/star/get(gists/check-is-starred)`.
@@ -157,6 +169,8 @@ public protocol APIProtocol: Sendable {
     /// - Remark: Generated from `#/paths//gists/{gist_id}/star/put(gists/star)`.
     func gists_sol_star(_ input: Operations.gists_sol_star.Input) async throws -> Operations.gists_sol_star.Output
     /// Unstar a gist
+    ///
+    ///
     ///
     /// - Remark: HTTP `DELETE /gists/{gist_id}/star`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/star/delete(gists/unstar)`.
@@ -296,6 +310,8 @@ extension APIProtocol {
     }
     /// Delete a gist
     ///
+    ///
+    ///
     /// - Remark: HTTP `DELETE /gists/{gist_id}`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/delete(gists/delete)`.
     public func gists_sol_delete(
@@ -395,6 +411,8 @@ extension APIProtocol {
     }
     /// Delete a gist comment
     ///
+    ///
+    ///
     /// - Remark: HTTP `DELETE /gists/{gist_id}/comments/{comment_id}`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/comments/{comment_id}/delete(gists/delete-comment)`.
     public func gists_sol_delete_hyphen_comment(
@@ -407,6 +425,8 @@ extension APIProtocol {
         ))
     }
     /// List gist commits
+    ///
+    ///
     ///
     /// - Remark: HTTP `GET /gists/{gist_id}/commits`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/commits/get(gists/list-commits)`.
@@ -423,6 +443,8 @@ extension APIProtocol {
     }
     /// List gist forks
     ///
+    ///
+    ///
     /// - Remark: HTTP `GET /gists/{gist_id}/forks`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/forks/get(gists/list-forks)`.
     public func gists_sol_list_hyphen_forks(
@@ -438,6 +460,8 @@ extension APIProtocol {
     }
     /// Fork a gist
     ///
+    ///
+    ///
     /// - Remark: HTTP `POST /gists/{gist_id}/forks`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/forks/post(gists/fork)`.
     public func gists_sol_fork(
@@ -450,6 +474,8 @@ extension APIProtocol {
         ))
     }
     /// Check if a gist is starred
+    ///
+    ///
     ///
     /// - Remark: HTTP `GET /gists/{gist_id}/star`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/star/get(gists/check-is-starred)`.
@@ -478,6 +504,8 @@ extension APIProtocol {
         ))
     }
     /// Unstar a gist
+    ///
+    ///
     ///
     /// - Remark: HTTP `DELETE /gists/{gist_id}/star`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/star/delete(gists/unstar)`.
@@ -4091,6 +4119,8 @@ public enum Operations {
     }
     /// Delete a gist
     ///
+    ///
+    ///
     /// - Remark: HTTP `DELETE /gists/{gist_id}`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/delete(gists/delete)`.
     public enum gists_sol_delete {
@@ -5179,6 +5209,8 @@ public enum Operations {
     }
     /// Delete a gist comment
     ///
+    ///
+    ///
     /// - Remark: HTTP `DELETE /gists/{gist_id}/comments/{comment_id}`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/comments/{comment_id}/delete(gists/delete-comment)`.
     public enum gists_sol_delete_hyphen_comment {
@@ -5362,6 +5394,8 @@ public enum Operations {
         }
     }
     /// List gist commits
+    ///
+    ///
     ///
     /// - Remark: HTTP `GET /gists/{gist_id}/commits`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/commits/get(gists/list-commits)`.
@@ -5608,6 +5642,8 @@ public enum Operations {
     }
     /// List gist forks
     ///
+    ///
+    ///
     /// - Remark: HTTP `GET /gists/{gist_id}/forks`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/forks/get(gists/list-forks)`.
     public enum gists_sol_list_hyphen_forks {
@@ -5853,6 +5889,8 @@ public enum Operations {
     }
     /// Fork a gist
     ///
+    ///
+    ///
     /// - Remark: HTTP `POST /gists/{gist_id}/forks`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/forks/post(gists/fork)`.
     public enum gists_sol_fork {
@@ -6093,6 +6131,8 @@ public enum Operations {
         }
     }
     /// Check if a gist is starred
+    ///
+    ///
     ///
     /// - Remark: HTTP `GET /gists/{gist_id}/star`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/star/get(gists/check-is-starred)`.
@@ -6481,6 +6521,8 @@ public enum Operations {
         }
     }
     /// Unstar a gist
+    ///
+    ///
     ///
     /// - Remark: HTTP `DELETE /gists/{gist_id}/star`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/star/delete(gists/unstar)`.
