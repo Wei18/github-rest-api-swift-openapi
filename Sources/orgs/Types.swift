@@ -28,6 +28,17 @@ public protocol APIProtocol: Sendable {
     ///
     /// To see the full details about an organization, the authenticated user must be an organization owner.
     ///
+    /// The values returned by this endpoint are set by the "Update an organization" endpoint. If your organization set a default security configuration (beta), the following values retrieved from the "Update an organization" endpoint have been overwritten by that configuration:
+    ///
+    /// - advanced_security_enabled_for_new_repositories
+    /// - dependabot_alerts_enabled_for_new_repositories
+    /// - dependabot_security_updates_enabled_for_new_repositories
+    /// - dependency_graph_enabled_for_new_repositories
+    /// - secret_scanning_enabled_for_new_repositories
+    /// - secret_scanning_push_protection_enabled_for_new_repositories
+    ///
+    /// For more information on security configurations, see "[Enabling security features at scale](https://docs.github.com/code-security/securing-your-organization/introduction-to-securing-your-organization-at-scale/about-enabling-security-features-at-scale)."
+    ///
     /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to see the full details about an organization.
     ///
     /// To see information about an organization's GitHub plan, GitHub Apps need the `Organization plan` permission.
@@ -40,6 +51,17 @@ public protocol APIProtocol: Sendable {
     /// **Parameter Deprecation Notice:** GitHub will replace and discontinue `members_allowed_repository_creation_type` in favor of more granular permissions. The new input parameters are `members_can_create_public_repositories`, `members_can_create_private_repositories` for all organizations and `members_can_create_internal_repositories` for organizations associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+. For more information, see the [blog post](https://developer.github.com/changes/2019-12-03-internal-visibility-changes).
     ///
     /// Updates the organization's profile and member privileges.
+    ///
+    /// With security configurations (beta), your organization can choose a default security configuration which will automatically apply a set of security enablement settings to new repositories in your organization based on their visibility. For targeted repositories, the following attributes will be overridden by the default security configuration:
+    ///
+    /// - advanced_security_enabled_for_new_repositories
+    /// - dependabot_alerts_enabled_for_new_repositories
+    /// - dependabot_security_updates_enabled_for_new_repositories
+    /// - dependency_graph_enabled_for_new_repositories
+    /// - secret_scanning_enabled_for_new_repositories
+    /// - secret_scanning_push_protection_enabled_for_new_repositories
+    ///
+    /// For more information on setting a default security configuration, see "[Enabling security features at scale](https://docs.github.com/code-security/securing-your-organization/introduction-to-securing-your-organization-at-scale/about-enabling-security-features-at-scale)."
     ///
     /// The authenticated user must be an organization owner to use this endpoint.
     ///
@@ -810,6 +832,17 @@ extension APIProtocol {
     ///
     /// To see the full details about an organization, the authenticated user must be an organization owner.
     ///
+    /// The values returned by this endpoint are set by the "Update an organization" endpoint. If your organization set a default security configuration (beta), the following values retrieved from the "Update an organization" endpoint have been overwritten by that configuration:
+    ///
+    /// - advanced_security_enabled_for_new_repositories
+    /// - dependabot_alerts_enabled_for_new_repositories
+    /// - dependabot_security_updates_enabled_for_new_repositories
+    /// - dependency_graph_enabled_for_new_repositories
+    /// - secret_scanning_enabled_for_new_repositories
+    /// - secret_scanning_push_protection_enabled_for_new_repositories
+    ///
+    /// For more information on security configurations, see "[Enabling security features at scale](https://docs.github.com/code-security/securing-your-organization/introduction-to-securing-your-organization-at-scale/about-enabling-security-features-at-scale)."
+    ///
     /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to see the full details about an organization.
     ///
     /// To see information about an organization's GitHub plan, GitHub Apps need the `Organization plan` permission.
@@ -830,6 +863,17 @@ extension APIProtocol {
     /// **Parameter Deprecation Notice:** GitHub will replace and discontinue `members_allowed_repository_creation_type` in favor of more granular permissions. The new input parameters are `members_can_create_public_repositories`, `members_can_create_private_repositories` for all organizations and `members_can_create_internal_repositories` for organizations associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+. For more information, see the [blog post](https://developer.github.com/changes/2019-12-03-internal-visibility-changes).
     ///
     /// Updates the organization's profile and member privileges.
+    ///
+    /// With security configurations (beta), your organization can choose a default security configuration which will automatically apply a set of security enablement settings to new repositories in your organization based on their visibility. For targeted repositories, the following attributes will be overridden by the default security configuration:
+    ///
+    /// - advanced_security_enabled_for_new_repositories
+    /// - dependabot_alerts_enabled_for_new_repositories
+    /// - dependabot_security_updates_enabled_for_new_repositories
+    /// - dependency_graph_enabled_for_new_repositories
+    /// - secret_scanning_enabled_for_new_repositories
+    /// - secret_scanning_push_protection_enabled_for_new_repositories
+    ///
+    /// For more information on setting a default security configuration, see "[Enabling security features at scale](https://docs.github.com/code-security/securing-your-organization/introduction-to-securing-your-organization-at-scale/about-enabling-security-features-at-scale)."
     ///
     /// The authenticated user must be an organization owner to use this endpoint.
     ///
@@ -6428,7 +6472,44 @@ public enum Components {
             /// Default value of the property
             ///
             /// - Remark: Generated from `#/components/schemas/org-custom-property/default_value`.
-            public var default_value: Swift.String?
+            @frozen public enum default_valuePayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/org-custom-property/default_value/case1`.
+                case case1(Swift.String)
+                /// - Remark: Generated from `#/components/schemas/org-custom-property/default_value/case2`.
+                case case2([Swift.String])
+                public init(from decoder: any Decoder) throws {
+                    var errors: [any Error] = []
+                    do {
+                        self = .case1(try decoder.decodeFromSingleValueContainer())
+                        return
+                    } catch {
+                        errors.append(error)
+                    }
+                    do {
+                        self = .case2(try decoder.decodeFromSingleValueContainer())
+                        return
+                    } catch {
+                        errors.append(error)
+                    }
+                    throw Swift.DecodingError.failedToDecodeOneOfSchema(
+                        type: Self.self,
+                        codingPath: decoder.codingPath,
+                        errors: errors
+                    )
+                }
+                public func encode(to encoder: any Encoder) throws {
+                    switch self {
+                    case let .case1(value):
+                        try encoder.encodeToSingleValueContainer(value)
+                    case let .case2(value):
+                        try encoder.encodeToSingleValueContainer(value)
+                    }
+                }
+            }
+            /// Default value of the property
+            ///
+            /// - Remark: Generated from `#/components/schemas/org-custom-property/default_value`.
+            public var default_value: Components.Schemas.org_hyphen_custom_hyphen_property.default_valuePayload?
             /// Short description of the property
             ///
             /// - Remark: Generated from `#/components/schemas/org-custom-property/description`.
@@ -6463,7 +6544,7 @@ public enum Components {
                 property_name: Swift.String,
                 value_type: Components.Schemas.org_hyphen_custom_hyphen_property.value_typePayload,
                 required: Swift.Bool? = nil,
-                default_value: Swift.String? = nil,
+                default_value: Components.Schemas.org_hyphen_custom_hyphen_property.default_valuePayload? = nil,
                 description: Swift.String? = nil,
                 allowed_values: [Swift.String]? = nil,
                 values_editable_by: Components.Schemas.org_hyphen_custom_hyphen_property.values_editable_byPayload? = nil
@@ -7270,6 +7351,17 @@ public enum Operations {
     ///
     /// To see the full details about an organization, the authenticated user must be an organization owner.
     ///
+    /// The values returned by this endpoint are set by the "Update an organization" endpoint. If your organization set a default security configuration (beta), the following values retrieved from the "Update an organization" endpoint have been overwritten by that configuration:
+    ///
+    /// - advanced_security_enabled_for_new_repositories
+    /// - dependabot_alerts_enabled_for_new_repositories
+    /// - dependabot_security_updates_enabled_for_new_repositories
+    /// - dependency_graph_enabled_for_new_repositories
+    /// - secret_scanning_enabled_for_new_repositories
+    /// - secret_scanning_push_protection_enabled_for_new_repositories
+    ///
+    /// For more information on security configurations, see "[Enabling security features at scale](https://docs.github.com/code-security/securing-your-organization/introduction-to-securing-your-organization-at-scale/about-enabling-security-features-at-scale)."
+    ///
     /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to see the full details about an organization.
     ///
     /// To see information about an organization's GitHub plan, GitHub Apps need the `Organization plan` permission.
@@ -7431,6 +7523,17 @@ public enum Operations {
     ///
     /// Updates the organization's profile and member privileges.
     ///
+    /// With security configurations (beta), your organization can choose a default security configuration which will automatically apply a set of security enablement settings to new repositories in your organization based on their visibility. For targeted repositories, the following attributes will be overridden by the default security configuration:
+    ///
+    /// - advanced_security_enabled_for_new_repositories
+    /// - dependabot_alerts_enabled_for_new_repositories
+    /// - dependabot_security_updates_enabled_for_new_repositories
+    /// - dependency_graph_enabled_for_new_repositories
+    /// - secret_scanning_enabled_for_new_repositories
+    /// - secret_scanning_push_protection_enabled_for_new_repositories
+    ///
+    /// For more information on setting a default security configuration, see "[Enabling security features at scale](https://docs.github.com/code-security/securing-your-organization/introduction-to-securing-your-organization-at-scale/about-enabling-security-features-at-scale)."
+    ///
     /// The authenticated user must be an organization owner to use this endpoint.
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `admin:org` or `repo` scope to use this endpoint.
@@ -7495,7 +7598,7 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/PATCH/requestBody/json/name`.
                     public var name: Swift.String?
-                    /// The description of the company.
+                    /// The description of the company. The maximum size is 160 characters.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/PATCH/requestBody/json/description`.
                     public var description: Swift.String?
@@ -7637,7 +7740,7 @@ public enum Operations {
                     ///   - twitter_username: The Twitter username of the company.
                     ///   - location: The location.
                     ///   - name: The shorthand name of the company.
-                    ///   - description: The description of the company.
+                    ///   - description: The description of the company. The maximum size is 160 characters.
                     ///   - has_organization_projects: Whether an organization can use organization projects.
                     ///   - has_repository_projects: Whether repositories that belong to the organization can use repository projects.
                     ///   - default_repository_permission: Default permission level members have for organization repositories.
@@ -18937,7 +19040,44 @@ public enum Operations {
                     /// Default value of the property
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/properties/schema/{custom_property_name}/PUT/requestBody/json/default_value`.
-                    public var default_value: Swift.String?
+                    @frozen public enum default_valuePayload: Codable, Hashable, Sendable {
+                        /// - Remark: Generated from `#/paths/orgs/{org}/properties/schema/{custom_property_name}/PUT/requestBody/json/default_value/case1`.
+                        case case1(Swift.String)
+                        /// - Remark: Generated from `#/paths/orgs/{org}/properties/schema/{custom_property_name}/PUT/requestBody/json/default_value/case2`.
+                        case case2([Swift.String])
+                        public init(from decoder: any Decoder) throws {
+                            var errors: [any Error] = []
+                            do {
+                                self = .case1(try decoder.decodeFromSingleValueContainer())
+                                return
+                            } catch {
+                                errors.append(error)
+                            }
+                            do {
+                                self = .case2(try decoder.decodeFromSingleValueContainer())
+                                return
+                            } catch {
+                                errors.append(error)
+                            }
+                            throw Swift.DecodingError.failedToDecodeOneOfSchema(
+                                type: Self.self,
+                                codingPath: decoder.codingPath,
+                                errors: errors
+                            )
+                        }
+                        public func encode(to encoder: any Encoder) throws {
+                            switch self {
+                            case let .case1(value):
+                                try encoder.encodeToSingleValueContainer(value)
+                            case let .case2(value):
+                                try encoder.encodeToSingleValueContainer(value)
+                            }
+                        }
+                    }
+                    /// Default value of the property
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/properties/schema/{custom_property_name}/PUT/requestBody/json/default_value`.
+                    public var default_value: Operations.orgs_sol_create_hyphen_or_hyphen_update_hyphen_custom_hyphen_property.Input.Body.jsonPayload.default_valuePayload?
                     /// Short description of the property
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/properties/schema/{custom_property_name}/PUT/requestBody/json/description`.
@@ -18958,7 +19098,7 @@ public enum Operations {
                     public init(
                         value_type: Operations.orgs_sol_create_hyphen_or_hyphen_update_hyphen_custom_hyphen_property.Input.Body.jsonPayload.value_typePayload,
                         required: Swift.Bool? = nil,
-                        default_value: Swift.String? = nil,
+                        default_value: Operations.orgs_sol_create_hyphen_or_hyphen_update_hyphen_custom_hyphen_property.Input.Body.jsonPayload.default_valuePayload? = nil,
                         description: Swift.String? = nil,
                         allowed_values: [Swift.String]? = nil
                     ) {
