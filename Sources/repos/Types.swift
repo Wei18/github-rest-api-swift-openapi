@@ -10785,10 +10785,10 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/repository-ruleset-bypass-actor/actor_type`.
             @frozen public enum actor_typePayload: String, Codable, Hashable, Sendable {
-                case RepositoryRole = "RepositoryRole"
-                case Team = "Team"
                 case Integration = "Integration"
                 case OrganizationAdmin = "OrganizationAdmin"
+                case RepositoryRole = "RepositoryRole"
+                case Team = "Team"
             }
             /// The type of actor that can bypass a ruleset
             ///
