@@ -120,9 +120,9 @@ public protocol APIProtocol: Sendable {
     func orgs_sol_list_hyphen_failed_hyphen_invitations(_ input: Operations.orgs_sol_list_hyphen_failed_hyphen_invitations.Input) async throws -> Operations.orgs_sol_list_hyphen_failed_hyphen_invitations.Output
     /// List organization webhooks
     ///
-    /// You must be an organization owner to use this endpoint. 
+    /// You must be an organization owner to use this endpoint.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit 
+    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit
     /// webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/hooks`.
@@ -132,9 +132,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Create a hook that posts payloads in JSON format.
     ///
-    /// You must be an organization owner to use this endpoint. 
+    /// You must be an organization owner to use this endpoint.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or 
+    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or
     /// edit webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/hooks`.
@@ -143,11 +143,11 @@ public protocol APIProtocol: Sendable {
     /// Get an organization webhook
     ///
     /// Returns a webhook configured in an organization. To get only the webhook
-    /// `config` properties, see "[Get a webhook configuration for an organization](/rest/orgs/webhooks#get-a-webhook-configuration-for-an-organization). 
+    /// `config` properties, see "[Get a webhook configuration for an organization](/rest/orgs/webhooks#get-a-webhook-configuration-for-an-organization).
     ///
-    /// You must be an organization owner to use this endpoint. 
+    /// You must be an organization owner to use this endpoint.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit 
+    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit
     /// webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/hooks/{hook_id}`.
@@ -159,11 +159,11 @@ public protocol APIProtocol: Sendable {
     /// the `secret` will be overwritten. If you previously had a `secret` set, you must
     /// provide the same `secret` or set a new `secret` or the secret will be removed. If
     /// you are only updating individual webhook `config` properties, use "[Update a webhook
-    /// configuration for an organization](/rest/orgs/webhooks#update-a-webhook-configuration-for-an-organization)". 
+    /// configuration for an organization](/rest/orgs/webhooks#update-a-webhook-configuration-for-an-organization)".
     ///
-    /// You must be an organization owner to use this endpoint. 
+    /// You must be an organization owner to use this endpoint.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit 
+    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit
     /// webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
     ///
     /// - Remark: HTTP `PATCH /orgs/{org}/hooks/{hook_id}`.
@@ -171,9 +171,9 @@ public protocol APIProtocol: Sendable {
     func orgs_sol_update_hyphen_webhook(_ input: Operations.orgs_sol_update_hyphen_webhook.Input) async throws -> Operations.orgs_sol_update_hyphen_webhook.Output
     /// Delete an organization webhook
     ///
-    /// You must be an organization owner to use this endpoint. 
+    /// You must be an organization owner to use this endpoint.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit 
+    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit
     /// webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/hooks/{hook_id}`.
@@ -183,9 +183,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Returns the webhook configuration for an organization. To get more information about the webhook, including the `active` state and `events`, use "[Get an organization webhook ](/rest/orgs/webhooks#get-an-organization-webhook)."
     ///
-    /// You must be an organization owner to use this endpoint. 
+    /// You must be an organization owner to use this endpoint.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit 
+    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit
     /// webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/hooks/{hook_id}/config`.
@@ -195,9 +195,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Updates the webhook configuration for an organization. To update more information about the webhook, including the `active` state and `events`, use "[Update an organization webhook ](/rest/orgs/webhooks#update-an-organization-webhook)."
     ///
-    /// You must be an organization owner to use this endpoint. 
+    /// You must be an organization owner to use this endpoint.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit 
+    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit
     /// webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
     ///
     /// - Remark: HTTP `PATCH /orgs/{org}/hooks/{hook_id}/config`.
@@ -207,9 +207,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Returns a list of webhook deliveries for a webhook configured in an organization.
     ///
-    /// You must be an organization owner to use this endpoint. 
+    /// You must be an organization owner to use this endpoint.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit 
+    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit
     /// webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/hooks/{hook_id}/deliveries`.
@@ -219,9 +219,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Returns a delivery for a webhook configured in an organization.
     ///
-    /// You must be an organization owner to use this endpoint. 
+    /// You must be an organization owner to use this endpoint.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit 
+    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit
     /// webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/hooks/{hook_id}/deliveries/{delivery_id}`.
@@ -231,9 +231,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Redeliver a delivery for a webhook configured in an organization.
     ///
-    /// You must be an organization owner to use this endpoint. 
+    /// You must be an organization owner to use this endpoint.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit 
+    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit
     /// webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/hooks/{hook_id}/deliveries/{delivery_id}/attempts`.
@@ -244,9 +244,9 @@ public protocol APIProtocol: Sendable {
     /// This will trigger a [ping event](https://docs.github.com/webhooks/#ping-event)
     /// to be sent to the hook.
     ///
-    /// You must be an organization owner to use this endpoint. 
+    /// You must be an organization owner to use this endpoint.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit 
+    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit
     /// webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/hooks/{hook_id}/pings`.
@@ -988,9 +988,9 @@ extension APIProtocol {
     }
     /// List organization webhooks
     ///
-    /// You must be an organization owner to use this endpoint. 
+    /// You must be an organization owner to use this endpoint.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit 
+    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit
     /// webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/hooks`.
@@ -1010,9 +1010,9 @@ extension APIProtocol {
     ///
     /// Create a hook that posts payloads in JSON format.
     ///
-    /// You must be an organization owner to use this endpoint. 
+    /// You must be an organization owner to use this endpoint.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or 
+    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or
     /// edit webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/hooks`.
@@ -1031,11 +1031,11 @@ extension APIProtocol {
     /// Get an organization webhook
     ///
     /// Returns a webhook configured in an organization. To get only the webhook
-    /// `config` properties, see "[Get a webhook configuration for an organization](/rest/orgs/webhooks#get-a-webhook-configuration-for-an-organization). 
+    /// `config` properties, see "[Get a webhook configuration for an organization](/rest/orgs/webhooks#get-a-webhook-configuration-for-an-organization).
     ///
-    /// You must be an organization owner to use this endpoint. 
+    /// You must be an organization owner to use this endpoint.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit 
+    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit
     /// webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/hooks/{hook_id}`.
@@ -1055,11 +1055,11 @@ extension APIProtocol {
     /// the `secret` will be overwritten. If you previously had a `secret` set, you must
     /// provide the same `secret` or set a new `secret` or the secret will be removed. If
     /// you are only updating individual webhook `config` properties, use "[Update a webhook
-    /// configuration for an organization](/rest/orgs/webhooks#update-a-webhook-configuration-for-an-organization)". 
+    /// configuration for an organization](/rest/orgs/webhooks#update-a-webhook-configuration-for-an-organization)".
     ///
-    /// You must be an organization owner to use this endpoint. 
+    /// You must be an organization owner to use this endpoint.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit 
+    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit
     /// webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
     ///
     /// - Remark: HTTP `PATCH /orgs/{org}/hooks/{hook_id}`.
@@ -1077,9 +1077,9 @@ extension APIProtocol {
     }
     /// Delete an organization webhook
     ///
-    /// You must be an organization owner to use this endpoint. 
+    /// You must be an organization owner to use this endpoint.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit 
+    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit
     /// webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/hooks/{hook_id}`.
@@ -1097,9 +1097,9 @@ extension APIProtocol {
     ///
     /// Returns the webhook configuration for an organization. To get more information about the webhook, including the `active` state and `events`, use "[Get an organization webhook ](/rest/orgs/webhooks#get-an-organization-webhook)."
     ///
-    /// You must be an organization owner to use this endpoint. 
+    /// You must be an organization owner to use this endpoint.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit 
+    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit
     /// webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/hooks/{hook_id}/config`.
@@ -1117,9 +1117,9 @@ extension APIProtocol {
     ///
     /// Updates the webhook configuration for an organization. To update more information about the webhook, including the `active` state and `events`, use "[Update an organization webhook ](/rest/orgs/webhooks#update-an-organization-webhook)."
     ///
-    /// You must be an organization owner to use this endpoint. 
+    /// You must be an organization owner to use this endpoint.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit 
+    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit
     /// webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
     ///
     /// - Remark: HTTP `PATCH /orgs/{org}/hooks/{hook_id}/config`.
@@ -1139,9 +1139,9 @@ extension APIProtocol {
     ///
     /// Returns a list of webhook deliveries for a webhook configured in an organization.
     ///
-    /// You must be an organization owner to use this endpoint. 
+    /// You must be an organization owner to use this endpoint.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit 
+    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit
     /// webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/hooks/{hook_id}/deliveries`.
@@ -1161,9 +1161,9 @@ extension APIProtocol {
     ///
     /// Returns a delivery for a webhook configured in an organization.
     ///
-    /// You must be an organization owner to use this endpoint. 
+    /// You must be an organization owner to use this endpoint.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit 
+    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit
     /// webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/hooks/{hook_id}/deliveries/{delivery_id}`.
@@ -1181,9 +1181,9 @@ extension APIProtocol {
     ///
     /// Redeliver a delivery for a webhook configured in an organization.
     ///
-    /// You must be an organization owner to use this endpoint. 
+    /// You must be an organization owner to use this endpoint.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit 
+    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit
     /// webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/hooks/{hook_id}/deliveries/{delivery_id}/attempts`.
@@ -1202,9 +1202,9 @@ extension APIProtocol {
     /// This will trigger a [ping event](https://docs.github.com/webhooks/#ping-event)
     /// to be sent to the hook.
     ///
-    /// You must be an organization owner to use this endpoint. 
+    /// You must be an organization owner to use this endpoint.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit 
+    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit
     /// webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/hooks/{hook_id}/pings`.
@@ -8969,9 +8969,9 @@ public enum Operations {
     }
     /// List organization webhooks
     ///
-    /// You must be an organization owner to use this endpoint. 
+    /// You must be an organization owner to use this endpoint.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit 
+    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit
     /// webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/hooks`.
@@ -9175,9 +9175,9 @@ public enum Operations {
     ///
     /// Create a hook that posts payloads in JSON format.
     ///
-    /// You must be an organization owner to use this endpoint. 
+    /// You must be an organization owner to use this endpoint.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or 
+    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or
     /// edit webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/hooks`.
@@ -9477,11 +9477,11 @@ public enum Operations {
     /// Get an organization webhook
     ///
     /// Returns a webhook configured in an organization. To get only the webhook
-    /// `config` properties, see "[Get a webhook configuration for an organization](/rest/orgs/webhooks#get-a-webhook-configuration-for-an-organization). 
+    /// `config` properties, see "[Get a webhook configuration for an organization](/rest/orgs/webhooks#get-a-webhook-configuration-for-an-organization).
     ///
-    /// You must be an organization owner to use this endpoint. 
+    /// You must be an organization owner to use this endpoint.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit 
+    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit
     /// webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/hooks/{hook_id}`.
@@ -9650,11 +9650,11 @@ public enum Operations {
     /// the `secret` will be overwritten. If you previously had a `secret` set, you must
     /// provide the same `secret` or set a new `secret` or the secret will be removed. If
     /// you are only updating individual webhook `config` properties, use "[Update a webhook
-    /// configuration for an organization](/rest/orgs/webhooks#update-a-webhook-configuration-for-an-organization)". 
+    /// configuration for an organization](/rest/orgs/webhooks#update-a-webhook-configuration-for-an-organization)".
     ///
-    /// You must be an organization owner to use this endpoint. 
+    /// You must be an organization owner to use this endpoint.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit 
+    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit
     /// webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
     ///
     /// - Remark: HTTP `PATCH /orgs/{org}/hooks/{hook_id}`.
@@ -9929,9 +9929,9 @@ public enum Operations {
     }
     /// Delete an organization webhook
     ///
-    /// You must be an organization owner to use this endpoint. 
+    /// You must be an organization owner to use this endpoint.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit 
+    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit
     /// webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/hooks/{hook_id}`.
@@ -10074,9 +10074,9 @@ public enum Operations {
     ///
     /// Returns the webhook configuration for an organization. To get more information about the webhook, including the `active` state and `events`, use "[Get an organization webhook ](/rest/orgs/webhooks#get-an-organization-webhook)."
     ///
-    /// You must be an organization owner to use this endpoint. 
+    /// You must be an organization owner to use this endpoint.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit 
+    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit
     /// webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/hooks/{hook_id}/config`.
@@ -10220,9 +10220,9 @@ public enum Operations {
     ///
     /// Updates the webhook configuration for an organization. To update more information about the webhook, including the `active` state and `events`, use "[Update an organization webhook ](/rest/orgs/webhooks#update-an-organization-webhook)."
     ///
-    /// You must be an organization owner to use this endpoint. 
+    /// You must be an organization owner to use this endpoint.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit 
+    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit
     /// webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
     ///
     /// - Remark: HTTP `PATCH /orgs/{org}/hooks/{hook_id}/config`.
@@ -10410,9 +10410,9 @@ public enum Operations {
     ///
     /// Returns a list of webhook deliveries for a webhook configured in an organization.
     ///
-    /// You must be an organization owner to use this endpoint. 
+    /// You must be an organization owner to use this endpoint.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit 
+    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit
     /// webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/hooks/{hook_id}/deliveries`.
@@ -10640,9 +10640,9 @@ public enum Operations {
     ///
     /// Returns a delivery for a webhook configured in an organization.
     ///
-    /// You must be an organization owner to use this endpoint. 
+    /// You must be an organization owner to use this endpoint.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit 
+    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit
     /// webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/hooks/{hook_id}/deliveries/{delivery_id}`.
@@ -10843,9 +10843,9 @@ public enum Operations {
     ///
     /// Redeliver a delivery for a webhook configured in an organization.
     ///
-    /// You must be an organization owner to use this endpoint. 
+    /// You must be an organization owner to use this endpoint.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit 
+    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit
     /// webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/hooks/{hook_id}/deliveries/{delivery_id}/attempts`.
@@ -11019,9 +11019,9 @@ public enum Operations {
     /// This will trigger a [ping event](https://docs.github.com/webhooks/#ping-event)
     /// to be sent to the hook.
     ///
-    /// You must be an organization owner to use this endpoint. 
+    /// You must be an organization owner to use this endpoint.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit 
+    /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit
     /// webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/hooks/{hook_id}/pings`.
