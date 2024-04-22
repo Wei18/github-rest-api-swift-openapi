@@ -349,6 +349,78 @@ public enum Components {
             case other = "other"
             case swift = "swift"
         }
+        /// A vulnerability describing the product and its affected versions within a GitHub Security Advisory.
+        ///
+        /// - Remark: Generated from `#/components/schemas/vulnerability`.
+        public struct vulnerability: Codable, Hashable, Sendable {
+            /// The name of the package affected by the vulnerability.
+            ///
+            /// - Remark: Generated from `#/components/schemas/vulnerability/package`.
+            public struct packagePayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/vulnerability/package/ecosystem`.
+                public var ecosystem: Components.Schemas.security_hyphen_advisory_hyphen_ecosystems
+                /// The unique package name within its ecosystem.
+                ///
+                /// - Remark: Generated from `#/components/schemas/vulnerability/package/name`.
+                public var name: Swift.String?
+                /// Creates a new `packagePayload`.
+                ///
+                /// - Parameters:
+                ///   - ecosystem:
+                ///   - name: The unique package name within its ecosystem.
+                public init(
+                    ecosystem: Components.Schemas.security_hyphen_advisory_hyphen_ecosystems,
+                    name: Swift.String? = nil
+                ) {
+                    self.ecosystem = ecosystem
+                    self.name = name
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case ecosystem
+                    case name
+                }
+            }
+            /// The name of the package affected by the vulnerability.
+            ///
+            /// - Remark: Generated from `#/components/schemas/vulnerability/package`.
+            public var package: Components.Schemas.vulnerability.packagePayload?
+            /// The range of the package versions affected by the vulnerability.
+            ///
+            /// - Remark: Generated from `#/components/schemas/vulnerability/vulnerable_version_range`.
+            public var vulnerable_version_range: Swift.String?
+            /// The package version that resolves the vulnerability.
+            ///
+            /// - Remark: Generated from `#/components/schemas/vulnerability/first_patched_version`.
+            public var first_patched_version: Swift.String?
+            /// The functions in the package that are affected by the vulnerability.
+            ///
+            /// - Remark: Generated from `#/components/schemas/vulnerability/vulnerable_functions`.
+            public var vulnerable_functions: [Swift.String]?
+            /// Creates a new `vulnerability`.
+            ///
+            /// - Parameters:
+            ///   - package: The name of the package affected by the vulnerability.
+            ///   - vulnerable_version_range: The range of the package versions affected by the vulnerability.
+            ///   - first_patched_version: The package version that resolves the vulnerability.
+            ///   - vulnerable_functions: The functions in the package that are affected by the vulnerability.
+            public init(
+                package: Components.Schemas.vulnerability.packagePayload? = nil,
+                vulnerable_version_range: Swift.String? = nil,
+                first_patched_version: Swift.String? = nil,
+                vulnerable_functions: [Swift.String]? = nil
+            ) {
+                self.package = package
+                self.vulnerable_version_range = vulnerable_version_range
+                self.first_patched_version = first_patched_version
+                self.vulnerable_functions = vulnerable_functions
+            }
+            public enum CodingKeys: String, CodingKey {
+                case package
+                case vulnerable_version_range
+                case first_patched_version
+                case vulnerable_functions
+            }
+        }
         /// A GitHub user.
         ///
         /// - Remark: Generated from `#/components/schemas/simple-user`.
@@ -626,84 +698,10 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/global-advisory/withdrawn_at`.
             public var withdrawn_at: Foundation.Date?
-            /// - Remark: Generated from `#/components/schemas/global-advisory/vulnerabilitiesPayload`.
-            public struct vulnerabilitiesPayloadPayload: Codable, Hashable, Sendable {
-                /// The name of the package affected by the vulnerability.
-                ///
-                /// - Remark: Generated from `#/components/schemas/global-advisory/vulnerabilitiesPayload/package`.
-                public struct packagePayload: Codable, Hashable, Sendable {
-                    /// - Remark: Generated from `#/components/schemas/global-advisory/vulnerabilitiesPayload/package/ecosystem`.
-                    public var ecosystem: Components.Schemas.security_hyphen_advisory_hyphen_ecosystems
-                    /// The unique package name within its ecosystem.
-                    ///
-                    /// - Remark: Generated from `#/components/schemas/global-advisory/vulnerabilitiesPayload/package/name`.
-                    public var name: Swift.String?
-                    /// Creates a new `packagePayload`.
-                    ///
-                    /// - Parameters:
-                    ///   - ecosystem:
-                    ///   - name: The unique package name within its ecosystem.
-                    public init(
-                        ecosystem: Components.Schemas.security_hyphen_advisory_hyphen_ecosystems,
-                        name: Swift.String? = nil
-                    ) {
-                        self.ecosystem = ecosystem
-                        self.name = name
-                    }
-                    public enum CodingKeys: String, CodingKey {
-                        case ecosystem
-                        case name
-                    }
-                }
-                /// The name of the package affected by the vulnerability.
-                ///
-                /// - Remark: Generated from `#/components/schemas/global-advisory/vulnerabilitiesPayload/package`.
-                public var package: Components.Schemas.global_hyphen_advisory.vulnerabilitiesPayloadPayload.packagePayload?
-                /// The range of the package versions affected by the vulnerability.
-                ///
-                /// - Remark: Generated from `#/components/schemas/global-advisory/vulnerabilitiesPayload/vulnerable_version_range`.
-                public var vulnerable_version_range: Swift.String?
-                /// The package version that resolve the vulnerability.
-                ///
-                /// - Remark: Generated from `#/components/schemas/global-advisory/vulnerabilitiesPayload/first_patched_version`.
-                public var first_patched_version: Swift.String?
-                /// The functions in the package that are affected by the vulnerability.
-                ///
-                /// - Remark: Generated from `#/components/schemas/global-advisory/vulnerabilitiesPayload/vulnerable_functions`.
-                public var vulnerable_functions: [Swift.String]?
-                /// Creates a new `vulnerabilitiesPayloadPayload`.
-                ///
-                /// - Parameters:
-                ///   - package: The name of the package affected by the vulnerability.
-                ///   - vulnerable_version_range: The range of the package versions affected by the vulnerability.
-                ///   - first_patched_version: The package version that resolve the vulnerability.
-                ///   - vulnerable_functions: The functions in the package that are affected by the vulnerability.
-                public init(
-                    package: Components.Schemas.global_hyphen_advisory.vulnerabilitiesPayloadPayload.packagePayload? = nil,
-                    vulnerable_version_range: Swift.String? = nil,
-                    first_patched_version: Swift.String? = nil,
-                    vulnerable_functions: [Swift.String]? = nil
-                ) {
-                    self.package = package
-                    self.vulnerable_version_range = vulnerable_version_range
-                    self.first_patched_version = first_patched_version
-                    self.vulnerable_functions = vulnerable_functions
-                }
-                public enum CodingKeys: String, CodingKey {
-                    case package
-                    case vulnerable_version_range
-                    case first_patched_version
-                    case vulnerable_functions
-                }
-            }
             /// The products and respective version ranges affected by the advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/global-advisory/vulnerabilities`.
-            public typealias vulnerabilitiesPayload = [Components.Schemas.global_hyphen_advisory.vulnerabilitiesPayloadPayload]
-            /// The products and respective version ranges affected by the advisory.
-            ///
-            /// - Remark: Generated from `#/components/schemas/global-advisory/vulnerabilities`.
-            public var vulnerabilities: Components.Schemas.global_hyphen_advisory.vulnerabilitiesPayload?
+            public var vulnerabilities: [Components.Schemas.vulnerability]?
             /// - Remark: Generated from `#/components/schemas/global-advisory/cvss`.
             public struct cvssPayload: Codable, Hashable, Sendable {
                 /// The CVSS vector.
@@ -837,7 +835,7 @@ public enum Components {
                 github_reviewed_at: Foundation.Date? = nil,
                 nvd_published_at: Foundation.Date? = nil,
                 withdrawn_at: Foundation.Date? = nil,
-                vulnerabilities: Components.Schemas.global_hyphen_advisory.vulnerabilitiesPayload? = nil,
+                vulnerabilities: [Components.Schemas.vulnerability]? = nil,
                 cvss: Components.Schemas.global_hyphen_advisory.cvssPayload? = nil,
                 cwes: Components.Schemas.global_hyphen_advisory.cwesPayload? = nil,
                 credits: Components.Schemas.global_hyphen_advisory.creditsPayload? = nil
@@ -958,7 +956,7 @@ public enum Components {
                     forKey: .withdrawn_at
                 )
                 vulnerabilities = try container.decodeIfPresent(
-                    Components.Schemas.global_hyphen_advisory.vulnerabilitiesPayload.self,
+                    [Components.Schemas.vulnerability].self,
                     forKey: .vulnerabilities
                 )
                 cvss = try container.decodeIfPresent(
