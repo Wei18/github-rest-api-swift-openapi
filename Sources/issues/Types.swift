@@ -4865,7 +4865,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/assigned-issue-event/created_at`.
             public var created_at: Swift.String
             /// - Remark: Generated from `#/components/schemas/assigned-issue-event/performed_via_github_app`.
-            public var performed_via_github_app: Components.Schemas.integration
+            public var performed_via_github_app: Components.Schemas.integration?
             /// - Remark: Generated from `#/components/schemas/assigned-issue-event/assignee`.
             public var assignee: Components.Schemas.simple_hyphen_user
             /// - Remark: Generated from `#/components/schemas/assigned-issue-event/assigner`.
@@ -4893,7 +4893,7 @@ public enum Components {
                 commit_id: Swift.String? = nil,
                 commit_url: Swift.String? = nil,
                 created_at: Swift.String,
-                performed_via_github_app: Components.Schemas.integration,
+                performed_via_github_app: Components.Schemas.integration? = nil,
                 assignee: Components.Schemas.simple_hyphen_user,
                 assigner: Components.Schemas.simple_hyphen_user
             ) {
@@ -6006,7 +6006,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/converted-note-to-issue-issue-event/created_at`.
             public var created_at: Swift.String
             /// - Remark: Generated from `#/components/schemas/converted-note-to-issue-issue-event/performed_via_github_app`.
-            public var performed_via_github_app: Components.Schemas.integration
+            public var performed_via_github_app: Components.Schemas.integration?
             /// - Remark: Generated from `#/components/schemas/converted-note-to-issue-issue-event/project_card`.
             public struct project_cardPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/converted-note-to-issue-issue-event/project_card/id`.
@@ -6078,7 +6078,7 @@ public enum Components {
                 commit_id: Swift.String? = nil,
                 commit_url: Swift.String? = nil,
                 created_at: Swift.String,
-                performed_via_github_app: Components.Schemas.integration,
+                performed_via_github_app: Components.Schemas.integration? = nil,
                 project_card: Components.Schemas.converted_hyphen_note_hyphen_to_hyphen_issue_hyphen_issue_hyphen_event.project_cardPayload? = nil
             ) {
                 self.id = id

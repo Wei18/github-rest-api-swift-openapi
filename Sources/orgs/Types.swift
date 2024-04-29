@@ -7088,34 +7088,6 @@ public enum Components {
                 self.body = body
             }
         }
-        public struct conflict: Sendable, Hashable {
-            /// - Remark: Generated from `#/components/responses/conflict/content`.
-            @frozen public enum Body: Sendable, Hashable {
-                /// - Remark: Generated from `#/components/responses/conflict/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
-                /// The associated value of the enum case if `self` is `.json`.
-                ///
-                /// - Throws: An error if `self` is not `.json`.
-                /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
-                    get throws {
-                        switch self {
-                        case let .json(body):
-                            return body
-                        }
-                    }
-                }
-            }
-            /// Received HTTP response body
-            public var body: Components.Responses.conflict.Body
-            /// Creates a new `conflict`.
-            ///
-            /// - Parameters:
-            ///   - body: Received HTTP response body
-            public init(body: Components.Responses.conflict.Body) {
-                self.body = body
-            }
-        }
         public struct internal_error: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/internal_error/content`.
             @frozen public enum Body: Sendable, Hashable {
@@ -7141,6 +7113,34 @@ public enum Components {
             /// - Parameters:
             ///   - body: Received HTTP response body
             public init(body: Components.Responses.internal_error.Body) {
+                self.body = body
+            }
+        }
+        public struct conflict: Sendable, Hashable {
+            /// - Remark: Generated from `#/components/responses/conflict/content`.
+            @frozen public enum Body: Sendable, Hashable {
+                /// - Remark: Generated from `#/components/responses/conflict/content/application\/json`.
+                case json(Components.Schemas.basic_hyphen_error)
+                /// The associated value of the enum case if `self` is `.json`.
+                ///
+                /// - Throws: An error if `self` is not `.json`.
+                /// - SeeAlso: `.json`.
+                public var json: Components.Schemas.basic_hyphen_error {
+                    get throws {
+                        switch self {
+                        case let .json(body):
+                            return body
+                        }
+                    }
+                }
+            }
+            /// Received HTTP response body
+            public var body: Components.Responses.conflict.Body
+            /// Creates a new `conflict`.
+            ///
+            /// - Parameters:
+            ///   - body: Received HTTP response body
+            public init(body: Components.Responses.conflict.Body) {
                 self.body = body
             }
         }

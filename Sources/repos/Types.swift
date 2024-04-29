@@ -10777,11 +10777,13 @@ public enum Components {
         ///
         /// - Remark: Generated from `#/components/schemas/repository-ruleset-bypass-actor`.
         public struct repository_hyphen_ruleset_hyphen_bypass_hyphen_actor: Codable, Hashable, Sendable {
-            /// The ID of the actor that can bypass a ruleset. If `actor_type` is `OrganizationAdmin`, this should be `1`.
+            /// The ID of the actor that can bypass a ruleset. If `actor_type` is `OrganizationAdmin`, this should be `1`. If `actor_type` is `DeployKey`, this should be null. `OrganizationAdmin` is not applicable for personal repositories.
+            ///
             ///
             /// - Remark: Generated from `#/components/schemas/repository-ruleset-bypass-actor/actor_id`.
-            public var actor_id: Swift.Int
-            /// The type of actor that can bypass a ruleset
+            public var actor_id: Swift.Int?
+            /// The type of actor that can bypass a ruleset.
+            ///
             ///
             /// - Remark: Generated from `#/components/schemas/repository-ruleset-bypass-actor/actor_type`.
             @frozen public enum actor_typePayload: String, Codable, Hashable, Sendable {
@@ -10789,30 +10791,34 @@ public enum Components {
                 case OrganizationAdmin = "OrganizationAdmin"
                 case RepositoryRole = "RepositoryRole"
                 case Team = "Team"
+                case DeployKey = "DeployKey"
             }
-            /// The type of actor that can bypass a ruleset
+            /// The type of actor that can bypass a ruleset.
+            ///
             ///
             /// - Remark: Generated from `#/components/schemas/repository-ruleset-bypass-actor/actor_type`.
             public var actor_type: Components.Schemas.repository_hyphen_ruleset_hyphen_bypass_hyphen_actor.actor_typePayload
-            /// When the specified actor can bypass the ruleset. `pull_request` means that an actor can only bypass rules on pull requests.
+            /// When the specified actor can bypass the ruleset. `pull_request` means that an actor can only bypass rules on pull requests. `pull_request` is not applicable for the `DeployKey` actor type.
+            ///
             ///
             /// - Remark: Generated from `#/components/schemas/repository-ruleset-bypass-actor/bypass_mode`.
             @frozen public enum bypass_modePayload: String, Codable, Hashable, Sendable {
                 case always = "always"
                 case pull_request = "pull_request"
             }
-            /// When the specified actor can bypass the ruleset. `pull_request` means that an actor can only bypass rules on pull requests.
+            /// When the specified actor can bypass the ruleset. `pull_request` means that an actor can only bypass rules on pull requests. `pull_request` is not applicable for the `DeployKey` actor type.
+            ///
             ///
             /// - Remark: Generated from `#/components/schemas/repository-ruleset-bypass-actor/bypass_mode`.
             public var bypass_mode: Components.Schemas.repository_hyphen_ruleset_hyphen_bypass_hyphen_actor.bypass_modePayload
             /// Creates a new `repository_hyphen_ruleset_hyphen_bypass_hyphen_actor`.
             ///
             /// - Parameters:
-            ///   - actor_id: The ID of the actor that can bypass a ruleset. If `actor_type` is `OrganizationAdmin`, this should be `1`.
-            ///   - actor_type: The type of actor that can bypass a ruleset
-            ///   - bypass_mode: When the specified actor can bypass the ruleset. `pull_request` means that an actor can only bypass rules on pull requests.
+            ///   - actor_id: The ID of the actor that can bypass a ruleset. If `actor_type` is `OrganizationAdmin`, this should be `1`. If `actor_type` is `DeployKey`, this should be null. `OrganizationAdmin` is not applicable for personal repositories.
+            ///   - actor_type: The type of actor that can bypass a ruleset.
+            ///   - bypass_mode: When the specified actor can bypass the ruleset. `pull_request` means that an actor can only bypass rules on pull requests. `pull_request` is not applicable for the `DeployKey` actor type.
             public init(
-                actor_id: Swift.Int,
+                actor_id: Swift.Int? = nil,
                 actor_type: Components.Schemas.repository_hyphen_ruleset_hyphen_bypass_hyphen_actor.actor_typePayload,
                 bypass_mode: Components.Schemas.repository_hyphen_ruleset_hyphen_bypass_hyphen_actor.bypass_modePayload
             ) {
@@ -12060,7 +12066,223 @@ public enum Components {
             case repository_hyphen_rule_hyphen_branch_hyphen_name_hyphen_pattern(Components.Schemas.repository_hyphen_rule_hyphen_branch_hyphen_name_hyphen_pattern)
             /// - Remark: Generated from `#/components/schemas/repository-rule/case14`.
             case repository_hyphen_rule_hyphen_tag_hyphen_name_hyphen_pattern(Components.Schemas.repository_hyphen_rule_hyphen_tag_hyphen_name_hyphen_pattern)
+            /// Note: file_path_restriction is in beta and subject to change.
+            ///
+            /// Prevent commits that include changes in specified file paths from being pushed to the commit graph.
+            ///
             /// - Remark: Generated from `#/components/schemas/repository-rule/case15`.
+            public struct Case15Payload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/repository-rule/case15/type`.
+                @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+                    case file_path_restriction = "file_path_restriction"
+                }
+                /// - Remark: Generated from `#/components/schemas/repository-rule/case15/type`.
+                public var _type: Components.Schemas.repository_hyphen_rule.Case15Payload._typePayload
+                /// - Remark: Generated from `#/components/schemas/repository-rule/case15/parameters`.
+                public struct parametersPayload: Codable, Hashable, Sendable {
+                    /// The file paths that are restricted from being pushed to the commit graph.
+                    ///
+                    /// - Remark: Generated from `#/components/schemas/repository-rule/case15/parameters/restricted_file_paths`.
+                    public var restricted_file_paths: [Swift.String]
+                    /// Creates a new `parametersPayload`.
+                    ///
+                    /// - Parameters:
+                    ///   - restricted_file_paths: The file paths that are restricted from being pushed to the commit graph.
+                    public init(restricted_file_paths: [Swift.String]) {
+                        self.restricted_file_paths = restricted_file_paths
+                    }
+                    public enum CodingKeys: String, CodingKey {
+                        case restricted_file_paths
+                    }
+                }
+                /// - Remark: Generated from `#/components/schemas/repository-rule/case15/parameters`.
+                public var parameters: Components.Schemas.repository_hyphen_rule.Case15Payload.parametersPayload?
+                /// Creates a new `Case15Payload`.
+                ///
+                /// - Parameters:
+                ///   - _type:
+                ///   - parameters:
+                public init(
+                    _type: Components.Schemas.repository_hyphen_rule.Case15Payload._typePayload,
+                    parameters: Components.Schemas.repository_hyphen_rule.Case15Payload.parametersPayload? = nil
+                ) {
+                    self._type = _type
+                    self.parameters = parameters
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case _type = "type"
+                    case parameters
+                }
+            }
+            /// Note: file_path_restriction is in beta and subject to change.
+            ///
+            /// Prevent commits that include changes in specified file paths from being pushed to the commit graph.
+            ///
+            /// - Remark: Generated from `#/components/schemas/repository-rule/case15`.
+            case case15(Components.Schemas.repository_hyphen_rule.Case15Payload)
+            /// Note: max_file_path_length is in beta and subject to change.
+            ///
+            /// Prevent commits that include file paths that exceed a specified character limit from being pushed to the commit graph.
+            ///
+            /// - Remark: Generated from `#/components/schemas/repository-rule/case16`.
+            public struct Case16Payload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/repository-rule/case16/type`.
+                @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+                    case max_file_path_length = "max_file_path_length"
+                }
+                /// - Remark: Generated from `#/components/schemas/repository-rule/case16/type`.
+                public var _type: Components.Schemas.repository_hyphen_rule.Case16Payload._typePayload
+                /// - Remark: Generated from `#/components/schemas/repository-rule/case16/parameters`.
+                public struct parametersPayload: Codable, Hashable, Sendable {
+                    /// The maximum amount of characters allowed in file paths
+                    ///
+                    /// - Remark: Generated from `#/components/schemas/repository-rule/case16/parameters/max_file_path_length`.
+                    public var max_file_path_length: Swift.Int
+                    /// Creates a new `parametersPayload`.
+                    ///
+                    /// - Parameters:
+                    ///   - max_file_path_length: The maximum amount of characters allowed in file paths
+                    public init(max_file_path_length: Swift.Int) {
+                        self.max_file_path_length = max_file_path_length
+                    }
+                    public enum CodingKeys: String, CodingKey {
+                        case max_file_path_length
+                    }
+                }
+                /// - Remark: Generated from `#/components/schemas/repository-rule/case16/parameters`.
+                public var parameters: Components.Schemas.repository_hyphen_rule.Case16Payload.parametersPayload?
+                /// Creates a new `Case16Payload`.
+                ///
+                /// - Parameters:
+                ///   - _type:
+                ///   - parameters:
+                public init(
+                    _type: Components.Schemas.repository_hyphen_rule.Case16Payload._typePayload,
+                    parameters: Components.Schemas.repository_hyphen_rule.Case16Payload.parametersPayload? = nil
+                ) {
+                    self._type = _type
+                    self.parameters = parameters
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case _type = "type"
+                    case parameters
+                }
+            }
+            /// Note: max_file_path_length is in beta and subject to change.
+            ///
+            /// Prevent commits that include file paths that exceed a specified character limit from being pushed to the commit graph.
+            ///
+            /// - Remark: Generated from `#/components/schemas/repository-rule/case16`.
+            case case16(Components.Schemas.repository_hyphen_rule.Case16Payload)
+            /// Note: file_extension_restriction is in beta and subject to change.
+            ///
+            /// Prevent commits that include files with specified file extensions from being pushed to the commit graph.
+            ///
+            /// - Remark: Generated from `#/components/schemas/repository-rule/case17`.
+            public struct Case17Payload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/repository-rule/case17/type`.
+                @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+                    case file_extension_restriction = "file_extension_restriction"
+                }
+                /// - Remark: Generated from `#/components/schemas/repository-rule/case17/type`.
+                public var _type: Components.Schemas.repository_hyphen_rule.Case17Payload._typePayload
+                /// - Remark: Generated from `#/components/schemas/repository-rule/case17/parameters`.
+                public struct parametersPayload: Codable, Hashable, Sendable {
+                    /// The file extensions that are restricted from being pushed to the commit graph.
+                    ///
+                    /// - Remark: Generated from `#/components/schemas/repository-rule/case17/parameters/restricted_file_extensions`.
+                    public var restricted_file_extensions: [Swift.String]
+                    /// Creates a new `parametersPayload`.
+                    ///
+                    /// - Parameters:
+                    ///   - restricted_file_extensions: The file extensions that are restricted from being pushed to the commit graph.
+                    public init(restricted_file_extensions: [Swift.String]) {
+                        self.restricted_file_extensions = restricted_file_extensions
+                    }
+                    public enum CodingKeys: String, CodingKey {
+                        case restricted_file_extensions
+                    }
+                }
+                /// - Remark: Generated from `#/components/schemas/repository-rule/case17/parameters`.
+                public var parameters: Components.Schemas.repository_hyphen_rule.Case17Payload.parametersPayload?
+                /// Creates a new `Case17Payload`.
+                ///
+                /// - Parameters:
+                ///   - _type:
+                ///   - parameters:
+                public init(
+                    _type: Components.Schemas.repository_hyphen_rule.Case17Payload._typePayload,
+                    parameters: Components.Schemas.repository_hyphen_rule.Case17Payload.parametersPayload? = nil
+                ) {
+                    self._type = _type
+                    self.parameters = parameters
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case _type = "type"
+                    case parameters
+                }
+            }
+            /// Note: file_extension_restriction is in beta and subject to change.
+            ///
+            /// Prevent commits that include files with specified file extensions from being pushed to the commit graph.
+            ///
+            /// - Remark: Generated from `#/components/schemas/repository-rule/case17`.
+            case case17(Components.Schemas.repository_hyphen_rule.Case17Payload)
+            /// Note: max_file_size is in beta and subject to change.
+            ///
+            /// Prevent commits that exceed a specified file size limit from being pushed to the commit.
+            ///
+            /// - Remark: Generated from `#/components/schemas/repository-rule/case18`.
+            public struct Case18Payload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/repository-rule/case18/type`.
+                @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+                    case max_file_size = "max_file_size"
+                }
+                /// - Remark: Generated from `#/components/schemas/repository-rule/case18/type`.
+                public var _type: Components.Schemas.repository_hyphen_rule.Case18Payload._typePayload
+                /// - Remark: Generated from `#/components/schemas/repository-rule/case18/parameters`.
+                public struct parametersPayload: Codable, Hashable, Sendable {
+                    /// The maximum file size allowed in megabytes. This limit does not apply to Git Large File Storage (Git LFS).
+                    ///
+                    /// - Remark: Generated from `#/components/schemas/repository-rule/case18/parameters/max_file_size`.
+                    public var max_file_size: Swift.Int
+                    /// Creates a new `parametersPayload`.
+                    ///
+                    /// - Parameters:
+                    ///   - max_file_size: The maximum file size allowed in megabytes. This limit does not apply to Git Large File Storage (Git LFS).
+                    public init(max_file_size: Swift.Int) {
+                        self.max_file_size = max_file_size
+                    }
+                    public enum CodingKeys: String, CodingKey {
+                        case max_file_size
+                    }
+                }
+                /// - Remark: Generated from `#/components/schemas/repository-rule/case18/parameters`.
+                public var parameters: Components.Schemas.repository_hyphen_rule.Case18Payload.parametersPayload?
+                /// Creates a new `Case18Payload`.
+                ///
+                /// - Parameters:
+                ///   - _type:
+                ///   - parameters:
+                public init(
+                    _type: Components.Schemas.repository_hyphen_rule.Case18Payload._typePayload,
+                    parameters: Components.Schemas.repository_hyphen_rule.Case18Payload.parametersPayload? = nil
+                ) {
+                    self._type = _type
+                    self.parameters = parameters
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case _type = "type"
+                    case parameters
+                }
+            }
+            /// Note: max_file_size is in beta and subject to change.
+            ///
+            /// Prevent commits that exceed a specified file size limit from being pushed to the commit.
+            ///
+            /// - Remark: Generated from `#/components/schemas/repository-rule/case18`.
+            case case18(Components.Schemas.repository_hyphen_rule.Case18Payload)
+            /// - Remark: Generated from `#/components/schemas/repository-rule/case19`.
             case repository_hyphen_rule_hyphen_workflows(Components.Schemas.repository_hyphen_rule_hyphen_workflows)
             public init(from decoder: any Decoder) throws {
                 var errors: [any Error] = []
@@ -12149,6 +12371,30 @@ public enum Components {
                     errors.append(error)
                 }
                 do {
+                    self = .case15(try .init(from: decoder))
+                    return
+                } catch {
+                    errors.append(error)
+                }
+                do {
+                    self = .case16(try .init(from: decoder))
+                    return
+                } catch {
+                    errors.append(error)
+                }
+                do {
+                    self = .case17(try .init(from: decoder))
+                    return
+                } catch {
+                    errors.append(error)
+                }
+                do {
+                    self = .case18(try .init(from: decoder))
+                    return
+                } catch {
+                    errors.append(error)
+                }
+                do {
                     self = .repository_hyphen_rule_hyphen_workflows(try .init(from: decoder))
                     return
                 } catch {
@@ -12190,6 +12436,14 @@ public enum Components {
                     try value.encode(to: encoder)
                 case let .repository_hyphen_rule_hyphen_tag_hyphen_name_hyphen_pattern(value):
                     try value.encode(to: encoder)
+                case let .case15(value):
+                    try value.encode(to: encoder)
+                case let .case16(value):
+                    try value.encode(to: encoder)
+                case let .case17(value):
+                    try value.encode(to: encoder)
+                case let .case18(value):
+                    try value.encode(to: encoder)
                 case let .repository_hyphen_rule_hyphen_workflows(value):
                     try value.encode(to: encoder)
                 }
@@ -12209,12 +12463,17 @@ public enum Components {
             public var name: Swift.String
             /// The target of the ruleset
             ///
+            /// **Note**: The `push` target is in beta and is subject to change.
+            ///
             /// - Remark: Generated from `#/components/schemas/repository-ruleset/target`.
             @frozen public enum targetPayload: String, Codable, Hashable, Sendable {
                 case branch = "branch"
                 case tag = "tag"
+                case push = "push"
             }
             /// The target of the ruleset
+            ///
+            /// **Note**: The `push` target is in beta and is subject to change.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-ruleset/target`.
             public var target: Components.Schemas.repository_hyphen_ruleset.targetPayload?
@@ -21556,6 +21815,34 @@ public enum Components {
                 self.body = body
             }
         }
+        public struct internal_error: Sendable, Hashable {
+            /// - Remark: Generated from `#/components/responses/internal_error/content`.
+            @frozen public enum Body: Sendable, Hashable {
+                /// - Remark: Generated from `#/components/responses/internal_error/content/application\/json`.
+                case json(Components.Schemas.basic_hyphen_error)
+                /// The associated value of the enum case if `self` is `.json`.
+                ///
+                /// - Throws: An error if `self` is not `.json`.
+                /// - SeeAlso: `.json`.
+                public var json: Components.Schemas.basic_hyphen_error {
+                    get throws {
+                        switch self {
+                        case let .json(body):
+                            return body
+                        }
+                    }
+                }
+            }
+            /// Received HTTP response body
+            public var body: Components.Responses.internal_error.Body
+            /// Creates a new `internal_error`.
+            ///
+            /// - Parameters:
+            ///   - body: Received HTTP response body
+            public init(body: Components.Responses.internal_error.Body) {
+                self.body = body
+            }
+        }
         public struct service_unavailable: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/service_unavailable/content`.
             @frozen public enum Body: Sendable, Hashable {
@@ -21666,34 +21953,6 @@ public enum Components {
             /// - Parameters:
             ///   - body: Received HTTP response body
             public init(body: Components.Responses.conflict.Body) {
-                self.body = body
-            }
-        }
-        public struct internal_error: Sendable, Hashable {
-            /// - Remark: Generated from `#/components/responses/internal_error/content`.
-            @frozen public enum Body: Sendable, Hashable {
-                /// - Remark: Generated from `#/components/responses/internal_error/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
-                /// The associated value of the enum case if `self` is `.json`.
-                ///
-                /// - Throws: An error if `self` is not `.json`.
-                /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
-                    get throws {
-                        switch self {
-                        case let .json(body):
-                            return body
-                        }
-                    }
-                }
-            }
-            /// Received HTTP response body
-            public var body: Components.Responses.internal_error.Body
-            /// Creates a new `internal_error`.
-            ///
-            /// - Parameters:
-            ///   - body: Received HTTP response body
-            public init(body: Components.Responses.internal_error.Body) {
                 self.body = body
             }
         }
@@ -22719,14 +22978,19 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/POST/requestBody/json/name`.
                     public var name: Swift.String
-                    /// The target of the ruleset.
+                    /// The target of the ruleset
+                    ///
+                    /// **Note**: The `push` target is in beta and is subject to change.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/POST/requestBody/json/target`.
                     @frozen public enum targetPayload: String, Codable, Hashable, Sendable {
                         case branch = "branch"
                         case tag = "tag"
+                        case push = "push"
                     }
-                    /// The target of the ruleset.
+                    /// The target of the ruleset
+                    ///
+                    /// **Note**: The `push` target is in beta and is subject to change.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/POST/requestBody/json/target`.
                     public var target: Operations.repos_sol_create_hyphen_org_hyphen_ruleset.Input.Body.jsonPayload.targetPayload?
@@ -22746,7 +23010,7 @@ public enum Operations {
                     ///
                     /// - Parameters:
                     ///   - name: The name of the ruleset.
-                    ///   - target: The target of the ruleset.
+                    ///   - target: The target of the ruleset
                     ///   - enforcement:
                     ///   - bypass_actors: The actors that can bypass the rules in this ruleset
                     ///   - conditions:
@@ -23605,14 +23869,19 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/{ruleset_id}/PUT/requestBody/json/name`.
                     public var name: Swift.String?
-                    /// The target of the ruleset.
+                    /// The target of the ruleset
+                    ///
+                    /// **Note**: The `push` target is in beta and is subject to change.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/{ruleset_id}/PUT/requestBody/json/target`.
                     @frozen public enum targetPayload: String, Codable, Hashable, Sendable {
                         case branch = "branch"
                         case tag = "tag"
+                        case push = "push"
                     }
-                    /// The target of the ruleset.
+                    /// The target of the ruleset
+                    ///
+                    /// **Note**: The `push` target is in beta and is subject to change.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/{ruleset_id}/PUT/requestBody/json/target`.
                     public var target: Operations.repos_sol_update_hyphen_org_hyphen_ruleset.Input.Body.jsonPayload.targetPayload?
@@ -23632,7 +23901,7 @@ public enum Operations {
                     ///
                     /// - Parameters:
                     ///   - name: The name of the ruleset.
-                    ///   - target: The target of the ruleset.
+                    ///   - target: The target of the ruleset
                     ///   - enforcement:
                     ///   - bypass_actors: The actors that can bypass the rules in this ruleset
                     ///   - conditions:
@@ -55356,14 +55625,19 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/rulesets/POST/requestBody/json/name`.
                     public var name: Swift.String
-                    /// The target of the ruleset.
+                    /// The target of the ruleset
+                    ///
+                    /// **Note**: The `push` target is in beta and is subject to change.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/rulesets/POST/requestBody/json/target`.
                     @frozen public enum targetPayload: String, Codable, Hashable, Sendable {
                         case branch = "branch"
                         case tag = "tag"
+                        case push = "push"
                     }
-                    /// The target of the ruleset.
+                    /// The target of the ruleset
+                    ///
+                    /// **Note**: The `push` target is in beta and is subject to change.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/rulesets/POST/requestBody/json/target`.
                     public var target: Operations.repos_sol_create_hyphen_repo_hyphen_ruleset.Input.Body.jsonPayload.targetPayload?
@@ -55383,7 +55657,7 @@ public enum Operations {
                     ///
                     /// - Parameters:
                     ///   - name: The name of the ruleset.
-                    ///   - target: The target of the ruleset.
+                    ///   - target: The target of the ruleset
                     ///   - enforcement:
                     ///   - bypass_actors: The actors that can bypass the rules in this ruleset
                     ///   - conditions:
@@ -56290,14 +56564,19 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/rulesets/{ruleset_id}/PUT/requestBody/json/name`.
                     public var name: Swift.String?
-                    /// The target of the ruleset.
+                    /// The target of the ruleset
+                    ///
+                    /// **Note**: The `push` target is in beta and is subject to change.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/rulesets/{ruleset_id}/PUT/requestBody/json/target`.
                     @frozen public enum targetPayload: String, Codable, Hashable, Sendable {
                         case branch = "branch"
                         case tag = "tag"
+                        case push = "push"
                     }
-                    /// The target of the ruleset.
+                    /// The target of the ruleset
+                    ///
+                    /// **Note**: The `push` target is in beta and is subject to change.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/rulesets/{ruleset_id}/PUT/requestBody/json/target`.
                     public var target: Operations.repos_sol_update_hyphen_repo_hyphen_ruleset.Input.Body.jsonPayload.targetPayload?
@@ -56317,7 +56596,7 @@ public enum Operations {
                     ///
                     /// - Parameters:
                     ///   - name: The name of the ruleset.
-                    ///   - target: The target of the ruleset.
+                    ///   - target: The target of the ruleset
                     ///   - enforcement:
                     ///   - bypass_actors: The actors that can bypass the rules in this ruleset
                     ///   - conditions:

@@ -27,8 +27,6 @@ public protocol APIProtocol: Sendable {
     /// - **`application/vnd.github.text+json`**: Returns a text only representation of the markdown body. Response will include `body_text`.
     /// - **`application/vnd.github.html+json`**: Returns HTML rendered from the body's markdown. Response will include `body_html`.
     /// - **`application/vnd.github.full+json`**: Returns raw, text, and HTML representations. Response will include `body`, `body_text`, and `body_html`.
-    /// - **`application/vnd.github.diff`**: For more information, see "[git-diff](https://git-scm.com/docs/git-diff)" in the Git documentation. If a diff is corrupt, contact us through the [GitHub Support portal](https://support.github.com/). Include the repository name and pull request ID in your message.
-    /// - **`application/vnd.github.patch`**: For more information, see "[git-format-patch](https://git-scm.com/docs/git-format-patch)" in the Git documentation.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/get(pulls/list)`.
@@ -47,7 +45,6 @@ public protocol APIProtocol: Sendable {
     /// - **`application/vnd.github.text+json`**: Returns a text only representation of the markdown body. Response will include `body_text`.
     /// - **`application/vnd.github.html+json`**: Returns HTML rendered from the body's markdown. Response will include `body_html`.
     /// - **`application/vnd.github.full+json`**: Returns raw, text, and HTML representations. Response will include `body`, `body_text`, and `body_html`.
-    /// - **`application/vnd.github.diff`**: For more information, see "[git-diff](https://git-scm.com/docs/git-diff)" in the Git documentation. If a diff is corrupt, contact us through the [GitHub Support portal](https://support.github.com/). Include the repository name and pull request ID in your message.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/pulls`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/post(pulls/create)`.
@@ -143,7 +140,6 @@ public protocol APIProtocol: Sendable {
     /// - **`application/vnd.github.text+json`**: Returns a text only representation of the markdown body. Response will include `body_text`.
     /// - **`application/vnd.github.html+json`**: Returns HTML rendered from the body's markdown. Response will include `body_html`.
     /// - **`application/vnd.github.full+json`**: Returns raw, text, and HTML representations. Response will include `body`, `body_text`, and `body_html`.
-    /// - **`application/vnd.github.diff`**: For more information, see "[git-diff](https://git-scm.com/docs/git-diff)" in the Git documentation. If a diff is corrupt, contact us through the [GitHub Support portal](https://support.github.com/). Include the repository name and pull request ID in your message.
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/pulls/{pull_number}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/patch(pulls/update)`.
@@ -213,7 +209,6 @@ public protocol APIProtocol: Sendable {
     /// - **`application/vnd.github.text+json`**: Returns a text only representation of the markdown body. Response will include `body_text`.
     /// - **`application/vnd.github.html+json`**: Returns HTML rendered from the body's markdown. Response will include `body_html`.
     /// - **`application/vnd.github.full+json`**: Returns raw, text, and HTML representations. Response will include `body`, `body_text`, and `body_html`.
-    /// - **`application/vnd.github.diff`**: For more information, see "[git-diff](https://git-scm.com/docs/git-diff)" in the Git documentation. If a diff is corrupt, contact us through the [GitHub Support portal](https://support.github.com/). Include the repository name and pull request ID in your message.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/{pull_number}/commits`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/commits/get(pulls/list-commits)`.
@@ -231,7 +226,6 @@ public protocol APIProtocol: Sendable {
     /// - **`application/vnd.github.text+json`**: Returns a text only representation of the markdown body. Response will include `body_text`.
     /// - **`application/vnd.github.html+json`**: Returns HTML rendered from the body's markdown. Response will include `body_html`.
     /// - **`application/vnd.github.full+json`**: Returns raw, text, and HTML representations. Response will include `body`, `body_text`, and `body_html`.
-    /// - **`application/vnd.github.diff`**: For more information, see "[git-diff](https://git-scm.com/docs/git-diff)" in the Git documentation. If a diff is corrupt, contact us through the [GitHub Support portal](https://support.github.com/). Include the repository name and pull request ID in your message.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/{pull_number}/files`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/files/get(pulls/list-files)`.
@@ -424,8 +418,6 @@ extension APIProtocol {
     /// - **`application/vnd.github.text+json`**: Returns a text only representation of the markdown body. Response will include `body_text`.
     /// - **`application/vnd.github.html+json`**: Returns HTML rendered from the body's markdown. Response will include `body_html`.
     /// - **`application/vnd.github.full+json`**: Returns raw, text, and HTML representations. Response will include `body`, `body_text`, and `body_html`.
-    /// - **`application/vnd.github.diff`**: For more information, see "[git-diff](https://git-scm.com/docs/git-diff)" in the Git documentation. If a diff is corrupt, contact us through the [GitHub Support portal](https://support.github.com/). Include the repository name and pull request ID in your message.
-    /// - **`application/vnd.github.patch`**: For more information, see "[git-format-patch](https://git-scm.com/docs/git-format-patch)" in the Git documentation.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/get(pulls/list)`.
@@ -454,7 +446,6 @@ extension APIProtocol {
     /// - **`application/vnd.github.text+json`**: Returns a text only representation of the markdown body. Response will include `body_text`.
     /// - **`application/vnd.github.html+json`**: Returns HTML rendered from the body's markdown. Response will include `body_html`.
     /// - **`application/vnd.github.full+json`**: Returns raw, text, and HTML representations. Response will include `body`, `body_text`, and `body_html`.
-    /// - **`application/vnd.github.diff`**: For more information, see "[git-diff](https://git-scm.com/docs/git-diff)" in the Git documentation. If a diff is corrupt, contact us through the [GitHub Support portal](https://support.github.com/). Include the repository name and pull request ID in your message.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/pulls`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/post(pulls/create)`.
@@ -604,7 +595,6 @@ extension APIProtocol {
     /// - **`application/vnd.github.text+json`**: Returns a text only representation of the markdown body. Response will include `body_text`.
     /// - **`application/vnd.github.html+json`**: Returns HTML rendered from the body's markdown. Response will include `body_html`.
     /// - **`application/vnd.github.full+json`**: Returns raw, text, and HTML representations. Response will include `body`, `body_text`, and `body_html`.
-    /// - **`application/vnd.github.diff`**: For more information, see "[git-diff](https://git-scm.com/docs/git-diff)" in the Git documentation. If a diff is corrupt, contact us through the [GitHub Support portal](https://support.github.com/). Include the repository name and pull request ID in your message.
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/pulls/{pull_number}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/patch(pulls/update)`.
@@ -714,7 +704,6 @@ extension APIProtocol {
     /// - **`application/vnd.github.text+json`**: Returns a text only representation of the markdown body. Response will include `body_text`.
     /// - **`application/vnd.github.html+json`**: Returns HTML rendered from the body's markdown. Response will include `body_html`.
     /// - **`application/vnd.github.full+json`**: Returns raw, text, and HTML representations. Response will include `body`, `body_text`, and `body_html`.
-    /// - **`application/vnd.github.diff`**: For more information, see "[git-diff](https://git-scm.com/docs/git-diff)" in the Git documentation. If a diff is corrupt, contact us through the [GitHub Support portal](https://support.github.com/). Include the repository name and pull request ID in your message.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/{pull_number}/commits`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/commits/get(pulls/list-commits)`.
@@ -742,7 +731,6 @@ extension APIProtocol {
     /// - **`application/vnd.github.text+json`**: Returns a text only representation of the markdown body. Response will include `body_text`.
     /// - **`application/vnd.github.html+json`**: Returns HTML rendered from the body's markdown. Response will include `body_html`.
     /// - **`application/vnd.github.full+json`**: Returns raw, text, and HTML representations. Response will include `body`, `body_text`, and `body_html`.
-    /// - **`application/vnd.github.diff`**: For more information, see "[git-diff](https://git-scm.com/docs/git-diff)" in the Git documentation. If a diff is corrupt, contact us through the [GitHub Support portal](https://support.github.com/). Include the repository name and pull request ID in your message.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/{pull_number}/files`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/files/get(pulls/list-files)`.
@@ -6838,6 +6826,34 @@ public enum Components {
                 self.body = body
             }
         }
+        public struct internal_error: Sendable, Hashable {
+            /// - Remark: Generated from `#/components/responses/internal_error/content`.
+            @frozen public enum Body: Sendable, Hashable {
+                /// - Remark: Generated from `#/components/responses/internal_error/content/application\/json`.
+                case json(Components.Schemas.basic_hyphen_error)
+                /// The associated value of the enum case if `self` is `.json`.
+                ///
+                /// - Throws: An error if `self` is not `.json`.
+                /// - SeeAlso: `.json`.
+                public var json: Components.Schemas.basic_hyphen_error {
+                    get throws {
+                        switch self {
+                        case let .json(body):
+                            return body
+                        }
+                    }
+                }
+            }
+            /// Received HTTP response body
+            public var body: Components.Responses.internal_error.Body
+            /// Creates a new `internal_error`.
+            ///
+            /// - Parameters:
+            ///   - body: Received HTTP response body
+            public init(body: Components.Responses.internal_error.Body) {
+                self.body = body
+            }
+        }
         public struct service_unavailable: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/service_unavailable/content`.
             @frozen public enum Body: Sendable, Hashable {
@@ -6895,34 +6911,6 @@ public enum Components {
                 self.body = body
             }
         }
-        public struct internal_error: Sendable, Hashable {
-            /// - Remark: Generated from `#/components/responses/internal_error/content`.
-            @frozen public enum Body: Sendable, Hashable {
-                /// - Remark: Generated from `#/components/responses/internal_error/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
-                /// The associated value of the enum case if `self` is `.json`.
-                ///
-                /// - Throws: An error if `self` is not `.json`.
-                /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
-                    get throws {
-                        switch self {
-                        case let .json(body):
-                            return body
-                        }
-                    }
-                }
-            }
-            /// Received HTTP response body
-            public var body: Components.Responses.internal_error.Body
-            /// Creates a new `internal_error`.
-            ///
-            /// - Parameters:
-            ///   - body: Received HTTP response body
-            public init(body: Components.Responses.internal_error.Body) {
-                self.body = body
-            }
-        }
         public struct unacceptable: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/unacceptable/content`.
             @frozen public enum Body: Sendable, Hashable {
@@ -6977,8 +6965,6 @@ public enum Operations {
     /// - **`application/vnd.github.text+json`**: Returns a text only representation of the markdown body. Response will include `body_text`.
     /// - **`application/vnd.github.html+json`**: Returns HTML rendered from the body's markdown. Response will include `body_html`.
     /// - **`application/vnd.github.full+json`**: Returns raw, text, and HTML representations. Response will include `body`, `body_text`, and `body_html`.
-    /// - **`application/vnd.github.diff`**: For more information, see "[git-diff](https://git-scm.com/docs/git-diff)" in the Git documentation. If a diff is corrupt, contact us through the [GitHub Support portal](https://support.github.com/). Include the repository name and pull request ID in your message.
-    /// - **`application/vnd.github.patch`**: For more information, see "[git-format-patch](https://git-scm.com/docs/git-format-patch)" in the Git documentation.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/get(pulls/list)`.
@@ -7276,7 +7262,6 @@ public enum Operations {
     /// - **`application/vnd.github.text+json`**: Returns a text only representation of the markdown body. Response will include `body_text`.
     /// - **`application/vnd.github.html+json`**: Returns HTML rendered from the body's markdown. Response will include `body_html`.
     /// - **`application/vnd.github.full+json`**: Returns raw, text, and HTML representations. Response will include `body`, `body_text`, and `body_html`.
-    /// - **`application/vnd.github.diff`**: For more information, see "[git-diff](https://git-scm.com/docs/git-diff)" in the Git documentation. If a diff is corrupt, contact us through the [GitHub Support portal](https://support.github.com/). Include the repository name and pull request ID in your message.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/pulls`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/post(pulls/create)`.
@@ -8592,7 +8577,6 @@ public enum Operations {
     /// - **`application/vnd.github.text+json`**: Returns a text only representation of the markdown body. Response will include `body_text`.
     /// - **`application/vnd.github.html+json`**: Returns HTML rendered from the body's markdown. Response will include `body_html`.
     /// - **`application/vnd.github.full+json`**: Returns raw, text, and HTML representations. Response will include `body`, `body_text`, and `body_html`.
-    /// - **`application/vnd.github.diff`**: For more information, see "[git-diff](https://git-scm.com/docs/git-diff)" in the Git documentation. If a diff is corrupt, contact us through the [GitHub Support portal](https://support.github.com/). Include the repository name and pull request ID in your message.
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/pulls/{pull_number}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/patch(pulls/update)`.
@@ -9679,7 +9663,6 @@ public enum Operations {
     /// - **`application/vnd.github.text+json`**: Returns a text only representation of the markdown body. Response will include `body_text`.
     /// - **`application/vnd.github.html+json`**: Returns HTML rendered from the body's markdown. Response will include `body_html`.
     /// - **`application/vnd.github.full+json`**: Returns raw, text, and HTML representations. Response will include `body`, `body_text`, and `body_html`.
-    /// - **`application/vnd.github.diff`**: For more information, see "[git-diff](https://git-scm.com/docs/git-diff)" in the Git documentation. If a diff is corrupt, contact us through the [GitHub Support portal](https://support.github.com/). Include the repository name and pull request ID in your message.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/{pull_number}/commits`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/commits/get(pulls/list-commits)`.
@@ -9884,7 +9867,6 @@ public enum Operations {
     /// - **`application/vnd.github.text+json`**: Returns a text only representation of the markdown body. Response will include `body_text`.
     /// - **`application/vnd.github.html+json`**: Returns HTML rendered from the body's markdown. Response will include `body_html`.
     /// - **`application/vnd.github.full+json`**: Returns raw, text, and HTML representations. Response will include `body`, `body_text`, and `body_html`.
-    /// - **`application/vnd.github.diff`**: For more information, see "[git-diff](https://git-scm.com/docs/git-diff)" in the Git documentation. If a diff is corrupt, contact us through the [GitHub Support portal](https://support.github.com/). Include the repository name and pull request ID in your message.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/{pull_number}/files`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/files/get(pulls/list-files)`.
