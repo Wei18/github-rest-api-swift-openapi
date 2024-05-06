@@ -252,6 +252,8 @@ public protocol APIProtocol: Sendable {
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
     ///
+    /// This endpoint is limited to 1,000 requests per hour for each user or app installation calling it.
+    ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/code-scanning/sarifs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/sarifs/post(code-scanning/upload-sarif)`.
     func code_hyphen_scanning_sol_upload_hyphen_sarif(_ input: Operations.code_hyphen_scanning_sol_upload_hyphen_sarif.Input) async throws -> Operations.code_hyphen_scanning_sol_upload_hyphen_sarif.Output
@@ -617,6 +619,8 @@ extension APIProtocol {
     /// For more information, see "[Get information about a SARIF upload](/rest/code-scanning/code-scanning#get-information-about-a-sarif-upload)."
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
+    ///
+    /// This endpoint is limited to 1,000 requests per hour for each user or app installation calling it.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/code-scanning/sarifs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/sarifs/post(code-scanning/upload-sarif)`.
@@ -6276,6 +6280,8 @@ public enum Operations {
     /// For more information, see "[Get information about a SARIF upload](/rest/code-scanning/code-scanning#get-information-about-a-sarif-upload)."
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
+    ///
+    /// This endpoint is limited to 1,000 requests per hour for each user or app installation calling it.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/code-scanning/sarifs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/sarifs/post(code-scanning/upload-sarif)`.
