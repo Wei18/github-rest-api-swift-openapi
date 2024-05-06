@@ -1380,6 +1380,8 @@ public enum Components {
             public var location: Swift.String?
             /// - Remark: Generated from `#/components/schemas/public-user/email`.
             public var email: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/public-user/notification_email`.
+            public var notification_email: Swift.String?
             /// - Remark: Generated from `#/components/schemas/public-user/hireable`.
             public var hireable: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/public-user/bio`.
@@ -1473,6 +1475,7 @@ public enum Components {
             ///   - blog:
             ///   - location:
             ///   - email:
+            ///   - notification_email:
             ///   - hireable:
             ///   - bio:
             ///   - twitter_username:
@@ -1513,6 +1516,7 @@ public enum Components {
                 blog: Swift.String? = nil,
                 location: Swift.String? = nil,
                 email: Swift.String? = nil,
+                notification_email: Swift.String? = nil,
                 hireable: Swift.Bool? = nil,
                 bio: Swift.String? = nil,
                 twitter_username: Swift.String? = nil,
@@ -1553,6 +1557,7 @@ public enum Components {
                 self.blog = blog
                 self.location = location
                 self.email = email
+                self.notification_email = notification_email
                 self.hireable = hireable
                 self.bio = bio
                 self.twitter_username = twitter_username
@@ -1594,6 +1599,7 @@ public enum Components {
                 case blog
                 case location
                 case email
+                case notification_email
                 case hireable
                 case bio
                 case twitter_username
@@ -1705,6 +1711,10 @@ public enum Components {
                     Swift.String.self,
                     forKey: .email
                 )
+                notification_email = try container.decodeIfPresent(
+                    Swift.String.self,
+                    forKey: .notification_email
+                )
                 hireable = try container.decodeIfPresent(
                     Swift.Bool.self,
                     forKey: .hireable
@@ -1793,6 +1803,7 @@ public enum Components {
                     "blog",
                     "location",
                     "email",
+                    "notification_email",
                     "hireable",
                     "bio",
                     "twitter_username",
@@ -1862,6 +1873,8 @@ public enum Components {
             public var location: Swift.String?
             /// - Remark: Generated from `#/components/schemas/private-user/email`.
             public var email: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/private-user/notification_email`.
+            public var notification_email: Swift.String?
             /// - Remark: Generated from `#/components/schemas/private-user/hireable`.
             public var hireable: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/private-user/bio`.
@@ -1961,6 +1974,7 @@ public enum Components {
             ///   - blog:
             ///   - location:
             ///   - email:
+            ///   - notification_email:
             ///   - hireable:
             ///   - bio:
             ///   - twitter_username:
@@ -2004,6 +2018,7 @@ public enum Components {
                 blog: Swift.String? = nil,
                 location: Swift.String? = nil,
                 email: Swift.String? = nil,
+                notification_email: Swift.String? = nil,
                 hireable: Swift.Bool? = nil,
                 bio: Swift.String? = nil,
                 twitter_username: Swift.String? = nil,
@@ -2047,6 +2062,7 @@ public enum Components {
                 self.blog = blog
                 self.location = location
                 self.email = email
+                self.notification_email = notification_email
                 self.hireable = hireable
                 self.bio = bio
                 self.twitter_username = twitter_username
@@ -2091,6 +2107,7 @@ public enum Components {
                 case blog
                 case location
                 case email
+                case notification_email
                 case hireable
                 case bio
                 case twitter_username
