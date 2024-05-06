@@ -12034,6 +12034,108 @@ public enum Components {
                 case parameters
             }
         }
+        /// A tool that must provide code scanning results for this rule to pass.
+        ///
+        /// - Remark: Generated from `#/components/schemas/repository-rule-params-code-scanning-tool`.
+        public struct repository_hyphen_rule_hyphen_params_hyphen_code_hyphen_scanning_hyphen_tool: Codable, Hashable, Sendable {
+            /// The severity level at which code scanning results that raise alerts block a reference update. For more information on alert severity levels, see "[About code scanning alerts](https://docs.github.com/code-security/code-scanning/managing-code-scanning-alerts/about-code-scanning-alerts#about-alert-severity-and-security-severity-levels)."
+            ///
+            /// - Remark: Generated from `#/components/schemas/repository-rule-params-code-scanning-tool/alerts_threshold`.
+            @frozen public enum alerts_thresholdPayload: String, Codable, Hashable, Sendable {
+                case none = "none"
+                case errors = "errors"
+                case errors_and_warnings = "errors_and_warnings"
+                case all = "all"
+            }
+            /// The severity level at which code scanning results that raise alerts block a reference update. For more information on alert severity levels, see "[About code scanning alerts](https://docs.github.com/code-security/code-scanning/managing-code-scanning-alerts/about-code-scanning-alerts#about-alert-severity-and-security-severity-levels)."
+            ///
+            /// - Remark: Generated from `#/components/schemas/repository-rule-params-code-scanning-tool/alerts_threshold`.
+            public var alerts_threshold: Components.Schemas.repository_hyphen_rule_hyphen_params_hyphen_code_hyphen_scanning_hyphen_tool.alerts_thresholdPayload
+            /// The severity level at which code scanning results that raise security alerts block a reference update. For more information on security severity levels, see "[About code scanning alerts](https://docs.github.com/code-security/code-scanning/managing-code-scanning-alerts/about-code-scanning-alerts#about-alert-severity-and-security-severity-levels)."
+            ///
+            /// - Remark: Generated from `#/components/schemas/repository-rule-params-code-scanning-tool/security_alerts_threshold`.
+            @frozen public enum security_alerts_thresholdPayload: String, Codable, Hashable, Sendable {
+                case none = "none"
+                case critical = "critical"
+                case high_or_higher = "high_or_higher"
+                case medium_or_higher = "medium_or_higher"
+                case all = "all"
+            }
+            /// The severity level at which code scanning results that raise security alerts block a reference update. For more information on security severity levels, see "[About code scanning alerts](https://docs.github.com/code-security/code-scanning/managing-code-scanning-alerts/about-code-scanning-alerts#about-alert-severity-and-security-severity-levels)."
+            ///
+            /// - Remark: Generated from `#/components/schemas/repository-rule-params-code-scanning-tool/security_alerts_threshold`.
+            public var security_alerts_threshold: Components.Schemas.repository_hyphen_rule_hyphen_params_hyphen_code_hyphen_scanning_hyphen_tool.security_alerts_thresholdPayload
+            /// The name of a code scanning tool
+            ///
+            /// - Remark: Generated from `#/components/schemas/repository-rule-params-code-scanning-tool/tool`.
+            public var tool: Swift.String
+            /// Creates a new `repository_hyphen_rule_hyphen_params_hyphen_code_hyphen_scanning_hyphen_tool`.
+            ///
+            /// - Parameters:
+            ///   - alerts_threshold: The severity level at which code scanning results that raise alerts block a reference update. For more information on alert severity levels, see "[About code scanning alerts](https://docs.github.com/code-security/code-scanning/managing-code-scanning-alerts/about-code-scanning-alerts#about-alert-severity-and-security-severity-levels)."
+            ///   - security_alerts_threshold: The severity level at which code scanning results that raise security alerts block a reference update. For more information on security severity levels, see "[About code scanning alerts](https://docs.github.com/code-security/code-scanning/managing-code-scanning-alerts/about-code-scanning-alerts#about-alert-severity-and-security-severity-levels)."
+            ///   - tool: The name of a code scanning tool
+            public init(
+                alerts_threshold: Components.Schemas.repository_hyphen_rule_hyphen_params_hyphen_code_hyphen_scanning_hyphen_tool.alerts_thresholdPayload,
+                security_alerts_threshold: Components.Schemas.repository_hyphen_rule_hyphen_params_hyphen_code_hyphen_scanning_hyphen_tool.security_alerts_thresholdPayload,
+                tool: Swift.String
+            ) {
+                self.alerts_threshold = alerts_threshold
+                self.security_alerts_threshold = security_alerts_threshold
+                self.tool = tool
+            }
+            public enum CodingKeys: String, CodingKey {
+                case alerts_threshold
+                case security_alerts_threshold
+                case tool
+            }
+        }
+        /// Choose which tools must provide code scanning results before the reference is updated. When configured, code scanning must be enabled and have results for both the commit and the reference being updated.
+        ///
+        /// - Remark: Generated from `#/components/schemas/repository-rule-code-scanning`.
+        public struct repository_hyphen_rule_hyphen_code_hyphen_scanning: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/repository-rule-code-scanning/type`.
+            @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+                case code_scanning = "code_scanning"
+            }
+            /// - Remark: Generated from `#/components/schemas/repository-rule-code-scanning/type`.
+            public var _type: Components.Schemas.repository_hyphen_rule_hyphen_code_hyphen_scanning._typePayload
+            /// - Remark: Generated from `#/components/schemas/repository-rule-code-scanning/parameters`.
+            public struct parametersPayload: Codable, Hashable, Sendable {
+                /// Tools that must provide code scanning results for this rule to pass.
+                ///
+                /// - Remark: Generated from `#/components/schemas/repository-rule-code-scanning/parameters/code_scanning_tools`.
+                public var code_scanning_tools: [Components.Schemas.repository_hyphen_rule_hyphen_params_hyphen_code_hyphen_scanning_hyphen_tool]
+                /// Creates a new `parametersPayload`.
+                ///
+                /// - Parameters:
+                ///   - code_scanning_tools: Tools that must provide code scanning results for this rule to pass.
+                public init(code_scanning_tools: [Components.Schemas.repository_hyphen_rule_hyphen_params_hyphen_code_hyphen_scanning_hyphen_tool]) {
+                    self.code_scanning_tools = code_scanning_tools
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case code_scanning_tools
+                }
+            }
+            /// - Remark: Generated from `#/components/schemas/repository-rule-code-scanning/parameters`.
+            public var parameters: Components.Schemas.repository_hyphen_rule_hyphen_code_hyphen_scanning.parametersPayload?
+            /// Creates a new `repository_hyphen_rule_hyphen_code_hyphen_scanning`.
+            ///
+            /// - Parameters:
+            ///   - _type:
+            ///   - parameters:
+            public init(
+                _type: Components.Schemas.repository_hyphen_rule_hyphen_code_hyphen_scanning._typePayload,
+                parameters: Components.Schemas.repository_hyphen_rule_hyphen_code_hyphen_scanning.parametersPayload? = nil
+            ) {
+                self._type = _type
+                self.parameters = parameters
+            }
+            public enum CodingKeys: String, CodingKey {
+                case _type = "type"
+                case parameters
+            }
+        }
         /// A repository rule.
         ///
         /// - Remark: Generated from `#/components/schemas/repository-rule`.
@@ -12284,6 +12386,8 @@ public enum Components {
             case case18(Components.Schemas.repository_hyphen_rule.Case18Payload)
             /// - Remark: Generated from `#/components/schemas/repository-rule/case19`.
             case repository_hyphen_rule_hyphen_workflows(Components.Schemas.repository_hyphen_rule_hyphen_workflows)
+            /// - Remark: Generated from `#/components/schemas/repository-rule/case20`.
+            case repository_hyphen_rule_hyphen_code_hyphen_scanning(Components.Schemas.repository_hyphen_rule_hyphen_code_hyphen_scanning)
             public init(from decoder: any Decoder) throws {
                 var errors: [any Error] = []
                 do {
@@ -12400,6 +12504,12 @@ public enum Components {
                 } catch {
                     errors.append(error)
                 }
+                do {
+                    self = .repository_hyphen_rule_hyphen_code_hyphen_scanning(try .init(from: decoder))
+                    return
+                } catch {
+                    errors.append(error)
+                }
                 throw Swift.DecodingError.failedToDecodeOneOfSchema(
                     type: Self.self,
                     codingPath: decoder.codingPath,
@@ -12445,6 +12555,8 @@ public enum Components {
                 case let .case18(value):
                     try value.encode(to: encoder)
                 case let .repository_hyphen_rule_hyphen_workflows(value):
+                    try value.encode(to: encoder)
+                case let .repository_hyphen_rule_hyphen_code_hyphen_scanning(value):
                     try value.encode(to: encoder)
                 }
             }
@@ -20835,6 +20947,35 @@ public enum Components {
             }
             /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case15`.
             case case15(Components.Schemas.repository_hyphen_rule_hyphen_detailed.Case15Payload)
+            /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case16`.
+            public struct Case16Payload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case16/value1`.
+                public var value1: Components.Schemas.repository_hyphen_rule_hyphen_code_hyphen_scanning
+                /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case16/value2`.
+                public var value2: Components.Schemas.repository_hyphen_rule_hyphen_ruleset_hyphen_info
+                /// Creates a new `Case16Payload`.
+                ///
+                /// - Parameters:
+                ///   - value1:
+                ///   - value2:
+                public init(
+                    value1: Components.Schemas.repository_hyphen_rule_hyphen_code_hyphen_scanning,
+                    value2: Components.Schemas.repository_hyphen_rule_hyphen_ruleset_hyphen_info
+                ) {
+                    self.value1 = value1
+                    self.value2 = value2
+                }
+                public init(from decoder: any Decoder) throws {
+                    value1 = try .init(from: decoder)
+                    value2 = try .init(from: decoder)
+                }
+                public func encode(to encoder: any Encoder) throws {
+                    try value1.encode(to: encoder)
+                    try value2.encode(to: encoder)
+                }
+            }
+            /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case16`.
+            case case16(Components.Schemas.repository_hyphen_rule_hyphen_detailed.Case16Payload)
             public init(from decoder: any Decoder) throws {
                 var errors: [any Error] = []
                 do {
@@ -20927,6 +21068,12 @@ public enum Components {
                 } catch {
                     errors.append(error)
                 }
+                do {
+                    self = .case16(try .init(from: decoder))
+                    return
+                } catch {
+                    errors.append(error)
+                }
                 throw Swift.DecodingError.failedToDecodeOneOfSchema(
                     type: Self.self,
                     codingPath: decoder.codingPath,
@@ -20964,6 +21111,8 @@ public enum Components {
                 case let .case14(value):
                     try value.encode(to: encoder)
                 case let .case15(value):
+                    try value.encode(to: encoder)
+                case let .case16(value):
                     try value.encode(to: encoder)
                 }
             }
