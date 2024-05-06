@@ -2083,6 +2083,8 @@ public struct Client: APIProtocol {
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
     ///
+    /// This endpoint is limited to 1,000 requests per hour for each user or app installation calling it.
+    ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/code-scanning/sarifs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/sarifs/post(code-scanning/upload-sarif)`.
     public func code_hyphen_scanning_sol_upload_hyphen_sarif(_ input: Operations.code_hyphen_scanning_sol_upload_hyphen_sarif.Input) async throws -> Operations.code_hyphen_scanning_sol_upload_hyphen_sarif.Output {
