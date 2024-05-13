@@ -199,6 +199,38 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/codeql/databases/{language}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/get(code-scanning/get-codeql-database)`.
     func code_hyphen_scanning_sol_get_hyphen_codeql_hyphen_database(_ input: Operations.code_hyphen_scanning_sol_get_hyphen_codeql_hyphen_database.Input) async throws -> Operations.code_hyphen_scanning_sol_get_hyphen_codeql_hyphen_database.Output
+    /// Create a CodeQL variant analysis
+    ///
+    /// Creates a new CodeQL variant analysis, which will run a CodeQL query against one or more repositories.
+    ///
+    /// Get started by learning more about [running CodeQL queries at scale with Multi-Repository Variant Analysis](https://docs.github.com/code-security/codeql-for-vs-code/getting-started-with-codeql-for-vs-code/running-codeql-queries-at-scale-with-multi-repository-variant-analysis).
+    ///
+    /// Use the `owner` and `repo` parameters in the URL to specify the controller repository that
+    /// will be used for running GitHub Actions workflows and storing the results of the CodeQL variant analysis.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `POST /repos/{owner}/{repo}/code-scanning/codeql/variant-analyses`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/post(code-scanning/create-variant-analysis)`.
+    func code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis(_ input: Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Input) async throws -> Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Output
+    /// Get the summary of a CodeQL variant analysis
+    ///
+    /// Gets the summary of a CodeQL variant analysis.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
+    ///
+    /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/get(code-scanning/get-variant-analysis)`.
+    func code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis(_ input: Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis.Input) async throws -> Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis.Output
+    /// Get the analysis status of a repository in a CodeQL variant analysis
+    ///
+    /// Gets the analysis status of a repository in a CodeQL variant analysis.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
+    ///
+    /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/repos/{repo_owner}/{repo_name}`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/repos/{repo_owner}/{repo_name}/get(code-scanning/get-variant-analysis-repo-task)`.
+    func code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis_hyphen_repo_hyphen_task(_ input: Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis_hyphen_repo_hyphen_task.Input) async throws -> Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis_hyphen_repo_hyphen_task.Output
     /// Get a code scanning default setup configuration
     ///
     /// Gets a code scanning default setup configuration.
@@ -545,6 +577,64 @@ extension APIProtocol {
         headers: Operations.code_hyphen_scanning_sol_get_hyphen_codeql_hyphen_database.Input.Headers = .init()
     ) async throws -> Operations.code_hyphen_scanning_sol_get_hyphen_codeql_hyphen_database.Output {
         try await code_hyphen_scanning_sol_get_hyphen_codeql_hyphen_database(Operations.code_hyphen_scanning_sol_get_hyphen_codeql_hyphen_database.Input(
+            path: path,
+            headers: headers
+        ))
+    }
+    /// Create a CodeQL variant analysis
+    ///
+    /// Creates a new CodeQL variant analysis, which will run a CodeQL query against one or more repositories.
+    ///
+    /// Get started by learning more about [running CodeQL queries at scale with Multi-Repository Variant Analysis](https://docs.github.com/code-security/codeql-for-vs-code/getting-started-with-codeql-for-vs-code/running-codeql-queries-at-scale-with-multi-repository-variant-analysis).
+    ///
+    /// Use the `owner` and `repo` parameters in the URL to specify the controller repository that
+    /// will be used for running GitHub Actions workflows and storing the results of the CodeQL variant analysis.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `POST /repos/{owner}/{repo}/code-scanning/codeql/variant-analyses`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/post(code-scanning/create-variant-analysis)`.
+    public func code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis(
+        path: Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Input.Path,
+        headers: Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Input.Headers = .init(),
+        body: Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Input.Body
+    ) async throws -> Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Output {
+        try await code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis(Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Input(
+            path: path,
+            headers: headers,
+            body: body
+        ))
+    }
+    /// Get the summary of a CodeQL variant analysis
+    ///
+    /// Gets the summary of a CodeQL variant analysis.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
+    ///
+    /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/get(code-scanning/get-variant-analysis)`.
+    public func code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis(
+        path: Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis.Input.Path,
+        headers: Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis.Input.Headers = .init()
+    ) async throws -> Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis.Output {
+        try await code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis(Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis.Input(
+            path: path,
+            headers: headers
+        ))
+    }
+    /// Get the analysis status of a repository in a CodeQL variant analysis
+    ///
+    /// Gets the analysis status of a repository in a CodeQL variant analysis.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
+    ///
+    /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/repos/{repo_owner}/{repo_name}`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/repos/{repo_owner}/{repo_name}/get(code-scanning/get-variant-analysis-repo-task)`.
+    public func code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis_hyphen_repo_hyphen_task(
+        path: Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis_hyphen_repo_hyphen_task.Input.Path,
+        headers: Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis_hyphen_repo_hyphen_task.Input.Headers = .init()
+    ) async throws -> Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis_hyphen_repo_hyphen_task.Output {
+        try await code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis_hyphen_repo_hyphen_task(Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis_hyphen_repo_hyphen_task.Input(
             path: path,
             headers: headers
         ))
@@ -2434,6 +2524,420 @@ public enum Components {
                 case updated_at
                 case url
                 case commit_oid
+            }
+        }
+        /// The language targeted by the CodeQL query
+        ///
+        /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis-language`.
+        @frozen public enum code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_language: String, Codable, Hashable, Sendable {
+            case cpp = "cpp"
+            case csharp = "csharp"
+            case go = "go"
+            case java = "java"
+            case javascript = "javascript"
+            case python = "python"
+            case ruby = "ruby"
+            case swift = "swift"
+        }
+        /// Repository Identifier
+        ///
+        /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis-repository`.
+        public struct code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_repository: Codable, Hashable, Sendable {
+            /// A unique identifier of the repository.
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis-repository/id`.
+            public var id: Swift.Int
+            /// The name of the repository.
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis-repository/name`.
+            public var name: Swift.String
+            /// The full, globally unique, name of the repository.
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis-repository/full_name`.
+            public var full_name: Swift.String
+            /// Whether the repository is private.
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis-repository/private`.
+            public var _private: Swift.Bool
+            /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis-repository/stargazers_count`.
+            public var stargazers_count: Swift.Int
+            /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis-repository/updated_at`.
+            public var updated_at: Foundation.Date?
+            /// Creates a new `code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_repository`.
+            ///
+            /// - Parameters:
+            ///   - id: A unique identifier of the repository.
+            ///   - name: The name of the repository.
+            ///   - full_name: The full, globally unique, name of the repository.
+            ///   - _private: Whether the repository is private.
+            ///   - stargazers_count:
+            ///   - updated_at:
+            public init(
+                id: Swift.Int,
+                name: Swift.String,
+                full_name: Swift.String,
+                _private: Swift.Bool,
+                stargazers_count: Swift.Int,
+                updated_at: Foundation.Date? = nil
+            ) {
+                self.id = id
+                self.name = name
+                self.full_name = full_name
+                self._private = _private
+                self.stargazers_count = stargazers_count
+                self.updated_at = updated_at
+            }
+            public enum CodingKeys: String, CodingKey {
+                case id
+                case name
+                case full_name
+                case _private = "private"
+                case stargazers_count
+                case updated_at
+            }
+        }
+        /// The new status of the CodeQL variant analysis repository task.
+        ///
+        /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis-status`.
+        @frozen public enum code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_status: String, Codable, Hashable, Sendable {
+            case pending = "pending"
+            case in_progress = "in_progress"
+            case succeeded = "succeeded"
+            case failed = "failed"
+            case canceled = "canceled"
+            case timed_out = "timed_out"
+        }
+        /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis-skipped-repo-group`.
+        public struct code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_skipped_hyphen_repo_hyphen_group: Codable, Hashable, Sendable {
+            /// The total number of repositories that were skipped for this reason.
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis-skipped-repo-group/repository_count`.
+            public var repository_count: Swift.Int
+            /// A list of repositories that were skipped. This list may not include all repositories that were skipped. This is only available when the repository was found and the user has access to it.
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis-skipped-repo-group/repositories`.
+            public var repositories: [Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_repository]
+            /// Creates a new `code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_skipped_hyphen_repo_hyphen_group`.
+            ///
+            /// - Parameters:
+            ///   - repository_count: The total number of repositories that were skipped for this reason.
+            ///   - repositories: A list of repositories that were skipped. This list may not include all repositories that were skipped. This is only available when the repository was found and the user has access to it.
+            public init(
+                repository_count: Swift.Int,
+                repositories: [Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_repository]
+            ) {
+                self.repository_count = repository_count
+                self.repositories = repositories
+            }
+            public enum CodingKeys: String, CodingKey {
+                case repository_count
+                case repositories
+            }
+        }
+        /// A run of a CodeQL query against one or more repositories.
+        ///
+        /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis`.
+        public struct code_hyphen_scanning_hyphen_variant_hyphen_analysis: Codable, Hashable, Sendable {
+            /// The ID of the variant analysis.
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/id`.
+            public var id: Swift.Int
+            /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/controller_repo`.
+            public var controller_repo: Components.Schemas.simple_hyphen_repository
+            /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/actor`.
+            public var actor: Components.Schemas.simple_hyphen_user
+            /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/query_language`.
+            public var query_language: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_language
+            /// The download url for the query pack.
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/query_pack_url`.
+            public var query_pack_url: Swift.String
+            /// The date and time at which the variant analysis was created, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/created_at`.
+            public var created_at: Foundation.Date?
+            /// The date and time at which the variant analysis was last updated, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/updated_at`.
+            public var updated_at: Foundation.Date?
+            /// The date and time at which the variant analysis was completed, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ. Will be null if the variant analysis has not yet completed or this information is not available.
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/completed_at`.
+            public var completed_at: Foundation.Date?
+            /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/status`.
+            @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                case in_progress = "in_progress"
+                case succeeded = "succeeded"
+                case failed = "failed"
+                case cancelled = "cancelled"
+            }
+            /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/status`.
+            public var status: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis.statusPayload
+            /// The GitHub Actions workflow run used to execute this variant analysis. This is only available if the workflow run has started.
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/actions_workflow_run_id`.
+            public var actions_workflow_run_id: Swift.Int?
+            /// The reason for a failure of the variant analysis. This is only available if the variant analysis has failed.
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/failure_reason`.
+            @frozen public enum failure_reasonPayload: String, Codable, Hashable, Sendable {
+                case no_repos_queried = "no_repos_queried"
+                case actions_workflow_run_failed = "actions_workflow_run_failed"
+                case internal_error = "internal_error"
+            }
+            /// The reason for a failure of the variant analysis. This is only available if the variant analysis has failed.
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/failure_reason`.
+            public var failure_reason: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis.failure_reasonPayload?
+            /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/scanned_repositoriesPayload`.
+            public struct scanned_repositoriesPayloadPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/scanned_repositoriesPayload/repository`.
+                public var repository: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_repository
+                /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/scanned_repositoriesPayload/analysis_status`.
+                public var analysis_status: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_status
+                /// The number of results in the case of a successful analysis. This is only available for successful analyses.
+                ///
+                /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/scanned_repositoriesPayload/result_count`.
+                public var result_count: Swift.Int?
+                /// The size of the artifact. This is only available for successful analyses.
+                ///
+                /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/scanned_repositoriesPayload/artifact_size_in_bytes`.
+                public var artifact_size_in_bytes: Swift.Int?
+                /// The reason of the failure of this repo task. This is only available if the repository task has failed.
+                ///
+                /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/scanned_repositoriesPayload/failure_message`.
+                public var failure_message: Swift.String?
+                /// Creates a new `scanned_repositoriesPayloadPayload`.
+                ///
+                /// - Parameters:
+                ///   - repository:
+                ///   - analysis_status:
+                ///   - result_count: The number of results in the case of a successful analysis. This is only available for successful analyses.
+                ///   - artifact_size_in_bytes: The size of the artifact. This is only available for successful analyses.
+                ///   - failure_message: The reason of the failure of this repo task. This is only available if the repository task has failed.
+                public init(
+                    repository: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_repository,
+                    analysis_status: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_status,
+                    result_count: Swift.Int? = nil,
+                    artifact_size_in_bytes: Swift.Int? = nil,
+                    failure_message: Swift.String? = nil
+                ) {
+                    self.repository = repository
+                    self.analysis_status = analysis_status
+                    self.result_count = result_count
+                    self.artifact_size_in_bytes = artifact_size_in_bytes
+                    self.failure_message = failure_message
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case repository
+                    case analysis_status
+                    case result_count
+                    case artifact_size_in_bytes
+                    case failure_message
+                }
+            }
+            /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/scanned_repositories`.
+            public typealias scanned_repositoriesPayload = [Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis.scanned_repositoriesPayloadPayload]
+            /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/scanned_repositories`.
+            public var scanned_repositories: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis.scanned_repositoriesPayload?
+            /// Information about repositories that were skipped from processing. This information is only available to the user that initiated the variant analysis.
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/skipped_repositories`.
+            public struct skipped_repositoriesPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/skipped_repositories/access_mismatch_repos`.
+                public var access_mismatch_repos: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_skipped_hyphen_repo_hyphen_group
+                /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/skipped_repositories/not_found_repos`.
+                public struct not_found_reposPayload: Codable, Hashable, Sendable {
+                    /// The total number of repositories that were skipped for this reason.
+                    ///
+                    /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/skipped_repositories/not_found_repos/repository_count`.
+                    public var repository_count: Swift.Int
+                    /// A list of full repository names that were skipped. This list may not include all repositories that were skipped.
+                    ///
+                    /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/skipped_repositories/not_found_repos/repository_full_names`.
+                    public var repository_full_names: [Swift.String]
+                    /// Creates a new `not_found_reposPayload`.
+                    ///
+                    /// - Parameters:
+                    ///   - repository_count: The total number of repositories that were skipped for this reason.
+                    ///   - repository_full_names: A list of full repository names that were skipped. This list may not include all repositories that were skipped.
+                    public init(
+                        repository_count: Swift.Int,
+                        repository_full_names: [Swift.String]
+                    ) {
+                        self.repository_count = repository_count
+                        self.repository_full_names = repository_full_names
+                    }
+                    public enum CodingKeys: String, CodingKey {
+                        case repository_count
+                        case repository_full_names
+                    }
+                }
+                /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/skipped_repositories/not_found_repos`.
+                public var not_found_repos: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis.skipped_repositoriesPayload.not_found_reposPayload
+                /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/skipped_repositories/no_codeql_db_repos`.
+                public var no_codeql_db_repos: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_skipped_hyphen_repo_hyphen_group
+                /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/skipped_repositories/over_limit_repos`.
+                public var over_limit_repos: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_skipped_hyphen_repo_hyphen_group
+                /// Creates a new `skipped_repositoriesPayload`.
+                ///
+                /// - Parameters:
+                ///   - access_mismatch_repos:
+                ///   - not_found_repos:
+                ///   - no_codeql_db_repos:
+                ///   - over_limit_repos:
+                public init(
+                    access_mismatch_repos: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_skipped_hyphen_repo_hyphen_group,
+                    not_found_repos: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis.skipped_repositoriesPayload.not_found_reposPayload,
+                    no_codeql_db_repos: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_skipped_hyphen_repo_hyphen_group,
+                    over_limit_repos: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_skipped_hyphen_repo_hyphen_group
+                ) {
+                    self.access_mismatch_repos = access_mismatch_repos
+                    self.not_found_repos = not_found_repos
+                    self.no_codeql_db_repos = no_codeql_db_repos
+                    self.over_limit_repos = over_limit_repos
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case access_mismatch_repos
+                    case not_found_repos
+                    case no_codeql_db_repos
+                    case over_limit_repos
+                }
+            }
+            /// Information about repositories that were skipped from processing. This information is only available to the user that initiated the variant analysis.
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/skipped_repositories`.
+            public var skipped_repositories: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis.skipped_repositoriesPayload?
+            /// Creates a new `code_hyphen_scanning_hyphen_variant_hyphen_analysis`.
+            ///
+            /// - Parameters:
+            ///   - id: The ID of the variant analysis.
+            ///   - controller_repo:
+            ///   - actor:
+            ///   - query_language:
+            ///   - query_pack_url: The download url for the query pack.
+            ///   - created_at: The date and time at which the variant analysis was created, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
+            ///   - updated_at: The date and time at which the variant analysis was last updated, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
+            ///   - completed_at: The date and time at which the variant analysis was completed, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ. Will be null if the variant analysis has not yet completed or this information is not available.
+            ///   - status:
+            ///   - actions_workflow_run_id: The GitHub Actions workflow run used to execute this variant analysis. This is only available if the workflow run has started.
+            ///   - failure_reason: The reason for a failure of the variant analysis. This is only available if the variant analysis has failed.
+            ///   - scanned_repositories:
+            ///   - skipped_repositories: Information about repositories that were skipped from processing. This information is only available to the user that initiated the variant analysis.
+            public init(
+                id: Swift.Int,
+                controller_repo: Components.Schemas.simple_hyphen_repository,
+                actor: Components.Schemas.simple_hyphen_user,
+                query_language: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_language,
+                query_pack_url: Swift.String,
+                created_at: Foundation.Date? = nil,
+                updated_at: Foundation.Date? = nil,
+                completed_at: Foundation.Date? = nil,
+                status: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis.statusPayload,
+                actions_workflow_run_id: Swift.Int? = nil,
+                failure_reason: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis.failure_reasonPayload? = nil,
+                scanned_repositories: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis.scanned_repositoriesPayload? = nil,
+                skipped_repositories: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis.skipped_repositoriesPayload? = nil
+            ) {
+                self.id = id
+                self.controller_repo = controller_repo
+                self.actor = actor
+                self.query_language = query_language
+                self.query_pack_url = query_pack_url
+                self.created_at = created_at
+                self.updated_at = updated_at
+                self.completed_at = completed_at
+                self.status = status
+                self.actions_workflow_run_id = actions_workflow_run_id
+                self.failure_reason = failure_reason
+                self.scanned_repositories = scanned_repositories
+                self.skipped_repositories = skipped_repositories
+            }
+            public enum CodingKeys: String, CodingKey {
+                case id
+                case controller_repo
+                case actor
+                case query_language
+                case query_pack_url
+                case created_at
+                case updated_at
+                case completed_at
+                case status
+                case actions_workflow_run_id
+                case failure_reason
+                case scanned_repositories
+                case skipped_repositories
+            }
+        }
+        /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis-repo-task`.
+        public struct code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_repo_hyphen_task: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis-repo-task/repository`.
+            public var repository: Components.Schemas.simple_hyphen_repository
+            /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis-repo-task/analysis_status`.
+            public var analysis_status: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_status
+            /// The size of the artifact. This is only available for successful analyses.
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis-repo-task/artifact_size_in_bytes`.
+            public var artifact_size_in_bytes: Swift.Int?
+            /// The number of results in the case of a successful analysis. This is only available for successful analyses.
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis-repo-task/result_count`.
+            public var result_count: Swift.Int?
+            /// The reason of the failure of this repo task. This is only available if the repository task has failed.
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis-repo-task/failure_message`.
+            public var failure_message: Swift.String?
+            /// The SHA of the commit the CodeQL database was built against. This is only available for successful analyses.
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis-repo-task/database_commit_sha`.
+            public var database_commit_sha: Swift.String?
+            /// The source location prefix to use. This is only available for successful analyses.
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis-repo-task/source_location_prefix`.
+            public var source_location_prefix: Swift.String?
+            /// The URL of the artifact. This is only available for successful analyses.
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis-repo-task/artifact_url`.
+            public var artifact_url: Swift.String?
+            /// Creates a new `code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_repo_hyphen_task`.
+            ///
+            /// - Parameters:
+            ///   - repository:
+            ///   - analysis_status:
+            ///   - artifact_size_in_bytes: The size of the artifact. This is only available for successful analyses.
+            ///   - result_count: The number of results in the case of a successful analysis. This is only available for successful analyses.
+            ///   - failure_message: The reason of the failure of this repo task. This is only available if the repository task has failed.
+            ///   - database_commit_sha: The SHA of the commit the CodeQL database was built against. This is only available for successful analyses.
+            ///   - source_location_prefix: The source location prefix to use. This is only available for successful analyses.
+            ///   - artifact_url: The URL of the artifact. This is only available for successful analyses.
+            public init(
+                repository: Components.Schemas.simple_hyphen_repository,
+                analysis_status: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_status,
+                artifact_size_in_bytes: Swift.Int? = nil,
+                result_count: Swift.Int? = nil,
+                failure_message: Swift.String? = nil,
+                database_commit_sha: Swift.String? = nil,
+                source_location_prefix: Swift.String? = nil,
+                artifact_url: Swift.String? = nil
+            ) {
+                self.repository = repository
+                self.analysis_status = analysis_status
+                self.artifact_size_in_bytes = artifact_size_in_bytes
+                self.result_count = result_count
+                self.failure_message = failure_message
+                self.database_commit_sha = database_commit_sha
+                self.source_location_prefix = source_location_prefix
+                self.artifact_url = artifact_url
+            }
+            public enum CodingKeys: String, CodingKey {
+                case repository
+                case analysis_status
+                case artifact_size_in_bytes
+                case result_count
+                case failure_message
+                case database_commit_sha
+                case source_location_prefix
+                case artifact_url
             }
         }
         /// Configuration for code scanning default setup.
@@ -5688,6 +6192,726 @@ public enum Operations {
             /// Service unavailable
             ///
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/get(code-scanning/get-codeql-database)/responses/503`.
+            ///
+            /// HTTP response code: `503 serviceUnavailable`.
+            case serviceUnavailable(Components.Responses.service_unavailable)
+            /// The associated value of the enum case if `self` is `.serviceUnavailable`.
+            ///
+            /// - Throws: An error if `self` is not `.serviceUnavailable`.
+            /// - SeeAlso: `.serviceUnavailable`.
+            public var serviceUnavailable: Components.Responses.service_unavailable {
+                get throws {
+                    switch self {
+                    case let .serviceUnavailable(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "serviceUnavailable",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
+    /// Create a CodeQL variant analysis
+    ///
+    /// Creates a new CodeQL variant analysis, which will run a CodeQL query against one or more repositories.
+    ///
+    /// Get started by learning more about [running CodeQL queries at scale with Multi-Repository Variant Analysis](https://docs.github.com/code-security/codeql-for-vs-code/getting-started-with-codeql-for-vs-code/running-codeql-queries-at-scale-with-multi-repository-variant-analysis).
+    ///
+    /// Use the `owner` and `repo` parameters in the URL to specify the controller repository that
+    /// will be used for running GitHub Actions workflows and storing the results of the CodeQL variant analysis.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `POST /repos/{owner}/{repo}/code-scanning/codeql/variant-analyses`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/post(code-scanning/create-variant-analysis)`.
+    public enum code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis {
+        public static let id: Swift.String = "code-scanning/create-variant-analysis"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/POST/path`.
+            public struct Path: Sendable, Hashable {
+                /// The account owner of the repository. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/POST/path/owner`.
+                public var owner: Components.Parameters.owner
+                /// The name of the repository without the `.git` extension. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/POST/path/repo`.
+                public var repo: Components.Parameters.repo
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - owner: The account owner of the repository. The name is not case sensitive.
+                ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
+                public init(
+                    owner: Components.Parameters.owner,
+                    repo: Components.Parameters.repo
+                ) {
+                    self.owner = owner
+                    self.repo = repo
+                }
+            }
+            public var path: Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Input.Path
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/POST/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Input.Headers
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/POST/requestBody`.
+            @frozen public enum Body: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/POST/requestBody/json`.
+                @frozen public enum jsonPayload: Codable, Hashable, Sendable {
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/POST/requestBody/json/case1`.
+                    public struct Case1Payload: Codable, Hashable, Sendable {
+                        /// Creates a new `Case1Payload`.
+                        public init() {}
+                    }
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/POST/requestBody/json/case1`.
+                    case case1(Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Input.Body.jsonPayload.Case1Payload)
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/POST/requestBody/json/case2`.
+                    public struct Case2Payload: Codable, Hashable, Sendable {
+                        /// Creates a new `Case2Payload`.
+                        public init() {}
+                    }
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/POST/requestBody/json/case2`.
+                    case case2(Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Input.Body.jsonPayload.Case2Payload)
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/POST/requestBody/json/case3`.
+                    public struct Case3Payload: Codable, Hashable, Sendable {
+                        /// Creates a new `Case3Payload`.
+                        public init() {}
+                    }
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/POST/requestBody/json/case3`.
+                    case case3(Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Input.Body.jsonPayload.Case3Payload)
+                    public init(from decoder: any Decoder) throws {
+                        var errors: [any Error] = []
+                        do {
+                            self = .case1(try .init(from: decoder))
+                            return
+                        } catch {
+                            errors.append(error)
+                        }
+                        do {
+                            self = .case2(try .init(from: decoder))
+                            return
+                        } catch {
+                            errors.append(error)
+                        }
+                        do {
+                            self = .case3(try .init(from: decoder))
+                            return
+                        } catch {
+                            errors.append(error)
+                        }
+                        throw Swift.DecodingError.failedToDecodeOneOfSchema(
+                            type: Self.self,
+                            codingPath: decoder.codingPath,
+                            errors: errors
+                        )
+                    }
+                    public func encode(to encoder: any Encoder) throws {
+                        switch self {
+                        case let .case1(value):
+                            try value.encode(to: encoder)
+                        case let .case2(value):
+                            try value.encode(to: encoder)
+                        case let .case3(value):
+                            try value.encode(to: encoder)
+                        }
+                    }
+                }
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/POST/requestBody/content/application\/json`.
+                case json(Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Input.Body.jsonPayload)
+            }
+            public var body: Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Input.Body
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - headers:
+            ///   - body:
+            public init(
+                path: Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Input.Path,
+                headers: Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Input.Headers = .init(),
+                body: Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Input.Body
+            ) {
+                self.path = path
+                self.headers = headers
+                self.body = body
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Created: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/POST/responses/201/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/POST/responses/201/content/application\/json`.
+                    case json(Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Output.Created.Body
+                /// Creates a new `Created`.
+                ///
+                /// - Parameters:
+                ///   - body: Received HTTP response body
+                public init(body: Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Output.Created.Body) {
+                    self.body = body
+                }
+            }
+            /// Variant analysis submitted for processing
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/post(code-scanning/create-variant-analysis)/responses/201`.
+            ///
+            /// HTTP response code: `201 created`.
+            case created(Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Output.Created)
+            /// The associated value of the enum case if `self` is `.created`.
+            ///
+            /// - Throws: An error if `self` is not `.created`.
+            /// - SeeAlso: `.created`.
+            public var created: Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Output.Created {
+                get throws {
+                    switch self {
+                    case let .created(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "created",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Resource not found
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/post(code-scanning/create-variant-analysis)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            case notFound(Components.Responses.not_found)
+            /// The associated value of the enum case if `self` is `.notFound`.
+            ///
+            /// - Throws: An error if `self` is not `.notFound`.
+            /// - SeeAlso: `.notFound`.
+            public var notFound: Components.Responses.not_found {
+                get throws {
+                    switch self {
+                    case let .notFound(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "notFound",
+                            response: self
+                        )
+                    }
+                }
+            }
+            public struct UnprocessableContent: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/POST/responses/422/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/POST/responses/422/content/application\/json`.
+                    case json(Components.Schemas.basic_hyphen_error)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Components.Schemas.basic_hyphen_error {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Output.UnprocessableContent.Body
+                /// Creates a new `UnprocessableContent`.
+                ///
+                /// - Parameters:
+                ///   - body: Received HTTP response body
+                public init(body: Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Output.UnprocessableContent.Body) {
+                    self.body = body
+                }
+            }
+            /// Unable to process variant analysis submission
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/post(code-scanning/create-variant-analysis)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            case unprocessableContent(Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Output.UnprocessableContent)
+            /// The associated value of the enum case if `self` is `.unprocessableContent`.
+            ///
+            /// - Throws: An error if `self` is not `.unprocessableContent`.
+            /// - SeeAlso: `.unprocessableContent`.
+            public var unprocessableContent: Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Output.UnprocessableContent {
+                get throws {
+                    switch self {
+                    case let .unprocessableContent(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "unprocessableContent",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Service unavailable
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/post(code-scanning/create-variant-analysis)/responses/503`.
+            ///
+            /// HTTP response code: `503 serviceUnavailable`.
+            case serviceUnavailable(Components.Responses.service_unavailable)
+            /// The associated value of the enum case if `self` is `.serviceUnavailable`.
+            ///
+            /// - Throws: An error if `self` is not `.serviceUnavailable`.
+            /// - SeeAlso: `.serviceUnavailable`.
+            public var serviceUnavailable: Components.Responses.service_unavailable {
+                get throws {
+                    switch self {
+                    case let .serviceUnavailable(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "serviceUnavailable",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
+    /// Get the summary of a CodeQL variant analysis
+    ///
+    /// Gets the summary of a CodeQL variant analysis.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
+    ///
+    /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/get(code-scanning/get-variant-analysis)`.
+    public enum code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis {
+        public static let id: Swift.String = "code-scanning/get-variant-analysis"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/GET/path`.
+            public struct Path: Sendable, Hashable {
+                /// The account owner of the repository. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/GET/path/owner`.
+                public var owner: Components.Parameters.owner
+                /// The name of the repository without the `.git` extension. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/GET/path/repo`.
+                public var repo: Components.Parameters.repo
+                /// The unique identifier of the variant analysis.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/GET/path/codeql_variant_analysis_id`.
+                public var codeql_variant_analysis_id: Swift.Int
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - owner: The account owner of the repository. The name is not case sensitive.
+                ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
+                ///   - codeql_variant_analysis_id: The unique identifier of the variant analysis.
+                public init(
+                    owner: Components.Parameters.owner,
+                    repo: Components.Parameters.repo,
+                    codeql_variant_analysis_id: Swift.Int
+                ) {
+                    self.owner = owner
+                    self.repo = repo
+                    self.codeql_variant_analysis_id = codeql_variant_analysis_id
+                }
+            }
+            public var path: Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis.Input.Path
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/GET/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis.Input.Headers
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - headers:
+            public init(
+                path: Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis.Input.Path,
+                headers: Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis.Input.Headers = .init()
+            ) {
+                self.path = path
+                self.headers = headers
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Ok: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/GET/responses/200/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/GET/responses/200/content/application\/json`.
+                    case json(Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis.Output.Ok.Body
+                /// Creates a new `Ok`.
+                ///
+                /// - Parameters:
+                ///   - body: Received HTTP response body
+                public init(body: Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis.Output.Ok.Body) {
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/get(code-scanning/get-variant-analysis)/responses/200`.
+            ///
+            /// HTTP response code: `200 ok`.
+            case ok(Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis.Output.Ok)
+            /// The associated value of the enum case if `self` is `.ok`.
+            ///
+            /// - Throws: An error if `self` is not `.ok`.
+            /// - SeeAlso: `.ok`.
+            public var ok: Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis.Output.Ok {
+                get throws {
+                    switch self {
+                    case let .ok(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "ok",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Resource not found
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/get(code-scanning/get-variant-analysis)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            case notFound(Components.Responses.not_found)
+            /// The associated value of the enum case if `self` is `.notFound`.
+            ///
+            /// - Throws: An error if `self` is not `.notFound`.
+            /// - SeeAlso: `.notFound`.
+            public var notFound: Components.Responses.not_found {
+                get throws {
+                    switch self {
+                    case let .notFound(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "notFound",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Service unavailable
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/get(code-scanning/get-variant-analysis)/responses/503`.
+            ///
+            /// HTTP response code: `503 serviceUnavailable`.
+            case serviceUnavailable(Components.Responses.service_unavailable)
+            /// The associated value of the enum case if `self` is `.serviceUnavailable`.
+            ///
+            /// - Throws: An error if `self` is not `.serviceUnavailable`.
+            /// - SeeAlso: `.serviceUnavailable`.
+            public var serviceUnavailable: Components.Responses.service_unavailable {
+                get throws {
+                    switch self {
+                    case let .serviceUnavailable(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "serviceUnavailable",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
+    /// Get the analysis status of a repository in a CodeQL variant analysis
+    ///
+    /// Gets the analysis status of a repository in a CodeQL variant analysis.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
+    ///
+    /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/repos/{repo_owner}/{repo_name}`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/repos/{repo_owner}/{repo_name}/get(code-scanning/get-variant-analysis-repo-task)`.
+    public enum code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis_hyphen_repo_hyphen_task {
+        public static let id: Swift.String = "code-scanning/get-variant-analysis-repo-task"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/repos/{repo_owner}/{repo_name}/GET/path`.
+            public struct Path: Sendable, Hashable {
+                /// The account owner of the repository. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/repos/{repo_owner}/{repo_name}/GET/path/owner`.
+                public var owner: Components.Parameters.owner
+                /// The name of the controller repository.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/repos/{repo_owner}/{repo_name}/GET/path/repo`.
+                public var repo: Swift.String
+                /// The ID of the variant analysis.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/repos/{repo_owner}/{repo_name}/GET/path/codeql_variant_analysis_id`.
+                public var codeql_variant_analysis_id: Swift.Int
+                /// The account owner of the variant analysis repository. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/repos/{repo_owner}/{repo_name}/GET/path/repo_owner`.
+                public var repo_owner: Swift.String
+                /// The name of the variant analysis repository.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/repos/{repo_owner}/{repo_name}/GET/path/repo_name`.
+                public var repo_name: Swift.String
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - owner: The account owner of the repository. The name is not case sensitive.
+                ///   - repo: The name of the controller repository.
+                ///   - codeql_variant_analysis_id: The ID of the variant analysis.
+                ///   - repo_owner: The account owner of the variant analysis repository. The name is not case sensitive.
+                ///   - repo_name: The name of the variant analysis repository.
+                public init(
+                    owner: Components.Parameters.owner,
+                    repo: Swift.String,
+                    codeql_variant_analysis_id: Swift.Int,
+                    repo_owner: Swift.String,
+                    repo_name: Swift.String
+                ) {
+                    self.owner = owner
+                    self.repo = repo
+                    self.codeql_variant_analysis_id = codeql_variant_analysis_id
+                    self.repo_owner = repo_owner
+                    self.repo_name = repo_name
+                }
+            }
+            public var path: Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis_hyphen_repo_hyphen_task.Input.Path
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/repos/{repo_owner}/{repo_name}/GET/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis_hyphen_repo_hyphen_task.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis_hyphen_repo_hyphen_task.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis_hyphen_repo_hyphen_task.Input.Headers
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - headers:
+            public init(
+                path: Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis_hyphen_repo_hyphen_task.Input.Path,
+                headers: Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis_hyphen_repo_hyphen_task.Input.Headers = .init()
+            ) {
+                self.path = path
+                self.headers = headers
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Ok: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/repos/{repo_owner}/{repo_name}/GET/responses/200/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/repos/{repo_owner}/{repo_name}/GET/responses/200/content/application\/json`.
+                    case json(Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_repo_hyphen_task)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_repo_hyphen_task {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis_hyphen_repo_hyphen_task.Output.Ok.Body
+                /// Creates a new `Ok`.
+                ///
+                /// - Parameters:
+                ///   - body: Received HTTP response body
+                public init(body: Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis_hyphen_repo_hyphen_task.Output.Ok.Body) {
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/repos/{repo_owner}/{repo_name}/get(code-scanning/get-variant-analysis-repo-task)/responses/200`.
+            ///
+            /// HTTP response code: `200 ok`.
+            case ok(Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis_hyphen_repo_hyphen_task.Output.Ok)
+            /// The associated value of the enum case if `self` is `.ok`.
+            ///
+            /// - Throws: An error if `self` is not `.ok`.
+            /// - SeeAlso: `.ok`.
+            public var ok: Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis_hyphen_repo_hyphen_task.Output.Ok {
+                get throws {
+                    switch self {
+                    case let .ok(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "ok",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Resource not found
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/repos/{repo_owner}/{repo_name}/get(code-scanning/get-variant-analysis-repo-task)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            case notFound(Components.Responses.not_found)
+            /// The associated value of the enum case if `self` is `.notFound`.
+            ///
+            /// - Throws: An error if `self` is not `.notFound`.
+            /// - SeeAlso: `.notFound`.
+            public var notFound: Components.Responses.not_found {
+                get throws {
+                    switch self {
+                    case let .notFound(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "notFound",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Service unavailable
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/repos/{repo_owner}/{repo_name}/get(code-scanning/get-variant-analysis-repo-task)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
             case serviceUnavailable(Components.Responses.service_unavailable)
