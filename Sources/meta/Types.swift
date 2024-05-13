@@ -439,6 +439,8 @@ public enum Components {
             public var importer: [Swift.String]?
             /// - Remark: Generated from `#/components/schemas/api-overview/actions`.
             public var actions: [Swift.String]?
+            /// - Remark: Generated from `#/components/schemas/api-overview/actions_macos`.
+            public var actions_macos: [Swift.String]?
             /// - Remark: Generated from `#/components/schemas/api-overview/dependabot`.
             public var dependabot: [Swift.String]?
             /// - Remark: Generated from `#/components/schemas/api-overview/domains`.
@@ -499,6 +501,7 @@ public enum Components {
             ///   - pages:
             ///   - importer:
             ///   - actions:
+            ///   - actions_macos:
             ///   - dependabot:
             ///   - domains:
             public init(
@@ -514,6 +517,7 @@ public enum Components {
                 pages: [Swift.String]? = nil,
                 importer: [Swift.String]? = nil,
                 actions: [Swift.String]? = nil,
+                actions_macos: [Swift.String]? = nil,
                 dependabot: [Swift.String]? = nil,
                 domains: Components.Schemas.api_hyphen_overview.domainsPayload? = nil
             ) {
@@ -529,6 +533,7 @@ public enum Components {
                 self.pages = pages
                 self.importer = importer
                 self.actions = actions
+                self.actions_macos = actions_macos
                 self.dependabot = dependabot
                 self.domains = domains
             }
@@ -545,6 +550,7 @@ public enum Components {
                 case pages
                 case importer
                 case actions
+                case actions_macos
                 case dependabot
                 case domains
             }
