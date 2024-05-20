@@ -1388,7 +1388,7 @@ public struct Client: APIProtocol {
     }
     /// Delete an app authorization
     ///
-    /// OAuth and GitHub application owners can revoke a grant for their application and a specific user. You must use [Basic Authentication](https://docs.github.com/rest/overview/other-authentication-methods#basic-authentication) when accessing this endpoint, using the OAuth application's `client_id` and `client_secret` as the username and password. You must also provide a valid OAuth `access_token` as an input parameter and the grant for the token's owner will be deleted.
+    /// OAuth and GitHub application owners can revoke a grant for their application and a specific user. You must use [Basic Authentication](https://docs.github.com/rest/authentication/authenticating-to-the-rest-api#using-basic-authentication) when accessing this endpoint, using the OAuth application's `client_id` and `client_secret` as the username and password. You must also provide a valid OAuth `access_token` as an input parameter and the grant for the token's owner will be deleted.
     /// Deleting an application's grant will also delete all OAuth tokens associated with the application for the user. Once deleted, the application will have no access to the user's account and will no longer be listed on [the application authorizations settings screen within GitHub](https://github.com/settings/applications#authorized).
     ///
     /// - Remark: HTTP `DELETE /applications/{client_id}/grant`.
@@ -1464,7 +1464,7 @@ public struct Client: APIProtocol {
     }
     /// Check a token
     ///
-    /// OAuth applications and GitHub applications with OAuth authorizations can use this API method for checking OAuth token validity without exceeding the normal rate limits for failed login attempts. Authentication works differently with this particular endpoint. You must use [Basic Authentication](https://docs.github.com/rest/overview/other-authentication-methods#basic-authentication) to use this endpoint, where the username is the application `client_id` and the password is its `client_secret`. Invalid tokens will return `404 NOT FOUND`.
+    /// OAuth applications and GitHub applications with OAuth authorizations can use this API method for checking OAuth token validity without exceeding the normal rate limits for failed login attempts. Authentication works differently with this particular endpoint. You must use [Basic Authentication](https://docs.github.com/rest/authentication/authenticating-to-the-rest-api#using-basic-authentication) to use this endpoint, where the username is the application `client_id` and the password is its `client_secret`. Invalid tokens will return `404 NOT FOUND`.
     ///
     /// - Remark: HTTP `POST /applications/{client_id}/token`.
     /// - Remark: Generated from `#/paths//applications/{client_id}/token/post(apps/check-token)`.
@@ -1581,7 +1581,7 @@ public struct Client: APIProtocol {
     }
     /// Reset a token
     ///
-    /// OAuth applications and GitHub applications with OAuth authorizations can use this API method to reset a valid OAuth token without end-user involvement. Applications must save the "token" property in the response because changes take effect immediately. You must use [Basic Authentication](https://docs.github.com/rest/overview/other-authentication-methods#basic-authentication) when accessing this endpoint, using the application's `client_id` and `client_secret` as the username and password. Invalid tokens will return `404 NOT FOUND`.
+    /// OAuth applications and GitHub applications with OAuth authorizations can use this API method to reset a valid OAuth token without end-user involvement. Applications must save the "token" property in the response because changes take effect immediately. You must use [Basic Authentication](https://docs.github.com/rest/authentication/authenticating-to-the-rest-api#using-basic-authentication) when accessing this endpoint, using the application's `client_id` and `client_secret` as the username and password. Invalid tokens will return `404 NOT FOUND`.
     ///
     /// - Remark: HTTP `PATCH /applications/{client_id}/token`.
     /// - Remark: Generated from `#/paths//applications/{client_id}/token/patch(apps/reset-token)`.
@@ -1676,7 +1676,7 @@ public struct Client: APIProtocol {
     }
     /// Delete an app token
     ///
-    /// OAuth  or GitHub application owners can revoke a single token for an OAuth application or a GitHub application with an OAuth authorization. You must use [Basic Authentication](https://docs.github.com/rest/overview/other-authentication-methods#basic-authentication) when accessing this endpoint, using the application's `client_id` and `client_secret` as the username and password.
+    /// OAuth  or GitHub application owners can revoke a single token for an OAuth application or a GitHub application with an OAuth authorization. You must use [Basic Authentication](https://docs.github.com/rest/authentication/authenticating-to-the-rest-api#using-basic-authentication) when accessing this endpoint, using the application's `client_id` and `client_secret` as the username and password.
     ///
     /// - Remark: HTTP `DELETE /applications/{client_id}/token`.
     /// - Remark: Generated from `#/paths//applications/{client_id}/token/delete(apps/delete-token)`.
@@ -1757,7 +1757,7 @@ public struct Client: APIProtocol {
     ///
     /// Invalid tokens will return `404 NOT FOUND`.
     ///
-    /// You must use [Basic Authentication](https://docs.github.com/rest/overview/other-authentication-methods#basic-authentication)
+    /// You must use [Basic Authentication](https://docs.github.com/rest/authentication/authenticating-to-the-rest-api#using-basic-authentication)
     /// when accessing this endpoint, using the `client_id` and `client_secret` of the GitHub App
     /// as the username and password.
     ///
@@ -2200,7 +2200,7 @@ public struct Client: APIProtocol {
     ///
     /// Shows whether the user or organization account actively subscribes to a plan listed by the authenticated GitHub App. When someone submits a plan change that won't be processed until the end of their billing cycle, you will also see the upcoming pending change.
     ///
-    /// GitHub Apps must use a [JWT](https://docs.github.com/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-a-github-app) to access this endpoint. OAuth apps must use [basic authentication](https://docs.github.com/rest/overview/other-authentication-methods#basic-authentication) with their client ID and client secret to access this endpoint.
+    /// GitHub Apps must use a [JWT](https://docs.github.com/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-a-github-app) to access this endpoint. OAuth apps must use [basic authentication](https://docs.github.com/rest/authentication/authenticating-to-the-rest-api#using-basic-authentication) with their client ID and client secret to access this endpoint.
     ///
     /// - Remark: HTTP `GET /marketplace_listing/accounts/{account_id}`.
     /// - Remark: Generated from `#/paths//marketplace_listing/accounts/{account_id}/get(apps/get-subscription-plan-for-account)`.
@@ -2310,7 +2310,7 @@ public struct Client: APIProtocol {
     ///
     /// Lists all plans that are part of your GitHub Marketplace listing.
     ///
-    /// GitHub Apps must use a [JWT](https://docs.github.com/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-a-github-app) to access this endpoint. OAuth apps must use [basic authentication](https://docs.github.com/rest/overview/other-authentication-methods#basic-authentication) with their client ID and client secret to access this endpoint.
+    /// GitHub Apps must use a [JWT](https://docs.github.com/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-a-github-app) to access this endpoint. OAuth apps must use [basic authentication](https://docs.github.com/rest/authentication/authenticating-to-the-rest-api#using-basic-authentication) with their client ID and client secret to access this endpoint.
     ///
     /// - Remark: HTTP `GET /marketplace_listing/plans`.
     /// - Remark: Generated from `#/paths//marketplace_listing/plans/get(apps/list-plans)`.
@@ -2440,7 +2440,7 @@ public struct Client: APIProtocol {
     ///
     /// Returns user and organization accounts associated with the specified plan, including free plans. For per-seat pricing, you see the list of accounts that have purchased the plan, including the number of seats purchased. When someone submits a plan change that won't be processed until the end of their billing cycle, you will also see the upcoming pending change.
     ///
-    /// GitHub Apps must use a [JWT](https://docs.github.com/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-a-github-app) to access this endpoint. OAuth apps must use [basic authentication](https://docs.github.com/rest/overview/other-authentication-methods#basic-authentication) with their client ID and client secret to access this endpoint.
+    /// GitHub Apps must use a [JWT](https://docs.github.com/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-a-github-app) to access this endpoint. OAuth apps must use [basic authentication](https://docs.github.com/rest/authentication/authenticating-to-the-rest-api#using-basic-authentication) with their client ID and client secret to access this endpoint.
     ///
     /// - Remark: HTTP `GET /marketplace_listing/plans/{plan_id}/accounts`.
     /// - Remark: Generated from `#/paths//marketplace_listing/plans/{plan_id}/accounts/get(apps/list-accounts-for-plan)`.
@@ -2608,7 +2608,7 @@ public struct Client: APIProtocol {
     ///
     /// Shows whether the user or organization account actively subscribes to a plan listed by the authenticated GitHub App. When someone submits a plan change that won't be processed until the end of their billing cycle, you will also see the upcoming pending change.
     ///
-    /// GitHub Apps must use a [JWT](https://docs.github.com/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-a-github-app) to access this endpoint. OAuth apps must use [basic authentication](https://docs.github.com/rest/overview/other-authentication-methods#basic-authentication) with their client ID and client secret to access this endpoint.
+    /// GitHub Apps must use a [JWT](https://docs.github.com/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-a-github-app) to access this endpoint. OAuth apps must use [basic authentication](https://docs.github.com/rest/authentication/authenticating-to-the-rest-api#using-basic-authentication) with their client ID and client secret to access this endpoint.
     ///
     /// - Remark: HTTP `GET /marketplace_listing/stubbed/accounts/{account_id}`.
     /// - Remark: Generated from `#/paths//marketplace_listing/stubbed/accounts/{account_id}/get(apps/get-subscription-plan-for-account-stubbed)`.
@@ -2698,7 +2698,7 @@ public struct Client: APIProtocol {
     ///
     /// Lists all plans that are part of your GitHub Marketplace listing.
     ///
-    /// GitHub Apps must use a [JWT](https://docs.github.com/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-a-github-app) to access this endpoint. OAuth apps must use [basic authentication](https://docs.github.com/rest/overview/other-authentication-methods#basic-authentication) with their client ID and client secret to access this endpoint.
+    /// GitHub Apps must use a [JWT](https://docs.github.com/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-a-github-app) to access this endpoint. OAuth apps must use [basic authentication](https://docs.github.com/rest/authentication/authenticating-to-the-rest-api#using-basic-authentication) with their client ID and client secret to access this endpoint.
     ///
     /// - Remark: HTTP `GET /marketplace_listing/stubbed/plans`.
     /// - Remark: Generated from `#/paths//marketplace_listing/stubbed/plans/get(apps/list-plans-stubbed)`.
@@ -2806,7 +2806,7 @@ public struct Client: APIProtocol {
     ///
     /// Returns repository and organization accounts associated with the specified plan, including free plans. For per-seat pricing, you see the list of accounts that have purchased the plan, including the number of seats purchased. When someone submits a plan change that won't be processed until the end of their billing cycle, you will also see the upcoming pending change.
     ///
-    /// GitHub Apps must use a [JWT](https://docs.github.com/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-a-github-app) to access this endpoint. OAuth apps must use [basic authentication](https://docs.github.com/rest/overview/other-authentication-methods#basic-authentication) with their client ID and client secret to access this endpoint.
+    /// GitHub Apps must use a [JWT](https://docs.github.com/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-a-github-app) to access this endpoint. OAuth apps must use [basic authentication](https://docs.github.com/rest/authentication/authenticating-to-the-rest-api#using-basic-authentication) with their client ID and client secret to access this endpoint.
     ///
     /// - Remark: HTTP `GET /marketplace_listing/stubbed/plans/{plan_id}/accounts`.
     /// - Remark: Generated from `#/paths//marketplace_listing/stubbed/plans/{plan_id}/accounts/get(apps/list-accounts-for-plan-stubbed)`.
