@@ -1593,7 +1593,7 @@ public struct Client: APIProtocol {
     ///
     /// By default this endpoint returns JSON metadata about the CodeQL database. To
     /// download the CodeQL database binary content, set the `Accept` header of the request
-    /// to [`application/zip`](https://docs.github.com/rest/overview/media-types), and make sure
+    /// to [`application/zip`](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types), and make sure
     /// your HTTP client is configured to follow redirects or use the `Location` header
     /// to make a second request to get the redirect URL.
     ///
