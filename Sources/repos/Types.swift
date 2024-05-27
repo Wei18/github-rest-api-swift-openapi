@@ -6428,6 +6428,10 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/hook-delivery-item/repository_id`.
             public var repository_id: Swift.Int?
+            /// Time when the webhook delivery was throttled.
+            ///
+            /// - Remark: Generated from `#/components/schemas/hook-delivery-item/throttled_at`.
+            public var throttled_at: Foundation.Date?
             /// Creates a new `hook_hyphen_delivery_hyphen_item`.
             ///
             /// - Parameters:
@@ -6442,6 +6446,7 @@ public enum Components {
             ///   - action: The type of activity for the event that triggered the delivery.
             ///   - installation_id: The id of the GitHub App installation associated with this event.
             ///   - repository_id: The id of the repository associated with this event.
+            ///   - throttled_at: Time when the webhook delivery was throttled.
             public init(
                 id: Swift.Int,
                 guid: Swift.String,
@@ -6453,7 +6458,8 @@ public enum Components {
                 event: Swift.String,
                 action: Swift.String? = nil,
                 installation_id: Swift.Int? = nil,
-                repository_id: Swift.Int? = nil
+                repository_id: Swift.Int? = nil,
+                throttled_at: Foundation.Date? = nil
             ) {
                 self.id = id
                 self.guid = guid
@@ -6466,6 +6472,7 @@ public enum Components {
                 self.action = action
                 self.installation_id = installation_id
                 self.repository_id = repository_id
+                self.throttled_at = throttled_at
             }
             public enum CodingKeys: String, CodingKey {
                 case id
@@ -6479,6 +6486,7 @@ public enum Components {
                 case action
                 case installation_id
                 case repository_id
+                case throttled_at
             }
         }
         /// Scim Error
@@ -6703,6 +6711,10 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/hook-delivery/repository_id`.
             public var repository_id: Swift.Int?
+            /// Time when the webhook delivery was throttled.
+            ///
+            /// - Remark: Generated from `#/components/schemas/hook-delivery/throttled_at`.
+            public var throttled_at: Foundation.Date?
             /// The URL target of the delivery.
             ///
             /// - Remark: Generated from `#/components/schemas/hook-delivery/url`.
@@ -6839,6 +6851,7 @@ public enum Components {
             ///   - action: The type of activity for the event that triggered the delivery.
             ///   - installation_id: The id of the GitHub App installation associated with this event.
             ///   - repository_id: The id of the repository associated with this event.
+            ///   - throttled_at: Time when the webhook delivery was throttled.
             ///   - url: The URL target of the delivery.
             ///   - request:
             ///   - response:
@@ -6854,6 +6867,7 @@ public enum Components {
                 action: Swift.String? = nil,
                 installation_id: Swift.Int? = nil,
                 repository_id: Swift.Int? = nil,
+                throttled_at: Foundation.Date? = nil,
                 url: Swift.String? = nil,
                 request: Components.Schemas.hook_hyphen_delivery.requestPayload,
                 response: Components.Schemas.hook_hyphen_delivery.responsePayload
@@ -6869,6 +6883,7 @@ public enum Components {
                 self.action = action
                 self.installation_id = installation_id
                 self.repository_id = repository_id
+                self.throttled_at = throttled_at
                 self.url = url
                 self.request = request
                 self.response = response
@@ -6885,6 +6900,7 @@ public enum Components {
                 case action
                 case installation_id
                 case repository_id
+                case throttled_at
                 case url
                 case request
                 case response
