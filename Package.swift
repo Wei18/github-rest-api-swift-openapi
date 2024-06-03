@@ -18,6 +18,7 @@ let package = Package(
         .library(name: "GitHubRestAPIChecks", targets: ["GitHubRestAPIChecks"]),
         .library(name: "GitHubRestAPIClassroom", targets: ["GitHubRestAPIClassroom"]),
         .library(name: "GitHubRestAPICode_Scanning", targets: ["GitHubRestAPICode_Scanning"]),
+        .library(name: "GitHubRestAPICode_Security", targets: ["GitHubRestAPICode_Security"]),
         .library(name: "GitHubRestAPICodes_Of_Conduct", targets: ["GitHubRestAPICodes_Of_Conduct"]),
         .library(name: "GitHubRestAPICodespaces", targets: ["GitHubRestAPICodespaces"]),
         .library(name: "GitHubRestAPICopilot", targets: ["GitHubRestAPICopilot"]),
@@ -110,6 +111,14 @@ let package = Package(
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
             ],
             path: "Sources/code-scanning"
+        ),
+        .target(
+            name: "GitHubRestAPICode_Security",
+            dependencies: [
+                .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
+                .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
+            ],
+            path: "Sources/code-security"
         ),
         .target(
             name: "GitHubRestAPICodes_Of_Conduct",

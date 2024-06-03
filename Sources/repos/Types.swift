@@ -836,7 +836,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// To process a response with a large number of commits, use a query parameter (`per_page` or `page`) to paginate the results. When using pagination:
     ///
-    /// - The list of changed files is only shown on the first page of results, but it includes all changed files for the entire comparison.
+    /// - The list of changed files is only shown on the first page of results, and it includes up to 300 changed files for the entire comparison.
     /// - The results are returned in chronological order, but the last commit in the returned list may not be the most recent one in the entire set if there are more pages of results.
     ///
     /// For more information on working with pagination, see "[Using pagination in the REST API](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api)."
@@ -1823,7 +1823,10 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/tags`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/tags/get(repos/list-tags)`.
     func repos_sol_list_hyphen_tags(_ input: Operations.repos_sol_list_hyphen_tags.Input) async throws -> Operations.repos_sol_list_hyphen_tags.Output
-    /// List tag protection states for a repository
+    /// Deprecated - List tag protection states for a repository
+    ///
+    /// **Note**: This operation is deprecated and will be removed after August 30th 2024
+    /// Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#get-all-repository-rulesets)" endpoint instead.
     ///
     /// This returns the tag protection states of a repository.
     ///
@@ -1831,22 +1834,31 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/tags/protection`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/tags/protection/get(repos/list-tag-protection)`.
+    @available(*, deprecated)
     func repos_sol_list_hyphen_tag_hyphen_protection(_ input: Operations.repos_sol_list_hyphen_tag_hyphen_protection.Input) async throws -> Operations.repos_sol_list_hyphen_tag_hyphen_protection.Output
-    /// Create a tag protection state for a repository
+    /// Deprecated - Create a tag protection state for a repository
+    ///
+    /// **Note**: This operation is deprecated and will be removed after August 30th 2024
+    /// Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#create-a-repository-ruleset)" endpoint instead.
     ///
     /// This creates a tag protection state for a repository.
     /// This endpoint is only available to repository administrators.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/tags/protection`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/tags/protection/post(repos/create-tag-protection)`.
+    @available(*, deprecated)
     func repos_sol_create_hyphen_tag_hyphen_protection(_ input: Operations.repos_sol_create_hyphen_tag_hyphen_protection.Input) async throws -> Operations.repos_sol_create_hyphen_tag_hyphen_protection.Output
-    /// Delete a tag protection state for a repository
+    /// Deprecated - Delete a tag protection state for a repository
+    ///
+    /// **Note**: This operation is deprecated and will be removed after August 30th 2024
+    /// Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#delete-a-repository-ruleset)" endpoint instead.
     ///
     /// This deletes a tag protection state for a repository.
     /// This endpoint is only available to repository administrators.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/tags/protection/{tag_protection_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/tags/protection/{tag_protection_id}/delete(repos/delete-tag-protection)`.
+    @available(*, deprecated)
     func repos_sol_delete_hyphen_tag_hyphen_protection(_ input: Operations.repos_sol_delete_hyphen_tag_hyphen_protection.Input) async throws -> Operations.repos_sol_delete_hyphen_tag_hyphen_protection.Output
     /// Download a repository archive (tar)
     ///
@@ -3493,7 +3505,7 @@ extension APIProtocol {
     ///
     /// To process a response with a large number of commits, use a query parameter (`per_page` or `page`) to paginate the results. When using pagination:
     ///
-    /// - The list of changed files is only shown on the first page of results, but it includes all changed files for the entire comparison.
+    /// - The list of changed files is only shown on the first page of results, and it includes up to 300 changed files for the entire comparison.
     /// - The results are returned in chronological order, but the last commit in the returned list may not be the most recent one in the entire set if there are more pages of results.
     ///
     /// For more information on working with pagination, see "[Using pagination in the REST API](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api)."
@@ -5328,7 +5340,10 @@ extension APIProtocol {
             headers: headers
         ))
     }
-    /// List tag protection states for a repository
+    /// Deprecated - List tag protection states for a repository
+    ///
+    /// **Note**: This operation is deprecated and will be removed after August 30th 2024
+    /// Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#get-all-repository-rulesets)" endpoint instead.
     ///
     /// This returns the tag protection states of a repository.
     ///
@@ -5336,6 +5351,7 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/tags/protection`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/tags/protection/get(repos/list-tag-protection)`.
+    @available(*, deprecated)
     public func repos_sol_list_hyphen_tag_hyphen_protection(
         path: Operations.repos_sol_list_hyphen_tag_hyphen_protection.Input.Path,
         headers: Operations.repos_sol_list_hyphen_tag_hyphen_protection.Input.Headers = .init()
@@ -5345,13 +5361,17 @@ extension APIProtocol {
             headers: headers
         ))
     }
-    /// Create a tag protection state for a repository
+    /// Deprecated - Create a tag protection state for a repository
+    ///
+    /// **Note**: This operation is deprecated and will be removed after August 30th 2024
+    /// Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#create-a-repository-ruleset)" endpoint instead.
     ///
     /// This creates a tag protection state for a repository.
     /// This endpoint is only available to repository administrators.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/tags/protection`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/tags/protection/post(repos/create-tag-protection)`.
+    @available(*, deprecated)
     public func repos_sol_create_hyphen_tag_hyphen_protection(
         path: Operations.repos_sol_create_hyphen_tag_hyphen_protection.Input.Path,
         headers: Operations.repos_sol_create_hyphen_tag_hyphen_protection.Input.Headers = .init(),
@@ -5363,13 +5383,17 @@ extension APIProtocol {
             body: body
         ))
     }
-    /// Delete a tag protection state for a repository
+    /// Deprecated - Delete a tag protection state for a repository
+    ///
+    /// **Note**: This operation is deprecated and will be removed after August 30th 2024
+    /// Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#delete-a-repository-ruleset)" endpoint instead.
     ///
     /// This deletes a tag protection state for a repository.
     /// This endpoint is only available to repository administrators.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/tags/protection/{tag_protection_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/tags/protection/{tag_protection_id}/delete(repos/delete-tag-protection)`.
+    @available(*, deprecated)
     public func repos_sol_delete_hyphen_tag_hyphen_protection(
         path: Operations.repos_sol_delete_hyphen_tag_hyphen_protection.Input.Path,
         headers: Operations.repos_sol_delete_hyphen_tag_hyphen_protection.Input.Headers = .init()
@@ -38357,7 +38381,7 @@ public enum Operations {
     ///
     /// To process a response with a large number of commits, use a query parameter (`per_page` or `page`) to paginate the results. When using pagination:
     ///
-    /// - The list of changed files is only shown on the first page of results, but it includes all changed files for the entire comparison.
+    /// - The list of changed files is only shown on the first page of results, and it includes up to 300 changed files for the entire comparison.
     /// - The results are returned in chronological order, but the last commit in the returned list may not be the most recent one in the entire set if there are more pages of results.
     ///
     /// For more information on working with pagination, see "[Using pagination in the REST API](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api)."
@@ -58465,7 +58489,10 @@ public enum Operations {
             }
         }
     }
-    /// List tag protection states for a repository
+    /// Deprecated - List tag protection states for a repository
+    ///
+    /// **Note**: This operation is deprecated and will be removed after August 30th 2024
+    /// Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#get-all-repository-rulesets)" endpoint instead.
     ///
     /// This returns the tag protection states of a repository.
     ///
@@ -58654,7 +58681,10 @@ public enum Operations {
             }
         }
     }
-    /// Create a tag protection state for a repository
+    /// Deprecated - Create a tag protection state for a repository
+    ///
+    /// **Note**: This operation is deprecated and will be removed after August 30th 2024
+    /// Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#create-a-repository-ruleset)" endpoint instead.
     ///
     /// This creates a tag protection state for a repository.
     /// This endpoint is only available to repository administrators.
@@ -58868,7 +58898,10 @@ public enum Operations {
             }
         }
     }
-    /// Delete a tag protection state for a repository
+    /// Deprecated - Delete a tag protection state for a repository
+    ///
+    /// **Note**: This operation is deprecated and will be removed after August 30th 2024
+    /// Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#delete-a-repository-ruleset)" endpoint instead.
     ///
     /// This deletes a tag protection state for a repository.
     /// This endpoint is only available to repository administrators.

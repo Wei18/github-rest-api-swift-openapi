@@ -50,10 +50,9 @@ public struct Client: APIProtocol {
     /// and the response will only include data up until yesterday. In order for an end user to be counted towards these metrics,
     /// they must have telemetry enabled in their IDE.
     ///
-    /// Only the owners and billing managers of enterprises with a Copilot Business or Enterprise subscription can view Copilot usage
-    /// metrics for the enterprise.
+    /// Only owners and billing managers can view Copilot usage metrics for the enterprise.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need the `copilot`, `manage_billing:copilot`, `admin:enterprise`, or `manage_billing:enterprise` scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `read:enterprise` scopes to use this endpoint.
     ///
     /// - Remark: HTTP `GET /enterprises/{enterprise}/copilot/usage`.
     /// - Remark: Generated from `#/paths//enterprises/{enterprise}/copilot/usage/get(copilot/usage-metrics-for-enterprise)`.
@@ -1281,10 +1280,9 @@ public struct Client: APIProtocol {
     /// and the response will only include data up until yesterday. In order for an end user to be counted towards these metrics,
     /// they must have telemetry enabled in their IDE.
     ///
-    /// Copilot Business or Copilot Enterprise organization owners, and owners and billing managers of their parent enterprises, can view
-    /// Copilot usage metrics.
+    /// Organization owners, and owners and billing managers of the parent enterprise, can view Copilot usage metrics.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need the `copilot`, `manage_billing:copilot`, `admin:org`, `admin:enterprise`, or `manage_billing:enterprise` scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot`, `read:org`, or `read:enterprise` scopes to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/copilot/usage`.
     /// - Remark: Generated from `#/paths//orgs/{org}/copilot/usage/get(copilot/usage-metrics-for-org)`.
