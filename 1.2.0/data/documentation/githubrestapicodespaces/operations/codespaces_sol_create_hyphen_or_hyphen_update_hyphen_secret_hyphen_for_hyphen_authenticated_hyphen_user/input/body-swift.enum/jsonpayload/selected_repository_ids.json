@@ -1,0 +1,677 @@
+{
+  "abstract" : [
+    {
+      "text" : "An array of repository ids that can access the user secret. You can manage the list of selected repositories using the ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/codespaces\/secrets#list-selected-repositories-for-a-user-secret",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ", ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/codespaces\/secrets#set-selected-repositories-for-a-user-secret",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ", and ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/codespaces\/secrets#remove-a-selected-repository-from-a-user-secret",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " endpoints.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_or_hyphen_update_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_or_hyphen_update_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user\/Input",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_or_hyphen_update_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user\/Input\/Body-swift.enum",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_or_hyphen_update_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user\/Input\/Body-swift.enum\/jsonPayload"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_or_hyphen_update_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user\/Input\/Body-swift.enum\/jsonPayload\/selected_repository_ids"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:23GitHubRestAPICodespaces10OperationsO032codespaces_sol_create_hyphen_or_i8_update_i8_secret_i5_for_i15_authenticated_I5_userO5InputV4BodyO11jsonPayloadV23selected_repository_idsSayAK0t1_u1_vsS0VGSgvp",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "selected_repository_ids"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO032codespaces_sol_create_hyphen_or_i8_update_i8_secret_i5_for_i15_authenticated_I5_userO",
+        "text" : "codespaces_sol_create_hyphen_or_hyphen_update_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO032codespaces_sol_create_hyphen_or_i8_update_i8_secret_i5_for_i15_authenticated_I5_userO5InputV",
+        "text" : "Input"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO032codespaces_sol_create_hyphen_or_i8_update_i8_secret_i5_for_i15_authenticated_I5_userO5InputV4BodyO",
+        "text" : "Body"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO032codespaces_sol_create_hyphen_or_i8_update_i8_secret_i5_for_i15_authenticated_I5_userO5InputV4BodyO11jsonPayloadV",
+        "text" : "jsonPayload"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO032codespaces_sol_create_hyphen_or_i8_update_i8_secret_i5_for_i15_authenticated_I5_userO5InputV4BodyO11jsonPayloadV023selected_repository_idsS0a",
+        "text" : "selected_repository_idsPayload"
+      },
+      {
+        "kind" : "text",
+        "text" : "?"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPICodespaces"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "selected_repository_ids"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "var"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "selected_repository_ids"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_or_hyphen_update_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO032codespaces_sol_create_hyphen_or_i8_update_i8_secret_i5_for_i15_authenticated_I5_userO",
+              "text" : "codespaces_sol_create_hyphen_or_hyphen_update_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_or_hyphen_update_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user\/Input",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO032codespaces_sol_create_hyphen_or_i8_update_i8_secret_i5_for_i15_authenticated_I5_userO5InputV",
+              "text" : "Input"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_or_hyphen_update_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user\/Input\/Body-swift.enum",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO032codespaces_sol_create_hyphen_or_i8_update_i8_secret_i5_for_i15_authenticated_I5_userO5InputV4BodyO",
+              "text" : "Body"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_or_hyphen_update_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user\/Input\/Body-swift.enum\/jsonPayload",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO032codespaces_sol_create_hyphen_or_i8_update_i8_secret_i5_for_i15_authenticated_I5_userO5InputV4BodyO11jsonPayloadV",
+              "text" : "jsonPayload"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_or_hyphen_update_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user\/Input\/Body-swift.enum\/jsonPayload\/selected_repository_idsPayload",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO032codespaces_sol_create_hyphen_or_i8_update_i8_secret_i5_for_i15_authenticated_I5_userO5InputV4BodyO11jsonPayloadV023selected_repository_idsS0a",
+              "text" : "selected_repository_idsPayload"
+            },
+            {
+              "kind" : "text",
+              "text" : "?"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/user\/codespaces\/secrets\/{secret_name}\/PUT\/requestBody\/json\/selected_repository_ids",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapicodespaces\/operations\/codespaces_sol_create_hyphen_or_hyphen_update_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user\/input\/body-swift.enum\/jsonpayload\/selected_repository_ids"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPICodespaces",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/codespaces_sol_create_hyphen_or_hyphen_update_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user": {
+  "abstract" : [
+    {
+      "text" : "Create or update a secret for the authenticated user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_create_hyphen_or_hyphen_update_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_or_hyphen_update_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_create_hyphen_or_hyphen_update_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.codespaces_sol_create_hyphen_or_hyphen_update_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespaces_sol_create_hyphen_or_hyphen_update_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/codespaces_sol_create_hyphen_or_hyphen_update_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_or_hyphen_update_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.codespaces_sol_create_hyphen_or_hyphen_update_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespaces_sol_create_hyphen_or_hyphen_update_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user\/input"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/codespaces_sol_create_hyphen_or_hyphen_update_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user/Input/Body-swift.enum": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_or_hyphen_update_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user\/Input\/Body-swift.enum",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.codespaces_sol_create_hyphen_or_hyphen_update_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespaces_sol_create_hyphen_or_hyphen_update_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user\/input\/body-swift.enum"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/codespaces_sol_create_hyphen_or_hyphen_update_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user/Input/Body-swift.enum/jsonPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "jsonPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_or_hyphen_update_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user\/Input\/Body-swift.enum\/jsonPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "jsonPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.codespaces_sol_create_hyphen_or_hyphen_update_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body.jsonPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespaces_sol_create_hyphen_or_hyphen_update_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user\/input\/body-swift.enum\/jsonpayload"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/codespaces_sol_create_hyphen_or_hyphen_update_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user/Input/Body-swift.enum/jsonPayload/selected_repository_ids": {
+  "abstract" : [
+    {
+      "text" : "An array of repository ids that can access the user secret. You can manage the list of selected repositories using the ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/codespaces\/secrets#list-selected-repositories-for-a-user-secret",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ", ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/codespaces\/secrets#set-selected-repositories-for-a-user-secret",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ", and ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/codespaces\/secrets#remove-a-selected-repository-from-a-user-secret",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " endpoints.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "selected_repository_ids"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO032codespaces_sol_create_hyphen_or_i8_update_i8_secret_i5_for_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_create_hyphen_or_hyphen_update_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO032codespaces_sol_create_hyphen_or_i8_update_i8_secret_i5_for_i15_authenticated_I5_userO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO032codespaces_sol_create_hyphen_or_i8_update_i8_secret_i5_for_i15_authenticated_I5_userO5InputV4BodyO",
+      "text" : "Body"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO032codespaces_sol_create_hyphen_or_i8_update_i8_secret_i5_for_i15_authenticated_I5_userO5InputV4BodyO11jsonPayloadV",
+      "text" : "jsonPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO032codespaces_sol_create_hyphen_or_i8_update_i8_secret_i5_for_i15_authenticated_I5_userO5InputV4BodyO11jsonPayloadV023selected_repository_idsS0a",
+      "text" : "selected_repository_idsPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_or_hyphen_update_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user\/Input\/Body-swift.enum\/jsonPayload\/selected_repository_ids",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "selected_repository_ids",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespaces_sol_create_hyphen_or_hyphen_update_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user\/input\/body-swift.enum\/jsonpayload\/selected_repository_ids"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/codespaces_sol_create_hyphen_or_hyphen_update_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user/Input/Body-swift.enum/jsonPayload/selected_repository_idsPayload": {
+  "abstract" : [
+    {
+      "text" : "An array of repository ids that can access the user secret. You can manage the list of selected repositories using the ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/codespaces\/secrets#list-selected-repositories-for-a-user-secret",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ", ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/codespaces\/secrets#set-selected-repositories-for-a-user-secret",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ", and ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/codespaces\/secrets#remove-a-selected-repository-from-a-user-secret",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " endpoints.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "selected_repository_idsPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_or_hyphen_update_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user\/Input\/Body-swift.enum\/jsonPayload\/selected_repository_idsPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "selected_repository_idsPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.codespaces_sol_create_hyphen_or_hyphen_update_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body.jsonPayload.selected_repository_idsPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespaces_sol_create_hyphen_or_hyphen_update_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user\/input\/body-swift.enum\/jsonpayload\/selected_repository_idspayload"
+},
+"https://docs.github.com/rest/codespaces/secrets#list-selected-repositories-for-a-user-secret": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/codespaces\/secrets#list-selected-repositories-for-a-user-secret",
+  "title" : "List selected repositories for a user secret",
+  "titleInlineContent" : [
+    {
+      "text" : "List selected repositories for a user secret",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/codespaces\/secrets#list-selected-repositories-for-a-user-secret"
+},
+"https://docs.github.com/rest/codespaces/secrets#remove-a-selected-repository-from-a-user-secret": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/codespaces\/secrets#remove-a-selected-repository-from-a-user-secret",
+  "title" : "Remove a selected repository from a user secret",
+  "titleInlineContent" : [
+    {
+      "text" : "Remove a selected repository from a user secret",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/codespaces\/secrets#remove-a-selected-repository-from-a-user-secret"
+},
+"https://docs.github.com/rest/codespaces/secrets#set-selected-repositories-for-a-user-secret": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/codespaces\/secrets#set-selected-repositories-for-a-user-secret",
+  "title" : "Set selected repositories for a user secret",
+  "titleInlineContent" : [
+    {
+      "text" : "Set selected repositories for a user secret",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/codespaces\/secrets#set-selected-repositories-for-a-user-secret"
+}
+}
+}

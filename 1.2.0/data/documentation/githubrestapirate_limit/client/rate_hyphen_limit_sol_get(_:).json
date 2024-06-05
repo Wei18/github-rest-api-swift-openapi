@@ -1,0 +1,1064 @@
+{
+  "abstract" : [
+    {
+      "text" : "Get rate limit status for the authenticated user",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit",
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Client"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Client\/rate_hyphen_limit_sol_get(_:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:23GitHubRestAPIRate_Limit6ClientV25rate_hyphen_limit_sol_getyAA10OperationsOADO6OutputOAG5InputVYaKF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "rate_hyphen_limit_sol_get"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10OperationsO25rate_hyphen_limit_sol_getO",
+        "text" : "rate_hyphen_limit_sol_get"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10OperationsO25rate_hyphen_limit_sol_getO5InputV",
+        "text" : "Input"
+      },
+      {
+        "kind" : "text",
+        "text" : ") "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "async"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "throws"
+      },
+      {
+        "kind" : "text",
+        "text" : " -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10OperationsO25rate_hyphen_limit_sol_getO",
+        "text" : "rate_hyphen_limit_sol_get"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10OperationsO25rate_hyphen_limit_sol_getO6OutputO",
+        "text" : "Output"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIRate_Limit"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Instance Method",
+    "symbolKind" : "method",
+    "title" : "rate_hyphen_limit_sol_get(_:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "func"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "rate_hyphen_limit_sol_get"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "_"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "internalParam",
+              "text" : "input"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Operations\/rate_hyphen_limit_sol_get",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10OperationsO25rate_hyphen_limit_sol_getO",
+              "text" : "rate_hyphen_limit_sol_get"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Operations\/rate_hyphen_limit_sol_get\/Input",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10OperationsO25rate_hyphen_limit_sol_getO5InputV",
+              "text" : "Input"
+            },
+            {
+              "kind" : "text",
+              "text" : ") "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "async"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "throws"
+            },
+            {
+              "kind" : "text",
+              "text" : " -> "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Operations\/rate_hyphen_limit_sol_get",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10OperationsO25rate_hyphen_limit_sol_getO",
+              "text" : "rate_hyphen_limit_sol_get"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Operations\/rate_hyphen_limit_sol_get\/Output",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10OperationsO25rate_hyphen_limit_sol_getO6OutputO",
+              "text" : "Output"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Note:",
+                  "type" : "text"
+                }
+              ],
+              "type" : "strong"
+            },
+            {
+              "text" : " Accessing this endpoint does not count against your REST API rate limit.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Some categories of endpoints have custom rate limits that are separate from the rate limit governing the other REST API endpoints. For this reason, the API response categorizes your rate limit. Under ",
+              "type" : "text"
+            },
+            {
+              "code" : "resources",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ", you’ll see objects relating to different categories:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "items" : [
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "The ",
+                      "type" : "text"
+                    },
+                    {
+                      "code" : "core",
+                      "type" : "codeVoice"
+                    },
+                    {
+                      "text" : " object provides your rate limit status for all non-search-related resources in the REST API.",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "The ",
+                      "type" : "text"
+                    },
+                    {
+                      "code" : "search",
+                      "type" : "codeVoice"
+                    },
+                    {
+                      "text" : " object provides your rate limit status for the REST API for searching (excluding code searches). For more information, see “",
+                      "type" : "text"
+                    },
+                    {
+                      "identifier" : "https:\/\/docs.github.com\/rest\/search\/search",
+                      "isActive" : true,
+                      "type" : "reference"
+                    },
+                    {
+                      "text" : ".”",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "The ",
+                      "type" : "text"
+                    },
+                    {
+                      "code" : "code_search",
+                      "type" : "codeVoice"
+                    },
+                    {
+                      "text" : " object provides your rate limit status for the REST API for searching code. For more information, see “",
+                      "type" : "text"
+                    },
+                    {
+                      "identifier" : "https:\/\/docs.github.com\/rest\/search\/search#search-code",
+                      "isActive" : true,
+                      "type" : "reference"
+                    },
+                    {
+                      "text" : ".”",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "The ",
+                      "type" : "text"
+                    },
+                    {
+                      "code" : "graphql",
+                      "type" : "codeVoice"
+                    },
+                    {
+                      "text" : " object provides your rate limit status for the GraphQL API. For more information, see “",
+                      "type" : "text"
+                    },
+                    {
+                      "identifier" : "https:\/\/docs.github.com\/graphql\/overview\/resource-limitations#rate-limit",
+                      "isActive" : true,
+                      "type" : "reference"
+                    },
+                    {
+                      "text" : ".”",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "The ",
+                      "type" : "text"
+                    },
+                    {
+                      "code" : "integration_manifest",
+                      "type" : "codeVoice"
+                    },
+                    {
+                      "text" : " object provides your rate limit status for the ",
+                      "type" : "text"
+                    },
+                    {
+                      "code" : "POST \/app-manifests\/{code}\/conversions",
+                      "type" : "codeVoice"
+                    },
+                    {
+                      "text" : " operation. For more information, see “",
+                      "type" : "text"
+                    },
+                    {
+                      "identifier" : "https:\/\/docs.github.com\/apps\/creating-github-apps\/setting-up-a-github-app\/creating-a-github-app-from-a-manifest#3-you-exchange-the-temporary-code-to-retrieve-the-app-configuration",
+                      "isActive" : true,
+                      "type" : "reference"
+                    },
+                    {
+                      "text" : ".”",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "The ",
+                      "type" : "text"
+                    },
+                    {
+                      "code" : "dependency_snapshots",
+                      "type" : "codeVoice"
+                    },
+                    {
+                      "text" : " object provides your rate limit status for submitting snapshots to the dependency graph. For more information, see “",
+                      "type" : "text"
+                    },
+                    {
+                      "identifier" : "https:\/\/docs.github.com\/rest\/dependency-graph",
+                      "isActive" : true,
+                      "type" : "reference"
+                    },
+                    {
+                      "text" : ".”",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "The ",
+                      "type" : "text"
+                    },
+                    {
+                      "code" : "code_scanning_upload",
+                      "type" : "codeVoice"
+                    },
+                    {
+                      "text" : " object provides your rate limit status for uploading SARIF results to code scanning. For more information, see “",
+                      "type" : "text"
+                    },
+                    {
+                      "identifier" : "https:\/\/docs.github.com\/code-security\/code-scanning\/integrating-with-code-scanning\/uploading-a-sarif-file-to-github",
+                      "isActive" : true,
+                      "type" : "reference"
+                    },
+                    {
+                      "text" : ".”",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "The ",
+                      "type" : "text"
+                    },
+                    {
+                      "code" : "actions_runner_registration",
+                      "type" : "codeVoice"
+                    },
+                    {
+                      "text" : " object provides your rate limit status for registering self-hosted runners in GitHub Actions. For more information, see “",
+                      "type" : "text"
+                    },
+                    {
+                      "identifier" : "https:\/\/docs.github.com\/rest\/actions\/self-hosted-runners",
+                      "isActive" : true,
+                      "type" : "reference"
+                    },
+                    {
+                      "text" : ".”",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "The ",
+                      "type" : "text"
+                    },
+                    {
+                      "code" : "source_import",
+                      "type" : "codeVoice"
+                    },
+                    {
+                      "text" : " object is no longer in use for any API endpoints, and it will be removed in the next API version. For more information about API versions, see “",
+                      "type" : "text"
+                    },
+                    {
+                      "identifier" : "https:\/\/docs.github.com\/rest\/about-the-rest-api\/api-versions",
+                      "isActive" : true,
+                      "type" : "reference"
+                    },
+                    {
+                      "text" : ".”",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            }
+          ],
+          "type" : "unorderedList"
+        },
+        {
+          "inlineContent" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Note:",
+                  "type" : "text"
+                }
+              ],
+              "type" : "strong"
+            },
+            {
+              "text" : " The ",
+              "type" : "text"
+            },
+            {
+              "code" : "rate",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " object is deprecated. If you’re writing new API client code or updating existing code, you should use the ",
+              "type" : "text"
+            },
+            {
+              "code" : "core",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " object instead of the ",
+              "type" : "text"
+            },
+            {
+              "code" : "rate",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " object. The ",
+              "type" : "text"
+            },
+            {
+              "code" : "core",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " object contains the same information that is present in the ",
+              "type" : "text"
+            },
+            {
+              "code" : "rate",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " object.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "HTTP ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "GET \/rate_limit",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/\/rate_limit\/get(rate-limit\/get)",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapirate_limit\/client\/rate_hyphen_limit_sol_get(_:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIRate_Limit",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Client": {
+  "abstract" : [
+    {
+      "text" : "GitHub’s v3 REST API.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Client",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Client",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/client"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Client/rate_hyphen_limit_sol_get(_:)": {
+  "abstract" : [
+    {
+      "text" : "Get rate limit status for the authenticated user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "rate_hyphen_limit_sol_get"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10OperationsO25rate_hyphen_limit_sol_getO",
+      "text" : "rate_hyphen_limit_sol_get"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10OperationsO25rate_hyphen_limit_sol_getO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10OperationsO25rate_hyphen_limit_sol_getO",
+      "text" : "rate_hyphen_limit_sol_get"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10OperationsO25rate_hyphen_limit_sol_getO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Client\/rate_hyphen_limit_sol_get(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "rate_hyphen_limit_sol_get(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/client\/rate_hyphen_limit_sol_get(_:)"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/operations"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Operations/rate_hyphen_limit_sol_get": {
+  "abstract" : [
+    {
+      "text" : "Get rate limit status for the authenticated user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "rate_hyphen_limit_sol_get"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Operations\/rate_hyphen_limit_sol_get",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "rate_hyphen_limit_sol_get"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.rate_hyphen_limit_sol_get",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/operations\/rate_hyphen_limit_sol_get"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Operations/rate_hyphen_limit_sol_get/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Operations\/rate_hyphen_limit_sol_get\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.rate_hyphen_limit_sol_get.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/operations\/rate_hyphen_limit_sol_get\/input"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Operations/rate_hyphen_limit_sol_get/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Operations\/rate_hyphen_limit_sol_get\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.rate_hyphen_limit_sol_get.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/operations\/rate_hyphen_limit_sol_get\/output"
+},
+"https://docs.github.com/apps/creating-github-apps/setting-up-a-github-app/creating-a-github-app-from-a-manifest#3-you-exchange-the-temporary-code-to-retrieve-the-app-configuration": {
+  "identifier" : "https:\/\/docs.github.com\/apps\/creating-github-apps\/setting-up-a-github-app\/creating-a-github-app-from-a-manifest#3-you-exchange-the-temporary-code-to-retrieve-the-app-configuration",
+  "title" : "Creating a GitHub App from a manifest",
+  "titleInlineContent" : [
+    {
+      "text" : "Creating a GitHub App from a manifest",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/apps\/creating-github-apps\/setting-up-a-github-app\/creating-a-github-app-from-a-manifest#3-you-exchange-the-temporary-code-to-retrieve-the-app-configuration"
+},
+"https://docs.github.com/code-security/code-scanning/integrating-with-code-scanning/uploading-a-sarif-file-to-github": {
+  "identifier" : "https:\/\/docs.github.com\/code-security\/code-scanning\/integrating-with-code-scanning\/uploading-a-sarif-file-to-github",
+  "title" : "Uploading a SARIF file to GitHub",
+  "titleInlineContent" : [
+    {
+      "text" : "Uploading a SARIF file to GitHub",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/code-security\/code-scanning\/integrating-with-code-scanning\/uploading-a-sarif-file-to-github"
+},
+"https://docs.github.com/graphql/overview/resource-limitations#rate-limit": {
+  "identifier" : "https:\/\/docs.github.com\/graphql\/overview\/resource-limitations#rate-limit",
+  "title" : "Resource limitations",
+  "titleInlineContent" : [
+    {
+      "text" : "Resource limitations",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/graphql\/overview\/resource-limitations#rate-limit"
+},
+"https://docs.github.com/rest/about-the-rest-api/api-versions": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/about-the-rest-api\/api-versions",
+  "title" : "API Versions",
+  "titleInlineContent" : [
+    {
+      "text" : "API Versions",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/about-the-rest-api\/api-versions"
+},
+"https://docs.github.com/rest/actions/self-hosted-runners": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/actions\/self-hosted-runners",
+  "title" : "Self-hosted runners",
+  "titleInlineContent" : [
+    {
+      "text" : "Self-hosted runners",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/actions\/self-hosted-runners"
+},
+"https://docs.github.com/rest/dependency-graph": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/dependency-graph",
+  "title" : "Dependency graph",
+  "titleInlineContent" : [
+    {
+      "text" : "Dependency graph",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/dependency-graph"
+},
+"https://docs.github.com/rest/search/search": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/search\/search",
+  "title" : "Search",
+  "titleInlineContent" : [
+    {
+      "text" : "Search",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/search\/search"
+},
+"https://docs.github.com/rest/search/search#search-code": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/search\/search#search-code",
+  "title" : "Search code",
+  "titleInlineContent" : [
+    {
+      "text" : "Search code",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/search\/search#search-code"
+}
+}
+}
