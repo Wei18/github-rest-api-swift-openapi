@@ -1388,7 +1388,7 @@ public struct Client: APIProtocol {
     }
     /// Delete an app authorization
     ///
-    /// OAuth and GitHub application owners can revoke a grant for their application and a specific user. You must use [Basic Authentication](https://docs.github.com/rest/authentication/authenticating-to-the-rest-api#using-basic-authentication) when accessing this endpoint, using the OAuth application's `client_id` and `client_secret` as the username and password. You must also provide a valid OAuth `access_token` as an input parameter and the grant for the token's owner will be deleted.
+    /// OAuth and GitHub application owners can revoke a grant for their application and a specific user. You must provide a valid OAuth `access_token` as an input parameter and the grant for the token's owner will be deleted.
     /// Deleting an application's grant will also delete all OAuth tokens associated with the application for the user. Once deleted, the application will have no access to the user's account and will no longer be listed on [the application authorizations settings screen within GitHub](https://github.com/settings/applications#authorized).
     ///
     /// - Remark: HTTP `DELETE /applications/{client_id}/grant`.
@@ -1464,7 +1464,7 @@ public struct Client: APIProtocol {
     }
     /// Check a token
     ///
-    /// OAuth applications and GitHub applications with OAuth authorizations can use this API method for checking OAuth token validity without exceeding the normal rate limits for failed login attempts. Authentication works differently with this particular endpoint. You must use [Basic Authentication](https://docs.github.com/rest/authentication/authenticating-to-the-rest-api#using-basic-authentication) to use this endpoint, where the username is the application `client_id` and the password is its `client_secret`. Invalid tokens will return `404 NOT FOUND`.
+    /// OAuth applications and GitHub applications with OAuth authorizations can use this API method for checking OAuth token validity without exceeding the normal rate limits for failed login attempts. Authentication works differently with this particular endpoint. Invalid tokens will return `404 NOT FOUND`.
     ///
     /// - Remark: HTTP `POST /applications/{client_id}/token`.
     /// - Remark: Generated from `#/paths//applications/{client_id}/token/post(apps/check-token)`.
@@ -1581,7 +1581,7 @@ public struct Client: APIProtocol {
     }
     /// Reset a token
     ///
-    /// OAuth applications and GitHub applications with OAuth authorizations can use this API method to reset a valid OAuth token without end-user involvement. Applications must save the "token" property in the response because changes take effect immediately. You must use [Basic Authentication](https://docs.github.com/rest/authentication/authenticating-to-the-rest-api#using-basic-authentication) when accessing this endpoint, using the application's `client_id` and `client_secret` as the username and password. Invalid tokens will return `404 NOT FOUND`.
+    /// OAuth applications and GitHub applications with OAuth authorizations can use this API method to reset a valid OAuth token without end-user involvement. Applications must save the "token" property in the response because changes take effect immediately. Invalid tokens will return `404 NOT FOUND`.
     ///
     /// - Remark: HTTP `PATCH /applications/{client_id}/token`.
     /// - Remark: Generated from `#/paths//applications/{client_id}/token/patch(apps/reset-token)`.
@@ -1676,7 +1676,7 @@ public struct Client: APIProtocol {
     }
     /// Delete an app token
     ///
-    /// OAuth  or GitHub application owners can revoke a single token for an OAuth application or a GitHub application with an OAuth authorization. You must use [Basic Authentication](https://docs.github.com/rest/authentication/authenticating-to-the-rest-api#using-basic-authentication) when accessing this endpoint, using the application's `client_id` and `client_secret` as the username and password.
+    /// OAuth  or GitHub application owners can revoke a single token for an OAuth application or a GitHub application with an OAuth authorization.
     ///
     /// - Remark: HTTP `DELETE /applications/{client_id}/token`.
     /// - Remark: Generated from `#/paths//applications/{client_id}/token/delete(apps/delete-token)`.
@@ -1756,10 +1756,6 @@ public struct Client: APIProtocol {
     /// token.
     ///
     /// Invalid tokens will return `404 NOT FOUND`.
-    ///
-    /// You must use [Basic Authentication](https://docs.github.com/rest/authentication/authenticating-to-the-rest-api#using-basic-authentication)
-    /// when accessing this endpoint, using the `client_id` and `client_secret` of the GitHub App
-    /// as the username and password.
     ///
     /// - Remark: HTTP `POST /applications/{client_id}/token/scoped`.
     /// - Remark: Generated from `#/paths//applications/{client_id}/token/scoped/post(apps/scope-token)`.
@@ -3375,7 +3371,9 @@ public struct Client: APIProtocol {
     }
     /// Add a repository to an app installation
     ///
-    /// Add a single repository to an installation. The authenticated user must have admin access to the repository.
+    /// Add a single repository to an installation. The authenticated user must have admin access to the repository.    
+    ///
+    /// This endpoint only works for PATs (classic) with the `repo` scope.
     ///
     /// - Remark: HTTP `PUT /user/installations/{installation_id}/repositories/{repository_id}`.
     /// - Remark: Generated from `#/paths//user/installations/{installation_id}/repositories/{repository_id}/put(apps/add-repo-to-installation-for-authenticated-user)`.
@@ -3466,7 +3464,9 @@ public struct Client: APIProtocol {
     }
     /// Remove a repository from an app installation
     ///
-    /// Remove a single repository from an installation. The authenticated user must have admin access to the repository. The installation must have the `repository_selection` of `selected`.
+    /// Remove a single repository from an installation. The authenticated user must have admin access to the repository. The installation must have the `repository_selection` of `selected`. 
+    ///
+    /// This endpoint only works for PATs (classic) with the `repo` scope.
     ///
     /// - Remark: HTTP `DELETE /user/installations/{installation_id}/repositories/{repository_id}`.
     /// - Remark: Generated from `#/paths//user/installations/{installation_id}/repositories/{repository_id}/delete(apps/remove-repo-from-installation-for-authenticated-user)`.
