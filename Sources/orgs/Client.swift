@@ -2887,7 +2887,7 @@ public struct Client: APIProtocol {
     ///
     /// **Rate limits**
     ///
-    /// To prevent abuse, the authenticated user is limited to 50 organization invitations per 24 hour period. If the organization is more than one month old or on a paid plan, the limit is 500 invitations per 24 hour period.
+    /// To prevent abuse, organization owners are limited to creating 50 organization invitations for an organization within a 24 hour period. If the organization is more than one month old or on a paid plan, the limit is 500 invitations per 24 hour period.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/memberships/{username}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/memberships/{username}/put(orgs/set-membership-for-user)`.
@@ -4134,7 +4134,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            [Components.Schemas.team].self,
+                            [Components.Schemas.team_hyphen_role_hyphen_assignment].self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -4229,7 +4229,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            [Components.Schemas.simple_hyphen_user].self,
+                            [Components.Schemas.user_hyphen_role_hyphen_assignment].self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)

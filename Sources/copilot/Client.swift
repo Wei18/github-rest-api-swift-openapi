@@ -235,12 +235,12 @@ public struct Client: APIProtocol {
     /// **Note**: This endpoint is in beta and is subject to change.
     ///
     /// Gets information about an organization's Copilot subscription, including seat breakdown
-    /// and code matching policies. To configure these settings, go to your organization's settings on GitHub.com.
+    /// and feature policies. To configure these settings, go to your organization's settings on GitHub.com.
     /// For more information, see "[Managing policies for Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-policies-for-copilot-business-in-your-organization)".
     ///
-    /// Only organization owners can configure and view details about the organization's Copilot Business subscription.
+    /// Only organization owners can view details about the organization's Copilot Business or Copilot Enterprise subscription.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need the `manage_billing:copilot` scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `read:org` scopes to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/copilot/billing`.
     /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/get(copilot/get-copilot-organization-details)`.
@@ -396,11 +396,10 @@ public struct Client: APIProtocol {
     ///
     /// **Note**: This endpoint is in beta and is subject to change.
     ///
-    /// Lists all Copilot seat assignments for an organization that are currently being billed (either active or pending cancellation at the start of the next billing cycle).
+    /// Lists all active Copilot seats for an organization with a Copilot Business or Copilot Enterprise subscription.
+    /// Only organization owners can view assigned seats.
     ///
-    /// Only organization owners can configure and view details about the organization's Copilot Business or Enterprise subscription.
-    ///
-    /// OAuth app tokens and personal access tokens (classic) need the `manage_billing:copilot` scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `read:org` scopes to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/copilot/billing/seats`.
     /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/seats/get(copilot/list-copilot-seats)`.
@@ -579,13 +578,13 @@ public struct Client: APIProtocol {
     /// Purchases a GitHub Copilot seat for all users within each specified team.
     /// The organization will be billed accordingly. For more information about Copilot pricing, see "[Pricing for GitHub Copilot](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#about-billing-for-github-copilot)".
     ///
-    /// Only organization owners can configure GitHub Copilot in their organization.
+    /// Only organization owners can add Copilot seats for their organization members.
     ///
     /// In order for an admin to use this endpoint, the organization must have a Copilot Business or Enterprise subscription and a configured suggestion matching policy.
     /// For more information about setting up a Copilot subscription, see "[Setting up a Copilot subscription for your organization](https://docs.github.com/billing/managing-billing-for-github-copilot/managing-your-github-copilot-subscription-for-your-organization-or-enterprise)".
     /// For more information about setting a suggestion matching policy, see "[Configuring suggestion matching policies for GitHub Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-policies-for-github-copilot-in-your-organization#configuring-suggestion-matching-policies-for-github-copilot-in-your-organization)".
     ///
-    /// OAuth app tokens and personal access tokens (classic) need the `manage_billing:copilot` scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `admin:org` scopes to use this endpoint.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/copilot/billing/selected_teams`.
     /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_teams/post(copilot/add-copilot-seats-for-teams)`.
@@ -757,9 +756,9 @@ public struct Client: APIProtocol {
     ///
     /// For more information about disabling access to Copilot Business or Enterprise, see "[Revoking access to GitHub Copilot for specific users in your organization](https://docs.github.com/copilot/managing-copilot/managing-access-for-copilot-in-your-organization#revoking-access-to-github-copilot-for-specific-users-in-your-organization)".
     ///
-    /// Only organization owners can configure GitHub Copilot in their organization.
+    /// Only organization owners can cancel Copilot seats for their organization members.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need the `manage_billing:copilot` scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `admin:org` scopes to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/copilot/billing/selected_teams`.
     /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_teams/delete(copilot/cancel-copilot-seat-assignment-for-teams)`.
@@ -927,13 +926,13 @@ public struct Client: APIProtocol {
     /// Purchases a GitHub Copilot seat for each user specified.
     /// The organization will be billed accordingly. For more information about Copilot pricing, see "[Pricing for GitHub Copilot](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#about-billing-for-github-copilot)".
     ///
-    /// Only organization owners can configure GitHub Copilot in their organization.
+    /// Only organization owners can add Copilot seats for their organization members.
     ///
     /// In order for an admin to use this endpoint, the organization must have a Copilot Business or Enterprise subscription and a configured suggestion matching policy.
     /// For more information about setting up a Copilot subscription, see "[Setting up a Copilot subscription for your organization](https://docs.github.com/billing/managing-billing-for-github-copilot/managing-your-github-copilot-subscription-for-your-organization-or-enterprise)".
     /// For more information about setting a suggestion matching policy, see "[Configuring suggestion matching policies for GitHub Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-policies-for-github-copilot-in-your-organization#configuring-suggestion-matching-policies-for-github-copilot-in-your-organization)".
     ///
-    /// OAuth app tokens and personal access tokens (classic) need the `manage_billing:copilot` scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `admin:org` scopes to use this endpoint.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/copilot/billing/selected_users`.
     /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_users/post(copilot/add-copilot-seats-for-users)`.
@@ -1105,9 +1104,9 @@ public struct Client: APIProtocol {
     ///
     /// For more information about disabling access to Copilot Business or Enterprise, see "[Revoking access to GitHub Copilot for specific users in your organization](https://docs.github.com/copilot/managing-copilot/managing-access-for-copilot-in-your-organization#revoking-access-to-github-copilot-for-specific-users-in-your-organization)".
     ///
-    /// Only organization owners can configure GitHub Copilot in their organization.
+    /// Only organization owners can cancel Copilot seats for their organization members.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need the `manage_billing:copilot` scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `admin:org` scopes to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/copilot/billing/selected_users`.
     /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_users/delete(copilot/cancel-copilot-seat-assignment-for-users)`.
@@ -1466,9 +1465,9 @@ public struct Client: APIProtocol {
     ///
     /// Gets the GitHub Copilot seat assignment details for a member of an organization who currently has access to GitHub Copilot.
     ///
-    /// Organization owners can view GitHub Copilot seat assignment details for members in their organization.
+    /// Only organization owners can view Copilot seat assignment details for members of their organization.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need the `manage_billing:copilot` scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `read:org` scopes to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/members/{username}/copilot`.
     /// - Remark: Generated from `#/paths//orgs/{org}/members/{username}/copilot/get(copilot/get-copilot-seat-details-for-user)`.

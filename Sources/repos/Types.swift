@@ -21600,10 +21600,6 @@ public enum Components {
         ///
         /// - Remark: Generated from `#/components/parameters/page`.
         public typealias page = Swift.Int
-        /// Only show results that were last updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
-        ///
-        /// - Remark: Generated from `#/components/parameters/since`.
-        public typealias since = Foundation.Date
         /// The unique identifier of the comment.
         ///
         /// - Remark: Generated from `#/components/parameters/comment-id`.
@@ -36294,11 +36290,11 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/GET/query/committer`.
                 public var committer: Swift.String?
-                /// Only show results that were last updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
+                /// Only show results that were last updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`. Due to limitations of Git, timestamps must be between 1970-01-01 and 2099-12-31 (inclusive) or unexpected results may be returned.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/GET/query/since`.
-                public var since: Components.Parameters.since?
-                /// Only commits before this date will be returned. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
+                public var since: Foundation.Date?
+                /// Only commits before this date will be returned. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`. Due to limitations of Git, timestamps must be between 1970-01-01 and 2099-12-31 (inclusive) or unexpected results may be returned.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/GET/query/until`.
                 public var until: Foundation.Date?
@@ -36317,8 +36313,8 @@ public enum Operations {
                 ///   - path: Only commits containing this file path will be returned.
                 ///   - author: GitHub username or email address to use to filter by commit author.
                 ///   - committer: GitHub username or email address to use to filter by commit committer.
-                ///   - since: Only show results that were last updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
-                ///   - until: Only commits before this date will be returned. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
+                ///   - since: Only show results that were last updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`. Due to limitations of Git, timestamps must be between 1970-01-01 and 2099-12-31 (inclusive) or unexpected results may be returned.
+                ///   - until: Only commits before this date will be returned. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`. Due to limitations of Git, timestamps must be between 1970-01-01 and 2099-12-31 (inclusive) or unexpected results may be returned.
                 ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
@@ -36326,7 +36322,7 @@ public enum Operations {
                     path: Swift.String? = nil,
                     author: Swift.String? = nil,
                     committer: Swift.String? = nil,
-                    since: Components.Parameters.since? = nil,
+                    since: Foundation.Date? = nil,
                     until: Foundation.Date? = nil,
                     per_page: Components.Parameters.per_hyphen_page? = nil,
                     page: Components.Parameters.page? = nil
@@ -38957,6 +38953,29 @@ public enum Operations {
                     default:
                         try throwUnexpectedResponseStatus(
                             expectedStatus: "found",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/contents/{path}/get(repos/get-content)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            case notModified(Components.Responses.not_modified)
+            /// The associated value of the enum case if `self` is `.notModified`.
+            ///
+            /// - Throws: An error if `self` is not `.notModified`.
+            /// - SeeAlso: `.notModified`.
+            public var notModified: Components.Responses.not_modified {
+                get throws {
+                    switch self {
+                    case let .notModified(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "notModified",
                             response: self
                         )
                     }
