@@ -8093,6 +8093,8 @@ public struct Client: APIProtocol {
                     return .forbidden(.init(body: body))
                 case 302:
                     return .found(.init())
+                case 304:
+                    return .notModified(.init())
                 default:
                     return .undocumented(
                         statusCode: response.status.code,
