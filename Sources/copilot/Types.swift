@@ -35,12 +35,12 @@ public protocol APIProtocol: Sendable {
     /// **Note**: This endpoint is in beta and is subject to change.
     ///
     /// Gets information about an organization's Copilot subscription, including seat breakdown
-    /// and code matching policies. To configure these settings, go to your organization's settings on GitHub.com.
+    /// and feature policies. To configure these settings, go to your organization's settings on GitHub.com.
     /// For more information, see "[Managing policies for Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-policies-for-copilot-business-in-your-organization)".
     ///
-    /// Only organization owners can configure and view details about the organization's Copilot Business subscription.
+    /// Only organization owners can view details about the organization's Copilot Business or Copilot Enterprise subscription.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need the `manage_billing:copilot` scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `read:org` scopes to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/copilot/billing`.
     /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/get(copilot/get-copilot-organization-details)`.
@@ -49,11 +49,10 @@ public protocol APIProtocol: Sendable {
     ///
     /// **Note**: This endpoint is in beta and is subject to change.
     ///
-    /// Lists all Copilot seat assignments for an organization that are currently being billed (either active or pending cancellation at the start of the next billing cycle).
+    /// Lists all active Copilot seats for an organization with a Copilot Business or Copilot Enterprise subscription.
+    /// Only organization owners can view assigned seats.
     ///
-    /// Only organization owners can configure and view details about the organization's Copilot Business or Enterprise subscription.
-    ///
-    /// OAuth app tokens and personal access tokens (classic) need the `manage_billing:copilot` scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `read:org` scopes to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/copilot/billing/seats`.
     /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/seats/get(copilot/list-copilot-seats)`.
@@ -65,13 +64,13 @@ public protocol APIProtocol: Sendable {
     /// Purchases a GitHub Copilot seat for all users within each specified team.
     /// The organization will be billed accordingly. For more information about Copilot pricing, see "[Pricing for GitHub Copilot](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#about-billing-for-github-copilot)".
     ///
-    /// Only organization owners can configure GitHub Copilot in their organization.
+    /// Only organization owners can add Copilot seats for their organization members.
     ///
     /// In order for an admin to use this endpoint, the organization must have a Copilot Business or Enterprise subscription and a configured suggestion matching policy.
     /// For more information about setting up a Copilot subscription, see "[Setting up a Copilot subscription for your organization](https://docs.github.com/billing/managing-billing-for-github-copilot/managing-your-github-copilot-subscription-for-your-organization-or-enterprise)".
     /// For more information about setting a suggestion matching policy, see "[Configuring suggestion matching policies for GitHub Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-policies-for-github-copilot-in-your-organization#configuring-suggestion-matching-policies-for-github-copilot-in-your-organization)".
     ///
-    /// OAuth app tokens and personal access tokens (classic) need the `manage_billing:copilot` scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `admin:org` scopes to use this endpoint.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/copilot/billing/selected_teams`.
     /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_teams/post(copilot/add-copilot-seats-for-teams)`.
@@ -87,9 +86,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// For more information about disabling access to Copilot Business or Enterprise, see "[Revoking access to GitHub Copilot for specific users in your organization](https://docs.github.com/copilot/managing-copilot/managing-access-for-copilot-in-your-organization#revoking-access-to-github-copilot-for-specific-users-in-your-organization)".
     ///
-    /// Only organization owners can configure GitHub Copilot in their organization.
+    /// Only organization owners can cancel Copilot seats for their organization members.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need the `manage_billing:copilot` scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `admin:org` scopes to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/copilot/billing/selected_teams`.
     /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_teams/delete(copilot/cancel-copilot-seat-assignment-for-teams)`.
@@ -101,13 +100,13 @@ public protocol APIProtocol: Sendable {
     /// Purchases a GitHub Copilot seat for each user specified.
     /// The organization will be billed accordingly. For more information about Copilot pricing, see "[Pricing for GitHub Copilot](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#about-billing-for-github-copilot)".
     ///
-    /// Only organization owners can configure GitHub Copilot in their organization.
+    /// Only organization owners can add Copilot seats for their organization members.
     ///
     /// In order for an admin to use this endpoint, the organization must have a Copilot Business or Enterprise subscription and a configured suggestion matching policy.
     /// For more information about setting up a Copilot subscription, see "[Setting up a Copilot subscription for your organization](https://docs.github.com/billing/managing-billing-for-github-copilot/managing-your-github-copilot-subscription-for-your-organization-or-enterprise)".
     /// For more information about setting a suggestion matching policy, see "[Configuring suggestion matching policies for GitHub Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-policies-for-github-copilot-in-your-organization#configuring-suggestion-matching-policies-for-github-copilot-in-your-organization)".
     ///
-    /// OAuth app tokens and personal access tokens (classic) need the `manage_billing:copilot` scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `admin:org` scopes to use this endpoint.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/copilot/billing/selected_users`.
     /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_users/post(copilot/add-copilot-seats-for-users)`.
@@ -123,9 +122,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// For more information about disabling access to Copilot Business or Enterprise, see "[Revoking access to GitHub Copilot for specific users in your organization](https://docs.github.com/copilot/managing-copilot/managing-access-for-copilot-in-your-organization#revoking-access-to-github-copilot-for-specific-users-in-your-organization)".
     ///
-    /// Only organization owners can configure GitHub Copilot in their organization.
+    /// Only organization owners can cancel Copilot seats for their organization members.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need the `manage_billing:copilot` scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `admin:org` scopes to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/copilot/billing/selected_users`.
     /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_users/delete(copilot/cancel-copilot-seat-assignment-for-users)`.
@@ -155,9 +154,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Gets the GitHub Copilot seat assignment details for a member of an organization who currently has access to GitHub Copilot.
     ///
-    /// Organization owners can view GitHub Copilot seat assignment details for members in their organization.
+    /// Only organization owners can view Copilot seat assignment details for members of their organization.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need the `manage_billing:copilot` scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `read:org` scopes to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/members/{username}/copilot`.
     /// - Remark: Generated from `#/paths//orgs/{org}/members/{username}/copilot/get(copilot/get-copilot-seat-details-for-user)`.
@@ -200,12 +199,12 @@ extension APIProtocol {
     /// **Note**: This endpoint is in beta and is subject to change.
     ///
     /// Gets information about an organization's Copilot subscription, including seat breakdown
-    /// and code matching policies. To configure these settings, go to your organization's settings on GitHub.com.
+    /// and feature policies. To configure these settings, go to your organization's settings on GitHub.com.
     /// For more information, see "[Managing policies for Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-policies-for-copilot-business-in-your-organization)".
     ///
-    /// Only organization owners can configure and view details about the organization's Copilot Business subscription.
+    /// Only organization owners can view details about the organization's Copilot Business or Copilot Enterprise subscription.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need the `manage_billing:copilot` scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `read:org` scopes to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/copilot/billing`.
     /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/get(copilot/get-copilot-organization-details)`.
@@ -222,11 +221,10 @@ extension APIProtocol {
     ///
     /// **Note**: This endpoint is in beta and is subject to change.
     ///
-    /// Lists all Copilot seat assignments for an organization that are currently being billed (either active or pending cancellation at the start of the next billing cycle).
+    /// Lists all active Copilot seats for an organization with a Copilot Business or Copilot Enterprise subscription.
+    /// Only organization owners can view assigned seats.
     ///
-    /// Only organization owners can configure and view details about the organization's Copilot Business or Enterprise subscription.
-    ///
-    /// OAuth app tokens and personal access tokens (classic) need the `manage_billing:copilot` scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `read:org` scopes to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/copilot/billing/seats`.
     /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/seats/get(copilot/list-copilot-seats)`.
@@ -248,13 +246,13 @@ extension APIProtocol {
     /// Purchases a GitHub Copilot seat for all users within each specified team.
     /// The organization will be billed accordingly. For more information about Copilot pricing, see "[Pricing for GitHub Copilot](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#about-billing-for-github-copilot)".
     ///
-    /// Only organization owners can configure GitHub Copilot in their organization.
+    /// Only organization owners can add Copilot seats for their organization members.
     ///
     /// In order for an admin to use this endpoint, the organization must have a Copilot Business or Enterprise subscription and a configured suggestion matching policy.
     /// For more information about setting up a Copilot subscription, see "[Setting up a Copilot subscription for your organization](https://docs.github.com/billing/managing-billing-for-github-copilot/managing-your-github-copilot-subscription-for-your-organization-or-enterprise)".
     /// For more information about setting a suggestion matching policy, see "[Configuring suggestion matching policies for GitHub Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-policies-for-github-copilot-in-your-organization#configuring-suggestion-matching-policies-for-github-copilot-in-your-organization)".
     ///
-    /// OAuth app tokens and personal access tokens (classic) need the `manage_billing:copilot` scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `admin:org` scopes to use this endpoint.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/copilot/billing/selected_teams`.
     /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_teams/post(copilot/add-copilot-seats-for-teams)`.
@@ -280,9 +278,9 @@ extension APIProtocol {
     ///
     /// For more information about disabling access to Copilot Business or Enterprise, see "[Revoking access to GitHub Copilot for specific users in your organization](https://docs.github.com/copilot/managing-copilot/managing-access-for-copilot-in-your-organization#revoking-access-to-github-copilot-for-specific-users-in-your-organization)".
     ///
-    /// Only organization owners can configure GitHub Copilot in their organization.
+    /// Only organization owners can cancel Copilot seats for their organization members.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need the `manage_billing:copilot` scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `admin:org` scopes to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/copilot/billing/selected_teams`.
     /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_teams/delete(copilot/cancel-copilot-seat-assignment-for-teams)`.
@@ -304,13 +302,13 @@ extension APIProtocol {
     /// Purchases a GitHub Copilot seat for each user specified.
     /// The organization will be billed accordingly. For more information about Copilot pricing, see "[Pricing for GitHub Copilot](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#about-billing-for-github-copilot)".
     ///
-    /// Only organization owners can configure GitHub Copilot in their organization.
+    /// Only organization owners can add Copilot seats for their organization members.
     ///
     /// In order for an admin to use this endpoint, the organization must have a Copilot Business or Enterprise subscription and a configured suggestion matching policy.
     /// For more information about setting up a Copilot subscription, see "[Setting up a Copilot subscription for your organization](https://docs.github.com/billing/managing-billing-for-github-copilot/managing-your-github-copilot-subscription-for-your-organization-or-enterprise)".
     /// For more information about setting a suggestion matching policy, see "[Configuring suggestion matching policies for GitHub Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-policies-for-github-copilot-in-your-organization#configuring-suggestion-matching-policies-for-github-copilot-in-your-organization)".
     ///
-    /// OAuth app tokens and personal access tokens (classic) need the `manage_billing:copilot` scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `admin:org` scopes to use this endpoint.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/copilot/billing/selected_users`.
     /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_users/post(copilot/add-copilot-seats-for-users)`.
@@ -336,9 +334,9 @@ extension APIProtocol {
     ///
     /// For more information about disabling access to Copilot Business or Enterprise, see "[Revoking access to GitHub Copilot for specific users in your organization](https://docs.github.com/copilot/managing-copilot/managing-access-for-copilot-in-your-organization#revoking-access-to-github-copilot-for-specific-users-in-your-organization)".
     ///
-    /// Only organization owners can configure GitHub Copilot in their organization.
+    /// Only organization owners can cancel Copilot seats for their organization members.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need the `manage_billing:copilot` scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `admin:org` scopes to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/copilot/billing/selected_users`.
     /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_users/delete(copilot/cancel-copilot-seat-assignment-for-users)`.
@@ -388,9 +386,9 @@ extension APIProtocol {
     ///
     /// Gets the GitHub Copilot seat assignment details for a member of an organization who currently has access to GitHub Copilot.
     ///
-    /// Organization owners can view GitHub Copilot seat assignment details for members in their organization.
+    /// Only organization owners can view Copilot seat assignment details for members of their organization.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need the `manage_billing:copilot` scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `read:org` scopes to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/members/{username}/copilot`.
     /// - Remark: Generated from `#/paths//orgs/{org}/members/{username}/copilot/get(copilot/get-copilot-seat-details-for-user)`.
@@ -891,6 +889,91 @@ public enum Components {
                     "total_active_chat_users",
                     "breakdown"
                 ])
+            }
+        }
+        /// A GitHub organization.
+        ///
+        /// - Remark: Generated from `#/components/schemas/organization-simple`.
+        public struct organization_hyphen_simple: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/organization-simple/login`.
+            public var login: Swift.String
+            /// - Remark: Generated from `#/components/schemas/organization-simple/id`.
+            public var id: Swift.Int
+            /// - Remark: Generated from `#/components/schemas/organization-simple/node_id`.
+            public var node_id: Swift.String
+            /// - Remark: Generated from `#/components/schemas/organization-simple/url`.
+            public var url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/organization-simple/repos_url`.
+            public var repos_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/organization-simple/events_url`.
+            public var events_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/organization-simple/hooks_url`.
+            public var hooks_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/organization-simple/issues_url`.
+            public var issues_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/organization-simple/members_url`.
+            public var members_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/organization-simple/public_members_url`.
+            public var public_members_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/organization-simple/avatar_url`.
+            public var avatar_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/organization-simple/description`.
+            public var description: Swift.String?
+            /// Creates a new `organization_hyphen_simple`.
+            ///
+            /// - Parameters:
+            ///   - login:
+            ///   - id:
+            ///   - node_id:
+            ///   - url:
+            ///   - repos_url:
+            ///   - events_url:
+            ///   - hooks_url:
+            ///   - issues_url:
+            ///   - members_url:
+            ///   - public_members_url:
+            ///   - avatar_url:
+            ///   - description:
+            public init(
+                login: Swift.String,
+                id: Swift.Int,
+                node_id: Swift.String,
+                url: Swift.String,
+                repos_url: Swift.String,
+                events_url: Swift.String,
+                hooks_url: Swift.String,
+                issues_url: Swift.String,
+                members_url: Swift.String,
+                public_members_url: Swift.String,
+                avatar_url: Swift.String,
+                description: Swift.String? = nil
+            ) {
+                self.login = login
+                self.id = id
+                self.node_id = node_id
+                self.url = url
+                self.repos_url = repos_url
+                self.events_url = events_url
+                self.hooks_url = hooks_url
+                self.issues_url = issues_url
+                self.members_url = members_url
+                self.public_members_url = public_members_url
+                self.avatar_url = avatar_url
+                self.description = description
+            }
+            public enum CodingKeys: String, CodingKey {
+                case login
+                case id
+                case node_id
+                case url
+                case repos_url
+                case events_url
+                case hooks_url
+                case issues_url
+                case members_url
+                case public_members_url
+                case avatar_url
+                case description
             }
         }
         /// The breakdown of Copilot Business seats for the organization.
@@ -1614,6 +1697,79 @@ public enum Components {
                 case plan
             }
         }
+        /// Group of enterprise owners and/or members
+        ///
+        /// - Remark: Generated from `#/components/schemas/enterprise-team`.
+        public struct enterprise_hyphen_team: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/enterprise-team/id`.
+            public var id: Swift.Int
+            /// - Remark: Generated from `#/components/schemas/enterprise-team/name`.
+            public var name: Swift.String
+            /// - Remark: Generated from `#/components/schemas/enterprise-team/slug`.
+            public var slug: Swift.String
+            /// - Remark: Generated from `#/components/schemas/enterprise-team/url`.
+            public var url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/enterprise-team/sync_to_organizations`.
+            public var sync_to_organizations: Swift.String
+            /// - Remark: Generated from `#/components/schemas/enterprise-team/group_id`.
+            public var group_id: Swift.Int?
+            /// - Remark: Generated from `#/components/schemas/enterprise-team/html_url`.
+            public var html_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/enterprise-team/members_url`.
+            public var members_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/enterprise-team/created_at`.
+            public var created_at: Foundation.Date
+            /// - Remark: Generated from `#/components/schemas/enterprise-team/updated_at`.
+            public var updated_at: Foundation.Date
+            /// Creates a new `enterprise_hyphen_team`.
+            ///
+            /// - Parameters:
+            ///   - id:
+            ///   - name:
+            ///   - slug:
+            ///   - url:
+            ///   - sync_to_organizations:
+            ///   - group_id:
+            ///   - html_url:
+            ///   - members_url:
+            ///   - created_at:
+            ///   - updated_at:
+            public init(
+                id: Swift.Int,
+                name: Swift.String,
+                slug: Swift.String,
+                url: Swift.String,
+                sync_to_organizations: Swift.String,
+                group_id: Swift.Int? = nil,
+                html_url: Swift.String,
+                members_url: Swift.String,
+                created_at: Foundation.Date,
+                updated_at: Foundation.Date
+            ) {
+                self.id = id
+                self.name = name
+                self.slug = slug
+                self.url = url
+                self.sync_to_organizations = sync_to_organizations
+                self.group_id = group_id
+                self.html_url = html_url
+                self.members_url = members_url
+                self.created_at = created_at
+                self.updated_at = updated_at
+            }
+            public enum CodingKeys: String, CodingKey {
+                case id
+                case name
+                case slug
+                case url
+                case sync_to_organizations
+                case group_id
+                case html_url
+                case members_url
+                case created_at
+                case updated_at
+            }
+        }
         /// Information about a Copilot Business seat assignment for a user, team, or organization.
         ///
         /// - Remark: Generated from `#/components/schemas/copilot-seat-details`.
@@ -1669,16 +1825,55 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/copilot-seat-details/assignee`.
             public var assignee: Components.Schemas.copilot_hyphen_seat_hyphen_details.assigneePayload
-            /// The team that granted access to GitHub Copilot to the assignee. This will be null if the user was assigned a seat individually.
+            /// The organization to which this seat belongs.
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-seat-details/organization`.
+            @frozen public enum organizationPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/copilot-seat-details/organization/case1`.
+                case organization_hyphen_simple(Components.Schemas.organization_hyphen_simple)
+                public init(from decoder: any Decoder) throws {
+                    var errors: [any Error] = []
+                    do {
+                        self = .organization_hyphen_simple(try .init(from: decoder))
+                        return
+                    } catch {
+                        errors.append(error)
+                    }
+                    throw Swift.DecodingError.failedToDecodeOneOfSchema(
+                        type: Self.self,
+                        codingPath: decoder.codingPath,
+                        errors: errors
+                    )
+                }
+                public func encode(to encoder: any Encoder) throws {
+                    switch self {
+                    case let .organization_hyphen_simple(value):
+                        try value.encode(to: encoder)
+                    }
+                }
+            }
+            /// The organization to which this seat belongs.
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-seat-details/organization`.
+            public var organization: Components.Schemas.copilot_hyphen_seat_hyphen_details.organizationPayload?
+            /// The team through which the assignee is granted access to GitHub Copilot, if applicable.
             ///
             /// - Remark: Generated from `#/components/schemas/copilot-seat-details/assigning_team`.
             @frozen public enum assigning_teamPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/copilot-seat-details/assigning_team/case1`.
                 case team(Components.Schemas.team)
+                /// - Remark: Generated from `#/components/schemas/copilot-seat-details/assigning_team/case2`.
+                case enterprise_hyphen_team(Components.Schemas.enterprise_hyphen_team)
                 public init(from decoder: any Decoder) throws {
                     var errors: [any Error] = []
                     do {
                         self = .team(try .init(from: decoder))
+                        return
+                    } catch {
+                        errors.append(error)
+                    }
+                    do {
+                        self = .enterprise_hyphen_team(try .init(from: decoder))
                         return
                     } catch {
                         errors.append(error)
@@ -1693,10 +1888,12 @@ public enum Components {
                     switch self {
                     case let .team(value):
                         try value.encode(to: encoder)
+                    case let .enterprise_hyphen_team(value):
+                        try value.encode(to: encoder)
                     }
                 }
             }
-            /// The team that granted access to GitHub Copilot to the assignee. This will be null if the user was assigned a seat individually.
+            /// The team through which the assignee is granted access to GitHub Copilot, if applicable.
             ///
             /// - Remark: Generated from `#/components/schemas/copilot-seat-details/assigning_team`.
             public var assigning_team: Components.Schemas.copilot_hyphen_seat_hyphen_details.assigning_teamPayload?
@@ -1724,7 +1921,8 @@ public enum Components {
             ///
             /// - Parameters:
             ///   - assignee: The assignee that has been granted access to GitHub Copilot.
-            ///   - assigning_team: The team that granted access to GitHub Copilot to the assignee. This will be null if the user was assigned a seat individually.
+            ///   - organization: The organization to which this seat belongs.
+            ///   - assigning_team: The team through which the assignee is granted access to GitHub Copilot, if applicable.
             ///   - pending_cancellation_date: The pending cancellation date for the seat, in `YYYY-MM-DD` format. This will be null unless the assignee's Copilot access has been canceled during the current billing cycle. If the seat has been cancelled, this corresponds to the start of the organization's next billing cycle.
             ///   - last_activity_at: Timestamp of user's last GitHub Copilot activity, in ISO 8601 format.
             ///   - last_activity_editor: Last editor that was used by the user for a GitHub Copilot completion.
@@ -1732,6 +1930,7 @@ public enum Components {
             ///   - updated_at: Timestamp of when the assignee's GitHub Copilot access was last updated, in ISO 8601 format.
             public init(
                 assignee: Components.Schemas.copilot_hyphen_seat_hyphen_details.assigneePayload,
+                organization: Components.Schemas.copilot_hyphen_seat_hyphen_details.organizationPayload? = nil,
                 assigning_team: Components.Schemas.copilot_hyphen_seat_hyphen_details.assigning_teamPayload? = nil,
                 pending_cancellation_date: Swift.String? = nil,
                 last_activity_at: Foundation.Date? = nil,
@@ -1740,6 +1939,7 @@ public enum Components {
                 updated_at: Foundation.Date? = nil
             ) {
                 self.assignee = assignee
+                self.organization = organization
                 self.assigning_team = assigning_team
                 self.pending_cancellation_date = pending_cancellation_date
                 self.last_activity_at = last_activity_at
@@ -1749,6 +1949,7 @@ public enum Components {
             }
             public enum CodingKeys: String, CodingKey {
                 case assignee
+                case organization
                 case assigning_team
                 case pending_cancellation_date
                 case last_activity_at
@@ -1761,6 +1962,10 @@ public enum Components {
                 assignee = try container.decode(
                     Components.Schemas.copilot_hyphen_seat_hyphen_details.assigneePayload.self,
                     forKey: .assignee
+                )
+                organization = try container.decodeIfPresent(
+                    Components.Schemas.copilot_hyphen_seat_hyphen_details.organizationPayload.self,
+                    forKey: .organization
                 )
                 assigning_team = try container.decodeIfPresent(
                     Components.Schemas.copilot_hyphen_seat_hyphen_details.assigning_teamPayload.self,
@@ -1788,6 +1993,7 @@ public enum Components {
                 )
                 try decoder.ensureNoAdditionalProperties(knownKeys: [
                     "assignee",
+                    "organization",
                     "assigning_team",
                     "pending_cancellation_date",
                     "last_activity_at",
@@ -2225,12 +2431,12 @@ public enum Operations {
     /// **Note**: This endpoint is in beta and is subject to change.
     ///
     /// Gets information about an organization's Copilot subscription, including seat breakdown
-    /// and code matching policies. To configure these settings, go to your organization's settings on GitHub.com.
+    /// and feature policies. To configure these settings, go to your organization's settings on GitHub.com.
     /// For more information, see "[Managing policies for Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-policies-for-copilot-business-in-your-organization)".
     ///
-    /// Only organization owners can configure and view details about the organization's Copilot Business subscription.
+    /// Only organization owners can view details about the organization's Copilot Business or Copilot Enterprise subscription.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need the `manage_billing:copilot` scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `read:org` scopes to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/copilot/billing`.
     /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/get(copilot/get-copilot-organization-details)`.
@@ -2483,11 +2689,10 @@ public enum Operations {
     ///
     /// **Note**: This endpoint is in beta and is subject to change.
     ///
-    /// Lists all Copilot seat assignments for an organization that are currently being billed (either active or pending cancellation at the start of the next billing cycle).
+    /// Lists all active Copilot seats for an organization with a Copilot Business or Copilot Enterprise subscription.
+    /// Only organization owners can view assigned seats.
     ///
-    /// Only organization owners can configure and view details about the organization's Copilot Business or Enterprise subscription.
-    ///
-    /// OAuth app tokens and personal access tokens (classic) need the `manage_billing:copilot` scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `read:org` scopes to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/copilot/billing/seats`.
     /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/seats/get(copilot/list-copilot-seats)`.
@@ -2787,13 +2992,13 @@ public enum Operations {
     /// Purchases a GitHub Copilot seat for all users within each specified team.
     /// The organization will be billed accordingly. For more information about Copilot pricing, see "[Pricing for GitHub Copilot](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#about-billing-for-github-copilot)".
     ///
-    /// Only organization owners can configure GitHub Copilot in their organization.
+    /// Only organization owners can add Copilot seats for their organization members.
     ///
     /// In order for an admin to use this endpoint, the organization must have a Copilot Business or Enterprise subscription and a configured suggestion matching policy.
     /// For more information about setting up a Copilot subscription, see "[Setting up a Copilot subscription for your organization](https://docs.github.com/billing/managing-billing-for-github-copilot/managing-your-github-copilot-subscription-for-your-organization-or-enterprise)".
     /// For more information about setting a suggestion matching policy, see "[Configuring suggestion matching policies for GitHub Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-policies-for-github-copilot-in-your-organization#configuring-suggestion-matching-policies-for-github-copilot-in-your-organization)".
     ///
-    /// OAuth app tokens and personal access tokens (classic) need the `manage_billing:copilot` scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `admin:org` scopes to use this endpoint.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/copilot/billing/selected_teams`.
     /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_teams/post(copilot/add-copilot-seats-for-teams)`.
@@ -3096,9 +3301,9 @@ public enum Operations {
     ///
     /// For more information about disabling access to Copilot Business or Enterprise, see "[Revoking access to GitHub Copilot for specific users in your organization](https://docs.github.com/copilot/managing-copilot/managing-access-for-copilot-in-your-organization#revoking-access-to-github-copilot-for-specific-users-in-your-organization)".
     ///
-    /// Only organization owners can configure GitHub Copilot in their organization.
+    /// Only organization owners can cancel Copilot seats for their organization members.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need the `manage_billing:copilot` scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `admin:org` scopes to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/copilot/billing/selected_teams`.
     /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_teams/delete(copilot/cancel-copilot-seat-assignment-for-teams)`.
@@ -3397,13 +3602,13 @@ public enum Operations {
     /// Purchases a GitHub Copilot seat for each user specified.
     /// The organization will be billed accordingly. For more information about Copilot pricing, see "[Pricing for GitHub Copilot](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#about-billing-for-github-copilot)".
     ///
-    /// Only organization owners can configure GitHub Copilot in their organization.
+    /// Only organization owners can add Copilot seats for their organization members.
     ///
     /// In order for an admin to use this endpoint, the organization must have a Copilot Business or Enterprise subscription and a configured suggestion matching policy.
     /// For more information about setting up a Copilot subscription, see "[Setting up a Copilot subscription for your organization](https://docs.github.com/billing/managing-billing-for-github-copilot/managing-your-github-copilot-subscription-for-your-organization-or-enterprise)".
     /// For more information about setting a suggestion matching policy, see "[Configuring suggestion matching policies for GitHub Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-policies-for-github-copilot-in-your-organization#configuring-suggestion-matching-policies-for-github-copilot-in-your-organization)".
     ///
-    /// OAuth app tokens and personal access tokens (classic) need the `manage_billing:copilot` scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `admin:org` scopes to use this endpoint.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/copilot/billing/selected_users`.
     /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_users/post(copilot/add-copilot-seats-for-users)`.
@@ -3706,9 +3911,9 @@ public enum Operations {
     ///
     /// For more information about disabling access to Copilot Business or Enterprise, see "[Revoking access to GitHub Copilot for specific users in your organization](https://docs.github.com/copilot/managing-copilot/managing-access-for-copilot-in-your-organization#revoking-access-to-github-copilot-for-specific-users-in-your-organization)".
     ///
-    /// Only organization owners can configure GitHub Copilot in their organization.
+    /// Only organization owners can cancel Copilot seats for their organization members.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need the `manage_billing:copilot` scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `admin:org` scopes to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/copilot/billing/selected_users`.
     /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_users/delete(copilot/cancel-copilot-seat-assignment-for-users)`.
@@ -4283,9 +4488,9 @@ public enum Operations {
     ///
     /// Gets the GitHub Copilot seat assignment details for a member of an organization who currently has access to GitHub Copilot.
     ///
-    /// Organization owners can view GitHub Copilot seat assignment details for members in their organization.
+    /// Only organization owners can view Copilot seat assignment details for members of their organization.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need the `manage_billing:copilot` scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `read:org` scopes to use this endpoint.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/members/{username}/copilot`.
     /// - Remark: Generated from `#/paths//orgs/{org}/members/{username}/copilot/get(copilot/get-copilot-seat-details-for-user)`.
