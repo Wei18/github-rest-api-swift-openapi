@@ -338,7 +338,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// **Rate limits**
     ///
-    /// To prevent abuse, the authenticated user is limited to 50 organization invitations per 24 hour period. If the organization is more than one month old or on a paid plan, the limit is 500 invitations per 24 hour period.
+    /// To prevent abuse, organization owners are limited to creating 50 organization invitations for an organization within a 24 hour period. If the organization is more than one month old or on a paid plan, the limit is 500 invitations per 24 hour period.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/memberships/{username}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/memberships/{username}/put(orgs/set-membership-for-user)`.
@@ -1383,7 +1383,7 @@ extension APIProtocol {
     ///
     /// **Rate limits**
     ///
-    /// To prevent abuse, the authenticated user is limited to 50 organization invitations per 24 hour period. If the organization is more than one month old or on a paid plan, the limit is 500 invitations per 24 hour period.
+    /// To prevent abuse, organization owners are limited to creating 50 organization invitations for an organization within a 24 hour period. If the organization is more than one month old or on a paid plan, the limit is 500 invitations per 24 hour period.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/memberships/{username}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/memberships/{username}/put(orgs/set-membership-for-user)`.
@@ -6108,6 +6108,390 @@ public enum Components {
                 case updated_at
             }
         }
+        /// The Relationship a Team has with a role.
+        ///
+        /// - Remark: Generated from `#/components/schemas/team-role-assignment`.
+        public struct team_hyphen_role_hyphen_assignment: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/team-role-assignment/id`.
+            public var id: Swift.Int
+            /// - Remark: Generated from `#/components/schemas/team-role-assignment/node_id`.
+            public var node_id: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team-role-assignment/name`.
+            public var name: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team-role-assignment/slug`.
+            public var slug: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team-role-assignment/description`.
+            public var description: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/team-role-assignment/privacy`.
+            public var privacy: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/team-role-assignment/notification_setting`.
+            public var notification_setting: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/team-role-assignment/permission`.
+            public var permission: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team-role-assignment/permissions`.
+            public struct permissionsPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/team-role-assignment/permissions/pull`.
+                public var pull: Swift.Bool
+                /// - Remark: Generated from `#/components/schemas/team-role-assignment/permissions/triage`.
+                public var triage: Swift.Bool
+                /// - Remark: Generated from `#/components/schemas/team-role-assignment/permissions/push`.
+                public var push: Swift.Bool
+                /// - Remark: Generated from `#/components/schemas/team-role-assignment/permissions/maintain`.
+                public var maintain: Swift.Bool
+                /// - Remark: Generated from `#/components/schemas/team-role-assignment/permissions/admin`.
+                public var admin: Swift.Bool
+                /// Creates a new `permissionsPayload`.
+                ///
+                /// - Parameters:
+                ///   - pull:
+                ///   - triage:
+                ///   - push:
+                ///   - maintain:
+                ///   - admin:
+                public init(
+                    pull: Swift.Bool,
+                    triage: Swift.Bool,
+                    push: Swift.Bool,
+                    maintain: Swift.Bool,
+                    admin: Swift.Bool
+                ) {
+                    self.pull = pull
+                    self.triage = triage
+                    self.push = push
+                    self.maintain = maintain
+                    self.admin = admin
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case pull
+                    case triage
+                    case push
+                    case maintain
+                    case admin
+                }
+            }
+            /// - Remark: Generated from `#/components/schemas/team-role-assignment/permissions`.
+            public var permissions: Components.Schemas.team_hyphen_role_hyphen_assignment.permissionsPayload?
+            /// - Remark: Generated from `#/components/schemas/team-role-assignment/url`.
+            public var url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team-role-assignment/html_url`.
+            public var html_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team-role-assignment/members_url`.
+            public var members_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team-role-assignment/repositories_url`.
+            public var repositories_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team-role-assignment/parent`.
+            public var parent: Components.Schemas.nullable_hyphen_team_hyphen_simple?
+            /// Creates a new `team_hyphen_role_hyphen_assignment`.
+            ///
+            /// - Parameters:
+            ///   - id:
+            ///   - node_id:
+            ///   - name:
+            ///   - slug:
+            ///   - description:
+            ///   - privacy:
+            ///   - notification_setting:
+            ///   - permission:
+            ///   - permissions:
+            ///   - url:
+            ///   - html_url:
+            ///   - members_url:
+            ///   - repositories_url:
+            ///   - parent:
+            public init(
+                id: Swift.Int,
+                node_id: Swift.String,
+                name: Swift.String,
+                slug: Swift.String,
+                description: Swift.String? = nil,
+                privacy: Swift.String? = nil,
+                notification_setting: Swift.String? = nil,
+                permission: Swift.String,
+                permissions: Components.Schemas.team_hyphen_role_hyphen_assignment.permissionsPayload? = nil,
+                url: Swift.String,
+                html_url: Swift.String,
+                members_url: Swift.String,
+                repositories_url: Swift.String,
+                parent: Components.Schemas.nullable_hyphen_team_hyphen_simple? = nil
+            ) {
+                self.id = id
+                self.node_id = node_id
+                self.name = name
+                self.slug = slug
+                self.description = description
+                self.privacy = privacy
+                self.notification_setting = notification_setting
+                self.permission = permission
+                self.permissions = permissions
+                self.url = url
+                self.html_url = html_url
+                self.members_url = members_url
+                self.repositories_url = repositories_url
+                self.parent = parent
+            }
+            public enum CodingKeys: String, CodingKey {
+                case id
+                case node_id
+                case name
+                case slug
+                case description
+                case privacy
+                case notification_setting
+                case permission
+                case permissions
+                case url
+                case html_url
+                case members_url
+                case repositories_url
+                case parent
+            }
+        }
+        /// Groups of organization members that gives permissions on specified repositories.
+        ///
+        /// - Remark: Generated from `#/components/schemas/team-simple`.
+        public struct team_hyphen_simple: Codable, Hashable, Sendable {
+            /// Unique identifier of the team
+            ///
+            /// - Remark: Generated from `#/components/schemas/team-simple/id`.
+            public var id: Swift.Int
+            /// - Remark: Generated from `#/components/schemas/team-simple/node_id`.
+            public var node_id: Swift.String
+            /// URL for the team
+            ///
+            /// - Remark: Generated from `#/components/schemas/team-simple/url`.
+            public var url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team-simple/members_url`.
+            public var members_url: Swift.String
+            /// Name of the team
+            ///
+            /// - Remark: Generated from `#/components/schemas/team-simple/name`.
+            public var name: Swift.String
+            /// Description of the team
+            ///
+            /// - Remark: Generated from `#/components/schemas/team-simple/description`.
+            public var description: Swift.String?
+            /// Permission that the team will have for its repositories
+            ///
+            /// - Remark: Generated from `#/components/schemas/team-simple/permission`.
+            public var permission: Swift.String
+            /// The level of privacy this team should have
+            ///
+            /// - Remark: Generated from `#/components/schemas/team-simple/privacy`.
+            public var privacy: Swift.String?
+            /// The notification setting the team has set
+            ///
+            /// - Remark: Generated from `#/components/schemas/team-simple/notification_setting`.
+            public var notification_setting: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/team-simple/html_url`.
+            public var html_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team-simple/repositories_url`.
+            public var repositories_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team-simple/slug`.
+            public var slug: Swift.String
+            /// Distinguished Name (DN) that team maps to within LDAP environment
+            ///
+            /// - Remark: Generated from `#/components/schemas/team-simple/ldap_dn`.
+            public var ldap_dn: Swift.String?
+            /// Creates a new `team_hyphen_simple`.
+            ///
+            /// - Parameters:
+            ///   - id: Unique identifier of the team
+            ///   - node_id:
+            ///   - url: URL for the team
+            ///   - members_url:
+            ///   - name: Name of the team
+            ///   - description: Description of the team
+            ///   - permission: Permission that the team will have for its repositories
+            ///   - privacy: The level of privacy this team should have
+            ///   - notification_setting: The notification setting the team has set
+            ///   - html_url:
+            ///   - repositories_url:
+            ///   - slug:
+            ///   - ldap_dn: Distinguished Name (DN) that team maps to within LDAP environment
+            public init(
+                id: Swift.Int,
+                node_id: Swift.String,
+                url: Swift.String,
+                members_url: Swift.String,
+                name: Swift.String,
+                description: Swift.String? = nil,
+                permission: Swift.String,
+                privacy: Swift.String? = nil,
+                notification_setting: Swift.String? = nil,
+                html_url: Swift.String,
+                repositories_url: Swift.String,
+                slug: Swift.String,
+                ldap_dn: Swift.String? = nil
+            ) {
+                self.id = id
+                self.node_id = node_id
+                self.url = url
+                self.members_url = members_url
+                self.name = name
+                self.description = description
+                self.permission = permission
+                self.privacy = privacy
+                self.notification_setting = notification_setting
+                self.html_url = html_url
+                self.repositories_url = repositories_url
+                self.slug = slug
+                self.ldap_dn = ldap_dn
+            }
+            public enum CodingKeys: String, CodingKey {
+                case id
+                case node_id
+                case url
+                case members_url
+                case name
+                case description
+                case permission
+                case privacy
+                case notification_setting
+                case html_url
+                case repositories_url
+                case slug
+                case ldap_dn
+            }
+        }
+        /// The Relationship a User has with a role.
+        ///
+        /// - Remark: Generated from `#/components/schemas/user-role-assignment`.
+        public struct user_hyphen_role_hyphen_assignment: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/user-role-assignment/name`.
+            public var name: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/user-role-assignment/email`.
+            public var email: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/user-role-assignment/login`.
+            public var login: Swift.String
+            /// - Remark: Generated from `#/components/schemas/user-role-assignment/id`.
+            public var id: Swift.Int
+            /// - Remark: Generated from `#/components/schemas/user-role-assignment/node_id`.
+            public var node_id: Swift.String
+            /// - Remark: Generated from `#/components/schemas/user-role-assignment/avatar_url`.
+            public var avatar_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/user-role-assignment/gravatar_id`.
+            public var gravatar_id: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/user-role-assignment/url`.
+            public var url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/user-role-assignment/html_url`.
+            public var html_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/user-role-assignment/followers_url`.
+            public var followers_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/user-role-assignment/following_url`.
+            public var following_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/user-role-assignment/gists_url`.
+            public var gists_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/user-role-assignment/starred_url`.
+            public var starred_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/user-role-assignment/subscriptions_url`.
+            public var subscriptions_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/user-role-assignment/organizations_url`.
+            public var organizations_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/user-role-assignment/repos_url`.
+            public var repos_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/user-role-assignment/events_url`.
+            public var events_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/user-role-assignment/received_events_url`.
+            public var received_events_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/user-role-assignment/type`.
+            public var _type: Swift.String
+            /// - Remark: Generated from `#/components/schemas/user-role-assignment/site_admin`.
+            public var site_admin: Swift.Bool
+            /// - Remark: Generated from `#/components/schemas/user-role-assignment/starred_at`.
+            public var starred_at: Swift.String?
+            /// Creates a new `user_hyphen_role_hyphen_assignment`.
+            ///
+            /// - Parameters:
+            ///   - name:
+            ///   - email:
+            ///   - login:
+            ///   - id:
+            ///   - node_id:
+            ///   - avatar_url:
+            ///   - gravatar_id:
+            ///   - url:
+            ///   - html_url:
+            ///   - followers_url:
+            ///   - following_url:
+            ///   - gists_url:
+            ///   - starred_url:
+            ///   - subscriptions_url:
+            ///   - organizations_url:
+            ///   - repos_url:
+            ///   - events_url:
+            ///   - received_events_url:
+            ///   - _type:
+            ///   - site_admin:
+            ///   - starred_at:
+            public init(
+                name: Swift.String? = nil,
+                email: Swift.String? = nil,
+                login: Swift.String,
+                id: Swift.Int,
+                node_id: Swift.String,
+                avatar_url: Swift.String,
+                gravatar_id: Swift.String? = nil,
+                url: Swift.String,
+                html_url: Swift.String,
+                followers_url: Swift.String,
+                following_url: Swift.String,
+                gists_url: Swift.String,
+                starred_url: Swift.String,
+                subscriptions_url: Swift.String,
+                organizations_url: Swift.String,
+                repos_url: Swift.String,
+                events_url: Swift.String,
+                received_events_url: Swift.String,
+                _type: Swift.String,
+                site_admin: Swift.Bool,
+                starred_at: Swift.String? = nil
+            ) {
+                self.name = name
+                self.email = email
+                self.login = login
+                self.id = id
+                self.node_id = node_id
+                self.avatar_url = avatar_url
+                self.gravatar_id = gravatar_id
+                self.url = url
+                self.html_url = html_url
+                self.followers_url = followers_url
+                self.following_url = following_url
+                self.gists_url = gists_url
+                self.starred_url = starred_url
+                self.subscriptions_url = subscriptions_url
+                self.organizations_url = organizations_url
+                self.repos_url = repos_url
+                self.events_url = events_url
+                self.received_events_url = received_events_url
+                self._type = _type
+                self.site_admin = site_admin
+                self.starred_at = starred_at
+            }
+            public enum CodingKeys: String, CodingKey {
+                case name
+                case email
+                case login
+                case id
+                case node_id
+                case avatar_url
+                case gravatar_id
+                case url
+                case html_url
+                case followers_url
+                case following_url
+                case gists_url
+                case starred_url
+                case subscriptions_url
+                case organizations_url
+                case repos_url
+                case events_url
+                case received_events_url
+                case _type = "type"
+                case site_admin
+                case starred_at
+            }
+        }
         /// Minimal representation of an organization programmatic access grant request for enumerations
         ///
         /// - Remark: Generated from `#/components/schemas/organization-programmatic-access-grant-request`.
@@ -6482,6 +6866,8 @@ public enum Components {
             @frozen public enum value_typePayload: String, Codable, Hashable, Sendable {
                 case string = "string"
                 case single_select = "single_select"
+                case multi_select = "multi_select"
+                case true_false = "true_false"
             }
             /// The type of the value for the property
             ///
@@ -6692,113 +7078,6 @@ public enum Components {
                 case repository_name
                 case repository_full_name
                 case properties
-            }
-        }
-        /// Groups of organization members that gives permissions on specified repositories.
-        ///
-        /// - Remark: Generated from `#/components/schemas/team-simple`.
-        public struct team_hyphen_simple: Codable, Hashable, Sendable {
-            /// Unique identifier of the team
-            ///
-            /// - Remark: Generated from `#/components/schemas/team-simple/id`.
-            public var id: Swift.Int
-            /// - Remark: Generated from `#/components/schemas/team-simple/node_id`.
-            public var node_id: Swift.String
-            /// URL for the team
-            ///
-            /// - Remark: Generated from `#/components/schemas/team-simple/url`.
-            public var url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/team-simple/members_url`.
-            public var members_url: Swift.String
-            /// Name of the team
-            ///
-            /// - Remark: Generated from `#/components/schemas/team-simple/name`.
-            public var name: Swift.String
-            /// Description of the team
-            ///
-            /// - Remark: Generated from `#/components/schemas/team-simple/description`.
-            public var description: Swift.String?
-            /// Permission that the team will have for its repositories
-            ///
-            /// - Remark: Generated from `#/components/schemas/team-simple/permission`.
-            public var permission: Swift.String
-            /// The level of privacy this team should have
-            ///
-            /// - Remark: Generated from `#/components/schemas/team-simple/privacy`.
-            public var privacy: Swift.String?
-            /// The notification setting the team has set
-            ///
-            /// - Remark: Generated from `#/components/schemas/team-simple/notification_setting`.
-            public var notification_setting: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/team-simple/html_url`.
-            public var html_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/team-simple/repositories_url`.
-            public var repositories_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/team-simple/slug`.
-            public var slug: Swift.String
-            /// Distinguished Name (DN) that team maps to within LDAP environment
-            ///
-            /// - Remark: Generated from `#/components/schemas/team-simple/ldap_dn`.
-            public var ldap_dn: Swift.String?
-            /// Creates a new `team_hyphen_simple`.
-            ///
-            /// - Parameters:
-            ///   - id: Unique identifier of the team
-            ///   - node_id:
-            ///   - url: URL for the team
-            ///   - members_url:
-            ///   - name: Name of the team
-            ///   - description: Description of the team
-            ///   - permission: Permission that the team will have for its repositories
-            ///   - privacy: The level of privacy this team should have
-            ///   - notification_setting: The notification setting the team has set
-            ///   - html_url:
-            ///   - repositories_url:
-            ///   - slug:
-            ///   - ldap_dn: Distinguished Name (DN) that team maps to within LDAP environment
-            public init(
-                id: Swift.Int,
-                node_id: Swift.String,
-                url: Swift.String,
-                members_url: Swift.String,
-                name: Swift.String,
-                description: Swift.String? = nil,
-                permission: Swift.String,
-                privacy: Swift.String? = nil,
-                notification_setting: Swift.String? = nil,
-                html_url: Swift.String,
-                repositories_url: Swift.String,
-                slug: Swift.String,
-                ldap_dn: Swift.String? = nil
-            ) {
-                self.id = id
-                self.node_id = node_id
-                self.url = url
-                self.members_url = members_url
-                self.name = name
-                self.description = description
-                self.permission = permission
-                self.privacy = privacy
-                self.notification_setting = notification_setting
-                self.html_url = html_url
-                self.repositories_url = repositories_url
-                self.slug = slug
-                self.ldap_dn = ldap_dn
-            }
-            public enum CodingKeys: String, CodingKey {
-                case id
-                case node_id
-                case url
-                case members_url
-                case name
-                case description
-                case permission
-                case privacy
-                case notification_setting
-                case html_url
-                case repositories_url
-                case slug
-                case ldap_dn
             }
         }
     }
@@ -12956,7 +13235,7 @@ public enum Operations {
     ///
     /// **Rate limits**
     ///
-    /// To prevent abuse, the authenticated user is limited to 50 organization invitations per 24 hour period. If the organization is more than one month old or on a paid plan, the limit is 500 invitations per 24 hour period.
+    /// To prevent abuse, organization owners are limited to creating 50 organization invitations for an organization within a 24 hour period. If the organization is more than one month old or on a paid plan, the limit is 500 invitations per 24 hour period.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/memberships/{username}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/memberships/{username}/put(orgs/set-membership-for-user)`.
@@ -15250,12 +15529,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/organization-roles/{role_id}/teams/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/organization-roles/{role_id}/teams/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.team])
+                    case json([Components.Schemas.team_hyphen_role_hyphen_assignment])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.team] {
+                    public var json: [Components.Schemas.team_hyphen_role_hyphen_assignment] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -15495,12 +15774,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/organization-roles/{role_id}/users/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/organization-roles/{role_id}/users/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.simple_hyphen_user])
+                    case json([Components.Schemas.user_hyphen_role_hyphen_assignment])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.simple_hyphen_user] {
+                    public var json: [Components.Schemas.user_hyphen_role_hyphen_assignment] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -19053,6 +19332,8 @@ public enum Operations {
                     @frozen public enum value_typePayload: String, Codable, Hashable, Sendable {
                         case string = "string"
                         case single_select = "single_select"
+                        case multi_select = "multi_select"
+                        case true_false = "true_false"
                     }
                     /// The type of the value for the property
                     ///
