@@ -118,6 +118,28 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/activity`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/activity/get(repos/list-activities)`.
     func repos_sol_list_hyphen_activities(_ input: Operations.repos_sol_list_hyphen_activities.Input) async throws -> Operations.repos_sol_list_hyphen_activities.Output
+    /// Create an attestation
+    ///
+    /// Store an artifact attestation and associate it with a repository.
+    ///
+    /// The authenticated user must have write permission to the repository and, if using a fine-grained access token the `attestations:write` permission is required.
+    ///
+    /// Artifact attestations are meant to be created using the [attest action](https://github.com/actions/attest). For amore information, see our guide on [using artifact attestations to establish a build's provenance](https://docs.github.com/actions/security-guides/using-artifact-attestations-to-establish-provenance-for-builds).
+    ///
+    /// - Remark: HTTP `POST /repos/{owner}/{repo}/attestations`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/attestations/post(repos/create-attestation)`.
+    func repos_sol_create_hyphen_attestation(_ input: Operations.repos_sol_create_hyphen_attestation.Input) async throws -> Operations.repos_sol_create_hyphen_attestation.Output
+    /// List attestations
+    ///
+    /// List a collection of artifact attestations with a given subject digest that are associated with a repository.
+    ///
+    /// The authenticated user making the request must have read access to the repository. In addition, when using a fine-grained access token the `attestations:read` permission is required.
+    ///
+    /// **Please note:** in order to offer meaningful security benefits, an attestation's signature and timestamps **must** be cryptographically verified, and the identity of the attestation signer **must** be validated. Attestations can be verified using the [GitHub CLI `attestation verify` command](https://cli.github.com/manual/gh_attestation_verify). For more information, see [our guide on how to use artifact attestations to establish a build's provenance](https://docs.github.com/actions/security-guides/using-artifact-attestations-to-establish-provenance-for-builds).
+    ///
+    /// - Remark: HTTP `GET /repos/{owner}/{repo}/attestations/{subject_digest}`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/attestations/{subject_digest}/get(repos/list-attestations)`.
+    func repos_sol_list_hyphen_attestations(_ input: Operations.repos_sol_list_hyphen_attestations.Input) async throws -> Operations.repos_sol_list_hyphen_attestations.Output
     /// Get all autolinks of a repository
     ///
     /// Gets all autolinks that are configured for a repository.
@@ -2256,6 +2278,48 @@ extension APIProtocol {
         headers: Operations.repos_sol_list_hyphen_activities.Input.Headers = .init()
     ) async throws -> Operations.repos_sol_list_hyphen_activities.Output {
         try await repos_sol_list_hyphen_activities(Operations.repos_sol_list_hyphen_activities.Input(
+            path: path,
+            query: query,
+            headers: headers
+        ))
+    }
+    /// Create an attestation
+    ///
+    /// Store an artifact attestation and associate it with a repository.
+    ///
+    /// The authenticated user must have write permission to the repository and, if using a fine-grained access token the `attestations:write` permission is required.
+    ///
+    /// Artifact attestations are meant to be created using the [attest action](https://github.com/actions/attest). For amore information, see our guide on [using artifact attestations to establish a build's provenance](https://docs.github.com/actions/security-guides/using-artifact-attestations-to-establish-provenance-for-builds).
+    ///
+    /// - Remark: HTTP `POST /repos/{owner}/{repo}/attestations`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/attestations/post(repos/create-attestation)`.
+    public func repos_sol_create_hyphen_attestation(
+        path: Operations.repos_sol_create_hyphen_attestation.Input.Path,
+        headers: Operations.repos_sol_create_hyphen_attestation.Input.Headers = .init(),
+        body: Operations.repos_sol_create_hyphen_attestation.Input.Body
+    ) async throws -> Operations.repos_sol_create_hyphen_attestation.Output {
+        try await repos_sol_create_hyphen_attestation(Operations.repos_sol_create_hyphen_attestation.Input(
+            path: path,
+            headers: headers,
+            body: body
+        ))
+    }
+    /// List attestations
+    ///
+    /// List a collection of artifact attestations with a given subject digest that are associated with a repository.
+    ///
+    /// The authenticated user making the request must have read access to the repository. In addition, when using a fine-grained access token the `attestations:read` permission is required.
+    ///
+    /// **Please note:** in order to offer meaningful security benefits, an attestation's signature and timestamps **must** be cryptographically verified, and the identity of the attestation signer **must** be validated. Attestations can be verified using the [GitHub CLI `attestation verify` command](https://cli.github.com/manual/gh_attestation_verify). For more information, see [our guide on how to use artifact attestations to establish a build's provenance](https://docs.github.com/actions/security-guides/using-artifact-attestations-to-establish-provenance-for-builds).
+    ///
+    /// - Remark: HTTP `GET /repos/{owner}/{repo}/attestations/{subject_digest}`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/attestations/{subject_digest}/get(repos/list-attestations)`.
+    public func repos_sol_list_hyphen_attestations(
+        path: Operations.repos_sol_list_hyphen_attestations.Input.Path,
+        query: Operations.repos_sol_list_hyphen_attestations.Input.Query = .init(),
+        headers: Operations.repos_sol_list_hyphen_attestations.Input.Headers = .init()
+    ) async throws -> Operations.repos_sol_list_hyphen_attestations.Output {
+        try await repos_sol_list_hyphen_attestations(Operations.repos_sol_list_hyphen_attestations.Input(
             path: path,
             query: query,
             headers: headers
@@ -7762,6 +7826,251 @@ public enum Components {
                 case html_url
             }
         }
+        /// Groups of organization members that gives permissions on specified repositories.
+        ///
+        /// - Remark: Generated from `#/components/schemas/nullable-team-simple`.
+        public struct nullable_hyphen_team_hyphen_simple: Codable, Hashable, Sendable {
+            /// Unique identifier of the team
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/id`.
+            public var id: Swift.Int
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/node_id`.
+            public var node_id: Swift.String
+            /// URL for the team
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/url`.
+            public var url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/members_url`.
+            public var members_url: Swift.String
+            /// Name of the team
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/name`.
+            public var name: Swift.String
+            /// Description of the team
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/description`.
+            public var description: Swift.String?
+            /// Permission that the team will have for its repositories
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/permission`.
+            public var permission: Swift.String
+            /// The level of privacy this team should have
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/privacy`.
+            public var privacy: Swift.String?
+            /// The notification setting the team has set
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/notification_setting`.
+            public var notification_setting: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/html_url`.
+            public var html_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/repositories_url`.
+            public var repositories_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/slug`.
+            public var slug: Swift.String
+            /// Distinguished Name (DN) that team maps to within LDAP environment
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/ldap_dn`.
+            public var ldap_dn: Swift.String?
+            /// Creates a new `nullable_hyphen_team_hyphen_simple`.
+            ///
+            /// - Parameters:
+            ///   - id: Unique identifier of the team
+            ///   - node_id:
+            ///   - url: URL for the team
+            ///   - members_url:
+            ///   - name: Name of the team
+            ///   - description: Description of the team
+            ///   - permission: Permission that the team will have for its repositories
+            ///   - privacy: The level of privacy this team should have
+            ///   - notification_setting: The notification setting the team has set
+            ///   - html_url:
+            ///   - repositories_url:
+            ///   - slug:
+            ///   - ldap_dn: Distinguished Name (DN) that team maps to within LDAP environment
+            public init(
+                id: Swift.Int,
+                node_id: Swift.String,
+                url: Swift.String,
+                members_url: Swift.String,
+                name: Swift.String,
+                description: Swift.String? = nil,
+                permission: Swift.String,
+                privacy: Swift.String? = nil,
+                notification_setting: Swift.String? = nil,
+                html_url: Swift.String,
+                repositories_url: Swift.String,
+                slug: Swift.String,
+                ldap_dn: Swift.String? = nil
+            ) {
+                self.id = id
+                self.node_id = node_id
+                self.url = url
+                self.members_url = members_url
+                self.name = name
+                self.description = description
+                self.permission = permission
+                self.privacy = privacy
+                self.notification_setting = notification_setting
+                self.html_url = html_url
+                self.repositories_url = repositories_url
+                self.slug = slug
+                self.ldap_dn = ldap_dn
+            }
+            public enum CodingKeys: String, CodingKey {
+                case id
+                case node_id
+                case url
+                case members_url
+                case name
+                case description
+                case permission
+                case privacy
+                case notification_setting
+                case html_url
+                case repositories_url
+                case slug
+                case ldap_dn
+            }
+        }
+        /// Groups of organization members that gives permissions on specified repositories.
+        ///
+        /// - Remark: Generated from `#/components/schemas/team`.
+        public struct team: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/team/id`.
+            public var id: Swift.Int
+            /// - Remark: Generated from `#/components/schemas/team/node_id`.
+            public var node_id: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team/name`.
+            public var name: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team/slug`.
+            public var slug: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team/description`.
+            public var description: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/team/privacy`.
+            public var privacy: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/team/notification_setting`.
+            public var notification_setting: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/team/permission`.
+            public var permission: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team/permissions`.
+            public struct permissionsPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/team/permissions/pull`.
+                public var pull: Swift.Bool
+                /// - Remark: Generated from `#/components/schemas/team/permissions/triage`.
+                public var triage: Swift.Bool
+                /// - Remark: Generated from `#/components/schemas/team/permissions/push`.
+                public var push: Swift.Bool
+                /// - Remark: Generated from `#/components/schemas/team/permissions/maintain`.
+                public var maintain: Swift.Bool
+                /// - Remark: Generated from `#/components/schemas/team/permissions/admin`.
+                public var admin: Swift.Bool
+                /// Creates a new `permissionsPayload`.
+                ///
+                /// - Parameters:
+                ///   - pull:
+                ///   - triage:
+                ///   - push:
+                ///   - maintain:
+                ///   - admin:
+                public init(
+                    pull: Swift.Bool,
+                    triage: Swift.Bool,
+                    push: Swift.Bool,
+                    maintain: Swift.Bool,
+                    admin: Swift.Bool
+                ) {
+                    self.pull = pull
+                    self.triage = triage
+                    self.push = push
+                    self.maintain = maintain
+                    self.admin = admin
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case pull
+                    case triage
+                    case push
+                    case maintain
+                    case admin
+                }
+            }
+            /// - Remark: Generated from `#/components/schemas/team/permissions`.
+            public var permissions: Components.Schemas.team.permissionsPayload?
+            /// - Remark: Generated from `#/components/schemas/team/url`.
+            public var url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team/html_url`.
+            public var html_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team/members_url`.
+            public var members_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team/repositories_url`.
+            public var repositories_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team/parent`.
+            public var parent: Components.Schemas.nullable_hyphen_team_hyphen_simple?
+            /// Creates a new `team`.
+            ///
+            /// - Parameters:
+            ///   - id:
+            ///   - node_id:
+            ///   - name:
+            ///   - slug:
+            ///   - description:
+            ///   - privacy:
+            ///   - notification_setting:
+            ///   - permission:
+            ///   - permissions:
+            ///   - url:
+            ///   - html_url:
+            ///   - members_url:
+            ///   - repositories_url:
+            ///   - parent:
+            public init(
+                id: Swift.Int,
+                node_id: Swift.String,
+                name: Swift.String,
+                slug: Swift.String,
+                description: Swift.String? = nil,
+                privacy: Swift.String? = nil,
+                notification_setting: Swift.String? = nil,
+                permission: Swift.String,
+                permissions: Components.Schemas.team.permissionsPayload? = nil,
+                url: Swift.String,
+                html_url: Swift.String,
+                members_url: Swift.String,
+                repositories_url: Swift.String,
+                parent: Components.Schemas.nullable_hyphen_team_hyphen_simple? = nil
+            ) {
+                self.id = id
+                self.node_id = node_id
+                self.name = name
+                self.slug = slug
+                self.description = description
+                self.privacy = privacy
+                self.notification_setting = notification_setting
+                self.permission = permission
+                self.permissions = permissions
+                self.url = url
+                self.html_url = html_url
+                self.members_url = members_url
+                self.repositories_url = repositories_url
+                self.parent = parent
+            }
+            public enum CodingKeys: String, CodingKey {
+                case id
+                case node_id
+                case name
+                case slug
+                case description
+                case privacy
+                case notification_setting
+                case permission
+                case permissions
+                case url
+                case html_url
+                case members_url
+                case repositories_url
+                case parent
+            }
+        }
         /// A collection of related issues and pull requests.
         ///
         /// - Remark: Generated from `#/components/schemas/nullable-milestone`.
@@ -8947,251 +9256,6 @@ public enum Components {
             public init() {}
             public init(from decoder: any Decoder) throws {
                 try decoder.ensureNoAdditionalProperties(knownKeys: [])
-            }
-        }
-        /// Groups of organization members that gives permissions on specified repositories.
-        ///
-        /// - Remark: Generated from `#/components/schemas/nullable-team-simple`.
-        public struct nullable_hyphen_team_hyphen_simple: Codable, Hashable, Sendable {
-            /// Unique identifier of the team
-            ///
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/id`.
-            public var id: Swift.Int
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/node_id`.
-            public var node_id: Swift.String
-            /// URL for the team
-            ///
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/url`.
-            public var url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/members_url`.
-            public var members_url: Swift.String
-            /// Name of the team
-            ///
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/name`.
-            public var name: Swift.String
-            /// Description of the team
-            ///
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/description`.
-            public var description: Swift.String?
-            /// Permission that the team will have for its repositories
-            ///
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/permission`.
-            public var permission: Swift.String
-            /// The level of privacy this team should have
-            ///
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/privacy`.
-            public var privacy: Swift.String?
-            /// The notification setting the team has set
-            ///
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/notification_setting`.
-            public var notification_setting: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/html_url`.
-            public var html_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/repositories_url`.
-            public var repositories_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/slug`.
-            public var slug: Swift.String
-            /// Distinguished Name (DN) that team maps to within LDAP environment
-            ///
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/ldap_dn`.
-            public var ldap_dn: Swift.String?
-            /// Creates a new `nullable_hyphen_team_hyphen_simple`.
-            ///
-            /// - Parameters:
-            ///   - id: Unique identifier of the team
-            ///   - node_id:
-            ///   - url: URL for the team
-            ///   - members_url:
-            ///   - name: Name of the team
-            ///   - description: Description of the team
-            ///   - permission: Permission that the team will have for its repositories
-            ///   - privacy: The level of privacy this team should have
-            ///   - notification_setting: The notification setting the team has set
-            ///   - html_url:
-            ///   - repositories_url:
-            ///   - slug:
-            ///   - ldap_dn: Distinguished Name (DN) that team maps to within LDAP environment
-            public init(
-                id: Swift.Int,
-                node_id: Swift.String,
-                url: Swift.String,
-                members_url: Swift.String,
-                name: Swift.String,
-                description: Swift.String? = nil,
-                permission: Swift.String,
-                privacy: Swift.String? = nil,
-                notification_setting: Swift.String? = nil,
-                html_url: Swift.String,
-                repositories_url: Swift.String,
-                slug: Swift.String,
-                ldap_dn: Swift.String? = nil
-            ) {
-                self.id = id
-                self.node_id = node_id
-                self.url = url
-                self.members_url = members_url
-                self.name = name
-                self.description = description
-                self.permission = permission
-                self.privacy = privacy
-                self.notification_setting = notification_setting
-                self.html_url = html_url
-                self.repositories_url = repositories_url
-                self.slug = slug
-                self.ldap_dn = ldap_dn
-            }
-            public enum CodingKeys: String, CodingKey {
-                case id
-                case node_id
-                case url
-                case members_url
-                case name
-                case description
-                case permission
-                case privacy
-                case notification_setting
-                case html_url
-                case repositories_url
-                case slug
-                case ldap_dn
-            }
-        }
-        /// Groups of organization members that gives permissions on specified repositories.
-        ///
-        /// - Remark: Generated from `#/components/schemas/team`.
-        public struct team: Codable, Hashable, Sendable {
-            /// - Remark: Generated from `#/components/schemas/team/id`.
-            public var id: Swift.Int
-            /// - Remark: Generated from `#/components/schemas/team/node_id`.
-            public var node_id: Swift.String
-            /// - Remark: Generated from `#/components/schemas/team/name`.
-            public var name: Swift.String
-            /// - Remark: Generated from `#/components/schemas/team/slug`.
-            public var slug: Swift.String
-            /// - Remark: Generated from `#/components/schemas/team/description`.
-            public var description: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/team/privacy`.
-            public var privacy: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/team/notification_setting`.
-            public var notification_setting: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/team/permission`.
-            public var permission: Swift.String
-            /// - Remark: Generated from `#/components/schemas/team/permissions`.
-            public struct permissionsPayload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/team/permissions/pull`.
-                public var pull: Swift.Bool
-                /// - Remark: Generated from `#/components/schemas/team/permissions/triage`.
-                public var triage: Swift.Bool
-                /// - Remark: Generated from `#/components/schemas/team/permissions/push`.
-                public var push: Swift.Bool
-                /// - Remark: Generated from `#/components/schemas/team/permissions/maintain`.
-                public var maintain: Swift.Bool
-                /// - Remark: Generated from `#/components/schemas/team/permissions/admin`.
-                public var admin: Swift.Bool
-                /// Creates a new `permissionsPayload`.
-                ///
-                /// - Parameters:
-                ///   - pull:
-                ///   - triage:
-                ///   - push:
-                ///   - maintain:
-                ///   - admin:
-                public init(
-                    pull: Swift.Bool,
-                    triage: Swift.Bool,
-                    push: Swift.Bool,
-                    maintain: Swift.Bool,
-                    admin: Swift.Bool
-                ) {
-                    self.pull = pull
-                    self.triage = triage
-                    self.push = push
-                    self.maintain = maintain
-                    self.admin = admin
-                }
-                public enum CodingKeys: String, CodingKey {
-                    case pull
-                    case triage
-                    case push
-                    case maintain
-                    case admin
-                }
-            }
-            /// - Remark: Generated from `#/components/schemas/team/permissions`.
-            public var permissions: Components.Schemas.team.permissionsPayload?
-            /// - Remark: Generated from `#/components/schemas/team/url`.
-            public var url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/team/html_url`.
-            public var html_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/team/members_url`.
-            public var members_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/team/repositories_url`.
-            public var repositories_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/team/parent`.
-            public var parent: Components.Schemas.nullable_hyphen_team_hyphen_simple?
-            /// Creates a new `team`.
-            ///
-            /// - Parameters:
-            ///   - id:
-            ///   - node_id:
-            ///   - name:
-            ///   - slug:
-            ///   - description:
-            ///   - privacy:
-            ///   - notification_setting:
-            ///   - permission:
-            ///   - permissions:
-            ///   - url:
-            ///   - html_url:
-            ///   - members_url:
-            ///   - repositories_url:
-            ///   - parent:
-            public init(
-                id: Swift.Int,
-                node_id: Swift.String,
-                name: Swift.String,
-                slug: Swift.String,
-                description: Swift.String? = nil,
-                privacy: Swift.String? = nil,
-                notification_setting: Swift.String? = nil,
-                permission: Swift.String,
-                permissions: Components.Schemas.team.permissionsPayload? = nil,
-                url: Swift.String,
-                html_url: Swift.String,
-                members_url: Swift.String,
-                repositories_url: Swift.String,
-                parent: Components.Schemas.nullable_hyphen_team_hyphen_simple? = nil
-            ) {
-                self.id = id
-                self.node_id = node_id
-                self.name = name
-                self.slug = slug
-                self.description = description
-                self.privacy = privacy
-                self.notification_setting = notification_setting
-                self.permission = permission
-                self.permissions = permissions
-                self.url = url
-                self.html_url = html_url
-                self.members_url = members_url
-                self.repositories_url = repositories_url
-                self.parent = parent
-            }
-            public enum CodingKeys: String, CodingKey {
-                case id
-                case node_id
-                case name
-                case slug
-                case description
-                case privacy
-                case notification_setting
-                case permission
-                case permissions
-                case url
-                case html_url
-                case members_url
-                case repositories_url
-                case parent
             }
         }
         /// Custom property name and associated value
@@ -25756,6 +25820,606 @@ public enum Operations {
                     default:
                         try throwUnexpectedResponseStatus(
                             expectedStatus: "unprocessableContent",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
+    /// Create an attestation
+    ///
+    /// Store an artifact attestation and associate it with a repository.
+    ///
+    /// The authenticated user must have write permission to the repository and, if using a fine-grained access token the `attestations:write` permission is required.
+    ///
+    /// Artifact attestations are meant to be created using the [attest action](https://github.com/actions/attest). For amore information, see our guide on [using artifact attestations to establish a build's provenance](https://docs.github.com/actions/security-guides/using-artifact-attestations-to-establish-provenance-for-builds).
+    ///
+    /// - Remark: HTTP `POST /repos/{owner}/{repo}/attestations`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/attestations/post(repos/create-attestation)`.
+    public enum repos_sol_create_hyphen_attestation {
+        public static let id: Swift.String = "repos/create-attestation"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/attestations/POST/path`.
+            public struct Path: Sendable, Hashable {
+                /// The account owner of the repository. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/attestations/POST/path/owner`.
+                public var owner: Components.Parameters.owner
+                /// The name of the repository without the `.git` extension. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/attestations/POST/path/repo`.
+                public var repo: Components.Parameters.repo
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - owner: The account owner of the repository. The name is not case sensitive.
+                ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
+                public init(
+                    owner: Components.Parameters.owner,
+                    repo: Components.Parameters.repo
+                ) {
+                    self.owner = owner
+                    self.repo = repo
+                }
+            }
+            public var path: Operations.repos_sol_create_hyphen_attestation.Input.Path
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/attestations/POST/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.repos_sol_create_hyphen_attestation.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.repos_sol_create_hyphen_attestation.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.repos_sol_create_hyphen_attestation.Input.Headers
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/attestations/POST/requestBody`.
+            @frozen public enum Body: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/attestations/POST/requestBody/json`.
+                public struct jsonPayload: Codable, Hashable, Sendable {
+                    /// The attestation's Sigstore Bundle.
+                    /// Refer to the [Sigstore Bundle Specification](https://github.com/sigstore/protobuf-specs/blob/main/protos/sigstore_bundle.proto) for more information.
+                    ///
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/attestations/POST/requestBody/json/bundle`.
+                    public struct bundlePayload: Codable, Hashable, Sendable {
+                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/attestations/POST/requestBody/json/bundle/mediaType`.
+                        public var mediaType: Swift.String?
+                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/attestations/POST/requestBody/json/bundle/verificationMaterial`.
+                        public struct verificationMaterialPayload: Codable, Hashable, Sendable {
+                            /// A container of undocumented properties.
+                            public var additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer
+                            /// Creates a new `verificationMaterialPayload`.
+                            ///
+                            /// - Parameters:
+                            ///   - additionalProperties: A container of undocumented properties.
+                            public init(additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer = .init()) {
+                                self.additionalProperties = additionalProperties
+                            }
+                            public init(from decoder: any Decoder) throws {
+                                additionalProperties = try decoder.decodeAdditionalProperties(knownKeys: [])
+                            }
+                            public func encode(to encoder: any Encoder) throws {
+                                try encoder.encodeAdditionalProperties(additionalProperties)
+                            }
+                        }
+                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/attestations/POST/requestBody/json/bundle/verificationMaterial`.
+                        public var verificationMaterial: Operations.repos_sol_create_hyphen_attestation.Input.Body.jsonPayload.bundlePayload.verificationMaterialPayload?
+                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/attestations/POST/requestBody/json/bundle/dsseEnvelope`.
+                        public struct dsseEnvelopePayload: Codable, Hashable, Sendable {
+                            /// A container of undocumented properties.
+                            public var additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer
+                            /// Creates a new `dsseEnvelopePayload`.
+                            ///
+                            /// - Parameters:
+                            ///   - additionalProperties: A container of undocumented properties.
+                            public init(additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer = .init()) {
+                                self.additionalProperties = additionalProperties
+                            }
+                            public init(from decoder: any Decoder) throws {
+                                additionalProperties = try decoder.decodeAdditionalProperties(knownKeys: [])
+                            }
+                            public func encode(to encoder: any Encoder) throws {
+                                try encoder.encodeAdditionalProperties(additionalProperties)
+                            }
+                        }
+                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/attestations/POST/requestBody/json/bundle/dsseEnvelope`.
+                        public var dsseEnvelope: Operations.repos_sol_create_hyphen_attestation.Input.Body.jsonPayload.bundlePayload.dsseEnvelopePayload?
+                        /// Creates a new `bundlePayload`.
+                        ///
+                        /// - Parameters:
+                        ///   - mediaType:
+                        ///   - verificationMaterial:
+                        ///   - dsseEnvelope:
+                        public init(
+                            mediaType: Swift.String? = nil,
+                            verificationMaterial: Operations.repos_sol_create_hyphen_attestation.Input.Body.jsonPayload.bundlePayload.verificationMaterialPayload? = nil,
+                            dsseEnvelope: Operations.repos_sol_create_hyphen_attestation.Input.Body.jsonPayload.bundlePayload.dsseEnvelopePayload? = nil
+                        ) {
+                            self.mediaType = mediaType
+                            self.verificationMaterial = verificationMaterial
+                            self.dsseEnvelope = dsseEnvelope
+                        }
+                        public enum CodingKeys: String, CodingKey {
+                            case mediaType
+                            case verificationMaterial
+                            case dsseEnvelope
+                        }
+                    }
+                    /// The attestation's Sigstore Bundle.
+                    /// Refer to the [Sigstore Bundle Specification](https://github.com/sigstore/protobuf-specs/blob/main/protos/sigstore_bundle.proto) for more information.
+                    ///
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/attestations/POST/requestBody/json/bundle`.
+                    public var bundle: Operations.repos_sol_create_hyphen_attestation.Input.Body.jsonPayload.bundlePayload
+                    /// Creates a new `jsonPayload`.
+                    ///
+                    /// - Parameters:
+                    ///   - bundle: The attestation's Sigstore Bundle.
+                    public init(bundle: Operations.repos_sol_create_hyphen_attestation.Input.Body.jsonPayload.bundlePayload) {
+                        self.bundle = bundle
+                    }
+                    public enum CodingKeys: String, CodingKey {
+                        case bundle
+                    }
+                }
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/attestations/POST/requestBody/content/application\/json`.
+                case json(Operations.repos_sol_create_hyphen_attestation.Input.Body.jsonPayload)
+            }
+            public var body: Operations.repos_sol_create_hyphen_attestation.Input.Body
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - headers:
+            ///   - body:
+            public init(
+                path: Operations.repos_sol_create_hyphen_attestation.Input.Path,
+                headers: Operations.repos_sol_create_hyphen_attestation.Input.Headers = .init(),
+                body: Operations.repos_sol_create_hyphen_attestation.Input.Body
+            ) {
+                self.path = path
+                self.headers = headers
+                self.body = body
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Created: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/attestations/POST/responses/201/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/attestations/POST/responses/201/content/json`.
+                    public struct jsonPayload: Codable, Hashable, Sendable {
+                        /// The ID of the attestation.
+                        ///
+                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/attestations/POST/responses/201/content/json/id`.
+                        public var id: Swift.Int?
+                        /// Creates a new `jsonPayload`.
+                        ///
+                        /// - Parameters:
+                        ///   - id: The ID of the attestation.
+                        public init(id: Swift.Int? = nil) {
+                            self.id = id
+                        }
+                        public enum CodingKeys: String, CodingKey {
+                            case id
+                        }
+                    }
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/attestations/POST/responses/201/content/application\/json`.
+                    case json(Operations.repos_sol_create_hyphen_attestation.Output.Created.Body.jsonPayload)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Operations.repos_sol_create_hyphen_attestation.Output.Created.Body.jsonPayload {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.repos_sol_create_hyphen_attestation.Output.Created.Body
+                /// Creates a new `Created`.
+                ///
+                /// - Parameters:
+                ///   - body: Received HTTP response body
+                public init(body: Operations.repos_sol_create_hyphen_attestation.Output.Created.Body) {
+                    self.body = body
+                }
+            }
+            /// response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/attestations/post(repos/create-attestation)/responses/201`.
+            ///
+            /// HTTP response code: `201 created`.
+            case created(Operations.repos_sol_create_hyphen_attestation.Output.Created)
+            /// The associated value of the enum case if `self` is `.created`.
+            ///
+            /// - Throws: An error if `self` is not `.created`.
+            /// - SeeAlso: `.created`.
+            public var created: Operations.repos_sol_create_hyphen_attestation.Output.Created {
+                get throws {
+                    switch self {
+                    case let .created(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "created",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Forbidden
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/attestations/post(repos/create-attestation)/responses/403`.
+            ///
+            /// HTTP response code: `403 forbidden`.
+            case forbidden(Components.Responses.forbidden)
+            /// The associated value of the enum case if `self` is `.forbidden`.
+            ///
+            /// - Throws: An error if `self` is not `.forbidden`.
+            /// - SeeAlso: `.forbidden`.
+            public var forbidden: Components.Responses.forbidden {
+                get throws {
+                    switch self {
+                    case let .forbidden(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "forbidden",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Validation failed, or the endpoint has been spammed.
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/attestations/post(repos/create-attestation)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            case unprocessableContent(Components.Responses.validation_failed)
+            /// The associated value of the enum case if `self` is `.unprocessableContent`.
+            ///
+            /// - Throws: An error if `self` is not `.unprocessableContent`.
+            /// - SeeAlso: `.unprocessableContent`.
+            public var unprocessableContent: Components.Responses.validation_failed {
+                get throws {
+                    switch self {
+                    case let .unprocessableContent(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "unprocessableContent",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
+    /// List attestations
+    ///
+    /// List a collection of artifact attestations with a given subject digest that are associated with a repository.
+    ///
+    /// The authenticated user making the request must have read access to the repository. In addition, when using a fine-grained access token the `attestations:read` permission is required.
+    ///
+    /// **Please note:** in order to offer meaningful security benefits, an attestation's signature and timestamps **must** be cryptographically verified, and the identity of the attestation signer **must** be validated. Attestations can be verified using the [GitHub CLI `attestation verify` command](https://cli.github.com/manual/gh_attestation_verify). For more information, see [our guide on how to use artifact attestations to establish a build's provenance](https://docs.github.com/actions/security-guides/using-artifact-attestations-to-establish-provenance-for-builds).
+    ///
+    /// - Remark: HTTP `GET /repos/{owner}/{repo}/attestations/{subject_digest}`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/attestations/{subject_digest}/get(repos/list-attestations)`.
+    public enum repos_sol_list_hyphen_attestations {
+        public static let id: Swift.String = "repos/list-attestations"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/attestations/{subject_digest}/GET/path`.
+            public struct Path: Sendable, Hashable {
+                /// The account owner of the repository. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/attestations/{subject_digest}/GET/path/owner`.
+                public var owner: Components.Parameters.owner
+                /// The name of the repository without the `.git` extension. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/attestations/{subject_digest}/GET/path/repo`.
+                public var repo: Components.Parameters.repo
+                /// The parameter should be set to the attestation's subject's SHA256 digest, in the form `sha256:HEX_DIGEST`.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/attestations/{subject_digest}/GET/path/subject_digest`.
+                public var subject_digest: Swift.String
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - owner: The account owner of the repository. The name is not case sensitive.
+                ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
+                ///   - subject_digest: The parameter should be set to the attestation's subject's SHA256 digest, in the form `sha256:HEX_DIGEST`.
+                public init(
+                    owner: Components.Parameters.owner,
+                    repo: Components.Parameters.repo,
+                    subject_digest: Swift.String
+                ) {
+                    self.owner = owner
+                    self.repo = repo
+                    self.subject_digest = subject_digest
+                }
+            }
+            public var path: Operations.repos_sol_list_hyphen_attestations.Input.Path
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/attestations/{subject_digest}/GET/query`.
+            public struct Query: Sendable, Hashable {
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/attestations/{subject_digest}/GET/query/per_page`.
+                public var per_page: Components.Parameters.per_hyphen_page?
+                /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/attestations/{subject_digest}/GET/query/before`.
+                public var before: Components.Parameters.pagination_hyphen_before?
+                /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/attestations/{subject_digest}/GET/query/after`.
+                public var after: Components.Parameters.pagination_hyphen_after?
+                /// Creates a new `Query`.
+                ///
+                /// - Parameters:
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - before: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - after: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                public init(
+                    per_page: Components.Parameters.per_hyphen_page? = nil,
+                    before: Components.Parameters.pagination_hyphen_before? = nil,
+                    after: Components.Parameters.pagination_hyphen_after? = nil
+                ) {
+                    self.per_page = per_page
+                    self.before = before
+                    self.after = after
+                }
+            }
+            public var query: Operations.repos_sol_list_hyphen_attestations.Input.Query
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/attestations/{subject_digest}/GET/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.repos_sol_list_hyphen_attestations.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.repos_sol_list_hyphen_attestations.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.repos_sol_list_hyphen_attestations.Input.Headers
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - query:
+            ///   - headers:
+            public init(
+                path: Operations.repos_sol_list_hyphen_attestations.Input.Path,
+                query: Operations.repos_sol_list_hyphen_attestations.Input.Query = .init(),
+                headers: Operations.repos_sol_list_hyphen_attestations.Input.Headers = .init()
+            ) {
+                self.path = path
+                self.query = query
+                self.headers = headers
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Ok: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/attestations/{subject_digest}/GET/responses/200/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/attestations/{subject_digest}/GET/responses/200/content/json`.
+                    public struct jsonPayload: Codable, Hashable, Sendable {
+                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/attestations/{subject_digest}/GET/responses/200/content/json/attestationsPayload`.
+                        public struct attestationsPayloadPayload: Codable, Hashable, Sendable {
+                            /// The attestation's Sigstore Bundle.
+                            /// Refer to the [Sigstore Bundle Specification](https://github.com/sigstore/protobuf-specs/blob/main/protos/sigstore_bundle.proto) for more information.
+                            ///
+                            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/attestations/{subject_digest}/GET/responses/200/content/json/attestationsPayload/bundle`.
+                            public struct bundlePayload: Codable, Hashable, Sendable {
+                                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/attestations/{subject_digest}/GET/responses/200/content/json/attestationsPayload/bundle/mediaType`.
+                                public var mediaType: Swift.String?
+                                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/attestations/{subject_digest}/GET/responses/200/content/json/attestationsPayload/bundle/verificationMaterial`.
+                                public struct verificationMaterialPayload: Codable, Hashable, Sendable {
+                                    /// A container of undocumented properties.
+                                    public var additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer
+                                    /// Creates a new `verificationMaterialPayload`.
+                                    ///
+                                    /// - Parameters:
+                                    ///   - additionalProperties: A container of undocumented properties.
+                                    public init(additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer = .init()) {
+                                        self.additionalProperties = additionalProperties
+                                    }
+                                    public init(from decoder: any Decoder) throws {
+                                        additionalProperties = try decoder.decodeAdditionalProperties(knownKeys: [])
+                                    }
+                                    public func encode(to encoder: any Encoder) throws {
+                                        try encoder.encodeAdditionalProperties(additionalProperties)
+                                    }
+                                }
+                                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/attestations/{subject_digest}/GET/responses/200/content/json/attestationsPayload/bundle/verificationMaterial`.
+                                public var verificationMaterial: Operations.repos_sol_list_hyphen_attestations.Output.Ok.Body.jsonPayload.attestationsPayloadPayload.bundlePayload.verificationMaterialPayload?
+                                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/attestations/{subject_digest}/GET/responses/200/content/json/attestationsPayload/bundle/dsseEnvelope`.
+                                public struct dsseEnvelopePayload: Codable, Hashable, Sendable {
+                                    /// A container of undocumented properties.
+                                    public var additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer
+                                    /// Creates a new `dsseEnvelopePayload`.
+                                    ///
+                                    /// - Parameters:
+                                    ///   - additionalProperties: A container of undocumented properties.
+                                    public init(additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer = .init()) {
+                                        self.additionalProperties = additionalProperties
+                                    }
+                                    public init(from decoder: any Decoder) throws {
+                                        additionalProperties = try decoder.decodeAdditionalProperties(knownKeys: [])
+                                    }
+                                    public func encode(to encoder: any Encoder) throws {
+                                        try encoder.encodeAdditionalProperties(additionalProperties)
+                                    }
+                                }
+                                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/attestations/{subject_digest}/GET/responses/200/content/json/attestationsPayload/bundle/dsseEnvelope`.
+                                public var dsseEnvelope: Operations.repos_sol_list_hyphen_attestations.Output.Ok.Body.jsonPayload.attestationsPayloadPayload.bundlePayload.dsseEnvelopePayload?
+                                /// Creates a new `bundlePayload`.
+                                ///
+                                /// - Parameters:
+                                ///   - mediaType:
+                                ///   - verificationMaterial:
+                                ///   - dsseEnvelope:
+                                public init(
+                                    mediaType: Swift.String? = nil,
+                                    verificationMaterial: Operations.repos_sol_list_hyphen_attestations.Output.Ok.Body.jsonPayload.attestationsPayloadPayload.bundlePayload.verificationMaterialPayload? = nil,
+                                    dsseEnvelope: Operations.repos_sol_list_hyphen_attestations.Output.Ok.Body.jsonPayload.attestationsPayloadPayload.bundlePayload.dsseEnvelopePayload? = nil
+                                ) {
+                                    self.mediaType = mediaType
+                                    self.verificationMaterial = verificationMaterial
+                                    self.dsseEnvelope = dsseEnvelope
+                                }
+                                public enum CodingKeys: String, CodingKey {
+                                    case mediaType
+                                    case verificationMaterial
+                                    case dsseEnvelope
+                                }
+                            }
+                            /// The attestation's Sigstore Bundle.
+                            /// Refer to the [Sigstore Bundle Specification](https://github.com/sigstore/protobuf-specs/blob/main/protos/sigstore_bundle.proto) for more information.
+                            ///
+                            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/attestations/{subject_digest}/GET/responses/200/content/json/attestationsPayload/bundle`.
+                            public var bundle: Operations.repos_sol_list_hyphen_attestations.Output.Ok.Body.jsonPayload.attestationsPayloadPayload.bundlePayload?
+                            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/attestations/{subject_digest}/GET/responses/200/content/json/attestationsPayload/repository_id`.
+                            public var repository_id: Swift.Int?
+                            /// Creates a new `attestationsPayloadPayload`.
+                            ///
+                            /// - Parameters:
+                            ///   - bundle: The attestation's Sigstore Bundle.
+                            ///   - repository_id:
+                            public init(
+                                bundle: Operations.repos_sol_list_hyphen_attestations.Output.Ok.Body.jsonPayload.attestationsPayloadPayload.bundlePayload? = nil,
+                                repository_id: Swift.Int? = nil
+                            ) {
+                                self.bundle = bundle
+                                self.repository_id = repository_id
+                            }
+                            public enum CodingKeys: String, CodingKey {
+                                case bundle
+                                case repository_id
+                            }
+                        }
+                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/attestations/{subject_digest}/GET/responses/200/content/json/attestations`.
+                        public typealias attestationsPayload = [Operations.repos_sol_list_hyphen_attestations.Output.Ok.Body.jsonPayload.attestationsPayloadPayload]
+                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/attestations/{subject_digest}/GET/responses/200/content/json/attestations`.
+                        public var attestations: Operations.repos_sol_list_hyphen_attestations.Output.Ok.Body.jsonPayload.attestationsPayload?
+                        /// Creates a new `jsonPayload`.
+                        ///
+                        /// - Parameters:
+                        ///   - attestations:
+                        public init(attestations: Operations.repos_sol_list_hyphen_attestations.Output.Ok.Body.jsonPayload.attestationsPayload? = nil) {
+                            self.attestations = attestations
+                        }
+                        public enum CodingKeys: String, CodingKey {
+                            case attestations
+                        }
+                    }
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/attestations/{subject_digest}/GET/responses/200/content/application\/json`.
+                    case json(Operations.repos_sol_list_hyphen_attestations.Output.Ok.Body.jsonPayload)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Operations.repos_sol_list_hyphen_attestations.Output.Ok.Body.jsonPayload {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.repos_sol_list_hyphen_attestations.Output.Ok.Body
+                /// Creates a new `Ok`.
+                ///
+                /// - Parameters:
+                ///   - body: Received HTTP response body
+                public init(body: Operations.repos_sol_list_hyphen_attestations.Output.Ok.Body) {
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/attestations/{subject_digest}/get(repos/list-attestations)/responses/200`.
+            ///
+            /// HTTP response code: `200 ok`.
+            case ok(Operations.repos_sol_list_hyphen_attestations.Output.Ok)
+            /// The associated value of the enum case if `self` is `.ok`.
+            ///
+            /// - Throws: An error if `self` is not `.ok`.
+            /// - SeeAlso: `.ok`.
+            public var ok: Operations.repos_sol_list_hyphen_attestations.Output.Ok {
+                get throws {
+                    switch self {
+                    case let .ok(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "ok",
                             response: self
                         )
                     }

@@ -11,6 +11,23 @@ import struct Foundation.Date
 #endif
 /// A type that performs HTTP operations defined by the OpenAPI document.
 public protocol APIProtocol: Sendable {
+    /// List all Copilot seat assignments for an enterprise
+    ///
+    /// **Note**: This endpoint is in beta and is subject to change.
+    ///
+    /// Lists all active Copilot seats across organizations or enterprise teams for an enterprise with a Copilot Business or Copilot Enterprise subscription.
+    ///
+    /// Users with access through multiple organizations or enterprise teams will only be counted toward `total_seats` once.
+    ///
+    /// For each organization or enterprise team which grants Copilot access to a user, a seat detail object will appear in the `seats` array.
+    ///
+    /// Only enterprise owners and billing managers can view assigned Copilot seats across their child organizations or enterprise teams.
+    ///
+    /// Personal access tokens (classic) need either the `manage_billing:copilot` or `read:enterprise` scopes to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /enterprises/{enterprise}/copilot/billing/seats`.
+    /// - Remark: Generated from `#/paths//enterprises/{enterprise}/copilot/billing/seats/get(copilot/list-copilot-seats-for-enterprise)`.
+    func copilot_sol_list_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_enterprise(_ input: Operations.copilot_sol_list_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_enterprise.Input) async throws -> Operations.copilot_sol_list_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_enterprise.Output
     /// Get a summary of Copilot usage for enterprise members
     ///
     /// **Note**: This endpoint is in beta and is subject to change.
@@ -165,6 +182,33 @@ public protocol APIProtocol: Sendable {
 
 /// Convenience overloads for operation inputs.
 extension APIProtocol {
+    /// List all Copilot seat assignments for an enterprise
+    ///
+    /// **Note**: This endpoint is in beta and is subject to change.
+    ///
+    /// Lists all active Copilot seats across organizations or enterprise teams for an enterprise with a Copilot Business or Copilot Enterprise subscription.
+    ///
+    /// Users with access through multiple organizations or enterprise teams will only be counted toward `total_seats` once.
+    ///
+    /// For each organization or enterprise team which grants Copilot access to a user, a seat detail object will appear in the `seats` array.
+    ///
+    /// Only enterprise owners and billing managers can view assigned Copilot seats across their child organizations or enterprise teams.
+    ///
+    /// Personal access tokens (classic) need either the `manage_billing:copilot` or `read:enterprise` scopes to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /enterprises/{enterprise}/copilot/billing/seats`.
+    /// - Remark: Generated from `#/paths//enterprises/{enterprise}/copilot/billing/seats/get(copilot/list-copilot-seats-for-enterprise)`.
+    public func copilot_sol_list_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_enterprise(
+        path: Operations.copilot_sol_list_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_enterprise.Input.Path,
+        query: Operations.copilot_sol_list_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_enterprise.Input.Query = .init(),
+        headers: Operations.copilot_sol_list_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_enterprise.Input.Headers = .init()
+    ) async throws -> Operations.copilot_sol_list_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_enterprise.Output {
+        try await copilot_sol_list_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_enterprise(Operations.copilot_sol_list_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_enterprise.Input(
+            path: path,
+            query: query,
+            headers: headers
+        ))
+    }
     /// Get a summary of Copilot usage for enterprise members
     ///
     /// **Note**: This endpoint is in beta and is subject to change.
@@ -591,619 +635,6 @@ public enum Components {
                 case documentation_url
                 case url
                 case status
-            }
-        }
-        /// Summary of Copilot usage.
-        ///
-        /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics`.
-        public struct copilot_hyphen_usage_hyphen_metrics: Codable, Hashable, Sendable {
-            /// The date for which the usage metrics are reported, in `YYYY-MM-DD` format.
-            ///
-            /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics/day`.
-            public var day: Swift.String
-            /// The total number of Copilot code completion suggestions shown to users.
-            ///
-            /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics/total_suggestions_count`.
-            public var total_suggestions_count: Swift.Int?
-            /// The total number of Copilot code completion suggestions accepted by users.
-            ///
-            /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics/total_acceptances_count`.
-            public var total_acceptances_count: Swift.Int?
-            /// The total number of lines of code completions suggested by Copilot.
-            ///
-            /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics/total_lines_suggested`.
-            public var total_lines_suggested: Swift.Int?
-            /// The total number of lines of code completions accepted by users.
-            ///
-            /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics/total_lines_accepted`.
-            public var total_lines_accepted: Swift.Int?
-            /// The total number of users who were shown Copilot code completion suggestions during the day specified.
-            ///
-            /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics/total_active_users`.
-            public var total_active_users: Swift.Int?
-            /// The total instances of users who accepted code suggested by Copilot Chat in the IDE (panel and inline).
-            ///
-            /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics/total_chat_acceptances`.
-            public var total_chat_acceptances: Swift.Int?
-            /// The total number of chat turns (prompt and response pairs) sent between users and Copilot Chat in the IDE.
-            ///
-            /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics/total_chat_turns`.
-            public var total_chat_turns: Swift.Int?
-            /// The total number of users who interacted with Copilot Chat in the IDE during the day specified.
-            ///
-            /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics/total_active_chat_users`.
-            public var total_active_chat_users: Swift.Int?
-            /// Breakdown of Copilot usage by editor for this language
-            ///
-            /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics/breakdownPayload`.
-            public struct breakdownPayloadPayload: Codable, Hashable, Sendable {
-                /// The language in which Copilot suggestions were shown to users in the specified editor.
-                ///
-                /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics/breakdownPayload/language`.
-                public var language: Swift.String?
-                /// The editor in which Copilot suggestions were shown to users for the specified language.
-                ///
-                /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics/breakdownPayload/editor`.
-                public var editor: Swift.String?
-                /// The number of Copilot suggestions shown to users in the editor specified during the day specified.
-                ///
-                /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics/breakdownPayload/suggestions_count`.
-                public var suggestions_count: Swift.Int?
-                /// The number of Copilot suggestions accepted by users in the editor specified during the day specified.
-                ///
-                /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics/breakdownPayload/acceptances_count`.
-                public var acceptances_count: Swift.Int?
-                /// The number of lines of code suggested by Copilot in the editor specified during the day specified.
-                ///
-                /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics/breakdownPayload/lines_suggested`.
-                public var lines_suggested: Swift.Int?
-                /// The number of lines of code accepted by users in the editor specified during the day specified.
-                ///
-                /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics/breakdownPayload/lines_accepted`.
-                public var lines_accepted: Swift.Int?
-                /// The number of users who were shown Copilot completion suggestions in the editor specified during the day specified.
-                ///
-                /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics/breakdownPayload/active_users`.
-                public var active_users: Swift.Int?
-                /// A container of undocumented properties.
-                public var additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer
-                /// Creates a new `breakdownPayloadPayload`.
-                ///
-                /// - Parameters:
-                ///   - language: The language in which Copilot suggestions were shown to users in the specified editor.
-                ///   - editor: The editor in which Copilot suggestions were shown to users for the specified language.
-                ///   - suggestions_count: The number of Copilot suggestions shown to users in the editor specified during the day specified.
-                ///   - acceptances_count: The number of Copilot suggestions accepted by users in the editor specified during the day specified.
-                ///   - lines_suggested: The number of lines of code suggested by Copilot in the editor specified during the day specified.
-                ///   - lines_accepted: The number of lines of code accepted by users in the editor specified during the day specified.
-                ///   - active_users: The number of users who were shown Copilot completion suggestions in the editor specified during the day specified.
-                ///   - additionalProperties: A container of undocumented properties.
-                public init(
-                    language: Swift.String? = nil,
-                    editor: Swift.String? = nil,
-                    suggestions_count: Swift.Int? = nil,
-                    acceptances_count: Swift.Int? = nil,
-                    lines_suggested: Swift.Int? = nil,
-                    lines_accepted: Swift.Int? = nil,
-                    active_users: Swift.Int? = nil,
-                    additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer = .init()
-                ) {
-                    self.language = language
-                    self.editor = editor
-                    self.suggestions_count = suggestions_count
-                    self.acceptances_count = acceptances_count
-                    self.lines_suggested = lines_suggested
-                    self.lines_accepted = lines_accepted
-                    self.active_users = active_users
-                    self.additionalProperties = additionalProperties
-                }
-                public enum CodingKeys: String, CodingKey {
-                    case language
-                    case editor
-                    case suggestions_count
-                    case acceptances_count
-                    case lines_suggested
-                    case lines_accepted
-                    case active_users
-                }
-                public init(from decoder: any Decoder) throws {
-                    let container = try decoder.container(keyedBy: CodingKeys.self)
-                    language = try container.decodeIfPresent(
-                        Swift.String.self,
-                        forKey: .language
-                    )
-                    editor = try container.decodeIfPresent(
-                        Swift.String.self,
-                        forKey: .editor
-                    )
-                    suggestions_count = try container.decodeIfPresent(
-                        Swift.Int.self,
-                        forKey: .suggestions_count
-                    )
-                    acceptances_count = try container.decodeIfPresent(
-                        Swift.Int.self,
-                        forKey: .acceptances_count
-                    )
-                    lines_suggested = try container.decodeIfPresent(
-                        Swift.Int.self,
-                        forKey: .lines_suggested
-                    )
-                    lines_accepted = try container.decodeIfPresent(
-                        Swift.Int.self,
-                        forKey: .lines_accepted
-                    )
-                    active_users = try container.decodeIfPresent(
-                        Swift.Int.self,
-                        forKey: .active_users
-                    )
-                    additionalProperties = try decoder.decodeAdditionalProperties(knownKeys: [
-                        "language",
-                        "editor",
-                        "suggestions_count",
-                        "acceptances_count",
-                        "lines_suggested",
-                        "lines_accepted",
-                        "active_users"
-                    ])
-                }
-                public func encode(to encoder: any Encoder) throws {
-                    var container = encoder.container(keyedBy: CodingKeys.self)
-                    try container.encodeIfPresent(
-                        language,
-                        forKey: .language
-                    )
-                    try container.encodeIfPresent(
-                        editor,
-                        forKey: .editor
-                    )
-                    try container.encodeIfPresent(
-                        suggestions_count,
-                        forKey: .suggestions_count
-                    )
-                    try container.encodeIfPresent(
-                        acceptances_count,
-                        forKey: .acceptances_count
-                    )
-                    try container.encodeIfPresent(
-                        lines_suggested,
-                        forKey: .lines_suggested
-                    )
-                    try container.encodeIfPresent(
-                        lines_accepted,
-                        forKey: .lines_accepted
-                    )
-                    try container.encodeIfPresent(
-                        active_users,
-                        forKey: .active_users
-                    )
-                    try encoder.encodeAdditionalProperties(additionalProperties)
-                }
-            }
-            /// Breakdown of Copilot code completions usage by language and editor
-            ///
-            /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics/breakdown`.
-            public typealias breakdownPayload = [Components.Schemas.copilot_hyphen_usage_hyphen_metrics.breakdownPayloadPayload]
-            /// Breakdown of Copilot code completions usage by language and editor
-            ///
-            /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics/breakdown`.
-            public var breakdown: Components.Schemas.copilot_hyphen_usage_hyphen_metrics.breakdownPayload?
-            /// Creates a new `copilot_hyphen_usage_hyphen_metrics`.
-            ///
-            /// - Parameters:
-            ///   - day: The date for which the usage metrics are reported, in `YYYY-MM-DD` format.
-            ///   - total_suggestions_count: The total number of Copilot code completion suggestions shown to users.
-            ///   - total_acceptances_count: The total number of Copilot code completion suggestions accepted by users.
-            ///   - total_lines_suggested: The total number of lines of code completions suggested by Copilot.
-            ///   - total_lines_accepted: The total number of lines of code completions accepted by users.
-            ///   - total_active_users: The total number of users who were shown Copilot code completion suggestions during the day specified.
-            ///   - total_chat_acceptances: The total instances of users who accepted code suggested by Copilot Chat in the IDE (panel and inline).
-            ///   - total_chat_turns: The total number of chat turns (prompt and response pairs) sent between users and Copilot Chat in the IDE.
-            ///   - total_active_chat_users: The total number of users who interacted with Copilot Chat in the IDE during the day specified.
-            ///   - breakdown: Breakdown of Copilot code completions usage by language and editor
-            public init(
-                day: Swift.String,
-                total_suggestions_count: Swift.Int? = nil,
-                total_acceptances_count: Swift.Int? = nil,
-                total_lines_suggested: Swift.Int? = nil,
-                total_lines_accepted: Swift.Int? = nil,
-                total_active_users: Swift.Int? = nil,
-                total_chat_acceptances: Swift.Int? = nil,
-                total_chat_turns: Swift.Int? = nil,
-                total_active_chat_users: Swift.Int? = nil,
-                breakdown: Components.Schemas.copilot_hyphen_usage_hyphen_metrics.breakdownPayload? = nil
-            ) {
-                self.day = day
-                self.total_suggestions_count = total_suggestions_count
-                self.total_acceptances_count = total_acceptances_count
-                self.total_lines_suggested = total_lines_suggested
-                self.total_lines_accepted = total_lines_accepted
-                self.total_active_users = total_active_users
-                self.total_chat_acceptances = total_chat_acceptances
-                self.total_chat_turns = total_chat_turns
-                self.total_active_chat_users = total_active_chat_users
-                self.breakdown = breakdown
-            }
-            public enum CodingKeys: String, CodingKey {
-                case day
-                case total_suggestions_count
-                case total_acceptances_count
-                case total_lines_suggested
-                case total_lines_accepted
-                case total_active_users
-                case total_chat_acceptances
-                case total_chat_turns
-                case total_active_chat_users
-                case breakdown
-            }
-            public init(from decoder: any Decoder) throws {
-                let container = try decoder.container(keyedBy: CodingKeys.self)
-                day = try container.decode(
-                    Swift.String.self,
-                    forKey: .day
-                )
-                total_suggestions_count = try container.decodeIfPresent(
-                    Swift.Int.self,
-                    forKey: .total_suggestions_count
-                )
-                total_acceptances_count = try container.decodeIfPresent(
-                    Swift.Int.self,
-                    forKey: .total_acceptances_count
-                )
-                total_lines_suggested = try container.decodeIfPresent(
-                    Swift.Int.self,
-                    forKey: .total_lines_suggested
-                )
-                total_lines_accepted = try container.decodeIfPresent(
-                    Swift.Int.self,
-                    forKey: .total_lines_accepted
-                )
-                total_active_users = try container.decodeIfPresent(
-                    Swift.Int.self,
-                    forKey: .total_active_users
-                )
-                total_chat_acceptances = try container.decodeIfPresent(
-                    Swift.Int.self,
-                    forKey: .total_chat_acceptances
-                )
-                total_chat_turns = try container.decodeIfPresent(
-                    Swift.Int.self,
-                    forKey: .total_chat_turns
-                )
-                total_active_chat_users = try container.decodeIfPresent(
-                    Swift.Int.self,
-                    forKey: .total_active_chat_users
-                )
-                breakdown = try container.decodeIfPresent(
-                    Components.Schemas.copilot_hyphen_usage_hyphen_metrics.breakdownPayload.self,
-                    forKey: .breakdown
-                )
-                try decoder.ensureNoAdditionalProperties(knownKeys: [
-                    "day",
-                    "total_suggestions_count",
-                    "total_acceptances_count",
-                    "total_lines_suggested",
-                    "total_lines_accepted",
-                    "total_active_users",
-                    "total_chat_acceptances",
-                    "total_chat_turns",
-                    "total_active_chat_users",
-                    "breakdown"
-                ])
-            }
-        }
-        /// A GitHub organization.
-        ///
-        /// - Remark: Generated from `#/components/schemas/organization-simple`.
-        public struct organization_hyphen_simple: Codable, Hashable, Sendable {
-            /// - Remark: Generated from `#/components/schemas/organization-simple/login`.
-            public var login: Swift.String
-            /// - Remark: Generated from `#/components/schemas/organization-simple/id`.
-            public var id: Swift.Int
-            /// - Remark: Generated from `#/components/schemas/organization-simple/node_id`.
-            public var node_id: Swift.String
-            /// - Remark: Generated from `#/components/schemas/organization-simple/url`.
-            public var url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/organization-simple/repos_url`.
-            public var repos_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/organization-simple/events_url`.
-            public var events_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/organization-simple/hooks_url`.
-            public var hooks_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/organization-simple/issues_url`.
-            public var issues_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/organization-simple/members_url`.
-            public var members_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/organization-simple/public_members_url`.
-            public var public_members_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/organization-simple/avatar_url`.
-            public var avatar_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/organization-simple/description`.
-            public var description: Swift.String?
-            /// Creates a new `organization_hyphen_simple`.
-            ///
-            /// - Parameters:
-            ///   - login:
-            ///   - id:
-            ///   - node_id:
-            ///   - url:
-            ///   - repos_url:
-            ///   - events_url:
-            ///   - hooks_url:
-            ///   - issues_url:
-            ///   - members_url:
-            ///   - public_members_url:
-            ///   - avatar_url:
-            ///   - description:
-            public init(
-                login: Swift.String,
-                id: Swift.Int,
-                node_id: Swift.String,
-                url: Swift.String,
-                repos_url: Swift.String,
-                events_url: Swift.String,
-                hooks_url: Swift.String,
-                issues_url: Swift.String,
-                members_url: Swift.String,
-                public_members_url: Swift.String,
-                avatar_url: Swift.String,
-                description: Swift.String? = nil
-            ) {
-                self.login = login
-                self.id = id
-                self.node_id = node_id
-                self.url = url
-                self.repos_url = repos_url
-                self.events_url = events_url
-                self.hooks_url = hooks_url
-                self.issues_url = issues_url
-                self.members_url = members_url
-                self.public_members_url = public_members_url
-                self.avatar_url = avatar_url
-                self.description = description
-            }
-            public enum CodingKeys: String, CodingKey {
-                case login
-                case id
-                case node_id
-                case url
-                case repos_url
-                case events_url
-                case hooks_url
-                case issues_url
-                case members_url
-                case public_members_url
-                case avatar_url
-                case description
-            }
-        }
-        /// The breakdown of Copilot Business seats for the organization.
-        ///
-        /// - Remark: Generated from `#/components/schemas/copilot-seat-breakdown`.
-        public struct copilot_hyphen_seat_hyphen_breakdown: Codable, Hashable, Sendable {
-            /// The total number of seats being billed for the organization as of the current billing cycle.
-            ///
-            /// - Remark: Generated from `#/components/schemas/copilot-seat-breakdown/total`.
-            public var total: Swift.Int?
-            /// Seats added during the current billing cycle.
-            ///
-            /// - Remark: Generated from `#/components/schemas/copilot-seat-breakdown/added_this_cycle`.
-            public var added_this_cycle: Swift.Int?
-            /// The number of seats that are pending cancellation at the end of the current billing cycle.
-            ///
-            /// - Remark: Generated from `#/components/schemas/copilot-seat-breakdown/pending_cancellation`.
-            public var pending_cancellation: Swift.Int?
-            /// The number of seats that have been assigned to users that have not yet accepted an invitation to this organization.
-            ///
-            /// - Remark: Generated from `#/components/schemas/copilot-seat-breakdown/pending_invitation`.
-            public var pending_invitation: Swift.Int?
-            /// The number of seats that have used Copilot during the current billing cycle.
-            ///
-            /// - Remark: Generated from `#/components/schemas/copilot-seat-breakdown/active_this_cycle`.
-            public var active_this_cycle: Swift.Int?
-            /// The number of seats that have not used Copilot during the current billing cycle.
-            ///
-            /// - Remark: Generated from `#/components/schemas/copilot-seat-breakdown/inactive_this_cycle`.
-            public var inactive_this_cycle: Swift.Int?
-            /// Creates a new `copilot_hyphen_seat_hyphen_breakdown`.
-            ///
-            /// - Parameters:
-            ///   - total: The total number of seats being billed for the organization as of the current billing cycle.
-            ///   - added_this_cycle: Seats added during the current billing cycle.
-            ///   - pending_cancellation: The number of seats that are pending cancellation at the end of the current billing cycle.
-            ///   - pending_invitation: The number of seats that have been assigned to users that have not yet accepted an invitation to this organization.
-            ///   - active_this_cycle: The number of seats that have used Copilot during the current billing cycle.
-            ///   - inactive_this_cycle: The number of seats that have not used Copilot during the current billing cycle.
-            public init(
-                total: Swift.Int? = nil,
-                added_this_cycle: Swift.Int? = nil,
-                pending_cancellation: Swift.Int? = nil,
-                pending_invitation: Swift.Int? = nil,
-                active_this_cycle: Swift.Int? = nil,
-                inactive_this_cycle: Swift.Int? = nil
-            ) {
-                self.total = total
-                self.added_this_cycle = added_this_cycle
-                self.pending_cancellation = pending_cancellation
-                self.pending_invitation = pending_invitation
-                self.active_this_cycle = active_this_cycle
-                self.inactive_this_cycle = inactive_this_cycle
-            }
-            public enum CodingKeys: String, CodingKey {
-                case total
-                case added_this_cycle
-                case pending_cancellation
-                case pending_invitation
-                case active_this_cycle
-                case inactive_this_cycle
-            }
-        }
-        /// Information about the seat breakdown and policies set for an organization with a Copilot Business subscription.
-        ///
-        /// - Remark: Generated from `#/components/schemas/copilot-organization-details`.
-        public struct copilot_hyphen_organization_hyphen_details: Codable, Hashable, Sendable {
-            /// - Remark: Generated from `#/components/schemas/copilot-organization-details/seat_breakdown`.
-            public var seat_breakdown: Components.Schemas.copilot_hyphen_seat_hyphen_breakdown
-            /// The organization policy for allowing or disallowing Copilot to make suggestions that match public code.
-            ///
-            /// - Remark: Generated from `#/components/schemas/copilot-organization-details/public_code_suggestions`.
-            @frozen public enum public_code_suggestionsPayload: String, Codable, Hashable, Sendable {
-                case allow = "allow"
-                case block = "block"
-                case unconfigured = "unconfigured"
-                case unknown = "unknown"
-            }
-            /// The organization policy for allowing or disallowing Copilot to make suggestions that match public code.
-            ///
-            /// - Remark: Generated from `#/components/schemas/copilot-organization-details/public_code_suggestions`.
-            public var public_code_suggestions: Components.Schemas.copilot_hyphen_organization_hyphen_details.public_code_suggestionsPayload
-            /// The organization policy for allowing or disallowing organization members to use Copilot Chat within their editor.
-            ///
-            /// - Remark: Generated from `#/components/schemas/copilot-organization-details/ide_chat`.
-            @frozen public enum ide_chatPayload: String, Codable, Hashable, Sendable {
-                case enabled = "enabled"
-                case disabled = "disabled"
-                case unconfigured = "unconfigured"
-            }
-            /// The organization policy for allowing or disallowing organization members to use Copilot Chat within their editor.
-            ///
-            /// - Remark: Generated from `#/components/schemas/copilot-organization-details/ide_chat`.
-            public var ide_chat: Components.Schemas.copilot_hyphen_organization_hyphen_details.ide_chatPayload?
-            /// The organization policy for allowing or disallowing organization members to use Copilot features within github.com.
-            ///
-            /// - Remark: Generated from `#/components/schemas/copilot-organization-details/platform_chat`.
-            @frozen public enum platform_chatPayload: String, Codable, Hashable, Sendable {
-                case enabled = "enabled"
-                case disabled = "disabled"
-                case unconfigured = "unconfigured"
-            }
-            /// The organization policy for allowing or disallowing organization members to use Copilot features within github.com.
-            ///
-            /// - Remark: Generated from `#/components/schemas/copilot-organization-details/platform_chat`.
-            public var platform_chat: Components.Schemas.copilot_hyphen_organization_hyphen_details.platform_chatPayload?
-            /// The organization policy for allowing or disallowing organization members to use Copilot within their CLI.
-            ///
-            /// - Remark: Generated from `#/components/schemas/copilot-organization-details/cli`.
-            @frozen public enum cliPayload: String, Codable, Hashable, Sendable {
-                case enabled = "enabled"
-                case disabled = "disabled"
-                case unconfigured = "unconfigured"
-            }
-            /// The organization policy for allowing or disallowing organization members to use Copilot within their CLI.
-            ///
-            /// - Remark: Generated from `#/components/schemas/copilot-organization-details/cli`.
-            public var cli: Components.Schemas.copilot_hyphen_organization_hyphen_details.cliPayload?
-            /// The mode of assigning new seats.
-            ///
-            /// - Remark: Generated from `#/components/schemas/copilot-organization-details/seat_management_setting`.
-            @frozen public enum seat_management_settingPayload: String, Codable, Hashable, Sendable {
-                case assign_all = "assign_all"
-                case assign_selected = "assign_selected"
-                case disabled = "disabled"
-                case unconfigured = "unconfigured"
-            }
-            /// The mode of assigning new seats.
-            ///
-            /// - Remark: Generated from `#/components/schemas/copilot-organization-details/seat_management_setting`.
-            public var seat_management_setting: Components.Schemas.copilot_hyphen_organization_hyphen_details.seat_management_settingPayload
-            /// A container of undocumented properties.
-            public var additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer
-            /// Creates a new `copilot_hyphen_organization_hyphen_details`.
-            ///
-            /// - Parameters:
-            ///   - seat_breakdown:
-            ///   - public_code_suggestions: The organization policy for allowing or disallowing Copilot to make suggestions that match public code.
-            ///   - ide_chat: The organization policy for allowing or disallowing organization members to use Copilot Chat within their editor.
-            ///   - platform_chat: The organization policy for allowing or disallowing organization members to use Copilot features within github.com.
-            ///   - cli: The organization policy for allowing or disallowing organization members to use Copilot within their CLI.
-            ///   - seat_management_setting: The mode of assigning new seats.
-            ///   - additionalProperties: A container of undocumented properties.
-            public init(
-                seat_breakdown: Components.Schemas.copilot_hyphen_seat_hyphen_breakdown,
-                public_code_suggestions: Components.Schemas.copilot_hyphen_organization_hyphen_details.public_code_suggestionsPayload,
-                ide_chat: Components.Schemas.copilot_hyphen_organization_hyphen_details.ide_chatPayload? = nil,
-                platform_chat: Components.Schemas.copilot_hyphen_organization_hyphen_details.platform_chatPayload? = nil,
-                cli: Components.Schemas.copilot_hyphen_organization_hyphen_details.cliPayload? = nil,
-                seat_management_setting: Components.Schemas.copilot_hyphen_organization_hyphen_details.seat_management_settingPayload,
-                additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer = .init()
-            ) {
-                self.seat_breakdown = seat_breakdown
-                self.public_code_suggestions = public_code_suggestions
-                self.ide_chat = ide_chat
-                self.platform_chat = platform_chat
-                self.cli = cli
-                self.seat_management_setting = seat_management_setting
-                self.additionalProperties = additionalProperties
-            }
-            public enum CodingKeys: String, CodingKey {
-                case seat_breakdown
-                case public_code_suggestions
-                case ide_chat
-                case platform_chat
-                case cli
-                case seat_management_setting
-            }
-            public init(from decoder: any Decoder) throws {
-                let container = try decoder.container(keyedBy: CodingKeys.self)
-                seat_breakdown = try container.decode(
-                    Components.Schemas.copilot_hyphen_seat_hyphen_breakdown.self,
-                    forKey: .seat_breakdown
-                )
-                public_code_suggestions = try container.decode(
-                    Components.Schemas.copilot_hyphen_organization_hyphen_details.public_code_suggestionsPayload.self,
-                    forKey: .public_code_suggestions
-                )
-                ide_chat = try container.decodeIfPresent(
-                    Components.Schemas.copilot_hyphen_organization_hyphen_details.ide_chatPayload.self,
-                    forKey: .ide_chat
-                )
-                platform_chat = try container.decodeIfPresent(
-                    Components.Schemas.copilot_hyphen_organization_hyphen_details.platform_chatPayload.self,
-                    forKey: .platform_chat
-                )
-                cli = try container.decodeIfPresent(
-                    Components.Schemas.copilot_hyphen_organization_hyphen_details.cliPayload.self,
-                    forKey: .cli
-                )
-                seat_management_setting = try container.decode(
-                    Components.Schemas.copilot_hyphen_organization_hyphen_details.seat_management_settingPayload.self,
-                    forKey: .seat_management_setting
-                )
-                additionalProperties = try decoder.decodeAdditionalProperties(knownKeys: [
-                    "seat_breakdown",
-                    "public_code_suggestions",
-                    "ide_chat",
-                    "platform_chat",
-                    "cli",
-                    "seat_management_setting"
-                ])
-            }
-            public func encode(to encoder: any Encoder) throws {
-                var container = encoder.container(keyedBy: CodingKeys.self)
-                try container.encode(
-                    seat_breakdown,
-                    forKey: .seat_breakdown
-                )
-                try container.encode(
-                    public_code_suggestions,
-                    forKey: .public_code_suggestions
-                )
-                try container.encodeIfPresent(
-                    ide_chat,
-                    forKey: .ide_chat
-                )
-                try container.encodeIfPresent(
-                    platform_chat,
-                    forKey: .platform_chat
-                )
-                try container.encodeIfPresent(
-                    cli,
-                    forKey: .cli
-                )
-                try container.encode(
-                    seat_management_setting,
-                    forKey: .seat_management_setting
-                )
-                try encoder.encodeAdditionalProperties(additionalProperties)
             }
         }
         /// Groups of organization members that gives permissions on specified repositories.
@@ -1697,6 +1128,91 @@ public enum Components {
                 case plan
             }
         }
+        /// A GitHub organization.
+        ///
+        /// - Remark: Generated from `#/components/schemas/organization-simple`.
+        public struct organization_hyphen_simple: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/organization-simple/login`.
+            public var login: Swift.String
+            /// - Remark: Generated from `#/components/schemas/organization-simple/id`.
+            public var id: Swift.Int
+            /// - Remark: Generated from `#/components/schemas/organization-simple/node_id`.
+            public var node_id: Swift.String
+            /// - Remark: Generated from `#/components/schemas/organization-simple/url`.
+            public var url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/organization-simple/repos_url`.
+            public var repos_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/organization-simple/events_url`.
+            public var events_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/organization-simple/hooks_url`.
+            public var hooks_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/organization-simple/issues_url`.
+            public var issues_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/organization-simple/members_url`.
+            public var members_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/organization-simple/public_members_url`.
+            public var public_members_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/organization-simple/avatar_url`.
+            public var avatar_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/organization-simple/description`.
+            public var description: Swift.String?
+            /// Creates a new `organization_hyphen_simple`.
+            ///
+            /// - Parameters:
+            ///   - login:
+            ///   - id:
+            ///   - node_id:
+            ///   - url:
+            ///   - repos_url:
+            ///   - events_url:
+            ///   - hooks_url:
+            ///   - issues_url:
+            ///   - members_url:
+            ///   - public_members_url:
+            ///   - avatar_url:
+            ///   - description:
+            public init(
+                login: Swift.String,
+                id: Swift.Int,
+                node_id: Swift.String,
+                url: Swift.String,
+                repos_url: Swift.String,
+                events_url: Swift.String,
+                hooks_url: Swift.String,
+                issues_url: Swift.String,
+                members_url: Swift.String,
+                public_members_url: Swift.String,
+                avatar_url: Swift.String,
+                description: Swift.String? = nil
+            ) {
+                self.login = login
+                self.id = id
+                self.node_id = node_id
+                self.url = url
+                self.repos_url = repos_url
+                self.events_url = events_url
+                self.hooks_url = hooks_url
+                self.issues_url = issues_url
+                self.members_url = members_url
+                self.public_members_url = public_members_url
+                self.avatar_url = avatar_url
+                self.description = description
+            }
+            public enum CodingKeys: String, CodingKey {
+                case login
+                case id
+                case node_id
+                case url
+                case repos_url
+                case events_url
+                case hooks_url
+                case issues_url
+                case members_url
+                case public_members_url
+                case avatar_url
+                case description
+            }
+        }
         /// Group of enterprise owners and/or members
         ///
         /// - Remark: Generated from `#/components/schemas/enterprise-team`.
@@ -2003,6 +1519,534 @@ public enum Components {
                 ])
             }
         }
+        /// Summary of Copilot usage.
+        ///
+        /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics`.
+        public struct copilot_hyphen_usage_hyphen_metrics: Codable, Hashable, Sendable {
+            /// The date for which the usage metrics are reported, in `YYYY-MM-DD` format.
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics/day`.
+            public var day: Swift.String
+            /// The total number of Copilot code completion suggestions shown to users.
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics/total_suggestions_count`.
+            public var total_suggestions_count: Swift.Int?
+            /// The total number of Copilot code completion suggestions accepted by users.
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics/total_acceptances_count`.
+            public var total_acceptances_count: Swift.Int?
+            /// The total number of lines of code completions suggested by Copilot.
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics/total_lines_suggested`.
+            public var total_lines_suggested: Swift.Int?
+            /// The total number of lines of code completions accepted by users.
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics/total_lines_accepted`.
+            public var total_lines_accepted: Swift.Int?
+            /// The total number of users who were shown Copilot code completion suggestions during the day specified.
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics/total_active_users`.
+            public var total_active_users: Swift.Int?
+            /// The total instances of users who accepted code suggested by Copilot Chat in the IDE (panel and inline).
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics/total_chat_acceptances`.
+            public var total_chat_acceptances: Swift.Int?
+            /// The total number of chat turns (prompt and response pairs) sent between users and Copilot Chat in the IDE.
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics/total_chat_turns`.
+            public var total_chat_turns: Swift.Int?
+            /// The total number of users who interacted with Copilot Chat in the IDE during the day specified.
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics/total_active_chat_users`.
+            public var total_active_chat_users: Swift.Int?
+            /// Breakdown of Copilot usage by editor for this language
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics/breakdownPayload`.
+            public struct breakdownPayloadPayload: Codable, Hashable, Sendable {
+                /// The language in which Copilot suggestions were shown to users in the specified editor.
+                ///
+                /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics/breakdownPayload/language`.
+                public var language: Swift.String?
+                /// The editor in which Copilot suggestions were shown to users for the specified language.
+                ///
+                /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics/breakdownPayload/editor`.
+                public var editor: Swift.String?
+                /// The number of Copilot suggestions shown to users in the editor specified during the day specified.
+                ///
+                /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics/breakdownPayload/suggestions_count`.
+                public var suggestions_count: Swift.Int?
+                /// The number of Copilot suggestions accepted by users in the editor specified during the day specified.
+                ///
+                /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics/breakdownPayload/acceptances_count`.
+                public var acceptances_count: Swift.Int?
+                /// The number of lines of code suggested by Copilot in the editor specified during the day specified.
+                ///
+                /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics/breakdownPayload/lines_suggested`.
+                public var lines_suggested: Swift.Int?
+                /// The number of lines of code accepted by users in the editor specified during the day specified.
+                ///
+                /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics/breakdownPayload/lines_accepted`.
+                public var lines_accepted: Swift.Int?
+                /// The number of users who were shown Copilot completion suggestions in the editor specified during the day specified.
+                ///
+                /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics/breakdownPayload/active_users`.
+                public var active_users: Swift.Int?
+                /// A container of undocumented properties.
+                public var additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer
+                /// Creates a new `breakdownPayloadPayload`.
+                ///
+                /// - Parameters:
+                ///   - language: The language in which Copilot suggestions were shown to users in the specified editor.
+                ///   - editor: The editor in which Copilot suggestions were shown to users for the specified language.
+                ///   - suggestions_count: The number of Copilot suggestions shown to users in the editor specified during the day specified.
+                ///   - acceptances_count: The number of Copilot suggestions accepted by users in the editor specified during the day specified.
+                ///   - lines_suggested: The number of lines of code suggested by Copilot in the editor specified during the day specified.
+                ///   - lines_accepted: The number of lines of code accepted by users in the editor specified during the day specified.
+                ///   - active_users: The number of users who were shown Copilot completion suggestions in the editor specified during the day specified.
+                ///   - additionalProperties: A container of undocumented properties.
+                public init(
+                    language: Swift.String? = nil,
+                    editor: Swift.String? = nil,
+                    suggestions_count: Swift.Int? = nil,
+                    acceptances_count: Swift.Int? = nil,
+                    lines_suggested: Swift.Int? = nil,
+                    lines_accepted: Swift.Int? = nil,
+                    active_users: Swift.Int? = nil,
+                    additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer = .init()
+                ) {
+                    self.language = language
+                    self.editor = editor
+                    self.suggestions_count = suggestions_count
+                    self.acceptances_count = acceptances_count
+                    self.lines_suggested = lines_suggested
+                    self.lines_accepted = lines_accepted
+                    self.active_users = active_users
+                    self.additionalProperties = additionalProperties
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case language
+                    case editor
+                    case suggestions_count
+                    case acceptances_count
+                    case lines_suggested
+                    case lines_accepted
+                    case active_users
+                }
+                public init(from decoder: any Decoder) throws {
+                    let container = try decoder.container(keyedBy: CodingKeys.self)
+                    language = try container.decodeIfPresent(
+                        Swift.String.self,
+                        forKey: .language
+                    )
+                    editor = try container.decodeIfPresent(
+                        Swift.String.self,
+                        forKey: .editor
+                    )
+                    suggestions_count = try container.decodeIfPresent(
+                        Swift.Int.self,
+                        forKey: .suggestions_count
+                    )
+                    acceptances_count = try container.decodeIfPresent(
+                        Swift.Int.self,
+                        forKey: .acceptances_count
+                    )
+                    lines_suggested = try container.decodeIfPresent(
+                        Swift.Int.self,
+                        forKey: .lines_suggested
+                    )
+                    lines_accepted = try container.decodeIfPresent(
+                        Swift.Int.self,
+                        forKey: .lines_accepted
+                    )
+                    active_users = try container.decodeIfPresent(
+                        Swift.Int.self,
+                        forKey: .active_users
+                    )
+                    additionalProperties = try decoder.decodeAdditionalProperties(knownKeys: [
+                        "language",
+                        "editor",
+                        "suggestions_count",
+                        "acceptances_count",
+                        "lines_suggested",
+                        "lines_accepted",
+                        "active_users"
+                    ])
+                }
+                public func encode(to encoder: any Encoder) throws {
+                    var container = encoder.container(keyedBy: CodingKeys.self)
+                    try container.encodeIfPresent(
+                        language,
+                        forKey: .language
+                    )
+                    try container.encodeIfPresent(
+                        editor,
+                        forKey: .editor
+                    )
+                    try container.encodeIfPresent(
+                        suggestions_count,
+                        forKey: .suggestions_count
+                    )
+                    try container.encodeIfPresent(
+                        acceptances_count,
+                        forKey: .acceptances_count
+                    )
+                    try container.encodeIfPresent(
+                        lines_suggested,
+                        forKey: .lines_suggested
+                    )
+                    try container.encodeIfPresent(
+                        lines_accepted,
+                        forKey: .lines_accepted
+                    )
+                    try container.encodeIfPresent(
+                        active_users,
+                        forKey: .active_users
+                    )
+                    try encoder.encodeAdditionalProperties(additionalProperties)
+                }
+            }
+            /// Breakdown of Copilot code completions usage by language and editor
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics/breakdown`.
+            public typealias breakdownPayload = [Components.Schemas.copilot_hyphen_usage_hyphen_metrics.breakdownPayloadPayload]
+            /// Breakdown of Copilot code completions usage by language and editor
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics/breakdown`.
+            public var breakdown: Components.Schemas.copilot_hyphen_usage_hyphen_metrics.breakdownPayload?
+            /// Creates a new `copilot_hyphen_usage_hyphen_metrics`.
+            ///
+            /// - Parameters:
+            ///   - day: The date for which the usage metrics are reported, in `YYYY-MM-DD` format.
+            ///   - total_suggestions_count: The total number of Copilot code completion suggestions shown to users.
+            ///   - total_acceptances_count: The total number of Copilot code completion suggestions accepted by users.
+            ///   - total_lines_suggested: The total number of lines of code completions suggested by Copilot.
+            ///   - total_lines_accepted: The total number of lines of code completions accepted by users.
+            ///   - total_active_users: The total number of users who were shown Copilot code completion suggestions during the day specified.
+            ///   - total_chat_acceptances: The total instances of users who accepted code suggested by Copilot Chat in the IDE (panel and inline).
+            ///   - total_chat_turns: The total number of chat turns (prompt and response pairs) sent between users and Copilot Chat in the IDE.
+            ///   - total_active_chat_users: The total number of users who interacted with Copilot Chat in the IDE during the day specified.
+            ///   - breakdown: Breakdown of Copilot code completions usage by language and editor
+            public init(
+                day: Swift.String,
+                total_suggestions_count: Swift.Int? = nil,
+                total_acceptances_count: Swift.Int? = nil,
+                total_lines_suggested: Swift.Int? = nil,
+                total_lines_accepted: Swift.Int? = nil,
+                total_active_users: Swift.Int? = nil,
+                total_chat_acceptances: Swift.Int? = nil,
+                total_chat_turns: Swift.Int? = nil,
+                total_active_chat_users: Swift.Int? = nil,
+                breakdown: Components.Schemas.copilot_hyphen_usage_hyphen_metrics.breakdownPayload? = nil
+            ) {
+                self.day = day
+                self.total_suggestions_count = total_suggestions_count
+                self.total_acceptances_count = total_acceptances_count
+                self.total_lines_suggested = total_lines_suggested
+                self.total_lines_accepted = total_lines_accepted
+                self.total_active_users = total_active_users
+                self.total_chat_acceptances = total_chat_acceptances
+                self.total_chat_turns = total_chat_turns
+                self.total_active_chat_users = total_active_chat_users
+                self.breakdown = breakdown
+            }
+            public enum CodingKeys: String, CodingKey {
+                case day
+                case total_suggestions_count
+                case total_acceptances_count
+                case total_lines_suggested
+                case total_lines_accepted
+                case total_active_users
+                case total_chat_acceptances
+                case total_chat_turns
+                case total_active_chat_users
+                case breakdown
+            }
+            public init(from decoder: any Decoder) throws {
+                let container = try decoder.container(keyedBy: CodingKeys.self)
+                day = try container.decode(
+                    Swift.String.self,
+                    forKey: .day
+                )
+                total_suggestions_count = try container.decodeIfPresent(
+                    Swift.Int.self,
+                    forKey: .total_suggestions_count
+                )
+                total_acceptances_count = try container.decodeIfPresent(
+                    Swift.Int.self,
+                    forKey: .total_acceptances_count
+                )
+                total_lines_suggested = try container.decodeIfPresent(
+                    Swift.Int.self,
+                    forKey: .total_lines_suggested
+                )
+                total_lines_accepted = try container.decodeIfPresent(
+                    Swift.Int.self,
+                    forKey: .total_lines_accepted
+                )
+                total_active_users = try container.decodeIfPresent(
+                    Swift.Int.self,
+                    forKey: .total_active_users
+                )
+                total_chat_acceptances = try container.decodeIfPresent(
+                    Swift.Int.self,
+                    forKey: .total_chat_acceptances
+                )
+                total_chat_turns = try container.decodeIfPresent(
+                    Swift.Int.self,
+                    forKey: .total_chat_turns
+                )
+                total_active_chat_users = try container.decodeIfPresent(
+                    Swift.Int.self,
+                    forKey: .total_active_chat_users
+                )
+                breakdown = try container.decodeIfPresent(
+                    Components.Schemas.copilot_hyphen_usage_hyphen_metrics.breakdownPayload.self,
+                    forKey: .breakdown
+                )
+                try decoder.ensureNoAdditionalProperties(knownKeys: [
+                    "day",
+                    "total_suggestions_count",
+                    "total_acceptances_count",
+                    "total_lines_suggested",
+                    "total_lines_accepted",
+                    "total_active_users",
+                    "total_chat_acceptances",
+                    "total_chat_turns",
+                    "total_active_chat_users",
+                    "breakdown"
+                ])
+            }
+        }
+        /// The breakdown of Copilot Business seats for the organization.
+        ///
+        /// - Remark: Generated from `#/components/schemas/copilot-seat-breakdown`.
+        public struct copilot_hyphen_seat_hyphen_breakdown: Codable, Hashable, Sendable {
+            /// The total number of seats being billed for the organization as of the current billing cycle.
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-seat-breakdown/total`.
+            public var total: Swift.Int?
+            /// Seats added during the current billing cycle.
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-seat-breakdown/added_this_cycle`.
+            public var added_this_cycle: Swift.Int?
+            /// The number of seats that are pending cancellation at the end of the current billing cycle.
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-seat-breakdown/pending_cancellation`.
+            public var pending_cancellation: Swift.Int?
+            /// The number of seats that have been assigned to users that have not yet accepted an invitation to this organization.
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-seat-breakdown/pending_invitation`.
+            public var pending_invitation: Swift.Int?
+            /// The number of seats that have used Copilot during the current billing cycle.
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-seat-breakdown/active_this_cycle`.
+            public var active_this_cycle: Swift.Int?
+            /// The number of seats that have not used Copilot during the current billing cycle.
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-seat-breakdown/inactive_this_cycle`.
+            public var inactive_this_cycle: Swift.Int?
+            /// Creates a new `copilot_hyphen_seat_hyphen_breakdown`.
+            ///
+            /// - Parameters:
+            ///   - total: The total number of seats being billed for the organization as of the current billing cycle.
+            ///   - added_this_cycle: Seats added during the current billing cycle.
+            ///   - pending_cancellation: The number of seats that are pending cancellation at the end of the current billing cycle.
+            ///   - pending_invitation: The number of seats that have been assigned to users that have not yet accepted an invitation to this organization.
+            ///   - active_this_cycle: The number of seats that have used Copilot during the current billing cycle.
+            ///   - inactive_this_cycle: The number of seats that have not used Copilot during the current billing cycle.
+            public init(
+                total: Swift.Int? = nil,
+                added_this_cycle: Swift.Int? = nil,
+                pending_cancellation: Swift.Int? = nil,
+                pending_invitation: Swift.Int? = nil,
+                active_this_cycle: Swift.Int? = nil,
+                inactive_this_cycle: Swift.Int? = nil
+            ) {
+                self.total = total
+                self.added_this_cycle = added_this_cycle
+                self.pending_cancellation = pending_cancellation
+                self.pending_invitation = pending_invitation
+                self.active_this_cycle = active_this_cycle
+                self.inactive_this_cycle = inactive_this_cycle
+            }
+            public enum CodingKeys: String, CodingKey {
+                case total
+                case added_this_cycle
+                case pending_cancellation
+                case pending_invitation
+                case active_this_cycle
+                case inactive_this_cycle
+            }
+        }
+        /// Information about the seat breakdown and policies set for an organization with a Copilot Business subscription.
+        ///
+        /// - Remark: Generated from `#/components/schemas/copilot-organization-details`.
+        public struct copilot_hyphen_organization_hyphen_details: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/copilot-organization-details/seat_breakdown`.
+            public var seat_breakdown: Components.Schemas.copilot_hyphen_seat_hyphen_breakdown
+            /// The organization policy for allowing or disallowing Copilot to make suggestions that match public code.
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-organization-details/public_code_suggestions`.
+            @frozen public enum public_code_suggestionsPayload: String, Codable, Hashable, Sendable {
+                case allow = "allow"
+                case block = "block"
+                case unconfigured = "unconfigured"
+                case unknown = "unknown"
+            }
+            /// The organization policy for allowing or disallowing Copilot to make suggestions that match public code.
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-organization-details/public_code_suggestions`.
+            public var public_code_suggestions: Components.Schemas.copilot_hyphen_organization_hyphen_details.public_code_suggestionsPayload
+            /// The organization policy for allowing or disallowing organization members to use Copilot Chat within their editor.
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-organization-details/ide_chat`.
+            @frozen public enum ide_chatPayload: String, Codable, Hashable, Sendable {
+                case enabled = "enabled"
+                case disabled = "disabled"
+                case unconfigured = "unconfigured"
+            }
+            /// The organization policy for allowing or disallowing organization members to use Copilot Chat within their editor.
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-organization-details/ide_chat`.
+            public var ide_chat: Components.Schemas.copilot_hyphen_organization_hyphen_details.ide_chatPayload?
+            /// The organization policy for allowing or disallowing organization members to use Copilot features within github.com.
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-organization-details/platform_chat`.
+            @frozen public enum platform_chatPayload: String, Codable, Hashable, Sendable {
+                case enabled = "enabled"
+                case disabled = "disabled"
+                case unconfigured = "unconfigured"
+            }
+            /// The organization policy for allowing or disallowing organization members to use Copilot features within github.com.
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-organization-details/platform_chat`.
+            public var platform_chat: Components.Schemas.copilot_hyphen_organization_hyphen_details.platform_chatPayload?
+            /// The organization policy for allowing or disallowing organization members to use Copilot within their CLI.
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-organization-details/cli`.
+            @frozen public enum cliPayload: String, Codable, Hashable, Sendable {
+                case enabled = "enabled"
+                case disabled = "disabled"
+                case unconfigured = "unconfigured"
+            }
+            /// The organization policy for allowing or disallowing organization members to use Copilot within their CLI.
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-organization-details/cli`.
+            public var cli: Components.Schemas.copilot_hyphen_organization_hyphen_details.cliPayload?
+            /// The mode of assigning new seats.
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-organization-details/seat_management_setting`.
+            @frozen public enum seat_management_settingPayload: String, Codable, Hashable, Sendable {
+                case assign_all = "assign_all"
+                case assign_selected = "assign_selected"
+                case disabled = "disabled"
+                case unconfigured = "unconfigured"
+            }
+            /// The mode of assigning new seats.
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-organization-details/seat_management_setting`.
+            public var seat_management_setting: Components.Schemas.copilot_hyphen_organization_hyphen_details.seat_management_settingPayload
+            /// A container of undocumented properties.
+            public var additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer
+            /// Creates a new `copilot_hyphen_organization_hyphen_details`.
+            ///
+            /// - Parameters:
+            ///   - seat_breakdown:
+            ///   - public_code_suggestions: The organization policy for allowing or disallowing Copilot to make suggestions that match public code.
+            ///   - ide_chat: The organization policy for allowing or disallowing organization members to use Copilot Chat within their editor.
+            ///   - platform_chat: The organization policy for allowing or disallowing organization members to use Copilot features within github.com.
+            ///   - cli: The organization policy for allowing or disallowing organization members to use Copilot within their CLI.
+            ///   - seat_management_setting: The mode of assigning new seats.
+            ///   - additionalProperties: A container of undocumented properties.
+            public init(
+                seat_breakdown: Components.Schemas.copilot_hyphen_seat_hyphen_breakdown,
+                public_code_suggestions: Components.Schemas.copilot_hyphen_organization_hyphen_details.public_code_suggestionsPayload,
+                ide_chat: Components.Schemas.copilot_hyphen_organization_hyphen_details.ide_chatPayload? = nil,
+                platform_chat: Components.Schemas.copilot_hyphen_organization_hyphen_details.platform_chatPayload? = nil,
+                cli: Components.Schemas.copilot_hyphen_organization_hyphen_details.cliPayload? = nil,
+                seat_management_setting: Components.Schemas.copilot_hyphen_organization_hyphen_details.seat_management_settingPayload,
+                additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer = .init()
+            ) {
+                self.seat_breakdown = seat_breakdown
+                self.public_code_suggestions = public_code_suggestions
+                self.ide_chat = ide_chat
+                self.platform_chat = platform_chat
+                self.cli = cli
+                self.seat_management_setting = seat_management_setting
+                self.additionalProperties = additionalProperties
+            }
+            public enum CodingKeys: String, CodingKey {
+                case seat_breakdown
+                case public_code_suggestions
+                case ide_chat
+                case platform_chat
+                case cli
+                case seat_management_setting
+            }
+            public init(from decoder: any Decoder) throws {
+                let container = try decoder.container(keyedBy: CodingKeys.self)
+                seat_breakdown = try container.decode(
+                    Components.Schemas.copilot_hyphen_seat_hyphen_breakdown.self,
+                    forKey: .seat_breakdown
+                )
+                public_code_suggestions = try container.decode(
+                    Components.Schemas.copilot_hyphen_organization_hyphen_details.public_code_suggestionsPayload.self,
+                    forKey: .public_code_suggestions
+                )
+                ide_chat = try container.decodeIfPresent(
+                    Components.Schemas.copilot_hyphen_organization_hyphen_details.ide_chatPayload.self,
+                    forKey: .ide_chat
+                )
+                platform_chat = try container.decodeIfPresent(
+                    Components.Schemas.copilot_hyphen_organization_hyphen_details.platform_chatPayload.self,
+                    forKey: .platform_chat
+                )
+                cli = try container.decodeIfPresent(
+                    Components.Schemas.copilot_hyphen_organization_hyphen_details.cliPayload.self,
+                    forKey: .cli
+                )
+                seat_management_setting = try container.decode(
+                    Components.Schemas.copilot_hyphen_organization_hyphen_details.seat_management_settingPayload.self,
+                    forKey: .seat_management_setting
+                )
+                additionalProperties = try decoder.decodeAdditionalProperties(knownKeys: [
+                    "seat_breakdown",
+                    "public_code_suggestions",
+                    "ide_chat",
+                    "platform_chat",
+                    "cli",
+                    "seat_management_setting"
+                ])
+            }
+            public func encode(to encoder: any Encoder) throws {
+                var container = encoder.container(keyedBy: CodingKeys.self)
+                try container.encode(
+                    seat_breakdown,
+                    forKey: .seat_breakdown
+                )
+                try container.encode(
+                    public_code_suggestions,
+                    forKey: .public_code_suggestions
+                )
+                try container.encodeIfPresent(
+                    ide_chat,
+                    forKey: .ide_chat
+                )
+                try container.encodeIfPresent(
+                    platform_chat,
+                    forKey: .platform_chat
+                )
+                try container.encodeIfPresent(
+                    cli,
+                    forKey: .cli
+                )
+                try container.encode(
+                    seat_management_setting,
+                    forKey: .seat_management_setting
+                )
+                try encoder.encodeAdditionalProperties(additionalProperties)
+            }
+        }
     }
     /// Types generated from the `#/components/parameters` section of the OpenAPI document.
     public enum Parameters {
@@ -2149,6 +2193,311 @@ public enum Components {
 
 /// API operations, with input and output types, generated from `#/paths` in the OpenAPI document.
 public enum Operations {
+    /// List all Copilot seat assignments for an enterprise
+    ///
+    /// **Note**: This endpoint is in beta and is subject to change.
+    ///
+    /// Lists all active Copilot seats across organizations or enterprise teams for an enterprise with a Copilot Business or Copilot Enterprise subscription.
+    ///
+    /// Users with access through multiple organizations or enterprise teams will only be counted toward `total_seats` once.
+    ///
+    /// For each organization or enterprise team which grants Copilot access to a user, a seat detail object will appear in the `seats` array.
+    ///
+    /// Only enterprise owners and billing managers can view assigned Copilot seats across their child organizations or enterprise teams.
+    ///
+    /// Personal access tokens (classic) need either the `manage_billing:copilot` or `read:enterprise` scopes to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /enterprises/{enterprise}/copilot/billing/seats`.
+    /// - Remark: Generated from `#/paths//enterprises/{enterprise}/copilot/billing/seats/get(copilot/list-copilot-seats-for-enterprise)`.
+    public enum copilot_sol_list_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_enterprise {
+        public static let id: Swift.String = "copilot/list-copilot-seats-for-enterprise"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/enterprises/{enterprise}/copilot/billing/seats/GET/path`.
+            public struct Path: Sendable, Hashable {
+                /// The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+                ///
+                /// - Remark: Generated from `#/paths/enterprises/{enterprise}/copilot/billing/seats/GET/path/enterprise`.
+                public var enterprise: Components.Parameters.enterprise
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - enterprise: The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+                public init(enterprise: Components.Parameters.enterprise) {
+                    self.enterprise = enterprise
+                }
+            }
+            public var path: Operations.copilot_sol_list_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_enterprise.Input.Path
+            /// - Remark: Generated from `#/paths/enterprises/{enterprise}/copilot/billing/seats/GET/query`.
+            public struct Query: Sendable, Hashable {
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///
+                /// - Remark: Generated from `#/paths/enterprises/{enterprise}/copilot/billing/seats/GET/query/page`.
+                public var page: Components.Parameters.page?
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///
+                /// - Remark: Generated from `#/paths/enterprises/{enterprise}/copilot/billing/seats/GET/query/per_page`.
+                public var per_page: Swift.Int?
+                /// Creates a new `Query`.
+                ///
+                /// - Parameters:
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                public init(
+                    page: Components.Parameters.page? = nil,
+                    per_page: Swift.Int? = nil
+                ) {
+                    self.page = page
+                    self.per_page = per_page
+                }
+            }
+            public var query: Operations.copilot_sol_list_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_enterprise.Input.Query
+            /// - Remark: Generated from `#/paths/enterprises/{enterprise}/copilot/billing/seats/GET/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.copilot_sol_list_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_enterprise.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.copilot_sol_list_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_enterprise.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.copilot_sol_list_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_enterprise.Input.Headers
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - query:
+            ///   - headers:
+            public init(
+                path: Operations.copilot_sol_list_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_enterprise.Input.Path,
+                query: Operations.copilot_sol_list_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_enterprise.Input.Query = .init(),
+                headers: Operations.copilot_sol_list_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_enterprise.Input.Headers = .init()
+            ) {
+                self.path = path
+                self.query = query
+                self.headers = headers
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Ok: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/enterprises/{enterprise}/copilot/billing/seats/GET/responses/200/headers`.
+                public struct Headers: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/enterprises/{enterprise}/copilot/billing/seats/GET/responses/200/headers/Link`.
+                    public var Link: Components.Headers.link?
+                    /// Creates a new `Headers`.
+                    ///
+                    /// - Parameters:
+                    ///   - Link:
+                    public init(Link: Components.Headers.link? = nil) {
+                        self.Link = Link
+                    }
+                }
+                /// Received HTTP response headers
+                public var headers: Operations.copilot_sol_list_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_enterprise.Output.Ok.Headers
+                /// - Remark: Generated from `#/paths/enterprises/{enterprise}/copilot/billing/seats/GET/responses/200/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/enterprises/{enterprise}/copilot/billing/seats/GET/responses/200/content/json`.
+                    public struct jsonPayload: Codable, Hashable, Sendable {
+                        /// The total number of Copilot seats the enterprise is being billed for. Users with access through multiple organizations or enterprise teams are only counted once.
+                        ///
+                        /// - Remark: Generated from `#/paths/enterprises/{enterprise}/copilot/billing/seats/GET/responses/200/content/json/total_seats`.
+                        public var total_seats: Swift.Int?
+                        /// - Remark: Generated from `#/paths/enterprises/{enterprise}/copilot/billing/seats/GET/responses/200/content/json/seats`.
+                        public var seats: [Components.Schemas.copilot_hyphen_seat_hyphen_details]?
+                        /// Creates a new `jsonPayload`.
+                        ///
+                        /// - Parameters:
+                        ///   - total_seats: The total number of Copilot seats the enterprise is being billed for. Users with access through multiple organizations or enterprise teams are only counted once.
+                        ///   - seats:
+                        public init(
+                            total_seats: Swift.Int? = nil,
+                            seats: [Components.Schemas.copilot_hyphen_seat_hyphen_details]? = nil
+                        ) {
+                            self.total_seats = total_seats
+                            self.seats = seats
+                        }
+                        public enum CodingKeys: String, CodingKey {
+                            case total_seats
+                            case seats
+                        }
+                    }
+                    /// - Remark: Generated from `#/paths/enterprises/{enterprise}/copilot/billing/seats/GET/responses/200/content/application\/json`.
+                    case json(Operations.copilot_sol_list_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_enterprise.Output.Ok.Body.jsonPayload)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Operations.copilot_sol_list_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_enterprise.Output.Ok.Body.jsonPayload {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.copilot_sol_list_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_enterprise.Output.Ok.Body
+                /// Creates a new `Ok`.
+                ///
+                /// - Parameters:
+                ///   - headers: Received HTTP response headers
+                ///   - body: Received HTTP response body
+                public init(
+                    headers: Operations.copilot_sol_list_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_enterprise.Output.Ok.Headers = .init(),
+                    body: Operations.copilot_sol_list_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_enterprise.Output.Ok.Body
+                ) {
+                    self.headers = headers
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//enterprises/{enterprise}/copilot/billing/seats/get(copilot/list-copilot-seats-for-enterprise)/responses/200`.
+            ///
+            /// HTTP response code: `200 ok`.
+            case ok(Operations.copilot_sol_list_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_enterprise.Output.Ok)
+            /// The associated value of the enum case if `self` is `.ok`.
+            ///
+            /// - Throws: An error if `self` is not `.ok`.
+            /// - SeeAlso: `.ok`.
+            public var ok: Operations.copilot_sol_list_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_enterprise.Output.Ok {
+                get throws {
+                    switch self {
+                    case let .ok(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "ok",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Internal Error
+            ///
+            /// - Remark: Generated from `#/paths//enterprises/{enterprise}/copilot/billing/seats/get(copilot/list-copilot-seats-for-enterprise)/responses/500`.
+            ///
+            /// HTTP response code: `500 internalServerError`.
+            case internalServerError(Components.Responses.internal_error)
+            /// The associated value of the enum case if `self` is `.internalServerError`.
+            ///
+            /// - Throws: An error if `self` is not `.internalServerError`.
+            /// - SeeAlso: `.internalServerError`.
+            public var internalServerError: Components.Responses.internal_error {
+                get throws {
+                    switch self {
+                    case let .internalServerError(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "internalServerError",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Requires authentication
+            ///
+            /// - Remark: Generated from `#/paths//enterprises/{enterprise}/copilot/billing/seats/get(copilot/list-copilot-seats-for-enterprise)/responses/401`.
+            ///
+            /// HTTP response code: `401 unauthorized`.
+            case unauthorized(Components.Responses.requires_authentication)
+            /// The associated value of the enum case if `self` is `.unauthorized`.
+            ///
+            /// - Throws: An error if `self` is not `.unauthorized`.
+            /// - SeeAlso: `.unauthorized`.
+            public var unauthorized: Components.Responses.requires_authentication {
+                get throws {
+                    switch self {
+                    case let .unauthorized(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "unauthorized",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Forbidden
+            ///
+            /// - Remark: Generated from `#/paths//enterprises/{enterprise}/copilot/billing/seats/get(copilot/list-copilot-seats-for-enterprise)/responses/403`.
+            ///
+            /// HTTP response code: `403 forbidden`.
+            case forbidden(Components.Responses.forbidden)
+            /// The associated value of the enum case if `self` is `.forbidden`.
+            ///
+            /// - Throws: An error if `self` is not `.forbidden`.
+            /// - SeeAlso: `.forbidden`.
+            public var forbidden: Components.Responses.forbidden {
+                get throws {
+                    switch self {
+                    case let .forbidden(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "forbidden",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Resource not found
+            ///
+            /// - Remark: Generated from `#/paths//enterprises/{enterprise}/copilot/billing/seats/get(copilot/list-copilot-seats-for-enterprise)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            case notFound(Components.Responses.not_found)
+            /// The associated value of the enum case if `self` is `.notFound`.
+            ///
+            /// - Throws: An error if `self` is not `.notFound`.
+            /// - SeeAlso: `.notFound`.
+            public var notFound: Components.Responses.not_found {
+                get throws {
+                    switch self {
+                    case let .notFound(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "notFound",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
     /// Get a summary of Copilot usage for enterprise members
     ///
     /// **Note**: This endpoint is in beta and is subject to change.

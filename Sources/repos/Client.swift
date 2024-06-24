@@ -1659,6 +1659,219 @@ public struct Client: APIProtocol {
             }
         )
     }
+    /// Create an attestation
+    ///
+    /// Store an artifact attestation and associate it with a repository.
+    ///
+    /// The authenticated user must have write permission to the repository and, if using a fine-grained access token the `attestations:write` permission is required.
+    ///
+    /// Artifact attestations are meant to be created using the [attest action](https://github.com/actions/attest). For amore information, see our guide on [using artifact attestations to establish a build's provenance](https://docs.github.com/actions/security-guides/using-artifact-attestations-to-establish-provenance-for-builds).
+    ///
+    /// - Remark: HTTP `POST /repos/{owner}/{repo}/attestations`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/attestations/post(repos/create-attestation)`.
+    public func repos_sol_create_hyphen_attestation(_ input: Operations.repos_sol_create_hyphen_attestation.Input) async throws -> Operations.repos_sol_create_hyphen_attestation.Output {
+        try await client.send(
+            input: input,
+            forOperation: Operations.repos_sol_create_hyphen_attestation.id,
+            serializer: { input in
+                let path = try converter.renderedPath(
+                    template: "/repos/{}/{}/attestations",
+                    parameters: [
+                        input.path.owner,
+                        input.path.repo
+                    ]
+                )
+                var request: HTTPTypes.HTTPRequest = .init(
+                    soar_path: path,
+                    method: .post
+                )
+                suppressMutabilityWarning(&request)
+                converter.setAcceptHeader(
+                    in: &request.headerFields,
+                    contentTypes: input.headers.accept
+                )
+                let body: OpenAPIRuntime.HTTPBody?
+                switch input.body {
+                case let .json(value):
+                    body = try converter.setRequiredRequestBodyAsJSON(
+                        value,
+                        headerFields: &request.headerFields,
+                        contentType: "application/json; charset=utf-8"
+                    )
+                }
+                return (request, body)
+            },
+            deserializer: { response, responseBody in
+                switch response.status.code {
+                case 201:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Operations.repos_sol_create_hyphen_attestation.Output.Created.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Operations.repos_sol_create_hyphen_attestation.Output.Created.Body.jsonPayload.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .created(.init(body: body))
+                case 403:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Components.Responses.forbidden.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Schemas.basic_hyphen_error.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .forbidden(.init(body: body))
+                case 422:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Components.Responses.validation_failed.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Schemas.validation_hyphen_error.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .unprocessableContent(.init(body: body))
+                default:
+                    return .undocumented(
+                        statusCode: response.status.code,
+                        .init(
+                            headerFields: response.headerFields,
+                            body: responseBody
+                        )
+                    )
+                }
+            }
+        )
+    }
+    /// List attestations
+    ///
+    /// List a collection of artifact attestations with a given subject digest that are associated with a repository.
+    ///
+    /// The authenticated user making the request must have read access to the repository. In addition, when using a fine-grained access token the `attestations:read` permission is required.
+    ///
+    /// **Please note:** in order to offer meaningful security benefits, an attestation's signature and timestamps **must** be cryptographically verified, and the identity of the attestation signer **must** be validated. Attestations can be verified using the [GitHub CLI `attestation verify` command](https://cli.github.com/manual/gh_attestation_verify). For more information, see [our guide on how to use artifact attestations to establish a build's provenance](https://docs.github.com/actions/security-guides/using-artifact-attestations-to-establish-provenance-for-builds).
+    ///
+    /// - Remark: HTTP `GET /repos/{owner}/{repo}/attestations/{subject_digest}`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/attestations/{subject_digest}/get(repos/list-attestations)`.
+    public func repos_sol_list_hyphen_attestations(_ input: Operations.repos_sol_list_hyphen_attestations.Input) async throws -> Operations.repos_sol_list_hyphen_attestations.Output {
+        try await client.send(
+            input: input,
+            forOperation: Operations.repos_sol_list_hyphen_attestations.id,
+            serializer: { input in
+                let path = try converter.renderedPath(
+                    template: "/repos/{}/{}/attestations/{}",
+                    parameters: [
+                        input.path.owner,
+                        input.path.repo,
+                        input.path.subject_digest
+                    ]
+                )
+                var request: HTTPTypes.HTTPRequest = .init(
+                    soar_path: path,
+                    method: .get
+                )
+                suppressMutabilityWarning(&request)
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "per_page",
+                    value: input.query.per_page
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "before",
+                    value: input.query.before
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "after",
+                    value: input.query.after
+                )
+                converter.setAcceptHeader(
+                    in: &request.headerFields,
+                    contentTypes: input.headers.accept
+                )
+                return (request, nil)
+            },
+            deserializer: { response, responseBody in
+                switch response.status.code {
+                case 200:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Operations.repos_sol_list_hyphen_attestations.Output.Ok.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Operations.repos_sol_list_hyphen_attestations.Output.Ok.Body.jsonPayload.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .ok(.init(body: body))
+                default:
+                    return .undocumented(
+                        statusCode: response.status.code,
+                        .init(
+                            headerFields: response.headerFields,
+                            body: responseBody
+                        )
+                    )
+                }
+            }
+        )
+    }
     /// Get all autolinks of a repository
     ///
     /// Gets all autolinks that are configured for a repository.
