@@ -38,6 +38,190 @@ public struct Client: APIProtocol {
     private var converter: Converter {
         client.converter
     }
+    /// List all Copilot seat assignments for an enterprise
+    ///
+    /// **Note**: This endpoint is in beta and is subject to change.
+    ///
+    /// Lists all active Copilot seats across organizations or enterprise teams for an enterprise with a Copilot Business or Copilot Enterprise subscription.
+    ///
+    /// Users with access through multiple organizations or enterprise teams will only be counted toward `total_seats` once.
+    ///
+    /// For each organization or enterprise team which grants Copilot access to a user, a seat detail object will appear in the `seats` array.
+    ///
+    /// Only enterprise owners and billing managers can view assigned Copilot seats across their child organizations or enterprise teams.
+    ///
+    /// Personal access tokens (classic) need either the `manage_billing:copilot` or `read:enterprise` scopes to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /enterprises/{enterprise}/copilot/billing/seats`.
+    /// - Remark: Generated from `#/paths//enterprises/{enterprise}/copilot/billing/seats/get(copilot/list-copilot-seats-for-enterprise)`.
+    public func copilot_sol_list_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_enterprise(_ input: Operations.copilot_sol_list_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_enterprise.Input) async throws -> Operations.copilot_sol_list_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_enterprise.Output {
+        try await client.send(
+            input: input,
+            forOperation: Operations.copilot_sol_list_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_enterprise.id,
+            serializer: { input in
+                let path = try converter.renderedPath(
+                    template: "/enterprises/{}/copilot/billing/seats",
+                    parameters: [
+                        input.path.enterprise
+                    ]
+                )
+                var request: HTTPTypes.HTTPRequest = .init(
+                    soar_path: path,
+                    method: .get
+                )
+                suppressMutabilityWarning(&request)
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "page",
+                    value: input.query.page
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "per_page",
+                    value: input.query.per_page
+                )
+                converter.setAcceptHeader(
+                    in: &request.headerFields,
+                    contentTypes: input.headers.accept
+                )
+                return (request, nil)
+            },
+            deserializer: { response, responseBody in
+                switch response.status.code {
+                case 200:
+                    let headers: Operations.copilot_sol_list_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_enterprise.Output.Ok.Headers = .init(Link: try converter.getOptionalHeaderFieldAsURI(
+                        in: response.headerFields,
+                        name: "Link",
+                        as: Components.Headers.link.self
+                    ))
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Operations.copilot_sol_list_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_enterprise.Output.Ok.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Operations.copilot_sol_list_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_enterprise.Output.Ok.Body.jsonPayload.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .ok(.init(
+                        headers: headers,
+                        body: body
+                    ))
+                case 500:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Components.Responses.internal_error.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Schemas.basic_hyphen_error.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .internalServerError(.init(body: body))
+                case 401:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Components.Responses.requires_authentication.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Schemas.basic_hyphen_error.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .unauthorized(.init(body: body))
+                case 403:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Components.Responses.forbidden.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Schemas.basic_hyphen_error.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .forbidden(.init(body: body))
+                case 404:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Components.Responses.not_found.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Schemas.basic_hyphen_error.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .notFound(.init(body: body))
+                default:
+                    return .undocumented(
+                        statusCode: response.status.code,
+                        .init(
+                            headerFields: response.headerFields,
+                            body: responseBody
+                        )
+                    )
+                }
+            }
+        )
+    }
     /// Get a summary of Copilot usage for enterprise members
     ///
     /// **Note**: This endpoint is in beta and is subject to change.
