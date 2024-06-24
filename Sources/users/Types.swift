@@ -285,6 +285,17 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /users/{username}`.
     /// - Remark: Generated from `#/paths//users/{username}/get(users/get-by-username)`.
     func users_sol_get_hyphen_by_hyphen_username(_ input: Operations.users_sol_get_hyphen_by_hyphen_username.Input) async throws -> Operations.users_sol_get_hyphen_by_hyphen_username.Output
+    /// List attestations
+    ///
+    /// List a collection of artifact attestations with a given subject digest that are associated with repositories owned by a user.
+    ///
+    /// The collection of attestations returned by this endpoint is filtered according to the authenticated user's permissions; if the authenticated user cannot read a repository, the attestations associated with that repository will not be included in the response. In addition, when using a fine-grained access token the `attestations:read` permission is required.
+    ///
+    /// **Please note:** in order to offer meaningful security benefits, an attestation's signature and timestamps **must** be cryptographically verified, and the identity of the attestation signer **must** be validated. Attestations can be verified using the [GitHub CLI `attestation verify` command](https://cli.github.com/manual/gh_attestation_verify). For more information, see [our guide on how to use artifact attestations to establish a build's provenance](https://docs.github.com/actions/security-guides/using-artifact-attestations-to-establish-provenance-for-builds).
+    ///
+    /// - Remark: HTTP `GET /users/{username}/attestations/{subject_digest}`.
+    /// - Remark: Generated from `#/paths//users/{username}/attestations/{subject_digest}/get(users/list-attestations)`.
+    func users_sol_list_hyphen_attestations(_ input: Operations.users_sol_list_hyphen_attestations.Input) async throws -> Operations.users_sol_list_hyphen_attestations.Output
     /// List followers of a user
     ///
     /// Lists the people following the specified user.
@@ -878,6 +889,27 @@ extension APIProtocol {
     ) async throws -> Operations.users_sol_get_hyphen_by_hyphen_username.Output {
         try await users_sol_get_hyphen_by_hyphen_username(Operations.users_sol_get_hyphen_by_hyphen_username.Input(
             path: path,
+            headers: headers
+        ))
+    }
+    /// List attestations
+    ///
+    /// List a collection of artifact attestations with a given subject digest that are associated with repositories owned by a user.
+    ///
+    /// The collection of attestations returned by this endpoint is filtered according to the authenticated user's permissions; if the authenticated user cannot read a repository, the attestations associated with that repository will not be included in the response. In addition, when using a fine-grained access token the `attestations:read` permission is required.
+    ///
+    /// **Please note:** in order to offer meaningful security benefits, an attestation's signature and timestamps **must** be cryptographically verified, and the identity of the attestation signer **must** be validated. Attestations can be verified using the [GitHub CLI `attestation verify` command](https://cli.github.com/manual/gh_attestation_verify). For more information, see [our guide on how to use artifact attestations to establish a build's provenance](https://docs.github.com/actions/security-guides/using-artifact-attestations-to-establish-provenance-for-builds).
+    ///
+    /// - Remark: HTTP `GET /users/{username}/attestations/{subject_digest}`.
+    /// - Remark: Generated from `#/paths//users/{username}/attestations/{subject_digest}/get(users/list-attestations)`.
+    public func users_sol_list_hyphen_attestations(
+        path: Operations.users_sol_list_hyphen_attestations.Input.Path,
+        query: Operations.users_sol_list_hyphen_attestations.Input.Query = .init(),
+        headers: Operations.users_sol_list_hyphen_attestations.Input.Headers = .init()
+    ) async throws -> Operations.users_sol_list_hyphen_attestations.Output {
+        try await users_sol_list_hyphen_attestations(Operations.users_sol_list_hyphen_attestations.Input(
+            path: path,
+            query: query,
             headers: headers
         ))
     }
@@ -1823,6 +1855,16 @@ public enum Components {
                 ])
             }
         }
+        /// An object without any properties.
+        ///
+        /// - Remark: Generated from `#/components/schemas/empty-object`.
+        public struct empty_hyphen_object: Codable, Hashable, Sendable {
+            /// Creates a new `empty_hyphen_object`.
+            public init() {}
+            public init(from decoder: any Decoder) throws {
+                try decoder.ensureNoAdditionalProperties(knownKeys: [])
+            }
+        }
         /// Private User
         ///
         /// - Remark: Generated from `#/components/schemas/private-user`.
@@ -2533,6 +2575,260 @@ public enum Components {
                 case created_at
             }
         }
+        /// Sigstore Bundle v0.1
+        ///
+        /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0`.
+        public struct sigstore_hyphen_bundle_hyphen_0: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/mediaType`.
+            public var mediaType: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial`.
+            public struct verificationMaterialPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial/x509CertificateChain`.
+                public struct x509CertificateChainPayload: Codable, Hashable, Sendable {
+                    /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial/x509CertificateChain/certificatesPayload`.
+                    public struct certificatesPayloadPayload: Codable, Hashable, Sendable {
+                        /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial/x509CertificateChain/certificatesPayload/rawBytes`.
+                        public var rawBytes: Swift.String?
+                        /// Creates a new `certificatesPayloadPayload`.
+                        ///
+                        /// - Parameters:
+                        ///   - rawBytes:
+                        public init(rawBytes: Swift.String? = nil) {
+                            self.rawBytes = rawBytes
+                        }
+                        public enum CodingKeys: String, CodingKey {
+                            case rawBytes
+                        }
+                    }
+                    /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial/x509CertificateChain/certificates`.
+                    public typealias certificatesPayload = [Components.Schemas.sigstore_hyphen_bundle_hyphen_0.verificationMaterialPayload.x509CertificateChainPayload.certificatesPayloadPayload]
+                    /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial/x509CertificateChain/certificates`.
+                    public var certificates: Components.Schemas.sigstore_hyphen_bundle_hyphen_0.verificationMaterialPayload.x509CertificateChainPayload.certificatesPayload?
+                    /// Creates a new `x509CertificateChainPayload`.
+                    ///
+                    /// - Parameters:
+                    ///   - certificates:
+                    public init(certificates: Components.Schemas.sigstore_hyphen_bundle_hyphen_0.verificationMaterialPayload.x509CertificateChainPayload.certificatesPayload? = nil) {
+                        self.certificates = certificates
+                    }
+                    public enum CodingKeys: String, CodingKey {
+                        case certificates
+                    }
+                }
+                /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial/x509CertificateChain`.
+                public var x509CertificateChain: Components.Schemas.sigstore_hyphen_bundle_hyphen_0.verificationMaterialPayload.x509CertificateChainPayload?
+                /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial/tlogEntriesPayload`.
+                public struct tlogEntriesPayloadPayload: Codable, Hashable, Sendable {
+                    /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial/tlogEntriesPayload/logIndex`.
+                    public var logIndex: Swift.String?
+                    /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial/tlogEntriesPayload/logId`.
+                    public struct logIdPayload: Codable, Hashable, Sendable {
+                        /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial/tlogEntriesPayload/logId/keyId`.
+                        public var keyId: Swift.String?
+                        /// Creates a new `logIdPayload`.
+                        ///
+                        /// - Parameters:
+                        ///   - keyId:
+                        public init(keyId: Swift.String? = nil) {
+                            self.keyId = keyId
+                        }
+                        public enum CodingKeys: String, CodingKey {
+                            case keyId
+                        }
+                    }
+                    /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial/tlogEntriesPayload/logId`.
+                    public var logId: Components.Schemas.sigstore_hyphen_bundle_hyphen_0.verificationMaterialPayload.tlogEntriesPayloadPayload.logIdPayload?
+                    /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial/tlogEntriesPayload/kindVersion`.
+                    public struct kindVersionPayload: Codable, Hashable, Sendable {
+                        /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial/tlogEntriesPayload/kindVersion/kind`.
+                        public var kind: Swift.String?
+                        /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial/tlogEntriesPayload/kindVersion/version`.
+                        public var version: Swift.String?
+                        /// Creates a new `kindVersionPayload`.
+                        ///
+                        /// - Parameters:
+                        ///   - kind:
+                        ///   - version:
+                        public init(
+                            kind: Swift.String? = nil,
+                            version: Swift.String? = nil
+                        ) {
+                            self.kind = kind
+                            self.version = version
+                        }
+                        public enum CodingKeys: String, CodingKey {
+                            case kind
+                            case version
+                        }
+                    }
+                    /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial/tlogEntriesPayload/kindVersion`.
+                    public var kindVersion: Components.Schemas.sigstore_hyphen_bundle_hyphen_0.verificationMaterialPayload.tlogEntriesPayloadPayload.kindVersionPayload?
+                    /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial/tlogEntriesPayload/integratedTime`.
+                    public var integratedTime: Swift.String?
+                    /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial/tlogEntriesPayload/inclusionPromise`.
+                    public struct inclusionPromisePayload: Codable, Hashable, Sendable {
+                        /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial/tlogEntriesPayload/inclusionPromise/signedEntryTimestamp`.
+                        public var signedEntryTimestamp: Swift.String?
+                        /// Creates a new `inclusionPromisePayload`.
+                        ///
+                        /// - Parameters:
+                        ///   - signedEntryTimestamp:
+                        public init(signedEntryTimestamp: Swift.String? = nil) {
+                            self.signedEntryTimestamp = signedEntryTimestamp
+                        }
+                        public enum CodingKeys: String, CodingKey {
+                            case signedEntryTimestamp
+                        }
+                    }
+                    /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial/tlogEntriesPayload/inclusionPromise`.
+                    public var inclusionPromise: Components.Schemas.sigstore_hyphen_bundle_hyphen_0.verificationMaterialPayload.tlogEntriesPayloadPayload.inclusionPromisePayload?
+                    /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial/tlogEntriesPayload/inclusionProof`.
+                    public var inclusionProof: Swift.String?
+                    /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial/tlogEntriesPayload/canonicalizedBody`.
+                    public var canonicalizedBody: Swift.String?
+                    /// Creates a new `tlogEntriesPayloadPayload`.
+                    ///
+                    /// - Parameters:
+                    ///   - logIndex:
+                    ///   - logId:
+                    ///   - kindVersion:
+                    ///   - integratedTime:
+                    ///   - inclusionPromise:
+                    ///   - inclusionProof:
+                    ///   - canonicalizedBody:
+                    public init(
+                        logIndex: Swift.String? = nil,
+                        logId: Components.Schemas.sigstore_hyphen_bundle_hyphen_0.verificationMaterialPayload.tlogEntriesPayloadPayload.logIdPayload? = nil,
+                        kindVersion: Components.Schemas.sigstore_hyphen_bundle_hyphen_0.verificationMaterialPayload.tlogEntriesPayloadPayload.kindVersionPayload? = nil,
+                        integratedTime: Swift.String? = nil,
+                        inclusionPromise: Components.Schemas.sigstore_hyphen_bundle_hyphen_0.verificationMaterialPayload.tlogEntriesPayloadPayload.inclusionPromisePayload? = nil,
+                        inclusionProof: Swift.String? = nil,
+                        canonicalizedBody: Swift.String? = nil
+                    ) {
+                        self.logIndex = logIndex
+                        self.logId = logId
+                        self.kindVersion = kindVersion
+                        self.integratedTime = integratedTime
+                        self.inclusionPromise = inclusionPromise
+                        self.inclusionProof = inclusionProof
+                        self.canonicalizedBody = canonicalizedBody
+                    }
+                    public enum CodingKeys: String, CodingKey {
+                        case logIndex
+                        case logId
+                        case kindVersion
+                        case integratedTime
+                        case inclusionPromise
+                        case inclusionProof
+                        case canonicalizedBody
+                    }
+                }
+                /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial/tlogEntries`.
+                public typealias tlogEntriesPayload = [Components.Schemas.sigstore_hyphen_bundle_hyphen_0.verificationMaterialPayload.tlogEntriesPayloadPayload]
+                /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial/tlogEntries`.
+                public var tlogEntries: Components.Schemas.sigstore_hyphen_bundle_hyphen_0.verificationMaterialPayload.tlogEntriesPayload?
+                /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial/timestampVerificationData`.
+                public var timestampVerificationData: Swift.String?
+                /// Creates a new `verificationMaterialPayload`.
+                ///
+                /// - Parameters:
+                ///   - x509CertificateChain:
+                ///   - tlogEntries:
+                ///   - timestampVerificationData:
+                public init(
+                    x509CertificateChain: Components.Schemas.sigstore_hyphen_bundle_hyphen_0.verificationMaterialPayload.x509CertificateChainPayload? = nil,
+                    tlogEntries: Components.Schemas.sigstore_hyphen_bundle_hyphen_0.verificationMaterialPayload.tlogEntriesPayload? = nil,
+                    timestampVerificationData: Swift.String? = nil
+                ) {
+                    self.x509CertificateChain = x509CertificateChain
+                    self.tlogEntries = tlogEntries
+                    self.timestampVerificationData = timestampVerificationData
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case x509CertificateChain
+                    case tlogEntries
+                    case timestampVerificationData
+                }
+            }
+            /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial`.
+            public var verificationMaterial: Components.Schemas.sigstore_hyphen_bundle_hyphen_0.verificationMaterialPayload?
+            /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/dsseEnvelope`.
+            public struct dsseEnvelopePayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/dsseEnvelope/payload`.
+                public var payload: Swift.String?
+                /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/dsseEnvelope/payloadType`.
+                public var payloadType: Swift.String?
+                /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/dsseEnvelope/signaturesPayload`.
+                public struct signaturesPayloadPayload: Codable, Hashable, Sendable {
+                    /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/dsseEnvelope/signaturesPayload/sig`.
+                    public var sig: Swift.String?
+                    /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/dsseEnvelope/signaturesPayload/keyid`.
+                    public var keyid: Swift.String?
+                    /// Creates a new `signaturesPayloadPayload`.
+                    ///
+                    /// - Parameters:
+                    ///   - sig:
+                    ///   - keyid:
+                    public init(
+                        sig: Swift.String? = nil,
+                        keyid: Swift.String? = nil
+                    ) {
+                        self.sig = sig
+                        self.keyid = keyid
+                    }
+                    public enum CodingKeys: String, CodingKey {
+                        case sig
+                        case keyid
+                    }
+                }
+                /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/dsseEnvelope/signatures`.
+                public typealias signaturesPayload = [Components.Schemas.sigstore_hyphen_bundle_hyphen_0.dsseEnvelopePayload.signaturesPayloadPayload]
+                /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/dsseEnvelope/signatures`.
+                public var signatures: Components.Schemas.sigstore_hyphen_bundle_hyphen_0.dsseEnvelopePayload.signaturesPayload?
+                /// Creates a new `dsseEnvelopePayload`.
+                ///
+                /// - Parameters:
+                ///   - payload:
+                ///   - payloadType:
+                ///   - signatures:
+                public init(
+                    payload: Swift.String? = nil,
+                    payloadType: Swift.String? = nil,
+                    signatures: Components.Schemas.sigstore_hyphen_bundle_hyphen_0.dsseEnvelopePayload.signaturesPayload? = nil
+                ) {
+                    self.payload = payload
+                    self.payloadType = payloadType
+                    self.signatures = signatures
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case payload
+                    case payloadType
+                    case signatures
+                }
+            }
+            /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/dsseEnvelope`.
+            public var dsseEnvelope: Components.Schemas.sigstore_hyphen_bundle_hyphen_0.dsseEnvelopePayload?
+            /// Creates a new `sigstore_hyphen_bundle_hyphen_0`.
+            ///
+            /// - Parameters:
+            ///   - mediaType:
+            ///   - verificationMaterial:
+            ///   - dsseEnvelope:
+            public init(
+                mediaType: Swift.String? = nil,
+                verificationMaterial: Components.Schemas.sigstore_hyphen_bundle_hyphen_0.verificationMaterialPayload? = nil,
+                dsseEnvelope: Components.Schemas.sigstore_hyphen_bundle_hyphen_0.dsseEnvelopePayload? = nil
+            ) {
+                self.mediaType = mediaType
+                self.verificationMaterial = verificationMaterial
+                self.dsseEnvelope = dsseEnvelope
+            }
+            public enum CodingKeys: String, CodingKey {
+                case mediaType
+                case verificationMaterial
+                case dsseEnvelope
+            }
+        }
         /// Hovercard
         ///
         /// - Remark: Generated from `#/components/schemas/hovercard`.
@@ -2603,6 +2899,14 @@ public enum Components {
     }
     /// Types generated from the `#/components/parameters` section of the OpenAPI document.
     public enum Parameters {
+        /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+        ///
+        /// - Remark: Generated from `#/components/parameters/pagination-before`.
+        public typealias pagination_hyphen_before = Swift.String
+        /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+        ///
+        /// - Remark: Generated from `#/components/parameters/pagination-after`.
+        public typealias pagination_hyphen_after = Swift.String
         /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/per-page`.
@@ -10556,6 +10860,326 @@ public enum Operations {
             /// Resource not found
             ///
             /// - Remark: Generated from `#/paths//users/{username}/get(users/get-by-username)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            case notFound(Components.Responses.not_found)
+            /// The associated value of the enum case if `self` is `.notFound`.
+            ///
+            /// - Throws: An error if `self` is not `.notFound`.
+            /// - SeeAlso: `.notFound`.
+            public var notFound: Components.Responses.not_found {
+                get throws {
+                    switch self {
+                    case let .notFound(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "notFound",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
+    /// List attestations
+    ///
+    /// List a collection of artifact attestations with a given subject digest that are associated with repositories owned by a user.
+    ///
+    /// The collection of attestations returned by this endpoint is filtered according to the authenticated user's permissions; if the authenticated user cannot read a repository, the attestations associated with that repository will not be included in the response. In addition, when using a fine-grained access token the `attestations:read` permission is required.
+    ///
+    /// **Please note:** in order to offer meaningful security benefits, an attestation's signature and timestamps **must** be cryptographically verified, and the identity of the attestation signer **must** be validated. Attestations can be verified using the [GitHub CLI `attestation verify` command](https://cli.github.com/manual/gh_attestation_verify). For more information, see [our guide on how to use artifact attestations to establish a build's provenance](https://docs.github.com/actions/security-guides/using-artifact-attestations-to-establish-provenance-for-builds).
+    ///
+    /// - Remark: HTTP `GET /users/{username}/attestations/{subject_digest}`.
+    /// - Remark: Generated from `#/paths//users/{username}/attestations/{subject_digest}/get(users/list-attestations)`.
+    public enum users_sol_list_hyphen_attestations {
+        public static let id: Swift.String = "users/list-attestations"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/path`.
+            public struct Path: Sendable, Hashable {
+                /// The handle for the GitHub user account.
+                ///
+                /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/path/username`.
+                public var username: Components.Parameters.username
+                /// Subject Digest
+                ///
+                /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/path/subject_digest`.
+                public var subject_digest: Swift.String
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - username: The handle for the GitHub user account.
+                ///   - subject_digest: Subject Digest
+                public init(
+                    username: Components.Parameters.username,
+                    subject_digest: Swift.String
+                ) {
+                    self.username = username
+                    self.subject_digest = subject_digest
+                }
+            }
+            public var path: Operations.users_sol_list_hyphen_attestations.Input.Path
+            /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/query`.
+            public struct Query: Sendable, Hashable {
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///
+                /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/query/per_page`.
+                public var per_page: Components.Parameters.per_hyphen_page?
+                /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///
+                /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/query/before`.
+                public var before: Components.Parameters.pagination_hyphen_before?
+                /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///
+                /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/query/after`.
+                public var after: Components.Parameters.pagination_hyphen_after?
+                /// Creates a new `Query`.
+                ///
+                /// - Parameters:
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - before: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - after: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                public init(
+                    per_page: Components.Parameters.per_hyphen_page? = nil,
+                    before: Components.Parameters.pagination_hyphen_before? = nil,
+                    after: Components.Parameters.pagination_hyphen_after? = nil
+                ) {
+                    self.per_page = per_page
+                    self.before = before
+                    self.after = after
+                }
+            }
+            public var query: Operations.users_sol_list_hyphen_attestations.Input.Query
+            /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_list_hyphen_attestations.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_list_hyphen_attestations.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.users_sol_list_hyphen_attestations.Input.Headers
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - query:
+            ///   - headers:
+            public init(
+                path: Operations.users_sol_list_hyphen_attestations.Input.Path,
+                query: Operations.users_sol_list_hyphen_attestations.Input.Query = .init(),
+                headers: Operations.users_sol_list_hyphen_attestations.Input.Headers = .init()
+            ) {
+                self.path = path
+                self.query = query
+                self.headers = headers
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Ok: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/responses/200/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/responses/200/content/json`.
+                    public struct jsonPayload: Codable, Hashable, Sendable {
+                        /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/responses/200/content/json/attestationsPayload`.
+                        public struct attestationsPayloadPayload: Codable, Hashable, Sendable {
+                            /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/responses/200/content/json/attestationsPayload/bundle`.
+                            public var bundle: Components.Schemas.sigstore_hyphen_bundle_hyphen_0?
+                            /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/responses/200/content/json/attestationsPayload/repository_id`.
+                            public var repository_id: Swift.Int?
+                            /// Creates a new `attestationsPayloadPayload`.
+                            ///
+                            /// - Parameters:
+                            ///   - bundle:
+                            ///   - repository_id:
+                            public init(
+                                bundle: Components.Schemas.sigstore_hyphen_bundle_hyphen_0? = nil,
+                                repository_id: Swift.Int? = nil
+                            ) {
+                                self.bundle = bundle
+                                self.repository_id = repository_id
+                            }
+                            public enum CodingKeys: String, CodingKey {
+                                case bundle
+                                case repository_id
+                            }
+                        }
+                        /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/responses/200/content/json/attestations`.
+                        public typealias attestationsPayload = [Operations.users_sol_list_hyphen_attestations.Output.Ok.Body.jsonPayload.attestationsPayloadPayload]
+                        /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/responses/200/content/json/attestations`.
+                        public var attestations: Operations.users_sol_list_hyphen_attestations.Output.Ok.Body.jsonPayload.attestationsPayload?
+                        /// Creates a new `jsonPayload`.
+                        ///
+                        /// - Parameters:
+                        ///   - attestations:
+                        public init(attestations: Operations.users_sol_list_hyphen_attestations.Output.Ok.Body.jsonPayload.attestationsPayload? = nil) {
+                            self.attestations = attestations
+                        }
+                        public enum CodingKeys: String, CodingKey {
+                            case attestations
+                        }
+                    }
+                    /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/responses/200/content/application\/json`.
+                    case json(Operations.users_sol_list_hyphen_attestations.Output.Ok.Body.jsonPayload)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Operations.users_sol_list_hyphen_attestations.Output.Ok.Body.jsonPayload {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.users_sol_list_hyphen_attestations.Output.Ok.Body
+                /// Creates a new `Ok`.
+                ///
+                /// - Parameters:
+                ///   - body: Received HTTP response body
+                public init(body: Operations.users_sol_list_hyphen_attestations.Output.Ok.Body) {
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//users/{username}/attestations/{subject_digest}/get(users/list-attestations)/responses/200`.
+            ///
+            /// HTTP response code: `200 ok`.
+            case ok(Operations.users_sol_list_hyphen_attestations.Output.Ok)
+            /// The associated value of the enum case if `self` is `.ok`.
+            ///
+            /// - Throws: An error if `self` is not `.ok`.
+            /// - SeeAlso: `.ok`.
+            public var ok: Operations.users_sol_list_hyphen_attestations.Output.Ok {
+                get throws {
+                    switch self {
+                    case let .ok(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "ok",
+                            response: self
+                        )
+                    }
+                }
+            }
+            public struct Created: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/responses/201/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/responses/201/content/application\/json`.
+                    case json(Components.Schemas.empty_hyphen_object)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Components.Schemas.empty_hyphen_object {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.users_sol_list_hyphen_attestations.Output.Created.Body
+                /// Creates a new `Created`.
+                ///
+                /// - Parameters:
+                ///   - body: Received HTTP response body
+                public init(body: Operations.users_sol_list_hyphen_attestations.Output.Created.Body) {
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//users/{username}/attestations/{subject_digest}/get(users/list-attestations)/responses/201`.
+            ///
+            /// HTTP response code: `201 created`.
+            case created(Operations.users_sol_list_hyphen_attestations.Output.Created)
+            /// The associated value of the enum case if `self` is `.created`.
+            ///
+            /// - Throws: An error if `self` is not `.created`.
+            /// - SeeAlso: `.created`.
+            public var created: Operations.users_sol_list_hyphen_attestations.Output.Created {
+                get throws {
+                    switch self {
+                    case let .created(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "created",
+                            response: self
+                        )
+                    }
+                }
+            }
+            public struct NoContent: Sendable, Hashable {
+                /// Creates a new `NoContent`.
+                public init() {}
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//users/{username}/attestations/{subject_digest}/get(users/list-attestations)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            case noContent(Operations.users_sol_list_hyphen_attestations.Output.NoContent)
+            /// The associated value of the enum case if `self` is `.noContent`.
+            ///
+            /// - Throws: An error if `self` is not `.noContent`.
+            /// - SeeAlso: `.noContent`.
+            public var noContent: Operations.users_sol_list_hyphen_attestations.Output.NoContent {
+                get throws {
+                    switch self {
+                    case let .noContent(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "noContent",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Resource not found
+            ///
+            /// - Remark: Generated from `#/paths//users/{username}/attestations/{subject_digest}/get(users/list-attestations)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
             case notFound(Components.Responses.not_found)
