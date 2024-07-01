@@ -3740,7 +3740,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/simple-user/login`.
             public var login: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/simple-user/node_id`.
             public var node_id: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/avatar_url`.
@@ -3803,7 +3803,7 @@ public enum Components {
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
                 login: Swift.String,
-                id: Swift.Int,
+                id: Swift.Int64,
                 node_id: Swift.String,
                 avatar_url: Swift.String,
                 gravatar_id: Swift.String? = nil,
@@ -3947,7 +3947,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/login`.
             public var login: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/node_id`.
             public var node_id: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/avatar_url`.
@@ -4010,7 +4010,7 @@ public enum Components {
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
                 login: Swift.String,
-                id: Swift.Int,
+                id: Swift.Int64,
                 node_id: Swift.String,
                 avatar_url: Swift.String,
                 gravatar_id: Swift.String? = nil,
@@ -7490,7 +7490,7 @@ public enum Components {
         /// - Remark: Generated from `#/components/schemas/pull-request-minimal`.
         public struct pull_hyphen_request_hyphen_minimal: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/pull-request-minimal/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/pull-request-minimal/number`.
             public var number: Swift.Int
             /// - Remark: Generated from `#/components/schemas/pull-request-minimal/url`.
@@ -7504,7 +7504,7 @@ public enum Components {
                 /// - Remark: Generated from `#/components/schemas/pull-request-minimal/head/repo`.
                 public struct repoPayload: Codable, Hashable, Sendable {
                     /// - Remark: Generated from `#/components/schemas/pull-request-minimal/head/repo/id`.
-                    public var id: Swift.Int
+                    public var id: Swift.Int64
                     /// - Remark: Generated from `#/components/schemas/pull-request-minimal/head/repo/url`.
                     public var url: Swift.String
                     /// - Remark: Generated from `#/components/schemas/pull-request-minimal/head/repo/name`.
@@ -7516,7 +7516,7 @@ public enum Components {
                     ///   - url:
                     ///   - name:
                     public init(
-                        id: Swift.Int,
+                        id: Swift.Int64,
                         url: Swift.String,
                         name: Swift.String
                     ) {
@@ -7564,7 +7564,7 @@ public enum Components {
                 /// - Remark: Generated from `#/components/schemas/pull-request-minimal/base/repo`.
                 public struct repoPayload: Codable, Hashable, Sendable {
                     /// - Remark: Generated from `#/components/schemas/pull-request-minimal/base/repo/id`.
-                    public var id: Swift.Int
+                    public var id: Swift.Int64
                     /// - Remark: Generated from `#/components/schemas/pull-request-minimal/base/repo/url`.
                     public var url: Swift.String
                     /// - Remark: Generated from `#/components/schemas/pull-request-minimal/base/repo/name`.
@@ -7576,7 +7576,7 @@ public enum Components {
                     ///   - url:
                     ///   - name:
                     public init(
-                        id: Swift.Int,
+                        id: Swift.Int64,
                         url: Swift.String,
                         name: Swift.String
                     ) {
@@ -7624,7 +7624,7 @@ public enum Components {
             ///   - head:
             ///   - base:
             public init(
-                id: Swift.Int,
+                id: Swift.Int64,
                 number: Swift.Int,
                 url: Swift.String,
                 head: Components.Schemas.pull_hyphen_request_hyphen_minimal.headPayload,
@@ -8235,7 +8235,7 @@ public enum Components {
                 /// The id of the environment.
                 ///
                 /// - Remark: Generated from `#/components/schemas/pending-deployment/environment/id`.
-                public var id: Swift.Int?
+                public var id: Swift.Int64?
                 /// - Remark: Generated from `#/components/schemas/pending-deployment/environment/node_id`.
                 public var node_id: Swift.String?
                 /// The name of the environment.
@@ -8255,7 +8255,7 @@ public enum Components {
                 ///   - url:
                 ///   - html_url:
                 public init(
-                    id: Swift.Int? = nil,
+                    id: Swift.Int64? = nil,
                     node_id: Swift.String? = nil,
                     name: Swift.String? = nil,
                     url: Swift.String? = nil,
@@ -8403,7 +8403,7 @@ public enum Components {
             /// Unique identifier of the deployment
             ///
             /// - Remark: Generated from `#/components/schemas/deployment/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/deployment/node_id`.
             public var node_id: Swift.String
             /// - Remark: Generated from `#/components/schemas/deployment/sha`.
@@ -8522,7 +8522,7 @@ public enum Components {
             ///   - performed_via_github_app:
             public init(
                 url: Swift.String,
-                id: Swift.Int,
+                id: Swift.Int64,
                 node_id: Swift.String,
                 sha: Swift.String,
                 ref: Swift.String,

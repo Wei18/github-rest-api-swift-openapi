@@ -265,6 +265,17 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `DELETE /user/ssh_signing_keys/{ssh_signing_key_id}`.
     /// - Remark: Generated from `#/paths//user/ssh_signing_keys/{ssh_signing_key_id}/delete(users/delete-ssh-signing-key-for-authenticated-user)`.
     func users_sol_delete_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.users_sol_delete_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.users_sol_delete_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output
+    /// Get a user using their ID
+    ///
+    /// Provides publicly available information about someone with a GitHub account. This method takes their durable user `ID` instead of their `login`, which can change over time.
+    ///
+    /// The `email` key in the following response is the publicly visible email address from your GitHub [profile page](https://github.com/settings/profile). When setting up your profile, you can select a primary email address to be “public” which provides an email entry for this endpoint. If you do not set a public email address for `email`, then it will have a value of `null`. You only see publicly visible email addresses when authenticated with GitHub. For more information, see [Authentication](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#authentication).
+    ///
+    /// The Emails API enables you to list all of your email addresses, and toggle a primary email to be visible publicly. For more information, see "[Emails API](https://docs.github.com/rest/users/emails)".
+    ///
+    /// - Remark: HTTP `GET /user/{account_id}`.
+    /// - Remark: Generated from `#/paths//user/{account_id}/get(users/get-by-id)`.
+    func users_sol_get_hyphen_by_hyphen_id(_ input: Operations.users_sol_get_hyphen_by_hyphen_id.Input) async throws -> Operations.users_sol_get_hyphen_by_hyphen_id.Output
     /// List users
     ///
     /// Lists all users, in the order that they signed up on GitHub. This list includes personal user accounts and organization accounts.
@@ -856,6 +867,25 @@ extension APIProtocol {
             headers: headers
         ))
     }
+    /// Get a user using their ID
+    ///
+    /// Provides publicly available information about someone with a GitHub account. This method takes their durable user `ID` instead of their `login`, which can change over time.
+    ///
+    /// The `email` key in the following response is the publicly visible email address from your GitHub [profile page](https://github.com/settings/profile). When setting up your profile, you can select a primary email address to be “public” which provides an email entry for this endpoint. If you do not set a public email address for `email`, then it will have a value of `null`. You only see publicly visible email addresses when authenticated with GitHub. For more information, see [Authentication](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#authentication).
+    ///
+    /// The Emails API enables you to list all of your email addresses, and toggle a primary email to be visible publicly. For more information, see "[Emails API](https://docs.github.com/rest/users/emails)".
+    ///
+    /// - Remark: HTTP `GET /user/{account_id}`.
+    /// - Remark: Generated from `#/paths//user/{account_id}/get(users/get-by-id)`.
+    public func users_sol_get_hyphen_by_hyphen_id(
+        path: Operations.users_sol_get_hyphen_by_hyphen_id.Input.Path,
+        headers: Operations.users_sol_get_hyphen_by_hyphen_id.Input.Headers = .init()
+    ) async throws -> Operations.users_sol_get_hyphen_by_hyphen_id.Output {
+        try await users_sol_get_hyphen_by_hyphen_id(Operations.users_sol_get_hyphen_by_hyphen_id.Input(
+            path: path,
+            headers: headers
+        ))
+    }
     /// List users
     ///
     /// Lists all users, in the order that they signed up on GitHub. This list includes personal user accounts and organization accounts.
@@ -1072,7 +1102,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/simple-user/login`.
             public var login: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/simple-user/node_id`.
             public var node_id: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/avatar_url`.
@@ -1135,7 +1165,7 @@ public enum Components {
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
                 login: Swift.String,
-                id: Swift.Int,
+                id: Swift.Int64,
                 node_id: Swift.String,
                 avatar_url: Swift.String,
                 gravatar_id: Swift.String? = nil,
@@ -2915,6 +2945,10 @@ public enum Components {
         ///
         /// - Remark: Generated from `#/components/parameters/page`.
         public typealias page = Swift.Int
+        /// account_id parameter
+        ///
+        /// - Remark: Generated from `#/components/parameters/account-id`.
+        public typealias account_hyphen_id = Swift.Int
         /// The handle for the GitHub user account.
         ///
         /// - Remark: Generated from `#/components/parameters/username`.
@@ -10496,6 +10530,200 @@ public enum Operations {
                     default:
                         try throwUnexpectedResponseStatus(
                             expectedStatus: "unauthorized",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
+    /// Get a user using their ID
+    ///
+    /// Provides publicly available information about someone with a GitHub account. This method takes their durable user `ID` instead of their `login`, which can change over time.
+    ///
+    /// The `email` key in the following response is the publicly visible email address from your GitHub [profile page](https://github.com/settings/profile). When setting up your profile, you can select a primary email address to be “public” which provides an email entry for this endpoint. If you do not set a public email address for `email`, then it will have a value of `null`. You only see publicly visible email addresses when authenticated with GitHub. For more information, see [Authentication](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#authentication).
+    ///
+    /// The Emails API enables you to list all of your email addresses, and toggle a primary email to be visible publicly. For more information, see "[Emails API](https://docs.github.com/rest/users/emails)".
+    ///
+    /// - Remark: HTTP `GET /user/{account_id}`.
+    /// - Remark: Generated from `#/paths//user/{account_id}/get(users/get-by-id)`.
+    public enum users_sol_get_hyphen_by_hyphen_id {
+        public static let id: Swift.String = "users/get-by-id"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/user/{account_id}/GET/path`.
+            public struct Path: Sendable, Hashable {
+                /// account_id parameter
+                ///
+                /// - Remark: Generated from `#/paths/user/{account_id}/GET/path/account_id`.
+                public var account_id: Components.Parameters.account_hyphen_id
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - account_id: account_id parameter
+                public init(account_id: Components.Parameters.account_hyphen_id) {
+                    self.account_id = account_id
+                }
+            }
+            public var path: Operations.users_sol_get_hyphen_by_hyphen_id.Input.Path
+            /// - Remark: Generated from `#/paths/user/{account_id}/GET/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_get_hyphen_by_hyphen_id.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_get_hyphen_by_hyphen_id.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.users_sol_get_hyphen_by_hyphen_id.Input.Headers
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - headers:
+            public init(
+                path: Operations.users_sol_get_hyphen_by_hyphen_id.Input.Path,
+                headers: Operations.users_sol_get_hyphen_by_hyphen_id.Input.Headers = .init()
+            ) {
+                self.path = path
+                self.headers = headers
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Ok: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/user/{account_id}/GET/responses/200/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/user/{account_id}/GET/responses/200/content/json`.
+                    @frozen public enum jsonPayload: Codable, Hashable, Sendable {
+                        /// - Remark: Generated from `#/paths/user/{account_id}/GET/responses/200/content/json/case1`.
+                        case private_hyphen_user(Components.Schemas.private_hyphen_user)
+                        /// - Remark: Generated from `#/paths/user/{account_id}/GET/responses/200/content/json/case2`.
+                        case public_hyphen_user(Components.Schemas.public_hyphen_user)
+                        public init(from decoder: any Decoder) throws {
+                            var errors: [any Error] = []
+                            do {
+                                self = .private_hyphen_user(try .init(from: decoder))
+                                return
+                            } catch {
+                                errors.append(error)
+                            }
+                            do {
+                                self = .public_hyphen_user(try .init(from: decoder))
+                                return
+                            } catch {
+                                errors.append(error)
+                            }
+                            throw Swift.DecodingError.failedToDecodeOneOfSchema(
+                                type: Self.self,
+                                codingPath: decoder.codingPath,
+                                errors: errors
+                            )
+                        }
+                        public func encode(to encoder: any Encoder) throws {
+                            switch self {
+                            case let .private_hyphen_user(value):
+                                try value.encode(to: encoder)
+                            case let .public_hyphen_user(value):
+                                try value.encode(to: encoder)
+                            }
+                        }
+                    }
+                    /// - Remark: Generated from `#/paths/user/{account_id}/GET/responses/200/content/application\/json`.
+                    case json(Operations.users_sol_get_hyphen_by_hyphen_id.Output.Ok.Body.jsonPayload)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Operations.users_sol_get_hyphen_by_hyphen_id.Output.Ok.Body.jsonPayload {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.users_sol_get_hyphen_by_hyphen_id.Output.Ok.Body
+                /// Creates a new `Ok`.
+                ///
+                /// - Parameters:
+                ///   - body: Received HTTP response body
+                public init(body: Operations.users_sol_get_hyphen_by_hyphen_id.Output.Ok.Body) {
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//user/{account_id}/get(users/get-by-id)/responses/200`.
+            ///
+            /// HTTP response code: `200 ok`.
+            case ok(Operations.users_sol_get_hyphen_by_hyphen_id.Output.Ok)
+            /// The associated value of the enum case if `self` is `.ok`.
+            ///
+            /// - Throws: An error if `self` is not `.ok`.
+            /// - SeeAlso: `.ok`.
+            public var ok: Operations.users_sol_get_hyphen_by_hyphen_id.Output.Ok {
+                get throws {
+                    switch self {
+                    case let .ok(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "ok",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Resource not found
+            ///
+            /// - Remark: Generated from `#/paths//user/{account_id}/get(users/get-by-id)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            case notFound(Components.Responses.not_found)
+            /// The associated value of the enum case if `self` is `.notFound`.
+            ///
+            /// - Throws: An error if `self` is not `.notFound`.
+            /// - SeeAlso: `.notFound`.
+            public var notFound: Components.Responses.not_found {
+                get throws {
+                    switch self {
+                    case let .notFound(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "notFound",
                             response: self
                         )
                     }
