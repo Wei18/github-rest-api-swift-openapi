@@ -370,6 +370,10 @@ public enum Components {
                     ///
                     /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/packagesPayload/supplier`.
                     public var supplier: Swift.String?
+                    /// The copyright holders of the package, and any dates present with those notices, if available.
+                    ///
+                    /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/packagesPayload/copyrightText`.
+                    public var copyrightText: Swift.String?
                     /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/packagesPayload/externalRefsPayload`.
                     public struct externalRefsPayloadPayload: Codable, Hashable, Sendable {
                         /// The category of reference to an external resource this reference refers to.
@@ -420,6 +424,7 @@ public enum Components {
                     ///   - licenseConcluded: The license of the package as determined while creating the SPDX document.
                     ///   - licenseDeclared: The license of the package as declared by its author, or NOASSERTION if this information
                     ///   - supplier: The distribution source of this package, or NOASSERTION if this was not determined.
+                    ///   - copyrightText: The copyright holders of the package, and any dates present with those notices, if available.
                     ///   - externalRefs:
                     public init(
                         SPDXID: Swift.String? = nil,
@@ -430,6 +435,7 @@ public enum Components {
                         licenseConcluded: Swift.String? = nil,
                         licenseDeclared: Swift.String? = nil,
                         supplier: Swift.String? = nil,
+                        copyrightText: Swift.String? = nil,
                         externalRefs: Components.Schemas.dependency_hyphen_graph_hyphen_spdx_hyphen_sbom.sbomPayload.packagesPayloadPayload.externalRefsPayload? = nil
                     ) {
                         self.SPDXID = SPDXID
@@ -440,6 +446,7 @@ public enum Components {
                         self.licenseConcluded = licenseConcluded
                         self.licenseDeclared = licenseDeclared
                         self.supplier = supplier
+                        self.copyrightText = copyrightText
                         self.externalRefs = externalRefs
                     }
                     public enum CodingKeys: String, CodingKey {
@@ -451,6 +458,7 @@ public enum Components {
                         case licenseConcluded
                         case licenseDeclared
                         case supplier
+                        case copyrightText
                         case externalRefs
                     }
                 }
