@@ -768,7 +768,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/simple-user/login`.
             public var login: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/simple-user/node_id`.
             public var node_id: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/avatar_url`.
@@ -831,7 +831,7 @@ public enum Components {
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
                 login: Swift.String,
-                id: Swift.Int,
+                id: Swift.Int64,
                 node_id: Swift.String,
                 avatar_url: Swift.String,
                 gravatar_id: Swift.String? = nil,
@@ -944,7 +944,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/login`.
             public var login: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/node_id`.
             public var node_id: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/avatar_url`.
@@ -1007,7 +1007,7 @@ public enum Components {
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
                 login: Swift.String,
-                id: Swift.Int,
+                id: Swift.Int64,
                 node_id: Swift.String,
                 avatar_url: Swift.String,
                 gravatar_id: Swift.String? = nil,
@@ -1583,7 +1583,6 @@ public enum Components {
         ///
         /// - Remark: Generated from `#/components/schemas/code-scanning-alert-dismissed-reason`.
         @frozen public enum code_hyphen_scanning_hyphen_alert_hyphen_dismissed_hyphen_reason: String, Codable, Hashable, Sendable {
-            case _empty = ""
             case false_space_positive = "false positive"
             case won_apos_t_space_fix = "won't fix"
             case used_space_in_space_tests = "used in tests"
