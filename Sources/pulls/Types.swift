@@ -1066,7 +1066,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/simple-user/login`.
             public var login: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/simple-user/node_id`.
             public var node_id: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/avatar_url`.
@@ -1129,7 +1129,7 @@ public enum Components {
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
                 login: Swift.String,
-                id: Swift.Int,
+                id: Swift.Int64,
                 node_id: Swift.String,
                 avatar_url: Swift.String,
                 gravatar_id: Swift.String? = nil,
@@ -1273,7 +1273,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/login`.
             public var login: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/node_id`.
             public var node_id: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/avatar_url`.
@@ -1336,7 +1336,7 @@ public enum Components {
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
                 login: Swift.String,
-                id: Swift.Int,
+                id: Swift.Int64,
                 node_id: Swift.String,
                 avatar_url: Swift.String,
                 gravatar_id: Swift.String? = nil,
@@ -3318,7 +3318,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/pull-request-simple/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/pull-request-simple/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/pull-request-simple/node_id`.
             public var node_id: Swift.String
             /// - Remark: Generated from `#/components/schemas/pull-request-simple/html_url`.
@@ -3626,7 +3626,7 @@ public enum Components {
             ///   - draft: Indicates whether or not the pull request is a draft.
             public init(
                 url: Swift.String,
-                id: Swift.Int,
+                id: Swift.Int64,
                 node_id: Swift.String,
                 html_url: Swift.String,
                 diff_url: Swift.String,
@@ -3749,11 +3749,11 @@ public enum Components {
             /// The ID of the pull request review to which the comment belongs.
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/pull_request_review_id`.
-            public var pull_request_review_id: Swift.Int?
+            public var pull_request_review_id: Swift.Int64?
             /// The ID of the pull request review comment.
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// The node ID of the pull request review comment.
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/node_id`.
@@ -3971,8 +3971,8 @@ public enum Components {
             ///   - body_text:
             public init(
                 url: Swift.String,
-                pull_request_review_id: Swift.Int? = nil,
-                id: Swift.Int,
+                pull_request_review_id: Swift.Int64? = nil,
+                id: Swift.Int64,
                 node_id: Swift.String,
                 diff_hunk: Swift.String,
                 path: Swift.String,
@@ -4069,7 +4069,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/pull-request/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/pull-request/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/pull-request/node_id`.
             public var node_id: Swift.String
             /// - Remark: Generated from `#/components/schemas/pull-request/html_url`.
@@ -4945,7 +4945,7 @@ public enum Components {
                     /// - Remark: Generated from `#/components/schemas/pull-request/head/user/html_url`.
                     public var html_url: Swift.String
                     /// - Remark: Generated from `#/components/schemas/pull-request/head/user/id`.
-                    public var id: Swift.Int
+                    public var id: Swift.Int64
                     /// - Remark: Generated from `#/components/schemas/pull-request/head/user/node_id`.
                     public var node_id: Swift.String
                     /// - Remark: Generated from `#/components/schemas/pull-request/head/user/login`.
@@ -4995,7 +4995,7 @@ public enum Components {
                         gists_url: Swift.String,
                         gravatar_id: Swift.String? = nil,
                         html_url: Swift.String,
-                        id: Swift.Int,
+                        id: Swift.Int64,
                         node_id: Swift.String,
                         login: Swift.String,
                         organizations_url: Swift.String,
@@ -5790,7 +5790,7 @@ public enum Components {
                     /// - Remark: Generated from `#/components/schemas/pull-request/base/user/html_url`.
                     public var html_url: Swift.String
                     /// - Remark: Generated from `#/components/schemas/pull-request/base/user/id`.
-                    public var id: Swift.Int
+                    public var id: Swift.Int64
                     /// - Remark: Generated from `#/components/schemas/pull-request/base/user/node_id`.
                     public var node_id: Swift.String
                     /// - Remark: Generated from `#/components/schemas/pull-request/base/user/login`.
@@ -5840,7 +5840,7 @@ public enum Components {
                         gists_url: Swift.String,
                         gravatar_id: Swift.String? = nil,
                         html_url: Swift.String,
-                        id: Swift.Int,
+                        id: Swift.Int64,
                         node_id: Swift.String,
                         login: Swift.String,
                         organizations_url: Swift.String,
@@ -6073,7 +6073,7 @@ public enum Components {
             ///   - changed_files:
             public init(
                 url: Swift.String,
-                id: Swift.Int,
+                id: Swift.Int64,
                 node_id: Swift.String,
                 html_url: Swift.String,
                 diff_url: Swift.String,
@@ -6434,9 +6434,9 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/review-comment/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/review-comment/pull_request_review_id`.
-            public var pull_request_review_id: Swift.Int?
+            public var pull_request_review_id: Swift.Int64?
             /// - Remark: Generated from `#/components/schemas/review-comment/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/review-comment/node_id`.
             public var node_id: Swift.String
             /// - Remark: Generated from `#/components/schemas/review-comment/diff_hunk`.
@@ -6575,8 +6575,8 @@ public enum Components {
             ///   - original_start_line: The original first line of the range for a multi-line comment.
             public init(
                 url: Swift.String,
-                pull_request_review_id: Swift.Int? = nil,
-                id: Swift.Int,
+                pull_request_review_id: Swift.Int64? = nil,
+                id: Swift.Int64,
                 node_id: Swift.String,
                 diff_hunk: Swift.String,
                 path: Swift.String,
