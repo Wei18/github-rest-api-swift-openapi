@@ -562,7 +562,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/simple-user/login`.
             public var login: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/simple-user/node_id`.
             public var node_id: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/avatar_url`.
@@ -625,7 +625,7 @@ public enum Components {
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
                 login: Swift.String,
-                id: Swift.Int,
+                id: Swift.Int64,
                 node_id: Swift.String,
                 avatar_url: Swift.String,
                 gravatar_id: Swift.String? = nil,
@@ -769,7 +769,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/login`.
             public var login: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/node_id`.
             public var node_id: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/avatar_url`.
@@ -832,7 +832,7 @@ public enum Components {
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
                 login: Swift.String,
-                id: Swift.Int,
+                id: Swift.Int64,
                 node_id: Swift.String,
                 avatar_url: Swift.String,
                 gravatar_id: Swift.String? = nil,
