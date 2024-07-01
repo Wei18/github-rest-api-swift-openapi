@@ -5818,7 +5818,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/simple-user/login`.
             public var login: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/simple-user/node_id`.
             public var node_id: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/avatar_url`.
@@ -5881,7 +5881,7 @@ public enum Components {
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
                 login: Swift.String,
-                id: Swift.Int,
+                id: Swift.Int64,
                 node_id: Swift.String,
                 avatar_url: Swift.String,
                 gravatar_id: Swift.String? = nil,
@@ -6025,7 +6025,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/login`.
             public var login: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/node_id`.
             public var node_id: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/avatar_url`.
@@ -6088,7 +6088,7 @@ public enum Components {
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
                 login: Swift.String,
-                id: Swift.Int,
+                id: Swift.Int64,
                 node_id: Swift.String,
                 avatar_url: Swift.String,
                 gravatar_id: Swift.String? = nil,
@@ -11078,21 +11078,36 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/repository-ruleset-conditions-repository-property-spec/property_values`.
             public var property_values: [Swift.String]
+            /// The source of the repository property. Defaults to 'custom' if not specified.
+            ///
+            /// - Remark: Generated from `#/components/schemas/repository-ruleset-conditions-repository-property-spec/source`.
+            @frozen public enum sourcePayload: String, Codable, Hashable, Sendable {
+                case custom = "custom"
+                case system = "system"
+            }
+            /// The source of the repository property. Defaults to 'custom' if not specified.
+            ///
+            /// - Remark: Generated from `#/components/schemas/repository-ruleset-conditions-repository-property-spec/source`.
+            public var source: Components.Schemas.repository_hyphen_ruleset_hyphen_conditions_hyphen_repository_hyphen_property_hyphen_spec.sourcePayload?
             /// Creates a new `repository_hyphen_ruleset_hyphen_conditions_hyphen_repository_hyphen_property_hyphen_spec`.
             ///
             /// - Parameters:
             ///   - name: The name of the repository property to target
             ///   - property_values: The values to match for the repository property
+            ///   - source: The source of the repository property. Defaults to 'custom' if not specified.
             public init(
                 name: Swift.String,
-                property_values: [Swift.String]
+                property_values: [Swift.String],
+                source: Components.Schemas.repository_hyphen_ruleset_hyphen_conditions_hyphen_repository_hyphen_property_hyphen_spec.sourcePayload? = nil
             ) {
                 self.name = name
                 self.property_values = property_values
+                self.source = source
             }
             public enum CodingKeys: String, CodingKey {
                 case name
                 case property_values
+                case source
             }
         }
         /// Parameters for a repository property condition
@@ -13264,7 +13279,7 @@ public enum Components {
             /// Unique identifier of the deployment
             ///
             /// - Remark: Generated from `#/components/schemas/deployment/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/deployment/node_id`.
             public var node_id: Swift.String
             /// - Remark: Generated from `#/components/schemas/deployment/sha`.
@@ -13383,7 +13398,7 @@ public enum Components {
             ///   - performed_via_github_app:
             public init(
                 url: Swift.String,
-                id: Swift.Int,
+                id: Swift.Int64,
                 node_id: Swift.String,
                 sha: Swift.String,
                 ref: Swift.String,
@@ -13860,7 +13875,7 @@ public enum Components {
                 /// - Remark: Generated from `#/components/schemas/branch-restriction-policy/usersPayload/login`.
                 public var login: Swift.String?
                 /// - Remark: Generated from `#/components/schemas/branch-restriction-policy/usersPayload/id`.
-                public var id: Swift.Int?
+                public var id: Swift.Int64?
                 /// - Remark: Generated from `#/components/schemas/branch-restriction-policy/usersPayload/node_id`.
                 public var node_id: Swift.String?
                 /// - Remark: Generated from `#/components/schemas/branch-restriction-policy/usersPayload/avatar_url`.
@@ -13916,7 +13931,7 @@ public enum Components {
                 ///   - site_admin:
                 public init(
                     login: Swift.String? = nil,
-                    id: Swift.Int? = nil,
+                    id: Swift.Int64? = nil,
                     node_id: Swift.String? = nil,
                     avatar_url: Swift.String? = nil,
                     gravatar_id: Swift.String? = nil,
@@ -15771,7 +15786,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/collaborator/login`.
             public var login: Swift.String
             /// - Remark: Generated from `#/components/schemas/collaborator/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/collaborator/email`.
             public var email: Swift.String?
             /// - Remark: Generated from `#/components/schemas/collaborator/name`.
@@ -15880,7 +15895,7 @@ public enum Components {
             ///   - role_name:
             public init(
                 login: Swift.String,
-                id: Swift.Int,
+                id: Swift.Int64,
                 email: Swift.String? = nil,
                 name: Swift.String? = nil,
                 node_id: Swift.String,
@@ -16048,7 +16063,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/nullable-collaborator/login`.
             public var login: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-collaborator/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/nullable-collaborator/email`.
             public var email: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-collaborator/name`.
@@ -16157,7 +16172,7 @@ public enum Components {
             ///   - role_name:
             public init(
                 login: Swift.String,
-                id: Swift.Int,
+                id: Swift.Int64,
                 email: Swift.String? = nil,
                 name: Swift.String? = nil,
                 node_id: Swift.String,
@@ -16484,7 +16499,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/pull-request-simple/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/pull-request-simple/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/pull-request-simple/node_id`.
             public var node_id: Swift.String
             /// - Remark: Generated from `#/components/schemas/pull-request-simple/html_url`.
@@ -16792,7 +16807,7 @@ public enum Components {
             ///   - draft: Indicates whether or not the pull request is a draft.
             public init(
                 url: Swift.String,
-                id: Swift.Int,
+                id: Swift.Int64,
                 node_id: Swift.String,
                 html_url: Swift.String,
                 diff_url: Swift.String,
@@ -18551,7 +18566,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/deployment-status/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/deployment-status/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/deployment-status/node_id`.
             public var node_id: Swift.String
             /// The state of the status.
@@ -18622,7 +18637,7 @@ public enum Components {
             ///   - performed_via_github_app:
             public init(
                 url: Swift.String,
-                id: Swift.Int,
+                id: Swift.Int64,
                 node_id: Swift.String,
                 state: Components.Schemas.deployment_hyphen_status.statePayload,
                 creator: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
