@@ -7145,8 +7145,6 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 204:
                     return .noContent(.init())
-                case 409:
-                    return .conflict(.init())
                 default:
                     return .undocumented(
                         statusCode: response.status.code,
