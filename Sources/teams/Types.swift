@@ -2847,7 +2847,7 @@ public enum Components {
         /// - Remark: Generated from `#/components/schemas/minimal-repository`.
         public struct minimal_hyphen_repository: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/minimal-repository/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/minimal-repository/node_id`.
             public var node_id: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/name`.
@@ -3195,7 +3195,7 @@ public enum Components {
             ///   - web_commit_signoff_required:
             ///   - security_and_analysis:
             public init(
-                id: Swift.Int,
+                id: Swift.Int64,
                 node_id: Swift.String,
                 name: Swift.String,
                 full_name: Swift.String,
@@ -3466,7 +3466,7 @@ public enum Components {
         /// - Remark: Generated from `#/components/schemas/organization-invitation`.
         public struct organization_hyphen_invitation: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/organization-invitation/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/organization-invitation/login`.
             public var login: Swift.String?
             /// - Remark: Generated from `#/components/schemas/organization-invitation/email`.
@@ -3505,7 +3505,7 @@ public enum Components {
             ///   - invitation_teams_url:
             ///   - invitation_source:
             public init(
-                id: Swift.Int,
+                id: Swift.Int64,
                 login: Swift.String? = nil,
                 email: Swift.String? = nil,
                 role: Swift.String,
