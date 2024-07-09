@@ -563,7 +563,7 @@ public enum Components {
             /// A unique identifier of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// The GraphQL identifier of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/node_id`.
@@ -792,7 +792,7 @@ public enum Components {
             ///   - trees_url: A template for the API URL to create or retrieve a raw Git tree of the repository.
             ///   - hooks_url: The API URL to list the hooks on the repository.
             public init(
-                id: Swift.Int,
+                id: Swift.Int64,
                 node_id: Swift.String,
                 name: Swift.String,
                 full_name: Swift.String,
