@@ -7050,7 +7050,7 @@ public enum Components {
             /// Unique identifier of the repository
             ///
             /// - Remark: Generated from `#/components/schemas/repository/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/repository/node_id`.
             public var node_id: Swift.String
             /// The name of the repository.
@@ -7493,7 +7493,7 @@ public enum Components {
             ///   - starred_at:
             ///   - anonymous_access_enabled: Whether anonymous git access is enabled for this repository
             public init(
-                id: Swift.Int,
+                id: Swift.Int64,
                 node_id: Swift.String,
                 name: Swift.String,
                 full_name: Swift.String,
@@ -8634,7 +8634,7 @@ public enum Components {
         /// - Remark: Generated from `#/components/schemas/minimal-repository`.
         public struct minimal_hyphen_repository: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/minimal-repository/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/minimal-repository/node_id`.
             public var node_id: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/name`.
@@ -8982,7 +8982,7 @@ public enum Components {
             ///   - web_commit_signoff_required:
             ///   - security_and_analysis:
             public init(
-                id: Swift.Int,
+                id: Swift.Int64,
                 node_id: Swift.String,
                 name: Swift.String,
                 full_name: Swift.String,
@@ -9331,7 +9331,7 @@ public enum Components {
             /// Unique identifier of the repository
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-repository/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/nullable-repository/node_id`.
             public var node_id: Swift.String
             /// The name of the repository.
@@ -9774,7 +9774,7 @@ public enum Components {
             ///   - starred_at:
             ///   - anonymous_access_enabled: Whether anonymous git access is enabled for this repository
             public init(
-                id: Swift.Int,
+                id: Swift.Int64,
                 node_id: Swift.String,
                 name: Swift.String,
                 full_name: Swift.String,
@@ -10106,7 +10106,7 @@ public enum Components {
         /// - Remark: Generated from `#/components/schemas/full-repository`.
         public struct full_hyphen_repository: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/full-repository/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/full-repository/node_id`.
             public var node_id: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/name`.
@@ -10555,7 +10555,7 @@ public enum Components {
             ///   - security_and_analysis:
             ///   - custom_properties: The custom properties that were defined for the repository. The keys are the custom property names, and the values are the corresponding custom property values.
             public init(
-                id: Swift.Int,
+                id: Swift.Int64,
                 node_id: Swift.String,
                 name: Swift.String,
                 full_name: Swift.String,
@@ -15972,7 +15972,7 @@ public enum Components {
             /// Unique identifier of the repository invitation.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-invitation/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/repository-invitation/repository`.
             public var repository: Components.Schemas.minimal_hyphen_repository
             /// - Remark: Generated from `#/components/schemas/repository-invitation/invitee`.
@@ -16021,7 +16021,7 @@ public enum Components {
             ///   - html_url:
             ///   - node_id:
             public init(
-                id: Swift.Int,
+                id: Swift.Int64,
                 repository: Components.Schemas.minimal_hyphen_repository,
                 invitee: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
                 inviter: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
