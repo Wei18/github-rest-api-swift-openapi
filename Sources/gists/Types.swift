@@ -1223,7 +1223,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/public-user/login`.
             public var login: Swift.String
             /// - Remark: Generated from `#/components/schemas/public-user/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/public-user/node_id`.
             public var node_id: Swift.String
             /// - Remark: Generated from `#/components/schemas/public-user/avatar_url`.
@@ -1380,7 +1380,7 @@ public enum Components {
             ///   - collaborators:
             public init(
                 login: Swift.String,
-                id: Swift.Int,
+                id: Swift.Int64,
                 node_id: Swift.String,
                 avatar_url: Swift.String,
                 gravatar_id: Swift.String? = nil,
@@ -1510,7 +1510,7 @@ public enum Components {
                     forKey: .login
                 )
                 id = try container.decode(
-                    Swift.Int.self,
+                    Swift.Int64.self,
                     forKey: .id
                 )
                 node_id = try container.decode(

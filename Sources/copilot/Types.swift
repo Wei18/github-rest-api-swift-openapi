@@ -87,6 +87,8 @@ public protocol APIProtocol: Sendable {
     /// For more information about setting up a Copilot subscription, see "[Setting up a Copilot subscription for your organization](https://docs.github.com/billing/managing-billing-for-github-copilot/managing-your-github-copilot-subscription-for-your-organization-or-enterprise)".
     /// For more information about setting a suggestion matching policy, see "[Configuring suggestion matching policies for GitHub Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-policies-for-github-copilot-in-your-organization#configuring-suggestion-matching-policies-for-github-copilot-in-your-organization)".
     ///
+    /// The response will contain the total number of new seats that were created and existing seats that were refreshed.
+    ///
     /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `admin:org` scopes to use this endpoint.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/copilot/billing/selected_teams`.
@@ -122,6 +124,8 @@ public protocol APIProtocol: Sendable {
     /// In order for an admin to use this endpoint, the organization must have a Copilot Business or Enterprise subscription and a configured suggestion matching policy.
     /// For more information about setting up a Copilot subscription, see "[Setting up a Copilot subscription for your organization](https://docs.github.com/billing/managing-billing-for-github-copilot/managing-your-github-copilot-subscription-for-your-organization-or-enterprise)".
     /// For more information about setting a suggestion matching policy, see "[Configuring suggestion matching policies for GitHub Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-policies-for-github-copilot-in-your-organization#configuring-suggestion-matching-policies-for-github-copilot-in-your-organization)".
+    ///
+    /// The response will contain the total number of new seats that were created and existing seats that were refreshed.
     ///
     /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `admin:org` scopes to use this endpoint.
     ///
@@ -296,6 +300,8 @@ extension APIProtocol {
     /// For more information about setting up a Copilot subscription, see "[Setting up a Copilot subscription for your organization](https://docs.github.com/billing/managing-billing-for-github-copilot/managing-your-github-copilot-subscription-for-your-organization-or-enterprise)".
     /// For more information about setting a suggestion matching policy, see "[Configuring suggestion matching policies for GitHub Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-policies-for-github-copilot-in-your-organization#configuring-suggestion-matching-policies-for-github-copilot-in-your-organization)".
     ///
+    /// The response will contain the total number of new seats that were created and existing seats that were refreshed.
+    ///
     /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `admin:org` scopes to use this endpoint.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/copilot/billing/selected_teams`.
@@ -351,6 +357,8 @@ extension APIProtocol {
     /// In order for an admin to use this endpoint, the organization must have a Copilot Business or Enterprise subscription and a configured suggestion matching policy.
     /// For more information about setting up a Copilot subscription, see "[Setting up a Copilot subscription for your organization](https://docs.github.com/billing/managing-billing-for-github-copilot/managing-your-github-copilot-subscription-for-your-organization-or-enterprise)".
     /// For more information about setting a suggestion matching policy, see "[Configuring suggestion matching policies for GitHub Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-policies-for-github-copilot-in-your-organization#configuring-suggestion-matching-policies-for-github-copilot-in-your-organization)".
+    ///
+    /// The response will contain the total number of new seats that were created and existing seats that were refreshed.
     ///
     /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `admin:org` scopes to use this endpoint.
     ///
@@ -1218,7 +1226,7 @@ public enum Components {
         /// - Remark: Generated from `#/components/schemas/enterprise-team`.
         public struct enterprise_hyphen_team: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/enterprise-team/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/enterprise-team/name`.
             public var name: Swift.String
             /// - Remark: Generated from `#/components/schemas/enterprise-team/slug`.
@@ -1251,7 +1259,7 @@ public enum Components {
             ///   - created_at:
             ///   - updated_at:
             public init(
-                id: Swift.Int,
+                id: Swift.Int64,
                 name: Swift.String,
                 slug: Swift.String,
                 url: Swift.String,
@@ -3347,6 +3355,8 @@ public enum Operations {
     /// For more information about setting up a Copilot subscription, see "[Setting up a Copilot subscription for your organization](https://docs.github.com/billing/managing-billing-for-github-copilot/managing-your-github-copilot-subscription-for-your-organization-or-enterprise)".
     /// For more information about setting a suggestion matching policy, see "[Configuring suggestion matching policies for GitHub Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-policies-for-github-copilot-in-your-organization#configuring-suggestion-matching-policies-for-github-copilot-in-your-organization)".
     ///
+    /// The response will contain the total number of new seats that were created and existing seats that were refreshed.
+    ///
     /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `admin:org` scopes to use this endpoint.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/copilot/billing/selected_teams`.
@@ -3956,6 +3966,8 @@ public enum Operations {
     /// In order for an admin to use this endpoint, the organization must have a Copilot Business or Enterprise subscription and a configured suggestion matching policy.
     /// For more information about setting up a Copilot subscription, see "[Setting up a Copilot subscription for your organization](https://docs.github.com/billing/managing-billing-for-github-copilot/managing-your-github-copilot-subscription-for-your-organization-or-enterprise)".
     /// For more information about setting a suggestion matching policy, see "[Configuring suggestion matching policies for GitHub Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-policies-for-github-copilot-in-your-organization#configuring-suggestion-matching-policies-for-github-copilot-in-your-organization)".
+    ///
+    /// The response will contain the total number of new seats that were created and existing seats that were refreshed.
     ///
     /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `admin:org` scopes to use this endpoint.
     ///

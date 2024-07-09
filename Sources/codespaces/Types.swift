@@ -1948,7 +1948,7 @@ public enum Components {
             /// Unique identifier of the repository
             ///
             /// - Remark: Generated from `#/components/schemas/repository/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/repository/node_id`.
             public var node_id: Swift.String
             /// The name of the repository.
@@ -2391,7 +2391,7 @@ public enum Components {
             ///   - starred_at:
             ///   - anonymous_access_enabled: Whether anonymous git access is enabled for this repository
             public init(
-                id: Swift.Int,
+                id: Swift.Int64,
                 node_id: Swift.String,
                 name: Swift.String,
                 full_name: Swift.String,
@@ -2852,7 +2852,7 @@ public enum Components {
         /// - Remark: Generated from `#/components/schemas/minimal-repository`.
         public struct minimal_hyphen_repository: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/minimal-repository/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/minimal-repository/node_id`.
             public var node_id: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/name`.
@@ -3200,7 +3200,7 @@ public enum Components {
             ///   - web_commit_signoff_required:
             ///   - security_and_analysis:
             public init(
-                id: Swift.Int,
+                id: Swift.Int64,
                 node_id: Swift.String,
                 name: Swift.String,
                 full_name: Swift.String,
@@ -3558,7 +3558,7 @@ public enum Components {
         /// - Remark: Generated from `#/components/schemas/codespace`.
         public struct codespace: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/codespace/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// Automatically generated name of this codespace.
             ///
             /// - Remark: Generated from `#/components/schemas/codespace/name`.
@@ -3804,7 +3804,7 @@ public enum Components {
             ///   - retention_expires_at: When a codespace will be auto-deleted based on the "retention_period_minutes" and "last_used_at"
             ///   - last_known_stop_notice: The text to display to a user when a codespace has been stopped for a potentially actionable reason.
             public init(
-                id: Swift.Int,
+                id: Swift.Int64,
                 name: Swift.String,
                 display_name: Swift.String? = nil,
                 environment_id: Swift.String? = nil,
@@ -4026,7 +4026,7 @@ public enum Components {
             /// Unique identifier of the repository
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-repository/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/nullable-repository/node_id`.
             public var node_id: Swift.String
             /// The name of the repository.
@@ -4469,7 +4469,7 @@ public enum Components {
             ///   - starred_at:
             ///   - anonymous_access_enabled: Whether anonymous git access is enabled for this repository
             public init(
-                id: Swift.Int,
+                id: Swift.Int64,
                 node_id: Swift.String,
                 name: Swift.String,
                 full_name: Swift.String,
@@ -4801,7 +4801,7 @@ public enum Components {
         /// - Remark: Generated from `#/components/schemas/full-repository`.
         public struct full_hyphen_repository: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/full-repository/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/full-repository/node_id`.
             public var node_id: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/name`.
@@ -5250,7 +5250,7 @@ public enum Components {
             ///   - security_and_analysis:
             ///   - custom_properties: The custom properties that were defined for the repository. The keys are the custom property names, and the values are the corresponding custom property values.
             public init(
-                id: Swift.Int,
+                id: Swift.Int64,
                 node_id: Swift.String,
                 name: Swift.String,
                 full_name: Swift.String,
@@ -5857,7 +5857,7 @@ public enum Components {
         /// - Remark: Generated from `#/components/schemas/codespace-with-full-repository`.
         public struct codespace_hyphen_with_hyphen_full_hyphen_repository: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/codespace-with-full-repository/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// Automatically generated name of this codespace.
             ///
             /// - Remark: Generated from `#/components/schemas/codespace-with-full-repository/name`.
@@ -6098,7 +6098,7 @@ public enum Components {
             ///   - retention_period_minutes: Duration in minutes after codespace has gone idle in which it will be deleted. Must be integer minutes between 0 and 43200 (30 days).
             ///   - retention_expires_at: When a codespace will be auto-deleted based on the "retention_period_minutes" and "last_used_at"
             public init(
-                id: Swift.Int,
+                id: Swift.Int64,
                 name: Swift.String,
                 display_name: Swift.String? = nil,
                 environment_id: Swift.String? = nil,

@@ -823,7 +823,7 @@ public enum Components {
             /// Unique identifier of the repository
             ///
             /// - Remark: Generated from `#/components/schemas/repository/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/repository/node_id`.
             public var node_id: Swift.String
             /// The name of the repository.
@@ -1266,7 +1266,7 @@ public enum Components {
             ///   - starred_at:
             ///   - anonymous_access_enabled: Whether anonymous git access is enabled for this repository
             public init(
-                id: Swift.Int,
+                id: Swift.Int64,
                 node_id: Swift.String,
                 name: Swift.String,
                 full_name: Swift.String,
@@ -2162,7 +2162,7 @@ public enum Components {
         /// - Remark: Generated from `#/components/schemas/minimal-repository`.
         public struct minimal_hyphen_repository: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/minimal-repository/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/minimal-repository/node_id`.
             public var node_id: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/name`.
@@ -2510,7 +2510,7 @@ public enum Components {
             ///   - web_commit_signoff_required:
             ///   - security_and_analysis:
             public init(
-                id: Swift.Int,
+                id: Swift.Int64,
                 node_id: Swift.String,
                 name: Swift.String,
                 full_name: Swift.String,
@@ -4420,7 +4420,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/user-search-result-item/login`.
             public var login: Swift.String
             /// - Remark: Generated from `#/components/schemas/user-search-result-item/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/user-search-result-item/node_id`.
             public var node_id: Swift.String
             /// - Remark: Generated from `#/components/schemas/user-search-result-item/avatar_url`.
@@ -4524,7 +4524,7 @@ public enum Components {
             ///   - suspended_at:
             public init(
                 login: Swift.String,
-                id: Swift.Int,
+                id: Swift.Int64,
                 node_id: Swift.String,
                 avatar_url: Swift.String,
                 gravatar_id: Swift.String? = nil,

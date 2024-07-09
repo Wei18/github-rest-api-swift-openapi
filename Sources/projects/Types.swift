@@ -1215,7 +1215,7 @@ public enum Components {
             /// The project card's ID
             ///
             /// - Remark: Generated from `#/components/schemas/project-card/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/project-card/node_id`.
             public var node_id: Swift.String
             /// - Remark: Generated from `#/components/schemas/project-card/note`.
@@ -1258,7 +1258,7 @@ public enum Components {
             ///   - project_url:
             public init(
                 url: Swift.String,
-                id: Swift.Int,
+                id: Swift.Int64,
                 node_id: Swift.String,
                 note: Swift.String? = nil,
                 creator: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,

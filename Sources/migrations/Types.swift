@@ -1257,7 +1257,7 @@ public enum Components {
             /// Unique identifier of the repository
             ///
             /// - Remark: Generated from `#/components/schemas/repository/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/repository/node_id`.
             public var node_id: Swift.String
             /// The name of the repository.
@@ -1700,7 +1700,7 @@ public enum Components {
             ///   - starred_at:
             ///   - anonymous_access_enabled: Whether anonymous git access is enabled for this repository
             public init(
-                id: Swift.Int,
+                id: Swift.Int64,
                 node_id: Swift.String,
                 name: Swift.String,
                 full_name: Swift.String,
@@ -2161,7 +2161,7 @@ public enum Components {
         /// - Remark: Generated from `#/components/schemas/minimal-repository`.
         public struct minimal_hyphen_repository: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/minimal-repository/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/minimal-repository/node_id`.
             public var node_id: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/name`.
@@ -2509,7 +2509,7 @@ public enum Components {
             ///   - web_commit_signoff_required:
             ///   - security_and_analysis:
             public init(
-                id: Swift.Int,
+                id: Swift.Int64,
                 node_id: Swift.String,
                 name: Swift.String,
                 full_name: Swift.String,
@@ -2780,7 +2780,7 @@ public enum Components {
         /// - Remark: Generated from `#/components/schemas/migration`.
         public struct migration: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/migration/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/migration/owner`.
             public var owner: Components.Schemas.nullable_hyphen_simple_hyphen_user?
             /// - Remark: Generated from `#/components/schemas/migration/guid`.
@@ -2841,7 +2841,7 @@ public enum Components {
             ///   - archive_url:
             ///   - exclude: Exclude related items from being returned in the response in order to improve performance of the request. The array can include any of: `"repositories"`.
             public init(
-                id: Swift.Int,
+                id: Swift.Int64,
                 owner: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
                 guid: Swift.String,
                 state: Swift.String,
