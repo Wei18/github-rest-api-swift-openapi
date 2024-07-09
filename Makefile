@@ -9,7 +9,7 @@ FILTERED_NAMES := $(shell yq -r '.tags[].name' $(OPENAPI_PATH))
 SOURCE_DIRS    := $(addprefix Sources/, $(FILTERED_NAMES))
 PACKAGE_PATHS  := Package.swift
 # Fix: https://github.com/irgaly/setup-mint/pull/25
-MINT_BIN       := $$HOME/mint
+MINT_BIN       := $(HOME)/mint
 
 # Helper
 .SILENT: commit
