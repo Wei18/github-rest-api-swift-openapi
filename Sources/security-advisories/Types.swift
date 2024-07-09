@@ -1433,7 +1433,7 @@ public enum Components {
             /// Unique identifier of the repository
             ///
             /// - Remark: Generated from `#/components/schemas/repository/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/repository/node_id`.
             public var node_id: Swift.String
             /// The name of the repository.
@@ -1876,7 +1876,7 @@ public enum Components {
             ///   - starred_at:
             ///   - anonymous_access_enabled: Whether anonymous git access is enabled for this repository
             public init(
-                id: Swift.Int,
+                id: Swift.Int64,
                 node_id: Swift.String,
                 name: Swift.String,
                 full_name: Swift.String,
@@ -2418,7 +2418,7 @@ public enum Components {
             /// A unique identifier of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// The GraphQL identifier of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/node_id`.
@@ -2647,7 +2647,7 @@ public enum Components {
             ///   - trees_url: A template for the API URL to create or retrieve a raw Git tree of the repository.
             ///   - hooks_url: The API URL to list the hooks on the repository.
             public init(
-                id: Swift.Int,
+                id: Swift.Int64,
                 node_id: Swift.String,
                 name: Swift.String,
                 full_name: Swift.String,
@@ -2920,7 +2920,7 @@ public enum Components {
             /// Unique identifier of the repository
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-repository/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/nullable-repository/node_id`.
             public var node_id: Swift.String
             /// The name of the repository.
@@ -3363,7 +3363,7 @@ public enum Components {
             ///   - starred_at:
             ///   - anonymous_access_enabled: Whether anonymous git access is enabled for this repository
             public init(
-                id: Swift.Int,
+                id: Swift.Int64,
                 node_id: Swift.String,
                 name: Swift.String,
                 full_name: Swift.String,
@@ -3695,7 +3695,7 @@ public enum Components {
         /// - Remark: Generated from `#/components/schemas/full-repository`.
         public struct full_hyphen_repository: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/full-repository/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/full-repository/node_id`.
             public var node_id: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/name`.
@@ -4144,7 +4144,7 @@ public enum Components {
             ///   - security_and_analysis:
             ///   - custom_properties: The custom properties that were defined for the repository. The keys are the custom property names, and the values are the corresponding custom property values.
             public init(
-                id: Swift.Int,
+                id: Swift.Int64,
                 node_id: Swift.String,
                 name: Swift.String,
                 full_name: Swift.String,
