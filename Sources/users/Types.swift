@@ -1399,7 +1399,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/public-user/login`.
             public var login: Swift.String
             /// - Remark: Generated from `#/components/schemas/public-user/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/public-user/node_id`.
             public var node_id: Swift.String
             /// - Remark: Generated from `#/components/schemas/public-user/avatar_url`.
@@ -1556,7 +1556,7 @@ public enum Components {
             ///   - collaborators:
             public init(
                 login: Swift.String,
-                id: Swift.Int,
+                id: Swift.Int64,
                 node_id: Swift.String,
                 avatar_url: Swift.String,
                 gravatar_id: Swift.String? = nil,
@@ -1686,7 +1686,7 @@ public enum Components {
                     forKey: .login
                 )
                 id = try container.decode(
-                    Swift.Int.self,
+                    Swift.Int64.self,
                     forKey: .id
                 )
                 node_id = try container.decode(
@@ -1902,7 +1902,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/private-user/login`.
             public var login: Swift.String
             /// - Remark: Generated from `#/components/schemas/private-user/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/private-user/node_id`.
             public var node_id: Swift.String
             /// - Remark: Generated from `#/components/schemas/private-user/avatar_url`.
@@ -2068,7 +2068,7 @@ public enum Components {
             ///   - ldap_dn:
             public init(
                 login: Swift.String,
-                id: Swift.Int,
+                id: Swift.Int64,
                 node_id: Swift.String,
                 avatar_url: Swift.String,
                 gravatar_id: Swift.String? = nil,
@@ -2243,7 +2243,7 @@ public enum Components {
         /// - Remark: Generated from `#/components/schemas/gpg-key`.
         public struct gpg_hyphen_key: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/gpg-key/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/gpg-key/name`.
             public var name: Swift.String?
             /// - Remark: Generated from `#/components/schemas/gpg-key/primary_key_id`.
@@ -2282,7 +2282,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/gpg-key/subkeysPayload`.
             public struct subkeysPayloadPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/gpg-key/subkeysPayload/id`.
-                public var id: Swift.Int?
+                public var id: Swift.Int64?
                 /// - Remark: Generated from `#/components/schemas/gpg-key/subkeysPayload/primary_key_id`.
                 public var primary_key_id: Swift.Int?
                 /// - Remark: Generated from `#/components/schemas/gpg-key/subkeysPayload/key_id`.
@@ -2352,7 +2352,7 @@ public enum Components {
                 ///   - raw_key:
                 ///   - revoked:
                 public init(
-                    id: Swift.Int? = nil,
+                    id: Swift.Int64? = nil,
                     primary_key_id: Swift.Int? = nil,
                     key_id: Swift.String? = nil,
                     public_key: Swift.String? = nil,
@@ -2438,7 +2438,7 @@ public enum Components {
             ///   - revoked:
             ///   - raw_key:
             public init(
-                id: Swift.Int,
+                id: Swift.Int64,
                 name: Swift.String? = nil,
                 primary_key_id: Swift.Int? = nil,
                 key_id: Swift.String,
@@ -2495,7 +2495,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/key/key`.
             public var key: Swift.String
             /// - Remark: Generated from `#/components/schemas/key/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/key/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/key/title`.
@@ -2518,7 +2518,7 @@ public enum Components {
             ///   - read_only:
             public init(
                 key: Swift.String,
-                id: Swift.Int,
+                id: Swift.Int64,
                 url: Swift.String,
                 title: Swift.String,
                 created_at: Foundation.Date,
