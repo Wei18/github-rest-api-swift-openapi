@@ -8,6 +8,8 @@ OPENAPI_PATH   := Submodule/github/rest-api-description/descriptions/api.github.
 FILTERED_NAMES := $(shell yq -r '.tags[].name' $(OPENAPI_PATH))
 SOURCE_DIRS    := $(addprefix Sources/, $(FILTERED_NAMES))
 PACKAGE_PATHS  := Package.swift
+# Fix: https://github.com/irgaly/setup-mint/pull/25
+MINT_BIN       := $HOME/mint
 
 # Helper
 .SILENT: commit
@@ -28,7 +30,7 @@ commit:
 %/Client.swift %/Types.swift: $(OPENAPI_PATH)
 	@echo "\n\nFolder $(@D) running"
 	@$(MAKE) "$(@D)/openapi-generator-config.yml"
-	mint run apple/swift-openapi-generator generate \
+	$(MINT_BIN) run apple/swift-openapi-generator generate \
 		"$(OPENAPI_PATH)" \
 		--config "$(@D)/openapi-generator-config.yml" \
 		--output-directory "$(@D)";
