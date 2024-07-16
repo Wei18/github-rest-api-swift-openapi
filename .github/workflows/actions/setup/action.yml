@@ -11,42 +11,44 @@ inputs:
 runs:
   using: 'composite'
   steps:
-  - uses: swift-actions/setup-swift@v2
-    with:
-      swift-version: ${{ inputs.swift }}
-  - uses: irgaly/setup-mint@v1
-  - uses: dcarbone/install-yq-action@v1.1.1
-  
-  - name: "Xcode Cache"
-    if: contains(inputs.os, 'macos')
-    uses: irgaly/xcode-cache@v1
-    with:
-      key: xcode-cache-deriveddata-${{ github.workflow }}-${{ github.sha }}
-      restore-keys: xcode-cache-deriveddata-${{ github.workflow }}-
-
-  # - name: "Set IgnoreFileSystemDeviceInodeChanges flag"
-  #   if: contains(inputs.os, 'macos')
-  #   shell: bash
-  #   run: defaults write com.apple.dt.XCBuild IgnoreFileSystemDeviceInodeChanges -bool YES
+    - uses: swift-actions/setup-swift@v2
+      with:
+        swift-version: ${{ inputs.swift }}
+    - uses: irgaly/setup-mint@v1
+      with:
+        mint-executable-directory: $HOME/.mint/bin
+    - uses: dcarbone/install-yq-action@v1.1.1
     
-  - name: "Swift Package Manager Cache"
-    uses: actions/cache@v4
-    with:
-      path: .build
-      key: ${{ runner.os }}-spm-${{ hashFiles('**/Package.resolved') }}
-      restore-keys: |
-        ${{ runner.os }}-spm-
-
-  - name: "Compiling Cache"
-    uses: actions/cache@v4
-    with:
-      path: ~/Library/Caches/org.swift.swiftpm/
-      key: ${{ runner.os }}-swift-build-${{ github.ref_name }}
-      restore-keys: |
-        ${{ runner.os }}-swift-build-
-
-# Hint: Use Composite Actions 
-# - https://stackoverflow.com/a/75735736/9801139
-# - https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#example-using-a-public-action-in-a-subdirectory
-# - https://docs.github.com/en/actions/creating-actions/creating-a-composite-action
-# - https://dev.to/n3wt0n/composite-actions-vs-reusable-workflows-what-is-the-difference-github-actions-11kd
+    - name: "Xcode Cache"
+      if: contains(inputs.os, 'macos')
+      uses: irgaly/xcode-cache@v1
+      with:
+        key: xcode-cache-deriveddata-${{ github.workflow }}-${{ github.sha }}
+        restore-keys: xcode-cache-deriveddata-${{ github.workflow }}-
+  
+    # - name: "Set IgnoreFileSystemDeviceInodeChanges flag"
+    #   if: contains(inputs.os, 'macos')
+    #   shell: bash
+    #   run: defaults write com.apple.dt.XCBuild IgnoreFileSystemDeviceInodeChanges -bool YES
+      
+    - name: "Swift Package Manager Cache"
+      uses: actions/cache@v4
+      with:
+        path: .build
+        key: ${{ runner.os }}-spm-${{ hashFiles('**/Package.resolved') }}
+        restore-keys: |
+          ${{ runner.os }}-spm-
+  
+    - name: "Compiling Cache"
+      uses: actions/cache@v4
+      with:
+        path: ~/Library/Caches/org.swift.swiftpm/
+        key: ${{ runner.os }}-swift-build-${{ github.ref_name }}
+        restore-keys: |
+          ${{ runner.os }}-swift-build-
+  
+  # Hint: Use Composite Actions 
+  # - https://stackoverflow.com/a/75735736/9801139
+  # - https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#example-using-a-public-action-in-a-subdirectory
+  # - https://docs.github.com/en/actions/creating-actions/creating-a-composite-action
+  # - https://dev.to/n3wt0n/composite-actions-vs-reusable-workflows-what-is-the-difference-github-actions-11kd
