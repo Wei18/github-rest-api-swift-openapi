@@ -2766,6 +2766,16 @@ public enum Components {
                 case rocket
             }
         }
+        /// An object without any properties.
+        ///
+        /// - Remark: Generated from `#/components/schemas/empty-object`.
+        public struct empty_hyphen_object: Codable, Hashable, Sendable {
+            /// Creates a new `empty_hyphen_object`.
+            public init() {}
+            public init(from decoder: any Decoder) throws {
+                try decoder.ensureNoAdditionalProperties(knownKeys: [])
+            }
+        }
         /// Groups of organization members that gives permissions on specified repositories.
         ///
         /// - Remark: Generated from `#/components/schemas/team-simple`.
@@ -3121,9 +3131,79 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/commit/commit`.
             public var commit: Components.Schemas.commit.commitPayload
             /// - Remark: Generated from `#/components/schemas/commit/author`.
-            public var author: Components.Schemas.nullable_hyphen_simple_hyphen_user?
+            @frozen public enum authorPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/commit/author/case1`.
+                case simple_hyphen_user(Components.Schemas.simple_hyphen_user)
+                /// - Remark: Generated from `#/components/schemas/commit/author/case2`.
+                case empty_hyphen_object(Components.Schemas.empty_hyphen_object)
+                public init(from decoder: any Decoder) throws {
+                    var errors: [any Error] = []
+                    do {
+                        self = .simple_hyphen_user(try .init(from: decoder))
+                        return
+                    } catch {
+                        errors.append(error)
+                    }
+                    do {
+                        self = .empty_hyphen_object(try .init(from: decoder))
+                        return
+                    } catch {
+                        errors.append(error)
+                    }
+                    throw Swift.DecodingError.failedToDecodeOneOfSchema(
+                        type: Self.self,
+                        codingPath: decoder.codingPath,
+                        errors: errors
+                    )
+                }
+                public func encode(to encoder: any Encoder) throws {
+                    switch self {
+                    case let .simple_hyphen_user(value):
+                        try value.encode(to: encoder)
+                    case let .empty_hyphen_object(value):
+                        try value.encode(to: encoder)
+                    }
+                }
+            }
+            /// - Remark: Generated from `#/components/schemas/commit/author`.
+            public var author: Components.Schemas.commit.authorPayload?
             /// - Remark: Generated from `#/components/schemas/commit/committer`.
-            public var committer: Components.Schemas.nullable_hyphen_simple_hyphen_user?
+            @frozen public enum committerPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/commit/committer/case1`.
+                case simple_hyphen_user(Components.Schemas.simple_hyphen_user)
+                /// - Remark: Generated from `#/components/schemas/commit/committer/case2`.
+                case empty_hyphen_object(Components.Schemas.empty_hyphen_object)
+                public init(from decoder: any Decoder) throws {
+                    var errors: [any Error] = []
+                    do {
+                        self = .simple_hyphen_user(try .init(from: decoder))
+                        return
+                    } catch {
+                        errors.append(error)
+                    }
+                    do {
+                        self = .empty_hyphen_object(try .init(from: decoder))
+                        return
+                    } catch {
+                        errors.append(error)
+                    }
+                    throw Swift.DecodingError.failedToDecodeOneOfSchema(
+                        type: Self.self,
+                        codingPath: decoder.codingPath,
+                        errors: errors
+                    )
+                }
+                public func encode(to encoder: any Encoder) throws {
+                    switch self {
+                    case let .simple_hyphen_user(value):
+                        try value.encode(to: encoder)
+                    case let .empty_hyphen_object(value):
+                        try value.encode(to: encoder)
+                    }
+                }
+            }
+            /// - Remark: Generated from `#/components/schemas/commit/committer`.
+            public var committer: Components.Schemas.commit.committerPayload?
             /// - Remark: Generated from `#/components/schemas/commit/parentsPayload`.
             public struct parentsPayloadPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/commit/parentsPayload/sha`.
@@ -3211,8 +3291,8 @@ public enum Components {
                 html_url: Swift.String,
                 comments_url: Swift.String,
                 commit: Components.Schemas.commit.commitPayload,
-                author: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
-                committer: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
+                author: Components.Schemas.commit.authorPayload? = nil,
+                committer: Components.Schemas.commit.committerPayload? = nil,
                 parents: Components.Schemas.commit.parentsPayload,
                 stats: Components.Schemas.commit.statsPayload? = nil,
                 files: [Components.Schemas.diff_hyphen_entry]? = nil
