@@ -28,17 +28,6 @@ public protocol APIProtocol: Sendable {
     ///
     /// To see the full details about an organization, the authenticated user must be an organization owner.
     ///
-    /// The values returned by this endpoint are set by the "Update an organization" endpoint. If your organization set a default security configuration (beta), the following values retrieved from the "Update an organization" endpoint have been overwritten by that configuration:
-    ///
-    /// - advanced_security_enabled_for_new_repositories
-    /// - dependabot_alerts_enabled_for_new_repositories
-    /// - dependabot_security_updates_enabled_for_new_repositories
-    /// - dependency_graph_enabled_for_new_repositories
-    /// - secret_scanning_enabled_for_new_repositories
-    /// - secret_scanning_push_protection_enabled_for_new_repositories
-    ///
-    /// For more information on security configurations, see "[Enabling security features at scale](https://docs.github.com/code-security/securing-your-organization/introduction-to-securing-your-organization-at-scale/about-enabling-security-features-at-scale)."
-    ///
     /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to see the full details about an organization.
     ///
     /// To see information about an organization's GitHub plan, GitHub Apps need the `Organization plan` permission.
@@ -50,18 +39,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// **Parameter Deprecation Notice:** GitHub will replace and discontinue `members_allowed_repository_creation_type` in favor of more granular permissions. The new input parameters are `members_can_create_public_repositories`, `members_can_create_private_repositories` for all organizations and `members_can_create_internal_repositories` for organizations associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+. For more information, see the [blog post](https://developer.github.com/changes/2019-12-03-internal-visibility-changes).
     ///
+    /// **Parameter Deprecation Notice:** Code security product enablement for new repositories through the organization API is deprecated. Please use [code security configurations](https://docs.github.com/rest/code-security/configurations#set-a-code-security-configuration-as-a-default-for-an-organization) to set defaults instead. For more information on setting a default security configuration, see the [changelog](https://github.blog/changelog/2024-07-09-sunsetting-security-settings-defaults-parameters-in-the-organizations-rest-api/).
+    ///
     /// Updates the organization's profile and member privileges.
-    ///
-    /// With security configurations (beta), your organization can choose a default security configuration which will automatically apply a set of security enablement settings to new repositories in your organization based on their visibility. For targeted repositories, the following attributes will be overridden by the default security configuration:
-    ///
-    /// - advanced_security_enabled_for_new_repositories
-    /// - dependabot_alerts_enabled_for_new_repositories
-    /// - dependabot_security_updates_enabled_for_new_repositories
-    /// - dependency_graph_enabled_for_new_repositories
-    /// - secret_scanning_enabled_for_new_repositories
-    /// - secret_scanning_push_protection_enabled_for_new_repositories
-    ///
-    /// For more information on setting a default security configuration, see "[Enabling security features at scale](https://docs.github.com/code-security/securing-your-organization/introduction-to-securing-your-organization-at-scale/about-enabling-security-features-at-scale)."
     ///
     /// The authenticated user must be an organization owner to use this endpoint.
     ///
@@ -846,17 +826,6 @@ extension APIProtocol {
     ///
     /// To see the full details about an organization, the authenticated user must be an organization owner.
     ///
-    /// The values returned by this endpoint are set by the "Update an organization" endpoint. If your organization set a default security configuration (beta), the following values retrieved from the "Update an organization" endpoint have been overwritten by that configuration:
-    ///
-    /// - advanced_security_enabled_for_new_repositories
-    /// - dependabot_alerts_enabled_for_new_repositories
-    /// - dependabot_security_updates_enabled_for_new_repositories
-    /// - dependency_graph_enabled_for_new_repositories
-    /// - secret_scanning_enabled_for_new_repositories
-    /// - secret_scanning_push_protection_enabled_for_new_repositories
-    ///
-    /// For more information on security configurations, see "[Enabling security features at scale](https://docs.github.com/code-security/securing-your-organization/introduction-to-securing-your-organization-at-scale/about-enabling-security-features-at-scale)."
-    ///
     /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to see the full details about an organization.
     ///
     /// To see information about an organization's GitHub plan, GitHub Apps need the `Organization plan` permission.
@@ -876,18 +845,9 @@ extension APIProtocol {
     ///
     /// **Parameter Deprecation Notice:** GitHub will replace and discontinue `members_allowed_repository_creation_type` in favor of more granular permissions. The new input parameters are `members_can_create_public_repositories`, `members_can_create_private_repositories` for all organizations and `members_can_create_internal_repositories` for organizations associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+. For more information, see the [blog post](https://developer.github.com/changes/2019-12-03-internal-visibility-changes).
     ///
+    /// **Parameter Deprecation Notice:** Code security product enablement for new repositories through the organization API is deprecated. Please use [code security configurations](https://docs.github.com/rest/code-security/configurations#set-a-code-security-configuration-as-a-default-for-an-organization) to set defaults instead. For more information on setting a default security configuration, see the [changelog](https://github.blog/changelog/2024-07-09-sunsetting-security-settings-defaults-parameters-in-the-organizations-rest-api/).
+    ///
     /// Updates the organization's profile and member privileges.
-    ///
-    /// With security configurations (beta), your organization can choose a default security configuration which will automatically apply a set of security enablement settings to new repositories in your organization based on their visibility. For targeted repositories, the following attributes will be overridden by the default security configuration:
-    ///
-    /// - advanced_security_enabled_for_new_repositories
-    /// - dependabot_alerts_enabled_for_new_repositories
-    /// - dependabot_security_updates_enabled_for_new_repositories
-    /// - dependency_graph_enabled_for_new_repositories
-    /// - secret_scanning_enabled_for_new_repositories
-    /// - secret_scanning_push_protection_enabled_for_new_repositories
-    ///
-    /// For more information on setting a default security configuration, see "[Enabling security features at scale](https://docs.github.com/code-security/securing-your-organization/introduction-to-securing-your-organization-at-scale/about-enabling-security-features-at-scale)."
     ///
     /// The authenticated user must be an organization owner to use this endpoint.
     ///
@@ -4687,6 +4647,28 @@ public enum Components {
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_push_protection`.
             public var secret_scanning_push_protection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_push_protectionPayload?
+            /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns`.
+            public struct secret_scanning_non_provider_patternsPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns/status`.
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                    case enabled = "enabled"
+                    case disabled = "disabled"
+                }
+                /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns/status`.
+                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_non_provider_patternsPayload.statusPayload?
+                /// Creates a new `secret_scanning_non_provider_patternsPayload`.
+                ///
+                /// - Parameters:
+                ///   - status:
+                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_non_provider_patternsPayload.statusPayload? = nil) {
+                    self.status = status
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case status
+                }
+            }
+            /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns`.
+            public var secret_scanning_non_provider_patterns: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_non_provider_patternsPayload?
             /// Creates a new `security_hyphen_and_hyphen_analysis`.
             ///
             /// - Parameters:
@@ -4694,22 +4676,26 @@ public enum Components {
             ///   - dependabot_security_updates: Enable or disable Dependabot security updates for the repository.
             ///   - secret_scanning:
             ///   - secret_scanning_push_protection:
+            ///   - secret_scanning_non_provider_patterns:
             public init(
                 advanced_security: Components.Schemas.security_hyphen_and_hyphen_analysis.advanced_securityPayload? = nil,
                 dependabot_security_updates: Components.Schemas.security_hyphen_and_hyphen_analysis.dependabot_security_updatesPayload? = nil,
                 secret_scanning: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanningPayload? = nil,
-                secret_scanning_push_protection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_push_protectionPayload? = nil
+                secret_scanning_push_protection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_push_protectionPayload? = nil,
+                secret_scanning_non_provider_patterns: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_non_provider_patternsPayload? = nil
             ) {
                 self.advanced_security = advanced_security
                 self.dependabot_security_updates = dependabot_security_updates
                 self.secret_scanning = secret_scanning
                 self.secret_scanning_push_protection = secret_scanning_push_protection
+                self.secret_scanning_non_provider_patterns = secret_scanning_non_provider_patterns
             }
             public enum CodingKeys: String, CodingKey {
                 case advanced_security
                 case dependabot_security_updates
                 case secret_scanning
                 case secret_scanning_push_protection
+                case secret_scanning_non_provider_patterns
             }
         }
         /// Minimal Repository
@@ -5468,46 +5454,59 @@ public enum Components {
             public var members_can_fork_private_repositories: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/organization-full/web_commit_signoff_required`.
             public var web_commit_signoff_required: Swift.Bool?
+            /// **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
+            ///
             /// Whether GitHub Advanced Security is enabled for new repositories and repositories transferred to this organization.
             ///
             /// This field is only visible to organization owners or members of a team with the security manager role.
             ///
             /// - Remark: Generated from `#/components/schemas/organization-full/advanced_security_enabled_for_new_repositories`.
+            @available(*, deprecated)
             public var advanced_security_enabled_for_new_repositories: Swift.Bool?
-            /// Whether GitHub Advanced Security is automatically enabled for new repositories and repositories transferred to
-            /// this organization.
+            /// **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
+            ///
+            /// Whether Dependabot alerts are automatically enabled for new repositories and repositories transferred to this organization.
             ///
             /// This field is only visible to organization owners or members of a team with the security manager role.
             ///
             /// - Remark: Generated from `#/components/schemas/organization-full/dependabot_alerts_enabled_for_new_repositories`.
+            @available(*, deprecated)
             public var dependabot_alerts_enabled_for_new_repositories: Swift.Bool?
-            /// Whether dependabot security updates are automatically enabled for new repositories and repositories transferred
-            /// to this organization.
+            /// **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
+            ///
+            /// Whether Dependabot security updates are automatically enabled for new repositories and repositories transferred to this organization.
             ///
             /// This field is only visible to organization owners or members of a team with the security manager role.
             ///
             /// - Remark: Generated from `#/components/schemas/organization-full/dependabot_security_updates_enabled_for_new_repositories`.
+            @available(*, deprecated)
             public var dependabot_security_updates_enabled_for_new_repositories: Swift.Bool?
-            /// Whether dependency graph is automatically enabled for new repositories and repositories transferred to this
-            /// organization.
+            /// **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
+            ///
+            /// Whether dependency graph is automatically enabled for new repositories and repositories transferred to this organization.
             ///
             /// This field is only visible to organization owners or members of a team with the security manager role.
             ///
             /// - Remark: Generated from `#/components/schemas/organization-full/dependency_graph_enabled_for_new_repositories`.
+            @available(*, deprecated)
             public var dependency_graph_enabled_for_new_repositories: Swift.Bool?
-            /// Whether secret scanning is automatically enabled for new repositories and repositories transferred to this
-            /// organization.
+            /// **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
+            ///
+            /// Whether secret scanning is automatically enabled for new repositories and repositories transferred to this organization.
             ///
             /// This field is only visible to organization owners or members of a team with the security manager role.
             ///
             /// - Remark: Generated from `#/components/schemas/organization-full/secret_scanning_enabled_for_new_repositories`.
+            @available(*, deprecated)
             public var secret_scanning_enabled_for_new_repositories: Swift.Bool?
-            /// Whether secret scanning push protection is automatically enabled for new repositories and repositories
-            /// transferred to this organization.
+            /// **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
+            ///
+            /// Whether secret scanning push protection is automatically enabled for new repositories and repositories transferred to this organization.
             ///
             /// This field is only visible to organization owners or members of a team with the security manager role.
             ///
             /// - Remark: Generated from `#/components/schemas/organization-full/secret_scanning_push_protection_enabled_for_new_repositories`.
+            @available(*, deprecated)
             public var secret_scanning_push_protection_enabled_for_new_repositories: Swift.Bool?
             /// Whether a custom link is shown to contributors who are blocked from pushing a secret by push protection.
             ///
@@ -5572,12 +5571,12 @@ public enum Components {
             ///   - members_can_create_private_pages:
             ///   - members_can_fork_private_repositories:
             ///   - web_commit_signoff_required:
-            ///   - advanced_security_enabled_for_new_repositories: Whether GitHub Advanced Security is enabled for new repositories and repositories transferred to this organization.
-            ///   - dependabot_alerts_enabled_for_new_repositories: Whether GitHub Advanced Security is automatically enabled for new repositories and repositories transferred to
-            ///   - dependabot_security_updates_enabled_for_new_repositories: Whether dependabot security updates are automatically enabled for new repositories and repositories transferred
-            ///   - dependency_graph_enabled_for_new_repositories: Whether dependency graph is automatically enabled for new repositories and repositories transferred to this
-            ///   - secret_scanning_enabled_for_new_repositories: Whether secret scanning is automatically enabled for new repositories and repositories transferred to this
-            ///   - secret_scanning_push_protection_enabled_for_new_repositories: Whether secret scanning push protection is automatically enabled for new repositories and repositories
+            ///   - advanced_security_enabled_for_new_repositories: **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
+            ///   - dependabot_alerts_enabled_for_new_repositories: **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
+            ///   - dependabot_security_updates_enabled_for_new_repositories: **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
+            ///   - dependency_graph_enabled_for_new_repositories: **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
+            ///   - secret_scanning_enabled_for_new_repositories: **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
+            ///   - secret_scanning_push_protection_enabled_for_new_repositories: **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
             ///   - secret_scanning_push_protection_custom_link_enabled: Whether a custom link is shown to contributors who are blocked from pushing a secret by push protection.
             ///   - secret_scanning_push_protection_custom_link: An optional URL string to display to contributors who are blocked from pushing a secret.
             ///   - created_at:
@@ -7692,17 +7691,6 @@ public enum Operations {
     ///
     /// To see the full details about an organization, the authenticated user must be an organization owner.
     ///
-    /// The values returned by this endpoint are set by the "Update an organization" endpoint. If your organization set a default security configuration (beta), the following values retrieved from the "Update an organization" endpoint have been overwritten by that configuration:
-    ///
-    /// - advanced_security_enabled_for_new_repositories
-    /// - dependabot_alerts_enabled_for_new_repositories
-    /// - dependabot_security_updates_enabled_for_new_repositories
-    /// - dependency_graph_enabled_for_new_repositories
-    /// - secret_scanning_enabled_for_new_repositories
-    /// - secret_scanning_push_protection_enabled_for_new_repositories
-    ///
-    /// For more information on security configurations, see "[Enabling security features at scale](https://docs.github.com/code-security/securing-your-organization/introduction-to-securing-your-organization-at-scale/about-enabling-security-features-at-scale)."
-    ///
     /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to see the full details about an organization.
     ///
     /// To see information about an organization's GitHub plan, GitHub Apps need the `Organization plan` permission.
@@ -7862,18 +7850,9 @@ public enum Operations {
     ///
     /// **Parameter Deprecation Notice:** GitHub will replace and discontinue `members_allowed_repository_creation_type` in favor of more granular permissions. The new input parameters are `members_can_create_public_repositories`, `members_can_create_private_repositories` for all organizations and `members_can_create_internal_repositories` for organizations associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+. For more information, see the [blog post](https://developer.github.com/changes/2019-12-03-internal-visibility-changes).
     ///
+    /// **Parameter Deprecation Notice:** Code security product enablement for new repositories through the organization API is deprecated. Please use [code security configurations](https://docs.github.com/rest/code-security/configurations#set-a-code-security-configuration-as-a-default-for-an-organization) to set defaults instead. For more information on setting a default security configuration, see the [changelog](https://github.blog/changelog/2024-07-09-sunsetting-security-settings-defaults-parameters-in-the-organizations-rest-api/).
+    ///
     /// Updates the organization's profile and member privileges.
-    ///
-    /// With security configurations (beta), your organization can choose a default security configuration which will automatically apply a set of security enablement settings to new repositories in your organization based on their visibility. For targeted repositories, the following attributes will be overridden by the default security configuration:
-    ///
-    /// - advanced_security_enabled_for_new_repositories
-    /// - dependabot_alerts_enabled_for_new_repositories
-    /// - dependabot_security_updates_enabled_for_new_repositories
-    /// - dependency_graph_enabled_for_new_repositories
-    /// - secret_scanning_enabled_for_new_repositories
-    /// - secret_scanning_push_protection_enabled_for_new_repositories
-    ///
-    /// For more information on setting a default security configuration, see "[Enabling security features at scale](https://docs.github.com/code-security/securing-your-organization/introduction-to-securing-your-organization-at-scale/about-enabling-security-features-at-scale)."
     ///
     /// The authenticated user must be an organization owner to use this endpoint.
     ///
@@ -8016,53 +7995,71 @@ public enum Operations {
                     public var web_commit_signoff_required: Swift.Bool?
                     /// - Remark: Generated from `#/paths/orgs/{org}/PATCH/requestBody/json/blog`.
                     public var blog: Swift.String?
-                    /// Whether GitHub Advanced Security is automatically enabled for new repositories.
+                    /// **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
+                    ///
+                    /// Whether GitHub Advanced Security is automatically enabled for new repositories and repositories transferred to this organization.
                     ///
                     /// To use this parameter, you must have admin permissions for the repository or be an owner or security manager for the organization that owns the repository. For more information, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."
                     ///
                     /// You can check which security and analysis features are currently enabled by using a `GET /orgs/{org}` request.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/PATCH/requestBody/json/advanced_security_enabled_for_new_repositories`.
+                    @available(*, deprecated)
                     public var advanced_security_enabled_for_new_repositories: Swift.Bool?
-                    /// Whether Dependabot alerts is automatically enabled for new repositories.
+                    /// **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
+                    ///
+                    /// Whether Dependabot alerts are automatically enabled for new repositories and repositories transferred to this organization.
                     ///
                     /// To use this parameter, you must have admin permissions for the repository or be an owner or security manager for the organization that owns the repository. For more information, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."
                     ///
                     /// You can check which security and analysis features are currently enabled by using a `GET /orgs/{org}` request.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/PATCH/requestBody/json/dependabot_alerts_enabled_for_new_repositories`.
+                    @available(*, deprecated)
                     public var dependabot_alerts_enabled_for_new_repositories: Swift.Bool?
-                    /// Whether Dependabot security updates is automatically enabled for new repositories.
+                    /// **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
+                    ///
+                    /// Whether Dependabot security updates are automatically enabled for new repositories and repositories transferred to this organization.
                     ///
                     /// To use this parameter, you must have admin permissions for the repository or be an owner or security manager for the organization that owns the repository. For more information, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."
                     ///
                     /// You can check which security and analysis features are currently enabled by using a `GET /orgs/{org}` request.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/PATCH/requestBody/json/dependabot_security_updates_enabled_for_new_repositories`.
+                    @available(*, deprecated)
                     public var dependabot_security_updates_enabled_for_new_repositories: Swift.Bool?
-                    /// Whether dependency graph is automatically enabled for new repositories.
+                    /// **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
+                    ///
+                    /// Whether dependency graph is automatically enabled for new repositories and repositories transferred to this organization.
                     ///
                     /// To use this parameter, you must have admin permissions for the repository or be an owner or security manager for the organization that owns the repository. For more information, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."
                     ///
                     /// You can check which security and analysis features are currently enabled by using a `GET /orgs/{org}` request.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/PATCH/requestBody/json/dependency_graph_enabled_for_new_repositories`.
+                    @available(*, deprecated)
                     public var dependency_graph_enabled_for_new_repositories: Swift.Bool?
-                    /// Whether secret scanning is automatically enabled for new repositories.
+                    /// **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
+                    ///
+                    /// Whether secret scanning is automatically enabled for new repositories and repositories transferred to this organization.
                     ///
                     /// To use this parameter, you must have admin permissions for the repository or be an owner or security manager for the organization that owns the repository. For more information, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."
                     ///
                     /// You can check which security and analysis features are currently enabled by using a `GET /orgs/{org}` request.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/PATCH/requestBody/json/secret_scanning_enabled_for_new_repositories`.
+                    @available(*, deprecated)
                     public var secret_scanning_enabled_for_new_repositories: Swift.Bool?
-                    /// Whether secret scanning push protection is automatically enabled for new repositories.
+                    /// **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
+                    ///
+                    /// Whether secret scanning push protection is automatically enabled for new repositories and repositories transferred to this organization.
                     ///
                     /// To use this parameter, you must have admin permissions for the repository or be an owner or security manager for the organization that owns the repository. For more information, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."
                     ///
                     /// You can check which security and analysis features are currently enabled by using a `GET /orgs/{org}` request.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/PATCH/requestBody/json/secret_scanning_push_protection_enabled_for_new_repositories`.
+                    @available(*, deprecated)
                     public var secret_scanning_push_protection_enabled_for_new_repositories: Swift.Bool?
                     /// Whether a custom link is shown to contributors who are blocked from pushing a secret by push protection.
                     ///
@@ -8096,12 +8093,12 @@ public enum Operations {
                     ///   - members_can_fork_private_repositories: Whether organization members can fork private organization repositories.
                     ///   - web_commit_signoff_required: Whether contributors to organization repositories are required to sign off on commits they make through GitHub's web interface.
                     ///   - blog:
-                    ///   - advanced_security_enabled_for_new_repositories: Whether GitHub Advanced Security is automatically enabled for new repositories.
-                    ///   - dependabot_alerts_enabled_for_new_repositories: Whether Dependabot alerts is automatically enabled for new repositories.
-                    ///   - dependabot_security_updates_enabled_for_new_repositories: Whether Dependabot security updates is automatically enabled for new repositories.
-                    ///   - dependency_graph_enabled_for_new_repositories: Whether dependency graph is automatically enabled for new repositories.
-                    ///   - secret_scanning_enabled_for_new_repositories: Whether secret scanning is automatically enabled for new repositories.
-                    ///   - secret_scanning_push_protection_enabled_for_new_repositories: Whether secret scanning push protection is automatically enabled for new repositories.
+                    ///   - advanced_security_enabled_for_new_repositories: **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
+                    ///   - dependabot_alerts_enabled_for_new_repositories: **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
+                    ///   - dependabot_security_updates_enabled_for_new_repositories: **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
+                    ///   - dependency_graph_enabled_for_new_repositories: **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
+                    ///   - secret_scanning_enabled_for_new_repositories: **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
+                    ///   - secret_scanning_push_protection_enabled_for_new_repositories: **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
                     ///   - secret_scanning_push_protection_custom_link_enabled: Whether a custom link is shown to contributors who are blocked from pushing a secret by push protection.
                     ///   - secret_scanning_push_protection_custom_link: If `secret_scanning_push_protection_custom_link_enabled` is true, the URL that will be displayed to contributors who are blocked from pushing a secret.
                     public init(
