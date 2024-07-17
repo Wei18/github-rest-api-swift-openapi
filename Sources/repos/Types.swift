@@ -8604,6 +8604,28 @@ public enum Components {
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_push_protection`.
             public var secret_scanning_push_protection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_push_protectionPayload?
+            /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns`.
+            public struct secret_scanning_non_provider_patternsPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns/status`.
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                    case enabled = "enabled"
+                    case disabled = "disabled"
+                }
+                /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns/status`.
+                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_non_provider_patternsPayload.statusPayload?
+                /// Creates a new `secret_scanning_non_provider_patternsPayload`.
+                ///
+                /// - Parameters:
+                ///   - status:
+                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_non_provider_patternsPayload.statusPayload? = nil) {
+                    self.status = status
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case status
+                }
+            }
+            /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns`.
+            public var secret_scanning_non_provider_patterns: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_non_provider_patternsPayload?
             /// Creates a new `security_hyphen_and_hyphen_analysis`.
             ///
             /// - Parameters:
@@ -8611,22 +8633,26 @@ public enum Components {
             ///   - dependabot_security_updates: Enable or disable Dependabot security updates for the repository.
             ///   - secret_scanning:
             ///   - secret_scanning_push_protection:
+            ///   - secret_scanning_non_provider_patterns:
             public init(
                 advanced_security: Components.Schemas.security_hyphen_and_hyphen_analysis.advanced_securityPayload? = nil,
                 dependabot_security_updates: Components.Schemas.security_hyphen_and_hyphen_analysis.dependabot_security_updatesPayload? = nil,
                 secret_scanning: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanningPayload? = nil,
-                secret_scanning_push_protection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_push_protectionPayload? = nil
+                secret_scanning_push_protection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_push_protectionPayload? = nil,
+                secret_scanning_non_provider_patterns: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_non_provider_patternsPayload? = nil
             ) {
                 self.advanced_security = advanced_security
                 self.dependabot_security_updates = dependabot_security_updates
                 self.secret_scanning = secret_scanning
                 self.secret_scanning_push_protection = secret_scanning_push_protection
+                self.secret_scanning_non_provider_patterns = secret_scanning_non_provider_patterns
             }
             public enum CodingKeys: String, CodingKey {
                 case advanced_security
                 case dependabot_security_updates
                 case secret_scanning
                 case secret_scanning_push_protection
+                case secret_scanning_non_provider_patterns
             }
         }
         /// Minimal Repository
@@ -14953,9 +14979,79 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/commit/commit`.
             public var commit: Components.Schemas.commit.commitPayload
             /// - Remark: Generated from `#/components/schemas/commit/author`.
-            public var author: Components.Schemas.nullable_hyphen_simple_hyphen_user?
+            @frozen public enum authorPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/commit/author/case1`.
+                case simple_hyphen_user(Components.Schemas.simple_hyphen_user)
+                /// - Remark: Generated from `#/components/schemas/commit/author/case2`.
+                case empty_hyphen_object(Components.Schemas.empty_hyphen_object)
+                public init(from decoder: any Decoder) throws {
+                    var errors: [any Error] = []
+                    do {
+                        self = .simple_hyphen_user(try .init(from: decoder))
+                        return
+                    } catch {
+                        errors.append(error)
+                    }
+                    do {
+                        self = .empty_hyphen_object(try .init(from: decoder))
+                        return
+                    } catch {
+                        errors.append(error)
+                    }
+                    throw Swift.DecodingError.failedToDecodeOneOfSchema(
+                        type: Self.self,
+                        codingPath: decoder.codingPath,
+                        errors: errors
+                    )
+                }
+                public func encode(to encoder: any Encoder) throws {
+                    switch self {
+                    case let .simple_hyphen_user(value):
+                        try value.encode(to: encoder)
+                    case let .empty_hyphen_object(value):
+                        try value.encode(to: encoder)
+                    }
+                }
+            }
+            /// - Remark: Generated from `#/components/schemas/commit/author`.
+            public var author: Components.Schemas.commit.authorPayload?
             /// - Remark: Generated from `#/components/schemas/commit/committer`.
-            public var committer: Components.Schemas.nullable_hyphen_simple_hyphen_user?
+            @frozen public enum committerPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/commit/committer/case1`.
+                case simple_hyphen_user(Components.Schemas.simple_hyphen_user)
+                /// - Remark: Generated from `#/components/schemas/commit/committer/case2`.
+                case empty_hyphen_object(Components.Schemas.empty_hyphen_object)
+                public init(from decoder: any Decoder) throws {
+                    var errors: [any Error] = []
+                    do {
+                        self = .simple_hyphen_user(try .init(from: decoder))
+                        return
+                    } catch {
+                        errors.append(error)
+                    }
+                    do {
+                        self = .empty_hyphen_object(try .init(from: decoder))
+                        return
+                    } catch {
+                        errors.append(error)
+                    }
+                    throw Swift.DecodingError.failedToDecodeOneOfSchema(
+                        type: Self.self,
+                        codingPath: decoder.codingPath,
+                        errors: errors
+                    )
+                }
+                public func encode(to encoder: any Encoder) throws {
+                    switch self {
+                    case let .simple_hyphen_user(value):
+                        try value.encode(to: encoder)
+                    case let .empty_hyphen_object(value):
+                        try value.encode(to: encoder)
+                    }
+                }
+            }
+            /// - Remark: Generated from `#/components/schemas/commit/committer`.
+            public var committer: Components.Schemas.commit.committerPayload?
             /// - Remark: Generated from `#/components/schemas/commit/parentsPayload`.
             public struct parentsPayloadPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/commit/parentsPayload/sha`.
@@ -15043,8 +15139,8 @@ public enum Components {
                 html_url: Swift.String,
                 comments_url: Swift.String,
                 commit: Components.Schemas.commit.commitPayload,
-                author: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
-                committer: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
+                author: Components.Schemas.commit.authorPayload? = nil,
+                committer: Components.Schemas.commit.committerPayload? = nil,
                 parents: Components.Schemas.commit.parentsPayload,
                 stats: Components.Schemas.commit.statsPayload? = nil,
                 files: [Components.Schemas.diff_hyphen_entry]? = nil
@@ -24875,25 +24971,52 @@ public enum Operations {
                         ///
                         /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/PATCH/requestBody/json/security_and_analysis/secret_scanning_push_protection`.
                         public var secret_scanning_push_protection: Operations.repos_sol_update.Input.Body.jsonPayload.security_and_analysisPayload.secret_scanning_push_protectionPayload?
+                        /// Use the `status` property to enable or disable secret scanning non-provider patterns for this repository. For more information, see "[Secret scanning supported secrets](/code-security/secret-scanning/secret-scanning-patterns#supported-secrets)."
+                        ///
+                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/PATCH/requestBody/json/security_and_analysis/secret_scanning_non_provider_patterns`.
+                        public struct secret_scanning_non_provider_patternsPayload: Codable, Hashable, Sendable {
+                            /// Can be `enabled` or `disabled`.
+                            ///
+                            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/PATCH/requestBody/json/security_and_analysis/secret_scanning_non_provider_patterns/status`.
+                            public var status: Swift.String?
+                            /// Creates a new `secret_scanning_non_provider_patternsPayload`.
+                            ///
+                            /// - Parameters:
+                            ///   - status: Can be `enabled` or `disabled`.
+                            public init(status: Swift.String? = nil) {
+                                self.status = status
+                            }
+                            public enum CodingKeys: String, CodingKey {
+                                case status
+                            }
+                        }
+                        /// Use the `status` property to enable or disable secret scanning non-provider patterns for this repository. For more information, see "[Secret scanning supported secrets](/code-security/secret-scanning/secret-scanning-patterns#supported-secrets)."
+                        ///
+                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/PATCH/requestBody/json/security_and_analysis/secret_scanning_non_provider_patterns`.
+                        public var secret_scanning_non_provider_patterns: Operations.repos_sol_update.Input.Body.jsonPayload.security_and_analysisPayload.secret_scanning_non_provider_patternsPayload?
                         /// Creates a new `security_and_analysisPayload`.
                         ///
                         /// - Parameters:
                         ///   - advanced_security: Use the `status` property to enable or disable GitHub Advanced Security for this repository. For more information, see "[About GitHub Advanced Security](/github/getting-started-with-github/learning-about-github/about-github-advanced-security)."
                         ///   - secret_scanning: Use the `status` property to enable or disable secret scanning for this repository. For more information, see "[About secret scanning](/code-security/secret-security/about-secret-scanning)."
                         ///   - secret_scanning_push_protection: Use the `status` property to enable or disable secret scanning push protection for this repository. For more information, see "[Protecting pushes with secret scanning](/code-security/secret-scanning/protecting-pushes-with-secret-scanning)."
+                        ///   - secret_scanning_non_provider_patterns: Use the `status` property to enable or disable secret scanning non-provider patterns for this repository. For more information, see "[Secret scanning supported secrets](/code-security/secret-scanning/secret-scanning-patterns#supported-secrets)."
                         public init(
                             advanced_security: Operations.repos_sol_update.Input.Body.jsonPayload.security_and_analysisPayload.advanced_securityPayload? = nil,
                             secret_scanning: Operations.repos_sol_update.Input.Body.jsonPayload.security_and_analysisPayload.secret_scanningPayload? = nil,
-                            secret_scanning_push_protection: Operations.repos_sol_update.Input.Body.jsonPayload.security_and_analysisPayload.secret_scanning_push_protectionPayload? = nil
+                            secret_scanning_push_protection: Operations.repos_sol_update.Input.Body.jsonPayload.security_and_analysisPayload.secret_scanning_push_protectionPayload? = nil,
+                            secret_scanning_non_provider_patterns: Operations.repos_sol_update.Input.Body.jsonPayload.security_and_analysisPayload.secret_scanning_non_provider_patternsPayload? = nil
                         ) {
                             self.advanced_security = advanced_security
                             self.secret_scanning = secret_scanning
                             self.secret_scanning_push_protection = secret_scanning_push_protection
+                            self.secret_scanning_non_provider_patterns = secret_scanning_non_provider_patterns
                         }
                         public enum CodingKeys: String, CodingKey {
                             case advanced_security
                             case secret_scanning
                             case secret_scanning_push_protection
+                            case secret_scanning_non_provider_patterns
                         }
                     }
                     /// Specify which security and analysis features to enable or disable for the repository.
@@ -27250,7 +27373,7 @@ public enum Operations {
                     self.body = body
                 }
             }
-            /// Response if dependabot is enabled
+            /// Response if Dependabot is enabled
             ///
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/automated-security-fixes/get(repos/check-automated-security-fixes)/responses/200`.
             ///
@@ -27277,7 +27400,7 @@ public enum Operations {
                 /// Creates a new `NotFound`.
                 public init() {}
             }
-            /// Not Found if dependabot is not enabled for the repository
+            /// Not Found if Dependabot is not enabled for the repository
             ///
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/automated-security-fixes/get(repos/check-automated-security-fixes)/responses/404`.
             ///
