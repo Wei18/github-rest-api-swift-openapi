@@ -44,6 +44,18 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /orgs/{org}/code-security/configurations/defaults`.
     /// - Remark: Generated from `#/paths//orgs/{org}/code-security/configurations/defaults/get(code-security/get-default-configurations)`.
     func code_hyphen_security_sol_get_hyphen_default_hyphen_configurations(_ input: Operations.code_hyphen_security_sol_get_hyphen_default_hyphen_configurations.Input) async throws -> Operations.code_hyphen_security_sol_get_hyphen_default_hyphen_configurations.Output
+    /// Detach configurations from repositories
+    ///
+    /// Detach code security configuration(s) from a set of repositories.
+    /// Repositories will retain their settings but will no longer be associated with the configuration.
+    ///
+    /// The authenticated user must be an administrator or security manager for the organization to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `write:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `DELETE /orgs/{org}/code-security/configurations/detach`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/code-security/configurations/detach/delete(code-security/detach-configuration)`.
+    func code_hyphen_security_sol_detach_hyphen_configuration(_ input: Operations.code_hyphen_security_sol_detach_hyphen_configuration.Input) async throws -> Operations.code_hyphen_security_sol_detach_hyphen_configuration.Output
     /// Get a code security configuration
     ///
     /// Gets a code security configuration available in an organization.
@@ -179,6 +191,28 @@ extension APIProtocol {
         try await code_hyphen_security_sol_get_hyphen_default_hyphen_configurations(Operations.code_hyphen_security_sol_get_hyphen_default_hyphen_configurations.Input(
             path: path,
             headers: headers
+        ))
+    }
+    /// Detach configurations from repositories
+    ///
+    /// Detach code security configuration(s) from a set of repositories.
+    /// Repositories will retain their settings but will no longer be associated with the configuration.
+    ///
+    /// The authenticated user must be an administrator or security manager for the organization to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `write:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `DELETE /orgs/{org}/code-security/configurations/detach`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/code-security/configurations/detach/delete(code-security/detach-configuration)`.
+    public func code_hyphen_security_sol_detach_hyphen_configuration(
+        path: Operations.code_hyphen_security_sol_detach_hyphen_configuration.Input.Path,
+        headers: Operations.code_hyphen_security_sol_detach_hyphen_configuration.Input.Headers = .init(),
+        body: Operations.code_hyphen_security_sol_detach_hyphen_configuration.Input.Body
+    ) async throws -> Operations.code_hyphen_security_sol_detach_hyphen_configuration.Output {
+        try await code_hyphen_security_sol_detach_hyphen_configuration(Operations.code_hyphen_security_sol_detach_hyphen_configuration.Input(
+            path: path,
+            headers: headers,
+            body: body
         ))
     }
     /// Get a code security configuration
@@ -1039,6 +1073,18 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/code-security-configuration/secret_scanning_push_protection`.
             public var secret_scanning_push_protection: Components.Schemas.code_hyphen_security_hyphen_configuration.secret_scanning_push_protectionPayload?
+            /// The enablement status of secret scanning validity checks
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-security-configuration/secret_scanning_validity_checks`.
+            @frozen public enum secret_scanning_validity_checksPayload: String, Codable, Hashable, Sendable {
+                case enabled = "enabled"
+                case disabled = "disabled"
+                case not_set = "not_set"
+            }
+            /// The enablement status of secret scanning validity checks
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-security-configuration/secret_scanning_validity_checks`.
+            public var secret_scanning_validity_checks: Components.Schemas.code_hyphen_security_hyphen_configuration.secret_scanning_validity_checksPayload?
             /// The enablement status of private vulnerability reporting
             ///
             /// - Remark: Generated from `#/components/schemas/code-security-configuration/private_vulnerability_reporting`.
@@ -1051,6 +1097,17 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/code-security-configuration/private_vulnerability_reporting`.
             public var private_vulnerability_reporting: Components.Schemas.code_hyphen_security_hyphen_configuration.private_vulnerability_reportingPayload?
+            /// The enforcement status for a security configuration
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-security-configuration/enforcement`.
+            @frozen public enum enforcementPayload: String, Codable, Hashable, Sendable {
+                case enforced = "enforced"
+                case unenforced = "unenforced"
+            }
+            /// The enforcement status for a security configuration
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-security-configuration/enforcement`.
+            public var enforcement: Components.Schemas.code_hyphen_security_hyphen_configuration.enforcementPayload?
             /// The URL of the configuration
             ///
             /// - Remark: Generated from `#/components/schemas/code-security-configuration/url`.
@@ -1077,7 +1134,9 @@ public enum Components {
             ///   - code_scanning_default_setup: The enablement status of code scanning default setup
             ///   - secret_scanning: The enablement status of secret scanning
             ///   - secret_scanning_push_protection: The enablement status of secret scanning push protection
+            ///   - secret_scanning_validity_checks: The enablement status of secret scanning validity checks
             ///   - private_vulnerability_reporting: The enablement status of private vulnerability reporting
+            ///   - enforcement: The enforcement status for a security configuration
             ///   - url: The URL of the configuration
             ///   - html_url: The URL of the configuration
             ///   - created_at:
@@ -1094,7 +1153,9 @@ public enum Components {
                 code_scanning_default_setup: Components.Schemas.code_hyphen_security_hyphen_configuration.code_scanning_default_setupPayload? = nil,
                 secret_scanning: Components.Schemas.code_hyphen_security_hyphen_configuration.secret_scanningPayload? = nil,
                 secret_scanning_push_protection: Components.Schemas.code_hyphen_security_hyphen_configuration.secret_scanning_push_protectionPayload? = nil,
+                secret_scanning_validity_checks: Components.Schemas.code_hyphen_security_hyphen_configuration.secret_scanning_validity_checksPayload? = nil,
                 private_vulnerability_reporting: Components.Schemas.code_hyphen_security_hyphen_configuration.private_vulnerability_reportingPayload? = nil,
+                enforcement: Components.Schemas.code_hyphen_security_hyphen_configuration.enforcementPayload? = nil,
                 url: Swift.String? = nil,
                 html_url: Swift.String? = nil,
                 created_at: Foundation.Date? = nil,
@@ -1111,7 +1172,9 @@ public enum Components {
                 self.code_scanning_default_setup = code_scanning_default_setup
                 self.secret_scanning = secret_scanning
                 self.secret_scanning_push_protection = secret_scanning_push_protection
+                self.secret_scanning_validity_checks = secret_scanning_validity_checks
                 self.private_vulnerability_reporting = private_vulnerability_reporting
+                self.enforcement = enforcement
                 self.url = url
                 self.html_url = html_url
                 self.created_at = created_at
@@ -1129,7 +1192,9 @@ public enum Components {
                 case code_scanning_default_setup
                 case secret_scanning
                 case secret_scanning_push_protection
+                case secret_scanning_validity_checks
                 case private_vulnerability_reporting
+                case enforcement
                 case url
                 case html_url
                 case created_at
@@ -1770,6 +1835,18 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/secret_scanning_push_protection`.
                     public var secret_scanning_push_protection: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_push_protectionPayload?
+                    /// The enablement status of secret scanning validity checks
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/secret_scanning_validity_checks`.
+                    @frozen public enum secret_scanning_validity_checksPayload: String, Codable, Hashable, Sendable {
+                        case enabled = "enabled"
+                        case disabled = "disabled"
+                        case not_set = "not_set"
+                    }
+                    /// The enablement status of secret scanning validity checks
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/secret_scanning_validity_checks`.
+                    public var secret_scanning_validity_checks: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_validity_checksPayload?
                     /// The enablement status of private vulnerability reporting
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/private_vulnerability_reporting`.
@@ -1782,6 +1859,17 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/private_vulnerability_reporting`.
                     public var private_vulnerability_reporting: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.private_vulnerability_reportingPayload?
+                    /// The status of enforcement
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/enforcement`.
+                    @frozen public enum enforcementPayload: String, Codable, Hashable, Sendable {
+                        case enforced = "enforced"
+                        case unenforced = "unenforced"
+                    }
+                    /// The status of enforcement
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/enforcement`.
+                    public var enforcement: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.enforcementPayload?
                     /// Creates a new `jsonPayload`.
                     ///
                     /// - Parameters:
@@ -1794,7 +1882,9 @@ public enum Operations {
                     ///   - code_scanning_default_setup: The enablement status of code scanning default setup
                     ///   - secret_scanning: The enablement status of secret scanning
                     ///   - secret_scanning_push_protection: The enablement status of secret scanning push protection
+                    ///   - secret_scanning_validity_checks: The enablement status of secret scanning validity checks
                     ///   - private_vulnerability_reporting: The enablement status of private vulnerability reporting
+                    ///   - enforcement: The status of enforcement
                     public init(
                         name: Swift.String,
                         description: Swift.String,
@@ -1805,7 +1895,9 @@ public enum Operations {
                         code_scanning_default_setup: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.code_scanning_default_setupPayload? = nil,
                         secret_scanning: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.secret_scanningPayload? = nil,
                         secret_scanning_push_protection: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_push_protectionPayload? = nil,
-                        private_vulnerability_reporting: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.private_vulnerability_reportingPayload? = nil
+                        secret_scanning_validity_checks: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_validity_checksPayload? = nil,
+                        private_vulnerability_reporting: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.private_vulnerability_reportingPayload? = nil,
+                        enforcement: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.enforcementPayload? = nil
                     ) {
                         self.name = name
                         self.description = description
@@ -1816,7 +1908,9 @@ public enum Operations {
                         self.code_scanning_default_setup = code_scanning_default_setup
                         self.secret_scanning = secret_scanning
                         self.secret_scanning_push_protection = secret_scanning_push_protection
+                        self.secret_scanning_validity_checks = secret_scanning_validity_checks
                         self.private_vulnerability_reporting = private_vulnerability_reporting
+                        self.enforcement = enforcement
                     }
                     public enum CodingKeys: String, CodingKey {
                         case name
@@ -1828,7 +1922,9 @@ public enum Operations {
                         case code_scanning_default_setup
                         case secret_scanning
                         case secret_scanning_push_protection
+                        case secret_scanning_validity_checks
                         case private_vulnerability_reporting
+                        case enforcement
                     }
                     public init(from decoder: any Decoder) throws {
                         let container = try decoder.container(keyedBy: CodingKeys.self)
@@ -1868,9 +1964,17 @@ public enum Operations {
                             Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_push_protectionPayload.self,
                             forKey: .secret_scanning_push_protection
                         )
+                        secret_scanning_validity_checks = try container.decodeIfPresent(
+                            Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_validity_checksPayload.self,
+                            forKey: .secret_scanning_validity_checks
+                        )
                         private_vulnerability_reporting = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.private_vulnerability_reportingPayload.self,
                             forKey: .private_vulnerability_reporting
+                        )
+                        enforcement = try container.decodeIfPresent(
+                            Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.enforcementPayload.self,
+                            forKey: .enforcement
                         )
                         try decoder.ensureNoAdditionalProperties(knownKeys: [
                             "name",
@@ -1882,7 +1986,9 @@ public enum Operations {
                             "code_scanning_default_setup",
                             "secret_scanning",
                             "secret_scanning_push_protection",
-                            "private_vulnerability_reporting"
+                            "secret_scanning_validity_checks",
+                            "private_vulnerability_reporting",
+                            "enforcement"
                         ])
                     }
                 }
@@ -2190,6 +2296,249 @@ public enum Operations {
             public static var allCases: [Self] {
                 [
                     .json
+                ]
+            }
+        }
+    }
+    /// Detach configurations from repositories
+    ///
+    /// Detach code security configuration(s) from a set of repositories.
+    /// Repositories will retain their settings but will no longer be associated with the configuration.
+    ///
+    /// The authenticated user must be an administrator or security manager for the organization to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `write:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `DELETE /orgs/{org}/code-security/configurations/detach`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/code-security/configurations/detach/delete(code-security/detach-configuration)`.
+    public enum code_hyphen_security_sol_detach_hyphen_configuration {
+        public static let id: Swift.String = "code-security/detach-configuration"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/detach/DELETE/path`.
+            public struct Path: Sendable, Hashable {
+                /// The organization name. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/detach/DELETE/path/org`.
+                public var org: Components.Parameters.org
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - org: The organization name. The name is not case sensitive.
+                public init(org: Components.Parameters.org) {
+                    self.org = org
+                }
+            }
+            public var path: Operations.code_hyphen_security_sol_detach_hyphen_configuration.Input.Path
+            /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/detach/DELETE/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_security_sol_detach_hyphen_configuration.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_security_sol_detach_hyphen_configuration.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.code_hyphen_security_sol_detach_hyphen_configuration.Input.Headers
+            /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/detach/DELETE/requestBody`.
+            @frozen public enum Body: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/detach/DELETE/requestBody/json`.
+                public struct jsonPayload: Codable, Hashable, Sendable {
+                    /// An array of repository IDs to detach from configurations.
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/detach/DELETE/requestBody/json/selected_repository_ids`.
+                    public var selected_repository_ids: [Swift.Int]?
+                    /// Creates a new `jsonPayload`.
+                    ///
+                    /// - Parameters:
+                    ///   - selected_repository_ids: An array of repository IDs to detach from configurations.
+                    public init(selected_repository_ids: [Swift.Int]? = nil) {
+                        self.selected_repository_ids = selected_repository_ids
+                    }
+                    public enum CodingKeys: String, CodingKey {
+                        case selected_repository_ids
+                    }
+                    public init(from decoder: any Decoder) throws {
+                        let container = try decoder.container(keyedBy: CodingKeys.self)
+                        selected_repository_ids = try container.decodeIfPresent(
+                            [Swift.Int].self,
+                            forKey: .selected_repository_ids
+                        )
+                        try decoder.ensureNoAdditionalProperties(knownKeys: [
+                            "selected_repository_ids"
+                        ])
+                    }
+                }
+                /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/detach/DELETE/requestBody/content/application\/json`.
+                case json(Operations.code_hyphen_security_sol_detach_hyphen_configuration.Input.Body.jsonPayload)
+            }
+            public var body: Operations.code_hyphen_security_sol_detach_hyphen_configuration.Input.Body
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - headers:
+            ///   - body:
+            public init(
+                path: Operations.code_hyphen_security_sol_detach_hyphen_configuration.Input.Path,
+                headers: Operations.code_hyphen_security_sol_detach_hyphen_configuration.Input.Headers = .init(),
+                body: Operations.code_hyphen_security_sol_detach_hyphen_configuration.Input.Body
+            ) {
+                self.path = path
+                self.headers = headers
+                self.body = body
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            /// A header with no content is returned.
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/code-security/configurations/detach/delete(code-security/detach-configuration)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            case noContent(Components.Responses.no_content)
+            /// The associated value of the enum case if `self` is `.noContent`.
+            ///
+            /// - Throws: An error if `self` is not `.noContent`.
+            /// - SeeAlso: `.noContent`.
+            public var noContent: Components.Responses.no_content {
+                get throws {
+                    switch self {
+                    case let .noContent(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "noContent",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Bad Request
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/code-security/configurations/detach/delete(code-security/detach-configuration)/responses/400`.
+            ///
+            /// HTTP response code: `400 badRequest`.
+            case badRequest(Components.Responses.bad_request)
+            /// The associated value of the enum case if `self` is `.badRequest`.
+            ///
+            /// - Throws: An error if `self` is not `.badRequest`.
+            /// - SeeAlso: `.badRequest`.
+            public var badRequest: Components.Responses.bad_request {
+                get throws {
+                    switch self {
+                    case let .badRequest(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "badRequest",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Forbidden
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/code-security/configurations/detach/delete(code-security/detach-configuration)/responses/403`.
+            ///
+            /// HTTP response code: `403 forbidden`.
+            case forbidden(Components.Responses.forbidden)
+            /// The associated value of the enum case if `self` is `.forbidden`.
+            ///
+            /// - Throws: An error if `self` is not `.forbidden`.
+            /// - SeeAlso: `.forbidden`.
+            public var forbidden: Components.Responses.forbidden {
+                get throws {
+                    switch self {
+                    case let .forbidden(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "forbidden",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Resource not found
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/code-security/configurations/detach/delete(code-security/detach-configuration)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            case notFound(Components.Responses.not_found)
+            /// The associated value of the enum case if `self` is `.notFound`.
+            ///
+            /// - Throws: An error if `self` is not `.notFound`.
+            /// - SeeAlso: `.notFound`.
+            public var notFound: Components.Responses.not_found {
+                get throws {
+                    switch self {
+                    case let .notFound(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "notFound",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Conflict
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/code-security/configurations/detach/delete(code-security/detach-configuration)/responses/409`.
+            ///
+            /// HTTP response code: `409 conflict`.
+            case conflict(Components.Responses.conflict)
+            /// The associated value of the enum case if `self` is `.conflict`.
+            ///
+            /// - Throws: An error if `self` is not `.conflict`.
+            /// - SeeAlso: `.conflict`.
+            public var conflict: Components.Responses.conflict {
+                get throws {
+                    switch self {
+                    case let .conflict(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "conflict",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case application_scim_plus_json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                case "application/scim+json":
+                    self = .application_scim_plus_json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                case .application_scim_plus_json:
+                    return "application/scim+json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json,
+                    .application_scim_plus_json
                 ]
             }
         }
@@ -2552,6 +2901,18 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/secret_scanning_push_protection`.
                     public var secret_scanning_push_protection: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_push_protectionPayload?
+                    /// The enablement status of secret scanning validity checks
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/secret_scanning_validity_checks`.
+                    @frozen public enum secret_scanning_validity_checksPayload: String, Codable, Hashable, Sendable {
+                        case enabled = "enabled"
+                        case disabled = "disabled"
+                        case not_set = "not_set"
+                    }
+                    /// The enablement status of secret scanning validity checks
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/secret_scanning_validity_checks`.
+                    public var secret_scanning_validity_checks: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_validity_checksPayload?
                     /// The enablement status of private vulnerability reporting
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/private_vulnerability_reporting`.
@@ -2564,6 +2925,17 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/private_vulnerability_reporting`.
                     public var private_vulnerability_reporting: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.private_vulnerability_reportingPayload?
+                    /// The status of enforcement
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/enforcement`.
+                    @frozen public enum enforcementPayload: String, Codable, Hashable, Sendable {
+                        case enforced = "enforced"
+                        case unenforced = "unenforced"
+                    }
+                    /// The status of enforcement
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/enforcement`.
+                    public var enforcement: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.enforcementPayload?
                     /// Creates a new `jsonPayload`.
                     ///
                     /// - Parameters:
@@ -2576,7 +2948,9 @@ public enum Operations {
                     ///   - code_scanning_default_setup: The enablement status of code scanning default setup
                     ///   - secret_scanning: The enablement status of secret scanning
                     ///   - secret_scanning_push_protection: The enablement status of secret scanning push protection
+                    ///   - secret_scanning_validity_checks: The enablement status of secret scanning validity checks
                     ///   - private_vulnerability_reporting: The enablement status of private vulnerability reporting
+                    ///   - enforcement: The status of enforcement
                     public init(
                         name: Swift.String? = nil,
                         description: Swift.String? = nil,
@@ -2587,7 +2961,9 @@ public enum Operations {
                         code_scanning_default_setup: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.code_scanning_default_setupPayload? = nil,
                         secret_scanning: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.secret_scanningPayload? = nil,
                         secret_scanning_push_protection: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_push_protectionPayload? = nil,
-                        private_vulnerability_reporting: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.private_vulnerability_reportingPayload? = nil
+                        secret_scanning_validity_checks: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_validity_checksPayload? = nil,
+                        private_vulnerability_reporting: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.private_vulnerability_reportingPayload? = nil,
+                        enforcement: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.enforcementPayload? = nil
                     ) {
                         self.name = name
                         self.description = description
@@ -2598,7 +2974,9 @@ public enum Operations {
                         self.code_scanning_default_setup = code_scanning_default_setup
                         self.secret_scanning = secret_scanning
                         self.secret_scanning_push_protection = secret_scanning_push_protection
+                        self.secret_scanning_validity_checks = secret_scanning_validity_checks
                         self.private_vulnerability_reporting = private_vulnerability_reporting
+                        self.enforcement = enforcement
                     }
                     public enum CodingKeys: String, CodingKey {
                         case name
@@ -2610,7 +2988,9 @@ public enum Operations {
                         case code_scanning_default_setup
                         case secret_scanning
                         case secret_scanning_push_protection
+                        case secret_scanning_validity_checks
                         case private_vulnerability_reporting
+                        case enforcement
                     }
                     public init(from decoder: any Decoder) throws {
                         let container = try decoder.container(keyedBy: CodingKeys.self)
@@ -2650,9 +3030,17 @@ public enum Operations {
                             Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_push_protectionPayload.self,
                             forKey: .secret_scanning_push_protection
                         )
+                        secret_scanning_validity_checks = try container.decodeIfPresent(
+                            Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_validity_checksPayload.self,
+                            forKey: .secret_scanning_validity_checks
+                        )
                         private_vulnerability_reporting = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.private_vulnerability_reportingPayload.self,
                             forKey: .private_vulnerability_reporting
+                        )
+                        enforcement = try container.decodeIfPresent(
+                            Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.enforcementPayload.self,
+                            forKey: .enforcement
                         )
                         try decoder.ensureNoAdditionalProperties(knownKeys: [
                             "name",
@@ -2664,7 +3052,9 @@ public enum Operations {
                             "code_scanning_default_setup",
                             "secret_scanning",
                             "secret_scanning_push_protection",
-                            "private_vulnerability_reporting"
+                            "secret_scanning_validity_checks",
+                            "private_vulnerability_reporting",
+                            "enforcement"
                         ])
                     }
                 }
