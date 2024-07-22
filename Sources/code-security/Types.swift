@@ -1510,8 +1510,7 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/GET/query/target_type`.
                 public var target_type: Operations.code_hyphen_security_sol_get_hyphen_configurations_hyphen_for_hyphen_org.Input.Query.target_typePayload?
-                /// 'The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."'
-                ///
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/GET/query/per_page`.
                 public var per_page: Swift.Int?
@@ -1527,7 +1526,7 @@ public enum Operations {
                 ///
                 /// - Parameters:
                 ///   - target_type: The target type of the code security configuration
-                ///   - per_page: 'The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."'
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - before: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - after: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
