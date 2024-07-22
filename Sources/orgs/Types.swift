@@ -15,7 +15,8 @@ public protocol APIProtocol: Sendable {
     ///
     /// Lists all organizations, in the order that they were created.
     ///
-    /// **Note:** Pagination is powered exclusively by the `since` parameter. Use the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers) to get the URL for the next page of organizations.
+    /// > [!NOTE]
+    /// > Pagination is powered exclusively by the `since` parameter. Use the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers) to get the URL for the next page of organizations.
     ///
     /// - Remark: HTTP `GET /organizations`.
     /// - Remark: Generated from `#/paths//organizations/get(orgs/list)`.
@@ -37,9 +38,11 @@ public protocol APIProtocol: Sendable {
     func orgs_sol_get(_ input: Operations.orgs_sol_get.Input) async throws -> Operations.orgs_sol_get.Output
     /// Update an organization
     ///
-    /// **Parameter Deprecation Notice:** GitHub will replace and discontinue `members_allowed_repository_creation_type` in favor of more granular permissions. The new input parameters are `members_can_create_public_repositories`, `members_can_create_private_repositories` for all organizations and `members_can_create_internal_repositories` for organizations associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+. For more information, see the [blog post](https://developer.github.com/changes/2019-12-03-internal-visibility-changes).
+    /// > [!WARNING]
+    /// > **Parameter deprecation notice:** GitHub will replace and discontinue `members_allowed_repository_creation_type` in favor of more granular permissions. The new input parameters are `members_can_create_public_repositories`, `members_can_create_private_repositories` for all organizations and `members_can_create_internal_repositories` for organizations associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+. For more information, see the [blog post](https://developer.github.com/changes/2019-12-03-internal-visibility-changes).
     ///
-    /// **Parameter Deprecation Notice:** Code security product enablement for new repositories through the organization API is deprecated. Please use [code security configurations](https://docs.github.com/rest/code-security/configurations#set-a-code-security-configuration-as-a-default-for-an-organization) to set defaults instead. For more information on setting a default security configuration, see the [changelog](https://github.blog/changelog/2024-07-09-sunsetting-security-settings-defaults-parameters-in-the-organizations-rest-api/).
+    /// > [!WARNING]
+    /// > **Parameter deprecation notice:** Code security product enablement for new repositories through the organization API is deprecated. Please use [code security configurations](https://docs.github.com/rest/code-security/configurations#set-a-code-security-configuration-as-a-default-for-an-organization) to set defaults instead. For more information on setting a default security configuration, see the [changelog](https://github.blog/changelog/2024-07-09-sunsetting-security-settings-defaults-parameters-in-the-organizations-rest-api/).
     ///
     /// Updates the organization's profile and member privileges.
     ///
@@ -343,25 +346,9 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `DELETE /orgs/{org}/memberships/{username}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/memberships/{username}/delete(orgs/remove-membership-for-user)`.
     func orgs_sol_remove_hyphen_membership_hyphen_for_hyphen_user(_ input: Operations.orgs_sol_remove_hyphen_membership_hyphen_for_hyphen_user.Input) async throws -> Operations.orgs_sol_remove_hyphen_membership_hyphen_for_hyphen_user.Output
-    /// List organization fine-grained permissions for an organization
-    ///
-    /// Lists the fine-grained permissions that can be used in custom organization roles for an organization. For more information, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
-    ///
-    /// To list the fine-grained permissions that can be used in custom repository roles for an organization, see "[List repository fine-grained permissions for an organization](https://docs.github.com/rest/orgs/organization-roles#list-repository-fine-grained-permissions-for-an-organization)."
-    ///
-    /// To use this endpoint, the authenticated user must be one of:
-    ///
-    /// - An administrator for the organization.
-    /// - A user, or a user on a team, with the fine-grained permissions of `read_organization_custom_org_role` in the organization.
-    ///
-    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
-    ///
-    /// - Remark: HTTP `GET /orgs/{org}/organization-fine-grained-permissions`.
-    /// - Remark: Generated from `#/paths//orgs/{org}/organization-fine-grained-permissions/get(orgs/list-organization-fine-grained-permissions)`.
-    func orgs_sol_list_hyphen_organization_hyphen_fine_hyphen_grained_hyphen_permissions(_ input: Operations.orgs_sol_list_hyphen_organization_hyphen_fine_hyphen_grained_hyphen_permissions.Input) async throws -> Operations.orgs_sol_list_hyphen_organization_hyphen_fine_hyphen_grained_hyphen_permissions.Output
     /// Get all organization roles for an organization
     ///
-    /// Lists the organization roles available in this organization. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// Lists the organization roles available in this organization. For more information on organization roles, see "[Using organization roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/using-organization-roles)."
     ///
     /// To use this endpoint, the authenticated user must be one of:
     ///
@@ -373,23 +360,9 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /orgs/{org}/organization-roles`.
     /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/get(orgs/list-org-roles)`.
     func orgs_sol_list_hyphen_org_hyphen_roles(_ input: Operations.orgs_sol_list_hyphen_org_hyphen_roles.Input) async throws -> Operations.orgs_sol_list_hyphen_org_hyphen_roles.Output
-    /// Create a custom organization role
-    ///
-    /// Creates a custom organization role that can be assigned to users and teams, granting them specific permissions over the organization. For more information on custom organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
-    ///
-    /// To use this endpoint, the authenticated user must be one of:
-    ///
-    /// - An administrator for the organization.
-    /// - A user, or a user on a team, with the fine-grained permissions of `write_organization_custom_org_role` in the organization.
-    ///
-    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
-    ///
-    /// - Remark: HTTP `POST /orgs/{org}/organization-roles`.
-    /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/post(orgs/create-custom-organization-role)`.
-    func orgs_sol_create_hyphen_custom_hyphen_organization_hyphen_role(_ input: Operations.orgs_sol_create_hyphen_custom_hyphen_organization_hyphen_role.Input) async throws -> Operations.orgs_sol_create_hyphen_custom_hyphen_organization_hyphen_role.Output
     /// Remove all organization roles for a team
     ///
-    /// Removes all assigned organization roles from a team. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// Removes all assigned organization roles from a team. For more information on organization roles, see "[Using organization roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/using-organization-roles)."
     ///
     /// The authenticated user must be an administrator for the organization to use this endpoint.
     ///
@@ -400,7 +373,7 @@ public protocol APIProtocol: Sendable {
     func orgs_sol_revoke_hyphen_all_hyphen_org_hyphen_roles_hyphen_team(_ input: Operations.orgs_sol_revoke_hyphen_all_hyphen_org_hyphen_roles_hyphen_team.Input) async throws -> Operations.orgs_sol_revoke_hyphen_all_hyphen_org_hyphen_roles_hyphen_team.Output
     /// Assign an organization role to a team
     ///
-    /// Assigns an organization role to a team in an organization. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// Assigns an organization role to a team in an organization. For more information on organization roles, see "[Using organization roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/using-organization-roles)."
     ///
     /// The authenticated user must be an administrator for the organization to use this endpoint.
     ///
@@ -411,7 +384,7 @@ public protocol APIProtocol: Sendable {
     func orgs_sol_assign_hyphen_team_hyphen_to_hyphen_org_hyphen_role(_ input: Operations.orgs_sol_assign_hyphen_team_hyphen_to_hyphen_org_hyphen_role.Input) async throws -> Operations.orgs_sol_assign_hyphen_team_hyphen_to_hyphen_org_hyphen_role.Output
     /// Remove an organization role from a team
     ///
-    /// Removes an organization role from a team. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// Removes an organization role from a team. For more information on organization roles, see "[Using organization roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/using-organization-roles)."
     ///
     /// The authenticated user must be an administrator for the organization to use this endpoint.
     ///
@@ -422,7 +395,7 @@ public protocol APIProtocol: Sendable {
     func orgs_sol_revoke_hyphen_org_hyphen_role_hyphen_team(_ input: Operations.orgs_sol_revoke_hyphen_org_hyphen_role_hyphen_team.Input) async throws -> Operations.orgs_sol_revoke_hyphen_org_hyphen_role_hyphen_team.Output
     /// Remove all organization roles for a user
     ///
-    /// Revokes all assigned organization roles from a user. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// Revokes all assigned organization roles from a user. For more information on organization roles, see "[Using organization roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/using-organization-roles)."
     ///
     /// The authenticated user must be an administrator for the organization to use this endpoint.
     ///
@@ -433,7 +406,7 @@ public protocol APIProtocol: Sendable {
     func orgs_sol_revoke_hyphen_all_hyphen_org_hyphen_roles_hyphen_user(_ input: Operations.orgs_sol_revoke_hyphen_all_hyphen_org_hyphen_roles_hyphen_user.Input) async throws -> Operations.orgs_sol_revoke_hyphen_all_hyphen_org_hyphen_roles_hyphen_user.Output
     /// Assign an organization role to a user
     ///
-    /// Assigns an organization role to a member of an organization. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// Assigns an organization role to a member of an organization. For more information on organization roles, see "[Using organization roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/using-organization-roles)."
     ///
     /// The authenticated user must be an administrator for the organization to use this endpoint.
     ///
@@ -444,7 +417,7 @@ public protocol APIProtocol: Sendable {
     func orgs_sol_assign_hyphen_user_hyphen_to_hyphen_org_hyphen_role(_ input: Operations.orgs_sol_assign_hyphen_user_hyphen_to_hyphen_org_hyphen_role.Input) async throws -> Operations.orgs_sol_assign_hyphen_user_hyphen_to_hyphen_org_hyphen_role.Output
     /// Remove an organization role from a user
     ///
-    /// Remove an organization role from a user. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// Remove an organization role from a user. For more information on organization roles, see "[Using organization roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/using-organization-roles)."
     ///
     /// The authenticated user must be an administrator for the organization to use this endpoint.
     ///
@@ -455,7 +428,7 @@ public protocol APIProtocol: Sendable {
     func orgs_sol_revoke_hyphen_org_hyphen_role_hyphen_user(_ input: Operations.orgs_sol_revoke_hyphen_org_hyphen_role_hyphen_user.Input) async throws -> Operations.orgs_sol_revoke_hyphen_org_hyphen_role_hyphen_user.Output
     /// Get an organization role
     ///
-    /// Gets an organization role that is available to this organization. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// Gets an organization role that is available to this organization. For more information on organization roles, see "[Using organization roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/using-organization-roles)."
     ///
     /// To use this endpoint, the authenticated user must be one of:
     ///
@@ -467,38 +440,9 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /orgs/{org}/organization-roles/{role_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/{role_id}/get(orgs/get-org-role)`.
     func orgs_sol_get_hyphen_org_hyphen_role(_ input: Operations.orgs_sol_get_hyphen_org_hyphen_role.Input) async throws -> Operations.orgs_sol_get_hyphen_org_hyphen_role.Output
-    /// Update a custom organization role
-    ///
-    /// Updates an existing custom organization role. Permission changes will apply to all assignees. For more information on custom organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
-    ///
-    ///
-    /// To use this endpoint, the authenticated user must be one of:
-    ///
-    /// - An administrator for the organization.
-    /// - A user, or a user on a team, with the fine-grained permissions of `write_organization_custom_org_role` in the organization.
-    ///
-    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
-    ///
-    /// - Remark: HTTP `PATCH /orgs/{org}/organization-roles/{role_id}`.
-    /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/{role_id}/patch(orgs/patch-custom-organization-role)`.
-    func orgs_sol_patch_hyphen_custom_hyphen_organization_hyphen_role(_ input: Operations.orgs_sol_patch_hyphen_custom_hyphen_organization_hyphen_role.Input) async throws -> Operations.orgs_sol_patch_hyphen_custom_hyphen_organization_hyphen_role.Output
-    /// Delete a custom organization role.
-    ///
-    /// Deletes a custom organization role. For more information on custom organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
-    ///
-    /// To use this endpoint, the authenticated user must be one of:
-    ///
-    /// - An administrator for the organization.
-    /// - A user, or a user on a team, with the fine-grained permissions of `write_organization_custom_org_role` in the organization.
-    ///
-    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
-    ///
-    /// - Remark: HTTP `DELETE /orgs/{org}/organization-roles/{role_id}`.
-    /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/{role_id}/delete(orgs/delete-custom-organization-role)`.
-    func orgs_sol_delete_hyphen_custom_hyphen_organization_hyphen_role(_ input: Operations.orgs_sol_delete_hyphen_custom_hyphen_organization_hyphen_role.Input) async throws -> Operations.orgs_sol_delete_hyphen_custom_hyphen_organization_hyphen_role.Output
     /// List teams that are assigned to an organization role
     ///
-    /// Lists the teams that are assigned to an organization role. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// Lists the teams that are assigned to an organization role. For more information on organization roles, see "[Using organization roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/using-organization-roles)."
     ///
     /// To use this endpoint, you must be an administrator for the organization.
     ///
@@ -509,7 +453,7 @@ public protocol APIProtocol: Sendable {
     func orgs_sol_list_hyphen_org_hyphen_role_hyphen_teams(_ input: Operations.orgs_sol_list_hyphen_org_hyphen_role_hyphen_teams.Input) async throws -> Operations.orgs_sol_list_hyphen_org_hyphen_role_hyphen_teams.Output
     /// List users that are assigned to an organization role
     ///
-    /// Lists organization members that are assigned to an organization role. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// Lists organization members that are assigned to an organization role. For more information on organization roles, see "[Using organization roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/using-organization-roles)."
     ///
     /// To use this endpoint, you must be an administrator for the organization.
     ///
@@ -749,6 +693,9 @@ public protocol APIProtocol: Sendable {
     func orgs_sol_remove_hyphen_security_hyphen_manager_hyphen_team(_ input: Operations.orgs_sol_remove_hyphen_security_hyphen_manager_hyphen_team.Input) async throws -> Operations.orgs_sol_remove_hyphen_security_hyphen_manager_hyphen_team.Output
     /// Enable or disable a security feature for an organization
     ///
+    /// > [!WARNING]
+    /// > **Deprecation notice:** The ability to enable or disable a security feature for all eligible repositories in an organization is deprecated. Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead. For more information, see the [changelog](https://github.blog/changelog/2024-07-22-deprecation-api-endpoint-to-enable-or-disable-a-security-feature-for-an-organization/).
+    ///
     /// Enables or disables the specified security feature for all eligible repositories in an organization. For more information, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."
     ///
     /// The authenticated user must be an organization owner or be member of a team with the security manager role to use this endpoint.
@@ -757,6 +704,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `POST /orgs/{org}/{security_product}/{enablement}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/{security_product}/{enablement}/post(orgs/enable-or-disable-security-product-on-all-org-repos)`.
+    @available(*, deprecated)
     func orgs_sol_enable_hyphen_or_hyphen_disable_hyphen_security_hyphen_product_hyphen_on_hyphen_all_hyphen_org_hyphen_repos(_ input: Operations.orgs_sol_enable_hyphen_or_hyphen_disable_hyphen_security_hyphen_product_hyphen_on_hyphen_all_hyphen_org_hyphen_repos.Input) async throws -> Operations.orgs_sol_enable_hyphen_or_hyphen_disable_hyphen_security_hyphen_product_hyphen_on_hyphen_all_hyphen_org_hyphen_repos.Output
     /// List organization memberships for the authenticated user
     ///
@@ -805,7 +753,8 @@ extension APIProtocol {
     ///
     /// Lists all organizations, in the order that they were created.
     ///
-    /// **Note:** Pagination is powered exclusively by the `since` parameter. Use the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers) to get the URL for the next page of organizations.
+    /// > [!NOTE]
+    /// > Pagination is powered exclusively by the `since` parameter. Use the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers) to get the URL for the next page of organizations.
     ///
     /// - Remark: HTTP `GET /organizations`.
     /// - Remark: Generated from `#/paths//organizations/get(orgs/list)`.
@@ -843,9 +792,11 @@ extension APIProtocol {
     }
     /// Update an organization
     ///
-    /// **Parameter Deprecation Notice:** GitHub will replace and discontinue `members_allowed_repository_creation_type` in favor of more granular permissions. The new input parameters are `members_can_create_public_repositories`, `members_can_create_private_repositories` for all organizations and `members_can_create_internal_repositories` for organizations associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+. For more information, see the [blog post](https://developer.github.com/changes/2019-12-03-internal-visibility-changes).
+    /// > [!WARNING]
+    /// > **Parameter deprecation notice:** GitHub will replace and discontinue `members_allowed_repository_creation_type` in favor of more granular permissions. The new input parameters are `members_can_create_public_repositories`, `members_can_create_private_repositories` for all organizations and `members_can_create_internal_repositories` for organizations associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+. For more information, see the [blog post](https://developer.github.com/changes/2019-12-03-internal-visibility-changes).
     ///
-    /// **Parameter Deprecation Notice:** Code security product enablement for new repositories through the organization API is deprecated. Please use [code security configurations](https://docs.github.com/rest/code-security/configurations#set-a-code-security-configuration-as-a-default-for-an-organization) to set defaults instead. For more information on setting a default security configuration, see the [changelog](https://github.blog/changelog/2024-07-09-sunsetting-security-settings-defaults-parameters-in-the-organizations-rest-api/).
+    /// > [!WARNING]
+    /// > **Parameter deprecation notice:** Code security product enablement for new repositories through the organization API is deprecated. Please use [code security configurations](https://docs.github.com/rest/code-security/configurations#set-a-code-security-configuration-as-a-default-for-an-organization) to set defaults instead. For more information on setting a default security configuration, see the [changelog](https://github.blog/changelog/2024-07-09-sunsetting-security-settings-defaults-parameters-in-the-organizations-rest-api/).
     ///
     /// Updates the organization's profile and member privileges.
     ///
@@ -1407,33 +1358,9 @@ extension APIProtocol {
             headers: headers
         ))
     }
-    /// List organization fine-grained permissions for an organization
-    ///
-    /// Lists the fine-grained permissions that can be used in custom organization roles for an organization. For more information, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
-    ///
-    /// To list the fine-grained permissions that can be used in custom repository roles for an organization, see "[List repository fine-grained permissions for an organization](https://docs.github.com/rest/orgs/organization-roles#list-repository-fine-grained-permissions-for-an-organization)."
-    ///
-    /// To use this endpoint, the authenticated user must be one of:
-    ///
-    /// - An administrator for the organization.
-    /// - A user, or a user on a team, with the fine-grained permissions of `read_organization_custom_org_role` in the organization.
-    ///
-    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
-    ///
-    /// - Remark: HTTP `GET /orgs/{org}/organization-fine-grained-permissions`.
-    /// - Remark: Generated from `#/paths//orgs/{org}/organization-fine-grained-permissions/get(orgs/list-organization-fine-grained-permissions)`.
-    public func orgs_sol_list_hyphen_organization_hyphen_fine_hyphen_grained_hyphen_permissions(
-        path: Operations.orgs_sol_list_hyphen_organization_hyphen_fine_hyphen_grained_hyphen_permissions.Input.Path,
-        headers: Operations.orgs_sol_list_hyphen_organization_hyphen_fine_hyphen_grained_hyphen_permissions.Input.Headers = .init()
-    ) async throws -> Operations.orgs_sol_list_hyphen_organization_hyphen_fine_hyphen_grained_hyphen_permissions.Output {
-        try await orgs_sol_list_hyphen_organization_hyphen_fine_hyphen_grained_hyphen_permissions(Operations.orgs_sol_list_hyphen_organization_hyphen_fine_hyphen_grained_hyphen_permissions.Input(
-            path: path,
-            headers: headers
-        ))
-    }
     /// Get all organization roles for an organization
     ///
-    /// Lists the organization roles available in this organization. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// Lists the organization roles available in this organization. For more information on organization roles, see "[Using organization roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/using-organization-roles)."
     ///
     /// To use this endpoint, the authenticated user must be one of:
     ///
@@ -1453,33 +1380,9 @@ extension APIProtocol {
             headers: headers
         ))
     }
-    /// Create a custom organization role
-    ///
-    /// Creates a custom organization role that can be assigned to users and teams, granting them specific permissions over the organization. For more information on custom organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
-    ///
-    /// To use this endpoint, the authenticated user must be one of:
-    ///
-    /// - An administrator for the organization.
-    /// - A user, or a user on a team, with the fine-grained permissions of `write_organization_custom_org_role` in the organization.
-    ///
-    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
-    ///
-    /// - Remark: HTTP `POST /orgs/{org}/organization-roles`.
-    /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/post(orgs/create-custom-organization-role)`.
-    public func orgs_sol_create_hyphen_custom_hyphen_organization_hyphen_role(
-        path: Operations.orgs_sol_create_hyphen_custom_hyphen_organization_hyphen_role.Input.Path,
-        headers: Operations.orgs_sol_create_hyphen_custom_hyphen_organization_hyphen_role.Input.Headers = .init(),
-        body: Operations.orgs_sol_create_hyphen_custom_hyphen_organization_hyphen_role.Input.Body
-    ) async throws -> Operations.orgs_sol_create_hyphen_custom_hyphen_organization_hyphen_role.Output {
-        try await orgs_sol_create_hyphen_custom_hyphen_organization_hyphen_role(Operations.orgs_sol_create_hyphen_custom_hyphen_organization_hyphen_role.Input(
-            path: path,
-            headers: headers,
-            body: body
-        ))
-    }
     /// Remove all organization roles for a team
     ///
-    /// Removes all assigned organization roles from a team. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// Removes all assigned organization roles from a team. For more information on organization roles, see "[Using organization roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/using-organization-roles)."
     ///
     /// The authenticated user must be an administrator for the organization to use this endpoint.
     ///
@@ -1492,7 +1395,7 @@ extension APIProtocol {
     }
     /// Assign an organization role to a team
     ///
-    /// Assigns an organization role to a team in an organization. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// Assigns an organization role to a team in an organization. For more information on organization roles, see "[Using organization roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/using-organization-roles)."
     ///
     /// The authenticated user must be an administrator for the organization to use this endpoint.
     ///
@@ -1505,7 +1408,7 @@ extension APIProtocol {
     }
     /// Remove an organization role from a team
     ///
-    /// Removes an organization role from a team. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// Removes an organization role from a team. For more information on organization roles, see "[Using organization roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/using-organization-roles)."
     ///
     /// The authenticated user must be an administrator for the organization to use this endpoint.
     ///
@@ -1518,7 +1421,7 @@ extension APIProtocol {
     }
     /// Remove all organization roles for a user
     ///
-    /// Revokes all assigned organization roles from a user. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// Revokes all assigned organization roles from a user. For more information on organization roles, see "[Using organization roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/using-organization-roles)."
     ///
     /// The authenticated user must be an administrator for the organization to use this endpoint.
     ///
@@ -1531,7 +1434,7 @@ extension APIProtocol {
     }
     /// Assign an organization role to a user
     ///
-    /// Assigns an organization role to a member of an organization. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// Assigns an organization role to a member of an organization. For more information on organization roles, see "[Using organization roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/using-organization-roles)."
     ///
     /// The authenticated user must be an administrator for the organization to use this endpoint.
     ///
@@ -1544,7 +1447,7 @@ extension APIProtocol {
     }
     /// Remove an organization role from a user
     ///
-    /// Remove an organization role from a user. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// Remove an organization role from a user. For more information on organization roles, see "[Using organization roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/using-organization-roles)."
     ///
     /// The authenticated user must be an administrator for the organization to use this endpoint.
     ///
@@ -1557,7 +1460,7 @@ extension APIProtocol {
     }
     /// Get an organization role
     ///
-    /// Gets an organization role that is available to this organization. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// Gets an organization role that is available to this organization. For more information on organization roles, see "[Using organization roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/using-organization-roles)."
     ///
     /// To use this endpoint, the authenticated user must be one of:
     ///
@@ -1577,50 +1480,9 @@ extension APIProtocol {
             headers: headers
         ))
     }
-    /// Update a custom organization role
-    ///
-    /// Updates an existing custom organization role. Permission changes will apply to all assignees. For more information on custom organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
-    ///
-    ///
-    /// To use this endpoint, the authenticated user must be one of:
-    ///
-    /// - An administrator for the organization.
-    /// - A user, or a user on a team, with the fine-grained permissions of `write_organization_custom_org_role` in the organization.
-    ///
-    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
-    ///
-    /// - Remark: HTTP `PATCH /orgs/{org}/organization-roles/{role_id}`.
-    /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/{role_id}/patch(orgs/patch-custom-organization-role)`.
-    public func orgs_sol_patch_hyphen_custom_hyphen_organization_hyphen_role(
-        path: Operations.orgs_sol_patch_hyphen_custom_hyphen_organization_hyphen_role.Input.Path,
-        headers: Operations.orgs_sol_patch_hyphen_custom_hyphen_organization_hyphen_role.Input.Headers = .init(),
-        body: Operations.orgs_sol_patch_hyphen_custom_hyphen_organization_hyphen_role.Input.Body
-    ) async throws -> Operations.orgs_sol_patch_hyphen_custom_hyphen_organization_hyphen_role.Output {
-        try await orgs_sol_patch_hyphen_custom_hyphen_organization_hyphen_role(Operations.orgs_sol_patch_hyphen_custom_hyphen_organization_hyphen_role.Input(
-            path: path,
-            headers: headers,
-            body: body
-        ))
-    }
-    /// Delete a custom organization role.
-    ///
-    /// Deletes a custom organization role. For more information on custom organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
-    ///
-    /// To use this endpoint, the authenticated user must be one of:
-    ///
-    /// - An administrator for the organization.
-    /// - A user, or a user on a team, with the fine-grained permissions of `write_organization_custom_org_role` in the organization.
-    ///
-    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
-    ///
-    /// - Remark: HTTP `DELETE /orgs/{org}/organization-roles/{role_id}`.
-    /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/{role_id}/delete(orgs/delete-custom-organization-role)`.
-    public func orgs_sol_delete_hyphen_custom_hyphen_organization_hyphen_role(path: Operations.orgs_sol_delete_hyphen_custom_hyphen_organization_hyphen_role.Input.Path) async throws -> Operations.orgs_sol_delete_hyphen_custom_hyphen_organization_hyphen_role.Output {
-        try await orgs_sol_delete_hyphen_custom_hyphen_organization_hyphen_role(Operations.orgs_sol_delete_hyphen_custom_hyphen_organization_hyphen_role.Input(path: path))
-    }
     /// List teams that are assigned to an organization role
     ///
-    /// Lists the teams that are assigned to an organization role. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// Lists the teams that are assigned to an organization role. For more information on organization roles, see "[Using organization roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/using-organization-roles)."
     ///
     /// To use this endpoint, you must be an administrator for the organization.
     ///
@@ -1641,7 +1503,7 @@ extension APIProtocol {
     }
     /// List users that are assigned to an organization role
     ///
-    /// Lists organization members that are assigned to an organization role. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// Lists organization members that are assigned to an organization role. For more information on organization roles, see "[Using organization roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/using-organization-roles)."
     ///
     /// To use this endpoint, you must be an administrator for the organization.
     ///
@@ -2097,6 +1959,9 @@ extension APIProtocol {
     }
     /// Enable or disable a security feature for an organization
     ///
+    /// > [!WARNING]
+    /// > **Deprecation notice:** The ability to enable or disable a security feature for all eligible repositories in an organization is deprecated. Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead. For more information, see the [changelog](https://github.blog/changelog/2024-07-22-deprecation-api-endpoint-to-enable-or-disable-a-security-feature-for-an-organization/).
+    ///
     /// Enables or disables the specified security feature for all eligible repositories in an organization. For more information, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."
     ///
     /// The authenticated user must be an organization owner or be member of a team with the security manager role to use this endpoint.
@@ -2105,6 +1970,7 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /orgs/{org}/{security_product}/{enablement}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/{security_product}/{enablement}/post(orgs/enable-or-disable-security-product-on-all-org-repos)`.
+    @available(*, deprecated)
     public func orgs_sol_enable_hyphen_or_hyphen_disable_hyphen_security_hyphen_product_hyphen_on_hyphen_all_hyphen_org_hyphen_repos(
         path: Operations.orgs_sol_enable_hyphen_or_hyphen_disable_hyphen_security_hyphen_product_hyphen_on_hyphen_all_hyphen_org_hyphen_repos.Input.Path,
         body: Operations.orgs_sol_enable_hyphen_or_hyphen_disable_hyphen_security_hyphen_product_hyphen_on_hyphen_all_hyphen_org_hyphen_repos.Input.Body? = nil
@@ -6047,31 +5913,6 @@ public enum Components {
                 case permissions
             }
         }
-        /// A fine-grained permission that protects organization resources.
-        ///
-        /// - Remark: Generated from `#/components/schemas/organization-fine-grained-permission`.
-        public struct organization_hyphen_fine_hyphen_grained_hyphen_permission: Codable, Hashable, Sendable {
-            /// - Remark: Generated from `#/components/schemas/organization-fine-grained-permission/name`.
-            public var name: Swift.String
-            /// - Remark: Generated from `#/components/schemas/organization-fine-grained-permission/description`.
-            public var description: Swift.String
-            /// Creates a new `organization_hyphen_fine_hyphen_grained_hyphen_permission`.
-            ///
-            /// - Parameters:
-            ///   - name:
-            ///   - description:
-            public init(
-                name: Swift.String,
-                description: Swift.String
-            ) {
-                self.name = name
-                self.description = description
-            }
-            public enum CodingKeys: String, CodingKey {
-                case name
-                case description
-            }
-        }
         /// Organization roles
         ///
         /// - Remark: Generated from `#/components/schemas/organization-role`.
@@ -7502,7 +7343,8 @@ public enum Operations {
     ///
     /// Lists all organizations, in the order that they were created.
     ///
-    /// **Note:** Pagination is powered exclusively by the `since` parameter. Use the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers) to get the URL for the next page of organizations.
+    /// > [!NOTE]
+    /// > Pagination is powered exclusively by the `since` parameter. Use the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers) to get the URL for the next page of organizations.
     ///
     /// - Remark: HTTP `GET /organizations`.
     /// - Remark: Generated from `#/paths//organizations/get(orgs/list)`.
@@ -7848,9 +7690,11 @@ public enum Operations {
     }
     /// Update an organization
     ///
-    /// **Parameter Deprecation Notice:** GitHub will replace and discontinue `members_allowed_repository_creation_type` in favor of more granular permissions. The new input parameters are `members_can_create_public_repositories`, `members_can_create_private_repositories` for all organizations and `members_can_create_internal_repositories` for organizations associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+. For more information, see the [blog post](https://developer.github.com/changes/2019-12-03-internal-visibility-changes).
+    /// > [!WARNING]
+    /// > **Parameter deprecation notice:** GitHub will replace and discontinue `members_allowed_repository_creation_type` in favor of more granular permissions. The new input parameters are `members_can_create_public_repositories`, `members_can_create_private_repositories` for all organizations and `members_can_create_internal_repositories` for organizations associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+. For more information, see the [blog post](https://developer.github.com/changes/2019-12-03-internal-visibility-changes).
     ///
-    /// **Parameter Deprecation Notice:** Code security product enablement for new repositories through the organization API is deprecated. Please use [code security configurations](https://docs.github.com/rest/code-security/configurations#set-a-code-security-configuration-as-a-default-for-an-organization) to set defaults instead. For more information on setting a default security configuration, see the [changelog](https://github.blog/changelog/2024-07-09-sunsetting-security-settings-defaults-parameters-in-the-organizations-rest-api/).
+    /// > [!WARNING]
+    /// > **Parameter deprecation notice:** Code security product enablement for new repositories through the organization API is deprecated. Please use [code security configurations](https://docs.github.com/rest/code-security/configurations#set-a-code-security-configuration-as-a-default-for-an-organization) to set defaults instead. For more information on setting a default security configuration, see the [changelog](https://github.blog/changelog/2024-07-09-sunsetting-security-settings-defaults-parameters-in-the-organizations-rest-api/).
     ///
     /// Updates the organization's profile and member privileges.
     ///
@@ -13949,196 +13793,9 @@ public enum Operations {
             }
         }
     }
-    /// List organization fine-grained permissions for an organization
-    ///
-    /// Lists the fine-grained permissions that can be used in custom organization roles for an organization. For more information, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
-    ///
-    /// To list the fine-grained permissions that can be used in custom repository roles for an organization, see "[List repository fine-grained permissions for an organization](https://docs.github.com/rest/orgs/organization-roles#list-repository-fine-grained-permissions-for-an-organization)."
-    ///
-    /// To use this endpoint, the authenticated user must be one of:
-    ///
-    /// - An administrator for the organization.
-    /// - A user, or a user on a team, with the fine-grained permissions of `read_organization_custom_org_role` in the organization.
-    ///
-    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
-    ///
-    /// - Remark: HTTP `GET /orgs/{org}/organization-fine-grained-permissions`.
-    /// - Remark: Generated from `#/paths//orgs/{org}/organization-fine-grained-permissions/get(orgs/list-organization-fine-grained-permissions)`.
-    public enum orgs_sol_list_hyphen_organization_hyphen_fine_hyphen_grained_hyphen_permissions {
-        public static let id: Swift.String = "orgs/list-organization-fine-grained-permissions"
-        public struct Input: Sendable, Hashable {
-            /// - Remark: Generated from `#/paths/orgs/{org}/organization-fine-grained-permissions/GET/path`.
-            public struct Path: Sendable, Hashable {
-                /// The organization name. The name is not case sensitive.
-                ///
-                /// - Remark: Generated from `#/paths/orgs/{org}/organization-fine-grained-permissions/GET/path/org`.
-                public var org: Components.Parameters.org
-                /// Creates a new `Path`.
-                ///
-                /// - Parameters:
-                ///   - org: The organization name. The name is not case sensitive.
-                public init(org: Components.Parameters.org) {
-                    self.org = org
-                }
-            }
-            public var path: Operations.orgs_sol_list_hyphen_organization_hyphen_fine_hyphen_grained_hyphen_permissions.Input.Path
-            /// - Remark: Generated from `#/paths/orgs/{org}/organization-fine-grained-permissions/GET/header`.
-            public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.orgs_sol_list_hyphen_organization_hyphen_fine_hyphen_grained_hyphen_permissions.AcceptableContentType>]
-                /// Creates a new `Headers`.
-                ///
-                /// - Parameters:
-                ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.orgs_sol_list_hyphen_organization_hyphen_fine_hyphen_grained_hyphen_permissions.AcceptableContentType>] = .defaultValues()) {
-                    self.accept = accept
-                }
-            }
-            public var headers: Operations.orgs_sol_list_hyphen_organization_hyphen_fine_hyphen_grained_hyphen_permissions.Input.Headers
-            /// Creates a new `Input`.
-            ///
-            /// - Parameters:
-            ///   - path:
-            ///   - headers:
-            public init(
-                path: Operations.orgs_sol_list_hyphen_organization_hyphen_fine_hyphen_grained_hyphen_permissions.Input.Path,
-                headers: Operations.orgs_sol_list_hyphen_organization_hyphen_fine_hyphen_grained_hyphen_permissions.Input.Headers = .init()
-            ) {
-                self.path = path
-                self.headers = headers
-            }
-        }
-        @frozen public enum Output: Sendable, Hashable {
-            public struct Ok: Sendable, Hashable {
-                /// - Remark: Generated from `#/paths/orgs/{org}/organization-fine-grained-permissions/GET/responses/200/content`.
-                @frozen public enum Body: Sendable, Hashable {
-                    /// - Remark: Generated from `#/paths/orgs/{org}/organization-fine-grained-permissions/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.organization_hyphen_fine_hyphen_grained_hyphen_permission])
-                    /// The associated value of the enum case if `self` is `.json`.
-                    ///
-                    /// - Throws: An error if `self` is not `.json`.
-                    /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.organization_hyphen_fine_hyphen_grained_hyphen_permission] {
-                        get throws {
-                            switch self {
-                            case let .json(body):
-                                return body
-                            }
-                        }
-                    }
-                }
-                /// Received HTTP response body
-                public var body: Operations.orgs_sol_list_hyphen_organization_hyphen_fine_hyphen_grained_hyphen_permissions.Output.Ok.Body
-                /// Creates a new `Ok`.
-                ///
-                /// - Parameters:
-                ///   - body: Received HTTP response body
-                public init(body: Operations.orgs_sol_list_hyphen_organization_hyphen_fine_hyphen_grained_hyphen_permissions.Output.Ok.Body) {
-                    self.body = body
-                }
-            }
-            /// Response
-            ///
-            /// - Remark: Generated from `#/paths//orgs/{org}/organization-fine-grained-permissions/get(orgs/list-organization-fine-grained-permissions)/responses/200`.
-            ///
-            /// HTTP response code: `200 ok`.
-            case ok(Operations.orgs_sol_list_hyphen_organization_hyphen_fine_hyphen_grained_hyphen_permissions.Output.Ok)
-            /// The associated value of the enum case if `self` is `.ok`.
-            ///
-            /// - Throws: An error if `self` is not `.ok`.
-            /// - SeeAlso: `.ok`.
-            public var ok: Operations.orgs_sol_list_hyphen_organization_hyphen_fine_hyphen_grained_hyphen_permissions.Output.Ok {
-                get throws {
-                    switch self {
-                    case let .ok(response):
-                        return response
-                    default:
-                        try throwUnexpectedResponseStatus(
-                            expectedStatus: "ok",
-                            response: self
-                        )
-                    }
-                }
-            }
-            /// Resource not found
-            ///
-            /// - Remark: Generated from `#/paths//orgs/{org}/organization-fine-grained-permissions/get(orgs/list-organization-fine-grained-permissions)/responses/404`.
-            ///
-            /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
-            /// The associated value of the enum case if `self` is `.notFound`.
-            ///
-            /// - Throws: An error if `self` is not `.notFound`.
-            /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
-                get throws {
-                    switch self {
-                    case let .notFound(response):
-                        return response
-                    default:
-                        try throwUnexpectedResponseStatus(
-                            expectedStatus: "notFound",
-                            response: self
-                        )
-                    }
-                }
-            }
-            /// Validation failed, or the endpoint has been spammed.
-            ///
-            /// - Remark: Generated from `#/paths//orgs/{org}/organization-fine-grained-permissions/get(orgs/list-organization-fine-grained-permissions)/responses/422`.
-            ///
-            /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
-            /// The associated value of the enum case if `self` is `.unprocessableContent`.
-            ///
-            /// - Throws: An error if `self` is not `.unprocessableContent`.
-            /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
-                get throws {
-                    switch self {
-                    case let .unprocessableContent(response):
-                        return response
-                    default:
-                        try throwUnexpectedResponseStatus(
-                            expectedStatus: "unprocessableContent",
-                            response: self
-                        )
-                    }
-                }
-            }
-            /// Undocumented response.
-            ///
-            /// A response with a code that is not documented in the OpenAPI document.
-            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
-        }
-        @frozen public enum AcceptableContentType: AcceptableProtocol {
-            case json
-            case other(Swift.String)
-            public init?(rawValue: Swift.String) {
-                switch rawValue.lowercased() {
-                case "application/json":
-                    self = .json
-                default:
-                    self = .other(rawValue)
-                }
-            }
-            public var rawValue: Swift.String {
-                switch self {
-                case let .other(string):
-                    return string
-                case .json:
-                    return "application/json"
-                }
-            }
-            public static var allCases: [Self] {
-                [
-                    .json
-                ]
-            }
-        }
-    }
     /// Get all organization roles for an organization
     ///
-    /// Lists the organization roles available in this organization. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// Lists the organization roles available in this organization. For more information on organization roles, see "[Using organization roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/using-organization-roles)."
     ///
     /// To use this endpoint, the authenticated user must be one of:
     ///
@@ -14348,261 +14005,9 @@ public enum Operations {
             }
         }
     }
-    /// Create a custom organization role
-    ///
-    /// Creates a custom organization role that can be assigned to users and teams, granting them specific permissions over the organization. For more information on custom organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
-    ///
-    /// To use this endpoint, the authenticated user must be one of:
-    ///
-    /// - An administrator for the organization.
-    /// - A user, or a user on a team, with the fine-grained permissions of `write_organization_custom_org_role` in the organization.
-    ///
-    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
-    ///
-    /// - Remark: HTTP `POST /orgs/{org}/organization-roles`.
-    /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/post(orgs/create-custom-organization-role)`.
-    public enum orgs_sol_create_hyphen_custom_hyphen_organization_hyphen_role {
-        public static let id: Swift.String = "orgs/create-custom-organization-role"
-        public struct Input: Sendable, Hashable {
-            /// - Remark: Generated from `#/paths/orgs/{org}/organization-roles/POST/path`.
-            public struct Path: Sendable, Hashable {
-                /// The organization name. The name is not case sensitive.
-                ///
-                /// - Remark: Generated from `#/paths/orgs/{org}/organization-roles/POST/path/org`.
-                public var org: Components.Parameters.org
-                /// Creates a new `Path`.
-                ///
-                /// - Parameters:
-                ///   - org: The organization name. The name is not case sensitive.
-                public init(org: Components.Parameters.org) {
-                    self.org = org
-                }
-            }
-            public var path: Operations.orgs_sol_create_hyphen_custom_hyphen_organization_hyphen_role.Input.Path
-            /// - Remark: Generated from `#/paths/orgs/{org}/organization-roles/POST/header`.
-            public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.orgs_sol_create_hyphen_custom_hyphen_organization_hyphen_role.AcceptableContentType>]
-                /// Creates a new `Headers`.
-                ///
-                /// - Parameters:
-                ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.orgs_sol_create_hyphen_custom_hyphen_organization_hyphen_role.AcceptableContentType>] = .defaultValues()) {
-                    self.accept = accept
-                }
-            }
-            public var headers: Operations.orgs_sol_create_hyphen_custom_hyphen_organization_hyphen_role.Input.Headers
-            /// - Remark: Generated from `#/paths/orgs/{org}/organization-roles/POST/requestBody`.
-            @frozen public enum Body: Sendable, Hashable {
-                /// - Remark: Generated from `#/paths/orgs/{org}/organization-roles/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
-                    /// The name of the custom role.
-                    ///
-                    /// - Remark: Generated from `#/paths/orgs/{org}/organization-roles/POST/requestBody/json/name`.
-                    public var name: Swift.String
-                    /// A short description about the intended usage of this role or what permissions it grants.
-                    ///
-                    /// - Remark: Generated from `#/paths/orgs/{org}/organization-roles/POST/requestBody/json/description`.
-                    public var description: Swift.String?
-                    /// A list of additional permissions included in this role.
-                    ///
-                    /// - Remark: Generated from `#/paths/orgs/{org}/organization-roles/POST/requestBody/json/permissions`.
-                    public var permissions: [Swift.String]
-                    /// Creates a new `jsonPayload`.
-                    ///
-                    /// - Parameters:
-                    ///   - name: The name of the custom role.
-                    ///   - description: A short description about the intended usage of this role or what permissions it grants.
-                    ///   - permissions: A list of additional permissions included in this role.
-                    public init(
-                        name: Swift.String,
-                        description: Swift.String? = nil,
-                        permissions: [Swift.String]
-                    ) {
-                        self.name = name
-                        self.description = description
-                        self.permissions = permissions
-                    }
-                    public enum CodingKeys: String, CodingKey {
-                        case name
-                        case description
-                        case permissions
-                    }
-                }
-                /// - Remark: Generated from `#/paths/orgs/{org}/organization-roles/POST/requestBody/content/application\/json`.
-                case json(Operations.orgs_sol_create_hyphen_custom_hyphen_organization_hyphen_role.Input.Body.jsonPayload)
-            }
-            public var body: Operations.orgs_sol_create_hyphen_custom_hyphen_organization_hyphen_role.Input.Body
-            /// Creates a new `Input`.
-            ///
-            /// - Parameters:
-            ///   - path:
-            ///   - headers:
-            ///   - body:
-            public init(
-                path: Operations.orgs_sol_create_hyphen_custom_hyphen_organization_hyphen_role.Input.Path,
-                headers: Operations.orgs_sol_create_hyphen_custom_hyphen_organization_hyphen_role.Input.Headers = .init(),
-                body: Operations.orgs_sol_create_hyphen_custom_hyphen_organization_hyphen_role.Input.Body
-            ) {
-                self.path = path
-                self.headers = headers
-                self.body = body
-            }
-        }
-        @frozen public enum Output: Sendable, Hashable {
-            public struct Created: Sendable, Hashable {
-                /// - Remark: Generated from `#/paths/orgs/{org}/organization-roles/POST/responses/201/content`.
-                @frozen public enum Body: Sendable, Hashable {
-                    /// - Remark: Generated from `#/paths/orgs/{org}/organization-roles/POST/responses/201/content/application\/json`.
-                    case json(Components.Schemas.organization_hyphen_role)
-                    /// The associated value of the enum case if `self` is `.json`.
-                    ///
-                    /// - Throws: An error if `self` is not `.json`.
-                    /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.organization_hyphen_role {
-                        get throws {
-                            switch self {
-                            case let .json(body):
-                                return body
-                            }
-                        }
-                    }
-                }
-                /// Received HTTP response body
-                public var body: Operations.orgs_sol_create_hyphen_custom_hyphen_organization_hyphen_role.Output.Created.Body
-                /// Creates a new `Created`.
-                ///
-                /// - Parameters:
-                ///   - body: Received HTTP response body
-                public init(body: Operations.orgs_sol_create_hyphen_custom_hyphen_organization_hyphen_role.Output.Created.Body) {
-                    self.body = body
-                }
-            }
-            /// Response
-            ///
-            /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/post(orgs/create-custom-organization-role)/responses/201`.
-            ///
-            /// HTTP response code: `201 created`.
-            case created(Operations.orgs_sol_create_hyphen_custom_hyphen_organization_hyphen_role.Output.Created)
-            /// The associated value of the enum case if `self` is `.created`.
-            ///
-            /// - Throws: An error if `self` is not `.created`.
-            /// - SeeAlso: `.created`.
-            public var created: Operations.orgs_sol_create_hyphen_custom_hyphen_organization_hyphen_role.Output.Created {
-                get throws {
-                    switch self {
-                    case let .created(response):
-                        return response
-                    default:
-                        try throwUnexpectedResponseStatus(
-                            expectedStatus: "created",
-                            response: self
-                        )
-                    }
-                }
-            }
-            /// Validation failed, or the endpoint has been spammed.
-            ///
-            /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/post(orgs/create-custom-organization-role)/responses/422`.
-            ///
-            /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
-            /// The associated value of the enum case if `self` is `.unprocessableContent`.
-            ///
-            /// - Throws: An error if `self` is not `.unprocessableContent`.
-            /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
-                get throws {
-                    switch self {
-                    case let .unprocessableContent(response):
-                        return response
-                    default:
-                        try throwUnexpectedResponseStatus(
-                            expectedStatus: "unprocessableContent",
-                            response: self
-                        )
-                    }
-                }
-            }
-            /// Resource not found
-            ///
-            /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/post(orgs/create-custom-organization-role)/responses/404`.
-            ///
-            /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
-            /// The associated value of the enum case if `self` is `.notFound`.
-            ///
-            /// - Throws: An error if `self` is not `.notFound`.
-            /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
-                get throws {
-                    switch self {
-                    case let .notFound(response):
-                        return response
-                    default:
-                        try throwUnexpectedResponseStatus(
-                            expectedStatus: "notFound",
-                            response: self
-                        )
-                    }
-                }
-            }
-            /// Conflict
-            ///
-            /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/post(orgs/create-custom-organization-role)/responses/409`.
-            ///
-            /// HTTP response code: `409 conflict`.
-            case conflict(Components.Responses.conflict)
-            /// The associated value of the enum case if `self` is `.conflict`.
-            ///
-            /// - Throws: An error if `self` is not `.conflict`.
-            /// - SeeAlso: `.conflict`.
-            public var conflict: Components.Responses.conflict {
-                get throws {
-                    switch self {
-                    case let .conflict(response):
-                        return response
-                    default:
-                        try throwUnexpectedResponseStatus(
-                            expectedStatus: "conflict",
-                            response: self
-                        )
-                    }
-                }
-            }
-            /// Undocumented response.
-            ///
-            /// A response with a code that is not documented in the OpenAPI document.
-            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
-        }
-        @frozen public enum AcceptableContentType: AcceptableProtocol {
-            case json
-            case other(Swift.String)
-            public init?(rawValue: Swift.String) {
-                switch rawValue.lowercased() {
-                case "application/json":
-                    self = .json
-                default:
-                    self = .other(rawValue)
-                }
-            }
-            public var rawValue: Swift.String {
-                switch self {
-                case let .other(string):
-                    return string
-                case .json:
-                    return "application/json"
-                }
-            }
-            public static var allCases: [Self] {
-                [
-                    .json
-                ]
-            }
-        }
-    }
     /// Remove all organization roles for a team
     ///
-    /// Removes all assigned organization roles from a team. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// Removes all assigned organization roles from a team. For more information on organization roles, see "[Using organization roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/using-organization-roles)."
     ///
     /// The authenticated user must be an administrator for the organization to use this endpoint.
     ///
@@ -14681,7 +14086,7 @@ public enum Operations {
     }
     /// Assign an organization role to a team
     ///
-    /// Assigns an organization role to a team in an organization. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// Assigns an organization role to a team in an organization. For more information on organization roles, see "[Using organization roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/using-organization-roles)."
     ///
     /// The authenticated user must be an administrator for the organization to use this endpoint.
     ///
@@ -14821,7 +14226,7 @@ public enum Operations {
     }
     /// Remove an organization role from a team
     ///
-    /// Removes an organization role from a team. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// Removes an organization role from a team. For more information on organization roles, see "[Using organization roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/using-organization-roles)."
     ///
     /// The authenticated user must be an administrator for the organization to use this endpoint.
     ///
@@ -14907,7 +14312,7 @@ public enum Operations {
     }
     /// Remove all organization roles for a user
     ///
-    /// Revokes all assigned organization roles from a user. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// Revokes all assigned organization roles from a user. For more information on organization roles, see "[Using organization roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/using-organization-roles)."
     ///
     /// The authenticated user must be an administrator for the organization to use this endpoint.
     ///
@@ -14986,7 +14391,7 @@ public enum Operations {
     }
     /// Assign an organization role to a user
     ///
-    /// Assigns an organization role to a member of an organization. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// Assigns an organization role to a member of an organization. For more information on organization roles, see "[Using organization roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/using-organization-roles)."
     ///
     /// The authenticated user must be an administrator for the organization to use this endpoint.
     ///
@@ -15126,7 +14531,7 @@ public enum Operations {
     }
     /// Remove an organization role from a user
     ///
-    /// Remove an organization role from a user. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// Remove an organization role from a user. For more information on organization roles, see "[Using organization roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/using-organization-roles)."
     ///
     /// The authenticated user must be an administrator for the organization to use this endpoint.
     ///
@@ -15212,7 +14617,7 @@ public enum Operations {
     }
     /// Get an organization role
     ///
-    /// Gets an organization role that is available to this organization. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// Gets an organization role that is available to this organization. For more information on organization roles, see "[Using organization roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/using-organization-roles)."
     ///
     /// To use this endpoint, the authenticated user must be one of:
     ///
@@ -15404,353 +14809,9 @@ public enum Operations {
             }
         }
     }
-    /// Update a custom organization role
-    ///
-    /// Updates an existing custom organization role. Permission changes will apply to all assignees. For more information on custom organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
-    ///
-    ///
-    /// To use this endpoint, the authenticated user must be one of:
-    ///
-    /// - An administrator for the organization.
-    /// - A user, or a user on a team, with the fine-grained permissions of `write_organization_custom_org_role` in the organization.
-    ///
-    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
-    ///
-    /// - Remark: HTTP `PATCH /orgs/{org}/organization-roles/{role_id}`.
-    /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/{role_id}/patch(orgs/patch-custom-organization-role)`.
-    public enum orgs_sol_patch_hyphen_custom_hyphen_organization_hyphen_role {
-        public static let id: Swift.String = "orgs/patch-custom-organization-role"
-        public struct Input: Sendable, Hashable {
-            /// - Remark: Generated from `#/paths/orgs/{org}/organization-roles/{role_id}/PATCH/path`.
-            public struct Path: Sendable, Hashable {
-                /// The organization name. The name is not case sensitive.
-                ///
-                /// - Remark: Generated from `#/paths/orgs/{org}/organization-roles/{role_id}/PATCH/path/org`.
-                public var org: Components.Parameters.org
-                /// The unique identifier of the role.
-                ///
-                /// - Remark: Generated from `#/paths/orgs/{org}/organization-roles/{role_id}/PATCH/path/role_id`.
-                public var role_id: Components.Parameters.role_hyphen_id
-                /// Creates a new `Path`.
-                ///
-                /// - Parameters:
-                ///   - org: The organization name. The name is not case sensitive.
-                ///   - role_id: The unique identifier of the role.
-                public init(
-                    org: Components.Parameters.org,
-                    role_id: Components.Parameters.role_hyphen_id
-                ) {
-                    self.org = org
-                    self.role_id = role_id
-                }
-            }
-            public var path: Operations.orgs_sol_patch_hyphen_custom_hyphen_organization_hyphen_role.Input.Path
-            /// - Remark: Generated from `#/paths/orgs/{org}/organization-roles/{role_id}/PATCH/header`.
-            public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.orgs_sol_patch_hyphen_custom_hyphen_organization_hyphen_role.AcceptableContentType>]
-                /// Creates a new `Headers`.
-                ///
-                /// - Parameters:
-                ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.orgs_sol_patch_hyphen_custom_hyphen_organization_hyphen_role.AcceptableContentType>] = .defaultValues()) {
-                    self.accept = accept
-                }
-            }
-            public var headers: Operations.orgs_sol_patch_hyphen_custom_hyphen_organization_hyphen_role.Input.Headers
-            /// - Remark: Generated from `#/paths/orgs/{org}/organization-roles/{role_id}/PATCH/requestBody`.
-            @frozen public enum Body: Sendable, Hashable {
-                /// - Remark: Generated from `#/paths/orgs/{org}/organization-roles/{role_id}/PATCH/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
-                    /// The name of the custom role.
-                    ///
-                    /// - Remark: Generated from `#/paths/orgs/{org}/organization-roles/{role_id}/PATCH/requestBody/json/name`.
-                    public var name: Swift.String?
-                    /// A short description about the intended usage of this role or what permissions it grants.
-                    ///
-                    /// - Remark: Generated from `#/paths/orgs/{org}/organization-roles/{role_id}/PATCH/requestBody/json/description`.
-                    public var description: Swift.String?
-                    /// A list of additional permissions included in this role.
-                    ///
-                    /// - Remark: Generated from `#/paths/orgs/{org}/organization-roles/{role_id}/PATCH/requestBody/json/permissions`.
-                    public var permissions: [Swift.String]?
-                    /// Creates a new `jsonPayload`.
-                    ///
-                    /// - Parameters:
-                    ///   - name: The name of the custom role.
-                    ///   - description: A short description about the intended usage of this role or what permissions it grants.
-                    ///   - permissions: A list of additional permissions included in this role.
-                    public init(
-                        name: Swift.String? = nil,
-                        description: Swift.String? = nil,
-                        permissions: [Swift.String]? = nil
-                    ) {
-                        self.name = name
-                        self.description = description
-                        self.permissions = permissions
-                    }
-                    public enum CodingKeys: String, CodingKey {
-                        case name
-                        case description
-                        case permissions
-                    }
-                }
-                /// - Remark: Generated from `#/paths/orgs/{org}/organization-roles/{role_id}/PATCH/requestBody/content/application\/json`.
-                case json(Operations.orgs_sol_patch_hyphen_custom_hyphen_organization_hyphen_role.Input.Body.jsonPayload)
-            }
-            public var body: Operations.orgs_sol_patch_hyphen_custom_hyphen_organization_hyphen_role.Input.Body
-            /// Creates a new `Input`.
-            ///
-            /// - Parameters:
-            ///   - path:
-            ///   - headers:
-            ///   - body:
-            public init(
-                path: Operations.orgs_sol_patch_hyphen_custom_hyphen_organization_hyphen_role.Input.Path,
-                headers: Operations.orgs_sol_patch_hyphen_custom_hyphen_organization_hyphen_role.Input.Headers = .init(),
-                body: Operations.orgs_sol_patch_hyphen_custom_hyphen_organization_hyphen_role.Input.Body
-            ) {
-                self.path = path
-                self.headers = headers
-                self.body = body
-            }
-        }
-        @frozen public enum Output: Sendable, Hashable {
-            public struct Ok: Sendable, Hashable {
-                /// - Remark: Generated from `#/paths/orgs/{org}/organization-roles/{role_id}/PATCH/responses/200/content`.
-                @frozen public enum Body: Sendable, Hashable {
-                    /// - Remark: Generated from `#/paths/orgs/{org}/organization-roles/{role_id}/PATCH/responses/200/content/application\/json`.
-                    case json(Components.Schemas.organization_hyphen_role)
-                    /// The associated value of the enum case if `self` is `.json`.
-                    ///
-                    /// - Throws: An error if `self` is not `.json`.
-                    /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.organization_hyphen_role {
-                        get throws {
-                            switch self {
-                            case let .json(body):
-                                return body
-                            }
-                        }
-                    }
-                }
-                /// Received HTTP response body
-                public var body: Operations.orgs_sol_patch_hyphen_custom_hyphen_organization_hyphen_role.Output.Ok.Body
-                /// Creates a new `Ok`.
-                ///
-                /// - Parameters:
-                ///   - body: Received HTTP response body
-                public init(body: Operations.orgs_sol_patch_hyphen_custom_hyphen_organization_hyphen_role.Output.Ok.Body) {
-                    self.body = body
-                }
-            }
-            /// Response
-            ///
-            /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/{role_id}/patch(orgs/patch-custom-organization-role)/responses/200`.
-            ///
-            /// HTTP response code: `200 ok`.
-            case ok(Operations.orgs_sol_patch_hyphen_custom_hyphen_organization_hyphen_role.Output.Ok)
-            /// The associated value of the enum case if `self` is `.ok`.
-            ///
-            /// - Throws: An error if `self` is not `.ok`.
-            /// - SeeAlso: `.ok`.
-            public var ok: Operations.orgs_sol_patch_hyphen_custom_hyphen_organization_hyphen_role.Output.Ok {
-                get throws {
-                    switch self {
-                    case let .ok(response):
-                        return response
-                    default:
-                        try throwUnexpectedResponseStatus(
-                            expectedStatus: "ok",
-                            response: self
-                        )
-                    }
-                }
-            }
-            /// Validation failed, or the endpoint has been spammed.
-            ///
-            /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/{role_id}/patch(orgs/patch-custom-organization-role)/responses/422`.
-            ///
-            /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
-            /// The associated value of the enum case if `self` is `.unprocessableContent`.
-            ///
-            /// - Throws: An error if `self` is not `.unprocessableContent`.
-            /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
-                get throws {
-                    switch self {
-                    case let .unprocessableContent(response):
-                        return response
-                    default:
-                        try throwUnexpectedResponseStatus(
-                            expectedStatus: "unprocessableContent",
-                            response: self
-                        )
-                    }
-                }
-            }
-            /// Conflict
-            ///
-            /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/{role_id}/patch(orgs/patch-custom-organization-role)/responses/409`.
-            ///
-            /// HTTP response code: `409 conflict`.
-            case conflict(Components.Responses.conflict)
-            /// The associated value of the enum case if `self` is `.conflict`.
-            ///
-            /// - Throws: An error if `self` is not `.conflict`.
-            /// - SeeAlso: `.conflict`.
-            public var conflict: Components.Responses.conflict {
-                get throws {
-                    switch self {
-                    case let .conflict(response):
-                        return response
-                    default:
-                        try throwUnexpectedResponseStatus(
-                            expectedStatus: "conflict",
-                            response: self
-                        )
-                    }
-                }
-            }
-            /// Resource not found
-            ///
-            /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/{role_id}/patch(orgs/patch-custom-organization-role)/responses/404`.
-            ///
-            /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
-            /// The associated value of the enum case if `self` is `.notFound`.
-            ///
-            /// - Throws: An error if `self` is not `.notFound`.
-            /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
-                get throws {
-                    switch self {
-                    case let .notFound(response):
-                        return response
-                    default:
-                        try throwUnexpectedResponseStatus(
-                            expectedStatus: "notFound",
-                            response: self
-                        )
-                    }
-                }
-            }
-            /// Undocumented response.
-            ///
-            /// A response with a code that is not documented in the OpenAPI document.
-            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
-        }
-        @frozen public enum AcceptableContentType: AcceptableProtocol {
-            case json
-            case other(Swift.String)
-            public init?(rawValue: Swift.String) {
-                switch rawValue.lowercased() {
-                case "application/json":
-                    self = .json
-                default:
-                    self = .other(rawValue)
-                }
-            }
-            public var rawValue: Swift.String {
-                switch self {
-                case let .other(string):
-                    return string
-                case .json:
-                    return "application/json"
-                }
-            }
-            public static var allCases: [Self] {
-                [
-                    .json
-                ]
-            }
-        }
-    }
-    /// Delete a custom organization role.
-    ///
-    /// Deletes a custom organization role. For more information on custom organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
-    ///
-    /// To use this endpoint, the authenticated user must be one of:
-    ///
-    /// - An administrator for the organization.
-    /// - A user, or a user on a team, with the fine-grained permissions of `write_organization_custom_org_role` in the organization.
-    ///
-    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
-    ///
-    /// - Remark: HTTP `DELETE /orgs/{org}/organization-roles/{role_id}`.
-    /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/{role_id}/delete(orgs/delete-custom-organization-role)`.
-    public enum orgs_sol_delete_hyphen_custom_hyphen_organization_hyphen_role {
-        public static let id: Swift.String = "orgs/delete-custom-organization-role"
-        public struct Input: Sendable, Hashable {
-            /// - Remark: Generated from `#/paths/orgs/{org}/organization-roles/{role_id}/DELETE/path`.
-            public struct Path: Sendable, Hashable {
-                /// The organization name. The name is not case sensitive.
-                ///
-                /// - Remark: Generated from `#/paths/orgs/{org}/organization-roles/{role_id}/DELETE/path/org`.
-                public var org: Components.Parameters.org
-                /// The unique identifier of the role.
-                ///
-                /// - Remark: Generated from `#/paths/orgs/{org}/organization-roles/{role_id}/DELETE/path/role_id`.
-                public var role_id: Components.Parameters.role_hyphen_id
-                /// Creates a new `Path`.
-                ///
-                /// - Parameters:
-                ///   - org: The organization name. The name is not case sensitive.
-                ///   - role_id: The unique identifier of the role.
-                public init(
-                    org: Components.Parameters.org,
-                    role_id: Components.Parameters.role_hyphen_id
-                ) {
-                    self.org = org
-                    self.role_id = role_id
-                }
-            }
-            public var path: Operations.orgs_sol_delete_hyphen_custom_hyphen_organization_hyphen_role.Input.Path
-            /// Creates a new `Input`.
-            ///
-            /// - Parameters:
-            ///   - path:
-            public init(path: Operations.orgs_sol_delete_hyphen_custom_hyphen_organization_hyphen_role.Input.Path) {
-                self.path = path
-            }
-        }
-        @frozen public enum Output: Sendable, Hashable {
-            public struct NoContent: Sendable, Hashable {
-                /// Creates a new `NoContent`.
-                public init() {}
-            }
-            /// Response
-            ///
-            /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/{role_id}/delete(orgs/delete-custom-organization-role)/responses/204`.
-            ///
-            /// HTTP response code: `204 noContent`.
-            case noContent(Operations.orgs_sol_delete_hyphen_custom_hyphen_organization_hyphen_role.Output.NoContent)
-            /// The associated value of the enum case if `self` is `.noContent`.
-            ///
-            /// - Throws: An error if `self` is not `.noContent`.
-            /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.orgs_sol_delete_hyphen_custom_hyphen_organization_hyphen_role.Output.NoContent {
-                get throws {
-                    switch self {
-                    case let .noContent(response):
-                        return response
-                    default:
-                        try throwUnexpectedResponseStatus(
-                            expectedStatus: "noContent",
-                            response: self
-                        )
-                    }
-                }
-            }
-            /// Undocumented response.
-            ///
-            /// A response with a code that is not documented in the OpenAPI document.
-            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
-        }
-    }
     /// List teams that are assigned to an organization role
     ///
-    /// Lists the teams that are assigned to an organization role. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// Lists the teams that are assigned to an organization role. For more information on organization roles, see "[Using organization roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/using-organization-roles)."
     ///
     /// To use this endpoint, you must be an administrator for the organization.
     ///
@@ -15995,7 +15056,7 @@ public enum Operations {
     }
     /// List users that are assigned to an organization role
     ///
-    /// Lists organization members that are assigned to an organization role. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// Lists organization members that are assigned to an organization role. For more information on organization roles, see "[Using organization roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/using-organization-roles)."
     ///
     /// To use this endpoint, you must be an administrator for the organization.
     ///
@@ -21307,6 +20368,9 @@ public enum Operations {
         }
     }
     /// Enable or disable a security feature for an organization
+    ///
+    /// > [!WARNING]
+    /// > **Deprecation notice:** The ability to enable or disable a security feature for all eligible repositories in an organization is deprecated. Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead. For more information, see the [changelog](https://github.blog/changelog/2024-07-22-deprecation-api-endpoint-to-enable-or-disable-a-security-feature-for-an-organization/).
     ///
     /// Enables or disables the specified security feature for all eligible repositories in an organization. For more information, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."
     ///
