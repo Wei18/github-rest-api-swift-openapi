@@ -15,7 +15,8 @@ public protocol APIProtocol: Sendable {
     ///
     /// Lists repositories for the specified organization.
     ///
-    /// **Note:** In order to see the `security_and_analysis` block for a repository you must have admin permissions for the repository or be an owner or security manager for the organization that owns the repository. For more information, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."
+    /// > [!NOTE]
+    /// > In order to see the `security_and_analysis` block for a repository you must have admin permissions for the repository or be an owner or security manager for the organization that owns the repository. For more information, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."
     ///
     /// - Remark: HTTP `GET /orgs/{org}/repos`.
     /// - Remark: Generated from `#/paths//orgs/{org}/repos/get(repos/list-for-org)`.
@@ -84,7 +85,8 @@ public protocol APIProtocol: Sendable {
     ///
     /// The `parent` and `source` objects are present when the repository is a fork. `parent` is the repository this repository was forked from, `source` is the ultimate source for the network.
     ///
-    /// **Note:** In order to see the `security_and_analysis` block for a repository you must have admin permissions for the repository or be an owner or security manager for the organization that owns the repository. For more information, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."
+    /// > [!NOTE]
+    /// > In order to see the `security_and_analysis` block for a repository you must have admin permissions for the repository or be an owner or security manager for the organization that owns the repository. For more information, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/get(repos/get)`.
@@ -222,9 +224,11 @@ public protocol APIProtocol: Sendable {
     ///
     /// Protecting a branch requires admin or owner permissions to the repository.
     ///
-    /// **Note**: Passing new arrays of `users` and `teams` replaces their previous values.
+    /// > [!NOTE]
+    /// > Passing new arrays of `users` and `teams` replaces their previous values.
     ///
-    /// **Note**: The list of users, apps, and teams in total is limited to 100 items.
+    /// > [!NOTE]
+    /// > The list of users, apps, and teams in total is limited to 100 items.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/branches/{branch}/protection`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/branches/{branch}/protection/put(repos/update-branch-protection)`.
@@ -274,7 +278,8 @@ public protocol APIProtocol: Sendable {
     ///
     /// Updating pull request review enforcement requires admin or owner permissions to the repository and branch protection to be enabled.
     ///
-    /// **Note**: Passing new arrays of `users` and `teams` replaces their previous values.
+    /// > [!NOTE]
+    /// > Passing new arrays of `users` and `teams` replaces their previous values.
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/branches/{branch}/protection/required_pull_request_reviews`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/branches/{branch}/protection/required_pull_request_reviews/patch(repos/update-pull-request-review-protection)`.
@@ -292,7 +297,8 @@ public protocol APIProtocol: Sendable {
     ///
     /// When authenticated with admin or owner permissions to the repository, you can use this endpoint to check whether a branch requires signed commits. An enabled status of `true` indicates you must sign commits on this branch. For more information, see [Signing commits with GPG](https://docs.github.com/articles/signing-commits-with-gpg) in GitHub Help.
     ///
-    /// **Note**: You must enable branch protection to require signed commits.
+    /// > [!NOTE]
+    /// > You must enable branch protection to require signed commits.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/branches/{branch}/protection/required_signatures`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/branches/{branch}/protection/required_signatures/get(repos/get-commit-signature-protection)`.
@@ -372,7 +378,8 @@ public protocol APIProtocol: Sendable {
     ///
     /// Lists who has access to this protected branch.
     ///
-    /// **Note**: Users, apps, and teams `restrictions` are only available for organization-owned repositories.
+    /// > [!NOTE]
+    /// > Users, apps, and teams `restrictions` are only available for organization-owned repositories.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/branches/{branch}/protection/restrictions`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/branches/{branch}/protection/restrictions/get(repos/get-access-restrictions)`.
@@ -510,7 +517,8 @@ public protocol APIProtocol: Sendable {
     ///
     /// Renames a branch in a repository.
     ///
-    /// **Note:** Although the API responds immediately, the branch rename process might take some extra time to complete in the background. You won't be able to push to the old branch name while the rename process is in progress. For more information, see "[Renaming a branch](https://docs.github.com/github/administering-a-repository/renaming-a-branch)".
+    /// > [!NOTE]
+    /// > Although the API responds immediately, the branch rename process might take some extra time to complete in the background. You won't be able to push to the old branch name while the rename process is in progress. For more information, see "[Renaming a branch](https://docs.github.com/github/administering-a-repository/renaming-a-branch)".
     ///
     /// The authenticated user must have push access to the branch. If the branch is the default branch, the authenticated user must also have admin or owner permissions.
     ///
@@ -602,7 +610,8 @@ public protocol APIProtocol: Sendable {
     ///  - If the user had their own fork of the repository, the fork will be deleted.
     ///  - If the user still has read access to the repository, open pull requests by this user from a fork will be denied.
     ///
-    /// **Note**: A user can still have access to the repository through organization permissions like base repository permissions.
+    /// > [!NOTE]
+    /// > A user can still have access to the repository through organization permissions like base repository permissions.
     ///
     /// Although the API responds immediately, the additional permission updates might take some extra time to complete in the background.
     ///
@@ -759,7 +768,8 @@ public protocol APIProtocol: Sendable {
     ///
     /// Returns the contents of a single commit reference. You must have `read` access for the repository to use this endpoint.
     ///
-    /// **Note:** If there are more than 300 files in the commit diff and the default JSON media type is requested, the response will include pagination link headers for the remaining files, up to a limit of 3000 files. Each page contains the static commit information, and the only changes are to the file listing.
+    /// > [!NOTE]
+    /// > If there are more than 300 files in the commit diff and the default JSON media type is requested, the response will include pagination link headers for the remaining files, up to a limit of 3000 files. Each page contains the static commit information, and the only changes are to the file listing.
     ///
     /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)." Pagination query parameters are not supported for these media types.
     ///
@@ -930,7 +940,8 @@ public protocol APIProtocol: Sendable {
     ///
     /// Creates a new file or replaces an existing file in a repository.
     ///
-    /// **Note:** If you use this endpoint and the "[Delete a file](https://docs.github.com/rest/repos/contents/#delete-a-file)" endpoint in parallel, the concurrent requests will conflict and you will receive errors. You must use these endpoints serially instead.
+    /// > [!NOTE]
+    /// > If you use this endpoint and the "[Delete a file](https://docs.github.com/rest/repos/contents/#delete-a-file)" endpoint in parallel, the concurrent requests will conflict and you will receive errors. You must use these endpoints serially instead.
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint. The `workflow` scope is also required in order to modify files in the `.github/workflows` directory.
     ///
@@ -947,7 +958,8 @@ public protocol APIProtocol: Sendable {
     ///
     /// You must provide values for both `name` and `email`, whether you choose to use `author` or `committer`. Otherwise, you'll receive a `422` status code.
     ///
-    /// **Note:** If you use this endpoint and the "[Create or update file contents](https://docs.github.com/rest/repos/contents/#create-or-update-file-contents)" endpoint in parallel, the concurrent requests will conflict and you will receive errors. You must use these endpoints serially instead.
+    /// > [!NOTE]
+    /// > If you use this endpoint and the "[Create or update file contents](https://docs.github.com/rest/repos/contents/#create-or-update-file-contents)" endpoint in parallel, the concurrent requests will conflict and you will receive errors. You must use these endpoints serially instead.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/contents/{path}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/contents/{path}/delete(repos/delete-file)`.
@@ -1094,7 +1106,8 @@ public protocol APIProtocol: Sendable {
     func repos_sol_get_hyphen_all_hyphen_environments(_ input: Operations.repos_sol_get_hyphen_all_hyphen_environments.Input) async throws -> Operations.repos_sol_get_hyphen_all_hyphen_environments.Output
     /// Get an environment
     ///
-    /// **Note:** To get information about name patterns that branches must match in order to deploy to this environment, see "[Get a deployment branch policy](/rest/deployments/branch-policies#get-a-deployment-branch-policy)."
+    /// > [!NOTE]
+    /// > To get information about name patterns that branches must match in order to deploy to this environment, see "[Get a deployment branch policy](/rest/deployments/branch-policies#get-a-deployment-branch-policy)."
     ///
     /// Anyone with read access to the repository can use this endpoint.
     ///
@@ -1107,9 +1120,11 @@ public protocol APIProtocol: Sendable {
     ///
     /// Create or update an environment with protection rules, such as required reviewers. For more information about environment protection rules, see "[Environments](/actions/reference/environments#environment-protection-rules)."
     ///
-    /// **Note:** To create or update name patterns that branches must match in order to deploy to this environment, see "[Deployment branch policies](/rest/deployments/branch-policies)."
+    /// > [!NOTE]
+    /// > To create or update name patterns that branches must match in order to deploy to this environment, see "[Deployment branch policies](/rest/deployments/branch-policies)."
     ///
-    /// **Note:** To create or update secrets for an environment, see "[GitHub Actions secrets](/rest/actions/secrets)."
+    /// > [!NOTE]
+    /// > To create or update secrets for an environment, see "[GitHub Actions secrets](/rest/actions/secrets)."
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
@@ -1198,7 +1213,9 @@ public protocol APIProtocol: Sendable {
     func repos_sol_create_hyphen_deployment_hyphen_protection_hyphen_rule(_ input: Operations.repos_sol_create_hyphen_deployment_hyphen_protection_hyphen_rule.Input) async throws -> Operations.repos_sol_create_hyphen_deployment_hyphen_protection_hyphen_rule.Output
     /// List custom deployment rule integrations available for an environment
     ///
-    /// Gets all custom deployment protection rule integrations that are available for an environment. Anyone with read access to the repository can use this endpoint.
+    /// Gets all custom deployment protection rule integrations that are available for an environment.
+    ///
+    /// The authenticated user must have admin or owner permissions to the repository to use this endpoint.
     ///
     /// For more information about environments, see "[Using environments for deployment](https://docs.github.com/actions/deployment/targeting-different-environments/using-environments-for-deployment)."
     ///
@@ -1242,9 +1259,11 @@ public protocol APIProtocol: Sendable {
     ///
     /// Create a fork for the authenticated user.
     ///
-    /// **Note**: Forking a Repository happens asynchronously. You may have to wait a short period of time before you can access the git objects. If this takes longer than 5 minutes, be sure to contact [GitHub Support](https://support.github.com/contact?tags=dotcom-rest-api).
+    /// > [!NOTE]
+    /// > Forking a Repository happens asynchronously. You may have to wait a short period of time before you can access the git objects. If this takes longer than 5 minutes, be sure to contact [GitHub Support](https://support.github.com/contact?tags=dotcom-rest-api).
     ///
-    /// **Note**: Although this endpoint works with GitHub Apps, the GitHub App must be installed on the destination account with access to all repositories and on the source account with access to the source repository.
+    /// > [!NOTE]
+    /// > Although this endpoint works with GitHub Apps, the GitHub App must be installed on the destination account with access to all repositories and on the source account with access to the source repository.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/forks`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/forks/post(repos/create-fork)`.
@@ -1335,7 +1354,8 @@ public protocol APIProtocol: Sendable {
     ///
     /// This will trigger the hook with the latest push to the current repository if the hook is subscribed to `push` events. If the hook is not subscribed to `push` events, the server will respond with 204 but no test POST will be generated.
     ///
-    /// **Note**: Previously `/repos/:owner/:repo/hooks/:hook_id/test`
+    /// > [!NOTE]
+    /// > Previously `/repos/:owner/:repo/hooks/:hook_id/test`
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/hooks/{hook_id}/tests`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/hooks/{hook_id}/tests/post(repos/test-push-webhook)`.
@@ -1657,9 +1677,8 @@ public protocol APIProtocol: Sendable {
     ///
     /// Gets a public release with the specified release ID.
     ///
-    /// **Note:** This returns an `upload_url` key corresponding to the endpoint
-    /// for uploading release assets. This key is a hypermedia resource. For more information, see
-    /// "[Getting started with the REST API](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#hypermedia)."
+    /// > [!NOTE]
+    /// > This returns an `upload_url` key corresponding to the endpoint for uploading release assets. This key is a hypermedia resource. For more information, see "[Getting started with the REST API](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#hypermedia)."
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/releases/{release_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/releases/{release_id}/get(repos/get-release)`.
@@ -1773,12 +1792,10 @@ public protocol APIProtocol: Sendable {
     func repos_sol_delete_hyphen_repo_hyphen_ruleset(_ input: Operations.repos_sol_delete_hyphen_repo_hyphen_ruleset.Input) async throws -> Operations.repos_sol_delete_hyphen_repo_hyphen_ruleset.Output
     /// Get the weekly commit activity
     ///
-    ///
     /// Returns a weekly aggregate of the number of additions and deletions pushed to a repository.
     ///
-    /// **Note:** This endpoint can only be used for repositories with fewer than 10,000 commits. If the repository contains
-    /// 10,000 or more commits, a 422 status code will be returned.
-    ///
+    /// > [!NOTE]
+    /// > This endpoint can only be used for repositories with fewer than 10,000 commits. If the repository contains 10,000 or more commits, a 422 status code will be returned.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/stats/code_frequency`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/stats/code_frequency/get(repos/get-code-frequency-stats)`.
@@ -1800,7 +1817,8 @@ public protocol APIProtocol: Sendable {
     /// *   `d` - Number of deletions
     /// *   `c` - Number of commits
     ///
-    /// **Note:** This endpoint will return `0` values for all addition and deletion counts in repositories with 10,000 or more commits.
+    /// > [!NOTE]
+    /// > This endpoint will return `0` values for all addition and deletion counts in repositories with 10,000 or more commits.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/stats/contributors`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/stats/contributors/get(repos/get-contributors-stats)`.
@@ -1847,8 +1865,8 @@ public protocol APIProtocol: Sendable {
     func repos_sol_list_hyphen_tags(_ input: Operations.repos_sol_list_hyphen_tags.Input) async throws -> Operations.repos_sol_list_hyphen_tags.Output
     /// Deprecated - List tag protection states for a repository
     ///
-    /// **Note**: This operation is deprecated and will be removed after August 30th 2024
-    /// Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#get-all-repository-rulesets)" endpoint instead.
+    /// > [!WARNING]
+    /// > **Deprecation notice:** This operation is deprecated and will be removed after August 30, 2024. Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#get-all-repository-rulesets)" endpoint instead.
     ///
     /// This returns the tag protection states of a repository.
     ///
@@ -1860,8 +1878,8 @@ public protocol APIProtocol: Sendable {
     func repos_sol_list_hyphen_tag_hyphen_protection(_ input: Operations.repos_sol_list_hyphen_tag_hyphen_protection.Input) async throws -> Operations.repos_sol_list_hyphen_tag_hyphen_protection.Output
     /// Deprecated - Create a tag protection state for a repository
     ///
-    /// **Note**: This operation is deprecated and will be removed after August 30th 2024
-    /// Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#create-a-repository-ruleset)" endpoint instead.
+    /// > [!WARNING]
+    /// > **Deprecation notice:** This operation is deprecated and will be removed after August 30, 2024. Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#create-a-repository-ruleset)" endpoint instead.
     ///
     /// This creates a tag protection state for a repository.
     /// This endpoint is only available to repository administrators.
@@ -1872,8 +1890,8 @@ public protocol APIProtocol: Sendable {
     func repos_sol_create_hyphen_tag_hyphen_protection(_ input: Operations.repos_sol_create_hyphen_tag_hyphen_protection.Input) async throws -> Operations.repos_sol_create_hyphen_tag_hyphen_protection.Output
     /// Deprecated - Delete a tag protection state for a repository
     ///
-    /// **Note**: This operation is deprecated and will be removed after August 30th 2024
-    /// Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#delete-a-repository-ruleset)" endpoint instead.
+    /// > [!WARNING]
+    /// > **Deprecation notice:** This operation is deprecated and will be removed after August 30, 2024. Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#delete-a-repository-ruleset)" endpoint instead.
     ///
     /// This deletes a tag protection state for a repository.
     /// This endpoint is only available to repository administrators.
@@ -1887,7 +1905,9 @@ public protocol APIProtocol: Sendable {
     /// Gets a redirect URL to download a tar archive for a repository. If you omit `:ref`, the repository’s default branch (usually
     /// `main`) will be used. Please make sure your HTTP framework is configured to follow redirects or you will need to use
     /// the `Location` header to make a second `GET` request.
-    /// **Note**: For private repositories, these links are temporary and expire after five minutes.
+    ///
+    /// > [!NOTE]
+    /// > For private repositories, these links are temporary and expire after five minutes.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/tarball/{ref}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/tarball/{ref}/get(repos/download-tarball-archive)`.
@@ -1981,7 +2001,8 @@ public protocol APIProtocol: Sendable {
     /// `main`) will be used. Please make sure your HTTP framework is configured to follow redirects or you will need to use
     /// the `Location` header to make a second `GET` request.
     ///
-    /// **Note**: For private repositories, these links are temporary and expire after five minutes. If the repository is empty, you will receive a 404 when you follow the redirect.
+    /// > [!NOTE]
+    /// > For private repositories, these links are temporary and expire after five minutes. If the repository is empty, you will receive a 404 when you follow the redirect.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/zipball/{ref}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/zipball/{ref}/get(repos/download-zipball-archive)`.
@@ -2060,7 +2081,8 @@ extension APIProtocol {
     ///
     /// Lists repositories for the specified organization.
     ///
-    /// **Note:** In order to see the `security_and_analysis` block for a repository you must have admin permissions for the repository or be an owner or security manager for the organization that owns the repository. For more information, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."
+    /// > [!NOTE]
+    /// > In order to see the `security_and_analysis` block for a repository you must have admin permissions for the repository or be an owner or security manager for the organization that owns the repository. For more information, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."
     ///
     /// - Remark: HTTP `GET /orgs/{org}/repos`.
     /// - Remark: Generated from `#/paths//orgs/{org}/repos/get(repos/list-for-org)`.
@@ -2213,7 +2235,8 @@ extension APIProtocol {
     ///
     /// The `parent` and `source` objects are present when the repository is a fork. `parent` is the repository this repository was forked from, `source` is the ultimate source for the network.
     ///
-    /// **Note:** In order to see the `security_and_analysis` block for a repository you must have admin permissions for the repository or be an owner or security manager for the organization that owns the repository. For more information, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."
+    /// > [!NOTE]
+    /// > In order to see the `security_and_analysis` block for a repository you must have admin permissions for the repository or be an owner or security manager for the organization that owns the repository. For more information, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/get(repos/get)`.
@@ -2479,9 +2502,11 @@ extension APIProtocol {
     ///
     /// Protecting a branch requires admin or owner permissions to the repository.
     ///
-    /// **Note**: Passing new arrays of `users` and `teams` replaces their previous values.
+    /// > [!NOTE]
+    /// > Passing new arrays of `users` and `teams` replaces their previous values.
     ///
-    /// **Note**: The list of users, apps, and teams in total is limited to 100 items.
+    /// > [!NOTE]
+    /// > The list of users, apps, and teams in total is limited to 100 items.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/branches/{branch}/protection`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/branches/{branch}/protection/put(repos/update-branch-protection)`.
@@ -2581,7 +2606,8 @@ extension APIProtocol {
     ///
     /// Updating pull request review enforcement requires admin or owner permissions to the repository and branch protection to be enabled.
     ///
-    /// **Note**: Passing new arrays of `users` and `teams` replaces their previous values.
+    /// > [!NOTE]
+    /// > Passing new arrays of `users` and `teams` replaces their previous values.
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/branches/{branch}/protection/required_pull_request_reviews`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/branches/{branch}/protection/required_pull_request_reviews/patch(repos/update-pull-request-review-protection)`.
@@ -2617,7 +2643,8 @@ extension APIProtocol {
     ///
     /// When authenticated with admin or owner permissions to the repository, you can use this endpoint to check whether a branch requires signed commits. An enabled status of `true` indicates you must sign commits on this branch. For more information, see [Signing commits with GPG](https://docs.github.com/articles/signing-commits-with-gpg) in GitHub Help.
     ///
-    /// **Note**: You must enable branch protection to require signed commits.
+    /// > [!NOTE]
+    /// > You must enable branch protection to require signed commits.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/branches/{branch}/protection/required_signatures`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/branches/{branch}/protection/required_signatures/get(repos/get-commit-signature-protection)`.
@@ -2779,7 +2806,8 @@ extension APIProtocol {
     ///
     /// Lists who has access to this protected branch.
     ///
-    /// **Note**: Users, apps, and teams `restrictions` are only available for organization-owned repositories.
+    /// > [!NOTE]
+    /// > Users, apps, and teams `restrictions` are only available for organization-owned repositories.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/branches/{branch}/protection/restrictions`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/branches/{branch}/protection/restrictions/get(repos/get-access-restrictions)`.
@@ -3041,7 +3069,8 @@ extension APIProtocol {
     ///
     /// Renames a branch in a repository.
     ///
-    /// **Note:** Although the API responds immediately, the branch rename process might take some extra time to complete in the background. You won't be able to push to the old branch name while the rename process is in progress. For more information, see "[Renaming a branch](https://docs.github.com/github/administering-a-repository/renaming-a-branch)".
+    /// > [!NOTE]
+    /// > Although the API responds immediately, the branch rename process might take some extra time to complete in the background. You won't be able to push to the old branch name while the rename process is in progress. For more information, see "[Renaming a branch](https://docs.github.com/github/administering-a-repository/renaming-a-branch)".
     ///
     /// The authenticated user must have push access to the branch. If the branch is the default branch, the authenticated user must also have admin or owner permissions.
     ///
@@ -3175,7 +3204,8 @@ extension APIProtocol {
     ///  - If the user had their own fork of the repository, the fork will be deleted.
     ///  - If the user still has read access to the repository, open pull requests by this user from a fork will be denied.
     ///
-    /// **Note**: A user can still have access to the repository through organization permissions like base repository permissions.
+    /// > [!NOTE]
+    /// > A user can still have access to the repository through organization permissions like base repository permissions.
     ///
     /// Although the API responds immediately, the additional permission updates might take some extra time to complete in the background.
     ///
@@ -3432,7 +3462,8 @@ extension APIProtocol {
     ///
     /// Returns the contents of a single commit reference. You must have `read` access for the repository to use this endpoint.
     ///
-    /// **Note:** If there are more than 300 files in the commit diff and the default JSON media type is requested, the response will include pagination link headers for the remaining files, up to a limit of 3000 files. Each page contains the static commit information, and the only changes are to the file listing.
+    /// > [!NOTE]
+    /// > If there are more than 300 files in the commit diff and the default JSON media type is requested, the response will include pagination link headers for the remaining files, up to a limit of 3000 files. Each page contains the static commit information, and the only changes are to the file listing.
     ///
     /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)." Pagination query parameters are not supported for these media types.
     ///
@@ -3661,7 +3692,8 @@ extension APIProtocol {
     ///
     /// Creates a new file or replaces an existing file in a repository.
     ///
-    /// **Note:** If you use this endpoint and the "[Delete a file](https://docs.github.com/rest/repos/contents/#delete-a-file)" endpoint in parallel, the concurrent requests will conflict and you will receive errors. You must use these endpoints serially instead.
+    /// > [!NOTE]
+    /// > If you use this endpoint and the "[Delete a file](https://docs.github.com/rest/repos/contents/#delete-a-file)" endpoint in parallel, the concurrent requests will conflict and you will receive errors. You must use these endpoints serially instead.
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint. The `workflow` scope is also required in order to modify files in the `.github/workflows` directory.
     ///
@@ -3688,7 +3720,8 @@ extension APIProtocol {
     ///
     /// You must provide values for both `name` and `email`, whether you choose to use `author` or `committer`. Otherwise, you'll receive a `422` status code.
     ///
-    /// **Note:** If you use this endpoint and the "[Create or update file contents](https://docs.github.com/rest/repos/contents/#create-or-update-file-contents)" endpoint in parallel, the concurrent requests will conflict and you will receive errors. You must use these endpoints serially instead.
+    /// > [!NOTE]
+    /// > If you use this endpoint and the "[Create or update file contents](https://docs.github.com/rest/repos/contents/#create-or-update-file-contents)" endpoint in parallel, the concurrent requests will conflict and you will receive errors. You must use these endpoints serially instead.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/contents/{path}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/contents/{path}/delete(repos/delete-file)`.
@@ -3939,7 +3972,8 @@ extension APIProtocol {
     }
     /// Get an environment
     ///
-    /// **Note:** To get information about name patterns that branches must match in order to deploy to this environment, see "[Get a deployment branch policy](/rest/deployments/branch-policies#get-a-deployment-branch-policy)."
+    /// > [!NOTE]
+    /// > To get information about name patterns that branches must match in order to deploy to this environment, see "[Get a deployment branch policy](/rest/deployments/branch-policies#get-a-deployment-branch-policy)."
     ///
     /// Anyone with read access to the repository can use this endpoint.
     ///
@@ -3960,9 +3994,11 @@ extension APIProtocol {
     ///
     /// Create or update an environment with protection rules, such as required reviewers. For more information about environment protection rules, see "[Environments](/actions/reference/environments#environment-protection-rules)."
     ///
-    /// **Note:** To create or update name patterns that branches must match in order to deploy to this environment, see "[Deployment branch policies](/rest/deployments/branch-policies)."
+    /// > [!NOTE]
+    /// > To create or update name patterns that branches must match in order to deploy to this environment, see "[Deployment branch policies](/rest/deployments/branch-policies)."
     ///
-    /// **Note:** To create or update secrets for an environment, see "[GitHub Actions secrets](/rest/actions/secrets)."
+    /// > [!NOTE]
+    /// > To create or update secrets for an environment, see "[GitHub Actions secrets](/rest/actions/secrets)."
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
@@ -4121,7 +4157,9 @@ extension APIProtocol {
     }
     /// List custom deployment rule integrations available for an environment
     ///
-    /// Gets all custom deployment protection rule integrations that are available for an environment. Anyone with read access to the repository can use this endpoint.
+    /// Gets all custom deployment protection rule integrations that are available for an environment.
+    ///
+    /// The authenticated user must have admin or owner permissions to the repository to use this endpoint.
     ///
     /// For more information about environments, see "[Using environments for deployment](https://docs.github.com/actions/deployment/targeting-different-environments/using-environments-for-deployment)."
     ///
@@ -4195,9 +4233,11 @@ extension APIProtocol {
     ///
     /// Create a fork for the authenticated user.
     ///
-    /// **Note**: Forking a Repository happens asynchronously. You may have to wait a short period of time before you can access the git objects. If this takes longer than 5 minutes, be sure to contact [GitHub Support](https://support.github.com/contact?tags=dotcom-rest-api).
+    /// > [!NOTE]
+    /// > Forking a Repository happens asynchronously. You may have to wait a short period of time before you can access the git objects. If this takes longer than 5 minutes, be sure to contact [GitHub Support](https://support.github.com/contact?tags=dotcom-rest-api).
     ///
-    /// **Note**: Although this endpoint works with GitHub Apps, the GitHub App must be installed on the destination account with access to all repositories and on the source account with access to the source repository.
+    /// > [!NOTE]
+    /// > Although this endpoint works with GitHub Apps, the GitHub App must be installed on the destination account with access to all repositories and on the source account with access to the source repository.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/forks`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/forks/post(repos/create-fork)`.
@@ -4396,7 +4436,8 @@ extension APIProtocol {
     ///
     /// This will trigger the hook with the latest push to the current repository if the hook is subscribed to `push` events. If the hook is not subscribed to `push` events, the server will respond with 204 but no test POST will be generated.
     ///
-    /// **Note**: Previously `/repos/:owner/:repo/hooks/:hook_id/test`
+    /// > [!NOTE]
+    /// > Previously `/repos/:owner/:repo/hooks/:hook_id/test`
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/hooks/{hook_id}/tests`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/hooks/{hook_id}/tests/post(repos/test-push-webhook)`.
@@ -5038,9 +5079,8 @@ extension APIProtocol {
     ///
     /// Gets a public release with the specified release ID.
     ///
-    /// **Note:** This returns an `upload_url` key corresponding to the endpoint
-    /// for uploading release assets. This key is a hypermedia resource. For more information, see
-    /// "[Getting started with the REST API](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#hypermedia)."
+    /// > [!NOTE]
+    /// > This returns an `upload_url` key corresponding to the endpoint for uploading release assets. This key is a hypermedia resource. For more information, see "[Getting started with the REST API](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#hypermedia)."
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/releases/{release_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/releases/{release_id}/get(repos/get-release)`.
@@ -5272,12 +5312,10 @@ extension APIProtocol {
     }
     /// Get the weekly commit activity
     ///
-    ///
     /// Returns a weekly aggregate of the number of additions and deletions pushed to a repository.
     ///
-    /// **Note:** This endpoint can only be used for repositories with fewer than 10,000 commits. If the repository contains
-    /// 10,000 or more commits, a 422 status code will be returned.
-    ///
+    /// > [!NOTE]
+    /// > This endpoint can only be used for repositories with fewer than 10,000 commits. If the repository contains 10,000 or more commits, a 422 status code will be returned.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/stats/code_frequency`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/stats/code_frequency/get(repos/get-code-frequency-stats)`.
@@ -5315,7 +5353,8 @@ extension APIProtocol {
     /// *   `d` - Number of deletions
     /// *   `c` - Number of commits
     ///
-    /// **Note:** This endpoint will return `0` values for all addition and deletion counts in repositories with 10,000 or more commits.
+    /// > [!NOTE]
+    /// > This endpoint will return `0` values for all addition and deletion counts in repositories with 10,000 or more commits.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/stats/contributors`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/stats/contributors/get(repos/get-contributors-stats)`.
@@ -5406,8 +5445,8 @@ extension APIProtocol {
     }
     /// Deprecated - List tag protection states for a repository
     ///
-    /// **Note**: This operation is deprecated and will be removed after August 30th 2024
-    /// Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#get-all-repository-rulesets)" endpoint instead.
+    /// > [!WARNING]
+    /// > **Deprecation notice:** This operation is deprecated and will be removed after August 30, 2024. Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#get-all-repository-rulesets)" endpoint instead.
     ///
     /// This returns the tag protection states of a repository.
     ///
@@ -5427,8 +5466,8 @@ extension APIProtocol {
     }
     /// Deprecated - Create a tag protection state for a repository
     ///
-    /// **Note**: This operation is deprecated and will be removed after August 30th 2024
-    /// Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#create-a-repository-ruleset)" endpoint instead.
+    /// > [!WARNING]
+    /// > **Deprecation notice:** This operation is deprecated and will be removed after August 30, 2024. Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#create-a-repository-ruleset)" endpoint instead.
     ///
     /// This creates a tag protection state for a repository.
     /// This endpoint is only available to repository administrators.
@@ -5449,8 +5488,8 @@ extension APIProtocol {
     }
     /// Deprecated - Delete a tag protection state for a repository
     ///
-    /// **Note**: This operation is deprecated and will be removed after August 30th 2024
-    /// Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#delete-a-repository-ruleset)" endpoint instead.
+    /// > [!WARNING]
+    /// > **Deprecation notice:** This operation is deprecated and will be removed after August 30, 2024. Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#delete-a-repository-ruleset)" endpoint instead.
     ///
     /// This deletes a tag protection state for a repository.
     /// This endpoint is only available to repository administrators.
@@ -5472,7 +5511,9 @@ extension APIProtocol {
     /// Gets a redirect URL to download a tar archive for a repository. If you omit `:ref`, the repository’s default branch (usually
     /// `main`) will be used. Please make sure your HTTP framework is configured to follow redirects or you will need to use
     /// the `Location` header to make a second `GET` request.
-    /// **Note**: For private repositories, these links are temporary and expire after five minutes.
+    ///
+    /// > [!NOTE]
+    /// > For private repositories, these links are temporary and expire after five minutes.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/tarball/{ref}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/tarball/{ref}/get(repos/download-tarball-archive)`.
@@ -5650,7 +5691,8 @@ extension APIProtocol {
     /// `main`) will be used. Please make sure your HTTP framework is configured to follow redirects or you will need to use
     /// the `Location` header to make a second `GET` request.
     ///
-    /// **Note**: For private repositories, these links are temporary and expire after five minutes. If the repository is empty, you will receive a 404 when you follow the redirect.
+    /// > [!NOTE]
+    /// > For private repositories, these links are temporary and expire after five minutes. If the repository is empty, you will receive a 404 when you follow the redirect.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/zipball/{ref}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/zipball/{ref}/get(repos/download-zipball-archive)`.
@@ -12720,7 +12762,8 @@ public enum Components {
             public var name: Swift.String
             /// The target of the ruleset
             ///
-            /// **Note**: The `push` target is in beta and is subject to change.
+            /// > [!NOTE]
+            /// > The `push` target is in beta and is subject to change.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-ruleset/target`.
             @frozen public enum targetPayload: String, Codable, Hashable, Sendable {
@@ -12730,7 +12773,8 @@ public enum Components {
             }
             /// The target of the ruleset
             ///
-            /// **Note**: The `push` target is in beta and is subject to change.
+            /// > [!NOTE]
+            /// > The `push` target is in beta and is subject to change.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-ruleset/target`.
             public var target: Components.Schemas.repository_hyphen_ruleset.targetPayload?
@@ -18822,7 +18866,7 @@ public enum Components {
             /// The id of the environment.
             ///
             /// - Remark: Generated from `#/components/schemas/environment/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/environment/node_id`.
             public var node_id: Swift.String
             /// The name of the environment.
@@ -19102,7 +19146,7 @@ public enum Components {
             ///   - protection_rules: Built-in deployment protection rules for the environment.
             ///   - deployment_branch_policy:
             public init(
-                id: Swift.Int,
+                id: Swift.Int64,
                 node_id: Swift.String,
                 name: Swift.String,
                 url: Swift.String,
@@ -21803,6 +21847,11 @@ public enum Components {
         ///
         /// - Remark: Generated from `#/components/parameters/invitation-id`.
         public typealias invitation_hyphen_id = Swift.Int
+        /// The name of the ref. Cannot contain wildcard characters. Optionally prefix with `refs/heads/` to limit to branches or `refs/tags/` to limit to tags. Omit the prefix to search across all refs. When specified, only rule evaluations triggered for this ref will be returned.
+        ///
+        ///
+        /// - Remark: Generated from `#/components/parameters/ref-in-query`.
+        public typealias ref_hyphen_in_hyphen_query = Swift.String
         /// The name of the repository to filter on. When specified, only rule evaluations from this repository will be returned.
         ///
         /// - Remark: Generated from `#/components/parameters/repository-name-in-query`.
@@ -21919,10 +21968,6 @@ public enum Components {
         ///
         /// - Remark: Generated from `#/components/parameters/release-id`.
         public typealias release_hyphen_id = Swift.Int
-        /// The name of the ref. Cannot contain wildcard characters. When specified, only rule evaluations triggered for this ref will be returned.
-        ///
-        /// - Remark: Generated from `#/components/parameters/ref-in-query`.
-        public typealias ref_hyphen_in_hyphen_query = Swift.String
         /// The unique identifier of the tag protection.
         ///
         /// - Remark: Generated from `#/components/parameters/tag-protection-id`.
@@ -22366,7 +22411,8 @@ public enum Operations {
     ///
     /// Lists repositories for the specified organization.
     ///
-    /// **Note:** In order to see the `security_and_analysis` block for a repository you must have admin permissions for the repository or be an owner or security manager for the organization that owns the repository. For more information, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."
+    /// > [!NOTE]
+    /// > In order to see the `security_and_analysis` block for a repository you must have admin permissions for the repository or be an owner or security manager for the organization that owns the repository. For more information, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."
     ///
     /// - Remark: HTTP `GET /orgs/{org}/repos`.
     /// - Remark: Generated from `#/paths//orgs/{org}/repos/get(repos/list-for-org)`.
@@ -23340,7 +23386,8 @@ public enum Operations {
                     public var name: Swift.String
                     /// The target of the ruleset
                     ///
-                    /// **Note**: The `push` target is in beta and is subject to change.
+                    /// > [!NOTE]
+                    /// > The `push` target is in beta and is subject to change.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/POST/requestBody/json/target`.
                     @frozen public enum targetPayload: String, Codable, Hashable, Sendable {
@@ -23350,7 +23397,8 @@ public enum Operations {
                     }
                     /// The target of the ruleset
                     ///
-                    /// **Note**: The `push` target is in beta and is subject to change.
+                    /// > [!NOTE]
+                    /// > The `push` target is in beta and is subject to change.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/POST/requestBody/json/target`.
                     public var target: Operations.repos_sol_create_hyphen_org_hyphen_ruleset.Input.Body.jsonPayload.targetPayload?
@@ -23575,6 +23623,11 @@ public enum Operations {
             public var path: Operations.repos_sol_get_hyphen_org_hyphen_rule_hyphen_suites.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/rule-suites/GET/query`.
             public struct Query: Sendable, Hashable {
+                /// The name of the ref. Cannot contain wildcard characters. Optionally prefix with `refs/heads/` to limit to branches or `refs/tags/` to limit to tags. Omit the prefix to search across all refs. When specified, only rule evaluations triggered for this ref will be returned.
+                ///
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/rule-suites/GET/query/ref`.
+                public var ref: Components.Parameters.ref_hyphen_in_hyphen_query?
                 /// The name of the repository to filter on. When specified, only rule evaluations from this repository will be returned.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/rule-suites/GET/query/repository_name`.
@@ -23618,6 +23671,7 @@ public enum Operations {
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
+                ///   - ref: The name of the ref. Cannot contain wildcard characters. Optionally prefix with `refs/heads/` to limit to branches or `refs/tags/` to limit to tags. Omit the prefix to search across all refs. When specified, only rule evaluations triggered for this ref will be returned.
                 ///   - repository_name: The name of the repository to filter on. When specified, only rule evaluations from this repository will be returned.
                 ///   - time_period: The time period to filter by.
                 ///   - actor_name: The handle for the GitHub user account to filter on. When specified, only rule evaluations triggered by this actor will be returned.
@@ -23625,6 +23679,7 @@ public enum Operations {
                 ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
+                    ref: Components.Parameters.ref_hyphen_in_hyphen_query? = nil,
                     repository_name: Components.Parameters.repository_hyphen_name_hyphen_in_hyphen_query? = nil,
                     time_period: Components.Parameters.time_hyphen_period? = nil,
                     actor_name: Components.Parameters.actor_hyphen_name_hyphen_in_hyphen_query? = nil,
@@ -23632,6 +23687,7 @@ public enum Operations {
                     per_page: Components.Parameters.per_hyphen_page? = nil,
                     page: Components.Parameters.page? = nil
                 ) {
+                    self.ref = ref
                     self.repository_name = repository_name
                     self.time_period = time_period
                     self.actor_name = actor_name
@@ -24231,7 +24287,8 @@ public enum Operations {
                     public var name: Swift.String?
                     /// The target of the ruleset
                     ///
-                    /// **Note**: The `push` target is in beta and is subject to change.
+                    /// > [!NOTE]
+                    /// > The `push` target is in beta and is subject to change.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/{ruleset_id}/PUT/requestBody/json/target`.
                     @frozen public enum targetPayload: String, Codable, Hashable, Sendable {
@@ -24241,7 +24298,8 @@ public enum Operations {
                     }
                     /// The target of the ruleset
                     ///
-                    /// **Note**: The `push` target is in beta and is subject to change.
+                    /// > [!NOTE]
+                    /// > The `push` target is in beta and is subject to change.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/{ruleset_id}/PUT/requestBody/json/target`.
                     public var target: Operations.repos_sol_update_hyphen_org_hyphen_ruleset.Input.Body.jsonPayload.targetPayload?
@@ -24606,7 +24664,8 @@ public enum Operations {
     ///
     /// The `parent` and `source` objects are present when the repository is a fork. `parent` is the repository this repository was forked from, `source` is the ultimate source for the network.
     ///
-    /// **Note:** In order to see the `security_and_analysis` block for a repository you must have admin permissions for the repository or be an owner or security manager for the organization that owns the repository. For more information, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."
+    /// > [!NOTE]
+    /// > In order to see the `security_and_analysis` block for a repository you must have admin permissions for the repository or be an owner or security manager for the organization that owns the repository. For more information, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/get(repos/get)`.
@@ -28192,9 +28251,11 @@ public enum Operations {
     ///
     /// Protecting a branch requires admin or owner permissions to the repository.
     ///
-    /// **Note**: Passing new arrays of `users` and `teams` replaces their previous values.
+    /// > [!NOTE]
+    /// > Passing new arrays of `users` and `teams` replaces their previous values.
     ///
-    /// **Note**: The list of users, apps, and teams in total is limited to 100 items.
+    /// > [!NOTE]
+    /// > The list of users, apps, and teams in total is limited to 100 items.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/branches/{branch}/protection`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/branches/{branch}/protection/put(repos/update-branch-protection)`.
@@ -29507,7 +29568,8 @@ public enum Operations {
     ///
     /// Updating pull request review enforcement requires admin or owner permissions to the repository and branch protection to be enabled.
     ///
-    /// **Note**: Passing new arrays of `users` and `teams` replaces their previous values.
+    /// > [!NOTE]
+    /// > Passing new arrays of `users` and `teams` replaces their previous values.
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/branches/{branch}/protection/required_pull_request_reviews`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/branches/{branch}/protection/required_pull_request_reviews/patch(repos/update-pull-request-review-protection)`.
@@ -29971,7 +30033,8 @@ public enum Operations {
     ///
     /// When authenticated with admin or owner permissions to the repository, you can use this endpoint to check whether a branch requires signed commits. An enabled status of `true` indicates you must sign commits on this branch. For more information, see [Signing commits with GPG](https://docs.github.com/articles/signing-commits-with-gpg) in GitHub Help.
     ///
-    /// **Note**: You must enable branch protection to require signed commits.
+    /// > [!NOTE]
+    /// > You must enable branch protection to require signed commits.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/branches/{branch}/protection/required_signatures`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/branches/{branch}/protection/required_signatures/get(repos/get-commit-signature-protection)`.
@@ -31959,7 +32022,8 @@ public enum Operations {
     ///
     /// Lists who has access to this protected branch.
     ///
-    /// **Note**: Users, apps, and teams `restrictions` are only available for organization-owned repositories.
+    /// > [!NOTE]
+    /// > Users, apps, and teams `restrictions` are only available for organization-owned repositories.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/branches/{branch}/protection/restrictions`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/branches/{branch}/protection/restrictions/get(repos/get-access-restrictions)`.
@@ -34859,7 +34923,8 @@ public enum Operations {
     ///
     /// Renames a branch in a repository.
     ///
-    /// **Note:** Although the API responds immediately, the branch rename process might take some extra time to complete in the background. You won't be able to push to the old branch name while the rename process is in progress. For more information, see "[Renaming a branch](https://docs.github.com/github/administering-a-repository/renaming-a-branch)".
+    /// > [!NOTE]
+    /// > Although the API responds immediately, the branch rename process might take some extra time to complete in the background. You won't be able to push to the old branch name while the rename process is in progress. For more information, see "[Renaming a branch](https://docs.github.com/github/administering-a-repository/renaming-a-branch)".
     ///
     /// The authenticated user must have push access to the branch. If the branch is the default branch, the authenticated user must also have admin or owner permissions.
     ///
@@ -35942,7 +36007,8 @@ public enum Operations {
     ///  - If the user had their own fork of the repository, the fork will be deleted.
     ///  - If the user still has read access to the repository, open pull requests by this user from a fork will be denied.
     ///
-    /// **Note**: A user can still have access to the repository through organization permissions like base repository permissions.
+    /// > [!NOTE]
+    /// > A user can still have access to the repository through organization permissions like base repository permissions.
     ///
     /// Although the API responds immediately, the additional permission updates might take some extra time to complete in the background.
     ///
@@ -38262,7 +38328,8 @@ public enum Operations {
     ///
     /// Returns the contents of a single commit reference. You must have `read` access for the repository to use this endpoint.
     ///
-    /// **Note:** If there are more than 300 files in the commit diff and the default JSON media type is requested, the response will include pagination link headers for the remaining files, up to a limit of 3000 files. Each page contains the static commit information, and the only changes are to the file listing.
+    /// > [!NOTE]
+    /// > If there are more than 300 files in the commit diff and the default JSON media type is requested, the response will include pagination link headers for the remaining files, up to a limit of 3000 files. Each page contains the static commit information, and the only changes are to the file listing.
     ///
     /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)." Pagination query parameters are not supported for these media types.
     ///
@@ -39824,7 +39891,8 @@ public enum Operations {
     ///
     /// Creates a new file or replaces an existing file in a repository.
     ///
-    /// **Note:** If you use this endpoint and the "[Delete a file](https://docs.github.com/rest/repos/contents/#delete-a-file)" endpoint in parallel, the concurrent requests will conflict and you will receive errors. You must use these endpoints serially instead.
+    /// > [!NOTE]
+    /// > If you use this endpoint and the "[Delete a file](https://docs.github.com/rest/repos/contents/#delete-a-file)" endpoint in parallel, the concurrent requests will conflict and you will receive errors. You must use these endpoints serially instead.
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint. The `workflow` scope is also required in order to modify files in the `.github/workflows` directory.
     ///
@@ -40240,7 +40308,8 @@ public enum Operations {
     ///
     /// You must provide values for both `name` and `email`, whether you choose to use `author` or `committer`. Otherwise, you'll receive a `422` status code.
     ///
-    /// **Note:** If you use this endpoint and the "[Create or update file contents](https://docs.github.com/rest/repos/contents/#create-or-update-file-contents)" endpoint in parallel, the concurrent requests will conflict and you will receive errors. You must use these endpoints serially instead.
+    /// > [!NOTE]
+    /// > If you use this endpoint and the "[Create or update file contents](https://docs.github.com/rest/repos/contents/#create-or-update-file-contents)" endpoint in parallel, the concurrent requests will conflict and you will receive errors. You must use these endpoints serially instead.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/contents/{path}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/contents/{path}/delete(repos/delete-file)`.
@@ -42170,7 +42239,10 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/deployments/{deployment_id}/statuses/POST/requestBody/json/state`.
                     public var state: Operations.repos_sol_create_hyphen_deployment_hyphen_status.Input.Body.jsonPayload.statePayload
-                    /// The target URL to associate with this status. This URL should contain output to keep the user updated while the task is running or serve as historical information for what happened in the deployment. **Note:** It's recommended to use the `log_url` parameter, which replaces `target_url`.
+                    /// The target URL to associate with this status. This URL should contain output to keep the user updated while the task is running or serve as historical information for what happened in the deployment.
+                    ///
+                    /// > [!NOTE]
+                    /// > It's recommended to use the `log_url` parameter, which replaces `target_url`.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/deployments/{deployment_id}/statuses/POST/requestBody/json/target_url`.
                     public var target_url: Swift.String?
@@ -42198,7 +42270,7 @@ public enum Operations {
                     ///
                     /// - Parameters:
                     ///   - state: The state of the status. When you set a transient deployment to `inactive`, the deployment will be shown as `destroyed` in GitHub.
-                    ///   - target_url: The target URL to associate with this status. This URL should contain output to keep the user updated while the task is running or serve as historical information for what happened in the deployment. **Note:** It's recommended to use the `log_url` parameter, which replaces `target_url`.
+                    ///   - target_url: The target URL to associate with this status. This URL should contain output to keep the user updated while the task is running or serve as historical information for what happened in the deployment.
                     ///   - log_url: The full URL of the deployment's output. This parameter replaces `target_url`. We will continue to accept `target_url` to support legacy uses, but we recommend replacing `target_url` with `log_url`. Setting `log_url` will automatically set `target_url` to the same value. Default: `""`
                     ///   - description: A short description of the status. The maximum description length is 140 characters.
                     ///   - environment: Name for the target deployment environment, which can be changed when setting a deploy status. For example, `production`, `staging`, or `qa`. If not defined, the environment of the previous status on the deployment will be used, if it exists. Otherwise, the environment of the deployment will be used.
@@ -42976,7 +43048,8 @@ public enum Operations {
     }
     /// Get an environment
     ///
-    /// **Note:** To get information about name patterns that branches must match in order to deploy to this environment, see "[Get a deployment branch policy](/rest/deployments/branch-policies#get-a-deployment-branch-policy)."
+    /// > [!NOTE]
+    /// > To get information about name patterns that branches must match in order to deploy to this environment, see "[Get a deployment branch policy](/rest/deployments/branch-policies#get-a-deployment-branch-policy)."
     ///
     /// Anyone with read access to the repository can use this endpoint.
     ///
@@ -43130,9 +43203,11 @@ public enum Operations {
     ///
     /// Create or update an environment with protection rules, such as required reviewers. For more information about environment protection rules, see "[Environments](/actions/reference/environments#environment-protection-rules)."
     ///
-    /// **Note:** To create or update name patterns that branches must match in order to deploy to this environment, see "[Deployment branch policies](/rest/deployments/branch-policies)."
+    /// > [!NOTE]
+    /// > To create or update name patterns that branches must match in order to deploy to this environment, see "[Deployment branch policies](/rest/deployments/branch-policies)."
     ///
-    /// **Note:** To create or update secrets for an environment, see "[GitHub Actions secrets](/rest/actions/secrets)."
+    /// > [!NOTE]
+    /// > To create or update secrets for an environment, see "[GitHub Actions secrets](/rest/actions/secrets)."
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
@@ -44705,7 +44780,9 @@ public enum Operations {
     }
     /// List custom deployment rule integrations available for an environment
     ///
-    /// Gets all custom deployment protection rule integrations that are available for an environment. Anyone with read access to the repository can use this endpoint.
+    /// Gets all custom deployment protection rule integrations that are available for an environment.
+    ///
+    /// The authenticated user must have admin or owner permissions to the repository to use this endpoint.
     ///
     /// For more information about environments, see "[Using environments for deployment](https://docs.github.com/actions/deployment/targeting-different-environments/using-environments-for-deployment)."
     ///
@@ -45395,9 +45472,11 @@ public enum Operations {
     ///
     /// Create a fork for the authenticated user.
     ///
-    /// **Note**: Forking a Repository happens asynchronously. You may have to wait a short period of time before you can access the git objects. If this takes longer than 5 minutes, be sure to contact [GitHub Support](https://support.github.com/contact?tags=dotcom-rest-api).
+    /// > [!NOTE]
+    /// > Forking a Repository happens asynchronously. You may have to wait a short period of time before you can access the git objects. If this takes longer than 5 minutes, be sure to contact [GitHub Support](https://support.github.com/contact?tags=dotcom-rest-api).
     ///
-    /// **Note**: Although this endpoint works with GitHub Apps, the GitHub App must be installed on the destination account with access to all repositories and on the source account with access to the source repository.
+    /// > [!NOTE]
+    /// > Although this endpoint works with GitHub Apps, the GitHub App must be installed on the destination account with access to all repositories and on the source account with access to the source repository.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/forks`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/forks/post(repos/create-fork)`.
@@ -47936,7 +48015,8 @@ public enum Operations {
     ///
     /// This will trigger the hook with the latest push to the current repository if the hook is subscribed to `push` events. If the hook is not subscribed to `push` events, the server will respond with 204 but no test POST will be generated.
     ///
-    /// **Note**: Previously `/repos/:owner/:repo/hooks/:hook_id/test`
+    /// > [!NOTE]
+    /// > Previously `/repos/:owner/:repo/hooks/:hook_id/test`
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/hooks/{hook_id}/tests`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/hooks/{hook_id}/tests/post(repos/test-push-webhook)`.
@@ -55216,9 +55296,8 @@ public enum Operations {
     ///
     /// Gets a public release with the specified release ID.
     ///
-    /// **Note:** This returns an `upload_url` key corresponding to the endpoint
-    /// for uploading release assets. This key is a hypermedia resource. For more information, see
-    /// "[Getting started with the REST API](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#hypermedia)."
+    /// > [!NOTE]
+    /// > This returns an `upload_url` key corresponding to the endpoint for uploading release assets. This key is a hypermedia resource. For more information, see "[Getting started with the REST API](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#hypermedia)."
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/releases/{release_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/releases/{release_id}/get(repos/get-release)`.
@@ -56637,7 +56716,8 @@ public enum Operations {
                     public var name: Swift.String
                     /// The target of the ruleset
                     ///
-                    /// **Note**: The `push` target is in beta and is subject to change.
+                    /// > [!NOTE]
+                    /// > The `push` target is in beta and is subject to change.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/rulesets/POST/requestBody/json/target`.
                     @frozen public enum targetPayload: String, Codable, Hashable, Sendable {
@@ -56647,7 +56727,8 @@ public enum Operations {
                     }
                     /// The target of the ruleset
                     ///
-                    /// **Note**: The `push` target is in beta and is subject to change.
+                    /// > [!NOTE]
+                    /// > The `push` target is in beta and is subject to change.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/rulesets/POST/requestBody/json/target`.
                     public var target: Operations.repos_sol_create_hyphen_repo_hyphen_ruleset.Input.Body.jsonPayload.targetPayload?
@@ -56881,7 +56962,8 @@ public enum Operations {
             public var path: Operations.repos_sol_get_hyphen_repo_hyphen_rule_hyphen_suites.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/rulesets/rule-suites/GET/query`.
             public struct Query: Sendable, Hashable {
-                /// The name of the ref. Cannot contain wildcard characters. When specified, only rule evaluations triggered for this ref will be returned.
+                /// The name of the ref. Cannot contain wildcard characters. Optionally prefix with `refs/heads/` to limit to branches or `refs/tags/` to limit to tags. Omit the prefix to search across all refs. When specified, only rule evaluations triggered for this ref will be returned.
+                ///
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/rulesets/rule-suites/GET/query/ref`.
                 public var ref: Components.Parameters.ref_hyphen_in_hyphen_query?
@@ -56924,7 +57006,7 @@ public enum Operations {
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - ref: The name of the ref. Cannot contain wildcard characters. When specified, only rule evaluations triggered for this ref will be returned.
+                ///   - ref: The name of the ref. Cannot contain wildcard characters. Optionally prefix with `refs/heads/` to limit to branches or `refs/tags/` to limit to tags. Omit the prefix to search across all refs. When specified, only rule evaluations triggered for this ref will be returned.
                 ///   - time_period: The time period to filter by.
                 ///   - actor_name: The handle for the GitHub user account to filter on. When specified, only rule evaluations triggered by this actor will be returned.
                 ///   - rule_suite_result: The rule results to filter on. When specified, only suites with this result will be returned.
@@ -57576,7 +57658,8 @@ public enum Operations {
                     public var name: Swift.String?
                     /// The target of the ruleset
                     ///
-                    /// **Note**: The `push` target is in beta and is subject to change.
+                    /// > [!NOTE]
+                    /// > The `push` target is in beta and is subject to change.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/rulesets/{ruleset_id}/PUT/requestBody/json/target`.
                     @frozen public enum targetPayload: String, Codable, Hashable, Sendable {
@@ -57586,7 +57669,8 @@ public enum Operations {
                     }
                     /// The target of the ruleset
                     ///
-                    /// **Note**: The `push` target is in beta and is subject to change.
+                    /// > [!NOTE]
+                    /// > The `push` target is in beta and is subject to change.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/rulesets/{ruleset_id}/PUT/requestBody/json/target`.
                     public var target: Operations.repos_sol_update_hyphen_repo_hyphen_ruleset.Input.Body.jsonPayload.targetPayload?
@@ -57956,12 +58040,10 @@ public enum Operations {
     }
     /// Get the weekly commit activity
     ///
-    ///
     /// Returns a weekly aggregate of the number of additions and deletions pushed to a repository.
     ///
-    /// **Note:** This endpoint can only be used for repositories with fewer than 10,000 commits. If the repository contains
-    /// 10,000 or more commits, a 422 status code will be returned.
-    ///
+    /// > [!NOTE]
+    /// > This endpoint can only be used for repositories with fewer than 10,000 commits. If the repository contains 10,000 or more commits, a 422 status code will be returned.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/stats/code_frequency`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/stats/code_frequency/get(repos/get-code-frequency-stats)`.
@@ -58370,7 +58452,8 @@ public enum Operations {
     /// *   `d` - Number of deletions
     /// *   `c` - Number of commits
     ///
-    /// **Note:** This endpoint will return `0` values for all addition and deletion counts in repositories with 10,000 or more commits.
+    /// > [!NOTE]
+    /// > This endpoint will return `0` values for all addition and deletion counts in repositories with 10,000 or more commits.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/stats/contributors`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/stats/contributors/get(repos/get-contributors-stats)`.
@@ -59312,8 +59395,8 @@ public enum Operations {
     }
     /// Deprecated - List tag protection states for a repository
     ///
-    /// **Note**: This operation is deprecated and will be removed after August 30th 2024
-    /// Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#get-all-repository-rulesets)" endpoint instead.
+    /// > [!WARNING]
+    /// > **Deprecation notice:** This operation is deprecated and will be removed after August 30, 2024. Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#get-all-repository-rulesets)" endpoint instead.
     ///
     /// This returns the tag protection states of a repository.
     ///
@@ -59504,8 +59587,8 @@ public enum Operations {
     }
     /// Deprecated - Create a tag protection state for a repository
     ///
-    /// **Note**: This operation is deprecated and will be removed after August 30th 2024
-    /// Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#create-a-repository-ruleset)" endpoint instead.
+    /// > [!WARNING]
+    /// > **Deprecation notice:** This operation is deprecated and will be removed after August 30, 2024. Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#create-a-repository-ruleset)" endpoint instead.
     ///
     /// This creates a tag protection state for a repository.
     /// This endpoint is only available to repository administrators.
@@ -59721,8 +59804,8 @@ public enum Operations {
     }
     /// Deprecated - Delete a tag protection state for a repository
     ///
-    /// **Note**: This operation is deprecated and will be removed after August 30th 2024
-    /// Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#delete-a-repository-ruleset)" endpoint instead.
+    /// > [!WARNING]
+    /// > **Deprecation notice:** This operation is deprecated and will be removed after August 30, 2024. Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#delete-a-repository-ruleset)" endpoint instead.
     ///
     /// This deletes a tag protection state for a repository.
     /// This endpoint is only available to repository administrators.
@@ -59898,7 +59981,9 @@ public enum Operations {
     /// Gets a redirect URL to download a tar archive for a repository. If you omit `:ref`, the repository’s default branch (usually
     /// `main`) will be used. Please make sure your HTTP framework is configured to follow redirects or you will need to use
     /// the `Location` header to make a second `GET` request.
-    /// **Note**: For private repositories, these links are temporary and expire after five minutes.
+    ///
+    /// > [!NOTE]
+    /// > For private repositories, these links are temporary and expire after five minutes.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/tarball/{ref}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/tarball/{ref}/get(repos/download-tarball-archive)`.
@@ -61760,7 +61845,8 @@ public enum Operations {
     /// `main`) will be used. Please make sure your HTTP framework is configured to follow redirects or you will need to use
     /// the `Location` header to make a second `GET` request.
     ///
-    /// **Note**: For private repositories, these links are temporary and expire after five minutes. If the repository is empty, you will receive a 404 when you follow the redirect.
+    /// > [!NOTE]
+    /// > For private repositories, these links are temporary and expire after five minutes. If the repository is empty, you will receive a 404 when you follow the redirect.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/zipball/{ref}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/zipball/{ref}/get(repos/download-zipball-archive)`.
