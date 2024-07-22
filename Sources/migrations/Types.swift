@@ -73,7 +73,8 @@ public protocol APIProtocol: Sendable {
     ///
     /// View the progress of an import.
     ///
-    /// **Warning:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
+    /// > [!WARNING]
+    /// > **Deprecation notice:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
     ///
     /// **Import status**
     ///
@@ -121,7 +122,8 @@ public protocol APIProtocol: Sendable {
     /// have the status `detection_found_multiple` and the Import Progress response will include a `project_choices` array.
     /// You can select the project to import by providing one of the objects in the `project_choices` array in the update request.
     ///
-    /// **Warning:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
+    /// > [!WARNING]
+    /// > **Deprecation notice:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/import`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/patch(migrations/update-import)`.
@@ -133,8 +135,8 @@ public protocol APIProtocol: Sendable {
     /// Importing into a GitHub repository with GitHub Actions enabled is not supported and will
     /// return a status `422 Unprocessable Entity` response.
     ///
-    /// **Warning:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
-    ///
+    /// > [!WARNING]
+    /// > **Deprecation notice:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/import`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/put(migrations/start-import)`.
@@ -144,8 +146,8 @@ public protocol APIProtocol: Sendable {
     ///
     /// Stop an import for a repository.
     ///
-    /// **Warning:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
-    ///
+    /// > [!WARNING]
+    /// > **Deprecation notice:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/import`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/delete(migrations/cancel-import)`.
@@ -157,7 +159,8 @@ public protocol APIProtocol: Sendable {
     ///
     /// This endpoint and the [Map a commit author](https://docs.github.com/rest/migrations/source-imports#map-a-commit-author) endpoint allow you to provide correct Git author information.
     ///
-    /// **Warning:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
+    /// > [!WARNING]
+    /// > **Deprecation notice:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/import/authors`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/authors/get(migrations/get-commit-authors)`.
@@ -168,8 +171,8 @@ public protocol APIProtocol: Sendable {
     /// Update an author's identity for the import. Your application can continue updating authors any time before you push
     /// new commits to the repository.
     ///
-    /// **Warning:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
-    ///
+    /// > [!WARNING]
+    /// > **Deprecation notice:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/import/authors/{author_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/authors/{author_id}/patch(migrations/map-commit-author)`.
@@ -179,8 +182,8 @@ public protocol APIProtocol: Sendable {
     ///
     /// List files larger than 100MB found during the import
     ///
-    /// **Warning:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
-    ///
+    /// > [!WARNING]
+    /// > **Deprecation notice:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/import/large_files`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/large_files/get(migrations/get-large-files)`.
@@ -194,8 +197,8 @@ public protocol APIProtocol: Sendable {
     /// You can learn more about our LFS feature and working with large files [on our help
     /// site](https://docs.github.com/repositories/working-with-files/managing-large-files).
     ///
-    /// **Warning:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
-    ///
+    /// > [!WARNING]
+    /// > **Deprecation notice:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/import/lfs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/lfs/patch(migrations/set-lfs-preference)`.
@@ -407,7 +410,8 @@ extension APIProtocol {
     ///
     /// View the progress of an import.
     ///
-    /// **Warning:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
+    /// > [!WARNING]
+    /// > **Deprecation notice:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
     ///
     /// **Import status**
     ///
@@ -463,7 +467,8 @@ extension APIProtocol {
     /// have the status `detection_found_multiple` and the Import Progress response will include a `project_choices` array.
     /// You can select the project to import by providing one of the objects in the `project_choices` array in the update request.
     ///
-    /// **Warning:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
+    /// > [!WARNING]
+    /// > **Deprecation notice:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/import`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/patch(migrations/update-import)`.
@@ -485,8 +490,8 @@ extension APIProtocol {
     /// Importing into a GitHub repository with GitHub Actions enabled is not supported and will
     /// return a status `422 Unprocessable Entity` response.
     ///
-    /// **Warning:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
-    ///
+    /// > [!WARNING]
+    /// > **Deprecation notice:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/import`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/put(migrations/start-import)`.
@@ -506,8 +511,8 @@ extension APIProtocol {
     ///
     /// Stop an import for a repository.
     ///
-    /// **Warning:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
-    ///
+    /// > [!WARNING]
+    /// > **Deprecation notice:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/import`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/delete(migrations/cancel-import)`.
@@ -527,7 +532,8 @@ extension APIProtocol {
     ///
     /// This endpoint and the [Map a commit author](https://docs.github.com/rest/migrations/source-imports#map-a-commit-author) endpoint allow you to provide correct Git author information.
     ///
-    /// **Warning:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
+    /// > [!WARNING]
+    /// > **Deprecation notice:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/import/authors`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/authors/get(migrations/get-commit-authors)`.
@@ -548,8 +554,8 @@ extension APIProtocol {
     /// Update an author's identity for the import. Your application can continue updating authors any time before you push
     /// new commits to the repository.
     ///
-    /// **Warning:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
-    ///
+    /// > [!WARNING]
+    /// > **Deprecation notice:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/import/authors/{author_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/authors/{author_id}/patch(migrations/map-commit-author)`.
@@ -569,8 +575,8 @@ extension APIProtocol {
     ///
     /// List files larger than 100MB found during the import
     ///
-    /// **Warning:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
-    ///
+    /// > [!WARNING]
+    /// > **Deprecation notice:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/import/large_files`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/large_files/get(migrations/get-large-files)`.
@@ -592,8 +598,8 @@ extension APIProtocol {
     /// You can learn more about our LFS feature and working with large files [on our help
     /// site](https://docs.github.com/repositories/working-with-files/managing-large-files).
     ///
-    /// **Warning:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
-    ///
+    /// > [!WARNING]
+    /// > **Deprecation notice:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/import/lfs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/lfs/patch(migrations/set-lfs-preference)`.
@@ -4729,7 +4735,8 @@ public enum Operations {
     ///
     /// View the progress of an import.
     ///
-    /// **Warning:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
+    /// > [!WARNING]
+    /// > **Deprecation notice:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
     ///
     /// **Import status**
     ///
@@ -4956,7 +4963,8 @@ public enum Operations {
     /// have the status `detection_found_multiple` and the Import Progress response will include a `project_choices` array.
     /// You can select the project to import by providing one of the objects in the `project_choices` array in the update request.
     ///
-    /// **Warning:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
+    /// > [!WARNING]
+    /// > **Deprecation notice:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/import`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/patch(migrations/update-import)`.
@@ -5185,8 +5193,8 @@ public enum Operations {
     /// Importing into a GitHub repository with GitHub Actions enabled is not supported and will
     /// return a status `422 Unprocessable Entity` response.
     ///
-    /// **Warning:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
-    ///
+    /// > [!WARNING]
+    /// > **Deprecation notice:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/import`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/put(migrations/start-import)`.
@@ -5486,8 +5494,8 @@ public enum Operations {
     ///
     /// Stop an import for a repository.
     ///
-    /// **Warning:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
-    ///
+    /// > [!WARNING]
+    /// > **Deprecation notice:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/import`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/delete(migrations/cancel-import)`.
@@ -5631,7 +5639,8 @@ public enum Operations {
     ///
     /// This endpoint and the [Map a commit author](https://docs.github.com/rest/migrations/source-imports#map-a-commit-author) endpoint allow you to provide correct Git author information.
     ///
-    /// **Warning:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
+    /// > [!WARNING]
+    /// > **Deprecation notice:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/import/authors`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/authors/get(migrations/get-commit-authors)`.
@@ -5839,8 +5848,8 @@ public enum Operations {
     /// Update an author's identity for the import. Your application can continue updating authors any time before you push
     /// new commits to the repository.
     ///
-    /// **Warning:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
-    ///
+    /// > [!WARNING]
+    /// > **Deprecation notice:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/import/authors/{author_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/authors/{author_id}/patch(migrations/map-commit-author)`.
@@ -6108,8 +6117,8 @@ public enum Operations {
     ///
     /// List files larger than 100MB found during the import
     ///
-    /// **Warning:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
-    ///
+    /// > [!WARNING]
+    /// > **Deprecation notice:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/import/large_files`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/large_files/get(migrations/get-large-files)`.
@@ -6279,8 +6288,8 @@ public enum Operations {
     /// You can learn more about our LFS feature and working with large files [on our help
     /// site](https://docs.github.com/repositories/working-with-files/managing-large-files).
     ///
-    /// **Warning:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
-    ///
+    /// > [!WARNING]
+    /// > **Deprecation notice:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/import/lfs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/lfs/patch(migrations/set-lfs-preference)`.
