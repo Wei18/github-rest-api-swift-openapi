@@ -1478,8 +1478,8 @@ public struct Client: APIProtocol {
     ///
     /// Lists the files in a specified pull request.
     ///
-    /// **Note:** Responses include a maximum of 3000 files. The paginated response
-    /// returns 30 files per page by default.
+    /// > [!NOTE]
+    /// > Responses include a maximum of 3000 files. The paginated response returns 30 files per page by default.
     ///
     /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
     ///
@@ -2246,7 +2246,8 @@ public struct Client: APIProtocol {
     ///
     /// Pull request reviews created in the `PENDING` state are not submitted and therefore do not include the `submitted_at` property in the response. To create a pending review for a pull request, leave the `event` parameter blank. For more information about submitting a `PENDING` review, see "[Submit a review for a pull request](https://docs.github.com/rest/pulls/reviews#submit-a-review-for-a-pull-request)."
     ///
-    /// **Note:** To comment on a specific line in a file, you need to first determine the position of that line in the diff. To see a pull request diff, add the `application/vnd.github.v3.diff` media type to the `Accept` header of a call to the [Get a pull request](https://docs.github.com/rest/pulls/pulls#get-a-pull-request) endpoint.
+    /// > [!NOTE]
+    /// > To comment on a specific line in a file, you need to first determine the position of that line in the diff. To see a pull request diff, add the `application/vnd.github.v3.diff` media type to the `Accept` header of a call to the [Get a pull request](https://docs.github.com/rest/pulls/pulls#get-a-pull-request) endpoint.
     ///
     /// The `position` value equals the number of lines down from the first "@@" hunk header in the file you want to add a comment. The line just below the "@@" line is position 1, the next line is position 2, and so on. The position in the diff continues to increase through lines of whitespace and additional hunks until the beginning of a new file.
     ///
@@ -2815,9 +2816,8 @@ public struct Client: APIProtocol {
     ///
     /// Dismisses a specified review on a pull request.
     ///
-    /// **Note:** To dismiss a pull request review on a [protected branch](https://docs.github.com/rest/branches/branch-protection),
-    /// you must be a repository administrator or be included in the list of people or teams
-    /// who can dismiss pull request reviews.
+    /// > [!NOTE]
+    /// > To dismiss a pull request review on a [protected branch](https://docs.github.com/rest/branches/branch-protection), you must be a repository administrator or be included in the list of people or teams who can dismiss pull request reviews.
     ///
     /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
     ///
