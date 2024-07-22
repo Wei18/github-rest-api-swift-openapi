@@ -181,7 +181,8 @@ public protocol APIProtocol: Sendable {
     func apps_sol_scope_hyphen_token(_ input: Operations.apps_sol_scope_hyphen_token.Input) async throws -> Operations.apps_sol_scope_hyphen_token.Output
     /// Get an app
     ///
-    /// **Note**: The `:app_slug` is just the URL-friendly name of your GitHub App. You can find this on the settings page for your GitHub App (e.g., `https://github.com/settings/apps/:app_slug`).
+    /// > [!NOTE]
+    /// > The `:app_slug` is just the URL-friendly name of your GitHub App. You can find this on the settings page for your GitHub App (e.g., `https://github.com/settings/apps/:app_slug`).
     ///
     /// - Remark: HTTP `GET /apps/{app_slug}`.
     /// - Remark: Generated from `#/paths//apps/{app_slug}/get(apps/get-by-slug)`.
@@ -663,7 +664,8 @@ extension APIProtocol {
     }
     /// Get an app
     ///
-    /// **Note**: The `:app_slug` is just the URL-friendly name of your GitHub App. You can find this on the settings page for your GitHub App (e.g., `https://github.com/settings/apps/:app_slug`).
+    /// > [!NOTE]
+    /// > The `:app_slug` is just the URL-friendly name of your GitHub App. You can find this on the settings page for your GitHub App (e.g., `https://github.com/settings/apps/:app_slug`).
     ///
     /// - Remark: HTTP `GET /apps/{app_slug}`.
     /// - Remark: Generated from `#/paths//apps/{app_slug}/get(apps/get-by-slug)`.
@@ -8420,7 +8422,8 @@ public enum Operations {
     }
     /// Get an app
     ///
-    /// **Note**: The `:app_slug` is just the URL-friendly name of your GitHub App. You can find this on the settings page for your GitHub App (e.g., `https://github.com/settings/apps/:app_slug`).
+    /// > [!NOTE]
+    /// > The `:app_slug` is just the URL-friendly name of your GitHub App. You can find this on the settings page for your GitHub App (e.g., `https://github.com/settings/apps/:app_slug`).
     ///
     /// - Remark: HTTP `GET /apps/{app_slug}`.
     /// - Remark: Generated from `#/paths//apps/{app_slug}/get(apps/get-by-slug)`.
