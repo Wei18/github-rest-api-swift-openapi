@@ -13,7 +13,8 @@ import struct Foundation.Date
 public protocol APIProtocol: Sendable {
     /// Get rate limit status for the authenticated user
     ///
-    /// **Note:** Accessing this endpoint does not count against your REST API rate limit.
+    /// > [!NOTE]
+    /// > Accessing this endpoint does not count against your REST API rate limit.
     ///
     /// Some categories of endpoints have custom rate limits that are separate from the rate limit governing the other REST API endpoints. For this reason, the API response categorizes your rate limit. Under `resources`, you'll see objects relating to different categories:
     /// * The `core` object provides your rate limit status for all non-search-related resources in the REST API.
@@ -26,7 +27,8 @@ public protocol APIProtocol: Sendable {
     /// * The `actions_runner_registration` object provides your rate limit status for registering self-hosted runners in GitHub Actions. For more information, see "[Self-hosted runners](https://docs.github.com/rest/actions/self-hosted-runners)."
     /// * The `source_import` object is no longer in use for any API endpoints, and it will be removed in the next API version. For more information about API versions, see "[API Versions](https://docs.github.com/rest/about-the-rest-api/api-versions)."
     ///
-    /// **Note:** The `rate` object is deprecated. If you're writing new API client code or updating existing code, you should use the `core` object instead of the `rate` object. The `core` object contains the same information that is present in the `rate` object.
+    /// > [!NOTE]
+    /// > The `rate` object is deprecated. If you're writing new API client code or updating existing code, you should use the `core` object instead of the `rate` object. The `core` object contains the same information that is present in the `rate` object.
     ///
     /// - Remark: HTTP `GET /rate_limit`.
     /// - Remark: Generated from `#/paths//rate_limit/get(rate-limit/get)`.
@@ -37,7 +39,8 @@ public protocol APIProtocol: Sendable {
 extension APIProtocol {
     /// Get rate limit status for the authenticated user
     ///
-    /// **Note:** Accessing this endpoint does not count against your REST API rate limit.
+    /// > [!NOTE]
+    /// > Accessing this endpoint does not count against your REST API rate limit.
     ///
     /// Some categories of endpoints have custom rate limits that are separate from the rate limit governing the other REST API endpoints. For this reason, the API response categorizes your rate limit. Under `resources`, you'll see objects relating to different categories:
     /// * The `core` object provides your rate limit status for all non-search-related resources in the REST API.
@@ -50,7 +53,8 @@ extension APIProtocol {
     /// * The `actions_runner_registration` object provides your rate limit status for registering self-hosted runners in GitHub Actions. For more information, see "[Self-hosted runners](https://docs.github.com/rest/actions/self-hosted-runners)."
     /// * The `source_import` object is no longer in use for any API endpoints, and it will be removed in the next API version. For more information about API versions, see "[API Versions](https://docs.github.com/rest/about-the-rest-api/api-versions)."
     ///
-    /// **Note:** The `rate` object is deprecated. If you're writing new API client code or updating existing code, you should use the `core` object instead of the `rate` object. The `core` object contains the same information that is present in the `rate` object.
+    /// > [!NOTE]
+    /// > The `rate` object is deprecated. If you're writing new API client code or updating existing code, you should use the `core` object instead of the `rate` object. The `core` object contains the same information that is present in the `rate` object.
     ///
     /// - Remark: HTTP `GET /rate_limit`.
     /// - Remark: Generated from `#/paths//rate_limit/get(rate-limit/get)`.
@@ -296,7 +300,8 @@ public enum Components {
 public enum Operations {
     /// Get rate limit status for the authenticated user
     ///
-    /// **Note:** Accessing this endpoint does not count against your REST API rate limit.
+    /// > [!NOTE]
+    /// > Accessing this endpoint does not count against your REST API rate limit.
     ///
     /// Some categories of endpoints have custom rate limits that are separate from the rate limit governing the other REST API endpoints. For this reason, the API response categorizes your rate limit. Under `resources`, you'll see objects relating to different categories:
     /// * The `core` object provides your rate limit status for all non-search-related resources in the REST API.
@@ -309,7 +314,8 @@ public enum Operations {
     /// * The `actions_runner_registration` object provides your rate limit status for registering self-hosted runners in GitHub Actions. For more information, see "[Self-hosted runners](https://docs.github.com/rest/actions/self-hosted-runners)."
     /// * The `source_import` object is no longer in use for any API endpoints, and it will be removed in the next API version. For more information about API versions, see "[API Versions](https://docs.github.com/rest/about-the-rest-api/api-versions)."
     ///
-    /// **Note:** The `rate` object is deprecated. If you're writing new API client code or updating existing code, you should use the `core` object instead of the `rate` object. The `core` object contains the same information that is present in the `rate` object.
+    /// > [!NOTE]
+    /// > The `rate` object is deprecated. If you're writing new API client code or updating existing code, you should use the `core` object instead of the `rate` object. The `core` object contains the same information that is present in the `rate` object.
     ///
     /// - Remark: HTTP `GET /rate_limit`.
     /// - Remark: Generated from `#/paths//rate_limit/get(rate-limit/get)`.
