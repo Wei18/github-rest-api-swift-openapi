@@ -17,10 +17,8 @@ public protocol APIProtocol: Sendable {
     /// repositories, and organization repositories. You can use the `filter` query parameter to fetch issues that are not
     /// necessarily assigned to you.
     ///
-    /// **Note**: GitHub's REST API considers every pull request an issue, but not every issue is a pull request. For this
-    /// reason, "Issues" endpoints may return both issues and pull requests in the response. You can identify pull requests by
-    /// the `pull_request` key. Be aware that the `id` of a pull request returned from "Issues" endpoints will be an _issue id_. To find out the pull
-    /// request id, use the "[List pull requests](https://docs.github.com/rest/pulls/pulls#list-pull-requests)" endpoint.
+    /// > [!NOTE]
+    /// > GitHub's REST API considers every pull request an issue, but not every issue is a pull request. For this reason, "Issues" endpoints may return both issues and pull requests in the response. You can identify pull requests by the `pull_request` key. Be aware that the `id` of a pull request returned from "Issues" endpoints will be an _issue id_. To find out the pull request id, use the "[List pull requests](https://docs.github.com/rest/pulls/pulls#list-pull-requests)" endpoint.
     ///
     /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
     ///
@@ -36,10 +34,8 @@ public protocol APIProtocol: Sendable {
     ///
     /// List issues in an organization assigned to the authenticated user.
     ///
-    /// **Note**: GitHub's REST API considers every pull request an issue, but not every issue is a pull request. For this
-    /// reason, "Issues" endpoints may return both issues and pull requests in the response. You can identify pull requests by
-    /// the `pull_request` key. Be aware that the `id` of a pull request returned from "Issues" endpoints will be an _issue id_. To find out the pull
-    /// request id, use the "[List pull requests](https://docs.github.com/rest/pulls/pulls#list-pull-requests)" endpoint.
+    /// > [!NOTE]
+    /// > GitHub's REST API considers every pull request an issue, but not every issue is a pull request. For this reason, "Issues" endpoints may return both issues and pull requests in the response. You can identify pull requests by the `pull_request` key. Be aware that the `id` of a pull request returned from "Issues" endpoints will be an _issue id_. To find out the pull request id, use the "[List pull requests](https://docs.github.com/rest/pulls/pulls#list-pull-requests)" endpoint.
     ///
     /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
     ///
@@ -73,10 +69,8 @@ public protocol APIProtocol: Sendable {
     ///
     /// List issues in a repository. Only open issues will be listed.
     ///
-    /// **Note**: GitHub's REST API considers every pull request an issue, but not every issue is a pull request. For this
-    /// reason, "Issues" endpoints may return both issues and pull requests in the response. You can identify pull requests by
-    /// the `pull_request` key. Be aware that the `id` of a pull request returned from "Issues" endpoints will be an _issue id_. To find out the pull
-    /// request id, use the "[List pull requests](https://docs.github.com/rest/pulls/pulls#list-pull-requests)" endpoint.
+    /// > [!NOTE]
+    /// > GitHub's REST API considers every pull request an issue, but not every issue is a pull request. For this reason, "Issues" endpoints may return both issues and pull requests in the response. You can identify pull requests by the `pull_request` key. Be aware that the `id` of a pull request returned from "Issues" endpoints will be an _issue id_. To find out the pull request id, use the "[List pull requests](https://docs.github.com/rest/pulls/pulls#list-pull-requests)" endpoint.
     ///
     /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
     ///
@@ -179,10 +173,8 @@ public protocol APIProtocol: Sendable {
     /// access, the API returns a `410 Gone` status. To receive webhook events for transferred and deleted issues, subscribe
     /// to the [`issues`](https://docs.github.com/webhooks/event-payloads/#issues) webhook.
     ///
-    /// **Note**: GitHub's REST API considers every pull request an issue, but not every issue is a pull request. For this
-    /// reason, "Issues" endpoints may return both issues and pull requests in the response. You can identify pull requests by
-    /// the `pull_request` key. Be aware that the `id` of a pull request returned from "Issues" endpoints will be an _issue id_. To find out the pull
-    /// request id, use the "[List pull requests](https://docs.github.com/rest/pulls/pulls#list-pull-requests)" endpoint.
+    /// > [!NOTE]
+    /// > GitHub's REST API considers every pull request an issue, but not every issue is a pull request. For this reason, "Issues" endpoints may return both issues and pull requests in the response. You can identify pull requests by the `pull_request` key. Be aware that the `id` of a pull request returned from "Issues" endpoints will be an _issue id_. To find out the pull request id, use the "[List pull requests](https://docs.github.com/rest/pulls/pulls#list-pull-requests)" endpoint.
     ///
     /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
     ///
@@ -414,10 +406,8 @@ public protocol APIProtocol: Sendable {
     ///
     /// List issues across owned and member repositories assigned to the authenticated user.
     ///
-    /// **Note**: GitHub's REST API considers every pull request an issue, but not every issue is a pull request. For this
-    /// reason, "Issues" endpoints may return both issues and pull requests in the response. You can identify pull requests by
-    /// the `pull_request` key. Be aware that the `id` of a pull request returned from "Issues" endpoints will be an _issue id_. To find out the pull
-    /// request id, use the "[List pull requests](https://docs.github.com/rest/pulls/pulls#list-pull-requests)" endpoint.
+    /// > [!NOTE]
+    /// > GitHub's REST API considers every pull request an issue, but not every issue is a pull request. For this reason, "Issues" endpoints may return both issues and pull requests in the response. You can identify pull requests by the `pull_request` key. Be aware that the `id` of a pull request returned from "Issues" endpoints will be an _issue id_. To find out the pull request id, use the "[List pull requests](https://docs.github.com/rest/pulls/pulls#list-pull-requests)" endpoint.
     ///
     /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
     ///
@@ -439,10 +429,8 @@ extension APIProtocol {
     /// repositories, and organization repositories. You can use the `filter` query parameter to fetch issues that are not
     /// necessarily assigned to you.
     ///
-    /// **Note**: GitHub's REST API considers every pull request an issue, but not every issue is a pull request. For this
-    /// reason, "Issues" endpoints may return both issues and pull requests in the response. You can identify pull requests by
-    /// the `pull_request` key. Be aware that the `id` of a pull request returned from "Issues" endpoints will be an _issue id_. To find out the pull
-    /// request id, use the "[List pull requests](https://docs.github.com/rest/pulls/pulls#list-pull-requests)" endpoint.
+    /// > [!NOTE]
+    /// > GitHub's REST API considers every pull request an issue, but not every issue is a pull request. For this reason, "Issues" endpoints may return both issues and pull requests in the response. You can identify pull requests by the `pull_request` key. Be aware that the `id` of a pull request returned from "Issues" endpoints will be an _issue id_. To find out the pull request id, use the "[List pull requests](https://docs.github.com/rest/pulls/pulls#list-pull-requests)" endpoint.
     ///
     /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
     ///
@@ -466,10 +454,8 @@ extension APIProtocol {
     ///
     /// List issues in an organization assigned to the authenticated user.
     ///
-    /// **Note**: GitHub's REST API considers every pull request an issue, but not every issue is a pull request. For this
-    /// reason, "Issues" endpoints may return both issues and pull requests in the response. You can identify pull requests by
-    /// the `pull_request` key. Be aware that the `id` of a pull request returned from "Issues" endpoints will be an _issue id_. To find out the pull
-    /// request id, use the "[List pull requests](https://docs.github.com/rest/pulls/pulls#list-pull-requests)" endpoint.
+    /// > [!NOTE]
+    /// > GitHub's REST API considers every pull request an issue, but not every issue is a pull request. For this reason, "Issues" endpoints may return both issues and pull requests in the response. You can identify pull requests by the `pull_request` key. Be aware that the `id` of a pull request returned from "Issues" endpoints will be an _issue id_. To find out the pull request id, use the "[List pull requests](https://docs.github.com/rest/pulls/pulls#list-pull-requests)" endpoint.
     ///
     /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
     ///
@@ -531,10 +517,8 @@ extension APIProtocol {
     ///
     /// List issues in a repository. Only open issues will be listed.
     ///
-    /// **Note**: GitHub's REST API considers every pull request an issue, but not every issue is a pull request. For this
-    /// reason, "Issues" endpoints may return both issues and pull requests in the response. You can identify pull requests by
-    /// the `pull_request` key. Be aware that the `id` of a pull request returned from "Issues" endpoints will be an _issue id_. To find out the pull
-    /// request id, use the "[List pull requests](https://docs.github.com/rest/pulls/pulls#list-pull-requests)" endpoint.
+    /// > [!NOTE]
+    /// > GitHub's REST API considers every pull request an issue, but not every issue is a pull request. For this reason, "Issues" endpoints may return both issues and pull requests in the response. You can identify pull requests by the `pull_request` key. Be aware that the `id` of a pull request returned from "Issues" endpoints will be an _issue id_. To find out the pull request id, use the "[List pull requests](https://docs.github.com/rest/pulls/pulls#list-pull-requests)" endpoint.
     ///
     /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
     ///
@@ -705,10 +689,8 @@ extension APIProtocol {
     /// access, the API returns a `410 Gone` status. To receive webhook events for transferred and deleted issues, subscribe
     /// to the [`issues`](https://docs.github.com/webhooks/event-payloads/#issues) webhook.
     ///
-    /// **Note**: GitHub's REST API considers every pull request an issue, but not every issue is a pull request. For this
-    /// reason, "Issues" endpoints may return both issues and pull requests in the response. You can identify pull requests by
-    /// the `pull_request` key. Be aware that the `id` of a pull request returned from "Issues" endpoints will be an _issue id_. To find out the pull
-    /// request id, use the "[List pull requests](https://docs.github.com/rest/pulls/pulls#list-pull-requests)" endpoint.
+    /// > [!NOTE]
+    /// > GitHub's REST API considers every pull request an issue, but not every issue is a pull request. For this reason, "Issues" endpoints may return both issues and pull requests in the response. You can identify pull requests by the `pull_request` key. Be aware that the `id` of a pull request returned from "Issues" endpoints will be an _issue id_. To find out the pull request id, use the "[List pull requests](https://docs.github.com/rest/pulls/pulls#list-pull-requests)" endpoint.
     ///
     /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
     ///
@@ -1186,10 +1168,8 @@ extension APIProtocol {
     ///
     /// List issues across owned and member repositories assigned to the authenticated user.
     ///
-    /// **Note**: GitHub's REST API considers every pull request an issue, but not every issue is a pull request. For this
-    /// reason, "Issues" endpoints may return both issues and pull requests in the response. You can identify pull requests by
-    /// the `pull_request` key. Be aware that the `id` of a pull request returned from "Issues" endpoints will be an _issue id_. To find out the pull
-    /// request id, use the "[List pull requests](https://docs.github.com/rest/pulls/pulls#list-pull-requests)" endpoint.
+    /// > [!NOTE]
+    /// > GitHub's REST API considers every pull request an issue, but not every issue is a pull request. For this reason, "Issues" endpoints may return both issues and pull requests in the response. You can identify pull requests by the `pull_request` key. Be aware that the `id` of a pull request returned from "Issues" endpoints will be an _issue id_. To find out the pull request id, use the "[List pull requests](https://docs.github.com/rest/pulls/pulls#list-pull-requests)" endpoint.
     ///
     /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
     ///
@@ -8311,10 +8291,8 @@ public enum Operations {
     /// repositories, and organization repositories. You can use the `filter` query parameter to fetch issues that are not
     /// necessarily assigned to you.
     ///
-    /// **Note**: GitHub's REST API considers every pull request an issue, but not every issue is a pull request. For this
-    /// reason, "Issues" endpoints may return both issues and pull requests in the response. You can identify pull requests by
-    /// the `pull_request` key. Be aware that the `id` of a pull request returned from "Issues" endpoints will be an _issue id_. To find out the pull
-    /// request id, use the "[List pull requests](https://docs.github.com/rest/pulls/pulls#list-pull-requests)" endpoint.
+    /// > [!NOTE]
+    /// > GitHub's REST API considers every pull request an issue, but not every issue is a pull request. For this reason, "Issues" endpoints may return both issues and pull requests in the response. You can identify pull requests by the `pull_request` key. Be aware that the `id` of a pull request returned from "Issues" endpoints will be an _issue id_. To find out the pull request id, use the "[List pull requests](https://docs.github.com/rest/pulls/pulls#list-pull-requests)" endpoint.
     ///
     /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
     ///
@@ -8640,10 +8618,8 @@ public enum Operations {
     ///
     /// List issues in an organization assigned to the authenticated user.
     ///
-    /// **Note**: GitHub's REST API considers every pull request an issue, but not every issue is a pull request. For this
-    /// reason, "Issues" endpoints may return both issues and pull requests in the response. You can identify pull requests by
-    /// the `pull_request` key. Be aware that the `id` of a pull request returned from "Issues" endpoints will be an _issue id_. To find out the pull
-    /// request id, use the "[List pull requests](https://docs.github.com/rest/pulls/pulls#list-pull-requests)" endpoint.
+    /// > [!NOTE]
+    /// > GitHub's REST API considers every pull request an issue, but not every issue is a pull request. For this reason, "Issues" endpoints may return both issues and pull requests in the response. You can identify pull requests by the `pull_request` key. Be aware that the `id` of a pull request returned from "Issues" endpoints will be an _issue id_. To find out the pull request id, use the "[List pull requests](https://docs.github.com/rest/pulls/pulls#list-pull-requests)" endpoint.
     ///
     /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
     ///
@@ -9308,10 +9284,8 @@ public enum Operations {
     ///
     /// List issues in a repository. Only open issues will be listed.
     ///
-    /// **Note**: GitHub's REST API considers every pull request an issue, but not every issue is a pull request. For this
-    /// reason, "Issues" endpoints may return both issues and pull requests in the response. You can identify pull requests by
-    /// the `pull_request` key. Be aware that the `id` of a pull request returned from "Issues" endpoints will be an _issue id_. To find out the pull
-    /// request id, use the "[List pull requests](https://docs.github.com/rest/pulls/pulls#list-pull-requests)" endpoint.
+    /// > [!NOTE]
+    /// > GitHub's REST API considers every pull request an issue, but not every issue is a pull request. For this reason, "Issues" endpoints may return both issues and pull requests in the response. You can identify pull requests by the `pull_request` key. Be aware that the `id` of a pull request returned from "Issues" endpoints will be an _issue id_. To find out the pull request id, use the "[List pull requests](https://docs.github.com/rest/pulls/pulls#list-pull-requests)" endpoint.
     ///
     /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
     ///
@@ -11351,10 +11325,8 @@ public enum Operations {
     /// access, the API returns a `410 Gone` status. To receive webhook events for transferred and deleted issues, subscribe
     /// to the [`issues`](https://docs.github.com/webhooks/event-payloads/#issues) webhook.
     ///
-    /// **Note**: GitHub's REST API considers every pull request an issue, but not every issue is a pull request. For this
-    /// reason, "Issues" endpoints may return both issues and pull requests in the response. You can identify pull requests by
-    /// the `pull_request` key. Be aware that the `id` of a pull request returned from "Issues" endpoints will be an _issue id_. To find out the pull
-    /// request id, use the "[List pull requests](https://docs.github.com/rest/pulls/pulls#list-pull-requests)" endpoint.
+    /// > [!NOTE]
+    /// > GitHub's REST API considers every pull request an issue, but not every issue is a pull request. For this reason, "Issues" endpoints may return both issues and pull requests in the response. You can identify pull requests by the `pull_request` key. Be aware that the `id` of a pull request returned from "Issues" endpoints will be an _issue id_. To find out the pull request id, use the "[List pull requests](https://docs.github.com/rest/pulls/pulls#list-pull-requests)" endpoint.
     ///
     /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
     ///
@@ -17682,10 +17654,8 @@ public enum Operations {
     ///
     /// List issues across owned and member repositories assigned to the authenticated user.
     ///
-    /// **Note**: GitHub's REST API considers every pull request an issue, but not every issue is a pull request. For this
-    /// reason, "Issues" endpoints may return both issues and pull requests in the response. You can identify pull requests by
-    /// the `pull_request` key. Be aware that the `id` of a pull request returned from "Issues" endpoints will be an _issue id_. To find out the pull
-    /// request id, use the "[List pull requests](https://docs.github.com/rest/pulls/pulls#list-pull-requests)" endpoint.
+    /// > [!NOTE]
+    /// > GitHub's REST API considers every pull request an issue, but not every issue is a pull request. For this reason, "Issues" endpoints may return both issues and pull requests in the response. You can identify pull requests by the `pull_request` key. Be aware that the `id` of a pull request returned from "Issues" endpoints will be an _issue id_. To find out the pull request id, use the "[List pull requests](https://docs.github.com/rest/pulls/pulls#list-pull-requests)" endpoint.
     ///
     /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
     ///

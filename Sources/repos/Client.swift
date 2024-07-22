@@ -42,7 +42,8 @@ public struct Client: APIProtocol {
     ///
     /// Lists repositories for the specified organization.
     ///
-    /// **Note:** In order to see the `security_and_analysis` block for a repository you must have admin permissions for the repository or be an owner or security manager for the organization that owns the repository. For more information, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."
+    /// > [!NOTE]
+    /// > In order to see the `security_and_analysis` block for a repository you must have admin permissions for the repository or be an owner or security manager for the organization that owns the repository. For more information, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."
     ///
     /// - Remark: HTTP `GET /orgs/{org}/repos`.
     /// - Remark: Generated from `#/paths//orgs/{org}/repos/get(repos/list-for-org)`.
@@ -536,6 +537,13 @@ public struct Client: APIProtocol {
                     method: .get
                 )
                 suppressMutabilityWarning(&request)
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "ref",
+                    value: input.query.ref
+                )
                 try converter.setQueryItemAsURI(
                     in: &request,
                     style: .form,
@@ -1096,7 +1104,8 @@ public struct Client: APIProtocol {
     ///
     /// The `parent` and `source` objects are present when the repository is a fork. `parent` is the repository this repository was forked from, `source` is the ultimate source for the network.
     ///
-    /// **Note:** In order to see the `security_and_analysis` block for a repository you must have admin permissions for the repository or be an owner or security manager for the organization that owns the repository. For more information, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."
+    /// > [!NOTE]
+    /// > In order to see the `security_and_analysis` block for a repository you must have admin permissions for the repository or be an owner or security manager for the organization that owns the repository. For more information, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/get(repos/get)`.
@@ -2672,9 +2681,11 @@ public struct Client: APIProtocol {
     ///
     /// Protecting a branch requires admin or owner permissions to the repository.
     ///
-    /// **Note**: Passing new arrays of `users` and `teams` replaces their previous values.
+    /// > [!NOTE]
+    /// > Passing new arrays of `users` and `teams` replaces their previous values.
     ///
-    /// **Note**: The list of users, apps, and teams in total is limited to 100 items.
+    /// > [!NOTE]
+    /// > The list of users, apps, and teams in total is limited to 100 items.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/branches/{branch}/protection`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/branches/{branch}/protection/put(repos/update-branch-protection)`.
@@ -3157,7 +3168,8 @@ public struct Client: APIProtocol {
     ///
     /// Updating pull request review enforcement requires admin or owner permissions to the repository and branch protection to be enabled.
     ///
-    /// **Note**: Passing new arrays of `users` and `teams` replaces their previous values.
+    /// > [!NOTE]
+    /// > Passing new arrays of `users` and `teams` replaces their previous values.
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/branches/{branch}/protection/required_pull_request_reviews`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/branches/{branch}/protection/required_pull_request_reviews/patch(repos/update-pull-request-review-protection)`.
@@ -3328,7 +3340,8 @@ public struct Client: APIProtocol {
     ///
     /// When authenticated with admin or owner permissions to the repository, you can use this endpoint to check whether a branch requires signed commits. An enabled status of `true` indicates you must sign commits on this branch. For more information, see [Signing commits with GPG](https://docs.github.com/articles/signing-commits-with-gpg) in GitHub Help.
     ///
-    /// **Note**: You must enable branch protection to require signed commits.
+    /// > [!NOTE]
+    /// > You must enable branch protection to require signed commits.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/branches/{branch}/protection/required_signatures`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/branches/{branch}/protection/required_signatures/get(repos/get-commit-signature-protection)`.
@@ -4306,7 +4319,8 @@ public struct Client: APIProtocol {
     ///
     /// Lists who has access to this protected branch.
     ///
-    /// **Note**: Users, apps, and teams `restrictions` are only available for organization-owned repositories.
+    /// > [!NOTE]
+    /// > Users, apps, and teams `restrictions` are only available for organization-owned repositories.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/branches/{branch}/protection/restrictions`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/branches/{branch}/protection/restrictions/get(repos/get-access-restrictions)`.
@@ -5631,7 +5645,8 @@ public struct Client: APIProtocol {
     ///
     /// Renames a branch in a repository.
     ///
-    /// **Note:** Although the API responds immediately, the branch rename process might take some extra time to complete in the background. You won't be able to push to the old branch name while the rename process is in progress. For more information, see "[Renaming a branch](https://docs.github.com/github/administering-a-repository/renaming-a-branch)".
+    /// > [!NOTE]
+    /// > Although the API responds immediately, the branch rename process might take some extra time to complete in the background. You won't be able to push to the old branch name while the rename process is in progress. For more information, see "[Renaming a branch](https://docs.github.com/github/administering-a-repository/renaming-a-branch)".
     ///
     /// The authenticated user must have push access to the branch. If the branch is the default branch, the authenticated user must also have admin or owner permissions.
     ///
@@ -6193,7 +6208,8 @@ public struct Client: APIProtocol {
     ///  - If the user had their own fork of the repository, the fork will be deleted.
     ///  - If the user still has read access to the repository, open pull requests by this user from a fork will be denied.
     ///
-    /// **Note**: A user can still have access to the repository through organization permissions like base repository permissions.
+    /// > [!NOTE]
+    /// > A user can still have access to the repository through organization permissions like base repository permissions.
     ///
     /// Although the API responds immediately, the additional permission updates might take some extra time to complete in the background.
     ///
@@ -7452,7 +7468,8 @@ public struct Client: APIProtocol {
     ///
     /// Returns the contents of a single commit reference. You must have `read` access for the repository to use this endpoint.
     ///
-    /// **Note:** If there are more than 300 files in the commit diff and the default JSON media type is requested, the response will include pagination link headers for the remaining files, up to a limit of 3000 files. Each page contains the static commit information, and the only changes are to the file listing.
+    /// > [!NOTE]
+    /// > If there are more than 300 files in the commit diff and the default JSON media type is requested, the response will include pagination link headers for the remaining files, up to a limit of 3000 files. Each page contains the static commit information, and the only changes are to the file listing.
     ///
     /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)." Pagination query parameters are not supported for these media types.
     ///
@@ -8324,7 +8341,8 @@ public struct Client: APIProtocol {
     ///
     /// Creates a new file or replaces an existing file in a repository.
     ///
-    /// **Note:** If you use this endpoint and the "[Delete a file](https://docs.github.com/rest/repos/contents/#delete-a-file)" endpoint in parallel, the concurrent requests will conflict and you will receive errors. You must use these endpoints serially instead.
+    /// > [!NOTE]
+    /// > If you use this endpoint and the "[Delete a file](https://docs.github.com/rest/repos/contents/#delete-a-file)" endpoint in parallel, the concurrent requests will conflict and you will receive errors. You must use these endpoints serially instead.
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint. The `workflow` scope is also required in order to modify files in the `.github/workflows` directory.
     ///
@@ -8497,7 +8515,8 @@ public struct Client: APIProtocol {
     ///
     /// You must provide values for both `name` and `email`, whether you choose to use `author` or `committer`. Otherwise, you'll receive a `422` status code.
     ///
-    /// **Note:** If you use this endpoint and the "[Create or update file contents](https://docs.github.com/rest/repos/contents/#create-or-update-file-contents)" endpoint in parallel, the concurrent requests will conflict and you will receive errors. You must use these endpoints serially instead.
+    /// > [!NOTE]
+    /// > If you use this endpoint and the "[Create or update file contents](https://docs.github.com/rest/repos/contents/#create-or-update-file-contents)" endpoint in parallel, the concurrent requests will conflict and you will receive errors. You must use these endpoints serially instead.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/contents/{path}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/contents/{path}/delete(repos/delete-file)`.
@@ -9764,7 +9783,8 @@ public struct Client: APIProtocol {
     }
     /// Get an environment
     ///
-    /// **Note:** To get information about name patterns that branches must match in order to deploy to this environment, see "[Get a deployment branch policy](/rest/deployments/branch-policies#get-a-deployment-branch-policy)."
+    /// > [!NOTE]
+    /// > To get information about name patterns that branches must match in order to deploy to this environment, see "[Get a deployment branch policy](/rest/deployments/branch-policies#get-a-deployment-branch-policy)."
     ///
     /// Anyone with read access to the repository can use this endpoint.
     ///
@@ -9836,9 +9856,11 @@ public struct Client: APIProtocol {
     ///
     /// Create or update an environment with protection rules, such as required reviewers. For more information about environment protection rules, see "[Environments](/actions/reference/environments#environment-protection-rules)."
     ///
-    /// **Note:** To create or update name patterns that branches must match in order to deploy to this environment, see "[Deployment branch policies](/rest/deployments/branch-policies)."
+    /// > [!NOTE]
+    /// > To create or update name patterns that branches must match in order to deploy to this environment, see "[Deployment branch policies](/rest/deployments/branch-policies)."
     ///
-    /// **Note:** To create or update secrets for an environment, see "[GitHub Actions secrets](/rest/actions/secrets)."
+    /// > [!NOTE]
+    /// > To create or update secrets for an environment, see "[GitHub Actions secrets](/rest/actions/secrets)."
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
@@ -10491,7 +10513,9 @@ public struct Client: APIProtocol {
     }
     /// List custom deployment rule integrations available for an environment
     ///
-    /// Gets all custom deployment protection rule integrations that are available for an environment. Anyone with read access to the repository can use this endpoint.
+    /// Gets all custom deployment protection rule integrations that are available for an environment.
+    ///
+    /// The authenticated user must have admin or owner permissions to the repository to use this endpoint.
     ///
     /// For more information about environments, see "[Using environments for deployment](https://docs.github.com/actions/deployment/targeting-different-environments/using-environments-for-deployment)."
     ///
@@ -10822,9 +10846,11 @@ public struct Client: APIProtocol {
     ///
     /// Create a fork for the authenticated user.
     ///
-    /// **Note**: Forking a Repository happens asynchronously. You may have to wait a short period of time before you can access the git objects. If this takes longer than 5 minutes, be sure to contact [GitHub Support](https://support.github.com/contact?tags=dotcom-rest-api).
+    /// > [!NOTE]
+    /// > Forking a Repository happens asynchronously. You may have to wait a short period of time before you can access the git objects. If this takes longer than 5 minutes, be sure to contact [GitHub Support](https://support.github.com/contact?tags=dotcom-rest-api).
     ///
-    /// **Note**: Although this endpoint works with GitHub Apps, the GitHub App must be installed on the destination account with access to all repositories and on the source account with access to the source repository.
+    /// > [!NOTE]
+    /// > Although this endpoint works with GitHub Apps, the GitHub App must be installed on the destination account with access to all repositories and on the source account with access to the source repository.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/forks`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/forks/post(repos/create-fork)`.
@@ -12129,7 +12155,8 @@ public struct Client: APIProtocol {
     ///
     /// This will trigger the hook with the latest push to the current repository if the hook is subscribed to `push` events. If the hook is not subscribed to `push` events, the server will respond with 204 but no test POST will be generated.
     ///
-    /// **Note**: Previously `/repos/:owner/:repo/hooks/:hook_id/test`
+    /// > [!NOTE]
+    /// > Previously `/repos/:owner/:repo/hooks/:hook_id/test`
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/hooks/{hook_id}/tests`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/hooks/{hook_id}/tests/post(repos/test-push-webhook)`.
@@ -15596,9 +15623,8 @@ public struct Client: APIProtocol {
     ///
     /// Gets a public release with the specified release ID.
     ///
-    /// **Note:** This returns an `upload_url` key corresponding to the endpoint
-    /// for uploading release assets. This key is a hypermedia resource. For more information, see
-    /// "[Getting started with the REST API](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#hypermedia)."
+    /// > [!NOTE]
+    /// > This returns an `upload_url` key corresponding to the endpoint for uploading release assets. This key is a hypermedia resource. For more information, see "[Getting started with the REST API](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#hypermedia)."
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/releases/{release_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/releases/{release_id}/get(repos/get-release)`.
@@ -16928,12 +16954,10 @@ public struct Client: APIProtocol {
     }
     /// Get the weekly commit activity
     ///
-    ///
     /// Returns a weekly aggregate of the number of additions and deletions pushed to a repository.
     ///
-    /// **Note:** This endpoint can only be used for repositories with fewer than 10,000 commits. If the repository contains
-    /// 10,000 or more commits, a 422 status code will be returned.
-    ///
+    /// > [!NOTE]
+    /// > This endpoint can only be used for repositories with fewer than 10,000 commits. If the repository contains 10,000 or more commits, a 422 status code will be returned.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/stats/code_frequency`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/stats/code_frequency/get(repos/get-code-frequency-stats)`.
@@ -17121,7 +17145,8 @@ public struct Client: APIProtocol {
     /// *   `d` - Number of deletions
     /// *   `c` - Number of commits
     ///
-    /// **Note:** This endpoint will return `0` values for all addition and deletion counts in repositories with 10,000 or more commits.
+    /// > [!NOTE]
+    /// > This endpoint will return `0` values for all addition and deletion counts in repositories with 10,000 or more commits.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/stats/contributors`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/stats/contributors/get(repos/get-contributors-stats)`.
@@ -17546,8 +17571,8 @@ public struct Client: APIProtocol {
     }
     /// Deprecated - List tag protection states for a repository
     ///
-    /// **Note**: This operation is deprecated and will be removed after August 30th 2024
-    /// Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#get-all-repository-rulesets)" endpoint instead.
+    /// > [!WARNING]
+    /// > **Deprecation notice:** This operation is deprecated and will be removed after August 30, 2024. Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#get-all-repository-rulesets)" endpoint instead.
     ///
     /// This returns the tag protection states of a repository.
     ///
@@ -17661,8 +17686,8 @@ public struct Client: APIProtocol {
     }
     /// Deprecated - Create a tag protection state for a repository
     ///
-    /// **Note**: This operation is deprecated and will be removed after August 30th 2024
-    /// Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#create-a-repository-ruleset)" endpoint instead.
+    /// > [!WARNING]
+    /// > **Deprecation notice:** This operation is deprecated and will be removed after August 30, 2024. Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#create-a-repository-ruleset)" endpoint instead.
     ///
     /// This creates a tag protection state for a repository.
     /// This endpoint is only available to repository administrators.
@@ -17784,8 +17809,8 @@ public struct Client: APIProtocol {
     }
     /// Deprecated - Delete a tag protection state for a repository
     ///
-    /// **Note**: This operation is deprecated and will be removed after August 30th 2024
-    /// Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#delete-a-repository-ruleset)" endpoint instead.
+    /// > [!WARNING]
+    /// > **Deprecation notice:** This operation is deprecated and will be removed after August 30, 2024. Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#delete-a-repository-ruleset)" endpoint instead.
     ///
     /// This deletes a tag protection state for a repository.
     /// This endpoint is only available to repository administrators.
@@ -17882,7 +17907,9 @@ public struct Client: APIProtocol {
     /// Gets a redirect URL to download a tar archive for a repository. If you omit `:ref`, the repository’s default branch (usually
     /// `main`) will be used. Please make sure your HTTP framework is configured to follow redirects or you will need to use
     /// the `Location` header to make a second `GET` request.
-    /// **Note**: For private repositories, these links are temporary and expire after five minutes.
+    ///
+    /// > [!NOTE]
+    /// > For private repositories, these links are temporary and expire after five minutes.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/tarball/{ref}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/tarball/{ref}/get(repos/download-tarball-archive)`.
@@ -18828,7 +18855,8 @@ public struct Client: APIProtocol {
     /// `main`) will be used. Please make sure your HTTP framework is configured to follow redirects or you will need to use
     /// the `Location` header to make a second `GET` request.
     ///
-    /// **Note**: For private repositories, these links are temporary and expire after five minutes. If the repository is empty, you will receive a 404 when you follow the redirect.
+    /// > [!NOTE]
+    /// > For private repositories, these links are temporary and expire after five minutes. If the repository is empty, you will receive a 404 when you follow the redirect.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/zipball/{ref}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/zipball/{ref}/get(repos/download-zipball-archive)`.

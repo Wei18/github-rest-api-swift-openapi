@@ -13,7 +13,8 @@ import struct Foundation.Date
 public protocol APIProtocol: Sendable {
     /// List all Copilot seat assignments for an enterprise
     ///
-    /// **Note**: This endpoint is in beta and is subject to change.
+    /// > [!NOTE]
+    /// > This endpoint is in beta and is subject to change.
     ///
     /// Lists all active Copilot seats across organizations or enterprise teams for an enterprise with a Copilot Business or Copilot Enterprise subscription.
     ///
@@ -30,7 +31,8 @@ public protocol APIProtocol: Sendable {
     func copilot_sol_list_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_enterprise(_ input: Operations.copilot_sol_list_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_enterprise.Input) async throws -> Operations.copilot_sol_list_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_enterprise.Output
     /// Get a summary of Copilot usage for enterprise members
     ///
-    /// **Note**: This endpoint is in beta and is subject to change.
+    /// > [!NOTE]
+    /// > This endpoint is in beta and is subject to change.
     ///
     /// You can use this endpoint to see a daily breakdown of aggregated usage metrics for Copilot completions and Copilot Chat in the IDE
     /// for all users across organizations with access to Copilot within your enterprise, with a further breakdown of suggestions, acceptances,
@@ -49,7 +51,8 @@ public protocol APIProtocol: Sendable {
     func copilot_sol_usage_hyphen_metrics_hyphen_for_hyphen_enterprise(_ input: Operations.copilot_sol_usage_hyphen_metrics_hyphen_for_hyphen_enterprise.Input) async throws -> Operations.copilot_sol_usage_hyphen_metrics_hyphen_for_hyphen_enterprise.Output
     /// Get Copilot seat information and settings for an organization
     ///
-    /// **Note**: This endpoint is in beta and is subject to change.
+    /// > [!NOTE]
+    /// > This endpoint is in beta and is subject to change.
     ///
     /// Gets information about an organization's Copilot subscription, including seat breakdown
     /// and feature policies. To configure these settings, go to your organization's settings on GitHub.com.
@@ -64,7 +67,8 @@ public protocol APIProtocol: Sendable {
     func copilot_sol_get_hyphen_copilot_hyphen_organization_hyphen_details(_ input: Operations.copilot_sol_get_hyphen_copilot_hyphen_organization_hyphen_details.Input) async throws -> Operations.copilot_sol_get_hyphen_copilot_hyphen_organization_hyphen_details.Output
     /// List all Copilot seat assignments for an organization
     ///
-    /// **Note**: This endpoint is in beta and is subject to change.
+    /// > [!NOTE]
+    /// > This endpoint is in beta and is subject to change.
     ///
     /// Lists all active Copilot seats for an organization with a Copilot Business or Copilot Enterprise subscription.
     /// Only organization owners can view assigned seats.
@@ -76,7 +80,8 @@ public protocol APIProtocol: Sendable {
     func copilot_sol_list_hyphen_copilot_hyphen_seats(_ input: Operations.copilot_sol_list_hyphen_copilot_hyphen_seats.Input) async throws -> Operations.copilot_sol_list_hyphen_copilot_hyphen_seats.Output
     /// Add teams to the Copilot subscription for an organization
     ///
-    /// **Note**: This endpoint is in beta and is subject to change.
+    /// > [!NOTE]
+    /// > This endpoint is in beta and is subject to change.
     ///
     /// Purchases a GitHub Copilot seat for all users within each specified team.
     /// The organization will be billed accordingly. For more information about Copilot pricing, see "[Pricing for GitHub Copilot](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#about-billing-for-github-copilot)".
@@ -96,7 +101,8 @@ public protocol APIProtocol: Sendable {
     func copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams(_ input: Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams.Input) async throws -> Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams.Output
     /// Remove teams from the Copilot subscription for an organization
     ///
-    /// **Note**: This endpoint is in beta and is subject to change.
+    /// > [!NOTE]
+    /// > This endpoint is in beta and is subject to change.
     ///
     /// Cancels the Copilot seat assignment for all members of each team specified.
     /// This will cause the members of the specified team(s) to lose access to GitHub Copilot at the end of the current billing cycle, and the organization will not be billed further for those users.
@@ -114,7 +120,8 @@ public protocol APIProtocol: Sendable {
     func copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_teams(_ input: Operations.copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_teams.Input) async throws -> Operations.copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_teams.Output
     /// Add users to the Copilot subscription for an organization
     ///
-    /// **Note**: This endpoint is in beta and is subject to change.
+    /// > [!NOTE]
+    /// > This endpoint is in beta and is subject to change.
     ///
     /// Purchases a GitHub Copilot seat for each user specified.
     /// The organization will be billed accordingly. For more information about Copilot pricing, see "[Pricing for GitHub Copilot](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#about-billing-for-github-copilot)".
@@ -134,7 +141,8 @@ public protocol APIProtocol: Sendable {
     func copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users(_ input: Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users.Input) async throws -> Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users.Output
     /// Remove users from the Copilot subscription for an organization
     ///
-    /// **Note**: This endpoint is in beta and is subject to change.
+    /// > [!NOTE]
+    /// > This endpoint is in beta and is subject to change.
     ///
     /// Cancels the Copilot seat assignment for each user specified.
     /// This will cause the specified users to lose access to GitHub Copilot at the end of the current billing cycle, and the organization will not be billed further for those users.
@@ -152,7 +160,8 @@ public protocol APIProtocol: Sendable {
     func copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_users(_ input: Operations.copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_users.Input) async throws -> Operations.copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_users.Output
     /// Get a summary of Copilot usage for organization members
     ///
-    /// **Note**: This endpoint is in beta and is subject to change.
+    /// > [!NOTE]
+    /// > This endpoint is in beta and is subject to change.
     ///
     /// You can use this endpoint to see a daily breakdown of aggregated usage metrics for Copilot completions and Copilot Chat in the IDE
     /// across an organization, with a further breakdown of suggestions, acceptances, and number of active users by editor and language for each day.
@@ -171,7 +180,8 @@ public protocol APIProtocol: Sendable {
     func copilot_sol_usage_hyphen_metrics_hyphen_for_hyphen_org(_ input: Operations.copilot_sol_usage_hyphen_metrics_hyphen_for_hyphen_org.Input) async throws -> Operations.copilot_sol_usage_hyphen_metrics_hyphen_for_hyphen_org.Output
     /// Get Copilot seat assignment details for a user
     ///
-    /// **Note**: This endpoint is in beta and is subject to change.
+    /// > [!NOTE]
+    /// > This endpoint is in beta and is subject to change.
     ///
     /// Gets the GitHub Copilot seat assignment details for a member of an organization who currently has access to GitHub Copilot.
     ///
@@ -188,7 +198,8 @@ public protocol APIProtocol: Sendable {
 extension APIProtocol {
     /// List all Copilot seat assignments for an enterprise
     ///
-    /// **Note**: This endpoint is in beta and is subject to change.
+    /// > [!NOTE]
+    /// > This endpoint is in beta and is subject to change.
     ///
     /// Lists all active Copilot seats across organizations or enterprise teams for an enterprise with a Copilot Business or Copilot Enterprise subscription.
     ///
@@ -215,7 +226,8 @@ extension APIProtocol {
     }
     /// Get a summary of Copilot usage for enterprise members
     ///
-    /// **Note**: This endpoint is in beta and is subject to change.
+    /// > [!NOTE]
+    /// > This endpoint is in beta and is subject to change.
     ///
     /// You can use this endpoint to see a daily breakdown of aggregated usage metrics for Copilot completions and Copilot Chat in the IDE
     /// for all users across organizations with access to Copilot within your enterprise, with a further breakdown of suggestions, acceptances,
@@ -244,7 +256,8 @@ extension APIProtocol {
     }
     /// Get Copilot seat information and settings for an organization
     ///
-    /// **Note**: This endpoint is in beta and is subject to change.
+    /// > [!NOTE]
+    /// > This endpoint is in beta and is subject to change.
     ///
     /// Gets information about an organization's Copilot subscription, including seat breakdown
     /// and feature policies. To configure these settings, go to your organization's settings on GitHub.com.
@@ -267,7 +280,8 @@ extension APIProtocol {
     }
     /// List all Copilot seat assignments for an organization
     ///
-    /// **Note**: This endpoint is in beta and is subject to change.
+    /// > [!NOTE]
+    /// > This endpoint is in beta and is subject to change.
     ///
     /// Lists all active Copilot seats for an organization with a Copilot Business or Copilot Enterprise subscription.
     /// Only organization owners can view assigned seats.
@@ -289,7 +303,8 @@ extension APIProtocol {
     }
     /// Add teams to the Copilot subscription for an organization
     ///
-    /// **Note**: This endpoint is in beta and is subject to change.
+    /// > [!NOTE]
+    /// > This endpoint is in beta and is subject to change.
     ///
     /// Purchases a GitHub Copilot seat for all users within each specified team.
     /// The organization will be billed accordingly. For more information about Copilot pricing, see "[Pricing for GitHub Copilot](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#about-billing-for-github-copilot)".
@@ -319,7 +334,8 @@ extension APIProtocol {
     }
     /// Remove teams from the Copilot subscription for an organization
     ///
-    /// **Note**: This endpoint is in beta and is subject to change.
+    /// > [!NOTE]
+    /// > This endpoint is in beta and is subject to change.
     ///
     /// Cancels the Copilot seat assignment for all members of each team specified.
     /// This will cause the members of the specified team(s) to lose access to GitHub Copilot at the end of the current billing cycle, and the organization will not be billed further for those users.
@@ -347,7 +363,8 @@ extension APIProtocol {
     }
     /// Add users to the Copilot subscription for an organization
     ///
-    /// **Note**: This endpoint is in beta and is subject to change.
+    /// > [!NOTE]
+    /// > This endpoint is in beta and is subject to change.
     ///
     /// Purchases a GitHub Copilot seat for each user specified.
     /// The organization will be billed accordingly. For more information about Copilot pricing, see "[Pricing for GitHub Copilot](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#about-billing-for-github-copilot)".
@@ -377,7 +394,8 @@ extension APIProtocol {
     }
     /// Remove users from the Copilot subscription for an organization
     ///
-    /// **Note**: This endpoint is in beta and is subject to change.
+    /// > [!NOTE]
+    /// > This endpoint is in beta and is subject to change.
     ///
     /// Cancels the Copilot seat assignment for each user specified.
     /// This will cause the specified users to lose access to GitHub Copilot at the end of the current billing cycle, and the organization will not be billed further for those users.
@@ -405,7 +423,8 @@ extension APIProtocol {
     }
     /// Get a summary of Copilot usage for organization members
     ///
-    /// **Note**: This endpoint is in beta and is subject to change.
+    /// > [!NOTE]
+    /// > This endpoint is in beta and is subject to change.
     ///
     /// You can use this endpoint to see a daily breakdown of aggregated usage metrics for Copilot completions and Copilot Chat in the IDE
     /// across an organization, with a further breakdown of suggestions, acceptances, and number of active users by editor and language for each day.
@@ -434,7 +453,8 @@ extension APIProtocol {
     }
     /// Get Copilot seat assignment details for a user
     ///
-    /// **Note**: This endpoint is in beta and is subject to change.
+    /// > [!NOTE]
+    /// > This endpoint is in beta and is subject to change.
     ///
     /// Gets the GitHub Copilot seat assignment details for a member of an organization who currently has access to GitHub Copilot.
     ///
@@ -2203,7 +2223,8 @@ public enum Components {
 public enum Operations {
     /// List all Copilot seat assignments for an enterprise
     ///
-    /// **Note**: This endpoint is in beta and is subject to change.
+    /// > [!NOTE]
+    /// > This endpoint is in beta and is subject to change.
     ///
     /// Lists all active Copilot seats across organizations or enterprise teams for an enterprise with a Copilot Business or Copilot Enterprise subscription.
     ///
@@ -2508,7 +2529,8 @@ public enum Operations {
     }
     /// Get a summary of Copilot usage for enterprise members
     ///
-    /// **Note**: This endpoint is in beta and is subject to change.
+    /// > [!NOTE]
+    /// > This endpoint is in beta and is subject to change.
     ///
     /// You can use this endpoint to see a daily breakdown of aggregated usage metrics for Copilot completions and Copilot Chat in the IDE
     /// for all users across organizations with access to Copilot within your enterprise, with a further breakdown of suggestions, acceptances,
@@ -2785,7 +2807,8 @@ public enum Operations {
     }
     /// Get Copilot seat information and settings for an organization
     ///
-    /// **Note**: This endpoint is in beta and is subject to change.
+    /// > [!NOTE]
+    /// > This endpoint is in beta and is subject to change.
     ///
     /// Gets information about an organization's Copilot subscription, including seat breakdown
     /// and feature policies. To configure these settings, go to your organization's settings on GitHub.com.
@@ -3044,7 +3067,8 @@ public enum Operations {
     }
     /// List all Copilot seat assignments for an organization
     ///
-    /// **Note**: This endpoint is in beta and is subject to change.
+    /// > [!NOTE]
+    /// > This endpoint is in beta and is subject to change.
     ///
     /// Lists all active Copilot seats for an organization with a Copilot Business or Copilot Enterprise subscription.
     /// Only organization owners can view assigned seats.
@@ -3344,7 +3368,8 @@ public enum Operations {
     }
     /// Add teams to the Copilot subscription for an organization
     ///
-    /// **Note**: This endpoint is in beta and is subject to change.
+    /// > [!NOTE]
+    /// > This endpoint is in beta and is subject to change.
     ///
     /// Purchases a GitHub Copilot seat for all users within each specified team.
     /// The organization will be billed accordingly. For more information about Copilot pricing, see "[Pricing for GitHub Copilot](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#about-billing-for-github-copilot)".
@@ -3651,7 +3676,8 @@ public enum Operations {
     }
     /// Remove teams from the Copilot subscription for an organization
     ///
-    /// **Note**: This endpoint is in beta and is subject to change.
+    /// > [!NOTE]
+    /// > This endpoint is in beta and is subject to change.
     ///
     /// Cancels the Copilot seat assignment for all members of each team specified.
     /// This will cause the members of the specified team(s) to lose access to GitHub Copilot at the end of the current billing cycle, and the organization will not be billed further for those users.
@@ -3956,7 +3982,8 @@ public enum Operations {
     }
     /// Add users to the Copilot subscription for an organization
     ///
-    /// **Note**: This endpoint is in beta and is subject to change.
+    /// > [!NOTE]
+    /// > This endpoint is in beta and is subject to change.
     ///
     /// Purchases a GitHub Copilot seat for each user specified.
     /// The organization will be billed accordingly. For more information about Copilot pricing, see "[Pricing for GitHub Copilot](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#about-billing-for-github-copilot)".
@@ -4263,7 +4290,8 @@ public enum Operations {
     }
     /// Remove users from the Copilot subscription for an organization
     ///
-    /// **Note**: This endpoint is in beta and is subject to change.
+    /// > [!NOTE]
+    /// > This endpoint is in beta and is subject to change.
     ///
     /// Cancels the Copilot seat assignment for each user specified.
     /// This will cause the specified users to lose access to GitHub Copilot at the end of the current billing cycle, and the organization will not be billed further for those users.
@@ -4568,7 +4596,8 @@ public enum Operations {
     }
     /// Get a summary of Copilot usage for organization members
     ///
-    /// **Note**: This endpoint is in beta and is subject to change.
+    /// > [!NOTE]
+    /// > This endpoint is in beta and is subject to change.
     ///
     /// You can use this endpoint to see a daily breakdown of aggregated usage metrics for Copilot completions and Copilot Chat in the IDE
     /// across an organization, with a further breakdown of suggestions, acceptances, and number of active users by editor and language for each day.
@@ -4845,7 +4874,8 @@ public enum Operations {
     }
     /// Get Copilot seat assignment details for a user
     ///
-    /// **Note**: This endpoint is in beta and is subject to change.
+    /// > [!NOTE]
+    /// > This endpoint is in beta and is subject to change.
     ///
     /// Gets the GitHub Copilot seat assignment details for a member of an organization who currently has access to GitHub Copilot.
     ///

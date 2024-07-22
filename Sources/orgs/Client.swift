@@ -42,7 +42,8 @@ public struct Client: APIProtocol {
     ///
     /// Lists all organizations, in the order that they were created.
     ///
-    /// **Note:** Pagination is powered exclusively by the `since` parameter. Use the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers) to get the URL for the next page of organizations.
+    /// > [!NOTE]
+    /// > Pagination is powered exclusively by the `since` parameter. Use the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers) to get the URL for the next page of organizations.
     ///
     /// - Remark: HTTP `GET /organizations`.
     /// - Remark: Generated from `#/paths//organizations/get(orgs/list)`.
@@ -222,9 +223,11 @@ public struct Client: APIProtocol {
     }
     /// Update an organization
     ///
-    /// **Parameter Deprecation Notice:** GitHub will replace and discontinue `members_allowed_repository_creation_type` in favor of more granular permissions. The new input parameters are `members_can_create_public_repositories`, `members_can_create_private_repositories` for all organizations and `members_can_create_internal_repositories` for organizations associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+. For more information, see the [blog post](https://developer.github.com/changes/2019-12-03-internal-visibility-changes).
+    /// > [!WARNING]
+    /// > **Parameter deprecation notice:** GitHub will replace and discontinue `members_allowed_repository_creation_type` in favor of more granular permissions. The new input parameters are `members_can_create_public_repositories`, `members_can_create_private_repositories` for all organizations and `members_can_create_internal_repositories` for organizations associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+. For more information, see the [blog post](https://developer.github.com/changes/2019-12-03-internal-visibility-changes).
     ///
-    /// **Parameter Deprecation Notice:** Code security product enablement for new repositories through the organization API is deprecated. Please use [code security configurations](https://docs.github.com/rest/code-security/configurations#set-a-code-security-configuration-as-a-default-for-an-organization) to set defaults instead. For more information on setting a default security configuration, see the [changelog](https://github.blog/changelog/2024-07-09-sunsetting-security-settings-defaults-parameters-in-the-organizations-rest-api/).
+    /// > [!WARNING]
+    /// > **Parameter deprecation notice:** Code security product enablement for new repositories through the organization API is deprecated. Please use [code security configurations](https://docs.github.com/rest/code-security/configurations#set-a-code-security-configuration-as-a-default-for-an-organization) to set defaults instead. For more information on setting a default security configuration, see the [changelog](https://github.blog/changelog/2024-07-09-sunsetting-security-settings-defaults-parameters-in-the-organizations-rest-api/).
     ///
     /// Updates the organization's profile and member privileges.
     ///
@@ -3166,126 +3169,9 @@ public struct Client: APIProtocol {
             }
         )
     }
-    /// List organization fine-grained permissions for an organization
-    ///
-    /// Lists the fine-grained permissions that can be used in custom organization roles for an organization. For more information, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
-    ///
-    /// To list the fine-grained permissions that can be used in custom repository roles for an organization, see "[List repository fine-grained permissions for an organization](https://docs.github.com/rest/orgs/organization-roles#list-repository-fine-grained-permissions-for-an-organization)."
-    ///
-    /// To use this endpoint, the authenticated user must be one of:
-    ///
-    /// - An administrator for the organization.
-    /// - A user, or a user on a team, with the fine-grained permissions of `read_organization_custom_org_role` in the organization.
-    ///
-    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
-    ///
-    /// - Remark: HTTP `GET /orgs/{org}/organization-fine-grained-permissions`.
-    /// - Remark: Generated from `#/paths//orgs/{org}/organization-fine-grained-permissions/get(orgs/list-organization-fine-grained-permissions)`.
-    public func orgs_sol_list_hyphen_organization_hyphen_fine_hyphen_grained_hyphen_permissions(_ input: Operations.orgs_sol_list_hyphen_organization_hyphen_fine_hyphen_grained_hyphen_permissions.Input) async throws -> Operations.orgs_sol_list_hyphen_organization_hyphen_fine_hyphen_grained_hyphen_permissions.Output {
-        try await client.send(
-            input: input,
-            forOperation: Operations.orgs_sol_list_hyphen_organization_hyphen_fine_hyphen_grained_hyphen_permissions.id,
-            serializer: { input in
-                let path = try converter.renderedPath(
-                    template: "/orgs/{}/organization-fine-grained-permissions",
-                    parameters: [
-                        input.path.org
-                    ]
-                )
-                var request: HTTPTypes.HTTPRequest = .init(
-                    soar_path: path,
-                    method: .get
-                )
-                suppressMutabilityWarning(&request)
-                converter.setAcceptHeader(
-                    in: &request.headerFields,
-                    contentTypes: input.headers.accept
-                )
-                return (request, nil)
-            },
-            deserializer: { response, responseBody in
-                switch response.status.code {
-                case 200:
-                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.orgs_sol_list_hyphen_organization_hyphen_fine_hyphen_grained_hyphen_permissions.Output.Ok.Body
-                    let chosenContentType = try converter.bestContentType(
-                        received: contentType,
-                        options: [
-                            "application/json"
-                        ]
-                    )
-                    switch chosenContentType {
-                    case "application/json":
-                        body = try await converter.getResponseBodyAsJSON(
-                            [Components.Schemas.organization_hyphen_fine_hyphen_grained_hyphen_permission].self,
-                            from: responseBody,
-                            transforming: { value in
-                                .json(value)
-                            }
-                        )
-                    default:
-                        preconditionFailure("bestContentType chose an invalid content type.")
-                    }
-                    return .ok(.init(body: body))
-                case 404:
-                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.not_found.Body
-                    let chosenContentType = try converter.bestContentType(
-                        received: contentType,
-                        options: [
-                            "application/json"
-                        ]
-                    )
-                    switch chosenContentType {
-                    case "application/json":
-                        body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
-                            from: responseBody,
-                            transforming: { value in
-                                .json(value)
-                            }
-                        )
-                    default:
-                        preconditionFailure("bestContentType chose an invalid content type.")
-                    }
-                    return .notFound(.init(body: body))
-                case 422:
-                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.validation_failed.Body
-                    let chosenContentType = try converter.bestContentType(
-                        received: contentType,
-                        options: [
-                            "application/json"
-                        ]
-                    )
-                    switch chosenContentType {
-                    case "application/json":
-                        body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.validation_hyphen_error.self,
-                            from: responseBody,
-                            transforming: { value in
-                                .json(value)
-                            }
-                        )
-                    default:
-                        preconditionFailure("bestContentType chose an invalid content type.")
-                    }
-                    return .unprocessableContent(.init(body: body))
-                default:
-                    return .undocumented(
-                        statusCode: response.status.code,
-                        .init(
-                            headerFields: response.headerFields,
-                            body: responseBody
-                        )
-                    )
-                }
-            }
-        )
-    }
     /// Get all organization roles for an organization
     ///
-    /// Lists the organization roles available in this organization. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// Lists the organization roles available in this organization. For more information on organization roles, see "[Using organization roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/using-organization-roles)."
     ///
     /// To use this endpoint, the authenticated user must be one of:
     ///
@@ -3398,155 +3284,9 @@ public struct Client: APIProtocol {
             }
         )
     }
-    /// Create a custom organization role
-    ///
-    /// Creates a custom organization role that can be assigned to users and teams, granting them specific permissions over the organization. For more information on custom organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
-    ///
-    /// To use this endpoint, the authenticated user must be one of:
-    ///
-    /// - An administrator for the organization.
-    /// - A user, or a user on a team, with the fine-grained permissions of `write_organization_custom_org_role` in the organization.
-    ///
-    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
-    ///
-    /// - Remark: HTTP `POST /orgs/{org}/organization-roles`.
-    /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/post(orgs/create-custom-organization-role)`.
-    public func orgs_sol_create_hyphen_custom_hyphen_organization_hyphen_role(_ input: Operations.orgs_sol_create_hyphen_custom_hyphen_organization_hyphen_role.Input) async throws -> Operations.orgs_sol_create_hyphen_custom_hyphen_organization_hyphen_role.Output {
-        try await client.send(
-            input: input,
-            forOperation: Operations.orgs_sol_create_hyphen_custom_hyphen_organization_hyphen_role.id,
-            serializer: { input in
-                let path = try converter.renderedPath(
-                    template: "/orgs/{}/organization-roles",
-                    parameters: [
-                        input.path.org
-                    ]
-                )
-                var request: HTTPTypes.HTTPRequest = .init(
-                    soar_path: path,
-                    method: .post
-                )
-                suppressMutabilityWarning(&request)
-                converter.setAcceptHeader(
-                    in: &request.headerFields,
-                    contentTypes: input.headers.accept
-                )
-                let body: OpenAPIRuntime.HTTPBody?
-                switch input.body {
-                case let .json(value):
-                    body = try converter.setRequiredRequestBodyAsJSON(
-                        value,
-                        headerFields: &request.headerFields,
-                        contentType: "application/json; charset=utf-8"
-                    )
-                }
-                return (request, body)
-            },
-            deserializer: { response, responseBody in
-                switch response.status.code {
-                case 201:
-                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.orgs_sol_create_hyphen_custom_hyphen_organization_hyphen_role.Output.Created.Body
-                    let chosenContentType = try converter.bestContentType(
-                        received: contentType,
-                        options: [
-                            "application/json"
-                        ]
-                    )
-                    switch chosenContentType {
-                    case "application/json":
-                        body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.organization_hyphen_role.self,
-                            from: responseBody,
-                            transforming: { value in
-                                .json(value)
-                            }
-                        )
-                    default:
-                        preconditionFailure("bestContentType chose an invalid content type.")
-                    }
-                    return .created(.init(body: body))
-                case 422:
-                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.validation_failed.Body
-                    let chosenContentType = try converter.bestContentType(
-                        received: contentType,
-                        options: [
-                            "application/json"
-                        ]
-                    )
-                    switch chosenContentType {
-                    case "application/json":
-                        body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.validation_hyphen_error.self,
-                            from: responseBody,
-                            transforming: { value in
-                                .json(value)
-                            }
-                        )
-                    default:
-                        preconditionFailure("bestContentType chose an invalid content type.")
-                    }
-                    return .unprocessableContent(.init(body: body))
-                case 404:
-                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.not_found.Body
-                    let chosenContentType = try converter.bestContentType(
-                        received: contentType,
-                        options: [
-                            "application/json"
-                        ]
-                    )
-                    switch chosenContentType {
-                    case "application/json":
-                        body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
-                            from: responseBody,
-                            transforming: { value in
-                                .json(value)
-                            }
-                        )
-                    default:
-                        preconditionFailure("bestContentType chose an invalid content type.")
-                    }
-                    return .notFound(.init(body: body))
-                case 409:
-                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.conflict.Body
-                    let chosenContentType = try converter.bestContentType(
-                        received: contentType,
-                        options: [
-                            "application/json"
-                        ]
-                    )
-                    switch chosenContentType {
-                    case "application/json":
-                        body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
-                            from: responseBody,
-                            transforming: { value in
-                                .json(value)
-                            }
-                        )
-                    default:
-                        preconditionFailure("bestContentType chose an invalid content type.")
-                    }
-                    return .conflict(.init(body: body))
-                default:
-                    return .undocumented(
-                        statusCode: response.status.code,
-                        .init(
-                            headerFields: response.headerFields,
-                            body: responseBody
-                        )
-                    )
-                }
-            }
-        )
-    }
     /// Remove all organization roles for a team
     ///
-    /// Removes all assigned organization roles from a team. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// Removes all assigned organization roles from a team. For more information on organization roles, see "[Using organization roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/using-organization-roles)."
     ///
     /// The authenticated user must be an administrator for the organization to use this endpoint.
     ///
@@ -3591,7 +3331,7 @@ public struct Client: APIProtocol {
     }
     /// Assign an organization role to a team
     ///
-    /// Assigns an organization role to a team in an organization. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// Assigns an organization role to a team in an organization. For more information on organization roles, see "[Using organization roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/using-organization-roles)."
     ///
     /// The authenticated user must be an administrator for the organization to use this endpoint.
     ///
@@ -3641,7 +3381,7 @@ public struct Client: APIProtocol {
     }
     /// Remove an organization role from a team
     ///
-    /// Removes an organization role from a team. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// Removes an organization role from a team. For more information on organization roles, see "[Using organization roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/using-organization-roles)."
     ///
     /// The authenticated user must be an administrator for the organization to use this endpoint.
     ///
@@ -3687,7 +3427,7 @@ public struct Client: APIProtocol {
     }
     /// Remove all organization roles for a user
     ///
-    /// Revokes all assigned organization roles from a user. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// Revokes all assigned organization roles from a user. For more information on organization roles, see "[Using organization roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/using-organization-roles)."
     ///
     /// The authenticated user must be an administrator for the organization to use this endpoint.
     ///
@@ -3732,7 +3472,7 @@ public struct Client: APIProtocol {
     }
     /// Assign an organization role to a user
     ///
-    /// Assigns an organization role to a member of an organization. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// Assigns an organization role to a member of an organization. For more information on organization roles, see "[Using organization roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/using-organization-roles)."
     ///
     /// The authenticated user must be an administrator for the organization to use this endpoint.
     ///
@@ -3782,7 +3522,7 @@ public struct Client: APIProtocol {
     }
     /// Remove an organization role from a user
     ///
-    /// Remove an organization role from a user. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// Remove an organization role from a user. For more information on organization roles, see "[Using organization roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/using-organization-roles)."
     ///
     /// The authenticated user must be an administrator for the organization to use this endpoint.
     ///
@@ -3828,7 +3568,7 @@ public struct Client: APIProtocol {
     }
     /// Get an organization role
     ///
-    /// Gets an organization role that is available to this organization. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// Gets an organization role that is available to this organization. For more information on organization roles, see "[Using organization roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/using-organization-roles)."
     ///
     /// To use this endpoint, the authenticated user must be one of:
     ///
@@ -3942,205 +3682,9 @@ public struct Client: APIProtocol {
             }
         )
     }
-    /// Update a custom organization role
-    ///
-    /// Updates an existing custom organization role. Permission changes will apply to all assignees. For more information on custom organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
-    ///
-    ///
-    /// To use this endpoint, the authenticated user must be one of:
-    ///
-    /// - An administrator for the organization.
-    /// - A user, or a user on a team, with the fine-grained permissions of `write_organization_custom_org_role` in the organization.
-    ///
-    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
-    ///
-    /// - Remark: HTTP `PATCH /orgs/{org}/organization-roles/{role_id}`.
-    /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/{role_id}/patch(orgs/patch-custom-organization-role)`.
-    public func orgs_sol_patch_hyphen_custom_hyphen_organization_hyphen_role(_ input: Operations.orgs_sol_patch_hyphen_custom_hyphen_organization_hyphen_role.Input) async throws -> Operations.orgs_sol_patch_hyphen_custom_hyphen_organization_hyphen_role.Output {
-        try await client.send(
-            input: input,
-            forOperation: Operations.orgs_sol_patch_hyphen_custom_hyphen_organization_hyphen_role.id,
-            serializer: { input in
-                let path = try converter.renderedPath(
-                    template: "/orgs/{}/organization-roles/{}",
-                    parameters: [
-                        input.path.org,
-                        input.path.role_id
-                    ]
-                )
-                var request: HTTPTypes.HTTPRequest = .init(
-                    soar_path: path,
-                    method: .patch
-                )
-                suppressMutabilityWarning(&request)
-                converter.setAcceptHeader(
-                    in: &request.headerFields,
-                    contentTypes: input.headers.accept
-                )
-                let body: OpenAPIRuntime.HTTPBody?
-                switch input.body {
-                case let .json(value):
-                    body = try converter.setRequiredRequestBodyAsJSON(
-                        value,
-                        headerFields: &request.headerFields,
-                        contentType: "application/json; charset=utf-8"
-                    )
-                }
-                return (request, body)
-            },
-            deserializer: { response, responseBody in
-                switch response.status.code {
-                case 200:
-                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.orgs_sol_patch_hyphen_custom_hyphen_organization_hyphen_role.Output.Ok.Body
-                    let chosenContentType = try converter.bestContentType(
-                        received: contentType,
-                        options: [
-                            "application/json"
-                        ]
-                    )
-                    switch chosenContentType {
-                    case "application/json":
-                        body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.organization_hyphen_role.self,
-                            from: responseBody,
-                            transforming: { value in
-                                .json(value)
-                            }
-                        )
-                    default:
-                        preconditionFailure("bestContentType chose an invalid content type.")
-                    }
-                    return .ok(.init(body: body))
-                case 422:
-                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.validation_failed.Body
-                    let chosenContentType = try converter.bestContentType(
-                        received: contentType,
-                        options: [
-                            "application/json"
-                        ]
-                    )
-                    switch chosenContentType {
-                    case "application/json":
-                        body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.validation_hyphen_error.self,
-                            from: responseBody,
-                            transforming: { value in
-                                .json(value)
-                            }
-                        )
-                    default:
-                        preconditionFailure("bestContentType chose an invalid content type.")
-                    }
-                    return .unprocessableContent(.init(body: body))
-                case 409:
-                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.conflict.Body
-                    let chosenContentType = try converter.bestContentType(
-                        received: contentType,
-                        options: [
-                            "application/json"
-                        ]
-                    )
-                    switch chosenContentType {
-                    case "application/json":
-                        body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
-                            from: responseBody,
-                            transforming: { value in
-                                .json(value)
-                            }
-                        )
-                    default:
-                        preconditionFailure("bestContentType chose an invalid content type.")
-                    }
-                    return .conflict(.init(body: body))
-                case 404:
-                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.not_found.Body
-                    let chosenContentType = try converter.bestContentType(
-                        received: contentType,
-                        options: [
-                            "application/json"
-                        ]
-                    )
-                    switch chosenContentType {
-                    case "application/json":
-                        body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
-                            from: responseBody,
-                            transforming: { value in
-                                .json(value)
-                            }
-                        )
-                    default:
-                        preconditionFailure("bestContentType chose an invalid content type.")
-                    }
-                    return .notFound(.init(body: body))
-                default:
-                    return .undocumented(
-                        statusCode: response.status.code,
-                        .init(
-                            headerFields: response.headerFields,
-                            body: responseBody
-                        )
-                    )
-                }
-            }
-        )
-    }
-    /// Delete a custom organization role.
-    ///
-    /// Deletes a custom organization role. For more information on custom organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
-    ///
-    /// To use this endpoint, the authenticated user must be one of:
-    ///
-    /// - An administrator for the organization.
-    /// - A user, or a user on a team, with the fine-grained permissions of `write_organization_custom_org_role` in the organization.
-    ///
-    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
-    ///
-    /// - Remark: HTTP `DELETE /orgs/{org}/organization-roles/{role_id}`.
-    /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/{role_id}/delete(orgs/delete-custom-organization-role)`.
-    public func orgs_sol_delete_hyphen_custom_hyphen_organization_hyphen_role(_ input: Operations.orgs_sol_delete_hyphen_custom_hyphen_organization_hyphen_role.Input) async throws -> Operations.orgs_sol_delete_hyphen_custom_hyphen_organization_hyphen_role.Output {
-        try await client.send(
-            input: input,
-            forOperation: Operations.orgs_sol_delete_hyphen_custom_hyphen_organization_hyphen_role.id,
-            serializer: { input in
-                let path = try converter.renderedPath(
-                    template: "/orgs/{}/organization-roles/{}",
-                    parameters: [
-                        input.path.org,
-                        input.path.role_id
-                    ]
-                )
-                var request: HTTPTypes.HTTPRequest = .init(
-                    soar_path: path,
-                    method: .delete
-                )
-                suppressMutabilityWarning(&request)
-                return (request, nil)
-            },
-            deserializer: { response, responseBody in
-                switch response.status.code {
-                case 204:
-                    return .noContent(.init())
-                default:
-                    return .undocumented(
-                        statusCode: response.status.code,
-                        .init(
-                            headerFields: response.headerFields,
-                            body: responseBody
-                        )
-                    )
-                }
-            }
-        )
-    }
     /// List teams that are assigned to an organization role
     ///
-    /// Lists the teams that are assigned to an organization role. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// Lists the teams that are assigned to an organization role. For more information on organization roles, see "[Using organization roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/using-organization-roles)."
     ///
     /// To use this endpoint, you must be an administrator for the organization.
     ///
@@ -4235,7 +3779,7 @@ public struct Client: APIProtocol {
     }
     /// List users that are assigned to an organization role
     ///
-    /// Lists organization members that are assigned to an organization role. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."
+    /// Lists organization members that are assigned to an organization role. For more information on organization roles, see "[Using organization roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/using-organization-roles)."
     ///
     /// To use this endpoint, you must be an administrator for the organization.
     ///
@@ -7184,6 +6728,9 @@ public struct Client: APIProtocol {
     }
     /// Enable or disable a security feature for an organization
     ///
+    /// > [!WARNING]
+    /// > **Deprecation notice:** The ability to enable or disable a security feature for all eligible repositories in an organization is deprecated. Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead. For more information, see the [changelog](https://github.blog/changelog/2024-07-22-deprecation-api-endpoint-to-enable-or-disable-a-security-feature-for-an-organization/).
+    ///
     /// Enables or disables the specified security feature for all eligible repositories in an organization. For more information, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."
     ///
     /// The authenticated user must be an organization owner or be member of a team with the security manager role to use this endpoint.
@@ -7192,6 +6739,7 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `POST /orgs/{org}/{security_product}/{enablement}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/{security_product}/{enablement}/post(orgs/enable-or-disable-security-product-on-all-org-repos)`.
+    @available(*, deprecated)
     public func orgs_sol_enable_hyphen_or_hyphen_disable_hyphen_security_hyphen_product_hyphen_on_hyphen_all_hyphen_org_hyphen_repos(_ input: Operations.orgs_sol_enable_hyphen_or_hyphen_disable_hyphen_security_hyphen_product_hyphen_on_hyphen_all_hyphen_org_hyphen_repos.Input) async throws -> Operations.orgs_sol_enable_hyphen_or_hyphen_disable_hyphen_security_hyphen_product_hyphen_on_hyphen_all_hyphen_org_hyphen_repos.Output {
         try await client.send(
             input: input,

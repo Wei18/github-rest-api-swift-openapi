@@ -111,7 +111,8 @@ public protocol APIProtocol: Sendable {
     ///
     /// Create a temporary private fork to collaborate on fixing a security vulnerability in your repository.
     ///
-    /// **Note**: Forking a repository happens asynchronously. You may have to wait up to 5 minutes before you can access the fork.
+    /// > [!NOTE]
+    /// > Forking a repository happens asynchronously. You may have to wait up to 5 minutes before you can access the fork.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/security-advisories/{ghsa_id}/forks`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/{ghsa_id}/forks/post(security-advisories/create-fork)`.
@@ -302,7 +303,8 @@ extension APIProtocol {
     ///
     /// Create a temporary private fork to collaborate on fixing a security vulnerability in your repository.
     ///
-    /// **Note**: Forking a repository happens asynchronously. You may have to wait up to 5 minutes before you can access the fork.
+    /// > [!NOTE]
+    /// > Forking a repository happens asynchronously. You may have to wait up to 5 minutes before you can access the fork.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/security-advisories/{ghsa_id}/forks`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/{ghsa_id}/forks/post(security-advisories/create-fork)`.
@@ -8493,7 +8495,8 @@ public enum Operations {
     ///
     /// Create a temporary private fork to collaborate on fixing a security vulnerability in your repository.
     ///
-    /// **Note**: Forking a repository happens asynchronously. You may have to wait up to 5 minutes before you can access the fork.
+    /// > [!NOTE]
+    /// > Forking a repository happens asynchronously. You may have to wait up to 5 minutes before you can access the fork.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/security-advisories/{ghsa_id}/forks`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/{ghsa_id}/forks/post(security-advisories/create-fork)`.

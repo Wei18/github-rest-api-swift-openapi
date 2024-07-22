@@ -32,7 +32,8 @@ public protocol APIProtocol: Sendable {
     ///
     /// By default, timeline resources are returned in JSON. You can specify the `application/atom+xml` type in the `Accept` header to return timeline resources in Atom format. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
     ///
-    /// **Note**: Private feeds are only returned when [authenticating via Basic Auth](https://docs.github.com/rest/authentication/authenticating-to-the-rest-api#using-basic-authentication) since current feed URIs use the older, non revocable auth tokens.
+    /// > [!NOTE]
+    /// > Private feeds are only returned when [authenticating via Basic Auth](https://docs.github.com/rest/authentication/authenticating-to-the-rest-api#using-basic-authentication) since current feed URIs use the older, non revocable auth tokens.
     ///
     /// - Remark: HTTP `GET /feeds`.
     /// - Remark: Generated from `#/paths//feeds/get(activity/get-feeds)`.
@@ -115,8 +116,8 @@ public protocol APIProtocol: Sendable {
     func activity_sol_list_hyphen_public_hyphen_org_hyphen_events(_ input: Operations.activity_sol_list_hyphen_public_hyphen_org_hyphen_events.Input) async throws -> Operations.activity_sol_list_hyphen_public_hyphen_org_hyphen_events.Output
     /// List repository events
     ///
-    /// **Note**: This API is not built to serve real-time use cases. Depending on the time of day, event latency can be anywhere from 30s to 6h.
-    ///
+    /// > [!NOTE]
+    /// > This API is not built to serve real-time use cases. Depending on the time of day, event latency can be anywhere from 30s to 6h.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/events`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/events/get(activity/list-repo-events)`.
@@ -299,7 +300,8 @@ extension APIProtocol {
     ///
     /// By default, timeline resources are returned in JSON. You can specify the `application/atom+xml` type in the `Accept` header to return timeline resources in Atom format. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
     ///
-    /// **Note**: Private feeds are only returned when [authenticating via Basic Auth](https://docs.github.com/rest/authentication/authenticating-to-the-rest-api#using-basic-authentication) since current feed URIs use the older, non revocable auth tokens.
+    /// > [!NOTE]
+    /// > Private feeds are only returned when [authenticating via Basic Auth](https://docs.github.com/rest/authentication/authenticating-to-the-rest-api#using-basic-authentication) since current feed URIs use the older, non revocable auth tokens.
     ///
     /// - Remark: HTTP `GET /feeds`.
     /// - Remark: Generated from `#/paths//feeds/get(activity/get-feeds)`.
@@ -464,8 +466,8 @@ extension APIProtocol {
     }
     /// List repository events
     ///
-    /// **Note**: This API is not built to serve real-time use cases. Depending on the time of day, event latency can be anywhere from 30s to 6h.
-    ///
+    /// > [!NOTE]
+    /// > This API is not built to serve real-time use cases. Depending on the time of day, event latency can be anywhere from 30s to 6h.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/events`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/events/get(activity/list-repo-events)`.
@@ -4924,7 +4926,8 @@ public enum Operations {
     ///
     /// By default, timeline resources are returned in JSON. You can specify the `application/atom+xml` type in the `Accept` header to return timeline resources in Atom format. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
     ///
-    /// **Note**: Private feeds are only returned when [authenticating via Basic Auth](https://docs.github.com/rest/authentication/authenticating-to-the-rest-api#using-basic-authentication) since current feed URIs use the older, non revocable auth tokens.
+    /// > [!NOTE]
+    /// > Private feeds are only returned when [authenticating via Basic Auth](https://docs.github.com/rest/authentication/authenticating-to-the-rest-api#using-basic-authentication) since current feed URIs use the older, non revocable auth tokens.
     ///
     /// - Remark: HTTP `GET /feeds`.
     /// - Remark: Generated from `#/paths//feeds/get(activity/get-feeds)`.
@@ -7028,8 +7031,8 @@ public enum Operations {
     }
     /// List repository events
     ///
-    /// **Note**: This API is not built to serve real-time use cases. Depending on the time of day, event latency can be anywhere from 30s to 6h.
-    ///
+    /// > [!NOTE]
+    /// > This API is not built to serve real-time use cases. Depending on the time of day, event latency can be anywhere from 30s to 6h.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/events`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/events/get(activity/list-repo-events)`.

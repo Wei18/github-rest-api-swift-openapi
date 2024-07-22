@@ -42,7 +42,8 @@ public struct Client: APIProtocol {
     ///
     /// List the reactions to a [team discussion comment](https://docs.github.com/rest/teams/discussion-comments#get-a-discussion-comment).
     ///
-    /// **Note:** You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/:org_id/team/:team_id/discussions/:discussion_number/comments/:comment_number/reactions`.
+    /// > [!NOTE]
+    /// > You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/:org_id/team/:team_id/discussions/:discussion_number/comments/:comment_number/reactions`.
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `read:discussion` scope to use this endpoint.
     ///
@@ -144,7 +145,8 @@ public struct Client: APIProtocol {
     ///
     /// A response with an HTTP `200` status means that you already added the reaction type to this team discussion comment.
     ///
-    /// **Note:** You can also specify a team by `org_id` and `team_id` using the route `POST /organizations/:org_id/team/:team_id/discussions/:discussion_number/comments/:comment_number/reactions`.
+    /// > [!NOTE]
+    /// > You can also specify a team by `org_id` and `team_id` using the route `POST /organizations/:org_id/team/:team_id/discussions/:discussion_number/comments/:comment_number/reactions`.
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `write:discussion` scope to use this endpoint.
     ///
@@ -244,7 +246,8 @@ public struct Client: APIProtocol {
     }
     /// Delete team discussion comment reaction
     ///
-    /// **Note:** You can also specify a team or organization with `team_id` and `org_id` using the route `DELETE /organizations/:org_id/team/:team_id/discussions/:discussion_number/comments/:comment_number/reactions/:reaction_id`.
+    /// > [!NOTE]
+    /// > You can also specify a team or organization with `team_id` and `org_id` using the route `DELETE /organizations/:org_id/team/:team_id/discussions/:discussion_number/comments/:comment_number/reactions/:reaction_id`.
     ///
     /// Delete a reaction to a [team discussion comment](https://docs.github.com/rest/teams/discussion-comments#get-a-discussion-comment).
     ///
@@ -294,7 +297,8 @@ public struct Client: APIProtocol {
     ///
     /// List the reactions to a [team discussion](https://docs.github.com/rest/teams/discussions#get-a-discussion).
     ///
-    /// **Note:** You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/:org_id/team/:team_id/discussions/:discussion_number/reactions`.
+    /// > [!NOTE]
+    /// > You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/:org_id/team/:team_id/discussions/:discussion_number/reactions`.
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `read:discussion` scope to use this endpoint.
     ///
@@ -395,7 +399,8 @@ public struct Client: APIProtocol {
     ///
     /// A response with an HTTP `200` status means that you already added the reaction type to this team discussion.
     ///
-    /// **Note:** You can also specify a team by `org_id` and `team_id` using the route `POST /organizations/:org_id/team/:team_id/discussions/:discussion_number/reactions`.
+    /// > [!NOTE]
+    /// > You can also specify a team by `org_id` and `team_id` using the route `POST /organizations/:org_id/team/:team_id/discussions/:discussion_number/reactions`.
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `write:discussion` scope to use this endpoint.
     ///
@@ -494,7 +499,8 @@ public struct Client: APIProtocol {
     }
     /// Delete team discussion reaction
     ///
-    /// **Note:** You can also specify a team or organization with `team_id` and `org_id` using the route `DELETE /organizations/:org_id/team/:team_id/discussions/:discussion_number/reactions/:reaction_id`.
+    /// > [!NOTE]
+    /// > You can also specify a team or organization with `team_id` and `org_id` using the route `DELETE /organizations/:org_id/team/:team_id/discussions/:discussion_number/reactions/:reaction_id`.
     ///
     /// Delete a reaction to a [team discussion](https://docs.github.com/rest/teams/discussions#get-a-discussion).
     ///
@@ -777,7 +783,8 @@ public struct Client: APIProtocol {
     }
     /// Delete a commit comment reaction
     ///
-    /// **Note:** You can also specify a repository by `repository_id` using the route `DELETE /repositories/:repository_id/comments/:comment_id/reactions/:reaction_id`.
+    /// > [!NOTE]
+    /// > You can also specify a repository by `repository_id` using the route `DELETE /repositories/:repository_id/comments/:comment_id/reactions/:reaction_id`.
     ///
     /// Delete a reaction to a [commit comment](https://docs.github.com/rest/commits/comments#get-a-commit-comment).
     ///
@@ -1058,7 +1065,8 @@ public struct Client: APIProtocol {
     }
     /// Delete an issue comment reaction
     ///
-    /// **Note:** You can also specify a repository by `repository_id` using the route `DELETE delete /repositories/:repository_id/issues/comments/:comment_id/reactions/:reaction_id`.
+    /// > [!NOTE]
+    /// > You can also specify a repository by `repository_id` using the route `DELETE delete /repositories/:repository_id/issues/comments/:comment_id/reactions/:reaction_id`.
     ///
     /// Delete a reaction to an [issue comment](https://docs.github.com/rest/issues/comments#get-an-issue-comment).
     ///
@@ -1361,7 +1369,8 @@ public struct Client: APIProtocol {
     }
     /// Delete an issue reaction
     ///
-    /// **Note:** You can also specify a repository by `repository_id` using the route `DELETE /repositories/:repository_id/issues/:issue_number/reactions/:reaction_id`.
+    /// > [!NOTE]
+    /// > You can also specify a repository by `repository_id` using the route `DELETE /repositories/:repository_id/issues/:issue_number/reactions/:reaction_id`.
     ///
     /// Delete a reaction to an [issue](https://docs.github.com/rest/issues/issues#get-an-issue).
     ///
@@ -1642,7 +1651,8 @@ public struct Client: APIProtocol {
     }
     /// Delete a pull request comment reaction
     ///
-    /// **Note:** You can also specify a repository by `repository_id` using the route `DELETE /repositories/:repository_id/pulls/comments/:comment_id/reactions/:reaction_id.`
+    /// > [!NOTE]
+    /// > You can also specify a repository by `repository_id` using the route `DELETE /repositories/:repository_id/pulls/comments/:comment_id/reactions/:reaction_id.`
     ///
     /// Delete a reaction to a [pull request review comment](https://docs.github.com/rest/pulls/comments#get-a-review-comment-for-a-pull-request).
     ///
@@ -1923,7 +1933,8 @@ public struct Client: APIProtocol {
     }
     /// Delete a release reaction
     ///
-    /// **Note:** You can also specify a repository by `repository_id` using the route `DELETE delete /repositories/:repository_id/releases/:release_id/reactions/:reaction_id`.
+    /// > [!NOTE]
+    /// > You can also specify a repository by `repository_id` using the route `DELETE delete /repositories/:repository_id/releases/:release_id/reactions/:reaction_id`.
     ///
     /// Delete a reaction to a [release](https://docs.github.com/rest/releases/releases#get-a-release).
     ///
@@ -1968,7 +1979,8 @@ public struct Client: APIProtocol {
     }
     /// List reactions for a team discussion comment (Legacy)
     ///
-    /// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [`List reactions for a team discussion comment`](https://docs.github.com/rest/reactions/reactions#list-reactions-for-a-team-discussion-comment) endpoint.
+    /// > [!WARNING]
+    /// > **Deprecation notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [`List reactions for a team discussion comment`](https://docs.github.com/rest/reactions/reactions#list-reactions-for-a-team-discussion-comment) endpoint.
     ///
     /// List the reactions to a [team discussion comment](https://docs.github.com/rest/teams/discussion-comments#get-a-discussion-comment).
     ///
@@ -2068,7 +2080,8 @@ public struct Client: APIProtocol {
     }
     /// Create reaction for a team discussion comment (Legacy)
     ///
-    /// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new "[Create reaction for a team discussion comment](https://docs.github.com/rest/reactions/reactions#create-reaction-for-a-team-discussion-comment)" endpoint.
+    /// > [!WARNING]
+    /// > **Deprecation notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new "[Create reaction for a team discussion comment](https://docs.github.com/rest/reactions/reactions#create-reaction-for-a-team-discussion-comment)" endpoint.
     ///
     /// Create a reaction to a [team discussion comment](https://docs.github.com/rest/teams/discussion-comments#get-a-discussion-comment).
     ///
@@ -2150,7 +2163,8 @@ public struct Client: APIProtocol {
     }
     /// List reactions for a team discussion (Legacy)
     ///
-    /// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [`List reactions for a team discussion`](https://docs.github.com/rest/reactions/reactions#list-reactions-for-a-team-discussion) endpoint.
+    /// > [!WARNING]
+    /// > **Deprecation notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [`List reactions for a team discussion`](https://docs.github.com/rest/reactions/reactions#list-reactions-for-a-team-discussion) endpoint.
     ///
     /// List the reactions to a [team discussion](https://docs.github.com/rest/teams/discussions#get-a-discussion).
     ///
@@ -2249,7 +2263,8 @@ public struct Client: APIProtocol {
     }
     /// Create reaction for a team discussion (Legacy)
     ///
-    /// **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [`Create reaction for a team discussion`](https://docs.github.com/rest/reactions/reactions#create-reaction-for-a-team-discussion) endpoint.
+    /// > [!WARNING]
+    /// > **Deprecation notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [`Create reaction for a team discussion`](https://docs.github.com/rest/reactions/reactions#create-reaction-for-a-team-discussion) endpoint.
     ///
     /// Create a reaction to a [team discussion](https://docs.github.com/rest/teams/discussions#get-a-discussion).
     ///
