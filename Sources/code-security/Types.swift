@@ -1241,9 +1241,11 @@ public enum Components {
                 case attached = "attached"
                 case attaching = "attaching"
                 case detached = "detached"
+                case removed = "removed"
                 case enforced = "enforced"
                 case failed = "failed"
                 case updating = "updating"
+                case removed_by_enterprise = "removed_by_enterprise"
             }
             /// The attachment status of the code security configuration on the repository.
             ///
@@ -1858,14 +1860,14 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/private_vulnerability_reporting`.
                     public var private_vulnerability_reporting: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.private_vulnerability_reportingPayload?
-                    /// The status of enforcement
+                    /// The enforcement status for a security configuration
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/enforcement`.
                     @frozen public enum enforcementPayload: String, Codable, Hashable, Sendable {
                         case enforced = "enforced"
                         case unenforced = "unenforced"
                     }
-                    /// The status of enforcement
+                    /// The enforcement status for a security configuration
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/enforcement`.
                     public var enforcement: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.enforcementPayload?
@@ -1883,7 +1885,7 @@ public enum Operations {
                     ///   - secret_scanning_push_protection: The enablement status of secret scanning push protection
                     ///   - secret_scanning_validity_checks: The enablement status of secret scanning validity checks
                     ///   - private_vulnerability_reporting: The enablement status of private vulnerability reporting
-                    ///   - enforcement: The status of enforcement
+                    ///   - enforcement: The enforcement status for a security configuration
                     public init(
                         name: Swift.String,
                         description: Swift.String,
@@ -2924,14 +2926,14 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/private_vulnerability_reporting`.
                     public var private_vulnerability_reporting: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.private_vulnerability_reportingPayload?
-                    /// The status of enforcement
+                    /// The enforcement status for a security configuration
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/enforcement`.
                     @frozen public enum enforcementPayload: String, Codable, Hashable, Sendable {
                         case enforced = "enforced"
                         case unenforced = "unenforced"
                     }
-                    /// The status of enforcement
+                    /// The enforcement status for a security configuration
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/enforcement`.
                     public var enforcement: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.enforcementPayload?
@@ -2949,7 +2951,7 @@ public enum Operations {
                     ///   - secret_scanning_push_protection: The enablement status of secret scanning push protection
                     ///   - secret_scanning_validity_checks: The enablement status of secret scanning validity checks
                     ///   - private_vulnerability_reporting: The enablement status of private vulnerability reporting
-                    ///   - enforcement: The status of enforcement
+                    ///   - enforcement: The enforcement status for a security configuration
                     public init(
                         name: Swift.String? = nil,
                         description: Swift.String? = nil,
@@ -3898,7 +3900,7 @@ public enum Operations {
                 public var after: Components.Parameters.pagination_hyphen_after?
                 /// A comma-separated list of statuses. If specified, only repositories with these attachment statuses will be returned.
                 ///
-                /// Can be: `all`, `attached`, `attaching`, `detached`, `enforced`, `failed`, `updating`
+                /// Can be: `all`, `attached`, `attaching`, `detached`, `removed`, `enforced`, `failed`, `updating`, `removed_by_enterprise`
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/repositories/GET/query/status`.
                 public var status: Swift.String?
