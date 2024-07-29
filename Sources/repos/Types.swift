@@ -11472,6 +11472,117 @@ public enum Components {
                 case _type = "type"
             }
         }
+        /// Merges must be performed via a merge queue.
+        ///
+        /// - Remark: Generated from `#/components/schemas/repository-rule-merge-queue`.
+        public struct repository_hyphen_rule_hyphen_merge_hyphen_queue: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/repository-rule-merge-queue/type`.
+            @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+                case merge_queue = "merge_queue"
+            }
+            /// - Remark: Generated from `#/components/schemas/repository-rule-merge-queue/type`.
+            public var _type: Components.Schemas.repository_hyphen_rule_hyphen_merge_hyphen_queue._typePayload
+            /// - Remark: Generated from `#/components/schemas/repository-rule-merge-queue/parameters`.
+            public struct parametersPayload: Codable, Hashable, Sendable {
+                /// Maximum time for a required status check to report a conclusion. After this much time has elapsed, checks that have not reported a conclusion will be assumed to have failed
+                ///
+                /// - Remark: Generated from `#/components/schemas/repository-rule-merge-queue/parameters/check_response_timeout_minutes`.
+                public var check_response_timeout_minutes: Swift.Int
+                /// When set to ALLGREEN, the merge commit created by merge queue for each PR in the group must pass all required checks to merge. When set to HEADGREEN, only the commit at the head of the merge group, i.e. the commit containing changes from all of the PRs in the group, must pass its required checks to merge.
+                ///
+                /// - Remark: Generated from `#/components/schemas/repository-rule-merge-queue/parameters/grouping_strategy`.
+                @frozen public enum grouping_strategyPayload: String, Codable, Hashable, Sendable {
+                    case ALLGREEN = "ALLGREEN"
+                    case HEADGREEN = "HEADGREEN"
+                }
+                /// When set to ALLGREEN, the merge commit created by merge queue for each PR in the group must pass all required checks to merge. When set to HEADGREEN, only the commit at the head of the merge group, i.e. the commit containing changes from all of the PRs in the group, must pass its required checks to merge.
+                ///
+                /// - Remark: Generated from `#/components/schemas/repository-rule-merge-queue/parameters/grouping_strategy`.
+                public var grouping_strategy: Components.Schemas.repository_hyphen_rule_hyphen_merge_hyphen_queue.parametersPayload.grouping_strategyPayload
+                /// Limit the number of queued pull requests requesting checks and workflow runs at the same time.
+                ///
+                /// - Remark: Generated from `#/components/schemas/repository-rule-merge-queue/parameters/max_entries_to_build`.
+                public var max_entries_to_build: Swift.Int
+                /// The maximum number of PRs that will be merged together in a group.
+                ///
+                /// - Remark: Generated from `#/components/schemas/repository-rule-merge-queue/parameters/max_entries_to_merge`.
+                public var max_entries_to_merge: Swift.Int
+                /// Method to use when merging changes from queued pull requests.
+                ///
+                /// - Remark: Generated from `#/components/schemas/repository-rule-merge-queue/parameters/merge_method`.
+                @frozen public enum merge_methodPayload: String, Codable, Hashable, Sendable {
+                    case MERGE = "MERGE"
+                    case SQUASH = "SQUASH"
+                    case REBASE = "REBASE"
+                }
+                /// Method to use when merging changes from queued pull requests.
+                ///
+                /// - Remark: Generated from `#/components/schemas/repository-rule-merge-queue/parameters/merge_method`.
+                public var merge_method: Components.Schemas.repository_hyphen_rule_hyphen_merge_hyphen_queue.parametersPayload.merge_methodPayload
+                /// The minimum number of PRs that will be merged together in a group.
+                ///
+                /// - Remark: Generated from `#/components/schemas/repository-rule-merge-queue/parameters/min_entries_to_merge`.
+                public var min_entries_to_merge: Swift.Int
+                /// The time merge queue should wait after the first PR is added to the queue for the minimum group size to be met. After this time has elapsed, the minimum group size will be ignored and a smaller group will be merged.
+                ///
+                /// - Remark: Generated from `#/components/schemas/repository-rule-merge-queue/parameters/min_entries_to_merge_wait_minutes`.
+                public var min_entries_to_merge_wait_minutes: Swift.Int
+                /// Creates a new `parametersPayload`.
+                ///
+                /// - Parameters:
+                ///   - check_response_timeout_minutes: Maximum time for a required status check to report a conclusion. After this much time has elapsed, checks that have not reported a conclusion will be assumed to have failed
+                ///   - grouping_strategy: When set to ALLGREEN, the merge commit created by merge queue for each PR in the group must pass all required checks to merge. When set to HEADGREEN, only the commit at the head of the merge group, i.e. the commit containing changes from all of the PRs in the group, must pass its required checks to merge.
+                ///   - max_entries_to_build: Limit the number of queued pull requests requesting checks and workflow runs at the same time.
+                ///   - max_entries_to_merge: The maximum number of PRs that will be merged together in a group.
+                ///   - merge_method: Method to use when merging changes from queued pull requests.
+                ///   - min_entries_to_merge: The minimum number of PRs that will be merged together in a group.
+                ///   - min_entries_to_merge_wait_minutes: The time merge queue should wait after the first PR is added to the queue for the minimum group size to be met. After this time has elapsed, the minimum group size will be ignored and a smaller group will be merged.
+                public init(
+                    check_response_timeout_minutes: Swift.Int,
+                    grouping_strategy: Components.Schemas.repository_hyphen_rule_hyphen_merge_hyphen_queue.parametersPayload.grouping_strategyPayload,
+                    max_entries_to_build: Swift.Int,
+                    max_entries_to_merge: Swift.Int,
+                    merge_method: Components.Schemas.repository_hyphen_rule_hyphen_merge_hyphen_queue.parametersPayload.merge_methodPayload,
+                    min_entries_to_merge: Swift.Int,
+                    min_entries_to_merge_wait_minutes: Swift.Int
+                ) {
+                    self.check_response_timeout_minutes = check_response_timeout_minutes
+                    self.grouping_strategy = grouping_strategy
+                    self.max_entries_to_build = max_entries_to_build
+                    self.max_entries_to_merge = max_entries_to_merge
+                    self.merge_method = merge_method
+                    self.min_entries_to_merge = min_entries_to_merge
+                    self.min_entries_to_merge_wait_minutes = min_entries_to_merge_wait_minutes
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case check_response_timeout_minutes
+                    case grouping_strategy
+                    case max_entries_to_build
+                    case max_entries_to_merge
+                    case merge_method
+                    case min_entries_to_merge
+                    case min_entries_to_merge_wait_minutes
+                }
+            }
+            /// - Remark: Generated from `#/components/schemas/repository-rule-merge-queue/parameters`.
+            public var parameters: Components.Schemas.repository_hyphen_rule_hyphen_merge_hyphen_queue.parametersPayload?
+            /// Creates a new `repository_hyphen_rule_hyphen_merge_hyphen_queue`.
+            ///
+            /// - Parameters:
+            ///   - _type:
+            ///   - parameters:
+            public init(
+                _type: Components.Schemas.repository_hyphen_rule_hyphen_merge_hyphen_queue._typePayload,
+                parameters: Components.Schemas.repository_hyphen_rule_hyphen_merge_hyphen_queue.parametersPayload? = nil
+            ) {
+                self._type = _type
+                self.parameters = parameters
+            }
+            public enum CodingKeys: String, CodingKey {
+                case _type = "type"
+                case parameters
+            }
+        }
         /// Choose which environments must be successfully deployed to before refs can be pushed into a ref that matches this rule.
         ///
         /// - Remark: Generated from `#/components/schemas/repository-rule-required-deployments`.
@@ -11660,6 +11771,10 @@ public enum Components {
             public var _type: Components.Schemas.repository_hyphen_rule_hyphen_required_hyphen_status_hyphen_checks._typePayload
             /// - Remark: Generated from `#/components/schemas/repository-rule-required-status-checks/parameters`.
             public struct parametersPayload: Codable, Hashable, Sendable {
+                /// Allow repositories and branches to be created if a check would otherwise prohibit it.
+                ///
+                /// - Remark: Generated from `#/components/schemas/repository-rule-required-status-checks/parameters/do_not_enforce_on_create`.
+                public var do_not_enforce_on_create: Swift.Bool?
                 /// Status checks that are required.
                 ///
                 /// - Remark: Generated from `#/components/schemas/repository-rule-required-status-checks/parameters/required_status_checks`.
@@ -11671,16 +11786,20 @@ public enum Components {
                 /// Creates a new `parametersPayload`.
                 ///
                 /// - Parameters:
+                ///   - do_not_enforce_on_create: Allow repositories and branches to be created if a check would otherwise prohibit it.
                 ///   - required_status_checks: Status checks that are required.
                 ///   - strict_required_status_checks_policy: Whether pull requests targeting a matching branch must be tested with the latest code. This setting will not take effect unless at least one status check is enabled.
                 public init(
+                    do_not_enforce_on_create: Swift.Bool? = nil,
                     required_status_checks: [Components.Schemas.repository_hyphen_rule_hyphen_params_hyphen_status_hyphen_check_hyphen_configuration],
                     strict_required_status_checks_policy: Swift.Bool
                 ) {
+                    self.do_not_enforce_on_create = do_not_enforce_on_create
                     self.required_status_checks = required_status_checks
                     self.strict_required_status_checks_policy = strict_required_status_checks_policy
                 }
                 public enum CodingKeys: String, CodingKey {
+                    case do_not_enforce_on_create
                     case required_status_checks
                     case strict_required_status_checks_policy
                 }
@@ -12187,6 +12306,10 @@ public enum Components {
             public var _type: Components.Schemas.repository_hyphen_rule_hyphen_workflows._typePayload
             /// - Remark: Generated from `#/components/schemas/repository-rule-workflows/parameters`.
             public struct parametersPayload: Codable, Hashable, Sendable {
+                /// Allow repositories and branches to be created if a check would otherwise prohibit it.
+                ///
+                /// - Remark: Generated from `#/components/schemas/repository-rule-workflows/parameters/do_not_enforce_on_create`.
+                public var do_not_enforce_on_create: Swift.Bool?
                 /// Workflows that must pass for this rule to pass.
                 ///
                 /// - Remark: Generated from `#/components/schemas/repository-rule-workflows/parameters/workflows`.
@@ -12194,11 +12317,17 @@ public enum Components {
                 /// Creates a new `parametersPayload`.
                 ///
                 /// - Parameters:
+                ///   - do_not_enforce_on_create: Allow repositories and branches to be created if a check would otherwise prohibit it.
                 ///   - workflows: Workflows that must pass for this rule to pass.
-                public init(workflows: [Components.Schemas.repository_hyphen_rule_hyphen_params_hyphen_workflow_hyphen_file_hyphen_reference]) {
+                public init(
+                    do_not_enforce_on_create: Swift.Bool? = nil,
+                    workflows: [Components.Schemas.repository_hyphen_rule_hyphen_params_hyphen_workflow_hyphen_file_hyphen_reference]
+                ) {
+                    self.do_not_enforce_on_create = do_not_enforce_on_create
                     self.workflows = workflows
                 }
                 public enum CodingKeys: String, CodingKey {
+                    case do_not_enforce_on_create
                     case workflows
                 }
             }
@@ -12336,42 +12465,45 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/repository-rule/case4`.
             case repository_hyphen_rule_hyphen_required_hyphen_linear_hyphen_history(Components.Schemas.repository_hyphen_rule_hyphen_required_hyphen_linear_hyphen_history)
             /// - Remark: Generated from `#/components/schemas/repository-rule/case5`.
-            case repository_hyphen_rule_hyphen_required_hyphen_deployments(Components.Schemas.repository_hyphen_rule_hyphen_required_hyphen_deployments)
+            case repository_hyphen_rule_hyphen_merge_hyphen_queue(Components.Schemas.repository_hyphen_rule_hyphen_merge_hyphen_queue)
             /// - Remark: Generated from `#/components/schemas/repository-rule/case6`.
-            case repository_hyphen_rule_hyphen_required_hyphen_signatures(Components.Schemas.repository_hyphen_rule_hyphen_required_hyphen_signatures)
+            case repository_hyphen_rule_hyphen_required_hyphen_deployments(Components.Schemas.repository_hyphen_rule_hyphen_required_hyphen_deployments)
             /// - Remark: Generated from `#/components/schemas/repository-rule/case7`.
-            case repository_hyphen_rule_hyphen_pull_hyphen_request(Components.Schemas.repository_hyphen_rule_hyphen_pull_hyphen_request)
+            case repository_hyphen_rule_hyphen_required_hyphen_signatures(Components.Schemas.repository_hyphen_rule_hyphen_required_hyphen_signatures)
             /// - Remark: Generated from `#/components/schemas/repository-rule/case8`.
-            case repository_hyphen_rule_hyphen_required_hyphen_status_hyphen_checks(Components.Schemas.repository_hyphen_rule_hyphen_required_hyphen_status_hyphen_checks)
+            case repository_hyphen_rule_hyphen_pull_hyphen_request(Components.Schemas.repository_hyphen_rule_hyphen_pull_hyphen_request)
             /// - Remark: Generated from `#/components/schemas/repository-rule/case9`.
-            case repository_hyphen_rule_hyphen_non_hyphen_fast_hyphen_forward(Components.Schemas.repository_hyphen_rule_hyphen_non_hyphen_fast_hyphen_forward)
+            case repository_hyphen_rule_hyphen_required_hyphen_status_hyphen_checks(Components.Schemas.repository_hyphen_rule_hyphen_required_hyphen_status_hyphen_checks)
             /// - Remark: Generated from `#/components/schemas/repository-rule/case10`.
-            case repository_hyphen_rule_hyphen_commit_hyphen_message_hyphen_pattern(Components.Schemas.repository_hyphen_rule_hyphen_commit_hyphen_message_hyphen_pattern)
+            case repository_hyphen_rule_hyphen_non_hyphen_fast_hyphen_forward(Components.Schemas.repository_hyphen_rule_hyphen_non_hyphen_fast_hyphen_forward)
             /// - Remark: Generated from `#/components/schemas/repository-rule/case11`.
-            case repository_hyphen_rule_hyphen_commit_hyphen_author_hyphen_email_hyphen_pattern(Components.Schemas.repository_hyphen_rule_hyphen_commit_hyphen_author_hyphen_email_hyphen_pattern)
+            case repository_hyphen_rule_hyphen_commit_hyphen_message_hyphen_pattern(Components.Schemas.repository_hyphen_rule_hyphen_commit_hyphen_message_hyphen_pattern)
             /// - Remark: Generated from `#/components/schemas/repository-rule/case12`.
-            case repository_hyphen_rule_hyphen_committer_hyphen_email_hyphen_pattern(Components.Schemas.repository_hyphen_rule_hyphen_committer_hyphen_email_hyphen_pattern)
+            case repository_hyphen_rule_hyphen_commit_hyphen_author_hyphen_email_hyphen_pattern(Components.Schemas.repository_hyphen_rule_hyphen_commit_hyphen_author_hyphen_email_hyphen_pattern)
             /// - Remark: Generated from `#/components/schemas/repository-rule/case13`.
-            case repository_hyphen_rule_hyphen_branch_hyphen_name_hyphen_pattern(Components.Schemas.repository_hyphen_rule_hyphen_branch_hyphen_name_hyphen_pattern)
+            case repository_hyphen_rule_hyphen_committer_hyphen_email_hyphen_pattern(Components.Schemas.repository_hyphen_rule_hyphen_committer_hyphen_email_hyphen_pattern)
             /// - Remark: Generated from `#/components/schemas/repository-rule/case14`.
+            case repository_hyphen_rule_hyphen_branch_hyphen_name_hyphen_pattern(Components.Schemas.repository_hyphen_rule_hyphen_branch_hyphen_name_hyphen_pattern)
+            /// - Remark: Generated from `#/components/schemas/repository-rule/case15`.
             case repository_hyphen_rule_hyphen_tag_hyphen_name_hyphen_pattern(Components.Schemas.repository_hyphen_rule_hyphen_tag_hyphen_name_hyphen_pattern)
-            /// Note: file_path_restriction is in beta and subject to change.
+            /// > [!NOTE]
+            /// > `file_path_restriction` is in beta and subject to change.
             ///
             /// Prevent commits that include changes in specified file paths from being pushed to the commit graph.
             ///
-            /// - Remark: Generated from `#/components/schemas/repository-rule/case15`.
-            public struct Case15Payload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/repository-rule/case15/type`.
+            /// - Remark: Generated from `#/components/schemas/repository-rule/case16`.
+            public struct Case16Payload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/repository-rule/case16/type`.
                 @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
                     case file_path_restriction = "file_path_restriction"
                 }
-                /// - Remark: Generated from `#/components/schemas/repository-rule/case15/type`.
-                public var _type: Components.Schemas.repository_hyphen_rule.Case15Payload._typePayload
-                /// - Remark: Generated from `#/components/schemas/repository-rule/case15/parameters`.
+                /// - Remark: Generated from `#/components/schemas/repository-rule/case16/type`.
+                public var _type: Components.Schemas.repository_hyphen_rule.Case16Payload._typePayload
+                /// - Remark: Generated from `#/components/schemas/repository-rule/case16/parameters`.
                 public struct parametersPayload: Codable, Hashable, Sendable {
                     /// The file paths that are restricted from being pushed to the commit graph.
                     ///
-                    /// - Remark: Generated from `#/components/schemas/repository-rule/case15/parameters/restricted_file_paths`.
+                    /// - Remark: Generated from `#/components/schemas/repository-rule/case16/parameters/restricted_file_paths`.
                     public var restricted_file_paths: [Swift.String]
                     /// Creates a new `parametersPayload`.
                     ///
@@ -12382,60 +12514,6 @@ public enum Components {
                     }
                     public enum CodingKeys: String, CodingKey {
                         case restricted_file_paths
-                    }
-                }
-                /// - Remark: Generated from `#/components/schemas/repository-rule/case15/parameters`.
-                public var parameters: Components.Schemas.repository_hyphen_rule.Case15Payload.parametersPayload?
-                /// Creates a new `Case15Payload`.
-                ///
-                /// - Parameters:
-                ///   - _type:
-                ///   - parameters:
-                public init(
-                    _type: Components.Schemas.repository_hyphen_rule.Case15Payload._typePayload,
-                    parameters: Components.Schemas.repository_hyphen_rule.Case15Payload.parametersPayload? = nil
-                ) {
-                    self._type = _type
-                    self.parameters = parameters
-                }
-                public enum CodingKeys: String, CodingKey {
-                    case _type = "type"
-                    case parameters
-                }
-            }
-            /// Note: file_path_restriction is in beta and subject to change.
-            ///
-            /// Prevent commits that include changes in specified file paths from being pushed to the commit graph.
-            ///
-            /// - Remark: Generated from `#/components/schemas/repository-rule/case15`.
-            case case15(Components.Schemas.repository_hyphen_rule.Case15Payload)
-            /// Note: max_file_path_length is in beta and subject to change.
-            ///
-            /// Prevent commits that include file paths that exceed a specified character limit from being pushed to the commit graph.
-            ///
-            /// - Remark: Generated from `#/components/schemas/repository-rule/case16`.
-            public struct Case16Payload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/repository-rule/case16/type`.
-                @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
-                    case max_file_path_length = "max_file_path_length"
-                }
-                /// - Remark: Generated from `#/components/schemas/repository-rule/case16/type`.
-                public var _type: Components.Schemas.repository_hyphen_rule.Case16Payload._typePayload
-                /// - Remark: Generated from `#/components/schemas/repository-rule/case16/parameters`.
-                public struct parametersPayload: Codable, Hashable, Sendable {
-                    /// The maximum amount of characters allowed in file paths
-                    ///
-                    /// - Remark: Generated from `#/components/schemas/repository-rule/case16/parameters/max_file_path_length`.
-                    public var max_file_path_length: Swift.Int
-                    /// Creates a new `parametersPayload`.
-                    ///
-                    /// - Parameters:
-                    ///   - max_file_path_length: The maximum amount of characters allowed in file paths
-                    public init(max_file_path_length: Swift.Int) {
-                        self.max_file_path_length = max_file_path_length
-                    }
-                    public enum CodingKeys: String, CodingKey {
-                        case max_file_path_length
                     }
                 }
                 /// - Remark: Generated from `#/components/schemas/repository-rule/case16/parameters`.
@@ -12457,39 +12535,41 @@ public enum Components {
                     case parameters
                 }
             }
-            /// Note: max_file_path_length is in beta and subject to change.
+            /// > [!NOTE]
+            /// > `file_path_restriction` is in beta and subject to change.
             ///
-            /// Prevent commits that include file paths that exceed a specified character limit from being pushed to the commit graph.
+            /// Prevent commits that include changes in specified file paths from being pushed to the commit graph.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-rule/case16`.
             case case16(Components.Schemas.repository_hyphen_rule.Case16Payload)
-            /// Note: file_extension_restriction is in beta and subject to change.
+            /// > [!NOTE]
+            /// > `max_file_path_length` is in beta and subject to change.
             ///
-            /// Prevent commits that include files with specified file extensions from being pushed to the commit graph.
+            /// Prevent commits that include file paths that exceed a specified character limit from being pushed to the commit graph.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-rule/case17`.
             public struct Case17Payload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/repository-rule/case17/type`.
                 @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
-                    case file_extension_restriction = "file_extension_restriction"
+                    case max_file_path_length = "max_file_path_length"
                 }
                 /// - Remark: Generated from `#/components/schemas/repository-rule/case17/type`.
                 public var _type: Components.Schemas.repository_hyphen_rule.Case17Payload._typePayload
                 /// - Remark: Generated from `#/components/schemas/repository-rule/case17/parameters`.
                 public struct parametersPayload: Codable, Hashable, Sendable {
-                    /// The file extensions that are restricted from being pushed to the commit graph.
+                    /// The maximum amount of characters allowed in file paths
                     ///
-                    /// - Remark: Generated from `#/components/schemas/repository-rule/case17/parameters/restricted_file_extensions`.
-                    public var restricted_file_extensions: [Swift.String]
+                    /// - Remark: Generated from `#/components/schemas/repository-rule/case17/parameters/max_file_path_length`.
+                    public var max_file_path_length: Swift.Int
                     /// Creates a new `parametersPayload`.
                     ///
                     /// - Parameters:
-                    ///   - restricted_file_extensions: The file extensions that are restricted from being pushed to the commit graph.
-                    public init(restricted_file_extensions: [Swift.String]) {
-                        self.restricted_file_extensions = restricted_file_extensions
+                    ///   - max_file_path_length: The maximum amount of characters allowed in file paths
+                    public init(max_file_path_length: Swift.Int) {
+                        self.max_file_path_length = max_file_path_length
                     }
                     public enum CodingKeys: String, CodingKey {
-                        case restricted_file_extensions
+                        case max_file_path_length
                     }
                 }
                 /// - Remark: Generated from `#/components/schemas/repository-rule/case17/parameters`.
@@ -12511,39 +12591,41 @@ public enum Components {
                     case parameters
                 }
             }
-            /// Note: file_extension_restriction is in beta and subject to change.
+            /// > [!NOTE]
+            /// > `max_file_path_length` is in beta and subject to change.
             ///
-            /// Prevent commits that include files with specified file extensions from being pushed to the commit graph.
+            /// Prevent commits that include file paths that exceed a specified character limit from being pushed to the commit graph.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-rule/case17`.
             case case17(Components.Schemas.repository_hyphen_rule.Case17Payload)
-            /// Note: max_file_size is in beta and subject to change.
+            /// > [!NOTE]
+            /// > `file_extension_restriction` is in beta and subject to change.
             ///
-            /// Prevent commits that exceed a specified file size limit from being pushed to the commit.
+            /// Prevent commits that include files with specified file extensions from being pushed to the commit graph.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-rule/case18`.
             public struct Case18Payload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/repository-rule/case18/type`.
                 @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
-                    case max_file_size = "max_file_size"
+                    case file_extension_restriction = "file_extension_restriction"
                 }
                 /// - Remark: Generated from `#/components/schemas/repository-rule/case18/type`.
                 public var _type: Components.Schemas.repository_hyphen_rule.Case18Payload._typePayload
                 /// - Remark: Generated from `#/components/schemas/repository-rule/case18/parameters`.
                 public struct parametersPayload: Codable, Hashable, Sendable {
-                    /// The maximum file size allowed in megabytes. This limit does not apply to Git Large File Storage (Git LFS).
+                    /// The file extensions that are restricted from being pushed to the commit graph.
                     ///
-                    /// - Remark: Generated from `#/components/schemas/repository-rule/case18/parameters/max_file_size`.
-                    public var max_file_size: Swift.Int
+                    /// - Remark: Generated from `#/components/schemas/repository-rule/case18/parameters/restricted_file_extensions`.
+                    public var restricted_file_extensions: [Swift.String]
                     /// Creates a new `parametersPayload`.
                     ///
                     /// - Parameters:
-                    ///   - max_file_size: The maximum file size allowed in megabytes. This limit does not apply to Git Large File Storage (Git LFS).
-                    public init(max_file_size: Swift.Int) {
-                        self.max_file_size = max_file_size
+                    ///   - restricted_file_extensions: The file extensions that are restricted from being pushed to the commit graph.
+                    public init(restricted_file_extensions: [Swift.String]) {
+                        self.restricted_file_extensions = restricted_file_extensions
                     }
                     public enum CodingKeys: String, CodingKey {
-                        case max_file_size
+                        case restricted_file_extensions
                     }
                 }
                 /// - Remark: Generated from `#/components/schemas/repository-rule/case18/parameters`.
@@ -12565,15 +12647,72 @@ public enum Components {
                     case parameters
                 }
             }
-            /// Note: max_file_size is in beta and subject to change.
+            /// > [!NOTE]
+            /// > `file_extension_restriction` is in beta and subject to change.
             ///
-            /// Prevent commits that exceed a specified file size limit from being pushed to the commit.
+            /// Prevent commits that include files with specified file extensions from being pushed to the commit graph.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-rule/case18`.
             case case18(Components.Schemas.repository_hyphen_rule.Case18Payload)
+            /// > [!NOTE]
+            /// > `max_file_size` is in beta and subject to change.
+            ///
+            /// Prevent commits that exceed a specified file size limit from being pushed to the commit.
+            ///
             /// - Remark: Generated from `#/components/schemas/repository-rule/case19`.
-            case repository_hyphen_rule_hyphen_workflows(Components.Schemas.repository_hyphen_rule_hyphen_workflows)
+            public struct Case19Payload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/repository-rule/case19/type`.
+                @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+                    case max_file_size = "max_file_size"
+                }
+                /// - Remark: Generated from `#/components/schemas/repository-rule/case19/type`.
+                public var _type: Components.Schemas.repository_hyphen_rule.Case19Payload._typePayload
+                /// - Remark: Generated from `#/components/schemas/repository-rule/case19/parameters`.
+                public struct parametersPayload: Codable, Hashable, Sendable {
+                    /// The maximum file size allowed in megabytes. This limit does not apply to Git Large File Storage (Git LFS).
+                    ///
+                    /// - Remark: Generated from `#/components/schemas/repository-rule/case19/parameters/max_file_size`.
+                    public var max_file_size: Swift.Int
+                    /// Creates a new `parametersPayload`.
+                    ///
+                    /// - Parameters:
+                    ///   - max_file_size: The maximum file size allowed in megabytes. This limit does not apply to Git Large File Storage (Git LFS).
+                    public init(max_file_size: Swift.Int) {
+                        self.max_file_size = max_file_size
+                    }
+                    public enum CodingKeys: String, CodingKey {
+                        case max_file_size
+                    }
+                }
+                /// - Remark: Generated from `#/components/schemas/repository-rule/case19/parameters`.
+                public var parameters: Components.Schemas.repository_hyphen_rule.Case19Payload.parametersPayload?
+                /// Creates a new `Case19Payload`.
+                ///
+                /// - Parameters:
+                ///   - _type:
+                ///   - parameters:
+                public init(
+                    _type: Components.Schemas.repository_hyphen_rule.Case19Payload._typePayload,
+                    parameters: Components.Schemas.repository_hyphen_rule.Case19Payload.parametersPayload? = nil
+                ) {
+                    self._type = _type
+                    self.parameters = parameters
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case _type = "type"
+                    case parameters
+                }
+            }
+            /// > [!NOTE]
+            /// > `max_file_size` is in beta and subject to change.
+            ///
+            /// Prevent commits that exceed a specified file size limit from being pushed to the commit.
+            ///
+            /// - Remark: Generated from `#/components/schemas/repository-rule/case19`.
+            case case19(Components.Schemas.repository_hyphen_rule.Case19Payload)
             /// - Remark: Generated from `#/components/schemas/repository-rule/case20`.
+            case repository_hyphen_rule_hyphen_workflows(Components.Schemas.repository_hyphen_rule_hyphen_workflows)
+            /// - Remark: Generated from `#/components/schemas/repository-rule/case21`.
             case repository_hyphen_rule_hyphen_code_hyphen_scanning(Components.Schemas.repository_hyphen_rule_hyphen_code_hyphen_scanning)
             public init(from decoder: any Decoder) throws {
                 var errors: [any Error] = []
@@ -12597,6 +12736,12 @@ public enum Components {
                 }
                 do {
                     self = .repository_hyphen_rule_hyphen_required_hyphen_linear_hyphen_history(try .init(from: decoder))
+                    return
+                } catch {
+                    errors.append(error)
+                }
+                do {
+                    self = .repository_hyphen_rule_hyphen_merge_hyphen_queue(try .init(from: decoder))
                     return
                 } catch {
                     errors.append(error)
@@ -12662,12 +12807,6 @@ public enum Components {
                     errors.append(error)
                 }
                 do {
-                    self = .case15(try .init(from: decoder))
-                    return
-                } catch {
-                    errors.append(error)
-                }
-                do {
                     self = .case16(try .init(from: decoder))
                     return
                 } catch {
@@ -12681,6 +12820,12 @@ public enum Components {
                 }
                 do {
                     self = .case18(try .init(from: decoder))
+                    return
+                } catch {
+                    errors.append(error)
+                }
+                do {
+                    self = .case19(try .init(from: decoder))
                     return
                 } catch {
                     errors.append(error)
@@ -12713,6 +12858,8 @@ public enum Components {
                     try value.encode(to: encoder)
                 case let .repository_hyphen_rule_hyphen_required_hyphen_linear_hyphen_history(value):
                     try value.encode(to: encoder)
+                case let .repository_hyphen_rule_hyphen_merge_hyphen_queue(value):
+                    try value.encode(to: encoder)
                 case let .repository_hyphen_rule_hyphen_required_hyphen_deployments(value):
                     try value.encode(to: encoder)
                 case let .repository_hyphen_rule_hyphen_required_hyphen_signatures(value):
@@ -12733,13 +12880,13 @@ public enum Components {
                     try value.encode(to: encoder)
                 case let .repository_hyphen_rule_hyphen_tag_hyphen_name_hyphen_pattern(value):
                     try value.encode(to: encoder)
-                case let .case15(value):
-                    try value.encode(to: encoder)
                 case let .case16(value):
                     try value.encode(to: encoder)
                 case let .case17(value):
                     try value.encode(to: encoder)
                 case let .case18(value):
+                    try value.encode(to: encoder)
+                case let .case19(value):
                     try value.encode(to: encoder)
                 case let .repository_hyphen_rule_hyphen_workflows(value):
                     try value.encode(to: encoder)
@@ -20890,10 +21037,39 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case5`.
             public struct Case5Payload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case5/value1`.
-                public var value1: Components.Schemas.repository_hyphen_rule_hyphen_required_hyphen_deployments
+                public var value1: Components.Schemas.repository_hyphen_rule_hyphen_merge_hyphen_queue
                 /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case5/value2`.
                 public var value2: Components.Schemas.repository_hyphen_rule_hyphen_ruleset_hyphen_info
                 /// Creates a new `Case5Payload`.
+                ///
+                /// - Parameters:
+                ///   - value1:
+                ///   - value2:
+                public init(
+                    value1: Components.Schemas.repository_hyphen_rule_hyphen_merge_hyphen_queue,
+                    value2: Components.Schemas.repository_hyphen_rule_hyphen_ruleset_hyphen_info
+                ) {
+                    self.value1 = value1
+                    self.value2 = value2
+                }
+                public init(from decoder: any Decoder) throws {
+                    value1 = try .init(from: decoder)
+                    value2 = try .init(from: decoder)
+                }
+                public func encode(to encoder: any Encoder) throws {
+                    try value1.encode(to: encoder)
+                    try value2.encode(to: encoder)
+                }
+            }
+            /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case5`.
+            case case5(Components.Schemas.repository_hyphen_rule_hyphen_detailed.Case5Payload)
+            /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case6`.
+            public struct Case6Payload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case6/value1`.
+                public var value1: Components.Schemas.repository_hyphen_rule_hyphen_required_hyphen_deployments
+                /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case6/value2`.
+                public var value2: Components.Schemas.repository_hyphen_rule_hyphen_ruleset_hyphen_info
+                /// Creates a new `Case6Payload`.
                 ///
                 /// - Parameters:
                 ///   - value1:
@@ -20914,15 +21090,15 @@ public enum Components {
                     try value2.encode(to: encoder)
                 }
             }
-            /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case5`.
-            case case5(Components.Schemas.repository_hyphen_rule_hyphen_detailed.Case5Payload)
             /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case6`.
-            public struct Case6Payload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case6/value1`.
+            case case6(Components.Schemas.repository_hyphen_rule_hyphen_detailed.Case6Payload)
+            /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case7`.
+            public struct Case7Payload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case7/value1`.
                 public var value1: Components.Schemas.repository_hyphen_rule_hyphen_required_hyphen_signatures
-                /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case6/value2`.
+                /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case7/value2`.
                 public var value2: Components.Schemas.repository_hyphen_rule_hyphen_ruleset_hyphen_info
-                /// Creates a new `Case6Payload`.
+                /// Creates a new `Case7Payload`.
                 ///
                 /// - Parameters:
                 ///   - value1:
@@ -20943,15 +21119,15 @@ public enum Components {
                     try value2.encode(to: encoder)
                 }
             }
-            /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case6`.
-            case case6(Components.Schemas.repository_hyphen_rule_hyphen_detailed.Case6Payload)
             /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case7`.
-            public struct Case7Payload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case7/value1`.
+            case case7(Components.Schemas.repository_hyphen_rule_hyphen_detailed.Case7Payload)
+            /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case8`.
+            public struct Case8Payload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case8/value1`.
                 public var value1: Components.Schemas.repository_hyphen_rule_hyphen_pull_hyphen_request
-                /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case7/value2`.
+                /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case8/value2`.
                 public var value2: Components.Schemas.repository_hyphen_rule_hyphen_ruleset_hyphen_info
-                /// Creates a new `Case7Payload`.
+                /// Creates a new `Case8Payload`.
                 ///
                 /// - Parameters:
                 ///   - value1:
@@ -20972,15 +21148,15 @@ public enum Components {
                     try value2.encode(to: encoder)
                 }
             }
-            /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case7`.
-            case case7(Components.Schemas.repository_hyphen_rule_hyphen_detailed.Case7Payload)
             /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case8`.
-            public struct Case8Payload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case8/value1`.
+            case case8(Components.Schemas.repository_hyphen_rule_hyphen_detailed.Case8Payload)
+            /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case9`.
+            public struct Case9Payload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case9/value1`.
                 public var value1: Components.Schemas.repository_hyphen_rule_hyphen_required_hyphen_status_hyphen_checks
-                /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case8/value2`.
+                /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case9/value2`.
                 public var value2: Components.Schemas.repository_hyphen_rule_hyphen_ruleset_hyphen_info
-                /// Creates a new `Case8Payload`.
+                /// Creates a new `Case9Payload`.
                 ///
                 /// - Parameters:
                 ///   - value1:
@@ -21001,15 +21177,15 @@ public enum Components {
                     try value2.encode(to: encoder)
                 }
             }
-            /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case8`.
-            case case8(Components.Schemas.repository_hyphen_rule_hyphen_detailed.Case8Payload)
             /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case9`.
-            public struct Case9Payload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case9/value1`.
+            case case9(Components.Schemas.repository_hyphen_rule_hyphen_detailed.Case9Payload)
+            /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case10`.
+            public struct Case10Payload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case10/value1`.
                 public var value1: Components.Schemas.repository_hyphen_rule_hyphen_non_hyphen_fast_hyphen_forward
-                /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case9/value2`.
+                /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case10/value2`.
                 public var value2: Components.Schemas.repository_hyphen_rule_hyphen_ruleset_hyphen_info
-                /// Creates a new `Case9Payload`.
+                /// Creates a new `Case10Payload`.
                 ///
                 /// - Parameters:
                 ///   - value1:
@@ -21030,15 +21206,15 @@ public enum Components {
                     try value2.encode(to: encoder)
                 }
             }
-            /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case9`.
-            case case9(Components.Schemas.repository_hyphen_rule_hyphen_detailed.Case9Payload)
             /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case10`.
-            public struct Case10Payload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case10/value1`.
+            case case10(Components.Schemas.repository_hyphen_rule_hyphen_detailed.Case10Payload)
+            /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case11`.
+            public struct Case11Payload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case11/value1`.
                 public var value1: Components.Schemas.repository_hyphen_rule_hyphen_commit_hyphen_message_hyphen_pattern
-                /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case10/value2`.
+                /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case11/value2`.
                 public var value2: Components.Schemas.repository_hyphen_rule_hyphen_ruleset_hyphen_info
-                /// Creates a new `Case10Payload`.
+                /// Creates a new `Case11Payload`.
                 ///
                 /// - Parameters:
                 ///   - value1:
@@ -21059,15 +21235,15 @@ public enum Components {
                     try value2.encode(to: encoder)
                 }
             }
-            /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case10`.
-            case case10(Components.Schemas.repository_hyphen_rule_hyphen_detailed.Case10Payload)
             /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case11`.
-            public struct Case11Payload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case11/value1`.
+            case case11(Components.Schemas.repository_hyphen_rule_hyphen_detailed.Case11Payload)
+            /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case12`.
+            public struct Case12Payload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case12/value1`.
                 public var value1: Components.Schemas.repository_hyphen_rule_hyphen_commit_hyphen_author_hyphen_email_hyphen_pattern
-                /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case11/value2`.
+                /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case12/value2`.
                 public var value2: Components.Schemas.repository_hyphen_rule_hyphen_ruleset_hyphen_info
-                /// Creates a new `Case11Payload`.
+                /// Creates a new `Case12Payload`.
                 ///
                 /// - Parameters:
                 ///   - value1:
@@ -21088,15 +21264,15 @@ public enum Components {
                     try value2.encode(to: encoder)
                 }
             }
-            /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case11`.
-            case case11(Components.Schemas.repository_hyphen_rule_hyphen_detailed.Case11Payload)
             /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case12`.
-            public struct Case12Payload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case12/value1`.
+            case case12(Components.Schemas.repository_hyphen_rule_hyphen_detailed.Case12Payload)
+            /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case13`.
+            public struct Case13Payload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case13/value1`.
                 public var value1: Components.Schemas.repository_hyphen_rule_hyphen_committer_hyphen_email_hyphen_pattern
-                /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case12/value2`.
+                /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case13/value2`.
                 public var value2: Components.Schemas.repository_hyphen_rule_hyphen_ruleset_hyphen_info
-                /// Creates a new `Case12Payload`.
+                /// Creates a new `Case13Payload`.
                 ///
                 /// - Parameters:
                 ///   - value1:
@@ -21117,15 +21293,15 @@ public enum Components {
                     try value2.encode(to: encoder)
                 }
             }
-            /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case12`.
-            case case12(Components.Schemas.repository_hyphen_rule_hyphen_detailed.Case12Payload)
             /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case13`.
-            public struct Case13Payload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case13/value1`.
+            case case13(Components.Schemas.repository_hyphen_rule_hyphen_detailed.Case13Payload)
+            /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case14`.
+            public struct Case14Payload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case14/value1`.
                 public var value1: Components.Schemas.repository_hyphen_rule_hyphen_branch_hyphen_name_hyphen_pattern
-                /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case13/value2`.
+                /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case14/value2`.
                 public var value2: Components.Schemas.repository_hyphen_rule_hyphen_ruleset_hyphen_info
-                /// Creates a new `Case13Payload`.
+                /// Creates a new `Case14Payload`.
                 ///
                 /// - Parameters:
                 ///   - value1:
@@ -21146,15 +21322,15 @@ public enum Components {
                     try value2.encode(to: encoder)
                 }
             }
-            /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case13`.
-            case case13(Components.Schemas.repository_hyphen_rule_hyphen_detailed.Case13Payload)
             /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case14`.
-            public struct Case14Payload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case14/value1`.
+            case case14(Components.Schemas.repository_hyphen_rule_hyphen_detailed.Case14Payload)
+            /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case15`.
+            public struct Case15Payload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case15/value1`.
                 public var value1: Components.Schemas.repository_hyphen_rule_hyphen_tag_hyphen_name_hyphen_pattern
-                /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case14/value2`.
+                /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case15/value2`.
                 public var value2: Components.Schemas.repository_hyphen_rule_hyphen_ruleset_hyphen_info
-                /// Creates a new `Case14Payload`.
+                /// Creates a new `Case15Payload`.
                 ///
                 /// - Parameters:
                 ///   - value1:
@@ -21175,15 +21351,15 @@ public enum Components {
                     try value2.encode(to: encoder)
                 }
             }
-            /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case14`.
-            case case14(Components.Schemas.repository_hyphen_rule_hyphen_detailed.Case14Payload)
             /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case15`.
-            public struct Case15Payload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case15/value1`.
+            case case15(Components.Schemas.repository_hyphen_rule_hyphen_detailed.Case15Payload)
+            /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case16`.
+            public struct Case16Payload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case16/value1`.
                 public var value1: Components.Schemas.repository_hyphen_rule_hyphen_workflows
-                /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case15/value2`.
+                /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case16/value2`.
                 public var value2: Components.Schemas.repository_hyphen_rule_hyphen_ruleset_hyphen_info
-                /// Creates a new `Case15Payload`.
+                /// Creates a new `Case16Payload`.
                 ///
                 /// - Parameters:
                 ///   - value1:
@@ -21204,15 +21380,15 @@ public enum Components {
                     try value2.encode(to: encoder)
                 }
             }
-            /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case15`.
-            case case15(Components.Schemas.repository_hyphen_rule_hyphen_detailed.Case15Payload)
             /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case16`.
-            public struct Case16Payload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case16/value1`.
+            case case16(Components.Schemas.repository_hyphen_rule_hyphen_detailed.Case16Payload)
+            /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case17`.
+            public struct Case17Payload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case17/value1`.
                 public var value1: Components.Schemas.repository_hyphen_rule_hyphen_code_hyphen_scanning
-                /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case16/value2`.
+                /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case17/value2`.
                 public var value2: Components.Schemas.repository_hyphen_rule_hyphen_ruleset_hyphen_info
-                /// Creates a new `Case16Payload`.
+                /// Creates a new `Case17Payload`.
                 ///
                 /// - Parameters:
                 ///   - value1:
@@ -21233,8 +21409,8 @@ public enum Components {
                     try value2.encode(to: encoder)
                 }
             }
-            /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case16`.
-            case case16(Components.Schemas.repository_hyphen_rule_hyphen_detailed.Case16Payload)
+            /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case17`.
+            case case17(Components.Schemas.repository_hyphen_rule_hyphen_detailed.Case17Payload)
             public init(from decoder: any Decoder) throws {
                 var errors: [any Error] = []
                 do {
@@ -21333,6 +21509,12 @@ public enum Components {
                 } catch {
                     errors.append(error)
                 }
+                do {
+                    self = .case17(try .init(from: decoder))
+                    return
+                } catch {
+                    errors.append(error)
+                }
                 throw Swift.DecodingError.failedToDecodeOneOfSchema(
                     type: Self.self,
                     codingPath: decoder.codingPath,
@@ -21372,6 +21554,8 @@ public enum Components {
                 case let .case15(value):
                     try value.encode(to: encoder)
                 case let .case16(value):
+                    try value.encode(to: encoder)
+                case let .case17(value):
                     try value.encode(to: encoder)
                 }
             }

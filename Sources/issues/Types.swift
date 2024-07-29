@@ -6292,6 +6292,8 @@ public enum Components {
         ///
         /// - Remark: Generated from `#/components/schemas/label`.
         public struct label: Codable, Hashable, Sendable {
+            /// Unique identifier for the label.
+            ///
             /// - Remark: Generated from `#/components/schemas/label/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/label/node_id`.
@@ -6304,24 +6306,28 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/label/name`.
             public var name: Swift.String
+            /// Optional description of the label, such as its purpose.
+            ///
             /// - Remark: Generated from `#/components/schemas/label/description`.
             public var description: Swift.String?
             /// 6-character hex code, without the leading #, identifying the color
             ///
             /// - Remark: Generated from `#/components/schemas/label/color`.
             public var color: Swift.String
+            /// Whether this label comes by default in a new repository.
+            ///
             /// - Remark: Generated from `#/components/schemas/label/default`.
             public var _default: Swift.Bool
             /// Creates a new `label`.
             ///
             /// - Parameters:
-            ///   - id:
+            ///   - id: Unique identifier for the label.
             ///   - node_id:
             ///   - url: URL for the label
             ///   - name: The name of the label.
-            ///   - description:
+            ///   - description: Optional description of the label, such as its purpose.
             ///   - color: 6-character hex code, without the leading #, identifying the color
-            ///   - _default:
+            ///   - _default: Whether this label comes by default in a new repository.
             public init(
                 id: Swift.Int64,
                 node_id: Swift.String,
