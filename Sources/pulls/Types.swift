@@ -6364,7 +6364,7 @@ public enum Components {
             /// Unique identifier of the review
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request-review/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/pull-request-review/node_id`.
             public var node_id: Swift.String
             /// - Remark: Generated from `#/components/schemas/pull-request-review/user`.
@@ -6463,7 +6463,7 @@ public enum Components {
             ///   - body_text:
             ///   - author_association:
             public init(
-                id: Swift.Int,
+                id: Swift.Int64,
                 node_id: Swift.String,
                 user: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
                 body: Swift.String,
