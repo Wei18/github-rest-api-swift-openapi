@@ -13,7 +13,8 @@ import struct Foundation.Date
 public protocol APIProtocol: Sendable {
     /// List public events
     ///
-    /// We delay the public events feed by five minutes, which means the most recent event returned by the public events API actually occurred at least five minutes ago.
+    /// > [!NOTE]
+    /// > This API is not built to serve real-time use cases. Depending on the time of day, event latency can be anywhere from 30s to 6h.
     ///
     /// - Remark: HTTP `GET /events`.
     /// - Remark: Generated from `#/paths//events/get(activity/list-public-events)`.
@@ -40,7 +41,8 @@ public protocol APIProtocol: Sendable {
     func activity_sol_get_hyphen_feeds(_ input: Operations.activity_sol_get_hyphen_feeds.Input) async throws -> Operations.activity_sol_get_hyphen_feeds.Output
     /// List public events for a network of repositories
     ///
-    ///
+    /// > [!NOTE]
+    /// > This API is not built to serve real-time use cases. Depending on the time of day, event latency can be anywhere from 30s to 6h.
     ///
     /// - Remark: HTTP `GET /networks/{owner}/{repo}/events`.
     /// - Remark: Generated from `#/paths//networks/{owner}/{repo}/events/get(activity/list-public-events-for-repo-network)`.
@@ -109,7 +111,8 @@ public protocol APIProtocol: Sendable {
     func activity_sol_delete_hyphen_thread_hyphen_subscription(_ input: Operations.activity_sol_delete_hyphen_thread_hyphen_subscription.Input) async throws -> Operations.activity_sol_delete_hyphen_thread_hyphen_subscription.Output
     /// List public organization events
     ///
-    ///
+    /// > [!NOTE]
+    /// > This API is not built to serve real-time use cases. Depending on the time of day, event latency can be anywhere from 30s to 6h.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/events`.
     /// - Remark: Generated from `#/paths//orgs/{org}/events/get(activity/list-public-org-events)`.
@@ -218,6 +221,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// If you are authenticated as the given user, you will see your private events. Otherwise, you'll only see public events.
     ///
+    /// > [!NOTE]
+    /// > This API is not built to serve real-time use cases. Depending on the time of day, event latency can be anywhere from 30s to 6h.
+    ///
     /// - Remark: HTTP `GET /users/{username}/events`.
     /// - Remark: Generated from `#/paths//users/{username}/events/get(activity/list-events-for-authenticated-user)`.
     func activity_sol_list_hyphen_events_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.activity_sol_list_hyphen_events_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.activity_sol_list_hyphen_events_hyphen_for_hyphen_authenticated_hyphen_user.Output
@@ -225,26 +231,35 @@ public protocol APIProtocol: Sendable {
     ///
     /// This is the user's organization dashboard. You must be authenticated as the user to view this.
     ///
+    /// > [!NOTE]
+    /// > This API is not built to serve real-time use cases. Depending on the time of day, event latency can be anywhere from 30s to 6h.
+    ///
     /// - Remark: HTTP `GET /users/{username}/events/orgs/{org}`.
     /// - Remark: Generated from `#/paths//users/{username}/events/orgs/{org}/get(activity/list-org-events-for-authenticated-user)`.
     func activity_sol_list_hyphen_org_hyphen_events_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.activity_sol_list_hyphen_org_hyphen_events_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.activity_sol_list_hyphen_org_hyphen_events_hyphen_for_hyphen_authenticated_hyphen_user.Output
     /// List public events for a user
     ///
-    ///
+    /// > [!NOTE]
+    /// > This API is not built to serve real-time use cases. Depending on the time of day, event latency can be anywhere from 30s to 6h.
     ///
     /// - Remark: HTTP `GET /users/{username}/events/public`.
     /// - Remark: Generated from `#/paths//users/{username}/events/public/get(activity/list-public-events-for-user)`.
     func activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_user(_ input: Operations.activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_user.Input) async throws -> Operations.activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_user.Output
     /// List events received by the authenticated user
     ///
-    /// These are events that you've received by watching repositories and following users. If you are authenticated as the given user, you will see private events. Otherwise, you'll only see public events.
+    /// These are events that you've received by watching repositories and following users. If you are authenticated as the
+    /// given user, you will see private events. Otherwise, you'll only see public events.
+    ///
+    /// > [!NOTE]
+    /// > This API is not built to serve real-time use cases. Depending on the time of day, event latency can be anywhere from 30s to 6h.
     ///
     /// - Remark: HTTP `GET /users/{username}/received_events`.
     /// - Remark: Generated from `#/paths//users/{username}/received_events/get(activity/list-received-events-for-user)`.
     func activity_sol_list_hyphen_received_hyphen_events_hyphen_for_hyphen_user(_ input: Operations.activity_sol_list_hyphen_received_hyphen_events_hyphen_for_hyphen_user.Input) async throws -> Operations.activity_sol_list_hyphen_received_hyphen_events_hyphen_for_hyphen_user.Output
     /// List public events received by a user
     ///
-    ///
+    /// > [!NOTE]
+    /// > This API is not built to serve real-time use cases. Depending on the time of day, event latency can be anywhere from 30s to 6h.
     ///
     /// - Remark: HTTP `GET /users/{username}/received_events/public`.
     /// - Remark: Generated from `#/paths//users/{username}/received_events/public/get(activity/list-received-public-events-for-user)`.
@@ -273,7 +288,8 @@ public protocol APIProtocol: Sendable {
 extension APIProtocol {
     /// List public events
     ///
-    /// We delay the public events feed by five minutes, which means the most recent event returned by the public events API actually occurred at least five minutes ago.
+    /// > [!NOTE]
+    /// > This API is not built to serve real-time use cases. Depending on the time of day, event latency can be anywhere from 30s to 6h.
     ///
     /// - Remark: HTTP `GET /events`.
     /// - Remark: Generated from `#/paths//events/get(activity/list-public-events)`.
@@ -310,7 +326,8 @@ extension APIProtocol {
     }
     /// List public events for a network of repositories
     ///
-    ///
+    /// > [!NOTE]
+    /// > This API is not built to serve real-time use cases. Depending on the time of day, event latency can be anywhere from 30s to 6h.
     ///
     /// - Remark: HTTP `GET /networks/{owner}/{repo}/events`.
     /// - Remark: Generated from `#/paths//networks/{owner}/{repo}/events/get(activity/list-public-events-for-repo-network)`.
@@ -449,7 +466,8 @@ extension APIProtocol {
     }
     /// List public organization events
     ///
-    ///
+    /// > [!NOTE]
+    /// > This API is not built to serve real-time use cases. Depending on the time of day, event latency can be anywhere from 30s to 6h.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/events`.
     /// - Remark: Generated from `#/paths//orgs/{org}/events/get(activity/list-public-org-events)`.
@@ -678,6 +696,9 @@ extension APIProtocol {
     ///
     /// If you are authenticated as the given user, you will see your private events. Otherwise, you'll only see public events.
     ///
+    /// > [!NOTE]
+    /// > This API is not built to serve real-time use cases. Depending on the time of day, event latency can be anywhere from 30s to 6h.
+    ///
     /// - Remark: HTTP `GET /users/{username}/events`.
     /// - Remark: Generated from `#/paths//users/{username}/events/get(activity/list-events-for-authenticated-user)`.
     public func activity_sol_list_hyphen_events_hyphen_for_hyphen_authenticated_hyphen_user(
@@ -695,6 +716,9 @@ extension APIProtocol {
     ///
     /// This is the user's organization dashboard. You must be authenticated as the user to view this.
     ///
+    /// > [!NOTE]
+    /// > This API is not built to serve real-time use cases. Depending on the time of day, event latency can be anywhere from 30s to 6h.
+    ///
     /// - Remark: HTTP `GET /users/{username}/events/orgs/{org}`.
     /// - Remark: Generated from `#/paths//users/{username}/events/orgs/{org}/get(activity/list-org-events-for-authenticated-user)`.
     public func activity_sol_list_hyphen_org_hyphen_events_hyphen_for_hyphen_authenticated_hyphen_user(
@@ -710,7 +734,8 @@ extension APIProtocol {
     }
     /// List public events for a user
     ///
-    ///
+    /// > [!NOTE]
+    /// > This API is not built to serve real-time use cases. Depending on the time of day, event latency can be anywhere from 30s to 6h.
     ///
     /// - Remark: HTTP `GET /users/{username}/events/public`.
     /// - Remark: Generated from `#/paths//users/{username}/events/public/get(activity/list-public-events-for-user)`.
@@ -727,7 +752,11 @@ extension APIProtocol {
     }
     /// List events received by the authenticated user
     ///
-    /// These are events that you've received by watching repositories and following users. If you are authenticated as the given user, you will see private events. Otherwise, you'll only see public events.
+    /// These are events that you've received by watching repositories and following users. If you are authenticated as the
+    /// given user, you will see private events. Otherwise, you'll only see public events.
+    ///
+    /// > [!NOTE]
+    /// > This API is not built to serve real-time use cases. Depending on the time of day, event latency can be anywhere from 30s to 6h.
     ///
     /// - Remark: HTTP `GET /users/{username}/received_events`.
     /// - Remark: Generated from `#/paths//users/{username}/received_events/get(activity/list-received-events-for-user)`.
@@ -744,7 +773,8 @@ extension APIProtocol {
     }
     /// List public events received by a user
     ///
-    ///
+    /// > [!NOTE]
+    /// > This API is not built to serve real-time use cases. Depending on the time of day, event latency can be anywhere from 30s to 6h.
     ///
     /// - Remark: HTTP `GET /users/{username}/received_events/public`.
     /// - Remark: Generated from `#/paths//users/{username}/received_events/public/get(activity/list-received-public-events-for-user)`.
@@ -4704,7 +4734,8 @@ public enum Components {
 public enum Operations {
     /// List public events
     ///
-    /// We delay the public events feed by five minutes, which means the most recent event returned by the public events API actually occurred at least five minutes ago.
+    /// > [!NOTE]
+    /// > This API is not built to serve real-time use cases. Depending on the time of day, event latency can be anywhere from 30s to 6h.
     ///
     /// - Remark: HTTP `GET /events`.
     /// - Remark: Generated from `#/paths//events/get(activity/list-public-events)`.
@@ -5039,7 +5070,8 @@ public enum Operations {
     }
     /// List public events for a network of repositories
     ///
-    ///
+    /// > [!NOTE]
+    /// > This API is not built to serve real-time use cases. Depending on the time of day, event latency can be anywhere from 30s to 6h.
     ///
     /// - Remark: HTTP `GET /networks/{owner}/{repo}/events`.
     /// - Remark: Generated from `#/paths//networks/{owner}/{repo}/events/get(activity/list-public-events-for-repo-network)`.
@@ -6872,7 +6904,8 @@ public enum Operations {
     }
     /// List public organization events
     ///
-    ///
+    /// > [!NOTE]
+    /// > This API is not built to serve real-time use cases. Depending on the time of day, event latency can be anywhere from 30s to 6h.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/events`.
     /// - Remark: Generated from `#/paths//orgs/{org}/events/get(activity/list-public-org-events)`.
@@ -9696,6 +9729,9 @@ public enum Operations {
     ///
     /// If you are authenticated as the given user, you will see your private events. Otherwise, you'll only see public events.
     ///
+    /// > [!NOTE]
+    /// > This API is not built to serve real-time use cases. Depending on the time of day, event latency can be anywhere from 30s to 6h.
+    ///
     /// - Remark: HTTP `GET /users/{username}/events`.
     /// - Remark: Generated from `#/paths//users/{username}/events/get(activity/list-events-for-authenticated-user)`.
     public enum activity_sol_list_hyphen_events_hyphen_for_hyphen_authenticated_hyphen_user {
@@ -9854,6 +9890,9 @@ public enum Operations {
     /// List organization events for the authenticated user
     ///
     /// This is the user's organization dashboard. You must be authenticated as the user to view this.
+    ///
+    /// > [!NOTE]
+    /// > This API is not built to serve real-time use cases. Depending on the time of day, event latency can be anywhere from 30s to 6h.
     ///
     /// - Remark: HTTP `GET /users/{username}/events/orgs/{org}`.
     /// - Remark: Generated from `#/paths//users/{username}/events/orgs/{org}/get(activity/list-org-events-for-authenticated-user)`.
@@ -10021,7 +10060,8 @@ public enum Operations {
     }
     /// List public events for a user
     ///
-    ///
+    /// > [!NOTE]
+    /// > This API is not built to serve real-time use cases. Depending on the time of day, event latency can be anywhere from 30s to 6h.
     ///
     /// - Remark: HTTP `GET /users/{username}/events/public`.
     /// - Remark: Generated from `#/paths//users/{username}/events/public/get(activity/list-public-events-for-user)`.
@@ -10180,7 +10220,11 @@ public enum Operations {
     }
     /// List events received by the authenticated user
     ///
-    /// These are events that you've received by watching repositories and following users. If you are authenticated as the given user, you will see private events. Otherwise, you'll only see public events.
+    /// These are events that you've received by watching repositories and following users. If you are authenticated as the
+    /// given user, you will see private events. Otherwise, you'll only see public events.
+    ///
+    /// > [!NOTE]
+    /// > This API is not built to serve real-time use cases. Depending on the time of day, event latency can be anywhere from 30s to 6h.
     ///
     /// - Remark: HTTP `GET /users/{username}/received_events`.
     /// - Remark: Generated from `#/paths//users/{username}/received_events/get(activity/list-received-events-for-user)`.
@@ -10339,7 +10383,8 @@ public enum Operations {
     }
     /// List public events received by a user
     ///
-    ///
+    /// > [!NOTE]
+    /// > This API is not built to serve real-time use cases. Depending on the time of day, event latency can be anywhere from 30s to 6h.
     ///
     /// - Remark: HTTP `GET /users/{username}/received_events/public`.
     /// - Remark: Generated from `#/paths//users/{username}/received_events/public/get(activity/list-received-public-events-for-user)`.
