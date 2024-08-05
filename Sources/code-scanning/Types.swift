@@ -1601,10 +1601,6 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-rule-summary/name`.
             public var name: Swift.String?
-            /// A set of tags applicable for the rule.
-            ///
-            /// - Remark: Generated from `#/components/schemas/code-scanning-alert-rule-summary/tags`.
-            public var tags: [Swift.String]?
             /// The severity of the alert.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-rule-summary/severity`.
@@ -1635,37 +1631,41 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-rule-summary/description`.
             public var description: Swift.String?
+            /// A set of tags applicable for the rule.
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-scanning-alert-rule-summary/tags`.
+            public var tags: [Swift.String]?
             /// Creates a new `code_hyphen_scanning_hyphen_alert_hyphen_rule_hyphen_summary`.
             ///
             /// - Parameters:
             ///   - id: A unique identifier for the rule used to detect the alert.
             ///   - name: The name of the rule used to detect the alert.
-            ///   - tags: A set of tags applicable for the rule.
             ///   - severity: The severity of the alert.
             ///   - security_severity_level: The security severity of the alert.
             ///   - description: A short description of the rule used to detect the alert.
+            ///   - tags: A set of tags applicable for the rule.
             public init(
                 id: Swift.String? = nil,
                 name: Swift.String? = nil,
-                tags: [Swift.String]? = nil,
                 severity: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_rule_hyphen_summary.severityPayload? = nil,
                 security_severity_level: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_rule_hyphen_summary.security_severity_levelPayload? = nil,
-                description: Swift.String? = nil
+                description: Swift.String? = nil,
+                tags: [Swift.String]? = nil
             ) {
                 self.id = id
                 self.name = name
-                self.tags = tags
                 self.severity = severity
                 self.security_severity_level = security_severity_level
                 self.description = description
+                self.tags = tags
             }
             public enum CodingKeys: String, CodingKey {
                 case id
                 case name
-                case tags
                 case severity
                 case security_severity_level
                 case description
+                case tags
             }
         }
         /// The version of the tool used to generate the code scanning analysis.
