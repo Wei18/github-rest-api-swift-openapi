@@ -4085,6 +4085,91 @@ public enum Components {
                 case html_url
             }
         }
+        /// A GitHub organization.
+        ///
+        /// - Remark: Generated from `#/components/schemas/organization-simple`.
+        public struct organization_hyphen_simple: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/organization-simple/login`.
+            public var login: Swift.String
+            /// - Remark: Generated from `#/components/schemas/organization-simple/id`.
+            public var id: Swift.Int
+            /// - Remark: Generated from `#/components/schemas/organization-simple/node_id`.
+            public var node_id: Swift.String
+            /// - Remark: Generated from `#/components/schemas/organization-simple/url`.
+            public var url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/organization-simple/repos_url`.
+            public var repos_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/organization-simple/events_url`.
+            public var events_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/organization-simple/hooks_url`.
+            public var hooks_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/organization-simple/issues_url`.
+            public var issues_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/organization-simple/members_url`.
+            public var members_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/organization-simple/public_members_url`.
+            public var public_members_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/organization-simple/avatar_url`.
+            public var avatar_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/organization-simple/description`.
+            public var description: Swift.String?
+            /// Creates a new `organization_hyphen_simple`.
+            ///
+            /// - Parameters:
+            ///   - login:
+            ///   - id:
+            ///   - node_id:
+            ///   - url:
+            ///   - repos_url:
+            ///   - events_url:
+            ///   - hooks_url:
+            ///   - issues_url:
+            ///   - members_url:
+            ///   - public_members_url:
+            ///   - avatar_url:
+            ///   - description:
+            public init(
+                login: Swift.String,
+                id: Swift.Int,
+                node_id: Swift.String,
+                url: Swift.String,
+                repos_url: Swift.String,
+                events_url: Swift.String,
+                hooks_url: Swift.String,
+                issues_url: Swift.String,
+                members_url: Swift.String,
+                public_members_url: Swift.String,
+                avatar_url: Swift.String,
+                description: Swift.String? = nil
+            ) {
+                self.login = login
+                self.id = id
+                self.node_id = node_id
+                self.url = url
+                self.repos_url = repos_url
+                self.events_url = events_url
+                self.hooks_url = hooks_url
+                self.issues_url = issues_url
+                self.members_url = members_url
+                self.public_members_url = public_members_url
+                self.avatar_url = avatar_url
+                self.description = description
+            }
+            public enum CodingKeys: String, CodingKey {
+                case login
+                case id
+                case node_id
+                case url
+                case repos_url
+                case events_url
+                case hooks_url
+                case issues_url
+                case members_url
+                case public_members_url
+                case avatar_url
+                case description
+            }
+        }
         /// Groups of organization members that gives permissions on specified repositories.
         ///
         /// - Remark: Generated from `#/components/schemas/nullable-team-simple`.
@@ -4328,91 +4413,6 @@ public enum Components {
                 case members_url
                 case repositories_url
                 case parent
-            }
-        }
-        /// A GitHub organization.
-        ///
-        /// - Remark: Generated from `#/components/schemas/organization-simple`.
-        public struct organization_hyphen_simple: Codable, Hashable, Sendable {
-            /// - Remark: Generated from `#/components/schemas/organization-simple/login`.
-            public var login: Swift.String
-            /// - Remark: Generated from `#/components/schemas/organization-simple/id`.
-            public var id: Swift.Int
-            /// - Remark: Generated from `#/components/schemas/organization-simple/node_id`.
-            public var node_id: Swift.String
-            /// - Remark: Generated from `#/components/schemas/organization-simple/url`.
-            public var url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/organization-simple/repos_url`.
-            public var repos_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/organization-simple/events_url`.
-            public var events_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/organization-simple/hooks_url`.
-            public var hooks_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/organization-simple/issues_url`.
-            public var issues_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/organization-simple/members_url`.
-            public var members_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/organization-simple/public_members_url`.
-            public var public_members_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/organization-simple/avatar_url`.
-            public var avatar_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/organization-simple/description`.
-            public var description: Swift.String?
-            /// Creates a new `organization_hyphen_simple`.
-            ///
-            /// - Parameters:
-            ///   - login:
-            ///   - id:
-            ///   - node_id:
-            ///   - url:
-            ///   - repos_url:
-            ///   - events_url:
-            ///   - hooks_url:
-            ///   - issues_url:
-            ///   - members_url:
-            ///   - public_members_url:
-            ///   - avatar_url:
-            ///   - description:
-            public init(
-                login: Swift.String,
-                id: Swift.Int,
-                node_id: Swift.String,
-                url: Swift.String,
-                repos_url: Swift.String,
-                events_url: Swift.String,
-                hooks_url: Swift.String,
-                issues_url: Swift.String,
-                members_url: Swift.String,
-                public_members_url: Swift.String,
-                avatar_url: Swift.String,
-                description: Swift.String? = nil
-            ) {
-                self.login = login
-                self.id = id
-                self.node_id = node_id
-                self.url = url
-                self.repos_url = repos_url
-                self.events_url = events_url
-                self.hooks_url = hooks_url
-                self.issues_url = issues_url
-                self.members_url = members_url
-                self.public_members_url = public_members_url
-                self.avatar_url = avatar_url
-                self.description = description
-            }
-            public enum CodingKeys: String, CodingKey {
-                case login
-                case id
-                case node_id
-                case url
-                case repos_url
-                case events_url
-                case hooks_url
-                case issues_url
-                case members_url
-                case public_members_url
-                case avatar_url
-                case description
             }
         }
         /// - Remark: Generated from `#/components/schemas/security-and-analysis`.
@@ -6984,6 +6984,10 @@ public enum Components {
         ///
         /// - Remark: Generated from `#/components/parameters/page`.
         public typealias page = Swift.Int
+        /// The slug of the team name.
+        ///
+        /// - Remark: Generated from `#/components/parameters/team-slug`.
+        public typealias team_hyphen_slug = Swift.String
         /// An organization ID. Only return organizations with an ID greater than this ID.
         ///
         /// - Remark: Generated from `#/components/parameters/since-org`.
@@ -7004,10 +7008,6 @@ public enum Components {
         ///
         /// - Remark: Generated from `#/components/parameters/invitation-id`.
         public typealias invitation_hyphen_id = Swift.Int
-        /// The slug of the team name.
-        ///
-        /// - Remark: Generated from `#/components/parameters/team-slug`.
-        public typealias team_hyphen_slug = Swift.String
         /// The unique identifier of the role.
         ///
         /// - Remark: Generated from `#/components/parameters/role-id`.

@@ -64,6 +64,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Get a repository ruleset for an organization.
     ///
+    /// **Note:** To prevent leaking sensitive information, the `bypass_actors` property is only returned if the user
+    /// making the API request has write access to the ruleset.
+    ///
     /// - Remark: HTTP `GET /orgs/{org}/rulesets/{ruleset_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/rulesets/{ruleset_id}/get(repos/get-org-ruleset)`.
     func repos_sol_get_hyphen_org_hyphen_ruleset(_ input: Operations.repos_sol_get_hyphen_org_hyphen_ruleset.Input) async throws -> Operations.repos_sol_get_hyphen_org_hyphen_ruleset.Output
@@ -1773,6 +1776,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Get a ruleset for a repository.
     ///
+    /// **Note:** To prevent leaking sensitive information, the `bypass_actors` property is only returned if the user
+    /// making the API request has write access to the ruleset.
+    ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/rulesets/{ruleset_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/rulesets/{ruleset_id}/get(repos/get-repo-ruleset)`.
     func repos_sol_get_hyphen_repo_hyphen_ruleset(_ input: Operations.repos_sol_get_hyphen_repo_hyphen_ruleset.Input) async throws -> Operations.repos_sol_get_hyphen_repo_hyphen_ruleset.Output
@@ -2187,6 +2193,9 @@ extension APIProtocol {
     /// Get an organization repository ruleset
     ///
     /// Get a repository ruleset for an organization.
+    ///
+    /// **Note:** To prevent leaking sensitive information, the `bypass_actors` property is only returned if the user
+    /// making the API request has write access to the ruleset.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/rulesets/{ruleset_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/rulesets/{ruleset_id}/get(repos/get-org-ruleset)`.
@@ -5264,6 +5273,9 @@ extension APIProtocol {
     /// Get a repository ruleset
     ///
     /// Get a ruleset for a repository.
+    ///
+    /// **Note:** To prevent leaking sensitive information, the `bypass_actors` property is only returned if the user
+    /// making the API request has write access to the ruleset.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/rulesets/{ruleset_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/rulesets/{ruleset_id}/get(repos/get-repo-ruleset)`.
@@ -10964,6 +10976,7 @@ public enum Components {
                 case RepositoryRole = "RepositoryRole"
                 case Team = "Team"
                 case DeployKey = "DeployKey"
+                case EnterpriseTeam = "EnterpriseTeam"
             }
             /// The type of actor that can bypass a ruleset.
             ///
@@ -22944,6 +22957,8 @@ public enum Operations {
                     /// - Remark: Generated from `#/paths/orgs/{org}/repos/POST/requestBody/json/use_squash_pr_title_as_default`.
                     @available(*, deprecated)
                     public var use_squash_pr_title_as_default: Swift.Bool?
+                    /// Required when using `squash_merge_commit_message`.
+                    ///
                     /// The default value for a squash merge commit title:
                     ///
                     /// - `PR_TITLE` - default to the pull request's title.
@@ -22954,6 +22969,8 @@ public enum Operations {
                         case PR_TITLE = "PR_TITLE"
                         case COMMIT_OR_PR_TITLE = "COMMIT_OR_PR_TITLE"
                     }
+                    /// Required when using `squash_merge_commit_message`.
+                    ///
                     /// The default value for a squash merge commit title:
                     ///
                     /// - `PR_TITLE` - default to the pull request's title.
@@ -22981,6 +22998,8 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/repos/POST/requestBody/json/squash_merge_commit_message`.
                     public var squash_merge_commit_message: Operations.repos_sol_create_hyphen_in_hyphen_org.Input.Body.jsonPayload.squash_merge_commit_messagePayload?
+                    /// Required when using `merge_commit_message`.
+                    ///
                     /// The default value for a merge commit title.
                     ///
                     /// - `PR_TITLE` - default to the pull request's title.
@@ -22991,6 +23010,8 @@ public enum Operations {
                         case PR_TITLE = "PR_TITLE"
                         case MERGE_MESSAGE = "MERGE_MESSAGE"
                     }
+                    /// Required when using `merge_commit_message`.
+                    ///
                     /// The default value for a merge commit title.
                     ///
                     /// - `PR_TITLE` - default to the pull request's title.
@@ -23065,9 +23086,9 @@ public enum Operations {
                     ///   - allow_auto_merge: Either `true` to allow auto-merge on pull requests, or `false` to disallow auto-merge.
                     ///   - delete_branch_on_merge: Either `true` to allow automatically deleting head branches when pull requests are merged, or `false` to prevent automatic deletion. **The authenticated user must be an organization owner to set this property to `true`.**
                     ///   - use_squash_pr_title_as_default: Either `true` to allow squash-merge commits to use pull request title, or `false` to use commit message. **This property has been deprecated. Please use `squash_merge_commit_title` instead.
-                    ///   - squash_merge_commit_title: The default value for a squash merge commit title:
+                    ///   - squash_merge_commit_title: Required when using `squash_merge_commit_message`.
                     ///   - squash_merge_commit_message: The default value for a squash merge commit message:
-                    ///   - merge_commit_title: The default value for a merge commit title.
+                    ///   - merge_commit_title: Required when using `merge_commit_message`.
                     ///   - merge_commit_message: The default value for a merge commit message.
                     ///   - custom_properties: The custom properties for the new repository. The keys are the custom property names, and the values are the corresponding custom property values.
                     public init(
@@ -24233,6 +24254,9 @@ public enum Operations {
     ///
     /// Get a repository ruleset for an organization.
     ///
+    /// **Note:** To prevent leaking sensitive information, the `bypass_actors` property is only returned if the user
+    /// making the API request has write access to the ruleset.
+    ///
     /// - Remark: HTTP `GET /orgs/{org}/rulesets/{ruleset_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/rulesets/{ruleset_id}/get(repos/get-org-ruleset)`.
     public enum repos_sol_get_hyphen_org_hyphen_ruleset {
@@ -25322,6 +25346,8 @@ public enum Operations {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/PATCH/requestBody/json/use_squash_pr_title_as_default`.
                     @available(*, deprecated)
                     public var use_squash_pr_title_as_default: Swift.Bool?
+                    /// Required when using `squash_merge_commit_message`.
+                    ///
                     /// The default value for a squash merge commit title:
                     ///
                     /// - `PR_TITLE` - default to the pull request's title.
@@ -25332,6 +25358,8 @@ public enum Operations {
                         case PR_TITLE = "PR_TITLE"
                         case COMMIT_OR_PR_TITLE = "COMMIT_OR_PR_TITLE"
                     }
+                    /// Required when using `squash_merge_commit_message`.
+                    ///
                     /// The default value for a squash merge commit title:
                     ///
                     /// - `PR_TITLE` - default to the pull request's title.
@@ -25359,6 +25387,8 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/PATCH/requestBody/json/squash_merge_commit_message`.
                     public var squash_merge_commit_message: Operations.repos_sol_update.Input.Body.jsonPayload.squash_merge_commit_messagePayload?
+                    /// Required when using `merge_commit_message`.
+                    ///
                     /// The default value for a merge commit title.
                     ///
                     /// - `PR_TITLE` - default to the pull request's title.
@@ -25369,6 +25399,8 @@ public enum Operations {
                         case PR_TITLE = "PR_TITLE"
                         case MERGE_MESSAGE = "MERGE_MESSAGE"
                     }
+                    /// Required when using `merge_commit_message`.
+                    ///
                     /// The default value for a merge commit title.
                     ///
                     /// - `PR_TITLE` - default to the pull request's title.
@@ -25429,9 +25461,9 @@ public enum Operations {
                     ///   - delete_branch_on_merge: Either `true` to allow automatically deleting head branches when pull requests are merged, or `false` to prevent automatic deletion.
                     ///   - allow_update_branch: Either `true` to always allow a pull request head branch that is behind its base branch to be updated even if it is not required to be up to date before merging, or false otherwise.
                     ///   - use_squash_pr_title_as_default: Either `true` to allow squash-merge commits to use pull request title, or `false` to use commit message. **This property has been deprecated. Please use `squash_merge_commit_title` instead.
-                    ///   - squash_merge_commit_title: The default value for a squash merge commit title:
+                    ///   - squash_merge_commit_title: Required when using `squash_merge_commit_message`.
                     ///   - squash_merge_commit_message: The default value for a squash merge commit message:
-                    ///   - merge_commit_title: The default value for a merge commit title.
+                    ///   - merge_commit_title: Required when using `merge_commit_message`.
                     ///   - merge_commit_message: The default value for a merge commit message.
                     ///   - archived: Whether to archive this repository. `false` will unarchive a previously archived repository.
                     ///   - allow_forking: Either `true` to allow private forks, or `false` to prevent private forks.
@@ -57572,6 +57604,9 @@ public enum Operations {
     ///
     /// Get a ruleset for a repository.
     ///
+    /// **Note:** To prevent leaking sensitive information, the `bypass_actors` property is only returned if the user
+    /// making the API request has write access to the ruleset.
+    ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/rulesets/{ruleset_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/rulesets/{ruleset_id}/get(repos/get-repo-ruleset)`.
     public enum repos_sol_get_hyphen_repo_hyphen_ruleset {
@@ -62958,6 +62993,8 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/user/repos/POST/requestBody/json/delete_branch_on_merge`.
                     public var delete_branch_on_merge: Swift.Bool?
+                    /// Required when using `squash_merge_commit_message`.
+                    ///
                     /// The default value for a squash merge commit title:
                     ///
                     /// - `PR_TITLE` - default to the pull request's title.
@@ -62968,6 +63005,8 @@ public enum Operations {
                         case PR_TITLE = "PR_TITLE"
                         case COMMIT_OR_PR_TITLE = "COMMIT_OR_PR_TITLE"
                     }
+                    /// Required when using `squash_merge_commit_message`.
+                    ///
                     /// The default value for a squash merge commit title:
                     ///
                     /// - `PR_TITLE` - default to the pull request's title.
@@ -62995,6 +63034,8 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/user/repos/POST/requestBody/json/squash_merge_commit_message`.
                     public var squash_merge_commit_message: Operations.repos_sol_create_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body.jsonPayload.squash_merge_commit_messagePayload?
+                    /// Required when using `merge_commit_message`.
+                    ///
                     /// The default value for a merge commit title.
                     ///
                     /// - `PR_TITLE` - default to the pull request's title.
@@ -63005,6 +63046,8 @@ public enum Operations {
                         case PR_TITLE = "PR_TITLE"
                         case MERGE_MESSAGE = "MERGE_MESSAGE"
                     }
+                    /// Required when using `merge_commit_message`.
+                    ///
                     /// The default value for a merge commit title.
                     ///
                     /// - `PR_TITLE` - default to the pull request's title.
@@ -63060,9 +63103,9 @@ public enum Operations {
                     ///   - allow_rebase_merge: Whether to allow rebase merges for pull requests.
                     ///   - allow_auto_merge: Whether to allow Auto-merge to be used on pull requests.
                     ///   - delete_branch_on_merge: Whether to delete head branches when pull requests are merged
-                    ///   - squash_merge_commit_title: The default value for a squash merge commit title:
+                    ///   - squash_merge_commit_title: Required when using `squash_merge_commit_message`.
                     ///   - squash_merge_commit_message: The default value for a squash merge commit message:
-                    ///   - merge_commit_title: The default value for a merge commit title.
+                    ///   - merge_commit_title: Required when using `merge_commit_message`.
                     ///   - merge_commit_message: The default value for a merge commit message.
                     ///   - has_downloads: Whether downloads are enabled.
                     ///   - is_template: Whether this repository acts as a template that can be used to generate new repositories.

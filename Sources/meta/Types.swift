@@ -445,6 +445,8 @@ public enum Components {
             public var actions_macos: [Swift.String]?
             /// - Remark: Generated from `#/components/schemas/api-overview/dependabot`.
             public var dependabot: [Swift.String]?
+            /// - Remark: Generated from `#/components/schemas/api-overview/copilot`.
+            public var copilot: [Swift.String]?
             /// - Remark: Generated from `#/components/schemas/api-overview/domains`.
             public struct domainsPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/api-overview/domains/website`.
@@ -505,6 +507,7 @@ public enum Components {
             ///   - actions:
             ///   - actions_macos:
             ///   - dependabot:
+            ///   - copilot:
             ///   - domains:
             public init(
                 verifiable_password_authentication: Swift.Bool,
@@ -521,6 +524,7 @@ public enum Components {
                 actions: [Swift.String]? = nil,
                 actions_macos: [Swift.String]? = nil,
                 dependabot: [Swift.String]? = nil,
+                copilot: [Swift.String]? = nil,
                 domains: Components.Schemas.api_hyphen_overview.domainsPayload? = nil
             ) {
                 self.verifiable_password_authentication = verifiable_password_authentication
@@ -537,6 +541,7 @@ public enum Components {
                 self.actions = actions
                 self.actions_macos = actions_macos
                 self.dependabot = dependabot
+                self.copilot = copilot
                 self.domains = domains
             }
             public enum CodingKeys: String, CodingKey {
@@ -554,6 +559,7 @@ public enum Components {
                 case actions
                 case actions_macos
                 case dependabot
+                case copilot
                 case domains
             }
         }

@@ -232,7 +232,7 @@ public struct Client: APIProtocol {
     /// for all users across organizations with access to Copilot within your enterprise, with a further breakdown of suggestions, acceptances,
     /// and number of active users by editor and language for each day. See the response schema tab for detailed metrics definitions.
     ///
-    /// The response contains metrics for the prior 28 days. Usage metrics are processed once per day for the previous day,
+    /// The response contains metrics for up to 28 days prior. Usage metrics are processed once per day for the previous day,
     /// and the response will only include data up until yesterday. In order for an end user to be counted towards these metrics,
     /// they must have telemetry enabled in their IDE.
     ///
@@ -297,6 +297,203 @@ public struct Client: APIProtocol {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
                     let body: Operations.copilot_sol_usage_hyphen_metrics_hyphen_for_hyphen_enterprise.Output.Ok.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            [Components.Schemas.copilot_hyphen_usage_hyphen_metrics].self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .ok(.init(body: body))
+                case 500:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Components.Responses.internal_error.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Schemas.basic_hyphen_error.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .internalServerError(.init(body: body))
+                case 401:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Components.Responses.requires_authentication.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Schemas.basic_hyphen_error.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .unauthorized(.init(body: body))
+                case 403:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Components.Responses.forbidden.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Schemas.basic_hyphen_error.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .forbidden(.init(body: body))
+                case 404:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Components.Responses.not_found.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Schemas.basic_hyphen_error.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .notFound(.init(body: body))
+                default:
+                    return .undocumented(
+                        statusCode: response.status.code,
+                        .init(
+                            headerFields: response.headerFields,
+                            body: responseBody
+                        )
+                    )
+                }
+            }
+        )
+    }
+    /// Get a summary of Copilot usage for an enterprise team
+    ///
+    /// > [!NOTE]
+    /// > This endpoint is in beta and is subject to change.
+    ///
+    /// You can use this endpoint to see a daily breakdown of aggregated usage metrics for Copilot completions and Copilot Chat in the IDE
+    /// for users within an enterprise team, with a further breakdown of suggestions, acceptances, and number of active users by editor and language for each day.
+    /// See the response schema tab for detailed metrics definitions.
+    ///
+    /// The response contains metrics for up to 28 days prior. Usage metrics are processed once per day for the previous day,
+    /// and the response will only include data up until yesterday. In order for an end user to be counted towards these metrics,
+    /// they must have telemetry enabled in their IDE.
+    ///
+    /// > [!NOTE]
+    /// > This endpoint will only return results for a given day if the enterprise team had five or more members with active Copilot licenses, as evaluated at the end of that day.
+    ///
+    /// Owners and billing managers for the enterprise that contains the enterprise team can view Copilot usage metrics for the enterprise team.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `read:enterprise` scopes to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /enterprises/{enterprise}/team/{team_slug}/copilot/usage`.
+    /// - Remark: Generated from `#/paths//enterprises/{enterprise}/team/{team_slug}/copilot/usage/get(copilot/usage-metrics-for-enterprise-team)`.
+    public func copilot_sol_usage_hyphen_metrics_hyphen_for_hyphen_enterprise_hyphen_team(_ input: Operations.copilot_sol_usage_hyphen_metrics_hyphen_for_hyphen_enterprise_hyphen_team.Input) async throws -> Operations.copilot_sol_usage_hyphen_metrics_hyphen_for_hyphen_enterprise_hyphen_team.Output {
+        try await client.send(
+            input: input,
+            forOperation: Operations.copilot_sol_usage_hyphen_metrics_hyphen_for_hyphen_enterprise_hyphen_team.id,
+            serializer: { input in
+                let path = try converter.renderedPath(
+                    template: "/enterprises/{}/team/{}/copilot/usage",
+                    parameters: [
+                        input.path.enterprise,
+                        input.path.team_slug
+                    ]
+                )
+                var request: HTTPTypes.HTTPRequest = .init(
+                    soar_path: path,
+                    method: .get
+                )
+                suppressMutabilityWarning(&request)
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "since",
+                    value: input.query.since
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "until",
+                    value: input.query.until
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "page",
+                    value: input.query.page
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "per_page",
+                    value: input.query.per_page
+                )
+                converter.setAcceptHeader(
+                    in: &request.headerFields,
+                    contentTypes: input.headers.accept
+                )
+                return (request, nil)
+            },
+            deserializer: { response, responseBody in
+                switch response.status.code {
+                case 200:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Operations.copilot_sol_usage_hyphen_metrics_hyphen_for_hyphen_enterprise_hyphen_team.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -1472,7 +1669,7 @@ public struct Client: APIProtocol {
     /// across an organization, with a further breakdown of suggestions, acceptances, and number of active users by editor and language for each day.
     /// See the response schema tab for detailed metrics definitions.
     ///
-    /// The response contains metrics for the prior 28 days. Usage metrics are processed once per day for the previous day,
+    /// The response contains metrics for up to 28 days prior. Usage metrics are processed once per day for the previous day,
     /// and the response will only include data up until yesterday. In order for an end user to be counted towards these metrics,
     /// they must have telemetry enabled in their IDE.
     ///

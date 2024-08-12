@@ -786,6 +786,9 @@ public struct Client: APIProtocol {
     ///
     /// Get a repository ruleset for an organization.
     ///
+    /// **Note:** To prevent leaking sensitive information, the `bypass_actors` property is only returned if the user
+    /// making the API request has write access to the ruleset.
+    ///
     /// - Remark: HTTP `GET /orgs/{org}/rulesets/{ruleset_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/rulesets/{ruleset_id}/get(repos/get-org-ruleset)`.
     public func repos_sol_get_hyphen_org_hyphen_ruleset(_ input: Operations.repos_sol_get_hyphen_org_hyphen_ruleset.Input) async throws -> Operations.repos_sol_get_hyphen_org_hyphen_ruleset.Output {
@@ -16627,6 +16630,9 @@ public struct Client: APIProtocol {
     /// Get a repository ruleset
     ///
     /// Get a ruleset for a repository.
+    ///
+    /// **Note:** To prevent leaking sensitive information, the `bypass_actors` property is only returned if the user
+    /// making the API request has write access to the ruleset.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/rulesets/{ruleset_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/rulesets/{ruleset_id}/get(repos/get-repo-ruleset)`.
