@@ -128,6 +128,17 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /orgs/{org}/code-security/configurations/{configuration_id}/repositories`.
     /// - Remark: Generated from `#/paths//orgs/{org}/code-security/configurations/{configuration_id}/repositories/get(code-security/get-repositories-for-configuration)`.
     func code_hyphen_security_sol_get_hyphen_repositories_hyphen_for_hyphen_configuration(_ input: Operations.code_hyphen_security_sol_get_hyphen_repositories_hyphen_for_hyphen_configuration.Input) async throws -> Operations.code_hyphen_security_sol_get_hyphen_repositories_hyphen_for_hyphen_configuration.Output
+    /// Get the code security configuration associated with a repository
+    ///
+    /// Get the code security configuration that manages a repository's code security settings.
+    ///
+    /// The authenticated user must be an administrator or security manager for the organization to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-security-configuration`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-security-configuration/get(code-security/get-configuration-for-repository)`.
+    func code_hyphen_security_sol_get_hyphen_configuration_hyphen_for_hyphen_repository(_ input: Operations.code_hyphen_security_sol_get_hyphen_configuration_hyphen_for_hyphen_repository.Input) async throws -> Operations.code_hyphen_security_sol_get_hyphen_configuration_hyphen_for_hyphen_repository.Output
 }
 
 /// Convenience overloads for operation inputs.
@@ -340,6 +351,25 @@ extension APIProtocol {
         try await code_hyphen_security_sol_get_hyphen_repositories_hyphen_for_hyphen_configuration(Operations.code_hyphen_security_sol_get_hyphen_repositories_hyphen_for_hyphen_configuration.Input(
             path: path,
             query: query,
+            headers: headers
+        ))
+    }
+    /// Get the code security configuration associated with a repository
+    ///
+    /// Get the code security configuration that manages a repository's code security settings.
+    ///
+    /// The authenticated user must be an administrator or security manager for the organization to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-security-configuration`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-security-configuration/get(code-security/get-configuration-for-repository)`.
+    public func code_hyphen_security_sol_get_hyphen_configuration_hyphen_for_hyphen_repository(
+        path: Operations.code_hyphen_security_sol_get_hyphen_configuration_hyphen_for_hyphen_repository.Input.Path,
+        headers: Operations.code_hyphen_security_sol_get_hyphen_configuration_hyphen_for_hyphen_repository.Input.Headers = .init()
+    ) async throws -> Operations.code_hyphen_security_sol_get_hyphen_configuration_hyphen_for_hyphen_repository.Output {
+        try await code_hyphen_security_sol_get_hyphen_configuration_hyphen_for_hyphen_repository(Operations.code_hyphen_security_sol_get_hyphen_configuration_hyphen_for_hyphen_repository.Input(
+            path: path,
             headers: headers
         ))
     }
@@ -1013,6 +1043,41 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/code-security-configuration/dependency_graph`.
             public var dependency_graph: Components.Schemas.code_hyphen_security_hyphen_configuration.dependency_graphPayload?
+            /// The enablement status of Automatic dependency submission
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-security-configuration/dependency_graph_autosubmit_action`.
+            @frozen public enum dependency_graph_autosubmit_actionPayload: String, Codable, Hashable, Sendable {
+                case enabled = "enabled"
+                case disabled = "disabled"
+                case not_set = "not_set"
+            }
+            /// The enablement status of Automatic dependency submission
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-security-configuration/dependency_graph_autosubmit_action`.
+            public var dependency_graph_autosubmit_action: Components.Schemas.code_hyphen_security_hyphen_configuration.dependency_graph_autosubmit_actionPayload?
+            /// Feature options for Automatic dependency submission
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-security-configuration/dependency_graph_autosubmit_action_options`.
+            public struct dependency_graph_autosubmit_action_optionsPayload: Codable, Hashable, Sendable {
+                /// Whether to use runners labeled with 'dependency-submission' or standard GitHub runners.
+                ///
+                /// - Remark: Generated from `#/components/schemas/code-security-configuration/dependency_graph_autosubmit_action_options/labeled_runners`.
+                public var labeled_runners: Swift.Bool?
+                /// Creates a new `dependency_graph_autosubmit_action_optionsPayload`.
+                ///
+                /// - Parameters:
+                ///   - labeled_runners: Whether to use runners labeled with 'dependency-submission' or standard GitHub runners.
+                public init(labeled_runners: Swift.Bool? = nil) {
+                    self.labeled_runners = labeled_runners
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case labeled_runners
+                }
+            }
+            /// Feature options for Automatic dependency submission
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-security-configuration/dependency_graph_autosubmit_action_options`.
+            public var dependency_graph_autosubmit_action_options: Components.Schemas.code_hyphen_security_hyphen_configuration.dependency_graph_autosubmit_action_optionsPayload?
             /// The enablement status of Dependabot alerts
             ///
             /// - Remark: Generated from `#/components/schemas/code-security-configuration/dependabot_alerts`.
@@ -1129,6 +1194,8 @@ public enum Components {
             ///   - description: A description of the code security configuration
             ///   - advanced_security: The enablement status of GitHub Advanced Security
             ///   - dependency_graph: The enablement status of Dependency Graph
+            ///   - dependency_graph_autosubmit_action: The enablement status of Automatic dependency submission
+            ///   - dependency_graph_autosubmit_action_options: Feature options for Automatic dependency submission
             ///   - dependabot_alerts: The enablement status of Dependabot alerts
             ///   - dependabot_security_updates: The enablement status of Dependabot security updates
             ///   - code_scanning_default_setup: The enablement status of code scanning default setup
@@ -1148,6 +1215,8 @@ public enum Components {
                 description: Swift.String? = nil,
                 advanced_security: Components.Schemas.code_hyphen_security_hyphen_configuration.advanced_securityPayload? = nil,
                 dependency_graph: Components.Schemas.code_hyphen_security_hyphen_configuration.dependency_graphPayload? = nil,
+                dependency_graph_autosubmit_action: Components.Schemas.code_hyphen_security_hyphen_configuration.dependency_graph_autosubmit_actionPayload? = nil,
+                dependency_graph_autosubmit_action_options: Components.Schemas.code_hyphen_security_hyphen_configuration.dependency_graph_autosubmit_action_optionsPayload? = nil,
                 dependabot_alerts: Components.Schemas.code_hyphen_security_hyphen_configuration.dependabot_alertsPayload? = nil,
                 dependabot_security_updates: Components.Schemas.code_hyphen_security_hyphen_configuration.dependabot_security_updatesPayload? = nil,
                 code_scanning_default_setup: Components.Schemas.code_hyphen_security_hyphen_configuration.code_scanning_default_setupPayload? = nil,
@@ -1167,6 +1236,8 @@ public enum Components {
                 self.description = description
                 self.advanced_security = advanced_security
                 self.dependency_graph = dependency_graph
+                self.dependency_graph_autosubmit_action = dependency_graph_autosubmit_action
+                self.dependency_graph_autosubmit_action_options = dependency_graph_autosubmit_action_options
                 self.dependabot_alerts = dependabot_alerts
                 self.dependabot_security_updates = dependabot_security_updates
                 self.code_scanning_default_setup = code_scanning_default_setup
@@ -1187,6 +1258,8 @@ public enum Components {
                 case description
                 case advanced_security
                 case dependency_graph
+                case dependency_graph_autosubmit_action
+                case dependency_graph_autosubmit_action_options
                 case dependabot_alerts
                 case dependabot_security_updates
                 case code_scanning_default_setup
@@ -1270,6 +1343,46 @@ public enum Components {
                 case repository
             }
         }
+        /// Code security configuration associated with a repository and attachment status
+        ///
+        /// - Remark: Generated from `#/components/schemas/code-security-configuration-for-repository`.
+        public struct code_hyphen_security_hyphen_configuration_hyphen_for_hyphen_repository: Codable, Hashable, Sendable {
+            /// The attachment status of the code security configuration on the repository.
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-security-configuration-for-repository/status`.
+            @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                case attached = "attached"
+                case attaching = "attaching"
+                case detached = "detached"
+                case removed = "removed"
+                case enforced = "enforced"
+                case failed = "failed"
+                case updating = "updating"
+                case removed_by_enterprise = "removed_by_enterprise"
+            }
+            /// The attachment status of the code security configuration on the repository.
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-security-configuration-for-repository/status`.
+            public var status: Components.Schemas.code_hyphen_security_hyphen_configuration_hyphen_for_hyphen_repository.statusPayload?
+            /// - Remark: Generated from `#/components/schemas/code-security-configuration-for-repository/configuration`.
+            public var configuration: Components.Schemas.code_hyphen_security_hyphen_configuration?
+            /// Creates a new `code_hyphen_security_hyphen_configuration_hyphen_for_hyphen_repository`.
+            ///
+            /// - Parameters:
+            ///   - status: The attachment status of the code security configuration on the repository.
+            ///   - configuration:
+            public init(
+                status: Components.Schemas.code_hyphen_security_hyphen_configuration_hyphen_for_hyphen_repository.statusPayload? = nil,
+                configuration: Components.Schemas.code_hyphen_security_hyphen_configuration? = nil
+            ) {
+                self.status = status
+                self.configuration = configuration
+            }
+            public enum CodingKeys: String, CodingKey {
+                case status
+                case configuration
+            }
+        }
     }
     /// Types generated from the `#/components/parameters` section of the OpenAPI document.
     public enum Parameters {
@@ -1281,6 +1394,14 @@ public enum Components {
         ///
         /// - Remark: Generated from `#/components/parameters/pagination-after`.
         public typealias pagination_hyphen_after = Swift.String
+        /// The account owner of the repository. The name is not case sensitive.
+        ///
+        /// - Remark: Generated from `#/components/parameters/owner`.
+        public typealias owner = Swift.String
+        /// The name of the repository without the `.git` extension. The name is not case sensitive.
+        ///
+        /// - Remark: Generated from `#/components/parameters/repo`.
+        public typealias repo = Swift.String
         /// The organization name. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/org`.
@@ -1776,6 +1897,41 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/dependency_graph`.
                     public var dependency_graph: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.dependency_graphPayload?
+                    /// The enablement status of Automatic dependency submission
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/dependency_graph_autosubmit_action`.
+                    @frozen public enum dependency_graph_autosubmit_actionPayload: String, Codable, Hashable, Sendable {
+                        case enabled = "enabled"
+                        case disabled = "disabled"
+                        case not_set = "not_set"
+                    }
+                    /// The enablement status of Automatic dependency submission
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/dependency_graph_autosubmit_action`.
+                    public var dependency_graph_autosubmit_action: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.dependency_graph_autosubmit_actionPayload?
+                    /// Feature options for Automatic dependency submission
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/dependency_graph_autosubmit_action_options`.
+                    public struct dependency_graph_autosubmit_action_optionsPayload: Codable, Hashable, Sendable {
+                        /// Whether to use runners labeled with 'dependency-submission' or standard GitHub runners.
+                        ///
+                        /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/dependency_graph_autosubmit_action_options/labeled_runners`.
+                        public var labeled_runners: Swift.Bool?
+                        /// Creates a new `dependency_graph_autosubmit_action_optionsPayload`.
+                        ///
+                        /// - Parameters:
+                        ///   - labeled_runners: Whether to use runners labeled with 'dependency-submission' or standard GitHub runners.
+                        public init(labeled_runners: Swift.Bool? = nil) {
+                            self.labeled_runners = labeled_runners
+                        }
+                        public enum CodingKeys: String, CodingKey {
+                            case labeled_runners
+                        }
+                    }
+                    /// Feature options for Automatic dependency submission
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/dependency_graph_autosubmit_action_options`.
+                    public var dependency_graph_autosubmit_action_options: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.dependency_graph_autosubmit_action_optionsPayload?
                     /// The enablement status of Dependabot alerts
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/dependabot_alerts`.
@@ -1878,6 +2034,8 @@ public enum Operations {
                     ///   - description: A description of the code security configuration
                     ///   - advanced_security: The enablement status of GitHub Advanced Security
                     ///   - dependency_graph: The enablement status of Dependency Graph
+                    ///   - dependency_graph_autosubmit_action: The enablement status of Automatic dependency submission
+                    ///   - dependency_graph_autosubmit_action_options: Feature options for Automatic dependency submission
                     ///   - dependabot_alerts: The enablement status of Dependabot alerts
                     ///   - dependabot_security_updates: The enablement status of Dependabot security updates
                     ///   - code_scanning_default_setup: The enablement status of code scanning default setup
@@ -1891,6 +2049,8 @@ public enum Operations {
                         description: Swift.String,
                         advanced_security: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.advanced_securityPayload? = nil,
                         dependency_graph: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.dependency_graphPayload? = nil,
+                        dependency_graph_autosubmit_action: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.dependency_graph_autosubmit_actionPayload? = nil,
+                        dependency_graph_autosubmit_action_options: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.dependency_graph_autosubmit_action_optionsPayload? = nil,
                         dependabot_alerts: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.dependabot_alertsPayload? = nil,
                         dependabot_security_updates: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.dependabot_security_updatesPayload? = nil,
                         code_scanning_default_setup: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.code_scanning_default_setupPayload? = nil,
@@ -1904,6 +2064,8 @@ public enum Operations {
                         self.description = description
                         self.advanced_security = advanced_security
                         self.dependency_graph = dependency_graph
+                        self.dependency_graph_autosubmit_action = dependency_graph_autosubmit_action
+                        self.dependency_graph_autosubmit_action_options = dependency_graph_autosubmit_action_options
                         self.dependabot_alerts = dependabot_alerts
                         self.dependabot_security_updates = dependabot_security_updates
                         self.code_scanning_default_setup = code_scanning_default_setup
@@ -1918,6 +2080,8 @@ public enum Operations {
                         case description
                         case advanced_security
                         case dependency_graph
+                        case dependency_graph_autosubmit_action
+                        case dependency_graph_autosubmit_action_options
                         case dependabot_alerts
                         case dependabot_security_updates
                         case code_scanning_default_setup
@@ -1944,6 +2108,14 @@ public enum Operations {
                         dependency_graph = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.dependency_graphPayload.self,
                             forKey: .dependency_graph
+                        )
+                        dependency_graph_autosubmit_action = try container.decodeIfPresent(
+                            Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.dependency_graph_autosubmit_actionPayload.self,
+                            forKey: .dependency_graph_autosubmit_action
+                        )
+                        dependency_graph_autosubmit_action_options = try container.decodeIfPresent(
+                            Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.dependency_graph_autosubmit_action_optionsPayload.self,
+                            forKey: .dependency_graph_autosubmit_action_options
                         )
                         dependabot_alerts = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.dependabot_alertsPayload.self,
@@ -1982,6 +2154,8 @@ public enum Operations {
                             "description",
                             "advanced_security",
                             "dependency_graph",
+                            "dependency_graph_autosubmit_action",
+                            "dependency_graph_autosubmit_action_options",
                             "dependabot_alerts",
                             "dependabot_security_updates",
                             "code_scanning_default_setup",
@@ -2842,6 +3016,41 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/dependency_graph`.
                     public var dependency_graph: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.dependency_graphPayload?
+                    /// The enablement status of Automatic dependency submission
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/dependency_graph_autosubmit_action`.
+                    @frozen public enum dependency_graph_autosubmit_actionPayload: String, Codable, Hashable, Sendable {
+                        case enabled = "enabled"
+                        case disabled = "disabled"
+                        case not_set = "not_set"
+                    }
+                    /// The enablement status of Automatic dependency submission
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/dependency_graph_autosubmit_action`.
+                    public var dependency_graph_autosubmit_action: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.dependency_graph_autosubmit_actionPayload?
+                    /// Feature options for Automatic dependency submission
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/dependency_graph_autosubmit_action_options`.
+                    public struct dependency_graph_autosubmit_action_optionsPayload: Codable, Hashable, Sendable {
+                        /// Whether to use runners labeled with 'dependency-submission' or standard GitHub runners.
+                        ///
+                        /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/dependency_graph_autosubmit_action_options/labeled_runners`.
+                        public var labeled_runners: Swift.Bool?
+                        /// Creates a new `dependency_graph_autosubmit_action_optionsPayload`.
+                        ///
+                        /// - Parameters:
+                        ///   - labeled_runners: Whether to use runners labeled with 'dependency-submission' or standard GitHub runners.
+                        public init(labeled_runners: Swift.Bool? = nil) {
+                            self.labeled_runners = labeled_runners
+                        }
+                        public enum CodingKeys: String, CodingKey {
+                            case labeled_runners
+                        }
+                    }
+                    /// Feature options for Automatic dependency submission
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/dependency_graph_autosubmit_action_options`.
+                    public var dependency_graph_autosubmit_action_options: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.dependency_graph_autosubmit_action_optionsPayload?
                     /// The enablement status of Dependabot alerts
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/dependabot_alerts`.
@@ -2944,6 +3153,8 @@ public enum Operations {
                     ///   - description: A description of the code security configuration
                     ///   - advanced_security: The enablement status of GitHub Advanced Security
                     ///   - dependency_graph: The enablement status of Dependency Graph
+                    ///   - dependency_graph_autosubmit_action: The enablement status of Automatic dependency submission
+                    ///   - dependency_graph_autosubmit_action_options: Feature options for Automatic dependency submission
                     ///   - dependabot_alerts: The enablement status of Dependabot alerts
                     ///   - dependabot_security_updates: The enablement status of Dependabot security updates
                     ///   - code_scanning_default_setup: The enablement status of code scanning default setup
@@ -2957,6 +3168,8 @@ public enum Operations {
                         description: Swift.String? = nil,
                         advanced_security: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.advanced_securityPayload? = nil,
                         dependency_graph: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.dependency_graphPayload? = nil,
+                        dependency_graph_autosubmit_action: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.dependency_graph_autosubmit_actionPayload? = nil,
+                        dependency_graph_autosubmit_action_options: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.dependency_graph_autosubmit_action_optionsPayload? = nil,
                         dependabot_alerts: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.dependabot_alertsPayload? = nil,
                         dependabot_security_updates: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.dependabot_security_updatesPayload? = nil,
                         code_scanning_default_setup: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.code_scanning_default_setupPayload? = nil,
@@ -2970,6 +3183,8 @@ public enum Operations {
                         self.description = description
                         self.advanced_security = advanced_security
                         self.dependency_graph = dependency_graph
+                        self.dependency_graph_autosubmit_action = dependency_graph_autosubmit_action
+                        self.dependency_graph_autosubmit_action_options = dependency_graph_autosubmit_action_options
                         self.dependabot_alerts = dependabot_alerts
                         self.dependabot_security_updates = dependabot_security_updates
                         self.code_scanning_default_setup = code_scanning_default_setup
@@ -2984,6 +3199,8 @@ public enum Operations {
                         case description
                         case advanced_security
                         case dependency_graph
+                        case dependency_graph_autosubmit_action
+                        case dependency_graph_autosubmit_action_options
                         case dependabot_alerts
                         case dependabot_security_updates
                         case code_scanning_default_setup
@@ -3010,6 +3227,14 @@ public enum Operations {
                         dependency_graph = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.dependency_graphPayload.self,
                             forKey: .dependency_graph
+                        )
+                        dependency_graph_autosubmit_action = try container.decodeIfPresent(
+                            Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.dependency_graph_autosubmit_actionPayload.self,
+                            forKey: .dependency_graph_autosubmit_action
+                        )
+                        dependency_graph_autosubmit_action_options = try container.decodeIfPresent(
+                            Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.dependency_graph_autosubmit_action_optionsPayload.self,
+                            forKey: .dependency_graph_autosubmit_action_options
                         )
                         dependabot_alerts = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.dependabot_alertsPayload.self,
@@ -3048,6 +3273,8 @@ public enum Operations {
                             "description",
                             "advanced_security",
                             "dependency_graph",
+                            "dependency_graph_autosubmit_action",
+                            "dependency_graph_autosubmit_action_options",
                             "dependabot_alerts",
                             "dependabot_security_updates",
                             "code_scanning_default_setup",
@@ -4030,6 +4257,243 @@ public enum Operations {
             /// Resource not found
             ///
             /// - Remark: Generated from `#/paths//orgs/{org}/code-security/configurations/{configuration_id}/repositories/get(code-security/get-repositories-for-configuration)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            case notFound(Components.Responses.not_found)
+            /// The associated value of the enum case if `self` is `.notFound`.
+            ///
+            /// - Throws: An error if `self` is not `.notFound`.
+            /// - SeeAlso: `.notFound`.
+            public var notFound: Components.Responses.not_found {
+                get throws {
+                    switch self {
+                    case let .notFound(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "notFound",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
+    /// Get the code security configuration associated with a repository
+    ///
+    /// Get the code security configuration that manages a repository's code security settings.
+    ///
+    /// The authenticated user must be an administrator or security manager for the organization to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-security-configuration`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-security-configuration/get(code-security/get-configuration-for-repository)`.
+    public enum code_hyphen_security_sol_get_hyphen_configuration_hyphen_for_hyphen_repository {
+        public static let id: Swift.String = "code-security/get-configuration-for-repository"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-security-configuration/GET/path`.
+            public struct Path: Sendable, Hashable {
+                /// The account owner of the repository. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-security-configuration/GET/path/owner`.
+                public var owner: Components.Parameters.owner
+                /// The name of the repository without the `.git` extension. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-security-configuration/GET/path/repo`.
+                public var repo: Components.Parameters.repo
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - owner: The account owner of the repository. The name is not case sensitive.
+                ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
+                public init(
+                    owner: Components.Parameters.owner,
+                    repo: Components.Parameters.repo
+                ) {
+                    self.owner = owner
+                    self.repo = repo
+                }
+            }
+            public var path: Operations.code_hyphen_security_sol_get_hyphen_configuration_hyphen_for_hyphen_repository.Input.Path
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-security-configuration/GET/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_security_sol_get_hyphen_configuration_hyphen_for_hyphen_repository.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_security_sol_get_hyphen_configuration_hyphen_for_hyphen_repository.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.code_hyphen_security_sol_get_hyphen_configuration_hyphen_for_hyphen_repository.Input.Headers
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - headers:
+            public init(
+                path: Operations.code_hyphen_security_sol_get_hyphen_configuration_hyphen_for_hyphen_repository.Input.Path,
+                headers: Operations.code_hyphen_security_sol_get_hyphen_configuration_hyphen_for_hyphen_repository.Input.Headers = .init()
+            ) {
+                self.path = path
+                self.headers = headers
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Ok: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-security-configuration/GET/responses/200/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-security-configuration/GET/responses/200/content/application\/json`.
+                    case json(Components.Schemas.code_hyphen_security_hyphen_configuration_hyphen_for_hyphen_repository)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Components.Schemas.code_hyphen_security_hyphen_configuration_hyphen_for_hyphen_repository {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.code_hyphen_security_sol_get_hyphen_configuration_hyphen_for_hyphen_repository.Output.Ok.Body
+                /// Creates a new `Ok`.
+                ///
+                /// - Parameters:
+                ///   - body: Received HTTP response body
+                public init(body: Operations.code_hyphen_security_sol_get_hyphen_configuration_hyphen_for_hyphen_repository.Output.Ok.Body) {
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-security-configuration/get(code-security/get-configuration-for-repository)/responses/200`.
+            ///
+            /// HTTP response code: `200 ok`.
+            case ok(Operations.code_hyphen_security_sol_get_hyphen_configuration_hyphen_for_hyphen_repository.Output.Ok)
+            /// The associated value of the enum case if `self` is `.ok`.
+            ///
+            /// - Throws: An error if `self` is not `.ok`.
+            /// - SeeAlso: `.ok`.
+            public var ok: Operations.code_hyphen_security_sol_get_hyphen_configuration_hyphen_for_hyphen_repository.Output.Ok {
+                get throws {
+                    switch self {
+                    case let .ok(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "ok",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// A header with no content is returned.
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-security-configuration/get(code-security/get-configuration-for-repository)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            case noContent(Components.Responses.no_content)
+            /// The associated value of the enum case if `self` is `.noContent`.
+            ///
+            /// - Throws: An error if `self` is not `.noContent`.
+            /// - SeeAlso: `.noContent`.
+            public var noContent: Components.Responses.no_content {
+                get throws {
+                    switch self {
+                    case let .noContent(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "noContent",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-security-configuration/get(code-security/get-configuration-for-repository)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            case notModified(Components.Responses.not_modified)
+            /// The associated value of the enum case if `self` is `.notModified`.
+            ///
+            /// - Throws: An error if `self` is not `.notModified`.
+            /// - SeeAlso: `.notModified`.
+            public var notModified: Components.Responses.not_modified {
+                get throws {
+                    switch self {
+                    case let .notModified(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "notModified",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Forbidden
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-security-configuration/get(code-security/get-configuration-for-repository)/responses/403`.
+            ///
+            /// HTTP response code: `403 forbidden`.
+            case forbidden(Components.Responses.forbidden)
+            /// The associated value of the enum case if `self` is `.forbidden`.
+            ///
+            /// - Throws: An error if `self` is not `.forbidden`.
+            /// - SeeAlso: `.forbidden`.
+            public var forbidden: Components.Responses.forbidden {
+                get throws {
+                    switch self {
+                    case let .forbidden(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "forbidden",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Resource not found
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-security-configuration/get(code-security/get-configuration-for-repository)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
             case notFound(Components.Responses.not_found)
