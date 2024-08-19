@@ -6726,15 +6726,19 @@ public enum Components {
         }
         /// Custom property defined on an organization
         ///
-        /// - Remark: Generated from `#/components/schemas/org-custom-property`.
-        public struct org_hyphen_custom_hyphen_property: Codable, Hashable, Sendable {
+        /// - Remark: Generated from `#/components/schemas/custom-property`.
+        public struct custom_hyphen_property: Codable, Hashable, Sendable {
             /// The name of the property
             ///
-            /// - Remark: Generated from `#/components/schemas/org-custom-property/property_name`.
+            /// - Remark: Generated from `#/components/schemas/custom-property/property_name`.
             public var property_name: Swift.String
+            /// The URL that can be used to fetch, update, or delete info about this property via the API.
+            ///
+            /// - Remark: Generated from `#/components/schemas/custom-property/url`.
+            public var url: Swift.String?
             /// The type of the value for the property
             ///
-            /// - Remark: Generated from `#/components/schemas/org-custom-property/value_type`.
+            /// - Remark: Generated from `#/components/schemas/custom-property/value_type`.
             @frozen public enum value_typePayload: String, Codable, Hashable, Sendable {
                 case string = "string"
                 case single_select = "single_select"
@@ -6743,19 +6747,19 @@ public enum Components {
             }
             /// The type of the value for the property
             ///
-            /// - Remark: Generated from `#/components/schemas/org-custom-property/value_type`.
-            public var value_type: Components.Schemas.org_hyphen_custom_hyphen_property.value_typePayload
+            /// - Remark: Generated from `#/components/schemas/custom-property/value_type`.
+            public var value_type: Components.Schemas.custom_hyphen_property.value_typePayload
             /// Whether the property is required.
             ///
-            /// - Remark: Generated from `#/components/schemas/org-custom-property/required`.
+            /// - Remark: Generated from `#/components/schemas/custom-property/required`.
             public var required: Swift.Bool?
             /// Default value of the property
             ///
-            /// - Remark: Generated from `#/components/schemas/org-custom-property/default_value`.
+            /// - Remark: Generated from `#/components/schemas/custom-property/default_value`.
             @frozen public enum default_valuePayload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/org-custom-property/default_value/case1`.
+                /// - Remark: Generated from `#/components/schemas/custom-property/default_value/case1`.
                 case case1(Swift.String)
-                /// - Remark: Generated from `#/components/schemas/org-custom-property/default_value/case2`.
+                /// - Remark: Generated from `#/components/schemas/custom-property/default_value/case2`.
                 case case2([Swift.String])
                 public init(from decoder: any Decoder) throws {
                     var errors: [any Error] = []
@@ -6788,32 +6792,33 @@ public enum Components {
             }
             /// Default value of the property
             ///
-            /// - Remark: Generated from `#/components/schemas/org-custom-property/default_value`.
-            public var default_value: Components.Schemas.org_hyphen_custom_hyphen_property.default_valuePayload?
+            /// - Remark: Generated from `#/components/schemas/custom-property/default_value`.
+            public var default_value: Components.Schemas.custom_hyphen_property.default_valuePayload?
             /// Short description of the property
             ///
-            /// - Remark: Generated from `#/components/schemas/org-custom-property/description`.
+            /// - Remark: Generated from `#/components/schemas/custom-property/description`.
             public var description: Swift.String?
             /// An ordered list of the allowed values of the property.
             /// The property can have up to 200 allowed values.
             ///
-            /// - Remark: Generated from `#/components/schemas/org-custom-property/allowed_values`.
+            /// - Remark: Generated from `#/components/schemas/custom-property/allowed_values`.
             public var allowed_values: [Swift.String]?
             /// Who can edit the values of the property
             ///
-            /// - Remark: Generated from `#/components/schemas/org-custom-property/values_editable_by`.
+            /// - Remark: Generated from `#/components/schemas/custom-property/values_editable_by`.
             @frozen public enum values_editable_byPayload: String, Codable, Hashable, Sendable {
                 case org_actors = "org_actors"
                 case org_and_repo_actors = "org_and_repo_actors"
             }
             /// Who can edit the values of the property
             ///
-            /// - Remark: Generated from `#/components/schemas/org-custom-property/values_editable_by`.
-            public var values_editable_by: Components.Schemas.org_hyphen_custom_hyphen_property.values_editable_byPayload?
-            /// Creates a new `org_hyphen_custom_hyphen_property`.
+            /// - Remark: Generated from `#/components/schemas/custom-property/values_editable_by`.
+            public var values_editable_by: Components.Schemas.custom_hyphen_property.values_editable_byPayload?
+            /// Creates a new `custom_hyphen_property`.
             ///
             /// - Parameters:
             ///   - property_name: The name of the property
+            ///   - url: The URL that can be used to fetch, update, or delete info about this property via the API.
             ///   - value_type: The type of the value for the property
             ///   - required: Whether the property is required.
             ///   - default_value: Default value of the property
@@ -6822,14 +6827,16 @@ public enum Components {
             ///   - values_editable_by: Who can edit the values of the property
             public init(
                 property_name: Swift.String,
-                value_type: Components.Schemas.org_hyphen_custom_hyphen_property.value_typePayload,
+                url: Swift.String? = nil,
+                value_type: Components.Schemas.custom_hyphen_property.value_typePayload,
                 required: Swift.Bool? = nil,
-                default_value: Components.Schemas.org_hyphen_custom_hyphen_property.default_valuePayload? = nil,
+                default_value: Components.Schemas.custom_hyphen_property.default_valuePayload? = nil,
                 description: Swift.String? = nil,
                 allowed_values: [Swift.String]? = nil,
-                values_editable_by: Components.Schemas.org_hyphen_custom_hyphen_property.values_editable_byPayload? = nil
+                values_editable_by: Components.Schemas.custom_hyphen_property.values_editable_byPayload? = nil
             ) {
                 self.property_name = property_name
+                self.url = url
                 self.value_type = value_type
                 self.required = required
                 self.default_value = default_value
@@ -6839,6 +6846,7 @@ public enum Components {
             }
             public enum CodingKeys: String, CodingKey {
                 case property_name
+                case url
                 case value_type
                 case required
                 case default_value
@@ -18141,12 +18149,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/properties/schema/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/properties/schema/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.org_hyphen_custom_hyphen_property])
+                    case json([Components.Schemas.custom_hyphen_property])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.org_hyphen_custom_hyphen_property] {
+                    public var json: [Components.Schemas.custom_hyphen_property] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -18312,12 +18320,12 @@ public enum Operations {
                     /// The array of custom properties to create or update.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/properties/schema/PATCH/requestBody/json/properties`.
-                    public var properties: [Components.Schemas.org_hyphen_custom_hyphen_property]
+                    public var properties: [Components.Schemas.custom_hyphen_property]
                     /// Creates a new `jsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - properties: The array of custom properties to create or update.
-                    public init(properties: [Components.Schemas.org_hyphen_custom_hyphen_property]) {
+                    public init(properties: [Components.Schemas.custom_hyphen_property]) {
                         self.properties = properties
                     }
                     public enum CodingKeys: String, CodingKey {
@@ -18349,12 +18357,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/properties/schema/PATCH/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/properties/schema/PATCH/responses/200/content/application\/json`.
-                    case json([Components.Schemas.org_hyphen_custom_hyphen_property])
+                    case json([Components.Schemas.custom_hyphen_property])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.org_hyphen_custom_hyphen_property] {
+                    public var json: [Components.Schemas.custom_hyphen_property] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -18537,12 +18545,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/properties/schema/{custom_property_name}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/properties/schema/{custom_property_name}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.org_hyphen_custom_hyphen_property)
+                    case json(Components.Schemas.custom_hyphen_property)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.org_hyphen_custom_hyphen_property {
+                    public var json: Components.Schemas.custom_hyphen_property {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -18835,12 +18843,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/properties/schema/{custom_property_name}/PUT/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/properties/schema/{custom_property_name}/PUT/responses/200/content/application\/json`.
-                    case json(Components.Schemas.org_hyphen_custom_hyphen_property)
+                    case json(Components.Schemas.custom_hyphen_property)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.org_hyphen_custom_hyphen_property {
+                    public var json: Components.Schemas.custom_hyphen_property {
                         get throws {
                             switch self {
                             case let .json(body):
