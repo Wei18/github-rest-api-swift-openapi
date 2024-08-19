@@ -6221,6 +6221,8 @@ public enum Components {
             public var slug: Swift.String?
             /// - Remark: Generated from `#/components/schemas/integration/node_id`.
             public var node_id: Swift.String
+            /// - Remark: Generated from `#/components/schemas/integration/client_id`.
+            public var client_id: Swift.String?
             /// - Remark: Generated from `#/components/schemas/integration/owner`.
             public var owner: Components.Schemas.nullable_hyphen_simple_hyphen_user?
             /// The name of the GitHub app
@@ -6351,8 +6353,6 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/integration/installations_count`.
             public var installations_count: Swift.Int?
-            /// - Remark: Generated from `#/components/schemas/integration/client_id`.
-            public var client_id: Swift.String?
             /// - Remark: Generated from `#/components/schemas/integration/client_secret`.
             public var client_secret: Swift.String?
             /// - Remark: Generated from `#/components/schemas/integration/webhook_secret`.
@@ -6365,6 +6365,7 @@ public enum Components {
             ///   - id: Unique identifier of the GitHub app
             ///   - slug: The slug name of the GitHub app
             ///   - node_id:
+            ///   - client_id:
             ///   - owner:
             ///   - name: The name of the GitHub app
             ///   - description:
@@ -6375,7 +6376,6 @@ public enum Components {
             ///   - permissions: The set of permissions for the GitHub app
             ///   - events: The list of events for the GitHub app
             ///   - installations_count: The number of installations associated with the GitHub app
-            ///   - client_id:
             ///   - client_secret:
             ///   - webhook_secret:
             ///   - pem:
@@ -6383,6 +6383,7 @@ public enum Components {
                 id: Swift.Int,
                 slug: Swift.String? = nil,
                 node_id: Swift.String,
+                client_id: Swift.String? = nil,
                 owner: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
                 name: Swift.String,
                 description: Swift.String? = nil,
@@ -6393,7 +6394,6 @@ public enum Components {
                 permissions: Components.Schemas.integration.permissionsPayload,
                 events: [Swift.String],
                 installations_count: Swift.Int? = nil,
-                client_id: Swift.String? = nil,
                 client_secret: Swift.String? = nil,
                 webhook_secret: Swift.String? = nil,
                 pem: Swift.String? = nil
@@ -6401,6 +6401,7 @@ public enum Components {
                 self.id = id
                 self.slug = slug
                 self.node_id = node_id
+                self.client_id = client_id
                 self.owner = owner
                 self.name = name
                 self.description = description
@@ -6411,7 +6412,6 @@ public enum Components {
                 self.permissions = permissions
                 self.events = events
                 self.installations_count = installations_count
-                self.client_id = client_id
                 self.client_secret = client_secret
                 self.webhook_secret = webhook_secret
                 self.pem = pem
@@ -6420,6 +6420,7 @@ public enum Components {
                 case id
                 case slug
                 case node_id
+                case client_id
                 case owner
                 case name
                 case description
@@ -6430,7 +6431,6 @@ public enum Components {
                 case permissions
                 case events
                 case installations_count
-                case client_id
                 case client_secret
                 case webhook_secret
                 case pem
@@ -8261,6 +8261,8 @@ public enum Components {
             public var slug: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-integration/node_id`.
             public var node_id: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-integration/client_id`.
+            public var client_id: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-integration/owner`.
             public var owner: Components.Schemas.nullable_hyphen_simple_hyphen_user?
             /// The name of the GitHub app
@@ -8391,8 +8393,6 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-integration/installations_count`.
             public var installations_count: Swift.Int?
-            /// - Remark: Generated from `#/components/schemas/nullable-integration/client_id`.
-            public var client_id: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-integration/client_secret`.
             public var client_secret: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-integration/webhook_secret`.
@@ -8405,6 +8405,7 @@ public enum Components {
             ///   - id: Unique identifier of the GitHub app
             ///   - slug: The slug name of the GitHub app
             ///   - node_id:
+            ///   - client_id:
             ///   - owner:
             ///   - name: The name of the GitHub app
             ///   - description:
@@ -8415,7 +8416,6 @@ public enum Components {
             ///   - permissions: The set of permissions for the GitHub app
             ///   - events: The list of events for the GitHub app
             ///   - installations_count: The number of installations associated with the GitHub app
-            ///   - client_id:
             ///   - client_secret:
             ///   - webhook_secret:
             ///   - pem:
@@ -8423,6 +8423,7 @@ public enum Components {
                 id: Swift.Int,
                 slug: Swift.String? = nil,
                 node_id: Swift.String,
+                client_id: Swift.String? = nil,
                 owner: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
                 name: Swift.String,
                 description: Swift.String? = nil,
@@ -8433,7 +8434,6 @@ public enum Components {
                 permissions: Components.Schemas.nullable_hyphen_integration.permissionsPayload,
                 events: [Swift.String],
                 installations_count: Swift.Int? = nil,
-                client_id: Swift.String? = nil,
                 client_secret: Swift.String? = nil,
                 webhook_secret: Swift.String? = nil,
                 pem: Swift.String? = nil
@@ -8441,6 +8441,7 @@ public enum Components {
                 self.id = id
                 self.slug = slug
                 self.node_id = node_id
+                self.client_id = client_id
                 self.owner = owner
                 self.name = name
                 self.description = description
@@ -8451,7 +8452,6 @@ public enum Components {
                 self.permissions = permissions
                 self.events = events
                 self.installations_count = installations_count
-                self.client_id = client_id
                 self.client_secret = client_secret
                 self.webhook_secret = webhook_secret
                 self.pem = pem
@@ -8460,6 +8460,7 @@ public enum Components {
                 case id
                 case slug
                 case node_id
+                case client_id
                 case owner
                 case name
                 case description
@@ -8470,7 +8471,6 @@ public enum Components {
                 case permissions
                 case events
                 case installations_count
-                case client_id
                 case client_secret
                 case webhook_secret
                 case pem
@@ -14477,6 +14477,8 @@ public enum Components {
                 public var owner: Components.Schemas.branch_hyphen_restriction_hyphen_policy.appsPayloadPayload.ownerPayload?
                 /// - Remark: Generated from `#/components/schemas/branch-restriction-policy/appsPayload/name`.
                 public var name: Swift.String?
+                /// - Remark: Generated from `#/components/schemas/branch-restriction-policy/appsPayload/client_id`.
+                public var client_id: Swift.String?
                 /// - Remark: Generated from `#/components/schemas/branch-restriction-policy/appsPayload/description`.
                 public var description: Swift.String?
                 /// - Remark: Generated from `#/components/schemas/branch-restriction-policy/appsPayload/external_url`.
@@ -14534,6 +14536,7 @@ public enum Components {
                 ///   - node_id:
                 ///   - owner:
                 ///   - name:
+                ///   - client_id:
                 ///   - description:
                 ///   - external_url:
                 ///   - html_url:
@@ -14547,6 +14550,7 @@ public enum Components {
                     node_id: Swift.String? = nil,
                     owner: Components.Schemas.branch_hyphen_restriction_hyphen_policy.appsPayloadPayload.ownerPayload? = nil,
                     name: Swift.String? = nil,
+                    client_id: Swift.String? = nil,
                     description: Swift.String? = nil,
                     external_url: Swift.String? = nil,
                     html_url: Swift.String? = nil,
@@ -14560,6 +14564,7 @@ public enum Components {
                     self.node_id = node_id
                     self.owner = owner
                     self.name = name
+                    self.client_id = client_id
                     self.description = description
                     self.external_url = external_url
                     self.html_url = html_url
@@ -14574,6 +14579,7 @@ public enum Components {
                     case node_id
                     case owner
                     case name
+                    case client_id
                     case description
                     case external_url
                     case html_url
@@ -25238,7 +25244,7 @@ public enum Operations {
                         ///
                         /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/PATCH/requestBody/json/security_and_analysis/secret_scanning_push_protection`.
                         public var secret_scanning_push_protection: Operations.repos_sol_update.Input.Body.jsonPayload.security_and_analysisPayload.secret_scanning_push_protectionPayload?
-                        /// Use the `status` property to enable or disable secret scanning non-provider patterns for this repository. For more information, see "[Secret scanning supported secrets](/code-security/secret-scanning/secret-scanning-patterns#supported-secrets)."
+                        /// Use the `status` property to enable or disable secret scanning non-provider patterns for this repository. For more information, see "[Supported secret scanning patterns](/code-security/secret-scanning/introduction/supported-secret-scanning-patterns#supported-secrets)."
                         ///
                         /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/PATCH/requestBody/json/security_and_analysis/secret_scanning_non_provider_patterns`.
                         public struct secret_scanning_non_provider_patternsPayload: Codable, Hashable, Sendable {
@@ -25257,7 +25263,7 @@ public enum Operations {
                                 case status
                             }
                         }
-                        /// Use the `status` property to enable or disable secret scanning non-provider patterns for this repository. For more information, see "[Secret scanning supported secrets](/code-security/secret-scanning/secret-scanning-patterns#supported-secrets)."
+                        /// Use the `status` property to enable or disable secret scanning non-provider patterns for this repository. For more information, see "[Supported secret scanning patterns](/code-security/secret-scanning/introduction/supported-secret-scanning-patterns#supported-secrets)."
                         ///
                         /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/PATCH/requestBody/json/security_and_analysis/secret_scanning_non_provider_patterns`.
                         public var secret_scanning_non_provider_patterns: Operations.repos_sol_update.Input.Body.jsonPayload.security_and_analysisPayload.secret_scanning_non_provider_patternsPayload?
@@ -25267,7 +25273,7 @@ public enum Operations {
                         ///   - advanced_security: Use the `status` property to enable or disable GitHub Advanced Security for this repository. For more information, see "[About GitHub Advanced Security](/github/getting-started-with-github/learning-about-github/about-github-advanced-security)."
                         ///   - secret_scanning: Use the `status` property to enable or disable secret scanning for this repository. For more information, see "[About secret scanning](/code-security/secret-security/about-secret-scanning)."
                         ///   - secret_scanning_push_protection: Use the `status` property to enable or disable secret scanning push protection for this repository. For more information, see "[Protecting pushes with secret scanning](/code-security/secret-scanning/protecting-pushes-with-secret-scanning)."
-                        ///   - secret_scanning_non_provider_patterns: Use the `status` property to enable or disable secret scanning non-provider patterns for this repository. For more information, see "[Secret scanning supported secrets](/code-security/secret-scanning/secret-scanning-patterns#supported-secrets)."
+                        ///   - secret_scanning_non_provider_patterns: Use the `status` property to enable or disable secret scanning non-provider patterns for this repository. For more information, see "[Supported secret scanning patterns](/code-security/secret-scanning/introduction/supported-secret-scanning-patterns#supported-secrets)."
                         public init(
                             advanced_security: Operations.repos_sol_update.Input.Body.jsonPayload.security_and_analysisPayload.advanced_securityPayload? = nil,
                             secret_scanning: Operations.repos_sol_update.Input.Body.jsonPayload.security_and_analysisPayload.secret_scanningPayload? = nil,
@@ -53665,6 +53671,29 @@ public enum Operations {
                     default:
                         try throwUnexpectedResponseStatus(
                             expectedStatus: "ok",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/readme/get(repos/get-readme)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            case notModified(Components.Responses.not_modified)
+            /// The associated value of the enum case if `self` is `.notModified`.
+            ///
+            /// - Throws: An error if `self` is not `.notModified`.
+            /// - SeeAlso: `.notModified`.
+            public var notModified: Components.Responses.not_modified {
+                get throws {
+                    switch self {
+                    case let .notModified(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "notModified",
                             response: self
                         )
                     }

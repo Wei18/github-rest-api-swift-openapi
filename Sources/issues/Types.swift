@@ -1534,6 +1534,8 @@ public enum Components {
             public var slug: Swift.String?
             /// - Remark: Generated from `#/components/schemas/integration/node_id`.
             public var node_id: Swift.String
+            /// - Remark: Generated from `#/components/schemas/integration/client_id`.
+            public var client_id: Swift.String?
             /// - Remark: Generated from `#/components/schemas/integration/owner`.
             public var owner: Components.Schemas.nullable_hyphen_simple_hyphen_user?
             /// The name of the GitHub app
@@ -1664,8 +1666,6 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/integration/installations_count`.
             public var installations_count: Swift.Int?
-            /// - Remark: Generated from `#/components/schemas/integration/client_id`.
-            public var client_id: Swift.String?
             /// - Remark: Generated from `#/components/schemas/integration/client_secret`.
             public var client_secret: Swift.String?
             /// - Remark: Generated from `#/components/schemas/integration/webhook_secret`.
@@ -1678,6 +1678,7 @@ public enum Components {
             ///   - id: Unique identifier of the GitHub app
             ///   - slug: The slug name of the GitHub app
             ///   - node_id:
+            ///   - client_id:
             ///   - owner:
             ///   - name: The name of the GitHub app
             ///   - description:
@@ -1688,7 +1689,6 @@ public enum Components {
             ///   - permissions: The set of permissions for the GitHub app
             ///   - events: The list of events for the GitHub app
             ///   - installations_count: The number of installations associated with the GitHub app
-            ///   - client_id:
             ///   - client_secret:
             ///   - webhook_secret:
             ///   - pem:
@@ -1696,6 +1696,7 @@ public enum Components {
                 id: Swift.Int,
                 slug: Swift.String? = nil,
                 node_id: Swift.String,
+                client_id: Swift.String? = nil,
                 owner: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
                 name: Swift.String,
                 description: Swift.String? = nil,
@@ -1706,7 +1707,6 @@ public enum Components {
                 permissions: Components.Schemas.integration.permissionsPayload,
                 events: [Swift.String],
                 installations_count: Swift.Int? = nil,
-                client_id: Swift.String? = nil,
                 client_secret: Swift.String? = nil,
                 webhook_secret: Swift.String? = nil,
                 pem: Swift.String? = nil
@@ -1714,6 +1714,7 @@ public enum Components {
                 self.id = id
                 self.slug = slug
                 self.node_id = node_id
+                self.client_id = client_id
                 self.owner = owner
                 self.name = name
                 self.description = description
@@ -1724,7 +1725,6 @@ public enum Components {
                 self.permissions = permissions
                 self.events = events
                 self.installations_count = installations_count
-                self.client_id = client_id
                 self.client_secret = client_secret
                 self.webhook_secret = webhook_secret
                 self.pem = pem
@@ -1733,6 +1733,7 @@ public enum Components {
                 case id
                 case slug
                 case node_id
+                case client_id
                 case owner
                 case name
                 case description
@@ -1743,7 +1744,6 @@ public enum Components {
                 case permissions
                 case events
                 case installations_count
-                case client_id
                 case client_secret
                 case webhook_secret
                 case pem
@@ -3093,6 +3093,8 @@ public enum Components {
             public var slug: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-integration/node_id`.
             public var node_id: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-integration/client_id`.
+            public var client_id: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-integration/owner`.
             public var owner: Components.Schemas.nullable_hyphen_simple_hyphen_user?
             /// The name of the GitHub app
@@ -3223,8 +3225,6 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-integration/installations_count`.
             public var installations_count: Swift.Int?
-            /// - Remark: Generated from `#/components/schemas/nullable-integration/client_id`.
-            public var client_id: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-integration/client_secret`.
             public var client_secret: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-integration/webhook_secret`.
@@ -3237,6 +3237,7 @@ public enum Components {
             ///   - id: Unique identifier of the GitHub app
             ///   - slug: The slug name of the GitHub app
             ///   - node_id:
+            ///   - client_id:
             ///   - owner:
             ///   - name: The name of the GitHub app
             ///   - description:
@@ -3247,7 +3248,6 @@ public enum Components {
             ///   - permissions: The set of permissions for the GitHub app
             ///   - events: The list of events for the GitHub app
             ///   - installations_count: The number of installations associated with the GitHub app
-            ///   - client_id:
             ///   - client_secret:
             ///   - webhook_secret:
             ///   - pem:
@@ -3255,6 +3255,7 @@ public enum Components {
                 id: Swift.Int,
                 slug: Swift.String? = nil,
                 node_id: Swift.String,
+                client_id: Swift.String? = nil,
                 owner: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
                 name: Swift.String,
                 description: Swift.String? = nil,
@@ -3265,7 +3266,6 @@ public enum Components {
                 permissions: Components.Schemas.nullable_hyphen_integration.permissionsPayload,
                 events: [Swift.String],
                 installations_count: Swift.Int? = nil,
-                client_id: Swift.String? = nil,
                 client_secret: Swift.String? = nil,
                 webhook_secret: Swift.String? = nil,
                 pem: Swift.String? = nil
@@ -3273,6 +3273,7 @@ public enum Components {
                 self.id = id
                 self.slug = slug
                 self.node_id = node_id
+                self.client_id = client_id
                 self.owner = owner
                 self.name = name
                 self.description = description
@@ -3283,7 +3284,6 @@ public enum Components {
                 self.permissions = permissions
                 self.events = events
                 self.installations_count = installations_count
-                self.client_id = client_id
                 self.client_secret = client_secret
                 self.webhook_secret = webhook_secret
                 self.pem = pem
@@ -3292,6 +3292,7 @@ public enum Components {
                 case id
                 case slug
                 case node_id
+                case client_id
                 case owner
                 case name
                 case description
@@ -3302,7 +3303,6 @@ public enum Components {
                 case permissions
                 case events
                 case installations_count
-                case client_id
                 case client_secret
                 case webhook_secret
                 case pem

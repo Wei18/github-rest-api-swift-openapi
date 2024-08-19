@@ -79,6 +79,17 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/locations`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/locations/get(secret-scanning/list-locations-for-alert)`.
     func secret_hyphen_scanning_sol_list_hyphen_locations_hyphen_for_hyphen_alert(_ input: Operations.secret_hyphen_scanning_sol_list_hyphen_locations_hyphen_for_hyphen_alert.Input) async throws -> Operations.secret_hyphen_scanning_sol_list_hyphen_locations_hyphen_for_hyphen_alert.Output
+    /// Create a push protection bypass
+    ///
+    /// Creates a bypass for a previously push protected secret.
+    ///
+    /// The authenticated user must be the original author of the committed secret.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `POST /repos/{owner}/{repo}/secret-scanning/push-protection-bypasses`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/push-protection-bypasses/post(secret-scanning/create-push-protection-bypass)`.
+    func secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass(_ input: Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Input) async throws -> Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Output
 }
 
 /// Convenience overloads for operation inputs.
@@ -207,6 +218,27 @@ extension APIProtocol {
             path: path,
             query: query,
             headers: headers
+        ))
+    }
+    /// Create a push protection bypass
+    ///
+    /// Creates a bypass for a previously push protected secret.
+    ///
+    /// The authenticated user must be the original author of the committed secret.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `POST /repos/{owner}/{repo}/secret-scanning/push-protection-bypasses`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/push-protection-bypasses/post(secret-scanning/create-push-protection-bypass)`.
+    public func secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass(
+        path: Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Input.Path,
+        headers: Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Input.Headers = .init(),
+        body: Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Input.Body
+    ) async throws -> Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Output {
+        try await secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass(Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Input(
+            path: path,
+            headers: headers,
+            body: body
         ))
     }
 }
@@ -986,7 +1018,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/organization-secret-scanning-alert/secret_type`.
             public var secret_type: Swift.String?
             /// User-friendly name for the detected secret, matching the `secret_type`.
-            /// For a list of built-in patterns, see "[Secret scanning patterns](https://docs.github.com/code-security/secret-scanning/secret-scanning-patterns#supported-secrets-for-advanced-security)."
+            /// For a list of built-in patterns, see "[Supported secret scanning patterns](https://docs.github.com/code-security/secret-scanning/introduction/supported-secret-scanning-patterns#supported-secrets)."
             ///
             /// - Remark: Generated from `#/components/schemas/organization-secret-scanning-alert/secret_type_display_name`.
             public var secret_type_display_name: Swift.String?
@@ -1142,7 +1174,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/secret-scanning-alert/secret_type`.
             public var secret_type: Swift.String?
             /// User-friendly name for the detected secret, matching the `secret_type`.
-            /// For a list of built-in patterns, see "[Secret scanning patterns](https://docs.github.com/code-security/secret-scanning/secret-scanning-patterns#supported-secrets-for-advanced-security)."
+            /// For a list of built-in patterns, see "[Supported secret scanning patterns](https://docs.github.com/code-security/secret-scanning/introduction/supported-secret-scanning-patterns#supported-secrets)."
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-alert/secret_type_display_name`.
             public var secret_type_display_name: Swift.String?
@@ -1824,6 +1856,51 @@ public enum Components {
                 case details
             }
         }
+        /// The reason for bypassing push protection.
+        ///
+        /// - Remark: Generated from `#/components/schemas/secret-scanning-push-protection-bypass-reason`.
+        @frozen public enum secret_hyphen_scanning_hyphen_push_hyphen_protection_hyphen_bypass_hyphen_reason: String, Codable, Hashable, Sendable {
+            case false_positive = "false_positive"
+            case used_in_tests = "used_in_tests"
+            case will_fix_later = "will_fix_later"
+        }
+        /// The ID of the push protection bypass placeholder. This value is returned on any push protected routes.
+        ///
+        /// - Remark: Generated from `#/components/schemas/secret-scanning-push-protection-bypass-placeholder-id`.
+        public typealias secret_hyphen_scanning_hyphen_push_hyphen_protection_hyphen_bypass_hyphen_placeholder_hyphen_id = Swift.String
+        /// - Remark: Generated from `#/components/schemas/secret-scanning-push-protection-bypass`.
+        public struct secret_hyphen_scanning_hyphen_push_hyphen_protection_hyphen_bypass: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/secret-scanning-push-protection-bypass/reason`.
+            public var reason: Components.Schemas.secret_hyphen_scanning_hyphen_push_hyphen_protection_hyphen_bypass_hyphen_reason?
+            /// The time that the bypass will expire in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
+            ///
+            /// - Remark: Generated from `#/components/schemas/secret-scanning-push-protection-bypass/expire_at`.
+            public var expire_at: Foundation.Date?
+            /// The token type this bypass is for.
+            ///
+            /// - Remark: Generated from `#/components/schemas/secret-scanning-push-protection-bypass/token_type`.
+            public var token_type: Swift.String?
+            /// Creates a new `secret_hyphen_scanning_hyphen_push_hyphen_protection_hyphen_bypass`.
+            ///
+            /// - Parameters:
+            ///   - reason:
+            ///   - expire_at: The time that the bypass will expire in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
+            ///   - token_type: The token type this bypass is for.
+            public init(
+                reason: Components.Schemas.secret_hyphen_scanning_hyphen_push_hyphen_protection_hyphen_bypass_hyphen_reason? = nil,
+                expire_at: Foundation.Date? = nil,
+                token_type: Swift.String? = nil
+            ) {
+                self.reason = reason
+                self.expire_at = expire_at
+                self.token_type = token_type
+            }
+            public enum CodingKeys: String, CodingKey {
+                case reason
+                case expire_at
+                case token_type
+            }
+        }
     }
     /// Types generated from the `#/components/parameters` section of the OpenAPI document.
     public enum Parameters {
@@ -1862,7 +1939,7 @@ public enum Components {
             case resolved = "resolved"
         }
         /// A comma-separated list of secret types to return. By default all secret types are returned.
-        /// See "[Secret scanning patterns](https://docs.github.com/code-security/secret-scanning/secret-scanning-patterns#supported-secrets-for-advanced-security)"
+        /// See "[Supported secret scanning patterns](https://docs.github.com/code-security/secret-scanning/introduction/supported-secret-scanning-patterns#supported-secrets)"
         /// for a complete list of secret types.
         ///
         /// - Remark: Generated from `#/components/parameters/secret-scanning-alert-secret-type`.
@@ -2052,7 +2129,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/enterprises/{enterprise}/secret-scanning/alerts/GET/query/state`.
                 public var state: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_state?
                 /// A comma-separated list of secret types to return. By default all secret types are returned.
-                /// See "[Secret scanning patterns](https://docs.github.com/code-security/secret-scanning/secret-scanning-patterns#supported-secrets-for-advanced-security)"
+                /// See "[Supported secret scanning patterns](https://docs.github.com/code-security/secret-scanning/introduction/supported-secret-scanning-patterns#supported-secrets)"
                 /// for a complete list of secret types.
                 ///
                 /// - Remark: Generated from `#/paths/enterprises/{enterprise}/secret-scanning/alerts/GET/query/secret_type`.
@@ -2346,7 +2423,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/secret-scanning/alerts/GET/query/state`.
                 public var state: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_state?
                 /// A comma-separated list of secret types to return. By default all secret types are returned.
-                /// See "[Secret scanning patterns](https://docs.github.com/code-security/secret-scanning/secret-scanning-patterns#supported-secrets-for-advanced-security)"
+                /// See "[Supported secret scanning patterns](https://docs.github.com/code-security/secret-scanning/introduction/supported-secret-scanning-patterns#supported-secrets)"
                 /// for a complete list of secret types.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/secret-scanning/alerts/GET/query/secret_type`.
@@ -2656,7 +2733,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/GET/query/state`.
                 public var state: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_state?
                 /// A comma-separated list of secret types to return. By default all secret types are returned.
-                /// See "[Secret scanning patterns](https://docs.github.com/code-security/secret-scanning/secret-scanning-patterns#supported-secrets-for-advanced-security)"
+                /// See "[Supported secret scanning patterns](https://docs.github.com/code-security/secret-scanning/introduction/supported-secret-scanning-patterns#supported-secrets)"
                 /// for a complete list of secret types.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/GET/query/secret_type`.
@@ -3618,6 +3695,287 @@ public enum Operations {
             /// Service unavailable
             ///
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/locations/get(secret-scanning/list-locations-for-alert)/responses/503`.
+            ///
+            /// HTTP response code: `503 serviceUnavailable`.
+            case serviceUnavailable(Components.Responses.service_unavailable)
+            /// The associated value of the enum case if `self` is `.serviceUnavailable`.
+            ///
+            /// - Throws: An error if `self` is not `.serviceUnavailable`.
+            /// - SeeAlso: `.serviceUnavailable`.
+            public var serviceUnavailable: Components.Responses.service_unavailable {
+                get throws {
+                    switch self {
+                    case let .serviceUnavailable(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "serviceUnavailable",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
+    /// Create a push protection bypass
+    ///
+    /// Creates a bypass for a previously push protected secret.
+    ///
+    /// The authenticated user must be the original author of the committed secret.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `POST /repos/{owner}/{repo}/secret-scanning/push-protection-bypasses`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/push-protection-bypasses/post(secret-scanning/create-push-protection-bypass)`.
+    public enum secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass {
+        public static let id: Swift.String = "secret-scanning/create-push-protection-bypass"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/push-protection-bypasses/POST/path`.
+            public struct Path: Sendable, Hashable {
+                /// The account owner of the repository. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/push-protection-bypasses/POST/path/owner`.
+                public var owner: Components.Parameters.owner
+                /// The name of the repository without the `.git` extension. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/push-protection-bypasses/POST/path/repo`.
+                public var repo: Components.Parameters.repo
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - owner: The account owner of the repository. The name is not case sensitive.
+                ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
+                public init(
+                    owner: Components.Parameters.owner,
+                    repo: Components.Parameters.repo
+                ) {
+                    self.owner = owner
+                    self.repo = repo
+                }
+            }
+            public var path: Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Input.Path
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/push-protection-bypasses/POST/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Input.Headers
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/push-protection-bypasses/POST/requestBody`.
+            @frozen public enum Body: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/push-protection-bypasses/POST/requestBody/json`.
+                public struct jsonPayload: Codable, Hashable, Sendable {
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/push-protection-bypasses/POST/requestBody/json/reason`.
+                    public var reason: Components.Schemas.secret_hyphen_scanning_hyphen_push_hyphen_protection_hyphen_bypass_hyphen_reason
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/push-protection-bypasses/POST/requestBody/json/placeholder_id`.
+                    public var placeholder_id: Components.Schemas.secret_hyphen_scanning_hyphen_push_hyphen_protection_hyphen_bypass_hyphen_placeholder_hyphen_id
+                    /// Creates a new `jsonPayload`.
+                    ///
+                    /// - Parameters:
+                    ///   - reason:
+                    ///   - placeholder_id:
+                    public init(
+                        reason: Components.Schemas.secret_hyphen_scanning_hyphen_push_hyphen_protection_hyphen_bypass_hyphen_reason,
+                        placeholder_id: Components.Schemas.secret_hyphen_scanning_hyphen_push_hyphen_protection_hyphen_bypass_hyphen_placeholder_hyphen_id
+                    ) {
+                        self.reason = reason
+                        self.placeholder_id = placeholder_id
+                    }
+                    public enum CodingKeys: String, CodingKey {
+                        case reason
+                        case placeholder_id
+                    }
+                }
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/push-protection-bypasses/POST/requestBody/content/application\/json`.
+                case json(Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Input.Body.jsonPayload)
+            }
+            public var body: Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Input.Body
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - headers:
+            ///   - body:
+            public init(
+                path: Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Input.Path,
+                headers: Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Input.Headers = .init(),
+                body: Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Input.Body
+            ) {
+                self.path = path
+                self.headers = headers
+                self.body = body
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Ok: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/push-protection-bypasses/POST/responses/200/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/push-protection-bypasses/POST/responses/200/content/application\/json`.
+                    case json(Components.Schemas.secret_hyphen_scanning_hyphen_push_hyphen_protection_hyphen_bypass)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Components.Schemas.secret_hyphen_scanning_hyphen_push_hyphen_protection_hyphen_bypass {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Output.Ok.Body
+                /// Creates a new `Ok`.
+                ///
+                /// - Parameters:
+                ///   - body: Received HTTP response body
+                public init(body: Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Output.Ok.Body) {
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/push-protection-bypasses/post(secret-scanning/create-push-protection-bypass)/responses/200`.
+            ///
+            /// HTTP response code: `200 ok`.
+            case ok(Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Output.Ok)
+            /// The associated value of the enum case if `self` is `.ok`.
+            ///
+            /// - Throws: An error if `self` is not `.ok`.
+            /// - SeeAlso: `.ok`.
+            public var ok: Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Output.Ok {
+                get throws {
+                    switch self {
+                    case let .ok(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "ok",
+                            response: self
+                        )
+                    }
+                }
+            }
+            public struct Forbidden: Sendable, Hashable {
+                /// Creates a new `Forbidden`.
+                public init() {}
+            }
+            /// User does not have enough permissions to perform this action.
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/push-protection-bypasses/post(secret-scanning/create-push-protection-bypass)/responses/403`.
+            ///
+            /// HTTP response code: `403 forbidden`.
+            case forbidden(Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Output.Forbidden)
+            /// The associated value of the enum case if `self` is `.forbidden`.
+            ///
+            /// - Throws: An error if `self` is not `.forbidden`.
+            /// - SeeAlso: `.forbidden`.
+            public var forbidden: Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Output.Forbidden {
+                get throws {
+                    switch self {
+                    case let .forbidden(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "forbidden",
+                            response: self
+                        )
+                    }
+                }
+            }
+            public struct NotFound: Sendable, Hashable {
+                /// Creates a new `NotFound`.
+                public init() {}
+            }
+            /// Placeholder ID not found, or push protection is disabled on this repository.
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/push-protection-bypasses/post(secret-scanning/create-push-protection-bypass)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            case notFound(Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Output.NotFound)
+            /// The associated value of the enum case if `self` is `.notFound`.
+            ///
+            /// - Throws: An error if `self` is not `.notFound`.
+            /// - SeeAlso: `.notFound`.
+            public var notFound: Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Output.NotFound {
+                get throws {
+                    switch self {
+                    case let .notFound(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "notFound",
+                            response: self
+                        )
+                    }
+                }
+            }
+            public struct UnprocessableContent: Sendable, Hashable {
+                /// Creates a new `UnprocessableContent`.
+                public init() {}
+            }
+            /// Bad request, input data missing or incorrect.
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/push-protection-bypasses/post(secret-scanning/create-push-protection-bypass)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            case unprocessableContent(Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Output.UnprocessableContent)
+            /// The associated value of the enum case if `self` is `.unprocessableContent`.
+            ///
+            /// - Throws: An error if `self` is not `.unprocessableContent`.
+            /// - SeeAlso: `.unprocessableContent`.
+            public var unprocessableContent: Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Output.UnprocessableContent {
+                get throws {
+                    switch self {
+                    case let .unprocessableContent(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "unprocessableContent",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Service unavailable
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/push-protection-bypasses/post(secret-scanning/create-push-protection-bypass)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
             case serviceUnavailable(Components.Responses.service_unavailable)

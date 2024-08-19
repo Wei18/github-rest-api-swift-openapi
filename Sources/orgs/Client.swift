@@ -5551,7 +5551,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            [Components.Schemas.org_hyphen_custom_hyphen_property].self,
+                            [Components.Schemas.custom_hyphen_property].self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -5672,7 +5672,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            [Components.Schemas.org_hyphen_custom_hyphen_property].self,
+                            [Components.Schemas.custom_hyphen_property].self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -5782,7 +5782,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.org_hyphen_custom_hyphen_property.self,
+                            Components.Schemas.custom_hyphen_property.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -5904,7 +5904,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.org_hyphen_custom_hyphen_property.self,
+                            Components.Schemas.custom_hyphen_property.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
