@@ -18726,6 +18726,102 @@ public enum Components {
                 case commit
             }
         }
+        /// The ID of the push protection bypass placeholder. This value is returned on any push protected routes.
+        ///
+        /// - Remark: Generated from `#/components/schemas/secret-scanning-push-protection-bypass-placeholder-id`.
+        public typealias secret_hyphen_scanning_hyphen_push_hyphen_protection_hyphen_bypass_hyphen_placeholder_hyphen_id = Swift.String
+        /// Repository rule violation was detected
+        ///
+        /// - Remark: Generated from `#/components/schemas/repository-rule-violation-error`.
+        public struct repository_hyphen_rule_hyphen_violation_hyphen_error: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/repository-rule-violation-error/message`.
+            public var message: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/repository-rule-violation-error/documentation_url`.
+            public var documentation_url: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/repository-rule-violation-error/status`.
+            public var status: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/repository-rule-violation-error/metadata`.
+            public struct metadataPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/repository-rule-violation-error/metadata/secret_scanning`.
+                public struct secret_scanningPayload: Codable, Hashable, Sendable {
+                    /// - Remark: Generated from `#/components/schemas/repository-rule-violation-error/metadata/secret_scanning/bypass_placeholdersPayload`.
+                    public struct bypass_placeholdersPayloadPayload: Codable, Hashable, Sendable {
+                        /// - Remark: Generated from `#/components/schemas/repository-rule-violation-error/metadata/secret_scanning/bypass_placeholdersPayload/placeholder_id`.
+                        public var placeholder_id: Components.Schemas.secret_hyphen_scanning_hyphen_push_hyphen_protection_hyphen_bypass_hyphen_placeholder_hyphen_id?
+                        /// - Remark: Generated from `#/components/schemas/repository-rule-violation-error/metadata/secret_scanning/bypass_placeholdersPayload/token_type`.
+                        public var token_type: Swift.String?
+                        /// Creates a new `bypass_placeholdersPayloadPayload`.
+                        ///
+                        /// - Parameters:
+                        ///   - placeholder_id:
+                        ///   - token_type:
+                        public init(
+                            placeholder_id: Components.Schemas.secret_hyphen_scanning_hyphen_push_hyphen_protection_hyphen_bypass_hyphen_placeholder_hyphen_id? = nil,
+                            token_type: Swift.String? = nil
+                        ) {
+                            self.placeholder_id = placeholder_id
+                            self.token_type = token_type
+                        }
+                        public enum CodingKeys: String, CodingKey {
+                            case placeholder_id
+                            case token_type
+                        }
+                    }
+                    /// - Remark: Generated from `#/components/schemas/repository-rule-violation-error/metadata/secret_scanning/bypass_placeholders`.
+                    public typealias bypass_placeholdersPayload = [Components.Schemas.repository_hyphen_rule_hyphen_violation_hyphen_error.metadataPayload.secret_scanningPayload.bypass_placeholdersPayloadPayload]
+                    /// - Remark: Generated from `#/components/schemas/repository-rule-violation-error/metadata/secret_scanning/bypass_placeholders`.
+                    public var bypass_placeholders: Components.Schemas.repository_hyphen_rule_hyphen_violation_hyphen_error.metadataPayload.secret_scanningPayload.bypass_placeholdersPayload?
+                    /// Creates a new `secret_scanningPayload`.
+                    ///
+                    /// - Parameters:
+                    ///   - bypass_placeholders:
+                    public init(bypass_placeholders: Components.Schemas.repository_hyphen_rule_hyphen_violation_hyphen_error.metadataPayload.secret_scanningPayload.bypass_placeholdersPayload? = nil) {
+                        self.bypass_placeholders = bypass_placeholders
+                    }
+                    public enum CodingKeys: String, CodingKey {
+                        case bypass_placeholders
+                    }
+                }
+                /// - Remark: Generated from `#/components/schemas/repository-rule-violation-error/metadata/secret_scanning`.
+                public var secret_scanning: Components.Schemas.repository_hyphen_rule_hyphen_violation_hyphen_error.metadataPayload.secret_scanningPayload?
+                /// Creates a new `metadataPayload`.
+                ///
+                /// - Parameters:
+                ///   - secret_scanning:
+                public init(secret_scanning: Components.Schemas.repository_hyphen_rule_hyphen_violation_hyphen_error.metadataPayload.secret_scanningPayload? = nil) {
+                    self.secret_scanning = secret_scanning
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case secret_scanning
+                }
+            }
+            /// - Remark: Generated from `#/components/schemas/repository-rule-violation-error/metadata`.
+            public var metadata: Components.Schemas.repository_hyphen_rule_hyphen_violation_hyphen_error.metadataPayload?
+            /// Creates a new `repository_hyphen_rule_hyphen_violation_hyphen_error`.
+            ///
+            /// - Parameters:
+            ///   - message:
+            ///   - documentation_url:
+            ///   - status:
+            ///   - metadata:
+            public init(
+                message: Swift.String? = nil,
+                documentation_url: Swift.String? = nil,
+                status: Swift.String? = nil,
+                metadata: Components.Schemas.repository_hyphen_rule_hyphen_violation_hyphen_error.metadataPayload? = nil
+            ) {
+                self.message = message
+                self.documentation_url = documentation_url
+                self.status = status
+                self.metadata = metadata
+            }
+            public enum CodingKeys: String, CodingKey {
+                case message
+                case documentation_url
+                case status
+                case metadata
+            }
+        }
         /// Contributor
         ///
         /// - Remark: Generated from `#/components/schemas/contributor`.
@@ -40466,17 +40562,80 @@ public enum Operations {
                     }
                 }
             }
+            public struct Conflict: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/contents/{path}/PUT/responses/409/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/contents/{path}/PUT/responses/409/content/json`.
+                    @frozen public enum jsonPayload: Codable, Hashable, Sendable {
+                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/contents/{path}/PUT/responses/409/content/json/case1`.
+                        case basic_hyphen_error(Components.Schemas.basic_hyphen_error)
+                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/contents/{path}/PUT/responses/409/content/json/case2`.
+                        case repository_hyphen_rule_hyphen_violation_hyphen_error(Components.Schemas.repository_hyphen_rule_hyphen_violation_hyphen_error)
+                        public init(from decoder: any Decoder) throws {
+                            var errors: [any Error] = []
+                            do {
+                                self = .basic_hyphen_error(try .init(from: decoder))
+                                return
+                            } catch {
+                                errors.append(error)
+                            }
+                            do {
+                                self = .repository_hyphen_rule_hyphen_violation_hyphen_error(try .init(from: decoder))
+                                return
+                            } catch {
+                                errors.append(error)
+                            }
+                            throw Swift.DecodingError.failedToDecodeOneOfSchema(
+                                type: Self.self,
+                                codingPath: decoder.codingPath,
+                                errors: errors
+                            )
+                        }
+                        public func encode(to encoder: any Encoder) throws {
+                            switch self {
+                            case let .basic_hyphen_error(value):
+                                try value.encode(to: encoder)
+                            case let .repository_hyphen_rule_hyphen_violation_hyphen_error(value):
+                                try value.encode(to: encoder)
+                            }
+                        }
+                    }
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/contents/{path}/PUT/responses/409/content/application\/json`.
+                    case json(Operations.repos_sol_create_hyphen_or_hyphen_update_hyphen_file_hyphen_contents.Output.Conflict.Body.jsonPayload)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Operations.repos_sol_create_hyphen_or_hyphen_update_hyphen_file_hyphen_contents.Output.Conflict.Body.jsonPayload {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.repos_sol_create_hyphen_or_hyphen_update_hyphen_file_hyphen_contents.Output.Conflict.Body
+                /// Creates a new `Conflict`.
+                ///
+                /// - Parameters:
+                ///   - body: Received HTTP response body
+                public init(body: Operations.repos_sol_create_hyphen_or_hyphen_update_hyphen_file_hyphen_contents.Output.Conflict.Body) {
+                    self.body = body
+                }
+            }
             /// Conflict
             ///
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/contents/{path}/put(repos/create-or-update-file-contents)/responses/409`.
             ///
             /// HTTP response code: `409 conflict`.
-            case conflict(Components.Responses.conflict)
+            case conflict(Operations.repos_sol_create_hyphen_or_hyphen_update_hyphen_file_hyphen_contents.Output.Conflict)
             /// The associated value of the enum case if `self` is `.conflict`.
             ///
             /// - Throws: An error if `self` is not `.conflict`.
             /// - SeeAlso: `.conflict`.
-            public var conflict: Components.Responses.conflict {
+            public var conflict: Operations.repos_sol_create_hyphen_or_hyphen_update_hyphen_file_hyphen_contents.Output.Conflict {
                 get throws {
                     switch self {
                     case let .conflict(response):

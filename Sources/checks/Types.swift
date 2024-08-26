@@ -2053,7 +2053,7 @@ public enum Components {
             /// The id of the check.
             ///
             /// - Remark: Generated from `#/components/schemas/check-run/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// The SHA of the commit that is being checked.
             ///
             /// - Remark: Generated from `#/components/schemas/check-run/head_sha`.
@@ -2192,7 +2192,7 @@ public enum Components {
             ///   - pull_requests: Pull requests that are open with a `head_sha` or `head_branch` that matches the check. The returned pull requests do not necessarily indicate pull requests that triggered the check.
             ///   - deployment:
             public init(
-                id: Swift.Int,
+                id: Swift.Int64,
                 head_sha: Swift.String,
                 node_id: Swift.String,
                 external_id: Swift.String? = nil,

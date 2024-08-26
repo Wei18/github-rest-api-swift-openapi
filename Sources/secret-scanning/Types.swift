@@ -1139,6 +1139,10 @@ public enum Components {
                 case validity
             }
         }
+        /// The ID of the push protection bypass placeholder. This value is returned on any push protected routes.
+        ///
+        /// - Remark: Generated from `#/components/schemas/secret-scanning-push-protection-bypass-placeholder-id`.
+        public typealias secret_hyphen_scanning_hyphen_push_hyphen_protection_hyphen_bypass_hyphen_placeholder_hyphen_id = Swift.String
         /// - Remark: Generated from `#/components/schemas/secret-scanning-alert`.
         public struct secret_hyphen_scanning_hyphen_alert: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/secret-scanning-alert/number`.
@@ -1864,10 +1868,6 @@ public enum Components {
             case used_in_tests = "used_in_tests"
             case will_fix_later = "will_fix_later"
         }
-        /// The ID of the push protection bypass placeholder. This value is returned on any push protected routes.
-        ///
-        /// - Remark: Generated from `#/components/schemas/secret-scanning-push-protection-bypass-placeholder-id`.
-        public typealias secret_hyphen_scanning_hyphen_push_hyphen_protection_hyphen_bypass_hyphen_placeholder_hyphen_id = Swift.String
         /// - Remark: Generated from `#/components/schemas/secret-scanning-push-protection-bypass`.
         public struct secret_hyphen_scanning_hyphen_push_hyphen_protection_hyphen_bypass: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/secret-scanning-push-protection-bypass/reason`.
