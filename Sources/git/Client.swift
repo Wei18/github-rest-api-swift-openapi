@@ -176,7 +176,7 @@ public struct Client: APIProtocol {
                     return .forbidden(.init(body: body))
                 case 422:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.validation_failed.Body
+                    let body: Operations.git_sol_create_hyphen_blob.Output.UnprocessableContent.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -186,7 +186,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.validation_hyphen_error.self,
+                            Operations.git_sol_create_hyphen_blob.Output.UnprocessableContent.Body.jsonPayload.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
