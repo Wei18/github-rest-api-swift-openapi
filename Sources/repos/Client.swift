@@ -8476,7 +8476,7 @@ public struct Client: APIProtocol {
                     return .unprocessableContent(.init(body: body))
                 case 409:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.conflict.Body
+                    let body: Operations.repos_sol_create_hyphen_or_hyphen_update_hyphen_file_hyphen_contents.Output.Conflict.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -8486,7 +8486,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Operations.repos_sol_create_hyphen_or_hyphen_update_hyphen_file_hyphen_contents.Output.Conflict.Body.jsonPayload.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
