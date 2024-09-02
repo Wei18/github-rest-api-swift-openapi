@@ -141,6 +141,20 @@ public struct Client: APIProtocol {
                     in: &request,
                     style: .form,
                     explode: true,
+                    name: "epss_percentage",
+                    value: input.query.epss_percentage
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "epss_percentile",
+                    value: input.query.epss_percentile
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
                     name: "before",
                     value: input.query.before
                 )

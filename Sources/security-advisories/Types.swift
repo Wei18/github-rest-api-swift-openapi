@@ -764,6 +764,31 @@ public enum Components {
             public typealias cwesPayload = [Components.Schemas.global_hyphen_advisory.cwesPayloadPayload]
             /// - Remark: Generated from `#/components/schemas/global-advisory/cwes`.
             public var cwes: Components.Schemas.global_hyphen_advisory.cwesPayload?
+            /// - Remark: Generated from `#/components/schemas/global-advisory/epss`.
+            public struct epssPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/global-advisory/epss/percentage`.
+                public var percentage: Swift.Double?
+                /// - Remark: Generated from `#/components/schemas/global-advisory/epss/percentile`.
+                public var percentile: Swift.Double?
+                /// Creates a new `epssPayload`.
+                ///
+                /// - Parameters:
+                ///   - percentage:
+                ///   - percentile:
+                public init(
+                    percentage: Swift.Double? = nil,
+                    percentile: Swift.Double? = nil
+                ) {
+                    self.percentage = percentage
+                    self.percentile = percentile
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case percentage
+                    case percentile
+                }
+            }
+            /// - Remark: Generated from `#/components/schemas/global-advisory/epss`.
+            public var epss: Components.Schemas.global_hyphen_advisory.epssPayload?
             /// - Remark: Generated from `#/components/schemas/global-advisory/creditsPayload`.
             public struct creditsPayloadPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/global-advisory/creditsPayload/user`.
@@ -818,6 +843,7 @@ public enum Components {
             ///   - vulnerabilities: The products and respective version ranges affected by the advisory.
             ///   - cvss:
             ///   - cwes:
+            ///   - epss:
             ///   - credits: The users who contributed to the advisory.
             public init(
                 ghsa_id: Swift.String,
@@ -840,6 +866,7 @@ public enum Components {
                 vulnerabilities: [Components.Schemas.vulnerability]? = nil,
                 cvss: Components.Schemas.global_hyphen_advisory.cvssPayload? = nil,
                 cwes: Components.Schemas.global_hyphen_advisory.cwesPayload? = nil,
+                epss: Components.Schemas.global_hyphen_advisory.epssPayload? = nil,
                 credits: Components.Schemas.global_hyphen_advisory.creditsPayload? = nil
             ) {
                 self.ghsa_id = ghsa_id
@@ -862,6 +889,7 @@ public enum Components {
                 self.vulnerabilities = vulnerabilities
                 self.cvss = cvss
                 self.cwes = cwes
+                self.epss = epss
                 self.credits = credits
             }
             public enum CodingKeys: String, CodingKey {
@@ -885,6 +913,7 @@ public enum Components {
                 case vulnerabilities
                 case cvss
                 case cwes
+                case epss
                 case credits
             }
             public init(from decoder: any Decoder) throws {
@@ -969,6 +998,10 @@ public enum Components {
                     Components.Schemas.global_hyphen_advisory.cwesPayload.self,
                     forKey: .cwes
                 )
+                epss = try container.decodeIfPresent(
+                    Components.Schemas.global_hyphen_advisory.epssPayload.self,
+                    forKey: .epss
+                )
                 credits = try container.decodeIfPresent(
                     Components.Schemas.global_hyphen_advisory.creditsPayload.self,
                     forKey: .credits
@@ -994,6 +1027,7 @@ public enum Components {
                     "vulnerabilities",
                     "cvss",
                     "cwes",
+                    "epss",
                     "credits"
                 ])
             }
@@ -6410,6 +6444,16 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/advisories/GET/query/modified`.
                 public var modified: Swift.String?
+                /// If specified, only return advisories that have an EPSS percentage score that matches the provided value.
+                /// The EPSS percentage represents the likelihood of a CVE being exploited.
+                ///
+                /// - Remark: Generated from `#/paths/advisories/GET/query/epss_percentage`.
+                public var epss_percentage: Swift.String?
+                /// If specified, only return advisories that have an EPSS percentile score that matches the provided value.
+                /// The EPSS percentile represents the relative rank of the CVE's likelihood of being exploited compared to other CVEs.
+                ///
+                /// - Remark: Generated from `#/paths/advisories/GET/query/epss_percentile`.
+                public var epss_percentile: Swift.String?
                 /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/advisories/GET/query/before`.
@@ -6435,6 +6479,8 @@ public enum Operations {
                 @frozen public enum sortPayload: String, Codable, Hashable, Sendable {
                     case updated = "updated"
                     case published = "published"
+                    case epss_percentage = "epss_percentage"
+                    case epss_percentile = "epss_percentile"
                 }
                 /// The property to sort the results by.
                 ///
@@ -6454,6 +6500,8 @@ public enum Operations {
                 ///   - published: If specified, only return advisories that were published on a date or date range.
                 ///   - updated: If specified, only return advisories that were updated on a date or date range.
                 ///   - modified: If specified, only show advisories that were updated or published on a date or date range.
+                ///   - epss_percentage: If specified, only return advisories that have an EPSS percentage score that matches the provided value.
+                ///   - epss_percentile: If specified, only return advisories that have an EPSS percentile score that matches the provided value.
                 ///   - before: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - after: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - direction: The direction to sort the results by.
@@ -6471,6 +6519,8 @@ public enum Operations {
                     published: Swift.String? = nil,
                     updated: Swift.String? = nil,
                     modified: Swift.String? = nil,
+                    epss_percentage: Swift.String? = nil,
+                    epss_percentile: Swift.String? = nil,
                     before: Components.Parameters.pagination_hyphen_before? = nil,
                     after: Components.Parameters.pagination_hyphen_after? = nil,
                     direction: Components.Parameters.direction? = nil,
@@ -6488,6 +6538,8 @@ public enum Operations {
                     self.published = published
                     self.updated = updated
                     self.modified = modified
+                    self.epss_percentage = epss_percentage
+                    self.epss_percentile = epss_percentile
                     self.before = before
                     self.after = after
                     self.direction = direction

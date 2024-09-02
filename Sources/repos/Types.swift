@@ -10976,7 +10976,6 @@ public enum Components {
                 case RepositoryRole = "RepositoryRole"
                 case Team = "Team"
                 case DeployKey = "DeployKey"
-                case EnterpriseTeam = "EnterpriseTeam"
             }
             /// The type of actor that can bypass a ruleset.
             ///
