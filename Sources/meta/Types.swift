@@ -459,6 +459,31 @@ public enum Components {
                 public var packages: [Swift.String]?
                 /// - Remark: Generated from `#/components/schemas/api-overview/domains/actions`.
                 public var actions: [Swift.String]?
+                /// - Remark: Generated from `#/components/schemas/api-overview/domains/artifact_attestations`.
+                public struct artifact_attestationsPayload: Codable, Hashable, Sendable {
+                    /// - Remark: Generated from `#/components/schemas/api-overview/domains/artifact_attestations/trust_domain`.
+                    public var trust_domain: Swift.String?
+                    /// - Remark: Generated from `#/components/schemas/api-overview/domains/artifact_attestations/services`.
+                    public var services: [Swift.String]?
+                    /// Creates a new `artifact_attestationsPayload`.
+                    ///
+                    /// - Parameters:
+                    ///   - trust_domain:
+                    ///   - services:
+                    public init(
+                        trust_domain: Swift.String? = nil,
+                        services: [Swift.String]? = nil
+                    ) {
+                        self.trust_domain = trust_domain
+                        self.services = services
+                    }
+                    public enum CodingKeys: String, CodingKey {
+                        case trust_domain
+                        case services
+                    }
+                }
+                /// - Remark: Generated from `#/components/schemas/api-overview/domains/artifact_attestations`.
+                public var artifact_attestations: Components.Schemas.api_hyphen_overview.domainsPayload.artifact_attestationsPayload?
                 /// Creates a new `domainsPayload`.
                 ///
                 /// - Parameters:
@@ -467,18 +492,21 @@ public enum Components {
                 ///   - copilot:
                 ///   - packages:
                 ///   - actions:
+                ///   - artifact_attestations:
                 public init(
                     website: [Swift.String]? = nil,
                     codespaces: [Swift.String]? = nil,
                     copilot: [Swift.String]? = nil,
                     packages: [Swift.String]? = nil,
-                    actions: [Swift.String]? = nil
+                    actions: [Swift.String]? = nil,
+                    artifact_attestations: Components.Schemas.api_hyphen_overview.domainsPayload.artifact_attestationsPayload? = nil
                 ) {
                     self.website = website
                     self.codespaces = codespaces
                     self.copilot = copilot
                     self.packages = packages
                     self.actions = actions
+                    self.artifact_attestations = artifact_attestations
                 }
                 public enum CodingKeys: String, CodingKey {
                     case website
@@ -486,6 +514,7 @@ public enum Components {
                     case copilot
                     case packages
                     case actions
+                    case artifact_attestations
                 }
             }
             /// - Remark: Generated from `#/components/schemas/api-overview/domains`.
