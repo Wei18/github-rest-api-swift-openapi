@@ -1,0 +1,5081 @@
+{
+  "abstract" : [
+    {
+      "text" : "GitHub’s v3 REST API.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:23GitHubRestAPICodespaces6ClientV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "Client"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPICodespaces"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "Client"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Client.swift",
+      "url" : "https:\/\/github.com\/Wei18\/github-rest-api-swift-openapi\/Sources\/codespaces\/Client.swift#L14"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "Client"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "Client"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/APIProtocol",
+        "doc:\/\/GitHubRestAPICodespaces\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/init(serverURL:configuration:transport:middlewares:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_add_hyphen_repository_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_add_hyphen_selected_hyphen_repo_hyphen_to_hyphen_org_hyphen_secret(_:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_check_hyphen_permissions_hyphen_for_hyphen_devcontainer(_:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_codespace_hyphen_machines_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_create_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret(_:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret(_:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_create_hyphen_or_hyphen_update_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_create_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_delete_hyphen_codespaces_hyphen_access_hyphen_users(_:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_delete_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_delete_hyphen_from_hyphen_organization(_:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_delete_hyphen_org_hyphen_secret(_:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_delete_hyphen_repo_hyphen_secret(_:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_delete_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_export_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_get_hyphen_codespaces_hyphen_for_hyphen_user_hyphen_in_hyphen_org(_:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_get_hyphen_export_hyphen_details_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_get_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_get_hyphen_org_hyphen_public_hyphen_key(_:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_get_hyphen_org_hyphen_secret(_:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_get_hyphen_public_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_get_hyphen_repo_hyphen_public_hyphen_key(_:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_get_hyphen_repo_hyphen_secret(_:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_get_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_list_hyphen_devcontainers_hyphen_in_hyphen_repository_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_list_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_list_hyphen_in_hyphen_organization(_:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_list_hyphen_in_hyphen_repository_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_list_hyphen_org_hyphen_secrets(_:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_list_hyphen_repo_hyphen_secrets(_:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_list_hyphen_repositories_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_list_hyphen_secrets_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret(_:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_pre_hyphen_flight_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_publish_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_remove_hyphen_repository_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_secret(_:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_repo_hyphen_machines_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_set_hyphen_codespaces_hyphen_access(_:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_set_hyphen_codespaces_hyphen_access_hyphen_users(_:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_set_hyphen_repositories_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret(_:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_start_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_stop_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_stop_hyphen_in_hyphen_organization(_:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_update_hyphen_for_hyphen_authenticated_hyphen_user(_:)"
+      ],
+      "title" : "Instance Methods"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/APIProtocol-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapicodespaces\/client"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPICodespaces",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/APIProtocol": {
+  "abstract" : [
+    {
+      "text" : "A type that performs HTTP operations defined by the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "APIProtocol"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/APIProtocol",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "APIProtocol"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "APIProtocol",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/apiprotocol"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client": {
+  "abstract" : [
+    {
+      "text" : "GitHub’s v3 REST API.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Client",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/APIProtocol-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/APIProtocol-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "APIProtocol Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/apiprotocol-implementations"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/codespaces_sol_add_hyphen_repository_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user(_:)": {
+  "abstract" : [
+    {
+      "text" : "Add a selected repository to a user secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_add_hyphen_repository_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO037codespaces_sol_add_hyphen_repository_i5_for_i8_secret_i1_k1_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_add_hyphen_repository_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO037codespaces_sol_add_hyphen_repository_i5_for_i8_secret_i1_k1_i15_authenticated_I5_userO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO037codespaces_sol_add_hyphen_repository_i5_for_i8_secret_i1_k1_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_add_hyphen_repository_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO037codespaces_sol_add_hyphen_repository_i5_for_i8_secret_i1_k1_i15_authenticated_I5_userO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_add_hyphen_repository_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codespaces_sol_add_hyphen_repository_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/codespaces_sol_add_hyphen_repository_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user(_:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/codespaces_sol_add_hyphen_selected_hyphen_repo_hyphen_to_hyphen_org_hyphen_secret(_:)": {
+  "abstract" : [
+    {
+      "text" : "Add selected repository to an organization secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_add_hyphen_selected_hyphen_repo_hyphen_to_hyphen_org_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO035codespaces_sol_add_hyphen_selected_i6_repo_i4_to_i5_org_I7_secretO",
+      "text" : "codespaces_sol_add_hyphen_selected_hyphen_repo_hyphen_to_hyphen_org_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO035codespaces_sol_add_hyphen_selected_i6_repo_i4_to_i5_org_I7_secretO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO035codespaces_sol_add_hyphen_selected_i6_repo_i4_to_i5_org_I7_secretO",
+      "text" : "codespaces_sol_add_hyphen_selected_hyphen_repo_hyphen_to_hyphen_org_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO035codespaces_sol_add_hyphen_selected_i6_repo_i4_to_i5_org_I7_secretO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_add_hyphen_selected_hyphen_repo_hyphen_to_hyphen_org_hyphen_secret(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codespaces_sol_add_hyphen_selected_hyphen_repo_hyphen_to_hyphen_org_hyphen_secret(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/codespaces_sol_add_hyphen_selected_hyphen_repo_hyphen_to_hyphen_org_hyphen_secret(_:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/codespaces_sol_check_hyphen_permissions_hyphen_for_hyphen_devcontainer(_:)": {
+  "abstract" : [
+    {
+      "text" : "Check if permissions defined by a devcontainer have been accepted by the authenticated user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_check_hyphen_permissions_hyphen_for_hyphen_devcontainer"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO040codespaces_sol_check_hyphen_permissions_i5_for_I13_devcontainerO",
+      "text" : "codespaces_sol_check_hyphen_permissions_hyphen_for_hyphen_devcontainer"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO040codespaces_sol_check_hyphen_permissions_i5_for_I13_devcontainerO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO040codespaces_sol_check_hyphen_permissions_i5_for_I13_devcontainerO",
+      "text" : "codespaces_sol_check_hyphen_permissions_hyphen_for_hyphen_devcontainer"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO040codespaces_sol_check_hyphen_permissions_i5_for_I13_devcontainerO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_check_hyphen_permissions_hyphen_for_hyphen_devcontainer(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codespaces_sol_check_hyphen_permissions_hyphen_for_hyphen_devcontainer(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/codespaces_sol_check_hyphen_permissions_hyphen_for_hyphen_devcontainer(_:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/codespaces_sol_codespace_hyphen_machines_hyphen_for_hyphen_authenticated_hyphen_user(_:)": {
+  "abstract" : [
+    {
+      "text" : "List machine types for a codespace",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_codespace_hyphen_machines_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO041codespaces_sol_codespace_hyphen_machines_i5_for_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_codespace_hyphen_machines_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO041codespaces_sol_codespace_hyphen_machines_i5_for_i15_authenticated_I5_userO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO041codespaces_sol_codespace_hyphen_machines_i5_for_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_codespace_hyphen_machines_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO041codespaces_sol_codespace_hyphen_machines_i5_for_i15_authenticated_I5_userO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_codespace_hyphen_machines_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codespaces_sol_codespace_hyphen_machines_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/codespaces_sol_codespace_hyphen_machines_hyphen_for_hyphen_authenticated_hyphen_user(_:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/codespaces_sol_create_hyphen_for_hyphen_authenticated_hyphen_user(_:)": {
+  "abstract" : [
+    {
+      "text" : "Create a codespace for the authenticated user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_create_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO033codespaces_sol_create_hyphen_for_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_create_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO033codespaces_sol_create_hyphen_for_i15_authenticated_I5_userO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO033codespaces_sol_create_hyphen_for_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_create_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO033codespaces_sol_create_hyphen_for_i15_authenticated_I5_userO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_create_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codespaces_sol_create_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/codespaces_sol_create_hyphen_for_hyphen_authenticated_hyphen_user(_:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/codespaces_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret(_:)": {
+  "abstract" : [
+    {
+      "text" : "Create or update an organization secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO032codespaces_sol_create_hyphen_or_i8_update_i5_org_I7_secretO",
+      "text" : "codespaces_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO032codespaces_sol_create_hyphen_or_i8_update_i5_org_I7_secretO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO032codespaces_sol_create_hyphen_or_i8_update_i5_org_I7_secretO",
+      "text" : "codespaces_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO032codespaces_sol_create_hyphen_or_i8_update_i5_org_I7_secretO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codespaces_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/codespaces_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret(_:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/codespaces_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret(_:)": {
+  "abstract" : [
+    {
+      "text" : "Create or update a repository secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO032codespaces_sol_create_hyphen_or_i8_update_i6_repo_I7_secretO",
+      "text" : "codespaces_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO032codespaces_sol_create_hyphen_or_i8_update_i6_repo_I7_secretO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO032codespaces_sol_create_hyphen_or_i8_update_i6_repo_I7_secretO",
+      "text" : "codespaces_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO032codespaces_sol_create_hyphen_or_i8_update_i6_repo_I7_secretO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codespaces_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/codespaces_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret(_:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/codespaces_sol_create_hyphen_or_hyphen_update_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user(_:)": {
+  "abstract" : [
+    {
+      "text" : "Create or update a secret for the authenticated user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_create_hyphen_or_hyphen_update_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO032codespaces_sol_create_hyphen_or_i8_update_i8_secret_i5_for_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_create_hyphen_or_hyphen_update_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO032codespaces_sol_create_hyphen_or_i8_update_i8_secret_i5_for_i15_authenticated_I5_userO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO032codespaces_sol_create_hyphen_or_i8_update_i8_secret_i5_for_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_create_hyphen_or_hyphen_update_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO032codespaces_sol_create_hyphen_or_i8_update_i8_secret_i5_for_i15_authenticated_I5_userO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_create_hyphen_or_hyphen_update_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codespaces_sol_create_hyphen_or_hyphen_update_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/codespaces_sol_create_hyphen_or_hyphen_update_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user(_:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user(_:)": {
+  "abstract" : [
+    {
+      "text" : "Create a codespace from a pull request",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO034codespaces_sol_create_hyphen_with_i4_pr_i5_for_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO034codespaces_sol_create_hyphen_with_i4_pr_i5_for_i15_authenticated_I5_userO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO034codespaces_sol_create_hyphen_with_i4_pr_i5_for_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO034codespaces_sol_create_hyphen_with_i4_pr_i5_for_i15_authenticated_I5_userO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user(_:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/codespaces_sol_create_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user(_:)": {
+  "abstract" : [
+    {
+      "text" : "Create a codespace in a repository",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_create_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO034codespaces_sol_create_hyphen_with_i6_repo_i5_for_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_create_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO034codespaces_sol_create_hyphen_with_i6_repo_i5_for_i15_authenticated_I5_userO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO034codespaces_sol_create_hyphen_with_i6_repo_i5_for_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_create_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO034codespaces_sol_create_hyphen_with_i6_repo_i5_for_i15_authenticated_I5_userO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_create_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codespaces_sol_create_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/codespaces_sol_create_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user(_:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/codespaces_sol_delete_hyphen_codespaces_hyphen_access_hyphen_users(_:)": {
+  "abstract" : [
+    {
+      "text" : "Remove users from Codespaces access for an organization",
+      "type" : "text"
+    }
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_delete_hyphen_codespaces_hyphen_access_hyphen_users"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO029codespaces_sol_delete_hyphen_f1_i8_access_I6_usersO",
+      "text" : "codespaces_sol_delete_hyphen_codespaces_hyphen_access_hyphen_users"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO029codespaces_sol_delete_hyphen_f1_i8_access_I6_usersO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO029codespaces_sol_delete_hyphen_f1_i8_access_I6_usersO",
+      "text" : "codespaces_sol_delete_hyphen_codespaces_hyphen_access_hyphen_users"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO029codespaces_sol_delete_hyphen_f1_i8_access_I6_usersO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_delete_hyphen_codespaces_hyphen_access_hyphen_users(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codespaces_sol_delete_hyphen_codespaces_hyphen_access_hyphen_users(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/codespaces_sol_delete_hyphen_codespaces_hyphen_access_hyphen_users(_:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/codespaces_sol_delete_hyphen_for_hyphen_authenticated_hyphen_user(_:)": {
+  "abstract" : [
+    {
+      "text" : "Delete a codespace for the authenticated user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_delete_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO033codespaces_sol_delete_hyphen_for_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_delete_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO033codespaces_sol_delete_hyphen_for_i15_authenticated_I5_userO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO033codespaces_sol_delete_hyphen_for_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_delete_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO033codespaces_sol_delete_hyphen_for_i15_authenticated_I5_userO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_delete_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codespaces_sol_delete_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/codespaces_sol_delete_hyphen_for_hyphen_authenticated_hyphen_user(_:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/codespaces_sol_delete_hyphen_from_hyphen_organization(_:)": {
+  "abstract" : [
+    {
+      "text" : "Delete a codespace from the organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_delete_hyphen_from_hyphen_organization"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO034codespaces_sol_delete_hyphen_from_I13_organizationO",
+      "text" : "codespaces_sol_delete_hyphen_from_hyphen_organization"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO034codespaces_sol_delete_hyphen_from_I13_organizationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO034codespaces_sol_delete_hyphen_from_I13_organizationO",
+      "text" : "codespaces_sol_delete_hyphen_from_hyphen_organization"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO034codespaces_sol_delete_hyphen_from_I13_organizationO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_delete_hyphen_from_hyphen_organization(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codespaces_sol_delete_hyphen_from_hyphen_organization(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/codespaces_sol_delete_hyphen_from_hyphen_organization(_:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/codespaces_sol_delete_hyphen_org_hyphen_secret(_:)": {
+  "abstract" : [
+    {
+      "text" : "Delete an organization secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_delete_hyphen_org_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO033codespaces_sol_delete_hyphen_org_I7_secretO",
+      "text" : "codespaces_sol_delete_hyphen_org_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO033codespaces_sol_delete_hyphen_org_I7_secretO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO033codespaces_sol_delete_hyphen_org_I7_secretO",
+      "text" : "codespaces_sol_delete_hyphen_org_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO033codespaces_sol_delete_hyphen_org_I7_secretO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_delete_hyphen_org_hyphen_secret(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codespaces_sol_delete_hyphen_org_hyphen_secret(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/codespaces_sol_delete_hyphen_org_hyphen_secret(_:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/codespaces_sol_delete_hyphen_repo_hyphen_secret(_:)": {
+  "abstract" : [
+    {
+      "text" : "Delete a repository secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_delete_hyphen_repo_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO034codespaces_sol_delete_hyphen_repo_I7_secretO",
+      "text" : "codespaces_sol_delete_hyphen_repo_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO034codespaces_sol_delete_hyphen_repo_I7_secretO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO034codespaces_sol_delete_hyphen_repo_I7_secretO",
+      "text" : "codespaces_sol_delete_hyphen_repo_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO034codespaces_sol_delete_hyphen_repo_I7_secretO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_delete_hyphen_repo_hyphen_secret(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codespaces_sol_delete_hyphen_repo_hyphen_secret(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/codespaces_sol_delete_hyphen_repo_hyphen_secret(_:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/codespaces_sol_delete_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user(_:)": {
+  "abstract" : [
+    {
+      "text" : "Delete a secret for the authenticated user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_delete_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO036codespaces_sol_delete_hyphen_secret_i5_for_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_delete_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO036codespaces_sol_delete_hyphen_secret_i5_for_i15_authenticated_I5_userO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO036codespaces_sol_delete_hyphen_secret_i5_for_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_delete_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO036codespaces_sol_delete_hyphen_secret_i5_for_i15_authenticated_I5_userO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_delete_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codespaces_sol_delete_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/codespaces_sol_delete_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user(_:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/codespaces_sol_export_hyphen_for_hyphen_authenticated_hyphen_user(_:)": {
+  "abstract" : [
+    {
+      "text" : "Export a codespace for the authenticated user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_export_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO033codespaces_sol_export_hyphen_for_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_export_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO033codespaces_sol_export_hyphen_for_i15_authenticated_I5_userO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO033codespaces_sol_export_hyphen_for_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_export_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO033codespaces_sol_export_hyphen_for_i15_authenticated_I5_userO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_export_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codespaces_sol_export_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/codespaces_sol_export_hyphen_for_hyphen_authenticated_hyphen_user(_:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/codespaces_sol_get_hyphen_codespaces_hyphen_for_hyphen_user_hyphen_in_hyphen_org(_:)": {
+  "abstract" : [
+    {
+      "text" : "List codespaces for a user in organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_get_hyphen_codespaces_hyphen_for_hyphen_user_hyphen_in_hyphen_org"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO026codespaces_sol_get_hyphen_f1_i5_for_i6_user_i4_in_I4_orgO",
+      "text" : "codespaces_sol_get_hyphen_codespaces_hyphen_for_hyphen_user_hyphen_in_hyphen_org"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO026codespaces_sol_get_hyphen_f1_i5_for_i6_user_i4_in_I4_orgO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO026codespaces_sol_get_hyphen_f1_i5_for_i6_user_i4_in_I4_orgO",
+      "text" : "codespaces_sol_get_hyphen_codespaces_hyphen_for_hyphen_user_hyphen_in_hyphen_org"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO026codespaces_sol_get_hyphen_f1_i5_for_i6_user_i4_in_I4_orgO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_get_hyphen_codespaces_hyphen_for_hyphen_user_hyphen_in_hyphen_org(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codespaces_sol_get_hyphen_codespaces_hyphen_for_hyphen_user_hyphen_in_hyphen_org(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/codespaces_sol_get_hyphen_codespaces_hyphen_for_hyphen_user_hyphen_in_hyphen_org(_:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/codespaces_sol_get_hyphen_export_hyphen_details_hyphen_for_hyphen_authenticated_hyphen_user(_:)": {
+  "abstract" : [
+    {
+      "text" : "Get details about a codespace export",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_get_hyphen_export_hyphen_details_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO033codespaces_sol_get_hyphen_export_i9_details_i5_for_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_get_hyphen_export_hyphen_details_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO033codespaces_sol_get_hyphen_export_i9_details_i5_for_i15_authenticated_I5_userO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO033codespaces_sol_get_hyphen_export_i9_details_i5_for_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_get_hyphen_export_hyphen_details_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO033codespaces_sol_get_hyphen_export_i9_details_i5_for_i15_authenticated_I5_userO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_get_hyphen_export_hyphen_details_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codespaces_sol_get_hyphen_export_hyphen_details_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/codespaces_sol_get_hyphen_export_hyphen_details_hyphen_for_hyphen_authenticated_hyphen_user(_:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/codespaces_sol_get_hyphen_for_hyphen_authenticated_hyphen_user(_:)": {
+  "abstract" : [
+    {
+      "text" : "Get a codespace for the authenticated user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_get_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO030codespaces_sol_get_hyphen_for_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_get_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO030codespaces_sol_get_hyphen_for_i15_authenticated_I5_userO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO030codespaces_sol_get_hyphen_for_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_get_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO030codespaces_sol_get_hyphen_for_i15_authenticated_I5_userO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_get_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codespaces_sol_get_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/codespaces_sol_get_hyphen_for_hyphen_authenticated_hyphen_user(_:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/codespaces_sol_get_hyphen_org_hyphen_public_hyphen_key(_:)": {
+  "abstract" : [
+    {
+      "text" : "Get an organization public key",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_get_hyphen_org_hyphen_public_hyphen_key"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO030codespaces_sol_get_hyphen_org_i8_public_I4_keyO",
+      "text" : "codespaces_sol_get_hyphen_org_hyphen_public_hyphen_key"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO030codespaces_sol_get_hyphen_org_i8_public_I4_keyO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO030codespaces_sol_get_hyphen_org_i8_public_I4_keyO",
+      "text" : "codespaces_sol_get_hyphen_org_hyphen_public_hyphen_key"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO030codespaces_sol_get_hyphen_org_i8_public_I4_keyO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_get_hyphen_org_hyphen_public_hyphen_key(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codespaces_sol_get_hyphen_org_hyphen_public_hyphen_key(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/codespaces_sol_get_hyphen_org_hyphen_public_hyphen_key(_:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/codespaces_sol_get_hyphen_org_hyphen_secret(_:)": {
+  "abstract" : [
+    {
+      "text" : "Get an organization secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_get_hyphen_org_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO030codespaces_sol_get_hyphen_org_I7_secretO",
+      "text" : "codespaces_sol_get_hyphen_org_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO030codespaces_sol_get_hyphen_org_I7_secretO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO030codespaces_sol_get_hyphen_org_I7_secretO",
+      "text" : "codespaces_sol_get_hyphen_org_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO030codespaces_sol_get_hyphen_org_I7_secretO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_get_hyphen_org_hyphen_secret(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codespaces_sol_get_hyphen_org_hyphen_secret(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/codespaces_sol_get_hyphen_org_hyphen_secret(_:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/codespaces_sol_get_hyphen_public_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user(_:)": {
+  "abstract" : [
+    {
+      "text" : "Get public key for the authenticated user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_get_hyphen_public_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO033codespaces_sol_get_hyphen_public_i5_key_i5_for_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_get_hyphen_public_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO033codespaces_sol_get_hyphen_public_i5_key_i5_for_i15_authenticated_I5_userO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO033codespaces_sol_get_hyphen_public_i5_key_i5_for_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_get_hyphen_public_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO033codespaces_sol_get_hyphen_public_i5_key_i5_for_i15_authenticated_I5_userO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_get_hyphen_public_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codespaces_sol_get_hyphen_public_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/codespaces_sol_get_hyphen_public_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user(_:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/codespaces_sol_get_hyphen_repo_hyphen_public_hyphen_key(_:)": {
+  "abstract" : [
+    {
+      "text" : "Get a repository public key",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_get_hyphen_repo_hyphen_public_hyphen_key"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO031codespaces_sol_get_hyphen_repo_i8_public_I4_keyO",
+      "text" : "codespaces_sol_get_hyphen_repo_hyphen_public_hyphen_key"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO031codespaces_sol_get_hyphen_repo_i8_public_I4_keyO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO031codespaces_sol_get_hyphen_repo_i8_public_I4_keyO",
+      "text" : "codespaces_sol_get_hyphen_repo_hyphen_public_hyphen_key"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO031codespaces_sol_get_hyphen_repo_i8_public_I4_keyO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_get_hyphen_repo_hyphen_public_hyphen_key(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codespaces_sol_get_hyphen_repo_hyphen_public_hyphen_key(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/codespaces_sol_get_hyphen_repo_hyphen_public_hyphen_key(_:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/codespaces_sol_get_hyphen_repo_hyphen_secret(_:)": {
+  "abstract" : [
+    {
+      "text" : "Get a repository secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_get_hyphen_repo_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO031codespaces_sol_get_hyphen_repo_I7_secretO",
+      "text" : "codespaces_sol_get_hyphen_repo_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO031codespaces_sol_get_hyphen_repo_I7_secretO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO031codespaces_sol_get_hyphen_repo_I7_secretO",
+      "text" : "codespaces_sol_get_hyphen_repo_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO031codespaces_sol_get_hyphen_repo_I7_secretO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_get_hyphen_repo_hyphen_secret(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codespaces_sol_get_hyphen_repo_hyphen_secret(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/codespaces_sol_get_hyphen_repo_hyphen_secret(_:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/codespaces_sol_get_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user(_:)": {
+  "abstract" : [
+    {
+      "text" : "Get a secret for the authenticated user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_get_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO033codespaces_sol_get_hyphen_secret_i5_for_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_get_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO033codespaces_sol_get_hyphen_secret_i5_for_i15_authenticated_I5_userO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO033codespaces_sol_get_hyphen_secret_i5_for_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_get_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO033codespaces_sol_get_hyphen_secret_i5_for_i15_authenticated_I5_userO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_get_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codespaces_sol_get_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/codespaces_sol_get_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user(_:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/codespaces_sol_list_hyphen_devcontainers_hyphen_in_hyphen_repository_hyphen_for_hyphen_authenticated_hyphen_user(_:)": {
+  "abstract" : [
+    {
+      "text" : "List devcontainer configurations in a repository for the authenticated user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_list_hyphen_devcontainers_hyphen_in_hyphen_repository_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO041codespaces_sol_list_hyphen_devcontainers_i4_in_i12_repository_i5_for_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_list_hyphen_devcontainers_hyphen_in_hyphen_repository_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO041codespaces_sol_list_hyphen_devcontainers_i4_in_i12_repository_i5_for_i15_authenticated_I5_userO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO041codespaces_sol_list_hyphen_devcontainers_i4_in_i12_repository_i5_for_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_list_hyphen_devcontainers_hyphen_in_hyphen_repository_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO041codespaces_sol_list_hyphen_devcontainers_i4_in_i12_repository_i5_for_i15_authenticated_I5_userO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_list_hyphen_devcontainers_hyphen_in_hyphen_repository_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codespaces_sol_list_hyphen_devcontainers_hyphen_in_hyphen_repository_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/codespaces_sol_list_hyphen_devcontainers_hyphen_in_hyphen_repository_hyphen_for_hyphen_authenticated_hyphen_user(_:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/codespaces_sol_list_hyphen_for_hyphen_authenticated_hyphen_user(_:)": {
+  "abstract" : [
+    {
+      "text" : "List codespaces for the authenticated user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_list_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO031codespaces_sol_list_hyphen_for_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_list_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO031codespaces_sol_list_hyphen_for_i15_authenticated_I5_userO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO031codespaces_sol_list_hyphen_for_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_list_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO031codespaces_sol_list_hyphen_for_i15_authenticated_I5_userO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_list_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codespaces_sol_list_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/codespaces_sol_list_hyphen_for_hyphen_authenticated_hyphen_user(_:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/codespaces_sol_list_hyphen_in_hyphen_organization(_:)": {
+  "abstract" : [
+    {
+      "text" : "List codespaces for the organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_list_hyphen_in_hyphen_organization"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO030codespaces_sol_list_hyphen_in_I13_organizationO",
+      "text" : "codespaces_sol_list_hyphen_in_hyphen_organization"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO030codespaces_sol_list_hyphen_in_I13_organizationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO030codespaces_sol_list_hyphen_in_I13_organizationO",
+      "text" : "codespaces_sol_list_hyphen_in_hyphen_organization"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO030codespaces_sol_list_hyphen_in_I13_organizationO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_list_hyphen_in_hyphen_organization(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codespaces_sol_list_hyphen_in_hyphen_organization(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/codespaces_sol_list_hyphen_in_hyphen_organization(_:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/codespaces_sol_list_hyphen_in_hyphen_repository_hyphen_for_hyphen_authenticated_hyphen_user(_:)": {
+  "abstract" : [
+    {
+      "text" : "List codespaces in a repository for the authenticated user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_list_hyphen_in_hyphen_repository_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO030codespaces_sol_list_hyphen_in_i12_repository_i5_for_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_list_hyphen_in_hyphen_repository_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO030codespaces_sol_list_hyphen_in_i12_repository_i5_for_i15_authenticated_I5_userO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO030codespaces_sol_list_hyphen_in_i12_repository_i5_for_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_list_hyphen_in_hyphen_repository_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO030codespaces_sol_list_hyphen_in_i12_repository_i5_for_i15_authenticated_I5_userO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_list_hyphen_in_hyphen_repository_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codespaces_sol_list_hyphen_in_hyphen_repository_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/codespaces_sol_list_hyphen_in_hyphen_repository_hyphen_for_hyphen_authenticated_hyphen_user(_:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/codespaces_sol_list_hyphen_org_hyphen_secrets(_:)": {
+  "abstract" : [
+    {
+      "text" : "List organization secrets",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_list_hyphen_org_hyphen_secrets"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO031codespaces_sol_list_hyphen_org_I8_secretsO",
+      "text" : "codespaces_sol_list_hyphen_org_hyphen_secrets"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO031codespaces_sol_list_hyphen_org_I8_secretsO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO031codespaces_sol_list_hyphen_org_I8_secretsO",
+      "text" : "codespaces_sol_list_hyphen_org_hyphen_secrets"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO031codespaces_sol_list_hyphen_org_I8_secretsO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_list_hyphen_org_hyphen_secrets(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codespaces_sol_list_hyphen_org_hyphen_secrets(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/codespaces_sol_list_hyphen_org_hyphen_secrets(_:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/codespaces_sol_list_hyphen_repo_hyphen_secrets(_:)": {
+  "abstract" : [
+    {
+      "text" : "List repository secrets",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_list_hyphen_repo_hyphen_secrets"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO032codespaces_sol_list_hyphen_repo_I8_secretsO",
+      "text" : "codespaces_sol_list_hyphen_repo_hyphen_secrets"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO032codespaces_sol_list_hyphen_repo_I8_secretsO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO032codespaces_sol_list_hyphen_repo_I8_secretsO",
+      "text" : "codespaces_sol_list_hyphen_repo_hyphen_secrets"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO032codespaces_sol_list_hyphen_repo_I8_secretsO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_list_hyphen_repo_hyphen_secrets(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codespaces_sol_list_hyphen_repo_hyphen_secrets(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/codespaces_sol_list_hyphen_repo_hyphen_secrets(_:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/codespaces_sol_list_hyphen_repositories_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user(_:)": {
+  "abstract" : [
+    {
+      "text" : "List selected repositories for a user secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_list_hyphen_repositories_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO040codespaces_sol_list_hyphen_repositories_i5_for_i8_secret_i1_k1_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_list_hyphen_repositories_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO040codespaces_sol_list_hyphen_repositories_i5_for_i8_secret_i1_k1_i15_authenticated_I5_userO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO040codespaces_sol_list_hyphen_repositories_i5_for_i8_secret_i1_k1_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_list_hyphen_repositories_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO040codespaces_sol_list_hyphen_repositories_i5_for_i8_secret_i1_k1_i15_authenticated_I5_userO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_list_hyphen_repositories_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codespaces_sol_list_hyphen_repositories_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/codespaces_sol_list_hyphen_repositories_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user(_:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/codespaces_sol_list_hyphen_secrets_hyphen_for_hyphen_authenticated_hyphen_user(_:)": {
+  "abstract" : [
+    {
+      "text" : "List secrets for the authenticated user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_list_hyphen_secrets_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO035codespaces_sol_list_hyphen_secrets_i5_for_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_list_hyphen_secrets_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO035codespaces_sol_list_hyphen_secrets_i5_for_i15_authenticated_I5_userO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO035codespaces_sol_list_hyphen_secrets_i5_for_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_list_hyphen_secrets_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO035codespaces_sol_list_hyphen_secrets_i5_for_i15_authenticated_I5_userO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_list_hyphen_secrets_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codespaces_sol_list_hyphen_secrets_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/codespaces_sol_list_hyphen_secrets_hyphen_for_hyphen_authenticated_hyphen_user(_:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/codespaces_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret(_:)": {
+  "abstract" : [
+    {
+      "text" : "List selected repositories for an organization secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO036codespaces_sol_list_hyphen_selected_i7_repos_i5_for_i5_org_I7_secretO",
+      "text" : "codespaces_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO036codespaces_sol_list_hyphen_selected_i7_repos_i5_for_i5_org_I7_secretO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO036codespaces_sol_list_hyphen_selected_i7_repos_i5_for_i5_org_I7_secretO",
+      "text" : "codespaces_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO036codespaces_sol_list_hyphen_selected_i7_repos_i5_for_i5_org_I7_secretO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codespaces_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/codespaces_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret(_:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/codespaces_sol_pre_hyphen_flight_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user(_:)": {
+  "abstract" : [
+    {
+      "text" : "Get default attributes for a codespace",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_pre_hyphen_flight_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO033codespaces_sol_pre_hyphen_flight_i6_with_i6_repo_i5_for_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_pre_hyphen_flight_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO033codespaces_sol_pre_hyphen_flight_i6_with_i6_repo_i5_for_i15_authenticated_I5_userO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO033codespaces_sol_pre_hyphen_flight_i6_with_i6_repo_i5_for_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_pre_hyphen_flight_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO033codespaces_sol_pre_hyphen_flight_i6_with_i6_repo_i5_for_i15_authenticated_I5_userO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_pre_hyphen_flight_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codespaces_sol_pre_hyphen_flight_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/codespaces_sol_pre_hyphen_flight_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user(_:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/codespaces_sol_publish_hyphen_for_hyphen_authenticated_hyphen_user(_:)": {
+  "abstract" : [
+    {
+      "text" : "Create a repository from an unpublished codespace",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_publish_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO034codespaces_sol_publish_hyphen_for_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_publish_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO034codespaces_sol_publish_hyphen_for_i15_authenticated_I5_userO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO034codespaces_sol_publish_hyphen_for_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_publish_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO034codespaces_sol_publish_hyphen_for_i15_authenticated_I5_userO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_publish_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codespaces_sol_publish_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/codespaces_sol_publish_hyphen_for_hyphen_authenticated_hyphen_user(_:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/codespaces_sol_remove_hyphen_repository_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user(_:)": {
+  "abstract" : [
+    {
+      "text" : "Remove a selected repository from a user secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_remove_hyphen_repository_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO040codespaces_sol_remove_hyphen_repository_i5_for_i8_secret_i1_k1_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_remove_hyphen_repository_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO040codespaces_sol_remove_hyphen_repository_i5_for_i8_secret_i1_k1_i15_authenticated_I5_userO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO040codespaces_sol_remove_hyphen_repository_i5_for_i8_secret_i1_k1_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_remove_hyphen_repository_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO040codespaces_sol_remove_hyphen_repository_i5_for_i8_secret_i1_k1_i15_authenticated_I5_userO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_remove_hyphen_repository_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codespaces_sol_remove_hyphen_repository_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/codespaces_sol_remove_hyphen_repository_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user(_:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/codespaces_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_secret(_:)": {
+  "abstract" : [
+    {
+      "text" : "Remove selected repository from an organization secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO038codespaces_sol_remove_hyphen_selected_i6_repo_i6_from_i5_org_I7_secretO",
+      "text" : "codespaces_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO038codespaces_sol_remove_hyphen_selected_i6_repo_i6_from_i5_org_I7_secretO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO038codespaces_sol_remove_hyphen_selected_i6_repo_i6_from_i5_org_I7_secretO",
+      "text" : "codespaces_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO038codespaces_sol_remove_hyphen_selected_i6_repo_i6_from_i5_org_I7_secretO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_secret(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codespaces_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_secret(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/codespaces_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_secret(_:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/codespaces_sol_repo_hyphen_machines_hyphen_for_hyphen_authenticated_hyphen_user(_:)": {
+  "abstract" : [
+    {
+      "text" : "List available machine types for a repository",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_repo_hyphen_machines_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO036codespaces_sol_repo_hyphen_machines_i5_for_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_repo_hyphen_machines_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO036codespaces_sol_repo_hyphen_machines_i5_for_i15_authenticated_I5_userO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO036codespaces_sol_repo_hyphen_machines_i5_for_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_repo_hyphen_machines_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO036codespaces_sol_repo_hyphen_machines_i5_for_i15_authenticated_I5_userO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_repo_hyphen_machines_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codespaces_sol_repo_hyphen_machines_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/codespaces_sol_repo_hyphen_machines_hyphen_for_hyphen_authenticated_hyphen_user(_:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/codespaces_sol_set_hyphen_codespaces_hyphen_access(_:)": {
+  "abstract" : [
+    {
+      "text" : "Manage access control for organization codespaces",
+      "type" : "text"
+    }
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_set_hyphen_codespaces_hyphen_access"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO026codespaces_sol_set_hyphen_f1_I7_accessO",
+      "text" : "codespaces_sol_set_hyphen_codespaces_hyphen_access"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO026codespaces_sol_set_hyphen_f1_I7_accessO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO026codespaces_sol_set_hyphen_f1_I7_accessO",
+      "text" : "codespaces_sol_set_hyphen_codespaces_hyphen_access"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO026codespaces_sol_set_hyphen_f1_I7_accessO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_set_hyphen_codespaces_hyphen_access(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codespaces_sol_set_hyphen_codespaces_hyphen_access(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/codespaces_sol_set_hyphen_codespaces_hyphen_access(_:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/codespaces_sol_set_hyphen_codespaces_hyphen_access_hyphen_users(_:)": {
+  "abstract" : [
+    {
+      "text" : "Add users to Codespaces access for an organization",
+      "type" : "text"
+    }
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_set_hyphen_codespaces_hyphen_access_hyphen_users"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO026codespaces_sol_set_hyphen_f1_i8_access_I6_usersO",
+      "text" : "codespaces_sol_set_hyphen_codespaces_hyphen_access_hyphen_users"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO026codespaces_sol_set_hyphen_f1_i8_access_I6_usersO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO026codespaces_sol_set_hyphen_f1_i8_access_I6_usersO",
+      "text" : "codespaces_sol_set_hyphen_codespaces_hyphen_access_hyphen_users"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO026codespaces_sol_set_hyphen_f1_i8_access_I6_usersO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_set_hyphen_codespaces_hyphen_access_hyphen_users(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codespaces_sol_set_hyphen_codespaces_hyphen_access_hyphen_users(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/codespaces_sol_set_hyphen_codespaces_hyphen_access_hyphen_users(_:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/codespaces_sol_set_hyphen_repositories_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user(_:)": {
+  "abstract" : [
+    {
+      "text" : "Set selected repositories for a user secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_set_hyphen_repositories_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO039codespaces_sol_set_hyphen_repositories_i5_for_i8_secret_i1_k1_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_set_hyphen_repositories_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO039codespaces_sol_set_hyphen_repositories_i5_for_i8_secret_i1_k1_i15_authenticated_I5_userO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO039codespaces_sol_set_hyphen_repositories_i5_for_i8_secret_i1_k1_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_set_hyphen_repositories_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO039codespaces_sol_set_hyphen_repositories_i5_for_i8_secret_i1_k1_i15_authenticated_I5_userO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_set_hyphen_repositories_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codespaces_sol_set_hyphen_repositories_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/codespaces_sol_set_hyphen_repositories_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user(_:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/codespaces_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret(_:)": {
+  "abstract" : [
+    {
+      "text" : "Set selected repositories for an organization secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO035codespaces_sol_set_hyphen_selected_i7_repos_i5_for_i5_org_I7_secretO",
+      "text" : "codespaces_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO035codespaces_sol_set_hyphen_selected_i7_repos_i5_for_i5_org_I7_secretO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO035codespaces_sol_set_hyphen_selected_i7_repos_i5_for_i5_org_I7_secretO",
+      "text" : "codespaces_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO035codespaces_sol_set_hyphen_selected_i7_repos_i5_for_i5_org_I7_secretO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codespaces_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/codespaces_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret(_:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/codespaces_sol_start_hyphen_for_hyphen_authenticated_hyphen_user(_:)": {
+  "abstract" : [
+    {
+      "text" : "Start a codespace for the authenticated user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_start_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO032codespaces_sol_start_hyphen_for_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_start_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO032codespaces_sol_start_hyphen_for_i15_authenticated_I5_userO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO032codespaces_sol_start_hyphen_for_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_start_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO032codespaces_sol_start_hyphen_for_i15_authenticated_I5_userO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_start_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codespaces_sol_start_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/codespaces_sol_start_hyphen_for_hyphen_authenticated_hyphen_user(_:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/codespaces_sol_stop_hyphen_for_hyphen_authenticated_hyphen_user(_:)": {
+  "abstract" : [
+    {
+      "text" : "Stop a codespace for the authenticated user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_stop_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO031codespaces_sol_stop_hyphen_for_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_stop_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO031codespaces_sol_stop_hyphen_for_i15_authenticated_I5_userO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO031codespaces_sol_stop_hyphen_for_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_stop_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO031codespaces_sol_stop_hyphen_for_i15_authenticated_I5_userO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_stop_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codespaces_sol_stop_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/codespaces_sol_stop_hyphen_for_hyphen_authenticated_hyphen_user(_:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/codespaces_sol_stop_hyphen_in_hyphen_organization(_:)": {
+  "abstract" : [
+    {
+      "text" : "Stop a codespace for an organization user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_stop_hyphen_in_hyphen_organization"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO030codespaces_sol_stop_hyphen_in_I13_organizationO",
+      "text" : "codespaces_sol_stop_hyphen_in_hyphen_organization"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO030codespaces_sol_stop_hyphen_in_I13_organizationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO030codespaces_sol_stop_hyphen_in_I13_organizationO",
+      "text" : "codespaces_sol_stop_hyphen_in_hyphen_organization"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO030codespaces_sol_stop_hyphen_in_I13_organizationO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_stop_hyphen_in_hyphen_organization(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codespaces_sol_stop_hyphen_in_hyphen_organization(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/codespaces_sol_stop_hyphen_in_hyphen_organization(_:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/codespaces_sol_update_hyphen_for_hyphen_authenticated_hyphen_user(_:)": {
+  "abstract" : [
+    {
+      "text" : "Update a codespace for the authenticated user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_update_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO033codespaces_sol_update_hyphen_for_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_update_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO033codespaces_sol_update_hyphen_for_i15_authenticated_I5_userO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO033codespaces_sol_update_hyphen_for_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_update_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO033codespaces_sol_update_hyphen_for_i15_authenticated_I5_userO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/codespaces_sol_update_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codespaces_sol_update_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/codespaces_sol_update_hyphen_for_hyphen_authenticated_hyphen_user(_:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Client/init(serverURL:configuration:transport:middlewares:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new client.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "serverURL"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation3URLV",
+      "text" : "URL"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:14OpenAPIRuntime13ConfigurationV",
+      "text" : "Configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "transport"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:14OpenAPIRuntime15ClientTransportP",
+      "text" : "ClientTransport"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "middlewares"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:14OpenAPIRuntime16ClientMiddlewareP",
+      "text" : "ClientMiddleware"
+    },
+    {
+      "kind" : "text",
+      "text" : "])"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Client\/init(serverURL:configuration:transport:middlewares:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(serverURL:configuration:transport:middlewares:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/client\/init(serverurl:configuration:transport:middlewares:)"
+},
+"doc://GitHubRestAPICodespaces/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

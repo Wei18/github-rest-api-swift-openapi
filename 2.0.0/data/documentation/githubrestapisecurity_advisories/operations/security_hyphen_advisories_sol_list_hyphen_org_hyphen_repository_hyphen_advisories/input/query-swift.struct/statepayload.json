@@ -1,0 +1,551 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories",
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Operations",
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Operations\/security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories",
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Operations\/security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories\/Input",
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Operations\/security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories\/Input\/Query-swift.struct"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Operations\/security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories\/Input\/Query-swift.struct\/statePayload"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:32GitHubRestAPISecurity_Advisories10OperationsO036security_hyphen_advisories_sol_list_h5_org_h12_repository_h1_I0O5InputV5QueryV12statePayloadO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "statePayload"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPISecurity_Advisories"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "statePayload"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/Wei18\/github-rest-api-swift-openapi\/Sources\/security-advisories\/Types.swift#L6950"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Operations.security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories.Input.Query.statePayload"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "statePayload"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/orgs\/{org}\/security-advisories\/GET\/query\/state",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/Se",
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/SE",
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/SQ",
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/SH",
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/SY",
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Operations\/security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories\/Input\/Query-swift.struct\/statePayload\/closed",
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Operations\/security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories\/Input\/Query-swift.struct\/statePayload\/draft",
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Operations\/security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories\/Input\/Query-swift.struct\/statePayload\/published",
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Operations\/security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories\/Input\/Query-swift.struct\/statePayload\/triage"
+      ],
+      "title" : "Enumeration Cases"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Operations\/security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories\/Input\/Query-swift.struct\/statePayload\/init(rawValue:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Operations\/security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories\/Input\/Query-swift.struct\/statePayload\/Equatable-Implementations",
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Operations\/security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories\/Input\/Query-swift.struct\/statePayload\/RawRepresentable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapisecurity_advisories\/operations\/security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories\/input\/query-swift.struct\/statepayload"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPISecurity_Advisories/SE": {
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPISecurity_Advisories/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPISecurity_Advisories/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPISecurity_Advisories/SY": {
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/SY",
+  "title" : "Swift.RawRepresentable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPISecurity_Advisories/Se": {
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPISecurity_Advisories",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/operations"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Operations/security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories": {
+  "abstract" : [
+    {
+      "text" : "List repository security advisories for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Operations\/security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/operations\/security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Operations/security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Operations\/security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/operations\/security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories\/input"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Operations/security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories/Input/Query-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Query"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Operations\/security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories\/Input\/Query-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Query"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories.Input.Query",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/operations\/security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories\/input\/query-swift.struct"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Operations/security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories/Input/Query-swift.struct/statePayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "statePayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Operations\/security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories\/Input\/Query-swift.struct\/statePayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "statePayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories.Input.Query.statePayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/operations\/security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories\/input\/query-swift.struct\/statepayload"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Operations/security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories/Input/Query-swift.struct/statePayload/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Operations\/security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories\/Input\/Query-swift.struct\/statePayload\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/operations\/security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories\/input\/query-swift.struct\/statepayload\/equatable-implementations"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Operations/security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories/Input/Query-swift.struct/statePayload/RawRepresentable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Operations\/security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories\/Input\/Query-swift.struct\/statePayload\/RawRepresentable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "RawRepresentable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/operations\/security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories\/input\/query-swift.struct\/statepayload\/rawrepresentable-implementations"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Operations/security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories/Input/Query-swift.struct/statePayload/closed": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "closed"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Operations\/security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories\/Input\/Query-swift.struct\/statePayload\/closed",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories.Input.Query.statePayload.closed",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/operations\/security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories\/input\/query-swift.struct\/statepayload\/closed"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Operations/security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories/Input/Query-swift.struct/statePayload/draft": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "draft"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Operations\/security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories\/Input\/Query-swift.struct\/statePayload\/draft",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories.Input.Query.statePayload.draft",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/operations\/security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories\/input\/query-swift.struct\/statepayload\/draft"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Operations/security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories/Input/Query-swift.struct/statePayload/init(rawValue:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "?("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rawValue"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Operations\/security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories\/Input\/Query-swift.struct\/statePayload\/init(rawValue:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(rawValue:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/operations\/security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories\/input\/query-swift.struct\/statepayload\/init(rawvalue:)"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Operations/security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories/Input/Query-swift.struct/statePayload/published": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "published"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Operations\/security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories\/Input\/Query-swift.struct\/statePayload\/published",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories.Input.Query.statePayload.published",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/operations\/security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories\/input\/query-swift.struct\/statepayload\/published"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Operations/security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories/Input/Query-swift.struct/statePayload/triage": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "triage"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Operations\/security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories\/Input\/Query-swift.struct\/statePayload\/triage",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories.Input.Query.statePayload.triage",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/operations\/security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories\/input\/query-swift.struct\/statepayload\/triage"
+},
+"doc://GitHubRestAPISecurity_Advisories/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}
