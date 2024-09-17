@@ -443,6 +443,8 @@ public enum Components {
             public var actions: [Swift.String]?
             /// - Remark: Generated from `#/components/schemas/api-overview/actions_macos`.
             public var actions_macos: [Swift.String]?
+            /// - Remark: Generated from `#/components/schemas/api-overview/codespaces`.
+            public var codespaces: [Swift.String]?
             /// - Remark: Generated from `#/components/schemas/api-overview/dependabot`.
             public var dependabot: [Swift.String]?
             /// - Remark: Generated from `#/components/schemas/api-overview/copilot`.
@@ -535,6 +537,7 @@ public enum Components {
             ///   - importer:
             ///   - actions:
             ///   - actions_macos:
+            ///   - codespaces:
             ///   - dependabot:
             ///   - copilot:
             ///   - domains:
@@ -552,6 +555,7 @@ public enum Components {
                 importer: [Swift.String]? = nil,
                 actions: [Swift.String]? = nil,
                 actions_macos: [Swift.String]? = nil,
+                codespaces: [Swift.String]? = nil,
                 dependabot: [Swift.String]? = nil,
                 copilot: [Swift.String]? = nil,
                 domains: Components.Schemas.api_hyphen_overview.domainsPayload? = nil
@@ -569,6 +573,7 @@ public enum Components {
                 self.importer = importer
                 self.actions = actions
                 self.actions_macos = actions_macos
+                self.codespaces = codespaces
                 self.dependabot = dependabot
                 self.copilot = copilot
                 self.domains = domains
@@ -587,6 +592,7 @@ public enum Components {
                 case importer
                 case actions
                 case actions_macos
+                case codespaces
                 case dependabot
                 case copilot
                 case domains
