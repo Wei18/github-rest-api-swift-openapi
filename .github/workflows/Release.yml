@@ -49,36 +49,10 @@ jobs:
     permissions:
       contents: write
     steps:
-    - name: Get latest version
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        LATEST_VERSION=$(gh release view --repo ${{ github.repository }} --json tagName --jq .tagName)
-        echo "Latest release version: $LATEST_VERSION"
-        echo "LATEST_VERSION=$LATEST_VERSION" >> $GITHUB_ENV
-
-    - name: Bump patch version
-      run: |
-        # Extract version numbers
-        VERSION=${LATEST_VERSION#v}
-        MAJOR=$(echo $VERSION | cut -d. -f1)
-        MINOR=$(echo $VERSION | cut -d. -f2)
-        PATCH=$(echo $VERSION | cut -d. -f3)
-        
-        # Bump the patch number
-        PATCH=$((PATCH+1))
-        
-        # Form new version
-        NEW_VERSION="v$MAJOR.$MINOR.$PATCH"
-        echo "New version: $NEW_VERSION"
-        echo "NEW_VERSION=$NEW_VERSION" >> $GITHUB_ENV
-
-    - name: Create new GitHub release
-      env:
-        GIT_REF: ${{ needs.create-git-branch-release.outputs.branch }}
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        gh release create $NEW_VERSION \
-          --repo ${{ github.repository }} \
-          --generate-notes \
-          --target "$GIT_REF"
+    - uses: Wei18/GitHubSwiftActions/Actions/Release@main
+      with:
+        owner: ${{ github.repository_owner }}
+        repo: ${{ github.event.repository.name }}
+        token: ${{ secrets.GITHUB_TOKEN }}
+        ref: ${{ needs.create-git-branch-release.outputs.branch }}
+        type: "patch"
