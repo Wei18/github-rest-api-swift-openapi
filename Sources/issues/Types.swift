@@ -7991,7 +7991,7 @@ public enum Components {
         /// The unique identifier of the comment.
         ///
         /// - Remark: Generated from `#/components/parameters/comment-id`.
-        public typealias comment_hyphen_id = Swift.Int
+        public typealias comment_hyphen_id = Swift.Int64
         /// A list of comma separated label names. Example: `bug,ui,@high`
         ///
         /// - Remark: Generated from `#/components/parameters/labels`.

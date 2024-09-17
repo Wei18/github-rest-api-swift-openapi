@@ -1150,6 +1150,18 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/code-security-configuration/secret_scanning_validity_checks`.
             public var secret_scanning_validity_checks: Components.Schemas.code_hyphen_security_hyphen_configuration.secret_scanning_validity_checksPayload?
+            /// The enablement status of secret scanning non-provider patterns
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-security-configuration/secret_scanning_non_provider_patterns`.
+            @frozen public enum secret_scanning_non_provider_patternsPayload: String, Codable, Hashable, Sendable {
+                case enabled = "enabled"
+                case disabled = "disabled"
+                case not_set = "not_set"
+            }
+            /// The enablement status of secret scanning non-provider patterns
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-security-configuration/secret_scanning_non_provider_patterns`.
+            public var secret_scanning_non_provider_patterns: Components.Schemas.code_hyphen_security_hyphen_configuration.secret_scanning_non_provider_patternsPayload?
             /// The enablement status of private vulnerability reporting
             ///
             /// - Remark: Generated from `#/components/schemas/code-security-configuration/private_vulnerability_reporting`.
@@ -1202,6 +1214,7 @@ public enum Components {
             ///   - secret_scanning: The enablement status of secret scanning
             ///   - secret_scanning_push_protection: The enablement status of secret scanning push protection
             ///   - secret_scanning_validity_checks: The enablement status of secret scanning validity checks
+            ///   - secret_scanning_non_provider_patterns: The enablement status of secret scanning non-provider patterns
             ///   - private_vulnerability_reporting: The enablement status of private vulnerability reporting
             ///   - enforcement: The enforcement status for a security configuration
             ///   - url: The URL of the configuration
@@ -1223,6 +1236,7 @@ public enum Components {
                 secret_scanning: Components.Schemas.code_hyphen_security_hyphen_configuration.secret_scanningPayload? = nil,
                 secret_scanning_push_protection: Components.Schemas.code_hyphen_security_hyphen_configuration.secret_scanning_push_protectionPayload? = nil,
                 secret_scanning_validity_checks: Components.Schemas.code_hyphen_security_hyphen_configuration.secret_scanning_validity_checksPayload? = nil,
+                secret_scanning_non_provider_patterns: Components.Schemas.code_hyphen_security_hyphen_configuration.secret_scanning_non_provider_patternsPayload? = nil,
                 private_vulnerability_reporting: Components.Schemas.code_hyphen_security_hyphen_configuration.private_vulnerability_reportingPayload? = nil,
                 enforcement: Components.Schemas.code_hyphen_security_hyphen_configuration.enforcementPayload? = nil,
                 url: Swift.String? = nil,
@@ -1244,6 +1258,7 @@ public enum Components {
                 self.secret_scanning = secret_scanning
                 self.secret_scanning_push_protection = secret_scanning_push_protection
                 self.secret_scanning_validity_checks = secret_scanning_validity_checks
+                self.secret_scanning_non_provider_patterns = secret_scanning_non_provider_patterns
                 self.private_vulnerability_reporting = private_vulnerability_reporting
                 self.enforcement = enforcement
                 self.url = url
@@ -1266,6 +1281,7 @@ public enum Components {
                 case secret_scanning
                 case secret_scanning_push_protection
                 case secret_scanning_validity_checks
+                case secret_scanning_non_provider_patterns
                 case private_vulnerability_reporting
                 case enforcement
                 case url
@@ -2004,6 +2020,18 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/secret_scanning_validity_checks`.
                     public var secret_scanning_validity_checks: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_validity_checksPayload?
+                    /// The enablement status of secret scanning non provider patterns
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/secret_scanning_non_provider_patterns`.
+                    @frozen public enum secret_scanning_non_provider_patternsPayload: String, Codable, Hashable, Sendable {
+                        case enabled = "enabled"
+                        case disabled = "disabled"
+                        case not_set = "not_set"
+                    }
+                    /// The enablement status of secret scanning non provider patterns
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/secret_scanning_non_provider_patterns`.
+                    public var secret_scanning_non_provider_patterns: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_non_provider_patternsPayload?
                     /// The enablement status of private vulnerability reporting
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/private_vulnerability_reporting`.
@@ -2042,6 +2070,7 @@ public enum Operations {
                     ///   - secret_scanning: The enablement status of secret scanning
                     ///   - secret_scanning_push_protection: The enablement status of secret scanning push protection
                     ///   - secret_scanning_validity_checks: The enablement status of secret scanning validity checks
+                    ///   - secret_scanning_non_provider_patterns: The enablement status of secret scanning non provider patterns
                     ///   - private_vulnerability_reporting: The enablement status of private vulnerability reporting
                     ///   - enforcement: The enforcement status for a security configuration
                     public init(
@@ -2057,6 +2086,7 @@ public enum Operations {
                         secret_scanning: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.secret_scanningPayload? = nil,
                         secret_scanning_push_protection: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_push_protectionPayload? = nil,
                         secret_scanning_validity_checks: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_validity_checksPayload? = nil,
+                        secret_scanning_non_provider_patterns: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_non_provider_patternsPayload? = nil,
                         private_vulnerability_reporting: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.private_vulnerability_reportingPayload? = nil,
                         enforcement: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.enforcementPayload? = nil
                     ) {
@@ -2072,6 +2102,7 @@ public enum Operations {
                         self.secret_scanning = secret_scanning
                         self.secret_scanning_push_protection = secret_scanning_push_protection
                         self.secret_scanning_validity_checks = secret_scanning_validity_checks
+                        self.secret_scanning_non_provider_patterns = secret_scanning_non_provider_patterns
                         self.private_vulnerability_reporting = private_vulnerability_reporting
                         self.enforcement = enforcement
                     }
@@ -2088,6 +2119,7 @@ public enum Operations {
                         case secret_scanning
                         case secret_scanning_push_protection
                         case secret_scanning_validity_checks
+                        case secret_scanning_non_provider_patterns
                         case private_vulnerability_reporting
                         case enforcement
                     }
@@ -2141,6 +2173,10 @@ public enum Operations {
                             Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_validity_checksPayload.self,
                             forKey: .secret_scanning_validity_checks
                         )
+                        secret_scanning_non_provider_patterns = try container.decodeIfPresent(
+                            Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_non_provider_patternsPayload.self,
+                            forKey: .secret_scanning_non_provider_patterns
+                        )
                         private_vulnerability_reporting = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.private_vulnerability_reportingPayload.self,
                             forKey: .private_vulnerability_reporting
@@ -2162,6 +2198,7 @@ public enum Operations {
                             "secret_scanning",
                             "secret_scanning_push_protection",
                             "secret_scanning_validity_checks",
+                            "secret_scanning_non_provider_patterns",
                             "private_vulnerability_reporting",
                             "enforcement"
                         ])
@@ -3123,6 +3160,18 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/secret_scanning_validity_checks`.
                     public var secret_scanning_validity_checks: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_validity_checksPayload?
+                    /// The enablement status of secret scanning non-provider patterns
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/secret_scanning_non_provider_patterns`.
+                    @frozen public enum secret_scanning_non_provider_patternsPayload: String, Codable, Hashable, Sendable {
+                        case enabled = "enabled"
+                        case disabled = "disabled"
+                        case not_set = "not_set"
+                    }
+                    /// The enablement status of secret scanning non-provider patterns
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/secret_scanning_non_provider_patterns`.
+                    public var secret_scanning_non_provider_patterns: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_non_provider_patternsPayload?
                     /// The enablement status of private vulnerability reporting
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/private_vulnerability_reporting`.
@@ -3161,6 +3210,7 @@ public enum Operations {
                     ///   - secret_scanning: The enablement status of secret scanning
                     ///   - secret_scanning_push_protection: The enablement status of secret scanning push protection
                     ///   - secret_scanning_validity_checks: The enablement status of secret scanning validity checks
+                    ///   - secret_scanning_non_provider_patterns: The enablement status of secret scanning non-provider patterns
                     ///   - private_vulnerability_reporting: The enablement status of private vulnerability reporting
                     ///   - enforcement: The enforcement status for a security configuration
                     public init(
@@ -3176,6 +3226,7 @@ public enum Operations {
                         secret_scanning: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.secret_scanningPayload? = nil,
                         secret_scanning_push_protection: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_push_protectionPayload? = nil,
                         secret_scanning_validity_checks: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_validity_checksPayload? = nil,
+                        secret_scanning_non_provider_patterns: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_non_provider_patternsPayload? = nil,
                         private_vulnerability_reporting: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.private_vulnerability_reportingPayload? = nil,
                         enforcement: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.enforcementPayload? = nil
                     ) {
@@ -3191,6 +3242,7 @@ public enum Operations {
                         self.secret_scanning = secret_scanning
                         self.secret_scanning_push_protection = secret_scanning_push_protection
                         self.secret_scanning_validity_checks = secret_scanning_validity_checks
+                        self.secret_scanning_non_provider_patterns = secret_scanning_non_provider_patterns
                         self.private_vulnerability_reporting = private_vulnerability_reporting
                         self.enforcement = enforcement
                     }
@@ -3207,6 +3259,7 @@ public enum Operations {
                         case secret_scanning
                         case secret_scanning_push_protection
                         case secret_scanning_validity_checks
+                        case secret_scanning_non_provider_patterns
                         case private_vulnerability_reporting
                         case enforcement
                     }
@@ -3260,6 +3313,10 @@ public enum Operations {
                             Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_validity_checksPayload.self,
                             forKey: .secret_scanning_validity_checks
                         )
+                        secret_scanning_non_provider_patterns = try container.decodeIfPresent(
+                            Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_non_provider_patternsPayload.self,
+                            forKey: .secret_scanning_non_provider_patterns
+                        )
                         private_vulnerability_reporting = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.private_vulnerability_reportingPayload.self,
                             forKey: .private_vulnerability_reporting
@@ -3281,6 +3338,7 @@ public enum Operations {
                             "secret_scanning",
                             "secret_scanning_push_protection",
                             "secret_scanning_validity_checks",
+                            "secret_scanning_non_provider_patterns",
                             "private_vulnerability_reporting",
                             "enforcement"
                         ])

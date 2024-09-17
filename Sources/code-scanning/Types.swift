@@ -1631,10 +1631,22 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-rule-summary/description`.
             public var description: Swift.String?
+            /// A description of the rule used to detect the alert.
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-scanning-alert-rule-summary/full_description`.
+            public var full_description: Swift.String?
             /// A set of tags applicable for the rule.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-rule-summary/tags`.
             public var tags: [Swift.String]?
+            /// Detailed documentation for the rule as GitHub Flavored Markdown.
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-scanning-alert-rule-summary/help`.
+            public var help: Swift.String?
+            /// A link to the documentation for the rule used to detect the alert.
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-scanning-alert-rule-summary/help_uri`.
+            public var help_uri: Swift.String?
             /// Creates a new `code_hyphen_scanning_hyphen_alert_hyphen_rule_hyphen_summary`.
             ///
             /// - Parameters:
@@ -1643,21 +1655,30 @@ public enum Components {
             ///   - severity: The severity of the alert.
             ///   - security_severity_level: The security severity of the alert.
             ///   - description: A short description of the rule used to detect the alert.
+            ///   - full_description: A description of the rule used to detect the alert.
             ///   - tags: A set of tags applicable for the rule.
+            ///   - help: Detailed documentation for the rule as GitHub Flavored Markdown.
+            ///   - help_uri: A link to the documentation for the rule used to detect the alert.
             public init(
                 id: Swift.String? = nil,
                 name: Swift.String? = nil,
                 severity: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_rule_hyphen_summary.severityPayload? = nil,
                 security_severity_level: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_rule_hyphen_summary.security_severity_levelPayload? = nil,
                 description: Swift.String? = nil,
-                tags: [Swift.String]? = nil
+                full_description: Swift.String? = nil,
+                tags: [Swift.String]? = nil,
+                help: Swift.String? = nil,
+                help_uri: Swift.String? = nil
             ) {
                 self.id = id
                 self.name = name
                 self.severity = severity
                 self.security_severity_level = security_severity_level
                 self.description = description
+                self.full_description = full_description
                 self.tags = tags
+                self.help = help
+                self.help_uri = help_uri
             }
             public enum CodingKeys: String, CodingKey {
                 case id
@@ -1665,7 +1686,10 @@ public enum Components {
                 case severity
                 case security_severity_level
                 case description
+                case full_description
                 case tags
+                case help
+                case help_uri
             }
         }
         /// The version of the tool used to generate the code scanning analysis.
@@ -2107,7 +2131,7 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-rule/description`.
             public var description: Swift.String?
-            /// description of the rule used to detect the alert.
+            /// A description of the rule used to detect the alert.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-rule/full_description`.
             public var full_description: Swift.String?
@@ -2131,7 +2155,7 @@ public enum Components {
             ///   - severity: The severity of the alert.
             ///   - security_severity_level: The security severity of the alert.
             ///   - description: A short description of the rule used to detect the alert.
-            ///   - full_description: description of the rule used to detect the alert.
+            ///   - full_description: A description of the rule used to detect the alert.
             ///   - tags: A set of tags applicable for the rule.
             ///   - help: Detailed documentation for the rule as GitHub Flavored Markdown.
             ///   - help_uri: A link to the documentation for the rule used to detect the alert.

@@ -551,6 +551,83 @@ public enum Servers {
 public enum Components {
     /// Types generated from the `#/components/schemas` section of the OpenAPI document.
     public enum Schemas {
+        /// - Remark: Generated from `#/components/schemas/cvss-severities`.
+        public struct cvss_hyphen_severities: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/cvss-severities/cvss_v3`.
+            public struct cvss_v3Payload: Codable, Hashable, Sendable {
+                /// The CVSS 3 vector string.
+                ///
+                /// - Remark: Generated from `#/components/schemas/cvss-severities/cvss_v3/vector_string`.
+                public var vector_string: Swift.String?
+                /// The CVSS 3 score.
+                ///
+                /// - Remark: Generated from `#/components/schemas/cvss-severities/cvss_v3/score`.
+                public var score: Swift.Double?
+                /// Creates a new `cvss_v3Payload`.
+                ///
+                /// - Parameters:
+                ///   - vector_string: The CVSS 3 vector string.
+                ///   - score: The CVSS 3 score.
+                public init(
+                    vector_string: Swift.String? = nil,
+                    score: Swift.Double? = nil
+                ) {
+                    self.vector_string = vector_string
+                    self.score = score
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case vector_string
+                    case score
+                }
+            }
+            /// - Remark: Generated from `#/components/schemas/cvss-severities/cvss_v3`.
+            public var cvss_v3: Components.Schemas.cvss_hyphen_severities.cvss_v3Payload?
+            /// - Remark: Generated from `#/components/schemas/cvss-severities/cvss_v4`.
+            public struct cvss_v4Payload: Codable, Hashable, Sendable {
+                /// The CVSS 4 vector string.
+                ///
+                /// - Remark: Generated from `#/components/schemas/cvss-severities/cvss_v4/vector_string`.
+                public var vector_string: Swift.String?
+                /// The CVSS 4 score.
+                ///
+                /// - Remark: Generated from `#/components/schemas/cvss-severities/cvss_v4/score`.
+                public var score: Swift.Double?
+                /// Creates a new `cvss_v4Payload`.
+                ///
+                /// - Parameters:
+                ///   - vector_string: The CVSS 4 vector string.
+                ///   - score: The CVSS 4 score.
+                public init(
+                    vector_string: Swift.String? = nil,
+                    score: Swift.Double? = nil
+                ) {
+                    self.vector_string = vector_string
+                    self.score = score
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case vector_string
+                    case score
+                }
+            }
+            /// - Remark: Generated from `#/components/schemas/cvss-severities/cvss_v4`.
+            public var cvss_v4: Components.Schemas.cvss_hyphen_severities.cvss_v4Payload?
+            /// Creates a new `cvss_hyphen_severities`.
+            ///
+            /// - Parameters:
+            ///   - cvss_v3:
+            ///   - cvss_v4:
+            public init(
+                cvss_v3: Components.Schemas.cvss_hyphen_severities.cvss_v3Payload? = nil,
+                cvss_v4: Components.Schemas.cvss_hyphen_severities.cvss_v4Payload? = nil
+            ) {
+                self.cvss_v3 = cvss_v3
+                self.cvss_v4 = cvss_v4
+            }
+            public enum CodingKeys: String, CodingKey {
+                case cvss_v3
+                case cvss_v4
+            }
+        }
         /// A GitHub user.
         ///
         /// - Remark: Generated from `#/components/schemas/simple-user`.
@@ -1228,6 +1305,8 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/cvss`.
             public var cvss: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.cvssPayload
+            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/cvss_severities`.
+            public var cvss_severities: Components.Schemas.cvss_hyphen_severities?
             /// A CWE weakness assigned to the advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/cwesPayload`.
@@ -1398,6 +1477,7 @@ public enum Components {
             ///   - vulnerabilities: Vulnerable version range information for the advisory.
             ///   - severity: The severity of the advisory.
             ///   - cvss: Details for the advisory pertaining to the Common Vulnerability Scoring System.
+            ///   - cvss_severities:
             ///   - cwes: Details for the advisory pertaining to Common Weakness Enumeration.
             ///   - identifiers: Values that identify this advisory among security information sources.
             ///   - references: Links to additional advisory information.
@@ -1412,6 +1492,7 @@ public enum Components {
                 vulnerabilities: [Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_vulnerability],
                 severity: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.severityPayload,
                 cvss: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.cvssPayload,
+                cvss_severities: Components.Schemas.cvss_hyphen_severities? = nil,
                 cwes: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.cwesPayload,
                 identifiers: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.identifiersPayload,
                 references: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.referencesPayload,
@@ -1426,6 +1507,7 @@ public enum Components {
                 self.vulnerabilities = vulnerabilities
                 self.severity = severity
                 self.cvss = cvss
+                self.cvss_severities = cvss_severities
                 self.cwes = cwes
                 self.identifiers = identifiers
                 self.references = references
@@ -1441,6 +1523,7 @@ public enum Components {
                 case vulnerabilities
                 case severity
                 case cvss
+                case cvss_severities
                 case cwes
                 case identifiers
                 case references
@@ -1478,6 +1561,10 @@ public enum Components {
                     Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.cvssPayload.self,
                     forKey: .cvss
                 )
+                cvss_severities = try container.decodeIfPresent(
+                    Components.Schemas.cvss_hyphen_severities.self,
+                    forKey: .cvss_severities
+                )
                 cwes = try container.decode(
                     Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.cwesPayload.self,
                     forKey: .cwes
@@ -1510,6 +1597,7 @@ public enum Components {
                     "vulnerabilities",
                     "severity",
                     "cvss",
+                    "cvss_severities",
                     "cwes",
                     "identifiers",
                     "references",
