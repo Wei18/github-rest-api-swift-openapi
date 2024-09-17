@@ -1,0 +1,82 @@
+name: Release
+
+on:
+  schedule:
+    - cron: '0 0 1 * *'  # 每月的第一天 00:00 UTC
+  workflow_dispatch:  # 允許手動觸發工作流
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+
+jobs:
+
+  create-git-branch-release:
+    runs-on: ubuntu-latest
+    outputs:
+      branch: ${{ steps.release_branch.outputs.value }}
+    steps:
+    - uses: actions/checkout@v3  # Use the latest stable version
+
+    - name: Create release branch
+      env:
+        RELEASE_BRANCH: release
+      id: release_branch
+      run: |
+        git checkout -B $RELEASE_BRANCH
+        echo "value=$RELEASE_BRANCH" >> $GITHUB_OUTPUT
+    
+    - name: Remove submodule (if exists)
+      env:
+        SUBMODULE_PATH: Submodule/github/rest-api-description
+      run: |
+        if [ -d "$SUBMODULE_PATH" ]; then
+          git submodule deinit -f $SUBMODULE_PATH || true
+          git rm -f $SUBMODULE_PATH || true
+          rm -rf .git/modules/$SUBMODULE_PATH || true
+          git commit -m "Remove submodule"
+          git push
+        else
+          echo "Submodule not found, skipping removal."
+        fi
+
+  create-github-release:
+    needs: create-git-branch-release
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Get latest version
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        LATEST_VERSION=$(gh release view --repo ${{ github.repository }} --json tagName --jq .tagName)
+        echo "Latest release version: $LATEST_VERSION"
+        echo "LATEST_VERSION=$LATEST_VERSION" >> $GITHUB_ENV
+
+    - name: Bump patch version
+      run: |
+        # Extract version numbers
+        VERSION=${LATEST_VERSION#v}
+        MAJOR=$(echo $VERSION | cut -d. -f1)
+        MINOR=$(echo $VERSION | cut -d. -f2)
+        PATCH=$(echo $VERSION | cut -d. -f3)
+        
+        # Bump the patch number
+        PATCH=$((PATCH+1))
+        
+        # Form new version
+        NEW_VERSION="v$MAJOR.$MINOR.$PATCH"
+        echo "New version: $NEW_VERSION"
+        echo "NEW_VERSION=$NEW_VERSION" >> $GITHUB_ENV
+
+    - name: Create new GitHub release
+      env:
+        GIT_REF: ${{ needs.create-git-branch-release.outputs.branch }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        gh release create $NEW_VERSION \
+          --repo ${{ github.repository }} \
+          --generate-notes \
+          --target "$GIT_REF"

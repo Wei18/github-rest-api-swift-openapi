@@ -11,8 +11,7 @@ updates:
     schedule:
       interval: "weekly"
 
-# FIXME: Need other way to update OAS.
-  # - package-ecosystem: "gitsubmodule"
-  #   directory: "/"
-  #   schedule:
-  #     interval: "weekly"
+  - package-ecosystem: "gitsubmodule"
+    directory: "/"
+    schedule:
+      interval: "weekly"
