@@ -31,13 +31,13 @@ jobs:
           os: ${{ matrix.os }}
       - name: "Sync code base"
         env:
-          PR_URL: ${{github.event.pull_request.html_url}}
-          GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh pr checkout ${{ github.event.pull_request.number }}
           git config user.name "${GITHUB_ACTOR}"
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-          make install
+          make -j 3 install
           git push
           gh pr merge --auto --merge "$PR_URL"
           gh pr review --approve "$PR_URL"

@@ -41,6 +41,9 @@ commit:
 Sources/%: Sources/%/Client.swift Sources/%/Types.swift
 	@$(MAKE) commit file="$@"
 
+# Prevent submodule update from running in parallel with other jobs
+.NOTPARALLEL: Submodule
+
 # Update openapi specification if needed
 .PHONY: Submodule
 Submodule:
