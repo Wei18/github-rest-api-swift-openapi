@@ -1675,9 +1675,9 @@ public struct Client: APIProtocol {
     ///
     /// Store an artifact attestation and associate it with a repository.
     ///
-    /// The authenticated user must have write permission to the repository and, if using a fine-grained access token the `attestations:write` permission is required.
+    /// The authenticated user must have write permission to the repository and, if using a fine-grained access token, the `attestations:write` permission is required.
     ///
-    /// Artifact attestations are meant to be created using the [attest action](https://github.com/actions/attest). For amore information, see our guide on [using artifact attestations to establish a build's provenance](https://docs.github.com/actions/security-guides/using-artifact-attestations-to-establish-provenance-for-builds).
+    /// Artifact attestations are meant to be created using the [attest action](https://github.com/actions/attest). For more information, see our guide on [using artifact attestations to establish a build's provenance](https://docs.github.com/actions/security-guides/using-artifact-attestations-to-establish-provenance-for-builds).
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/attestations`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/attestations/post(repos/create-attestation)`.

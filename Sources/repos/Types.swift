@@ -127,9 +127,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// Store an artifact attestation and associate it with a repository.
     ///
-    /// The authenticated user must have write permission to the repository and, if using a fine-grained access token the `attestations:write` permission is required.
+    /// The authenticated user must have write permission to the repository and, if using a fine-grained access token, the `attestations:write` permission is required.
     ///
-    /// Artifact attestations are meant to be created using the [attest action](https://github.com/actions/attest). For amore information, see our guide on [using artifact attestations to establish a build's provenance](https://docs.github.com/actions/security-guides/using-artifact-attestations-to-establish-provenance-for-builds).
+    /// Artifact attestations are meant to be created using the [attest action](https://github.com/actions/attest). For more information, see our guide on [using artifact attestations to establish a build's provenance](https://docs.github.com/actions/security-guides/using-artifact-attestations-to-establish-provenance-for-builds).
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/attestations`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/attestations/post(repos/create-attestation)`.
@@ -2319,9 +2319,9 @@ extension APIProtocol {
     ///
     /// Store an artifact attestation and associate it with a repository.
     ///
-    /// The authenticated user must have write permission to the repository and, if using a fine-grained access token the `attestations:write` permission is required.
+    /// The authenticated user must have write permission to the repository and, if using a fine-grained access token, the `attestations:write` permission is required.
     ///
-    /// Artifact attestations are meant to be created using the [attest action](https://github.com/actions/attest). For amore information, see our guide on [using artifact attestations to establish a build's provenance](https://docs.github.com/actions/security-guides/using-artifact-attestations-to-establish-provenance-for-builds).
+    /// Artifact attestations are meant to be created using the [attest action](https://github.com/actions/attest). For more information, see our guide on [using artifact attestations to establish a build's provenance](https://docs.github.com/actions/security-guides/using-artifact-attestations-to-establish-provenance-for-builds).
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/attestations`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/attestations/post(repos/create-attestation)`.
@@ -10963,11 +10963,9 @@ public enum Components {
         public struct repository_hyphen_ruleset_hyphen_bypass_hyphen_actor: Codable, Hashable, Sendable {
             /// The ID of the actor that can bypass a ruleset. If `actor_type` is `OrganizationAdmin`, this should be `1`. If `actor_type` is `DeployKey`, this should be null. `OrganizationAdmin` is not applicable for personal repositories.
             ///
-            ///
             /// - Remark: Generated from `#/components/schemas/repository-ruleset-bypass-actor/actor_id`.
             public var actor_id: Swift.Int?
             /// The type of actor that can bypass a ruleset.
-            ///
             ///
             /// - Remark: Generated from `#/components/schemas/repository-ruleset-bypass-actor/actor_type`.
             @frozen public enum actor_typePayload: String, Codable, Hashable, Sendable {
@@ -10979,11 +10977,9 @@ public enum Components {
             }
             /// The type of actor that can bypass a ruleset.
             ///
-            ///
             /// - Remark: Generated from `#/components/schemas/repository-ruleset-bypass-actor/actor_type`.
             public var actor_type: Components.Schemas.repository_hyphen_ruleset_hyphen_bypass_hyphen_actor.actor_typePayload
             /// When the specified actor can bypass the ruleset. `pull_request` means that an actor can only bypass rules on pull requests. `pull_request` is not applicable for the `DeployKey` actor type.
-            ///
             ///
             /// - Remark: Generated from `#/components/schemas/repository-ruleset-bypass-actor/bypass_mode`.
             @frozen public enum bypass_modePayload: String, Codable, Hashable, Sendable {
@@ -10991,7 +10987,6 @@ public enum Components {
                 case pull_request = "pull_request"
             }
             /// When the specified actor can bypass the ruleset. `pull_request` means that an actor can only bypass rules on pull requests. `pull_request` is not applicable for the `DeployKey` actor type.
-            ///
             ///
             /// - Remark: Generated from `#/components/schemas/repository-ruleset-bypass-actor/bypass_mode`.
             public var bypass_mode: Components.Schemas.repository_hyphen_ruleset_hyphen_bypass_hyphen_actor.bypass_modePayload
@@ -11235,7 +11230,6 @@ public enum Components {
             }
         }
         /// Conditions for an organization ruleset. The conditions object should contain both `repository_name` and `ref_name` properties or both `repository_id` and `ref_name` properties.
-        ///
         ///
         /// - Remark: Generated from `#/components/schemas/org-ruleset-conditions`.
         @frozen public enum org_hyphen_ruleset_hyphen_conditions: Codable, Hashable, Sendable {
@@ -12498,9 +12492,6 @@ public enum Components {
             case repository_hyphen_rule_hyphen_branch_hyphen_name_hyphen_pattern(Components.Schemas.repository_hyphen_rule_hyphen_branch_hyphen_name_hyphen_pattern)
             /// - Remark: Generated from `#/components/schemas/repository-rule/case15`.
             case repository_hyphen_rule_hyphen_tag_hyphen_name_hyphen_pattern(Components.Schemas.repository_hyphen_rule_hyphen_tag_hyphen_name_hyphen_pattern)
-            /// > [!NOTE]
-            /// > `file_path_restriction` is in beta and subject to change.
-            ///
             /// Prevent commits that include changes in specified file paths from being pushed to the commit graph.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-rule/case16`.
@@ -12547,16 +12538,10 @@ public enum Components {
                     case parameters
                 }
             }
-            /// > [!NOTE]
-            /// > `file_path_restriction` is in beta and subject to change.
-            ///
             /// Prevent commits that include changes in specified file paths from being pushed to the commit graph.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-rule/case16`.
             case case16(Components.Schemas.repository_hyphen_rule.Case16Payload)
-            /// > [!NOTE]
-            /// > `max_file_path_length` is in beta and subject to change.
-            ///
             /// Prevent commits that include file paths that exceed a specified character limit from being pushed to the commit graph.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-rule/case17`.
@@ -12603,16 +12588,10 @@ public enum Components {
                     case parameters
                 }
             }
-            /// > [!NOTE]
-            /// > `max_file_path_length` is in beta and subject to change.
-            ///
             /// Prevent commits that include file paths that exceed a specified character limit from being pushed to the commit graph.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-rule/case17`.
             case case17(Components.Schemas.repository_hyphen_rule.Case17Payload)
-            /// > [!NOTE]
-            /// > `file_extension_restriction` is in beta and subject to change.
-            ///
             /// Prevent commits that include files with specified file extensions from being pushed to the commit graph.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-rule/case18`.
@@ -12659,16 +12638,10 @@ public enum Components {
                     case parameters
                 }
             }
-            /// > [!NOTE]
-            /// > `file_extension_restriction` is in beta and subject to change.
-            ///
             /// Prevent commits that include files with specified file extensions from being pushed to the commit graph.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-rule/case18`.
             case case18(Components.Schemas.repository_hyphen_rule.Case18Payload)
-            /// > [!NOTE]
-            /// > `max_file_size` is in beta and subject to change.
-            ///
             /// Prevent commits that exceed a specified file size limit from being pushed to the commit.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-rule/case19`.
@@ -12715,9 +12688,6 @@ public enum Components {
                     case parameters
                 }
             }
-            /// > [!NOTE]
-            /// > `max_file_size` is in beta and subject to change.
-            ///
             /// Prevent commits that exceed a specified file size limit from being pushed to the commit.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-rule/case19`.
@@ -12921,9 +12891,6 @@ public enum Components {
             public var name: Swift.String
             /// The target of the ruleset
             ///
-            /// > [!NOTE]
-            /// > The `push` target is in beta and is subject to change.
-            ///
             /// - Remark: Generated from `#/components/schemas/repository-ruleset/target`.
             @frozen public enum targetPayload: String, Codable, Hashable, Sendable {
                 case branch = "branch"
@@ -12931,9 +12898,6 @@ public enum Components {
                 case push = "push"
             }
             /// The target of the ruleset
-            ///
-            /// > [!NOTE]
-            /// > The `push` target is in beta and is subject to change.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-ruleset/target`.
             public var target: Components.Schemas.repository_hyphen_ruleset.targetPayload?
@@ -22120,7 +22084,7 @@ public enum Components {
         /// The unique identifier of the comment.
         ///
         /// - Remark: Generated from `#/components/parameters/comment-id`.
-        public typealias comment_hyphen_id = Swift.Int
+        public typealias comment_hyphen_id = Swift.Int64
         /// The account owner of the repository. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/owner`.
@@ -22146,7 +22110,6 @@ public enum Components {
         /// - Remark: Generated from `#/components/parameters/invitation-id`.
         public typealias invitation_hyphen_id = Swift.Int
         /// The name of the ref. Cannot contain wildcard characters. Optionally prefix with `refs/heads/` to limit to branches or `refs/tags/` to limit to tags. Omit the prefix to search across all refs. When specified, only rule evaluations triggered for this ref will be returned.
-        ///
         ///
         /// - Remark: Generated from `#/components/parameters/ref-in-query`.
         public typealias ref_hyphen_in_hyphen_query = Swift.String
@@ -23692,9 +23655,6 @@ public enum Operations {
                     public var name: Swift.String
                     /// The target of the ruleset
                     ///
-                    /// > [!NOTE]
-                    /// > The `push` target is in beta and is subject to change.
-                    ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/POST/requestBody/json/target`.
                     @frozen public enum targetPayload: String, Codable, Hashable, Sendable {
                         case branch = "branch"
@@ -23702,9 +23662,6 @@ public enum Operations {
                         case push = "push"
                     }
                     /// The target of the ruleset
-                    ///
-                    /// > [!NOTE]
-                    /// > The `push` target is in beta and is subject to change.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/POST/requestBody/json/target`.
                     public var target: Operations.repos_sol_create_hyphen_org_hyphen_ruleset.Input.Body.jsonPayload.targetPayload?
@@ -23930,7 +23887,6 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/rule-suites/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The name of the ref. Cannot contain wildcard characters. Optionally prefix with `refs/heads/` to limit to branches or `refs/tags/` to limit to tags. Omit the prefix to search across all refs. When specified, only rule evaluations triggered for this ref will be returned.
-                ///
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/rule-suites/GET/query/ref`.
                 public var ref: Components.Parameters.ref_hyphen_in_hyphen_query?
@@ -24596,9 +24552,6 @@ public enum Operations {
                     public var name: Swift.String?
                     /// The target of the ruleset
                     ///
-                    /// > [!NOTE]
-                    /// > The `push` target is in beta and is subject to change.
-                    ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/{ruleset_id}/PUT/requestBody/json/target`.
                     @frozen public enum targetPayload: String, Codable, Hashable, Sendable {
                         case branch = "branch"
@@ -24606,9 +24559,6 @@ public enum Operations {
                         case push = "push"
                     }
                     /// The target of the ruleset
-                    ///
-                    /// > [!NOTE]
-                    /// > The `push` target is in beta and is subject to change.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/{ruleset_id}/PUT/requestBody/json/target`.
                     public var target: Operations.repos_sol_update_hyphen_org_hyphen_ruleset.Input.Body.jsonPayload.targetPayload?
@@ -26374,9 +26324,9 @@ public enum Operations {
     ///
     /// Store an artifact attestation and associate it with a repository.
     ///
-    /// The authenticated user must have write permission to the repository and, if using a fine-grained access token the `attestations:write` permission is required.
+    /// The authenticated user must have write permission to the repository and, if using a fine-grained access token, the `attestations:write` permission is required.
     ///
-    /// Artifact attestations are meant to be created using the [attest action](https://github.com/actions/attest). For amore information, see our guide on [using artifact attestations to establish a build's provenance](https://docs.github.com/actions/security-guides/using-artifact-attestations-to-establish-provenance-for-builds).
+    /// Artifact attestations are meant to be created using the [attest action](https://github.com/actions/attest). For more information, see our guide on [using artifact attestations to establish a build's provenance](https://docs.github.com/actions/security-guides/using-artifact-attestations-to-establish-provenance-for-builds).
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/attestations`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/attestations/post(repos/create-attestation)`.
@@ -28635,7 +28585,6 @@ public enum Operations {
                         /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/PUT/requestBody/json/required_status_checks/strict`.
                         public var strict: Swift.Bool
                         /// **Deprecated**: The list of status checks to require in order to merge into this branch. If any of these checks have recently been set by a particular GitHub App, they will be required to come from that app in future for the branch to merge. Use `checks` instead of `contexts` for more fine-grained control.
-                        ///
                         ///
                         /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/PUT/requestBody/json/required_status_checks/contexts`.
                         @available(*, deprecated)
@@ -31076,7 +31025,6 @@ public enum Operations {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks/PATCH/requestBody/json/strict`.
                     public var strict: Swift.Bool?
                     /// **Deprecated**: The list of status checks to require in order to merge into this branch. If any of these checks have recently been set by a particular GitHub App, they will be required to come from that app in future for the branch to merge. Use `checks` instead of `contexts` for more fine-grained control.
-                    ///
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks/PATCH/requestBody/json/contexts`.
                     @available(*, deprecated)
@@ -57119,9 +57067,6 @@ public enum Operations {
                     public var name: Swift.String
                     /// The target of the ruleset
                     ///
-                    /// > [!NOTE]
-                    /// > The `push` target is in beta and is subject to change.
-                    ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/rulesets/POST/requestBody/json/target`.
                     @frozen public enum targetPayload: String, Codable, Hashable, Sendable {
                         case branch = "branch"
@@ -57129,9 +57074,6 @@ public enum Operations {
                         case push = "push"
                     }
                     /// The target of the ruleset
-                    ///
-                    /// > [!NOTE]
-                    /// > The `push` target is in beta and is subject to change.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/rulesets/POST/requestBody/json/target`.
                     public var target: Operations.repos_sol_create_hyphen_repo_hyphen_ruleset.Input.Body.jsonPayload.targetPayload?
@@ -57366,7 +57308,6 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/rulesets/rule-suites/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The name of the ref. Cannot contain wildcard characters. Optionally prefix with `refs/heads/` to limit to branches or `refs/tags/` to limit to tags. Omit the prefix to search across all refs. When specified, only rule evaluations triggered for this ref will be returned.
-                ///
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/rulesets/rule-suites/GET/query/ref`.
                 public var ref: Components.Parameters.ref_hyphen_in_hyphen_query?
@@ -58064,9 +58005,6 @@ public enum Operations {
                     public var name: Swift.String?
                     /// The target of the ruleset
                     ///
-                    /// > [!NOTE]
-                    /// > The `push` target is in beta and is subject to change.
-                    ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/rulesets/{ruleset_id}/PUT/requestBody/json/target`.
                     @frozen public enum targetPayload: String, Codable, Hashable, Sendable {
                         case branch = "branch"
@@ -58074,9 +58012,6 @@ public enum Operations {
                         case push = "push"
                     }
                     /// The target of the ruleset
-                    ///
-                    /// > [!NOTE]
-                    /// > The `push` target is in beta and is subject to change.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/rulesets/{ruleset_id}/PUT/requestBody/json/target`.
                     public var target: Operations.repos_sol_update_hyphen_repo_hyphen_ruleset.Input.Body.jsonPayload.targetPayload?
