@@ -13,18 +13,15 @@ jobs:
 
   create-git-branch-release:
     runs-on: ubuntu-latest
+    env:
+      RELEASE_BRANCH: release
     outputs:
-      branch: ${{ steps.release_branch.outputs.value }}
+      branch: ${{ env.RELEASE_BRANCH }}
     steps:
     - uses: actions/checkout@v4
 
     - name: Create release branch
-      env:
-        RELEASE_BRANCH: release
-      id: release_branch
-      run: |
-        git checkout -B $RELEASE_BRANCH
-        echo "value=$RELEASE_BRANCH" >> $GITHUB_OUTPUT
+      run: git checkout -B $RELEASE_BRANCH
     
     - name: Remove submodule (if exists)
       env:
@@ -37,10 +34,12 @@ jobs:
           git rm -f $SUBMODULE_PATH || true
           rm -rf .git/modules/$SUBMODULE_PATH || true
           git commit -m "Remove submodule"
-          git push
         else
           echo "Submodule not found, skipping removal."
         fi
+
+    - name: Push release branch
+      run: git push --force --set-upstream origin $RELEASE_BRANCH
 
   create-github-release:
     needs: create-git-branch-release
