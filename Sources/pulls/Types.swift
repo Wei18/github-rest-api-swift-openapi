@@ -6761,7 +6761,7 @@ public enum Components {
         /// The unique identifier of the comment.
         ///
         /// - Remark: Generated from `#/components/parameters/comment-id`.
-        public typealias comment_hyphen_id = Swift.Int
+        public typealias comment_hyphen_id = Swift.Int64
         /// The property to sort the results by.
         ///
         /// - Remark: Generated from `#/components/parameters/sort`.
