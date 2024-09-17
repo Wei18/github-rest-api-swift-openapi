@@ -16,7 +16,7 @@ jobs:
     outputs:
       branch: ${{ steps.release_branch.outputs.value }}
     steps:
-    - uses: actions/checkout@v3  # Use the latest stable version
+    - uses: actions/checkout@v4
 
     - name: Create release branch
       env:
@@ -44,9 +44,6 @@ jobs:
     needs: create-git-branch-release
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-
     - name: Get latest version
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
