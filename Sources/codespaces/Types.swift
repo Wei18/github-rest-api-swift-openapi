@@ -238,8 +238,6 @@ public protocol APIProtocol: Sendable {
     /// Gets your public key, which you need to encrypt secrets. You need to
     /// encrypt a secret before you can create or update secrets.
     ///
-    /// Anyone with read access to the repository can use this endpoint.
-    ///
     /// If the repository is private, OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/codespaces/secrets/public-key`.
@@ -938,8 +936,6 @@ extension APIProtocol {
     ///
     /// Gets your public key, which you need to encrypt secrets. You need to
     /// encrypt a secret before you can create or update secrets.
-    ///
-    /// Anyone with read access to the repository can use this endpoint.
     ///
     /// If the repository is private, OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
@@ -12383,8 +12379,6 @@ public enum Operations {
     ///
     /// Gets your public key, which you need to encrypt secrets. You need to
     /// encrypt a secret before you can create or update secrets.
-    ///
-    /// Anyone with read access to the repository can use this endpoint.
     ///
     /// If the repository is private, OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///

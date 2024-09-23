@@ -1752,7 +1752,7 @@ public enum Components {
                 case inactive_this_cycle
             }
         }
-        /// Information about the seat breakdown and policies set for an organization with a Copilot Business subscription.
+        /// Information about the seat breakdown and policies set for an organization with a Copilot Business or Copilot Enterprise subscription.
         ///
         /// - Remark: Generated from `#/components/schemas/copilot-organization-details`.
         public struct copilot_hyphen_organization_hyphen_details: Codable, Hashable, Sendable {
