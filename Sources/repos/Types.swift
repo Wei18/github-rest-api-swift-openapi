@@ -13169,6 +13169,7 @@ public enum Components {
             @frozen public enum evaluation_resultPayload: String, Codable, Hashable, Sendable {
                 case pass = "pass"
                 case fail = "fail"
+                case bypass = "bypass"
             }
             /// The result of the rule evaluations for rules with the `active` and `evaluate` enforcement statuses, demonstrating whether rules would pass or fail if all rules in the rule suite were `active`.
             ///
@@ -13281,14 +13282,15 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/rule-suite/result`.
             public var result: Components.Schemas.rule_hyphen_suite.resultPayload?
-            /// The result of the rule evaluations for rules with the `active` and `evaluate` enforcement statuses, demonstrating whether rules would pass or fail if all rules in the rule suite were `active`.
+            /// The result of the rule evaluations for rules with the `active` and `evaluate` enforcement statuses, demonstrating whether rules would pass or fail if all rules in the rule suite were `active`. Null if no rules with `evaluate` enforcement status were run.
             ///
             /// - Remark: Generated from `#/components/schemas/rule-suite/evaluation_result`.
             @frozen public enum evaluation_resultPayload: String, Codable, Hashable, Sendable {
                 case pass = "pass"
                 case fail = "fail"
+                case bypass = "bypass"
             }
-            /// The result of the rule evaluations for rules with the `active` and `evaluate` enforcement statuses, demonstrating whether rules would pass or fail if all rules in the rule suite were `active`.
+            /// The result of the rule evaluations for rules with the `active` and `evaluate` enforcement statuses, demonstrating whether rules would pass or fail if all rules in the rule suite were `active`. Null if no rules with `evaluate` enforcement status were run.
             ///
             /// - Remark: Generated from `#/components/schemas/rule-suite/evaluation_result`.
             public var evaluation_result: Components.Schemas.rule_hyphen_suite.evaluation_resultPayload?
@@ -13358,7 +13360,7 @@ public enum Components {
                 ///
                 /// - Remark: Generated from `#/components/schemas/rule-suite/rule_evaluationsPayload/rule_type`.
                 public var rule_type: Swift.String?
-                /// Any associated details with the rule evaluation.
+                /// The detailed failure message for the rule. Null if the rule passed.
                 ///
                 /// - Remark: Generated from `#/components/schemas/rule-suite/rule_evaluationsPayload/details`.
                 public var details: Swift.String?
@@ -13369,7 +13371,7 @@ public enum Components {
                 ///   - enforcement: The enforcement level of this rule source.
                 ///   - result: The result of the evaluation of the individual rule.
                 ///   - rule_type: The type of rule.
-                ///   - details: Any associated details with the rule evaluation.
+                ///   - details: The detailed failure message for the rule. Null if the rule passed.
                 public init(
                     rule_source: Components.Schemas.rule_hyphen_suite.rule_evaluationsPayloadPayload.rule_sourcePayload? = nil,
                     enforcement: Components.Schemas.rule_hyphen_suite.rule_evaluationsPayloadPayload.enforcementPayload? = nil,
@@ -13412,7 +13414,7 @@ public enum Components {
             ///   - repository_name: The name of the repository without the `.git` extension.
             ///   - pushed_at:
             ///   - result: The result of the rule evaluations for rules with the `active` enforcement status.
-            ///   - evaluation_result: The result of the rule evaluations for rules with the `active` and `evaluate` enforcement statuses, demonstrating whether rules would pass or fail if all rules in the rule suite were `active`.
+            ///   - evaluation_result: The result of the rule evaluations for rules with the `active` and `evaluate` enforcement statuses, demonstrating whether rules would pass or fail if all rules in the rule suite were `active`. Null if no rules with `evaluate` enforcement status were run.
             ///   - rule_evaluations: Details on the evaluated rules.
             public init(
                 id: Swift.Int? = nil,
@@ -17673,6 +17675,8 @@ public enum Components {
             public var path: Swift.String
             /// - Remark: Generated from `#/components/schemas/content-tree/sha`.
             public var sha: Swift.String
+            /// - Remark: Generated from `#/components/schemas/content-tree/content`.
+            public var content: Swift.String?
             /// - Remark: Generated from `#/components/schemas/content-tree/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/content-tree/git_url`.
@@ -17691,8 +17695,6 @@ public enum Components {
                 public var name: Swift.String
                 /// - Remark: Generated from `#/components/schemas/content-tree/entriesPayload/path`.
                 public var path: Swift.String
-                /// - Remark: Generated from `#/components/schemas/content-tree/entriesPayload/content`.
-                public var content: Swift.String?
                 /// - Remark: Generated from `#/components/schemas/content-tree/entriesPayload/sha`.
                 public var sha: Swift.String
                 /// - Remark: Generated from `#/components/schemas/content-tree/entriesPayload/url`.
@@ -17741,7 +17743,6 @@ public enum Components {
                 ///   - size:
                 ///   - name:
                 ///   - path:
-                ///   - content:
                 ///   - sha:
                 ///   - url:
                 ///   - git_url:
@@ -17753,7 +17754,6 @@ public enum Components {
                     size: Swift.Int,
                     name: Swift.String,
                     path: Swift.String,
-                    content: Swift.String? = nil,
                     sha: Swift.String,
                     url: Swift.String,
                     git_url: Swift.String? = nil,
@@ -17765,7 +17765,6 @@ public enum Components {
                     self.size = size
                     self.name = name
                     self.path = path
-                    self.content = content
                     self.sha = sha
                     self.url = url
                     self.git_url = git_url
@@ -17778,7 +17777,6 @@ public enum Components {
                     case size
                     case name
                     case path
-                    case content
                     case sha
                     case url
                     case git_url
@@ -17830,6 +17828,7 @@ public enum Components {
             ///   - name:
             ///   - path:
             ///   - sha:
+            ///   - content:
             ///   - url:
             ///   - git_url:
             ///   - html_url:
@@ -17842,6 +17841,7 @@ public enum Components {
                 name: Swift.String,
                 path: Swift.String,
                 sha: Swift.String,
+                content: Swift.String? = nil,
                 url: Swift.String,
                 git_url: Swift.String? = nil,
                 html_url: Swift.String? = nil,
@@ -17854,6 +17854,7 @@ public enum Components {
                 self.name = name
                 self.path = path
                 self.sha = sha
+                self.content = content
                 self.url = url
                 self.git_url = git_url
                 self.html_url = html_url
@@ -17867,6 +17868,7 @@ public enum Components {
                 case name
                 case path
                 case sha
+                case content
                 case url
                 case git_url
                 case html_url
