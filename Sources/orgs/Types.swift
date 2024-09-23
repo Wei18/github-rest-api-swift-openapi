@@ -700,7 +700,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// The authenticated user must be an organization owner or be member of a team with the security manager role to use this endpoint.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need the `write:org` scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org`, `write:org`, or `repo` scopes to use this endpoint.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/{security_product}/{enablement}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/{security_product}/{enablement}/post(orgs/enable-or-disable-security-product-on-all-org-repos)`.
@@ -1966,7 +1966,7 @@ extension APIProtocol {
     ///
     /// The authenticated user must be an organization owner or be member of a team with the security manager role to use this endpoint.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need the `write:org` scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org`, `write:org`, or `repo` scopes to use this endpoint.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/{security_product}/{enablement}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/{security_product}/{enablement}/post(orgs/enable-or-disable-security-product-on-all-org-repos)`.
@@ -20384,7 +20384,7 @@ public enum Operations {
     ///
     /// The authenticated user must be an organization owner or be member of a team with the security manager role to use this endpoint.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need the `write:org` scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org`, `write:org`, or `repo` scopes to use this endpoint.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/{security_product}/{enablement}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/{security_product}/{enablement}/post(orgs/enable-or-disable-security-product-on-all-org-repos)`.
