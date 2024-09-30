@@ -2802,116 +2802,26 @@ public enum Operations {
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/POST/requestBody/json`.
                 @frozen public enum jsonPayload: Codable, Hashable, Sendable {
-                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/POST/requestBody/json/case1`.
-                    public struct Case1Payload: Codable, Hashable, Sendable {
-                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/POST/requestBody/json/case1/status`.
-                        public var status: OpenAPIRuntime.OpenAPIValueContainer
-                        /// A container of undocumented properties.
-                        public var additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer
-                        /// Creates a new `Case1Payload`.
-                        ///
-                        /// - Parameters:
-                        ///   - status:
-                        ///   - additionalProperties: A container of undocumented properties.
-                        public init(
-                            status: OpenAPIRuntime.OpenAPIValueContainer,
-                            additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer = .init()
-                        ) {
-                            self.status = status
-                            self.additionalProperties = additionalProperties
-                        }
-                        public enum CodingKeys: String, CodingKey {
-                            case status
-                        }
-                        public init(from decoder: any Decoder) throws {
-                            let container = try decoder.container(keyedBy: CodingKeys.self)
-                            status = try container.decode(
-                                OpenAPIRuntime.OpenAPIValueContainer.self,
-                                forKey: .status
-                            )
-                            additionalProperties = try decoder.decodeAdditionalProperties(knownKeys: [
-                                "status"
-                            ])
-                        }
-                        public func encode(to encoder: any Encoder) throws {
-                            var container = encoder.container(keyedBy: CodingKeys.self)
-                            try container.encode(
-                                status,
-                                forKey: .status
-                            )
-                            try encoder.encodeAdditionalProperties(additionalProperties)
-                        }
+                    public enum CodingKeys: String, CodingKey {
+                        case status
                     }
-                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/POST/requestBody/json/case1`.
-                    case case1(Operations.checks_sol_create.Input.Body.jsonPayload.Case1Payload)
-                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/POST/requestBody/json/case2`.
-                    public struct Case2Payload: Codable, Hashable, Sendable {
-                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/POST/requestBody/json/case2/status`.
-                        public var status: OpenAPIRuntime.OpenAPIValueContainer?
-                        /// A container of undocumented properties.
-                        public var additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer
-                        /// Creates a new `Case2Payload`.
-                        ///
-                        /// - Parameters:
-                        ///   - status:
-                        ///   - additionalProperties: A container of undocumented properties.
-                        public init(
-                            status: OpenAPIRuntime.OpenAPIValueContainer? = nil,
-                            additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer = .init()
-                        ) {
-                            self.status = status
-                            self.additionalProperties = additionalProperties
-                        }
-                        public enum CodingKeys: String, CodingKey {
-                            case status
-                        }
-                        public init(from decoder: any Decoder) throws {
-                            let container = try decoder.container(keyedBy: CodingKeys.self)
-                            status = try container.decodeIfPresent(
-                                OpenAPIRuntime.OpenAPIValueContainer.self,
-                                forKey: .status
-                            )
-                            additionalProperties = try decoder.decodeAdditionalProperties(knownKeys: [
-                                "status"
-                            ])
-                        }
-                        public func encode(to encoder: any Encoder) throws {
-                            var container = encoder.container(keyedBy: CodingKeys.self)
-                            try container.encodeIfPresent(
-                                status,
-                                forKey: .status
-                            )
-                            try encoder.encodeAdditionalProperties(additionalProperties)
-                        }
-                    }
-                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/POST/requestBody/json/case2`.
-                    case case2(Operations.checks_sol_create.Input.Body.jsonPayload.Case2Payload)
                     public init(from decoder: any Decoder) throws {
-                        var errors: [any Error] = []
-                        do {
-                            self = .case1(try .init(from: decoder))
-                            return
-                        } catch {
-                            errors.append(error)
-                        }
-                        do {
-                            self = .case2(try .init(from: decoder))
-                            return
-                        } catch {
-                            errors.append(error)
-                        }
-                        throw Swift.DecodingError.failedToDecodeOneOfSchema(
-                            type: Self.self,
-                            codingPath: decoder.codingPath,
-                            errors: errors
+                        let container = try decoder.container(keyedBy: CodingKeys.self)
+                        let discriminator = try container.decode(
+                            Swift.String.self,
+                            forKey: .status
                         )
+                        switch discriminator {
+                        default:
+                            throw Swift.DecodingError.unknownOneOfDiscriminator(
+                                discriminatorKey: CodingKeys.status,
+                                discriminatorValue: discriminator,
+                                codingPath: decoder.codingPath
+                            )
+                        }
                     }
                     public func encode(to encoder: any Encoder) throws {
                         switch self {
-                        case let .case1(value):
-                            try value.encode(to: encoder)
-                        case let .case2(value):
-                            try value.encode(to: encoder)
                         }
                     }
                 }
