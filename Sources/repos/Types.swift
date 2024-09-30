@@ -2868,7 +2868,7 @@ extension APIProtocol {
     public func repos_sol_add_hyphen_app_hyphen_access_hyphen_restrictions(
         path: Operations.repos_sol_add_hyphen_app_hyphen_access_hyphen_restrictions.Input.Path,
         headers: Operations.repos_sol_add_hyphen_app_hyphen_access_hyphen_restrictions.Input.Headers = .init(),
-        body: Operations.repos_sol_add_hyphen_app_hyphen_access_hyphen_restrictions.Input.Body? = nil
+        body: Operations.repos_sol_add_hyphen_app_hyphen_access_hyphen_restrictions.Input.Body
     ) async throws -> Operations.repos_sol_add_hyphen_app_hyphen_access_hyphen_restrictions.Output {
         try await repos_sol_add_hyphen_app_hyphen_access_hyphen_restrictions(Operations.repos_sol_add_hyphen_app_hyphen_access_hyphen_restrictions.Input(
             path: path,
@@ -2887,7 +2887,7 @@ extension APIProtocol {
     public func repos_sol_set_hyphen_app_hyphen_access_hyphen_restrictions(
         path: Operations.repos_sol_set_hyphen_app_hyphen_access_hyphen_restrictions.Input.Path,
         headers: Operations.repos_sol_set_hyphen_app_hyphen_access_hyphen_restrictions.Input.Headers = .init(),
-        body: Operations.repos_sol_set_hyphen_app_hyphen_access_hyphen_restrictions.Input.Body? = nil
+        body: Operations.repos_sol_set_hyphen_app_hyphen_access_hyphen_restrictions.Input.Body
     ) async throws -> Operations.repos_sol_set_hyphen_app_hyphen_access_hyphen_restrictions.Output {
         try await repos_sol_set_hyphen_app_hyphen_access_hyphen_restrictions(Operations.repos_sol_set_hyphen_app_hyphen_access_hyphen_restrictions.Input(
             path: path,
@@ -2906,7 +2906,7 @@ extension APIProtocol {
     public func repos_sol_remove_hyphen_app_hyphen_access_hyphen_restrictions(
         path: Operations.repos_sol_remove_hyphen_app_hyphen_access_hyphen_restrictions.Input.Path,
         headers: Operations.repos_sol_remove_hyphen_app_hyphen_access_hyphen_restrictions.Input.Headers = .init(),
-        body: Operations.repos_sol_remove_hyphen_app_hyphen_access_hyphen_restrictions.Input.Body? = nil
+        body: Operations.repos_sol_remove_hyphen_app_hyphen_access_hyphen_restrictions.Input.Body
     ) async throws -> Operations.repos_sol_remove_hyphen_app_hyphen_access_hyphen_restrictions.Output {
         try await repos_sol_remove_hyphen_app_hyphen_access_hyphen_restrictions(Operations.repos_sol_remove_hyphen_app_hyphen_access_hyphen_restrictions.Input(
             path: path,
@@ -3020,7 +3020,7 @@ extension APIProtocol {
     public func repos_sol_add_hyphen_user_hyphen_access_hyphen_restrictions(
         path: Operations.repos_sol_add_hyphen_user_hyphen_access_hyphen_restrictions.Input.Path,
         headers: Operations.repos_sol_add_hyphen_user_hyphen_access_hyphen_restrictions.Input.Headers = .init(),
-        body: Operations.repos_sol_add_hyphen_user_hyphen_access_hyphen_restrictions.Input.Body? = nil
+        body: Operations.repos_sol_add_hyphen_user_hyphen_access_hyphen_restrictions.Input.Body
     ) async throws -> Operations.repos_sol_add_hyphen_user_hyphen_access_hyphen_restrictions.Output {
         try await repos_sol_add_hyphen_user_hyphen_access_hyphen_restrictions(Operations.repos_sol_add_hyphen_user_hyphen_access_hyphen_restrictions.Input(
             path: path,
@@ -3043,7 +3043,7 @@ extension APIProtocol {
     public func repos_sol_set_hyphen_user_hyphen_access_hyphen_restrictions(
         path: Operations.repos_sol_set_hyphen_user_hyphen_access_hyphen_restrictions.Input.Path,
         headers: Operations.repos_sol_set_hyphen_user_hyphen_access_hyphen_restrictions.Input.Headers = .init(),
-        body: Operations.repos_sol_set_hyphen_user_hyphen_access_hyphen_restrictions.Input.Body? = nil
+        body: Operations.repos_sol_set_hyphen_user_hyphen_access_hyphen_restrictions.Input.Body
     ) async throws -> Operations.repos_sol_set_hyphen_user_hyphen_access_hyphen_restrictions.Output {
         try await repos_sol_set_hyphen_user_hyphen_access_hyphen_restrictions(Operations.repos_sol_set_hyphen_user_hyphen_access_hyphen_restrictions.Input(
             path: path,
@@ -3066,7 +3066,7 @@ extension APIProtocol {
     public func repos_sol_remove_hyphen_user_hyphen_access_hyphen_restrictions(
         path: Operations.repos_sol_remove_hyphen_user_hyphen_access_hyphen_restrictions.Input.Path,
         headers: Operations.repos_sol_remove_hyphen_user_hyphen_access_hyphen_restrictions.Input.Headers = .init(),
-        body: Operations.repos_sol_remove_hyphen_user_hyphen_access_hyphen_restrictions.Input.Body? = nil
+        body: Operations.repos_sol_remove_hyphen_user_hyphen_access_hyphen_restrictions.Input.Body
     ) async throws -> Operations.repos_sol_remove_hyphen_user_hyphen_access_hyphen_restrictions.Output {
         try await repos_sol_remove_hyphen_user_hyphen_access_hyphen_restrictions(Operations.repos_sol_remove_hyphen_user_hyphen_access_hyphen_restrictions.Input(
             path: path,
@@ -10979,27 +10979,27 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/repository-ruleset-bypass-actor/actor_type`.
             public var actor_type: Components.Schemas.repository_hyphen_ruleset_hyphen_bypass_hyphen_actor.actor_typePayload
-            /// When the specified actor can bypass the ruleset. `pull_request` means that an actor can only bypass rules on pull requests. `pull_request` is not applicable for the `DeployKey` actor type.
+            /// When the specified actor can bypass the ruleset. `pull_request` means that an actor can only bypass rules on pull requests. `pull_request` is not applicable for the `DeployKey` actor type. Also, `pull_request` is only applicable to branch rulesets.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-ruleset-bypass-actor/bypass_mode`.
             @frozen public enum bypass_modePayload: String, Codable, Hashable, Sendable {
                 case always = "always"
                 case pull_request = "pull_request"
             }
-            /// When the specified actor can bypass the ruleset. `pull_request` means that an actor can only bypass rules on pull requests. `pull_request` is not applicable for the `DeployKey` actor type.
+            /// When the specified actor can bypass the ruleset. `pull_request` means that an actor can only bypass rules on pull requests. `pull_request` is not applicable for the `DeployKey` actor type. Also, `pull_request` is only applicable to branch rulesets.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-ruleset-bypass-actor/bypass_mode`.
-            public var bypass_mode: Components.Schemas.repository_hyphen_ruleset_hyphen_bypass_hyphen_actor.bypass_modePayload
+            public var bypass_mode: Components.Schemas.repository_hyphen_ruleset_hyphen_bypass_hyphen_actor.bypass_modePayload?
             /// Creates a new `repository_hyphen_ruleset_hyphen_bypass_hyphen_actor`.
             ///
             /// - Parameters:
             ///   - actor_id: The ID of the actor that can bypass a ruleset. If `actor_type` is `OrganizationAdmin`, this should be `1`. If `actor_type` is `DeployKey`, this should be null. `OrganizationAdmin` is not applicable for personal repositories.
             ///   - actor_type: The type of actor that can bypass a ruleset.
-            ///   - bypass_mode: When the specified actor can bypass the ruleset. `pull_request` means that an actor can only bypass rules on pull requests. `pull_request` is not applicable for the `DeployKey` actor type.
+            ///   - bypass_mode: When the specified actor can bypass the ruleset. `pull_request` means that an actor can only bypass rules on pull requests. `pull_request` is not applicable for the `DeployKey` actor type. Also, `pull_request` is only applicable to branch rulesets.
             public init(
                 actor_id: Swift.Int? = nil,
                 actor_type: Components.Schemas.repository_hyphen_ruleset_hyphen_bypass_hyphen_actor.actor_typePayload,
-                bypass_mode: Components.Schemas.repository_hyphen_ruleset_hyphen_bypass_hyphen_actor.bypass_modePayload
+                bypass_mode: Components.Schemas.repository_hyphen_ruleset_hyphen_bypass_hyphen_actor.bypass_modePayload? = nil
             ) {
                 self.actor_id = actor_id
                 self.actor_type = actor_type
@@ -11229,7 +11229,9 @@ public enum Components {
                 case repository_property
             }
         }
-        /// Conditions for an organization ruleset. The conditions object should contain both `repository_name` and `ref_name` properties or both `repository_id` and `ref_name` properties.
+        /// Conditions for an organization ruleset.
+        /// The branch and tag rulesets conditions object should contain both `repository_name` and `ref_name` properties, or both `repository_id` and `ref_name` properties, or both `repository_property` and `ref_name` properties.
+        /// The push rulesets conditions object does not require the `ref_name` property.
         ///
         /// - Remark: Generated from `#/components/schemas/org-ruleset-conditions`.
         @frozen public enum org_hyphen_ruleset_hyphen_conditions: Codable, Hashable, Sendable {
@@ -32773,61 +32775,26 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps/POST/requestBody/json`.
-                @frozen public enum jsonPayload: Codable, Hashable, Sendable {
-                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps/POST/requestBody/json/case1`.
-                    public struct Case1Payload: Codable, Hashable, Sendable {
-                        /// The GitHub Apps that have push access to this branch. Use the slugified version of the app name. **Note**: The list of users, apps, and teams in total is limited to 100 items.
-                        ///
-                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps/POST/requestBody/json/case1/apps`.
-                        public var apps: [Swift.String]
-                        /// Creates a new `Case1Payload`.
-                        ///
-                        /// - Parameters:
-                        ///   - apps: The GitHub Apps that have push access to this branch. Use the slugified version of the app name. **Note**: The list of users, apps, and teams in total is limited to 100 items.
-                        public init(apps: [Swift.String]) {
-                            self.apps = apps
-                        }
-                        public enum CodingKeys: String, CodingKey {
-                            case apps
-                        }
+                public struct jsonPayload: Codable, Hashable, Sendable {
+                    /// The GitHub Apps that have push access to this branch. Use the slugified version of the app name. **Note**: The list of users, apps, and teams in total is limited to 100 items.
+                    ///
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps/POST/requestBody/json/apps`.
+                    public var apps: [Swift.String]
+                    /// Creates a new `jsonPayload`.
+                    ///
+                    /// - Parameters:
+                    ///   - apps: The GitHub Apps that have push access to this branch. Use the slugified version of the app name. **Note**: The list of users, apps, and teams in total is limited to 100 items.
+                    public init(apps: [Swift.String]) {
+                        self.apps = apps
                     }
-                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps/POST/requestBody/json/case1`.
-                    case case1(Operations.repos_sol_add_hyphen_app_hyphen_access_hyphen_restrictions.Input.Body.jsonPayload.Case1Payload)
-                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps/POST/requestBody/json/case2`.
-                    case case2([Swift.String])
-                    public init(from decoder: any Decoder) throws {
-                        var errors: [any Error] = []
-                        do {
-                            self = .case1(try .init(from: decoder))
-                            return
-                        } catch {
-                            errors.append(error)
-                        }
-                        do {
-                            self = .case2(try decoder.decodeFromSingleValueContainer())
-                            return
-                        } catch {
-                            errors.append(error)
-                        }
-                        throw Swift.DecodingError.failedToDecodeOneOfSchema(
-                            type: Self.self,
-                            codingPath: decoder.codingPath,
-                            errors: errors
-                        )
-                    }
-                    public func encode(to encoder: any Encoder) throws {
-                        switch self {
-                        case let .case1(value):
-                            try value.encode(to: encoder)
-                        case let .case2(value):
-                            try encoder.encodeToSingleValueContainer(value)
-                        }
+                    public enum CodingKeys: String, CodingKey {
+                        case apps
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps/POST/requestBody/content/application\/json`.
                 case json(Operations.repos_sol_add_hyphen_app_hyphen_access_hyphen_restrictions.Input.Body.jsonPayload)
             }
-            public var body: Operations.repos_sol_add_hyphen_app_hyphen_access_hyphen_restrictions.Input.Body?
+            public var body: Operations.repos_sol_add_hyphen_app_hyphen_access_hyphen_restrictions.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -32837,7 +32804,7 @@ public enum Operations {
             public init(
                 path: Operations.repos_sol_add_hyphen_app_hyphen_access_hyphen_restrictions.Input.Path,
                 headers: Operations.repos_sol_add_hyphen_app_hyphen_access_hyphen_restrictions.Input.Headers = .init(),
-                body: Operations.repos_sol_add_hyphen_app_hyphen_access_hyphen_restrictions.Input.Body? = nil
+                body: Operations.repos_sol_add_hyphen_app_hyphen_access_hyphen_restrictions.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -33007,61 +32974,26 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps/PUT/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps/PUT/requestBody/json`.
-                @frozen public enum jsonPayload: Codable, Hashable, Sendable {
-                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps/PUT/requestBody/json/case1`.
-                    public struct Case1Payload: Codable, Hashable, Sendable {
-                        /// The GitHub Apps that have push access to this branch. Use the slugified version of the app name. **Note**: The list of users, apps, and teams in total is limited to 100 items.
-                        ///
-                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps/PUT/requestBody/json/case1/apps`.
-                        public var apps: [Swift.String]
-                        /// Creates a new `Case1Payload`.
-                        ///
-                        /// - Parameters:
-                        ///   - apps: The GitHub Apps that have push access to this branch. Use the slugified version of the app name. **Note**: The list of users, apps, and teams in total is limited to 100 items.
-                        public init(apps: [Swift.String]) {
-                            self.apps = apps
-                        }
-                        public enum CodingKeys: String, CodingKey {
-                            case apps
-                        }
+                public struct jsonPayload: Codable, Hashable, Sendable {
+                    /// The GitHub Apps that have push access to this branch. Use the slugified version of the app name. **Note**: The list of users, apps, and teams in total is limited to 100 items.
+                    ///
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps/PUT/requestBody/json/apps`.
+                    public var apps: [Swift.String]
+                    /// Creates a new `jsonPayload`.
+                    ///
+                    /// - Parameters:
+                    ///   - apps: The GitHub Apps that have push access to this branch. Use the slugified version of the app name. **Note**: The list of users, apps, and teams in total is limited to 100 items.
+                    public init(apps: [Swift.String]) {
+                        self.apps = apps
                     }
-                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps/PUT/requestBody/json/case1`.
-                    case case1(Operations.repos_sol_set_hyphen_app_hyphen_access_hyphen_restrictions.Input.Body.jsonPayload.Case1Payload)
-                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps/PUT/requestBody/json/case2`.
-                    case case2([Swift.String])
-                    public init(from decoder: any Decoder) throws {
-                        var errors: [any Error] = []
-                        do {
-                            self = .case1(try .init(from: decoder))
-                            return
-                        } catch {
-                            errors.append(error)
-                        }
-                        do {
-                            self = .case2(try decoder.decodeFromSingleValueContainer())
-                            return
-                        } catch {
-                            errors.append(error)
-                        }
-                        throw Swift.DecodingError.failedToDecodeOneOfSchema(
-                            type: Self.self,
-                            codingPath: decoder.codingPath,
-                            errors: errors
-                        )
-                    }
-                    public func encode(to encoder: any Encoder) throws {
-                        switch self {
-                        case let .case1(value):
-                            try value.encode(to: encoder)
-                        case let .case2(value):
-                            try encoder.encodeToSingleValueContainer(value)
-                        }
+                    public enum CodingKeys: String, CodingKey {
+                        case apps
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps/PUT/requestBody/content/application\/json`.
                 case json(Operations.repos_sol_set_hyphen_app_hyphen_access_hyphen_restrictions.Input.Body.jsonPayload)
             }
-            public var body: Operations.repos_sol_set_hyphen_app_hyphen_access_hyphen_restrictions.Input.Body?
+            public var body: Operations.repos_sol_set_hyphen_app_hyphen_access_hyphen_restrictions.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -33071,7 +33003,7 @@ public enum Operations {
             public init(
                 path: Operations.repos_sol_set_hyphen_app_hyphen_access_hyphen_restrictions.Input.Path,
                 headers: Operations.repos_sol_set_hyphen_app_hyphen_access_hyphen_restrictions.Input.Headers = .init(),
-                body: Operations.repos_sol_set_hyphen_app_hyphen_access_hyphen_restrictions.Input.Body? = nil
+                body: Operations.repos_sol_set_hyphen_app_hyphen_access_hyphen_restrictions.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -33241,61 +33173,26 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps/DELETE/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps/DELETE/requestBody/json`.
-                @frozen public enum jsonPayload: Codable, Hashable, Sendable {
-                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps/DELETE/requestBody/json/case1`.
-                    public struct Case1Payload: Codable, Hashable, Sendable {
-                        /// The GitHub Apps that have push access to this branch. Use the slugified version of the app name. **Note**: The list of users, apps, and teams in total is limited to 100 items.
-                        ///
-                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps/DELETE/requestBody/json/case1/apps`.
-                        public var apps: [Swift.String]
-                        /// Creates a new `Case1Payload`.
-                        ///
-                        /// - Parameters:
-                        ///   - apps: The GitHub Apps that have push access to this branch. Use the slugified version of the app name. **Note**: The list of users, apps, and teams in total is limited to 100 items.
-                        public init(apps: [Swift.String]) {
-                            self.apps = apps
-                        }
-                        public enum CodingKeys: String, CodingKey {
-                            case apps
-                        }
+                public struct jsonPayload: Codable, Hashable, Sendable {
+                    /// The GitHub Apps that have push access to this branch. Use the slugified version of the app name. **Note**: The list of users, apps, and teams in total is limited to 100 items.
+                    ///
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps/DELETE/requestBody/json/apps`.
+                    public var apps: [Swift.String]
+                    /// Creates a new `jsonPayload`.
+                    ///
+                    /// - Parameters:
+                    ///   - apps: The GitHub Apps that have push access to this branch. Use the slugified version of the app name. **Note**: The list of users, apps, and teams in total is limited to 100 items.
+                    public init(apps: [Swift.String]) {
+                        self.apps = apps
                     }
-                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps/DELETE/requestBody/json/case1`.
-                    case case1(Operations.repos_sol_remove_hyphen_app_hyphen_access_hyphen_restrictions.Input.Body.jsonPayload.Case1Payload)
-                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps/DELETE/requestBody/json/case2`.
-                    case case2([Swift.String])
-                    public init(from decoder: any Decoder) throws {
-                        var errors: [any Error] = []
-                        do {
-                            self = .case1(try .init(from: decoder))
-                            return
-                        } catch {
-                            errors.append(error)
-                        }
-                        do {
-                            self = .case2(try decoder.decodeFromSingleValueContainer())
-                            return
-                        } catch {
-                            errors.append(error)
-                        }
-                        throw Swift.DecodingError.failedToDecodeOneOfSchema(
-                            type: Self.self,
-                            codingPath: decoder.codingPath,
-                            errors: errors
-                        )
-                    }
-                    public func encode(to encoder: any Encoder) throws {
-                        switch self {
-                        case let .case1(value):
-                            try value.encode(to: encoder)
-                        case let .case2(value):
-                            try encoder.encodeToSingleValueContainer(value)
-                        }
+                    public enum CodingKeys: String, CodingKey {
+                        case apps
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps/DELETE/requestBody/content/application\/json`.
                 case json(Operations.repos_sol_remove_hyphen_app_hyphen_access_hyphen_restrictions.Input.Body.jsonPayload)
             }
-            public var body: Operations.repos_sol_remove_hyphen_app_hyphen_access_hyphen_restrictions.Input.Body?
+            public var body: Operations.repos_sol_remove_hyphen_app_hyphen_access_hyphen_restrictions.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -33305,7 +33202,7 @@ public enum Operations {
             public init(
                 path: Operations.repos_sol_remove_hyphen_app_hyphen_access_hyphen_restrictions.Input.Path,
                 headers: Operations.repos_sol_remove_hyphen_app_hyphen_access_hyphen_restrictions.Input.Headers = .init(),
-                body: Operations.repos_sol_remove_hyphen_app_hyphen_access_hyphen_restrictions.Input.Body? = nil
+                body: Operations.repos_sol_remove_hyphen_app_hyphen_access_hyphen_restrictions.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -34533,61 +34430,26 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users/POST/requestBody/json`.
-                @frozen public enum jsonPayload: Codable, Hashable, Sendable {
-                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users/POST/requestBody/json/case1`.
-                    public struct Case1Payload: Codable, Hashable, Sendable {
-                        /// The username for users
-                        ///
-                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users/POST/requestBody/json/case1/users`.
-                        public var users: [Swift.String]
-                        /// Creates a new `Case1Payload`.
-                        ///
-                        /// - Parameters:
-                        ///   - users: The username for users
-                        public init(users: [Swift.String]) {
-                            self.users = users
-                        }
-                        public enum CodingKeys: String, CodingKey {
-                            case users
-                        }
+                public struct jsonPayload: Codable, Hashable, Sendable {
+                    /// The username for users
+                    ///
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users/POST/requestBody/json/users`.
+                    public var users: [Swift.String]
+                    /// Creates a new `jsonPayload`.
+                    ///
+                    /// - Parameters:
+                    ///   - users: The username for users
+                    public init(users: [Swift.String]) {
+                        self.users = users
                     }
-                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users/POST/requestBody/json/case1`.
-                    case case1(Operations.repos_sol_add_hyphen_user_hyphen_access_hyphen_restrictions.Input.Body.jsonPayload.Case1Payload)
-                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users/POST/requestBody/json/case2`.
-                    case case2([Swift.String])
-                    public init(from decoder: any Decoder) throws {
-                        var errors: [any Error] = []
-                        do {
-                            self = .case1(try .init(from: decoder))
-                            return
-                        } catch {
-                            errors.append(error)
-                        }
-                        do {
-                            self = .case2(try decoder.decodeFromSingleValueContainer())
-                            return
-                        } catch {
-                            errors.append(error)
-                        }
-                        throw Swift.DecodingError.failedToDecodeOneOfSchema(
-                            type: Self.self,
-                            codingPath: decoder.codingPath,
-                            errors: errors
-                        )
-                    }
-                    public func encode(to encoder: any Encoder) throws {
-                        switch self {
-                        case let .case1(value):
-                            try value.encode(to: encoder)
-                        case let .case2(value):
-                            try encoder.encodeToSingleValueContainer(value)
-                        }
+                    public enum CodingKeys: String, CodingKey {
+                        case users
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users/POST/requestBody/content/application\/json`.
                 case json(Operations.repos_sol_add_hyphen_user_hyphen_access_hyphen_restrictions.Input.Body.jsonPayload)
             }
-            public var body: Operations.repos_sol_add_hyphen_user_hyphen_access_hyphen_restrictions.Input.Body?
+            public var body: Operations.repos_sol_add_hyphen_user_hyphen_access_hyphen_restrictions.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -34597,7 +34459,7 @@ public enum Operations {
             public init(
                 path: Operations.repos_sol_add_hyphen_user_hyphen_access_hyphen_restrictions.Input.Path,
                 headers: Operations.repos_sol_add_hyphen_user_hyphen_access_hyphen_restrictions.Input.Headers = .init(),
-                body: Operations.repos_sol_add_hyphen_user_hyphen_access_hyphen_restrictions.Input.Body? = nil
+                body: Operations.repos_sol_add_hyphen_user_hyphen_access_hyphen_restrictions.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -34771,61 +34633,26 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users/PUT/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users/PUT/requestBody/json`.
-                @frozen public enum jsonPayload: Codable, Hashable, Sendable {
-                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users/PUT/requestBody/json/case1`.
-                    public struct Case1Payload: Codable, Hashable, Sendable {
-                        /// The username for users
-                        ///
-                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users/PUT/requestBody/json/case1/users`.
-                        public var users: [Swift.String]
-                        /// Creates a new `Case1Payload`.
-                        ///
-                        /// - Parameters:
-                        ///   - users: The username for users
-                        public init(users: [Swift.String]) {
-                            self.users = users
-                        }
-                        public enum CodingKeys: String, CodingKey {
-                            case users
-                        }
+                public struct jsonPayload: Codable, Hashable, Sendable {
+                    /// The username for users
+                    ///
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users/PUT/requestBody/json/users`.
+                    public var users: [Swift.String]
+                    /// Creates a new `jsonPayload`.
+                    ///
+                    /// - Parameters:
+                    ///   - users: The username for users
+                    public init(users: [Swift.String]) {
+                        self.users = users
                     }
-                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users/PUT/requestBody/json/case1`.
-                    case case1(Operations.repos_sol_set_hyphen_user_hyphen_access_hyphen_restrictions.Input.Body.jsonPayload.Case1Payload)
-                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users/PUT/requestBody/json/case2`.
-                    case case2([Swift.String])
-                    public init(from decoder: any Decoder) throws {
-                        var errors: [any Error] = []
-                        do {
-                            self = .case1(try .init(from: decoder))
-                            return
-                        } catch {
-                            errors.append(error)
-                        }
-                        do {
-                            self = .case2(try decoder.decodeFromSingleValueContainer())
-                            return
-                        } catch {
-                            errors.append(error)
-                        }
-                        throw Swift.DecodingError.failedToDecodeOneOfSchema(
-                            type: Self.self,
-                            codingPath: decoder.codingPath,
-                            errors: errors
-                        )
-                    }
-                    public func encode(to encoder: any Encoder) throws {
-                        switch self {
-                        case let .case1(value):
-                            try value.encode(to: encoder)
-                        case let .case2(value):
-                            try encoder.encodeToSingleValueContainer(value)
-                        }
+                    public enum CodingKeys: String, CodingKey {
+                        case users
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users/PUT/requestBody/content/application\/json`.
                 case json(Operations.repos_sol_set_hyphen_user_hyphen_access_hyphen_restrictions.Input.Body.jsonPayload)
             }
-            public var body: Operations.repos_sol_set_hyphen_user_hyphen_access_hyphen_restrictions.Input.Body?
+            public var body: Operations.repos_sol_set_hyphen_user_hyphen_access_hyphen_restrictions.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -34835,7 +34662,7 @@ public enum Operations {
             public init(
                 path: Operations.repos_sol_set_hyphen_user_hyphen_access_hyphen_restrictions.Input.Path,
                 headers: Operations.repos_sol_set_hyphen_user_hyphen_access_hyphen_restrictions.Input.Headers = .init(),
-                body: Operations.repos_sol_set_hyphen_user_hyphen_access_hyphen_restrictions.Input.Body? = nil
+                body: Operations.repos_sol_set_hyphen_user_hyphen_access_hyphen_restrictions.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -35009,61 +34836,26 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users/DELETE/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users/DELETE/requestBody/json`.
-                @frozen public enum jsonPayload: Codable, Hashable, Sendable {
-                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users/DELETE/requestBody/json/case1`.
-                    public struct Case1Payload: Codable, Hashable, Sendable {
-                        /// The username for users
-                        ///
-                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users/DELETE/requestBody/json/case1/users`.
-                        public var users: [Swift.String]
-                        /// Creates a new `Case1Payload`.
-                        ///
-                        /// - Parameters:
-                        ///   - users: The username for users
-                        public init(users: [Swift.String]) {
-                            self.users = users
-                        }
-                        public enum CodingKeys: String, CodingKey {
-                            case users
-                        }
+                public struct jsonPayload: Codable, Hashable, Sendable {
+                    /// The username for users
+                    ///
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users/DELETE/requestBody/json/users`.
+                    public var users: [Swift.String]
+                    /// Creates a new `jsonPayload`.
+                    ///
+                    /// - Parameters:
+                    ///   - users: The username for users
+                    public init(users: [Swift.String]) {
+                        self.users = users
                     }
-                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users/DELETE/requestBody/json/case1`.
-                    case case1(Operations.repos_sol_remove_hyphen_user_hyphen_access_hyphen_restrictions.Input.Body.jsonPayload.Case1Payload)
-                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users/DELETE/requestBody/json/case2`.
-                    case case2([Swift.String])
-                    public init(from decoder: any Decoder) throws {
-                        var errors: [any Error] = []
-                        do {
-                            self = .case1(try .init(from: decoder))
-                            return
-                        } catch {
-                            errors.append(error)
-                        }
-                        do {
-                            self = .case2(try decoder.decodeFromSingleValueContainer())
-                            return
-                        } catch {
-                            errors.append(error)
-                        }
-                        throw Swift.DecodingError.failedToDecodeOneOfSchema(
-                            type: Self.self,
-                            codingPath: decoder.codingPath,
-                            errors: errors
-                        )
-                    }
-                    public func encode(to encoder: any Encoder) throws {
-                        switch self {
-                        case let .case1(value):
-                            try value.encode(to: encoder)
-                        case let .case2(value):
-                            try encoder.encodeToSingleValueContainer(value)
-                        }
+                    public enum CodingKeys: String, CodingKey {
+                        case users
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users/DELETE/requestBody/content/application\/json`.
                 case json(Operations.repos_sol_remove_hyphen_user_hyphen_access_hyphen_restrictions.Input.Body.jsonPayload)
             }
-            public var body: Operations.repos_sol_remove_hyphen_user_hyphen_access_hyphen_restrictions.Input.Body?
+            public var body: Operations.repos_sol_remove_hyphen_user_hyphen_access_hyphen_restrictions.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -35073,7 +34865,7 @@ public enum Operations {
             public init(
                 path: Operations.repos_sol_remove_hyphen_user_hyphen_access_hyphen_restrictions.Input.Path,
                 headers: Operations.repos_sol_remove_hyphen_user_hyphen_access_hyphen_restrictions.Input.Headers = .init(),
-                body: Operations.repos_sol_remove_hyphen_user_hyphen_access_hyphen_restrictions.Input.Body? = nil
+                body: Operations.repos_sol_remove_hyphen_user_hyphen_access_hyphen_restrictions.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -39909,85 +39701,6 @@ public enum Operations {
                             switch self {
                             case let .application_vnd_period_github_period_object(body):
                                 return body
-                            default:
-                                try throwUnexpectedResponseBody(
-                                    expectedContent: "application/vnd.github.object",
-                                    body: self
-                                )
-                            }
-                        }
-                    }
-                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/contents/{path}/GET/responses/200/content/json`.
-                    @frozen public enum jsonPayload: Codable, Hashable, Sendable {
-                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/contents/{path}/GET/responses/200/content/json/case1`.
-                        case content_hyphen_directory(Components.Schemas.content_hyphen_directory)
-                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/contents/{path}/GET/responses/200/content/json/case2`.
-                        case content_hyphen_file(Components.Schemas.content_hyphen_file)
-                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/contents/{path}/GET/responses/200/content/json/case3`.
-                        case content_hyphen_symlink(Components.Schemas.content_hyphen_symlink)
-                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/contents/{path}/GET/responses/200/content/json/case4`.
-                        case content_hyphen_submodule(Components.Schemas.content_hyphen_submodule)
-                        public init(from decoder: any Decoder) throws {
-                            var errors: [any Error] = []
-                            do {
-                                self = .content_hyphen_directory(try decoder.decodeFromSingleValueContainer())
-                                return
-                            } catch {
-                                errors.append(error)
-                            }
-                            do {
-                                self = .content_hyphen_file(try .init(from: decoder))
-                                return
-                            } catch {
-                                errors.append(error)
-                            }
-                            do {
-                                self = .content_hyphen_symlink(try .init(from: decoder))
-                                return
-                            } catch {
-                                errors.append(error)
-                            }
-                            do {
-                                self = .content_hyphen_submodule(try .init(from: decoder))
-                                return
-                            } catch {
-                                errors.append(error)
-                            }
-                            throw Swift.DecodingError.failedToDecodeOneOfSchema(
-                                type: Self.self,
-                                codingPath: decoder.codingPath,
-                                errors: errors
-                            )
-                        }
-                        public func encode(to encoder: any Encoder) throws {
-                            switch self {
-                            case let .content_hyphen_directory(value):
-                                try encoder.encodeToSingleValueContainer(value)
-                            case let .content_hyphen_file(value):
-                                try value.encode(to: encoder)
-                            case let .content_hyphen_symlink(value):
-                                try value.encode(to: encoder)
-                            case let .content_hyphen_submodule(value):
-                                try value.encode(to: encoder)
-                            }
-                        }
-                    }
-                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/contents/{path}/GET/responses/200/content/application\/json`.
-                    case json(Operations.repos_sol_get_hyphen_content.Output.Ok.Body.jsonPayload)
-                    /// The associated value of the enum case if `self` is `.json`.
-                    ///
-                    /// - Throws: An error if `self` is not `.json`.
-                    /// - SeeAlso: `.json`.
-                    public var json: Operations.repos_sol_get_hyphen_content.Output.Ok.Body.jsonPayload {
-                        get throws {
-                            switch self {
-                            case let .json(body):
-                                return body
-                            default:
-                                try throwUnexpectedResponseBody(
-                                    expectedContent: "application/json",
-                                    body: self
-                                )
                             }
                         }
                     }
