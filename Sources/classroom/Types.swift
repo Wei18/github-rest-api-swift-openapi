@@ -23,8 +23,8 @@ public protocol APIProtocol: Sendable {
     /// Lists any assignment repositories that have been created by students accepting a GitHub Classroom assignment. Accepted assignments will only be returned if the current user is an administrator of the GitHub Classroom for the assignment.
     ///
     /// - Remark: HTTP `GET /assignments/{assignment_id}/accepted_assignments`.
-    /// - Remark: Generated from `#/paths//assignments/{assignment_id}/accepted_assignments/get(classroom/list-accepted-assigments-for-an-assignment)`.
-    func classroom_sol_list_hyphen_accepted_hyphen_assigments_hyphen_for_hyphen_an_hyphen_assignment(_ input: Operations.classroom_sol_list_hyphen_accepted_hyphen_assigments_hyphen_for_hyphen_an_hyphen_assignment.Input) async throws -> Operations.classroom_sol_list_hyphen_accepted_hyphen_assigments_hyphen_for_hyphen_an_hyphen_assignment.Output
+    /// - Remark: Generated from `#/paths//assignments/{assignment_id}/accepted_assignments/get(classroom/list-accepted-assignments-for-an-assignment)`.
+    func classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment(_ input: Operations.classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment.Input) async throws -> Operations.classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment.Output
     /// Get assignment grades
     ///
     /// Gets grades for a GitHub Classroom assignment. Grades will only be returned if the current user is an administrator of the GitHub Classroom for the assignment.
@@ -77,13 +77,13 @@ extension APIProtocol {
     /// Lists any assignment repositories that have been created by students accepting a GitHub Classroom assignment. Accepted assignments will only be returned if the current user is an administrator of the GitHub Classroom for the assignment.
     ///
     /// - Remark: HTTP `GET /assignments/{assignment_id}/accepted_assignments`.
-    /// - Remark: Generated from `#/paths//assignments/{assignment_id}/accepted_assignments/get(classroom/list-accepted-assigments-for-an-assignment)`.
-    public func classroom_sol_list_hyphen_accepted_hyphen_assigments_hyphen_for_hyphen_an_hyphen_assignment(
-        path: Operations.classroom_sol_list_hyphen_accepted_hyphen_assigments_hyphen_for_hyphen_an_hyphen_assignment.Input.Path,
-        query: Operations.classroom_sol_list_hyphen_accepted_hyphen_assigments_hyphen_for_hyphen_an_hyphen_assignment.Input.Query = .init(),
-        headers: Operations.classroom_sol_list_hyphen_accepted_hyphen_assigments_hyphen_for_hyphen_an_hyphen_assignment.Input.Headers = .init()
-    ) async throws -> Operations.classroom_sol_list_hyphen_accepted_hyphen_assigments_hyphen_for_hyphen_an_hyphen_assignment.Output {
-        try await classroom_sol_list_hyphen_accepted_hyphen_assigments_hyphen_for_hyphen_an_hyphen_assignment(Operations.classroom_sol_list_hyphen_accepted_hyphen_assigments_hyphen_for_hyphen_an_hyphen_assignment.Input(
+    /// - Remark: Generated from `#/paths//assignments/{assignment_id}/accepted_assignments/get(classroom/list-accepted-assignments-for-an-assignment)`.
+    public func classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment(
+        path: Operations.classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment.Input.Path,
+        query: Operations.classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment.Input.Query = .init(),
+        headers: Operations.classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment.Input.Headers = .init()
+    ) async throws -> Operations.classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment.Output {
+        try await classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment(Operations.classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment.Input(
             path: path,
             query: query,
             headers: headers
@@ -1168,9 +1168,9 @@ public enum Operations {
     /// Lists any assignment repositories that have been created by students accepting a GitHub Classroom assignment. Accepted assignments will only be returned if the current user is an administrator of the GitHub Classroom for the assignment.
     ///
     /// - Remark: HTTP `GET /assignments/{assignment_id}/accepted_assignments`.
-    /// - Remark: Generated from `#/paths//assignments/{assignment_id}/accepted_assignments/get(classroom/list-accepted-assigments-for-an-assignment)`.
-    public enum classroom_sol_list_hyphen_accepted_hyphen_assigments_hyphen_for_hyphen_an_hyphen_assignment {
-        public static let id: Swift.String = "classroom/list-accepted-assigments-for-an-assignment"
+    /// - Remark: Generated from `#/paths//assignments/{assignment_id}/accepted_assignments/get(classroom/list-accepted-assignments-for-an-assignment)`.
+    public enum classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment {
+        public static let id: Swift.String = "classroom/list-accepted-assignments-for-an-assignment"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/assignments/{assignment_id}/accepted_assignments/GET/path`.
             public struct Path: Sendable, Hashable {
@@ -1186,7 +1186,7 @@ public enum Operations {
                     self.assignment_id = assignment_id
                 }
             }
-            public var path: Operations.classroom_sol_list_hyphen_accepted_hyphen_assigments_hyphen_for_hyphen_an_hyphen_assignment.Input.Path
+            public var path: Operations.classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment.Input.Path
             /// - Remark: Generated from `#/paths/assignments/{assignment_id}/accepted_assignments/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
@@ -1210,19 +1210,19 @@ public enum Operations {
                     self.per_page = per_page
                 }
             }
-            public var query: Operations.classroom_sol_list_hyphen_accepted_hyphen_assigments_hyphen_for_hyphen_an_hyphen_assignment.Input.Query
+            public var query: Operations.classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment.Input.Query
             /// - Remark: Generated from `#/paths/assignments/{assignment_id}/accepted_assignments/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.classroom_sol_list_hyphen_accepted_hyphen_assigments_hyphen_for_hyphen_an_hyphen_assignment.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.classroom_sol_list_hyphen_accepted_hyphen_assigments_hyphen_for_hyphen_an_hyphen_assignment.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.classroom_sol_list_hyphen_accepted_hyphen_assigments_hyphen_for_hyphen_an_hyphen_assignment.Input.Headers
+            public var headers: Operations.classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -1230,9 +1230,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.classroom_sol_list_hyphen_accepted_hyphen_assigments_hyphen_for_hyphen_an_hyphen_assignment.Input.Path,
-                query: Operations.classroom_sol_list_hyphen_accepted_hyphen_assigments_hyphen_for_hyphen_an_hyphen_assignment.Input.Query = .init(),
-                headers: Operations.classroom_sol_list_hyphen_accepted_hyphen_assigments_hyphen_for_hyphen_an_hyphen_assignment.Input.Headers = .init()
+                path: Operations.classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment.Input.Path,
+                query: Operations.classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment.Input.Query = .init(),
+                headers: Operations.classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -1259,26 +1259,26 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.classroom_sol_list_hyphen_accepted_hyphen_assigments_hyphen_for_hyphen_an_hyphen_assignment.Output.Ok.Body
+                public var body: Operations.classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.classroom_sol_list_hyphen_accepted_hyphen_assigments_hyphen_for_hyphen_an_hyphen_assignment.Output.Ok.Body) {
+                public init(body: Operations.classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment.Output.Ok.Body) {
                     self.body = body
                 }
             }
             /// Response
             ///
-            /// - Remark: Generated from `#/paths//assignments/{assignment_id}/accepted_assignments/get(classroom/list-accepted-assigments-for-an-assignment)/responses/200`.
+            /// - Remark: Generated from `#/paths//assignments/{assignment_id}/accepted_assignments/get(classroom/list-accepted-assignments-for-an-assignment)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.classroom_sol_list_hyphen_accepted_hyphen_assigments_hyphen_for_hyphen_an_hyphen_assignment.Output.Ok)
+            case ok(Operations.classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.classroom_sol_list_hyphen_accepted_hyphen_assigments_hyphen_for_hyphen_an_hyphen_assignment.Output.Ok {
+            public var ok: Operations.classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
