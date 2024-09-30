@@ -296,6 +296,13 @@ public struct Client: APIProtocol {
                     in: &request,
                     style: .form,
                     explode: true,
+                    name: "pr",
+                    value: input.query.pr
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
                     name: "direction",
                     value: input.query.direction
                 )
@@ -755,6 +762,13 @@ public struct Client: APIProtocol {
                     name: "ref",
                     value: input.query.ref
                 )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "pr",
+                    value: input.query.pr
+                )
                 converter.setAcceptHeader(
                     in: &request.headerFields,
                     contentTypes: input.headers.accept
@@ -927,6 +941,13 @@ public struct Client: APIProtocol {
                     explode: true,
                     name: "per_page",
                     value: input.query.per_page
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "pr",
+                    value: input.query.pr
                 )
                 try converter.setQueryItemAsURI(
                     in: &request,
