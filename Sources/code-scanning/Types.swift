@@ -3296,6 +3296,10 @@ public enum Components {
         ///
         /// - Remark: Generated from `#/components/parameters/git-ref`.
         public typealias git_hyphen_ref = Components.Schemas.code_hyphen_scanning_hyphen_ref
+        /// The number of the pull request for the results you want to list.
+        ///
+        /// - Remark: Generated from `#/components/parameters/pr-alias`.
+        public typealias pr_hyphen_alias = Swift.Int
         /// The number that identifies an alert. You can find this at the end of the URL for a code scanning alert within GitHub, and in the `number` field in the response from the `GET /repos/{owner}/{repo}/code-scanning/alerts` operation.
         ///
         /// - Remark: Generated from `#/components/parameters/alert-number`.
@@ -3899,6 +3903,10 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/GET/query/ref`.
                 public var ref: Components.Parameters.git_hyphen_ref?
+                /// The number of the pull request for the results you want to list.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/GET/query/pr`.
+                public var pr: Components.Parameters.pr_hyphen_alias?
                 /// - Remark: Generated from `#/components/parameters/direction`.
                 @frozen public enum direction: String, Codable, Hashable, Sendable {
                     case asc = "asc"
@@ -3933,6 +3941,7 @@ public enum Operations {
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - ref: The Git reference for the results you want to list. The `ref` for a branch can be formatted either as `refs/heads/<branch name>` or simply `<branch name>`. To reference a pull request use `refs/pull/<number>/merge`.
+                ///   - pr: The number of the pull request for the results you want to list.
                 ///   - direction: The direction to sort the results by.
                 ///   - sort: The property by which to sort the results.
                 ///   - state: If specified, only code scanning alerts with this state will be returned.
@@ -3943,6 +3952,7 @@ public enum Operations {
                     page: Components.Parameters.page? = nil,
                     per_page: Components.Parameters.per_hyphen_page? = nil,
                     ref: Components.Parameters.git_hyphen_ref? = nil,
+                    pr: Components.Parameters.pr_hyphen_alias? = nil,
                     direction: Components.Parameters.direction? = nil,
                     sort: Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Input.Query.sortPayload? = nil,
                     state: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_state_hyphen_query? = nil,
@@ -3953,6 +3963,7 @@ public enum Operations {
                     self.page = page
                     self.per_page = per_page
                     self.ref = ref
+                    self.pr = pr
                     self.direction = direction
                     self.sort = sort
                     self.state = state
@@ -4717,20 +4728,27 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/instances/GET/query/ref`.
                 public var ref: Components.Parameters.git_hyphen_ref?
+                /// The number of the pull request for the results you want to list.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/instances/GET/query/pr`.
+                public var pr: Components.Parameters.pr_hyphen_alias?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - ref: The Git reference for the results you want to list. The `ref` for a branch can be formatted either as `refs/heads/<branch name>` or simply `<branch name>`. To reference a pull request use `refs/pull/<number>/merge`.
+                ///   - pr: The number of the pull request for the results you want to list.
                 public init(
                     page: Components.Parameters.page? = nil,
                     per_page: Components.Parameters.per_hyphen_page? = nil,
-                    ref: Components.Parameters.git_hyphen_ref? = nil
+                    ref: Components.Parameters.git_hyphen_ref? = nil,
+                    pr: Components.Parameters.pr_hyphen_alias? = nil
                 ) {
                     self.page = page
                     self.per_page = per_page
                     self.ref = ref
+                    self.pr = pr
                 }
             }
             public var query: Operations.code_hyphen_scanning_sol_list_hyphen_alert_hyphen_instances.Input.Query
@@ -4979,6 +4997,10 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/analyses/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
+                /// The number of the pull request for the results you want to list.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/analyses/GET/query/pr`.
+                public var pr: Components.Parameters.pr_hyphen_alias?
                 /// The Git reference for the analyses you want to list. The `ref` for a branch can be formatted either as `refs/heads/<branch name>` or simply `<branch name>`. To reference a pull request use `refs/pull/<number>/merge`.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/analyses/GET/query/ref`.
@@ -5011,6 +5033,7 @@ public enum Operations {
                 ///   - tool_guid: The GUID of a code scanning tool. Only results by this tool will be listed. Note that some code scanning tools may not include a GUID in their analysis data. You can specify the tool by using either `tool_guid` or `tool_name`, but not both.
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - pr: The number of the pull request for the results you want to list.
                 ///   - ref: The Git reference for the analyses you want to list. The `ref` for a branch can be formatted either as `refs/heads/<branch name>` or simply `<branch name>`. To reference a pull request use `refs/pull/<number>/merge`.
                 ///   - sarif_id: Filter analyses belonging to the same SARIF upload.
                 ///   - direction: The direction to sort the results by.
@@ -5020,6 +5043,7 @@ public enum Operations {
                     tool_guid: Components.Parameters.tool_hyphen_guid? = nil,
                     page: Components.Parameters.page? = nil,
                     per_page: Components.Parameters.per_hyphen_page? = nil,
+                    pr: Components.Parameters.pr_hyphen_alias? = nil,
                     ref: Components.Schemas.code_hyphen_scanning_hyphen_ref? = nil,
                     sarif_id: Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_sarif_hyphen_id? = nil,
                     direction: Components.Parameters.direction? = nil,
@@ -5029,6 +5053,7 @@ public enum Operations {
                     self.tool_guid = tool_guid
                     self.page = page
                     self.per_page = per_page
+                    self.pr = pr
                     self.ref = ref
                     self.sarif_id = sarif_id
                     self.direction = direction

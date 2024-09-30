@@ -394,6 +394,7 @@ public protocol APIProtocol: Sendable {
     /// Update a pull request branch
     ///
     /// Updates the pull request branch with the latest upstream changes by merging HEAD from the base branch into the pull request branch.
+    /// Note: If making a request on behalf of a GitHub App you must also have permissions to write the contents of the head repository.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/pulls/{pull_number}/update-branch`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/update-branch/put(pulls/update-branch)`.
@@ -1025,6 +1026,7 @@ extension APIProtocol {
     /// Update a pull request branch
     ///
     /// Updates the pull request branch with the latest upstream changes by merging HEAD from the base branch into the pull request branch.
+    /// Note: If making a request on behalf of a GitHub App you must also have permissions to write the contents of the head repository.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/pulls/{pull_number}/update-branch`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/update-branch/put(pulls/update-branch)`.
@@ -13275,6 +13277,7 @@ public enum Operations {
     /// Update a pull request branch
     ///
     /// Updates the pull request branch with the latest upstream changes by merging HEAD from the base branch into the pull request branch.
+    /// Note: If making a request on behalf of a GitHub App you must also have permissions to write the contents of the head repository.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/pulls/{pull_number}/update-branch`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/update-branch/put(pulls/update-branch)`.

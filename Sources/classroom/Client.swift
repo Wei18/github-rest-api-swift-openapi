@@ -129,11 +129,11 @@ public struct Client: APIProtocol {
     /// Lists any assignment repositories that have been created by students accepting a GitHub Classroom assignment. Accepted assignments will only be returned if the current user is an administrator of the GitHub Classroom for the assignment.
     ///
     /// - Remark: HTTP `GET /assignments/{assignment_id}/accepted_assignments`.
-    /// - Remark: Generated from `#/paths//assignments/{assignment_id}/accepted_assignments/get(classroom/list-accepted-assigments-for-an-assignment)`.
-    public func classroom_sol_list_hyphen_accepted_hyphen_assigments_hyphen_for_hyphen_an_hyphen_assignment(_ input: Operations.classroom_sol_list_hyphen_accepted_hyphen_assigments_hyphen_for_hyphen_an_hyphen_assignment.Input) async throws -> Operations.classroom_sol_list_hyphen_accepted_hyphen_assigments_hyphen_for_hyphen_an_hyphen_assignment.Output {
+    /// - Remark: Generated from `#/paths//assignments/{assignment_id}/accepted_assignments/get(classroom/list-accepted-assignments-for-an-assignment)`.
+    public func classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment(_ input: Operations.classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment.Input) async throws -> Operations.classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.classroom_sol_list_hyphen_accepted_hyphen_assigments_hyphen_for_hyphen_an_hyphen_assignment.id,
+            forOperation: Operations.classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/assignments/{}/accepted_assignments",
@@ -170,7 +170,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.classroom_sol_list_hyphen_accepted_hyphen_assigments_hyphen_for_hyphen_an_hyphen_assignment.Output.Ok.Body
+                    let body: Operations.classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
