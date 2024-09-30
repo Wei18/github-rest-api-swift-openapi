@@ -779,33 +779,33 @@ public enum Components {
         }
         /// A GitHub organization.
         ///
-        /// - Remark: Generated from `#/components/schemas/organization-simple`.
-        public struct organization_hyphen_simple: Codable, Hashable, Sendable {
-            /// - Remark: Generated from `#/components/schemas/organization-simple/login`.
+        /// - Remark: Generated from `#/components/schemas/nullable-organization-simple`.
+        public struct nullable_hyphen_organization_hyphen_simple: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/nullable-organization-simple/login`.
             public var login: Swift.String
-            /// - Remark: Generated from `#/components/schemas/organization-simple/id`.
+            /// - Remark: Generated from `#/components/schemas/nullable-organization-simple/id`.
             public var id: Swift.Int
-            /// - Remark: Generated from `#/components/schemas/organization-simple/node_id`.
+            /// - Remark: Generated from `#/components/schemas/nullable-organization-simple/node_id`.
             public var node_id: Swift.String
-            /// - Remark: Generated from `#/components/schemas/organization-simple/url`.
+            /// - Remark: Generated from `#/components/schemas/nullable-organization-simple/url`.
             public var url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/organization-simple/repos_url`.
+            /// - Remark: Generated from `#/components/schemas/nullable-organization-simple/repos_url`.
             public var repos_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/organization-simple/events_url`.
+            /// - Remark: Generated from `#/components/schemas/nullable-organization-simple/events_url`.
             public var events_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/organization-simple/hooks_url`.
+            /// - Remark: Generated from `#/components/schemas/nullable-organization-simple/hooks_url`.
             public var hooks_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/organization-simple/issues_url`.
+            /// - Remark: Generated from `#/components/schemas/nullable-organization-simple/issues_url`.
             public var issues_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/organization-simple/members_url`.
+            /// - Remark: Generated from `#/components/schemas/nullable-organization-simple/members_url`.
             public var members_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/organization-simple/public_members_url`.
+            /// - Remark: Generated from `#/components/schemas/nullable-organization-simple/public_members_url`.
             public var public_members_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/organization-simple/avatar_url`.
+            /// - Remark: Generated from `#/components/schemas/nullable-organization-simple/avatar_url`.
             public var avatar_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/organization-simple/description`.
+            /// - Remark: Generated from `#/components/schemas/nullable-organization-simple/description`.
             public var description: Swift.String?
-            /// Creates a new `organization_hyphen_simple`.
+            /// Creates a new `nullable_hyphen_organization_hyphen_simple`.
             ///
             /// - Parameters:
             ///   - login:
@@ -1184,68 +1184,10 @@ public enum Components {
         ///
         /// - Remark: Generated from `#/components/schemas/copilot-seat-details`.
         public struct copilot_hyphen_seat_hyphen_details: Codable, Hashable, Sendable {
-            /// The assignee that has been granted access to GitHub Copilot.
-            ///
             /// - Remark: Generated from `#/components/schemas/copilot-seat-details/assignee`.
-            @frozen public enum assigneePayload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/copilot-seat-details/assignee/case1`.
-                case simple_hyphen_user(Components.Schemas.simple_hyphen_user)
-                public init(from decoder: any Decoder) throws {
-                    var errors: [any Error] = []
-                    do {
-                        self = .simple_hyphen_user(try .init(from: decoder))
-                        return
-                    } catch {
-                        errors.append(error)
-                    }
-                    throw Swift.DecodingError.failedToDecodeOneOfSchema(
-                        type: Self.self,
-                        codingPath: decoder.codingPath,
-                        errors: errors
-                    )
-                }
-                public func encode(to encoder: any Encoder) throws {
-                    switch self {
-                    case let .simple_hyphen_user(value):
-                        try value.encode(to: encoder)
-                    }
-                }
-            }
-            /// The assignee that has been granted access to GitHub Copilot.
-            ///
-            /// - Remark: Generated from `#/components/schemas/copilot-seat-details/assignee`.
-            public var assignee: Components.Schemas.copilot_hyphen_seat_hyphen_details.assigneePayload
-            /// The organization to which this seat belongs.
-            ///
+            public var assignee: Components.Schemas.simple_hyphen_user
             /// - Remark: Generated from `#/components/schemas/copilot-seat-details/organization`.
-            @frozen public enum organizationPayload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/copilot-seat-details/organization/case1`.
-                case organization_hyphen_simple(Components.Schemas.organization_hyphen_simple)
-                public init(from decoder: any Decoder) throws {
-                    var errors: [any Error] = []
-                    do {
-                        self = .organization_hyphen_simple(try .init(from: decoder))
-                        return
-                    } catch {
-                        errors.append(error)
-                    }
-                    throw Swift.DecodingError.failedToDecodeOneOfSchema(
-                        type: Self.self,
-                        codingPath: decoder.codingPath,
-                        errors: errors
-                    )
-                }
-                public func encode(to encoder: any Encoder) throws {
-                    switch self {
-                    case let .organization_hyphen_simple(value):
-                        try value.encode(to: encoder)
-                    }
-                }
-            }
-            /// The organization to which this seat belongs.
-            ///
-            /// - Remark: Generated from `#/components/schemas/copilot-seat-details/organization`.
-            public var organization: Components.Schemas.copilot_hyphen_seat_hyphen_details.organizationPayload?
+            public var organization: Components.Schemas.nullable_hyphen_organization_hyphen_simple?
             /// The team through which the assignee is granted access to GitHub Copilot, if applicable.
             ///
             /// - Remark: Generated from `#/components/schemas/copilot-seat-details/assigning_team`.
@@ -1310,8 +1252,8 @@ public enum Components {
             /// Creates a new `copilot_hyphen_seat_hyphen_details`.
             ///
             /// - Parameters:
-            ///   - assignee: The assignee that has been granted access to GitHub Copilot.
-            ///   - organization: The organization to which this seat belongs.
+            ///   - assignee:
+            ///   - organization:
             ///   - assigning_team: The team through which the assignee is granted access to GitHub Copilot, if applicable.
             ///   - pending_cancellation_date: The pending cancellation date for the seat, in `YYYY-MM-DD` format. This will be null unless the assignee's Copilot access has been canceled during the current billing cycle. If the seat has been cancelled, this corresponds to the start of the organization's next billing cycle.
             ///   - last_activity_at: Timestamp of user's last GitHub Copilot activity, in ISO 8601 format.
@@ -1319,8 +1261,8 @@ public enum Components {
             ///   - created_at: Timestamp of when the assignee was last granted access to GitHub Copilot, in ISO 8601 format.
             ///   - updated_at: Timestamp of when the assignee's GitHub Copilot access was last updated, in ISO 8601 format.
             public init(
-                assignee: Components.Schemas.copilot_hyphen_seat_hyphen_details.assigneePayload,
-                organization: Components.Schemas.copilot_hyphen_seat_hyphen_details.organizationPayload? = nil,
+                assignee: Components.Schemas.simple_hyphen_user,
+                organization: Components.Schemas.nullable_hyphen_organization_hyphen_simple? = nil,
                 assigning_team: Components.Schemas.copilot_hyphen_seat_hyphen_details.assigning_teamPayload? = nil,
                 pending_cancellation_date: Swift.String? = nil,
                 last_activity_at: Foundation.Date? = nil,
@@ -1350,11 +1292,11 @@ public enum Components {
             public init(from decoder: any Decoder) throws {
                 let container = try decoder.container(keyedBy: CodingKeys.self)
                 assignee = try container.decode(
-                    Components.Schemas.copilot_hyphen_seat_hyphen_details.assigneePayload.self,
+                    Components.Schemas.simple_hyphen_user.self,
                     forKey: .assignee
                 )
                 organization = try container.decodeIfPresent(
-                    Components.Schemas.copilot_hyphen_seat_hyphen_details.organizationPayload.self,
+                    Components.Schemas.nullable_hyphen_organization_hyphen_simple.self,
                     forKey: .organization
                 )
                 assigning_team = try container.decodeIfPresent(
