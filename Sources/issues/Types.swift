@@ -188,7 +188,7 @@ public protocol APIProtocol: Sendable {
     func issues_sol_get(_ input: Operations.issues_sol_get.Input) async throws -> Operations.issues_sol_get.Output
     /// Update an issue
     ///
-    /// Issue owners and users with push access can edit an issue.
+    /// Issue owners and users with push access or Triage role can edit an issue.
     ///
     /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
     ///
@@ -712,7 +712,7 @@ extension APIProtocol {
     }
     /// Update an issue
     ///
-    /// Issue owners and users with push access can edit an issue.
+    /// Issue owners and users with push access or Triage role can edit an issue.
     ///
     /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
     ///
@@ -11579,7 +11579,7 @@ public enum Operations {
     }
     /// Update an issue
     ///
-    /// Issue owners and users with push access can edit an issue.
+    /// Issue owners and users with push access or Triage role can edit an issue.
     ///
     /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
     ///
