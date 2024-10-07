@@ -7050,7 +7050,7 @@ public enum Components {
         ///
         /// - Remark: Generated from `#/components/parameters/fine-grained-personal-access-token-id`.
         public typealias fine_hyphen_grained_hyphen_personal_hyphen_access_hyphen_token_hyphen_id = Swift.Int
-        /// The custom property name. The name is case sensitive.
+        /// The custom property name
         ///
         /// - Remark: Generated from `#/components/parameters/custom-property-name`.
         public typealias custom_hyphen_property_hyphen_name = Swift.String
@@ -18497,7 +18497,7 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/properties/schema/{custom_property_name}/GET/path/org`.
                 public var org: Components.Parameters.org
-                /// The custom property name. The name is case sensitive.
+                /// The custom property name
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/properties/schema/{custom_property_name}/GET/path/custom_property_name`.
                 public var custom_property_name: Components.Parameters.custom_hyphen_property_hyphen_name
@@ -18505,7 +18505,7 @@ public enum Operations {
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - custom_property_name: The custom property name. The name is case sensitive.
+                ///   - custom_property_name: The custom property name
                 public init(
                     org: Components.Parameters.org,
                     custom_property_name: Components.Parameters.custom_hyphen_property_hyphen_name
@@ -18688,7 +18688,7 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/properties/schema/{custom_property_name}/PUT/path/org`.
                 public var org: Components.Parameters.org
-                /// The custom property name. The name is case sensitive.
+                /// The custom property name
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/properties/schema/{custom_property_name}/PUT/path/custom_property_name`.
                 public var custom_property_name: Components.Parameters.custom_hyphen_property_hyphen_name
@@ -18696,7 +18696,7 @@ public enum Operations {
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - custom_property_name: The custom property name. The name is case sensitive.
+                ///   - custom_property_name: The custom property name
                 public init(
                     org: Components.Parameters.org,
                     custom_property_name: Components.Parameters.custom_hyphen_property_hyphen_name
@@ -18986,7 +18986,7 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/properties/schema/{custom_property_name}/DELETE/path/org`.
                 public var org: Components.Parameters.org
-                /// The custom property name. The name is case sensitive.
+                /// The custom property name
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/properties/schema/{custom_property_name}/DELETE/path/custom_property_name`.
                 public var custom_property_name: Components.Parameters.custom_hyphen_property_hyphen_name
@@ -18994,7 +18994,7 @@ public enum Operations {
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - custom_property_name: The custom property name. The name is case sensitive.
+                ///   - custom_property_name: The custom property name
                 public init(
                     org: Components.Parameters.org,
                     custom_property_name: Components.Parameters.custom_hyphen_property_hyphen_name

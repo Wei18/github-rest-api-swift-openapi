@@ -1249,6 +1249,18 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/copilot-seat-details/updated_at`.
             public var updated_at: Foundation.Date?
+            /// The Copilot plan of the organization, or the parent enterprise, when applicable.
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-seat-details/plan_type`.
+            @frozen public enum plan_typePayload: String, Codable, Hashable, Sendable {
+                case business = "business"
+                case enterprise = "enterprise"
+                case unknown = "unknown"
+            }
+            /// The Copilot plan of the organization, or the parent enterprise, when applicable.
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-seat-details/plan_type`.
+            public var plan_type: Components.Schemas.copilot_hyphen_seat_hyphen_details.plan_typePayload?
             /// Creates a new `copilot_hyphen_seat_hyphen_details`.
             ///
             /// - Parameters:
@@ -1260,6 +1272,7 @@ public enum Components {
             ///   - last_activity_editor: Last editor that was used by the user for a GitHub Copilot completion.
             ///   - created_at: Timestamp of when the assignee was last granted access to GitHub Copilot, in ISO 8601 format.
             ///   - updated_at: Timestamp of when the assignee's GitHub Copilot access was last updated, in ISO 8601 format.
+            ///   - plan_type: The Copilot plan of the organization, or the parent enterprise, when applicable.
             public init(
                 assignee: Components.Schemas.simple_hyphen_user,
                 organization: Components.Schemas.nullable_hyphen_organization_hyphen_simple? = nil,
@@ -1268,7 +1281,8 @@ public enum Components {
                 last_activity_at: Foundation.Date? = nil,
                 last_activity_editor: Swift.String? = nil,
                 created_at: Foundation.Date,
-                updated_at: Foundation.Date? = nil
+                updated_at: Foundation.Date? = nil,
+                plan_type: Components.Schemas.copilot_hyphen_seat_hyphen_details.plan_typePayload? = nil
             ) {
                 self.assignee = assignee
                 self.organization = organization
@@ -1278,6 +1292,7 @@ public enum Components {
                 self.last_activity_editor = last_activity_editor
                 self.created_at = created_at
                 self.updated_at = updated_at
+                self.plan_type = plan_type
             }
             public enum CodingKeys: String, CodingKey {
                 case assignee
@@ -1288,6 +1303,7 @@ public enum Components {
                 case last_activity_editor
                 case created_at
                 case updated_at
+                case plan_type
             }
             public init(from decoder: any Decoder) throws {
                 let container = try decoder.container(keyedBy: CodingKeys.self)
@@ -1323,6 +1339,10 @@ public enum Components {
                     Foundation.Date.self,
                     forKey: .updated_at
                 )
+                plan_type = try container.decodeIfPresent(
+                    Components.Schemas.copilot_hyphen_seat_hyphen_details.plan_typePayload.self,
+                    forKey: .plan_type
+                )
                 try decoder.ensureNoAdditionalProperties(knownKeys: [
                     "assignee",
                     "organization",
@@ -1331,7 +1351,8 @@ public enum Components {
                     "last_activity_at",
                     "last_activity_editor",
                     "created_at",
-                    "updated_at"
+                    "updated_at",
+                    "plan_type"
                 ])
             }
         }
@@ -1762,6 +1783,18 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/copilot-organization-details/seat_management_setting`.
             public var seat_management_setting: Components.Schemas.copilot_hyphen_organization_hyphen_details.seat_management_settingPayload
+            /// The Copilot plan of the organization, or the parent enterprise, when applicable.
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-organization-details/plan_type`.
+            @frozen public enum plan_typePayload: String, Codable, Hashable, Sendable {
+                case business = "business"
+                case enterprise = "enterprise"
+                case unknown = "unknown"
+            }
+            /// The Copilot plan of the organization, or the parent enterprise, when applicable.
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-organization-details/plan_type`.
+            public var plan_type: Components.Schemas.copilot_hyphen_organization_hyphen_details.plan_typePayload?
             /// A container of undocumented properties.
             public var additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer
             /// Creates a new `copilot_hyphen_organization_hyphen_details`.
@@ -1773,6 +1806,7 @@ public enum Components {
             ///   - platform_chat: The organization policy for allowing or disallowing organization members to use Copilot features within github.com.
             ///   - cli: The organization policy for allowing or disallowing organization members to use Copilot within their CLI.
             ///   - seat_management_setting: The mode of assigning new seats.
+            ///   - plan_type: The Copilot plan of the organization, or the parent enterprise, when applicable.
             ///   - additionalProperties: A container of undocumented properties.
             public init(
                 seat_breakdown: Components.Schemas.copilot_hyphen_seat_hyphen_breakdown,
@@ -1781,6 +1815,7 @@ public enum Components {
                 platform_chat: Components.Schemas.copilot_hyphen_organization_hyphen_details.platform_chatPayload? = nil,
                 cli: Components.Schemas.copilot_hyphen_organization_hyphen_details.cliPayload? = nil,
                 seat_management_setting: Components.Schemas.copilot_hyphen_organization_hyphen_details.seat_management_settingPayload,
+                plan_type: Components.Schemas.copilot_hyphen_organization_hyphen_details.plan_typePayload? = nil,
                 additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer = .init()
             ) {
                 self.seat_breakdown = seat_breakdown
@@ -1789,6 +1824,7 @@ public enum Components {
                 self.platform_chat = platform_chat
                 self.cli = cli
                 self.seat_management_setting = seat_management_setting
+                self.plan_type = plan_type
                 self.additionalProperties = additionalProperties
             }
             public enum CodingKeys: String, CodingKey {
@@ -1798,6 +1834,7 @@ public enum Components {
                 case platform_chat
                 case cli
                 case seat_management_setting
+                case plan_type
             }
             public init(from decoder: any Decoder) throws {
                 let container = try decoder.container(keyedBy: CodingKeys.self)
@@ -1825,13 +1862,18 @@ public enum Components {
                     Components.Schemas.copilot_hyphen_organization_hyphen_details.seat_management_settingPayload.self,
                     forKey: .seat_management_setting
                 )
+                plan_type = try container.decodeIfPresent(
+                    Components.Schemas.copilot_hyphen_organization_hyphen_details.plan_typePayload.self,
+                    forKey: .plan_type
+                )
                 additionalProperties = try decoder.decodeAdditionalProperties(knownKeys: [
                     "seat_breakdown",
                     "public_code_suggestions",
                     "ide_chat",
                     "platform_chat",
                     "cli",
-                    "seat_management_setting"
+                    "seat_management_setting",
+                    "plan_type"
                 ])
             }
             public func encode(to encoder: any Encoder) throws {
@@ -1859,6 +1901,10 @@ public enum Components {
                 try container.encode(
                     seat_management_setting,
                     forKey: .seat_management_setting
+                )
+                try container.encodeIfPresent(
+                    plan_type,
+                    forKey: .plan_type
                 )
                 try encoder.encodeAdditionalProperties(additionalProperties)
             }
