@@ -311,6 +311,13 @@ public struct Client: APIProtocol {
                     name: "page",
                     value: input.query.page
                 )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "targets",
+                    value: input.query.targets
+                )
                 converter.setAcceptHeader(
                     in: &request.headerFields,
                     contentTypes: input.headers.accept
@@ -16140,6 +16147,13 @@ public struct Client: APIProtocol {
                     explode: true,
                     name: "includes_parents",
                     value: input.query.includes_parents
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "targets",
+                    value: input.query.targets
                 )
                 converter.setAcceptHeader(
                     in: &request.headerFields,
