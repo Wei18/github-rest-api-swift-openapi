@@ -5249,8 +5249,6 @@ public enum Components {
             public var private_gists: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/organization-full/disk_usage`.
             public var disk_usage: Swift.Int?
-            /// - Remark: Generated from `#/components/schemas/organization-full/collaborators`.
-            public var collaborators: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/organization-full/billing_email`.
             public var billing_email: Swift.String?
             /// - Remark: Generated from `#/components/schemas/organization-full/plan`.
@@ -5422,7 +5420,6 @@ public enum Components {
             ///   - owned_private_repos:
             ///   - private_gists:
             ///   - disk_usage:
-            ///   - collaborators:
             ///   - billing_email:
             ///   - plan:
             ///   - default_repository_permission:
@@ -5480,7 +5477,6 @@ public enum Components {
                 owned_private_repos: Swift.Int? = nil,
                 private_gists: Swift.Int? = nil,
                 disk_usage: Swift.Int? = nil,
-                collaborators: Swift.Int? = nil,
                 billing_email: Swift.String? = nil,
                 plan: Components.Schemas.organization_hyphen_full.planPayload? = nil,
                 default_repository_permission: Swift.String? = nil,
@@ -5538,7 +5534,6 @@ public enum Components {
                 self.owned_private_repos = owned_private_repos
                 self.private_gists = private_gists
                 self.disk_usage = disk_usage
-                self.collaborators = collaborators
                 self.billing_email = billing_email
                 self.plan = plan
                 self.default_repository_permission = default_repository_permission
@@ -5597,7 +5592,6 @@ public enum Components {
                 case owned_private_repos
                 case private_gists
                 case disk_usage
-                case collaborators
                 case billing_email
                 case plan
                 case default_repository_permission
