@@ -22113,6 +22113,13 @@ public enum Components {
         ///
         /// - Remark: Generated from `#/components/parameters/invitation-id`.
         public typealias invitation_hyphen_id = Swift.Int
+        /// A comma-separated list of rule targets to filter by.
+        /// If provided, only rulesets that apply to the specified targets will be returned.
+        /// For example, `branch,tag,push`.
+        ///
+        ///
+        /// - Remark: Generated from `#/components/parameters/ruleset-targets`.
+        public typealias ruleset_hyphen_targets = Swift.String
         /// The name of the ref. Cannot contain wildcard characters. Optionally prefix with `refs/heads/` to limit to branches or `refs/tags/` to limit to tags. Omit the prefix to search across all refs. When specified, only rule evaluations triggered for this ref will be returned.
         ///
         /// - Remark: Generated from `#/components/parameters/ref-in-query`.
@@ -23442,17 +23449,27 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/GET/query/page`.
                 public var page: Components.Parameters.page?
+                /// A comma-separated list of rule targets to filter by.
+                /// If provided, only rulesets that apply to the specified targets will be returned.
+                /// For example, `branch,tag,push`.
+                ///
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/GET/query/targets`.
+                public var targets: Components.Parameters.ruleset_hyphen_targets?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - targets: A comma-separated list of rule targets to filter by.
                 public init(
                     per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    page: Components.Parameters.page? = nil,
+                    targets: Components.Parameters.ruleset_hyphen_targets? = nil
                 ) {
                     self.per_page = per_page
                     self.page = page
+                    self.targets = targets
                 }
             }
             public var query: Operations.repos_sol_get_hyphen_org_hyphen_rulesets.Input.Query
@@ -56553,20 +56570,30 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/rulesets/GET/query/includes_parents`.
                 public var includes_parents: Swift.Bool?
+                /// A comma-separated list of rule targets to filter by.
+                /// If provided, only rulesets that apply to the specified targets will be returned.
+                /// For example, `branch,tag,push`.
+                ///
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/rulesets/GET/query/targets`.
+                public var targets: Components.Parameters.ruleset_hyphen_targets?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - includes_parents: Include rulesets configured at higher levels that apply to this repository
+                ///   - targets: A comma-separated list of rule targets to filter by.
                 public init(
                     per_page: Components.Parameters.per_hyphen_page? = nil,
                     page: Components.Parameters.page? = nil,
-                    includes_parents: Swift.Bool? = nil
+                    includes_parents: Swift.Bool? = nil,
+                    targets: Components.Parameters.ruleset_hyphen_targets? = nil
                 ) {
                     self.per_page = per_page
                     self.page = page
                     self.includes_parents = includes_parents
+                    self.targets = targets
                 }
             }
             public var query: Operations.repos_sol_get_hyphen_repo_hyphen_rulesets.Input.Query
