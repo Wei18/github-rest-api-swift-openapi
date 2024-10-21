@@ -126,6 +126,123 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `PUT /orgs/{org}/actions/permissions/workflow`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/permissions/workflow/put(actions/set-github-actions-default-workflow-permissions-organization)`.
     func actions_sol_set_hyphen_github_hyphen_actions_hyphen_default_hyphen_workflow_hyphen_permissions_hyphen_organization(_ input: Operations.actions_sol_set_hyphen_github_hyphen_actions_hyphen_default_hyphen_workflow_hyphen_permissions_hyphen_organization.Input) async throws -> Operations.actions_sol_set_hyphen_github_hyphen_actions_hyphen_default_hyphen_workflow_hyphen_permissions_hyphen_organization.Output
+    /// List self-hosted runner groups for an organization
+    ///
+    /// Lists all self-hosted runner groups configured in an organization and inherited from an enterprise.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/actions/runner-groups`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/get(actions/list-self-hosted-runner-groups-for-org)`.
+    func actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_groups_hyphen_for_hyphen_org(_ input: Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_groups_hyphen_for_hyphen_org.Input) async throws -> Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_groups_hyphen_for_hyphen_org.Output
+    /// Create a self-hosted runner group for an organization
+    ///
+    /// Creates a new self-hosted runner group for an organization.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `POST /orgs/{org}/actions/runner-groups`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/post(actions/create-self-hosted-runner-group-for-org)`.
+    func actions_sol_create_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org(_ input: Operations.actions_sol_create_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Input) async throws -> Operations.actions_sol_create_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Output
+    /// Get a self-hosted runner group for an organization
+    ///
+    /// Gets a specific self-hosted runner group for an organization.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/actions/runner-groups/{runner_group_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/get(actions/get-self-hosted-runner-group-for-org)`.
+    func actions_sol_get_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org(_ input: Operations.actions_sol_get_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Input) async throws -> Operations.actions_sol_get_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Output
+    /// Update a self-hosted runner group for an organization
+    ///
+    /// Updates the `name` and `visibility` of a self-hosted runner group in an organization.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `PATCH /orgs/{org}/actions/runner-groups/{runner_group_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/patch(actions/update-self-hosted-runner-group-for-org)`.
+    func actions_sol_update_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org(_ input: Operations.actions_sol_update_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Input) async throws -> Operations.actions_sol_update_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Output
+    /// Delete a self-hosted runner group from an organization
+    ///
+    /// Deletes a self-hosted runner group for an organization.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `DELETE /orgs/{org}/actions/runner-groups/{runner_group_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/delete(actions/delete-self-hosted-runner-group-from-org)`.
+    func actions_sol_delete_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_from_hyphen_org(_ input: Operations.actions_sol_delete_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_from_hyphen_org.Input) async throws -> Operations.actions_sol_delete_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_from_hyphen_org.Output
+    /// List repository access to a self-hosted runner group in an organization
+    ///
+    /// Lists the repositories with access to a self-hosted runner group configured in an organization.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/actions/runner-groups/{runner_group_id}/repositories`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/get(actions/list-repo-access-to-self-hosted-runner-group-in-org)`.
+    func actions_sol_list_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org(_ input: Operations.actions_sol_list_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Input) async throws -> Operations.actions_sol_list_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Output
+    /// Set repository access for a self-hosted runner group in an organization
+    ///
+    /// Replaces the list of repositories that have access to a self-hosted runner group configured in an organization.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `PUT /orgs/{org}/actions/runner-groups/{runner_group_id}/repositories`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/put(actions/set-repo-access-to-self-hosted-runner-group-in-org)`.
+    func actions_sol_set_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org(_ input: Operations.actions_sol_set_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Input) async throws -> Operations.actions_sol_set_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Output
+    /// Add repository access to a self-hosted runner group in an organization
+    ///
+    /// Adds a repository to the list of repositories that can access a self-hosted runner group. The runner group must have `visibility` set to `selected`. For more information, see "[Create a self-hosted runner group for an organization](#create-a-self-hosted-runner-group-for-an-organization)."
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `PUT /orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/{repository_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/{repository_id}/put(actions/add-repo-access-to-self-hosted-runner-group-in-org)`.
+    func actions_sol_add_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org(_ input: Operations.actions_sol_add_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Input) async throws -> Operations.actions_sol_add_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Output
+    /// Remove repository access to a self-hosted runner group in an organization
+    ///
+    /// Removes a repository from the list of selected repositories that can access a self-hosted runner group. The runner group must have `visibility` set to `selected`. For more information, see "[Create a self-hosted runner group for an organization](#create-a-self-hosted-runner-group-for-an-organization)."
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `DELETE /orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/{repository_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/{repository_id}/delete(actions/remove-repo-access-to-self-hosted-runner-group-in-org)`.
+    func actions_sol_remove_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org(_ input: Operations.actions_sol_remove_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Input) async throws -> Operations.actions_sol_remove_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Output
+    /// List self-hosted runners in a group for an organization
+    ///
+    /// Lists self-hosted runners that are in a specific organization group.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/actions/runner-groups/{runner_group_id}/runners`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/runners/get(actions/list-self-hosted-runners-in-group-for-org)`.
+    func actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org(_ input: Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Input) async throws -> Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Output
+    /// Set self-hosted runners in a group for an organization
+    ///
+    /// Replaces the list of self-hosted runners that are part of an organization runner group.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `PUT /orgs/{org}/actions/runner-groups/{runner_group_id}/runners`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/runners/put(actions/set-self-hosted-runners-in-group-for-org)`.
+    func actions_sol_set_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org(_ input: Operations.actions_sol_set_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Input) async throws -> Operations.actions_sol_set_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Output
+    /// Add a self-hosted runner to a group for an organization
+    ///
+    /// Adds a self-hosted runner to a runner group configured in an organization.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `PUT /orgs/{org}/actions/runner-groups/{runner_group_id}/runners/{runner_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/runners/{runner_id}/put(actions/add-self-hosted-runner-to-group-for-org)`.
+    func actions_sol_add_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_to_hyphen_group_hyphen_for_hyphen_org(_ input: Operations.actions_sol_add_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_to_hyphen_group_hyphen_for_hyphen_org.Input) async throws -> Operations.actions_sol_add_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_to_hyphen_group_hyphen_for_hyphen_org.Output
+    /// Remove a self-hosted runner from a group for an organization
+    ///
+    /// Removes a self-hosted runner from a group configured in an organization. The runner is then returned to the default group.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `DELETE /orgs/{org}/actions/runner-groups/{runner_group_id}/runners/{runner_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/runners/{runner_id}/delete(actions/remove-self-hosted-runner-from-group-for-org)`.
+    func actions_sol_remove_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_from_hyphen_group_hyphen_for_hyphen_org(_ input: Operations.actions_sol_remove_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_from_hyphen_group_hyphen_for_hyphen_org.Input) async throws -> Operations.actions_sol_remove_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_from_hyphen_group_hyphen_for_hyphen_org.Output
     /// List self-hosted runners for an organization
     ///
     /// Lists all self-hosted runners configured in an organization.
@@ -1594,6 +1711,207 @@ extension APIProtocol {
             path: path,
             body: body
         ))
+    }
+    /// List self-hosted runner groups for an organization
+    ///
+    /// Lists all self-hosted runner groups configured in an organization and inherited from an enterprise.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/actions/runner-groups`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/get(actions/list-self-hosted-runner-groups-for-org)`.
+    public func actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_groups_hyphen_for_hyphen_org(
+        path: Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_groups_hyphen_for_hyphen_org.Input.Path,
+        query: Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_groups_hyphen_for_hyphen_org.Input.Query = .init(),
+        headers: Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_groups_hyphen_for_hyphen_org.Input.Headers = .init()
+    ) async throws -> Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_groups_hyphen_for_hyphen_org.Output {
+        try await actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_groups_hyphen_for_hyphen_org(Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_groups_hyphen_for_hyphen_org.Input(
+            path: path,
+            query: query,
+            headers: headers
+        ))
+    }
+    /// Create a self-hosted runner group for an organization
+    ///
+    /// Creates a new self-hosted runner group for an organization.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `POST /orgs/{org}/actions/runner-groups`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/post(actions/create-self-hosted-runner-group-for-org)`.
+    public func actions_sol_create_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org(
+        path: Operations.actions_sol_create_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Input.Path,
+        headers: Operations.actions_sol_create_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Input.Headers = .init(),
+        body: Operations.actions_sol_create_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Input.Body
+    ) async throws -> Operations.actions_sol_create_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Output {
+        try await actions_sol_create_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org(Operations.actions_sol_create_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Input(
+            path: path,
+            headers: headers,
+            body: body
+        ))
+    }
+    /// Get a self-hosted runner group for an organization
+    ///
+    /// Gets a specific self-hosted runner group for an organization.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/actions/runner-groups/{runner_group_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/get(actions/get-self-hosted-runner-group-for-org)`.
+    public func actions_sol_get_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org(
+        path: Operations.actions_sol_get_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Input.Path,
+        headers: Operations.actions_sol_get_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Input.Headers = .init()
+    ) async throws -> Operations.actions_sol_get_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Output {
+        try await actions_sol_get_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org(Operations.actions_sol_get_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Input(
+            path: path,
+            headers: headers
+        ))
+    }
+    /// Update a self-hosted runner group for an organization
+    ///
+    /// Updates the `name` and `visibility` of a self-hosted runner group in an organization.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `PATCH /orgs/{org}/actions/runner-groups/{runner_group_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/patch(actions/update-self-hosted-runner-group-for-org)`.
+    public func actions_sol_update_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org(
+        path: Operations.actions_sol_update_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Input.Path,
+        headers: Operations.actions_sol_update_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Input.Headers = .init(),
+        body: Operations.actions_sol_update_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Input.Body
+    ) async throws -> Operations.actions_sol_update_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Output {
+        try await actions_sol_update_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org(Operations.actions_sol_update_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Input(
+            path: path,
+            headers: headers,
+            body: body
+        ))
+    }
+    /// Delete a self-hosted runner group from an organization
+    ///
+    /// Deletes a self-hosted runner group for an organization.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `DELETE /orgs/{org}/actions/runner-groups/{runner_group_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/delete(actions/delete-self-hosted-runner-group-from-org)`.
+    public func actions_sol_delete_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_from_hyphen_org(path: Operations.actions_sol_delete_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_from_hyphen_org.Input.Path) async throws -> Operations.actions_sol_delete_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_from_hyphen_org.Output {
+        try await actions_sol_delete_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_from_hyphen_org(Operations.actions_sol_delete_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_from_hyphen_org.Input(path: path))
+    }
+    /// List repository access to a self-hosted runner group in an organization
+    ///
+    /// Lists the repositories with access to a self-hosted runner group configured in an organization.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/actions/runner-groups/{runner_group_id}/repositories`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/get(actions/list-repo-access-to-self-hosted-runner-group-in-org)`.
+    public func actions_sol_list_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org(
+        path: Operations.actions_sol_list_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Input.Path,
+        query: Operations.actions_sol_list_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Input.Query = .init(),
+        headers: Operations.actions_sol_list_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Input.Headers = .init()
+    ) async throws -> Operations.actions_sol_list_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Output {
+        try await actions_sol_list_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org(Operations.actions_sol_list_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Input(
+            path: path,
+            query: query,
+            headers: headers
+        ))
+    }
+    /// Set repository access for a self-hosted runner group in an organization
+    ///
+    /// Replaces the list of repositories that have access to a self-hosted runner group configured in an organization.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `PUT /orgs/{org}/actions/runner-groups/{runner_group_id}/repositories`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/put(actions/set-repo-access-to-self-hosted-runner-group-in-org)`.
+    public func actions_sol_set_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org(
+        path: Operations.actions_sol_set_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Input.Path,
+        body: Operations.actions_sol_set_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Input.Body
+    ) async throws -> Operations.actions_sol_set_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Output {
+        try await actions_sol_set_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org(Operations.actions_sol_set_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Input(
+            path: path,
+            body: body
+        ))
+    }
+    /// Add repository access to a self-hosted runner group in an organization
+    ///
+    /// Adds a repository to the list of repositories that can access a self-hosted runner group. The runner group must have `visibility` set to `selected`. For more information, see "[Create a self-hosted runner group for an organization](#create-a-self-hosted-runner-group-for-an-organization)."
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `PUT /orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/{repository_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/{repository_id}/put(actions/add-repo-access-to-self-hosted-runner-group-in-org)`.
+    public func actions_sol_add_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org(path: Operations.actions_sol_add_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Input.Path) async throws -> Operations.actions_sol_add_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Output {
+        try await actions_sol_add_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org(Operations.actions_sol_add_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Input(path: path))
+    }
+    /// Remove repository access to a self-hosted runner group in an organization
+    ///
+    /// Removes a repository from the list of selected repositories that can access a self-hosted runner group. The runner group must have `visibility` set to `selected`. For more information, see "[Create a self-hosted runner group for an organization](#create-a-self-hosted-runner-group-for-an-organization)."
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `DELETE /orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/{repository_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/{repository_id}/delete(actions/remove-repo-access-to-self-hosted-runner-group-in-org)`.
+    public func actions_sol_remove_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org(path: Operations.actions_sol_remove_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Input.Path) async throws -> Operations.actions_sol_remove_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Output {
+        try await actions_sol_remove_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org(Operations.actions_sol_remove_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Input(path: path))
+    }
+    /// List self-hosted runners in a group for an organization
+    ///
+    /// Lists self-hosted runners that are in a specific organization group.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/actions/runner-groups/{runner_group_id}/runners`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/runners/get(actions/list-self-hosted-runners-in-group-for-org)`.
+    public func actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org(
+        path: Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Input.Path,
+        query: Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Input.Query = .init(),
+        headers: Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Input.Headers = .init()
+    ) async throws -> Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Output {
+        try await actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org(Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Input(
+            path: path,
+            query: query,
+            headers: headers
+        ))
+    }
+    /// Set self-hosted runners in a group for an organization
+    ///
+    /// Replaces the list of self-hosted runners that are part of an organization runner group.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `PUT /orgs/{org}/actions/runner-groups/{runner_group_id}/runners`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/runners/put(actions/set-self-hosted-runners-in-group-for-org)`.
+    public func actions_sol_set_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org(
+        path: Operations.actions_sol_set_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Input.Path,
+        body: Operations.actions_sol_set_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Input.Body
+    ) async throws -> Operations.actions_sol_set_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Output {
+        try await actions_sol_set_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org(Operations.actions_sol_set_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Input(
+            path: path,
+            body: body
+        ))
+    }
+    /// Add a self-hosted runner to a group for an organization
+    ///
+    /// Adds a self-hosted runner to a runner group configured in an organization.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `PUT /orgs/{org}/actions/runner-groups/{runner_group_id}/runners/{runner_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/runners/{runner_id}/put(actions/add-self-hosted-runner-to-group-for-org)`.
+    public func actions_sol_add_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_to_hyphen_group_hyphen_for_hyphen_org(path: Operations.actions_sol_add_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_to_hyphen_group_hyphen_for_hyphen_org.Input.Path) async throws -> Operations.actions_sol_add_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_to_hyphen_group_hyphen_for_hyphen_org.Output {
+        try await actions_sol_add_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_to_hyphen_group_hyphen_for_hyphen_org(Operations.actions_sol_add_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_to_hyphen_group_hyphen_for_hyphen_org.Input(path: path))
+    }
+    /// Remove a self-hosted runner from a group for an organization
+    ///
+    /// Removes a self-hosted runner from a group configured in an organization. The runner is then returned to the default group.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `DELETE /orgs/{org}/actions/runner-groups/{runner_group_id}/runners/{runner_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/runners/{runner_id}/delete(actions/remove-self-hosted-runner-from-group-for-org)`.
+    public func actions_sol_remove_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_from_hyphen_group_hyphen_for_hyphen_org(path: Operations.actions_sol_remove_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_from_hyphen_group_hyphen_for_hyphen_org.Input.Path) async throws -> Operations.actions_sol_remove_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_from_hyphen_group_hyphen_for_hyphen_org.Output {
+        try await actions_sol_remove_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_from_hyphen_group_hyphen_for_hyphen_org(Operations.actions_sol_remove_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_from_hyphen_group_hyphen_for_hyphen_org.Input(path: path))
     }
     /// List self-hosted runners for an organization
     ///
@@ -3775,6 +4093,8 @@ public enum Components {
             public var site_admin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/simple-user/starred_at`.
             public var starred_at: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/simple-user/user_view_type`.
+            public var user_view_type: Swift.String?
             /// Creates a new `simple_hyphen_user`.
             ///
             /// - Parameters:
@@ -3799,6 +4119,7 @@ public enum Components {
             ///   - _type:
             ///   - site_admin:
             ///   - starred_at:
+            ///   - user_view_type:
             public init(
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
@@ -3820,7 +4141,8 @@ public enum Components {
                 received_events_url: Swift.String,
                 _type: Swift.String,
                 site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil
+                starred_at: Swift.String? = nil,
+                user_view_type: Swift.String? = nil
             ) {
                 self.name = name
                 self.email = email
@@ -3843,6 +4165,7 @@ public enum Components {
                 self._type = _type
                 self.site_admin = site_admin
                 self.starred_at = starred_at
+                self.user_view_type = user_view_type
             }
             public enum CodingKeys: String, CodingKey {
                 case name
@@ -3866,6 +4189,7 @@ public enum Components {
                 case _type = "type"
                 case site_admin
                 case starred_at
+                case user_view_type
             }
         }
         /// Basic Error
@@ -3982,6 +4306,8 @@ public enum Components {
             public var site_admin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/starred_at`.
             public var starred_at: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/user_view_type`.
+            public var user_view_type: Swift.String?
             /// Creates a new `nullable_hyphen_simple_hyphen_user`.
             ///
             /// - Parameters:
@@ -4006,6 +4332,7 @@ public enum Components {
             ///   - _type:
             ///   - site_admin:
             ///   - starred_at:
+            ///   - user_view_type:
             public init(
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
@@ -4027,7 +4354,8 @@ public enum Components {
                 received_events_url: Swift.String,
                 _type: Swift.String,
                 site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil
+                starred_at: Swift.String? = nil,
+                user_view_type: Swift.String? = nil
             ) {
                 self.name = name
                 self.email = email
@@ -4050,6 +4378,7 @@ public enum Components {
                 self._type = _type
                 self.site_admin = site_admin
                 self.starred_at = starred_at
+                self.user_view_type = user_view_type
             }
             public enum CodingKeys: String, CodingKey {
                 case name
@@ -4073,6 +4402,7 @@ public enum Components {
                 case _type = "type"
                 case site_admin
                 case starred_at
+                case user_view_type
             }
         }
         /// Scim Error
@@ -4421,7 +4751,7 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/repository/allow_update_branch`.
             public var allow_update_branch: Swift.Bool?
-            /// Whether a squash merge commit can use the pull request title as default. **This property has been deprecated. Please use `squash_merge_commit_title` instead.
+            /// Whether a squash merge commit can use the pull request title as default. **This property is closing down. Please use `squash_merge_commit_title` instead.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/use_squash_pr_title_as_default`.
             @available(*, deprecated)
@@ -4609,7 +4939,7 @@ public enum Components {
             ///   - allow_auto_merge: Whether to allow Auto-merge to be used on pull requests.
             ///   - delete_branch_on_merge: Whether to delete head branches when pull requests are merged
             ///   - allow_update_branch: Whether or not a pull request head branch that is behind its base branch can always be updated even if it is not required to be up to date before merging.
-            ///   - use_squash_pr_title_as_default: Whether a squash merge commit can use the pull request title as default. **This property has been deprecated. Please use `squash_merge_commit_title` instead.
+            ///   - use_squash_pr_title_as_default: Whether a squash merge commit can use the pull request title as default. **This property is closing down. Please use `squash_merge_commit_title` instead.
             ///   - squash_merge_commit_title: The default value for a squash merge commit title:
             ///   - squash_merge_commit_message: The default value for a squash merge commit message:
             ///   - merge_commit_title: The default value for a merge commit title.
@@ -5550,6 +5880,28 @@ public enum Components {
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns`.
             public var secret_scanning_non_provider_patterns: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_non_provider_patternsPayload?
+            /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection`.
+            public struct secret_scanning_ai_detectionPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection/status`.
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                    case enabled = "enabled"
+                    case disabled = "disabled"
+                }
+                /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection/status`.
+                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload.statusPayload?
+                /// Creates a new `secret_scanning_ai_detectionPayload`.
+                ///
+                /// - Parameters:
+                ///   - status:
+                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload.statusPayload? = nil) {
+                    self.status = status
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case status
+                }
+            }
+            /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection`.
+            public var secret_scanning_ai_detection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload?
             /// Creates a new `security_hyphen_and_hyphen_analysis`.
             ///
             /// - Parameters:
@@ -5558,18 +5910,21 @@ public enum Components {
             ///   - secret_scanning:
             ///   - secret_scanning_push_protection:
             ///   - secret_scanning_non_provider_patterns:
+            ///   - secret_scanning_ai_detection:
             public init(
                 advanced_security: Components.Schemas.security_hyphen_and_hyphen_analysis.advanced_securityPayload? = nil,
                 dependabot_security_updates: Components.Schemas.security_hyphen_and_hyphen_analysis.dependabot_security_updatesPayload? = nil,
                 secret_scanning: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanningPayload? = nil,
                 secret_scanning_push_protection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_push_protectionPayload? = nil,
-                secret_scanning_non_provider_patterns: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_non_provider_patternsPayload? = nil
+                secret_scanning_non_provider_patterns: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_non_provider_patternsPayload? = nil,
+                secret_scanning_ai_detection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload? = nil
             ) {
                 self.advanced_security = advanced_security
                 self.dependabot_security_updates = dependabot_security_updates
                 self.secret_scanning = secret_scanning
                 self.secret_scanning_push_protection = secret_scanning_push_protection
                 self.secret_scanning_non_provider_patterns = secret_scanning_non_provider_patterns
+                self.secret_scanning_ai_detection = secret_scanning_ai_detection
             }
             public enum CodingKeys: String, CodingKey {
                 case advanced_security
@@ -5577,6 +5932,7 @@ public enum Components {
                 case secret_scanning
                 case secret_scanning_push_protection
                 case secret_scanning_non_provider_patterns
+                case secret_scanning_ai_detection
             }
         }
         /// Minimal Repository
@@ -6422,6 +6778,103 @@ public enum Components {
             public enum CodingKeys: String, CodingKey {
                 case default_workflow_permissions
                 case can_approve_pull_request_reviews
+            }
+        }
+        /// - Remark: Generated from `#/components/schemas/runner-groups-org`.
+        public struct runner_hyphen_groups_hyphen_org: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/runner-groups-org/id`.
+            public var id: Swift.Double
+            /// - Remark: Generated from `#/components/schemas/runner-groups-org/name`.
+            public var name: Swift.String
+            /// - Remark: Generated from `#/components/schemas/runner-groups-org/visibility`.
+            public var visibility: Swift.String
+            /// - Remark: Generated from `#/components/schemas/runner-groups-org/default`.
+            public var _default: Swift.Bool
+            /// Link to the selected repositories resource for this runner group. Not present unless visibility was set to `selected`
+            ///
+            /// - Remark: Generated from `#/components/schemas/runner-groups-org/selected_repositories_url`.
+            public var selected_repositories_url: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/runner-groups-org/runners_url`.
+            public var runners_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/runner-groups-org/hosted_runners_url`.
+            public var hosted_runners_url: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/runner-groups-org/inherited`.
+            public var inherited: Swift.Bool
+            /// - Remark: Generated from `#/components/schemas/runner-groups-org/inherited_allows_public_repositories`.
+            public var inherited_allows_public_repositories: Swift.Bool?
+            /// - Remark: Generated from `#/components/schemas/runner-groups-org/allows_public_repositories`.
+            public var allows_public_repositories: Swift.Bool
+            /// If `true`, the `restricted_to_workflows` and `selected_workflows` fields cannot be modified.
+            ///
+            /// - Remark: Generated from `#/components/schemas/runner-groups-org/workflow_restrictions_read_only`.
+            public var workflow_restrictions_read_only: Swift.Bool?
+            /// If `true`, the runner group will be restricted to running only the workflows specified in the `selected_workflows` array.
+            ///
+            /// - Remark: Generated from `#/components/schemas/runner-groups-org/restricted_to_workflows`.
+            public var restricted_to_workflows: Swift.Bool?
+            /// List of workflows the runner group should be allowed to run. This setting will be ignored unless `restricted_to_workflows` is set to `true`.
+            ///
+            /// - Remark: Generated from `#/components/schemas/runner-groups-org/selected_workflows`.
+            public var selected_workflows: [Swift.String]?
+            /// Creates a new `runner_hyphen_groups_hyphen_org`.
+            ///
+            /// - Parameters:
+            ///   - id:
+            ///   - name:
+            ///   - visibility:
+            ///   - _default:
+            ///   - selected_repositories_url: Link to the selected repositories resource for this runner group. Not present unless visibility was set to `selected`
+            ///   - runners_url:
+            ///   - hosted_runners_url:
+            ///   - inherited:
+            ///   - inherited_allows_public_repositories:
+            ///   - allows_public_repositories:
+            ///   - workflow_restrictions_read_only: If `true`, the `restricted_to_workflows` and `selected_workflows` fields cannot be modified.
+            ///   - restricted_to_workflows: If `true`, the runner group will be restricted to running only the workflows specified in the `selected_workflows` array.
+            ///   - selected_workflows: List of workflows the runner group should be allowed to run. This setting will be ignored unless `restricted_to_workflows` is set to `true`.
+            public init(
+                id: Swift.Double,
+                name: Swift.String,
+                visibility: Swift.String,
+                _default: Swift.Bool,
+                selected_repositories_url: Swift.String? = nil,
+                runners_url: Swift.String,
+                hosted_runners_url: Swift.String? = nil,
+                inherited: Swift.Bool,
+                inherited_allows_public_repositories: Swift.Bool? = nil,
+                allows_public_repositories: Swift.Bool,
+                workflow_restrictions_read_only: Swift.Bool? = nil,
+                restricted_to_workflows: Swift.Bool? = nil,
+                selected_workflows: [Swift.String]? = nil
+            ) {
+                self.id = id
+                self.name = name
+                self.visibility = visibility
+                self._default = _default
+                self.selected_repositories_url = selected_repositories_url
+                self.runners_url = runners_url
+                self.hosted_runners_url = hosted_runners_url
+                self.inherited = inherited
+                self.inherited_allows_public_repositories = inherited_allows_public_repositories
+                self.allows_public_repositories = allows_public_repositories
+                self.workflow_restrictions_read_only = workflow_restrictions_read_only
+                self.restricted_to_workflows = restricted_to_workflows
+                self.selected_workflows = selected_workflows
+            }
+            public enum CodingKeys: String, CodingKey {
+                case id
+                case name
+                case visibility
+                case _default = "default"
+                case selected_repositories_url
+                case runners_url
+                case hosted_runners_url
+                case inherited
+                case inherited_allows_public_repositories
+                case allows_public_repositories
+                case workflow_restrictions_read_only
+                case restricted_to_workflows
+                case selected_workflows
             }
         }
         /// A label for a self hosted runner
@@ -9035,6 +9488,14 @@ public enum Components {
         ///
         /// - Remark: Generated from `#/components/parameters/repository-id`.
         public typealias repository_hyphen_id = Swift.Int
+        /// Only return runner groups that are allowed to be used by this repository.
+        ///
+        /// - Remark: Generated from `#/components/parameters/visible-to-repository`.
+        public typealias visible_hyphen_to_hyphen_repository = Swift.String
+        /// Unique identifier of the self-hosted runner group.
+        ///
+        /// - Remark: Generated from `#/components/parameters/runner-group-id`.
+        public typealias runner_hyphen_group_hyphen_id = Swift.Int
         /// Unique identifier of the self-hosted runner.
         ///
         /// - Remark: Generated from `#/components/parameters/runner-id`.
@@ -11020,6 +11481,1797 @@ public enum Operations {
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
             public var noContent: Operations.actions_sol_set_hyphen_github_hyphen_actions_hyphen_default_hyphen_workflow_hyphen_permissions_hyphen_organization.Output.NoContent {
+                get throws {
+                    switch self {
+                    case let .noContent(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "noContent",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+    }
+    /// List self-hosted runner groups for an organization
+    ///
+    /// Lists all self-hosted runner groups configured in an organization and inherited from an enterprise.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/actions/runner-groups`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/get(actions/list-self-hosted-runner-groups-for-org)`.
+    public enum actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_groups_hyphen_for_hyphen_org {
+        public static let id: Swift.String = "actions/list-self-hosted-runner-groups-for-org"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/GET/path`.
+            public struct Path: Sendable, Hashable {
+                /// The organization name. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/GET/path/org`.
+                public var org: Components.Parameters.org
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - org: The organization name. The name is not case sensitive.
+                public init(org: Components.Parameters.org) {
+                    self.org = org
+                }
+            }
+            public var path: Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_groups_hyphen_for_hyphen_org.Input.Path
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/GET/query`.
+            public struct Query: Sendable, Hashable {
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/GET/query/per_page`.
+                public var per_page: Components.Parameters.per_hyphen_page?
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/GET/query/page`.
+                public var page: Components.Parameters.page?
+                /// Only return runner groups that are allowed to be used by this repository.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/GET/query/visible_to_repository`.
+                public var visible_to_repository: Components.Parameters.visible_hyphen_to_hyphen_repository?
+                /// Creates a new `Query`.
+                ///
+                /// - Parameters:
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - visible_to_repository: Only return runner groups that are allowed to be used by this repository.
+                public init(
+                    per_page: Components.Parameters.per_hyphen_page? = nil,
+                    page: Components.Parameters.page? = nil,
+                    visible_to_repository: Components.Parameters.visible_hyphen_to_hyphen_repository? = nil
+                ) {
+                    self.per_page = per_page
+                    self.page = page
+                    self.visible_to_repository = visible_to_repository
+                }
+            }
+            public var query: Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_groups_hyphen_for_hyphen_org.Input.Query
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/GET/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_groups_hyphen_for_hyphen_org.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_groups_hyphen_for_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_groups_hyphen_for_hyphen_org.Input.Headers
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - query:
+            ///   - headers:
+            public init(
+                path: Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_groups_hyphen_for_hyphen_org.Input.Path,
+                query: Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_groups_hyphen_for_hyphen_org.Input.Query = .init(),
+                headers: Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_groups_hyphen_for_hyphen_org.Input.Headers = .init()
+            ) {
+                self.path = path
+                self.query = query
+                self.headers = headers
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Ok: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/GET/responses/200/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/GET/responses/200/content/json`.
+                    public struct jsonPayload: Codable, Hashable, Sendable {
+                        /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/GET/responses/200/content/json/total_count`.
+                        public var total_count: Swift.Double
+                        /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/GET/responses/200/content/json/runner_groups`.
+                        public var runner_groups: [Components.Schemas.runner_hyphen_groups_hyphen_org]
+                        /// Creates a new `jsonPayload`.
+                        ///
+                        /// - Parameters:
+                        ///   - total_count:
+                        ///   - runner_groups:
+                        public init(
+                            total_count: Swift.Double,
+                            runner_groups: [Components.Schemas.runner_hyphen_groups_hyphen_org]
+                        ) {
+                            self.total_count = total_count
+                            self.runner_groups = runner_groups
+                        }
+                        public enum CodingKeys: String, CodingKey {
+                            case total_count
+                            case runner_groups
+                        }
+                    }
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/GET/responses/200/content/application\/json`.
+                    case json(Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_groups_hyphen_for_hyphen_org.Output.Ok.Body.jsonPayload)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_groups_hyphen_for_hyphen_org.Output.Ok.Body.jsonPayload {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_groups_hyphen_for_hyphen_org.Output.Ok.Body
+                /// Creates a new `Ok`.
+                ///
+                /// - Parameters:
+                ///   - body: Received HTTP response body
+                public init(body: Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_groups_hyphen_for_hyphen_org.Output.Ok.Body) {
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/get(actions/list-self-hosted-runner-groups-for-org)/responses/200`.
+            ///
+            /// HTTP response code: `200 ok`.
+            case ok(Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_groups_hyphen_for_hyphen_org.Output.Ok)
+            /// The associated value of the enum case if `self` is `.ok`.
+            ///
+            /// - Throws: An error if `self` is not `.ok`.
+            /// - SeeAlso: `.ok`.
+            public var ok: Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_groups_hyphen_for_hyphen_org.Output.Ok {
+                get throws {
+                    switch self {
+                    case let .ok(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "ok",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
+    /// Create a self-hosted runner group for an organization
+    ///
+    /// Creates a new self-hosted runner group for an organization.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `POST /orgs/{org}/actions/runner-groups`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/post(actions/create-self-hosted-runner-group-for-org)`.
+    public enum actions_sol_create_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org {
+        public static let id: Swift.String = "actions/create-self-hosted-runner-group-for-org"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/POST/path`.
+            public struct Path: Sendable, Hashable {
+                /// The organization name. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/POST/path/org`.
+                public var org: Components.Parameters.org
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - org: The organization name. The name is not case sensitive.
+                public init(org: Components.Parameters.org) {
+                    self.org = org
+                }
+            }
+            public var path: Operations.actions_sol_create_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Input.Path
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/POST/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.actions_sol_create_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.actions_sol_create_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.actions_sol_create_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Input.Headers
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/POST/requestBody`.
+            @frozen public enum Body: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/POST/requestBody/json`.
+                public struct jsonPayload: Codable, Hashable, Sendable {
+                    /// Name of the runner group.
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/POST/requestBody/json/name`.
+                    public var name: Swift.String
+                    /// Visibility of a runner group. You can select all repositories, select individual repositories, or limit access to private repositories.
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/POST/requestBody/json/visibility`.
+                    @frozen public enum visibilityPayload: String, Codable, Hashable, Sendable {
+                        case selected = "selected"
+                        case all = "all"
+                        case _private = "private"
+                    }
+                    /// Visibility of a runner group. You can select all repositories, select individual repositories, or limit access to private repositories.
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/POST/requestBody/json/visibility`.
+                    public var visibility: Operations.actions_sol_create_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Input.Body.jsonPayload.visibilityPayload?
+                    /// List of repository IDs that can access the runner group.
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/POST/requestBody/json/selected_repository_ids`.
+                    public var selected_repository_ids: [Swift.Int]?
+                    /// List of runner IDs to add to the runner group.
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/POST/requestBody/json/runners`.
+                    public var runners: [Swift.Int]?
+                    /// Whether the runner group can be used by `public` repositories.
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/POST/requestBody/json/allows_public_repositories`.
+                    public var allows_public_repositories: Swift.Bool?
+                    /// If `true`, the runner group will be restricted to running only the workflows specified in the `selected_workflows` array.
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/POST/requestBody/json/restricted_to_workflows`.
+                    public var restricted_to_workflows: Swift.Bool?
+                    /// List of workflows the runner group should be allowed to run. This setting will be ignored unless `restricted_to_workflows` is set to `true`.
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/POST/requestBody/json/selected_workflows`.
+                    public var selected_workflows: [Swift.String]?
+                    /// Creates a new `jsonPayload`.
+                    ///
+                    /// - Parameters:
+                    ///   - name: Name of the runner group.
+                    ///   - visibility: Visibility of a runner group. You can select all repositories, select individual repositories, or limit access to private repositories.
+                    ///   - selected_repository_ids: List of repository IDs that can access the runner group.
+                    ///   - runners: List of runner IDs to add to the runner group.
+                    ///   - allows_public_repositories: Whether the runner group can be used by `public` repositories.
+                    ///   - restricted_to_workflows: If `true`, the runner group will be restricted to running only the workflows specified in the `selected_workflows` array.
+                    ///   - selected_workflows: List of workflows the runner group should be allowed to run. This setting will be ignored unless `restricted_to_workflows` is set to `true`.
+                    public init(
+                        name: Swift.String,
+                        visibility: Operations.actions_sol_create_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Input.Body.jsonPayload.visibilityPayload? = nil,
+                        selected_repository_ids: [Swift.Int]? = nil,
+                        runners: [Swift.Int]? = nil,
+                        allows_public_repositories: Swift.Bool? = nil,
+                        restricted_to_workflows: Swift.Bool? = nil,
+                        selected_workflows: [Swift.String]? = nil
+                    ) {
+                        self.name = name
+                        self.visibility = visibility
+                        self.selected_repository_ids = selected_repository_ids
+                        self.runners = runners
+                        self.allows_public_repositories = allows_public_repositories
+                        self.restricted_to_workflows = restricted_to_workflows
+                        self.selected_workflows = selected_workflows
+                    }
+                    public enum CodingKeys: String, CodingKey {
+                        case name
+                        case visibility
+                        case selected_repository_ids
+                        case runners
+                        case allows_public_repositories
+                        case restricted_to_workflows
+                        case selected_workflows
+                    }
+                }
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/POST/requestBody/content/application\/json`.
+                case json(Operations.actions_sol_create_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Input.Body.jsonPayload)
+            }
+            public var body: Operations.actions_sol_create_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Input.Body
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - headers:
+            ///   - body:
+            public init(
+                path: Operations.actions_sol_create_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Input.Path,
+                headers: Operations.actions_sol_create_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Input.Headers = .init(),
+                body: Operations.actions_sol_create_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Input.Body
+            ) {
+                self.path = path
+                self.headers = headers
+                self.body = body
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Created: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/POST/responses/201/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/POST/responses/201/content/application\/json`.
+                    case json(Components.Schemas.runner_hyphen_groups_hyphen_org)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Components.Schemas.runner_hyphen_groups_hyphen_org {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.actions_sol_create_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Output.Created.Body
+                /// Creates a new `Created`.
+                ///
+                /// - Parameters:
+                ///   - body: Received HTTP response body
+                public init(body: Operations.actions_sol_create_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Output.Created.Body) {
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/post(actions/create-self-hosted-runner-group-for-org)/responses/201`.
+            ///
+            /// HTTP response code: `201 created`.
+            case created(Operations.actions_sol_create_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Output.Created)
+            /// The associated value of the enum case if `self` is `.created`.
+            ///
+            /// - Throws: An error if `self` is not `.created`.
+            /// - SeeAlso: `.created`.
+            public var created: Operations.actions_sol_create_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Output.Created {
+                get throws {
+                    switch self {
+                    case let .created(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "created",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
+    /// Get a self-hosted runner group for an organization
+    ///
+    /// Gets a specific self-hosted runner group for an organization.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/actions/runner-groups/{runner_group_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/get(actions/get-self-hosted-runner-group-for-org)`.
+    public enum actions_sol_get_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org {
+        public static let id: Swift.String = "actions/get-self-hosted-runner-group-for-org"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/GET/path`.
+            public struct Path: Sendable, Hashable {
+                /// The organization name. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/GET/path/org`.
+                public var org: Components.Parameters.org
+                /// Unique identifier of the self-hosted runner group.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/GET/path/runner_group_id`.
+                public var runner_group_id: Components.Parameters.runner_hyphen_group_hyphen_id
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - org: The organization name. The name is not case sensitive.
+                ///   - runner_group_id: Unique identifier of the self-hosted runner group.
+                public init(
+                    org: Components.Parameters.org,
+                    runner_group_id: Components.Parameters.runner_hyphen_group_hyphen_id
+                ) {
+                    self.org = org
+                    self.runner_group_id = runner_group_id
+                }
+            }
+            public var path: Operations.actions_sol_get_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Input.Path
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/GET/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.actions_sol_get_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.actions_sol_get_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.actions_sol_get_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Input.Headers
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - headers:
+            public init(
+                path: Operations.actions_sol_get_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Input.Path,
+                headers: Operations.actions_sol_get_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Input.Headers = .init()
+            ) {
+                self.path = path
+                self.headers = headers
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Ok: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/GET/responses/200/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/GET/responses/200/content/application\/json`.
+                    case json(Components.Schemas.runner_hyphen_groups_hyphen_org)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Components.Schemas.runner_hyphen_groups_hyphen_org {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.actions_sol_get_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Output.Ok.Body
+                /// Creates a new `Ok`.
+                ///
+                /// - Parameters:
+                ///   - body: Received HTTP response body
+                public init(body: Operations.actions_sol_get_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Output.Ok.Body) {
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/get(actions/get-self-hosted-runner-group-for-org)/responses/200`.
+            ///
+            /// HTTP response code: `200 ok`.
+            case ok(Operations.actions_sol_get_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Output.Ok)
+            /// The associated value of the enum case if `self` is `.ok`.
+            ///
+            /// - Throws: An error if `self` is not `.ok`.
+            /// - SeeAlso: `.ok`.
+            public var ok: Operations.actions_sol_get_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Output.Ok {
+                get throws {
+                    switch self {
+                    case let .ok(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "ok",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
+    /// Update a self-hosted runner group for an organization
+    ///
+    /// Updates the `name` and `visibility` of a self-hosted runner group in an organization.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `PATCH /orgs/{org}/actions/runner-groups/{runner_group_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/patch(actions/update-self-hosted-runner-group-for-org)`.
+    public enum actions_sol_update_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org {
+        public static let id: Swift.String = "actions/update-self-hosted-runner-group-for-org"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/PATCH/path`.
+            public struct Path: Sendable, Hashable {
+                /// The organization name. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/PATCH/path/org`.
+                public var org: Components.Parameters.org
+                /// Unique identifier of the self-hosted runner group.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/PATCH/path/runner_group_id`.
+                public var runner_group_id: Components.Parameters.runner_hyphen_group_hyphen_id
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - org: The organization name. The name is not case sensitive.
+                ///   - runner_group_id: Unique identifier of the self-hosted runner group.
+                public init(
+                    org: Components.Parameters.org,
+                    runner_group_id: Components.Parameters.runner_hyphen_group_hyphen_id
+                ) {
+                    self.org = org
+                    self.runner_group_id = runner_group_id
+                }
+            }
+            public var path: Operations.actions_sol_update_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Input.Path
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/PATCH/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.actions_sol_update_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.actions_sol_update_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.actions_sol_update_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Input.Headers
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/PATCH/requestBody`.
+            @frozen public enum Body: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/PATCH/requestBody/json`.
+                public struct jsonPayload: Codable, Hashable, Sendable {
+                    /// Name of the runner group.
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/PATCH/requestBody/json/name`.
+                    public var name: Swift.String
+                    /// Visibility of a runner group. You can select all repositories, select individual repositories, or all private repositories.
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/PATCH/requestBody/json/visibility`.
+                    @frozen public enum visibilityPayload: String, Codable, Hashable, Sendable {
+                        case selected = "selected"
+                        case all = "all"
+                        case _private = "private"
+                    }
+                    /// Visibility of a runner group. You can select all repositories, select individual repositories, or all private repositories.
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/PATCH/requestBody/json/visibility`.
+                    public var visibility: Operations.actions_sol_update_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Input.Body.jsonPayload.visibilityPayload?
+                    /// Whether the runner group can be used by `public` repositories.
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/PATCH/requestBody/json/allows_public_repositories`.
+                    public var allows_public_repositories: Swift.Bool?
+                    /// If `true`, the runner group will be restricted to running only the workflows specified in the `selected_workflows` array.
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/PATCH/requestBody/json/restricted_to_workflows`.
+                    public var restricted_to_workflows: Swift.Bool?
+                    /// List of workflows the runner group should be allowed to run. This setting will be ignored unless `restricted_to_workflows` is set to `true`.
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/PATCH/requestBody/json/selected_workflows`.
+                    public var selected_workflows: [Swift.String]?
+                    /// Creates a new `jsonPayload`.
+                    ///
+                    /// - Parameters:
+                    ///   - name: Name of the runner group.
+                    ///   - visibility: Visibility of a runner group. You can select all repositories, select individual repositories, or all private repositories.
+                    ///   - allows_public_repositories: Whether the runner group can be used by `public` repositories.
+                    ///   - restricted_to_workflows: If `true`, the runner group will be restricted to running only the workflows specified in the `selected_workflows` array.
+                    ///   - selected_workflows: List of workflows the runner group should be allowed to run. This setting will be ignored unless `restricted_to_workflows` is set to `true`.
+                    public init(
+                        name: Swift.String,
+                        visibility: Operations.actions_sol_update_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Input.Body.jsonPayload.visibilityPayload? = nil,
+                        allows_public_repositories: Swift.Bool? = nil,
+                        restricted_to_workflows: Swift.Bool? = nil,
+                        selected_workflows: [Swift.String]? = nil
+                    ) {
+                        self.name = name
+                        self.visibility = visibility
+                        self.allows_public_repositories = allows_public_repositories
+                        self.restricted_to_workflows = restricted_to_workflows
+                        self.selected_workflows = selected_workflows
+                    }
+                    public enum CodingKeys: String, CodingKey {
+                        case name
+                        case visibility
+                        case allows_public_repositories
+                        case restricted_to_workflows
+                        case selected_workflows
+                    }
+                }
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/PATCH/requestBody/content/application\/json`.
+                case json(Operations.actions_sol_update_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Input.Body.jsonPayload)
+            }
+            public var body: Operations.actions_sol_update_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Input.Body
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - headers:
+            ///   - body:
+            public init(
+                path: Operations.actions_sol_update_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Input.Path,
+                headers: Operations.actions_sol_update_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Input.Headers = .init(),
+                body: Operations.actions_sol_update_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Input.Body
+            ) {
+                self.path = path
+                self.headers = headers
+                self.body = body
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Ok: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/PATCH/responses/200/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/PATCH/responses/200/content/application\/json`.
+                    case json(Components.Schemas.runner_hyphen_groups_hyphen_org)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Components.Schemas.runner_hyphen_groups_hyphen_org {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.actions_sol_update_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Output.Ok.Body
+                /// Creates a new `Ok`.
+                ///
+                /// - Parameters:
+                ///   - body: Received HTTP response body
+                public init(body: Operations.actions_sol_update_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Output.Ok.Body) {
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/patch(actions/update-self-hosted-runner-group-for-org)/responses/200`.
+            ///
+            /// HTTP response code: `200 ok`.
+            case ok(Operations.actions_sol_update_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Output.Ok)
+            /// The associated value of the enum case if `self` is `.ok`.
+            ///
+            /// - Throws: An error if `self` is not `.ok`.
+            /// - SeeAlso: `.ok`.
+            public var ok: Operations.actions_sol_update_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Output.Ok {
+                get throws {
+                    switch self {
+                    case let .ok(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "ok",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
+    /// Delete a self-hosted runner group from an organization
+    ///
+    /// Deletes a self-hosted runner group for an organization.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `DELETE /orgs/{org}/actions/runner-groups/{runner_group_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/delete(actions/delete-self-hosted-runner-group-from-org)`.
+    public enum actions_sol_delete_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_from_hyphen_org {
+        public static let id: Swift.String = "actions/delete-self-hosted-runner-group-from-org"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/DELETE/path`.
+            public struct Path: Sendable, Hashable {
+                /// The organization name. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/DELETE/path/org`.
+                public var org: Components.Parameters.org
+                /// Unique identifier of the self-hosted runner group.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/DELETE/path/runner_group_id`.
+                public var runner_group_id: Components.Parameters.runner_hyphen_group_hyphen_id
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - org: The organization name. The name is not case sensitive.
+                ///   - runner_group_id: Unique identifier of the self-hosted runner group.
+                public init(
+                    org: Components.Parameters.org,
+                    runner_group_id: Components.Parameters.runner_hyphen_group_hyphen_id
+                ) {
+                    self.org = org
+                    self.runner_group_id = runner_group_id
+                }
+            }
+            public var path: Operations.actions_sol_delete_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_from_hyphen_org.Input.Path
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            public init(path: Operations.actions_sol_delete_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_from_hyphen_org.Input.Path) {
+                self.path = path
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct NoContent: Sendable, Hashable {
+                /// Creates a new `NoContent`.
+                public init() {}
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/delete(actions/delete-self-hosted-runner-group-from-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            case noContent(Operations.actions_sol_delete_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_from_hyphen_org.Output.NoContent)
+            /// The associated value of the enum case if `self` is `.noContent`.
+            ///
+            /// - Throws: An error if `self` is not `.noContent`.
+            /// - SeeAlso: `.noContent`.
+            public var noContent: Operations.actions_sol_delete_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_from_hyphen_org.Output.NoContent {
+                get throws {
+                    switch self {
+                    case let .noContent(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "noContent",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+    }
+    /// List repository access to a self-hosted runner group in an organization
+    ///
+    /// Lists the repositories with access to a self-hosted runner group configured in an organization.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/actions/runner-groups/{runner_group_id}/repositories`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/get(actions/list-repo-access-to-self-hosted-runner-group-in-org)`.
+    public enum actions_sol_list_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org {
+        public static let id: Swift.String = "actions/list-repo-access-to-self-hosted-runner-group-in-org"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/GET/path`.
+            public struct Path: Sendable, Hashable {
+                /// The organization name. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/GET/path/org`.
+                public var org: Components.Parameters.org
+                /// Unique identifier of the self-hosted runner group.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/GET/path/runner_group_id`.
+                public var runner_group_id: Components.Parameters.runner_hyphen_group_hyphen_id
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - org: The organization name. The name is not case sensitive.
+                ///   - runner_group_id: Unique identifier of the self-hosted runner group.
+                public init(
+                    org: Components.Parameters.org,
+                    runner_group_id: Components.Parameters.runner_hyphen_group_hyphen_id
+                ) {
+                    self.org = org
+                    self.runner_group_id = runner_group_id
+                }
+            }
+            public var path: Operations.actions_sol_list_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Input.Path
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/GET/query`.
+            public struct Query: Sendable, Hashable {
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/GET/query/page`.
+                public var page: Components.Parameters.page?
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/GET/query/per_page`.
+                public var per_page: Components.Parameters.per_hyphen_page?
+                /// Creates a new `Query`.
+                ///
+                /// - Parameters:
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                public init(
+                    page: Components.Parameters.page? = nil,
+                    per_page: Components.Parameters.per_hyphen_page? = nil
+                ) {
+                    self.page = page
+                    self.per_page = per_page
+                }
+            }
+            public var query: Operations.actions_sol_list_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Input.Query
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/GET/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.actions_sol_list_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.actions_sol_list_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.actions_sol_list_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Input.Headers
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - query:
+            ///   - headers:
+            public init(
+                path: Operations.actions_sol_list_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Input.Path,
+                query: Operations.actions_sol_list_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Input.Query = .init(),
+                headers: Operations.actions_sol_list_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Input.Headers = .init()
+            ) {
+                self.path = path
+                self.query = query
+                self.headers = headers
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Ok: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/GET/responses/200/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/GET/responses/200/content/json`.
+                    public struct jsonPayload: Codable, Hashable, Sendable {
+                        /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/GET/responses/200/content/json/total_count`.
+                        public var total_count: Swift.Double
+                        /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/GET/responses/200/content/json/repositories`.
+                        public var repositories: [Components.Schemas.minimal_hyphen_repository]
+                        /// Creates a new `jsonPayload`.
+                        ///
+                        /// - Parameters:
+                        ///   - total_count:
+                        ///   - repositories:
+                        public init(
+                            total_count: Swift.Double,
+                            repositories: [Components.Schemas.minimal_hyphen_repository]
+                        ) {
+                            self.total_count = total_count
+                            self.repositories = repositories
+                        }
+                        public enum CodingKeys: String, CodingKey {
+                            case total_count
+                            case repositories
+                        }
+                    }
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/GET/responses/200/content/application\/json`.
+                    case json(Operations.actions_sol_list_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Output.Ok.Body.jsonPayload)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Operations.actions_sol_list_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Output.Ok.Body.jsonPayload {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.actions_sol_list_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Output.Ok.Body
+                /// Creates a new `Ok`.
+                ///
+                /// - Parameters:
+                ///   - body: Received HTTP response body
+                public init(body: Operations.actions_sol_list_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Output.Ok.Body) {
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/get(actions/list-repo-access-to-self-hosted-runner-group-in-org)/responses/200`.
+            ///
+            /// HTTP response code: `200 ok`.
+            case ok(Operations.actions_sol_list_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Output.Ok)
+            /// The associated value of the enum case if `self` is `.ok`.
+            ///
+            /// - Throws: An error if `self` is not `.ok`.
+            /// - SeeAlso: `.ok`.
+            public var ok: Operations.actions_sol_list_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Output.Ok {
+                get throws {
+                    switch self {
+                    case let .ok(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "ok",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
+    /// Set repository access for a self-hosted runner group in an organization
+    ///
+    /// Replaces the list of repositories that have access to a self-hosted runner group configured in an organization.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `PUT /orgs/{org}/actions/runner-groups/{runner_group_id}/repositories`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/put(actions/set-repo-access-to-self-hosted-runner-group-in-org)`.
+    public enum actions_sol_set_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org {
+        public static let id: Swift.String = "actions/set-repo-access-to-self-hosted-runner-group-in-org"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/PUT/path`.
+            public struct Path: Sendable, Hashable {
+                /// The organization name. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/PUT/path/org`.
+                public var org: Components.Parameters.org
+                /// Unique identifier of the self-hosted runner group.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/PUT/path/runner_group_id`.
+                public var runner_group_id: Components.Parameters.runner_hyphen_group_hyphen_id
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - org: The organization name. The name is not case sensitive.
+                ///   - runner_group_id: Unique identifier of the self-hosted runner group.
+                public init(
+                    org: Components.Parameters.org,
+                    runner_group_id: Components.Parameters.runner_hyphen_group_hyphen_id
+                ) {
+                    self.org = org
+                    self.runner_group_id = runner_group_id
+                }
+            }
+            public var path: Operations.actions_sol_set_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Input.Path
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/PUT/requestBody`.
+            @frozen public enum Body: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/PUT/requestBody/json`.
+                public struct jsonPayload: Codable, Hashable, Sendable {
+                    /// List of repository IDs that can access the runner group.
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/PUT/requestBody/json/selected_repository_ids`.
+                    public var selected_repository_ids: [Swift.Int]
+                    /// Creates a new `jsonPayload`.
+                    ///
+                    /// - Parameters:
+                    ///   - selected_repository_ids: List of repository IDs that can access the runner group.
+                    public init(selected_repository_ids: [Swift.Int]) {
+                        self.selected_repository_ids = selected_repository_ids
+                    }
+                    public enum CodingKeys: String, CodingKey {
+                        case selected_repository_ids
+                    }
+                }
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/PUT/requestBody/content/application\/json`.
+                case json(Operations.actions_sol_set_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Input.Body.jsonPayload)
+            }
+            public var body: Operations.actions_sol_set_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Input.Body
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - body:
+            public init(
+                path: Operations.actions_sol_set_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Input.Path,
+                body: Operations.actions_sol_set_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Input.Body
+            ) {
+                self.path = path
+                self.body = body
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct NoContent: Sendable, Hashable {
+                /// Creates a new `NoContent`.
+                public init() {}
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/put(actions/set-repo-access-to-self-hosted-runner-group-in-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            case noContent(Operations.actions_sol_set_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Output.NoContent)
+            /// The associated value of the enum case if `self` is `.noContent`.
+            ///
+            /// - Throws: An error if `self` is not `.noContent`.
+            /// - SeeAlso: `.noContent`.
+            public var noContent: Operations.actions_sol_set_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Output.NoContent {
+                get throws {
+                    switch self {
+                    case let .noContent(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "noContent",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+    }
+    /// Add repository access to a self-hosted runner group in an organization
+    ///
+    /// Adds a repository to the list of repositories that can access a self-hosted runner group. The runner group must have `visibility` set to `selected`. For more information, see "[Create a self-hosted runner group for an organization](#create-a-self-hosted-runner-group-for-an-organization)."
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `PUT /orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/{repository_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/{repository_id}/put(actions/add-repo-access-to-self-hosted-runner-group-in-org)`.
+    public enum actions_sol_add_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org {
+        public static let id: Swift.String = "actions/add-repo-access-to-self-hosted-runner-group-in-org"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/{repository_id}/PUT/path`.
+            public struct Path: Sendable, Hashable {
+                /// The organization name. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/{repository_id}/PUT/path/org`.
+                public var org: Components.Parameters.org
+                /// Unique identifier of the self-hosted runner group.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/{repository_id}/PUT/path/runner_group_id`.
+                public var runner_group_id: Components.Parameters.runner_hyphen_group_hyphen_id
+                /// The unique identifier of the repository.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/{repository_id}/PUT/path/repository_id`.
+                public var repository_id: Components.Parameters.repository_hyphen_id
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - org: The organization name. The name is not case sensitive.
+                ///   - runner_group_id: Unique identifier of the self-hosted runner group.
+                ///   - repository_id: The unique identifier of the repository.
+                public init(
+                    org: Components.Parameters.org,
+                    runner_group_id: Components.Parameters.runner_hyphen_group_hyphen_id,
+                    repository_id: Components.Parameters.repository_hyphen_id
+                ) {
+                    self.org = org
+                    self.runner_group_id = runner_group_id
+                    self.repository_id = repository_id
+                }
+            }
+            public var path: Operations.actions_sol_add_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Input.Path
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            public init(path: Operations.actions_sol_add_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Input.Path) {
+                self.path = path
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct NoContent: Sendable, Hashable {
+                /// Creates a new `NoContent`.
+                public init() {}
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/{repository_id}/put(actions/add-repo-access-to-self-hosted-runner-group-in-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            case noContent(Operations.actions_sol_add_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Output.NoContent)
+            /// The associated value of the enum case if `self` is `.noContent`.
+            ///
+            /// - Throws: An error if `self` is not `.noContent`.
+            /// - SeeAlso: `.noContent`.
+            public var noContent: Operations.actions_sol_add_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Output.NoContent {
+                get throws {
+                    switch self {
+                    case let .noContent(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "noContent",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+    }
+    /// Remove repository access to a self-hosted runner group in an organization
+    ///
+    /// Removes a repository from the list of selected repositories that can access a self-hosted runner group. The runner group must have `visibility` set to `selected`. For more information, see "[Create a self-hosted runner group for an organization](#create-a-self-hosted-runner-group-for-an-organization)."
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `DELETE /orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/{repository_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/{repository_id}/delete(actions/remove-repo-access-to-self-hosted-runner-group-in-org)`.
+    public enum actions_sol_remove_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org {
+        public static let id: Swift.String = "actions/remove-repo-access-to-self-hosted-runner-group-in-org"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/{repository_id}/DELETE/path`.
+            public struct Path: Sendable, Hashable {
+                /// The organization name. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/{repository_id}/DELETE/path/org`.
+                public var org: Components.Parameters.org
+                /// Unique identifier of the self-hosted runner group.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/{repository_id}/DELETE/path/runner_group_id`.
+                public var runner_group_id: Components.Parameters.runner_hyphen_group_hyphen_id
+                /// The unique identifier of the repository.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/{repository_id}/DELETE/path/repository_id`.
+                public var repository_id: Components.Parameters.repository_hyphen_id
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - org: The organization name. The name is not case sensitive.
+                ///   - runner_group_id: Unique identifier of the self-hosted runner group.
+                ///   - repository_id: The unique identifier of the repository.
+                public init(
+                    org: Components.Parameters.org,
+                    runner_group_id: Components.Parameters.runner_hyphen_group_hyphen_id,
+                    repository_id: Components.Parameters.repository_hyphen_id
+                ) {
+                    self.org = org
+                    self.runner_group_id = runner_group_id
+                    self.repository_id = repository_id
+                }
+            }
+            public var path: Operations.actions_sol_remove_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Input.Path
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            public init(path: Operations.actions_sol_remove_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Input.Path) {
+                self.path = path
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct NoContent: Sendable, Hashable {
+                /// Creates a new `NoContent`.
+                public init() {}
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/{repository_id}/delete(actions/remove-repo-access-to-self-hosted-runner-group-in-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            case noContent(Operations.actions_sol_remove_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Output.NoContent)
+            /// The associated value of the enum case if `self` is `.noContent`.
+            ///
+            /// - Throws: An error if `self` is not `.noContent`.
+            /// - SeeAlso: `.noContent`.
+            public var noContent: Operations.actions_sol_remove_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Output.NoContent {
+                get throws {
+                    switch self {
+                    case let .noContent(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "noContent",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+    }
+    /// List self-hosted runners in a group for an organization
+    ///
+    /// Lists self-hosted runners that are in a specific organization group.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/actions/runner-groups/{runner_group_id}/runners`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/runners/get(actions/list-self-hosted-runners-in-group-for-org)`.
+    public enum actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org {
+        public static let id: Swift.String = "actions/list-self-hosted-runners-in-group-for-org"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/runners/GET/path`.
+            public struct Path: Sendable, Hashable {
+                /// The organization name. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/runners/GET/path/org`.
+                public var org: Components.Parameters.org
+                /// Unique identifier of the self-hosted runner group.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/runners/GET/path/runner_group_id`.
+                public var runner_group_id: Components.Parameters.runner_hyphen_group_hyphen_id
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - org: The organization name. The name is not case sensitive.
+                ///   - runner_group_id: Unique identifier of the self-hosted runner group.
+                public init(
+                    org: Components.Parameters.org,
+                    runner_group_id: Components.Parameters.runner_hyphen_group_hyphen_id
+                ) {
+                    self.org = org
+                    self.runner_group_id = runner_group_id
+                }
+            }
+            public var path: Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Input.Path
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/runners/GET/query`.
+            public struct Query: Sendable, Hashable {
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/runners/GET/query/per_page`.
+                public var per_page: Components.Parameters.per_hyphen_page?
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/runners/GET/query/page`.
+                public var page: Components.Parameters.page?
+                /// Creates a new `Query`.
+                ///
+                /// - Parameters:
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                public init(
+                    per_page: Components.Parameters.per_hyphen_page? = nil,
+                    page: Components.Parameters.page? = nil
+                ) {
+                    self.per_page = per_page
+                    self.page = page
+                }
+            }
+            public var query: Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Input.Query
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/runners/GET/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Input.Headers
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - query:
+            ///   - headers:
+            public init(
+                path: Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Input.Path,
+                query: Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Input.Query = .init(),
+                headers: Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Input.Headers = .init()
+            ) {
+                self.path = path
+                self.query = query
+                self.headers = headers
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Ok: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/runners/GET/responses/200/headers`.
+                public struct Headers: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/runners/GET/responses/200/headers/Link`.
+                    public var Link: Components.Headers.link?
+                    /// Creates a new `Headers`.
+                    ///
+                    /// - Parameters:
+                    ///   - Link:
+                    public init(Link: Components.Headers.link? = nil) {
+                        self.Link = Link
+                    }
+                }
+                /// Received HTTP response headers
+                public var headers: Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Output.Ok.Headers
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/runners/GET/responses/200/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/runners/GET/responses/200/content/json`.
+                    public struct jsonPayload: Codable, Hashable, Sendable {
+                        /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/runners/GET/responses/200/content/json/total_count`.
+                        public var total_count: Swift.Double
+                        /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/runners/GET/responses/200/content/json/runners`.
+                        public var runners: [Components.Schemas.runner]
+                        /// Creates a new `jsonPayload`.
+                        ///
+                        /// - Parameters:
+                        ///   - total_count:
+                        ///   - runners:
+                        public init(
+                            total_count: Swift.Double,
+                            runners: [Components.Schemas.runner]
+                        ) {
+                            self.total_count = total_count
+                            self.runners = runners
+                        }
+                        public enum CodingKeys: String, CodingKey {
+                            case total_count
+                            case runners
+                        }
+                    }
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/runners/GET/responses/200/content/application\/json`.
+                    case json(Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Output.Ok.Body.jsonPayload)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Output.Ok.Body.jsonPayload {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Output.Ok.Body
+                /// Creates a new `Ok`.
+                ///
+                /// - Parameters:
+                ///   - headers: Received HTTP response headers
+                ///   - body: Received HTTP response body
+                public init(
+                    headers: Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Output.Ok.Headers = .init(),
+                    body: Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Output.Ok.Body
+                ) {
+                    self.headers = headers
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/runners/get(actions/list-self-hosted-runners-in-group-for-org)/responses/200`.
+            ///
+            /// HTTP response code: `200 ok`.
+            case ok(Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Output.Ok)
+            /// The associated value of the enum case if `self` is `.ok`.
+            ///
+            /// - Throws: An error if `self` is not `.ok`.
+            /// - SeeAlso: `.ok`.
+            public var ok: Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Output.Ok {
+                get throws {
+                    switch self {
+                    case let .ok(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "ok",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
+    /// Set self-hosted runners in a group for an organization
+    ///
+    /// Replaces the list of self-hosted runners that are part of an organization runner group.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `PUT /orgs/{org}/actions/runner-groups/{runner_group_id}/runners`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/runners/put(actions/set-self-hosted-runners-in-group-for-org)`.
+    public enum actions_sol_set_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org {
+        public static let id: Swift.String = "actions/set-self-hosted-runners-in-group-for-org"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/runners/PUT/path`.
+            public struct Path: Sendable, Hashable {
+                /// The organization name. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/runners/PUT/path/org`.
+                public var org: Components.Parameters.org
+                /// Unique identifier of the self-hosted runner group.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/runners/PUT/path/runner_group_id`.
+                public var runner_group_id: Components.Parameters.runner_hyphen_group_hyphen_id
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - org: The organization name. The name is not case sensitive.
+                ///   - runner_group_id: Unique identifier of the self-hosted runner group.
+                public init(
+                    org: Components.Parameters.org,
+                    runner_group_id: Components.Parameters.runner_hyphen_group_hyphen_id
+                ) {
+                    self.org = org
+                    self.runner_group_id = runner_group_id
+                }
+            }
+            public var path: Operations.actions_sol_set_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Input.Path
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/runners/PUT/requestBody`.
+            @frozen public enum Body: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/runners/PUT/requestBody/json`.
+                public struct jsonPayload: Codable, Hashable, Sendable {
+                    /// List of runner IDs to add to the runner group.
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/runners/PUT/requestBody/json/runners`.
+                    public var runners: [Swift.Int]
+                    /// Creates a new `jsonPayload`.
+                    ///
+                    /// - Parameters:
+                    ///   - runners: List of runner IDs to add to the runner group.
+                    public init(runners: [Swift.Int]) {
+                        self.runners = runners
+                    }
+                    public enum CodingKeys: String, CodingKey {
+                        case runners
+                    }
+                }
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/runners/PUT/requestBody/content/application\/json`.
+                case json(Operations.actions_sol_set_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Input.Body.jsonPayload)
+            }
+            public var body: Operations.actions_sol_set_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Input.Body
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - body:
+            public init(
+                path: Operations.actions_sol_set_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Input.Path,
+                body: Operations.actions_sol_set_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Input.Body
+            ) {
+                self.path = path
+                self.body = body
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct NoContent: Sendable, Hashable {
+                /// Creates a new `NoContent`.
+                public init() {}
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/runners/put(actions/set-self-hosted-runners-in-group-for-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            case noContent(Operations.actions_sol_set_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Output.NoContent)
+            /// The associated value of the enum case if `self` is `.noContent`.
+            ///
+            /// - Throws: An error if `self` is not `.noContent`.
+            /// - SeeAlso: `.noContent`.
+            public var noContent: Operations.actions_sol_set_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Output.NoContent {
+                get throws {
+                    switch self {
+                    case let .noContent(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "noContent",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+    }
+    /// Add a self-hosted runner to a group for an organization
+    ///
+    /// Adds a self-hosted runner to a runner group configured in an organization.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `PUT /orgs/{org}/actions/runner-groups/{runner_group_id}/runners/{runner_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/runners/{runner_id}/put(actions/add-self-hosted-runner-to-group-for-org)`.
+    public enum actions_sol_add_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_to_hyphen_group_hyphen_for_hyphen_org {
+        public static let id: Swift.String = "actions/add-self-hosted-runner-to-group-for-org"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/runners/{runner_id}/PUT/path`.
+            public struct Path: Sendable, Hashable {
+                /// The organization name. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/runners/{runner_id}/PUT/path/org`.
+                public var org: Components.Parameters.org
+                /// Unique identifier of the self-hosted runner group.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/runners/{runner_id}/PUT/path/runner_group_id`.
+                public var runner_group_id: Components.Parameters.runner_hyphen_group_hyphen_id
+                /// Unique identifier of the self-hosted runner.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/runners/{runner_id}/PUT/path/runner_id`.
+                public var runner_id: Components.Parameters.runner_hyphen_id
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - org: The organization name. The name is not case sensitive.
+                ///   - runner_group_id: Unique identifier of the self-hosted runner group.
+                ///   - runner_id: Unique identifier of the self-hosted runner.
+                public init(
+                    org: Components.Parameters.org,
+                    runner_group_id: Components.Parameters.runner_hyphen_group_hyphen_id,
+                    runner_id: Components.Parameters.runner_hyphen_id
+                ) {
+                    self.org = org
+                    self.runner_group_id = runner_group_id
+                    self.runner_id = runner_id
+                }
+            }
+            public var path: Operations.actions_sol_add_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_to_hyphen_group_hyphen_for_hyphen_org.Input.Path
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            public init(path: Operations.actions_sol_add_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_to_hyphen_group_hyphen_for_hyphen_org.Input.Path) {
+                self.path = path
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct NoContent: Sendable, Hashable {
+                /// Creates a new `NoContent`.
+                public init() {}
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/runners/{runner_id}/put(actions/add-self-hosted-runner-to-group-for-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            case noContent(Operations.actions_sol_add_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_to_hyphen_group_hyphen_for_hyphen_org.Output.NoContent)
+            /// The associated value of the enum case if `self` is `.noContent`.
+            ///
+            /// - Throws: An error if `self` is not `.noContent`.
+            /// - SeeAlso: `.noContent`.
+            public var noContent: Operations.actions_sol_add_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_to_hyphen_group_hyphen_for_hyphen_org.Output.NoContent {
+                get throws {
+                    switch self {
+                    case let .noContent(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "noContent",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+    }
+    /// Remove a self-hosted runner from a group for an organization
+    ///
+    /// Removes a self-hosted runner from a group configured in an organization. The runner is then returned to the default group.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `DELETE /orgs/{org}/actions/runner-groups/{runner_group_id}/runners/{runner_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/runners/{runner_id}/delete(actions/remove-self-hosted-runner-from-group-for-org)`.
+    public enum actions_sol_remove_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_from_hyphen_group_hyphen_for_hyphen_org {
+        public static let id: Swift.String = "actions/remove-self-hosted-runner-from-group-for-org"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/runners/{runner_id}/DELETE/path`.
+            public struct Path: Sendable, Hashable {
+                /// The organization name. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/runners/{runner_id}/DELETE/path/org`.
+                public var org: Components.Parameters.org
+                /// Unique identifier of the self-hosted runner group.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/runners/{runner_id}/DELETE/path/runner_group_id`.
+                public var runner_group_id: Components.Parameters.runner_hyphen_group_hyphen_id
+                /// Unique identifier of the self-hosted runner.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/runners/{runner_id}/DELETE/path/runner_id`.
+                public var runner_id: Components.Parameters.runner_hyphen_id
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - org: The organization name. The name is not case sensitive.
+                ///   - runner_group_id: Unique identifier of the self-hosted runner group.
+                ///   - runner_id: Unique identifier of the self-hosted runner.
+                public init(
+                    org: Components.Parameters.org,
+                    runner_group_id: Components.Parameters.runner_hyphen_group_hyphen_id,
+                    runner_id: Components.Parameters.runner_hyphen_id
+                ) {
+                    self.org = org
+                    self.runner_group_id = runner_group_id
+                    self.runner_id = runner_id
+                }
+            }
+            public var path: Operations.actions_sol_remove_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_from_hyphen_group_hyphen_for_hyphen_org.Input.Path
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            public init(path: Operations.actions_sol_remove_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_from_hyphen_group_hyphen_for_hyphen_org.Input.Path) {
+                self.path = path
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct NoContent: Sendable, Hashable {
+                /// Creates a new `NoContent`.
+                public init() {}
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/runners/{runner_id}/delete(actions/remove-self-hosted-runner-from-group-for-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            case noContent(Operations.actions_sol_remove_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_from_hyphen_group_hyphen_for_hyphen_org.Output.NoContent)
+            /// The associated value of the enum case if `self` is `.noContent`.
+            ///
+            /// - Throws: An error if `self` is not `.noContent`.
+            /// - SeeAlso: `.noContent`.
+            public var noContent: Operations.actions_sol_remove_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_from_hyphen_group_hyphen_for_hyphen_org.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):

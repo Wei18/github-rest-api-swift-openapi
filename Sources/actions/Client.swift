@@ -779,6 +779,804 @@ public struct Client: APIProtocol {
             }
         )
     }
+    /// List self-hosted runner groups for an organization
+    ///
+    /// Lists all self-hosted runner groups configured in an organization and inherited from an enterprise.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/actions/runner-groups`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/get(actions/list-self-hosted-runner-groups-for-org)`.
+    public func actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_groups_hyphen_for_hyphen_org(_ input: Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_groups_hyphen_for_hyphen_org.Input) async throws -> Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_groups_hyphen_for_hyphen_org.Output {
+        try await client.send(
+            input: input,
+            forOperation: Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_groups_hyphen_for_hyphen_org.id,
+            serializer: { input in
+                let path = try converter.renderedPath(
+                    template: "/orgs/{}/actions/runner-groups",
+                    parameters: [
+                        input.path.org
+                    ]
+                )
+                var request: HTTPTypes.HTTPRequest = .init(
+                    soar_path: path,
+                    method: .get
+                )
+                suppressMutabilityWarning(&request)
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "per_page",
+                    value: input.query.per_page
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "page",
+                    value: input.query.page
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "visible_to_repository",
+                    value: input.query.visible_to_repository
+                )
+                converter.setAcceptHeader(
+                    in: &request.headerFields,
+                    contentTypes: input.headers.accept
+                )
+                return (request, nil)
+            },
+            deserializer: { response, responseBody in
+                switch response.status.code {
+                case 200:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_groups_hyphen_for_hyphen_org.Output.Ok.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_groups_hyphen_for_hyphen_org.Output.Ok.Body.jsonPayload.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .ok(.init(body: body))
+                default:
+                    return .undocumented(
+                        statusCode: response.status.code,
+                        .init(
+                            headerFields: response.headerFields,
+                            body: responseBody
+                        )
+                    )
+                }
+            }
+        )
+    }
+    /// Create a self-hosted runner group for an organization
+    ///
+    /// Creates a new self-hosted runner group for an organization.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `POST /orgs/{org}/actions/runner-groups`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/post(actions/create-self-hosted-runner-group-for-org)`.
+    public func actions_sol_create_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org(_ input: Operations.actions_sol_create_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Input) async throws -> Operations.actions_sol_create_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Output {
+        try await client.send(
+            input: input,
+            forOperation: Operations.actions_sol_create_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.id,
+            serializer: { input in
+                let path = try converter.renderedPath(
+                    template: "/orgs/{}/actions/runner-groups",
+                    parameters: [
+                        input.path.org
+                    ]
+                )
+                var request: HTTPTypes.HTTPRequest = .init(
+                    soar_path: path,
+                    method: .post
+                )
+                suppressMutabilityWarning(&request)
+                converter.setAcceptHeader(
+                    in: &request.headerFields,
+                    contentTypes: input.headers.accept
+                )
+                let body: OpenAPIRuntime.HTTPBody?
+                switch input.body {
+                case let .json(value):
+                    body = try converter.setRequiredRequestBodyAsJSON(
+                        value,
+                        headerFields: &request.headerFields,
+                        contentType: "application/json; charset=utf-8"
+                    )
+                }
+                return (request, body)
+            },
+            deserializer: { response, responseBody in
+                switch response.status.code {
+                case 201:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Operations.actions_sol_create_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Output.Created.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Schemas.runner_hyphen_groups_hyphen_org.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .created(.init(body: body))
+                default:
+                    return .undocumented(
+                        statusCode: response.status.code,
+                        .init(
+                            headerFields: response.headerFields,
+                            body: responseBody
+                        )
+                    )
+                }
+            }
+        )
+    }
+    /// Get a self-hosted runner group for an organization
+    ///
+    /// Gets a specific self-hosted runner group for an organization.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/actions/runner-groups/{runner_group_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/get(actions/get-self-hosted-runner-group-for-org)`.
+    public func actions_sol_get_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org(_ input: Operations.actions_sol_get_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Input) async throws -> Operations.actions_sol_get_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Output {
+        try await client.send(
+            input: input,
+            forOperation: Operations.actions_sol_get_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.id,
+            serializer: { input in
+                let path = try converter.renderedPath(
+                    template: "/orgs/{}/actions/runner-groups/{}",
+                    parameters: [
+                        input.path.org,
+                        input.path.runner_group_id
+                    ]
+                )
+                var request: HTTPTypes.HTTPRequest = .init(
+                    soar_path: path,
+                    method: .get
+                )
+                suppressMutabilityWarning(&request)
+                converter.setAcceptHeader(
+                    in: &request.headerFields,
+                    contentTypes: input.headers.accept
+                )
+                return (request, nil)
+            },
+            deserializer: { response, responseBody in
+                switch response.status.code {
+                case 200:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Operations.actions_sol_get_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Output.Ok.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Schemas.runner_hyphen_groups_hyphen_org.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .ok(.init(body: body))
+                default:
+                    return .undocumented(
+                        statusCode: response.status.code,
+                        .init(
+                            headerFields: response.headerFields,
+                            body: responseBody
+                        )
+                    )
+                }
+            }
+        )
+    }
+    /// Update a self-hosted runner group for an organization
+    ///
+    /// Updates the `name` and `visibility` of a self-hosted runner group in an organization.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `PATCH /orgs/{org}/actions/runner-groups/{runner_group_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/patch(actions/update-self-hosted-runner-group-for-org)`.
+    public func actions_sol_update_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org(_ input: Operations.actions_sol_update_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Input) async throws -> Operations.actions_sol_update_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Output {
+        try await client.send(
+            input: input,
+            forOperation: Operations.actions_sol_update_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.id,
+            serializer: { input in
+                let path = try converter.renderedPath(
+                    template: "/orgs/{}/actions/runner-groups/{}",
+                    parameters: [
+                        input.path.org,
+                        input.path.runner_group_id
+                    ]
+                )
+                var request: HTTPTypes.HTTPRequest = .init(
+                    soar_path: path,
+                    method: .patch
+                )
+                suppressMutabilityWarning(&request)
+                converter.setAcceptHeader(
+                    in: &request.headerFields,
+                    contentTypes: input.headers.accept
+                )
+                let body: OpenAPIRuntime.HTTPBody?
+                switch input.body {
+                case let .json(value):
+                    body = try converter.setRequiredRequestBodyAsJSON(
+                        value,
+                        headerFields: &request.headerFields,
+                        contentType: "application/json; charset=utf-8"
+                    )
+                }
+                return (request, body)
+            },
+            deserializer: { response, responseBody in
+                switch response.status.code {
+                case 200:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Operations.actions_sol_update_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Output.Ok.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Schemas.runner_hyphen_groups_hyphen_org.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .ok(.init(body: body))
+                default:
+                    return .undocumented(
+                        statusCode: response.status.code,
+                        .init(
+                            headerFields: response.headerFields,
+                            body: responseBody
+                        )
+                    )
+                }
+            }
+        )
+    }
+    /// Delete a self-hosted runner group from an organization
+    ///
+    /// Deletes a self-hosted runner group for an organization.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `DELETE /orgs/{org}/actions/runner-groups/{runner_group_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/delete(actions/delete-self-hosted-runner-group-from-org)`.
+    public func actions_sol_delete_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_from_hyphen_org(_ input: Operations.actions_sol_delete_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_from_hyphen_org.Input) async throws -> Operations.actions_sol_delete_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_from_hyphen_org.Output {
+        try await client.send(
+            input: input,
+            forOperation: Operations.actions_sol_delete_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_from_hyphen_org.id,
+            serializer: { input in
+                let path = try converter.renderedPath(
+                    template: "/orgs/{}/actions/runner-groups/{}",
+                    parameters: [
+                        input.path.org,
+                        input.path.runner_group_id
+                    ]
+                )
+                var request: HTTPTypes.HTTPRequest = .init(
+                    soar_path: path,
+                    method: .delete
+                )
+                suppressMutabilityWarning(&request)
+                return (request, nil)
+            },
+            deserializer: { response, responseBody in
+                switch response.status.code {
+                case 204:
+                    return .noContent(.init())
+                default:
+                    return .undocumented(
+                        statusCode: response.status.code,
+                        .init(
+                            headerFields: response.headerFields,
+                            body: responseBody
+                        )
+                    )
+                }
+            }
+        )
+    }
+    /// List repository access to a self-hosted runner group in an organization
+    ///
+    /// Lists the repositories with access to a self-hosted runner group configured in an organization.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/actions/runner-groups/{runner_group_id}/repositories`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/get(actions/list-repo-access-to-self-hosted-runner-group-in-org)`.
+    public func actions_sol_list_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org(_ input: Operations.actions_sol_list_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Input) async throws -> Operations.actions_sol_list_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Output {
+        try await client.send(
+            input: input,
+            forOperation: Operations.actions_sol_list_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.id,
+            serializer: { input in
+                let path = try converter.renderedPath(
+                    template: "/orgs/{}/actions/runner-groups/{}/repositories",
+                    parameters: [
+                        input.path.org,
+                        input.path.runner_group_id
+                    ]
+                )
+                var request: HTTPTypes.HTTPRequest = .init(
+                    soar_path: path,
+                    method: .get
+                )
+                suppressMutabilityWarning(&request)
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "page",
+                    value: input.query.page
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "per_page",
+                    value: input.query.per_page
+                )
+                converter.setAcceptHeader(
+                    in: &request.headerFields,
+                    contentTypes: input.headers.accept
+                )
+                return (request, nil)
+            },
+            deserializer: { response, responseBody in
+                switch response.status.code {
+                case 200:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Operations.actions_sol_list_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Output.Ok.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Operations.actions_sol_list_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Output.Ok.Body.jsonPayload.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .ok(.init(body: body))
+                default:
+                    return .undocumented(
+                        statusCode: response.status.code,
+                        .init(
+                            headerFields: response.headerFields,
+                            body: responseBody
+                        )
+                    )
+                }
+            }
+        )
+    }
+    /// Set repository access for a self-hosted runner group in an organization
+    ///
+    /// Replaces the list of repositories that have access to a self-hosted runner group configured in an organization.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `PUT /orgs/{org}/actions/runner-groups/{runner_group_id}/repositories`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/put(actions/set-repo-access-to-self-hosted-runner-group-in-org)`.
+    public func actions_sol_set_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org(_ input: Operations.actions_sol_set_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Input) async throws -> Operations.actions_sol_set_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Output {
+        try await client.send(
+            input: input,
+            forOperation: Operations.actions_sol_set_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.id,
+            serializer: { input in
+                let path = try converter.renderedPath(
+                    template: "/orgs/{}/actions/runner-groups/{}/repositories",
+                    parameters: [
+                        input.path.org,
+                        input.path.runner_group_id
+                    ]
+                )
+                var request: HTTPTypes.HTTPRequest = .init(
+                    soar_path: path,
+                    method: .put
+                )
+                suppressMutabilityWarning(&request)
+                let body: OpenAPIRuntime.HTTPBody?
+                switch input.body {
+                case let .json(value):
+                    body = try converter.setRequiredRequestBodyAsJSON(
+                        value,
+                        headerFields: &request.headerFields,
+                        contentType: "application/json; charset=utf-8"
+                    )
+                }
+                return (request, body)
+            },
+            deserializer: { response, responseBody in
+                switch response.status.code {
+                case 204:
+                    return .noContent(.init())
+                default:
+                    return .undocumented(
+                        statusCode: response.status.code,
+                        .init(
+                            headerFields: response.headerFields,
+                            body: responseBody
+                        )
+                    )
+                }
+            }
+        )
+    }
+    /// Add repository access to a self-hosted runner group in an organization
+    ///
+    /// Adds a repository to the list of repositories that can access a self-hosted runner group. The runner group must have `visibility` set to `selected`. For more information, see "[Create a self-hosted runner group for an organization](#create-a-self-hosted-runner-group-for-an-organization)."
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `PUT /orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/{repository_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/{repository_id}/put(actions/add-repo-access-to-self-hosted-runner-group-in-org)`.
+    public func actions_sol_add_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org(_ input: Operations.actions_sol_add_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Input) async throws -> Operations.actions_sol_add_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Output {
+        try await client.send(
+            input: input,
+            forOperation: Operations.actions_sol_add_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.id,
+            serializer: { input in
+                let path = try converter.renderedPath(
+                    template: "/orgs/{}/actions/runner-groups/{}/repositories/{}",
+                    parameters: [
+                        input.path.org,
+                        input.path.runner_group_id,
+                        input.path.repository_id
+                    ]
+                )
+                var request: HTTPTypes.HTTPRequest = .init(
+                    soar_path: path,
+                    method: .put
+                )
+                suppressMutabilityWarning(&request)
+                return (request, nil)
+            },
+            deserializer: { response, responseBody in
+                switch response.status.code {
+                case 204:
+                    return .noContent(.init())
+                default:
+                    return .undocumented(
+                        statusCode: response.status.code,
+                        .init(
+                            headerFields: response.headerFields,
+                            body: responseBody
+                        )
+                    )
+                }
+            }
+        )
+    }
+    /// Remove repository access to a self-hosted runner group in an organization
+    ///
+    /// Removes a repository from the list of selected repositories that can access a self-hosted runner group. The runner group must have `visibility` set to `selected`. For more information, see "[Create a self-hosted runner group for an organization](#create-a-self-hosted-runner-group-for-an-organization)."
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `DELETE /orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/{repository_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/{repository_id}/delete(actions/remove-repo-access-to-self-hosted-runner-group-in-org)`.
+    public func actions_sol_remove_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org(_ input: Operations.actions_sol_remove_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Input) async throws -> Operations.actions_sol_remove_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Output {
+        try await client.send(
+            input: input,
+            forOperation: Operations.actions_sol_remove_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.id,
+            serializer: { input in
+                let path = try converter.renderedPath(
+                    template: "/orgs/{}/actions/runner-groups/{}/repositories/{}",
+                    parameters: [
+                        input.path.org,
+                        input.path.runner_group_id,
+                        input.path.repository_id
+                    ]
+                )
+                var request: HTTPTypes.HTTPRequest = .init(
+                    soar_path: path,
+                    method: .delete
+                )
+                suppressMutabilityWarning(&request)
+                return (request, nil)
+            },
+            deserializer: { response, responseBody in
+                switch response.status.code {
+                case 204:
+                    return .noContent(.init())
+                default:
+                    return .undocumented(
+                        statusCode: response.status.code,
+                        .init(
+                            headerFields: response.headerFields,
+                            body: responseBody
+                        )
+                    )
+                }
+            }
+        )
+    }
+    /// List self-hosted runners in a group for an organization
+    ///
+    /// Lists self-hosted runners that are in a specific organization group.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/actions/runner-groups/{runner_group_id}/runners`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/runners/get(actions/list-self-hosted-runners-in-group-for-org)`.
+    public func actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org(_ input: Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Input) async throws -> Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Output {
+        try await client.send(
+            input: input,
+            forOperation: Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.id,
+            serializer: { input in
+                let path = try converter.renderedPath(
+                    template: "/orgs/{}/actions/runner-groups/{}/runners",
+                    parameters: [
+                        input.path.org,
+                        input.path.runner_group_id
+                    ]
+                )
+                var request: HTTPTypes.HTTPRequest = .init(
+                    soar_path: path,
+                    method: .get
+                )
+                suppressMutabilityWarning(&request)
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "per_page",
+                    value: input.query.per_page
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "page",
+                    value: input.query.page
+                )
+                converter.setAcceptHeader(
+                    in: &request.headerFields,
+                    contentTypes: input.headers.accept
+                )
+                return (request, nil)
+            },
+            deserializer: { response, responseBody in
+                switch response.status.code {
+                case 200:
+                    let headers: Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Output.Ok.Headers = .init(Link: try converter.getOptionalHeaderFieldAsURI(
+                        in: response.headerFields,
+                        name: "Link",
+                        as: Components.Headers.link.self
+                    ))
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Output.Ok.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Operations.actions_sol_list_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Output.Ok.Body.jsonPayload.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .ok(.init(
+                        headers: headers,
+                        body: body
+                    ))
+                default:
+                    return .undocumented(
+                        statusCode: response.status.code,
+                        .init(
+                            headerFields: response.headerFields,
+                            body: responseBody
+                        )
+                    )
+                }
+            }
+        )
+    }
+    /// Set self-hosted runners in a group for an organization
+    ///
+    /// Replaces the list of self-hosted runners that are part of an organization runner group.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `PUT /orgs/{org}/actions/runner-groups/{runner_group_id}/runners`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/runners/put(actions/set-self-hosted-runners-in-group-for-org)`.
+    public func actions_sol_set_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org(_ input: Operations.actions_sol_set_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Input) async throws -> Operations.actions_sol_set_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Output {
+        try await client.send(
+            input: input,
+            forOperation: Operations.actions_sol_set_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.id,
+            serializer: { input in
+                let path = try converter.renderedPath(
+                    template: "/orgs/{}/actions/runner-groups/{}/runners",
+                    parameters: [
+                        input.path.org,
+                        input.path.runner_group_id
+                    ]
+                )
+                var request: HTTPTypes.HTTPRequest = .init(
+                    soar_path: path,
+                    method: .put
+                )
+                suppressMutabilityWarning(&request)
+                let body: OpenAPIRuntime.HTTPBody?
+                switch input.body {
+                case let .json(value):
+                    body = try converter.setRequiredRequestBodyAsJSON(
+                        value,
+                        headerFields: &request.headerFields,
+                        contentType: "application/json; charset=utf-8"
+                    )
+                }
+                return (request, body)
+            },
+            deserializer: { response, responseBody in
+                switch response.status.code {
+                case 204:
+                    return .noContent(.init())
+                default:
+                    return .undocumented(
+                        statusCode: response.status.code,
+                        .init(
+                            headerFields: response.headerFields,
+                            body: responseBody
+                        )
+                    )
+                }
+            }
+        )
+    }
+    /// Add a self-hosted runner to a group for an organization
+    ///
+    /// Adds a self-hosted runner to a runner group configured in an organization.
+    ///
+    /// OAuth tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `PUT /orgs/{org}/actions/runner-groups/{runner_group_id}/runners/{runner_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/runners/{runner_id}/put(actions/add-self-hosted-runner-to-group-for-org)`.
+    public func actions_sol_add_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_to_hyphen_group_hyphen_for_hyphen_org(_ input: Operations.actions_sol_add_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_to_hyphen_group_hyphen_for_hyphen_org.Input) async throws -> Operations.actions_sol_add_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_to_hyphen_group_hyphen_for_hyphen_org.Output {
+        try await client.send(
+            input: input,
+            forOperation: Operations.actions_sol_add_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_to_hyphen_group_hyphen_for_hyphen_org.id,
+            serializer: { input in
+                let path = try converter.renderedPath(
+                    template: "/orgs/{}/actions/runner-groups/{}/runners/{}",
+                    parameters: [
+                        input.path.org,
+                        input.path.runner_group_id,
+                        input.path.runner_id
+                    ]
+                )
+                var request: HTTPTypes.HTTPRequest = .init(
+                    soar_path: path,
+                    method: .put
+                )
+                suppressMutabilityWarning(&request)
+                return (request, nil)
+            },
+            deserializer: { response, responseBody in
+                switch response.status.code {
+                case 204:
+                    return .noContent(.init())
+                default:
+                    return .undocumented(
+                        statusCode: response.status.code,
+                        .init(
+                            headerFields: response.headerFields,
+                            body: responseBody
+                        )
+                    )
+                }
+            }
+        )
+    }
+    /// Remove a self-hosted runner from a group for an organization
+    ///
+    /// Removes a self-hosted runner from a group configured in an organization. The runner is then returned to the default group.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `DELETE /orgs/{org}/actions/runner-groups/{runner_group_id}/runners/{runner_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/runners/{runner_id}/delete(actions/remove-self-hosted-runner-from-group-for-org)`.
+    public func actions_sol_remove_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_from_hyphen_group_hyphen_for_hyphen_org(_ input: Operations.actions_sol_remove_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_from_hyphen_group_hyphen_for_hyphen_org.Input) async throws -> Operations.actions_sol_remove_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_from_hyphen_group_hyphen_for_hyphen_org.Output {
+        try await client.send(
+            input: input,
+            forOperation: Operations.actions_sol_remove_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_from_hyphen_group_hyphen_for_hyphen_org.id,
+            serializer: { input in
+                let path = try converter.renderedPath(
+                    template: "/orgs/{}/actions/runner-groups/{}/runners/{}",
+                    parameters: [
+                        input.path.org,
+                        input.path.runner_group_id,
+                        input.path.runner_id
+                    ]
+                )
+                var request: HTTPTypes.HTTPRequest = .init(
+                    soar_path: path,
+                    method: .delete
+                )
+                suppressMutabilityWarning(&request)
+                return (request, nil)
+            },
+            deserializer: { response, responseBody in
+                switch response.status.code {
+                case 204:
+                    return .noContent(.init())
+                default:
+                    return .undocumented(
+                        statusCode: response.status.code,
+                        .init(
+                            headerFields: response.headerFields,
+                            body: responseBody
+                        )
+                    )
+                }
+            }
+        )
+    }
     /// List self-hosted runners for an organization
     ///
     /// Lists all self-hosted runners configured in an organization.
