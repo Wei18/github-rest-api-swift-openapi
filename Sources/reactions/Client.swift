@@ -1980,7 +1980,7 @@ public struct Client: APIProtocol {
     /// List reactions for a team discussion comment (Legacy)
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [`List reactions for a team discussion comment`](https://docs.github.com/rest/reactions/reactions#list-reactions-for-a-team-discussion-comment) endpoint.
+    /// > **Endpoint closing down notice:** This endpoint route is closing down and will be removed from the Teams API. We recommend migrating your existing code to use the new [`List reactions for a team discussion comment`](https://docs.github.com/rest/reactions/reactions#list-reactions-for-a-team-discussion-comment) endpoint.
     ///
     /// List the reactions to a [team discussion comment](https://docs.github.com/rest/teams/discussion-comments#get-a-discussion-comment).
     ///
@@ -2081,7 +2081,7 @@ public struct Client: APIProtocol {
     /// Create reaction for a team discussion comment (Legacy)
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new "[Create reaction for a team discussion comment](https://docs.github.com/rest/reactions/reactions#create-reaction-for-a-team-discussion-comment)" endpoint.
+    /// > **Endpoint closing down notice:** This endpoint route is closing down and will be removed from the Teams API. We recommend migrating your existing code to use the new "[Create reaction for a team discussion comment](https://docs.github.com/rest/reactions/reactions#create-reaction-for-a-team-discussion-comment)" endpoint.
     ///
     /// Create a reaction to a [team discussion comment](https://docs.github.com/rest/teams/discussion-comments#get-a-discussion-comment).
     ///
@@ -2164,7 +2164,7 @@ public struct Client: APIProtocol {
     /// List reactions for a team discussion (Legacy)
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [`List reactions for a team discussion`](https://docs.github.com/rest/reactions/reactions#list-reactions-for-a-team-discussion) endpoint.
+    /// > **Endpoint closing down notice:** This endpoint route is closing down and will be removed from the Teams API. We recommend migrating your existing code to use the new [`List reactions for a team discussion`](https://docs.github.com/rest/reactions/reactions#list-reactions-for-a-team-discussion) endpoint.
     ///
     /// List the reactions to a [team discussion](https://docs.github.com/rest/teams/discussions#get-a-discussion).
     ///
@@ -2264,7 +2264,7 @@ public struct Client: APIProtocol {
     /// Create reaction for a team discussion (Legacy)
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [`Create reaction for a team discussion`](https://docs.github.com/rest/reactions/reactions#create-reaction-for-a-team-discussion) endpoint.
+    /// > **Endpoint closing down notice:** This endpoint route is closing down and will be removed from the Teams API. We recommend migrating your existing code to use the new [`Create reaction for a team discussion`](https://docs.github.com/rest/reactions/reactions#create-reaction-for-a-team-discussion) endpoint.
     ///
     /// Create a reaction to a [team discussion](https://docs.github.com/rest/teams/discussions#get-a-discussion).
     ///
