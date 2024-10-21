@@ -74,7 +74,7 @@ public protocol APIProtocol: Sendable {
     /// View the progress of an import.
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
+    /// > **Endpoint closing down notice:** Due to very low levels of usage and available alternatives, this endpoint is closing down and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
     ///
     /// **Import status**
     ///
@@ -123,7 +123,7 @@ public protocol APIProtocol: Sendable {
     /// You can select the project to import by providing one of the objects in the `project_choices` array in the update request.
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
+    /// > **Endpoint closing down notice:** Due to very low levels of usage and available alternatives, this endpoint is closing down and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/import`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/patch(migrations/update-import)`.
@@ -136,7 +136,7 @@ public protocol APIProtocol: Sendable {
     /// return a status `422 Unprocessable Entity` response.
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
+    /// > **Endpoint closing down notice:** Due to very low levels of usage and available alternatives, this endpoint is closing down and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/import`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/put(migrations/start-import)`.
@@ -147,7 +147,7 @@ public protocol APIProtocol: Sendable {
     /// Stop an import for a repository.
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
+    /// > **Endpoint closing down notice:** Due to very low levels of usage and available alternatives, this endpoint is closing down and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/import`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/delete(migrations/cancel-import)`.
@@ -160,7 +160,7 @@ public protocol APIProtocol: Sendable {
     /// This endpoint and the [Map a commit author](https://docs.github.com/rest/migrations/source-imports#map-a-commit-author) endpoint allow you to provide correct Git author information.
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
+    /// > **Endpoint closing down notice:** Due to very low levels of usage and available alternatives, this endpoint is closing down and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/import/authors`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/authors/get(migrations/get-commit-authors)`.
@@ -172,7 +172,7 @@ public protocol APIProtocol: Sendable {
     /// new commits to the repository.
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
+    /// > **Endpoint closing down notice:** Due to very low levels of usage and available alternatives, this endpoint is closing down and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/import/authors/{author_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/authors/{author_id}/patch(migrations/map-commit-author)`.
@@ -183,7 +183,7 @@ public protocol APIProtocol: Sendable {
     /// List files larger than 100MB found during the import
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
+    /// > **Endpoint closing down notice:** Due to very low levels of usage and available alternatives, this endpoint is closing down and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/import/large_files`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/large_files/get(migrations/get-large-files)`.
@@ -198,7 +198,7 @@ public protocol APIProtocol: Sendable {
     /// site](https://docs.github.com/repositories/working-with-files/managing-large-files).
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
+    /// > **Endpoint closing down notice:** Due to very low levels of usage and available alternatives, this endpoint is closing down and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/import/lfs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/lfs/patch(migrations/set-lfs-preference)`.
@@ -411,7 +411,7 @@ extension APIProtocol {
     /// View the progress of an import.
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
+    /// > **Endpoint closing down notice:** Due to very low levels of usage and available alternatives, this endpoint is closing down and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
     ///
     /// **Import status**
     ///
@@ -468,7 +468,7 @@ extension APIProtocol {
     /// You can select the project to import by providing one of the objects in the `project_choices` array in the update request.
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
+    /// > **Endpoint closing down notice:** Due to very low levels of usage and available alternatives, this endpoint is closing down and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/import`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/patch(migrations/update-import)`.
@@ -491,7 +491,7 @@ extension APIProtocol {
     /// return a status `422 Unprocessable Entity` response.
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
+    /// > **Endpoint closing down notice:** Due to very low levels of usage and available alternatives, this endpoint is closing down and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/import`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/put(migrations/start-import)`.
@@ -512,7 +512,7 @@ extension APIProtocol {
     /// Stop an import for a repository.
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
+    /// > **Endpoint closing down notice:** Due to very low levels of usage and available alternatives, this endpoint is closing down and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/import`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/delete(migrations/cancel-import)`.
@@ -533,7 +533,7 @@ extension APIProtocol {
     /// This endpoint and the [Map a commit author](https://docs.github.com/rest/migrations/source-imports#map-a-commit-author) endpoint allow you to provide correct Git author information.
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
+    /// > **Endpoint closing down notice:** Due to very low levels of usage and available alternatives, this endpoint is closing down and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/import/authors`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/authors/get(migrations/get-commit-authors)`.
@@ -555,7 +555,7 @@ extension APIProtocol {
     /// new commits to the repository.
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
+    /// > **Endpoint closing down notice:** Due to very low levels of usage and available alternatives, this endpoint is closing down and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/import/authors/{author_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/authors/{author_id}/patch(migrations/map-commit-author)`.
@@ -576,7 +576,7 @@ extension APIProtocol {
     /// List files larger than 100MB found during the import
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
+    /// > **Endpoint closing down notice:** Due to very low levels of usage and available alternatives, this endpoint is closing down and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/import/large_files`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/large_files/get(migrations/get-large-files)`.
@@ -599,7 +599,7 @@ extension APIProtocol {
     /// site](https://docs.github.com/repositories/working-with-files/managing-large-files).
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
+    /// > **Endpoint closing down notice:** Due to very low levels of usage and available alternatives, this endpoint is closing down and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/import/lfs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/lfs/patch(migrations/set-lfs-preference)`.
@@ -813,6 +813,8 @@ public enum Components {
             public var site_admin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/simple-user/starred_at`.
             public var starred_at: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/simple-user/user_view_type`.
+            public var user_view_type: Swift.String?
             /// Creates a new `simple_hyphen_user`.
             ///
             /// - Parameters:
@@ -837,6 +839,7 @@ public enum Components {
             ///   - _type:
             ///   - site_admin:
             ///   - starred_at:
+            ///   - user_view_type:
             public init(
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
@@ -858,7 +861,8 @@ public enum Components {
                 received_events_url: Swift.String,
                 _type: Swift.String,
                 site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil
+                starred_at: Swift.String? = nil,
+                user_view_type: Swift.String? = nil
             ) {
                 self.name = name
                 self.email = email
@@ -881,6 +885,7 @@ public enum Components {
                 self._type = _type
                 self.site_admin = site_admin
                 self.starred_at = starred_at
+                self.user_view_type = user_view_type
             }
             public enum CodingKeys: String, CodingKey {
                 case name
@@ -904,6 +909,7 @@ public enum Components {
                 case _type = "type"
                 case site_admin
                 case starred_at
+                case user_view_type
             }
         }
         /// Basic Error
@@ -989,6 +995,8 @@ public enum Components {
             public var site_admin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/starred_at`.
             public var starred_at: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/user_view_type`.
+            public var user_view_type: Swift.String?
             /// Creates a new `nullable_hyphen_simple_hyphen_user`.
             ///
             /// - Parameters:
@@ -1013,6 +1021,7 @@ public enum Components {
             ///   - _type:
             ///   - site_admin:
             ///   - starred_at:
+            ///   - user_view_type:
             public init(
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
@@ -1034,7 +1043,8 @@ public enum Components {
                 received_events_url: Swift.String,
                 _type: Swift.String,
                 site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil
+                starred_at: Swift.String? = nil,
+                user_view_type: Swift.String? = nil
             ) {
                 self.name = name
                 self.email = email
@@ -1057,6 +1067,7 @@ public enum Components {
                 self._type = _type
                 self.site_admin = site_admin
                 self.starred_at = starred_at
+                self.user_view_type = user_view_type
             }
             public enum CodingKeys: String, CodingKey {
                 case name
@@ -1080,6 +1091,7 @@ public enum Components {
                 case _type = "type"
                 case site_admin
                 case starred_at
+                case user_view_type
             }
         }
         /// Validation Error
@@ -1504,7 +1516,7 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/repository/allow_update_branch`.
             public var allow_update_branch: Swift.Bool?
-            /// Whether a squash merge commit can use the pull request title as default. **This property has been deprecated. Please use `squash_merge_commit_title` instead.
+            /// Whether a squash merge commit can use the pull request title as default. **This property is closing down. Please use `squash_merge_commit_title` instead.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/use_squash_pr_title_as_default`.
             @available(*, deprecated)
@@ -1692,7 +1704,7 @@ public enum Components {
             ///   - allow_auto_merge: Whether to allow Auto-merge to be used on pull requests.
             ///   - delete_branch_on_merge: Whether to delete head branches when pull requests are merged
             ///   - allow_update_branch: Whether or not a pull request head branch that is behind its base branch can always be updated even if it is not required to be up to date before merging.
-            ///   - use_squash_pr_title_as_default: Whether a squash merge commit can use the pull request title as default. **This property has been deprecated. Please use `squash_merge_commit_title` instead.
+            ///   - use_squash_pr_title_as_default: Whether a squash merge commit can use the pull request title as default. **This property is closing down. Please use `squash_merge_commit_title` instead.
             ///   - squash_merge_commit_title: The default value for a squash merge commit title:
             ///   - squash_merge_commit_message: The default value for a squash merge commit message:
             ///   - merge_commit_title: The default value for a merge commit title.
@@ -2159,6 +2171,28 @@ public enum Components {
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns`.
             public var secret_scanning_non_provider_patterns: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_non_provider_patternsPayload?
+            /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection`.
+            public struct secret_scanning_ai_detectionPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection/status`.
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                    case enabled = "enabled"
+                    case disabled = "disabled"
+                }
+                /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection/status`.
+                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload.statusPayload?
+                /// Creates a new `secret_scanning_ai_detectionPayload`.
+                ///
+                /// - Parameters:
+                ///   - status:
+                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload.statusPayload? = nil) {
+                    self.status = status
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case status
+                }
+            }
+            /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection`.
+            public var secret_scanning_ai_detection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload?
             /// Creates a new `security_hyphen_and_hyphen_analysis`.
             ///
             /// - Parameters:
@@ -2167,18 +2201,21 @@ public enum Components {
             ///   - secret_scanning:
             ///   - secret_scanning_push_protection:
             ///   - secret_scanning_non_provider_patterns:
+            ///   - secret_scanning_ai_detection:
             public init(
                 advanced_security: Components.Schemas.security_hyphen_and_hyphen_analysis.advanced_securityPayload? = nil,
                 dependabot_security_updates: Components.Schemas.security_hyphen_and_hyphen_analysis.dependabot_security_updatesPayload? = nil,
                 secret_scanning: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanningPayload? = nil,
                 secret_scanning_push_protection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_push_protectionPayload? = nil,
-                secret_scanning_non_provider_patterns: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_non_provider_patternsPayload? = nil
+                secret_scanning_non_provider_patterns: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_non_provider_patternsPayload? = nil,
+                secret_scanning_ai_detection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload? = nil
             ) {
                 self.advanced_security = advanced_security
                 self.dependabot_security_updates = dependabot_security_updates
                 self.secret_scanning = secret_scanning
                 self.secret_scanning_push_protection = secret_scanning_push_protection
                 self.secret_scanning_non_provider_patterns = secret_scanning_non_provider_patterns
+                self.secret_scanning_ai_detection = secret_scanning_ai_detection
             }
             public enum CodingKeys: String, CodingKey {
                 case advanced_security
@@ -2186,6 +2223,7 @@ public enum Components {
                 case secret_scanning
                 case secret_scanning_push_protection
                 case secret_scanning_non_provider_patterns
+                case secret_scanning_ai_detection
             }
         }
         /// Minimal Repository
@@ -4736,7 +4774,7 @@ public enum Operations {
     /// View the progress of an import.
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
+    /// > **Endpoint closing down notice:** Due to very low levels of usage and available alternatives, this endpoint is closing down and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
     ///
     /// **Import status**
     ///
@@ -4964,7 +5002,7 @@ public enum Operations {
     /// You can select the project to import by providing one of the objects in the `project_choices` array in the update request.
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
+    /// > **Endpoint closing down notice:** Due to very low levels of usage and available alternatives, this endpoint is closing down and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/import`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/patch(migrations/update-import)`.
@@ -5194,7 +5232,7 @@ public enum Operations {
     /// return a status `422 Unprocessable Entity` response.
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
+    /// > **Endpoint closing down notice:** Due to very low levels of usage and available alternatives, this endpoint is closing down and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/import`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/put(migrations/start-import)`.
@@ -5495,7 +5533,7 @@ public enum Operations {
     /// Stop an import for a repository.
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
+    /// > **Endpoint closing down notice:** Due to very low levels of usage and available alternatives, this endpoint is closing down and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/import`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/delete(migrations/cancel-import)`.
@@ -5640,7 +5678,7 @@ public enum Operations {
     /// This endpoint and the [Map a commit author](https://docs.github.com/rest/migrations/source-imports#map-a-commit-author) endpoint allow you to provide correct Git author information.
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
+    /// > **Endpoint closing down notice:** Due to very low levels of usage and available alternatives, this endpoint is closing down and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/import/authors`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/authors/get(migrations/get-commit-authors)`.
@@ -5849,7 +5887,7 @@ public enum Operations {
     /// new commits to the repository.
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
+    /// > **Endpoint closing down notice:** Due to very low levels of usage and available alternatives, this endpoint is closing down and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/import/authors/{author_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/authors/{author_id}/patch(migrations/map-commit-author)`.
@@ -6118,7 +6156,7 @@ public enum Operations {
     /// List files larger than 100MB found during the import
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
+    /// > **Endpoint closing down notice:** Due to very low levels of usage and available alternatives, this endpoint is closing down and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/import/large_files`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/large_files/get(migrations/get-large-files)`.
@@ -6289,7 +6327,7 @@ public enum Operations {
     /// site](https://docs.github.com/repositories/working-with-files/managing-large-files).
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** Due to very low levels of usage and available alternatives, this endpoint is deprecated and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
+    /// > **Endpoint closing down notice:** Due to very low levels of usage and available alternatives, this endpoint is closing down and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the [changelog](https://gh.io/source-imports-api-deprecation).
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/import/lfs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/lfs/patch(migrations/set-lfs-preference)`.
