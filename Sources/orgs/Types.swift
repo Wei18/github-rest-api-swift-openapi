@@ -39,10 +39,10 @@ public protocol APIProtocol: Sendable {
     /// Update an organization
     ///
     /// > [!WARNING]
-    /// > **Parameter deprecation notice:** GitHub will replace and discontinue `members_allowed_repository_creation_type` in favor of more granular permissions. The new input parameters are `members_can_create_public_repositories`, `members_can_create_private_repositories` for all organizations and `members_can_create_internal_repositories` for organizations associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+. For more information, see the [blog post](https://developer.github.com/changes/2019-12-03-internal-visibility-changes).
+    /// > **Closing down notice:** GitHub will replace and discontinue `members_allowed_repository_creation_type` in favor of more granular permissions. The new input parameters are `members_can_create_public_repositories`, `members_can_create_private_repositories` for all organizations and `members_can_create_internal_repositories` for organizations associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+. For more information, see the [blog post](https://developer.github.com/changes/2019-12-03-internal-visibility-changes).
     ///
     /// > [!WARNING]
-    /// > **Parameter deprecation notice:** Code security product enablement for new repositories through the organization API is deprecated. Please use [code security configurations](https://docs.github.com/rest/code-security/configurations#set-a-code-security-configuration-as-a-default-for-an-organization) to set defaults instead. For more information on setting a default security configuration, see the [changelog](https://github.blog/changelog/2024-07-09-sunsetting-security-settings-defaults-parameters-in-the-organizations-rest-api/).
+    /// > **Closing down notice:** Code security product enablement for new repositories through the organization API is closing down. Please use [code security configurations](https://docs.github.com/rest/code-security/configurations#set-a-code-security-configuration-as-a-default-for-an-organization) to set defaults instead. For more information on setting a default security configuration, see the [changelog](https://github.blog/changelog/2024-07-09-sunsetting-security-settings-defaults-parameters-in-the-organizations-rest-api/).
     ///
     /// Updates the organization's profile and member privileges.
     ///
@@ -694,7 +694,7 @@ public protocol APIProtocol: Sendable {
     /// Enable or disable a security feature for an organization
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** The ability to enable or disable a security feature for all eligible repositories in an organization is deprecated. Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead. For more information, see the [changelog](https://github.blog/changelog/2024-07-22-deprecation-of-api-endpoint-to-enable-or-disable-a-security-feature-for-an-organization/).
+    /// > **Closing down notice:** The ability to enable or disable a security feature for all eligible repositories in an organization is closing down. Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead. For more information, see the [changelog](https://github.blog/changelog/2024-07-22-deprecation-of-api-endpoint-to-enable-or-disable-a-security-feature-for-an-organization/).
     ///
     /// Enables or disables the specified security feature for all eligible repositories in an organization. For more information, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."
     ///
@@ -793,10 +793,10 @@ extension APIProtocol {
     /// Update an organization
     ///
     /// > [!WARNING]
-    /// > **Parameter deprecation notice:** GitHub will replace and discontinue `members_allowed_repository_creation_type` in favor of more granular permissions. The new input parameters are `members_can_create_public_repositories`, `members_can_create_private_repositories` for all organizations and `members_can_create_internal_repositories` for organizations associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+. For more information, see the [blog post](https://developer.github.com/changes/2019-12-03-internal-visibility-changes).
+    /// > **Closing down notice:** GitHub will replace and discontinue `members_allowed_repository_creation_type` in favor of more granular permissions. The new input parameters are `members_can_create_public_repositories`, `members_can_create_private_repositories` for all organizations and `members_can_create_internal_repositories` for organizations associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+. For more information, see the [blog post](https://developer.github.com/changes/2019-12-03-internal-visibility-changes).
     ///
     /// > [!WARNING]
-    /// > **Parameter deprecation notice:** Code security product enablement for new repositories through the organization API is deprecated. Please use [code security configurations](https://docs.github.com/rest/code-security/configurations#set-a-code-security-configuration-as-a-default-for-an-organization) to set defaults instead. For more information on setting a default security configuration, see the [changelog](https://github.blog/changelog/2024-07-09-sunsetting-security-settings-defaults-parameters-in-the-organizations-rest-api/).
+    /// > **Closing down notice:** Code security product enablement for new repositories through the organization API is closing down. Please use [code security configurations](https://docs.github.com/rest/code-security/configurations#set-a-code-security-configuration-as-a-default-for-an-organization) to set defaults instead. For more information on setting a default security configuration, see the [changelog](https://github.blog/changelog/2024-07-09-sunsetting-security-settings-defaults-parameters-in-the-organizations-rest-api/).
     ///
     /// Updates the organization's profile and member privileges.
     ///
@@ -1960,7 +1960,7 @@ extension APIProtocol {
     /// Enable or disable a security feature for an organization
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** The ability to enable or disable a security feature for all eligible repositories in an organization is deprecated. Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead. For more information, see the [changelog](https://github.blog/changelog/2024-07-22-deprecation-of-api-endpoint-to-enable-or-disable-a-security-feature-for-an-organization/).
+    /// > **Closing down notice:** The ability to enable or disable a security feature for all eligible repositories in an organization is closing down. Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead. For more information, see the [changelog](https://github.blog/changelog/2024-07-22-deprecation-of-api-endpoint-to-enable-or-disable-a-security-feature-for-an-organization/).
     ///
     /// Enables or disables the specified security feature for all eligible repositories in an organization. For more information, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."
     ///
@@ -2125,6 +2125,8 @@ public enum Components {
             public var site_admin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/simple-user/starred_at`.
             public var starred_at: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/simple-user/user_view_type`.
+            public var user_view_type: Swift.String?
             /// Creates a new `simple_hyphen_user`.
             ///
             /// - Parameters:
@@ -2149,6 +2151,7 @@ public enum Components {
             ///   - _type:
             ///   - site_admin:
             ///   - starred_at:
+            ///   - user_view_type:
             public init(
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
@@ -2170,7 +2173,8 @@ public enum Components {
                 received_events_url: Swift.String,
                 _type: Swift.String,
                 site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil
+                starred_at: Swift.String? = nil,
+                user_view_type: Swift.String? = nil
             ) {
                 self.name = name
                 self.email = email
@@ -2193,6 +2197,7 @@ public enum Components {
                 self._type = _type
                 self.site_admin = site_admin
                 self.starred_at = starred_at
+                self.user_view_type = user_view_type
             }
             public enum CodingKeys: String, CodingKey {
                 case name
@@ -2216,6 +2221,7 @@ public enum Components {
                 case _type = "type"
                 case site_admin
                 case starred_at
+                case user_view_type
             }
         }
         /// Basic Error
@@ -2332,6 +2338,8 @@ public enum Components {
             public var site_admin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/starred_at`.
             public var starred_at: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/user_view_type`.
+            public var user_view_type: Swift.String?
             /// Creates a new `nullable_hyphen_simple_hyphen_user`.
             ///
             /// - Parameters:
@@ -2356,6 +2364,7 @@ public enum Components {
             ///   - _type:
             ///   - site_admin:
             ///   - starred_at:
+            ///   - user_view_type:
             public init(
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
@@ -2377,7 +2386,8 @@ public enum Components {
                 received_events_url: Swift.String,
                 _type: Swift.String,
                 site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil
+                starred_at: Swift.String? = nil,
+                user_view_type: Swift.String? = nil
             ) {
                 self.name = name
                 self.email = email
@@ -2400,6 +2410,7 @@ public enum Components {
                 self._type = _type
                 self.site_admin = site_admin
                 self.starred_at = starred_at
+                self.user_view_type = user_view_type
             }
             public enum CodingKeys: String, CodingKey {
                 case name
@@ -2423,6 +2434,7 @@ public enum Components {
                 case _type = "type"
                 case site_admin
                 case starred_at
+                case user_view_type
             }
         }
         /// The URL to which the payloads will be delivered.
@@ -3433,13 +3445,13 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_custom_properties`.
             public var organization_custom_properties: Components.Schemas.app_hyphen_permissions.organization_custom_propertiesPayload?
-            /// The level of permission to grant the access token for managing access to GitHub Copilot for members of an organization with a Copilot Business subscription. This property is in beta and is subject to change.
+            /// The level of permission to grant the access token for managing access to GitHub Copilot for members of an organization with a Copilot Business subscription. This property is in public preview and is subject to change.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_copilot_seat_management`.
             @frozen public enum organization_copilot_seat_managementPayload: String, Codable, Hashable, Sendable {
                 case write = "write"
             }
-            /// The level of permission to grant the access token for managing access to GitHub Copilot for members of an organization with a Copilot Business subscription. This property is in beta and is subject to change.
+            /// The level of permission to grant the access token for managing access to GitHub Copilot for members of an organization with a Copilot Business subscription. This property is in public preview and is subject to change.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_copilot_seat_management`.
             public var organization_copilot_seat_management: Components.Schemas.app_hyphen_permissions.organization_copilot_seat_managementPayload?
@@ -3507,7 +3519,7 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_plan`.
             public var organization_plan: Components.Schemas.app_hyphen_permissions.organization_planPayload?
-            /// The level of permission to grant the access token to manage organization projects and projects beta (where available).
+            /// The level of permission to grant the access token to manage organization projects and projects public preview (where available).
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_projects`.
             @frozen public enum organization_projectsPayload: String, Codable, Hashable, Sendable {
@@ -3515,7 +3527,7 @@ public enum Components {
                 case write = "write"
                 case admin = "admin"
             }
-            /// The level of permission to grant the access token to manage organization projects and projects beta (where available).
+            /// The level of permission to grant the access token to manage organization projects and projects public preview (where available).
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_projects`.
             public var organization_projects: Components.Schemas.app_hyphen_permissions.organization_projectsPayload?
@@ -3681,14 +3693,14 @@ public enum Components {
             ///   - organization_custom_roles: The level of permission to grant the access token for custom repository roles management.
             ///   - organization_custom_org_roles: The level of permission to grant the access token for custom organization roles management.
             ///   - organization_custom_properties: The level of permission to grant the access token for custom property management.
-            ///   - organization_copilot_seat_management: The level of permission to grant the access token for managing access to GitHub Copilot for members of an organization with a Copilot Business subscription. This property is in beta and is subject to change.
+            ///   - organization_copilot_seat_management: The level of permission to grant the access token for managing access to GitHub Copilot for members of an organization with a Copilot Business subscription. This property is in public preview and is subject to change.
             ///   - organization_announcement_banners: The level of permission to grant the access token to view and manage announcement banners for an organization.
             ///   - organization_events: The level of permission to grant the access token to view events triggered by an activity in an organization.
             ///   - organization_hooks: The level of permission to grant the access token to manage the post-receive hooks for an organization.
             ///   - organization_personal_access_tokens: The level of permission to grant the access token for viewing and managing fine-grained personal access token requests to an organization.
             ///   - organization_personal_access_token_requests: The level of permission to grant the access token for viewing and managing fine-grained personal access tokens that have been approved by an organization.
             ///   - organization_plan: The level of permission to grant the access token for viewing an organization's plan.
-            ///   - organization_projects: The level of permission to grant the access token to manage organization projects and projects beta (where available).
+            ///   - organization_projects: The level of permission to grant the access token to manage organization projects and projects public preview (where available).
             ///   - organization_packages: The level of permission to grant the access token for organization packages published to GitHub Packages.
             ///   - organization_secrets: The level of permission to grant the access token to manage organization secrets.
             ///   - organization_self_hosted_runners: The level of permission to grant the access token to view and manage GitHub Actions self-hosted runners available to an organization.
@@ -4450,6 +4462,28 @@ public enum Components {
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns`.
             public var secret_scanning_non_provider_patterns: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_non_provider_patternsPayload?
+            /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection`.
+            public struct secret_scanning_ai_detectionPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection/status`.
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                    case enabled = "enabled"
+                    case disabled = "disabled"
+                }
+                /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection/status`.
+                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload.statusPayload?
+                /// Creates a new `secret_scanning_ai_detectionPayload`.
+                ///
+                /// - Parameters:
+                ///   - status:
+                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload.statusPayload? = nil) {
+                    self.status = status
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case status
+                }
+            }
+            /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection`.
+            public var secret_scanning_ai_detection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload?
             /// Creates a new `security_hyphen_and_hyphen_analysis`.
             ///
             /// - Parameters:
@@ -4458,18 +4492,21 @@ public enum Components {
             ///   - secret_scanning:
             ///   - secret_scanning_push_protection:
             ///   - secret_scanning_non_provider_patterns:
+            ///   - secret_scanning_ai_detection:
             public init(
                 advanced_security: Components.Schemas.security_hyphen_and_hyphen_analysis.advanced_securityPayload? = nil,
                 dependabot_security_updates: Components.Schemas.security_hyphen_and_hyphen_analysis.dependabot_security_updatesPayload? = nil,
                 secret_scanning: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanningPayload? = nil,
                 secret_scanning_push_protection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_push_protectionPayload? = nil,
-                secret_scanning_non_provider_patterns: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_non_provider_patternsPayload? = nil
+                secret_scanning_non_provider_patterns: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_non_provider_patternsPayload? = nil,
+                secret_scanning_ai_detection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload? = nil
             ) {
                 self.advanced_security = advanced_security
                 self.dependabot_security_updates = dependabot_security_updates
                 self.secret_scanning = secret_scanning
                 self.secret_scanning_push_protection = secret_scanning_push_protection
                 self.secret_scanning_non_provider_patterns = secret_scanning_non_provider_patterns
+                self.secret_scanning_ai_detection = secret_scanning_ai_detection
             }
             public enum CodingKeys: String, CodingKey {
                 case advanced_security
@@ -4477,6 +4514,7 @@ public enum Components {
                 case secret_scanning
                 case secret_scanning_push_protection
                 case secret_scanning_non_provider_patterns
+                case secret_scanning_ai_detection
             }
         }
         /// Minimal Repository
@@ -5318,7 +5356,7 @@ public enum Components {
             public var members_can_fork_private_repositories: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/organization-full/web_commit_signoff_required`.
             public var web_commit_signoff_required: Swift.Bool?
-            /// **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
+            /// **Endpoint closing down notice.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
             ///
             /// Whether GitHub Advanced Security is enabled for new repositories and repositories transferred to this organization.
             ///
@@ -5327,7 +5365,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/organization-full/advanced_security_enabled_for_new_repositories`.
             @available(*, deprecated)
             public var advanced_security_enabled_for_new_repositories: Swift.Bool?
-            /// **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
+            /// **Endpoint closing down notice.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
             ///
             /// Whether Dependabot alerts are automatically enabled for new repositories and repositories transferred to this organization.
             ///
@@ -5336,7 +5374,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/organization-full/dependabot_alerts_enabled_for_new_repositories`.
             @available(*, deprecated)
             public var dependabot_alerts_enabled_for_new_repositories: Swift.Bool?
-            /// **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
+            /// **Endpoint closing down notice.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
             ///
             /// Whether Dependabot security updates are automatically enabled for new repositories and repositories transferred to this organization.
             ///
@@ -5345,7 +5383,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/organization-full/dependabot_security_updates_enabled_for_new_repositories`.
             @available(*, deprecated)
             public var dependabot_security_updates_enabled_for_new_repositories: Swift.Bool?
-            /// **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
+            /// **Endpoint closing down notice.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
             ///
             /// Whether dependency graph is automatically enabled for new repositories and repositories transferred to this organization.
             ///
@@ -5354,7 +5392,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/organization-full/dependency_graph_enabled_for_new_repositories`.
             @available(*, deprecated)
             public var dependency_graph_enabled_for_new_repositories: Swift.Bool?
-            /// **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
+            /// **Endpoint closing down notice.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
             ///
             /// Whether secret scanning is automatically enabled for new repositories and repositories transferred to this organization.
             ///
@@ -5363,7 +5401,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/organization-full/secret_scanning_enabled_for_new_repositories`.
             @available(*, deprecated)
             public var secret_scanning_enabled_for_new_repositories: Swift.Bool?
-            /// **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
+            /// **Endpoint closing down notice.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
             ///
             /// Whether secret scanning push protection is automatically enabled for new repositories and repositories transferred to this organization.
             ///
@@ -5434,12 +5472,12 @@ public enum Components {
             ///   - members_can_create_private_pages:
             ///   - members_can_fork_private_repositories:
             ///   - web_commit_signoff_required:
-            ///   - advanced_security_enabled_for_new_repositories: **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
-            ///   - dependabot_alerts_enabled_for_new_repositories: **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
-            ///   - dependabot_security_updates_enabled_for_new_repositories: **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
-            ///   - dependency_graph_enabled_for_new_repositories: **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
-            ///   - secret_scanning_enabled_for_new_repositories: **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
-            ///   - secret_scanning_push_protection_enabled_for_new_repositories: **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
+            ///   - advanced_security_enabled_for_new_repositories: **Endpoint closing down notice.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
+            ///   - dependabot_alerts_enabled_for_new_repositories: **Endpoint closing down notice.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
+            ///   - dependabot_security_updates_enabled_for_new_repositories: **Endpoint closing down notice.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
+            ///   - dependency_graph_enabled_for_new_repositories: **Endpoint closing down notice.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
+            ///   - secret_scanning_enabled_for_new_repositories: **Endpoint closing down notice.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
+            ///   - secret_scanning_push_protection_enabled_for_new_repositories: **Endpoint closing down notice.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
             ///   - secret_scanning_push_protection_custom_link_enabled: Whether a custom link is shown to contributors who are blocked from pushing a secret by push protection.
             ///   - secret_scanning_push_protection_custom_link: An optional URL string to display to contributors who are blocked from pushing a secret.
             ///   - created_at:
@@ -6265,6 +6303,8 @@ public enum Components {
             public var site_admin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/user-role-assignment/starred_at`.
             public var starred_at: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/user-role-assignment/user_view_type`.
+            public var user_view_type: Swift.String?
             /// Creates a new `user_hyphen_role_hyphen_assignment`.
             ///
             /// - Parameters:
@@ -6289,6 +6329,7 @@ public enum Components {
             ///   - _type:
             ///   - site_admin:
             ///   - starred_at:
+            ///   - user_view_type:
             public init(
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
@@ -6310,7 +6351,8 @@ public enum Components {
                 received_events_url: Swift.String,
                 _type: Swift.String,
                 site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil
+                starred_at: Swift.String? = nil,
+                user_view_type: Swift.String? = nil
             ) {
                 self.name = name
                 self.email = email
@@ -6333,6 +6375,7 @@ public enum Components {
                 self._type = _type
                 self.site_admin = site_admin
                 self.starred_at = starred_at
+                self.user_view_type = user_view_type
             }
             public enum CodingKeys: String, CodingKey {
                 case name
@@ -6356,6 +6399,7 @@ public enum Components {
                 case _type = "type"
                 case site_admin
                 case starred_at
+                case user_view_type
             }
         }
         /// Minimal representation of an organization programmatic access grant request for enumerations
@@ -7693,10 +7737,10 @@ public enum Operations {
     /// Update an organization
     ///
     /// > [!WARNING]
-    /// > **Parameter deprecation notice:** GitHub will replace and discontinue `members_allowed_repository_creation_type` in favor of more granular permissions. The new input parameters are `members_can_create_public_repositories`, `members_can_create_private_repositories` for all organizations and `members_can_create_internal_repositories` for organizations associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+. For more information, see the [blog post](https://developer.github.com/changes/2019-12-03-internal-visibility-changes).
+    /// > **Closing down notice:** GitHub will replace and discontinue `members_allowed_repository_creation_type` in favor of more granular permissions. The new input parameters are `members_can_create_public_repositories`, `members_can_create_private_repositories` for all organizations and `members_can_create_internal_repositories` for organizations associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+. For more information, see the [blog post](https://developer.github.com/changes/2019-12-03-internal-visibility-changes).
     ///
     /// > [!WARNING]
-    /// > **Parameter deprecation notice:** Code security product enablement for new repositories through the organization API is deprecated. Please use [code security configurations](https://docs.github.com/rest/code-security/configurations#set-a-code-security-configuration-as-a-default-for-an-organization) to set defaults instead. For more information on setting a default security configuration, see the [changelog](https://github.blog/changelog/2024-07-09-sunsetting-security-settings-defaults-parameters-in-the-organizations-rest-api/).
+    /// > **Closing down notice:** Code security product enablement for new repositories through the organization API is closing down. Please use [code security configurations](https://docs.github.com/rest/code-security/configurations#set-a-code-security-configuration-as-a-default-for-an-organization) to set defaults instead. For more information on setting a default security configuration, see the [changelog](https://github.blog/changelog/2024-07-09-sunsetting-security-settings-defaults-parameters-in-the-organizations-rest-api/).
     ///
     /// Updates the organization's profile and member privileges.
     ///
@@ -7806,7 +7850,7 @@ public enum Operations {
                     /// - Remark: Generated from `#/paths/orgs/{org}/PATCH/requestBody/json/members_can_create_public_repositories`.
                     public var members_can_create_public_repositories: Swift.Bool?
                     /// Specifies which types of repositories non-admin organization members can create. `private` is only available to repositories that are part of an organization on GitHub Enterprise Cloud. 
-                    /// **Note:** This parameter is deprecated and will be removed in the future. Its return value ignores internal repositories. Using this parameter overrides values set in `members_can_create_repositories`. See the parameter deprecation notice in the operation description for details.
+                    /// **Note:** This parameter is closing down and will be removed in the future. Its return value ignores internal repositories. Using this parameter overrides values set in `members_can_create_repositories`. See the parameter deprecation notice in the operation description for details.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/PATCH/requestBody/json/members_allowed_repository_creation_type`.
                     @frozen public enum members_allowed_repository_creation_typePayload: String, Codable, Hashable, Sendable {
@@ -7815,7 +7859,7 @@ public enum Operations {
                         case none = "none"
                     }
                     /// Specifies which types of repositories non-admin organization members can create. `private` is only available to repositories that are part of an organization on GitHub Enterprise Cloud. 
-                    /// **Note:** This parameter is deprecated and will be removed in the future. Its return value ignores internal repositories. Using this parameter overrides values set in `members_can_create_repositories`. See the parameter deprecation notice in the operation description for details.
+                    /// **Note:** This parameter is closing down and will be removed in the future. Its return value ignores internal repositories. Using this parameter overrides values set in `members_can_create_repositories`. See the parameter deprecation notice in the operation description for details.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/PATCH/requestBody/json/members_allowed_repository_creation_type`.
                     public var members_allowed_repository_creation_type: Operations.orgs_sol_update.Input.Body.jsonPayload.members_allowed_repository_creation_typePayload?
@@ -7841,7 +7885,7 @@ public enum Operations {
                     public var web_commit_signoff_required: Swift.Bool?
                     /// - Remark: Generated from `#/paths/orgs/{org}/PATCH/requestBody/json/blog`.
                     public var blog: Swift.String?
-                    /// **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
+                    /// **Endpoint closing down notice.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
                     ///
                     /// Whether GitHub Advanced Security is automatically enabled for new repositories and repositories transferred to this organization.
                     ///
@@ -7852,7 +7896,7 @@ public enum Operations {
                     /// - Remark: Generated from `#/paths/orgs/{org}/PATCH/requestBody/json/advanced_security_enabled_for_new_repositories`.
                     @available(*, deprecated)
                     public var advanced_security_enabled_for_new_repositories: Swift.Bool?
-                    /// **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
+                    /// **Endpoint closing down notice.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
                     ///
                     /// Whether Dependabot alerts are automatically enabled for new repositories and repositories transferred to this organization.
                     ///
@@ -7863,7 +7907,7 @@ public enum Operations {
                     /// - Remark: Generated from `#/paths/orgs/{org}/PATCH/requestBody/json/dependabot_alerts_enabled_for_new_repositories`.
                     @available(*, deprecated)
                     public var dependabot_alerts_enabled_for_new_repositories: Swift.Bool?
-                    /// **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
+                    /// **Endpoint closing down notice.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
                     ///
                     /// Whether Dependabot security updates are automatically enabled for new repositories and repositories transferred to this organization.
                     ///
@@ -7874,7 +7918,7 @@ public enum Operations {
                     /// - Remark: Generated from `#/paths/orgs/{org}/PATCH/requestBody/json/dependabot_security_updates_enabled_for_new_repositories`.
                     @available(*, deprecated)
                     public var dependabot_security_updates_enabled_for_new_repositories: Swift.Bool?
-                    /// **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
+                    /// **Endpoint closing down notice.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
                     ///
                     /// Whether dependency graph is automatically enabled for new repositories and repositories transferred to this organization.
                     ///
@@ -7885,7 +7929,7 @@ public enum Operations {
                     /// - Remark: Generated from `#/paths/orgs/{org}/PATCH/requestBody/json/dependency_graph_enabled_for_new_repositories`.
                     @available(*, deprecated)
                     public var dependency_graph_enabled_for_new_repositories: Swift.Bool?
-                    /// **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
+                    /// **Endpoint closing down notice.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
                     ///
                     /// Whether secret scanning is automatically enabled for new repositories and repositories transferred to this organization.
                     ///
@@ -7896,7 +7940,7 @@ public enum Operations {
                     /// - Remark: Generated from `#/paths/orgs/{org}/PATCH/requestBody/json/secret_scanning_enabled_for_new_repositories`.
                     @available(*, deprecated)
                     public var secret_scanning_enabled_for_new_repositories: Swift.Bool?
-                    /// **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
+                    /// **Endpoint closing down notice.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
                     ///
                     /// Whether secret scanning push protection is automatically enabled for new repositories and repositories transferred to this organization.
                     ///
@@ -7939,12 +7983,12 @@ public enum Operations {
                     ///   - members_can_fork_private_repositories: Whether organization members can fork private organization repositories.
                     ///   - web_commit_signoff_required: Whether contributors to organization repositories are required to sign off on commits they make through GitHub's web interface.
                     ///   - blog:
-                    ///   - advanced_security_enabled_for_new_repositories: **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
-                    ///   - dependabot_alerts_enabled_for_new_repositories: **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
-                    ///   - dependabot_security_updates_enabled_for_new_repositories: **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
-                    ///   - dependency_graph_enabled_for_new_repositories: **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
-                    ///   - secret_scanning_enabled_for_new_repositories: **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
-                    ///   - secret_scanning_push_protection_enabled_for_new_repositories: **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
+                    ///   - advanced_security_enabled_for_new_repositories: **Endpoint closing down notice.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
+                    ///   - dependabot_alerts_enabled_for_new_repositories: **Endpoint closing down notice.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
+                    ///   - dependabot_security_updates_enabled_for_new_repositories: **Endpoint closing down notice.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
+                    ///   - dependency_graph_enabled_for_new_repositories: **Endpoint closing down notice.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
+                    ///   - secret_scanning_enabled_for_new_repositories: **Endpoint closing down notice.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
+                    ///   - secret_scanning_push_protection_enabled_for_new_repositories: **Endpoint closing down notice.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
                     ///   - secret_scanning_push_protection_custom_link_enabled: Whether a custom link is shown to contributors who are blocked from pushing a secret by push protection.
                     ///   - secret_scanning_push_protection_custom_link: If `secret_scanning_push_protection_custom_link_enabled` is true, the URL that will be displayed to contributors who are blocked from pushing a secret.
                     public init(
@@ -20372,7 +20416,7 @@ public enum Operations {
     /// Enable or disable a security feature for an organization
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** The ability to enable or disable a security feature for all eligible repositories in an organization is deprecated. Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead. For more information, see the [changelog](https://github.blog/changelog/2024-07-22-deprecation-of-api-endpoint-to-enable-or-disable-a-security-feature-for-an-organization/).
+    /// > **Closing down notice:** The ability to enable or disable a security feature for all eligible repositories in an organization is closing down. Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead. For more information, see the [changelog](https://github.blog/changelog/2024-07-22-deprecation-of-api-endpoint-to-enable-or-disable-a-security-feature-for-an-organization/).
     ///
     /// Enables or disables the specified security feature for all eligible repositories in an organization. For more information, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."
     ///
