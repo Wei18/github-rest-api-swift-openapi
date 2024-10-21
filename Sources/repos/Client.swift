@@ -17570,10 +17570,10 @@ public struct Client: APIProtocol {
             }
         )
     }
-    /// Deprecated - List tag protection states for a repository
+    /// Closing down - List tag protection states for a repository
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** This operation is deprecated and will be removed after August 30, 2024. Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#get-all-repository-rulesets)" endpoint instead.
+    /// > **Closing down notice:** This operation is closing down and will be removed after August 30, 2024. Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#get-all-repository-rulesets)" endpoint instead.
     ///
     /// This returns the tag protection states of a repository.
     ///
@@ -17685,10 +17685,10 @@ public struct Client: APIProtocol {
             }
         )
     }
-    /// Deprecated - Create a tag protection state for a repository
+    /// Closing down - Create a tag protection state for a repository
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** This operation is deprecated and will be removed after August 30, 2024. Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#create-a-repository-ruleset)" endpoint instead.
+    /// > **Closing down notice:** This operation is closing down and will be removed after August 30, 2024. Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#create-a-repository-ruleset)" endpoint instead.
     ///
     /// This creates a tag protection state for a repository.
     /// This endpoint is only available to repository administrators.
@@ -17808,10 +17808,10 @@ public struct Client: APIProtocol {
             }
         )
     }
-    /// Deprecated - Delete a tag protection state for a repository
+    /// Closing down - Delete a tag protection state for a repository
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** This operation is deprecated and will be removed after August 30, 2024. Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#delete-a-repository-ruleset)" endpoint instead.
+    /// > **Closing down notice:** This operation is closing down and will be removed after August 30, 2024. Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#delete-a-repository-ruleset)" endpoint instead.
     ///
     /// This deletes a tag protection state for a repository.
     /// This endpoint is only available to repository administrators.
