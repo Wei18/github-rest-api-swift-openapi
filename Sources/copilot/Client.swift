@@ -41,7 +41,7 @@ public struct Client: APIProtocol {
     /// List all Copilot seat assignments for an enterprise
     ///
     /// > [!NOTE]
-    /// > This endpoint is in beta and is subject to change.
+    /// > This endpoint is in public preview and is subject to change.
     ///
     /// Lists all active Copilot seats across organizations or enterprise teams for an enterprise with a Copilot Business or Copilot Enterprise subscription.
     ///
@@ -226,7 +226,7 @@ public struct Client: APIProtocol {
     /// Get a summary of Copilot usage for enterprise members
     ///
     /// > [!NOTE]
-    /// > This endpoint is in beta and is subject to change.
+    /// > This endpoint is in public preview and is subject to change.
     ///
     /// You can use this endpoint to see a daily breakdown of aggregated usage metrics for Copilot completions and Copilot Chat in the IDE
     /// for all users across organizations with access to Copilot within your enterprise, with a further breakdown of suggestions, acceptances,
@@ -419,7 +419,7 @@ public struct Client: APIProtocol {
     /// Get a summary of Copilot usage for an enterprise team
     ///
     /// > [!NOTE]
-    /// > This endpoint is in beta and is subject to change.
+    /// > This endpoint is in public preview and is subject to change.
     ///
     /// You can use this endpoint to see a daily breakdown of aggregated usage metrics for Copilot completions and Copilot Chat in the IDE
     /// for users within an enterprise team, with a further breakdown of suggestions, acceptances, and number of active users by editor and language for each day.
@@ -616,7 +616,7 @@ public struct Client: APIProtocol {
     /// Get Copilot seat information and settings for an organization
     ///
     /// > [!NOTE]
-    /// > This endpoint is in beta and is subject to change.
+    /// > This endpoint is in public preview and is subject to change.
     ///
     /// Gets information about an organization's Copilot subscription, including seat breakdown
     /// and feature policies. To configure these settings, go to your organization's settings on GitHub.com.
@@ -779,7 +779,7 @@ public struct Client: APIProtocol {
     /// List all Copilot seat assignments for an organization
     ///
     /// > [!NOTE]
-    /// > This endpoint is in beta and is subject to change.
+    /// > This endpoint is in public preview and is subject to change.
     ///
     /// Lists all active Copilot seats for an organization with a Copilot Business or Copilot Enterprise subscription.
     /// Only organization owners can view assigned seats.
@@ -959,7 +959,7 @@ public struct Client: APIProtocol {
     /// Add teams to the Copilot subscription for an organization
     ///
     /// > [!NOTE]
-    /// > This endpoint is in beta and is subject to change.
+    /// > This endpoint is in public preview and is subject to change.
     ///
     /// Purchases a GitHub Copilot seat for all users within each specified team.
     /// The organization will be billed accordingly. For more information about Copilot pricing, see "[Pricing for GitHub Copilot](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#about-billing-for-github-copilot)".
@@ -1136,7 +1136,7 @@ public struct Client: APIProtocol {
     /// Remove teams from the Copilot subscription for an organization
     ///
     /// > [!NOTE]
-    /// > This endpoint is in beta and is subject to change.
+    /// > This endpoint is in public preview and is subject to change.
     ///
     /// Cancels the Copilot seat assignment for all members of each team specified.
     /// This will cause the members of the specified team(s) to lose access to GitHub Copilot at the end of the current billing cycle, and the organization will not be billed further for those users.
@@ -1311,7 +1311,7 @@ public struct Client: APIProtocol {
     /// Add users to the Copilot subscription for an organization
     ///
     /// > [!NOTE]
-    /// > This endpoint is in beta and is subject to change.
+    /// > This endpoint is in public preview and is subject to change.
     ///
     /// Purchases a GitHub Copilot seat for each user specified.
     /// The organization will be billed accordingly. For more information about Copilot pricing, see "[Pricing for GitHub Copilot](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#about-billing-for-github-copilot)".
@@ -1488,7 +1488,7 @@ public struct Client: APIProtocol {
     /// Remove users from the Copilot subscription for an organization
     ///
     /// > [!NOTE]
-    /// > This endpoint is in beta and is subject to change.
+    /// > This endpoint is in public preview and is subject to change.
     ///
     /// Cancels the Copilot seat assignment for each user specified.
     /// This will cause the specified users to lose access to GitHub Copilot at the end of the current billing cycle, and the organization will not be billed further for those users.
@@ -1663,7 +1663,7 @@ public struct Client: APIProtocol {
     /// Get a summary of Copilot usage for organization members
     ///
     /// > [!NOTE]
-    /// > This endpoint is in beta and is subject to change.
+    /// > This endpoint is in public preview and is subject to change.
     ///
     /// You can use this endpoint to see a daily breakdown of aggregated usage metrics for Copilot completions and Copilot Chat in the IDE
     /// across an organization, with a further breakdown of suggestions, acceptances, and number of active users by editor and language for each day.
@@ -1856,7 +1856,7 @@ public struct Client: APIProtocol {
     /// Get Copilot seat assignment details for a user
     ///
     /// > [!NOTE]
-    /// > This endpoint is in beta and is subject to change.
+    /// > This endpoint is in public preview and is subject to change.
     ///
     /// Gets the GitHub Copilot seat assignment details for a member of an organization who currently has access to GitHub Copilot.
     ///
@@ -2018,7 +2018,7 @@ public struct Client: APIProtocol {
     /// Get a summary of Copilot usage for a team
     ///
     /// > [!NOTE]
-    /// > This endpoint is in beta and is subject to change.
+    /// > This endpoint is in public preview and is subject to change.
     ///
     /// You can use this endpoint to see a daily breakdown of aggregated usage metrics for Copilot completions and Copilot Chat in the IDE
     /// for users within a team, with a further breakdown of suggestions, acceptances, and number of active users by editor and language for each day.

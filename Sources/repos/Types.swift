@@ -1869,10 +1869,10 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/tags`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/tags/get(repos/list-tags)`.
     func repos_sol_list_hyphen_tags(_ input: Operations.repos_sol_list_hyphen_tags.Input) async throws -> Operations.repos_sol_list_hyphen_tags.Output
-    /// Deprecated - List tag protection states for a repository
+    /// Closing down - List tag protection states for a repository
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** This operation is deprecated and will be removed after August 30, 2024. Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#get-all-repository-rulesets)" endpoint instead.
+    /// > **Closing down notice:** This operation is closing down and will be removed after August 30, 2024. Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#get-all-repository-rulesets)" endpoint instead.
     ///
     /// This returns the tag protection states of a repository.
     ///
@@ -1882,10 +1882,10 @@ public protocol APIProtocol: Sendable {
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/tags/protection/get(repos/list-tag-protection)`.
     @available(*, deprecated)
     func repos_sol_list_hyphen_tag_hyphen_protection(_ input: Operations.repos_sol_list_hyphen_tag_hyphen_protection.Input) async throws -> Operations.repos_sol_list_hyphen_tag_hyphen_protection.Output
-    /// Deprecated - Create a tag protection state for a repository
+    /// Closing down - Create a tag protection state for a repository
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** This operation is deprecated and will be removed after August 30, 2024. Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#create-a-repository-ruleset)" endpoint instead.
+    /// > **Closing down notice:** This operation is closing down and will be removed after August 30, 2024. Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#create-a-repository-ruleset)" endpoint instead.
     ///
     /// This creates a tag protection state for a repository.
     /// This endpoint is only available to repository administrators.
@@ -1894,10 +1894,10 @@ public protocol APIProtocol: Sendable {
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/tags/protection/post(repos/create-tag-protection)`.
     @available(*, deprecated)
     func repos_sol_create_hyphen_tag_hyphen_protection(_ input: Operations.repos_sol_create_hyphen_tag_hyphen_protection.Input) async throws -> Operations.repos_sol_create_hyphen_tag_hyphen_protection.Output
-    /// Deprecated - Delete a tag protection state for a repository
+    /// Closing down - Delete a tag protection state for a repository
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** This operation is deprecated and will be removed after August 30, 2024. Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#delete-a-repository-ruleset)" endpoint instead.
+    /// > **Closing down notice:** This operation is closing down and will be removed after August 30, 2024. Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#delete-a-repository-ruleset)" endpoint instead.
     ///
     /// This deletes a tag protection state for a repository.
     /// This endpoint is only available to repository administrators.
@@ -5455,10 +5455,10 @@ extension APIProtocol {
             headers: headers
         ))
     }
-    /// Deprecated - List tag protection states for a repository
+    /// Closing down - List tag protection states for a repository
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** This operation is deprecated and will be removed after August 30, 2024. Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#get-all-repository-rulesets)" endpoint instead.
+    /// > **Closing down notice:** This operation is closing down and will be removed after August 30, 2024. Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#get-all-repository-rulesets)" endpoint instead.
     ///
     /// This returns the tag protection states of a repository.
     ///
@@ -5476,10 +5476,10 @@ extension APIProtocol {
             headers: headers
         ))
     }
-    /// Deprecated - Create a tag protection state for a repository
+    /// Closing down - Create a tag protection state for a repository
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** This operation is deprecated and will be removed after August 30, 2024. Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#create-a-repository-ruleset)" endpoint instead.
+    /// > **Closing down notice:** This operation is closing down and will be removed after August 30, 2024. Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#create-a-repository-ruleset)" endpoint instead.
     ///
     /// This creates a tag protection state for a repository.
     /// This endpoint is only available to repository administrators.
@@ -5498,10 +5498,10 @@ extension APIProtocol {
             body: body
         ))
     }
-    /// Deprecated - Delete a tag protection state for a repository
+    /// Closing down - Delete a tag protection state for a repository
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** This operation is deprecated and will be removed after August 30, 2024. Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#delete-a-repository-ruleset)" endpoint instead.
+    /// > **Closing down notice:** This operation is closing down and will be removed after August 30, 2024. Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#delete-a-repository-ruleset)" endpoint instead.
     ///
     /// This deletes a tag protection state for a repository.
     /// This endpoint is only available to repository administrators.
@@ -5907,6 +5907,8 @@ public enum Components {
             public var site_admin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/simple-user/starred_at`.
             public var starred_at: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/simple-user/user_view_type`.
+            public var user_view_type: Swift.String?
             /// Creates a new `simple_hyphen_user`.
             ///
             /// - Parameters:
@@ -5931,6 +5933,7 @@ public enum Components {
             ///   - _type:
             ///   - site_admin:
             ///   - starred_at:
+            ///   - user_view_type:
             public init(
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
@@ -5952,7 +5955,8 @@ public enum Components {
                 received_events_url: Swift.String,
                 _type: Swift.String,
                 site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil
+                starred_at: Swift.String? = nil,
+                user_view_type: Swift.String? = nil
             ) {
                 self.name = name
                 self.email = email
@@ -5975,6 +5979,7 @@ public enum Components {
                 self._type = _type
                 self.site_admin = site_admin
                 self.starred_at = starred_at
+                self.user_view_type = user_view_type
             }
             public enum CodingKeys: String, CodingKey {
                 case name
@@ -5998,6 +6003,7 @@ public enum Components {
                 case _type = "type"
                 case site_admin
                 case starred_at
+                case user_view_type
             }
         }
         /// Basic Error
@@ -6114,6 +6120,8 @@ public enum Components {
             public var site_admin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/starred_at`.
             public var starred_at: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/user_view_type`.
+            public var user_view_type: Swift.String?
             /// Creates a new `nullable_hyphen_simple_hyphen_user`.
             ///
             /// - Parameters:
@@ -6138,6 +6146,7 @@ public enum Components {
             ///   - _type:
             ///   - site_admin:
             ///   - starred_at:
+            ///   - user_view_type:
             public init(
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
@@ -6159,7 +6168,8 @@ public enum Components {
                 received_events_url: Swift.String,
                 _type: Swift.String,
                 site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil
+                starred_at: Swift.String? = nil,
+                user_view_type: Swift.String? = nil
             ) {
                 self.name = name
                 self.email = email
@@ -6182,6 +6192,7 @@ public enum Components {
                 self._type = _type
                 self.site_admin = site_admin
                 self.starred_at = starred_at
+                self.user_view_type = user_view_type
             }
             public enum CodingKeys: String, CodingKey {
                 case name
@@ -6205,6 +6216,7 @@ public enum Components {
                 case _type = "type"
                 case site_admin
                 case starred_at
+                case user_view_type
             }
         }
         /// GitHub apps are a new way to extend GitHub. They can be installed directly on organizations and user accounts and granted access to specific repositories. They come with granular permissions and built-in webhooks. GitHub apps are first class actors within GitHub.
@@ -7345,7 +7357,7 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/repository/allow_update_branch`.
             public var allow_update_branch: Swift.Bool?
-            /// Whether a squash merge commit can use the pull request title as default. **This property has been deprecated. Please use `squash_merge_commit_title` instead.
+            /// Whether a squash merge commit can use the pull request title as default. **This property is closing down. Please use `squash_merge_commit_title` instead.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/use_squash_pr_title_as_default`.
             @available(*, deprecated)
@@ -7533,7 +7545,7 @@ public enum Components {
             ///   - allow_auto_merge: Whether to allow Auto-merge to be used on pull requests.
             ///   - delete_branch_on_merge: Whether to delete head branches when pull requests are merged
             ///   - allow_update_branch: Whether or not a pull request head branch that is behind its base branch can always be updated even if it is not required to be up to date before merging.
-            ///   - use_squash_pr_title_as_default: Whether a squash merge commit can use the pull request title as default. **This property has been deprecated. Please use `squash_merge_commit_title` instead.
+            ///   - use_squash_pr_title_as_default: Whether a squash merge commit can use the pull request title as default. **This property is closing down. Please use `squash_merge_commit_title` instead.
             ///   - squash_merge_commit_title: The default value for a squash merge commit title:
             ///   - squash_merge_commit_message: The default value for a squash merge commit message:
             ///   - merge_commit_title: The default value for a merge commit title.
@@ -8680,6 +8692,28 @@ public enum Components {
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns`.
             public var secret_scanning_non_provider_patterns: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_non_provider_patternsPayload?
+            /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection`.
+            public struct secret_scanning_ai_detectionPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection/status`.
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                    case enabled = "enabled"
+                    case disabled = "disabled"
+                }
+                /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection/status`.
+                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload.statusPayload?
+                /// Creates a new `secret_scanning_ai_detectionPayload`.
+                ///
+                /// - Parameters:
+                ///   - status:
+                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload.statusPayload? = nil) {
+                    self.status = status
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case status
+                }
+            }
+            /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection`.
+            public var secret_scanning_ai_detection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload?
             /// Creates a new `security_hyphen_and_hyphen_analysis`.
             ///
             /// - Parameters:
@@ -8688,18 +8722,21 @@ public enum Components {
             ///   - secret_scanning:
             ///   - secret_scanning_push_protection:
             ///   - secret_scanning_non_provider_patterns:
+            ///   - secret_scanning_ai_detection:
             public init(
                 advanced_security: Components.Schemas.security_hyphen_and_hyphen_analysis.advanced_securityPayload? = nil,
                 dependabot_security_updates: Components.Schemas.security_hyphen_and_hyphen_analysis.dependabot_security_updatesPayload? = nil,
                 secret_scanning: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanningPayload? = nil,
                 secret_scanning_push_protection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_push_protectionPayload? = nil,
-                secret_scanning_non_provider_patterns: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_non_provider_patternsPayload? = nil
+                secret_scanning_non_provider_patterns: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_non_provider_patternsPayload? = nil,
+                secret_scanning_ai_detection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload? = nil
             ) {
                 self.advanced_security = advanced_security
                 self.dependabot_security_updates = dependabot_security_updates
                 self.secret_scanning = secret_scanning
                 self.secret_scanning_push_protection = secret_scanning_push_protection
                 self.secret_scanning_non_provider_patterns = secret_scanning_non_provider_patterns
+                self.secret_scanning_ai_detection = secret_scanning_ai_detection
             }
             public enum CodingKeys: String, CodingKey {
                 case advanced_security
@@ -8707,6 +8744,7 @@ public enum Components {
                 case secret_scanning
                 case secret_scanning_push_protection
                 case secret_scanning_non_provider_patterns
+                case secret_scanning_ai_detection
             }
         }
         /// Minimal Repository
@@ -9652,7 +9690,7 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-repository/allow_update_branch`.
             public var allow_update_branch: Swift.Bool?
-            /// Whether a squash merge commit can use the pull request title as default. **This property has been deprecated. Please use `squash_merge_commit_title` instead.
+            /// Whether a squash merge commit can use the pull request title as default. **This property is closing down. Please use `squash_merge_commit_title` instead.
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-repository/use_squash_pr_title_as_default`.
             @available(*, deprecated)
@@ -9840,7 +9878,7 @@ public enum Components {
             ///   - allow_auto_merge: Whether to allow Auto-merge to be used on pull requests.
             ///   - delete_branch_on_merge: Whether to delete head branches when pull requests are merged
             ///   - allow_update_branch: Whether or not a pull request head branch that is behind its base branch can always be updated even if it is not required to be up to date before merging.
-            ///   - use_squash_pr_title_as_default: Whether a squash merge commit can use the pull request title as default. **This property has been deprecated. Please use `squash_merge_commit_title` instead.
+            ///   - use_squash_pr_title_as_default: Whether a squash merge commit can use the pull request title as default. **This property is closing down. Please use `squash_merge_commit_title` instead.
             ///   - squash_merge_commit_title: The default value for a squash merge commit title:
             ///   - squash_merge_commit_message: The default value for a squash merge commit message:
             ///   - merge_commit_title: The default value for a merge commit title.
@@ -14105,6 +14143,8 @@ public enum Components {
                 public var _type: Swift.String?
                 /// - Remark: Generated from `#/components/schemas/branch-restriction-policy/usersPayload/site_admin`.
                 public var site_admin: Swift.Bool?
+                /// - Remark: Generated from `#/components/schemas/branch-restriction-policy/usersPayload/user_view_type`.
+                public var user_view_type: Swift.String?
                 /// Creates a new `usersPayloadPayload`.
                 ///
                 /// - Parameters:
@@ -14126,6 +14166,7 @@ public enum Components {
                 ///   - received_events_url:
                 ///   - _type:
                 ///   - site_admin:
+                ///   - user_view_type:
                 public init(
                     login: Swift.String? = nil,
                     id: Swift.Int64? = nil,
@@ -14144,7 +14185,8 @@ public enum Components {
                     events_url: Swift.String? = nil,
                     received_events_url: Swift.String? = nil,
                     _type: Swift.String? = nil,
-                    site_admin: Swift.Bool? = nil
+                    site_admin: Swift.Bool? = nil,
+                    user_view_type: Swift.String? = nil
                 ) {
                     self.login = login
                     self.id = id
@@ -14164,6 +14206,7 @@ public enum Components {
                     self.received_events_url = received_events_url
                     self._type = _type
                     self.site_admin = site_admin
+                    self.user_view_type = user_view_type
                 }
                 public enum CodingKeys: String, CodingKey {
                     case login
@@ -14184,6 +14227,7 @@ public enum Components {
                     case received_events_url
                     case _type = "type"
                     case site_admin
+                    case user_view_type
                 }
             }
             /// - Remark: Generated from `#/components/schemas/branch-restriction-policy/users`.
@@ -14339,6 +14383,8 @@ public enum Components {
                     public var _type: Swift.String?
                     /// - Remark: Generated from `#/components/schemas/branch-restriction-policy/appsPayload/owner/site_admin`.
                     public var site_admin: Swift.Bool?
+                    /// - Remark: Generated from `#/components/schemas/branch-restriction-policy/appsPayload/owner/user_view_type`.
+                    public var user_view_type: Swift.String?
                     /// Creates a new `ownerPayload`.
                     ///
                     /// - Parameters:
@@ -14365,6 +14411,7 @@ public enum Components {
                     ///   - received_events_url:
                     ///   - _type:
                     ///   - site_admin:
+                    ///   - user_view_type:
                     public init(
                         login: Swift.String? = nil,
                         id: Swift.Int? = nil,
@@ -14388,7 +14435,8 @@ public enum Components {
                         organizations_url: Swift.String? = nil,
                         received_events_url: Swift.String? = nil,
                         _type: Swift.String? = nil,
-                        site_admin: Swift.Bool? = nil
+                        site_admin: Swift.Bool? = nil,
+                        user_view_type: Swift.String? = nil
                     ) {
                         self.login = login
                         self.id = id
@@ -14413,6 +14461,7 @@ public enum Components {
                         self.received_events_url = received_events_url
                         self._type = _type
                         self.site_admin = site_admin
+                        self.user_view_type = user_view_type
                     }
                     public enum CodingKeys: String, CodingKey {
                         case login
@@ -14438,6 +14487,7 @@ public enum Components {
                         case received_events_url
                         case _type = "type"
                         case site_admin
+                        case user_view_type
                     }
                 }
                 /// - Remark: Generated from `#/components/schemas/branch-restriction-policy/appsPayload/owner`.
@@ -16141,6 +16191,8 @@ public enum Components {
             public var permissions: Components.Schemas.collaborator.permissionsPayload?
             /// - Remark: Generated from `#/components/schemas/collaborator/role_name`.
             public var role_name: Swift.String
+            /// - Remark: Generated from `#/components/schemas/collaborator/user_view_type`.
+            public var user_view_type: Swift.String?
             /// Creates a new `collaborator`.
             ///
             /// - Parameters:
@@ -16166,6 +16218,7 @@ public enum Components {
             ///   - site_admin:
             ///   - permissions:
             ///   - role_name:
+            ///   - user_view_type:
             public init(
                 login: Swift.String,
                 id: Swift.Int64,
@@ -16188,7 +16241,8 @@ public enum Components {
                 _type: Swift.String,
                 site_admin: Swift.Bool,
                 permissions: Components.Schemas.collaborator.permissionsPayload? = nil,
-                role_name: Swift.String
+                role_name: Swift.String,
+                user_view_type: Swift.String? = nil
             ) {
                 self.login = login
                 self.id = id
@@ -16212,6 +16266,7 @@ public enum Components {
                 self.site_admin = site_admin
                 self.permissions = permissions
                 self.role_name = role_name
+                self.user_view_type = user_view_type
             }
             public enum CodingKeys: String, CodingKey {
                 case login
@@ -16236,6 +16291,7 @@ public enum Components {
                 case site_admin
                 case permissions
                 case role_name
+                case user_view_type
             }
         }
         /// Repository invitations let you manage who you collaborate with.
@@ -16418,6 +16474,8 @@ public enum Components {
             public var permissions: Components.Schemas.nullable_hyphen_collaborator.permissionsPayload?
             /// - Remark: Generated from `#/components/schemas/nullable-collaborator/role_name`.
             public var role_name: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-collaborator/user_view_type`.
+            public var user_view_type: Swift.String?
             /// Creates a new `nullable_hyphen_collaborator`.
             ///
             /// - Parameters:
@@ -16443,6 +16501,7 @@ public enum Components {
             ///   - site_admin:
             ///   - permissions:
             ///   - role_name:
+            ///   - user_view_type:
             public init(
                 login: Swift.String,
                 id: Swift.Int64,
@@ -16465,7 +16524,8 @@ public enum Components {
                 _type: Swift.String,
                 site_admin: Swift.Bool,
                 permissions: Components.Schemas.nullable_hyphen_collaborator.permissionsPayload? = nil,
-                role_name: Swift.String
+                role_name: Swift.String,
+                user_view_type: Swift.String? = nil
             ) {
                 self.login = login
                 self.id = id
@@ -16489,6 +16549,7 @@ public enum Components {
                 self.site_admin = site_admin
                 self.permissions = permissions
                 self.role_name = role_name
+                self.user_view_type = user_view_type
             }
             public enum CodingKeys: String, CodingKey {
                 case login
@@ -16513,6 +16574,7 @@ public enum Components {
                 case site_admin
                 case permissions
                 case role_name
+                case user_view_type
             }
         }
         /// Repository Collaborator Permission
@@ -18835,6 +18897,8 @@ public enum Components {
             public var email: Swift.String?
             /// - Remark: Generated from `#/components/schemas/contributor/name`.
             public var name: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/contributor/user_view_type`.
+            public var user_view_type: Swift.String?
             /// Creates a new `contributor`.
             ///
             /// - Parameters:
@@ -18859,6 +18923,7 @@ public enum Components {
             ///   - contributions:
             ///   - email:
             ///   - name:
+            ///   - user_view_type:
             public init(
                 login: Swift.String? = nil,
                 id: Swift.Int? = nil,
@@ -18880,7 +18945,8 @@ public enum Components {
                 site_admin: Swift.Bool? = nil,
                 contributions: Swift.Int,
                 email: Swift.String? = nil,
-                name: Swift.String? = nil
+                name: Swift.String? = nil,
+                user_view_type: Swift.String? = nil
             ) {
                 self.login = login
                 self.id = id
@@ -18903,6 +18969,7 @@ public enum Components {
                 self.contributions = contributions
                 self.email = email
                 self.name = name
+                self.user_view_type = user_view_type
             }
             public enum CodingKeys: String, CodingKey {
                 case login
@@ -18926,6 +18993,7 @@ public enum Components {
                 case contributions
                 case email
                 case name
+                case user_view_type
             }
         }
         /// The status of a deployment.
@@ -18964,7 +19032,7 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/deployment-status/environment`.
             public var environment: Swift.String?
-            /// Deprecated: the URL to associate with this status.
+            /// Closing down notice: the URL to associate with this status.
             ///
             /// - Remark: Generated from `#/components/schemas/deployment-status/target_url`.
             public var target_url: Swift.String
@@ -18996,7 +19064,7 @@ public enum Components {
             ///   - creator:
             ///   - description: A short description of the status.
             ///   - environment: The environment of the deployment that the status is for.
-            ///   - target_url: Deprecated: the URL to associate with this status.
+            ///   - target_url: Closing down notice: the URL to associate with this status.
             ///   - created_at:
             ///   - updated_at:
             ///   - deployment_url:
@@ -23027,7 +23095,7 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/repos/POST/requestBody/json/delete_branch_on_merge`.
                     public var delete_branch_on_merge: Swift.Bool?
-                    /// Either `true` to allow squash-merge commits to use pull request title, or `false` to use commit message. **This property has been deprecated. Please use `squash_merge_commit_title` instead.
+                    /// Either `true` to allow squash-merge commits to use pull request title, or `false` to use commit message. **This property is closing down. Please use `squash_merge_commit_title` instead.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/repos/POST/requestBody/json/use_squash_pr_title_as_default`.
                     @available(*, deprecated)
@@ -23160,7 +23228,7 @@ public enum Operations {
                     ///   - allow_rebase_merge: Either `true` to allow rebase-merging pull requests, or `false` to prevent rebase-merging.
                     ///   - allow_auto_merge: Either `true` to allow auto-merge on pull requests, or `false` to disallow auto-merge.
                     ///   - delete_branch_on_merge: Either `true` to allow automatically deleting head branches when pull requests are merged, or `false` to prevent automatic deletion. **The authenticated user must be an organization owner to set this property to `true`.**
-                    ///   - use_squash_pr_title_as_default: Either `true` to allow squash-merge commits to use pull request title, or `false` to use commit message. **This property has been deprecated. Please use `squash_merge_commit_title` instead.
+                    ///   - use_squash_pr_title_as_default: Either `true` to allow squash-merge commits to use pull request title, or `false` to use commit message. **This property is closing down. Please use `squash_merge_commit_title` instead.
                     ///   - squash_merge_commit_title: Required when using `squash_merge_commit_message`.
                     ///   - squash_merge_commit_message: The default value for a squash merge commit message:
                     ///   - merge_commit_title: Required when using `merge_commit_message`.
@@ -25310,6 +25378,29 @@ public enum Operations {
                         ///
                         /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/PATCH/requestBody/json/security_and_analysis/secret_scanning_push_protection`.
                         public var secret_scanning_push_protection: Operations.repos_sol_update.Input.Body.jsonPayload.security_and_analysisPayload.secret_scanning_push_protectionPayload?
+                        /// Use the `status` property to enable or disable secret scanning AI detection for this repository. For more information, see "[Responsible detection of generic secrets with AI](https://docs.github.com/code-security/secret-scanning/using-advanced-secret-scanning-and-push-protection-features/generic-secret-detection/responsible-ai-generic-secrets)."
+                        ///
+                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/PATCH/requestBody/json/security_and_analysis/secret_scanning_ai_detection`.
+                        public struct secret_scanning_ai_detectionPayload: Codable, Hashable, Sendable {
+                            /// Can be `enabled` or `disabled`.
+                            ///
+                            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/PATCH/requestBody/json/security_and_analysis/secret_scanning_ai_detection/status`.
+                            public var status: Swift.String?
+                            /// Creates a new `secret_scanning_ai_detectionPayload`.
+                            ///
+                            /// - Parameters:
+                            ///   - status: Can be `enabled` or `disabled`.
+                            public init(status: Swift.String? = nil) {
+                                self.status = status
+                            }
+                            public enum CodingKeys: String, CodingKey {
+                                case status
+                            }
+                        }
+                        /// Use the `status` property to enable or disable secret scanning AI detection for this repository. For more information, see "[Responsible detection of generic secrets with AI](https://docs.github.com/code-security/secret-scanning/using-advanced-secret-scanning-and-push-protection-features/generic-secret-detection/responsible-ai-generic-secrets)."
+                        ///
+                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/PATCH/requestBody/json/security_and_analysis/secret_scanning_ai_detection`.
+                        public var secret_scanning_ai_detection: Operations.repos_sol_update.Input.Body.jsonPayload.security_and_analysisPayload.secret_scanning_ai_detectionPayload?
                         /// Use the `status` property to enable or disable secret scanning non-provider patterns for this repository. For more information, see "[Supported secret scanning patterns](/code-security/secret-scanning/introduction/supported-secret-scanning-patterns#supported-secrets)."
                         ///
                         /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/PATCH/requestBody/json/security_and_analysis/secret_scanning_non_provider_patterns`.
@@ -25339,22 +25430,26 @@ public enum Operations {
                         ///   - advanced_security: Use the `status` property to enable or disable GitHub Advanced Security for this repository. For more information, see "[About GitHub Advanced Security](/github/getting-started-with-github/learning-about-github/about-github-advanced-security)."
                         ///   - secret_scanning: Use the `status` property to enable or disable secret scanning for this repository. For more information, see "[About secret scanning](/code-security/secret-security/about-secret-scanning)."
                         ///   - secret_scanning_push_protection: Use the `status` property to enable or disable secret scanning push protection for this repository. For more information, see "[Protecting pushes with secret scanning](/code-security/secret-scanning/protecting-pushes-with-secret-scanning)."
+                        ///   - secret_scanning_ai_detection: Use the `status` property to enable or disable secret scanning AI detection for this repository. For more information, see "[Responsible detection of generic secrets with AI](https://docs.github.com/code-security/secret-scanning/using-advanced-secret-scanning-and-push-protection-features/generic-secret-detection/responsible-ai-generic-secrets)."
                         ///   - secret_scanning_non_provider_patterns: Use the `status` property to enable or disable secret scanning non-provider patterns for this repository. For more information, see "[Supported secret scanning patterns](/code-security/secret-scanning/introduction/supported-secret-scanning-patterns#supported-secrets)."
                         public init(
                             advanced_security: Operations.repos_sol_update.Input.Body.jsonPayload.security_and_analysisPayload.advanced_securityPayload? = nil,
                             secret_scanning: Operations.repos_sol_update.Input.Body.jsonPayload.security_and_analysisPayload.secret_scanningPayload? = nil,
                             secret_scanning_push_protection: Operations.repos_sol_update.Input.Body.jsonPayload.security_and_analysisPayload.secret_scanning_push_protectionPayload? = nil,
+                            secret_scanning_ai_detection: Operations.repos_sol_update.Input.Body.jsonPayload.security_and_analysisPayload.secret_scanning_ai_detectionPayload? = nil,
                             secret_scanning_non_provider_patterns: Operations.repos_sol_update.Input.Body.jsonPayload.security_and_analysisPayload.secret_scanning_non_provider_patternsPayload? = nil
                         ) {
                             self.advanced_security = advanced_security
                             self.secret_scanning = secret_scanning
                             self.secret_scanning_push_protection = secret_scanning_push_protection
+                            self.secret_scanning_ai_detection = secret_scanning_ai_detection
                             self.secret_scanning_non_provider_patterns = secret_scanning_non_provider_patterns
                         }
                         public enum CodingKeys: String, CodingKey {
                             case advanced_security
                             case secret_scanning
                             case secret_scanning_push_protection
+                            case secret_scanning_ai_detection
                             case secret_scanning_non_provider_patterns
                         }
                     }
@@ -25413,7 +25508,7 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/PATCH/requestBody/json/allow_update_branch`.
                     public var allow_update_branch: Swift.Bool?
-                    /// Either `true` to allow squash-merge commits to use pull request title, or `false` to use commit message. **This property has been deprecated. Please use `squash_merge_commit_title` instead.
+                    /// Either `true` to allow squash-merge commits to use pull request title, or `false` to use commit message. **This property is closing down. Please use `squash_merge_commit_title` instead.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/PATCH/requestBody/json/use_squash_pr_title_as_default`.
                     @available(*, deprecated)
@@ -25532,7 +25627,7 @@ public enum Operations {
                     ///   - allow_auto_merge: Either `true` to allow auto-merge on pull requests, or `false` to disallow auto-merge.
                     ///   - delete_branch_on_merge: Either `true` to allow automatically deleting head branches when pull requests are merged, or `false` to prevent automatic deletion.
                     ///   - allow_update_branch: Either `true` to always allow a pull request head branch that is behind its base branch to be updated even if it is not required to be up to date before merging, or false otherwise.
-                    ///   - use_squash_pr_title_as_default: Either `true` to allow squash-merge commits to use pull request title, or `false` to use commit message. **This property has been deprecated. Please use `squash_merge_commit_title` instead.
+                    ///   - use_squash_pr_title_as_default: Either `true` to allow squash-merge commits to use pull request title, or `false` to use commit message. **This property is closing down. Please use `squash_merge_commit_title` instead.
                     ///   - squash_merge_commit_title: Required when using `squash_merge_commit_message`.
                     ///   - squash_merge_commit_message: The default value for a squash merge commit message:
                     ///   - merge_commit_title: Required when using `merge_commit_message`.
@@ -28605,7 +28700,7 @@ public enum Operations {
                         ///
                         /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/PUT/requestBody/json/required_status_checks/strict`.
                         public var strict: Swift.Bool
-                        /// **Deprecated**: The list of status checks to require in order to merge into this branch. If any of these checks have recently been set by a particular GitHub App, they will be required to come from that app in future for the branch to merge. Use `checks` instead of `contexts` for more fine-grained control.
+                        /// **Closing down notice**: The list of status checks to require in order to merge into this branch. If any of these checks have recently been set by a particular GitHub App, they will be required to come from that app in future for the branch to merge. Use `checks` instead of `contexts` for more fine-grained control.
                         ///
                         /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/PUT/requestBody/json/required_status_checks/contexts`.
                         @available(*, deprecated)
@@ -28649,7 +28744,7 @@ public enum Operations {
                         ///
                         /// - Parameters:
                         ///   - strict: Require branches to be up to date before merging.
-                        ///   - contexts: **Deprecated**: The list of status checks to require in order to merge into this branch. If any of these checks have recently been set by a particular GitHub App, they will be required to come from that app in future for the branch to merge. Use `checks` instead of `contexts` for more fine-grained control.
+                        ///   - contexts: **Closing down notice**: The list of status checks to require in order to merge into this branch. If any of these checks have recently been set by a particular GitHub App, they will be required to come from that app in future for the branch to merge. Use `checks` instead of `contexts` for more fine-grained control.
                         ///   - checks: The list of status checks to require in order to merge into this branch.
                         public init(
                             strict: Swift.Bool,
@@ -31045,7 +31140,7 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks/PATCH/requestBody/json/strict`.
                     public var strict: Swift.Bool?
-                    /// **Deprecated**: The list of status checks to require in order to merge into this branch. If any of these checks have recently been set by a particular GitHub App, they will be required to come from that app in future for the branch to merge. Use `checks` instead of `contexts` for more fine-grained control.
+                    /// **Closing down notice**: The list of status checks to require in order to merge into this branch. If any of these checks have recently been set by a particular GitHub App, they will be required to come from that app in future for the branch to merge. Use `checks` instead of `contexts` for more fine-grained control.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks/PATCH/requestBody/json/contexts`.
                     @available(*, deprecated)
@@ -31089,7 +31184,7 @@ public enum Operations {
                     ///
                     /// - Parameters:
                     ///   - strict: Require branches to be up to date before merging.
-                    ///   - contexts: **Deprecated**: The list of status checks to require in order to merge into this branch. If any of these checks have recently been set by a particular GitHub App, they will be required to come from that app in future for the branch to merge. Use `checks` instead of `contexts` for more fine-grained control.
+                    ///   - contexts: **Closing down notice**: The list of status checks to require in order to merge into this branch. If any of these checks have recently been set by a particular GitHub App, they will be required to come from that app in future for the branch to merge. Use `checks` instead of `contexts` for more fine-grained control.
                     ///   - checks: The list of status checks to require in order to merge into this branch.
                     public init(
                         strict: Swift.Bool? = nil,
@@ -37984,7 +38079,7 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{commit_sha}/comments/POST/requestBody/json/position`.
                     public var position: Swift.Int?
-                    /// **Deprecated**. Use **position** parameter instead. Line number in the file to comment on.
+                    /// **Closing down notice**. Use **position** parameter instead. Line number in the file to comment on.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{commit_sha}/comments/POST/requestBody/json/line`.
                     public var line: Swift.Int?
@@ -37994,7 +38089,7 @@ public enum Operations {
                     ///   - body: The contents of the comment.
                     ///   - path: Relative path of the file to comment on.
                     ///   - position: Line index in the diff to comment on.
-                    ///   - line: **Deprecated**. Use **position** parameter instead. Line number in the file to comment on.
+                    ///   - line: **Closing down notice**. Use **position** parameter instead. Line number in the file to comment on.
                     public init(
                         body: Swift.String,
                         path: Swift.String? = nil,
@@ -59476,10 +59571,10 @@ public enum Operations {
             }
         }
     }
-    /// Deprecated - List tag protection states for a repository
+    /// Closing down - List tag protection states for a repository
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** This operation is deprecated and will be removed after August 30, 2024. Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#get-all-repository-rulesets)" endpoint instead.
+    /// > **Closing down notice:** This operation is closing down and will be removed after August 30, 2024. Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#get-all-repository-rulesets)" endpoint instead.
     ///
     /// This returns the tag protection states of a repository.
     ///
@@ -59668,10 +59763,10 @@ public enum Operations {
             }
         }
     }
-    /// Deprecated - Create a tag protection state for a repository
+    /// Closing down - Create a tag protection state for a repository
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** This operation is deprecated and will be removed after August 30, 2024. Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#create-a-repository-ruleset)" endpoint instead.
+    /// > **Closing down notice:** This operation is closing down and will be removed after August 30, 2024. Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#create-a-repository-ruleset)" endpoint instead.
     ///
     /// This creates a tag protection state for a repository.
     /// This endpoint is only available to repository administrators.
@@ -59885,10 +59980,10 @@ public enum Operations {
             }
         }
     }
-    /// Deprecated - Delete a tag protection state for a repository
+    /// Closing down - Delete a tag protection state for a repository
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** This operation is deprecated and will be removed after August 30, 2024. Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#delete-a-repository-ruleset)" endpoint instead.
+    /// > **Closing down notice:** This operation is closing down and will be removed after August 30, 2024. Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#delete-a-repository-ruleset)" endpoint instead.
     ///
     /// This deletes a tag protection state for a repository.
     /// This endpoint is only available to repository administrators.

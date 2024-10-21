@@ -1137,6 +1137,8 @@ public enum Components {
             public var site_admin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/simple-user/starred_at`.
             public var starred_at: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/simple-user/user_view_type`.
+            public var user_view_type: Swift.String?
             /// Creates a new `simple_hyphen_user`.
             ///
             /// - Parameters:
@@ -1161,6 +1163,7 @@ public enum Components {
             ///   - _type:
             ///   - site_admin:
             ///   - starred_at:
+            ///   - user_view_type:
             public init(
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
@@ -1182,7 +1185,8 @@ public enum Components {
                 received_events_url: Swift.String,
                 _type: Swift.String,
                 site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil
+                starred_at: Swift.String? = nil,
+                user_view_type: Swift.String? = nil
             ) {
                 self.name = name
                 self.email = email
@@ -1205,6 +1209,7 @@ public enum Components {
                 self._type = _type
                 self.site_admin = site_admin
                 self.starred_at = starred_at
+                self.user_view_type = user_view_type
             }
             public enum CodingKeys: String, CodingKey {
                 case name
@@ -1228,6 +1233,7 @@ public enum Components {
                 case _type = "type"
                 case site_admin
                 case starred_at
+                case user_view_type
             }
         }
         /// Basic Error
@@ -1400,6 +1406,8 @@ public enum Components {
             public var login: Swift.String
             /// - Remark: Generated from `#/components/schemas/public-user/id`.
             public var id: Swift.Int64
+            /// - Remark: Generated from `#/components/schemas/public-user/user_view_type`.
+            public var user_view_type: Swift.String?
             /// - Remark: Generated from `#/components/schemas/public-user/node_id`.
             public var node_id: Swift.String
             /// - Remark: Generated from `#/components/schemas/public-user/avatar_url`.
@@ -1499,8 +1507,6 @@ public enum Components {
             }
             /// - Remark: Generated from `#/components/schemas/public-user/plan`.
             public var plan: Components.Schemas.public_hyphen_user.planPayload?
-            /// - Remark: Generated from `#/components/schemas/public-user/suspended_at`.
-            public var suspended_at: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/public-user/private_gists`.
             public var private_gists: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/public-user/total_private_repos`.
@@ -1516,6 +1522,7 @@ public enum Components {
             /// - Parameters:
             ///   - login:
             ///   - id:
+            ///   - user_view_type:
             ///   - node_id:
             ///   - avatar_url:
             ///   - gravatar_id:
@@ -1548,7 +1555,6 @@ public enum Components {
             ///   - created_at:
             ///   - updated_at:
             ///   - plan:
-            ///   - suspended_at:
             ///   - private_gists:
             ///   - total_private_repos:
             ///   - owned_private_repos:
@@ -1557,6 +1563,7 @@ public enum Components {
             public init(
                 login: Swift.String,
                 id: Swift.Int64,
+                user_view_type: Swift.String? = nil,
                 node_id: Swift.String,
                 avatar_url: Swift.String,
                 gravatar_id: Swift.String? = nil,
@@ -1589,7 +1596,6 @@ public enum Components {
                 created_at: Foundation.Date,
                 updated_at: Foundation.Date,
                 plan: Components.Schemas.public_hyphen_user.planPayload? = nil,
-                suspended_at: Foundation.Date? = nil,
                 private_gists: Swift.Int? = nil,
                 total_private_repos: Swift.Int? = nil,
                 owned_private_repos: Swift.Int? = nil,
@@ -1598,6 +1604,7 @@ public enum Components {
             ) {
                 self.login = login
                 self.id = id
+                self.user_view_type = user_view_type
                 self.node_id = node_id
                 self.avatar_url = avatar_url
                 self.gravatar_id = gravatar_id
@@ -1630,7 +1637,6 @@ public enum Components {
                 self.created_at = created_at
                 self.updated_at = updated_at
                 self.plan = plan
-                self.suspended_at = suspended_at
                 self.private_gists = private_gists
                 self.total_private_repos = total_private_repos
                 self.owned_private_repos = owned_private_repos
@@ -1640,6 +1646,7 @@ public enum Components {
             public enum CodingKeys: String, CodingKey {
                 case login
                 case id
+                case user_view_type
                 case node_id
                 case avatar_url
                 case gravatar_id
@@ -1672,7 +1679,6 @@ public enum Components {
                 case created_at
                 case updated_at
                 case plan
-                case suspended_at
                 case private_gists
                 case total_private_repos
                 case owned_private_repos
@@ -1688,6 +1694,10 @@ public enum Components {
                 id = try container.decode(
                     Swift.Int64.self,
                     forKey: .id
+                )
+                user_view_type = try container.decodeIfPresent(
+                    Swift.String.self,
+                    forKey: .user_view_type
                 )
                 node_id = try container.decode(
                     Swift.String.self,
@@ -1817,10 +1827,6 @@ public enum Components {
                     Components.Schemas.public_hyphen_user.planPayload.self,
                     forKey: .plan
                 )
-                suspended_at = try container.decodeIfPresent(
-                    Foundation.Date.self,
-                    forKey: .suspended_at
-                )
                 private_gists = try container.decodeIfPresent(
                     Swift.Int.self,
                     forKey: .private_gists
@@ -1844,6 +1850,7 @@ public enum Components {
                 try decoder.ensureNoAdditionalProperties(knownKeys: [
                     "login",
                     "id",
+                    "user_view_type",
                     "node_id",
                     "avatar_url",
                     "gravatar_id",
@@ -1876,7 +1883,6 @@ public enum Components {
                     "created_at",
                     "updated_at",
                     "plan",
-                    "suspended_at",
                     "private_gists",
                     "total_private_repos",
                     "owned_private_repos",
@@ -1903,6 +1909,8 @@ public enum Components {
             public var login: Swift.String
             /// - Remark: Generated from `#/components/schemas/private-user/id`.
             public var id: Swift.Int64
+            /// - Remark: Generated from `#/components/schemas/private-user/user_view_type`.
+            public var user_view_type: Swift.String?
             /// - Remark: Generated from `#/components/schemas/private-user/node_id`.
             public var node_id: Swift.String
             /// - Remark: Generated from `#/components/schemas/private-user/avatar_url`.
@@ -2014,8 +2022,6 @@ public enum Components {
             }
             /// - Remark: Generated from `#/components/schemas/private-user/plan`.
             public var plan: Components.Schemas.private_hyphen_user.planPayload?
-            /// - Remark: Generated from `#/components/schemas/private-user/suspended_at`.
-            public var suspended_at: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/private-user/business_plus`.
             public var business_plus: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/private-user/ldap_dn`.
@@ -2025,6 +2031,7 @@ public enum Components {
             /// - Parameters:
             ///   - login:
             ///   - id:
+            ///   - user_view_type:
             ///   - node_id:
             ///   - avatar_url:
             ///   - gravatar_id:
@@ -2063,12 +2070,12 @@ public enum Components {
             ///   - collaborators:
             ///   - two_factor_authentication:
             ///   - plan:
-            ///   - suspended_at:
             ///   - business_plus:
             ///   - ldap_dn:
             public init(
                 login: Swift.String,
                 id: Swift.Int64,
+                user_view_type: Swift.String? = nil,
                 node_id: Swift.String,
                 avatar_url: Swift.String,
                 gravatar_id: Swift.String? = nil,
@@ -2107,12 +2114,12 @@ public enum Components {
                 collaborators: Swift.Int,
                 two_factor_authentication: Swift.Bool,
                 plan: Components.Schemas.private_hyphen_user.planPayload? = nil,
-                suspended_at: Foundation.Date? = nil,
                 business_plus: Swift.Bool? = nil,
                 ldap_dn: Swift.String? = nil
             ) {
                 self.login = login
                 self.id = id
+                self.user_view_type = user_view_type
                 self.node_id = node_id
                 self.avatar_url = avatar_url
                 self.gravatar_id = gravatar_id
@@ -2151,13 +2158,13 @@ public enum Components {
                 self.collaborators = collaborators
                 self.two_factor_authentication = two_factor_authentication
                 self.plan = plan
-                self.suspended_at = suspended_at
                 self.business_plus = business_plus
                 self.ldap_dn = ldap_dn
             }
             public enum CodingKeys: String, CodingKey {
                 case login
                 case id
+                case user_view_type
                 case node_id
                 case avatar_url
                 case gravatar_id
@@ -2196,7 +2203,6 @@ public enum Components {
                 case collaborators
                 case two_factor_authentication
                 case plan
-                case suspended_at
                 case business_plus
                 case ldap_dn
             }
@@ -3135,35 +3141,37 @@ public enum Operations {
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/GET/responses/200/content/json`.
                     @frozen public enum jsonPayload: Codable, Hashable, Sendable {
-                        /// - Remark: Generated from `#/paths/user/GET/responses/200/content/json/case1`.
-                        case private_hyphen_user(Components.Schemas.private_hyphen_user)
-                        /// - Remark: Generated from `#/paths/user/GET/responses/200/content/json/case2`.
-                        case public_hyphen_user(Components.Schemas.public_hyphen_user)
+                        /// - Remark: Generated from `#/paths/user/GET/responses/200/content/json/private_hyphen_user`.
+                        case _private(Components.Schemas.private_hyphen_user)
+                        /// - Remark: Generated from `#/paths/user/GET/responses/200/content/json/public_hyphen_user`.
+                        case _public(Components.Schemas.public_hyphen_user)
+                        public enum CodingKeys: String, CodingKey {
+                            case user_view_type
+                        }
                         public init(from decoder: any Decoder) throws {
-                            var errors: [any Error] = []
-                            do {
-                                self = .private_hyphen_user(try .init(from: decoder))
-                                return
-                            } catch {
-                                errors.append(error)
-                            }
-                            do {
-                                self = .public_hyphen_user(try .init(from: decoder))
-                                return
-                            } catch {
-                                errors.append(error)
-                            }
-                            throw Swift.DecodingError.failedToDecodeOneOfSchema(
-                                type: Self.self,
-                                codingPath: decoder.codingPath,
-                                errors: errors
+                            let container = try decoder.container(keyedBy: CodingKeys.self)
+                            let discriminator = try container.decode(
+                                Swift.String.self,
+                                forKey: .user_view_type
                             )
+                            switch discriminator {
+                            case "private":
+                                self = ._private(try .init(from: decoder))
+                            case "public":
+                                self = ._public(try .init(from: decoder))
+                            default:
+                                throw Swift.DecodingError.unknownOneOfDiscriminator(
+                                    discriminatorKey: CodingKeys.user_view_type,
+                                    discriminatorValue: discriminator,
+                                    codingPath: decoder.codingPath
+                                )
+                            }
                         }
                         public func encode(to encoder: any Encoder) throws {
                             switch self {
-                            case let .private_hyphen_user(value):
+                            case let ._private(value):
                                 try value.encode(to: encoder)
-                            case let .public_hyphen_user(value):
+                            case let ._public(value):
                                 try value.encode(to: encoder)
                             }
                         }
@@ -10625,35 +10633,37 @@ public enum Operations {
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/{account_id}/GET/responses/200/content/json`.
                     @frozen public enum jsonPayload: Codable, Hashable, Sendable {
-                        /// - Remark: Generated from `#/paths/user/{account_id}/GET/responses/200/content/json/case1`.
-                        case private_hyphen_user(Components.Schemas.private_hyphen_user)
-                        /// - Remark: Generated from `#/paths/user/{account_id}/GET/responses/200/content/json/case2`.
-                        case public_hyphen_user(Components.Schemas.public_hyphen_user)
+                        /// - Remark: Generated from `#/paths/user/{account_id}/GET/responses/200/content/json/private_hyphen_user`.
+                        case _private(Components.Schemas.private_hyphen_user)
+                        /// - Remark: Generated from `#/paths/user/{account_id}/GET/responses/200/content/json/public_hyphen_user`.
+                        case _public(Components.Schemas.public_hyphen_user)
+                        public enum CodingKeys: String, CodingKey {
+                            case user_view_type
+                        }
                         public init(from decoder: any Decoder) throws {
-                            var errors: [any Error] = []
-                            do {
-                                self = .private_hyphen_user(try .init(from: decoder))
-                                return
-                            } catch {
-                                errors.append(error)
-                            }
-                            do {
-                                self = .public_hyphen_user(try .init(from: decoder))
-                                return
-                            } catch {
-                                errors.append(error)
-                            }
-                            throw Swift.DecodingError.failedToDecodeOneOfSchema(
-                                type: Self.self,
-                                codingPath: decoder.codingPath,
-                                errors: errors
+                            let container = try decoder.container(keyedBy: CodingKeys.self)
+                            let discriminator = try container.decode(
+                                Swift.String.self,
+                                forKey: .user_view_type
                             )
+                            switch discriminator {
+                            case "private":
+                                self = ._private(try .init(from: decoder))
+                            case "public":
+                                self = ._public(try .init(from: decoder))
+                            default:
+                                throw Swift.DecodingError.unknownOneOfDiscriminator(
+                                    discriminatorKey: CodingKeys.user_view_type,
+                                    discriminatorValue: discriminator,
+                                    codingPath: decoder.codingPath
+                                )
+                            }
                         }
                         public func encode(to encoder: any Encoder) throws {
                             switch self {
-                            case let .private_hyphen_user(value):
+                            case let ._private(value):
                                 try value.encode(to: encoder)
-                            case let .public_hyphen_user(value):
+                            case let ._public(value):
                                 try value.encode(to: encoder)
                             }
                         }
@@ -11004,35 +11014,37 @@ public enum Operations {
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/users/{username}/GET/responses/200/content/json`.
                     @frozen public enum jsonPayload: Codable, Hashable, Sendable {
-                        /// - Remark: Generated from `#/paths/users/{username}/GET/responses/200/content/json/case1`.
-                        case private_hyphen_user(Components.Schemas.private_hyphen_user)
-                        /// - Remark: Generated from `#/paths/users/{username}/GET/responses/200/content/json/case2`.
-                        case public_hyphen_user(Components.Schemas.public_hyphen_user)
+                        /// - Remark: Generated from `#/paths/users/{username}/GET/responses/200/content/json/private_hyphen_user`.
+                        case _private(Components.Schemas.private_hyphen_user)
+                        /// - Remark: Generated from `#/paths/users/{username}/GET/responses/200/content/json/public_hyphen_user`.
+                        case _public(Components.Schemas.public_hyphen_user)
+                        public enum CodingKeys: String, CodingKey {
+                            case user_view_type
+                        }
                         public init(from decoder: any Decoder) throws {
-                            var errors: [any Error] = []
-                            do {
-                                self = .private_hyphen_user(try .init(from: decoder))
-                                return
-                            } catch {
-                                errors.append(error)
-                            }
-                            do {
-                                self = .public_hyphen_user(try .init(from: decoder))
-                                return
-                            } catch {
-                                errors.append(error)
-                            }
-                            throw Swift.DecodingError.failedToDecodeOneOfSchema(
-                                type: Self.self,
-                                codingPath: decoder.codingPath,
-                                errors: errors
+                            let container = try decoder.container(keyedBy: CodingKeys.self)
+                            let discriminator = try container.decode(
+                                Swift.String.self,
+                                forKey: .user_view_type
                             )
+                            switch discriminator {
+                            case "private":
+                                self = ._private(try .init(from: decoder))
+                            case "public":
+                                self = ._public(try .init(from: decoder))
+                            default:
+                                throw Swift.DecodingError.unknownOneOfDiscriminator(
+                                    discriminatorKey: CodingKeys.user_view_type,
+                                    discriminatorValue: discriminator,
+                                    codingPath: decoder.codingPath
+                                )
+                            }
                         }
                         public func encode(to encoder: any Encoder) throws {
                             switch self {
-                            case let .private_hyphen_user(value):
+                            case let ._private(value):
                                 try value.encode(to: encoder)
-                            case let .public_hyphen_user(value):
+                            case let ._public(value):
                                 try value.encode(to: encoder)
                             }
                         }

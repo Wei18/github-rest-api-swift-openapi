@@ -165,7 +165,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// If your comment applies to more than one line in the pull request diff, you should use the parameters `line`, `side`, and optionally `start_line` and `start_side` in your request.
     ///
-    /// The `position` parameter is deprecated. If you use `position`, the `line`, `side`, `start_line`, and `start_side` parameters are not required.
+    /// The `position` parameter is closing down. If you use `position`, the `line`, `side`, `start_line`, and `start_side` parameters are not required.
     ///
     /// This endpoint triggers [notifications](https://docs.github.com/github/managing-subscriptions-and-notifications-on-github/about-notifications). Creating content too quickly using this endpoint may result in secondary rate limiting. For more information, see "[Rate limits for the API](https://docs.github.com/rest/using-the-rest-api/rate-limits-for-the-rest-api#about-secondary-rate-limits)"
     /// and "[Best practices for using the REST API](https://docs.github.com/rest/guides/best-practices-for-using-the-rest-api)."
@@ -641,7 +641,7 @@ extension APIProtocol {
     ///
     /// If your comment applies to more than one line in the pull request diff, you should use the parameters `line`, `side`, and optionally `start_line` and `start_side` in your request.
     ///
-    /// The `position` parameter is deprecated. If you use `position`, the `line`, `side`, `start_line`, and `start_side` parameters are not required.
+    /// The `position` parameter is closing down. If you use `position`, the `line`, `side`, `start_line`, and `start_side` parameters are not required.
     ///
     /// This endpoint triggers [notifications](https://docs.github.com/github/managing-subscriptions-and-notifications-on-github/about-notifications). Creating content too quickly using this endpoint may result in secondary rate limiting. For more information, see "[Rate limits for the API](https://docs.github.com/rest/using-the-rest-api/rate-limits-for-the-rest-api#about-secondary-rate-limits)"
     /// and "[Best practices for using the REST API](https://docs.github.com/rest/guides/best-practices-for-using-the-rest-api)."
@@ -1103,6 +1103,8 @@ public enum Components {
             public var site_admin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/simple-user/starred_at`.
             public var starred_at: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/simple-user/user_view_type`.
+            public var user_view_type: Swift.String?
             /// Creates a new `simple_hyphen_user`.
             ///
             /// - Parameters:
@@ -1127,6 +1129,7 @@ public enum Components {
             ///   - _type:
             ///   - site_admin:
             ///   - starred_at:
+            ///   - user_view_type:
             public init(
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
@@ -1148,7 +1151,8 @@ public enum Components {
                 received_events_url: Swift.String,
                 _type: Swift.String,
                 site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil
+                starred_at: Swift.String? = nil,
+                user_view_type: Swift.String? = nil
             ) {
                 self.name = name
                 self.email = email
@@ -1171,6 +1175,7 @@ public enum Components {
                 self._type = _type
                 self.site_admin = site_admin
                 self.starred_at = starred_at
+                self.user_view_type = user_view_type
             }
             public enum CodingKeys: String, CodingKey {
                 case name
@@ -1194,6 +1199,7 @@ public enum Components {
                 case _type = "type"
                 case site_admin
                 case starred_at
+                case user_view_type
             }
         }
         /// Basic Error
@@ -1310,6 +1316,8 @@ public enum Components {
             public var site_admin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/starred_at`.
             public var starred_at: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/user_view_type`.
+            public var user_view_type: Swift.String?
             /// Creates a new `nullable_hyphen_simple_hyphen_user`.
             ///
             /// - Parameters:
@@ -1334,6 +1342,7 @@ public enum Components {
             ///   - _type:
             ///   - site_admin:
             ///   - starred_at:
+            ///   - user_view_type:
             public init(
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
@@ -1355,7 +1364,8 @@ public enum Components {
                 received_events_url: Swift.String,
                 _type: Swift.String,
                 site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil
+                starred_at: Swift.String? = nil,
+                user_view_type: Swift.String? = nil
             ) {
                 self.name = name
                 self.email = email
@@ -1378,6 +1388,7 @@ public enum Components {
                 self._type = _type
                 self.site_admin = site_admin
                 self.starred_at = starred_at
+                self.user_view_type = user_view_type
             }
             public enum CodingKeys: String, CodingKey {
                 case name
@@ -1401,6 +1412,7 @@ public enum Components {
                 case _type = "type"
                 case site_admin
                 case starred_at
+                case user_view_type
             }
         }
         /// Validation Error
@@ -1825,7 +1837,7 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/repository/allow_update_branch`.
             public var allow_update_branch: Swift.Bool?
-            /// Whether a squash merge commit can use the pull request title as default. **This property has been deprecated. Please use `squash_merge_commit_title` instead.
+            /// Whether a squash merge commit can use the pull request title as default. **This property is closing down. Please use `squash_merge_commit_title` instead.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/use_squash_pr_title_as_default`.
             @available(*, deprecated)
@@ -2013,7 +2025,7 @@ public enum Components {
             ///   - allow_auto_merge: Whether to allow Auto-merge to be used on pull requests.
             ///   - delete_branch_on_merge: Whether to delete head branches when pull requests are merged
             ///   - allow_update_branch: Whether or not a pull request head branch that is behind its base branch can always be updated even if it is not required to be up to date before merging.
-            ///   - use_squash_pr_title_as_default: Whether a squash merge commit can use the pull request title as default. **This property has been deprecated. Please use `squash_merge_commit_title` instead.
+            ///   - use_squash_pr_title_as_default: Whether a squash merge commit can use the pull request title as default. **This property is closing down. Please use `squash_merge_commit_title` instead.
             ///   - squash_merge_commit_title: The default value for a squash merge commit title:
             ///   - squash_merge_commit_message: The default value for a squash merge commit message:
             ///   - merge_commit_title: The default value for a merge commit title.
@@ -3848,11 +3860,11 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/path`.
             public var path: Swift.String
-            /// The line index in the diff to which the comment applies. This field is deprecated; use `line` instead.
+            /// The line index in the diff to which the comment applies. This field is closing down; use `line` instead.
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/position`.
             public var position: Swift.Int?
-            /// The index of the original line in the diff to which the comment applies. This field is deprecated; use `original_line` instead.
+            /// The index of the original line in the diff to which the comment applies. This field is closing down; use `original_line` instead.
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/original_position`.
             public var original_position: Swift.Int?
@@ -4028,8 +4040,8 @@ public enum Components {
             ///   - node_id: The node ID of the pull request review comment.
             ///   - diff_hunk: The diff of the line that the comment refers to.
             ///   - path: The relative path of the file to which the comment applies.
-            ///   - position: The line index in the diff to which the comment applies. This field is deprecated; use `line` instead.
-            ///   - original_position: The index of the original line in the diff to which the comment applies. This field is deprecated; use `original_line` instead.
+            ///   - position: The line index in the diff to which the comment applies. This field is closing down; use `line` instead.
+            ///   - original_position: The index of the original line in the diff to which the comment applies. This field is closing down; use `original_line` instead.
             ///   - commit_id: The SHA of the commit to which the comment applies.
             ///   - original_commit_id: The SHA of the original commit to which the comment applies.
             ///   - in_reply_to_id: The comment ID to reply to.
@@ -4390,6 +4402,8 @@ public enum Components {
                         public var _type: Swift.String
                         /// - Remark: Generated from `#/components/schemas/pull-request/head/repo/owner/url`.
                         public var url: Swift.String
+                        /// - Remark: Generated from `#/components/schemas/pull-request/head/repo/owner/user_view_type`.
+                        public var user_view_type: Swift.String?
                         /// Creates a new `ownerPayload`.
                         ///
                         /// - Parameters:
@@ -4411,6 +4425,7 @@ public enum Components {
                         ///   - subscriptions_url:
                         ///   - _type:
                         ///   - url:
+                        ///   - user_view_type:
                         public init(
                             avatar_url: Swift.String,
                             events_url: Swift.String,
@@ -4429,7 +4444,8 @@ public enum Components {
                             starred_url: Swift.String,
                             subscriptions_url: Swift.String,
                             _type: Swift.String,
-                            url: Swift.String
+                            url: Swift.String,
+                            user_view_type: Swift.String? = nil
                         ) {
                             self.avatar_url = avatar_url
                             self.events_url = events_url
@@ -4449,6 +4465,7 @@ public enum Components {
                             self.subscriptions_url = subscriptions_url
                             self._type = _type
                             self.url = url
+                            self.user_view_type = user_view_type
                         }
                         public enum CodingKeys: String, CodingKey {
                             case avatar_url
@@ -4469,6 +4486,7 @@ public enum Components {
                             case subscriptions_url
                             case _type = "type"
                             case url
+                            case user_view_type
                         }
                     }
                     /// - Remark: Generated from `#/components/schemas/pull-request/head/repo/owner`.
@@ -5048,6 +5066,8 @@ public enum Components {
                     public var _type: Swift.String
                     /// - Remark: Generated from `#/components/schemas/pull-request/head/user/url`.
                     public var url: Swift.String
+                    /// - Remark: Generated from `#/components/schemas/pull-request/head/user/user_view_type`.
+                    public var user_view_type: Swift.String?
                     /// Creates a new `userPayload`.
                     ///
                     /// - Parameters:
@@ -5069,6 +5089,7 @@ public enum Components {
                     ///   - subscriptions_url:
                     ///   - _type:
                     ///   - url:
+                    ///   - user_view_type:
                     public init(
                         avatar_url: Swift.String,
                         events_url: Swift.String,
@@ -5087,7 +5108,8 @@ public enum Components {
                         starred_url: Swift.String,
                         subscriptions_url: Swift.String,
                         _type: Swift.String,
-                        url: Swift.String
+                        url: Swift.String,
+                        user_view_type: Swift.String? = nil
                     ) {
                         self.avatar_url = avatar_url
                         self.events_url = events_url
@@ -5107,6 +5129,7 @@ public enum Components {
                         self.subscriptions_url = subscriptions_url
                         self._type = _type
                         self.url = url
+                        self.user_view_type = user_view_type
                     }
                     public enum CodingKeys: String, CodingKey {
                         case avatar_url
@@ -5127,6 +5150,7 @@ public enum Components {
                         case subscriptions_url
                         case _type = "type"
                         case url
+                        case user_view_type
                     }
                 }
                 /// - Remark: Generated from `#/components/schemas/pull-request/head/user`.
@@ -5278,6 +5302,8 @@ public enum Components {
                         public var _type: Swift.String
                         /// - Remark: Generated from `#/components/schemas/pull-request/base/repo/owner/url`.
                         public var url: Swift.String
+                        /// - Remark: Generated from `#/components/schemas/pull-request/base/repo/owner/user_view_type`.
+                        public var user_view_type: Swift.String?
                         /// Creates a new `ownerPayload`.
                         ///
                         /// - Parameters:
@@ -5299,6 +5325,7 @@ public enum Components {
                         ///   - subscriptions_url:
                         ///   - _type:
                         ///   - url:
+                        ///   - user_view_type:
                         public init(
                             avatar_url: Swift.String,
                             events_url: Swift.String,
@@ -5317,7 +5344,8 @@ public enum Components {
                             starred_url: Swift.String,
                             subscriptions_url: Swift.String,
                             _type: Swift.String,
-                            url: Swift.String
+                            url: Swift.String,
+                            user_view_type: Swift.String? = nil
                         ) {
                             self.avatar_url = avatar_url
                             self.events_url = events_url
@@ -5337,6 +5365,7 @@ public enum Components {
                             self.subscriptions_url = subscriptions_url
                             self._type = _type
                             self.url = url
+                            self.user_view_type = user_view_type
                         }
                         public enum CodingKeys: String, CodingKey {
                             case avatar_url
@@ -5357,6 +5386,7 @@ public enum Components {
                             case subscriptions_url
                             case _type = "type"
                             case url
+                            case user_view_type
                         }
                     }
                     /// - Remark: Generated from `#/components/schemas/pull-request/base/repo/owner`.
@@ -5893,6 +5923,8 @@ public enum Components {
                     public var _type: Swift.String
                     /// - Remark: Generated from `#/components/schemas/pull-request/base/user/url`.
                     public var url: Swift.String
+                    /// - Remark: Generated from `#/components/schemas/pull-request/base/user/user_view_type`.
+                    public var user_view_type: Swift.String?
                     /// Creates a new `userPayload`.
                     ///
                     /// - Parameters:
@@ -5914,6 +5946,7 @@ public enum Components {
                     ///   - subscriptions_url:
                     ///   - _type:
                     ///   - url:
+                    ///   - user_view_type:
                     public init(
                         avatar_url: Swift.String,
                         events_url: Swift.String,
@@ -5932,7 +5965,8 @@ public enum Components {
                         starred_url: Swift.String,
                         subscriptions_url: Swift.String,
                         _type: Swift.String,
-                        url: Swift.String
+                        url: Swift.String,
+                        user_view_type: Swift.String? = nil
                     ) {
                         self.avatar_url = avatar_url
                         self.events_url = events_url
@@ -5952,6 +5986,7 @@ public enum Components {
                         self.subscriptions_url = subscriptions_url
                         self._type = _type
                         self.url = url
+                        self.user_view_type = user_view_type
                     }
                     public enum CodingKeys: String, CodingKey {
                         case avatar_url
@@ -5972,6 +6007,7 @@ public enum Components {
                         case subscriptions_url
                         case _type = "type"
                         case url
+                        case user_view_type
                     }
                 }
                 /// - Remark: Generated from `#/components/schemas/pull-request/base/user`.
@@ -9156,7 +9192,7 @@ public enum Operations {
     ///
     /// If your comment applies to more than one line in the pull request diff, you should use the parameters `line`, `side`, and optionally `start_line` and `start_side` in your request.
     ///
-    /// The `position` parameter is deprecated. If you use `position`, the `line`, `side`, `start_line`, and `start_side` parameters are not required.
+    /// The `position` parameter is closing down. If you use `position`, the `line`, `side`, `start_line`, and `start_side` parameters are not required.
     ///
     /// This endpoint triggers [notifications](https://docs.github.com/github/managing-subscriptions-and-notifications-on-github/about-notifications). Creating content too quickly using this endpoint may result in secondary rate limiting. For more information, see "[Rate limits for the API](https://docs.github.com/rest/using-the-rest-api/rate-limits-for-the-rest-api#about-secondary-rate-limits)"
     /// and "[Best practices for using the REST API](https://docs.github.com/rest/guides/best-practices-for-using-the-rest-api)."
@@ -9232,7 +9268,7 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/POST/requestBody/json/path`.
                     public var path: Swift.String
-                    /// **This parameter is deprecated. Use `line` instead**. The position in the diff where you want to add a review comment. Note this value is not the same as the line number in the file. The position value equals the number of lines down from the first "@@" hunk header in the file you want to add a comment. The line just below the "@@" line is position 1, the next line is position 2, and so on. The position in the diff continues to increase through lines of whitespace and additional hunks until the beginning of a new file.
+                    /// **This parameter is closing down. Use `line` instead**. The position in the diff where you want to add a review comment. Note this value is not the same as the line number in the file. The position value equals the number of lines down from the first "@@" hunk header in the file you want to add a comment. The line just below the "@@" line is position 1, the next line is position 2, and so on. The position in the diff continues to increase through lines of whitespace and additional hunks until the beginning of a new file.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/POST/requestBody/json/position`.
                     @available(*, deprecated)
@@ -9289,7 +9325,7 @@ public enum Operations {
                     ///   - body: The text of the review comment.
                     ///   - commit_id: The SHA of the commit needing a comment. Not using the latest commit SHA may render your comment outdated if a subsequent commit modifies the line you specify as the `position`.
                     ///   - path: The relative path to the file that necessitates a comment.
-                    ///   - position: **This parameter is deprecated. Use `line` instead**. The position in the diff where you want to add a review comment. Note this value is not the same as the line number in the file. The position value equals the number of lines down from the first "@@" hunk header in the file you want to add a comment. The line just below the "@@" line is position 1, the next line is position 2, and so on. The position in the diff continues to increase through lines of whitespace and additional hunks until the beginning of a new file.
+                    ///   - position: **This parameter is closing down. Use `line` instead**. The position in the diff where you want to add a review comment. Note this value is not the same as the line number in the file. The position value equals the number of lines down from the first "@@" hunk header in the file you want to add a comment. The line just below the "@@" line is position 1, the next line is position 2, and so on. The position in the diff continues to increase through lines of whitespace and additional hunks until the beginning of a new file.
                     ///   - side: In a split diff view, the side of the diff that the pull request's changes appear on. Can be `LEFT` or `RIGHT`. Use `LEFT` for deletions that appear in red. Use `RIGHT` for additions that appear in green or unchanged lines that appear in white and are shown for context. For a multi-line comment, side represents whether the last line of the comment range is a deletion or addition. For more information, see "[Diff view options](https://docs.github.com/articles/about-comparing-branches-in-pull-requests#diff-view-options)" in the GitHub Help documentation.
                     ///   - line: **Required unless using `subject_type:file`**. The line of the blob in the pull request diff that the comment applies to. For a multi-line comment, the last line of the range that your comment applies to.
                     ///   - start_line: **Required when using multi-line comments unless using `in_reply_to`**. The `start_line` is the first line in the pull request diff that your multi-line comment applies to. To learn more about multi-line comments, see "[Commenting on a pull request](https://docs.github.com/articles/commenting-on-a-pull-request#adding-line-comments-to-a-pull-request)" in the GitHub Help documentation.

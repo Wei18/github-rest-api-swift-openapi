@@ -2403,7 +2403,7 @@ public struct Client: APIProtocol {
     /// Get a team (Legacy)
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the [Get a team by name](https://docs.github.com/rest/teams/teams#get-a-team-by-name) endpoint.
+    /// > **Endpoint closing down notice:** This endpoint route is closing down and will be removed from the Teams API. We recommend migrating your existing code to use the [Get a team by name](https://docs.github.com/rest/teams/teams#get-a-team-by-name) endpoint.
     ///
     /// - Remark: HTTP `GET /teams/{team_id}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/get(teams/get-legacy)`.
@@ -2491,7 +2491,7 @@ public struct Client: APIProtocol {
     /// Update a team (Legacy)
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [Update a team](https://docs.github.com/rest/teams/teams#update-a-team) endpoint.
+    /// > **Endpoint closing down notice:** This endpoint route is closing down and will be removed from the Teams API. We recommend migrating your existing code to use the new [Update a team](https://docs.github.com/rest/teams/teams#update-a-team) endpoint.
     ///
     /// To edit a team, the authenticated user must either be an organization owner or a team maintainer.
     ///
@@ -2659,7 +2659,7 @@ public struct Client: APIProtocol {
     /// Delete a team (Legacy)
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [Delete a team](https://docs.github.com/rest/teams/teams#delete-a-team) endpoint.
+    /// > **Endpoint closing down notice:** This endpoint route is closing down and will be removed from the Teams API. We recommend migrating your existing code to use the new [Delete a team](https://docs.github.com/rest/teams/teams#delete-a-team) endpoint.
     ///
     /// To delete a team, the authenticated user must be an organization owner or team maintainer.
     ///
@@ -2753,7 +2753,7 @@ public struct Client: APIProtocol {
     /// List discussions (Legacy)
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [`List discussions`](https://docs.github.com/rest/teams/discussions#list-discussions) endpoint.
+    /// > **Endpoint closing down notice:** This endpoint route is closing down and will be removed from the Teams API. We recommend migrating your existing code to use the new [`List discussions`](https://docs.github.com/rest/teams/discussions#list-discussions) endpoint.
     ///
     /// List all discussions on a team's page.
     ///
@@ -2852,7 +2852,7 @@ public struct Client: APIProtocol {
     /// Create a discussion (Legacy)
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [`Create a discussion`](https://docs.github.com/rest/teams/discussions#create-a-discussion) endpoint.
+    /// > **Endpoint closing down notice:** This endpoint route is closing down and will be removed from the Teams API. We recommend migrating your existing code to use the new [`Create a discussion`](https://docs.github.com/rest/teams/discussions#create-a-discussion) endpoint.
     ///
     /// Creates a new discussion post on a team's page.
     ///
@@ -2933,7 +2933,7 @@ public struct Client: APIProtocol {
     /// Get a discussion (Legacy)
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [Get a discussion](https://docs.github.com/rest/teams/discussions#get-a-discussion) endpoint.
+    /// > **Endpoint closing down notice:** This endpoint route is closing down and will be removed from the Teams API. We recommend migrating your existing code to use the new [Get a discussion](https://docs.github.com/rest/teams/discussions#get-a-discussion) endpoint.
     ///
     /// Get a specific discussion on a team's page.
     ///
@@ -3004,7 +3004,7 @@ public struct Client: APIProtocol {
     /// Update a discussion (Legacy)
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [Update a discussion](https://docs.github.com/rest/teams/discussions#update-a-discussion) endpoint.
+    /// > **Endpoint closing down notice:** This endpoint route is closing down and will be removed from the Teams API. We recommend migrating your existing code to use the new [Update a discussion](https://docs.github.com/rest/teams/discussions#update-a-discussion) endpoint.
     ///
     /// Edits the title and body text of a discussion post. Only the parameters you provide are updated.
     ///
@@ -3086,7 +3086,7 @@ public struct Client: APIProtocol {
     /// Delete a discussion (Legacy)
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [`Delete a discussion`](https://docs.github.com/rest/teams/discussions#delete-a-discussion) endpoint.
+    /// > **Endpoint closing down notice:** This endpoint route is closing down and will be removed from the Teams API. We recommend migrating your existing code to use the new [`Delete a discussion`](https://docs.github.com/rest/teams/discussions#delete-a-discussion) endpoint.
     ///
     /// Delete a discussion from a team's page.
     ///
@@ -3133,7 +3133,7 @@ public struct Client: APIProtocol {
     /// List discussion comments (Legacy)
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [List discussion comments](https://docs.github.com/rest/teams/discussion-comments#list-discussion-comments) endpoint.
+    /// > **Endpoint closing down notice:** This endpoint route is closing down and will be removed from the Teams API. We recommend migrating your existing code to use the new [List discussion comments](https://docs.github.com/rest/teams/discussion-comments#list-discussion-comments) endpoint.
     ///
     /// List all comments on a team discussion.
     ///
@@ -3233,7 +3233,7 @@ public struct Client: APIProtocol {
     /// Create a discussion comment (Legacy)
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [Create a discussion comment](https://docs.github.com/rest/teams/discussion-comments#create-a-discussion-comment) endpoint.
+    /// > **Endpoint closing down notice:** This endpoint route is closing down and will be removed from the Teams API. We recommend migrating your existing code to use the new [Create a discussion comment](https://docs.github.com/rest/teams/discussion-comments#create-a-discussion-comment) endpoint.
     ///
     /// Creates a new comment on a team discussion.
     ///
@@ -3315,7 +3315,7 @@ public struct Client: APIProtocol {
     /// Get a discussion comment (Legacy)
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [Get a discussion comment](https://docs.github.com/rest/teams/discussion-comments#get-a-discussion-comment) endpoint.
+    /// > **Endpoint closing down notice:** This endpoint route is closing down and will be removed from the Teams API. We recommend migrating your existing code to use the new [Get a discussion comment](https://docs.github.com/rest/teams/discussion-comments#get-a-discussion-comment) endpoint.
     ///
     /// Get a specific comment on a team discussion.
     ///
@@ -3387,7 +3387,7 @@ public struct Client: APIProtocol {
     /// Update a discussion comment (Legacy)
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [Update a discussion comment](https://docs.github.com/rest/teams/discussion-comments#update-a-discussion-comment) endpoint.
+    /// > **Endpoint closing down notice:** This endpoint route is closing down and will be removed from the Teams API. We recommend migrating your existing code to use the new [Update a discussion comment](https://docs.github.com/rest/teams/discussion-comments#update-a-discussion-comment) endpoint.
     ///
     /// Edits the body text of a discussion comment.
     ///
@@ -3468,7 +3468,7 @@ public struct Client: APIProtocol {
     /// Delete a discussion comment (Legacy)
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [Delete a discussion comment](https://docs.github.com/rest/teams/discussion-comments#delete-a-discussion-comment) endpoint.
+    /// > **Endpoint closing down notice:** This endpoint route is closing down and will be removed from the Teams API. We recommend migrating your existing code to use the new [Delete a discussion comment](https://docs.github.com/rest/teams/discussion-comments#delete-a-discussion-comment) endpoint.
     ///
     /// Deletes a comment on a team discussion.
     ///
@@ -3516,7 +3516,7 @@ public struct Client: APIProtocol {
     /// List pending team invitations (Legacy)
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [`List pending team invitations`](https://docs.github.com/rest/teams/members#list-pending-team-invitations) endpoint.
+    /// > **Endpoint closing down notice:** This endpoint route is closing down and will be removed from the Teams API. We recommend migrating your existing code to use the new [`List pending team invitations`](https://docs.github.com/rest/teams/members#list-pending-team-invitations) endpoint.
     ///
     /// The return hash contains a `role` field which refers to the Organization Invitation role and will be one of the following values: `direct_member`, `admin`, `billing_manager`, `hiring_manager`, or `reinstate`. If the invitee is not a GitHub member, the `login` field in the return hash will be `null`.
     ///
@@ -3606,7 +3606,7 @@ public struct Client: APIProtocol {
     /// List team members (Legacy)
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [`List team members`](https://docs.github.com/rest/teams/members#list-team-members) endpoint.
+    /// > **Endpoint closing down notice:** This endpoint route is closing down and will be removed from the Teams API. We recommend migrating your existing code to use the new [`List team members`](https://docs.github.com/rest/teams/members#list-team-members) endpoint.
     ///
     /// Team members will include the members of child teams.
     ///
@@ -3724,7 +3724,7 @@ public struct Client: APIProtocol {
     }
     /// Get team member (Legacy)
     ///
-    /// The "Get team member" endpoint (described below) is deprecated.
+    /// The "Get team member" endpoint (described below) is closing down.
     ///
     /// We recommend using the [Get team membership for a user](https://docs.github.com/rest/teams/members#get-team-membership-for-a-user) endpoint instead. It allows you to get both active and pending memberships.
     ///
@@ -3772,7 +3772,7 @@ public struct Client: APIProtocol {
     }
     /// Add team member (Legacy)
     ///
-    /// The "Add team member" endpoint (described below) is deprecated.
+    /// The "Add team member" endpoint (described below) is closing down.
     ///
     /// We recommend using the [Add or update team membership for a user](https://docs.github.com/rest/teams/members#add-or-update-team-membership-for-a-user) endpoint instead. It allows you to invite new organization members to your teams.
     ///
@@ -3855,7 +3855,7 @@ public struct Client: APIProtocol {
     }
     /// Remove team member (Legacy)
     ///
-    /// The "Remove team member" endpoint (described below) is deprecated.
+    /// The "Remove team member" endpoint (described below) is closing down.
     ///
     /// We recommend using the [Remove team membership for a user](https://docs.github.com/rest/teams/members#remove-team-membership-for-a-user) endpoint instead. It allows you to remove both active and pending memberships.
     ///
@@ -3909,7 +3909,7 @@ public struct Client: APIProtocol {
     /// Get team membership for a user (Legacy)
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [Get team membership for a user](https://docs.github.com/rest/teams/members#get-team-membership-for-a-user) endpoint.
+    /// > **Endpoint closing down notice:** This endpoint route is closing down and will be removed from the Teams API. We recommend migrating your existing code to use the new [Get team membership for a user](https://docs.github.com/rest/teams/members#get-team-membership-for-a-user) endpoint.
     ///
     /// Team members will include the members of child teams.
     ///
@@ -4007,7 +4007,7 @@ public struct Client: APIProtocol {
     /// Add or update team membership for a user (Legacy)
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [Add or update team membership for a user](https://docs.github.com/rest/teams/members#add-or-update-team-membership-for-a-user) endpoint.
+    /// > **Endpoint closing down notice:** This endpoint route is closing down and will be removed from the Teams API. We recommend migrating your existing code to use the new [Add or update team membership for a user](https://docs.github.com/rest/teams/members#add-or-update-team-membership-for-a-user) endpoint.
     ///
     /// Team synchronization is available for organizations using GitHub Enterprise Cloud. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
     ///
@@ -4122,7 +4122,7 @@ public struct Client: APIProtocol {
     /// Remove team membership for a user (Legacy)
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [Remove team membership for a user](https://docs.github.com/rest/teams/members#remove-team-membership-for-a-user) endpoint.
+    /// > **Endpoint closing down notice:** This endpoint route is closing down and will be removed from the Teams API. We recommend migrating your existing code to use the new [Remove team membership for a user](https://docs.github.com/rest/teams/members#remove-team-membership-for-a-user) endpoint.
     ///
     /// Team synchronization is available for organizations using GitHub Enterprise Cloud. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
     ///
@@ -4174,7 +4174,7 @@ public struct Client: APIProtocol {
     /// List team projects (Legacy)
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [`List team projects`](https://docs.github.com/rest/teams/teams#list-team-projects) endpoint.
+    /// > **Endpoint closing down notice:** This endpoint route is closing down and will be removed from the Teams API. We recommend migrating your existing code to use the new [`List team projects`](https://docs.github.com/rest/teams/teams#list-team-projects) endpoint.
     ///
     /// Lists the organization projects for a team.
     ///
@@ -4286,7 +4286,7 @@ public struct Client: APIProtocol {
     /// Check team permissions for a project (Legacy)
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [Check team permissions for a project](https://docs.github.com/rest/teams/teams#check-team-permissions-for-a-project) endpoint.
+    /// > **Endpoint closing down notice:** This endpoint route is closing down and will be removed from the Teams API. We recommend migrating your existing code to use the new [Check team permissions for a project](https://docs.github.com/rest/teams/teams#check-team-permissions-for-a-project) endpoint.
     ///
     /// Checks whether a team has `read`, `write`, or `admin` permissions for an organization project. The response includes projects inherited from a parent team.
     ///
@@ -4357,7 +4357,7 @@ public struct Client: APIProtocol {
     /// Add or update team project permissions (Legacy)
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [Add or update team project permissions](https://docs.github.com/rest/teams/teams#add-or-update-team-project-permissions) endpoint.
+    /// > **Endpoint closing down notice:** This endpoint route is closing down and will be removed from the Teams API. We recommend migrating your existing code to use the new [Add or update team project permissions](https://docs.github.com/rest/teams/teams#add-or-update-team-project-permissions) endpoint.
     ///
     /// Adds an organization project to a team. To add a project to a team or update the team's permission on a project, the authenticated user must have `admin` permissions for the project. The project and team must be part of the same organization.
     ///
@@ -4483,7 +4483,7 @@ public struct Client: APIProtocol {
     /// Remove a project from a team (Legacy)
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [Remove a project from a team](https://docs.github.com/rest/teams/teams#remove-a-project-from-a-team) endpoint.
+    /// > **Endpoint closing down notice:** This endpoint route is closing down and will be removed from the Teams API. We recommend migrating your existing code to use the new [Remove a project from a team](https://docs.github.com/rest/teams/teams#remove-a-project-from-a-team) endpoint.
     ///
     /// Removes an organization project from a team. An organization owner or a team maintainer can remove any project from the team. To remove a project from a team as an organization member, the authenticated user must have `read` access to both the team and project, or `admin` access to the team or project. **Note:** This endpoint removes the project from the team, but does not delete it.
     ///
@@ -4576,7 +4576,7 @@ public struct Client: APIProtocol {
     /// List team repositories (Legacy)
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [List team repositories](https://docs.github.com/rest/teams/teams#list-team-repositories) endpoint.
+    /// > **Endpoint closing down notice:** This endpoint route is closing down and will be removed from the Teams API. We recommend migrating your existing code to use the new [List team repositories](https://docs.github.com/rest/teams/teams#list-team-repositories) endpoint.
     ///
     /// - Remark: HTTP `GET /teams/{team_id}/repos`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/repos/get(teams/list-repos-legacy)`.
@@ -4686,7 +4686,7 @@ public struct Client: APIProtocol {
     /// Check team permissions for a repository (Legacy)
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [Check team permissions for a repository](https://docs.github.com/rest/teams/teams#check-team-permissions-for-a-repository) endpoint.
+    /// > **Endpoint closing down notice:** This endpoint route is closing down and will be removed from the Teams API. We recommend migrating your existing code to use the new [Check team permissions for a repository](https://docs.github.com/rest/teams/teams#check-team-permissions-for-a-repository) endpoint.
     ///
     /// > [!NOTE]
     /// > Repositories inherited through a parent team will also be checked.
@@ -4763,7 +4763,7 @@ public struct Client: APIProtocol {
     /// Add or update team repository permissions (Legacy)
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new "[Add or update team repository permissions](https://docs.github.com/rest/teams/teams#add-or-update-team-repository-permissions)" endpoint.
+    /// > **Endpoint closing down notice:** This endpoint route is closing down and will be removed from the Teams API. We recommend migrating your existing code to use the new "[Add or update team repository permissions](https://docs.github.com/rest/teams/teams#add-or-update-team-repository-permissions)" endpoint.
     ///
     /// To add a repository to a team or update the team's permission on a repository, the authenticated user must have admin access to the repository, and must be able to see the team. The repository must be owned by the organization, or a direct fork of a repository owned by the organization. You will get a `422 Unprocessable Entity` status if you attempt to add a repository to a team that is not owned by the organization.
     ///
@@ -4870,7 +4870,7 @@ public struct Client: APIProtocol {
     /// Remove a repository from a team (Legacy)
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [Remove a repository from a team](https://docs.github.com/rest/teams/teams#remove-a-repository-from-a-team) endpoint.
+    /// > **Endpoint closing down notice:** This endpoint route is closing down and will be removed from the Teams API. We recommend migrating your existing code to use the new [Remove a repository from a team](https://docs.github.com/rest/teams/teams#remove-a-repository-from-a-team) endpoint.
     ///
     /// If the authenticated user is an organization owner or a team maintainer, they can remove any repositories from the team. To remove a repository from a team as an organization member, the authenticated user must have admin access to the repository and must be able to see the team. NOTE: This does not delete the repository, it just removes it from the team.
     ///
@@ -4916,7 +4916,7 @@ public struct Client: APIProtocol {
     /// List child teams (Legacy)
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [`List child teams`](https://docs.github.com/rest/teams/teams#list-child-teams) endpoint.
+    /// > **Endpoint closing down notice:** This endpoint route is closing down and will be removed from the Teams API. We recommend migrating your existing code to use the new [`List child teams`](https://docs.github.com/rest/teams/teams#list-child-teams) endpoint.
     ///
     /// - Remark: HTTP `GET /teams/{team_id}/teams`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/teams/get(teams/list-child-legacy)`.

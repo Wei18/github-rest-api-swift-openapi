@@ -75,7 +75,7 @@ public protocol APIProtocol: Sendable {
     /// and `0` is returned in this field.
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** The `tool_name` field is deprecated and will, in future, not be included in the response for this endpoint. The example response reflects this change. The tool name can now be found inside the `tool` field.
+    /// > **Closing down notice:** The `tool_name` field is closing down and will, in future, not be included in the response for this endpoint. The example response reflects this change. The tool name can now be found inside the `tool` field.
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
     ///
@@ -413,7 +413,7 @@ extension APIProtocol {
     /// and `0` is returned in this field.
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** The `tool_name` field is deprecated and will, in future, not be included in the response for this endpoint. The example response reflects this change. The tool name can now be found inside the `tool` field.
+    /// > **Closing down notice:** The `tool_name` field is closing down and will, in future, not be included in the response for this endpoint. The example response reflects this change. The tool name can now be found inside the `tool` field.
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
     ///
@@ -803,6 +803,8 @@ public enum Components {
             public var site_admin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/simple-user/starred_at`.
             public var starred_at: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/simple-user/user_view_type`.
+            public var user_view_type: Swift.String?
             /// Creates a new `simple_hyphen_user`.
             ///
             /// - Parameters:
@@ -827,6 +829,7 @@ public enum Components {
             ///   - _type:
             ///   - site_admin:
             ///   - starred_at:
+            ///   - user_view_type:
             public init(
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
@@ -848,7 +851,8 @@ public enum Components {
                 received_events_url: Swift.String,
                 _type: Swift.String,
                 site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil
+                starred_at: Swift.String? = nil,
+                user_view_type: Swift.String? = nil
             ) {
                 self.name = name
                 self.email = email
@@ -871,6 +875,7 @@ public enum Components {
                 self._type = _type
                 self.site_admin = site_admin
                 self.starred_at = starred_at
+                self.user_view_type = user_view_type
             }
             public enum CodingKeys: String, CodingKey {
                 case name
@@ -894,6 +899,7 @@ public enum Components {
                 case _type = "type"
                 case site_admin
                 case starred_at
+                case user_view_type
             }
         }
         /// Basic Error
@@ -979,6 +985,8 @@ public enum Components {
             public var site_admin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/starred_at`.
             public var starred_at: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/user_view_type`.
+            public var user_view_type: Swift.String?
             /// Creates a new `nullable_hyphen_simple_hyphen_user`.
             ///
             /// - Parameters:
@@ -1003,6 +1011,7 @@ public enum Components {
             ///   - _type:
             ///   - site_admin:
             ///   - starred_at:
+            ///   - user_view_type:
             public init(
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
@@ -1024,7 +1033,8 @@ public enum Components {
                 received_events_url: Swift.String,
                 _type: Swift.String,
                 site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil
+                starred_at: Swift.String? = nil,
+                user_view_type: Swift.String? = nil
             ) {
                 self.name = name
                 self.email = email
@@ -1047,6 +1057,7 @@ public enum Components {
                 self._type = _type
                 self.site_admin = site_admin
                 self.starred_at = starred_at
+                self.user_view_type = user_view_type
             }
             public enum CodingKeys: String, CodingKey {
                 case name
@@ -1070,6 +1081,7 @@ public enum Components {
                 case _type = "type"
                 case site_admin
                 case starred_at
+                case user_view_type
             }
         }
         /// Scim Error
@@ -3916,6 +3928,14 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/GET/query/direction`.
                 public var direction: Components.Parameters.direction?
+                /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/GET/query/before`.
+                public var before: Components.Parameters.pagination_hyphen_before?
+                /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/GET/query/after`.
+                public var after: Components.Parameters.pagination_hyphen_after?
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/GET/query/sort`.
                 @frozen public enum sortPayload: String, Codable, Hashable, Sendable {
                     case created = "created"
@@ -3943,6 +3963,8 @@ public enum Operations {
                 ///   - ref: The Git reference for the results you want to list. The `ref` for a branch can be formatted either as `refs/heads/<branch name>` or simply `<branch name>`. To reference a pull request use `refs/pull/<number>/merge`.
                 ///   - pr: The number of the pull request for the results you want to list.
                 ///   - direction: The direction to sort the results by.
+                ///   - before: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - after: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - sort: The property by which to sort the results.
                 ///   - state: If specified, only code scanning alerts with this state will be returned.
                 ///   - severity: If specified, only code scanning alerts with this severity will be returned.
@@ -3954,6 +3976,8 @@ public enum Operations {
                     ref: Components.Parameters.git_hyphen_ref? = nil,
                     pr: Components.Parameters.pr_hyphen_alias? = nil,
                     direction: Components.Parameters.direction? = nil,
+                    before: Components.Parameters.pagination_hyphen_before? = nil,
+                    after: Components.Parameters.pagination_hyphen_after? = nil,
                     sort: Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Input.Query.sortPayload? = nil,
                     state: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_state_hyphen_query? = nil,
                     severity: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_severity? = nil
@@ -3965,6 +3989,8 @@ public enum Operations {
                     self.ref = ref
                     self.pr = pr
                     self.direction = direction
+                    self.before = before
+                    self.after = after
                     self.sort = sort
                     self.state = state
                     self.severity = severity
@@ -4946,7 +4972,7 @@ public enum Operations {
     /// and `0` is returned in this field.
     ///
     /// > [!WARNING]
-    /// > **Deprecation notice:** The `tool_name` field is deprecated and will, in future, not be included in the response for this endpoint. The example response reflects this change. The tool name can now be found inside the `tool` field.
+    /// > **Closing down notice:** The `tool_name` field is closing down and will, in future, not be included in the response for this endpoint. The example response reflects this change. The tool name can now be found inside the `tool` field.
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
     ///

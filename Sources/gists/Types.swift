@@ -619,6 +619,8 @@ public enum Components {
             public var site_admin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/simple-user/starred_at`.
             public var starred_at: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/simple-user/user_view_type`.
+            public var user_view_type: Swift.String?
             /// Creates a new `simple_hyphen_user`.
             ///
             /// - Parameters:
@@ -643,6 +645,7 @@ public enum Components {
             ///   - _type:
             ///   - site_admin:
             ///   - starred_at:
+            ///   - user_view_type:
             public init(
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
@@ -664,7 +667,8 @@ public enum Components {
                 received_events_url: Swift.String,
                 _type: Swift.String,
                 site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil
+                starred_at: Swift.String? = nil,
+                user_view_type: Swift.String? = nil
             ) {
                 self.name = name
                 self.email = email
@@ -687,6 +691,7 @@ public enum Components {
                 self._type = _type
                 self.site_admin = site_admin
                 self.starred_at = starred_at
+                self.user_view_type = user_view_type
             }
             public enum CodingKeys: String, CodingKey {
                 case name
@@ -710,6 +715,7 @@ public enum Components {
                 case _type = "type"
                 case site_admin
                 case starred_at
+                case user_view_type
             }
         }
         /// Basic Error
@@ -795,6 +801,8 @@ public enum Components {
             public var site_admin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/starred_at`.
             public var starred_at: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/user_view_type`.
+            public var user_view_type: Swift.String?
             /// Creates a new `nullable_hyphen_simple_hyphen_user`.
             ///
             /// - Parameters:
@@ -819,6 +827,7 @@ public enum Components {
             ///   - _type:
             ///   - site_admin:
             ///   - starred_at:
+            ///   - user_view_type:
             public init(
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
@@ -840,7 +849,8 @@ public enum Components {
                 received_events_url: Swift.String,
                 _type: Swift.String,
                 site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil
+                starred_at: Swift.String? = nil,
+                user_view_type: Swift.String? = nil
             ) {
                 self.name = name
                 self.email = email
@@ -863,6 +873,7 @@ public enum Components {
                 self._type = _type
                 self.site_admin = site_admin
                 self.starred_at = starred_at
+                self.user_view_type = user_view_type
             }
             public enum CodingKeys: String, CodingKey {
                 case name
@@ -886,6 +897,7 @@ public enum Components {
                 case _type = "type"
                 case site_admin
                 case starred_at
+                case user_view_type
             }
         }
         /// Validation Error
@@ -1226,6 +1238,8 @@ public enum Components {
             public var login: Swift.String
             /// - Remark: Generated from `#/components/schemas/public-user/id`.
             public var id: Swift.Int64
+            /// - Remark: Generated from `#/components/schemas/public-user/user_view_type`.
+            public var user_view_type: Swift.String?
             /// - Remark: Generated from `#/components/schemas/public-user/node_id`.
             public var node_id: Swift.String
             /// - Remark: Generated from `#/components/schemas/public-user/avatar_url`.
@@ -1325,8 +1339,6 @@ public enum Components {
             }
             /// - Remark: Generated from `#/components/schemas/public-user/plan`.
             public var plan: Components.Schemas.public_hyphen_user.planPayload?
-            /// - Remark: Generated from `#/components/schemas/public-user/suspended_at`.
-            public var suspended_at: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/public-user/private_gists`.
             public var private_gists: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/public-user/total_private_repos`.
@@ -1342,6 +1354,7 @@ public enum Components {
             /// - Parameters:
             ///   - login:
             ///   - id:
+            ///   - user_view_type:
             ///   - node_id:
             ///   - avatar_url:
             ///   - gravatar_id:
@@ -1374,7 +1387,6 @@ public enum Components {
             ///   - created_at:
             ///   - updated_at:
             ///   - plan:
-            ///   - suspended_at:
             ///   - private_gists:
             ///   - total_private_repos:
             ///   - owned_private_repos:
@@ -1383,6 +1395,7 @@ public enum Components {
             public init(
                 login: Swift.String,
                 id: Swift.Int64,
+                user_view_type: Swift.String? = nil,
                 node_id: Swift.String,
                 avatar_url: Swift.String,
                 gravatar_id: Swift.String? = nil,
@@ -1415,7 +1428,6 @@ public enum Components {
                 created_at: Foundation.Date,
                 updated_at: Foundation.Date,
                 plan: Components.Schemas.public_hyphen_user.planPayload? = nil,
-                suspended_at: Foundation.Date? = nil,
                 private_gists: Swift.Int? = nil,
                 total_private_repos: Swift.Int? = nil,
                 owned_private_repos: Swift.Int? = nil,
@@ -1424,6 +1436,7 @@ public enum Components {
             ) {
                 self.login = login
                 self.id = id
+                self.user_view_type = user_view_type
                 self.node_id = node_id
                 self.avatar_url = avatar_url
                 self.gravatar_id = gravatar_id
@@ -1456,7 +1469,6 @@ public enum Components {
                 self.created_at = created_at
                 self.updated_at = updated_at
                 self.plan = plan
-                self.suspended_at = suspended_at
                 self.private_gists = private_gists
                 self.total_private_repos = total_private_repos
                 self.owned_private_repos = owned_private_repos
@@ -1466,6 +1478,7 @@ public enum Components {
             public enum CodingKeys: String, CodingKey {
                 case login
                 case id
+                case user_view_type
                 case node_id
                 case avatar_url
                 case gravatar_id
@@ -1498,7 +1511,6 @@ public enum Components {
                 case created_at
                 case updated_at
                 case plan
-                case suspended_at
                 case private_gists
                 case total_private_repos
                 case owned_private_repos
@@ -1514,6 +1526,10 @@ public enum Components {
                 id = try container.decode(
                     Swift.Int64.self,
                     forKey: .id
+                )
+                user_view_type = try container.decodeIfPresent(
+                    Swift.String.self,
+                    forKey: .user_view_type
                 )
                 node_id = try container.decode(
                     Swift.String.self,
@@ -1643,10 +1659,6 @@ public enum Components {
                     Components.Schemas.public_hyphen_user.planPayload.self,
                     forKey: .plan
                 )
-                suspended_at = try container.decodeIfPresent(
-                    Foundation.Date.self,
-                    forKey: .suspended_at
-                )
                 private_gists = try container.decodeIfPresent(
                     Swift.Int.self,
                     forKey: .private_gists
@@ -1670,6 +1682,7 @@ public enum Components {
                 try decoder.ensureNoAdditionalProperties(knownKeys: [
                     "login",
                     "id",
+                    "user_view_type",
                     "node_id",
                     "avatar_url",
                     "gravatar_id",
@@ -1702,7 +1715,6 @@ public enum Components {
                     "created_at",
                     "updated_at",
                     "plan",
-                    "suspended_at",
                     "private_gists",
                     "total_private_repos",
                     "owned_private_repos",

@@ -28,7 +28,7 @@ public protocol APIProtocol: Sendable {
     /// * The `source_import` object is no longer in use for any API endpoints, and it will be removed in the next API version. For more information about API versions, see "[API Versions](https://docs.github.com/rest/about-the-rest-api/api-versions)."
     ///
     /// > [!NOTE]
-    /// > The `rate` object is deprecated. If you're writing new API client code or updating existing code, you should use the `core` object instead of the `rate` object. The `core` object contains the same information that is present in the `rate` object.
+    /// > The `rate` object is closing down. If you're writing new API client code or updating existing code, you should use the `core` object instead of the `rate` object. The `core` object contains the same information that is present in the `rate` object.
     ///
     /// - Remark: HTTP `GET /rate_limit`.
     /// - Remark: Generated from `#/paths//rate_limit/get(rate-limit/get)`.
@@ -54,7 +54,7 @@ extension APIProtocol {
     /// * The `source_import` object is no longer in use for any API endpoints, and it will be removed in the next API version. For more information about API versions, see "[API Versions](https://docs.github.com/rest/about-the-rest-api/api-versions)."
     ///
     /// > [!NOTE]
-    /// > The `rate` object is deprecated. If you're writing new API client code or updating existing code, you should use the `core` object instead of the `rate` object. The `core` object contains the same information that is present in the `rate` object.
+    /// > The `rate` object is closing down. If you're writing new API client code or updating existing code, you should use the `core` object instead of the `rate` object. The `core` object contains the same information that is present in the `rate` object.
     ///
     /// - Remark: HTTP `GET /rate_limit`.
     /// - Remark: Generated from `#/paths//rate_limit/get(rate-limit/get)`.
@@ -315,7 +315,7 @@ public enum Operations {
     /// * The `source_import` object is no longer in use for any API endpoints, and it will be removed in the next API version. For more information about API versions, see "[API Versions](https://docs.github.com/rest/about-the-rest-api/api-versions)."
     ///
     /// > [!NOTE]
-    /// > The `rate` object is deprecated. If you're writing new API client code or updating existing code, you should use the `core` object instead of the `rate` object. The `core` object contains the same information that is present in the `rate` object.
+    /// > The `rate` object is closing down. If you're writing new API client code or updating existing code, you should use the `core` object instead of the `rate` object. The `core` object contains the same information that is present in the `rate` object.
     ///
     /// - Remark: HTTP `GET /rate_limit`.
     /// - Remark: Generated from `#/paths//rate_limit/get(rate-limit/get)`.

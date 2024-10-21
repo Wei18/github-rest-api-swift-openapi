@@ -1027,6 +1027,8 @@ public enum Components {
             public var site_admin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/simple-user/starred_at`.
             public var starred_at: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/simple-user/user_view_type`.
+            public var user_view_type: Swift.String?
             /// Creates a new `simple_hyphen_user`.
             ///
             /// - Parameters:
@@ -1051,6 +1053,7 @@ public enum Components {
             ///   - _type:
             ///   - site_admin:
             ///   - starred_at:
+            ///   - user_view_type:
             public init(
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
@@ -1072,7 +1075,8 @@ public enum Components {
                 received_events_url: Swift.String,
                 _type: Swift.String,
                 site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil
+                starred_at: Swift.String? = nil,
+                user_view_type: Swift.String? = nil
             ) {
                 self.name = name
                 self.email = email
@@ -1095,6 +1099,7 @@ public enum Components {
                 self._type = _type
                 self.site_admin = site_admin
                 self.starred_at = starred_at
+                self.user_view_type = user_view_type
             }
             public enum CodingKeys: String, CodingKey {
                 case name
@@ -1118,6 +1123,7 @@ public enum Components {
                 case _type = "type"
                 case site_admin
                 case starred_at
+                case user_view_type
             }
         }
         /// Basic Error
@@ -1234,6 +1240,8 @@ public enum Components {
             public var site_admin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/starred_at`.
             public var starred_at: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/user_view_type`.
+            public var user_view_type: Swift.String?
             /// Creates a new `nullable_hyphen_simple_hyphen_user`.
             ///
             /// - Parameters:
@@ -1258,6 +1266,7 @@ public enum Components {
             ///   - _type:
             ///   - site_admin:
             ///   - starred_at:
+            ///   - user_view_type:
             public init(
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
@@ -1279,7 +1288,8 @@ public enum Components {
                 received_events_url: Swift.String,
                 _type: Swift.String,
                 site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil
+                starred_at: Swift.String? = nil,
+                user_view_type: Swift.String? = nil
             ) {
                 self.name = name
                 self.email = email
@@ -1302,6 +1312,7 @@ public enum Components {
                 self._type = _type
                 self.site_admin = site_admin
                 self.starred_at = starred_at
+                self.user_view_type = user_view_type
             }
             public enum CodingKeys: String, CodingKey {
                 case name
@@ -1325,6 +1336,7 @@ public enum Components {
                 case _type = "type"
                 case site_admin
                 case starred_at
+                case user_view_type
             }
         }
         /// GitHub apps are a new way to extend GitHub. They can be installed directly on organizations and user accounts and granted access to specific repositories. They come with granular permissions and built-in webhooks. GitHub apps are first class actors within GitHub.
@@ -2654,13 +2666,13 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_custom_properties`.
             public var organization_custom_properties: Components.Schemas.app_hyphen_permissions.organization_custom_propertiesPayload?
-            /// The level of permission to grant the access token for managing access to GitHub Copilot for members of an organization with a Copilot Business subscription. This property is in beta and is subject to change.
+            /// The level of permission to grant the access token for managing access to GitHub Copilot for members of an organization with a Copilot Business subscription. This property is in public preview and is subject to change.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_copilot_seat_management`.
             @frozen public enum organization_copilot_seat_managementPayload: String, Codable, Hashable, Sendable {
                 case write = "write"
             }
-            /// The level of permission to grant the access token for managing access to GitHub Copilot for members of an organization with a Copilot Business subscription. This property is in beta and is subject to change.
+            /// The level of permission to grant the access token for managing access to GitHub Copilot for members of an organization with a Copilot Business subscription. This property is in public preview and is subject to change.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_copilot_seat_management`.
             public var organization_copilot_seat_management: Components.Schemas.app_hyphen_permissions.organization_copilot_seat_managementPayload?
@@ -2728,7 +2740,7 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_plan`.
             public var organization_plan: Components.Schemas.app_hyphen_permissions.organization_planPayload?
-            /// The level of permission to grant the access token to manage organization projects and projects beta (where available).
+            /// The level of permission to grant the access token to manage organization projects and projects public preview (where available).
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_projects`.
             @frozen public enum organization_projectsPayload: String, Codable, Hashable, Sendable {
@@ -2736,7 +2748,7 @@ public enum Components {
                 case write = "write"
                 case admin = "admin"
             }
-            /// The level of permission to grant the access token to manage organization projects and projects beta (where available).
+            /// The level of permission to grant the access token to manage organization projects and projects public preview (where available).
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_projects`.
             public var organization_projects: Components.Schemas.app_hyphen_permissions.organization_projectsPayload?
@@ -2902,14 +2914,14 @@ public enum Components {
             ///   - organization_custom_roles: The level of permission to grant the access token for custom repository roles management.
             ///   - organization_custom_org_roles: The level of permission to grant the access token for custom organization roles management.
             ///   - organization_custom_properties: The level of permission to grant the access token for custom property management.
-            ///   - organization_copilot_seat_management: The level of permission to grant the access token for managing access to GitHub Copilot for members of an organization with a Copilot Business subscription. This property is in beta and is subject to change.
+            ///   - organization_copilot_seat_management: The level of permission to grant the access token for managing access to GitHub Copilot for members of an organization with a Copilot Business subscription. This property is in public preview and is subject to change.
             ///   - organization_announcement_banners: The level of permission to grant the access token to view and manage announcement banners for an organization.
             ///   - organization_events: The level of permission to grant the access token to view events triggered by an activity in an organization.
             ///   - organization_hooks: The level of permission to grant the access token to manage the post-receive hooks for an organization.
             ///   - organization_personal_access_tokens: The level of permission to grant the access token for viewing and managing fine-grained personal access token requests to an organization.
             ///   - organization_personal_access_token_requests: The level of permission to grant the access token for viewing and managing fine-grained personal access tokens that have been approved by an organization.
             ///   - organization_plan: The level of permission to grant the access token for viewing an organization's plan.
-            ///   - organization_projects: The level of permission to grant the access token to manage organization projects and projects beta (where available).
+            ///   - organization_projects: The level of permission to grant the access token to manage organization projects and projects public preview (where available).
             ///   - organization_packages: The level of permission to grant the access token for organization packages published to GitHub Packages.
             ///   - organization_secrets: The level of permission to grant the access token to manage organization secrets.
             ///   - organization_self_hosted_runners: The level of permission to grant the access token to view and manage GitHub Actions self-hosted runners available to an organization.
@@ -3560,7 +3572,7 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/repository/allow_update_branch`.
             public var allow_update_branch: Swift.Bool?
-            /// Whether a squash merge commit can use the pull request title as default. **This property has been deprecated. Please use `squash_merge_commit_title` instead.
+            /// Whether a squash merge commit can use the pull request title as default. **This property is closing down. Please use `squash_merge_commit_title` instead.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/use_squash_pr_title_as_default`.
             @available(*, deprecated)
@@ -3748,7 +3760,7 @@ public enum Components {
             ///   - allow_auto_merge: Whether to allow Auto-merge to be used on pull requests.
             ///   - delete_branch_on_merge: Whether to delete head branches when pull requests are merged
             ///   - allow_update_branch: Whether or not a pull request head branch that is behind its base branch can always be updated even if it is not required to be up to date before merging.
-            ///   - use_squash_pr_title_as_default: Whether a squash merge commit can use the pull request title as default. **This property has been deprecated. Please use `squash_merge_commit_title` instead.
+            ///   - use_squash_pr_title_as_default: Whether a squash merge commit can use the pull request title as default. **This property is closing down. Please use `squash_merge_commit_title` instead.
             ///   - squash_merge_commit_title: The default value for a squash merge commit title:
             ///   - squash_merge_commit_message: The default value for a squash merge commit message:
             ///   - merge_commit_title: The default value for a merge commit title.

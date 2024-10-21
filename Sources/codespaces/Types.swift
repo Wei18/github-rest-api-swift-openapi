@@ -1445,6 +1445,8 @@ public enum Components {
             public var site_admin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/simple-user/starred_at`.
             public var starred_at: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/simple-user/user_view_type`.
+            public var user_view_type: Swift.String?
             /// Creates a new `simple_hyphen_user`.
             ///
             /// - Parameters:
@@ -1469,6 +1471,7 @@ public enum Components {
             ///   - _type:
             ///   - site_admin:
             ///   - starred_at:
+            ///   - user_view_type:
             public init(
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
@@ -1490,7 +1493,8 @@ public enum Components {
                 received_events_url: Swift.String,
                 _type: Swift.String,
                 site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil
+                starred_at: Swift.String? = nil,
+                user_view_type: Swift.String? = nil
             ) {
                 self.name = name
                 self.email = email
@@ -1513,6 +1517,7 @@ public enum Components {
                 self._type = _type
                 self.site_admin = site_admin
                 self.starred_at = starred_at
+                self.user_view_type = user_view_type
             }
             public enum CodingKeys: String, CodingKey {
                 case name
@@ -1536,6 +1541,7 @@ public enum Components {
                 case _type = "type"
                 case site_admin
                 case starred_at
+                case user_view_type
             }
         }
         /// Basic Error
@@ -1621,6 +1627,8 @@ public enum Components {
             public var site_admin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/starred_at`.
             public var starred_at: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/user_view_type`.
+            public var user_view_type: Swift.String?
             /// Creates a new `nullable_hyphen_simple_hyphen_user`.
             ///
             /// - Parameters:
@@ -1645,6 +1653,7 @@ public enum Components {
             ///   - _type:
             ///   - site_admin:
             ///   - starred_at:
+            ///   - user_view_type:
             public init(
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
@@ -1666,7 +1675,8 @@ public enum Components {
                 received_events_url: Swift.String,
                 _type: Swift.String,
                 site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil
+                starred_at: Swift.String? = nil,
+                user_view_type: Swift.String? = nil
             ) {
                 self.name = name
                 self.email = email
@@ -1689,6 +1699,7 @@ public enum Components {
                 self._type = _type
                 self.site_admin = site_admin
                 self.starred_at = starred_at
+                self.user_view_type = user_view_type
             }
             public enum CodingKeys: String, CodingKey {
                 case name
@@ -1712,6 +1723,7 @@ public enum Components {
                 case _type = "type"
                 case site_admin
                 case starred_at
+                case user_view_type
             }
         }
         /// Scim Error
@@ -2185,7 +2197,7 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/repository/allow_update_branch`.
             public var allow_update_branch: Swift.Bool?
-            /// Whether a squash merge commit can use the pull request title as default. **This property has been deprecated. Please use `squash_merge_commit_title` instead.
+            /// Whether a squash merge commit can use the pull request title as default. **This property is closing down. Please use `squash_merge_commit_title` instead.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/use_squash_pr_title_as_default`.
             @available(*, deprecated)
@@ -2373,7 +2385,7 @@ public enum Components {
             ///   - allow_auto_merge: Whether to allow Auto-merge to be used on pull requests.
             ///   - delete_branch_on_merge: Whether to delete head branches when pull requests are merged
             ///   - allow_update_branch: Whether or not a pull request head branch that is behind its base branch can always be updated even if it is not required to be up to date before merging.
-            ///   - use_squash_pr_title_as_default: Whether a squash merge commit can use the pull request title as default. **This property has been deprecated. Please use `squash_merge_commit_title` instead.
+            ///   - use_squash_pr_title_as_default: Whether a squash merge commit can use the pull request title as default. **This property is closing down. Please use `squash_merge_commit_title` instead.
             ///   - squash_merge_commit_title: The default value for a squash merge commit title:
             ///   - squash_merge_commit_message: The default value for a squash merge commit message:
             ///   - merge_commit_title: The default value for a merge commit title.
@@ -2840,6 +2852,28 @@ public enum Components {
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns`.
             public var secret_scanning_non_provider_patterns: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_non_provider_patternsPayload?
+            /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection`.
+            public struct secret_scanning_ai_detectionPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection/status`.
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                    case enabled = "enabled"
+                    case disabled = "disabled"
+                }
+                /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection/status`.
+                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload.statusPayload?
+                /// Creates a new `secret_scanning_ai_detectionPayload`.
+                ///
+                /// - Parameters:
+                ///   - status:
+                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload.statusPayload? = nil) {
+                    self.status = status
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case status
+                }
+            }
+            /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection`.
+            public var secret_scanning_ai_detection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload?
             /// Creates a new `security_hyphen_and_hyphen_analysis`.
             ///
             /// - Parameters:
@@ -2848,18 +2882,21 @@ public enum Components {
             ///   - secret_scanning:
             ///   - secret_scanning_push_protection:
             ///   - secret_scanning_non_provider_patterns:
+            ///   - secret_scanning_ai_detection:
             public init(
                 advanced_security: Components.Schemas.security_hyphen_and_hyphen_analysis.advanced_securityPayload? = nil,
                 dependabot_security_updates: Components.Schemas.security_hyphen_and_hyphen_analysis.dependabot_security_updatesPayload? = nil,
                 secret_scanning: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanningPayload? = nil,
                 secret_scanning_push_protection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_push_protectionPayload? = nil,
-                secret_scanning_non_provider_patterns: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_non_provider_patternsPayload? = nil
+                secret_scanning_non_provider_patterns: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_non_provider_patternsPayload? = nil,
+                secret_scanning_ai_detection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload? = nil
             ) {
                 self.advanced_security = advanced_security
                 self.dependabot_security_updates = dependabot_security_updates
                 self.secret_scanning = secret_scanning
                 self.secret_scanning_push_protection = secret_scanning_push_protection
                 self.secret_scanning_non_provider_patterns = secret_scanning_non_provider_patterns
+                self.secret_scanning_ai_detection = secret_scanning_ai_detection
             }
             public enum CodingKeys: String, CodingKey {
                 case advanced_security
@@ -2867,6 +2904,7 @@ public enum Components {
                 case secret_scanning
                 case secret_scanning_push_protection
                 case secret_scanning_non_provider_patterns
+                case secret_scanning_ai_detection
             }
         }
         /// Minimal Repository
@@ -4289,7 +4327,7 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-repository/allow_update_branch`.
             public var allow_update_branch: Swift.Bool?
-            /// Whether a squash merge commit can use the pull request title as default. **This property has been deprecated. Please use `squash_merge_commit_title` instead.
+            /// Whether a squash merge commit can use the pull request title as default. **This property is closing down. Please use `squash_merge_commit_title` instead.
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-repository/use_squash_pr_title_as_default`.
             @available(*, deprecated)
@@ -4477,7 +4515,7 @@ public enum Components {
             ///   - allow_auto_merge: Whether to allow Auto-merge to be used on pull requests.
             ///   - delete_branch_on_merge: Whether to delete head branches when pull requests are merged
             ///   - allow_update_branch: Whether or not a pull request head branch that is behind its base branch can always be updated even if it is not required to be up to date before merging.
-            ///   - use_squash_pr_title_as_default: Whether a squash merge commit can use the pull request title as default. **This property has been deprecated. Please use `squash_merge_commit_title` instead.
+            ///   - use_squash_pr_title_as_default: Whether a squash merge commit can use the pull request title as default. **This property is closing down. Please use `squash_merge_commit_title` instead.
             ///   - squash_merge_commit_title: The default value for a squash merge commit title:
             ///   - squash_merge_commit_message: The default value for a squash merge commit message:
             ///   - merge_commit_title: The default value for a merge commit title.
@@ -10558,7 +10596,7 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/codespaces/POST/requestBody/json/location`.
                     public var location: Swift.String?
-                    /// The geographic area for this codespace. If not specified, the value is assigned by IP. This property replaces `location`, which is being deprecated.
+                    /// The geographic area for this codespace. If not specified, the value is assigned by IP. This property replaces `location`, which is closing down.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/codespaces/POST/requestBody/json/geo`.
                     @frozen public enum geoPayload: String, Codable, Hashable, Sendable {
@@ -10567,7 +10605,7 @@ public enum Operations {
                         case UsEast = "UsEast"
                         case UsWest = "UsWest"
                     }
-                    /// The geographic area for this codespace. If not specified, the value is assigned by IP. This property replaces `location`, which is being deprecated.
+                    /// The geographic area for this codespace. If not specified, the value is assigned by IP. This property replaces `location`, which is closing down.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/codespaces/POST/requestBody/json/geo`.
                     public var geo: Operations.codespaces_sol_create_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body.jsonPayload.geoPayload?
@@ -10608,7 +10646,7 @@ public enum Operations {
                     /// - Parameters:
                     ///   - ref: Git ref (typically a branch name) for this codespace
                     ///   - location: The requested location for a new codespace. Best efforts are made to respect this upon creation. Assigned by IP if not provided.
-                    ///   - geo: The geographic area for this codespace. If not specified, the value is assigned by IP. This property replaces `location`, which is being deprecated.
+                    ///   - geo: The geographic area for this codespace. If not specified, the value is assigned by IP. This property replaces `location`, which is closing down.
                     ///   - client_ip: IP for location auto-detection when proxying a request
                     ///   - machine: Machine type to use for this codespace
                     ///   - devcontainer_path: Path to devcontainer.json config to use for this codespace
@@ -13029,7 +13067,7 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/codespaces/POST/requestBody/json/location`.
                     public var location: Swift.String?
-                    /// The geographic area for this codespace. If not specified, the value is assigned by IP. This property replaces `location`, which is being deprecated.
+                    /// The geographic area for this codespace. If not specified, the value is assigned by IP. This property replaces `location`, which is closing down.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/codespaces/POST/requestBody/json/geo`.
                     @frozen public enum geoPayload: String, Codable, Hashable, Sendable {
@@ -13038,7 +13076,7 @@ public enum Operations {
                         case UsEast = "UsEast"
                         case UsWest = "UsWest"
                     }
-                    /// The geographic area for this codespace. If not specified, the value is assigned by IP. This property replaces `location`, which is being deprecated.
+                    /// The geographic area for this codespace. If not specified, the value is assigned by IP. This property replaces `location`, which is closing down.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/codespaces/POST/requestBody/json/geo`.
                     public var geo: Operations.codespaces_sol_create_hyphen_with_hyphen_pr_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body.jsonPayload.geoPayload?
@@ -13078,7 +13116,7 @@ public enum Operations {
                     ///
                     /// - Parameters:
                     ///   - location: The requested location for a new codespace. Best efforts are made to respect this upon creation. Assigned by IP if not provided.
-                    ///   - geo: The geographic area for this codespace. If not specified, the value is assigned by IP. This property replaces `location`, which is being deprecated.
+                    ///   - geo: The geographic area for this codespace. If not specified, the value is assigned by IP. This property replaces `location`, which is closing down.
                     ///   - client_ip: IP for location auto-detection when proxying a request
                     ///   - machine: Machine type to use for this codespace
                     ///   - devcontainer_path: Path to devcontainer.json config to use for this codespace
@@ -13700,7 +13738,7 @@ public enum Operations {
                         ///
                         /// - Remark: Generated from `#/paths/user/codespaces/POST/requestBody/json/case1/location`.
                         public var location: Swift.String?
-                        /// The geographic area for this codespace. If not specified, the value is assigned by IP. This property replaces `location`, which is being deprecated.
+                        /// The geographic area for this codespace. If not specified, the value is assigned by IP. This property replaces `location`, which is closing down.
                         ///
                         /// - Remark: Generated from `#/paths/user/codespaces/POST/requestBody/json/case1/geo`.
                         @frozen public enum geoPayload: String, Codable, Hashable, Sendable {
@@ -13709,7 +13747,7 @@ public enum Operations {
                             case UsEast = "UsEast"
                             case UsWest = "UsWest"
                         }
-                        /// The geographic area for this codespace. If not specified, the value is assigned by IP. This property replaces `location`, which is being deprecated.
+                        /// The geographic area for this codespace. If not specified, the value is assigned by IP. This property replaces `location`, which is closing down.
                         ///
                         /// - Remark: Generated from `#/paths/user/codespaces/POST/requestBody/json/case1/geo`.
                         public var geo: Operations.codespaces_sol_create_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body.jsonPayload.Case1Payload.geoPayload?
@@ -13751,7 +13789,7 @@ public enum Operations {
                         ///   - repository_id: Repository id for this codespace
                         ///   - ref: Git ref (typically a branch name) for this codespace
                         ///   - location: The requested location for a new codespace. Best efforts are made to respect this upon creation. Assigned by IP if not provided.
-                        ///   - geo: The geographic area for this codespace. If not specified, the value is assigned by IP. This property replaces `location`, which is being deprecated.
+                        ///   - geo: The geographic area for this codespace. If not specified, the value is assigned by IP. This property replaces `location`, which is closing down.
                         ///   - client_ip: IP for location auto-detection when proxying a request
                         ///   - machine: Machine type to use for this codespace
                         ///   - devcontainer_path: Path to devcontainer.json config to use for this codespace
@@ -13843,7 +13881,7 @@ public enum Operations {
                         ///
                         /// - Remark: Generated from `#/paths/user/codespaces/POST/requestBody/json/case2/location`.
                         public var location: Swift.String?
-                        /// The geographic area for this codespace. If not specified, the value is assigned by IP. This property replaces `location`, which is being deprecated.
+                        /// The geographic area for this codespace. If not specified, the value is assigned by IP. This property replaces `location`, which is closing down.
                         ///
                         /// - Remark: Generated from `#/paths/user/codespaces/POST/requestBody/json/case2/geo`.
                         @frozen public enum geoPayload: String, Codable, Hashable, Sendable {
@@ -13852,7 +13890,7 @@ public enum Operations {
                             case UsEast = "UsEast"
                             case UsWest = "UsWest"
                         }
-                        /// The geographic area for this codespace. If not specified, the value is assigned by IP. This property replaces `location`, which is being deprecated.
+                        /// The geographic area for this codespace. If not specified, the value is assigned by IP. This property replaces `location`, which is closing down.
                         ///
                         /// - Remark: Generated from `#/paths/user/codespaces/POST/requestBody/json/case2/geo`.
                         public var geo: Operations.codespaces_sol_create_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body.jsonPayload.Case2Payload.geoPayload?
@@ -13877,7 +13915,7 @@ public enum Operations {
                         /// - Parameters:
                         ///   - pull_request: Pull request number for this codespace
                         ///   - location: The requested location for a new codespace. Best efforts are made to respect this upon creation. Assigned by IP if not provided.
-                        ///   - geo: The geographic area for this codespace. If not specified, the value is assigned by IP. This property replaces `location`, which is being deprecated.
+                        ///   - geo: The geographic area for this codespace. If not specified, the value is assigned by IP. This property replaces `location`, which is closing down.
                         ///   - machine: Machine type to use for this codespace
                         ///   - devcontainer_path: Path to devcontainer.json config to use for this codespace
                         ///   - working_directory: Working directory for this codespace

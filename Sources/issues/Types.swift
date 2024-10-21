@@ -1251,6 +1251,8 @@ public enum Components {
             public var site_admin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/simple-user/starred_at`.
             public var starred_at: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/simple-user/user_view_type`.
+            public var user_view_type: Swift.String?
             /// Creates a new `simple_hyphen_user`.
             ///
             /// - Parameters:
@@ -1275,6 +1277,7 @@ public enum Components {
             ///   - _type:
             ///   - site_admin:
             ///   - starred_at:
+            ///   - user_view_type:
             public init(
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
@@ -1296,7 +1299,8 @@ public enum Components {
                 received_events_url: Swift.String,
                 _type: Swift.String,
                 site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil
+                starred_at: Swift.String? = nil,
+                user_view_type: Swift.String? = nil
             ) {
                 self.name = name
                 self.email = email
@@ -1319,6 +1323,7 @@ public enum Components {
                 self._type = _type
                 self.site_admin = site_admin
                 self.starred_at = starred_at
+                self.user_view_type = user_view_type
             }
             public enum CodingKeys: String, CodingKey {
                 case name
@@ -1342,6 +1347,7 @@ public enum Components {
                 case _type = "type"
                 case site_admin
                 case starred_at
+                case user_view_type
             }
         }
         /// Basic Error
@@ -1427,6 +1433,8 @@ public enum Components {
             public var site_admin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/starred_at`.
             public var starred_at: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/user_view_type`.
+            public var user_view_type: Swift.String?
             /// Creates a new `nullable_hyphen_simple_hyphen_user`.
             ///
             /// - Parameters:
@@ -1451,6 +1459,7 @@ public enum Components {
             ///   - _type:
             ///   - site_admin:
             ///   - starred_at:
+            ///   - user_view_type:
             public init(
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
@@ -1472,7 +1481,8 @@ public enum Components {
                 received_events_url: Swift.String,
                 _type: Swift.String,
                 site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil
+                starred_at: Swift.String? = nil,
+                user_view_type: Swift.String? = nil
             ) {
                 self.name = name
                 self.email = email
@@ -1495,6 +1505,7 @@ public enum Components {
                 self._type = _type
                 self.site_admin = site_admin
                 self.starred_at = starred_at
+                self.user_view_type = user_view_type
             }
             public enum CodingKeys: String, CodingKey {
                 case name
@@ -1518,6 +1529,7 @@ public enum Components {
                 case _type = "type"
                 case site_admin
                 case starred_at
+                case user_view_type
             }
         }
         /// GitHub apps are a new way to extend GitHub. They can be installed directly on organizations and user accounts and granted access to specific repositories. They come with granular permissions and built-in webhooks. GitHub apps are first class actors within GitHub.
@@ -2220,7 +2232,7 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/repository/allow_update_branch`.
             public var allow_update_branch: Swift.Bool?
-            /// Whether a squash merge commit can use the pull request title as default. **This property has been deprecated. Please use `squash_merge_commit_title` instead.
+            /// Whether a squash merge commit can use the pull request title as default. **This property is closing down. Please use `squash_merge_commit_title` instead.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/use_squash_pr_title_as_default`.
             @available(*, deprecated)
@@ -2408,7 +2420,7 @@ public enum Components {
             ///   - allow_auto_merge: Whether to allow Auto-merge to be used on pull requests.
             ///   - delete_branch_on_merge: Whether to delete head branches when pull requests are merged
             ///   - allow_update_branch: Whether or not a pull request head branch that is behind its base branch can always be updated even if it is not required to be up to date before merging.
-            ///   - use_squash_pr_title_as_default: Whether a squash merge commit can use the pull request title as default. **This property has been deprecated. Please use `squash_merge_commit_title` instead.
+            ///   - use_squash_pr_title_as_default: Whether a squash merge commit can use the pull request title as default. **This property is closing down. Please use `squash_merge_commit_title` instead.
             ///   - squash_merge_commit_title: The default value for a squash merge commit title:
             ///   - squash_merge_commit_message: The default value for a squash merge commit message:
             ///   - merge_commit_title: The default value for a merge commit title.
@@ -6974,11 +6986,11 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/path`.
             public var path: Swift.String
-            /// The line index in the diff to which the comment applies. This field is deprecated; use `line` instead.
+            /// The line index in the diff to which the comment applies. This field is closing down; use `line` instead.
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/position`.
             public var position: Swift.Int?
-            /// The index of the original line in the diff to which the comment applies. This field is deprecated; use `original_line` instead.
+            /// The index of the original line in the diff to which the comment applies. This field is closing down; use `original_line` instead.
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/original_position`.
             public var original_position: Swift.Int?
@@ -7154,8 +7166,8 @@ public enum Components {
             ///   - node_id: The node ID of the pull request review comment.
             ///   - diff_hunk: The diff of the line that the comment refers to.
             ///   - path: The relative path of the file to which the comment applies.
-            ///   - position: The line index in the diff to which the comment applies. This field is deprecated; use `line` instead.
-            ///   - original_position: The index of the original line in the diff to which the comment applies. This field is deprecated; use `original_line` instead.
+            ///   - position: The line index in the diff to which the comment applies. This field is closing down; use `line` instead.
+            ///   - original_position: The index of the original line in the diff to which the comment applies. This field is closing down; use `original_line` instead.
             ///   - commit_id: The SHA of the commit to which the comment applies.
             ///   - original_commit_id: The SHA of the original commit to which the comment applies.
             ///   - in_reply_to_id: The comment ID to reply to.
@@ -9736,7 +9748,7 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/POST/requestBody/json/body`.
                     public var body: Swift.String?
-                    /// Login for the user that this issue should be assigned to. _NOTE: Only users with push access can set the assignee for new issues. The assignee is silently dropped otherwise. **This field is deprecated.**_
+                    /// Login for the user that this issue should be assigned to. _NOTE: Only users with push access can set the assignee for new issues. The assignee is silently dropped otherwise. **This field is closing down.**_
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/POST/requestBody/json/assignee`.
                     public var assignee: Swift.String?
@@ -9866,7 +9878,7 @@ public enum Operations {
                     /// - Parameters:
                     ///   - title: The title of the issue.
                     ///   - body: The contents of the issue.
-                    ///   - assignee: Login for the user that this issue should be assigned to. _NOTE: Only users with push access can set the assignee for new issues. The assignee is silently dropped otherwise. **This field is deprecated.**_
+                    ///   - assignee: Login for the user that this issue should be assigned to. _NOTE: Only users with push access can set the assignee for new issues. The assignee is silently dropped otherwise. **This field is closing down.**_
                     ///   - milestone:
                     ///   - labels: Labels to associate with this issue. _NOTE: Only users with push access can set labels for new issues. Labels are silently dropped otherwise._
                     ///   - assignees: Logins for Users to assign to this issue. _NOTE: Only users with push access can set assignees for new issues. Assignees are silently dropped otherwise._
@@ -11685,7 +11697,7 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/PATCH/requestBody/json/body`.
                     public var body: Swift.String?
-                    /// Username to assign to this issue. **This field is deprecated.**
+                    /// Username to assign to this issue. **This field is closing down.**
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/PATCH/requestBody/json/assignee`.
                     public var assignee: Swift.String?
@@ -11838,7 +11850,7 @@ public enum Operations {
                     /// - Parameters:
                     ///   - title: The title of the issue.
                     ///   - body: The contents of the issue.
-                    ///   - assignee: Username to assign to this issue. **This field is deprecated.**
+                    ///   - assignee: Username to assign to this issue. **This field is closing down.**
                     ///   - state: The open or closed state of the issue.
                     ///   - state_reason: The reason for the state change. Ignored unless `state` is changed.
                     ///   - milestone:

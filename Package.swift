@@ -40,6 +40,7 @@ let package = Package(
         .library(name: "GitHubRestAPIOidc", targets: ["GitHubRestAPIOidc"]),
         .library(name: "GitHubRestAPIOrgs", targets: ["GitHubRestAPIOrgs"]),
         .library(name: "GitHubRestAPIPackages", targets: ["GitHubRestAPIPackages"]),
+        .library(name: "GitHubRestAPIPrivate_Registries", targets: ["GitHubRestAPIPrivate_Registries"]),
         .library(name: "GitHubRestAPIProjects", targets: ["GitHubRestAPIProjects"]),
         .library(name: "GitHubRestAPIPulls", targets: ["GitHubRestAPIPulls"]),
         .library(name: "GitHubRestAPIRate_Limit", targets: ["GitHubRestAPIRate_Limit"]),
@@ -287,6 +288,14 @@ let package = Package(
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
             ],
             path: "Sources/packages"
+        ),
+        .target(
+            name: "GitHubRestAPIPrivate_Registries",
+            dependencies: [
+                .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
+                .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
+            ],
+            path: "Sources/private-registries"
         ),
         .target(
             name: "GitHubRestAPIProjects",
