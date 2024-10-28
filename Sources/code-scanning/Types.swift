@@ -1910,7 +1910,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/code-scanning-organization-alert-items/instances_url`.
             public var instances_url: Components.Schemas.alert_hyphen_instances_hyphen_url
             /// - Remark: Generated from `#/components/schemas/code-scanning-organization-alert-items/state`.
-            public var state: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_state
+            public var state: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_state?
             /// - Remark: Generated from `#/components/schemas/code-scanning-organization-alert-items/fixed_at`.
             public var fixed_at: Components.Schemas.alert_hyphen_fixed_hyphen_at?
             /// - Remark: Generated from `#/components/schemas/code-scanning-organization-alert-items/dismissed_by`.
@@ -1955,7 +1955,7 @@ public enum Components {
                 url: Components.Schemas.alert_hyphen_url,
                 html_url: Components.Schemas.alert_hyphen_html_hyphen_url,
                 instances_url: Components.Schemas.alert_hyphen_instances_hyphen_url,
-                state: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_state,
+                state: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_state? = nil,
                 fixed_at: Components.Schemas.alert_hyphen_fixed_hyphen_at? = nil,
                 dismissed_by: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
                 dismissed_at: Components.Schemas.alert_hyphen_dismissed_hyphen_at? = nil,
@@ -2017,7 +2017,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-items/instances_url`.
             public var instances_url: Components.Schemas.alert_hyphen_instances_hyphen_url
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-items/state`.
-            public var state: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_state
+            public var state: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_state?
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-items/fixed_at`.
             public var fixed_at: Components.Schemas.alert_hyphen_fixed_hyphen_at?
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-items/dismissed_by`.
@@ -2059,7 +2059,7 @@ public enum Components {
                 url: Components.Schemas.alert_hyphen_url,
                 html_url: Components.Schemas.alert_hyphen_html_hyphen_url,
                 instances_url: Components.Schemas.alert_hyphen_instances_hyphen_url,
-                state: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_state,
+                state: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_state? = nil,
                 fixed_at: Components.Schemas.alert_hyphen_fixed_hyphen_at? = nil,
                 dismissed_by: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
                 dismissed_at: Components.Schemas.alert_hyphen_dismissed_hyphen_at? = nil,
@@ -2219,7 +2219,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert/instances_url`.
             public var instances_url: Components.Schemas.alert_hyphen_instances_hyphen_url
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert/state`.
-            public var state: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_state
+            public var state: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_state?
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert/fixed_at`.
             public var fixed_at: Components.Schemas.alert_hyphen_fixed_hyphen_at?
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert/dismissed_by`.
@@ -2261,7 +2261,7 @@ public enum Components {
                 url: Components.Schemas.alert_hyphen_url,
                 html_url: Components.Schemas.alert_hyphen_html_hyphen_url,
                 instances_url: Components.Schemas.alert_hyphen_instances_hyphen_url,
-                state: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_state,
+                state: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_state? = nil,
                 fixed_at: Components.Schemas.alert_hyphen_fixed_hyphen_at? = nil,
                 dismissed_by: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
                 dismissed_at: Components.Schemas.alert_hyphen_dismissed_hyphen_at? = nil,

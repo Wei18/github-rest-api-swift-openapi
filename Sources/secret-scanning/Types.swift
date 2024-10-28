@@ -1066,6 +1066,14 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/organization-secret-scanning-alert/validity`.
             public var validity: Components.Schemas.organization_hyphen_secret_hyphen_scanning_hyphen_alert.validityPayload?
+            /// Whether the secret was publicly leaked.
+            ///
+            /// - Remark: Generated from `#/components/schemas/organization-secret-scanning-alert/publicly_leaked`.
+            public var publicly_leaked: Swift.Bool?
+            /// Whether the detected secret was found in multiple repositories in the same organization or enterprise.
+            ///
+            /// - Remark: Generated from `#/components/schemas/organization-secret-scanning-alert/multi_repo`.
+            public var multi_repo: Swift.Bool?
             /// Creates a new `organization_hyphen_secret_hyphen_scanning_hyphen_alert`.
             ///
             /// - Parameters:
@@ -1088,6 +1096,8 @@ public enum Components {
             ///   - push_protection_bypassed_at: The time that push protection was bypassed in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
             ///   - resolution_comment: The comment that was optionally added when this alert was closed
             ///   - validity: The token status as of the latest validity check.
+            ///   - publicly_leaked: Whether the secret was publicly leaked.
+            ///   - multi_repo: Whether the detected secret was found in multiple repositories in the same organization or enterprise.
             public init(
                 number: Components.Schemas.alert_hyphen_number? = nil,
                 created_at: Components.Schemas.alert_hyphen_created_hyphen_at? = nil,
@@ -1107,7 +1117,9 @@ public enum Components {
                 push_protection_bypassed_by: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
                 push_protection_bypassed_at: Foundation.Date? = nil,
                 resolution_comment: Swift.String? = nil,
-                validity: Components.Schemas.organization_hyphen_secret_hyphen_scanning_hyphen_alert.validityPayload? = nil
+                validity: Components.Schemas.organization_hyphen_secret_hyphen_scanning_hyphen_alert.validityPayload? = nil,
+                publicly_leaked: Swift.Bool? = nil,
+                multi_repo: Swift.Bool? = nil
             ) {
                 self.number = number
                 self.created_at = created_at
@@ -1128,6 +1140,8 @@ public enum Components {
                 self.push_protection_bypassed_at = push_protection_bypassed_at
                 self.resolution_comment = resolution_comment
                 self.validity = validity
+                self.publicly_leaked = publicly_leaked
+                self.multi_repo = multi_repo
             }
             public enum CodingKeys: String, CodingKey {
                 case number
@@ -1149,6 +1163,8 @@ public enum Components {
                 case push_protection_bypassed_at
                 case resolution_comment
                 case validity
+                case publicly_leaked
+                case multi_repo
             }
         }
         /// The ID of the push protection bypass placeholder. This value is returned on any push protected routes.
@@ -1220,6 +1236,14 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-alert/validity`.
             public var validity: Components.Schemas.secret_hyphen_scanning_hyphen_alert.validityPayload?
+            /// Whether the detected secret was publicly leaked.
+            ///
+            /// - Remark: Generated from `#/components/schemas/secret-scanning-alert/publicly_leaked`.
+            public var publicly_leaked: Swift.Bool?
+            /// Whether the detected secret was found in multiple repositories under the same organization or enterprise.
+            ///
+            /// - Remark: Generated from `#/components/schemas/secret-scanning-alert/multi_repo`.
+            public var multi_repo: Swift.Bool?
             /// Creates a new `secret_hyphen_scanning_hyphen_alert`.
             ///
             /// - Parameters:
@@ -1241,6 +1265,8 @@ public enum Components {
             ///   - push_protection_bypassed_by:
             ///   - push_protection_bypassed_at: The time that push protection was bypassed in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
             ///   - validity: The token status as of the latest validity check.
+            ///   - publicly_leaked: Whether the detected secret was publicly leaked.
+            ///   - multi_repo: Whether the detected secret was found in multiple repositories under the same organization or enterprise.
             public init(
                 number: Components.Schemas.alert_hyphen_number? = nil,
                 created_at: Components.Schemas.alert_hyphen_created_hyphen_at? = nil,
@@ -1259,7 +1285,9 @@ public enum Components {
                 push_protection_bypassed: Swift.Bool? = nil,
                 push_protection_bypassed_by: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
                 push_protection_bypassed_at: Foundation.Date? = nil,
-                validity: Components.Schemas.secret_hyphen_scanning_hyphen_alert.validityPayload? = nil
+                validity: Components.Schemas.secret_hyphen_scanning_hyphen_alert.validityPayload? = nil,
+                publicly_leaked: Swift.Bool? = nil,
+                multi_repo: Swift.Bool? = nil
             ) {
                 self.number = number
                 self.created_at = created_at
@@ -1279,6 +1307,8 @@ public enum Components {
                 self.push_protection_bypassed_by = push_protection_bypassed_by
                 self.push_protection_bypassed_at = push_protection_bypassed_at
                 self.validity = validity
+                self.publicly_leaked = publicly_leaked
+                self.multi_repo = multi_repo
             }
             public enum CodingKeys: String, CodingKey {
                 case number
@@ -1299,6 +1329,8 @@ public enum Components {
                 case push_protection_bypassed_by
                 case push_protection_bypassed_at
                 case validity
+                case publicly_leaked
+                case multi_repo
             }
         }
         /// An optional comment when closing an alert. Cannot be updated or deleted. Must be `null` when changing `state` to `open`.
@@ -1971,6 +2003,14 @@ public enum Components {
         ///
         /// - Remark: Generated from `#/components/parameters/secret-scanning-alert-validity`.
         public typealias secret_hyphen_scanning_hyphen_alert_hyphen_validity = Swift.String
+        /// A boolean value representing whether or not to filter alerts by the publicly-leaked tag being present.
+        ///
+        /// - Remark: Generated from `#/components/parameters/secret-scanning-alert-publicly-leaked`.
+        public typealias secret_hyphen_scanning_hyphen_alert_hyphen_publicly_hyphen_leaked = Swift.Bool
+        /// A boolean value representing whether or not to filter alerts by the multi-repo tag being present.
+        ///
+        /// - Remark: Generated from `#/components/parameters/secret-scanning-alert-multi-repo`.
+        public typealias secret_hyphen_scanning_hyphen_alert_hyphen_multi_hyphen_repo = Swift.Bool
         /// The account owner of the repository. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/owner`.
@@ -2184,6 +2224,14 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/enterprises/{enterprise}/secret-scanning/alerts/GET/query/validity`.
                 public var validity: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_validity?
+                /// A boolean value representing whether or not to filter alerts by the publicly-leaked tag being present.
+                ///
+                /// - Remark: Generated from `#/paths/enterprises/{enterprise}/secret-scanning/alerts/GET/query/is_publicly_leaked`.
+                public var is_publicly_leaked: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_publicly_hyphen_leaked?
+                /// A boolean value representing whether or not to filter alerts by the multi-repo tag being present.
+                ///
+                /// - Remark: Generated from `#/paths/enterprises/{enterprise}/secret-scanning/alerts/GET/query/is_multi_repo`.
+                public var is_multi_repo: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_multi_hyphen_repo?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
@@ -2196,6 +2244,8 @@ public enum Operations {
                 ///   - before: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - after: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - validity: A comma-separated list of validities that, when present, will return alerts that match the validities in this list. Valid options are `active`, `inactive`, and `unknown`.
+                ///   - is_publicly_leaked: A boolean value representing whether or not to filter alerts by the publicly-leaked tag being present.
+                ///   - is_multi_repo: A boolean value representing whether or not to filter alerts by the multi-repo tag being present.
                 public init(
                     state: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_state? = nil,
                     secret_type: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_secret_hyphen_type? = nil,
@@ -2205,7 +2255,9 @@ public enum Operations {
                     per_page: Components.Parameters.per_hyphen_page? = nil,
                     before: Components.Parameters.pagination_hyphen_before? = nil,
                     after: Components.Parameters.pagination_hyphen_after? = nil,
-                    validity: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_validity? = nil
+                    validity: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_validity? = nil,
+                    is_publicly_leaked: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_publicly_hyphen_leaked? = nil,
+                    is_multi_repo: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_multi_hyphen_repo? = nil
                 ) {
                     self.state = state
                     self.secret_type = secret_type
@@ -2216,6 +2268,8 @@ public enum Operations {
                     self.before = before
                     self.after = after
                     self.validity = validity
+                    self.is_publicly_leaked = is_publicly_leaked
+                    self.is_multi_repo = is_multi_repo
                 }
             }
             public var query: Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.Input.Query
@@ -2482,6 +2536,14 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/secret-scanning/alerts/GET/query/validity`.
                 public var validity: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_validity?
+                /// A boolean value representing whether or not to filter alerts by the publicly-leaked tag being present.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/secret-scanning/alerts/GET/query/is_publicly_leaked`.
+                public var is_publicly_leaked: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_publicly_hyphen_leaked?
+                /// A boolean value representing whether or not to filter alerts by the multi-repo tag being present.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/secret-scanning/alerts/GET/query/is_multi_repo`.
+                public var is_multi_repo: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_multi_hyphen_repo?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
@@ -2495,6 +2557,8 @@ public enum Operations {
                 ///   - before: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for events before this cursor. To receive an initial cursor on your first request, include an empty "before" query string.
                 ///   - after: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for events after this cursor.  To receive an initial cursor on your first request, include an empty "after" query string.
                 ///   - validity: A comma-separated list of validities that, when present, will return alerts that match the validities in this list. Valid options are `active`, `inactive`, and `unknown`.
+                ///   - is_publicly_leaked: A boolean value representing whether or not to filter alerts by the publicly-leaked tag being present.
+                ///   - is_multi_repo: A boolean value representing whether or not to filter alerts by the multi-repo tag being present.
                 public init(
                     state: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_state? = nil,
                     secret_type: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_secret_hyphen_type? = nil,
@@ -2505,7 +2569,9 @@ public enum Operations {
                     per_page: Components.Parameters.per_hyphen_page? = nil,
                     before: Components.Parameters.secret_hyphen_scanning_hyphen_pagination_hyphen_before_hyphen_org_hyphen_repo? = nil,
                     after: Components.Parameters.secret_hyphen_scanning_hyphen_pagination_hyphen_after_hyphen_org_hyphen_repo? = nil,
-                    validity: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_validity? = nil
+                    validity: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_validity? = nil,
+                    is_publicly_leaked: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_publicly_hyphen_leaked? = nil,
+                    is_multi_repo: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_multi_hyphen_repo? = nil
                 ) {
                     self.state = state
                     self.secret_type = secret_type
@@ -2517,6 +2583,8 @@ public enum Operations {
                     self.before = before
                     self.after = after
                     self.validity = validity
+                    self.is_publicly_leaked = is_publicly_leaked
+                    self.is_multi_repo = is_multi_repo
                 }
             }
             public var query: Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Input.Query
@@ -2792,6 +2860,14 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/GET/query/validity`.
                 public var validity: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_validity?
+                /// A boolean value representing whether or not to filter alerts by the publicly-leaked tag being present.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/GET/query/is_publicly_leaked`.
+                public var is_publicly_leaked: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_publicly_hyphen_leaked?
+                /// A boolean value representing whether or not to filter alerts by the multi-repo tag being present.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/GET/query/is_multi_repo`.
+                public var is_multi_repo: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_multi_hyphen_repo?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
@@ -2805,6 +2881,8 @@ public enum Operations {
                 ///   - before: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for events before this cursor. To receive an initial cursor on your first request, include an empty "before" query string.
                 ///   - after: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for events after this cursor.  To receive an initial cursor on your first request, include an empty "after" query string.
                 ///   - validity: A comma-separated list of validities that, when present, will return alerts that match the validities in this list. Valid options are `active`, `inactive`, and `unknown`.
+                ///   - is_publicly_leaked: A boolean value representing whether or not to filter alerts by the publicly-leaked tag being present.
+                ///   - is_multi_repo: A boolean value representing whether or not to filter alerts by the multi-repo tag being present.
                 public init(
                     state: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_state? = nil,
                     secret_type: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_secret_hyphen_type? = nil,
@@ -2815,7 +2893,9 @@ public enum Operations {
                     per_page: Components.Parameters.per_hyphen_page? = nil,
                     before: Components.Parameters.secret_hyphen_scanning_hyphen_pagination_hyphen_before_hyphen_org_hyphen_repo? = nil,
                     after: Components.Parameters.secret_hyphen_scanning_hyphen_pagination_hyphen_after_hyphen_org_hyphen_repo? = nil,
-                    validity: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_validity? = nil
+                    validity: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_validity? = nil,
+                    is_publicly_leaked: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_publicly_hyphen_leaked? = nil,
+                    is_multi_repo: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_multi_hyphen_repo? = nil
                 ) {
                     self.state = state
                     self.secret_type = secret_type
@@ -2827,6 +2907,8 @@ public enum Operations {
                     self.before = before
                     self.after = after
                     self.validity = validity
+                    self.is_publicly_leaked = is_publicly_leaked
+                    self.is_multi_repo = is_multi_repo
                 }
             }
             public var query: Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Input.Query

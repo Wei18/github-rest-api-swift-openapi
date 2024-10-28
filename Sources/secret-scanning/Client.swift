@@ -129,6 +129,20 @@ public struct Client: APIProtocol {
                     name: "validity",
                     value: input.query.validity
                 )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "is_publicly_leaked",
+                    value: input.query.is_publicly_leaked
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "is_multi_repo",
+                    value: input.query.is_multi_repo
+                )
                 converter.setAcceptHeader(
                     in: &request.headerFields,
                     contentTypes: input.headers.accept
@@ -318,6 +332,20 @@ public struct Client: APIProtocol {
                     explode: true,
                     name: "validity",
                     value: input.query.validity
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "is_publicly_leaked",
+                    value: input.query.is_publicly_leaked
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "is_multi_repo",
+                    value: input.query.is_multi_repo
                 )
                 converter.setAcceptHeader(
                     in: &request.headerFields,
@@ -509,6 +537,20 @@ public struct Client: APIProtocol {
                     explode: true,
                     name: "validity",
                     value: input.query.validity
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "is_publicly_leaked",
+                    value: input.query.is_publicly_leaked
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "is_multi_repo",
+                    value: input.query.is_multi_repo
                 )
                 converter.setAcceptHeader(
                     in: &request.headerFields,
