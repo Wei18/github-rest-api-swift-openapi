@@ -42838,7 +42838,7 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dispatches/POST/requestBody/json/event_type`.
                     public var event_type: Swift.String
-                    /// JSON payload with extra information about the webhook event that your action or workflow may use. The maximum number of top-level properties is 10.
+                    /// JSON payload with extra information about the webhook event that your action or workflow may use. The maximum number of top-level properties is 10. The total size of the JSON payload must be less than 64KB.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dispatches/POST/requestBody/json/client_payload`.
                     public struct client_payloadPayload: Codable, Hashable, Sendable {
@@ -42858,7 +42858,7 @@ public enum Operations {
                             try encoder.encodeAdditionalProperties(additionalProperties)
                         }
                     }
-                    /// JSON payload with extra information about the webhook event that your action or workflow may use. The maximum number of top-level properties is 10.
+                    /// JSON payload with extra information about the webhook event that your action or workflow may use. The maximum number of top-level properties is 10. The total size of the JSON payload must be less than 64KB.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dispatches/POST/requestBody/json/client_payload`.
                     public var client_payload: Operations.repos_sol_create_hyphen_dispatch_hyphen_event.Input.Body.jsonPayload.client_payloadPayload?
@@ -42866,7 +42866,7 @@ public enum Operations {
                     ///
                     /// - Parameters:
                     ///   - event_type: A custom webhook event name. Must be 100 characters or fewer.
-                    ///   - client_payload: JSON payload with extra information about the webhook event that your action or workflow may use. The maximum number of top-level properties is 10.
+                    ///   - client_payload: JSON payload with extra information about the webhook event that your action or workflow may use. The maximum number of top-level properties is 10. The total size of the JSON payload must be less than 64KB.
                     public init(
                         event_type: Swift.String,
                         client_payload: Operations.repos_sol_create_hyphen_dispatch_hyphen_event.Input.Body.jsonPayload.client_payloadPayload? = nil
