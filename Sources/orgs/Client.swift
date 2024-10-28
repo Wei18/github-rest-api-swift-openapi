@@ -7201,6 +7201,9 @@ public struct Client: APIProtocol {
     ///
     /// For OAuth app tokens and personal access tokens (classic), this endpoint only lists organizations that your authorization allows you to operate on in some way (e.g., you can list teams with `read:org` scope, you can publicize your organization membership with `user` scope, etc.). Therefore, this API requires at least `user` or `read:org` scope for OAuth app tokens and personal access tokens (classic). Requests with insufficient scope will receive a `403 Forbidden` response.
     ///
+    /// > [!NOTE]
+    /// > Requests using a fine-grained access token will receive a `200 Success` response with an empty list.
+    ///
     /// - Remark: HTTP `GET /user/orgs`.
     /// - Remark: Generated from `#/paths//user/orgs/get(orgs/list-for-authenticated-user)`.
     public func orgs_sol_list_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.orgs_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.orgs_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.Output {

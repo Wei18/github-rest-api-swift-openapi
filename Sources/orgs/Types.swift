@@ -733,6 +733,9 @@ public protocol APIProtocol: Sendable {
     ///
     /// For OAuth app tokens and personal access tokens (classic), this endpoint only lists organizations that your authorization allows you to operate on in some way (e.g., you can list teams with `read:org` scope, you can publicize your organization membership with `user` scope, etc.). Therefore, this API requires at least `user` or `read:org` scope for OAuth app tokens and personal access tokens (classic). Requests with insufficient scope will receive a `403 Forbidden` response.
     ///
+    /// > [!NOTE]
+    /// > Requests using a fine-grained access token will receive a `200 Success` response with an empty list.
+    ///
     /// - Remark: HTTP `GET /user/orgs`.
     /// - Remark: Generated from `#/paths//user/orgs/get(orgs/list-for-authenticated-user)`.
     func orgs_sol_list_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.orgs_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.orgs_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.Output
@@ -2032,6 +2035,9 @@ extension APIProtocol {
     /// List organizations for the authenticated user.
     ///
     /// For OAuth app tokens and personal access tokens (classic), this endpoint only lists organizations that your authorization allows you to operate on in some way (e.g., you can list teams with `read:org` scope, you can publicize your organization membership with `user` scope, etc.). Therefore, this API requires at least `user` or `read:org` scope for OAuth app tokens and personal access tokens (classic). Requests with insufficient scope will receive a `403 Forbidden` response.
+    ///
+    /// > [!NOTE]
+    /// > Requests using a fine-grained access token will receive a `200 Success` response with an empty list.
     ///
     /// - Remark: HTTP `GET /user/orgs`.
     /// - Remark: Generated from `#/paths//user/orgs/get(orgs/list-for-authenticated-user)`.
@@ -5287,6 +5293,12 @@ public enum Components {
             public var private_gists: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/organization-full/disk_usage`.
             public var disk_usage: Swift.Int?
+            /// The number of collaborators on private repositories.
+            ///
+            /// This field may be null if the number of private repositories is over 50,000.
+            ///
+            /// - Remark: Generated from `#/components/schemas/organization-full/collaborators`.
+            public var collaborators: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/organization-full/billing_email`.
             public var billing_email: Swift.String?
             /// - Remark: Generated from `#/components/schemas/organization-full/plan`.
@@ -5458,6 +5470,7 @@ public enum Components {
             ///   - owned_private_repos:
             ///   - private_gists:
             ///   - disk_usage:
+            ///   - collaborators: The number of collaborators on private repositories.
             ///   - billing_email:
             ///   - plan:
             ///   - default_repository_permission:
@@ -5515,6 +5528,7 @@ public enum Components {
                 owned_private_repos: Swift.Int? = nil,
                 private_gists: Swift.Int? = nil,
                 disk_usage: Swift.Int? = nil,
+                collaborators: Swift.Int? = nil,
                 billing_email: Swift.String? = nil,
                 plan: Components.Schemas.organization_hyphen_full.planPayload? = nil,
                 default_repository_permission: Swift.String? = nil,
@@ -5572,6 +5586,7 @@ public enum Components {
                 self.owned_private_repos = owned_private_repos
                 self.private_gists = private_gists
                 self.disk_usage = disk_usage
+                self.collaborators = collaborators
                 self.billing_email = billing_email
                 self.plan = plan
                 self.default_repository_permission = default_repository_permission
@@ -5630,6 +5645,7 @@ public enum Components {
                 case owned_private_repos
                 case private_gists
                 case disk_usage
+                case collaborators
                 case billing_email
                 case plan
                 case default_repository_permission
@@ -21264,6 +21280,9 @@ public enum Operations {
     /// List organizations for the authenticated user.
     ///
     /// For OAuth app tokens and personal access tokens (classic), this endpoint only lists organizations that your authorization allows you to operate on in some way (e.g., you can list teams with `read:org` scope, you can publicize your organization membership with `user` scope, etc.). Therefore, this API requires at least `user` or `read:org` scope for OAuth app tokens and personal access tokens (classic). Requests with insufficient scope will receive a `403 Forbidden` response.
+    ///
+    /// > [!NOTE]
+    /// > Requests using a fine-grained access token will receive a `200 Success` response with an empty list.
     ///
     /// - Remark: HTTP `GET /user/orgs`.
     /// - Remark: Generated from `#/paths//user/orgs/get(orgs/list-for-authenticated-user)`.
