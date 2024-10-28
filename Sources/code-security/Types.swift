@@ -1145,6 +1145,79 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/code-security-configuration/secret_scanning_push_protection`.
             public var secret_scanning_push_protection: Components.Schemas.code_hyphen_security_hyphen_configuration.secret_scanning_push_protectionPayload?
+            /// The enablement status of secret scanning delegated bypass
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-security-configuration/secret_scanning_delegated_bypass`.
+            @frozen public enum secret_scanning_delegated_bypassPayload: String, Codable, Hashable, Sendable {
+                case enabled = "enabled"
+                case disabled = "disabled"
+                case not_set = "not_set"
+            }
+            /// The enablement status of secret scanning delegated bypass
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-security-configuration/secret_scanning_delegated_bypass`.
+            public var secret_scanning_delegated_bypass: Components.Schemas.code_hyphen_security_hyphen_configuration.secret_scanning_delegated_bypassPayload?
+            /// Feature options for secret scanning delegated bypass
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-security-configuration/secret_scanning_delegated_bypass_options`.
+            public struct secret_scanning_delegated_bypass_optionsPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/code-security-configuration/secret_scanning_delegated_bypass_options/reviewersPayload`.
+                public struct reviewersPayloadPayload: Codable, Hashable, Sendable {
+                    /// The ID of the team or role selected as a bypass reviewer
+                    ///
+                    /// - Remark: Generated from `#/components/schemas/code-security-configuration/secret_scanning_delegated_bypass_options/reviewersPayload/reviewer_id`.
+                    public var reviewer_id: Swift.Int
+                    /// The type of the bypass reviewer
+                    ///
+                    /// - Remark: Generated from `#/components/schemas/code-security-configuration/secret_scanning_delegated_bypass_options/reviewersPayload/reviewer_type`.
+                    @frozen public enum reviewer_typePayload: String, Codable, Hashable, Sendable {
+                        case TEAM = "TEAM"
+                        case ROLE = "ROLE"
+                    }
+                    /// The type of the bypass reviewer
+                    ///
+                    /// - Remark: Generated from `#/components/schemas/code-security-configuration/secret_scanning_delegated_bypass_options/reviewersPayload/reviewer_type`.
+                    public var reviewer_type: Components.Schemas.code_hyphen_security_hyphen_configuration.secret_scanning_delegated_bypass_optionsPayload.reviewersPayloadPayload.reviewer_typePayload
+                    /// Creates a new `reviewersPayloadPayload`.
+                    ///
+                    /// - Parameters:
+                    ///   - reviewer_id: The ID of the team or role selected as a bypass reviewer
+                    ///   - reviewer_type: The type of the bypass reviewer
+                    public init(
+                        reviewer_id: Swift.Int,
+                        reviewer_type: Components.Schemas.code_hyphen_security_hyphen_configuration.secret_scanning_delegated_bypass_optionsPayload.reviewersPayloadPayload.reviewer_typePayload
+                    ) {
+                        self.reviewer_id = reviewer_id
+                        self.reviewer_type = reviewer_type
+                    }
+                    public enum CodingKeys: String, CodingKey {
+                        case reviewer_id
+                        case reviewer_type
+                    }
+                }
+                /// The bypass reviewers for secret scanning delegated bypass
+                ///
+                /// - Remark: Generated from `#/components/schemas/code-security-configuration/secret_scanning_delegated_bypass_options/reviewers`.
+                public typealias reviewersPayload = [Components.Schemas.code_hyphen_security_hyphen_configuration.secret_scanning_delegated_bypass_optionsPayload.reviewersPayloadPayload]
+                /// The bypass reviewers for secret scanning delegated bypass
+                ///
+                /// - Remark: Generated from `#/components/schemas/code-security-configuration/secret_scanning_delegated_bypass_options/reviewers`.
+                public var reviewers: Components.Schemas.code_hyphen_security_hyphen_configuration.secret_scanning_delegated_bypass_optionsPayload.reviewersPayload?
+                /// Creates a new `secret_scanning_delegated_bypass_optionsPayload`.
+                ///
+                /// - Parameters:
+                ///   - reviewers: The bypass reviewers for secret scanning delegated bypass
+                public init(reviewers: Components.Schemas.code_hyphen_security_hyphen_configuration.secret_scanning_delegated_bypass_optionsPayload.reviewersPayload? = nil) {
+                    self.reviewers = reviewers
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case reviewers
+                }
+            }
+            /// Feature options for secret scanning delegated bypass
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-security-configuration/secret_scanning_delegated_bypass_options`.
+            public var secret_scanning_delegated_bypass_options: Components.Schemas.code_hyphen_security_hyphen_configuration.secret_scanning_delegated_bypass_optionsPayload?
             /// The enablement status of secret scanning validity checks
             ///
             /// - Remark: Generated from `#/components/schemas/code-security-configuration/secret_scanning_validity_checks`.
@@ -1220,6 +1293,8 @@ public enum Components {
             ///   - code_scanning_default_setup: The enablement status of code scanning default setup
             ///   - secret_scanning: The enablement status of secret scanning
             ///   - secret_scanning_push_protection: The enablement status of secret scanning push protection
+            ///   - secret_scanning_delegated_bypass: The enablement status of secret scanning delegated bypass
+            ///   - secret_scanning_delegated_bypass_options: Feature options for secret scanning delegated bypass
             ///   - secret_scanning_validity_checks: The enablement status of secret scanning validity checks
             ///   - secret_scanning_non_provider_patterns: The enablement status of secret scanning non-provider patterns
             ///   - private_vulnerability_reporting: The enablement status of private vulnerability reporting
@@ -1242,6 +1317,8 @@ public enum Components {
                 code_scanning_default_setup: Components.Schemas.code_hyphen_security_hyphen_configuration.code_scanning_default_setupPayload? = nil,
                 secret_scanning: Components.Schemas.code_hyphen_security_hyphen_configuration.secret_scanningPayload? = nil,
                 secret_scanning_push_protection: Components.Schemas.code_hyphen_security_hyphen_configuration.secret_scanning_push_protectionPayload? = nil,
+                secret_scanning_delegated_bypass: Components.Schemas.code_hyphen_security_hyphen_configuration.secret_scanning_delegated_bypassPayload? = nil,
+                secret_scanning_delegated_bypass_options: Components.Schemas.code_hyphen_security_hyphen_configuration.secret_scanning_delegated_bypass_optionsPayload? = nil,
                 secret_scanning_validity_checks: Components.Schemas.code_hyphen_security_hyphen_configuration.secret_scanning_validity_checksPayload? = nil,
                 secret_scanning_non_provider_patterns: Components.Schemas.code_hyphen_security_hyphen_configuration.secret_scanning_non_provider_patternsPayload? = nil,
                 private_vulnerability_reporting: Components.Schemas.code_hyphen_security_hyphen_configuration.private_vulnerability_reportingPayload? = nil,
@@ -1264,6 +1341,8 @@ public enum Components {
                 self.code_scanning_default_setup = code_scanning_default_setup
                 self.secret_scanning = secret_scanning
                 self.secret_scanning_push_protection = secret_scanning_push_protection
+                self.secret_scanning_delegated_bypass = secret_scanning_delegated_bypass
+                self.secret_scanning_delegated_bypass_options = secret_scanning_delegated_bypass_options
                 self.secret_scanning_validity_checks = secret_scanning_validity_checks
                 self.secret_scanning_non_provider_patterns = secret_scanning_non_provider_patterns
                 self.private_vulnerability_reporting = private_vulnerability_reporting
@@ -1287,6 +1366,8 @@ public enum Components {
                 case code_scanning_default_setup
                 case secret_scanning
                 case secret_scanning_push_protection
+                case secret_scanning_delegated_bypass
+                case secret_scanning_delegated_bypass_options
                 case secret_scanning_validity_checks
                 case secret_scanning_non_provider_patterns
                 case private_vulnerability_reporting
@@ -2015,6 +2096,79 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/secret_scanning_push_protection`.
                     public var secret_scanning_push_protection: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_push_protectionPayload?
+                    /// The enablement status of secret scanning delegated bypass
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/secret_scanning_delegated_bypass`.
+                    @frozen public enum secret_scanning_delegated_bypassPayload: String, Codable, Hashable, Sendable {
+                        case enabled = "enabled"
+                        case disabled = "disabled"
+                        case not_set = "not_set"
+                    }
+                    /// The enablement status of secret scanning delegated bypass
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/secret_scanning_delegated_bypass`.
+                    public var secret_scanning_delegated_bypass: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_delegated_bypassPayload?
+                    /// Feature options for secret scanning delegated bypass
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/secret_scanning_delegated_bypass_options`.
+                    public struct secret_scanning_delegated_bypass_optionsPayload: Codable, Hashable, Sendable {
+                        /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/secret_scanning_delegated_bypass_options/reviewersPayload`.
+                        public struct reviewersPayloadPayload: Codable, Hashable, Sendable {
+                            /// The ID of the team or role selected as a bypass reviewer
+                            ///
+                            /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/secret_scanning_delegated_bypass_options/reviewersPayload/reviewer_id`.
+                            public var reviewer_id: Swift.Int
+                            /// The type of the bypass reviewer
+                            ///
+                            /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/secret_scanning_delegated_bypass_options/reviewersPayload/reviewer_type`.
+                            @frozen public enum reviewer_typePayload: String, Codable, Hashable, Sendable {
+                                case TEAM = "TEAM"
+                                case ROLE = "ROLE"
+                            }
+                            /// The type of the bypass reviewer
+                            ///
+                            /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/secret_scanning_delegated_bypass_options/reviewersPayload/reviewer_type`.
+                            public var reviewer_type: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_delegated_bypass_optionsPayload.reviewersPayloadPayload.reviewer_typePayload
+                            /// Creates a new `reviewersPayloadPayload`.
+                            ///
+                            /// - Parameters:
+                            ///   - reviewer_id: The ID of the team or role selected as a bypass reviewer
+                            ///   - reviewer_type: The type of the bypass reviewer
+                            public init(
+                                reviewer_id: Swift.Int,
+                                reviewer_type: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_delegated_bypass_optionsPayload.reviewersPayloadPayload.reviewer_typePayload
+                            ) {
+                                self.reviewer_id = reviewer_id
+                                self.reviewer_type = reviewer_type
+                            }
+                            public enum CodingKeys: String, CodingKey {
+                                case reviewer_id
+                                case reviewer_type
+                            }
+                        }
+                        /// The bypass reviewers for secret scanning delegated bypass
+                        ///
+                        /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/secret_scanning_delegated_bypass_options/reviewers`.
+                        public typealias reviewersPayload = [Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_delegated_bypass_optionsPayload.reviewersPayloadPayload]
+                        /// The bypass reviewers for secret scanning delegated bypass
+                        ///
+                        /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/secret_scanning_delegated_bypass_options/reviewers`.
+                        public var reviewers: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_delegated_bypass_optionsPayload.reviewersPayload?
+                        /// Creates a new `secret_scanning_delegated_bypass_optionsPayload`.
+                        ///
+                        /// - Parameters:
+                        ///   - reviewers: The bypass reviewers for secret scanning delegated bypass
+                        public init(reviewers: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_delegated_bypass_optionsPayload.reviewersPayload? = nil) {
+                            self.reviewers = reviewers
+                        }
+                        public enum CodingKeys: String, CodingKey {
+                            case reviewers
+                        }
+                    }
+                    /// Feature options for secret scanning delegated bypass
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/secret_scanning_delegated_bypass_options`.
+                    public var secret_scanning_delegated_bypass_options: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_delegated_bypass_optionsPayload?
                     /// The enablement status of secret scanning validity checks
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/secret_scanning_validity_checks`.
@@ -2076,6 +2230,8 @@ public enum Operations {
                     ///   - code_scanning_default_setup: The enablement status of code scanning default setup
                     ///   - secret_scanning: The enablement status of secret scanning
                     ///   - secret_scanning_push_protection: The enablement status of secret scanning push protection
+                    ///   - secret_scanning_delegated_bypass: The enablement status of secret scanning delegated bypass
+                    ///   - secret_scanning_delegated_bypass_options: Feature options for secret scanning delegated bypass
                     ///   - secret_scanning_validity_checks: The enablement status of secret scanning validity checks
                     ///   - secret_scanning_non_provider_patterns: The enablement status of secret scanning non provider patterns
                     ///   - private_vulnerability_reporting: The enablement status of private vulnerability reporting
@@ -2092,6 +2248,8 @@ public enum Operations {
                         code_scanning_default_setup: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.code_scanning_default_setupPayload? = nil,
                         secret_scanning: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.secret_scanningPayload? = nil,
                         secret_scanning_push_protection: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_push_protectionPayload? = nil,
+                        secret_scanning_delegated_bypass: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_delegated_bypassPayload? = nil,
+                        secret_scanning_delegated_bypass_options: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_delegated_bypass_optionsPayload? = nil,
                         secret_scanning_validity_checks: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_validity_checksPayload? = nil,
                         secret_scanning_non_provider_patterns: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_non_provider_patternsPayload? = nil,
                         private_vulnerability_reporting: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.private_vulnerability_reportingPayload? = nil,
@@ -2108,6 +2266,8 @@ public enum Operations {
                         self.code_scanning_default_setup = code_scanning_default_setup
                         self.secret_scanning = secret_scanning
                         self.secret_scanning_push_protection = secret_scanning_push_protection
+                        self.secret_scanning_delegated_bypass = secret_scanning_delegated_bypass
+                        self.secret_scanning_delegated_bypass_options = secret_scanning_delegated_bypass_options
                         self.secret_scanning_validity_checks = secret_scanning_validity_checks
                         self.secret_scanning_non_provider_patterns = secret_scanning_non_provider_patterns
                         self.private_vulnerability_reporting = private_vulnerability_reporting
@@ -2125,6 +2285,8 @@ public enum Operations {
                         case code_scanning_default_setup
                         case secret_scanning
                         case secret_scanning_push_protection
+                        case secret_scanning_delegated_bypass
+                        case secret_scanning_delegated_bypass_options
                         case secret_scanning_validity_checks
                         case secret_scanning_non_provider_patterns
                         case private_vulnerability_reporting
@@ -2176,6 +2338,14 @@ public enum Operations {
                             Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_push_protectionPayload.self,
                             forKey: .secret_scanning_push_protection
                         )
+                        secret_scanning_delegated_bypass = try container.decodeIfPresent(
+                            Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_delegated_bypassPayload.self,
+                            forKey: .secret_scanning_delegated_bypass
+                        )
+                        secret_scanning_delegated_bypass_options = try container.decodeIfPresent(
+                            Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_delegated_bypass_optionsPayload.self,
+                            forKey: .secret_scanning_delegated_bypass_options
+                        )
                         secret_scanning_validity_checks = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_validity_checksPayload.self,
                             forKey: .secret_scanning_validity_checks
@@ -2204,6 +2374,8 @@ public enum Operations {
                             "code_scanning_default_setup",
                             "secret_scanning",
                             "secret_scanning_push_protection",
+                            "secret_scanning_delegated_bypass",
+                            "secret_scanning_delegated_bypass_options",
                             "secret_scanning_validity_checks",
                             "secret_scanning_non_provider_patterns",
                             "private_vulnerability_reporting",
@@ -3155,6 +3327,79 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/secret_scanning_push_protection`.
                     public var secret_scanning_push_protection: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_push_protectionPayload?
+                    /// The enablement status of secret scanning delegated bypass
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/secret_scanning_delegated_bypass`.
+                    @frozen public enum secret_scanning_delegated_bypassPayload: String, Codable, Hashable, Sendable {
+                        case enabled = "enabled"
+                        case disabled = "disabled"
+                        case not_set = "not_set"
+                    }
+                    /// The enablement status of secret scanning delegated bypass
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/secret_scanning_delegated_bypass`.
+                    public var secret_scanning_delegated_bypass: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_delegated_bypassPayload?
+                    /// Feature options for secret scanning delegated bypass
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/secret_scanning_delegated_bypass_options`.
+                    public struct secret_scanning_delegated_bypass_optionsPayload: Codable, Hashable, Sendable {
+                        /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/secret_scanning_delegated_bypass_options/reviewersPayload`.
+                        public struct reviewersPayloadPayload: Codable, Hashable, Sendable {
+                            /// The ID of the team or role selected as a bypass reviewer
+                            ///
+                            /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/secret_scanning_delegated_bypass_options/reviewersPayload/reviewer_id`.
+                            public var reviewer_id: Swift.Int
+                            /// The type of the bypass reviewer
+                            ///
+                            /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/secret_scanning_delegated_bypass_options/reviewersPayload/reviewer_type`.
+                            @frozen public enum reviewer_typePayload: String, Codable, Hashable, Sendable {
+                                case TEAM = "TEAM"
+                                case ROLE = "ROLE"
+                            }
+                            /// The type of the bypass reviewer
+                            ///
+                            /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/secret_scanning_delegated_bypass_options/reviewersPayload/reviewer_type`.
+                            public var reviewer_type: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_delegated_bypass_optionsPayload.reviewersPayloadPayload.reviewer_typePayload
+                            /// Creates a new `reviewersPayloadPayload`.
+                            ///
+                            /// - Parameters:
+                            ///   - reviewer_id: The ID of the team or role selected as a bypass reviewer
+                            ///   - reviewer_type: The type of the bypass reviewer
+                            public init(
+                                reviewer_id: Swift.Int,
+                                reviewer_type: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_delegated_bypass_optionsPayload.reviewersPayloadPayload.reviewer_typePayload
+                            ) {
+                                self.reviewer_id = reviewer_id
+                                self.reviewer_type = reviewer_type
+                            }
+                            public enum CodingKeys: String, CodingKey {
+                                case reviewer_id
+                                case reviewer_type
+                            }
+                        }
+                        /// The bypass reviewers for secret scanning delegated bypass
+                        ///
+                        /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/secret_scanning_delegated_bypass_options/reviewers`.
+                        public typealias reviewersPayload = [Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_delegated_bypass_optionsPayload.reviewersPayloadPayload]
+                        /// The bypass reviewers for secret scanning delegated bypass
+                        ///
+                        /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/secret_scanning_delegated_bypass_options/reviewers`.
+                        public var reviewers: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_delegated_bypass_optionsPayload.reviewersPayload?
+                        /// Creates a new `secret_scanning_delegated_bypass_optionsPayload`.
+                        ///
+                        /// - Parameters:
+                        ///   - reviewers: The bypass reviewers for secret scanning delegated bypass
+                        public init(reviewers: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_delegated_bypass_optionsPayload.reviewersPayload? = nil) {
+                            self.reviewers = reviewers
+                        }
+                        public enum CodingKeys: String, CodingKey {
+                            case reviewers
+                        }
+                    }
+                    /// Feature options for secret scanning delegated bypass
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/secret_scanning_delegated_bypass_options`.
+                    public var secret_scanning_delegated_bypass_options: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_delegated_bypass_optionsPayload?
                     /// The enablement status of secret scanning validity checks
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/secret_scanning_validity_checks`.
@@ -3216,6 +3461,8 @@ public enum Operations {
                     ///   - code_scanning_default_setup: The enablement status of code scanning default setup
                     ///   - secret_scanning: The enablement status of secret scanning
                     ///   - secret_scanning_push_protection: The enablement status of secret scanning push protection
+                    ///   - secret_scanning_delegated_bypass: The enablement status of secret scanning delegated bypass
+                    ///   - secret_scanning_delegated_bypass_options: Feature options for secret scanning delegated bypass
                     ///   - secret_scanning_validity_checks: The enablement status of secret scanning validity checks
                     ///   - secret_scanning_non_provider_patterns: The enablement status of secret scanning non-provider patterns
                     ///   - private_vulnerability_reporting: The enablement status of private vulnerability reporting
@@ -3232,6 +3479,8 @@ public enum Operations {
                         code_scanning_default_setup: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.code_scanning_default_setupPayload? = nil,
                         secret_scanning: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.secret_scanningPayload? = nil,
                         secret_scanning_push_protection: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_push_protectionPayload? = nil,
+                        secret_scanning_delegated_bypass: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_delegated_bypassPayload? = nil,
+                        secret_scanning_delegated_bypass_options: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_delegated_bypass_optionsPayload? = nil,
                         secret_scanning_validity_checks: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_validity_checksPayload? = nil,
                         secret_scanning_non_provider_patterns: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_non_provider_patternsPayload? = nil,
                         private_vulnerability_reporting: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.private_vulnerability_reportingPayload? = nil,
@@ -3248,6 +3497,8 @@ public enum Operations {
                         self.code_scanning_default_setup = code_scanning_default_setup
                         self.secret_scanning = secret_scanning
                         self.secret_scanning_push_protection = secret_scanning_push_protection
+                        self.secret_scanning_delegated_bypass = secret_scanning_delegated_bypass
+                        self.secret_scanning_delegated_bypass_options = secret_scanning_delegated_bypass_options
                         self.secret_scanning_validity_checks = secret_scanning_validity_checks
                         self.secret_scanning_non_provider_patterns = secret_scanning_non_provider_patterns
                         self.private_vulnerability_reporting = private_vulnerability_reporting
@@ -3265,6 +3516,8 @@ public enum Operations {
                         case code_scanning_default_setup
                         case secret_scanning
                         case secret_scanning_push_protection
+                        case secret_scanning_delegated_bypass
+                        case secret_scanning_delegated_bypass_options
                         case secret_scanning_validity_checks
                         case secret_scanning_non_provider_patterns
                         case private_vulnerability_reporting
@@ -3316,6 +3569,14 @@ public enum Operations {
                             Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_push_protectionPayload.self,
                             forKey: .secret_scanning_push_protection
                         )
+                        secret_scanning_delegated_bypass = try container.decodeIfPresent(
+                            Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_delegated_bypassPayload.self,
+                            forKey: .secret_scanning_delegated_bypass
+                        )
+                        secret_scanning_delegated_bypass_options = try container.decodeIfPresent(
+                            Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_delegated_bypass_optionsPayload.self,
+                            forKey: .secret_scanning_delegated_bypass_options
+                        )
                         secret_scanning_validity_checks = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_validity_checksPayload.self,
                             forKey: .secret_scanning_validity_checks
@@ -3344,6 +3605,8 @@ public enum Operations {
                             "code_scanning_default_setup",
                             "secret_scanning",
                             "secret_scanning_push_protection",
+                            "secret_scanning_delegated_bypass",
+                            "secret_scanning_delegated_bypass_options",
                             "secret_scanning_validity_checks",
                             "secret_scanning_non_provider_patterns",
                             "private_vulnerability_reporting",
@@ -3758,6 +4021,7 @@ public enum Operations {
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/attach/POST/requestBody/json/scope`.
                     @frozen public enum scopePayload: String, Codable, Hashable, Sendable {
                         case all = "all"
+                        case all_without_configurations = "all_without_configurations"
                         case _public = "public"
                         case private_or_internal = "private_or_internal"
                         case selected = "selected"
