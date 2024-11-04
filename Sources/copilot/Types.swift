@@ -29,6 +29,22 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /enterprises/{enterprise}/copilot/billing/seats`.
     /// - Remark: Generated from `#/paths//enterprises/{enterprise}/copilot/billing/seats/get(copilot/list-copilot-seats-for-enterprise)`.
     func copilot_sol_list_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_enterprise(_ input: Operations.copilot_sol_list_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_enterprise.Input) async throws -> Operations.copilot_sol_list_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_enterprise.Output
+    /// Get Copilot metrics for an enterprise
+    ///
+    /// Use this endpoint to see a breakdown of aggregated metrics for various GitHub Copilot features. See the response schema tab for detailed metrics definitions.
+    ///
+    /// The response contains metrics for up to 28 days prior. Metrics are processed once per day for the previous day,
+    /// and the response will only include data up until yesterday. In order for an end user to be counted towards these metrics,
+    /// they must have telemetry enabled in their IDE.
+    ///
+    /// To access this endpoint, the Copilot Metrics API access policy must be enabled or set to "no policy" for the enterprise within GitHub settings.
+    /// Only enterprise owners and billing managers can view Copilot metrics for the enterprise.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `read:enterprise` scopes to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /enterprises/{enterprise}/copilot/metrics`.
+    /// - Remark: Generated from `#/paths//enterprises/{enterprise}/copilot/metrics/get(copilot/copilot-metrics-for-enterprise)`.
+    func copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_enterprise(_ input: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_enterprise.Input) async throws -> Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_enterprise.Output
     /// Get a summary of Copilot usage for enterprise members
     ///
     /// > [!NOTE]
@@ -49,6 +65,25 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /enterprises/{enterprise}/copilot/usage`.
     /// - Remark: Generated from `#/paths//enterprises/{enterprise}/copilot/usage/get(copilot/usage-metrics-for-enterprise)`.
     func copilot_sol_usage_hyphen_metrics_hyphen_for_hyphen_enterprise(_ input: Operations.copilot_sol_usage_hyphen_metrics_hyphen_for_hyphen_enterprise.Input) async throws -> Operations.copilot_sol_usage_hyphen_metrics_hyphen_for_hyphen_enterprise.Output
+    /// Get Copilot metrics for an enterprise team
+    ///
+    /// Use this endpoint to see a breakdown of aggregated metrics for various GitHub Copilot features. See the response schema tab for detailed metrics definitions.
+    ///
+    /// The response contains metrics for up to 28 days prior. Metrics are processed once per day for the previous day,
+    /// and the response will only include data up until yesterday. In order for an end user to be counted towards these metrics,
+    /// they must have telemetry enabled in their IDE.
+    ///
+    /// > [!NOTE]
+    /// > This endpoint will only return results for a given day if the enterprise team had **five or more members with active Copilot licenses** on that day, as evaluated at the end of that day.
+    ///
+    /// To access this endpoint, the Copilot Metrics API access policy must be enabled or set to "no policy" for the enterprise within GitHub settings.
+    /// Only owners and billing managers for the enterprise that contains the enterprise team can view Copilot metrics for the enterprise team.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `read:enterprise` scopes to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /enterprises/{enterprise}/team/{team_slug}/copilot/metrics`.
+    /// - Remark: Generated from `#/paths//enterprises/{enterprise}/team/{team_slug}/copilot/metrics/get(copilot/copilot-metrics-for-enterprise-team)`.
+    func copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_enterprise_hyphen_team(_ input: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_enterprise_hyphen_team.Input) async throws -> Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_enterprise_hyphen_team.Output
     /// Get a summary of Copilot usage for an enterprise team
     ///
     /// > [!NOTE]
@@ -181,6 +216,25 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `DELETE /orgs/{org}/copilot/billing/selected_users`.
     /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_users/delete(copilot/cancel-copilot-seat-assignment-for-users)`.
     func copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_users(_ input: Operations.copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_users.Input) async throws -> Operations.copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_users.Output
+    /// Get Copilot metrics for an organization
+    ///
+    /// Use this endpoint to see a breakdown of aggregated metrics for various GitHub Copilot features. See the response schema tab for detailed metrics definitions.
+    ///
+    /// > [!NOTE]
+    /// > This endpoint will only return results for a given day if the organization contained **five or more members with active Copilot licenses** on that day, as evaluated at the end of that day.
+    ///
+    /// The response contains metrics for up to 28 days prior. Metrics are processed once per day for the previous day,
+    /// and the response will only include data up until yesterday. In order for an end user to be counted towards these metrics,
+    /// they must have telemetry enabled in their IDE.
+    ///
+    /// To access this endpoint, the Copilot Metrics API access policy must be enabled for the organization.
+    /// Only organization owners and owners and billing managers of the parent enterprise can view Copilot metrics.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot`, `read:org`, or `read:enterprise` scopes to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/copilot/metrics`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/copilot/metrics/get(copilot/copilot-metrics-for-organization)`.
+    func copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization(_ input: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization.Input) async throws -> Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization.Output
     /// Get a summary of Copilot usage for organization members
     ///
     /// > [!NOTE]
@@ -215,6 +269,25 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /orgs/{org}/members/{username}/copilot`.
     /// - Remark: Generated from `#/paths//orgs/{org}/members/{username}/copilot/get(copilot/get-copilot-seat-details-for-user)`.
     func copilot_sol_get_hyphen_copilot_hyphen_seat_hyphen_details_hyphen_for_hyphen_user(_ input: Operations.copilot_sol_get_hyphen_copilot_hyphen_seat_hyphen_details_hyphen_for_hyphen_user.Input) async throws -> Operations.copilot_sol_get_hyphen_copilot_hyphen_seat_hyphen_details_hyphen_for_hyphen_user.Output
+    /// Get Copilot metrics for a team
+    ///
+    /// Use this endpoint to see a breakdown of aggregated metrics for various GitHub Copilot features. See the response schema tab for detailed metrics definitions.
+    ///
+    /// > [!NOTE]
+    /// > This endpoint will only return results for a given day if the team had **five or more members with active Copilot licenses** on that day, as evaluated at the end of that day.
+    ///
+    /// The response contains metrics for up to 28 days prior. Metrics are processed once per day for the previous day,
+    /// and the response will only include data up until yesterday. In order for an end user to be counted towards these metrics,
+    /// they must have telemetry enabled in their IDE.
+    ///
+    /// To access this endpoint, the Copilot Metrics API access policy must be enabled for the organization containing the team within GitHub settings.
+    /// Only organization owners for the organization that contains this team and owners and billing managers of the parent enterprise can view Copilot metrics for a team.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot`, `read:org`, or `read:enterprise` scopes to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/team/{team_slug}/copilot/metrics`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/team/{team_slug}/copilot/metrics/get(copilot/copilot-metrics-for-team)`.
+    func copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_team(_ input: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_team.Input) async throws -> Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_team.Output
     /// Get a summary of Copilot usage for a team
     ///
     /// > [!NOTE]
@@ -270,6 +343,32 @@ extension APIProtocol {
             headers: headers
         ))
     }
+    /// Get Copilot metrics for an enterprise
+    ///
+    /// Use this endpoint to see a breakdown of aggregated metrics for various GitHub Copilot features. See the response schema tab for detailed metrics definitions.
+    ///
+    /// The response contains metrics for up to 28 days prior. Metrics are processed once per day for the previous day,
+    /// and the response will only include data up until yesterday. In order for an end user to be counted towards these metrics,
+    /// they must have telemetry enabled in their IDE.
+    ///
+    /// To access this endpoint, the Copilot Metrics API access policy must be enabled or set to "no policy" for the enterprise within GitHub settings.
+    /// Only enterprise owners and billing managers can view Copilot metrics for the enterprise.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `read:enterprise` scopes to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /enterprises/{enterprise}/copilot/metrics`.
+    /// - Remark: Generated from `#/paths//enterprises/{enterprise}/copilot/metrics/get(copilot/copilot-metrics-for-enterprise)`.
+    public func copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_enterprise(
+        path: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_enterprise.Input.Path,
+        query: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_enterprise.Input.Query = .init(),
+        headers: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_enterprise.Input.Headers = .init()
+    ) async throws -> Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_enterprise.Output {
+        try await copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_enterprise(Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_enterprise.Input(
+            path: path,
+            query: query,
+            headers: headers
+        ))
+    }
     /// Get a summary of Copilot usage for enterprise members
     ///
     /// > [!NOTE]
@@ -295,6 +394,35 @@ extension APIProtocol {
         headers: Operations.copilot_sol_usage_hyphen_metrics_hyphen_for_hyphen_enterprise.Input.Headers = .init()
     ) async throws -> Operations.copilot_sol_usage_hyphen_metrics_hyphen_for_hyphen_enterprise.Output {
         try await copilot_sol_usage_hyphen_metrics_hyphen_for_hyphen_enterprise(Operations.copilot_sol_usage_hyphen_metrics_hyphen_for_hyphen_enterprise.Input(
+            path: path,
+            query: query,
+            headers: headers
+        ))
+    }
+    /// Get Copilot metrics for an enterprise team
+    ///
+    /// Use this endpoint to see a breakdown of aggregated metrics for various GitHub Copilot features. See the response schema tab for detailed metrics definitions.
+    ///
+    /// The response contains metrics for up to 28 days prior. Metrics are processed once per day for the previous day,
+    /// and the response will only include data up until yesterday. In order for an end user to be counted towards these metrics,
+    /// they must have telemetry enabled in their IDE.
+    ///
+    /// > [!NOTE]
+    /// > This endpoint will only return results for a given day if the enterprise team had **five or more members with active Copilot licenses** on that day, as evaluated at the end of that day.
+    ///
+    /// To access this endpoint, the Copilot Metrics API access policy must be enabled or set to "no policy" for the enterprise within GitHub settings.
+    /// Only owners and billing managers for the enterprise that contains the enterprise team can view Copilot metrics for the enterprise team.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `read:enterprise` scopes to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /enterprises/{enterprise}/team/{team_slug}/copilot/metrics`.
+    /// - Remark: Generated from `#/paths//enterprises/{enterprise}/team/{team_slug}/copilot/metrics/get(copilot/copilot-metrics-for-enterprise-team)`.
+    public func copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_enterprise_hyphen_team(
+        path: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_enterprise_hyphen_team.Input.Path,
+        query: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_enterprise_hyphen_team.Input.Query = .init(),
+        headers: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_enterprise_hyphen_team.Input.Headers = .init()
+    ) async throws -> Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_enterprise_hyphen_team.Output {
+        try await copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_enterprise_hyphen_team(Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_enterprise_hyphen_team.Input(
             path: path,
             query: query,
             headers: headers
@@ -500,6 +628,35 @@ extension APIProtocol {
             body: body
         ))
     }
+    /// Get Copilot metrics for an organization
+    ///
+    /// Use this endpoint to see a breakdown of aggregated metrics for various GitHub Copilot features. See the response schema tab for detailed metrics definitions.
+    ///
+    /// > [!NOTE]
+    /// > This endpoint will only return results for a given day if the organization contained **five or more members with active Copilot licenses** on that day, as evaluated at the end of that day.
+    ///
+    /// The response contains metrics for up to 28 days prior. Metrics are processed once per day for the previous day,
+    /// and the response will only include data up until yesterday. In order for an end user to be counted towards these metrics,
+    /// they must have telemetry enabled in their IDE.
+    ///
+    /// To access this endpoint, the Copilot Metrics API access policy must be enabled for the organization.
+    /// Only organization owners and owners and billing managers of the parent enterprise can view Copilot metrics.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot`, `read:org`, or `read:enterprise` scopes to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/copilot/metrics`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/copilot/metrics/get(copilot/copilot-metrics-for-organization)`.
+    public func copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization(
+        path: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization.Input.Path,
+        query: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization.Input.Query = .init(),
+        headers: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization.Input.Headers = .init()
+    ) async throws -> Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization.Output {
+        try await copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization(Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization.Input(
+            path: path,
+            query: query,
+            headers: headers
+        ))
+    }
     /// Get a summary of Copilot usage for organization members
     ///
     /// > [!NOTE]
@@ -549,6 +706,35 @@ extension APIProtocol {
     ) async throws -> Operations.copilot_sol_get_hyphen_copilot_hyphen_seat_hyphen_details_hyphen_for_hyphen_user.Output {
         try await copilot_sol_get_hyphen_copilot_hyphen_seat_hyphen_details_hyphen_for_hyphen_user(Operations.copilot_sol_get_hyphen_copilot_hyphen_seat_hyphen_details_hyphen_for_hyphen_user.Input(
             path: path,
+            headers: headers
+        ))
+    }
+    /// Get Copilot metrics for a team
+    ///
+    /// Use this endpoint to see a breakdown of aggregated metrics for various GitHub Copilot features. See the response schema tab for detailed metrics definitions.
+    ///
+    /// > [!NOTE]
+    /// > This endpoint will only return results for a given day if the team had **five or more members with active Copilot licenses** on that day, as evaluated at the end of that day.
+    ///
+    /// The response contains metrics for up to 28 days prior. Metrics are processed once per day for the previous day,
+    /// and the response will only include data up until yesterday. In order for an end user to be counted towards these metrics,
+    /// they must have telemetry enabled in their IDE.
+    ///
+    /// To access this endpoint, the Copilot Metrics API access policy must be enabled for the organization containing the team within GitHub settings.
+    /// Only organization owners for the organization that contains this team and owners and billing managers of the parent enterprise can view Copilot metrics for a team.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot`, `read:org`, or `read:enterprise` scopes to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/team/{team_slug}/copilot/metrics`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/team/{team_slug}/copilot/metrics/get(copilot/copilot-metrics-for-team)`.
+    public func copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_team(
+        path: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_team.Input.Path,
+        query: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_team.Input.Query = .init(),
+        headers: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_team.Input.Headers = .init()
+    ) async throws -> Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_team.Output {
+        try await copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_team(Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_team.Input(
+            path: path,
+            query: query,
             headers: headers
         ))
     }
@@ -1362,6 +1548,893 @@ public enum Components {
                 ])
             }
         }
+        /// Usage metrics for Copilot editor code completions in the IDE.
+        ///
+        /// - Remark: Generated from `#/components/schemas/copilot-ide-code-completions`.
+        public struct copilot_hyphen_ide_hyphen_code_hyphen_completions: Codable, Hashable, Sendable {
+            /// Number of users who accepted at least one Copilot code suggestion, across all active editors. Includes both full and partial acceptances.
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-ide-code-completions/total_engaged_users`.
+            public var total_engaged_users: Swift.Int?
+            /// Usage metrics for a given language for the given editor for Copilot code completions.
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-ide-code-completions/languagesPayload`.
+            public struct languagesPayloadPayload: Codable, Hashable, Sendable {
+                /// Name of the language used for Copilot code completion suggestions.
+                ///
+                /// - Remark: Generated from `#/components/schemas/copilot-ide-code-completions/languagesPayload/name`.
+                public var name: Swift.String?
+                /// Number of users who accepted at least one Copilot code completion suggestion for the given language. Includes both full and partial acceptances.
+                ///
+                /// - Remark: Generated from `#/components/schemas/copilot-ide-code-completions/languagesPayload/total_engaged_users`.
+                public var total_engaged_users: Swift.Int?
+                /// Creates a new `languagesPayloadPayload`.
+                ///
+                /// - Parameters:
+                ///   - name: Name of the language used for Copilot code completion suggestions.
+                ///   - total_engaged_users: Number of users who accepted at least one Copilot code completion suggestion for the given language. Includes both full and partial acceptances.
+                public init(
+                    name: Swift.String? = nil,
+                    total_engaged_users: Swift.Int? = nil
+                ) {
+                    self.name = name
+                    self.total_engaged_users = total_engaged_users
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case name
+                    case total_engaged_users
+                }
+            }
+            /// Code completion metrics for active languages.
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-ide-code-completions/languages`.
+            public typealias languagesPayload = [Components.Schemas.copilot_hyphen_ide_hyphen_code_hyphen_completions.languagesPayloadPayload]
+            /// Code completion metrics for active languages.
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-ide-code-completions/languages`.
+            public var languages: Components.Schemas.copilot_hyphen_ide_hyphen_code_hyphen_completions.languagesPayload?
+            /// Copilot code completion metrics for active editors.
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-ide-code-completions/editorsPayload`.
+            public struct editorsPayloadPayload: Codable, Hashable, Sendable {
+                /// Name of the given editor.
+                ///
+                /// - Remark: Generated from `#/components/schemas/copilot-ide-code-completions/editorsPayload/name`.
+                public var name: Swift.String?
+                /// Number of users who accepted at least one Copilot code completion suggestion for the given editor. Includes both full and partial acceptances.
+                ///
+                /// - Remark: Generated from `#/components/schemas/copilot-ide-code-completions/editorsPayload/total_engaged_users`.
+                public var total_engaged_users: Swift.Int?
+                /// - Remark: Generated from `#/components/schemas/copilot-ide-code-completions/editorsPayload/modelsPayload`.
+                public struct modelsPayloadPayload: Codable, Hashable, Sendable {
+                    /// Name of the language used for Copilot code completion suggestions, for the given editor.
+                    ///
+                    /// - Remark: Generated from `#/components/schemas/copilot-ide-code-completions/editorsPayload/modelsPayload/name`.
+                    public var name: Swift.String?
+                    /// Indicates whether a model is custom or default.
+                    ///
+                    /// - Remark: Generated from `#/components/schemas/copilot-ide-code-completions/editorsPayload/modelsPayload/is_custom_model`.
+                    public var is_custom_model: Swift.Bool?
+                    /// The training date for the custom model.
+                    ///
+                    /// - Remark: Generated from `#/components/schemas/copilot-ide-code-completions/editorsPayload/modelsPayload/custom_model_training_date`.
+                    public var custom_model_training_date: Swift.String?
+                    /// Number of users who accepted at least one Copilot code completion suggestion for the given editor, for the given language and model. Includes both full and partial acceptances.
+                    ///
+                    /// - Remark: Generated from `#/components/schemas/copilot-ide-code-completions/editorsPayload/modelsPayload/total_engaged_users`.
+                    public var total_engaged_users: Swift.Int?
+                    /// Usage metrics for a given language for the given editor for Copilot code completions.
+                    ///
+                    /// - Remark: Generated from `#/components/schemas/copilot-ide-code-completions/editorsPayload/modelsPayload/languagesPayload`.
+                    public struct languagesPayloadPayload: Codable, Hashable, Sendable {
+                        /// Name of the language used for Copilot code completion suggestions, for the given editor.
+                        ///
+                        /// - Remark: Generated from `#/components/schemas/copilot-ide-code-completions/editorsPayload/modelsPayload/languagesPayload/name`.
+                        public var name: Swift.String?
+                        /// Number of users who accepted at least one Copilot code completion suggestion for the given editor, for the given language. Includes both full and partial acceptances.
+                        ///
+                        /// - Remark: Generated from `#/components/schemas/copilot-ide-code-completions/editorsPayload/modelsPayload/languagesPayload/total_engaged_users`.
+                        public var total_engaged_users: Swift.Int?
+                        /// The number of Copilot code suggestions generated for the given editor, for the given language.
+                        ///
+                        /// - Remark: Generated from `#/components/schemas/copilot-ide-code-completions/editorsPayload/modelsPayload/languagesPayload/total_code_suggestions`.
+                        public var total_code_suggestions: Swift.Int?
+                        /// The number of Copilot code suggestions accepted for the given editor, for the given language. Includes both full and partial acceptances.
+                        ///
+                        /// - Remark: Generated from `#/components/schemas/copilot-ide-code-completions/editorsPayload/modelsPayload/languagesPayload/total_code_acceptances`.
+                        public var total_code_acceptances: Swift.Int?
+                        /// The number of lines of code suggested by Copilot code completions for the given editor, for the given language.
+                        ///
+                        /// - Remark: Generated from `#/components/schemas/copilot-ide-code-completions/editorsPayload/modelsPayload/languagesPayload/total_code_lines_suggested`.
+                        public var total_code_lines_suggested: Swift.Int?
+                        /// The number of lines of code accepted from Copilot code suggestions for the given editor, for the given language.
+                        ///
+                        /// - Remark: Generated from `#/components/schemas/copilot-ide-code-completions/editorsPayload/modelsPayload/languagesPayload/total_code_lines_accepted`.
+                        public var total_code_lines_accepted: Swift.Int?
+                        /// Creates a new `languagesPayloadPayload`.
+                        ///
+                        /// - Parameters:
+                        ///   - name: Name of the language used for Copilot code completion suggestions, for the given editor.
+                        ///   - total_engaged_users: Number of users who accepted at least one Copilot code completion suggestion for the given editor, for the given language. Includes both full and partial acceptances.
+                        ///   - total_code_suggestions: The number of Copilot code suggestions generated for the given editor, for the given language.
+                        ///   - total_code_acceptances: The number of Copilot code suggestions accepted for the given editor, for the given language. Includes both full and partial acceptances.
+                        ///   - total_code_lines_suggested: The number of lines of code suggested by Copilot code completions for the given editor, for the given language.
+                        ///   - total_code_lines_accepted: The number of lines of code accepted from Copilot code suggestions for the given editor, for the given language.
+                        public init(
+                            name: Swift.String? = nil,
+                            total_engaged_users: Swift.Int? = nil,
+                            total_code_suggestions: Swift.Int? = nil,
+                            total_code_acceptances: Swift.Int? = nil,
+                            total_code_lines_suggested: Swift.Int? = nil,
+                            total_code_lines_accepted: Swift.Int? = nil
+                        ) {
+                            self.name = name
+                            self.total_engaged_users = total_engaged_users
+                            self.total_code_suggestions = total_code_suggestions
+                            self.total_code_acceptances = total_code_acceptances
+                            self.total_code_lines_suggested = total_code_lines_suggested
+                            self.total_code_lines_accepted = total_code_lines_accepted
+                        }
+                        public enum CodingKeys: String, CodingKey {
+                            case name
+                            case total_engaged_users
+                            case total_code_suggestions
+                            case total_code_acceptances
+                            case total_code_lines_suggested
+                            case total_code_lines_accepted
+                        }
+                    }
+                    /// Code completion metrics for active languages, for the given editor.
+                    ///
+                    /// - Remark: Generated from `#/components/schemas/copilot-ide-code-completions/editorsPayload/modelsPayload/languages`.
+                    public typealias languagesPayload = [Components.Schemas.copilot_hyphen_ide_hyphen_code_hyphen_completions.editorsPayloadPayload.modelsPayloadPayload.languagesPayloadPayload]
+                    /// Code completion metrics for active languages, for the given editor.
+                    ///
+                    /// - Remark: Generated from `#/components/schemas/copilot-ide-code-completions/editorsPayload/modelsPayload/languages`.
+                    public var languages: Components.Schemas.copilot_hyphen_ide_hyphen_code_hyphen_completions.editorsPayloadPayload.modelsPayloadPayload.languagesPayload?
+                    /// Creates a new `modelsPayloadPayload`.
+                    ///
+                    /// - Parameters:
+                    ///   - name: Name of the language used for Copilot code completion suggestions, for the given editor.
+                    ///   - is_custom_model: Indicates whether a model is custom or default.
+                    ///   - custom_model_training_date: The training date for the custom model.
+                    ///   - total_engaged_users: Number of users who accepted at least one Copilot code completion suggestion for the given editor, for the given language and model. Includes both full and partial acceptances.
+                    ///   - languages: Code completion metrics for active languages, for the given editor.
+                    public init(
+                        name: Swift.String? = nil,
+                        is_custom_model: Swift.Bool? = nil,
+                        custom_model_training_date: Swift.String? = nil,
+                        total_engaged_users: Swift.Int? = nil,
+                        languages: Components.Schemas.copilot_hyphen_ide_hyphen_code_hyphen_completions.editorsPayloadPayload.modelsPayloadPayload.languagesPayload? = nil
+                    ) {
+                        self.name = name
+                        self.is_custom_model = is_custom_model
+                        self.custom_model_training_date = custom_model_training_date
+                        self.total_engaged_users = total_engaged_users
+                        self.languages = languages
+                    }
+                    public enum CodingKeys: String, CodingKey {
+                        case name
+                        case is_custom_model
+                        case custom_model_training_date
+                        case total_engaged_users
+                        case languages
+                    }
+                }
+                /// List of model metrics for custom models and the default model.
+                ///
+                /// - Remark: Generated from `#/components/schemas/copilot-ide-code-completions/editorsPayload/models`.
+                public typealias modelsPayload = [Components.Schemas.copilot_hyphen_ide_hyphen_code_hyphen_completions.editorsPayloadPayload.modelsPayloadPayload]
+                /// List of model metrics for custom models and the default model.
+                ///
+                /// - Remark: Generated from `#/components/schemas/copilot-ide-code-completions/editorsPayload/models`.
+                public var models: Components.Schemas.copilot_hyphen_ide_hyphen_code_hyphen_completions.editorsPayloadPayload.modelsPayload?
+                /// A container of undocumented properties.
+                public var additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer
+                /// Creates a new `editorsPayloadPayload`.
+                ///
+                /// - Parameters:
+                ///   - name: Name of the given editor.
+                ///   - total_engaged_users: Number of users who accepted at least one Copilot code completion suggestion for the given editor. Includes both full and partial acceptances.
+                ///   - models: List of model metrics for custom models and the default model.
+                ///   - additionalProperties: A container of undocumented properties.
+                public init(
+                    name: Swift.String? = nil,
+                    total_engaged_users: Swift.Int? = nil,
+                    models: Components.Schemas.copilot_hyphen_ide_hyphen_code_hyphen_completions.editorsPayloadPayload.modelsPayload? = nil,
+                    additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer = .init()
+                ) {
+                    self.name = name
+                    self.total_engaged_users = total_engaged_users
+                    self.models = models
+                    self.additionalProperties = additionalProperties
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case name
+                    case total_engaged_users
+                    case models
+                }
+                public init(from decoder: any Decoder) throws {
+                    let container = try decoder.container(keyedBy: CodingKeys.self)
+                    name = try container.decodeIfPresent(
+                        Swift.String.self,
+                        forKey: .name
+                    )
+                    total_engaged_users = try container.decodeIfPresent(
+                        Swift.Int.self,
+                        forKey: .total_engaged_users
+                    )
+                    models = try container.decodeIfPresent(
+                        Components.Schemas.copilot_hyphen_ide_hyphen_code_hyphen_completions.editorsPayloadPayload.modelsPayload.self,
+                        forKey: .models
+                    )
+                    additionalProperties = try decoder.decodeAdditionalProperties(knownKeys: [
+                        "name",
+                        "total_engaged_users",
+                        "models"
+                    ])
+                }
+                public func encode(to encoder: any Encoder) throws {
+                    var container = encoder.container(keyedBy: CodingKeys.self)
+                    try container.encodeIfPresent(
+                        name,
+                        forKey: .name
+                    )
+                    try container.encodeIfPresent(
+                        total_engaged_users,
+                        forKey: .total_engaged_users
+                    )
+                    try container.encodeIfPresent(
+                        models,
+                        forKey: .models
+                    )
+                    try encoder.encodeAdditionalProperties(additionalProperties)
+                }
+            }
+            /// - Remark: Generated from `#/components/schemas/copilot-ide-code-completions/editors`.
+            public typealias editorsPayload = [Components.Schemas.copilot_hyphen_ide_hyphen_code_hyphen_completions.editorsPayloadPayload]
+            /// - Remark: Generated from `#/components/schemas/copilot-ide-code-completions/editors`.
+            public var editors: Components.Schemas.copilot_hyphen_ide_hyphen_code_hyphen_completions.editorsPayload?
+            /// A container of undocumented properties.
+            public var additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer
+            /// Creates a new `copilot_hyphen_ide_hyphen_code_hyphen_completions`.
+            ///
+            /// - Parameters:
+            ///   - total_engaged_users: Number of users who accepted at least one Copilot code suggestion, across all active editors. Includes both full and partial acceptances.
+            ///   - languages: Code completion metrics for active languages.
+            ///   - editors:
+            ///   - additionalProperties: A container of undocumented properties.
+            public init(
+                total_engaged_users: Swift.Int? = nil,
+                languages: Components.Schemas.copilot_hyphen_ide_hyphen_code_hyphen_completions.languagesPayload? = nil,
+                editors: Components.Schemas.copilot_hyphen_ide_hyphen_code_hyphen_completions.editorsPayload? = nil,
+                additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer = .init()
+            ) {
+                self.total_engaged_users = total_engaged_users
+                self.languages = languages
+                self.editors = editors
+                self.additionalProperties = additionalProperties
+            }
+            public enum CodingKeys: String, CodingKey {
+                case total_engaged_users
+                case languages
+                case editors
+            }
+            public init(from decoder: any Decoder) throws {
+                let container = try decoder.container(keyedBy: CodingKeys.self)
+                total_engaged_users = try container.decodeIfPresent(
+                    Swift.Int.self,
+                    forKey: .total_engaged_users
+                )
+                languages = try container.decodeIfPresent(
+                    Components.Schemas.copilot_hyphen_ide_hyphen_code_hyphen_completions.languagesPayload.self,
+                    forKey: .languages
+                )
+                editors = try container.decodeIfPresent(
+                    Components.Schemas.copilot_hyphen_ide_hyphen_code_hyphen_completions.editorsPayload.self,
+                    forKey: .editors
+                )
+                additionalProperties = try decoder.decodeAdditionalProperties(knownKeys: [
+                    "total_engaged_users",
+                    "languages",
+                    "editors"
+                ])
+            }
+            public func encode(to encoder: any Encoder) throws {
+                var container = encoder.container(keyedBy: CodingKeys.self)
+                try container.encodeIfPresent(
+                    total_engaged_users,
+                    forKey: .total_engaged_users
+                )
+                try container.encodeIfPresent(
+                    languages,
+                    forKey: .languages
+                )
+                try container.encodeIfPresent(
+                    editors,
+                    forKey: .editors
+                )
+                try encoder.encodeAdditionalProperties(additionalProperties)
+            }
+        }
+        /// Usage metrics for Copilot Chat in the IDE.
+        ///
+        /// - Remark: Generated from `#/components/schemas/copilot-ide-chat`.
+        public struct copilot_hyphen_ide_hyphen_chat: Codable, Hashable, Sendable {
+            /// Total number of users who prompted Copilot Chat in the IDE.
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-ide-chat/total_engaged_users`.
+            public var total_engaged_users: Swift.Int?
+            /// Copilot Chat metrics, for active editors.
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-ide-chat/editorsPayload`.
+            public struct editorsPayloadPayload: Codable, Hashable, Sendable {
+                /// Name of the given editor.
+                ///
+                /// - Remark: Generated from `#/components/schemas/copilot-ide-chat/editorsPayload/name`.
+                public var name: Swift.String?
+                /// The number of users who prompted Copilot Chat in the specified editor.
+                ///
+                /// - Remark: Generated from `#/components/schemas/copilot-ide-chat/editorsPayload/total_engaged_users`.
+                public var total_engaged_users: Swift.Int?
+                /// - Remark: Generated from `#/components/schemas/copilot-ide-chat/editorsPayload/modelsPayload`.
+                public struct modelsPayloadPayload: Codable, Hashable, Sendable {
+                    /// Name of the language used for Copilot code completion suggestions, for the given editor.
+                    ///
+                    /// - Remark: Generated from `#/components/schemas/copilot-ide-chat/editorsPayload/modelsPayload/name`.
+                    public var name: Swift.String?
+                    /// Indicates whether a model is custom or default.
+                    ///
+                    /// - Remark: Generated from `#/components/schemas/copilot-ide-chat/editorsPayload/modelsPayload/is_custom_model`.
+                    public var is_custom_model: Swift.Bool?
+                    /// The training date for the custom model.
+                    ///
+                    /// - Remark: Generated from `#/components/schemas/copilot-ide-chat/editorsPayload/modelsPayload/custom_model_training_date`.
+                    public var custom_model_training_date: Swift.String?
+                    /// The number of users who prompted Copilot Chat in the given editor and model.
+                    ///
+                    /// - Remark: Generated from `#/components/schemas/copilot-ide-chat/editorsPayload/modelsPayload/total_engaged_users`.
+                    public var total_engaged_users: Swift.Int?
+                    /// The total number of chats initiated by users in the given editor and model.
+                    ///
+                    /// - Remark: Generated from `#/components/schemas/copilot-ide-chat/editorsPayload/modelsPayload/total_chats`.
+                    public var total_chats: Swift.Int?
+                    /// The number of times users accepted a code suggestion from Copilot Chat using the 'Insert Code' UI element, for the given editor.
+                    ///
+                    /// - Remark: Generated from `#/components/schemas/copilot-ide-chat/editorsPayload/modelsPayload/total_chat_insertion_events`.
+                    public var total_chat_insertion_events: Swift.Int?
+                    /// The number of times users copied a code suggestion from Copilot Chat using the keyboard, or the 'Copy' UI element, for the given editor.
+                    ///
+                    /// - Remark: Generated from `#/components/schemas/copilot-ide-chat/editorsPayload/modelsPayload/total_chat_copy_events`.
+                    public var total_chat_copy_events: Swift.Int?
+                    /// Creates a new `modelsPayloadPayload`.
+                    ///
+                    /// - Parameters:
+                    ///   - name: Name of the language used for Copilot code completion suggestions, for the given editor.
+                    ///   - is_custom_model: Indicates whether a model is custom or default.
+                    ///   - custom_model_training_date: The training date for the custom model.
+                    ///   - total_engaged_users: The number of users who prompted Copilot Chat in the given editor and model.
+                    ///   - total_chats: The total number of chats initiated by users in the given editor and model.
+                    ///   - total_chat_insertion_events: The number of times users accepted a code suggestion from Copilot Chat using the 'Insert Code' UI element, for the given editor.
+                    ///   - total_chat_copy_events: The number of times users copied a code suggestion from Copilot Chat using the keyboard, or the 'Copy' UI element, for the given editor.
+                    public init(
+                        name: Swift.String? = nil,
+                        is_custom_model: Swift.Bool? = nil,
+                        custom_model_training_date: Swift.String? = nil,
+                        total_engaged_users: Swift.Int? = nil,
+                        total_chats: Swift.Int? = nil,
+                        total_chat_insertion_events: Swift.Int? = nil,
+                        total_chat_copy_events: Swift.Int? = nil
+                    ) {
+                        self.name = name
+                        self.is_custom_model = is_custom_model
+                        self.custom_model_training_date = custom_model_training_date
+                        self.total_engaged_users = total_engaged_users
+                        self.total_chats = total_chats
+                        self.total_chat_insertion_events = total_chat_insertion_events
+                        self.total_chat_copy_events = total_chat_copy_events
+                    }
+                    public enum CodingKeys: String, CodingKey {
+                        case name
+                        case is_custom_model
+                        case custom_model_training_date
+                        case total_engaged_users
+                        case total_chats
+                        case total_chat_insertion_events
+                        case total_chat_copy_events
+                    }
+                }
+                /// List of model metrics for custom models and the default model.
+                ///
+                /// - Remark: Generated from `#/components/schemas/copilot-ide-chat/editorsPayload/models`.
+                public typealias modelsPayload = [Components.Schemas.copilot_hyphen_ide_hyphen_chat.editorsPayloadPayload.modelsPayloadPayload]
+                /// List of model metrics for custom models and the default model.
+                ///
+                /// - Remark: Generated from `#/components/schemas/copilot-ide-chat/editorsPayload/models`.
+                public var models: Components.Schemas.copilot_hyphen_ide_hyphen_chat.editorsPayloadPayload.modelsPayload?
+                /// Creates a new `editorsPayloadPayload`.
+                ///
+                /// - Parameters:
+                ///   - name: Name of the given editor.
+                ///   - total_engaged_users: The number of users who prompted Copilot Chat in the specified editor.
+                ///   - models: List of model metrics for custom models and the default model.
+                public init(
+                    name: Swift.String? = nil,
+                    total_engaged_users: Swift.Int? = nil,
+                    models: Components.Schemas.copilot_hyphen_ide_hyphen_chat.editorsPayloadPayload.modelsPayload? = nil
+                ) {
+                    self.name = name
+                    self.total_engaged_users = total_engaged_users
+                    self.models = models
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case name
+                    case total_engaged_users
+                    case models
+                }
+            }
+            /// - Remark: Generated from `#/components/schemas/copilot-ide-chat/editors`.
+            public typealias editorsPayload = [Components.Schemas.copilot_hyphen_ide_hyphen_chat.editorsPayloadPayload]
+            /// - Remark: Generated from `#/components/schemas/copilot-ide-chat/editors`.
+            public var editors: Components.Schemas.copilot_hyphen_ide_hyphen_chat.editorsPayload?
+            /// A container of undocumented properties.
+            public var additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer
+            /// Creates a new `copilot_hyphen_ide_hyphen_chat`.
+            ///
+            /// - Parameters:
+            ///   - total_engaged_users: Total number of users who prompted Copilot Chat in the IDE.
+            ///   - editors:
+            ///   - additionalProperties: A container of undocumented properties.
+            public init(
+                total_engaged_users: Swift.Int? = nil,
+                editors: Components.Schemas.copilot_hyphen_ide_hyphen_chat.editorsPayload? = nil,
+                additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer = .init()
+            ) {
+                self.total_engaged_users = total_engaged_users
+                self.editors = editors
+                self.additionalProperties = additionalProperties
+            }
+            public enum CodingKeys: String, CodingKey {
+                case total_engaged_users
+                case editors
+            }
+            public init(from decoder: any Decoder) throws {
+                let container = try decoder.container(keyedBy: CodingKeys.self)
+                total_engaged_users = try container.decodeIfPresent(
+                    Swift.Int.self,
+                    forKey: .total_engaged_users
+                )
+                editors = try container.decodeIfPresent(
+                    Components.Schemas.copilot_hyphen_ide_hyphen_chat.editorsPayload.self,
+                    forKey: .editors
+                )
+                additionalProperties = try decoder.decodeAdditionalProperties(knownKeys: [
+                    "total_engaged_users",
+                    "editors"
+                ])
+            }
+            public func encode(to encoder: any Encoder) throws {
+                var container = encoder.container(keyedBy: CodingKeys.self)
+                try container.encodeIfPresent(
+                    total_engaged_users,
+                    forKey: .total_engaged_users
+                )
+                try container.encodeIfPresent(
+                    editors,
+                    forKey: .editors
+                )
+                try encoder.encodeAdditionalProperties(additionalProperties)
+            }
+        }
+        /// Usage metrics for Copilot Chat in github.com
+        ///
+        /// - Remark: Generated from `#/components/schemas/copilot-dotcom-chat`.
+        public struct copilot_hyphen_dotcom_hyphen_chat: Codable, Hashable, Sendable {
+            /// Total number of users who prompted Copilot Chat on github.com at least once.
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-dotcom-chat/total_engaged_users`.
+            public var total_engaged_users: Swift.Int?
+            /// - Remark: Generated from `#/components/schemas/copilot-dotcom-chat/modelsPayload`.
+            public struct modelsPayloadPayload: Codable, Hashable, Sendable {
+                /// Name of the language used for Copilot code completion suggestions, for the given editor.
+                ///
+                /// - Remark: Generated from `#/components/schemas/copilot-dotcom-chat/modelsPayload/name`.
+                public var name: Swift.String?
+                /// Indicates whether a model is custom or default.
+                ///
+                /// - Remark: Generated from `#/components/schemas/copilot-dotcom-chat/modelsPayload/is_custom_model`.
+                public var is_custom_model: Swift.Bool?
+                /// The training date for the custom model (if applicable).
+                ///
+                /// - Remark: Generated from `#/components/schemas/copilot-dotcom-chat/modelsPayload/custom_model_training_date`.
+                public var custom_model_training_date: Swift.String?
+                /// Total number of users who prompted Copilot Chat on github.com at least once for each model.
+                ///
+                /// - Remark: Generated from `#/components/schemas/copilot-dotcom-chat/modelsPayload/total_engaged_users`.
+                public var total_engaged_users: Swift.Int?
+                /// Total number of chats initiated by users on github.com.
+                ///
+                /// - Remark: Generated from `#/components/schemas/copilot-dotcom-chat/modelsPayload/total_chats`.
+                public var total_chats: Swift.Int?
+                /// Creates a new `modelsPayloadPayload`.
+                ///
+                /// - Parameters:
+                ///   - name: Name of the language used for Copilot code completion suggestions, for the given editor.
+                ///   - is_custom_model: Indicates whether a model is custom or default.
+                ///   - custom_model_training_date: The training date for the custom model (if applicable).
+                ///   - total_engaged_users: Total number of users who prompted Copilot Chat on github.com at least once for each model.
+                ///   - total_chats: Total number of chats initiated by users on github.com.
+                public init(
+                    name: Swift.String? = nil,
+                    is_custom_model: Swift.Bool? = nil,
+                    custom_model_training_date: Swift.String? = nil,
+                    total_engaged_users: Swift.Int? = nil,
+                    total_chats: Swift.Int? = nil
+                ) {
+                    self.name = name
+                    self.is_custom_model = is_custom_model
+                    self.custom_model_training_date = custom_model_training_date
+                    self.total_engaged_users = total_engaged_users
+                    self.total_chats = total_chats
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case name
+                    case is_custom_model
+                    case custom_model_training_date
+                    case total_engaged_users
+                    case total_chats
+                }
+            }
+            /// List of model metrics for a custom models and the default model.
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-dotcom-chat/models`.
+            public typealias modelsPayload = [Components.Schemas.copilot_hyphen_dotcom_hyphen_chat.modelsPayloadPayload]
+            /// List of model metrics for a custom models and the default model.
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-dotcom-chat/models`.
+            public var models: Components.Schemas.copilot_hyphen_dotcom_hyphen_chat.modelsPayload?
+            /// A container of undocumented properties.
+            public var additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer
+            /// Creates a new `copilot_hyphen_dotcom_hyphen_chat`.
+            ///
+            /// - Parameters:
+            ///   - total_engaged_users: Total number of users who prompted Copilot Chat on github.com at least once.
+            ///   - models: List of model metrics for a custom models and the default model.
+            ///   - additionalProperties: A container of undocumented properties.
+            public init(
+                total_engaged_users: Swift.Int? = nil,
+                models: Components.Schemas.copilot_hyphen_dotcom_hyphen_chat.modelsPayload? = nil,
+                additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer = .init()
+            ) {
+                self.total_engaged_users = total_engaged_users
+                self.models = models
+                self.additionalProperties = additionalProperties
+            }
+            public enum CodingKeys: String, CodingKey {
+                case total_engaged_users
+                case models
+            }
+            public init(from decoder: any Decoder) throws {
+                let container = try decoder.container(keyedBy: CodingKeys.self)
+                total_engaged_users = try container.decodeIfPresent(
+                    Swift.Int.self,
+                    forKey: .total_engaged_users
+                )
+                models = try container.decodeIfPresent(
+                    Components.Schemas.copilot_hyphen_dotcom_hyphen_chat.modelsPayload.self,
+                    forKey: .models
+                )
+                additionalProperties = try decoder.decodeAdditionalProperties(knownKeys: [
+                    "total_engaged_users",
+                    "models"
+                ])
+            }
+            public func encode(to encoder: any Encoder) throws {
+                var container = encoder.container(keyedBy: CodingKeys.self)
+                try container.encodeIfPresent(
+                    total_engaged_users,
+                    forKey: .total_engaged_users
+                )
+                try container.encodeIfPresent(
+                    models,
+                    forKey: .models
+                )
+                try encoder.encodeAdditionalProperties(additionalProperties)
+            }
+        }
+        /// Usage metrics for Copilot for pull requests.
+        ///
+        /// - Remark: Generated from `#/components/schemas/copilot-dotcom-pull-requests`.
+        public struct copilot_hyphen_dotcom_hyphen_pull_hyphen_requests: Codable, Hashable, Sendable {
+            /// The number of users who used Copilot for Pull Requests on github.com to generate a pull request summary at least once.
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-dotcom-pull-requests/total_engaged_users`.
+            public var total_engaged_users: Swift.Int?
+            /// - Remark: Generated from `#/components/schemas/copilot-dotcom-pull-requests/repositoriesPayload`.
+            public struct repositoriesPayloadPayload: Codable, Hashable, Sendable {
+                /// Repository name
+                ///
+                /// - Remark: Generated from `#/components/schemas/copilot-dotcom-pull-requests/repositoriesPayload/name`.
+                public var name: Swift.String?
+                /// The number of users who generated pull request summaries using Copilot for Pull Requests in the given repository.
+                ///
+                /// - Remark: Generated from `#/components/schemas/copilot-dotcom-pull-requests/repositoriesPayload/total_engaged_users`.
+                public var total_engaged_users: Swift.Int?
+                /// - Remark: Generated from `#/components/schemas/copilot-dotcom-pull-requests/repositoriesPayload/modelsPayload`.
+                public struct modelsPayloadPayload: Codable, Hashable, Sendable {
+                    /// Name of the language used for Copilot code completion suggestions, for the given editor.
+                    ///
+                    /// - Remark: Generated from `#/components/schemas/copilot-dotcom-pull-requests/repositoriesPayload/modelsPayload/name`.
+                    public var name: Swift.String?
+                    /// Indicates whether a model is custom or default.
+                    ///
+                    /// - Remark: Generated from `#/components/schemas/copilot-dotcom-pull-requests/repositoriesPayload/modelsPayload/is_custom_model`.
+                    public var is_custom_model: Swift.Bool?
+                    /// The training date for the custom model.
+                    ///
+                    /// - Remark: Generated from `#/components/schemas/copilot-dotcom-pull-requests/repositoriesPayload/modelsPayload/custom_model_training_date`.
+                    public var custom_model_training_date: Swift.String?
+                    /// The number of pull request summaries generated using Copilot for Pull Requests in the given repository.
+                    ///
+                    /// - Remark: Generated from `#/components/schemas/copilot-dotcom-pull-requests/repositoriesPayload/modelsPayload/total_pr_summaries_created`.
+                    public var total_pr_summaries_created: Swift.Int?
+                    /// The number of users who generated pull request summaries using Copilot for Pull Requests in the given repository and model.
+                    ///
+                    /// - Remark: Generated from `#/components/schemas/copilot-dotcom-pull-requests/repositoriesPayload/modelsPayload/total_engaged_users`.
+                    public var total_engaged_users: Swift.Int?
+                    /// Creates a new `modelsPayloadPayload`.
+                    ///
+                    /// - Parameters:
+                    ///   - name: Name of the language used for Copilot code completion suggestions, for the given editor.
+                    ///   - is_custom_model: Indicates whether a model is custom or default.
+                    ///   - custom_model_training_date: The training date for the custom model.
+                    ///   - total_pr_summaries_created: The number of pull request summaries generated using Copilot for Pull Requests in the given repository.
+                    ///   - total_engaged_users: The number of users who generated pull request summaries using Copilot for Pull Requests in the given repository and model.
+                    public init(
+                        name: Swift.String? = nil,
+                        is_custom_model: Swift.Bool? = nil,
+                        custom_model_training_date: Swift.String? = nil,
+                        total_pr_summaries_created: Swift.Int? = nil,
+                        total_engaged_users: Swift.Int? = nil
+                    ) {
+                        self.name = name
+                        self.is_custom_model = is_custom_model
+                        self.custom_model_training_date = custom_model_training_date
+                        self.total_pr_summaries_created = total_pr_summaries_created
+                        self.total_engaged_users = total_engaged_users
+                    }
+                    public enum CodingKeys: String, CodingKey {
+                        case name
+                        case is_custom_model
+                        case custom_model_training_date
+                        case total_pr_summaries_created
+                        case total_engaged_users
+                    }
+                }
+                /// List of model metrics for custom models and the default model.
+                ///
+                /// - Remark: Generated from `#/components/schemas/copilot-dotcom-pull-requests/repositoriesPayload/models`.
+                public typealias modelsPayload = [Components.Schemas.copilot_hyphen_dotcom_hyphen_pull_hyphen_requests.repositoriesPayloadPayload.modelsPayloadPayload]
+                /// List of model metrics for custom models and the default model.
+                ///
+                /// - Remark: Generated from `#/components/schemas/copilot-dotcom-pull-requests/repositoriesPayload/models`.
+                public var models: Components.Schemas.copilot_hyphen_dotcom_hyphen_pull_hyphen_requests.repositoriesPayloadPayload.modelsPayload?
+                /// Creates a new `repositoriesPayloadPayload`.
+                ///
+                /// - Parameters:
+                ///   - name: Repository name
+                ///   - total_engaged_users: The number of users who generated pull request summaries using Copilot for Pull Requests in the given repository.
+                ///   - models: List of model metrics for custom models and the default model.
+                public init(
+                    name: Swift.String? = nil,
+                    total_engaged_users: Swift.Int? = nil,
+                    models: Components.Schemas.copilot_hyphen_dotcom_hyphen_pull_hyphen_requests.repositoriesPayloadPayload.modelsPayload? = nil
+                ) {
+                    self.name = name
+                    self.total_engaged_users = total_engaged_users
+                    self.models = models
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case name
+                    case total_engaged_users
+                    case models
+                }
+            }
+            /// Repositories in which users used Copilot for Pull Requests to generate pull request summaries
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-dotcom-pull-requests/repositories`.
+            public typealias repositoriesPayload = [Components.Schemas.copilot_hyphen_dotcom_hyphen_pull_hyphen_requests.repositoriesPayloadPayload]
+            /// Repositories in which users used Copilot for Pull Requests to generate pull request summaries
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-dotcom-pull-requests/repositories`.
+            public var repositories: Components.Schemas.copilot_hyphen_dotcom_hyphen_pull_hyphen_requests.repositoriesPayload?
+            /// A container of undocumented properties.
+            public var additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer
+            /// Creates a new `copilot_hyphen_dotcom_hyphen_pull_hyphen_requests`.
+            ///
+            /// - Parameters:
+            ///   - total_engaged_users: The number of users who used Copilot for Pull Requests on github.com to generate a pull request summary at least once.
+            ///   - repositories: Repositories in which users used Copilot for Pull Requests to generate pull request summaries
+            ///   - additionalProperties: A container of undocumented properties.
+            public init(
+                total_engaged_users: Swift.Int? = nil,
+                repositories: Components.Schemas.copilot_hyphen_dotcom_hyphen_pull_hyphen_requests.repositoriesPayload? = nil,
+                additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer = .init()
+            ) {
+                self.total_engaged_users = total_engaged_users
+                self.repositories = repositories
+                self.additionalProperties = additionalProperties
+            }
+            public enum CodingKeys: String, CodingKey {
+                case total_engaged_users
+                case repositories
+            }
+            public init(from decoder: any Decoder) throws {
+                let container = try decoder.container(keyedBy: CodingKeys.self)
+                total_engaged_users = try container.decodeIfPresent(
+                    Swift.Int.self,
+                    forKey: .total_engaged_users
+                )
+                repositories = try container.decodeIfPresent(
+                    Components.Schemas.copilot_hyphen_dotcom_hyphen_pull_hyphen_requests.repositoriesPayload.self,
+                    forKey: .repositories
+                )
+                additionalProperties = try decoder.decodeAdditionalProperties(knownKeys: [
+                    "total_engaged_users",
+                    "repositories"
+                ])
+            }
+            public func encode(to encoder: any Encoder) throws {
+                var container = encoder.container(keyedBy: CodingKeys.self)
+                try container.encodeIfPresent(
+                    total_engaged_users,
+                    forKey: .total_engaged_users
+                )
+                try container.encodeIfPresent(
+                    repositories,
+                    forKey: .repositories
+                )
+                try encoder.encodeAdditionalProperties(additionalProperties)
+            }
+        }
+        /// Copilot usage metrics for a given day.
+        ///
+        /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics-day`.
+        public struct copilot_hyphen_usage_hyphen_metrics_hyphen_day: Codable, Hashable, Sendable {
+            /// The date for which the usage metrics are aggregated, in `YYYY-MM-DD` format.
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics-day/date`.
+            public var date: Swift.String
+            /// The total number of Copilot users with activity belonging to any Copilot feature, globally, for the given day. Includes passive activity such as receiving a code suggestion, as well as engagement activity such as accepting a code suggestion or prompting chat. Does not include authentication events. Is not limited to the individual features detailed on the endpoint.
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics-day/total_active_users`.
+            public var total_active_users: Swift.Int?
+            /// The total number of Copilot users who engaged with any Copilot feature, for the given day. Examples include but are not limited to accepting a code suggestion, prompting Copilot chat, or triggering a PR Summary. Does not include authentication events. Is not limited to the individual features detailed on the endpoint.
+            ///
+            /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics-day/total_engaged_users`.
+            public var total_engaged_users: Swift.Int?
+            /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics-day/copilot_ide_code_completions`.
+            public var copilot_ide_code_completions: Components.Schemas.copilot_hyphen_ide_hyphen_code_hyphen_completions?
+            /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics-day/copilot_ide_chat`.
+            public var copilot_ide_chat: Components.Schemas.copilot_hyphen_ide_hyphen_chat?
+            /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics-day/copilot_dotcom_chat`.
+            public var copilot_dotcom_chat: Components.Schemas.copilot_hyphen_dotcom_hyphen_chat?
+            /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics-day/copilot_dotcom_pull_requests`.
+            public var copilot_dotcom_pull_requests: Components.Schemas.copilot_hyphen_dotcom_hyphen_pull_hyphen_requests?
+            /// A container of undocumented properties.
+            public var additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer
+            /// Creates a new `copilot_hyphen_usage_hyphen_metrics_hyphen_day`.
+            ///
+            /// - Parameters:
+            ///   - date: The date for which the usage metrics are aggregated, in `YYYY-MM-DD` format.
+            ///   - total_active_users: The total number of Copilot users with activity belonging to any Copilot feature, globally, for the given day. Includes passive activity such as receiving a code suggestion, as well as engagement activity such as accepting a code suggestion or prompting chat. Does not include authentication events. Is not limited to the individual features detailed on the endpoint.
+            ///   - total_engaged_users: The total number of Copilot users who engaged with any Copilot feature, for the given day. Examples include but are not limited to accepting a code suggestion, prompting Copilot chat, or triggering a PR Summary. Does not include authentication events. Is not limited to the individual features detailed on the endpoint.
+            ///   - copilot_ide_code_completions:
+            ///   - copilot_ide_chat:
+            ///   - copilot_dotcom_chat:
+            ///   - copilot_dotcom_pull_requests:
+            ///   - additionalProperties: A container of undocumented properties.
+            public init(
+                date: Swift.String,
+                total_active_users: Swift.Int? = nil,
+                total_engaged_users: Swift.Int? = nil,
+                copilot_ide_code_completions: Components.Schemas.copilot_hyphen_ide_hyphen_code_hyphen_completions? = nil,
+                copilot_ide_chat: Components.Schemas.copilot_hyphen_ide_hyphen_chat? = nil,
+                copilot_dotcom_chat: Components.Schemas.copilot_hyphen_dotcom_hyphen_chat? = nil,
+                copilot_dotcom_pull_requests: Components.Schemas.copilot_hyphen_dotcom_hyphen_pull_hyphen_requests? = nil,
+                additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer = .init()
+            ) {
+                self.date = date
+                self.total_active_users = total_active_users
+                self.total_engaged_users = total_engaged_users
+                self.copilot_ide_code_completions = copilot_ide_code_completions
+                self.copilot_ide_chat = copilot_ide_chat
+                self.copilot_dotcom_chat = copilot_dotcom_chat
+                self.copilot_dotcom_pull_requests = copilot_dotcom_pull_requests
+                self.additionalProperties = additionalProperties
+            }
+            public enum CodingKeys: String, CodingKey {
+                case date
+                case total_active_users
+                case total_engaged_users
+                case copilot_ide_code_completions
+                case copilot_ide_chat
+                case copilot_dotcom_chat
+                case copilot_dotcom_pull_requests
+            }
+            public init(from decoder: any Decoder) throws {
+                let container = try decoder.container(keyedBy: CodingKeys.self)
+                date = try container.decode(
+                    Swift.String.self,
+                    forKey: .date
+                )
+                total_active_users = try container.decodeIfPresent(
+                    Swift.Int.self,
+                    forKey: .total_active_users
+                )
+                total_engaged_users = try container.decodeIfPresent(
+                    Swift.Int.self,
+                    forKey: .total_engaged_users
+                )
+                copilot_ide_code_completions = try container.decodeIfPresent(
+                    Components.Schemas.copilot_hyphen_ide_hyphen_code_hyphen_completions.self,
+                    forKey: .copilot_ide_code_completions
+                )
+                copilot_ide_chat = try container.decodeIfPresent(
+                    Components.Schemas.copilot_hyphen_ide_hyphen_chat.self,
+                    forKey: .copilot_ide_chat
+                )
+                copilot_dotcom_chat = try container.decodeIfPresent(
+                    Components.Schemas.copilot_hyphen_dotcom_hyphen_chat.self,
+                    forKey: .copilot_dotcom_chat
+                )
+                copilot_dotcom_pull_requests = try container.decodeIfPresent(
+                    Components.Schemas.copilot_hyphen_dotcom_hyphen_pull_hyphen_requests.self,
+                    forKey: .copilot_dotcom_pull_requests
+                )
+                additionalProperties = try decoder.decodeAdditionalProperties(knownKeys: [
+                    "date",
+                    "total_active_users",
+                    "total_engaged_users",
+                    "copilot_ide_code_completions",
+                    "copilot_ide_chat",
+                    "copilot_dotcom_chat",
+                    "copilot_dotcom_pull_requests"
+                ])
+            }
+            public func encode(to encoder: any Encoder) throws {
+                var container = encoder.container(keyedBy: CodingKeys.self)
+                try container.encode(
+                    date,
+                    forKey: .date
+                )
+                try container.encodeIfPresent(
+                    total_active_users,
+                    forKey: .total_active_users
+                )
+                try container.encodeIfPresent(
+                    total_engaged_users,
+                    forKey: .total_engaged_users
+                )
+                try container.encodeIfPresent(
+                    copilot_ide_code_completions,
+                    forKey: .copilot_ide_code_completions
+                )
+                try container.encodeIfPresent(
+                    copilot_ide_chat,
+                    forKey: .copilot_ide_chat
+                )
+                try container.encodeIfPresent(
+                    copilot_dotcom_chat,
+                    forKey: .copilot_dotcom_chat
+                )
+                try container.encodeIfPresent(
+                    copilot_dotcom_pull_requests,
+                    forKey: .copilot_dotcom_pull_requests
+                )
+                try encoder.encodeAdditionalProperties(additionalProperties)
+            }
+        }
         /// Summary of Copilot usage.
         ///
         /// - Remark: Generated from `#/components/schemas/copilot-usage-metrics`.
@@ -1926,6 +2999,10 @@ public enum Components {
         ///
         /// - Remark: Generated from `#/components/parameters/enterprise`.
         public typealias enterprise = Swift.String
+        /// The slug of the enterprise team name.
+        ///
+        /// - Remark: Generated from `#/components/parameters/enterprise-team-slug`.
+        public typealias enterprise_hyphen_team_hyphen_slug = Swift.String
         /// The slug of the team name.
         ///
         /// - Remark: Generated from `#/components/parameters/team-slug`.
@@ -2052,6 +3129,34 @@ public enum Components {
             /// - Parameters:
             ///   - body: Received HTTP response body
             public init(body: Components.Responses.internal_error.Body) {
+                self.body = body
+            }
+        }
+        public struct usage_metrics_api_disabled: Sendable, Hashable {
+            /// - Remark: Generated from `#/components/responses/usage_metrics_api_disabled/content`.
+            @frozen public enum Body: Sendable, Hashable {
+                /// - Remark: Generated from `#/components/responses/usage_metrics_api_disabled/content/application\/json`.
+                case json(Components.Schemas.basic_hyphen_error)
+                /// The associated value of the enum case if `self` is `.json`.
+                ///
+                /// - Throws: An error if `self` is not `.json`.
+                /// - SeeAlso: `.json`.
+                public var json: Components.Schemas.basic_hyphen_error {
+                    get throws {
+                        switch self {
+                        case let .json(body):
+                            return body
+                        }
+                    }
+                }
+            }
+            /// Received HTTP response body
+            public var body: Components.Responses.usage_metrics_api_disabled.Body
+            /// Creates a new `usage_metrics_api_disabled`.
+            ///
+            /// - Parameters:
+            ///   - body: Received HTTP response body
+            public init(body: Components.Responses.usage_metrics_api_disabled.Body) {
                 self.body = body
             }
         }
@@ -2371,6 +3476,280 @@ public enum Operations {
             }
         }
     }
+    /// Get Copilot metrics for an enterprise
+    ///
+    /// Use this endpoint to see a breakdown of aggregated metrics for various GitHub Copilot features. See the response schema tab for detailed metrics definitions.
+    ///
+    /// The response contains metrics for up to 28 days prior. Metrics are processed once per day for the previous day,
+    /// and the response will only include data up until yesterday. In order for an end user to be counted towards these metrics,
+    /// they must have telemetry enabled in their IDE.
+    ///
+    /// To access this endpoint, the Copilot Metrics API access policy must be enabled or set to "no policy" for the enterprise within GitHub settings.
+    /// Only enterprise owners and billing managers can view Copilot metrics for the enterprise.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `read:enterprise` scopes to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /enterprises/{enterprise}/copilot/metrics`.
+    /// - Remark: Generated from `#/paths//enterprises/{enterprise}/copilot/metrics/get(copilot/copilot-metrics-for-enterprise)`.
+    public enum copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_enterprise {
+        public static let id: Swift.String = "copilot/copilot-metrics-for-enterprise"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/enterprises/{enterprise}/copilot/metrics/GET/path`.
+            public struct Path: Sendable, Hashable {
+                /// The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+                ///
+                /// - Remark: Generated from `#/paths/enterprises/{enterprise}/copilot/metrics/GET/path/enterprise`.
+                public var enterprise: Components.Parameters.enterprise
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - enterprise: The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+                public init(enterprise: Components.Parameters.enterprise) {
+                    self.enterprise = enterprise
+                }
+            }
+            public var path: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_enterprise.Input.Path
+            /// - Remark: Generated from `#/paths/enterprises/{enterprise}/copilot/metrics/GET/query`.
+            public struct Query: Sendable, Hashable {
+                /// Show usage metrics since this date. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format (`YYYY-MM-DDTHH:MM:SSZ`). Maximum value is 28 days ago.
+                ///
+                /// - Remark: Generated from `#/paths/enterprises/{enterprise}/copilot/metrics/GET/query/since`.
+                public var since: Swift.String?
+                /// Show usage metrics until this date. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format (`YYYY-MM-DDTHH:MM:SSZ`) and should not preceed the `since` date if it is passed.
+                ///
+                /// - Remark: Generated from `#/paths/enterprises/{enterprise}/copilot/metrics/GET/query/until`.
+                public var until: Swift.String?
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///
+                /// - Remark: Generated from `#/paths/enterprises/{enterprise}/copilot/metrics/GET/query/page`.
+                public var page: Components.Parameters.page?
+                /// The number of days of metrics to display per page (max 28). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///
+                /// - Remark: Generated from `#/paths/enterprises/{enterprise}/copilot/metrics/GET/query/per_page`.
+                public var per_page: Swift.Int?
+                /// Creates a new `Query`.
+                ///
+                /// - Parameters:
+                ///   - since: Show usage metrics since this date. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format (`YYYY-MM-DDTHH:MM:SSZ`). Maximum value is 28 days ago.
+                ///   - until: Show usage metrics until this date. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format (`YYYY-MM-DDTHH:MM:SSZ`) and should not preceed the `since` date if it is passed.
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - per_page: The number of days of metrics to display per page (max 28). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                public init(
+                    since: Swift.String? = nil,
+                    until: Swift.String? = nil,
+                    page: Components.Parameters.page? = nil,
+                    per_page: Swift.Int? = nil
+                ) {
+                    self.since = since
+                    self.until = until
+                    self.page = page
+                    self.per_page = per_page
+                }
+            }
+            public var query: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_enterprise.Input.Query
+            /// - Remark: Generated from `#/paths/enterprises/{enterprise}/copilot/metrics/GET/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_enterprise.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_enterprise.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_enterprise.Input.Headers
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - query:
+            ///   - headers:
+            public init(
+                path: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_enterprise.Input.Path,
+                query: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_enterprise.Input.Query = .init(),
+                headers: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_enterprise.Input.Headers = .init()
+            ) {
+                self.path = path
+                self.query = query
+                self.headers = headers
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Ok: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/enterprises/{enterprise}/copilot/metrics/GET/responses/200/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/enterprises/{enterprise}/copilot/metrics/GET/responses/200/content/application\/json`.
+                    case json([Components.Schemas.copilot_hyphen_usage_hyphen_metrics_hyphen_day])
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: [Components.Schemas.copilot_hyphen_usage_hyphen_metrics_hyphen_day] {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_enterprise.Output.Ok.Body
+                /// Creates a new `Ok`.
+                ///
+                /// - Parameters:
+                ///   - body: Received HTTP response body
+                public init(body: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_enterprise.Output.Ok.Body) {
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//enterprises/{enterprise}/copilot/metrics/get(copilot/copilot-metrics-for-enterprise)/responses/200`.
+            ///
+            /// HTTP response code: `200 ok`.
+            case ok(Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_enterprise.Output.Ok)
+            /// The associated value of the enum case if `self` is `.ok`.
+            ///
+            /// - Throws: An error if `self` is not `.ok`.
+            /// - SeeAlso: `.ok`.
+            public var ok: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_enterprise.Output.Ok {
+                get throws {
+                    switch self {
+                    case let .ok(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "ok",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Internal Error
+            ///
+            /// - Remark: Generated from `#/paths//enterprises/{enterprise}/copilot/metrics/get(copilot/copilot-metrics-for-enterprise)/responses/500`.
+            ///
+            /// HTTP response code: `500 internalServerError`.
+            case internalServerError(Components.Responses.internal_error)
+            /// The associated value of the enum case if `self` is `.internalServerError`.
+            ///
+            /// - Throws: An error if `self` is not `.internalServerError`.
+            /// - SeeAlso: `.internalServerError`.
+            public var internalServerError: Components.Responses.internal_error {
+                get throws {
+                    switch self {
+                    case let .internalServerError(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "internalServerError",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Forbidden
+            ///
+            /// - Remark: Generated from `#/paths//enterprises/{enterprise}/copilot/metrics/get(copilot/copilot-metrics-for-enterprise)/responses/403`.
+            ///
+            /// HTTP response code: `403 forbidden`.
+            case forbidden(Components.Responses.forbidden)
+            /// The associated value of the enum case if `self` is `.forbidden`.
+            ///
+            /// - Throws: An error if `self` is not `.forbidden`.
+            /// - SeeAlso: `.forbidden`.
+            public var forbidden: Components.Responses.forbidden {
+                get throws {
+                    switch self {
+                    case let .forbidden(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "forbidden",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Resource not found
+            ///
+            /// - Remark: Generated from `#/paths//enterprises/{enterprise}/copilot/metrics/get(copilot/copilot-metrics-for-enterprise)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            case notFound(Components.Responses.not_found)
+            /// The associated value of the enum case if `self` is `.notFound`.
+            ///
+            /// - Throws: An error if `self` is not `.notFound`.
+            /// - SeeAlso: `.notFound`.
+            public var notFound: Components.Responses.not_found {
+                get throws {
+                    switch self {
+                    case let .notFound(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "notFound",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Copilot Usage Merics API setting is disabled at the organization or enterprise level.
+            ///
+            /// - Remark: Generated from `#/paths//enterprises/{enterprise}/copilot/metrics/get(copilot/copilot-metrics-for-enterprise)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            case unprocessableContent(Components.Responses.usage_metrics_api_disabled)
+            /// The associated value of the enum case if `self` is `.unprocessableContent`.
+            ///
+            /// - Throws: An error if `self` is not `.unprocessableContent`.
+            /// - SeeAlso: `.unprocessableContent`.
+            public var unprocessableContent: Components.Responses.usage_metrics_api_disabled {
+                get throws {
+                    switch self {
+                    case let .unprocessableContent(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "unprocessableContent",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
     /// Get a summary of Copilot usage for enterprise members
     ///
     /// > [!NOTE]
@@ -2613,6 +3992,292 @@ public enum Operations {
                     default:
                         try throwUnexpectedResponseStatus(
                             expectedStatus: "notFound",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
+    /// Get Copilot metrics for an enterprise team
+    ///
+    /// Use this endpoint to see a breakdown of aggregated metrics for various GitHub Copilot features. See the response schema tab for detailed metrics definitions.
+    ///
+    /// The response contains metrics for up to 28 days prior. Metrics are processed once per day for the previous day,
+    /// and the response will only include data up until yesterday. In order for an end user to be counted towards these metrics,
+    /// they must have telemetry enabled in their IDE.
+    ///
+    /// > [!NOTE]
+    /// > This endpoint will only return results for a given day if the enterprise team had **five or more members with active Copilot licenses** on that day, as evaluated at the end of that day.
+    ///
+    /// To access this endpoint, the Copilot Metrics API access policy must be enabled or set to "no policy" for the enterprise within GitHub settings.
+    /// Only owners and billing managers for the enterprise that contains the enterprise team can view Copilot metrics for the enterprise team.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `read:enterprise` scopes to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /enterprises/{enterprise}/team/{team_slug}/copilot/metrics`.
+    /// - Remark: Generated from `#/paths//enterprises/{enterprise}/team/{team_slug}/copilot/metrics/get(copilot/copilot-metrics-for-enterprise-team)`.
+    public enum copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_enterprise_hyphen_team {
+        public static let id: Swift.String = "copilot/copilot-metrics-for-enterprise-team"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/enterprises/{enterprise}/team/{team_slug}/copilot/metrics/GET/path`.
+            public struct Path: Sendable, Hashable {
+                /// The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+                ///
+                /// - Remark: Generated from `#/paths/enterprises/{enterprise}/team/{team_slug}/copilot/metrics/GET/path/enterprise`.
+                public var enterprise: Components.Parameters.enterprise
+                /// The slug of the enterprise team name.
+                ///
+                /// - Remark: Generated from `#/paths/enterprises/{enterprise}/team/{team_slug}/copilot/metrics/GET/path/team_slug`.
+                public var team_slug: Components.Parameters.enterprise_hyphen_team_hyphen_slug
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - enterprise: The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+                ///   - team_slug: The slug of the enterprise team name.
+                public init(
+                    enterprise: Components.Parameters.enterprise,
+                    team_slug: Components.Parameters.enterprise_hyphen_team_hyphen_slug
+                ) {
+                    self.enterprise = enterprise
+                    self.team_slug = team_slug
+                }
+            }
+            public var path: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_enterprise_hyphen_team.Input.Path
+            /// - Remark: Generated from `#/paths/enterprises/{enterprise}/team/{team_slug}/copilot/metrics/GET/query`.
+            public struct Query: Sendable, Hashable {
+                /// Show usage metrics since this date. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format (`YYYY-MM-DDTHH:MM:SSZ`). Maximum value is 28 days ago.
+                ///
+                /// - Remark: Generated from `#/paths/enterprises/{enterprise}/team/{team_slug}/copilot/metrics/GET/query/since`.
+                public var since: Swift.String?
+                /// Show usage metrics until this date. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format (`YYYY-MM-DDTHH:MM:SSZ`) and should not preceed the `since` date if it is passed.
+                ///
+                /// - Remark: Generated from `#/paths/enterprises/{enterprise}/team/{team_slug}/copilot/metrics/GET/query/until`.
+                public var until: Swift.String?
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///
+                /// - Remark: Generated from `#/paths/enterprises/{enterprise}/team/{team_slug}/copilot/metrics/GET/query/page`.
+                public var page: Components.Parameters.page?
+                /// The number of days of metrics to display per page (max 28). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///
+                /// - Remark: Generated from `#/paths/enterprises/{enterprise}/team/{team_slug}/copilot/metrics/GET/query/per_page`.
+                public var per_page: Swift.Int?
+                /// Creates a new `Query`.
+                ///
+                /// - Parameters:
+                ///   - since: Show usage metrics since this date. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format (`YYYY-MM-DDTHH:MM:SSZ`). Maximum value is 28 days ago.
+                ///   - until: Show usage metrics until this date. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format (`YYYY-MM-DDTHH:MM:SSZ`) and should not preceed the `since` date if it is passed.
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - per_page: The number of days of metrics to display per page (max 28). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                public init(
+                    since: Swift.String? = nil,
+                    until: Swift.String? = nil,
+                    page: Components.Parameters.page? = nil,
+                    per_page: Swift.Int? = nil
+                ) {
+                    self.since = since
+                    self.until = until
+                    self.page = page
+                    self.per_page = per_page
+                }
+            }
+            public var query: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_enterprise_hyphen_team.Input.Query
+            /// - Remark: Generated from `#/paths/enterprises/{enterprise}/team/{team_slug}/copilot/metrics/GET/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_enterprise_hyphen_team.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_enterprise_hyphen_team.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_enterprise_hyphen_team.Input.Headers
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - query:
+            ///   - headers:
+            public init(
+                path: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_enterprise_hyphen_team.Input.Path,
+                query: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_enterprise_hyphen_team.Input.Query = .init(),
+                headers: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_enterprise_hyphen_team.Input.Headers = .init()
+            ) {
+                self.path = path
+                self.query = query
+                self.headers = headers
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Ok: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/enterprises/{enterprise}/team/{team_slug}/copilot/metrics/GET/responses/200/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/enterprises/{enterprise}/team/{team_slug}/copilot/metrics/GET/responses/200/content/application\/json`.
+                    case json([Components.Schemas.copilot_hyphen_usage_hyphen_metrics_hyphen_day])
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: [Components.Schemas.copilot_hyphen_usage_hyphen_metrics_hyphen_day] {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_enterprise_hyphen_team.Output.Ok.Body
+                /// Creates a new `Ok`.
+                ///
+                /// - Parameters:
+                ///   - body: Received HTTP response body
+                public init(body: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_enterprise_hyphen_team.Output.Ok.Body) {
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//enterprises/{enterprise}/team/{team_slug}/copilot/metrics/get(copilot/copilot-metrics-for-enterprise-team)/responses/200`.
+            ///
+            /// HTTP response code: `200 ok`.
+            case ok(Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_enterprise_hyphen_team.Output.Ok)
+            /// The associated value of the enum case if `self` is `.ok`.
+            ///
+            /// - Throws: An error if `self` is not `.ok`.
+            /// - SeeAlso: `.ok`.
+            public var ok: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_enterprise_hyphen_team.Output.Ok {
+                get throws {
+                    switch self {
+                    case let .ok(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "ok",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Internal Error
+            ///
+            /// - Remark: Generated from `#/paths//enterprises/{enterprise}/team/{team_slug}/copilot/metrics/get(copilot/copilot-metrics-for-enterprise-team)/responses/500`.
+            ///
+            /// HTTP response code: `500 internalServerError`.
+            case internalServerError(Components.Responses.internal_error)
+            /// The associated value of the enum case if `self` is `.internalServerError`.
+            ///
+            /// - Throws: An error if `self` is not `.internalServerError`.
+            /// - SeeAlso: `.internalServerError`.
+            public var internalServerError: Components.Responses.internal_error {
+                get throws {
+                    switch self {
+                    case let .internalServerError(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "internalServerError",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Forbidden
+            ///
+            /// - Remark: Generated from `#/paths//enterprises/{enterprise}/team/{team_slug}/copilot/metrics/get(copilot/copilot-metrics-for-enterprise-team)/responses/403`.
+            ///
+            /// HTTP response code: `403 forbidden`.
+            case forbidden(Components.Responses.forbidden)
+            /// The associated value of the enum case if `self` is `.forbidden`.
+            ///
+            /// - Throws: An error if `self` is not `.forbidden`.
+            /// - SeeAlso: `.forbidden`.
+            public var forbidden: Components.Responses.forbidden {
+                get throws {
+                    switch self {
+                    case let .forbidden(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "forbidden",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Resource not found
+            ///
+            /// - Remark: Generated from `#/paths//enterprises/{enterprise}/team/{team_slug}/copilot/metrics/get(copilot/copilot-metrics-for-enterprise-team)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            case notFound(Components.Responses.not_found)
+            /// The associated value of the enum case if `self` is `.notFound`.
+            ///
+            /// - Throws: An error if `self` is not `.notFound`.
+            /// - SeeAlso: `.notFound`.
+            public var notFound: Components.Responses.not_found {
+                get throws {
+                    switch self {
+                    case let .notFound(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "notFound",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Copilot Usage Merics API setting is disabled at the organization or enterprise level.
+            ///
+            /// - Remark: Generated from `#/paths//enterprises/{enterprise}/team/{team_slug}/copilot/metrics/get(copilot/copilot-metrics-for-enterprise-team)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            case unprocessableContent(Components.Responses.usage_metrics_api_disabled)
+            /// The associated value of the enum case if `self` is `.unprocessableContent`.
+            ///
+            /// - Throws: An error if `self` is not `.unprocessableContent`.
+            /// - SeeAlso: `.unprocessableContent`.
+            public var unprocessableContent: Components.Responses.usage_metrics_api_disabled {
+                get throws {
+                    switch self {
+                    case let .unprocessableContent(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "unprocessableContent",
                             response: self
                         )
                     }
@@ -4728,6 +6393,283 @@ public enum Operations {
             }
         }
     }
+    /// Get Copilot metrics for an organization
+    ///
+    /// Use this endpoint to see a breakdown of aggregated metrics for various GitHub Copilot features. See the response schema tab for detailed metrics definitions.
+    ///
+    /// > [!NOTE]
+    /// > This endpoint will only return results for a given day if the organization contained **five or more members with active Copilot licenses** on that day, as evaluated at the end of that day.
+    ///
+    /// The response contains metrics for up to 28 days prior. Metrics are processed once per day for the previous day,
+    /// and the response will only include data up until yesterday. In order for an end user to be counted towards these metrics,
+    /// they must have telemetry enabled in their IDE.
+    ///
+    /// To access this endpoint, the Copilot Metrics API access policy must be enabled for the organization.
+    /// Only organization owners and owners and billing managers of the parent enterprise can view Copilot metrics.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot`, `read:org`, or `read:enterprise` scopes to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/copilot/metrics`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/copilot/metrics/get(copilot/copilot-metrics-for-organization)`.
+    public enum copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization {
+        public static let id: Swift.String = "copilot/copilot-metrics-for-organization"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/orgs/{org}/copilot/metrics/GET/path`.
+            public struct Path: Sendable, Hashable {
+                /// The organization name. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/copilot/metrics/GET/path/org`.
+                public var org: Components.Parameters.org
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - org: The organization name. The name is not case sensitive.
+                public init(org: Components.Parameters.org) {
+                    self.org = org
+                }
+            }
+            public var path: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization.Input.Path
+            /// - Remark: Generated from `#/paths/orgs/{org}/copilot/metrics/GET/query`.
+            public struct Query: Sendable, Hashable {
+                /// Show usage metrics since this date. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format (`YYYY-MM-DDTHH:MM:SSZ`). Maximum value is 28 days ago.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/copilot/metrics/GET/query/since`.
+                public var since: Swift.String?
+                /// Show usage metrics until this date. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format (`YYYY-MM-DDTHH:MM:SSZ`) and should not preceed the `since` date if it is passed.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/copilot/metrics/GET/query/until`.
+                public var until: Swift.String?
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/copilot/metrics/GET/query/page`.
+                public var page: Components.Parameters.page?
+                /// The number of days of metrics to display per page (max 28). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/copilot/metrics/GET/query/per_page`.
+                public var per_page: Swift.Int?
+                /// Creates a new `Query`.
+                ///
+                /// - Parameters:
+                ///   - since: Show usage metrics since this date. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format (`YYYY-MM-DDTHH:MM:SSZ`). Maximum value is 28 days ago.
+                ///   - until: Show usage metrics until this date. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format (`YYYY-MM-DDTHH:MM:SSZ`) and should not preceed the `since` date if it is passed.
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - per_page: The number of days of metrics to display per page (max 28). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                public init(
+                    since: Swift.String? = nil,
+                    until: Swift.String? = nil,
+                    page: Components.Parameters.page? = nil,
+                    per_page: Swift.Int? = nil
+                ) {
+                    self.since = since
+                    self.until = until
+                    self.page = page
+                    self.per_page = per_page
+                }
+            }
+            public var query: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization.Input.Query
+            /// - Remark: Generated from `#/paths/orgs/{org}/copilot/metrics/GET/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization.Input.Headers
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - query:
+            ///   - headers:
+            public init(
+                path: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization.Input.Path,
+                query: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization.Input.Query = .init(),
+                headers: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization.Input.Headers = .init()
+            ) {
+                self.path = path
+                self.query = query
+                self.headers = headers
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Ok: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/orgs/{org}/copilot/metrics/GET/responses/200/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/orgs/{org}/copilot/metrics/GET/responses/200/content/application\/json`.
+                    case json([Components.Schemas.copilot_hyphen_usage_hyphen_metrics_hyphen_day])
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: [Components.Schemas.copilot_hyphen_usage_hyphen_metrics_hyphen_day] {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization.Output.Ok.Body
+                /// Creates a new `Ok`.
+                ///
+                /// - Parameters:
+                ///   - body: Received HTTP response body
+                public init(body: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization.Output.Ok.Body) {
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/copilot/metrics/get(copilot/copilot-metrics-for-organization)/responses/200`.
+            ///
+            /// HTTP response code: `200 ok`.
+            case ok(Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization.Output.Ok)
+            /// The associated value of the enum case if `self` is `.ok`.
+            ///
+            /// - Throws: An error if `self` is not `.ok`.
+            /// - SeeAlso: `.ok`.
+            public var ok: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization.Output.Ok {
+                get throws {
+                    switch self {
+                    case let .ok(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "ok",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Internal Error
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/copilot/metrics/get(copilot/copilot-metrics-for-organization)/responses/500`.
+            ///
+            /// HTTP response code: `500 internalServerError`.
+            case internalServerError(Components.Responses.internal_error)
+            /// The associated value of the enum case if `self` is `.internalServerError`.
+            ///
+            /// - Throws: An error if `self` is not `.internalServerError`.
+            /// - SeeAlso: `.internalServerError`.
+            public var internalServerError: Components.Responses.internal_error {
+                get throws {
+                    switch self {
+                    case let .internalServerError(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "internalServerError",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Forbidden
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/copilot/metrics/get(copilot/copilot-metrics-for-organization)/responses/403`.
+            ///
+            /// HTTP response code: `403 forbidden`.
+            case forbidden(Components.Responses.forbidden)
+            /// The associated value of the enum case if `self` is `.forbidden`.
+            ///
+            /// - Throws: An error if `self` is not `.forbidden`.
+            /// - SeeAlso: `.forbidden`.
+            public var forbidden: Components.Responses.forbidden {
+                get throws {
+                    switch self {
+                    case let .forbidden(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "forbidden",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Resource not found
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/copilot/metrics/get(copilot/copilot-metrics-for-organization)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            case notFound(Components.Responses.not_found)
+            /// The associated value of the enum case if `self` is `.notFound`.
+            ///
+            /// - Throws: An error if `self` is not `.notFound`.
+            /// - SeeAlso: `.notFound`.
+            public var notFound: Components.Responses.not_found {
+                get throws {
+                    switch self {
+                    case let .notFound(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "notFound",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Copilot Usage Merics API setting is disabled at the organization or enterprise level.
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/copilot/metrics/get(copilot/copilot-metrics-for-organization)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            case unprocessableContent(Components.Responses.usage_metrics_api_disabled)
+            /// The associated value of the enum case if `self` is `.unprocessableContent`.
+            ///
+            /// - Throws: An error if `self` is not `.unprocessableContent`.
+            /// - SeeAlso: `.unprocessableContent`.
+            public var unprocessableContent: Components.Responses.usage_metrics_api_disabled {
+                get throws {
+                    switch self {
+                    case let .unprocessableContent(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "unprocessableContent",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
     /// Get a summary of Copilot usage for organization members
     ///
     /// > [!NOTE]
@@ -5230,6 +7172,292 @@ public enum Operations {
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
             public var unprocessableContent: Operations.copilot_sol_get_hyphen_copilot_hyphen_seat_hyphen_details_hyphen_for_hyphen_user.Output.UnprocessableContent {
+                get throws {
+                    switch self {
+                    case let .unprocessableContent(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "unprocessableContent",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
+    /// Get Copilot metrics for a team
+    ///
+    /// Use this endpoint to see a breakdown of aggregated metrics for various GitHub Copilot features. See the response schema tab for detailed metrics definitions.
+    ///
+    /// > [!NOTE]
+    /// > This endpoint will only return results for a given day if the team had **five or more members with active Copilot licenses** on that day, as evaluated at the end of that day.
+    ///
+    /// The response contains metrics for up to 28 days prior. Metrics are processed once per day for the previous day,
+    /// and the response will only include data up until yesterday. In order for an end user to be counted towards these metrics,
+    /// they must have telemetry enabled in their IDE.
+    ///
+    /// To access this endpoint, the Copilot Metrics API access policy must be enabled for the organization containing the team within GitHub settings.
+    /// Only organization owners for the organization that contains this team and owners and billing managers of the parent enterprise can view Copilot metrics for a team.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot`, `read:org`, or `read:enterprise` scopes to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/team/{team_slug}/copilot/metrics`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/team/{team_slug}/copilot/metrics/get(copilot/copilot-metrics-for-team)`.
+    public enum copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_team {
+        public static let id: Swift.String = "copilot/copilot-metrics-for-team"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/orgs/{org}/team/{team_slug}/copilot/metrics/GET/path`.
+            public struct Path: Sendable, Hashable {
+                /// The organization name. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/team/{team_slug}/copilot/metrics/GET/path/org`.
+                public var org: Components.Parameters.org
+                /// The slug of the team name.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/team/{team_slug}/copilot/metrics/GET/path/team_slug`.
+                public var team_slug: Components.Parameters.team_hyphen_slug
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - org: The organization name. The name is not case sensitive.
+                ///   - team_slug: The slug of the team name.
+                public init(
+                    org: Components.Parameters.org,
+                    team_slug: Components.Parameters.team_hyphen_slug
+                ) {
+                    self.org = org
+                    self.team_slug = team_slug
+                }
+            }
+            public var path: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_team.Input.Path
+            /// - Remark: Generated from `#/paths/orgs/{org}/team/{team_slug}/copilot/metrics/GET/query`.
+            public struct Query: Sendable, Hashable {
+                /// Show usage metrics since this date. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format (`YYYY-MM-DDTHH:MM:SSZ`). Maximum value is 28 days ago.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/team/{team_slug}/copilot/metrics/GET/query/since`.
+                public var since: Swift.String?
+                /// Show usage metrics until this date. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format (`YYYY-MM-DDTHH:MM:SSZ`) and should not preceed the `since` date if it is passed.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/team/{team_slug}/copilot/metrics/GET/query/until`.
+                public var until: Swift.String?
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/team/{team_slug}/copilot/metrics/GET/query/page`.
+                public var page: Components.Parameters.page?
+                /// The number of days of metrics to display per page (max 28). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/team/{team_slug}/copilot/metrics/GET/query/per_page`.
+                public var per_page: Swift.Int?
+                /// Creates a new `Query`.
+                ///
+                /// - Parameters:
+                ///   - since: Show usage metrics since this date. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format (`YYYY-MM-DDTHH:MM:SSZ`). Maximum value is 28 days ago.
+                ///   - until: Show usage metrics until this date. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format (`YYYY-MM-DDTHH:MM:SSZ`) and should not preceed the `since` date if it is passed.
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - per_page: The number of days of metrics to display per page (max 28). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                public init(
+                    since: Swift.String? = nil,
+                    until: Swift.String? = nil,
+                    page: Components.Parameters.page? = nil,
+                    per_page: Swift.Int? = nil
+                ) {
+                    self.since = since
+                    self.until = until
+                    self.page = page
+                    self.per_page = per_page
+                }
+            }
+            public var query: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_team.Input.Query
+            /// - Remark: Generated from `#/paths/orgs/{org}/team/{team_slug}/copilot/metrics/GET/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_team.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_team.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_team.Input.Headers
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - query:
+            ///   - headers:
+            public init(
+                path: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_team.Input.Path,
+                query: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_team.Input.Query = .init(),
+                headers: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_team.Input.Headers = .init()
+            ) {
+                self.path = path
+                self.query = query
+                self.headers = headers
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Ok: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/orgs/{org}/team/{team_slug}/copilot/metrics/GET/responses/200/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/orgs/{org}/team/{team_slug}/copilot/metrics/GET/responses/200/content/application\/json`.
+                    case json([Components.Schemas.copilot_hyphen_usage_hyphen_metrics_hyphen_day])
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: [Components.Schemas.copilot_hyphen_usage_hyphen_metrics_hyphen_day] {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_team.Output.Ok.Body
+                /// Creates a new `Ok`.
+                ///
+                /// - Parameters:
+                ///   - body: Received HTTP response body
+                public init(body: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_team.Output.Ok.Body) {
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/team/{team_slug}/copilot/metrics/get(copilot/copilot-metrics-for-team)/responses/200`.
+            ///
+            /// HTTP response code: `200 ok`.
+            case ok(Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_team.Output.Ok)
+            /// The associated value of the enum case if `self` is `.ok`.
+            ///
+            /// - Throws: An error if `self` is not `.ok`.
+            /// - SeeAlso: `.ok`.
+            public var ok: Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_team.Output.Ok {
+                get throws {
+                    switch self {
+                    case let .ok(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "ok",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Internal Error
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/team/{team_slug}/copilot/metrics/get(copilot/copilot-metrics-for-team)/responses/500`.
+            ///
+            /// HTTP response code: `500 internalServerError`.
+            case internalServerError(Components.Responses.internal_error)
+            /// The associated value of the enum case if `self` is `.internalServerError`.
+            ///
+            /// - Throws: An error if `self` is not `.internalServerError`.
+            /// - SeeAlso: `.internalServerError`.
+            public var internalServerError: Components.Responses.internal_error {
+                get throws {
+                    switch self {
+                    case let .internalServerError(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "internalServerError",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Forbidden
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/team/{team_slug}/copilot/metrics/get(copilot/copilot-metrics-for-team)/responses/403`.
+            ///
+            /// HTTP response code: `403 forbidden`.
+            case forbidden(Components.Responses.forbidden)
+            /// The associated value of the enum case if `self` is `.forbidden`.
+            ///
+            /// - Throws: An error if `self` is not `.forbidden`.
+            /// - SeeAlso: `.forbidden`.
+            public var forbidden: Components.Responses.forbidden {
+                get throws {
+                    switch self {
+                    case let .forbidden(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "forbidden",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Resource not found
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/team/{team_slug}/copilot/metrics/get(copilot/copilot-metrics-for-team)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            case notFound(Components.Responses.not_found)
+            /// The associated value of the enum case if `self` is `.notFound`.
+            ///
+            /// - Throws: An error if `self` is not `.notFound`.
+            /// - SeeAlso: `.notFound`.
+            public var notFound: Components.Responses.not_found {
+                get throws {
+                    switch self {
+                    case let .notFound(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "notFound",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Copilot Usage Merics API setting is disabled at the organization or enterprise level.
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/team/{team_slug}/copilot/metrics/get(copilot/copilot-metrics-for-team)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            case unprocessableContent(Components.Responses.usage_metrics_api_disabled)
+            /// The associated value of the enum case if `self` is `.unprocessableContent`.
+            ///
+            /// - Throws: An error if `self` is not `.unprocessableContent`.
+            /// - SeeAlso: `.unprocessableContent`.
+            public var unprocessableContent: Components.Responses.usage_metrics_api_disabled {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):

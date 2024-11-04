@@ -179,7 +179,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// Lists the CodeQL databases that are available in a repository.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/codeql/databases`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/databases/get(code-scanning/list-codeql-databases)`.
@@ -194,11 +194,20 @@ public protocol APIProtocol: Sendable {
     /// your HTTP client is configured to follow redirects or use the `Location` header
     /// to make a second request to get the redirect URL.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/codeql/databases/{language}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/get(code-scanning/get-codeql-database)`.
     func code_hyphen_scanning_sol_get_hyphen_codeql_hyphen_database(_ input: Operations.code_hyphen_scanning_sol_get_hyphen_codeql_hyphen_database.Input) async throws -> Operations.code_hyphen_scanning_sol_get_hyphen_codeql_hyphen_database.Output
+    /// Delete a CodeQL database
+    ///
+    /// Deletes a CodeQL database for a language in a repository.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
+    ///
+    /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/code-scanning/codeql/databases/{language}`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/delete(code-scanning/delete-codeql-database)`.
+    func code_hyphen_scanning_sol_delete_hyphen_codeql_hyphen_database(_ input: Operations.code_hyphen_scanning_sol_delete_hyphen_codeql_hyphen_database.Input) async throws -> Operations.code_hyphen_scanning_sol_delete_hyphen_codeql_hyphen_database.Output
     /// Create a CodeQL variant analysis
     ///
     /// Creates a new CodeQL variant analysis, which will run a CodeQL query against one or more repositories.
@@ -545,7 +554,7 @@ extension APIProtocol {
     ///
     /// Lists the CodeQL databases that are available in a repository.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/codeql/databases`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/databases/get(code-scanning/list-codeql-databases)`.
@@ -568,7 +577,7 @@ extension APIProtocol {
     /// your HTTP client is configured to follow redirects or use the `Location` header
     /// to make a second request to get the redirect URL.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/codeql/databases/{language}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/get(code-scanning/get-codeql-database)`.
@@ -577,6 +586,23 @@ extension APIProtocol {
         headers: Operations.code_hyphen_scanning_sol_get_hyphen_codeql_hyphen_database.Input.Headers = .init()
     ) async throws -> Operations.code_hyphen_scanning_sol_get_hyphen_codeql_hyphen_database.Output {
         try await code_hyphen_scanning_sol_get_hyphen_codeql_hyphen_database(Operations.code_hyphen_scanning_sol_get_hyphen_codeql_hyphen_database.Input(
+            path: path,
+            headers: headers
+        ))
+    }
+    /// Delete a CodeQL database
+    ///
+    /// Deletes a CodeQL database for a language in a repository.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
+    ///
+    /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/code-scanning/codeql/databases/{language}`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/delete(code-scanning/delete-codeql-database)`.
+    public func code_hyphen_scanning_sol_delete_hyphen_codeql_hyphen_database(
+        path: Operations.code_hyphen_scanning_sol_delete_hyphen_codeql_hyphen_database.Input.Path,
+        headers: Operations.code_hyphen_scanning_sol_delete_hyphen_codeql_hyphen_database.Input.Headers = .init()
+    ) async throws -> Operations.code_hyphen_scanning_sol_delete_hyphen_codeql_hyphen_database.Output {
+        try await code_hyphen_scanning_sol_delete_hyphen_codeql_hyphen_database(Operations.code_hyphen_scanning_sol_delete_hyphen_codeql_hyphen_database.Input(
             path: path,
             headers: headers
         ))
@@ -5861,7 +5887,7 @@ public enum Operations {
     ///
     /// Lists the CodeQL databases that are available in a repository.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/codeql/databases`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/databases/get(code-scanning/list-codeql-databases)`.
@@ -6079,7 +6105,7 @@ public enum Operations {
     /// your HTTP client is configured to follow redirects or use the `Location` header
     /// to make a second request to get the redirect URL.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/codeql/databases/{language}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/get(code-scanning/get-codeql-database)`.
@@ -6266,6 +6292,201 @@ public enum Operations {
             /// Service unavailable
             ///
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/get(code-scanning/get-codeql-database)/responses/503`.
+            ///
+            /// HTTP response code: `503 serviceUnavailable`.
+            case serviceUnavailable(Components.Responses.service_unavailable)
+            /// The associated value of the enum case if `self` is `.serviceUnavailable`.
+            ///
+            /// - Throws: An error if `self` is not `.serviceUnavailable`.
+            /// - SeeAlso: `.serviceUnavailable`.
+            public var serviceUnavailable: Components.Responses.service_unavailable {
+                get throws {
+                    switch self {
+                    case let .serviceUnavailable(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "serviceUnavailable",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
+    /// Delete a CodeQL database
+    ///
+    /// Deletes a CodeQL database for a language in a repository.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
+    ///
+    /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/code-scanning/codeql/databases/{language}`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/delete(code-scanning/delete-codeql-database)`.
+    public enum code_hyphen_scanning_sol_delete_hyphen_codeql_hyphen_database {
+        public static let id: Swift.String = "code-scanning/delete-codeql-database"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/DELETE/path`.
+            public struct Path: Sendable, Hashable {
+                /// The account owner of the repository. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/DELETE/path/owner`.
+                public var owner: Components.Parameters.owner
+                /// The name of the repository without the `.git` extension. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/DELETE/path/repo`.
+                public var repo: Components.Parameters.repo
+                /// The language of the CodeQL database.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/DELETE/path/language`.
+                public var language: Swift.String
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - owner: The account owner of the repository. The name is not case sensitive.
+                ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
+                ///   - language: The language of the CodeQL database.
+                public init(
+                    owner: Components.Parameters.owner,
+                    repo: Components.Parameters.repo,
+                    language: Swift.String
+                ) {
+                    self.owner = owner
+                    self.repo = repo
+                    self.language = language
+                }
+            }
+            public var path: Operations.code_hyphen_scanning_sol_delete_hyphen_codeql_hyphen_database.Input.Path
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/DELETE/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_delete_hyphen_codeql_hyphen_database.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_delete_hyphen_codeql_hyphen_database.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.code_hyphen_scanning_sol_delete_hyphen_codeql_hyphen_database.Input.Headers
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - headers:
+            public init(
+                path: Operations.code_hyphen_scanning_sol_delete_hyphen_codeql_hyphen_database.Input.Path,
+                headers: Operations.code_hyphen_scanning_sol_delete_hyphen_codeql_hyphen_database.Input.Headers = .init()
+            ) {
+                self.path = path
+                self.headers = headers
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct NoContent: Sendable, Hashable {
+                /// Creates a new `NoContent`.
+                public init() {}
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/delete(code-scanning/delete-codeql-database)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            case noContent(Operations.code_hyphen_scanning_sol_delete_hyphen_codeql_hyphen_database.Output.NoContent)
+            /// The associated value of the enum case if `self` is `.noContent`.
+            ///
+            /// - Throws: An error if `self` is not `.noContent`.
+            /// - SeeAlso: `.noContent`.
+            public var noContent: Operations.code_hyphen_scanning_sol_delete_hyphen_codeql_hyphen_database.Output.NoContent {
+                get throws {
+                    switch self {
+                    case let .noContent(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "noContent",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Response if the repository is archived or if GitHub Advanced Security is not enabled for this repository
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/delete(code-scanning/delete-codeql-database)/responses/403`.
+            ///
+            /// HTTP response code: `403 forbidden`.
+            case forbidden(Components.Responses.code_scanning_forbidden_write)
+            /// The associated value of the enum case if `self` is `.forbidden`.
+            ///
+            /// - Throws: An error if `self` is not `.forbidden`.
+            /// - SeeAlso: `.forbidden`.
+            public var forbidden: Components.Responses.code_scanning_forbidden_write {
+                get throws {
+                    switch self {
+                    case let .forbidden(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "forbidden",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Resource not found
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/delete(code-scanning/delete-codeql-database)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            case notFound(Components.Responses.not_found)
+            /// The associated value of the enum case if `self` is `.notFound`.
+            ///
+            /// - Throws: An error if `self` is not `.notFound`.
+            /// - SeeAlso: `.notFound`.
+            public var notFound: Components.Responses.not_found {
+                get throws {
+                    switch self {
+                    case let .notFound(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "notFound",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Service unavailable
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/delete(code-scanning/delete-codeql-database)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
             case serviceUnavailable(Components.Responses.service_unavailable)
