@@ -11730,13 +11730,6 @@ public struct Client: APIProtocol {
                     name: "cursor",
                     value: input.query.cursor
                 )
-                try converter.setQueryItemAsURI(
-                    in: &request,
-                    style: .form,
-                    explode: true,
-                    name: "redelivery",
-                    value: input.query.redelivery
-                )
                 converter.setAcceptHeader(
                     in: &request.headerFields,
                     contentTypes: input.headers.accept
