@@ -246,6 +246,69 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `POST /orgs/{org}/hooks/{hook_id}/pings`.
     /// - Remark: Generated from `#/paths//orgs/{org}/hooks/{hook_id}/pings/post(orgs/ping-webhook)`.
     func orgs_sol_ping_hyphen_webhook(_ input: Operations.orgs_sol_ping_hyphen_webhook.Input) async throws -> Operations.orgs_sol_ping_hyphen_webhook.Output
+    /// Get route stats by actor
+    ///
+    /// Get API request count statistics for an actor broken down by route within a specified time frame.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/insights/api/route-stats/{actor_type}/{actor_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/insights/api/route-stats/{actor_type}/{actor_id}/get(api-insights/get-route-stats-by-actor)`.
+    func api_hyphen_insights_sol_get_hyphen_route_hyphen_stats_hyphen_by_hyphen_actor(_ input: Operations.api_hyphen_insights_sol_get_hyphen_route_hyphen_stats_hyphen_by_hyphen_actor.Input) async throws -> Operations.api_hyphen_insights_sol_get_hyphen_route_hyphen_stats_hyphen_by_hyphen_actor.Output
+    /// Get subject stats
+    ///
+    /// Get API request statistics for all subjects within an organization within a specified time frame. Subjects can be users or GitHub Apps.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/insights/api/subject-stats`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/insights/api/subject-stats/get(api-insights/get-subject-stats)`.
+    func api_hyphen_insights_sol_get_hyphen_subject_hyphen_stats(_ input: Operations.api_hyphen_insights_sol_get_hyphen_subject_hyphen_stats.Input) async throws -> Operations.api_hyphen_insights_sol_get_hyphen_subject_hyphen_stats.Output
+    /// Get summary stats
+    ///
+    /// Get overall statistics of API requests made within an organization by all users and apps within a specified time frame.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/insights/api/summary-stats`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/insights/api/summary-stats/get(api-insights/get-summary-stats)`.
+    func api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats(_ input: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats.Input) async throws -> Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats.Output
+    /// Get summary stats by user
+    ///
+    /// Get overall statistics of API requests within the organization for a user.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/insights/api/summary-stats/users/{user_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/insights/api/summary-stats/users/{user_id}/get(api-insights/get-summary-stats-by-user)`.
+    func api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_user(_ input: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_user.Input) async throws -> Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_user.Output
+    /// Get summary stats by actor
+    ///
+    /// Get overall statistics of API requests within the organization made by a specific actor. Actors can be GitHub App installations, OAuth apps or other tokens on behalf of a user.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/insights/api/summary-stats/{actor_type}/{actor_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/insights/api/summary-stats/{actor_type}/{actor_id}/get(api-insights/get-summary-stats-by-actor)`.
+    func api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_actor(_ input: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_actor.Input) async throws -> Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_actor.Output
+    /// Get time stats
+    ///
+    /// Get the number of API requests and rate-limited requests made within an organization over a specified time period.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/insights/api/time-stats`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/insights/api/time-stats/get(api-insights/get-time-stats)`.
+    func api_hyphen_insights_sol_get_hyphen_time_hyphen_stats(_ input: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats.Input) async throws -> Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats.Output
+    /// Get time stats by user
+    ///
+    /// Get the number of API requests and rate-limited requests made within an organization by a specific user over a specified time period.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/insights/api/time-stats/users/{user_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/insights/api/time-stats/users/{user_id}/get(api-insights/get-time-stats-by-user)`.
+    func api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_user(_ input: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_user.Input) async throws -> Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_user.Output
+    /// Get time stats by actor
+    ///
+    /// Get the number of API requests and rate-limited requests made within an organization by a specific actor within a specified time period.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/insights/api/time-stats/{actor_type}/{actor_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/insights/api/time-stats/{actor_type}/{actor_id}/get(api-insights/get-time-stats-by-actor)`.
+    func api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_actor(_ input: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_actor.Input) async throws -> Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_actor.Output
+    /// Get user stats
+    ///
+    /// Get API usage statistics within an organization for a user broken down by the type of access.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/insights/api/user-stats/{user_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/insights/api/user-stats/{user_id}/get(api-insights/get-user-stats)`.
+    func api_hyphen_insights_sol_get_hyphen_user_hyphen_stats(_ input: Operations.api_hyphen_insights_sol_get_hyphen_user_hyphen_stats.Input) async throws -> Operations.api_hyphen_insights_sol_get_hyphen_user_hyphen_stats.Output
     /// List app installations for an organization
     ///
     /// Lists all GitHub Apps in an organization. The installation count includes
@@ -1164,6 +1227,159 @@ extension APIProtocol {
     ) async throws -> Operations.orgs_sol_ping_hyphen_webhook.Output {
         try await orgs_sol_ping_hyphen_webhook(Operations.orgs_sol_ping_hyphen_webhook.Input(
             path: path,
+            headers: headers
+        ))
+    }
+    /// Get route stats by actor
+    ///
+    /// Get API request count statistics for an actor broken down by route within a specified time frame.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/insights/api/route-stats/{actor_type}/{actor_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/insights/api/route-stats/{actor_type}/{actor_id}/get(api-insights/get-route-stats-by-actor)`.
+    public func api_hyphen_insights_sol_get_hyphen_route_hyphen_stats_hyphen_by_hyphen_actor(
+        path: Operations.api_hyphen_insights_sol_get_hyphen_route_hyphen_stats_hyphen_by_hyphen_actor.Input.Path,
+        query: Operations.api_hyphen_insights_sol_get_hyphen_route_hyphen_stats_hyphen_by_hyphen_actor.Input.Query,
+        headers: Operations.api_hyphen_insights_sol_get_hyphen_route_hyphen_stats_hyphen_by_hyphen_actor.Input.Headers = .init()
+    ) async throws -> Operations.api_hyphen_insights_sol_get_hyphen_route_hyphen_stats_hyphen_by_hyphen_actor.Output {
+        try await api_hyphen_insights_sol_get_hyphen_route_hyphen_stats_hyphen_by_hyphen_actor(Operations.api_hyphen_insights_sol_get_hyphen_route_hyphen_stats_hyphen_by_hyphen_actor.Input(
+            path: path,
+            query: query,
+            headers: headers
+        ))
+    }
+    /// Get subject stats
+    ///
+    /// Get API request statistics for all subjects within an organization within a specified time frame. Subjects can be users or GitHub Apps.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/insights/api/subject-stats`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/insights/api/subject-stats/get(api-insights/get-subject-stats)`.
+    public func api_hyphen_insights_sol_get_hyphen_subject_hyphen_stats(
+        path: Operations.api_hyphen_insights_sol_get_hyphen_subject_hyphen_stats.Input.Path,
+        query: Operations.api_hyphen_insights_sol_get_hyphen_subject_hyphen_stats.Input.Query,
+        headers: Operations.api_hyphen_insights_sol_get_hyphen_subject_hyphen_stats.Input.Headers = .init()
+    ) async throws -> Operations.api_hyphen_insights_sol_get_hyphen_subject_hyphen_stats.Output {
+        try await api_hyphen_insights_sol_get_hyphen_subject_hyphen_stats(Operations.api_hyphen_insights_sol_get_hyphen_subject_hyphen_stats.Input(
+            path: path,
+            query: query,
+            headers: headers
+        ))
+    }
+    /// Get summary stats
+    ///
+    /// Get overall statistics of API requests made within an organization by all users and apps within a specified time frame.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/insights/api/summary-stats`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/insights/api/summary-stats/get(api-insights/get-summary-stats)`.
+    public func api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats(
+        path: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats.Input.Path,
+        query: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats.Input.Query,
+        headers: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats.Input.Headers = .init()
+    ) async throws -> Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats.Output {
+        try await api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats(Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats.Input(
+            path: path,
+            query: query,
+            headers: headers
+        ))
+    }
+    /// Get summary stats by user
+    ///
+    /// Get overall statistics of API requests within the organization for a user.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/insights/api/summary-stats/users/{user_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/insights/api/summary-stats/users/{user_id}/get(api-insights/get-summary-stats-by-user)`.
+    public func api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_user(
+        path: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_user.Input.Path,
+        query: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_user.Input.Query,
+        headers: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_user.Input.Headers = .init()
+    ) async throws -> Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_user.Output {
+        try await api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_user(Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_user.Input(
+            path: path,
+            query: query,
+            headers: headers
+        ))
+    }
+    /// Get summary stats by actor
+    ///
+    /// Get overall statistics of API requests within the organization made by a specific actor. Actors can be GitHub App installations, OAuth apps or other tokens on behalf of a user.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/insights/api/summary-stats/{actor_type}/{actor_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/insights/api/summary-stats/{actor_type}/{actor_id}/get(api-insights/get-summary-stats-by-actor)`.
+    public func api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_actor(
+        path: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_actor.Input.Path,
+        query: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_actor.Input.Query,
+        headers: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_actor.Input.Headers = .init()
+    ) async throws -> Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_actor.Output {
+        try await api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_actor(Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_actor.Input(
+            path: path,
+            query: query,
+            headers: headers
+        ))
+    }
+    /// Get time stats
+    ///
+    /// Get the number of API requests and rate-limited requests made within an organization over a specified time period.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/insights/api/time-stats`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/insights/api/time-stats/get(api-insights/get-time-stats)`.
+    public func api_hyphen_insights_sol_get_hyphen_time_hyphen_stats(
+        path: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats.Input.Path,
+        query: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats.Input.Query,
+        headers: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats.Input.Headers = .init()
+    ) async throws -> Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats.Output {
+        try await api_hyphen_insights_sol_get_hyphen_time_hyphen_stats(Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats.Input(
+            path: path,
+            query: query,
+            headers: headers
+        ))
+    }
+    /// Get time stats by user
+    ///
+    /// Get the number of API requests and rate-limited requests made within an organization by a specific user over a specified time period.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/insights/api/time-stats/users/{user_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/insights/api/time-stats/users/{user_id}/get(api-insights/get-time-stats-by-user)`.
+    public func api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_user(
+        path: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_user.Input.Path,
+        query: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_user.Input.Query,
+        headers: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_user.Input.Headers = .init()
+    ) async throws -> Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_user.Output {
+        try await api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_user(Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_user.Input(
+            path: path,
+            query: query,
+            headers: headers
+        ))
+    }
+    /// Get time stats by actor
+    ///
+    /// Get the number of API requests and rate-limited requests made within an organization by a specific actor within a specified time period.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/insights/api/time-stats/{actor_type}/{actor_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/insights/api/time-stats/{actor_type}/{actor_id}/get(api-insights/get-time-stats-by-actor)`.
+    public func api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_actor(
+        path: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_actor.Input.Path,
+        query: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_actor.Input.Query,
+        headers: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_actor.Input.Headers = .init()
+    ) async throws -> Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_actor.Output {
+        try await api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_actor(Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_actor.Input(
+            path: path,
+            query: query,
+            headers: headers
+        ))
+    }
+    /// Get user stats
+    ///
+    /// Get API usage statistics within an organization for a user broken down by the type of access.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/insights/api/user-stats/{user_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/insights/api/user-stats/{user_id}/get(api-insights/get-user-stats)`.
+    public func api_hyphen_insights_sol_get_hyphen_user_hyphen_stats(
+        path: Operations.api_hyphen_insights_sol_get_hyphen_user_hyphen_stats.Input.Path,
+        query: Operations.api_hyphen_insights_sol_get_hyphen_user_hyphen_stats.Input.Query,
+        headers: Operations.api_hyphen_insights_sol_get_hyphen_user_hyphen_stats.Input.Headers = .init()
+    ) async throws -> Operations.api_hyphen_insights_sol_get_hyphen_user_hyphen_stats.Output {
+        try await api_hyphen_insights_sol_get_hyphen_user_hyphen_stats(Operations.api_hyphen_insights_sol_get_hyphen_user_hyphen_stats.Input(
+            path: path,
+            query: query,
             headers: headers
         ))
     }
@@ -5872,6 +6088,253 @@ public enum Components {
                 case _type = "type"
             }
         }
+        /// - Remark: Generated from `#/components/schemas/api_hyphen_insights_hyphen_route_hyphen_stats`.
+        public struct api_hyphen_insights_hyphen_route_hyphen_statsPayload: Codable, Hashable, Sendable {
+            /// The HTTP method
+            ///
+            /// - Remark: Generated from `#/components/schemas/api_hyphen_insights_hyphen_route_hyphen_stats/http_method`.
+            public var http_method: Swift.String?
+            /// The API path's route template
+            ///
+            /// - Remark: Generated from `#/components/schemas/api_hyphen_insights_hyphen_route_hyphen_stats/api_route`.
+            public var api_route: Swift.String?
+            /// The total number of requests within the queried time period
+            ///
+            /// - Remark: Generated from `#/components/schemas/api_hyphen_insights_hyphen_route_hyphen_stats/total_request_count`.
+            public var total_request_count: Swift.Int64?
+            /// The total number of requests that were rate limited within the queried time period
+            ///
+            /// - Remark: Generated from `#/components/schemas/api_hyphen_insights_hyphen_route_hyphen_stats/rate_limited_request_count`.
+            public var rate_limited_request_count: Swift.Int64?
+            /// - Remark: Generated from `#/components/schemas/api_hyphen_insights_hyphen_route_hyphen_stats/last_rate_limited_timestamp`.
+            public var last_rate_limited_timestamp: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/api_hyphen_insights_hyphen_route_hyphen_stats/last_request_timestamp`.
+            public var last_request_timestamp: Swift.String?
+            /// Creates a new `api_hyphen_insights_hyphen_route_hyphen_statsPayload`.
+            ///
+            /// - Parameters:
+            ///   - http_method: The HTTP method
+            ///   - api_route: The API path's route template
+            ///   - total_request_count: The total number of requests within the queried time period
+            ///   - rate_limited_request_count: The total number of requests that were rate limited within the queried time period
+            ///   - last_rate_limited_timestamp:
+            ///   - last_request_timestamp:
+            public init(
+                http_method: Swift.String? = nil,
+                api_route: Swift.String? = nil,
+                total_request_count: Swift.Int64? = nil,
+                rate_limited_request_count: Swift.Int64? = nil,
+                last_rate_limited_timestamp: Swift.String? = nil,
+                last_request_timestamp: Swift.String? = nil
+            ) {
+                self.http_method = http_method
+                self.api_route = api_route
+                self.total_request_count = total_request_count
+                self.rate_limited_request_count = rate_limited_request_count
+                self.last_rate_limited_timestamp = last_rate_limited_timestamp
+                self.last_request_timestamp = last_request_timestamp
+            }
+            public enum CodingKeys: String, CodingKey {
+                case http_method
+                case api_route
+                case total_request_count
+                case rate_limited_request_count
+                case last_rate_limited_timestamp
+                case last_request_timestamp
+            }
+        }
+        /// API Insights usage route stats for an actor
+        ///
+        /// - Remark: Generated from `#/components/schemas/api-insights-route-stats`.
+        public typealias api_hyphen_insights_hyphen_route_hyphen_stats = [Components.Schemas.api_hyphen_insights_hyphen_route_hyphen_statsPayload]
+        /// - Remark: Generated from `#/components/schemas/api_hyphen_insights_hyphen_subject_hyphen_stats`.
+        public struct api_hyphen_insights_hyphen_subject_hyphen_statsPayload: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/api_hyphen_insights_hyphen_subject_hyphen_stats/subject_type`.
+            public var subject_type: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/api_hyphen_insights_hyphen_subject_hyphen_stats/subject_name`.
+            public var subject_name: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/api_hyphen_insights_hyphen_subject_hyphen_stats/subject_id`.
+            public var subject_id: Swift.Int64?
+            /// - Remark: Generated from `#/components/schemas/api_hyphen_insights_hyphen_subject_hyphen_stats/total_request_count`.
+            public var total_request_count: Swift.Int?
+            /// - Remark: Generated from `#/components/schemas/api_hyphen_insights_hyphen_subject_hyphen_stats/rate_limited_request_count`.
+            public var rate_limited_request_count: Swift.Int?
+            /// - Remark: Generated from `#/components/schemas/api_hyphen_insights_hyphen_subject_hyphen_stats/last_rate_limited_timestamp`.
+            public var last_rate_limited_timestamp: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/api_hyphen_insights_hyphen_subject_hyphen_stats/last_request_timestamp`.
+            public var last_request_timestamp: Swift.String?
+            /// Creates a new `api_hyphen_insights_hyphen_subject_hyphen_statsPayload`.
+            ///
+            /// - Parameters:
+            ///   - subject_type:
+            ///   - subject_name:
+            ///   - subject_id:
+            ///   - total_request_count:
+            ///   - rate_limited_request_count:
+            ///   - last_rate_limited_timestamp:
+            ///   - last_request_timestamp:
+            public init(
+                subject_type: Swift.String? = nil,
+                subject_name: Swift.String? = nil,
+                subject_id: Swift.Int64? = nil,
+                total_request_count: Swift.Int? = nil,
+                rate_limited_request_count: Swift.Int? = nil,
+                last_rate_limited_timestamp: Swift.String? = nil,
+                last_request_timestamp: Swift.String? = nil
+            ) {
+                self.subject_type = subject_type
+                self.subject_name = subject_name
+                self.subject_id = subject_id
+                self.total_request_count = total_request_count
+                self.rate_limited_request_count = rate_limited_request_count
+                self.last_rate_limited_timestamp = last_rate_limited_timestamp
+                self.last_request_timestamp = last_request_timestamp
+            }
+            public enum CodingKeys: String, CodingKey {
+                case subject_type
+                case subject_name
+                case subject_id
+                case total_request_count
+                case rate_limited_request_count
+                case last_rate_limited_timestamp
+                case last_request_timestamp
+            }
+        }
+        /// API Insights usage subject stats for an organization
+        ///
+        /// - Remark: Generated from `#/components/schemas/api-insights-subject-stats`.
+        public typealias api_hyphen_insights_hyphen_subject_hyphen_stats = [Components.Schemas.api_hyphen_insights_hyphen_subject_hyphen_statsPayload]
+        /// API Insights usage summary stats for an organization
+        ///
+        /// - Remark: Generated from `#/components/schemas/api-insights-summary-stats`.
+        public struct api_hyphen_insights_hyphen_summary_hyphen_stats: Codable, Hashable, Sendable {
+            /// The total number of requests within the queried time period
+            ///
+            /// - Remark: Generated from `#/components/schemas/api-insights-summary-stats/total_request_count`.
+            public var total_request_count: Swift.Int64?
+            /// The total number of requests that were rate limited within the queried time period
+            ///
+            /// - Remark: Generated from `#/components/schemas/api-insights-summary-stats/rate_limited_request_count`.
+            public var rate_limited_request_count: Swift.Int64?
+            /// Creates a new `api_hyphen_insights_hyphen_summary_hyphen_stats`.
+            ///
+            /// - Parameters:
+            ///   - total_request_count: The total number of requests within the queried time period
+            ///   - rate_limited_request_count: The total number of requests that were rate limited within the queried time period
+            public init(
+                total_request_count: Swift.Int64? = nil,
+                rate_limited_request_count: Swift.Int64? = nil
+            ) {
+                self.total_request_count = total_request_count
+                self.rate_limited_request_count = rate_limited_request_count
+            }
+            public enum CodingKeys: String, CodingKey {
+                case total_request_count
+                case rate_limited_request_count
+            }
+        }
+        /// - Remark: Generated from `#/components/schemas/api_hyphen_insights_hyphen_time_hyphen_stats`.
+        public struct api_hyphen_insights_hyphen_time_hyphen_statsPayload: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/api_hyphen_insights_hyphen_time_hyphen_stats/timestamp`.
+            public var timestamp: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/api_hyphen_insights_hyphen_time_hyphen_stats/total_request_count`.
+            public var total_request_count: Swift.Int64?
+            /// - Remark: Generated from `#/components/schemas/api_hyphen_insights_hyphen_time_hyphen_stats/rate_limited_request_count`.
+            public var rate_limited_request_count: Swift.Int64?
+            /// Creates a new `api_hyphen_insights_hyphen_time_hyphen_statsPayload`.
+            ///
+            /// - Parameters:
+            ///   - timestamp:
+            ///   - total_request_count:
+            ///   - rate_limited_request_count:
+            public init(
+                timestamp: Swift.String? = nil,
+                total_request_count: Swift.Int64? = nil,
+                rate_limited_request_count: Swift.Int64? = nil
+            ) {
+                self.timestamp = timestamp
+                self.total_request_count = total_request_count
+                self.rate_limited_request_count = rate_limited_request_count
+            }
+            public enum CodingKeys: String, CodingKey {
+                case timestamp
+                case total_request_count
+                case rate_limited_request_count
+            }
+        }
+        /// API Insights usage time stats for an organization
+        ///
+        /// - Remark: Generated from `#/components/schemas/api-insights-time-stats`.
+        public typealias api_hyphen_insights_hyphen_time_hyphen_stats = [Components.Schemas.api_hyphen_insights_hyphen_time_hyphen_statsPayload]
+        /// - Remark: Generated from `#/components/schemas/api_hyphen_insights_hyphen_user_hyphen_stats`.
+        public struct api_hyphen_insights_hyphen_user_hyphen_statsPayload: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/api_hyphen_insights_hyphen_user_hyphen_stats/actor_type`.
+            public var actor_type: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/api_hyphen_insights_hyphen_user_hyphen_stats/actor_name`.
+            public var actor_name: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/api_hyphen_insights_hyphen_user_hyphen_stats/actor_id`.
+            public var actor_id: Swift.Int64?
+            /// - Remark: Generated from `#/components/schemas/api_hyphen_insights_hyphen_user_hyphen_stats/integration_id`.
+            public var integration_id: Swift.Int64?
+            /// - Remark: Generated from `#/components/schemas/api_hyphen_insights_hyphen_user_hyphen_stats/oauth_application_id`.
+            public var oauth_application_id: Swift.Int64?
+            /// - Remark: Generated from `#/components/schemas/api_hyphen_insights_hyphen_user_hyphen_stats/total_request_count`.
+            public var total_request_count: Swift.Int?
+            /// - Remark: Generated from `#/components/schemas/api_hyphen_insights_hyphen_user_hyphen_stats/rate_limited_request_count`.
+            public var rate_limited_request_count: Swift.Int?
+            /// - Remark: Generated from `#/components/schemas/api_hyphen_insights_hyphen_user_hyphen_stats/last_rate_limited_timestamp`.
+            public var last_rate_limited_timestamp: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/api_hyphen_insights_hyphen_user_hyphen_stats/last_request_timestamp`.
+            public var last_request_timestamp: Swift.String?
+            /// Creates a new `api_hyphen_insights_hyphen_user_hyphen_statsPayload`.
+            ///
+            /// - Parameters:
+            ///   - actor_type:
+            ///   - actor_name:
+            ///   - actor_id:
+            ///   - integration_id:
+            ///   - oauth_application_id:
+            ///   - total_request_count:
+            ///   - rate_limited_request_count:
+            ///   - last_rate_limited_timestamp:
+            ///   - last_request_timestamp:
+            public init(
+                actor_type: Swift.String? = nil,
+                actor_name: Swift.String? = nil,
+                actor_id: Swift.Int64? = nil,
+                integration_id: Swift.Int64? = nil,
+                oauth_application_id: Swift.Int64? = nil,
+                total_request_count: Swift.Int? = nil,
+                rate_limited_request_count: Swift.Int? = nil,
+                last_rate_limited_timestamp: Swift.String? = nil,
+                last_request_timestamp: Swift.String? = nil
+            ) {
+                self.actor_type = actor_type
+                self.actor_name = actor_name
+                self.actor_id = actor_id
+                self.integration_id = integration_id
+                self.oauth_application_id = oauth_application_id
+                self.total_request_count = total_request_count
+                self.rate_limited_request_count = rate_limited_request_count
+                self.last_rate_limited_timestamp = last_rate_limited_timestamp
+                self.last_request_timestamp = last_request_timestamp
+            }
+            public enum CodingKeys: String, CodingKey {
+                case actor_type
+                case actor_name
+                case actor_id
+                case integration_id
+                case oauth_application_id
+                case total_request_count
+                case rate_limited_request_count
+                case last_rate_limited_timestamp
+                case last_request_timestamp
+            }
+        }
+        /// API Insights usage stats for a user
+        ///
+        /// - Remark: Generated from `#/components/schemas/api-insights-user-stats`.
+        public typealias api_hyphen_insights_hyphen_user_hyphen_stats = [Components.Schemas.api_hyphen_insights_hyphen_user_hyphen_statsPayload]
         /// Org Membership
         ///
         /// - Remark: Generated from `#/components/schemas/org-membership`.
@@ -6541,6 +7004,10 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/organization-programmatic-access-grant-request/created_at`.
             public var created_at: Swift.String
+            /// Unique identifier of the user's token. This field can also be found in audit log events and the organization's settings for their PAT grants.
+            ///
+            /// - Remark: Generated from `#/components/schemas/organization-programmatic-access-grant-request/token_id`.
+            public var token_id: Swift.Int
             /// Whether the associated fine-grained personal access token has expired.
             ///
             /// - Remark: Generated from `#/components/schemas/organization-programmatic-access-grant-request/token_expired`.
@@ -6563,6 +7030,7 @@ public enum Components {
             ///   - repositories_url: URL to the list of repositories requested to be accessed via fine-grained personal access token. Should only be followed when `repository_selection` is `subset`.
             ///   - permissions: Permissions requested, categorized by type of permission.
             ///   - created_at: Date and time when the request for access was created.
+            ///   - token_id: Unique identifier of the user's token. This field can also be found in audit log events and the organization's settings for their PAT grants.
             ///   - token_expired: Whether the associated fine-grained personal access token has expired.
             ///   - token_expires_at: Date and time when the associated fine-grained personal access token expires.
             ///   - token_last_used_at: Date and time when the associated fine-grained personal access token was last used for authentication.
@@ -6574,6 +7042,7 @@ public enum Components {
                 repositories_url: Swift.String,
                 permissions: Components.Schemas.organization_hyphen_programmatic_hyphen_access_hyphen_grant_hyphen_request.permissionsPayload,
                 created_at: Swift.String,
+                token_id: Swift.Int,
                 token_expired: Swift.Bool,
                 token_expires_at: Swift.String? = nil,
                 token_last_used_at: Swift.String? = nil
@@ -6585,6 +7054,7 @@ public enum Components {
                 self.repositories_url = repositories_url
                 self.permissions = permissions
                 self.created_at = created_at
+                self.token_id = token_id
                 self.token_expired = token_expired
                 self.token_expires_at = token_expires_at
                 self.token_last_used_at = token_last_used_at
@@ -6597,6 +7067,7 @@ public enum Components {
                 case repositories_url
                 case permissions
                 case created_at
+                case token_id
                 case token_expired
                 case token_expires_at
                 case token_last_used_at
@@ -6606,7 +7077,7 @@ public enum Components {
         ///
         /// - Remark: Generated from `#/components/schemas/organization-programmatic-access-grant`.
         public struct organization_hyphen_programmatic_hyphen_access_hyphen_grant: Codable, Hashable, Sendable {
-            /// Unique identifier of the fine-grained personal access token. The `pat_id` used to get details about an approved fine-grained personal access token.
+            /// Unique identifier of the fine-grained personal access token grant. The `pat_id` used to get details about an approved fine-grained personal access token.
             ///
             /// - Remark: Generated from `#/components/schemas/organization-programmatic-access-grant/id`.
             public var id: Swift.Int
@@ -6721,6 +7192,10 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/organization-programmatic-access-grant/access_granted_at`.
             public var access_granted_at: Swift.String
+            /// Unique identifier of the user's token. This field can also be found in audit log events and the organization's settings for their PAT grants.
+            ///
+            /// - Remark: Generated from `#/components/schemas/organization-programmatic-access-grant/token_id`.
+            public var token_id: Swift.Int
             /// Whether the associated fine-grained personal access token has expired.
             ///
             /// - Remark: Generated from `#/components/schemas/organization-programmatic-access-grant/token_expired`.
@@ -6736,12 +7211,13 @@ public enum Components {
             /// Creates a new `organization_hyphen_programmatic_hyphen_access_hyphen_grant`.
             ///
             /// - Parameters:
-            ///   - id: Unique identifier of the fine-grained personal access token. The `pat_id` used to get details about an approved fine-grained personal access token.
+            ///   - id: Unique identifier of the fine-grained personal access token grant. The `pat_id` used to get details about an approved fine-grained personal access token.
             ///   - owner:
             ///   - repository_selection: Type of repository selection requested.
             ///   - repositories_url: URL to the list of repositories the fine-grained personal access token can access. Only follow when `repository_selection` is `subset`.
             ///   - permissions: Permissions requested, categorized by type of permission.
             ///   - access_granted_at: Date and time when the fine-grained personal access token was approved to access the organization.
+            ///   - token_id: Unique identifier of the user's token. This field can also be found in audit log events and the organization's settings for their PAT grants.
             ///   - token_expired: Whether the associated fine-grained personal access token has expired.
             ///   - token_expires_at: Date and time when the associated fine-grained personal access token expires.
             ///   - token_last_used_at: Date and time when the associated fine-grained personal access token was last used for authentication.
@@ -6752,6 +7228,7 @@ public enum Components {
                 repositories_url: Swift.String,
                 permissions: Components.Schemas.organization_hyphen_programmatic_hyphen_access_hyphen_grant.permissionsPayload,
                 access_granted_at: Swift.String,
+                token_id: Swift.Int,
                 token_expired: Swift.Bool,
                 token_expires_at: Swift.String? = nil,
                 token_last_used_at: Swift.String? = nil
@@ -6762,6 +7239,7 @@ public enum Components {
                 self.repositories_url = repositories_url
                 self.permissions = permissions
                 self.access_granted_at = access_granted_at
+                self.token_id = token_id
                 self.token_expired = token_expired
                 self.token_expires_at = token_expires_at
                 self.token_last_used_at = token_last_used_at
@@ -6773,6 +7251,7 @@ public enum Components {
                 case repositories_url
                 case permissions
                 case access_granted_at
+                case token_id
                 case token_expired
                 case token_expires_at
                 case token_last_used_at
@@ -7066,6 +7545,61 @@ public enum Components {
         ///
         /// - Remark: Generated from `#/components/parameters/hook-id`.
         public typealias hook_hyphen_id = Swift.Int
+        /// The type of the actor
+        ///
+        /// - Remark: Generated from `#/components/parameters/api-insights-actor-type`.
+        @frozen public enum api_hyphen_insights_hyphen_actor_hyphen_type: String, Codable, Hashable, Sendable {
+            case installations = "installations"
+            case classic_pats = "classic_pats"
+            case fine_grained_pats = "fine_grained_pats"
+            case oauth_apps = "oauth_apps"
+            case github_apps_user_to_server = "github_apps_user_to_server"
+        }
+        /// The ID of the actor
+        ///
+        /// - Remark: Generated from `#/components/parameters/api-insights-actor-id`.
+        public typealias api_hyphen_insights_hyphen_actor_hyphen_id = Swift.Int
+        /// The minimum timestamp to query for stats
+        ///
+        /// - Remark: Generated from `#/components/parameters/api-insights-min-timestamp`.
+        public typealias api_hyphen_insights_hyphen_min_hyphen_timestamp = Swift.String
+        /// The maximum timestamp to query for stats
+        ///
+        /// - Remark: Generated from `#/components/parameters/api-insights-max-timestamp`.
+        public typealias api_hyphen_insights_hyphen_max_hyphen_timestamp = Swift.String
+        /// - Remark: Generated from `#/components/parameters/api_hyphen_insights_hyphen_route_hyphen_stats_hyphen_sort`.
+        @frozen public enum api_hyphen_insights_hyphen_route_hyphen_stats_hyphen_sortPayload: String, Codable, Hashable, Sendable {
+            case last_rate_limited_timestamp = "last_rate_limited_timestamp"
+            case last_request_timestamp = "last_request_timestamp"
+            case rate_limited_request_count = "rate_limited_request_count"
+            case http_method = "http_method"
+            case api_route = "api_route"
+            case total_request_count = "total_request_count"
+        }
+        /// The property to sort the results by.
+        ///
+        /// - Remark: Generated from `#/components/parameters/api-insights-route-stats-sort`.
+        public typealias api_hyphen_insights_hyphen_route_hyphen_stats_hyphen_sort = [Components.Parameters.api_hyphen_insights_hyphen_route_hyphen_stats_hyphen_sortPayload]
+        /// - Remark: Generated from `#/components/parameters/api_hyphen_insights_hyphen_sort`.
+        @frozen public enum api_hyphen_insights_hyphen_sortPayload: String, Codable, Hashable, Sendable {
+            case last_rate_limited_timestamp = "last_rate_limited_timestamp"
+            case last_request_timestamp = "last_request_timestamp"
+            case rate_limited_request_count = "rate_limited_request_count"
+            case subject_name = "subject_name"
+            case total_request_count = "total_request_count"
+        }
+        /// The property to sort the results by.
+        ///
+        /// - Remark: Generated from `#/components/parameters/api-insights-sort`.
+        public typealias api_hyphen_insights_hyphen_sort = [Components.Parameters.api_hyphen_insights_hyphen_sortPayload]
+        /// The ID of the user to query for stats
+        ///
+        /// - Remark: Generated from `#/components/parameters/api-insights-user-id`.
+        public typealias api_hyphen_insights_hyphen_user_hyphen_id = Swift.String
+        /// The increment of time used to breakdown the query results (5m, 10m, 1h, etc.)
+        ///
+        /// - Remark: Generated from `#/components/parameters/api-insights-timestamp-increment`.
+        public typealias api_hyphen_insights_hyphen_timestamp_hyphen_increment = Swift.String
         /// The unique identifier of the invitation.
         ///
         /// - Remark: Generated from `#/components/parameters/invitation-id`.
@@ -10988,22 +11522,17 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/hooks/{hook_id}/deliveries/GET/query/cursor`.
                 public var cursor: Components.Parameters.cursor?
-                /// - Remark: Generated from `#/paths/orgs/{org}/hooks/{hook_id}/deliveries/GET/query/redelivery`.
-                public var redelivery: Swift.Bool?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - cursor: Used for pagination: the starting delivery from which the page of deliveries is fetched. Refer to the `link` header for the next and previous page cursors.
-                ///   - redelivery:
                 public init(
                     per_page: Components.Parameters.per_hyphen_page? = nil,
-                    cursor: Components.Parameters.cursor? = nil,
-                    redelivery: Swift.Bool? = nil
+                    cursor: Components.Parameters.cursor? = nil
                 ) {
                     self.per_page = per_page
                     self.cursor = cursor
-                    self.redelivery = redelivery
                 }
             }
             public var query: Operations.orgs_sol_list_hyphen_webhook_hyphen_deliveries.Input.Query
@@ -11658,6 +12187,1687 @@ public enum Operations {
                     default:
                         try throwUnexpectedResponseStatus(
                             expectedStatus: "notFound",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
+    /// Get route stats by actor
+    ///
+    /// Get API request count statistics for an actor broken down by route within a specified time frame.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/insights/api/route-stats/{actor_type}/{actor_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/insights/api/route-stats/{actor_type}/{actor_id}/get(api-insights/get-route-stats-by-actor)`.
+    public enum api_hyphen_insights_sol_get_hyphen_route_hyphen_stats_hyphen_by_hyphen_actor {
+        public static let id: Swift.String = "api-insights/get-route-stats-by-actor"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/route-stats/{actor_type}/{actor_id}/GET/path`.
+            public struct Path: Sendable, Hashable {
+                /// The organization name. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/route-stats/{actor_type}/{actor_id}/GET/path/org`.
+                public var org: Components.Parameters.org
+                /// - Remark: Generated from `#/components/parameters/api-insights-actor-type`.
+                @frozen public enum api_hyphen_insights_hyphen_actor_hyphen_type: String, Codable, Hashable, Sendable {
+                    case installations = "installations"
+                    case classic_pats = "classic_pats"
+                    case fine_grained_pats = "fine_grained_pats"
+                    case oauth_apps = "oauth_apps"
+                    case github_apps_user_to_server = "github_apps_user_to_server"
+                }
+                /// The type of the actor
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/route-stats/{actor_type}/{actor_id}/GET/path/actor_type`.
+                public var actor_type: Components.Parameters.api_hyphen_insights_hyphen_actor_hyphen_type
+                /// The ID of the actor
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/route-stats/{actor_type}/{actor_id}/GET/path/actor_id`.
+                public var actor_id: Components.Parameters.api_hyphen_insights_hyphen_actor_hyphen_id
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - org: The organization name. The name is not case sensitive.
+                ///   - actor_type: The type of the actor
+                ///   - actor_id: The ID of the actor
+                public init(
+                    org: Components.Parameters.org,
+                    actor_type: Components.Parameters.api_hyphen_insights_hyphen_actor_hyphen_type,
+                    actor_id: Components.Parameters.api_hyphen_insights_hyphen_actor_hyphen_id
+                ) {
+                    self.org = org
+                    self.actor_type = actor_type
+                    self.actor_id = actor_id
+                }
+            }
+            public var path: Operations.api_hyphen_insights_sol_get_hyphen_route_hyphen_stats_hyphen_by_hyphen_actor.Input.Path
+            /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/route-stats/{actor_type}/{actor_id}/GET/query`.
+            public struct Query: Sendable, Hashable {
+                /// The minimum timestamp to query for stats
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/route-stats/{actor_type}/{actor_id}/GET/query/min_timestamp`.
+                public var min_timestamp: Components.Parameters.api_hyphen_insights_hyphen_min_hyphen_timestamp
+                /// The maximum timestamp to query for stats
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/route-stats/{actor_type}/{actor_id}/GET/query/max_timestamp`.
+                public var max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/route-stats/{actor_type}/{actor_id}/GET/query/page`.
+                public var page: Components.Parameters.page?
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/route-stats/{actor_type}/{actor_id}/GET/query/per_page`.
+                public var per_page: Components.Parameters.per_hyphen_page?
+                /// - Remark: Generated from `#/components/parameters/direction`.
+                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                    case asc = "asc"
+                    case desc = "desc"
+                }
+                /// The direction to sort the results by.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/route-stats/{actor_type}/{actor_id}/GET/query/direction`.
+                public var direction: Components.Parameters.direction?
+                /// - Remark: Generated from `#/components/parameters/api_hyphen_insights_hyphen_route_hyphen_stats_hyphen_sort`.
+                @frozen public enum api_hyphen_insights_hyphen_route_hyphen_stats_hyphen_sortPayload: String, Codable, Hashable, Sendable {
+                    case last_rate_limited_timestamp = "last_rate_limited_timestamp"
+                    case last_request_timestamp = "last_request_timestamp"
+                    case rate_limited_request_count = "rate_limited_request_count"
+                    case http_method = "http_method"
+                    case api_route = "api_route"
+                    case total_request_count = "total_request_count"
+                }
+                /// - Remark: Generated from `#/components/parameters/api-insights-route-stats-sort`.
+                public typealias api_hyphen_insights_hyphen_route_hyphen_stats_hyphen_sort = [Components.Parameters.api_hyphen_insights_hyphen_route_hyphen_stats_hyphen_sortPayload]
+                /// The property to sort the results by.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/route-stats/{actor_type}/{actor_id}/GET/query/sort`.
+                public var sort: Components.Parameters.api_hyphen_insights_hyphen_route_hyphen_stats_hyphen_sort?
+                /// Creates a new `Query`.
+                ///
+                /// - Parameters:
+                ///   - min_timestamp: The minimum timestamp to query for stats
+                ///   - max_timestamp: The maximum timestamp to query for stats
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - direction: The direction to sort the results by.
+                ///   - sort: The property to sort the results by.
+                public init(
+                    min_timestamp: Components.Parameters.api_hyphen_insights_hyphen_min_hyphen_timestamp,
+                    max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp,
+                    page: Components.Parameters.page? = nil,
+                    per_page: Components.Parameters.per_hyphen_page? = nil,
+                    direction: Components.Parameters.direction? = nil,
+                    sort: Components.Parameters.api_hyphen_insights_hyphen_route_hyphen_stats_hyphen_sort? = nil
+                ) {
+                    self.min_timestamp = min_timestamp
+                    self.max_timestamp = max_timestamp
+                    self.page = page
+                    self.per_page = per_page
+                    self.direction = direction
+                    self.sort = sort
+                }
+            }
+            public var query: Operations.api_hyphen_insights_sol_get_hyphen_route_hyphen_stats_hyphen_by_hyphen_actor.Input.Query
+            /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/route-stats/{actor_type}/{actor_id}/GET/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.api_hyphen_insights_sol_get_hyphen_route_hyphen_stats_hyphen_by_hyphen_actor.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.api_hyphen_insights_sol_get_hyphen_route_hyphen_stats_hyphen_by_hyphen_actor.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.api_hyphen_insights_sol_get_hyphen_route_hyphen_stats_hyphen_by_hyphen_actor.Input.Headers
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - query:
+            ///   - headers:
+            public init(
+                path: Operations.api_hyphen_insights_sol_get_hyphen_route_hyphen_stats_hyphen_by_hyphen_actor.Input.Path,
+                query: Operations.api_hyphen_insights_sol_get_hyphen_route_hyphen_stats_hyphen_by_hyphen_actor.Input.Query,
+                headers: Operations.api_hyphen_insights_sol_get_hyphen_route_hyphen_stats_hyphen_by_hyphen_actor.Input.Headers = .init()
+            ) {
+                self.path = path
+                self.query = query
+                self.headers = headers
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Ok: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/route-stats/{actor_type}/{actor_id}/GET/responses/200/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/route-stats/{actor_type}/{actor_id}/GET/responses/200/content/application\/json`.
+                    case json(Components.Schemas.api_hyphen_insights_hyphen_route_hyphen_stats)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Components.Schemas.api_hyphen_insights_hyphen_route_hyphen_stats {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.api_hyphen_insights_sol_get_hyphen_route_hyphen_stats_hyphen_by_hyphen_actor.Output.Ok.Body
+                /// Creates a new `Ok`.
+                ///
+                /// - Parameters:
+                ///   - body: Received HTTP response body
+                public init(body: Operations.api_hyphen_insights_sol_get_hyphen_route_hyphen_stats_hyphen_by_hyphen_actor.Output.Ok.Body) {
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/insights/api/route-stats/{actor_type}/{actor_id}/get(api-insights/get-route-stats-by-actor)/responses/200`.
+            ///
+            /// HTTP response code: `200 ok`.
+            case ok(Operations.api_hyphen_insights_sol_get_hyphen_route_hyphen_stats_hyphen_by_hyphen_actor.Output.Ok)
+            /// The associated value of the enum case if `self` is `.ok`.
+            ///
+            /// - Throws: An error if `self` is not `.ok`.
+            /// - SeeAlso: `.ok`.
+            public var ok: Operations.api_hyphen_insights_sol_get_hyphen_route_hyphen_stats_hyphen_by_hyphen_actor.Output.Ok {
+                get throws {
+                    switch self {
+                    case let .ok(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "ok",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
+    /// Get subject stats
+    ///
+    /// Get API request statistics for all subjects within an organization within a specified time frame. Subjects can be users or GitHub Apps.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/insights/api/subject-stats`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/insights/api/subject-stats/get(api-insights/get-subject-stats)`.
+    public enum api_hyphen_insights_sol_get_hyphen_subject_hyphen_stats {
+        public static let id: Swift.String = "api-insights/get-subject-stats"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/subject-stats/GET/path`.
+            public struct Path: Sendable, Hashable {
+                /// The organization name. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/subject-stats/GET/path/org`.
+                public var org: Components.Parameters.org
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - org: The organization name. The name is not case sensitive.
+                public init(org: Components.Parameters.org) {
+                    self.org = org
+                }
+            }
+            public var path: Operations.api_hyphen_insights_sol_get_hyphen_subject_hyphen_stats.Input.Path
+            /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/subject-stats/GET/query`.
+            public struct Query: Sendable, Hashable {
+                /// The minimum timestamp to query for stats
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/subject-stats/GET/query/min_timestamp`.
+                public var min_timestamp: Components.Parameters.api_hyphen_insights_hyphen_min_hyphen_timestamp
+                /// The maximum timestamp to query for stats
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/subject-stats/GET/query/max_timestamp`.
+                public var max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/subject-stats/GET/query/page`.
+                public var page: Components.Parameters.page?
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/subject-stats/GET/query/per_page`.
+                public var per_page: Components.Parameters.per_hyphen_page?
+                /// - Remark: Generated from `#/components/parameters/direction`.
+                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                    case asc = "asc"
+                    case desc = "desc"
+                }
+                /// The direction to sort the results by.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/subject-stats/GET/query/direction`.
+                public var direction: Components.Parameters.direction?
+                /// - Remark: Generated from `#/components/parameters/api_hyphen_insights_hyphen_sort`.
+                @frozen public enum api_hyphen_insights_hyphen_sortPayload: String, Codable, Hashable, Sendable {
+                    case last_rate_limited_timestamp = "last_rate_limited_timestamp"
+                    case last_request_timestamp = "last_request_timestamp"
+                    case rate_limited_request_count = "rate_limited_request_count"
+                    case subject_name = "subject_name"
+                    case total_request_count = "total_request_count"
+                }
+                /// - Remark: Generated from `#/components/parameters/api-insights-sort`.
+                public typealias api_hyphen_insights_hyphen_sort = [Components.Parameters.api_hyphen_insights_hyphen_sortPayload]
+                /// The property to sort the results by.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/subject-stats/GET/query/sort`.
+                public var sort: Components.Parameters.api_hyphen_insights_hyphen_sort?
+                /// Creates a new `Query`.
+                ///
+                /// - Parameters:
+                ///   - min_timestamp: The minimum timestamp to query for stats
+                ///   - max_timestamp: The maximum timestamp to query for stats
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - direction: The direction to sort the results by.
+                ///   - sort: The property to sort the results by.
+                public init(
+                    min_timestamp: Components.Parameters.api_hyphen_insights_hyphen_min_hyphen_timestamp,
+                    max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp,
+                    page: Components.Parameters.page? = nil,
+                    per_page: Components.Parameters.per_hyphen_page? = nil,
+                    direction: Components.Parameters.direction? = nil,
+                    sort: Components.Parameters.api_hyphen_insights_hyphen_sort? = nil
+                ) {
+                    self.min_timestamp = min_timestamp
+                    self.max_timestamp = max_timestamp
+                    self.page = page
+                    self.per_page = per_page
+                    self.direction = direction
+                    self.sort = sort
+                }
+            }
+            public var query: Operations.api_hyphen_insights_sol_get_hyphen_subject_hyphen_stats.Input.Query
+            /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/subject-stats/GET/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.api_hyphen_insights_sol_get_hyphen_subject_hyphen_stats.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.api_hyphen_insights_sol_get_hyphen_subject_hyphen_stats.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.api_hyphen_insights_sol_get_hyphen_subject_hyphen_stats.Input.Headers
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - query:
+            ///   - headers:
+            public init(
+                path: Operations.api_hyphen_insights_sol_get_hyphen_subject_hyphen_stats.Input.Path,
+                query: Operations.api_hyphen_insights_sol_get_hyphen_subject_hyphen_stats.Input.Query,
+                headers: Operations.api_hyphen_insights_sol_get_hyphen_subject_hyphen_stats.Input.Headers = .init()
+            ) {
+                self.path = path
+                self.query = query
+                self.headers = headers
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Ok: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/subject-stats/GET/responses/200/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/subject-stats/GET/responses/200/content/application\/json`.
+                    case json(Components.Schemas.api_hyphen_insights_hyphen_subject_hyphen_stats)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Components.Schemas.api_hyphen_insights_hyphen_subject_hyphen_stats {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.api_hyphen_insights_sol_get_hyphen_subject_hyphen_stats.Output.Ok.Body
+                /// Creates a new `Ok`.
+                ///
+                /// - Parameters:
+                ///   - body: Received HTTP response body
+                public init(body: Operations.api_hyphen_insights_sol_get_hyphen_subject_hyphen_stats.Output.Ok.Body) {
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/insights/api/subject-stats/get(api-insights/get-subject-stats)/responses/200`.
+            ///
+            /// HTTP response code: `200 ok`.
+            case ok(Operations.api_hyphen_insights_sol_get_hyphen_subject_hyphen_stats.Output.Ok)
+            /// The associated value of the enum case if `self` is `.ok`.
+            ///
+            /// - Throws: An error if `self` is not `.ok`.
+            /// - SeeAlso: `.ok`.
+            public var ok: Operations.api_hyphen_insights_sol_get_hyphen_subject_hyphen_stats.Output.Ok {
+                get throws {
+                    switch self {
+                    case let .ok(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "ok",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
+    /// Get summary stats
+    ///
+    /// Get overall statistics of API requests made within an organization by all users and apps within a specified time frame.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/insights/api/summary-stats`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/insights/api/summary-stats/get(api-insights/get-summary-stats)`.
+    public enum api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats {
+        public static let id: Swift.String = "api-insights/get-summary-stats"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/summary-stats/GET/path`.
+            public struct Path: Sendable, Hashable {
+                /// The organization name. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/summary-stats/GET/path/org`.
+                public var org: Components.Parameters.org
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - org: The organization name. The name is not case sensitive.
+                public init(org: Components.Parameters.org) {
+                    self.org = org
+                }
+            }
+            public var path: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats.Input.Path
+            /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/summary-stats/GET/query`.
+            public struct Query: Sendable, Hashable {
+                /// The minimum timestamp to query for stats
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/summary-stats/GET/query/min_timestamp`.
+                public var min_timestamp: Components.Parameters.api_hyphen_insights_hyphen_min_hyphen_timestamp
+                /// The maximum timestamp to query for stats
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/summary-stats/GET/query/max_timestamp`.
+                public var max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp
+                /// Creates a new `Query`.
+                ///
+                /// - Parameters:
+                ///   - min_timestamp: The minimum timestamp to query for stats
+                ///   - max_timestamp: The maximum timestamp to query for stats
+                public init(
+                    min_timestamp: Components.Parameters.api_hyphen_insights_hyphen_min_hyphen_timestamp,
+                    max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp
+                ) {
+                    self.min_timestamp = min_timestamp
+                    self.max_timestamp = max_timestamp
+                }
+            }
+            public var query: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats.Input.Query
+            /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/summary-stats/GET/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats.Input.Headers
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - query:
+            ///   - headers:
+            public init(
+                path: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats.Input.Path,
+                query: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats.Input.Query,
+                headers: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats.Input.Headers = .init()
+            ) {
+                self.path = path
+                self.query = query
+                self.headers = headers
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Ok: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/summary-stats/GET/responses/200/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/summary-stats/GET/responses/200/content/application\/json`.
+                    case json(Components.Schemas.api_hyphen_insights_hyphen_summary_hyphen_stats)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Components.Schemas.api_hyphen_insights_hyphen_summary_hyphen_stats {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats.Output.Ok.Body
+                /// Creates a new `Ok`.
+                ///
+                /// - Parameters:
+                ///   - body: Received HTTP response body
+                public init(body: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats.Output.Ok.Body) {
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/insights/api/summary-stats/get(api-insights/get-summary-stats)/responses/200`.
+            ///
+            /// HTTP response code: `200 ok`.
+            case ok(Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats.Output.Ok)
+            /// The associated value of the enum case if `self` is `.ok`.
+            ///
+            /// - Throws: An error if `self` is not `.ok`.
+            /// - SeeAlso: `.ok`.
+            public var ok: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats.Output.Ok {
+                get throws {
+                    switch self {
+                    case let .ok(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "ok",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
+    /// Get summary stats by user
+    ///
+    /// Get overall statistics of API requests within the organization for a user.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/insights/api/summary-stats/users/{user_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/insights/api/summary-stats/users/{user_id}/get(api-insights/get-summary-stats-by-user)`.
+    public enum api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_user {
+        public static let id: Swift.String = "api-insights/get-summary-stats-by-user"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/summary-stats/users/{user_id}/GET/path`.
+            public struct Path: Sendable, Hashable {
+                /// The organization name. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/summary-stats/users/{user_id}/GET/path/org`.
+                public var org: Components.Parameters.org
+                /// The ID of the user to query for stats
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/summary-stats/users/{user_id}/GET/path/user_id`.
+                public var user_id: Components.Parameters.api_hyphen_insights_hyphen_user_hyphen_id
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - org: The organization name. The name is not case sensitive.
+                ///   - user_id: The ID of the user to query for stats
+                public init(
+                    org: Components.Parameters.org,
+                    user_id: Components.Parameters.api_hyphen_insights_hyphen_user_hyphen_id
+                ) {
+                    self.org = org
+                    self.user_id = user_id
+                }
+            }
+            public var path: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_user.Input.Path
+            /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/summary-stats/users/{user_id}/GET/query`.
+            public struct Query: Sendable, Hashable {
+                /// The minimum timestamp to query for stats
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/summary-stats/users/{user_id}/GET/query/min_timestamp`.
+                public var min_timestamp: Components.Parameters.api_hyphen_insights_hyphen_min_hyphen_timestamp
+                /// The maximum timestamp to query for stats
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/summary-stats/users/{user_id}/GET/query/max_timestamp`.
+                public var max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp
+                /// Creates a new `Query`.
+                ///
+                /// - Parameters:
+                ///   - min_timestamp: The minimum timestamp to query for stats
+                ///   - max_timestamp: The maximum timestamp to query for stats
+                public init(
+                    min_timestamp: Components.Parameters.api_hyphen_insights_hyphen_min_hyphen_timestamp,
+                    max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp
+                ) {
+                    self.min_timestamp = min_timestamp
+                    self.max_timestamp = max_timestamp
+                }
+            }
+            public var query: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_user.Input.Query
+            /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/summary-stats/users/{user_id}/GET/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_user.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_user.Input.Headers
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - query:
+            ///   - headers:
+            public init(
+                path: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_user.Input.Path,
+                query: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_user.Input.Query,
+                headers: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_user.Input.Headers = .init()
+            ) {
+                self.path = path
+                self.query = query
+                self.headers = headers
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Ok: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/summary-stats/users/{user_id}/GET/responses/200/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/summary-stats/users/{user_id}/GET/responses/200/content/application\/json`.
+                    case json(Components.Schemas.api_hyphen_insights_hyphen_summary_hyphen_stats)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Components.Schemas.api_hyphen_insights_hyphen_summary_hyphen_stats {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_user.Output.Ok.Body
+                /// Creates a new `Ok`.
+                ///
+                /// - Parameters:
+                ///   - body: Received HTTP response body
+                public init(body: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_user.Output.Ok.Body) {
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/insights/api/summary-stats/users/{user_id}/get(api-insights/get-summary-stats-by-user)/responses/200`.
+            ///
+            /// HTTP response code: `200 ok`.
+            case ok(Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_user.Output.Ok)
+            /// The associated value of the enum case if `self` is `.ok`.
+            ///
+            /// - Throws: An error if `self` is not `.ok`.
+            /// - SeeAlso: `.ok`.
+            public var ok: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_user.Output.Ok {
+                get throws {
+                    switch self {
+                    case let .ok(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "ok",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
+    /// Get summary stats by actor
+    ///
+    /// Get overall statistics of API requests within the organization made by a specific actor. Actors can be GitHub App installations, OAuth apps or other tokens on behalf of a user.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/insights/api/summary-stats/{actor_type}/{actor_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/insights/api/summary-stats/{actor_type}/{actor_id}/get(api-insights/get-summary-stats-by-actor)`.
+    public enum api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_actor {
+        public static let id: Swift.String = "api-insights/get-summary-stats-by-actor"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/summary-stats/{actor_type}/{actor_id}/GET/path`.
+            public struct Path: Sendable, Hashable {
+                /// The organization name. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/summary-stats/{actor_type}/{actor_id}/GET/path/org`.
+                public var org: Components.Parameters.org
+                /// - Remark: Generated from `#/components/parameters/api-insights-actor-type`.
+                @frozen public enum api_hyphen_insights_hyphen_actor_hyphen_type: String, Codable, Hashable, Sendable {
+                    case installations = "installations"
+                    case classic_pats = "classic_pats"
+                    case fine_grained_pats = "fine_grained_pats"
+                    case oauth_apps = "oauth_apps"
+                    case github_apps_user_to_server = "github_apps_user_to_server"
+                }
+                /// The type of the actor
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/summary-stats/{actor_type}/{actor_id}/GET/path/actor_type`.
+                public var actor_type: Components.Parameters.api_hyphen_insights_hyphen_actor_hyphen_type
+                /// The ID of the actor
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/summary-stats/{actor_type}/{actor_id}/GET/path/actor_id`.
+                public var actor_id: Components.Parameters.api_hyphen_insights_hyphen_actor_hyphen_id
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - org: The organization name. The name is not case sensitive.
+                ///   - actor_type: The type of the actor
+                ///   - actor_id: The ID of the actor
+                public init(
+                    org: Components.Parameters.org,
+                    actor_type: Components.Parameters.api_hyphen_insights_hyphen_actor_hyphen_type,
+                    actor_id: Components.Parameters.api_hyphen_insights_hyphen_actor_hyphen_id
+                ) {
+                    self.org = org
+                    self.actor_type = actor_type
+                    self.actor_id = actor_id
+                }
+            }
+            public var path: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_actor.Input.Path
+            /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/summary-stats/{actor_type}/{actor_id}/GET/query`.
+            public struct Query: Sendable, Hashable {
+                /// The minimum timestamp to query for stats
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/summary-stats/{actor_type}/{actor_id}/GET/query/min_timestamp`.
+                public var min_timestamp: Components.Parameters.api_hyphen_insights_hyphen_min_hyphen_timestamp
+                /// The maximum timestamp to query for stats
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/summary-stats/{actor_type}/{actor_id}/GET/query/max_timestamp`.
+                public var max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp
+                /// Creates a new `Query`.
+                ///
+                /// - Parameters:
+                ///   - min_timestamp: The minimum timestamp to query for stats
+                ///   - max_timestamp: The maximum timestamp to query for stats
+                public init(
+                    min_timestamp: Components.Parameters.api_hyphen_insights_hyphen_min_hyphen_timestamp,
+                    max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp
+                ) {
+                    self.min_timestamp = min_timestamp
+                    self.max_timestamp = max_timestamp
+                }
+            }
+            public var query: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_actor.Input.Query
+            /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/summary-stats/{actor_type}/{actor_id}/GET/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_actor.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_actor.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_actor.Input.Headers
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - query:
+            ///   - headers:
+            public init(
+                path: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_actor.Input.Path,
+                query: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_actor.Input.Query,
+                headers: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_actor.Input.Headers = .init()
+            ) {
+                self.path = path
+                self.query = query
+                self.headers = headers
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Ok: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/summary-stats/{actor_type}/{actor_id}/GET/responses/200/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/summary-stats/{actor_type}/{actor_id}/GET/responses/200/content/application\/json`.
+                    case json(Components.Schemas.api_hyphen_insights_hyphen_summary_hyphen_stats)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Components.Schemas.api_hyphen_insights_hyphen_summary_hyphen_stats {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_actor.Output.Ok.Body
+                /// Creates a new `Ok`.
+                ///
+                /// - Parameters:
+                ///   - body: Received HTTP response body
+                public init(body: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_actor.Output.Ok.Body) {
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/insights/api/summary-stats/{actor_type}/{actor_id}/get(api-insights/get-summary-stats-by-actor)/responses/200`.
+            ///
+            /// HTTP response code: `200 ok`.
+            case ok(Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_actor.Output.Ok)
+            /// The associated value of the enum case if `self` is `.ok`.
+            ///
+            /// - Throws: An error if `self` is not `.ok`.
+            /// - SeeAlso: `.ok`.
+            public var ok: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_actor.Output.Ok {
+                get throws {
+                    switch self {
+                    case let .ok(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "ok",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
+    /// Get time stats
+    ///
+    /// Get the number of API requests and rate-limited requests made within an organization over a specified time period.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/insights/api/time-stats`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/insights/api/time-stats/get(api-insights/get-time-stats)`.
+    public enum api_hyphen_insights_sol_get_hyphen_time_hyphen_stats {
+        public static let id: Swift.String = "api-insights/get-time-stats"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/time-stats/GET/path`.
+            public struct Path: Sendable, Hashable {
+                /// The organization name. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/time-stats/GET/path/org`.
+                public var org: Components.Parameters.org
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - org: The organization name. The name is not case sensitive.
+                public init(org: Components.Parameters.org) {
+                    self.org = org
+                }
+            }
+            public var path: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats.Input.Path
+            /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/time-stats/GET/query`.
+            public struct Query: Sendable, Hashable {
+                /// The minimum timestamp to query for stats
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/time-stats/GET/query/min_timestamp`.
+                public var min_timestamp: Components.Parameters.api_hyphen_insights_hyphen_min_hyphen_timestamp
+                /// The maximum timestamp to query for stats
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/time-stats/GET/query/max_timestamp`.
+                public var max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp
+                /// The increment of time used to breakdown the query results (5m, 10m, 1h, etc.)
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/time-stats/GET/query/timestamp_increment`.
+                public var timestamp_increment: Components.Parameters.api_hyphen_insights_hyphen_timestamp_hyphen_increment
+                /// Creates a new `Query`.
+                ///
+                /// - Parameters:
+                ///   - min_timestamp: The minimum timestamp to query for stats
+                ///   - max_timestamp: The maximum timestamp to query for stats
+                ///   - timestamp_increment: The increment of time used to breakdown the query results (5m, 10m, 1h, etc.)
+                public init(
+                    min_timestamp: Components.Parameters.api_hyphen_insights_hyphen_min_hyphen_timestamp,
+                    max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp,
+                    timestamp_increment: Components.Parameters.api_hyphen_insights_hyphen_timestamp_hyphen_increment
+                ) {
+                    self.min_timestamp = min_timestamp
+                    self.max_timestamp = max_timestamp
+                    self.timestamp_increment = timestamp_increment
+                }
+            }
+            public var query: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats.Input.Query
+            /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/time-stats/GET/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats.Input.Headers
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - query:
+            ///   - headers:
+            public init(
+                path: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats.Input.Path,
+                query: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats.Input.Query,
+                headers: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats.Input.Headers = .init()
+            ) {
+                self.path = path
+                self.query = query
+                self.headers = headers
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Ok: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/time-stats/GET/responses/200/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/time-stats/GET/responses/200/content/application\/json`.
+                    case json(Components.Schemas.api_hyphen_insights_hyphen_time_hyphen_stats)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Components.Schemas.api_hyphen_insights_hyphen_time_hyphen_stats {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats.Output.Ok.Body
+                /// Creates a new `Ok`.
+                ///
+                /// - Parameters:
+                ///   - body: Received HTTP response body
+                public init(body: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats.Output.Ok.Body) {
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/insights/api/time-stats/get(api-insights/get-time-stats)/responses/200`.
+            ///
+            /// HTTP response code: `200 ok`.
+            case ok(Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats.Output.Ok)
+            /// The associated value of the enum case if `self` is `.ok`.
+            ///
+            /// - Throws: An error if `self` is not `.ok`.
+            /// - SeeAlso: `.ok`.
+            public var ok: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats.Output.Ok {
+                get throws {
+                    switch self {
+                    case let .ok(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "ok",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
+    /// Get time stats by user
+    ///
+    /// Get the number of API requests and rate-limited requests made within an organization by a specific user over a specified time period.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/insights/api/time-stats/users/{user_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/insights/api/time-stats/users/{user_id}/get(api-insights/get-time-stats-by-user)`.
+    public enum api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_user {
+        public static let id: Swift.String = "api-insights/get-time-stats-by-user"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/time-stats/users/{user_id}/GET/path`.
+            public struct Path: Sendable, Hashable {
+                /// The organization name. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/time-stats/users/{user_id}/GET/path/org`.
+                public var org: Components.Parameters.org
+                /// The ID of the user to query for stats
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/time-stats/users/{user_id}/GET/path/user_id`.
+                public var user_id: Components.Parameters.api_hyphen_insights_hyphen_user_hyphen_id
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - org: The organization name. The name is not case sensitive.
+                ///   - user_id: The ID of the user to query for stats
+                public init(
+                    org: Components.Parameters.org,
+                    user_id: Components.Parameters.api_hyphen_insights_hyphen_user_hyphen_id
+                ) {
+                    self.org = org
+                    self.user_id = user_id
+                }
+            }
+            public var path: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_user.Input.Path
+            /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/time-stats/users/{user_id}/GET/query`.
+            public struct Query: Sendable, Hashable {
+                /// The minimum timestamp to query for stats
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/time-stats/users/{user_id}/GET/query/min_timestamp`.
+                public var min_timestamp: Components.Parameters.api_hyphen_insights_hyphen_min_hyphen_timestamp
+                /// The maximum timestamp to query for stats
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/time-stats/users/{user_id}/GET/query/max_timestamp`.
+                public var max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp
+                /// The increment of time used to breakdown the query results (5m, 10m, 1h, etc.)
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/time-stats/users/{user_id}/GET/query/timestamp_increment`.
+                public var timestamp_increment: Components.Parameters.api_hyphen_insights_hyphen_timestamp_hyphen_increment
+                /// Creates a new `Query`.
+                ///
+                /// - Parameters:
+                ///   - min_timestamp: The minimum timestamp to query for stats
+                ///   - max_timestamp: The maximum timestamp to query for stats
+                ///   - timestamp_increment: The increment of time used to breakdown the query results (5m, 10m, 1h, etc.)
+                public init(
+                    min_timestamp: Components.Parameters.api_hyphen_insights_hyphen_min_hyphen_timestamp,
+                    max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp,
+                    timestamp_increment: Components.Parameters.api_hyphen_insights_hyphen_timestamp_hyphen_increment
+                ) {
+                    self.min_timestamp = min_timestamp
+                    self.max_timestamp = max_timestamp
+                    self.timestamp_increment = timestamp_increment
+                }
+            }
+            public var query: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_user.Input.Query
+            /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/time-stats/users/{user_id}/GET/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_user.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_user.Input.Headers
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - query:
+            ///   - headers:
+            public init(
+                path: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_user.Input.Path,
+                query: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_user.Input.Query,
+                headers: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_user.Input.Headers = .init()
+            ) {
+                self.path = path
+                self.query = query
+                self.headers = headers
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Ok: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/time-stats/users/{user_id}/GET/responses/200/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/time-stats/users/{user_id}/GET/responses/200/content/application\/json`.
+                    case json(Components.Schemas.api_hyphen_insights_hyphen_time_hyphen_stats)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Components.Schemas.api_hyphen_insights_hyphen_time_hyphen_stats {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_user.Output.Ok.Body
+                /// Creates a new `Ok`.
+                ///
+                /// - Parameters:
+                ///   - body: Received HTTP response body
+                public init(body: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_user.Output.Ok.Body) {
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/insights/api/time-stats/users/{user_id}/get(api-insights/get-time-stats-by-user)/responses/200`.
+            ///
+            /// HTTP response code: `200 ok`.
+            case ok(Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_user.Output.Ok)
+            /// The associated value of the enum case if `self` is `.ok`.
+            ///
+            /// - Throws: An error if `self` is not `.ok`.
+            /// - SeeAlso: `.ok`.
+            public var ok: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_user.Output.Ok {
+                get throws {
+                    switch self {
+                    case let .ok(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "ok",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
+    /// Get time stats by actor
+    ///
+    /// Get the number of API requests and rate-limited requests made within an organization by a specific actor within a specified time period.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/insights/api/time-stats/{actor_type}/{actor_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/insights/api/time-stats/{actor_type}/{actor_id}/get(api-insights/get-time-stats-by-actor)`.
+    public enum api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_actor {
+        public static let id: Swift.String = "api-insights/get-time-stats-by-actor"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/time-stats/{actor_type}/{actor_id}/GET/path`.
+            public struct Path: Sendable, Hashable {
+                /// The organization name. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/time-stats/{actor_type}/{actor_id}/GET/path/org`.
+                public var org: Components.Parameters.org
+                /// - Remark: Generated from `#/components/parameters/api-insights-actor-type`.
+                @frozen public enum api_hyphen_insights_hyphen_actor_hyphen_type: String, Codable, Hashable, Sendable {
+                    case installations = "installations"
+                    case classic_pats = "classic_pats"
+                    case fine_grained_pats = "fine_grained_pats"
+                    case oauth_apps = "oauth_apps"
+                    case github_apps_user_to_server = "github_apps_user_to_server"
+                }
+                /// The type of the actor
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/time-stats/{actor_type}/{actor_id}/GET/path/actor_type`.
+                public var actor_type: Components.Parameters.api_hyphen_insights_hyphen_actor_hyphen_type
+                /// The ID of the actor
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/time-stats/{actor_type}/{actor_id}/GET/path/actor_id`.
+                public var actor_id: Components.Parameters.api_hyphen_insights_hyphen_actor_hyphen_id
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - org: The organization name. The name is not case sensitive.
+                ///   - actor_type: The type of the actor
+                ///   - actor_id: The ID of the actor
+                public init(
+                    org: Components.Parameters.org,
+                    actor_type: Components.Parameters.api_hyphen_insights_hyphen_actor_hyphen_type,
+                    actor_id: Components.Parameters.api_hyphen_insights_hyphen_actor_hyphen_id
+                ) {
+                    self.org = org
+                    self.actor_type = actor_type
+                    self.actor_id = actor_id
+                }
+            }
+            public var path: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_actor.Input.Path
+            /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/time-stats/{actor_type}/{actor_id}/GET/query`.
+            public struct Query: Sendable, Hashable {
+                /// The minimum timestamp to query for stats
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/time-stats/{actor_type}/{actor_id}/GET/query/min_timestamp`.
+                public var min_timestamp: Components.Parameters.api_hyphen_insights_hyphen_min_hyphen_timestamp
+                /// The maximum timestamp to query for stats
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/time-stats/{actor_type}/{actor_id}/GET/query/max_timestamp`.
+                public var max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp
+                /// The increment of time used to breakdown the query results (5m, 10m, 1h, etc.)
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/time-stats/{actor_type}/{actor_id}/GET/query/timestamp_increment`.
+                public var timestamp_increment: Components.Parameters.api_hyphen_insights_hyphen_timestamp_hyphen_increment
+                /// Creates a new `Query`.
+                ///
+                /// - Parameters:
+                ///   - min_timestamp: The minimum timestamp to query for stats
+                ///   - max_timestamp: The maximum timestamp to query for stats
+                ///   - timestamp_increment: The increment of time used to breakdown the query results (5m, 10m, 1h, etc.)
+                public init(
+                    min_timestamp: Components.Parameters.api_hyphen_insights_hyphen_min_hyphen_timestamp,
+                    max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp,
+                    timestamp_increment: Components.Parameters.api_hyphen_insights_hyphen_timestamp_hyphen_increment
+                ) {
+                    self.min_timestamp = min_timestamp
+                    self.max_timestamp = max_timestamp
+                    self.timestamp_increment = timestamp_increment
+                }
+            }
+            public var query: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_actor.Input.Query
+            /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/time-stats/{actor_type}/{actor_id}/GET/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_actor.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_actor.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_actor.Input.Headers
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - query:
+            ///   - headers:
+            public init(
+                path: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_actor.Input.Path,
+                query: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_actor.Input.Query,
+                headers: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_actor.Input.Headers = .init()
+            ) {
+                self.path = path
+                self.query = query
+                self.headers = headers
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Ok: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/time-stats/{actor_type}/{actor_id}/GET/responses/200/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/time-stats/{actor_type}/{actor_id}/GET/responses/200/content/application\/json`.
+                    case json(Components.Schemas.api_hyphen_insights_hyphen_time_hyphen_stats)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Components.Schemas.api_hyphen_insights_hyphen_time_hyphen_stats {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_actor.Output.Ok.Body
+                /// Creates a new `Ok`.
+                ///
+                /// - Parameters:
+                ///   - body: Received HTTP response body
+                public init(body: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_actor.Output.Ok.Body) {
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/insights/api/time-stats/{actor_type}/{actor_id}/get(api-insights/get-time-stats-by-actor)/responses/200`.
+            ///
+            /// HTTP response code: `200 ok`.
+            case ok(Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_actor.Output.Ok)
+            /// The associated value of the enum case if `self` is `.ok`.
+            ///
+            /// - Throws: An error if `self` is not `.ok`.
+            /// - SeeAlso: `.ok`.
+            public var ok: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_actor.Output.Ok {
+                get throws {
+                    switch self {
+                    case let .ok(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "ok",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
+    /// Get user stats
+    ///
+    /// Get API usage statistics within an organization for a user broken down by the type of access.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/insights/api/user-stats/{user_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/insights/api/user-stats/{user_id}/get(api-insights/get-user-stats)`.
+    public enum api_hyphen_insights_sol_get_hyphen_user_hyphen_stats {
+        public static let id: Swift.String = "api-insights/get-user-stats"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/user-stats/{user_id}/GET/path`.
+            public struct Path: Sendable, Hashable {
+                /// The organization name. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/user-stats/{user_id}/GET/path/org`.
+                public var org: Components.Parameters.org
+                /// The ID of the user to query for stats
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/user-stats/{user_id}/GET/path/user_id`.
+                public var user_id: Components.Parameters.api_hyphen_insights_hyphen_user_hyphen_id
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - org: The organization name. The name is not case sensitive.
+                ///   - user_id: The ID of the user to query for stats
+                public init(
+                    org: Components.Parameters.org,
+                    user_id: Components.Parameters.api_hyphen_insights_hyphen_user_hyphen_id
+                ) {
+                    self.org = org
+                    self.user_id = user_id
+                }
+            }
+            public var path: Operations.api_hyphen_insights_sol_get_hyphen_user_hyphen_stats.Input.Path
+            /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/user-stats/{user_id}/GET/query`.
+            public struct Query: Sendable, Hashable {
+                /// The minimum timestamp to query for stats
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/user-stats/{user_id}/GET/query/min_timestamp`.
+                public var min_timestamp: Components.Parameters.api_hyphen_insights_hyphen_min_hyphen_timestamp
+                /// The maximum timestamp to query for stats
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/user-stats/{user_id}/GET/query/max_timestamp`.
+                public var max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/user-stats/{user_id}/GET/query/page`.
+                public var page: Components.Parameters.page?
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/user-stats/{user_id}/GET/query/per_page`.
+                public var per_page: Components.Parameters.per_hyphen_page?
+                /// - Remark: Generated from `#/components/parameters/direction`.
+                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                    case asc = "asc"
+                    case desc = "desc"
+                }
+                /// The direction to sort the results by.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/user-stats/{user_id}/GET/query/direction`.
+                public var direction: Components.Parameters.direction?
+                /// - Remark: Generated from `#/components/parameters/api_hyphen_insights_hyphen_sort`.
+                @frozen public enum api_hyphen_insights_hyphen_sortPayload: String, Codable, Hashable, Sendable {
+                    case last_rate_limited_timestamp = "last_rate_limited_timestamp"
+                    case last_request_timestamp = "last_request_timestamp"
+                    case rate_limited_request_count = "rate_limited_request_count"
+                    case subject_name = "subject_name"
+                    case total_request_count = "total_request_count"
+                }
+                /// - Remark: Generated from `#/components/parameters/api-insights-sort`.
+                public typealias api_hyphen_insights_hyphen_sort = [Components.Parameters.api_hyphen_insights_hyphen_sortPayload]
+                /// The property to sort the results by.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/user-stats/{user_id}/GET/query/sort`.
+                public var sort: Components.Parameters.api_hyphen_insights_hyphen_sort?
+                /// Creates a new `Query`.
+                ///
+                /// - Parameters:
+                ///   - min_timestamp: The minimum timestamp to query for stats
+                ///   - max_timestamp: The maximum timestamp to query for stats
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - direction: The direction to sort the results by.
+                ///   - sort: The property to sort the results by.
+                public init(
+                    min_timestamp: Components.Parameters.api_hyphen_insights_hyphen_min_hyphen_timestamp,
+                    max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp,
+                    page: Components.Parameters.page? = nil,
+                    per_page: Components.Parameters.per_hyphen_page? = nil,
+                    direction: Components.Parameters.direction? = nil,
+                    sort: Components.Parameters.api_hyphen_insights_hyphen_sort? = nil
+                ) {
+                    self.min_timestamp = min_timestamp
+                    self.max_timestamp = max_timestamp
+                    self.page = page
+                    self.per_page = per_page
+                    self.direction = direction
+                    self.sort = sort
+                }
+            }
+            public var query: Operations.api_hyphen_insights_sol_get_hyphen_user_hyphen_stats.Input.Query
+            /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/user-stats/{user_id}/GET/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.api_hyphen_insights_sol_get_hyphen_user_hyphen_stats.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.api_hyphen_insights_sol_get_hyphen_user_hyphen_stats.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.api_hyphen_insights_sol_get_hyphen_user_hyphen_stats.Input.Headers
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - query:
+            ///   - headers:
+            public init(
+                path: Operations.api_hyphen_insights_sol_get_hyphen_user_hyphen_stats.Input.Path,
+                query: Operations.api_hyphen_insights_sol_get_hyphen_user_hyphen_stats.Input.Query,
+                headers: Operations.api_hyphen_insights_sol_get_hyphen_user_hyphen_stats.Input.Headers = .init()
+            ) {
+                self.path = path
+                self.query = query
+                self.headers = headers
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Ok: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/user-stats/{user_id}/GET/responses/200/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/user-stats/{user_id}/GET/responses/200/content/application\/json`.
+                    case json(Components.Schemas.api_hyphen_insights_hyphen_user_hyphen_stats)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Components.Schemas.api_hyphen_insights_hyphen_user_hyphen_stats {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.api_hyphen_insights_sol_get_hyphen_user_hyphen_stats.Output.Ok.Body
+                /// Creates a new `Ok`.
+                ///
+                /// - Parameters:
+                ///   - body: Received HTTP response body
+                public init(body: Operations.api_hyphen_insights_sol_get_hyphen_user_hyphen_stats.Output.Ok.Body) {
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/insights/api/user-stats/{user_id}/get(api-insights/get-user-stats)/responses/200`.
+            ///
+            /// HTTP response code: `200 ok`.
+            case ok(Operations.api_hyphen_insights_sol_get_hyphen_user_hyphen_stats.Output.Ok)
+            /// The associated value of the enum case if `self` is `.ok`.
+            ///
+            /// - Throws: An error if `self` is not `.ok`.
+            /// - SeeAlso: `.ok`.
+            public var ok: Operations.api_hyphen_insights_sol_get_hyphen_user_hyphen_stats.Output.Ok {
+                get throws {
+                    switch self {
+                    case let .ok(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "ok",
                             response: self
                         )
                     }

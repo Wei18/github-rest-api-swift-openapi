@@ -1641,13 +1641,6 @@ public struct Client: APIProtocol {
                     name: "cursor",
                     value: input.query.cursor
                 )
-                try converter.setQueryItemAsURI(
-                    in: &request,
-                    style: .form,
-                    explode: true,
-                    name: "redelivery",
-                    value: input.query.redelivery
-                )
                 converter.setAcceptHeader(
                     in: &request.headerFields,
                     contentTypes: input.headers.accept
@@ -2052,6 +2045,822 @@ public struct Client: APIProtocol {
                         preconditionFailure("bestContentType chose an invalid content type.")
                     }
                     return .notFound(.init(body: body))
+                default:
+                    return .undocumented(
+                        statusCode: response.status.code,
+                        .init(
+                            headerFields: response.headerFields,
+                            body: responseBody
+                        )
+                    )
+                }
+            }
+        )
+    }
+    /// Get route stats by actor
+    ///
+    /// Get API request count statistics for an actor broken down by route within a specified time frame.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/insights/api/route-stats/{actor_type}/{actor_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/insights/api/route-stats/{actor_type}/{actor_id}/get(api-insights/get-route-stats-by-actor)`.
+    public func api_hyphen_insights_sol_get_hyphen_route_hyphen_stats_hyphen_by_hyphen_actor(_ input: Operations.api_hyphen_insights_sol_get_hyphen_route_hyphen_stats_hyphen_by_hyphen_actor.Input) async throws -> Operations.api_hyphen_insights_sol_get_hyphen_route_hyphen_stats_hyphen_by_hyphen_actor.Output {
+        try await client.send(
+            input: input,
+            forOperation: Operations.api_hyphen_insights_sol_get_hyphen_route_hyphen_stats_hyphen_by_hyphen_actor.id,
+            serializer: { input in
+                let path = try converter.renderedPath(
+                    template: "/orgs/{}/insights/api/route-stats/{}/{}",
+                    parameters: [
+                        input.path.org,
+                        input.path.actor_type,
+                        input.path.actor_id
+                    ]
+                )
+                var request: HTTPTypes.HTTPRequest = .init(
+                    soar_path: path,
+                    method: .get
+                )
+                suppressMutabilityWarning(&request)
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "min_timestamp",
+                    value: input.query.min_timestamp
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "max_timestamp",
+                    value: input.query.max_timestamp
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "page",
+                    value: input.query.page
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "per_page",
+                    value: input.query.per_page
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "direction",
+                    value: input.query.direction
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "sort",
+                    value: input.query.sort
+                )
+                converter.setAcceptHeader(
+                    in: &request.headerFields,
+                    contentTypes: input.headers.accept
+                )
+                return (request, nil)
+            },
+            deserializer: { response, responseBody in
+                switch response.status.code {
+                case 200:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Operations.api_hyphen_insights_sol_get_hyphen_route_hyphen_stats_hyphen_by_hyphen_actor.Output.Ok.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Schemas.api_hyphen_insights_hyphen_route_hyphen_stats.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .ok(.init(body: body))
+                default:
+                    return .undocumented(
+                        statusCode: response.status.code,
+                        .init(
+                            headerFields: response.headerFields,
+                            body: responseBody
+                        )
+                    )
+                }
+            }
+        )
+    }
+    /// Get subject stats
+    ///
+    /// Get API request statistics for all subjects within an organization within a specified time frame. Subjects can be users or GitHub Apps.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/insights/api/subject-stats`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/insights/api/subject-stats/get(api-insights/get-subject-stats)`.
+    public func api_hyphen_insights_sol_get_hyphen_subject_hyphen_stats(_ input: Operations.api_hyphen_insights_sol_get_hyphen_subject_hyphen_stats.Input) async throws -> Operations.api_hyphen_insights_sol_get_hyphen_subject_hyphen_stats.Output {
+        try await client.send(
+            input: input,
+            forOperation: Operations.api_hyphen_insights_sol_get_hyphen_subject_hyphen_stats.id,
+            serializer: { input in
+                let path = try converter.renderedPath(
+                    template: "/orgs/{}/insights/api/subject-stats",
+                    parameters: [
+                        input.path.org
+                    ]
+                )
+                var request: HTTPTypes.HTTPRequest = .init(
+                    soar_path: path,
+                    method: .get
+                )
+                suppressMutabilityWarning(&request)
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "min_timestamp",
+                    value: input.query.min_timestamp
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "max_timestamp",
+                    value: input.query.max_timestamp
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "page",
+                    value: input.query.page
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "per_page",
+                    value: input.query.per_page
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "direction",
+                    value: input.query.direction
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "sort",
+                    value: input.query.sort
+                )
+                converter.setAcceptHeader(
+                    in: &request.headerFields,
+                    contentTypes: input.headers.accept
+                )
+                return (request, nil)
+            },
+            deserializer: { response, responseBody in
+                switch response.status.code {
+                case 200:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Operations.api_hyphen_insights_sol_get_hyphen_subject_hyphen_stats.Output.Ok.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Schemas.api_hyphen_insights_hyphen_subject_hyphen_stats.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .ok(.init(body: body))
+                default:
+                    return .undocumented(
+                        statusCode: response.status.code,
+                        .init(
+                            headerFields: response.headerFields,
+                            body: responseBody
+                        )
+                    )
+                }
+            }
+        )
+    }
+    /// Get summary stats
+    ///
+    /// Get overall statistics of API requests made within an organization by all users and apps within a specified time frame.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/insights/api/summary-stats`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/insights/api/summary-stats/get(api-insights/get-summary-stats)`.
+    public func api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats(_ input: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats.Input) async throws -> Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats.Output {
+        try await client.send(
+            input: input,
+            forOperation: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats.id,
+            serializer: { input in
+                let path = try converter.renderedPath(
+                    template: "/orgs/{}/insights/api/summary-stats",
+                    parameters: [
+                        input.path.org
+                    ]
+                )
+                var request: HTTPTypes.HTTPRequest = .init(
+                    soar_path: path,
+                    method: .get
+                )
+                suppressMutabilityWarning(&request)
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "min_timestamp",
+                    value: input.query.min_timestamp
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "max_timestamp",
+                    value: input.query.max_timestamp
+                )
+                converter.setAcceptHeader(
+                    in: &request.headerFields,
+                    contentTypes: input.headers.accept
+                )
+                return (request, nil)
+            },
+            deserializer: { response, responseBody in
+                switch response.status.code {
+                case 200:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats.Output.Ok.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Schemas.api_hyphen_insights_hyphen_summary_hyphen_stats.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .ok(.init(body: body))
+                default:
+                    return .undocumented(
+                        statusCode: response.status.code,
+                        .init(
+                            headerFields: response.headerFields,
+                            body: responseBody
+                        )
+                    )
+                }
+            }
+        )
+    }
+    /// Get summary stats by user
+    ///
+    /// Get overall statistics of API requests within the organization for a user.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/insights/api/summary-stats/users/{user_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/insights/api/summary-stats/users/{user_id}/get(api-insights/get-summary-stats-by-user)`.
+    public func api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_user(_ input: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_user.Input) async throws -> Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_user.Output {
+        try await client.send(
+            input: input,
+            forOperation: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_user.id,
+            serializer: { input in
+                let path = try converter.renderedPath(
+                    template: "/orgs/{}/insights/api/summary-stats/users/{}",
+                    parameters: [
+                        input.path.org,
+                        input.path.user_id
+                    ]
+                )
+                var request: HTTPTypes.HTTPRequest = .init(
+                    soar_path: path,
+                    method: .get
+                )
+                suppressMutabilityWarning(&request)
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "min_timestamp",
+                    value: input.query.min_timestamp
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "max_timestamp",
+                    value: input.query.max_timestamp
+                )
+                converter.setAcceptHeader(
+                    in: &request.headerFields,
+                    contentTypes: input.headers.accept
+                )
+                return (request, nil)
+            },
+            deserializer: { response, responseBody in
+                switch response.status.code {
+                case 200:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_user.Output.Ok.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Schemas.api_hyphen_insights_hyphen_summary_hyphen_stats.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .ok(.init(body: body))
+                default:
+                    return .undocumented(
+                        statusCode: response.status.code,
+                        .init(
+                            headerFields: response.headerFields,
+                            body: responseBody
+                        )
+                    )
+                }
+            }
+        )
+    }
+    /// Get summary stats by actor
+    ///
+    /// Get overall statistics of API requests within the organization made by a specific actor. Actors can be GitHub App installations, OAuth apps or other tokens on behalf of a user.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/insights/api/summary-stats/{actor_type}/{actor_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/insights/api/summary-stats/{actor_type}/{actor_id}/get(api-insights/get-summary-stats-by-actor)`.
+    public func api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_actor(_ input: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_actor.Input) async throws -> Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_actor.Output {
+        try await client.send(
+            input: input,
+            forOperation: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_actor.id,
+            serializer: { input in
+                let path = try converter.renderedPath(
+                    template: "/orgs/{}/insights/api/summary-stats/{}/{}",
+                    parameters: [
+                        input.path.org,
+                        input.path.actor_type,
+                        input.path.actor_id
+                    ]
+                )
+                var request: HTTPTypes.HTTPRequest = .init(
+                    soar_path: path,
+                    method: .get
+                )
+                suppressMutabilityWarning(&request)
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "min_timestamp",
+                    value: input.query.min_timestamp
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "max_timestamp",
+                    value: input.query.max_timestamp
+                )
+                converter.setAcceptHeader(
+                    in: &request.headerFields,
+                    contentTypes: input.headers.accept
+                )
+                return (request, nil)
+            },
+            deserializer: { response, responseBody in
+                switch response.status.code {
+                case 200:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_actor.Output.Ok.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Schemas.api_hyphen_insights_hyphen_summary_hyphen_stats.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .ok(.init(body: body))
+                default:
+                    return .undocumented(
+                        statusCode: response.status.code,
+                        .init(
+                            headerFields: response.headerFields,
+                            body: responseBody
+                        )
+                    )
+                }
+            }
+        )
+    }
+    /// Get time stats
+    ///
+    /// Get the number of API requests and rate-limited requests made within an organization over a specified time period.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/insights/api/time-stats`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/insights/api/time-stats/get(api-insights/get-time-stats)`.
+    public func api_hyphen_insights_sol_get_hyphen_time_hyphen_stats(_ input: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats.Input) async throws -> Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats.Output {
+        try await client.send(
+            input: input,
+            forOperation: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats.id,
+            serializer: { input in
+                let path = try converter.renderedPath(
+                    template: "/orgs/{}/insights/api/time-stats",
+                    parameters: [
+                        input.path.org
+                    ]
+                )
+                var request: HTTPTypes.HTTPRequest = .init(
+                    soar_path: path,
+                    method: .get
+                )
+                suppressMutabilityWarning(&request)
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "min_timestamp",
+                    value: input.query.min_timestamp
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "max_timestamp",
+                    value: input.query.max_timestamp
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "timestamp_increment",
+                    value: input.query.timestamp_increment
+                )
+                converter.setAcceptHeader(
+                    in: &request.headerFields,
+                    contentTypes: input.headers.accept
+                )
+                return (request, nil)
+            },
+            deserializer: { response, responseBody in
+                switch response.status.code {
+                case 200:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats.Output.Ok.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Schemas.api_hyphen_insights_hyphen_time_hyphen_stats.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .ok(.init(body: body))
+                default:
+                    return .undocumented(
+                        statusCode: response.status.code,
+                        .init(
+                            headerFields: response.headerFields,
+                            body: responseBody
+                        )
+                    )
+                }
+            }
+        )
+    }
+    /// Get time stats by user
+    ///
+    /// Get the number of API requests and rate-limited requests made within an organization by a specific user over a specified time period.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/insights/api/time-stats/users/{user_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/insights/api/time-stats/users/{user_id}/get(api-insights/get-time-stats-by-user)`.
+    public func api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_user(_ input: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_user.Input) async throws -> Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_user.Output {
+        try await client.send(
+            input: input,
+            forOperation: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_user.id,
+            serializer: { input in
+                let path = try converter.renderedPath(
+                    template: "/orgs/{}/insights/api/time-stats/users/{}",
+                    parameters: [
+                        input.path.org,
+                        input.path.user_id
+                    ]
+                )
+                var request: HTTPTypes.HTTPRequest = .init(
+                    soar_path: path,
+                    method: .get
+                )
+                suppressMutabilityWarning(&request)
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "min_timestamp",
+                    value: input.query.min_timestamp
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "max_timestamp",
+                    value: input.query.max_timestamp
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "timestamp_increment",
+                    value: input.query.timestamp_increment
+                )
+                converter.setAcceptHeader(
+                    in: &request.headerFields,
+                    contentTypes: input.headers.accept
+                )
+                return (request, nil)
+            },
+            deserializer: { response, responseBody in
+                switch response.status.code {
+                case 200:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_user.Output.Ok.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Schemas.api_hyphen_insights_hyphen_time_hyphen_stats.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .ok(.init(body: body))
+                default:
+                    return .undocumented(
+                        statusCode: response.status.code,
+                        .init(
+                            headerFields: response.headerFields,
+                            body: responseBody
+                        )
+                    )
+                }
+            }
+        )
+    }
+    /// Get time stats by actor
+    ///
+    /// Get the number of API requests and rate-limited requests made within an organization by a specific actor within a specified time period.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/insights/api/time-stats/{actor_type}/{actor_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/insights/api/time-stats/{actor_type}/{actor_id}/get(api-insights/get-time-stats-by-actor)`.
+    public func api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_actor(_ input: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_actor.Input) async throws -> Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_actor.Output {
+        try await client.send(
+            input: input,
+            forOperation: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_actor.id,
+            serializer: { input in
+                let path = try converter.renderedPath(
+                    template: "/orgs/{}/insights/api/time-stats/{}/{}",
+                    parameters: [
+                        input.path.org,
+                        input.path.actor_type,
+                        input.path.actor_id
+                    ]
+                )
+                var request: HTTPTypes.HTTPRequest = .init(
+                    soar_path: path,
+                    method: .get
+                )
+                suppressMutabilityWarning(&request)
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "min_timestamp",
+                    value: input.query.min_timestamp
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "max_timestamp",
+                    value: input.query.max_timestamp
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "timestamp_increment",
+                    value: input.query.timestamp_increment
+                )
+                converter.setAcceptHeader(
+                    in: &request.headerFields,
+                    contentTypes: input.headers.accept
+                )
+                return (request, nil)
+            },
+            deserializer: { response, responseBody in
+                switch response.status.code {
+                case 200:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_actor.Output.Ok.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Schemas.api_hyphen_insights_hyphen_time_hyphen_stats.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .ok(.init(body: body))
+                default:
+                    return .undocumented(
+                        statusCode: response.status.code,
+                        .init(
+                            headerFields: response.headerFields,
+                            body: responseBody
+                        )
+                    )
+                }
+            }
+        )
+    }
+    /// Get user stats
+    ///
+    /// Get API usage statistics within an organization for a user broken down by the type of access.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/insights/api/user-stats/{user_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/insights/api/user-stats/{user_id}/get(api-insights/get-user-stats)`.
+    public func api_hyphen_insights_sol_get_hyphen_user_hyphen_stats(_ input: Operations.api_hyphen_insights_sol_get_hyphen_user_hyphen_stats.Input) async throws -> Operations.api_hyphen_insights_sol_get_hyphen_user_hyphen_stats.Output {
+        try await client.send(
+            input: input,
+            forOperation: Operations.api_hyphen_insights_sol_get_hyphen_user_hyphen_stats.id,
+            serializer: { input in
+                let path = try converter.renderedPath(
+                    template: "/orgs/{}/insights/api/user-stats/{}",
+                    parameters: [
+                        input.path.org,
+                        input.path.user_id
+                    ]
+                )
+                var request: HTTPTypes.HTTPRequest = .init(
+                    soar_path: path,
+                    method: .get
+                )
+                suppressMutabilityWarning(&request)
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "min_timestamp",
+                    value: input.query.min_timestamp
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "max_timestamp",
+                    value: input.query.max_timestamp
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "page",
+                    value: input.query.page
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "per_page",
+                    value: input.query.per_page
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "direction",
+                    value: input.query.direction
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "sort",
+                    value: input.query.sort
+                )
+                converter.setAcceptHeader(
+                    in: &request.headerFields,
+                    contentTypes: input.headers.accept
+                )
+                return (request, nil)
+            },
+            deserializer: { response, responseBody in
+                switch response.status.code {
+                case 200:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Operations.api_hyphen_insights_sol_get_hyphen_user_hyphen_stats.Output.Ok.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Schemas.api_hyphen_insights_hyphen_user_hyphen_stats.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .ok(.init(body: body))
                 default:
                     return .undocumented(
                         statusCode: response.status.code,
