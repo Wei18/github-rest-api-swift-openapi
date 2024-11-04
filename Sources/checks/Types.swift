@@ -2483,7 +2483,7 @@ public enum Components {
         /// - Remark: Generated from `#/components/schemas/check-suite`.
         public struct check_hyphen_suite: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/check-suite/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/check-suite/node_id`.
             public var node_id: Swift.String
             /// - Remark: Generated from `#/components/schemas/check-suite/head_branch`.
@@ -2571,7 +2571,7 @@ public enum Components {
             ///   - rerequestable:
             ///   - runs_rerequestable:
             public init(
-                id: Swift.Int,
+                id: Swift.Int64,
                 node_id: Swift.String,
                 head_branch: Swift.String? = nil,
                 head_sha: Swift.String,
