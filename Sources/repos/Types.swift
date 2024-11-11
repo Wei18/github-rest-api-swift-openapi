@@ -19824,6 +19824,8 @@ public enum Components {
             public var added_by: Swift.String?
             /// - Remark: Generated from `#/components/schemas/deploy-key/last_used`.
             public var last_used: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/deploy-key/enabled`.
+            public var enabled: Swift.Bool?
             /// Creates a new `deploy_hyphen_key`.
             ///
             /// - Parameters:
@@ -19836,6 +19838,7 @@ public enum Components {
             ///   - read_only:
             ///   - added_by:
             ///   - last_used:
+            ///   - enabled:
             public init(
                 id: Swift.Int,
                 key: Swift.String,
@@ -19845,7 +19848,8 @@ public enum Components {
                 created_at: Swift.String,
                 read_only: Swift.Bool,
                 added_by: Swift.String? = nil,
-                last_used: Swift.String? = nil
+                last_used: Swift.String? = nil,
+                enabled: Swift.Bool? = nil
             ) {
                 self.id = id
                 self.key = key
@@ -19856,6 +19860,7 @@ public enum Components {
                 self.read_only = read_only
                 self.added_by = added_by
                 self.last_used = last_used
+                self.enabled = enabled
             }
             public enum CodingKeys: String, CodingKey {
                 case id
@@ -19867,6 +19872,7 @@ public enum Components {
                 case read_only
                 case added_by
                 case last_used
+                case enabled
             }
         }
         /// Language

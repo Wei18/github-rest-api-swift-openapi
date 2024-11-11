@@ -1072,6 +1072,10 @@ public enum Components {
                     public var raw_url: Swift.String?
                     /// - Remark: Generated from `#/components/schemas/base-gist/files/additionalProperties/size`.
                     public var size: Swift.Int?
+                    /// The encoding used for `content`. Currently, `"utf-8"` and `"base64"` are supported.
+                    ///
+                    /// - Remark: Generated from `#/components/schemas/base-gist/files/additionalProperties/encoding`.
+                    public var encoding: Swift.String?
                     /// Creates a new `additionalPropertiesPayload`.
                     ///
                     /// - Parameters:
@@ -1080,18 +1084,21 @@ public enum Components {
                     ///   - language:
                     ///   - raw_url:
                     ///   - size:
+                    ///   - encoding: The encoding used for `content`. Currently, `"utf-8"` and `"base64"` are supported.
                     public init(
                         filename: Swift.String? = nil,
                         _type: Swift.String? = nil,
                         language: Swift.String? = nil,
                         raw_url: Swift.String? = nil,
-                        size: Swift.Int? = nil
+                        size: Swift.Int? = nil,
+                        encoding: Swift.String? = nil
                     ) {
                         self.filename = filename
                         self._type = _type
                         self.language = language
                         self.raw_url = raw_url
                         self.size = size
+                        self.encoding = encoding
                     }
                     public enum CodingKeys: String, CodingKey {
                         case filename
@@ -1099,6 +1106,7 @@ public enum Components {
                         case language
                         case raw_url
                         case size
+                        case encoding
                     }
                 }
                 /// A container of undocumented properties.
@@ -2078,6 +2086,10 @@ public enum Components {
                     public var truncated: Swift.Bool?
                     /// - Remark: Generated from `#/components/schemas/gist-simple/files/additionalProperties/content`.
                     public var content: Swift.String?
+                    /// The encoding used for `content`. Currently, `"utf-8"` and `"base64"` are supported.
+                    ///
+                    /// - Remark: Generated from `#/components/schemas/gist-simple/files/additionalProperties/encoding`.
+                    public var encoding: Swift.String?
                     /// Creates a new `additionalPropertiesPayload`.
                     ///
                     /// - Parameters:
@@ -2088,6 +2100,7 @@ public enum Components {
                     ///   - size:
                     ///   - truncated:
                     ///   - content:
+                    ///   - encoding: The encoding used for `content`. Currently, `"utf-8"` and `"base64"` are supported.
                     public init(
                         filename: Swift.String? = nil,
                         _type: Swift.String? = nil,
@@ -2095,7 +2108,8 @@ public enum Components {
                         raw_url: Swift.String? = nil,
                         size: Swift.Int? = nil,
                         truncated: Swift.Bool? = nil,
-                        content: Swift.String? = nil
+                        content: Swift.String? = nil,
+                        encoding: Swift.String? = nil
                     ) {
                         self.filename = filename
                         self._type = _type
@@ -2104,6 +2118,7 @@ public enum Components {
                         self.size = size
                         self.truncated = truncated
                         self.content = content
+                        self.encoding = encoding
                     }
                     public enum CodingKeys: String, CodingKey {
                         case filename
@@ -2113,6 +2128,7 @@ public enum Components {
                         case size
                         case truncated
                         case content
+                        case encoding
                     }
                 }
                 /// A container of undocumented properties.
