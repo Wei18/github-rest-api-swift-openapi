@@ -287,6 +287,10 @@ public enum Components {
                 ///
                 /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/spdxVersion`.
                 public var spdxVersion: Swift.String
+                /// An optional comment about the SPDX document.
+                ///
+                /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/comment`.
+                public var comment: Swift.String?
                 /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/creationInfo`.
                 public struct creationInfoPayload: Codable, Hashable, Sendable {
                     /// The date and time the SPDX document was created.
@@ -324,10 +328,6 @@ public enum Components {
                 ///
                 /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/dataLicense`.
                 public var dataLicense: Swift.String
-                /// The name of the repository that the SPDX document describes.
-                ///
-                /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/documentDescribes`.
-                public var documentDescribes: [Swift.String]
                 /// The namespace for the SPDX document.
                 ///
                 /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/documentNamespace`.
@@ -466,45 +466,88 @@ public enum Components {
                 public typealias packagesPayload = [Components.Schemas.dependency_hyphen_graph_hyphen_spdx_hyphen_sbom.sbomPayload.packagesPayloadPayload]
                 /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/packages`.
                 public var packages: Components.Schemas.dependency_hyphen_graph_hyphen_spdx_hyphen_sbom.sbomPayload.packagesPayload
+                /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/relationshipsPayload`.
+                public struct relationshipsPayloadPayload: Codable, Hashable, Sendable {
+                    /// The type of relationship between the two SPDX elements.
+                    ///
+                    /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/relationshipsPayload/relationshipType`.
+                    public var relationshipType: Swift.String?
+                    /// The SPDX identifier of the package that is the source of the relationship.
+                    ///
+                    /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/relationshipsPayload/spdxElementId`.
+                    public var spdxElementId: Swift.String?
+                    /// The SPDX identifier of the package that is the target of the relationship.
+                    ///
+                    /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/relationshipsPayload/relatedSpdxElement`.
+                    public var relatedSpdxElement: Swift.String?
+                    /// Creates a new `relationshipsPayloadPayload`.
+                    ///
+                    /// - Parameters:
+                    ///   - relationshipType: The type of relationship between the two SPDX elements.
+                    ///   - spdxElementId: The SPDX identifier of the package that is the source of the relationship.
+                    ///   - relatedSpdxElement: The SPDX identifier of the package that is the target of the relationship.
+                    public init(
+                        relationshipType: Swift.String? = nil,
+                        spdxElementId: Swift.String? = nil,
+                        relatedSpdxElement: Swift.String? = nil
+                    ) {
+                        self.relationshipType = relationshipType
+                        self.spdxElementId = spdxElementId
+                        self.relatedSpdxElement = relatedSpdxElement
+                    }
+                    public enum CodingKeys: String, CodingKey {
+                        case relationshipType
+                        case spdxElementId
+                        case relatedSpdxElement
+                    }
+                }
+                /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/relationships`.
+                public typealias relationshipsPayload = [Components.Schemas.dependency_hyphen_graph_hyphen_spdx_hyphen_sbom.sbomPayload.relationshipsPayloadPayload]
+                /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/relationships`.
+                public var relationships: Components.Schemas.dependency_hyphen_graph_hyphen_spdx_hyphen_sbom.sbomPayload.relationshipsPayload?
                 /// Creates a new `sbomPayload`.
                 ///
                 /// - Parameters:
                 ///   - SPDXID: The SPDX identifier for the SPDX document.
                 ///   - spdxVersion: The version of the SPDX specification that this document conforms to.
+                ///   - comment: An optional comment about the SPDX document.
                 ///   - creationInfo:
                 ///   - name: The name of the SPDX document.
                 ///   - dataLicense: The license under which the SPDX document is licensed.
-                ///   - documentDescribes: The name of the repository that the SPDX document describes.
                 ///   - documentNamespace: The namespace for the SPDX document.
                 ///   - packages:
+                ///   - relationships:
                 public init(
                     SPDXID: Swift.String,
                     spdxVersion: Swift.String,
+                    comment: Swift.String? = nil,
                     creationInfo: Components.Schemas.dependency_hyphen_graph_hyphen_spdx_hyphen_sbom.sbomPayload.creationInfoPayload,
                     name: Swift.String,
                     dataLicense: Swift.String,
-                    documentDescribes: [Swift.String],
                     documentNamespace: Swift.String,
-                    packages: Components.Schemas.dependency_hyphen_graph_hyphen_spdx_hyphen_sbom.sbomPayload.packagesPayload
+                    packages: Components.Schemas.dependency_hyphen_graph_hyphen_spdx_hyphen_sbom.sbomPayload.packagesPayload,
+                    relationships: Components.Schemas.dependency_hyphen_graph_hyphen_spdx_hyphen_sbom.sbomPayload.relationshipsPayload? = nil
                 ) {
                     self.SPDXID = SPDXID
                     self.spdxVersion = spdxVersion
+                    self.comment = comment
                     self.creationInfo = creationInfo
                     self.name = name
                     self.dataLicense = dataLicense
-                    self.documentDescribes = documentDescribes
                     self.documentNamespace = documentNamespace
                     self.packages = packages
+                    self.relationships = relationships
                 }
                 public enum CodingKeys: String, CodingKey {
                     case SPDXID
                     case spdxVersion
+                    case comment
                     case creationInfo
                     case name
                     case dataLicense
-                    case documentDescribes
                     case documentNamespace
                     case packages
+                    case relationships
                 }
             }
             /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom`.
