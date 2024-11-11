@@ -16,11 +16,14 @@ public protocol APIProtocol: Sendable {
     /// > [!NOTE]
     /// > This endpoint is in public preview and is subject to change.
     ///
-    /// Lists all active Copilot seats across organizations or enterprise teams for an enterprise with a Copilot Business or Copilot Enterprise subscription.
+    /// Lists all Copilot seats currently being billed for across organizations or enterprise teams for an enterprise with a Copilot Business or Copilot Enterprise subscription.
     ///
     /// Users with access through multiple organizations or enterprise teams will only be counted toward `total_seats` once.
     ///
     /// For each organization or enterprise team which grants Copilot access to a user, a seat detail object will appear in the `seats` array.
+    /// Each seat object contains information about the assigned user's most recent Copilot activity. Users must have
+    /// telemetry enabled in their IDE for Copilot in the IDE activity to be reflected in `last_activity_at`. For more information about activity data,
+    /// see "[Reviewing user activity data for Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-github-copilot-in-your-organization/reviewing-activity-related-to-github-copilot-in-your-organization/reviewing-user-activity-data-for-copilot-in-your-organization)."
     ///
     /// Only enterprise owners and billing managers can view assigned Copilot seats across their child organizations or enterprise teams.
     ///
@@ -57,6 +60,8 @@ public protocol APIProtocol: Sendable {
     /// The response contains metrics for up to 28 days prior. Usage metrics are processed once per day for the previous day,
     /// and the response will only include data up until yesterday. In order for an end user to be counted towards these metrics,
     /// they must have telemetry enabled in their IDE.
+    ///
+    /// The time zone in the response is in UTC time, that means that the cutoff time for the "day" is UTC time.
     ///
     /// Only owners and billing managers can view Copilot usage metrics for the enterprise.
     ///
@@ -114,7 +119,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// Gets information about an organization's Copilot subscription, including seat breakdown
     /// and feature policies. To configure these settings, go to your organization's settings on GitHub.com.
-    /// For more information, see "[Managing policies for Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-policies-for-copilot-business-in-your-organization)".
+    /// For more information, see "[Managing policies for Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-policies-for-copilot-business-in-your-organization)."
     ///
     /// Only organization owners can view details about the organization's Copilot Business or Copilot Enterprise subscription.
     ///
@@ -128,8 +133,11 @@ public protocol APIProtocol: Sendable {
     /// > [!NOTE]
     /// > This endpoint is in public preview and is subject to change.
     ///
-    /// Lists all active Copilot seats for an organization with a Copilot Business or Copilot Enterprise subscription.
+    /// Lists all Copilot seats for which an organization with a Copilot Business or Copilot Enterprise subscription is currently being billed.
     /// Only organization owners can view assigned seats.
+    ///
+    /// Each seat object contains information about the assigned user's most recent Copilot activity. Users must have telemetry enabled in their IDE for Copilot in the IDE activity to be reflected in `last_activity_at`.
+    /// For more information about activity data, see "[Reviewing user activity data for Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-github-copilot-in-your-organization/reviewing-activity-related-to-github-copilot-in-your-organization/reviewing-user-activity-data-for-copilot-in-your-organization)."
     ///
     /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `read:org` scopes to use this endpoint.
     ///
@@ -142,13 +150,13 @@ public protocol APIProtocol: Sendable {
     /// > This endpoint is in public preview and is subject to change.
     ///
     /// Purchases a GitHub Copilot seat for all users within each specified team.
-    /// The organization will be billed accordingly. For more information about Copilot pricing, see "[Pricing for GitHub Copilot](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#about-billing-for-github-copilot)".
+    /// The organization will be billed for each seat based on the organization's Copilot plan. For more information about Copilot pricing, see "[About billing for GitHub Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-github-copilot-in-your-organization/managing-the-copilot-subscription-for-your-organization/about-billing-for-github-copilot-in-your-organization)."
     ///
     /// Only organization owners can add Copilot seats for their organization members.
     ///
     /// In order for an admin to use this endpoint, the organization must have a Copilot Business or Enterprise subscription and a configured suggestion matching policy.
-    /// For more information about setting up a Copilot subscription, see "[Setting up a Copilot subscription for your organization](https://docs.github.com/billing/managing-billing-for-github-copilot/managing-your-github-copilot-subscription-for-your-organization-or-enterprise)".
-    /// For more information about setting a suggestion matching policy, see "[Configuring suggestion matching policies for GitHub Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-policies-for-github-copilot-in-your-organization#configuring-suggestion-matching-policies-for-github-copilot-in-your-organization)".
+    /// For more information about setting up a Copilot subscription, see "[Subscribing to Copilot for your organization](https://docs.github.com/copilot/managing-copilot/managing-github-copilot-in-your-organization/managing-the-copilot-subscription-for-your-organization/subscribing-to-copilot-for-your-organization)."
+    /// For more information about setting a suggestion matching policy, see "[Managing policies for Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-github-copilot-in-your-organization/setting-policies-for-copilot-in-your-organization/managing-policies-for-copilot-in-your-organization#policies-for-suggestion-matching)."
     ///
     /// The response will contain the total number of new seats that were created and existing seats that were refreshed.
     ///
@@ -162,14 +170,16 @@ public protocol APIProtocol: Sendable {
     /// > [!NOTE]
     /// > This endpoint is in public preview and is subject to change.
     ///
-    /// Cancels the Copilot seat assignment for all members of each team specified.
-    /// This will cause the members of the specified team(s) to lose access to GitHub Copilot at the end of the current billing cycle, and the organization will not be billed further for those users.
+    /// Sets seats for all members of each team specified to "pending cancellation".
+    /// This will cause the members of the specified team(s) to lose access to GitHub Copilot at the end of the current billing cycle unless they retain access through another team.
     ///
-    /// For more information about Copilot pricing, see "[Pricing for GitHub Copilot](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#about-billing-for-github-copilot)".
+    /// For more information about Copilot pricing, see "[About billing for GitHub Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-github-copilot-in-your-organization/managing-the-copilot-subscription-for-your-organization/about-billing-for-github-copilot-in-your-organization)."
     ///
-    /// For more information about disabling access to Copilot Business or Enterprise, see "[Revoking access to GitHub Copilot for specific users in your organization](https://docs.github.com/copilot/managing-copilot/managing-access-for-copilot-in-your-organization#revoking-access-to-github-copilot-for-specific-users-in-your-organization)".
+    /// For more information about disabling access to Copilot Business or Enterprise, see "[Revoking access to Copilot for members of your organization](https://docs.github.com/copilot/managing-copilot/managing-github-copilot-in-your-organization/managing-access-to-github-copilot-in-your-organization/revoking-access-to-copilot-for-members-of-your-organization)."
     ///
     /// Only organization owners can cancel Copilot seats for their organization members.
+    ///
+    /// The response will contain the total number of seats set to "pending cancellation".
     ///
     /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `admin:org` scopes to use this endpoint.
     ///
@@ -182,13 +192,13 @@ public protocol APIProtocol: Sendable {
     /// > This endpoint is in public preview and is subject to change.
     ///
     /// Purchases a GitHub Copilot seat for each user specified.
-    /// The organization will be billed accordingly. For more information about Copilot pricing, see "[Pricing for GitHub Copilot](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#about-billing-for-github-copilot)".
+    /// The organization will be billed for each seat based on the organization's Copilot plan. For more information about Copilot pricing, see "[About billing for GitHub Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-github-copilot-in-your-organization/managing-the-copilot-subscription-for-your-organization/about-billing-for-github-copilot-in-your-organization)."
     ///
     /// Only organization owners can add Copilot seats for their organization members.
     ///
     /// In order for an admin to use this endpoint, the organization must have a Copilot Business or Enterprise subscription and a configured suggestion matching policy.
-    /// For more information about setting up a Copilot subscription, see "[Setting up a Copilot subscription for your organization](https://docs.github.com/billing/managing-billing-for-github-copilot/managing-your-github-copilot-subscription-for-your-organization-or-enterprise)".
-    /// For more information about setting a suggestion matching policy, see "[Configuring suggestion matching policies for GitHub Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-policies-for-github-copilot-in-your-organization#configuring-suggestion-matching-policies-for-github-copilot-in-your-organization)".
+    /// For more information about setting up a Copilot subscription, see "[Subscribing to Copilot for your organization](https://docs.github.com/copilot/managing-copilot/managing-github-copilot-in-your-organization/managing-the-copilot-subscription-for-your-organization/subscribing-to-copilot-for-your-organization)."
+    /// For more information about setting a suggestion matching policy, see "[Managing policies for Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-github-copilot-in-your-organization/setting-policies-for-copilot-in-your-organization/managing-policies-for-copilot-in-your-organization#policies-for-suggestion-matching)."
     ///
     /// The response will contain the total number of new seats that were created and existing seats that were refreshed.
     ///
@@ -202,14 +212,16 @@ public protocol APIProtocol: Sendable {
     /// > [!NOTE]
     /// > This endpoint is in public preview and is subject to change.
     ///
-    /// Cancels the Copilot seat assignment for each user specified.
-    /// This will cause the specified users to lose access to GitHub Copilot at the end of the current billing cycle, and the organization will not be billed further for those users.
+    /// Sets seats for all users specified to "pending cancellation".
+    /// This will cause the specified users to lose access to GitHub Copilot at the end of the current billing cycle unless they retain access through team membership.
     ///
-    /// For more information about Copilot pricing, see "[Pricing for GitHub Copilot](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#about-billing-for-github-copilot)".
+    /// For more information about Copilot pricing, see "[About billing for GitHub Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-github-copilot-in-your-organization/managing-the-copilot-subscription-for-your-organization/about-billing-for-github-copilot-in-your-organization)."
     ///
-    /// For more information about disabling access to Copilot Business or Enterprise, see "[Revoking access to GitHub Copilot for specific users in your organization](https://docs.github.com/copilot/managing-copilot/managing-access-for-copilot-in-your-organization#revoking-access-to-github-copilot-for-specific-users-in-your-organization)".
+    /// For more information about disabling access to Copilot Business or Enterprise, see "[Revoking access to Copilot for members of your organization](https://docs.github.com/copilot/managing-copilot/managing-github-copilot-in-your-organization/managing-access-to-github-copilot-in-your-organization/revoking-access-to-copilot-for-members-of-your-organization)."
     ///
     /// Only organization owners can cancel Copilot seats for their organization members.
+    ///
+    /// The response will contain the total number of seats set to "pending cancellation".
     ///
     /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `admin:org` scopes to use this endpoint.
     ///
@@ -260,7 +272,10 @@ public protocol APIProtocol: Sendable {
     /// > [!NOTE]
     /// > This endpoint is in public preview and is subject to change.
     ///
-    /// Gets the GitHub Copilot seat assignment details for a member of an organization who currently has access to GitHub Copilot.
+    /// Gets the GitHub Copilot seat details for a member of an organization who currently has access to GitHub Copilot.
+    ///
+    /// The seat object contains information about the user's most recent Copilot activity. Users must have telemetry enabled in their IDE for Copilot in the IDE activity to be reflected in `last_activity_at`.
+    /// For more information about activity data, see "[Reviewing user activity data for Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-github-copilot-in-your-organization/reviewing-activity-related-to-github-copilot-in-your-organization/reviewing-user-activity-data-for-copilot-in-your-organization)."
     ///
     /// Only organization owners can view Copilot seat assignment details for members of their organization.
     ///
@@ -320,11 +335,14 @@ extension APIProtocol {
     /// > [!NOTE]
     /// > This endpoint is in public preview and is subject to change.
     ///
-    /// Lists all active Copilot seats across organizations or enterprise teams for an enterprise with a Copilot Business or Copilot Enterprise subscription.
+    /// Lists all Copilot seats currently being billed for across organizations or enterprise teams for an enterprise with a Copilot Business or Copilot Enterprise subscription.
     ///
     /// Users with access through multiple organizations or enterprise teams will only be counted toward `total_seats` once.
     ///
     /// For each organization or enterprise team which grants Copilot access to a user, a seat detail object will appear in the `seats` array.
+    /// Each seat object contains information about the assigned user's most recent Copilot activity. Users must have
+    /// telemetry enabled in their IDE for Copilot in the IDE activity to be reflected in `last_activity_at`. For more information about activity data,
+    /// see "[Reviewing user activity data for Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-github-copilot-in-your-organization/reviewing-activity-related-to-github-copilot-in-your-organization/reviewing-user-activity-data-for-copilot-in-your-organization)."
     ///
     /// Only enterprise owners and billing managers can view assigned Copilot seats across their child organizations or enterprise teams.
     ///
@@ -381,6 +399,8 @@ extension APIProtocol {
     /// The response contains metrics for up to 28 days prior. Usage metrics are processed once per day for the previous day,
     /// and the response will only include data up until yesterday. In order for an end user to be counted towards these metrics,
     /// they must have telemetry enabled in their IDE.
+    ///
+    /// The time zone in the response is in UTC time, that means that the cutoff time for the "day" is UTC time.
     ///
     /// Only owners and billing managers can view Copilot usage metrics for the enterprise.
     ///
@@ -468,7 +488,7 @@ extension APIProtocol {
     ///
     /// Gets information about an organization's Copilot subscription, including seat breakdown
     /// and feature policies. To configure these settings, go to your organization's settings on GitHub.com.
-    /// For more information, see "[Managing policies for Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-policies-for-copilot-business-in-your-organization)".
+    /// For more information, see "[Managing policies for Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-policies-for-copilot-business-in-your-organization)."
     ///
     /// Only organization owners can view details about the organization's Copilot Business or Copilot Enterprise subscription.
     ///
@@ -490,8 +510,11 @@ extension APIProtocol {
     /// > [!NOTE]
     /// > This endpoint is in public preview and is subject to change.
     ///
-    /// Lists all active Copilot seats for an organization with a Copilot Business or Copilot Enterprise subscription.
+    /// Lists all Copilot seats for which an organization with a Copilot Business or Copilot Enterprise subscription is currently being billed.
     /// Only organization owners can view assigned seats.
+    ///
+    /// Each seat object contains information about the assigned user's most recent Copilot activity. Users must have telemetry enabled in their IDE for Copilot in the IDE activity to be reflected in `last_activity_at`.
+    /// For more information about activity data, see "[Reviewing user activity data for Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-github-copilot-in-your-organization/reviewing-activity-related-to-github-copilot-in-your-organization/reviewing-user-activity-data-for-copilot-in-your-organization)."
     ///
     /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `read:org` scopes to use this endpoint.
     ///
@@ -514,13 +537,13 @@ extension APIProtocol {
     /// > This endpoint is in public preview and is subject to change.
     ///
     /// Purchases a GitHub Copilot seat for all users within each specified team.
-    /// The organization will be billed accordingly. For more information about Copilot pricing, see "[Pricing for GitHub Copilot](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#about-billing-for-github-copilot)".
+    /// The organization will be billed for each seat based on the organization's Copilot plan. For more information about Copilot pricing, see "[About billing for GitHub Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-github-copilot-in-your-organization/managing-the-copilot-subscription-for-your-organization/about-billing-for-github-copilot-in-your-organization)."
     ///
     /// Only organization owners can add Copilot seats for their organization members.
     ///
     /// In order for an admin to use this endpoint, the organization must have a Copilot Business or Enterprise subscription and a configured suggestion matching policy.
-    /// For more information about setting up a Copilot subscription, see "[Setting up a Copilot subscription for your organization](https://docs.github.com/billing/managing-billing-for-github-copilot/managing-your-github-copilot-subscription-for-your-organization-or-enterprise)".
-    /// For more information about setting a suggestion matching policy, see "[Configuring suggestion matching policies for GitHub Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-policies-for-github-copilot-in-your-organization#configuring-suggestion-matching-policies-for-github-copilot-in-your-organization)".
+    /// For more information about setting up a Copilot subscription, see "[Subscribing to Copilot for your organization](https://docs.github.com/copilot/managing-copilot/managing-github-copilot-in-your-organization/managing-the-copilot-subscription-for-your-organization/subscribing-to-copilot-for-your-organization)."
+    /// For more information about setting a suggestion matching policy, see "[Managing policies for Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-github-copilot-in-your-organization/setting-policies-for-copilot-in-your-organization/managing-policies-for-copilot-in-your-organization#policies-for-suggestion-matching)."
     ///
     /// The response will contain the total number of new seats that were created and existing seats that were refreshed.
     ///
@@ -544,14 +567,16 @@ extension APIProtocol {
     /// > [!NOTE]
     /// > This endpoint is in public preview and is subject to change.
     ///
-    /// Cancels the Copilot seat assignment for all members of each team specified.
-    /// This will cause the members of the specified team(s) to lose access to GitHub Copilot at the end of the current billing cycle, and the organization will not be billed further for those users.
+    /// Sets seats for all members of each team specified to "pending cancellation".
+    /// This will cause the members of the specified team(s) to lose access to GitHub Copilot at the end of the current billing cycle unless they retain access through another team.
     ///
-    /// For more information about Copilot pricing, see "[Pricing for GitHub Copilot](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#about-billing-for-github-copilot)".
+    /// For more information about Copilot pricing, see "[About billing for GitHub Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-github-copilot-in-your-organization/managing-the-copilot-subscription-for-your-organization/about-billing-for-github-copilot-in-your-organization)."
     ///
-    /// For more information about disabling access to Copilot Business or Enterprise, see "[Revoking access to GitHub Copilot for specific users in your organization](https://docs.github.com/copilot/managing-copilot/managing-access-for-copilot-in-your-organization#revoking-access-to-github-copilot-for-specific-users-in-your-organization)".
+    /// For more information about disabling access to Copilot Business or Enterprise, see "[Revoking access to Copilot for members of your organization](https://docs.github.com/copilot/managing-copilot/managing-github-copilot-in-your-organization/managing-access-to-github-copilot-in-your-organization/revoking-access-to-copilot-for-members-of-your-organization)."
     ///
     /// Only organization owners can cancel Copilot seats for their organization members.
+    ///
+    /// The response will contain the total number of seats set to "pending cancellation".
     ///
     /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `admin:org` scopes to use this endpoint.
     ///
@@ -574,13 +599,13 @@ extension APIProtocol {
     /// > This endpoint is in public preview and is subject to change.
     ///
     /// Purchases a GitHub Copilot seat for each user specified.
-    /// The organization will be billed accordingly. For more information about Copilot pricing, see "[Pricing for GitHub Copilot](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#about-billing-for-github-copilot)".
+    /// The organization will be billed for each seat based on the organization's Copilot plan. For more information about Copilot pricing, see "[About billing for GitHub Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-github-copilot-in-your-organization/managing-the-copilot-subscription-for-your-organization/about-billing-for-github-copilot-in-your-organization)."
     ///
     /// Only organization owners can add Copilot seats for their organization members.
     ///
     /// In order for an admin to use this endpoint, the organization must have a Copilot Business or Enterprise subscription and a configured suggestion matching policy.
-    /// For more information about setting up a Copilot subscription, see "[Setting up a Copilot subscription for your organization](https://docs.github.com/billing/managing-billing-for-github-copilot/managing-your-github-copilot-subscription-for-your-organization-or-enterprise)".
-    /// For more information about setting a suggestion matching policy, see "[Configuring suggestion matching policies for GitHub Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-policies-for-github-copilot-in-your-organization#configuring-suggestion-matching-policies-for-github-copilot-in-your-organization)".
+    /// For more information about setting up a Copilot subscription, see "[Subscribing to Copilot for your organization](https://docs.github.com/copilot/managing-copilot/managing-github-copilot-in-your-organization/managing-the-copilot-subscription-for-your-organization/subscribing-to-copilot-for-your-organization)."
+    /// For more information about setting a suggestion matching policy, see "[Managing policies for Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-github-copilot-in-your-organization/setting-policies-for-copilot-in-your-organization/managing-policies-for-copilot-in-your-organization#policies-for-suggestion-matching)."
     ///
     /// The response will contain the total number of new seats that were created and existing seats that were refreshed.
     ///
@@ -604,14 +629,16 @@ extension APIProtocol {
     /// > [!NOTE]
     /// > This endpoint is in public preview and is subject to change.
     ///
-    /// Cancels the Copilot seat assignment for each user specified.
-    /// This will cause the specified users to lose access to GitHub Copilot at the end of the current billing cycle, and the organization will not be billed further for those users.
+    /// Sets seats for all users specified to "pending cancellation".
+    /// This will cause the specified users to lose access to GitHub Copilot at the end of the current billing cycle unless they retain access through team membership.
     ///
-    /// For more information about Copilot pricing, see "[Pricing for GitHub Copilot](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#about-billing-for-github-copilot)".
+    /// For more information about Copilot pricing, see "[About billing for GitHub Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-github-copilot-in-your-organization/managing-the-copilot-subscription-for-your-organization/about-billing-for-github-copilot-in-your-organization)."
     ///
-    /// For more information about disabling access to Copilot Business or Enterprise, see "[Revoking access to GitHub Copilot for specific users in your organization](https://docs.github.com/copilot/managing-copilot/managing-access-for-copilot-in-your-organization#revoking-access-to-github-copilot-for-specific-users-in-your-organization)".
+    /// For more information about disabling access to Copilot Business or Enterprise, see "[Revoking access to Copilot for members of your organization](https://docs.github.com/copilot/managing-copilot/managing-github-copilot-in-your-organization/managing-access-to-github-copilot-in-your-organization/revoking-access-to-copilot-for-members-of-your-organization)."
     ///
     /// Only organization owners can cancel Copilot seats for their organization members.
+    ///
+    /// The response will contain the total number of seats set to "pending cancellation".
     ///
     /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `admin:org` scopes to use this endpoint.
     ///
@@ -692,7 +719,10 @@ extension APIProtocol {
     /// > [!NOTE]
     /// > This endpoint is in public preview and is subject to change.
     ///
-    /// Gets the GitHub Copilot seat assignment details for a member of an organization who currently has access to GitHub Copilot.
+    /// Gets the GitHub Copilot seat details for a member of an organization who currently has access to GitHub Copilot.
+    ///
+    /// The seat object contains information about the user's most recent Copilot activity. Users must have telemetry enabled in their IDE for Copilot in the IDE activity to be reflected in `last_activity_at`.
+    /// For more information about activity data, see "[Reviewing user activity data for Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-github-copilot-in-your-organization/reviewing-activity-related-to-github-copilot-in-your-organization/reviewing-user-activity-data-for-copilot-in-your-organization)."
     ///
     /// Only organization owners can view Copilot seat assignment details for members of their organization.
     ///
@@ -1314,7 +1344,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/enterprise-team/sync_to_organizations`.
             public var sync_to_organizations: Swift.String
             /// - Remark: Generated from `#/components/schemas/enterprise-team/group_id`.
-            public var group_id: Swift.Int?
+            public var group_id: Swift.String?
             /// - Remark: Generated from `#/components/schemas/enterprise-team/html_url`.
             public var html_url: Swift.String
             /// - Remark: Generated from `#/components/schemas/enterprise-team/members_url`.
@@ -1342,7 +1372,7 @@ public enum Components {
                 slug: Swift.String,
                 url: Swift.String,
                 sync_to_organizations: Swift.String,
-                group_id: Swift.Int? = nil,
+                group_id: Swift.String? = nil,
                 html_url: Swift.String,
                 members_url: Swift.String,
                 created_at: Foundation.Date,
@@ -3175,11 +3205,14 @@ public enum Operations {
     /// > [!NOTE]
     /// > This endpoint is in public preview and is subject to change.
     ///
-    /// Lists all active Copilot seats across organizations or enterprise teams for an enterprise with a Copilot Business or Copilot Enterprise subscription.
+    /// Lists all Copilot seats currently being billed for across organizations or enterprise teams for an enterprise with a Copilot Business or Copilot Enterprise subscription.
     ///
     /// Users with access through multiple organizations or enterprise teams will only be counted toward `total_seats` once.
     ///
     /// For each organization or enterprise team which grants Copilot access to a user, a seat detail object will appear in the `seats` array.
+    /// Each seat object contains information about the assigned user's most recent Copilot activity. Users must have
+    /// telemetry enabled in their IDE for Copilot in the IDE activity to be reflected in `last_activity_at`. For more information about activity data,
+    /// see "[Reviewing user activity data for Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-github-copilot-in-your-organization/reviewing-activity-related-to-github-copilot-in-your-organization/reviewing-user-activity-data-for-copilot-in-your-organization)."
     ///
     /// Only enterprise owners and billing managers can view assigned Copilot seats across their child organizations or enterprise teams.
     ///
@@ -3762,6 +3795,8 @@ public enum Operations {
     /// The response contains metrics for up to 28 days prior. Usage metrics are processed once per day for the previous day,
     /// and the response will only include data up until yesterday. In order for an end user to be counted towards these metrics,
     /// they must have telemetry enabled in their IDE.
+    ///
+    /// The time zone in the response is in UTC time, that means that the cutoff time for the "day" is UTC time.
     ///
     /// Only owners and billing managers can view Copilot usage metrics for the enterprise.
     ///
@@ -4611,7 +4646,7 @@ public enum Operations {
     ///
     /// Gets information about an organization's Copilot subscription, including seat breakdown
     /// and feature policies. To configure these settings, go to your organization's settings on GitHub.com.
-    /// For more information, see "[Managing policies for Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-policies-for-copilot-business-in-your-organization)".
+    /// For more information, see "[Managing policies for Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-policies-for-copilot-business-in-your-organization)."
     ///
     /// Only organization owners can view details about the organization's Copilot Business or Copilot Enterprise subscription.
     ///
@@ -4869,8 +4904,11 @@ public enum Operations {
     /// > [!NOTE]
     /// > This endpoint is in public preview and is subject to change.
     ///
-    /// Lists all active Copilot seats for an organization with a Copilot Business or Copilot Enterprise subscription.
+    /// Lists all Copilot seats for which an organization with a Copilot Business or Copilot Enterprise subscription is currently being billed.
     /// Only organization owners can view assigned seats.
+    ///
+    /// Each seat object contains information about the assigned user's most recent Copilot activity. Users must have telemetry enabled in their IDE for Copilot in the IDE activity to be reflected in `last_activity_at`.
+    /// For more information about activity data, see "[Reviewing user activity data for Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-github-copilot-in-your-organization/reviewing-activity-related-to-github-copilot-in-your-organization/reviewing-user-activity-data-for-copilot-in-your-organization)."
     ///
     /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `read:org` scopes to use this endpoint.
     ///
@@ -5171,13 +5209,13 @@ public enum Operations {
     /// > This endpoint is in public preview and is subject to change.
     ///
     /// Purchases a GitHub Copilot seat for all users within each specified team.
-    /// The organization will be billed accordingly. For more information about Copilot pricing, see "[Pricing for GitHub Copilot](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#about-billing-for-github-copilot)".
+    /// The organization will be billed for each seat based on the organization's Copilot plan. For more information about Copilot pricing, see "[About billing for GitHub Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-github-copilot-in-your-organization/managing-the-copilot-subscription-for-your-organization/about-billing-for-github-copilot-in-your-organization)."
     ///
     /// Only organization owners can add Copilot seats for their organization members.
     ///
     /// In order for an admin to use this endpoint, the organization must have a Copilot Business or Enterprise subscription and a configured suggestion matching policy.
-    /// For more information about setting up a Copilot subscription, see "[Setting up a Copilot subscription for your organization](https://docs.github.com/billing/managing-billing-for-github-copilot/managing-your-github-copilot-subscription-for-your-organization-or-enterprise)".
-    /// For more information about setting a suggestion matching policy, see "[Configuring suggestion matching policies for GitHub Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-policies-for-github-copilot-in-your-organization#configuring-suggestion-matching-policies-for-github-copilot-in-your-organization)".
+    /// For more information about setting up a Copilot subscription, see "[Subscribing to Copilot for your organization](https://docs.github.com/copilot/managing-copilot/managing-github-copilot-in-your-organization/managing-the-copilot-subscription-for-your-organization/subscribing-to-copilot-for-your-organization)."
+    /// For more information about setting a suggestion matching policy, see "[Managing policies for Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-github-copilot-in-your-organization/setting-policies-for-copilot-in-your-organization/managing-policies-for-copilot-in-your-organization#policies-for-suggestion-matching)."
     ///
     /// The response will contain the total number of new seats that were created and existing seats that were refreshed.
     ///
@@ -5258,7 +5296,7 @@ public enum Operations {
             public struct Created: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/orgs/{org}/copilot/billing/selected_teams/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
-                    /// The total number of seat assignments created.
+                    /// The total number of seats created for members of the specified team(s).
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/copilot/billing/selected_teams/POST/responses/201/content/json`.
                     public struct jsonPayload: Codable, Hashable, Sendable {
@@ -5478,14 +5516,16 @@ public enum Operations {
     /// > [!NOTE]
     /// > This endpoint is in public preview and is subject to change.
     ///
-    /// Cancels the Copilot seat assignment for all members of each team specified.
-    /// This will cause the members of the specified team(s) to lose access to GitHub Copilot at the end of the current billing cycle, and the organization will not be billed further for those users.
+    /// Sets seats for all members of each team specified to "pending cancellation".
+    /// This will cause the members of the specified team(s) to lose access to GitHub Copilot at the end of the current billing cycle unless they retain access through another team.
     ///
-    /// For more information about Copilot pricing, see "[Pricing for GitHub Copilot](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#about-billing-for-github-copilot)".
+    /// For more information about Copilot pricing, see "[About billing for GitHub Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-github-copilot-in-your-organization/managing-the-copilot-subscription-for-your-organization/about-billing-for-github-copilot-in-your-organization)."
     ///
-    /// For more information about disabling access to Copilot Business or Enterprise, see "[Revoking access to GitHub Copilot for specific users in your organization](https://docs.github.com/copilot/managing-copilot/managing-access-for-copilot-in-your-organization#revoking-access-to-github-copilot-for-specific-users-in-your-organization)".
+    /// For more information about disabling access to Copilot Business or Enterprise, see "[Revoking access to Copilot for members of your organization](https://docs.github.com/copilot/managing-copilot/managing-github-copilot-in-your-organization/managing-access-to-github-copilot-in-your-organization/revoking-access-to-copilot-for-members-of-your-organization)."
     ///
     /// Only organization owners can cancel Copilot seats for their organization members.
+    ///
+    /// The response will contain the total number of seats set to "pending cancellation".
     ///
     /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `admin:org` scopes to use this endpoint.
     ///
@@ -5564,7 +5604,7 @@ public enum Operations {
             public struct Ok: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/orgs/{org}/copilot/billing/selected_teams/DELETE/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
-                    /// The total number of seat assignments cancelled.
+                    /// The total number of seats set to "pending cancellation" for members of the specified team(s).
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/copilot/billing/selected_teams/DELETE/responses/200/content/json`.
                     public struct jsonPayload: Codable, Hashable, Sendable {
@@ -5785,13 +5825,13 @@ public enum Operations {
     /// > This endpoint is in public preview and is subject to change.
     ///
     /// Purchases a GitHub Copilot seat for each user specified.
-    /// The organization will be billed accordingly. For more information about Copilot pricing, see "[Pricing for GitHub Copilot](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#about-billing-for-github-copilot)".
+    /// The organization will be billed for each seat based on the organization's Copilot plan. For more information about Copilot pricing, see "[About billing for GitHub Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-github-copilot-in-your-organization/managing-the-copilot-subscription-for-your-organization/about-billing-for-github-copilot-in-your-organization)."
     ///
     /// Only organization owners can add Copilot seats for their organization members.
     ///
     /// In order for an admin to use this endpoint, the organization must have a Copilot Business or Enterprise subscription and a configured suggestion matching policy.
-    /// For more information about setting up a Copilot subscription, see "[Setting up a Copilot subscription for your organization](https://docs.github.com/billing/managing-billing-for-github-copilot/managing-your-github-copilot-subscription-for-your-organization-or-enterprise)".
-    /// For more information about setting a suggestion matching policy, see "[Configuring suggestion matching policies for GitHub Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-policies-for-github-copilot-in-your-organization#configuring-suggestion-matching-policies-for-github-copilot-in-your-organization)".
+    /// For more information about setting up a Copilot subscription, see "[Subscribing to Copilot for your organization](https://docs.github.com/copilot/managing-copilot/managing-github-copilot-in-your-organization/managing-the-copilot-subscription-for-your-organization/subscribing-to-copilot-for-your-organization)."
+    /// For more information about setting a suggestion matching policy, see "[Managing policies for Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-github-copilot-in-your-organization/setting-policies-for-copilot-in-your-organization/managing-policies-for-copilot-in-your-organization#policies-for-suggestion-matching)."
     ///
     /// The response will contain the total number of new seats that were created and existing seats that were refreshed.
     ///
@@ -5872,7 +5912,7 @@ public enum Operations {
             public struct Created: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/orgs/{org}/copilot/billing/selected_users/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
-                    /// The total number of seat assignments created.
+                    /// The total number of seats created for the specified user(s).
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/copilot/billing/selected_users/POST/responses/201/content/json`.
                     public struct jsonPayload: Codable, Hashable, Sendable {
@@ -6092,14 +6132,16 @@ public enum Operations {
     /// > [!NOTE]
     /// > This endpoint is in public preview and is subject to change.
     ///
-    /// Cancels the Copilot seat assignment for each user specified.
-    /// This will cause the specified users to lose access to GitHub Copilot at the end of the current billing cycle, and the organization will not be billed further for those users.
+    /// Sets seats for all users specified to "pending cancellation".
+    /// This will cause the specified users to lose access to GitHub Copilot at the end of the current billing cycle unless they retain access through team membership.
     ///
-    /// For more information about Copilot pricing, see "[Pricing for GitHub Copilot](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#about-billing-for-github-copilot)".
+    /// For more information about Copilot pricing, see "[About billing for GitHub Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-github-copilot-in-your-organization/managing-the-copilot-subscription-for-your-organization/about-billing-for-github-copilot-in-your-organization)."
     ///
-    /// For more information about disabling access to Copilot Business or Enterprise, see "[Revoking access to GitHub Copilot for specific users in your organization](https://docs.github.com/copilot/managing-copilot/managing-access-for-copilot-in-your-organization#revoking-access-to-github-copilot-for-specific-users-in-your-organization)".
+    /// For more information about disabling access to Copilot Business or Enterprise, see "[Revoking access to Copilot for members of your organization](https://docs.github.com/copilot/managing-copilot/managing-github-copilot-in-your-organization/managing-access-to-github-copilot-in-your-organization/revoking-access-to-copilot-for-members-of-your-organization)."
     ///
     /// Only organization owners can cancel Copilot seats for their organization members.
+    ///
+    /// The response will contain the total number of seats set to "pending cancellation".
     ///
     /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `admin:org` scopes to use this endpoint.
     ///
@@ -6178,7 +6220,7 @@ public enum Operations {
             public struct Ok: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/orgs/{org}/copilot/billing/selected_users/DELETE/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
-                    /// The total number of seat assignments cancelled.
+                    /// The total number of seats set to "pending cancellation" for the specified users.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/copilot/billing/selected_users/DELETE/responses/200/content/json`.
                     public struct jsonPayload: Codable, Hashable, Sendable {
@@ -6953,7 +6995,10 @@ public enum Operations {
     /// > [!NOTE]
     /// > This endpoint is in public preview and is subject to change.
     ///
-    /// Gets the GitHub Copilot seat assignment details for a member of an organization who currently has access to GitHub Copilot.
+    /// Gets the GitHub Copilot seat details for a member of an organization who currently has access to GitHub Copilot.
+    ///
+    /// The seat object contains information about the user's most recent Copilot activity. Users must have telemetry enabled in their IDE for Copilot in the IDE activity to be reflected in `last_activity_at`.
+    /// For more information about activity data, see "[Reviewing user activity data for Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-github-copilot-in-your-organization/reviewing-activity-related-to-github-copilot-in-your-organization/reviewing-user-activity-data-for-copilot-in-your-organization)."
     ///
     /// Only organization owners can view Copilot seat assignment details for members of their organization.
     ///
