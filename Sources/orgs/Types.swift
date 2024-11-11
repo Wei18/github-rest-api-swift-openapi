@@ -5652,6 +5652,10 @@ public enum Components {
             public var updated_at: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/organization-full/archived_at`.
             public var archived_at: Foundation.Date?
+            /// Controls whether or not deploy keys may be added and used for repositories in the organization.
+            ///
+            /// - Remark: Generated from `#/components/schemas/organization-full/deploy_keys_enabled_for_repositories`.
+            public var deploy_keys_enabled_for_repositories: Swift.Bool?
             /// Creates a new `organization_hyphen_full`.
             ///
             /// - Parameters:
@@ -5712,6 +5716,7 @@ public enum Components {
             ///   - created_at:
             ///   - updated_at:
             ///   - archived_at:
+            ///   - deploy_keys_enabled_for_repositories: Controls whether or not deploy keys may be added and used for repositories in the organization.
             public init(
                 login: Swift.String,
                 id: Swift.Int,
@@ -5769,7 +5774,8 @@ public enum Components {
                 secret_scanning_push_protection_custom_link: Swift.String? = nil,
                 created_at: Foundation.Date,
                 updated_at: Foundation.Date,
-                archived_at: Foundation.Date? = nil
+                archived_at: Foundation.Date? = nil,
+                deploy_keys_enabled_for_repositories: Swift.Bool? = nil
             ) {
                 self.login = login
                 self.id = id
@@ -5828,6 +5834,7 @@ public enum Components {
                 self.created_at = created_at
                 self.updated_at = updated_at
                 self.archived_at = archived_at
+                self.deploy_keys_enabled_for_repositories = deploy_keys_enabled_for_repositories
             }
             public enum CodingKeys: String, CodingKey {
                 case login
@@ -5887,6 +5894,7 @@ public enum Components {
                 case created_at
                 case updated_at
                 case archived_at
+                case deploy_keys_enabled_for_repositories
             }
         }
         /// Organization Invitation
@@ -7008,6 +7016,10 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/organization-programmatic-access-grant-request/token_id`.
             public var token_id: Swift.Int
+            /// The name given to the user's token. This field can also be found in an organization's settings page for Active Tokens.
+            ///
+            /// - Remark: Generated from `#/components/schemas/organization-programmatic-access-grant-request/token_name`.
+            public var token_name: Swift.String
             /// Whether the associated fine-grained personal access token has expired.
             ///
             /// - Remark: Generated from `#/components/schemas/organization-programmatic-access-grant-request/token_expired`.
@@ -7031,6 +7043,7 @@ public enum Components {
             ///   - permissions: Permissions requested, categorized by type of permission.
             ///   - created_at: Date and time when the request for access was created.
             ///   - token_id: Unique identifier of the user's token. This field can also be found in audit log events and the organization's settings for their PAT grants.
+            ///   - token_name: The name given to the user's token. This field can also be found in an organization's settings page for Active Tokens.
             ///   - token_expired: Whether the associated fine-grained personal access token has expired.
             ///   - token_expires_at: Date and time when the associated fine-grained personal access token expires.
             ///   - token_last_used_at: Date and time when the associated fine-grained personal access token was last used for authentication.
@@ -7043,6 +7056,7 @@ public enum Components {
                 permissions: Components.Schemas.organization_hyphen_programmatic_hyphen_access_hyphen_grant_hyphen_request.permissionsPayload,
                 created_at: Swift.String,
                 token_id: Swift.Int,
+                token_name: Swift.String,
                 token_expired: Swift.Bool,
                 token_expires_at: Swift.String? = nil,
                 token_last_used_at: Swift.String? = nil
@@ -7055,6 +7069,7 @@ public enum Components {
                 self.permissions = permissions
                 self.created_at = created_at
                 self.token_id = token_id
+                self.token_name = token_name
                 self.token_expired = token_expired
                 self.token_expires_at = token_expires_at
                 self.token_last_used_at = token_last_used_at
@@ -7068,6 +7083,7 @@ public enum Components {
                 case permissions
                 case created_at
                 case token_id
+                case token_name
                 case token_expired
                 case token_expires_at
                 case token_last_used_at
@@ -7196,6 +7212,10 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/organization-programmatic-access-grant/token_id`.
             public var token_id: Swift.Int
+            /// The name given to the user's token. This field can also be found in an organization's settings page for Active Tokens.
+            ///
+            /// - Remark: Generated from `#/components/schemas/organization-programmatic-access-grant/token_name`.
+            public var token_name: Swift.String
             /// Whether the associated fine-grained personal access token has expired.
             ///
             /// - Remark: Generated from `#/components/schemas/organization-programmatic-access-grant/token_expired`.
@@ -7218,6 +7238,7 @@ public enum Components {
             ///   - permissions: Permissions requested, categorized by type of permission.
             ///   - access_granted_at: Date and time when the fine-grained personal access token was approved to access the organization.
             ///   - token_id: Unique identifier of the user's token. This field can also be found in audit log events and the organization's settings for their PAT grants.
+            ///   - token_name: The name given to the user's token. This field can also be found in an organization's settings page for Active Tokens.
             ///   - token_expired: Whether the associated fine-grained personal access token has expired.
             ///   - token_expires_at: Date and time when the associated fine-grained personal access token expires.
             ///   - token_last_used_at: Date and time when the associated fine-grained personal access token was last used for authentication.
@@ -7229,6 +7250,7 @@ public enum Components {
                 permissions: Components.Schemas.organization_hyphen_programmatic_hyphen_access_hyphen_grant.permissionsPayload,
                 access_granted_at: Swift.String,
                 token_id: Swift.Int,
+                token_name: Swift.String,
                 token_expired: Swift.Bool,
                 token_expires_at: Swift.String? = nil,
                 token_last_used_at: Swift.String? = nil
@@ -7240,6 +7262,7 @@ public enum Components {
                 self.permissions = permissions
                 self.access_granted_at = access_granted_at
                 self.token_id = token_id
+                self.token_name = token_name
                 self.token_expired = token_expired
                 self.token_expires_at = token_expires_at
                 self.token_last_used_at = token_last_used_at
@@ -7252,6 +7275,7 @@ public enum Components {
                 case permissions
                 case access_granted_at
                 case token_id
+                case token_name
                 case token_expired
                 case token_expires_at
                 case token_last_used_at
@@ -8509,6 +8533,10 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/PATCH/requestBody/json/secret_scanning_push_protection_custom_link`.
                     public var secret_scanning_push_protection_custom_link: Swift.String?
+                    /// Controls whether or not deploy keys may be added and used for repositories in the organization.
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/PATCH/requestBody/json/deploy_keys_enabled_for_repositories`.
+                    public var deploy_keys_enabled_for_repositories: Swift.Bool?
                     /// Creates a new `jsonPayload`.
                     ///
                     /// - Parameters:
@@ -8541,6 +8569,7 @@ public enum Operations {
                     ///   - secret_scanning_push_protection_enabled_for_new_repositories: **Endpoint closing down notice.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.
                     ///   - secret_scanning_push_protection_custom_link_enabled: Whether a custom link is shown to contributors who are blocked from pushing a secret by push protection.
                     ///   - secret_scanning_push_protection_custom_link: If `secret_scanning_push_protection_custom_link_enabled` is true, the URL that will be displayed to contributors who are blocked from pushing a secret.
+                    ///   - deploy_keys_enabled_for_repositories: Controls whether or not deploy keys may be added and used for repositories in the organization.
                     public init(
                         billing_email: Swift.String? = nil,
                         company: Swift.String? = nil,
@@ -8570,7 +8599,8 @@ public enum Operations {
                         secret_scanning_enabled_for_new_repositories: Swift.Bool? = nil,
                         secret_scanning_push_protection_enabled_for_new_repositories: Swift.Bool? = nil,
                         secret_scanning_push_protection_custom_link_enabled: Swift.Bool? = nil,
-                        secret_scanning_push_protection_custom_link: Swift.String? = nil
+                        secret_scanning_push_protection_custom_link: Swift.String? = nil,
+                        deploy_keys_enabled_for_repositories: Swift.Bool? = nil
                     ) {
                         self.billing_email = billing_email
                         self.company = company
@@ -8601,6 +8631,7 @@ public enum Operations {
                         self.secret_scanning_push_protection_enabled_for_new_repositories = secret_scanning_push_protection_enabled_for_new_repositories
                         self.secret_scanning_push_protection_custom_link_enabled = secret_scanning_push_protection_custom_link_enabled
                         self.secret_scanning_push_protection_custom_link = secret_scanning_push_protection_custom_link
+                        self.deploy_keys_enabled_for_repositories = deploy_keys_enabled_for_repositories
                     }
                     public enum CodingKeys: String, CodingKey {
                         case billing_email
@@ -8632,6 +8663,7 @@ public enum Operations {
                         case secret_scanning_push_protection_enabled_for_new_repositories
                         case secret_scanning_push_protection_custom_link_enabled
                         case secret_scanning_push_protection_custom_link
+                        case deploy_keys_enabled_for_repositories
                     }
                 }
                 /// - Remark: Generated from `#/paths/orgs/{org}/PATCH/requestBody/content/application\/json`.
