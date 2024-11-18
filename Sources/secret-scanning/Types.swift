@@ -1050,6 +1050,16 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/organization-secret-scanning-alert/push_protection_bypassed_at`.
             public var push_protection_bypassed_at: Foundation.Date?
+            /// - Remark: Generated from `#/components/schemas/organization-secret-scanning-alert/push_protection_bypass_request_reviewer`.
+            public var push_protection_bypass_request_reviewer: Components.Schemas.nullable_hyphen_simple_hyphen_user?
+            /// An optional comment when requesting a push protection bypass.
+            ///
+            /// - Remark: Generated from `#/components/schemas/organization-secret-scanning-alert/push_protection_bypass_request_comment`.
+            public var push_protection_bypass_request_comment: Swift.String?
+            /// The URL to a push protection bypass request.
+            ///
+            /// - Remark: Generated from `#/components/schemas/organization-secret-scanning-alert/push_protection_bypass_request_html_url`.
+            public var push_protection_bypass_request_html_url: Swift.String?
             /// The comment that was optionally added when this alert was closed
             ///
             /// - Remark: Generated from `#/components/schemas/organization-secret-scanning-alert/resolution_comment`.
@@ -1094,6 +1104,9 @@ public enum Components {
             ///   - push_protection_bypassed: Whether push protection was bypassed for the detected secret.
             ///   - push_protection_bypassed_by:
             ///   - push_protection_bypassed_at: The time that push protection was bypassed in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
+            ///   - push_protection_bypass_request_reviewer:
+            ///   - push_protection_bypass_request_comment: An optional comment when requesting a push protection bypass.
+            ///   - push_protection_bypass_request_html_url: The URL to a push protection bypass request.
             ///   - resolution_comment: The comment that was optionally added when this alert was closed
             ///   - validity: The token status as of the latest validity check.
             ///   - publicly_leaked: Whether the secret was publicly leaked.
@@ -1116,6 +1129,9 @@ public enum Components {
                 push_protection_bypassed: Swift.Bool? = nil,
                 push_protection_bypassed_by: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
                 push_protection_bypassed_at: Foundation.Date? = nil,
+                push_protection_bypass_request_reviewer: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
+                push_protection_bypass_request_comment: Swift.String? = nil,
+                push_protection_bypass_request_html_url: Swift.String? = nil,
                 resolution_comment: Swift.String? = nil,
                 validity: Components.Schemas.organization_hyphen_secret_hyphen_scanning_hyphen_alert.validityPayload? = nil,
                 publicly_leaked: Swift.Bool? = nil,
@@ -1138,6 +1154,9 @@ public enum Components {
                 self.push_protection_bypassed = push_protection_bypassed
                 self.push_protection_bypassed_by = push_protection_bypassed_by
                 self.push_protection_bypassed_at = push_protection_bypassed_at
+                self.push_protection_bypass_request_reviewer = push_protection_bypass_request_reviewer
+                self.push_protection_bypass_request_comment = push_protection_bypass_request_comment
+                self.push_protection_bypass_request_html_url = push_protection_bypass_request_html_url
                 self.resolution_comment = resolution_comment
                 self.validity = validity
                 self.publicly_leaked = publicly_leaked
@@ -1161,6 +1180,9 @@ public enum Components {
                 case push_protection_bypassed
                 case push_protection_bypassed_by
                 case push_protection_bypassed_at
+                case push_protection_bypass_request_reviewer
+                case push_protection_bypass_request_comment
+                case push_protection_bypass_request_html_url
                 case resolution_comment
                 case validity
                 case publicly_leaked
@@ -1224,6 +1246,16 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-alert/push_protection_bypassed_at`.
             public var push_protection_bypassed_at: Foundation.Date?
+            /// - Remark: Generated from `#/components/schemas/secret-scanning-alert/push_protection_bypass_request_reviewer`.
+            public var push_protection_bypass_request_reviewer: Components.Schemas.nullable_hyphen_simple_hyphen_user?
+            /// An optional comment when requesting a push protection bypass.
+            ///
+            /// - Remark: Generated from `#/components/schemas/secret-scanning-alert/push_protection_bypass_request_comment`.
+            public var push_protection_bypass_request_comment: Swift.String?
+            /// The URL to a push protection bypass request.
+            ///
+            /// - Remark: Generated from `#/components/schemas/secret-scanning-alert/push_protection_bypass_request_html_url`.
+            public var push_protection_bypass_request_html_url: Swift.String?
             /// The token status as of the latest validity check.
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-alert/validity`.
@@ -1264,6 +1296,9 @@ public enum Components {
             ///   - push_protection_bypassed: Whether push protection was bypassed for the detected secret.
             ///   - push_protection_bypassed_by:
             ///   - push_protection_bypassed_at: The time that push protection was bypassed in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
+            ///   - push_protection_bypass_request_reviewer:
+            ///   - push_protection_bypass_request_comment: An optional comment when requesting a push protection bypass.
+            ///   - push_protection_bypass_request_html_url: The URL to a push protection bypass request.
             ///   - validity: The token status as of the latest validity check.
             ///   - publicly_leaked: Whether the detected secret was publicly leaked.
             ///   - multi_repo: Whether the detected secret was found in multiple repositories under the same organization or enterprise.
@@ -1285,6 +1320,9 @@ public enum Components {
                 push_protection_bypassed: Swift.Bool? = nil,
                 push_protection_bypassed_by: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
                 push_protection_bypassed_at: Foundation.Date? = nil,
+                push_protection_bypass_request_reviewer: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
+                push_protection_bypass_request_comment: Swift.String? = nil,
+                push_protection_bypass_request_html_url: Swift.String? = nil,
                 validity: Components.Schemas.secret_hyphen_scanning_hyphen_alert.validityPayload? = nil,
                 publicly_leaked: Swift.Bool? = nil,
                 multi_repo: Swift.Bool? = nil
@@ -1306,6 +1344,9 @@ public enum Components {
                 self.push_protection_bypassed = push_protection_bypassed
                 self.push_protection_bypassed_by = push_protection_bypassed_by
                 self.push_protection_bypassed_at = push_protection_bypassed_at
+                self.push_protection_bypass_request_reviewer = push_protection_bypass_request_reviewer
+                self.push_protection_bypass_request_comment = push_protection_bypass_request_comment
+                self.push_protection_bypass_request_html_url = push_protection_bypass_request_html_url
                 self.validity = validity
                 self.publicly_leaked = publicly_leaked
                 self.multi_repo = multi_repo
@@ -1328,6 +1369,9 @@ public enum Components {
                 case push_protection_bypassed
                 case push_protection_bypassed_by
                 case push_protection_bypassed_at
+                case push_protection_bypass_request_reviewer
+                case push_protection_bypass_request_comment
+                case push_protection_bypass_request_html_url
                 case validity
                 case publicly_leaked
                 case multi_repo
