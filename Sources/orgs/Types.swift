@@ -6448,6 +6448,32 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/organization-role/description`.
             public var description: Swift.String?
+            /// The system role from which this role inherits permissions.
+            ///
+            /// - Remark: Generated from `#/components/schemas/organization-role/base_role`.
+            @frozen public enum base_rolePayload: String, Codable, Hashable, Sendable {
+                case read = "read"
+                case triage = "triage"
+                case write = "write"
+                case maintain = "maintain"
+                case admin = "admin"
+            }
+            /// The system role from which this role inherits permissions.
+            ///
+            /// - Remark: Generated from `#/components/schemas/organization-role/base_role`.
+            public var base_role: Components.Schemas.organization_hyphen_role.base_rolePayload?
+            /// Source answers the question, "where did this role come from?"
+            ///
+            /// - Remark: Generated from `#/components/schemas/organization-role/source`.
+            @frozen public enum sourcePayload: String, Codable, Hashable, Sendable {
+                case Organization = "Organization"
+                case Enterprise = "Enterprise"
+                case Predefined = "Predefined"
+            }
+            /// Source answers the question, "where did this role come from?"
+            ///
+            /// - Remark: Generated from `#/components/schemas/organization-role/source`.
+            public var source: Components.Schemas.organization_hyphen_role.sourcePayload?
             /// A list of permissions included in this role.
             ///
             /// - Remark: Generated from `#/components/schemas/organization-role/permissions`.
@@ -6468,6 +6494,8 @@ public enum Components {
             ///   - id: The unique identifier of the role.
             ///   - name: The name of the role.
             ///   - description: A short description about who this role is for or what permissions it grants.
+            ///   - base_role: The system role from which this role inherits permissions.
+            ///   - source: Source answers the question, "where did this role come from?"
             ///   - permissions: A list of permissions included in this role.
             ///   - organization:
             ///   - created_at: The date and time the role was created.
@@ -6476,6 +6504,8 @@ public enum Components {
                 id: Swift.Int64,
                 name: Swift.String,
                 description: Swift.String? = nil,
+                base_role: Components.Schemas.organization_hyphen_role.base_rolePayload? = nil,
+                source: Components.Schemas.organization_hyphen_role.sourcePayload? = nil,
                 permissions: [Swift.String],
                 organization: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
                 created_at: Foundation.Date,
@@ -6484,6 +6514,8 @@ public enum Components {
                 self.id = id
                 self.name = name
                 self.description = description
+                self.base_role = base_role
+                self.source = source
                 self.permissions = permissions
                 self.organization = organization
                 self.created_at = created_at
@@ -6493,6 +6525,8 @@ public enum Components {
                 case id
                 case name
                 case description
+                case base_role
+                case source
                 case permissions
                 case organization
                 case created_at
@@ -6503,6 +6537,18 @@ public enum Components {
         ///
         /// - Remark: Generated from `#/components/schemas/team-role-assignment`.
         public struct team_hyphen_role_hyphen_assignment: Codable, Hashable, Sendable {
+            /// Determines if the team has a direct, indirect, or mixed relationship to a role
+            ///
+            /// - Remark: Generated from `#/components/schemas/team-role-assignment/assignment`.
+            @frozen public enum assignmentPayload: String, Codable, Hashable, Sendable {
+                case direct = "direct"
+                case indirect = "indirect"
+                case mixed = "mixed"
+            }
+            /// Determines if the team has a direct, indirect, or mixed relationship to a role
+            ///
+            /// - Remark: Generated from `#/components/schemas/team-role-assignment/assignment`.
+            public var assignment: Components.Schemas.team_hyphen_role_hyphen_assignment.assignmentPayload?
             /// - Remark: Generated from `#/components/schemas/team-role-assignment/id`.
             public var id: Swift.Int
             /// - Remark: Generated from `#/components/schemas/team-role-assignment/node_id`.
@@ -6575,6 +6621,7 @@ public enum Components {
             /// Creates a new `team_hyphen_role_hyphen_assignment`.
             ///
             /// - Parameters:
+            ///   - assignment: Determines if the team has a direct, indirect, or mixed relationship to a role
             ///   - id:
             ///   - node_id:
             ///   - name:
@@ -6590,6 +6637,7 @@ public enum Components {
             ///   - repositories_url:
             ///   - parent:
             public init(
+                assignment: Components.Schemas.team_hyphen_role_hyphen_assignment.assignmentPayload? = nil,
                 id: Swift.Int,
                 node_id: Swift.String,
                 name: Swift.String,
@@ -6605,6 +6653,7 @@ public enum Components {
                 repositories_url: Swift.String,
                 parent: Components.Schemas.nullable_hyphen_team_hyphen_simple? = nil
             ) {
+                self.assignment = assignment
                 self.id = id
                 self.node_id = node_id
                 self.name = name
@@ -6621,6 +6670,7 @@ public enum Components {
                 self.parent = parent
             }
             public enum CodingKeys: String, CodingKey {
+                case assignment
                 case id
                 case node_id
                 case name
@@ -6748,6 +6798,22 @@ public enum Components {
         ///
         /// - Remark: Generated from `#/components/schemas/user-role-assignment`.
         public struct user_hyphen_role_hyphen_assignment: Codable, Hashable, Sendable {
+            /// Determines if the user has a direct, indirect, or mixed relationship to a role
+            ///
+            /// - Remark: Generated from `#/components/schemas/user-role-assignment/assignment`.
+            @frozen public enum assignmentPayload: String, Codable, Hashable, Sendable {
+                case direct = "direct"
+                case indirect = "indirect"
+                case mixed = "mixed"
+            }
+            /// Determines if the user has a direct, indirect, or mixed relationship to a role
+            ///
+            /// - Remark: Generated from `#/components/schemas/user-role-assignment/assignment`.
+            public var assignment: Components.Schemas.user_hyphen_role_hyphen_assignment.assignmentPayload?
+            /// Team the user has gotten the role through
+            ///
+            /// - Remark: Generated from `#/components/schemas/user-role-assignment/inherited_from`.
+            public var inherited_from: [Components.Schemas.team_hyphen_simple]?
             /// - Remark: Generated from `#/components/schemas/user-role-assignment/name`.
             public var name: Swift.String?
             /// - Remark: Generated from `#/components/schemas/user-role-assignment/email`.
@@ -6795,6 +6861,8 @@ public enum Components {
             /// Creates a new `user_hyphen_role_hyphen_assignment`.
             ///
             /// - Parameters:
+            ///   - assignment: Determines if the user has a direct, indirect, or mixed relationship to a role
+            ///   - inherited_from: Team the user has gotten the role through
             ///   - name:
             ///   - email:
             ///   - login:
@@ -6818,6 +6886,8 @@ public enum Components {
             ///   - starred_at:
             ///   - user_view_type:
             public init(
+                assignment: Components.Schemas.user_hyphen_role_hyphen_assignment.assignmentPayload? = nil,
+                inherited_from: [Components.Schemas.team_hyphen_simple]? = nil,
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
                 login: Swift.String,
@@ -6841,6 +6911,8 @@ public enum Components {
                 starred_at: Swift.String? = nil,
                 user_view_type: Swift.String? = nil
             ) {
+                self.assignment = assignment
+                self.inherited_from = inherited_from
                 self.name = name
                 self.email = email
                 self.login = login
@@ -6865,6 +6937,8 @@ public enum Components {
                 self.user_view_type = user_view_type
             }
             public enum CodingKeys: String, CodingKey {
+                case assignment
+                case inherited_from
                 case name
                 case email
                 case login
@@ -7293,6 +7367,17 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/custom-property/url`.
             public var url: Swift.String?
+            /// The source type of the property
+            ///
+            /// - Remark: Generated from `#/components/schemas/custom-property/source_type`.
+            @frozen public enum source_typePayload: String, Codable, Hashable, Sendable {
+                case organization = "organization"
+                case enterprise = "enterprise"
+            }
+            /// The source type of the property
+            ///
+            /// - Remark: Generated from `#/components/schemas/custom-property/source_type`.
+            public var source_type: Components.Schemas.custom_hyphen_property.source_typePayload?
             /// The type of the value for the property
             ///
             /// - Remark: Generated from `#/components/schemas/custom-property/value_type`.
@@ -7376,6 +7461,7 @@ public enum Components {
             /// - Parameters:
             ///   - property_name: The name of the property
             ///   - url: The URL that can be used to fetch, update, or delete info about this property via the API.
+            ///   - source_type: The source type of the property
             ///   - value_type: The type of the value for the property
             ///   - required: Whether the property is required.
             ///   - default_value: Default value of the property
@@ -7385,6 +7471,7 @@ public enum Components {
             public init(
                 property_name: Swift.String,
                 url: Swift.String? = nil,
+                source_type: Components.Schemas.custom_hyphen_property.source_typePayload? = nil,
                 value_type: Components.Schemas.custom_hyphen_property.value_typePayload,
                 required: Swift.Bool? = nil,
                 default_value: Components.Schemas.custom_hyphen_property.default_valuePayload? = nil,
@@ -7394,6 +7481,7 @@ public enum Components {
             ) {
                 self.property_name = property_name
                 self.url = url
+                self.source_type = source_type
                 self.value_type = value_type
                 self.required = required
                 self.default_value = default_value
@@ -7404,6 +7492,7 @@ public enum Components {
             public enum CodingKeys: String, CodingKey {
                 case property_name
                 case url
+                case source_type
                 case value_type
                 case required
                 case default_value
