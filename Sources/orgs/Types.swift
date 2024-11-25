@@ -7672,11 +7672,11 @@ public enum Components {
         ///
         /// - Remark: Generated from `#/components/parameters/api-insights-actor-id`.
         public typealias api_hyphen_insights_hyphen_actor_hyphen_id = Swift.Int
-        /// The minimum timestamp to query for stats
+        /// The minimum timestamp to query for stats. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
         ///
         /// - Remark: Generated from `#/components/parameters/api-insights-min-timestamp`.
         public typealias api_hyphen_insights_hyphen_min_hyphen_timestamp = Swift.String
-        /// The maximum timestamp to query for stats
+        /// The maximum timestamp to query for stats. Defaults to the time 30 days ago. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
         ///
         /// - Remark: Generated from `#/components/parameters/api-insights-max-timestamp`.
         public typealias api_hyphen_insights_hyphen_max_hyphen_timestamp = Swift.String
@@ -12394,14 +12394,14 @@ public enum Operations {
             public var path: Operations.api_hyphen_insights_sol_get_hyphen_route_hyphen_stats_hyphen_by_hyphen_actor.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/route-stats/{actor_type}/{actor_id}/GET/query`.
             public struct Query: Sendable, Hashable {
-                /// The minimum timestamp to query for stats
+                /// The minimum timestamp to query for stats. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/route-stats/{actor_type}/{actor_id}/GET/query/min_timestamp`.
                 public var min_timestamp: Components.Parameters.api_hyphen_insights_hyphen_min_hyphen_timestamp
-                /// The maximum timestamp to query for stats
+                /// The maximum timestamp to query for stats. Defaults to the time 30 days ago. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/route-stats/{actor_type}/{actor_id}/GET/query/max_timestamp`.
-                public var max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp
+                public var max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/route-stats/{actor_type}/{actor_id}/GET/query/page`.
@@ -12437,15 +12437,15 @@ public enum Operations {
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - min_timestamp: The minimum timestamp to query for stats
-                ///   - max_timestamp: The maximum timestamp to query for stats
+                ///   - min_timestamp: The minimum timestamp to query for stats. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
+                ///   - max_timestamp: The maximum timestamp to query for stats. Defaults to the time 30 days ago. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - direction: The direction to sort the results by.
                 ///   - sort: The property to sort the results by.
                 public init(
                     min_timestamp: Components.Parameters.api_hyphen_insights_hyphen_min_hyphen_timestamp,
-                    max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp,
+                    max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp? = nil,
                     page: Components.Parameters.page? = nil,
                     per_page: Components.Parameters.per_hyphen_page? = nil,
                     direction: Components.Parameters.direction? = nil,
@@ -12597,14 +12597,14 @@ public enum Operations {
             public var path: Operations.api_hyphen_insights_sol_get_hyphen_subject_hyphen_stats.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/subject-stats/GET/query`.
             public struct Query: Sendable, Hashable {
-                /// The minimum timestamp to query for stats
+                /// The minimum timestamp to query for stats. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/subject-stats/GET/query/min_timestamp`.
                 public var min_timestamp: Components.Parameters.api_hyphen_insights_hyphen_min_hyphen_timestamp
-                /// The maximum timestamp to query for stats
+                /// The maximum timestamp to query for stats. Defaults to the time 30 days ago. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/subject-stats/GET/query/max_timestamp`.
-                public var max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp
+                public var max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/subject-stats/GET/query/page`.
@@ -12639,15 +12639,15 @@ public enum Operations {
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - min_timestamp: The minimum timestamp to query for stats
-                ///   - max_timestamp: The maximum timestamp to query for stats
+                ///   - min_timestamp: The minimum timestamp to query for stats. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
+                ///   - max_timestamp: The maximum timestamp to query for stats. Defaults to the time 30 days ago. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - direction: The direction to sort the results by.
                 ///   - sort: The property to sort the results by.
                 public init(
                     min_timestamp: Components.Parameters.api_hyphen_insights_hyphen_min_hyphen_timestamp,
-                    max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp,
+                    max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp? = nil,
                     page: Components.Parameters.page? = nil,
                     per_page: Components.Parameters.per_hyphen_page? = nil,
                     direction: Components.Parameters.direction? = nil,
@@ -12799,22 +12799,22 @@ public enum Operations {
             public var path: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/summary-stats/GET/query`.
             public struct Query: Sendable, Hashable {
-                /// The minimum timestamp to query for stats
+                /// The minimum timestamp to query for stats. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/summary-stats/GET/query/min_timestamp`.
                 public var min_timestamp: Components.Parameters.api_hyphen_insights_hyphen_min_hyphen_timestamp
-                /// The maximum timestamp to query for stats
+                /// The maximum timestamp to query for stats. Defaults to the time 30 days ago. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/summary-stats/GET/query/max_timestamp`.
-                public var max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp
+                public var max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - min_timestamp: The minimum timestamp to query for stats
-                ///   - max_timestamp: The maximum timestamp to query for stats
+                ///   - min_timestamp: The minimum timestamp to query for stats. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
+                ///   - max_timestamp: The maximum timestamp to query for stats. Defaults to the time 30 days ago. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
                 public init(
                     min_timestamp: Components.Parameters.api_hyphen_insights_hyphen_min_hyphen_timestamp,
-                    max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp
+                    max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp? = nil
                 ) {
                     self.min_timestamp = min_timestamp
                     self.max_timestamp = max_timestamp
@@ -12967,22 +12967,22 @@ public enum Operations {
             public var path: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_user.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/summary-stats/users/{user_id}/GET/query`.
             public struct Query: Sendable, Hashable {
-                /// The minimum timestamp to query for stats
+                /// The minimum timestamp to query for stats. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/summary-stats/users/{user_id}/GET/query/min_timestamp`.
                 public var min_timestamp: Components.Parameters.api_hyphen_insights_hyphen_min_hyphen_timestamp
-                /// The maximum timestamp to query for stats
+                /// The maximum timestamp to query for stats. Defaults to the time 30 days ago. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/summary-stats/users/{user_id}/GET/query/max_timestamp`.
-                public var max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp
+                public var max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - min_timestamp: The minimum timestamp to query for stats
-                ///   - max_timestamp: The maximum timestamp to query for stats
+                ///   - min_timestamp: The minimum timestamp to query for stats. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
+                ///   - max_timestamp: The maximum timestamp to query for stats. Defaults to the time 30 days ago. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
                 public init(
                     min_timestamp: Components.Parameters.api_hyphen_insights_hyphen_min_hyphen_timestamp,
-                    max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp
+                    max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp? = nil
                 ) {
                     self.min_timestamp = min_timestamp
                     self.max_timestamp = max_timestamp
@@ -13150,22 +13150,22 @@ public enum Operations {
             public var path: Operations.api_hyphen_insights_sol_get_hyphen_summary_hyphen_stats_hyphen_by_hyphen_actor.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/summary-stats/{actor_type}/{actor_id}/GET/query`.
             public struct Query: Sendable, Hashable {
-                /// The minimum timestamp to query for stats
+                /// The minimum timestamp to query for stats. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/summary-stats/{actor_type}/{actor_id}/GET/query/min_timestamp`.
                 public var min_timestamp: Components.Parameters.api_hyphen_insights_hyphen_min_hyphen_timestamp
-                /// The maximum timestamp to query for stats
+                /// The maximum timestamp to query for stats. Defaults to the time 30 days ago. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/summary-stats/{actor_type}/{actor_id}/GET/query/max_timestamp`.
-                public var max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp
+                public var max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - min_timestamp: The minimum timestamp to query for stats
-                ///   - max_timestamp: The maximum timestamp to query for stats
+                ///   - min_timestamp: The minimum timestamp to query for stats. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
+                ///   - max_timestamp: The maximum timestamp to query for stats. Defaults to the time 30 days ago. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
                 public init(
                     min_timestamp: Components.Parameters.api_hyphen_insights_hyphen_min_hyphen_timestamp,
-                    max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp
+                    max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp? = nil
                 ) {
                     self.min_timestamp = min_timestamp
                     self.max_timestamp = max_timestamp
@@ -13309,14 +13309,14 @@ public enum Operations {
             public var path: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/time-stats/GET/query`.
             public struct Query: Sendable, Hashable {
-                /// The minimum timestamp to query for stats
+                /// The minimum timestamp to query for stats. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/time-stats/GET/query/min_timestamp`.
                 public var min_timestamp: Components.Parameters.api_hyphen_insights_hyphen_min_hyphen_timestamp
-                /// The maximum timestamp to query for stats
+                /// The maximum timestamp to query for stats. Defaults to the time 30 days ago. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/time-stats/GET/query/max_timestamp`.
-                public var max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp
+                public var max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp?
                 /// The increment of time used to breakdown the query results (5m, 10m, 1h, etc.)
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/time-stats/GET/query/timestamp_increment`.
@@ -13324,12 +13324,12 @@ public enum Operations {
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - min_timestamp: The minimum timestamp to query for stats
-                ///   - max_timestamp: The maximum timestamp to query for stats
+                ///   - min_timestamp: The minimum timestamp to query for stats. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
+                ///   - max_timestamp: The maximum timestamp to query for stats. Defaults to the time 30 days ago. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
                 ///   - timestamp_increment: The increment of time used to breakdown the query results (5m, 10m, 1h, etc.)
                 public init(
                     min_timestamp: Components.Parameters.api_hyphen_insights_hyphen_min_hyphen_timestamp,
-                    max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp,
+                    max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp? = nil,
                     timestamp_increment: Components.Parameters.api_hyphen_insights_hyphen_timestamp_hyphen_increment
                 ) {
                     self.min_timestamp = min_timestamp
@@ -13484,14 +13484,14 @@ public enum Operations {
             public var path: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_user.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/time-stats/users/{user_id}/GET/query`.
             public struct Query: Sendable, Hashable {
-                /// The minimum timestamp to query for stats
+                /// The minimum timestamp to query for stats. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/time-stats/users/{user_id}/GET/query/min_timestamp`.
                 public var min_timestamp: Components.Parameters.api_hyphen_insights_hyphen_min_hyphen_timestamp
-                /// The maximum timestamp to query for stats
+                /// The maximum timestamp to query for stats. Defaults to the time 30 days ago. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/time-stats/users/{user_id}/GET/query/max_timestamp`.
-                public var max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp
+                public var max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp?
                 /// The increment of time used to breakdown the query results (5m, 10m, 1h, etc.)
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/time-stats/users/{user_id}/GET/query/timestamp_increment`.
@@ -13499,12 +13499,12 @@ public enum Operations {
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - min_timestamp: The minimum timestamp to query for stats
-                ///   - max_timestamp: The maximum timestamp to query for stats
+                ///   - min_timestamp: The minimum timestamp to query for stats. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
+                ///   - max_timestamp: The maximum timestamp to query for stats. Defaults to the time 30 days ago. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
                 ///   - timestamp_increment: The increment of time used to breakdown the query results (5m, 10m, 1h, etc.)
                 public init(
                     min_timestamp: Components.Parameters.api_hyphen_insights_hyphen_min_hyphen_timestamp,
-                    max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp,
+                    max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp? = nil,
                     timestamp_increment: Components.Parameters.api_hyphen_insights_hyphen_timestamp_hyphen_increment
                 ) {
                     self.min_timestamp = min_timestamp
@@ -13674,14 +13674,14 @@ public enum Operations {
             public var path: Operations.api_hyphen_insights_sol_get_hyphen_time_hyphen_stats_hyphen_by_hyphen_actor.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/time-stats/{actor_type}/{actor_id}/GET/query`.
             public struct Query: Sendable, Hashable {
-                /// The minimum timestamp to query for stats
+                /// The minimum timestamp to query for stats. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/time-stats/{actor_type}/{actor_id}/GET/query/min_timestamp`.
                 public var min_timestamp: Components.Parameters.api_hyphen_insights_hyphen_min_hyphen_timestamp
-                /// The maximum timestamp to query for stats
+                /// The maximum timestamp to query for stats. Defaults to the time 30 days ago. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/time-stats/{actor_type}/{actor_id}/GET/query/max_timestamp`.
-                public var max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp
+                public var max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp?
                 /// The increment of time used to breakdown the query results (5m, 10m, 1h, etc.)
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/time-stats/{actor_type}/{actor_id}/GET/query/timestamp_increment`.
@@ -13689,12 +13689,12 @@ public enum Operations {
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - min_timestamp: The minimum timestamp to query for stats
-                ///   - max_timestamp: The maximum timestamp to query for stats
+                ///   - min_timestamp: The minimum timestamp to query for stats. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
+                ///   - max_timestamp: The maximum timestamp to query for stats. Defaults to the time 30 days ago. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
                 ///   - timestamp_increment: The increment of time used to breakdown the query results (5m, 10m, 1h, etc.)
                 public init(
                     min_timestamp: Components.Parameters.api_hyphen_insights_hyphen_min_hyphen_timestamp,
-                    max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp,
+                    max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp? = nil,
                     timestamp_increment: Components.Parameters.api_hyphen_insights_hyphen_timestamp_hyphen_increment
                 ) {
                     self.min_timestamp = min_timestamp
@@ -13849,14 +13849,14 @@ public enum Operations {
             public var path: Operations.api_hyphen_insights_sol_get_hyphen_user_hyphen_stats.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/user-stats/{user_id}/GET/query`.
             public struct Query: Sendable, Hashable {
-                /// The minimum timestamp to query for stats
+                /// The minimum timestamp to query for stats. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/user-stats/{user_id}/GET/query/min_timestamp`.
                 public var min_timestamp: Components.Parameters.api_hyphen_insights_hyphen_min_hyphen_timestamp
-                /// The maximum timestamp to query for stats
+                /// The maximum timestamp to query for stats. Defaults to the time 30 days ago. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/user-stats/{user_id}/GET/query/max_timestamp`.
-                public var max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp
+                public var max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/user-stats/{user_id}/GET/query/page`.
@@ -13891,15 +13891,15 @@ public enum Operations {
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - min_timestamp: The minimum timestamp to query for stats
-                ///   - max_timestamp: The maximum timestamp to query for stats
+                ///   - min_timestamp: The minimum timestamp to query for stats. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
+                ///   - max_timestamp: The maximum timestamp to query for stats. Defaults to the time 30 days ago. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - direction: The direction to sort the results by.
                 ///   - sort: The property to sort the results by.
                 public init(
                     min_timestamp: Components.Parameters.api_hyphen_insights_hyphen_min_hyphen_timestamp,
-                    max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp,
+                    max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp? = nil,
                     page: Components.Parameters.page? = nil,
                     per_page: Components.Parameters.per_hyphen_page? = nil,
                     direction: Components.Parameters.direction? = nil,
