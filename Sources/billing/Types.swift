@@ -11,6 +11,15 @@ import struct Foundation.Date
 #endif
 /// A type that performs HTTP operations defined by the OpenAPI document.
 public protocol APIProtocol: Sendable {
+    /// Get billing usage report for an organization
+    ///
+    /// Gets a report of the total usage for an organization. To use this endpoint, you must be an administrator of an organization within an enterprise or an organization account.
+    ///
+    /// **Note:** This endpoint is only available to organizations with access to the enhanced billing platform. For more information, see "[About the enhanced billing platform](https://docs.github.com/billing/using-the-new-billing-platform)."
+    ///
+    /// - Remark: HTTP `GET /organizations/{org}/settings/billing/usage`.
+    /// - Remark: Generated from `#/paths//organizations/{org}/settings/billing/usage/get(billing/get-github-billing-usage-report-org)`.
+    func billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org(_ input: Operations.billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org.Input) async throws -> Operations.billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org.Output
     /// Get GitHub Actions billing for an organization
     ///
     /// Gets the summary of the free and paid GitHub Actions minutes used.
@@ -81,6 +90,25 @@ public protocol APIProtocol: Sendable {
 
 /// Convenience overloads for operation inputs.
 extension APIProtocol {
+    /// Get billing usage report for an organization
+    ///
+    /// Gets a report of the total usage for an organization. To use this endpoint, you must be an administrator of an organization within an enterprise or an organization account.
+    ///
+    /// **Note:** This endpoint is only available to organizations with access to the enhanced billing platform. For more information, see "[About the enhanced billing platform](https://docs.github.com/billing/using-the-new-billing-platform)."
+    ///
+    /// - Remark: HTTP `GET /organizations/{org}/settings/billing/usage`.
+    /// - Remark: Generated from `#/paths//organizations/{org}/settings/billing/usage/get(billing/get-github-billing-usage-report-org)`.
+    public func billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org(
+        path: Operations.billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org.Input.Path,
+        query: Operations.billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org.Input.Query = .init(),
+        headers: Operations.billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org.Input.Headers = .init()
+    ) async throws -> Operations.billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org.Output {
+        try await billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org(Operations.billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org.Input(
+            path: path,
+            query: query,
+            headers: headers
+        ))
+    }
     /// Get GitHub Actions billing for an organization
     ///
     /// Gets the summary of the free and paid GitHub Actions minutes used.
@@ -211,6 +239,208 @@ public enum Servers {
 public enum Components {
     /// Types generated from the `#/components/schemas` section of the OpenAPI document.
     public enum Schemas {
+        /// Basic Error
+        ///
+        /// - Remark: Generated from `#/components/schemas/basic-error`.
+        public struct basic_hyphen_error: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/basic-error/message`.
+            public var message: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/basic-error/documentation_url`.
+            public var documentation_url: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/basic-error/url`.
+            public var url: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/basic-error/status`.
+            public var status: Swift.String?
+            /// Creates a new `basic_hyphen_error`.
+            ///
+            /// - Parameters:
+            ///   - message:
+            ///   - documentation_url:
+            ///   - url:
+            ///   - status:
+            public init(
+                message: Swift.String? = nil,
+                documentation_url: Swift.String? = nil,
+                url: Swift.String? = nil,
+                status: Swift.String? = nil
+            ) {
+                self.message = message
+                self.documentation_url = documentation_url
+                self.url = url
+                self.status = status
+            }
+            public enum CodingKeys: String, CodingKey {
+                case message
+                case documentation_url
+                case url
+                case status
+            }
+        }
+        /// Scim Error
+        ///
+        /// - Remark: Generated from `#/components/schemas/scim-error`.
+        public struct scim_hyphen_error: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/scim-error/message`.
+            public var message: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/scim-error/documentation_url`.
+            public var documentation_url: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/scim-error/detail`.
+            public var detail: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/scim-error/status`.
+            public var status: Swift.Int?
+            /// - Remark: Generated from `#/components/schemas/scim-error/scimType`.
+            public var scimType: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/scim-error/schemas`.
+            public var schemas: [Swift.String]?
+            /// Creates a new `scim_hyphen_error`.
+            ///
+            /// - Parameters:
+            ///   - message:
+            ///   - documentation_url:
+            ///   - detail:
+            ///   - status:
+            ///   - scimType:
+            ///   - schemas:
+            public init(
+                message: Swift.String? = nil,
+                documentation_url: Swift.String? = nil,
+                detail: Swift.String? = nil,
+                status: Swift.Int? = nil,
+                scimType: Swift.String? = nil,
+                schemas: [Swift.String]? = nil
+            ) {
+                self.message = message
+                self.documentation_url = documentation_url
+                self.detail = detail
+                self.status = status
+                self.scimType = scimType
+                self.schemas = schemas
+            }
+            public enum CodingKeys: String, CodingKey {
+                case message
+                case documentation_url
+                case detail
+                case status
+                case scimType
+                case schemas
+            }
+        }
+        /// - Remark: Generated from `#/components/schemas/billing-usage-report`.
+        public struct billing_hyphen_usage_hyphen_report: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/billing-usage-report/usageItemsPayload`.
+            public struct usageItemsPayloadPayload: Codable, Hashable, Sendable {
+                /// Date of the usage line item.
+                ///
+                /// - Remark: Generated from `#/components/schemas/billing-usage-report/usageItemsPayload/date`.
+                public var date: Swift.String
+                /// Product name.
+                ///
+                /// - Remark: Generated from `#/components/schemas/billing-usage-report/usageItemsPayload/product`.
+                public var product: Swift.String
+                /// SKU name.
+                ///
+                /// - Remark: Generated from `#/components/schemas/billing-usage-report/usageItemsPayload/sku`.
+                public var sku: Swift.String
+                /// Quantity of the usage line item.
+                ///
+                /// - Remark: Generated from `#/components/schemas/billing-usage-report/usageItemsPayload/quantity`.
+                public var quantity: Swift.Int
+                /// Unit type of the usage line item.
+                ///
+                /// - Remark: Generated from `#/components/schemas/billing-usage-report/usageItemsPayload/unitType`.
+                public var unitType: Swift.String
+                /// Price per unit of the usage line item.
+                ///
+                /// - Remark: Generated from `#/components/schemas/billing-usage-report/usageItemsPayload/pricePerUnit`.
+                public var pricePerUnit: Swift.Double
+                /// Gross amount of the usage line item.
+                ///
+                /// - Remark: Generated from `#/components/schemas/billing-usage-report/usageItemsPayload/grossAmount`.
+                public var grossAmount: Swift.Double
+                /// Discount amount of the usage line item.
+                ///
+                /// - Remark: Generated from `#/components/schemas/billing-usage-report/usageItemsPayload/discountAmount`.
+                public var discountAmount: Swift.Double
+                /// Net amount of the usage line item.
+                ///
+                /// - Remark: Generated from `#/components/schemas/billing-usage-report/usageItemsPayload/netAmount`.
+                public var netAmount: Swift.Double
+                /// Name of the organization.
+                ///
+                /// - Remark: Generated from `#/components/schemas/billing-usage-report/usageItemsPayload/organizationName`.
+                public var organizationName: Swift.String
+                /// Name of the repository.
+                ///
+                /// - Remark: Generated from `#/components/schemas/billing-usage-report/usageItemsPayload/repositoryName`.
+                public var repositoryName: Swift.String?
+                /// Creates a new `usageItemsPayloadPayload`.
+                ///
+                /// - Parameters:
+                ///   - date: Date of the usage line item.
+                ///   - product: Product name.
+                ///   - sku: SKU name.
+                ///   - quantity: Quantity of the usage line item.
+                ///   - unitType: Unit type of the usage line item.
+                ///   - pricePerUnit: Price per unit of the usage line item.
+                ///   - grossAmount: Gross amount of the usage line item.
+                ///   - discountAmount: Discount amount of the usage line item.
+                ///   - netAmount: Net amount of the usage line item.
+                ///   - organizationName: Name of the organization.
+                ///   - repositoryName: Name of the repository.
+                public init(
+                    date: Swift.String,
+                    product: Swift.String,
+                    sku: Swift.String,
+                    quantity: Swift.Int,
+                    unitType: Swift.String,
+                    pricePerUnit: Swift.Double,
+                    grossAmount: Swift.Double,
+                    discountAmount: Swift.Double,
+                    netAmount: Swift.Double,
+                    organizationName: Swift.String,
+                    repositoryName: Swift.String? = nil
+                ) {
+                    self.date = date
+                    self.product = product
+                    self.sku = sku
+                    self.quantity = quantity
+                    self.unitType = unitType
+                    self.pricePerUnit = pricePerUnit
+                    self.grossAmount = grossAmount
+                    self.discountAmount = discountAmount
+                    self.netAmount = netAmount
+                    self.organizationName = organizationName
+                    self.repositoryName = repositoryName
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case date
+                    case product
+                    case sku
+                    case quantity
+                    case unitType
+                    case pricePerUnit
+                    case grossAmount
+                    case discountAmount
+                    case netAmount
+                    case organizationName
+                    case repositoryName
+                }
+            }
+            /// - Remark: Generated from `#/components/schemas/billing-usage-report/usageItems`.
+            public typealias usageItemsPayload = [Components.Schemas.billing_hyphen_usage_hyphen_report.usageItemsPayloadPayload]
+            /// - Remark: Generated from `#/components/schemas/billing-usage-report/usageItems`.
+            public var usageItems: Components.Schemas.billing_hyphen_usage_hyphen_report.usageItemsPayload?
+            /// Creates a new `billing_hyphen_usage_hyphen_report`.
+            ///
+            /// - Parameters:
+            ///   - usageItems:
+            public init(usageItems: Components.Schemas.billing_hyphen_usage_hyphen_report.usageItemsPayload? = nil) {
+                self.usageItems = usageItems
+            }
+            public enum CodingKeys: String, CodingKey {
+                case usageItems
+            }
+        }
         /// - Remark: Generated from `#/components/schemas/actions-billing-usage`.
         public struct actions_hyphen_billing_hyphen_usage: Codable, Hashable, Sendable {
             /// The sum of the free and paid GitHub Actions minutes used.
@@ -460,6 +690,22 @@ public enum Components {
         ///
         /// - Remark: Generated from `#/components/parameters/org`.
         public typealias org = Swift.String
+        /// If specified, only return results for a single year. The value of `year` is an integer with four digits representing a year. For example, `2024`. Default value is the current year.
+        ///
+        /// - Remark: Generated from `#/components/parameters/billing-usage-report-year`.
+        public typealias billing_hyphen_usage_hyphen_report_hyphen_year = Swift.Int
+        /// If specified, only return results for a single month. The value of `month` is an integer between `1` and `12`.
+        ///
+        /// - Remark: Generated from `#/components/parameters/billing-usage-report-month`.
+        public typealias billing_hyphen_usage_hyphen_report_hyphen_month = Swift.Int
+        /// If specified, only return results for a single day. The value of `day` is an integer between `1` and `31`.
+        ///
+        /// - Remark: Generated from `#/components/parameters/billing-usage-report-day`.
+        public typealias billing_hyphen_usage_hyphen_report_hyphen_day = Swift.Int
+        /// If specified, only return results for a single hour. The value of `hour` is an integer between `0` and `23`.
+        ///
+        /// - Remark: Generated from `#/components/parameters/billing-usage-report-hour`.
+        public typealias billing_hyphen_usage_hyphen_report_hyphen_hour = Swift.Int
         /// The handle for the GitHub user account.
         ///
         /// - Remark: Generated from `#/components/parameters/username`.
@@ -468,13 +714,452 @@ public enum Components {
     /// Types generated from the `#/components/requestBodies` section of the OpenAPI document.
     public enum RequestBodies {}
     /// Types generated from the `#/components/responses` section of the OpenAPI document.
-    public enum Responses {}
+    public enum Responses {
+        public struct bad_request: Sendable, Hashable {
+            /// - Remark: Generated from `#/components/responses/bad_request/content`.
+            @frozen public enum Body: Sendable, Hashable {
+                /// - Remark: Generated from `#/components/responses/bad_request/content/application\/json`.
+                case json(Components.Schemas.basic_hyphen_error)
+                /// The associated value of the enum case if `self` is `.json`.
+                ///
+                /// - Throws: An error if `self` is not `.json`.
+                /// - SeeAlso: `.json`.
+                public var json: Components.Schemas.basic_hyphen_error {
+                    get throws {
+                        switch self {
+                        case let .json(body):
+                            return body
+                        default:
+                            try throwUnexpectedResponseBody(
+                                expectedContent: "application/json",
+                                body: self
+                            )
+                        }
+                    }
+                }
+                /// - Remark: Generated from `#/components/responses/bad_request/content/application\/scim+json`.
+                case application_scim_plus_json(Components.Schemas.scim_hyphen_error)
+                /// The associated value of the enum case if `self` is `.application_scim_plus_json`.
+                ///
+                /// - Throws: An error if `self` is not `.application_scim_plus_json`.
+                /// - SeeAlso: `.application_scim_plus_json`.
+                public var application_scim_plus_json: Components.Schemas.scim_hyphen_error {
+                    get throws {
+                        switch self {
+                        case let .application_scim_plus_json(body):
+                            return body
+                        default:
+                            try throwUnexpectedResponseBody(
+                                expectedContent: "application/scim+json",
+                                body: self
+                            )
+                        }
+                    }
+                }
+            }
+            /// Received HTTP response body
+            public var body: Components.Responses.bad_request.Body
+            /// Creates a new `bad_request`.
+            ///
+            /// - Parameters:
+            ///   - body: Received HTTP response body
+            public init(body: Components.Responses.bad_request.Body) {
+                self.body = body
+            }
+        }
+        public struct forbidden: Sendable, Hashable {
+            /// - Remark: Generated from `#/components/responses/forbidden/content`.
+            @frozen public enum Body: Sendable, Hashable {
+                /// - Remark: Generated from `#/components/responses/forbidden/content/application\/json`.
+                case json(Components.Schemas.basic_hyphen_error)
+                /// The associated value of the enum case if `self` is `.json`.
+                ///
+                /// - Throws: An error if `self` is not `.json`.
+                /// - SeeAlso: `.json`.
+                public var json: Components.Schemas.basic_hyphen_error {
+                    get throws {
+                        switch self {
+                        case let .json(body):
+                            return body
+                        }
+                    }
+                }
+            }
+            /// Received HTTP response body
+            public var body: Components.Responses.forbidden.Body
+            /// Creates a new `forbidden`.
+            ///
+            /// - Parameters:
+            ///   - body: Received HTTP response body
+            public init(body: Components.Responses.forbidden.Body) {
+                self.body = body
+            }
+        }
+        public struct internal_error: Sendable, Hashable {
+            /// - Remark: Generated from `#/components/responses/internal_error/content`.
+            @frozen public enum Body: Sendable, Hashable {
+                /// - Remark: Generated from `#/components/responses/internal_error/content/application\/json`.
+                case json(Components.Schemas.basic_hyphen_error)
+                /// The associated value of the enum case if `self` is `.json`.
+                ///
+                /// - Throws: An error if `self` is not `.json`.
+                /// - SeeAlso: `.json`.
+                public var json: Components.Schemas.basic_hyphen_error {
+                    get throws {
+                        switch self {
+                        case let .json(body):
+                            return body
+                        }
+                    }
+                }
+            }
+            /// Received HTTP response body
+            public var body: Components.Responses.internal_error.Body
+            /// Creates a new `internal_error`.
+            ///
+            /// - Parameters:
+            ///   - body: Received HTTP response body
+            public init(body: Components.Responses.internal_error.Body) {
+                self.body = body
+            }
+        }
+        public struct service_unavailable: Sendable, Hashable {
+            /// - Remark: Generated from `#/components/responses/service_unavailable/content`.
+            @frozen public enum Body: Sendable, Hashable {
+                /// - Remark: Generated from `#/components/responses/service_unavailable/content/json`.
+                public struct jsonPayload: Codable, Hashable, Sendable {
+                    /// - Remark: Generated from `#/components/responses/service_unavailable/content/json/code`.
+                    public var code: Swift.String?
+                    /// - Remark: Generated from `#/components/responses/service_unavailable/content/json/message`.
+                    public var message: Swift.String?
+                    /// - Remark: Generated from `#/components/responses/service_unavailable/content/json/documentation_url`.
+                    public var documentation_url: Swift.String?
+                    /// Creates a new `jsonPayload`.
+                    ///
+                    /// - Parameters:
+                    ///   - code:
+                    ///   - message:
+                    ///   - documentation_url:
+                    public init(
+                        code: Swift.String? = nil,
+                        message: Swift.String? = nil,
+                        documentation_url: Swift.String? = nil
+                    ) {
+                        self.code = code
+                        self.message = message
+                        self.documentation_url = documentation_url
+                    }
+                    public enum CodingKeys: String, CodingKey {
+                        case code
+                        case message
+                        case documentation_url
+                    }
+                }
+                /// - Remark: Generated from `#/components/responses/service_unavailable/content/application\/json`.
+                case json(Components.Responses.service_unavailable.Body.jsonPayload)
+                /// The associated value of the enum case if `self` is `.json`.
+                ///
+                /// - Throws: An error if `self` is not `.json`.
+                /// - SeeAlso: `.json`.
+                public var json: Components.Responses.service_unavailable.Body.jsonPayload {
+                    get throws {
+                        switch self {
+                        case let .json(body):
+                            return body
+                        }
+                    }
+                }
+            }
+            /// Received HTTP response body
+            public var body: Components.Responses.service_unavailable.Body
+            /// Creates a new `service_unavailable`.
+            ///
+            /// - Parameters:
+            ///   - body: Received HTTP response body
+            public init(body: Components.Responses.service_unavailable.Body) {
+                self.body = body
+            }
+        }
+        public struct billing_usage_report_org: Sendable, Hashable {
+            /// - Remark: Generated from `#/components/responses/billing_usage_report_org/content`.
+            @frozen public enum Body: Sendable, Hashable {
+                /// - Remark: Generated from `#/components/responses/billing_usage_report_org/content/application\/json`.
+                case json(Components.Schemas.billing_hyphen_usage_hyphen_report)
+                /// The associated value of the enum case if `self` is `.json`.
+                ///
+                /// - Throws: An error if `self` is not `.json`.
+                /// - SeeAlso: `.json`.
+                public var json: Components.Schemas.billing_hyphen_usage_hyphen_report {
+                    get throws {
+                        switch self {
+                        case let .json(body):
+                            return body
+                        }
+                    }
+                }
+            }
+            /// Received HTTP response body
+            public var body: Components.Responses.billing_usage_report_org.Body
+            /// Creates a new `billing_usage_report_org`.
+            ///
+            /// - Parameters:
+            ///   - body: Received HTTP response body
+            public init(body: Components.Responses.billing_usage_report_org.Body) {
+                self.body = body
+            }
+        }
+    }
     /// Types generated from the `#/components/headers` section of the OpenAPI document.
     public enum Headers {}
 }
 
 /// API operations, with input and output types, generated from `#/paths` in the OpenAPI document.
 public enum Operations {
+    /// Get billing usage report for an organization
+    ///
+    /// Gets a report of the total usage for an organization. To use this endpoint, you must be an administrator of an organization within an enterprise or an organization account.
+    ///
+    /// **Note:** This endpoint is only available to organizations with access to the enhanced billing platform. For more information, see "[About the enhanced billing platform](https://docs.github.com/billing/using-the-new-billing-platform)."
+    ///
+    /// - Remark: HTTP `GET /organizations/{org}/settings/billing/usage`.
+    /// - Remark: Generated from `#/paths//organizations/{org}/settings/billing/usage/get(billing/get-github-billing-usage-report-org)`.
+    public enum billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org {
+        public static let id: Swift.String = "billing/get-github-billing-usage-report-org"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/organizations/{org}/settings/billing/usage/GET/path`.
+            public struct Path: Sendable, Hashable {
+                /// The organization name. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/organizations/{org}/settings/billing/usage/GET/path/org`.
+                public var org: Components.Parameters.org
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - org: The organization name. The name is not case sensitive.
+                public init(org: Components.Parameters.org) {
+                    self.org = org
+                }
+            }
+            public var path: Operations.billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org.Input.Path
+            /// - Remark: Generated from `#/paths/organizations/{org}/settings/billing/usage/GET/query`.
+            public struct Query: Sendable, Hashable {
+                /// If specified, only return results for a single year. The value of `year` is an integer with four digits representing a year. For example, `2024`. Default value is the current year.
+                ///
+                /// - Remark: Generated from `#/paths/organizations/{org}/settings/billing/usage/GET/query/year`.
+                public var year: Components.Parameters.billing_hyphen_usage_hyphen_report_hyphen_year?
+                /// If specified, only return results for a single month. The value of `month` is an integer between `1` and `12`.
+                ///
+                /// - Remark: Generated from `#/paths/organizations/{org}/settings/billing/usage/GET/query/month`.
+                public var month: Components.Parameters.billing_hyphen_usage_hyphen_report_hyphen_month?
+                /// If specified, only return results for a single day. The value of `day` is an integer between `1` and `31`.
+                ///
+                /// - Remark: Generated from `#/paths/organizations/{org}/settings/billing/usage/GET/query/day`.
+                public var day: Components.Parameters.billing_hyphen_usage_hyphen_report_hyphen_day?
+                /// If specified, only return results for a single hour. The value of `hour` is an integer between `0` and `23`.
+                ///
+                /// - Remark: Generated from `#/paths/organizations/{org}/settings/billing/usage/GET/query/hour`.
+                public var hour: Components.Parameters.billing_hyphen_usage_hyphen_report_hyphen_hour?
+                /// Creates a new `Query`.
+                ///
+                /// - Parameters:
+                ///   - year: If specified, only return results for a single year. The value of `year` is an integer with four digits representing a year. For example, `2024`. Default value is the current year.
+                ///   - month: If specified, only return results for a single month. The value of `month` is an integer between `1` and `12`.
+                ///   - day: If specified, only return results for a single day. The value of `day` is an integer between `1` and `31`.
+                ///   - hour: If specified, only return results for a single hour. The value of `hour` is an integer between `0` and `23`.
+                public init(
+                    year: Components.Parameters.billing_hyphen_usage_hyphen_report_hyphen_year? = nil,
+                    month: Components.Parameters.billing_hyphen_usage_hyphen_report_hyphen_month? = nil,
+                    day: Components.Parameters.billing_hyphen_usage_hyphen_report_hyphen_day? = nil,
+                    hour: Components.Parameters.billing_hyphen_usage_hyphen_report_hyphen_hour? = nil
+                ) {
+                    self.year = year
+                    self.month = month
+                    self.day = day
+                    self.hour = hour
+                }
+            }
+            public var query: Operations.billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org.Input.Query
+            /// - Remark: Generated from `#/paths/organizations/{org}/settings/billing/usage/GET/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org.Input.Headers
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - query:
+            ///   - headers:
+            public init(
+                path: Operations.billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org.Input.Path,
+                query: Operations.billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org.Input.Query = .init(),
+                headers: Operations.billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org.Input.Headers = .init()
+            ) {
+                self.path = path
+                self.query = query
+                self.headers = headers
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            /// Billing usage report response for an organization
+            ///
+            /// - Remark: Generated from `#/paths//organizations/{org}/settings/billing/usage/get(billing/get-github-billing-usage-report-org)/responses/200`.
+            ///
+            /// HTTP response code: `200 ok`.
+            case ok(Components.Responses.billing_usage_report_org)
+            /// The associated value of the enum case if `self` is `.ok`.
+            ///
+            /// - Throws: An error if `self` is not `.ok`.
+            /// - SeeAlso: `.ok`.
+            public var ok: Components.Responses.billing_usage_report_org {
+                get throws {
+                    switch self {
+                    case let .ok(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "ok",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Bad Request
+            ///
+            /// - Remark: Generated from `#/paths//organizations/{org}/settings/billing/usage/get(billing/get-github-billing-usage-report-org)/responses/400`.
+            ///
+            /// HTTP response code: `400 badRequest`.
+            case badRequest(Components.Responses.bad_request)
+            /// The associated value of the enum case if `self` is `.badRequest`.
+            ///
+            /// - Throws: An error if `self` is not `.badRequest`.
+            /// - SeeAlso: `.badRequest`.
+            public var badRequest: Components.Responses.bad_request {
+                get throws {
+                    switch self {
+                    case let .badRequest(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "badRequest",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Forbidden
+            ///
+            /// - Remark: Generated from `#/paths//organizations/{org}/settings/billing/usage/get(billing/get-github-billing-usage-report-org)/responses/403`.
+            ///
+            /// HTTP response code: `403 forbidden`.
+            case forbidden(Components.Responses.forbidden)
+            /// The associated value of the enum case if `self` is `.forbidden`.
+            ///
+            /// - Throws: An error if `self` is not `.forbidden`.
+            /// - SeeAlso: `.forbidden`.
+            public var forbidden: Components.Responses.forbidden {
+                get throws {
+                    switch self {
+                    case let .forbidden(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "forbidden",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Internal Error
+            ///
+            /// - Remark: Generated from `#/paths//organizations/{org}/settings/billing/usage/get(billing/get-github-billing-usage-report-org)/responses/500`.
+            ///
+            /// HTTP response code: `500 internalServerError`.
+            case internalServerError(Components.Responses.internal_error)
+            /// The associated value of the enum case if `self` is `.internalServerError`.
+            ///
+            /// - Throws: An error if `self` is not `.internalServerError`.
+            /// - SeeAlso: `.internalServerError`.
+            public var internalServerError: Components.Responses.internal_error {
+                get throws {
+                    switch self {
+                    case let .internalServerError(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "internalServerError",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Service unavailable
+            ///
+            /// - Remark: Generated from `#/paths//organizations/{org}/settings/billing/usage/get(billing/get-github-billing-usage-report-org)/responses/503`.
+            ///
+            /// HTTP response code: `503 serviceUnavailable`.
+            case serviceUnavailable(Components.Responses.service_unavailable)
+            /// The associated value of the enum case if `self` is `.serviceUnavailable`.
+            ///
+            /// - Throws: An error if `self` is not `.serviceUnavailable`.
+            /// - SeeAlso: `.serviceUnavailable`.
+            public var serviceUnavailable: Components.Responses.service_unavailable {
+                get throws {
+                    switch self {
+                    case let .serviceUnavailable(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "serviceUnavailable",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case application_scim_plus_json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                case "application/scim+json":
+                    self = .application_scim_plus_json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                case .application_scim_plus_json:
+                    return "application/scim+json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json,
+                    .application_scim_plus_json
+                ]
+            }
+        }
+    }
     /// Get GitHub Actions billing for an organization
     ///
     /// Gets the summary of the free and paid GitHub Actions minutes used.
