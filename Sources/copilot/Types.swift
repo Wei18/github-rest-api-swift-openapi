@@ -1637,7 +1637,7 @@ public enum Components {
                 public var total_engaged_users: Swift.Int?
                 /// - Remark: Generated from `#/components/schemas/copilot-ide-code-completions/editorsPayload/modelsPayload`.
                 public struct modelsPayloadPayload: Codable, Hashable, Sendable {
-                    /// Name of the language used for Copilot code completion suggestions, for the given editor.
+                    /// Name of the model used for Copilot code completion suggestions. If the default model is used will appear as 'default'.
                     ///
                     /// - Remark: Generated from `#/components/schemas/copilot-ide-code-completions/editorsPayload/modelsPayload/name`.
                     public var name: Swift.String?
@@ -1725,7 +1725,7 @@ public enum Components {
                     /// Creates a new `modelsPayloadPayload`.
                     ///
                     /// - Parameters:
-                    ///   - name: Name of the language used for Copilot code completion suggestions, for the given editor.
+                    ///   - name: Name of the model used for Copilot code completion suggestions. If the default model is used will appear as 'default'.
                     ///   - is_custom_model: Indicates whether a model is custom or default.
                     ///   - custom_model_training_date: The training date for the custom model.
                     ///   - total_engaged_users: Number of users who accepted at least one Copilot code completion suggestion for the given editor, for the given language and model. Includes both full and partial acceptances.
@@ -1909,7 +1909,7 @@ public enum Components {
                 public var total_engaged_users: Swift.Int?
                 /// - Remark: Generated from `#/components/schemas/copilot-ide-chat/editorsPayload/modelsPayload`.
                 public struct modelsPayloadPayload: Codable, Hashable, Sendable {
-                    /// Name of the language used for Copilot code completion suggestions, for the given editor.
+                    /// Name of the model used for Copilot code completion suggestions. If the default model is used will appear as 'default'.
                     ///
                     /// - Remark: Generated from `#/components/schemas/copilot-ide-chat/editorsPayload/modelsPayload/name`.
                     public var name: Swift.String?
@@ -1940,7 +1940,7 @@ public enum Components {
                     /// Creates a new `modelsPayloadPayload`.
                     ///
                     /// - Parameters:
-                    ///   - name: Name of the language used for Copilot code completion suggestions, for the given editor.
+                    ///   - name: Name of the model used for Copilot code completion suggestions. If the default model is used will appear as 'default'.
                     ///   - is_custom_model: Indicates whether a model is custom or default.
                     ///   - custom_model_training_date: The training date for the custom model.
                     ///   - total_engaged_users: The number of users who prompted Copilot Chat in the given editor and model.
@@ -2066,7 +2066,7 @@ public enum Components {
             public var total_engaged_users: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/copilot-dotcom-chat/modelsPayload`.
             public struct modelsPayloadPayload: Codable, Hashable, Sendable {
-                /// Name of the language used for Copilot code completion suggestions, for the given editor.
+                /// Name of the model used for Copilot code completion suggestions. If the default model is used will appear as 'default'.
                 ///
                 /// - Remark: Generated from `#/components/schemas/copilot-dotcom-chat/modelsPayload/name`.
                 public var name: Swift.String?
@@ -2089,7 +2089,7 @@ public enum Components {
                 /// Creates a new `modelsPayloadPayload`.
                 ///
                 /// - Parameters:
-                ///   - name: Name of the language used for Copilot code completion suggestions, for the given editor.
+                ///   - name: Name of the model used for Copilot code completion suggestions. If the default model is used will appear as 'default'.
                 ///   - is_custom_model: Indicates whether a model is custom or default.
                 ///   - custom_model_training_date: The training date for the custom model (if applicable).
                 ///   - total_engaged_users: Total number of users who prompted Copilot Chat on github.com at least once for each model.
@@ -2192,7 +2192,7 @@ public enum Components {
                 public var total_engaged_users: Swift.Int?
                 /// - Remark: Generated from `#/components/schemas/copilot-dotcom-pull-requests/repositoriesPayload/modelsPayload`.
                 public struct modelsPayloadPayload: Codable, Hashable, Sendable {
-                    /// Name of the language used for Copilot code completion suggestions, for the given editor.
+                    /// Name of the model used for Copilot code completion suggestions. If the default model is used will appear as 'default'.
                     ///
                     /// - Remark: Generated from `#/components/schemas/copilot-dotcom-pull-requests/repositoriesPayload/modelsPayload/name`.
                     public var name: Swift.String?
@@ -2215,7 +2215,7 @@ public enum Components {
                     /// Creates a new `modelsPayloadPayload`.
                     ///
                     /// - Parameters:
-                    ///   - name: Name of the language used for Copilot code completion suggestions, for the given editor.
+                    ///   - name: Name of the model used for Copilot code completion suggestions. If the default model is used will appear as 'default'.
                     ///   - is_custom_model: Indicates whether a model is custom or default.
                     ///   - custom_model_training_date: The training date for the custom model.
                     ///   - total_pr_summaries_created: The number of pull request summaries generated using Copilot for Pull Requests in the given repository.
