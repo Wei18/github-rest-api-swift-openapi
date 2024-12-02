@@ -90,6 +90,15 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/secret-scanning/push-protection-bypasses`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/push-protection-bypasses/post(secret-scanning/create-push-protection-bypass)`.
     func secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass(_ input: Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Input) async throws -> Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Output
+    /// Get secret scanning scan history for a repository
+    ///
+    /// Lists the latest incremental and backfill scans by type for a repository.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` or `security_events` scope to use this endpoint. If this endpoint is only used with public repositories, the token can use the `public_repo` scope instead.
+    ///
+    /// - Remark: HTTP `GET /repos/{owner}/{repo}/secret-scanning/scan-history`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/scan-history/get(secret-scanning/get-scan-history)`.
+    func secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history(_ input: Operations.secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history.Input) async throws -> Operations.secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history.Output
 }
 
 /// Convenience overloads for operation inputs.
@@ -239,6 +248,23 @@ extension APIProtocol {
             path: path,
             headers: headers,
             body: body
+        ))
+    }
+    /// Get secret scanning scan history for a repository
+    ///
+    /// Lists the latest incremental and backfill scans by type for a repository.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` or `security_events` scope to use this endpoint. If this endpoint is only used with public repositories, the token can use the `public_repo` scope instead.
+    ///
+    /// - Remark: HTTP `GET /repos/{owner}/{repo}/secret-scanning/scan-history`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/scan-history/get(secret-scanning/get-scan-history)`.
+    public func secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history(
+        path: Operations.secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history.Input.Path,
+        headers: Operations.secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history.Input.Headers = .init()
+    ) async throws -> Operations.secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history.Output {
+        try await secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history(Operations.secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history.Input(
+            path: path,
+            headers: headers
         ))
     }
 }
@@ -1987,6 +2013,142 @@ public enum Components {
                 case reason
                 case expire_at
                 case token_type
+            }
+        }
+        /// Information on a single scan performed by secret scanning on the repository
+        ///
+        /// - Remark: Generated from `#/components/schemas/secret-scanning-scan`.
+        public struct secret_hyphen_scanning_hyphen_scan: Codable, Hashable, Sendable {
+            /// The type of scan
+            ///
+            /// - Remark: Generated from `#/components/schemas/secret-scanning-scan/type`.
+            public var _type: Swift.String?
+            /// The state of the scan. Either "completed" or "running"
+            ///
+            /// - Remark: Generated from `#/components/schemas/secret-scanning-scan/status`.
+            public var status: Swift.String?
+            /// The time that the scan was completed. Empty if the scan is active
+            ///
+            /// - Remark: Generated from `#/components/schemas/secret-scanning-scan/completed_at`.
+            public var completed_at: Foundation.Date?
+            /// The time that the scan was started
+            ///
+            /// - Remark: Generated from `#/components/schemas/secret-scanning-scan/started_at`.
+            public var started_at: Foundation.Date?
+            /// Creates a new `secret_hyphen_scanning_hyphen_scan`.
+            ///
+            /// - Parameters:
+            ///   - _type: The type of scan
+            ///   - status: The state of the scan. Either "completed" or "running"
+            ///   - completed_at: The time that the scan was completed. Empty if the scan is active
+            ///   - started_at: The time that the scan was started
+            public init(
+                _type: Swift.String? = nil,
+                status: Swift.String? = nil,
+                completed_at: Foundation.Date? = nil,
+                started_at: Foundation.Date? = nil
+            ) {
+                self._type = _type
+                self.status = status
+                self.completed_at = completed_at
+                self.started_at = started_at
+            }
+            public enum CodingKeys: String, CodingKey {
+                case _type = "type"
+                case status
+                case completed_at
+                case started_at
+            }
+        }
+        /// - Remark: Generated from `#/components/schemas/secret-scanning-scan-history`.
+        public struct secret_hyphen_scanning_hyphen_scan_hyphen_history: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/secret-scanning-scan-history/incremental_scans`.
+            public var incremental_scans: [Components.Schemas.secret_hyphen_scanning_hyphen_scan]?
+            /// - Remark: Generated from `#/components/schemas/secret-scanning-scan-history/pattern_update_scans`.
+            public var pattern_update_scans: [Components.Schemas.secret_hyphen_scanning_hyphen_scan]?
+            /// - Remark: Generated from `#/components/schemas/secret-scanning-scan-history/backfill_scans`.
+            public var backfill_scans: [Components.Schemas.secret_hyphen_scanning_hyphen_scan]?
+            /// - Remark: Generated from `#/components/schemas/secret-scanning-scan-history/custom_pattern_backfill_scansPayload`.
+            public struct custom_pattern_backfill_scansPayloadPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/secret-scanning-scan-history/custom_pattern_backfill_scansPayload/value1`.
+                public var value1: Components.Schemas.secret_hyphen_scanning_hyphen_scan
+                /// - Remark: Generated from `#/components/schemas/secret-scanning-scan-history/custom_pattern_backfill_scansPayload/value2`.
+                public struct Value2Payload: Codable, Hashable, Sendable {
+                    /// Name of the custom pattern for custom pattern scans
+                    ///
+                    /// - Remark: Generated from `#/components/schemas/secret-scanning-scan-history/custom_pattern_backfill_scansPayload/value2/pattern_name`.
+                    public var pattern_name: Swift.String?
+                    /// Level at which the custom pattern is defined, one of "repository", "organization", or "enterprise"
+                    ///
+                    /// - Remark: Generated from `#/components/schemas/secret-scanning-scan-history/custom_pattern_backfill_scansPayload/value2/pattern_scope`.
+                    public var pattern_scope: Swift.String?
+                    /// Creates a new `Value2Payload`.
+                    ///
+                    /// - Parameters:
+                    ///   - pattern_name: Name of the custom pattern for custom pattern scans
+                    ///   - pattern_scope: Level at which the custom pattern is defined, one of "repository", "organization", or "enterprise"
+                    public init(
+                        pattern_name: Swift.String? = nil,
+                        pattern_scope: Swift.String? = nil
+                    ) {
+                        self.pattern_name = pattern_name
+                        self.pattern_scope = pattern_scope
+                    }
+                    public enum CodingKeys: String, CodingKey {
+                        case pattern_name
+                        case pattern_scope
+                    }
+                }
+                /// - Remark: Generated from `#/components/schemas/secret-scanning-scan-history/custom_pattern_backfill_scansPayload/value2`.
+                public var value2: Components.Schemas.secret_hyphen_scanning_hyphen_scan_hyphen_history.custom_pattern_backfill_scansPayloadPayload.Value2Payload
+                /// Creates a new `custom_pattern_backfill_scansPayloadPayload`.
+                ///
+                /// - Parameters:
+                ///   - value1:
+                ///   - value2:
+                public init(
+                    value1: Components.Schemas.secret_hyphen_scanning_hyphen_scan,
+                    value2: Components.Schemas.secret_hyphen_scanning_hyphen_scan_hyphen_history.custom_pattern_backfill_scansPayloadPayload.Value2Payload
+                ) {
+                    self.value1 = value1
+                    self.value2 = value2
+                }
+                public init(from decoder: any Decoder) throws {
+                    value1 = try .init(from: decoder)
+                    value2 = try .init(from: decoder)
+                }
+                public func encode(to encoder: any Encoder) throws {
+                    try value1.encode(to: encoder)
+                    try value2.encode(to: encoder)
+                }
+            }
+            /// - Remark: Generated from `#/components/schemas/secret-scanning-scan-history/custom_pattern_backfill_scans`.
+            public typealias custom_pattern_backfill_scansPayload = [Components.Schemas.secret_hyphen_scanning_hyphen_scan_hyphen_history.custom_pattern_backfill_scansPayloadPayload]
+            /// - Remark: Generated from `#/components/schemas/secret-scanning-scan-history/custom_pattern_backfill_scans`.
+            public var custom_pattern_backfill_scans: Components.Schemas.secret_hyphen_scanning_hyphen_scan_hyphen_history.custom_pattern_backfill_scansPayload?
+            /// Creates a new `secret_hyphen_scanning_hyphen_scan_hyphen_history`.
+            ///
+            /// - Parameters:
+            ///   - incremental_scans:
+            ///   - pattern_update_scans:
+            ///   - backfill_scans:
+            ///   - custom_pattern_backfill_scans:
+            public init(
+                incremental_scans: [Components.Schemas.secret_hyphen_scanning_hyphen_scan]? = nil,
+                pattern_update_scans: [Components.Schemas.secret_hyphen_scanning_hyphen_scan]? = nil,
+                backfill_scans: [Components.Schemas.secret_hyphen_scanning_hyphen_scan]? = nil,
+                custom_pattern_backfill_scans: Components.Schemas.secret_hyphen_scanning_hyphen_scan_hyphen_history.custom_pattern_backfill_scansPayload? = nil
+            ) {
+                self.incremental_scans = incremental_scans
+                self.pattern_update_scans = pattern_update_scans
+                self.backfill_scans = backfill_scans
+                self.custom_pattern_backfill_scans = custom_pattern_backfill_scans
+            }
+            public enum CodingKeys: String, CodingKey {
+                case incremental_scans
+                case pattern_update_scans
+                case backfill_scans
+                case custom_pattern_backfill_scans
             }
         }
     }
@@ -4129,6 +4291,199 @@ public enum Operations {
                     default:
                         try throwUnexpectedResponseStatus(
                             expectedStatus: "serviceUnavailable",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
+    /// Get secret scanning scan history for a repository
+    ///
+    /// Lists the latest incremental and backfill scans by type for a repository.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` or `security_events` scope to use this endpoint. If this endpoint is only used with public repositories, the token can use the `public_repo` scope instead.
+    ///
+    /// - Remark: HTTP `GET /repos/{owner}/{repo}/secret-scanning/scan-history`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/scan-history/get(secret-scanning/get-scan-history)`.
+    public enum secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history {
+        public static let id: Swift.String = "secret-scanning/get-scan-history"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/scan-history/GET/path`.
+            public struct Path: Sendable, Hashable {
+                /// The account owner of the repository. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/scan-history/GET/path/owner`.
+                public var owner: Components.Parameters.owner
+                /// The name of the repository without the `.git` extension. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/scan-history/GET/path/repo`.
+                public var repo: Components.Parameters.repo
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - owner: The account owner of the repository. The name is not case sensitive.
+                ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
+                public init(
+                    owner: Components.Parameters.owner,
+                    repo: Components.Parameters.repo
+                ) {
+                    self.owner = owner
+                    self.repo = repo
+                }
+            }
+            public var path: Operations.secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history.Input.Path
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/scan-history/GET/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history.Input.Headers
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - headers:
+            public init(
+                path: Operations.secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history.Input.Path,
+                headers: Operations.secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history.Input.Headers = .init()
+            ) {
+                self.path = path
+                self.headers = headers
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct NotFound: Sendable, Hashable {
+                /// Creates a new `NotFound`.
+                public init() {}
+            }
+            /// Repository does not have GitHub Advanced Security or secret scanning enabled
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/scan-history/get(secret-scanning/get-scan-history)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            case notFound(Operations.secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history.Output.NotFound)
+            /// The associated value of the enum case if `self` is `.notFound`.
+            ///
+            /// - Throws: An error if `self` is not `.notFound`.
+            /// - SeeAlso: `.notFound`.
+            public var notFound: Operations.secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history.Output.NotFound {
+                get throws {
+                    switch self {
+                    case let .notFound(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "notFound",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Service unavailable
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/scan-history/get(secret-scanning/get-scan-history)/responses/503`.
+            ///
+            /// HTTP response code: `503 serviceUnavailable`.
+            case serviceUnavailable(Components.Responses.service_unavailable)
+            /// The associated value of the enum case if `self` is `.serviceUnavailable`.
+            ///
+            /// - Throws: An error if `self` is not `.serviceUnavailable`.
+            /// - SeeAlso: `.serviceUnavailable`.
+            public var serviceUnavailable: Components.Responses.service_unavailable {
+                get throws {
+                    switch self {
+                    case let .serviceUnavailable(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "serviceUnavailable",
+                            response: self
+                        )
+                    }
+                }
+            }
+            public struct Ok: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/scan-history/GET/responses/200/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/scan-history/GET/responses/200/content/application\/json`.
+                    case json(Components.Schemas.secret_hyphen_scanning_hyphen_scan_hyphen_history)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Components.Schemas.secret_hyphen_scanning_hyphen_scan_hyphen_history {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history.Output.Ok.Body
+                /// Creates a new `Ok`.
+                ///
+                /// - Parameters:
+                ///   - body: Received HTTP response body
+                public init(body: Operations.secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history.Output.Ok.Body) {
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/scan-history/get(secret-scanning/get-scan-history)/responses/200`.
+            ///
+            /// HTTP response code: `200 ok`.
+            case ok(Operations.secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history.Output.Ok)
+            /// The associated value of the enum case if `self` is `.ok`.
+            ///
+            /// - Throws: An error if `self` is not `.ok`.
+            /// - SeeAlso: `.ok`.
+            public var ok: Operations.secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history.Output.Ok {
+                get throws {
+                    switch self {
+                    case let .ok(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "ok",
                             response: self
                         )
                     }
