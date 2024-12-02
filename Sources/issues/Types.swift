@@ -318,6 +318,60 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/issues/{issue_number}/lock`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/lock/delete(issues/unlock)`.
     func issues_sol_unlock(_ input: Operations.issues_sol_unlock.Input) async throws -> Operations.issues_sol_unlock.Output
+    /// Remove sub-issue
+    ///
+    /// You can use the REST API to remove a sub-issue from an issue.
+    /// Removing content too quickly using this endpoint may result in secondary rate limiting.
+    /// For more information, see "[Rate limits for the API](https://docs.github.com/rest/using-the-rest-api/rate-limits-for-the-rest-api#about-secondary-rate-limits)"
+    /// and "[Best practices for using the REST API](https://docs.github.com/rest/guides/best-practices-for-using-the-rest-api)."
+    /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
+    /// - **`application/vnd.github.raw+json`**: Returns the raw markdown body. Response will include `body`. This is the default if you do not pass a specific media type.
+    /// - **`application/vnd.github.text+json`**: Returns a text only representation of the markdown body. Response will include `body_text`.
+    /// - **`application/vnd.github.html+json`**: Returns HTML rendered from the body's markdown. Response will include `body_html`.
+    /// - **`application/vnd.github.full+json`**: Returns raw, text, and HTML representations. Response will include `body`, `body_text`, and `body_html`.
+    ///
+    /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/issues/{issue_number}/sub_issue`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/sub_issue/delete(issues/remove-sub-issue)`.
+    func issues_sol_remove_hyphen_sub_hyphen_issue(_ input: Operations.issues_sol_remove_hyphen_sub_hyphen_issue.Input) async throws -> Operations.issues_sol_remove_hyphen_sub_hyphen_issue.Output
+    /// List sub-issues
+    ///
+    /// You can use the REST API to list the sub-issues on an issue.
+    ///
+    /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
+    ///
+    /// - **`application/vnd.github.raw+json`**: Returns the raw markdown body. Response will include `body`. This is the default if you do not pass any specific media type.
+    /// - **`application/vnd.github.text+json`**: Returns a text only representation of the markdown body. Response will include `body_text`.
+    /// - **`application/vnd.github.html+json`**: Returns HTML rendered from the body's markdown. Response will include `body_html`.
+    /// - **`application/vnd.github.full+json`**: Returns raw, text, and HTML representations. Response will include `body`, `body_text`, and `body_html`.
+    ///
+    /// - Remark: HTTP `GET /repos/{owner}/{repo}/issues/{issue_number}/sub_issues`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/sub_issues/get(issues/list-sub-issues)`.
+    func issues_sol_list_hyphen_sub_hyphen_issues(_ input: Operations.issues_sol_list_hyphen_sub_hyphen_issues.Input) async throws -> Operations.issues_sol_list_hyphen_sub_hyphen_issues.Output
+    /// Add sub-issue
+    ///
+    /// You can use the REST API to add sub-issues to issues.
+    ///
+    /// Creating content too quickly using this endpoint may result in secondary rate limiting.
+    /// For more information, see "[Rate limits for the API](https://docs.github.com/rest/using-the-rest-api/rate-limits-for-the-rest-api#about-secondary-rate-limits)"
+    /// and "[Best practices for using the REST API](https://docs.github.com/rest/guides/best-practices-for-using-the-rest-api)."
+    ///
+    /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
+    ///
+    /// - **`application/vnd.github.raw+json`**: Returns the raw markdown body. Response will include `body`. This is the default if you do not pass any specific media type.
+    /// - **`application/vnd.github.text+json`**: Returns a text only representation of the markdown body. Response will include `body_text`.
+    /// - **`application/vnd.github.html+json`**: Returns HTML rendered from the body's markdown. Response will include `body_html`.
+    /// - **`application/vnd.github.full+json`**: Returns raw, text, and HTML representations. Response will include `body`, `body_text`, and `body_html`.
+    ///
+    /// - Remark: HTTP `POST /repos/{owner}/{repo}/issues/{issue_number}/sub_issues`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/sub_issues/post(issues/add-sub-issue)`.
+    func issues_sol_add_hyphen_sub_hyphen_issue(_ input: Operations.issues_sol_add_hyphen_sub_hyphen_issue.Input) async throws -> Operations.issues_sol_add_hyphen_sub_hyphen_issue.Output
+    /// Reprioritize sub-issue
+    ///
+    /// You can use the REST API to reprioritize a sub-issue to a different position in the parent list.
+    ///
+    /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/issues/{issue_number}/sub_issues/priority`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/sub_issues/priority/patch(issues/reprioritize-sub-issue)`.
+    func issues_sol_reprioritize_hyphen_sub_hyphen_issue(_ input: Operations.issues_sol_reprioritize_hyphen_sub_hyphen_issue.Input) async throws -> Operations.issues_sol_reprioritize_hyphen_sub_hyphen_issue.Output
     /// List timeline events for an issue
     ///
     /// List all timeline events for an issue.
@@ -974,6 +1028,100 @@ extension APIProtocol {
             headers: headers
         ))
     }
+    /// Remove sub-issue
+    ///
+    /// You can use the REST API to remove a sub-issue from an issue.
+    /// Removing content too quickly using this endpoint may result in secondary rate limiting.
+    /// For more information, see "[Rate limits for the API](https://docs.github.com/rest/using-the-rest-api/rate-limits-for-the-rest-api#about-secondary-rate-limits)"
+    /// and "[Best practices for using the REST API](https://docs.github.com/rest/guides/best-practices-for-using-the-rest-api)."
+    /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
+    /// - **`application/vnd.github.raw+json`**: Returns the raw markdown body. Response will include `body`. This is the default if you do not pass a specific media type.
+    /// - **`application/vnd.github.text+json`**: Returns a text only representation of the markdown body. Response will include `body_text`.
+    /// - **`application/vnd.github.html+json`**: Returns HTML rendered from the body's markdown. Response will include `body_html`.
+    /// - **`application/vnd.github.full+json`**: Returns raw, text, and HTML representations. Response will include `body`, `body_text`, and `body_html`.
+    ///
+    /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/issues/{issue_number}/sub_issue`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/sub_issue/delete(issues/remove-sub-issue)`.
+    public func issues_sol_remove_hyphen_sub_hyphen_issue(
+        path: Operations.issues_sol_remove_hyphen_sub_hyphen_issue.Input.Path,
+        headers: Operations.issues_sol_remove_hyphen_sub_hyphen_issue.Input.Headers = .init(),
+        body: Operations.issues_sol_remove_hyphen_sub_hyphen_issue.Input.Body
+    ) async throws -> Operations.issues_sol_remove_hyphen_sub_hyphen_issue.Output {
+        try await issues_sol_remove_hyphen_sub_hyphen_issue(Operations.issues_sol_remove_hyphen_sub_hyphen_issue.Input(
+            path: path,
+            headers: headers,
+            body: body
+        ))
+    }
+    /// List sub-issues
+    ///
+    /// You can use the REST API to list the sub-issues on an issue.
+    ///
+    /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
+    ///
+    /// - **`application/vnd.github.raw+json`**: Returns the raw markdown body. Response will include `body`. This is the default if you do not pass any specific media type.
+    /// - **`application/vnd.github.text+json`**: Returns a text only representation of the markdown body. Response will include `body_text`.
+    /// - **`application/vnd.github.html+json`**: Returns HTML rendered from the body's markdown. Response will include `body_html`.
+    /// - **`application/vnd.github.full+json`**: Returns raw, text, and HTML representations. Response will include `body`, `body_text`, and `body_html`.
+    ///
+    /// - Remark: HTTP `GET /repos/{owner}/{repo}/issues/{issue_number}/sub_issues`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/sub_issues/get(issues/list-sub-issues)`.
+    public func issues_sol_list_hyphen_sub_hyphen_issues(
+        path: Operations.issues_sol_list_hyphen_sub_hyphen_issues.Input.Path,
+        query: Operations.issues_sol_list_hyphen_sub_hyphen_issues.Input.Query = .init(),
+        headers: Operations.issues_sol_list_hyphen_sub_hyphen_issues.Input.Headers = .init()
+    ) async throws -> Operations.issues_sol_list_hyphen_sub_hyphen_issues.Output {
+        try await issues_sol_list_hyphen_sub_hyphen_issues(Operations.issues_sol_list_hyphen_sub_hyphen_issues.Input(
+            path: path,
+            query: query,
+            headers: headers
+        ))
+    }
+    /// Add sub-issue
+    ///
+    /// You can use the REST API to add sub-issues to issues.
+    ///
+    /// Creating content too quickly using this endpoint may result in secondary rate limiting.
+    /// For more information, see "[Rate limits for the API](https://docs.github.com/rest/using-the-rest-api/rate-limits-for-the-rest-api#about-secondary-rate-limits)"
+    /// and "[Best practices for using the REST API](https://docs.github.com/rest/guides/best-practices-for-using-the-rest-api)."
+    ///
+    /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
+    ///
+    /// - **`application/vnd.github.raw+json`**: Returns the raw markdown body. Response will include `body`. This is the default if you do not pass any specific media type.
+    /// - **`application/vnd.github.text+json`**: Returns a text only representation of the markdown body. Response will include `body_text`.
+    /// - **`application/vnd.github.html+json`**: Returns HTML rendered from the body's markdown. Response will include `body_html`.
+    /// - **`application/vnd.github.full+json`**: Returns raw, text, and HTML representations. Response will include `body`, `body_text`, and `body_html`.
+    ///
+    /// - Remark: HTTP `POST /repos/{owner}/{repo}/issues/{issue_number}/sub_issues`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/sub_issues/post(issues/add-sub-issue)`.
+    public func issues_sol_add_hyphen_sub_hyphen_issue(
+        path: Operations.issues_sol_add_hyphen_sub_hyphen_issue.Input.Path,
+        headers: Operations.issues_sol_add_hyphen_sub_hyphen_issue.Input.Headers = .init(),
+        body: Operations.issues_sol_add_hyphen_sub_hyphen_issue.Input.Body
+    ) async throws -> Operations.issues_sol_add_hyphen_sub_hyphen_issue.Output {
+        try await issues_sol_add_hyphen_sub_hyphen_issue(Operations.issues_sol_add_hyphen_sub_hyphen_issue.Input(
+            path: path,
+            headers: headers,
+            body: body
+        ))
+    }
+    /// Reprioritize sub-issue
+    ///
+    /// You can use the REST API to reprioritize a sub-issue to a different position in the parent list.
+    ///
+    /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/issues/{issue_number}/sub_issues/priority`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/sub_issues/priority/patch(issues/reprioritize-sub-issue)`.
+    public func issues_sol_reprioritize_hyphen_sub_hyphen_issue(
+        path: Operations.issues_sol_reprioritize_hyphen_sub_hyphen_issue.Input.Path,
+        headers: Operations.issues_sol_reprioritize_hyphen_sub_hyphen_issue.Input.Headers = .init(),
+        body: Operations.issues_sol_reprioritize_hyphen_sub_hyphen_issue.Input.Body
+    ) async throws -> Operations.issues_sol_reprioritize_hyphen_sub_hyphen_issue.Output {
+        try await issues_sol_reprioritize_hyphen_sub_hyphen_issue(Operations.issues_sol_reprioritize_hyphen_sub_hyphen_issue.Input(
+            path: path,
+            headers: headers,
+            body: body
+        ))
+    }
     /// List timeline events for an issue
     ///
     /// List all timeline events for an issue.
@@ -1385,6 +1533,37 @@ public enum Components {
                 case documentation_url
                 case url
                 case status
+            }
+        }
+        /// Validation Error Simple
+        ///
+        /// - Remark: Generated from `#/components/schemas/validation-error-simple`.
+        public struct validation_hyphen_error_hyphen_simple: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/validation-error-simple/message`.
+            public var message: Swift.String
+            /// - Remark: Generated from `#/components/schemas/validation-error-simple/documentation_url`.
+            public var documentation_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/validation-error-simple/errors`.
+            public var errors: [Swift.String]?
+            /// Creates a new `validation_hyphen_error_hyphen_simple`.
+            ///
+            /// - Parameters:
+            ///   - message:
+            ///   - documentation_url:
+            ///   - errors:
+            public init(
+                message: Swift.String,
+                documentation_url: Swift.String,
+                errors: [Swift.String]? = nil
+            ) {
+                self.message = message
+                self.documentation_url = documentation_url
+                self.errors = errors
+            }
+            public enum CodingKeys: String, CodingKey {
+                case message
+                case documentation_url
+                case errors
             }
         }
         /// A GitHub user.
@@ -3404,6 +3583,35 @@ public enum Components {
                 case rocket
             }
         }
+        /// - Remark: Generated from `#/components/schemas/sub-issues-summary`.
+        public struct sub_hyphen_issues_hyphen_summary: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/sub-issues-summary/total`.
+            public var total: Swift.Int
+            /// - Remark: Generated from `#/components/schemas/sub-issues-summary/completed`.
+            public var completed: Swift.Int
+            /// - Remark: Generated from `#/components/schemas/sub-issues-summary/percent_completed`.
+            public var percent_completed: Swift.Int
+            /// Creates a new `sub_hyphen_issues_hyphen_summary`.
+            ///
+            /// - Parameters:
+            ///   - total:
+            ///   - completed:
+            ///   - percent_completed:
+            public init(
+                total: Swift.Int,
+                completed: Swift.Int,
+                percent_completed: Swift.Int
+            ) {
+                self.total = total
+                self.completed = completed
+                self.percent_completed = percent_completed
+            }
+            public enum CodingKeys: String, CodingKey {
+                case total
+                case completed
+                case percent_completed
+            }
+        }
         /// Issues are a great way to keep track of tasks, enhancements, and bugs for your projects.
         ///
         /// - Remark: Generated from `#/components/schemas/issue`.
@@ -3631,6 +3839,8 @@ public enum Components {
             public var author_association: Components.Schemas.author_hyphen_association
             /// - Remark: Generated from `#/components/schemas/issue/reactions`.
             public var reactions: Components.Schemas.reaction_hyphen_rollup?
+            /// - Remark: Generated from `#/components/schemas/issue/sub_issues_summary`.
+            public var sub_issues_summary: Components.Schemas.sub_hyphen_issues_hyphen_summary?
             /// Creates a new `issue`.
             ///
             /// - Parameters:
@@ -3668,6 +3878,7 @@ public enum Components {
             ///   - performed_via_github_app:
             ///   - author_association:
             ///   - reactions:
+            ///   - sub_issues_summary:
             public init(
                 id: Swift.Int64,
                 node_id: Swift.String,
@@ -3702,7 +3913,8 @@ public enum Components {
                 repository: Components.Schemas.repository? = nil,
                 performed_via_github_app: Components.Schemas.nullable_hyphen_integration? = nil,
                 author_association: Components.Schemas.author_hyphen_association,
-                reactions: Components.Schemas.reaction_hyphen_rollup? = nil
+                reactions: Components.Schemas.reaction_hyphen_rollup? = nil,
+                sub_issues_summary: Components.Schemas.sub_hyphen_issues_hyphen_summary? = nil
             ) {
                 self.id = id
                 self.node_id = node_id
@@ -3738,6 +3950,7 @@ public enum Components {
                 self.performed_via_github_app = performed_via_github_app
                 self.author_association = author_association
                 self.reactions = reactions
+                self.sub_issues_summary = sub_issues_summary
             }
             public enum CodingKeys: String, CodingKey {
                 case id
@@ -3774,6 +3987,7 @@ public enum Components {
                 case performed_via_github_app
                 case author_association
                 case reactions
+                case sub_issues_summary
             }
         }
         /// Comments provide a way for people to collaborate on an issue.
@@ -4203,6 +4417,8 @@ public enum Components {
             public var author_association: Components.Schemas.author_hyphen_association
             /// - Remark: Generated from `#/components/schemas/nullable-issue/reactions`.
             public var reactions: Components.Schemas.reaction_hyphen_rollup?
+            /// - Remark: Generated from `#/components/schemas/nullable-issue/sub_issues_summary`.
+            public var sub_issues_summary: Components.Schemas.sub_hyphen_issues_hyphen_summary?
             /// Creates a new `nullable_hyphen_issue`.
             ///
             /// - Parameters:
@@ -4240,6 +4456,7 @@ public enum Components {
             ///   - performed_via_github_app:
             ///   - author_association:
             ///   - reactions:
+            ///   - sub_issues_summary:
             public init(
                 id: Swift.Int64,
                 node_id: Swift.String,
@@ -4274,7 +4491,8 @@ public enum Components {
                 repository: Components.Schemas.repository? = nil,
                 performed_via_github_app: Components.Schemas.nullable_hyphen_integration? = nil,
                 author_association: Components.Schemas.author_hyphen_association,
-                reactions: Components.Schemas.reaction_hyphen_rollup? = nil
+                reactions: Components.Schemas.reaction_hyphen_rollup? = nil,
+                sub_issues_summary: Components.Schemas.sub_hyphen_issues_hyphen_summary? = nil
             ) {
                 self.id = id
                 self.node_id = node_id
@@ -4310,6 +4528,7 @@ public enum Components {
                 self.performed_via_github_app = performed_via_github_app
                 self.author_association = author_association
                 self.reactions = reactions
+                self.sub_issues_summary = sub_issues_summary
             }
             public enum CodingKeys: String, CodingKey {
                 case id
@@ -4346,6 +4565,7 @@ public enum Components {
                 case performed_via_github_app
                 case author_association
                 case reactions
+                case sub_issues_summary
             }
         }
         /// Issue Event Label
@@ -6720,6 +6940,8 @@ public enum Components {
                 public var signature: Swift.String?
                 /// - Remark: Generated from `#/components/schemas/timeline-committed-event/verification/payload`.
                 public var payload: Swift.String?
+                /// - Remark: Generated from `#/components/schemas/timeline-committed-event/verification/verified_at`.
+                public var verified_at: Swift.String?
                 /// Creates a new `verificationPayload`.
                 ///
                 /// - Parameters:
@@ -6727,22 +6949,26 @@ public enum Components {
                 ///   - reason:
                 ///   - signature:
                 ///   - payload:
+                ///   - verified_at:
                 public init(
                     verified: Swift.Bool,
                     reason: Swift.String,
                     signature: Swift.String? = nil,
-                    payload: Swift.String? = nil
+                    payload: Swift.String? = nil,
+                    verified_at: Swift.String? = nil
                 ) {
                     self.verified = verified
                     self.reason = reason
                     self.signature = signature
                     self.payload = payload
+                    self.verified_at = verified_at
                 }
                 public enum CodingKeys: String, CodingKey {
                     case verified
                     case reason
                     case signature
                     case payload
+                    case verified_at
                 }
             }
             /// - Remark: Generated from `#/components/schemas/timeline-committed-event/verification`.
@@ -8040,6 +8266,34 @@ public enum Components {
     public enum RequestBodies {}
     /// Types generated from the `#/components/responses` section of the OpenAPI document.
     public enum Responses {
+        public struct validation_failed_simple: Sendable, Hashable {
+            /// - Remark: Generated from `#/components/responses/validation_failed_simple/content`.
+            @frozen public enum Body: Sendable, Hashable {
+                /// - Remark: Generated from `#/components/responses/validation_failed_simple/content/application\/json`.
+                case json(Components.Schemas.validation_hyphen_error_hyphen_simple)
+                /// The associated value of the enum case if `self` is `.json`.
+                ///
+                /// - Throws: An error if `self` is not `.json`.
+                /// - SeeAlso: `.json`.
+                public var json: Components.Schemas.validation_hyphen_error_hyphen_simple {
+                    get throws {
+                        switch self {
+                        case let .json(body):
+                            return body
+                        }
+                    }
+                }
+            }
+            /// Received HTTP response body
+            public var body: Components.Responses.validation_failed_simple.Body
+            /// Creates a new `validation_failed_simple`.
+            ///
+            /// - Parameters:
+            ///   - body: Received HTTP response body
+            public init(body: Components.Responses.validation_failed_simple.Body) {
+                self.body = body
+            }
+        }
         public struct not_found: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/not_found/content`.
             @frozen public enum Body: Sendable, Hashable {
@@ -15262,6 +15516,1096 @@ public enum Operations {
                     default:
                         try throwUnexpectedResponseStatus(
                             expectedStatus: "notFound",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
+    /// Remove sub-issue
+    ///
+    /// You can use the REST API to remove a sub-issue from an issue.
+    /// Removing content too quickly using this endpoint may result in secondary rate limiting.
+    /// For more information, see "[Rate limits for the API](https://docs.github.com/rest/using-the-rest-api/rate-limits-for-the-rest-api#about-secondary-rate-limits)"
+    /// and "[Best practices for using the REST API](https://docs.github.com/rest/guides/best-practices-for-using-the-rest-api)."
+    /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
+    /// - **`application/vnd.github.raw+json`**: Returns the raw markdown body. Response will include `body`. This is the default if you do not pass a specific media type.
+    /// - **`application/vnd.github.text+json`**: Returns a text only representation of the markdown body. Response will include `body_text`.
+    /// - **`application/vnd.github.html+json`**: Returns HTML rendered from the body's markdown. Response will include `body_html`.
+    /// - **`application/vnd.github.full+json`**: Returns raw, text, and HTML representations. Response will include `body`, `body_text`, and `body_html`.
+    ///
+    /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/issues/{issue_number}/sub_issue`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/sub_issue/delete(issues/remove-sub-issue)`.
+    public enum issues_sol_remove_hyphen_sub_hyphen_issue {
+        public static let id: Swift.String = "issues/remove-sub-issue"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issue/DELETE/path`.
+            public struct Path: Sendable, Hashable {
+                /// The account owner of the repository. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issue/DELETE/path/owner`.
+                public var owner: Components.Parameters.owner
+                /// The name of the repository without the `.git` extension. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issue/DELETE/path/repo`.
+                public var repo: Components.Parameters.repo
+                /// The number that identifies the issue.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issue/DELETE/path/issue_number`.
+                public var issue_number: Components.Parameters.issue_hyphen_number
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - owner: The account owner of the repository. The name is not case sensitive.
+                ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
+                ///   - issue_number: The number that identifies the issue.
+                public init(
+                    owner: Components.Parameters.owner,
+                    repo: Components.Parameters.repo,
+                    issue_number: Components.Parameters.issue_hyphen_number
+                ) {
+                    self.owner = owner
+                    self.repo = repo
+                    self.issue_number = issue_number
+                }
+            }
+            public var path: Operations.issues_sol_remove_hyphen_sub_hyphen_issue.Input.Path
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issue/DELETE/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.issues_sol_remove_hyphen_sub_hyphen_issue.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.issues_sol_remove_hyphen_sub_hyphen_issue.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.issues_sol_remove_hyphen_sub_hyphen_issue.Input.Headers
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issue/DELETE/requestBody`.
+            @frozen public enum Body: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issue/DELETE/requestBody/json`.
+                public struct jsonPayload: Codable, Hashable, Sendable {
+                    /// The sub-issue to remove
+                    ///
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issue/DELETE/requestBody/json/sub_issue_id`.
+                    public var sub_issue_id: Swift.Int
+                    /// Creates a new `jsonPayload`.
+                    ///
+                    /// - Parameters:
+                    ///   - sub_issue_id: The sub-issue to remove
+                    public init(sub_issue_id: Swift.Int) {
+                        self.sub_issue_id = sub_issue_id
+                    }
+                    public enum CodingKeys: String, CodingKey {
+                        case sub_issue_id
+                    }
+                }
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issue/DELETE/requestBody/content/application\/json`.
+                case json(Operations.issues_sol_remove_hyphen_sub_hyphen_issue.Input.Body.jsonPayload)
+            }
+            public var body: Operations.issues_sol_remove_hyphen_sub_hyphen_issue.Input.Body
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - headers:
+            ///   - body:
+            public init(
+                path: Operations.issues_sol_remove_hyphen_sub_hyphen_issue.Input.Path,
+                headers: Operations.issues_sol_remove_hyphen_sub_hyphen_issue.Input.Headers = .init(),
+                body: Operations.issues_sol_remove_hyphen_sub_hyphen_issue.Input.Body
+            ) {
+                self.path = path
+                self.headers = headers
+                self.body = body
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Ok: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issue/DELETE/responses/200/headers`.
+                public struct Headers: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issue/DELETE/responses/200/headers/Location`.
+                    public var Location: Swift.String?
+                    /// Creates a new `Headers`.
+                    ///
+                    /// - Parameters:
+                    ///   - Location:
+                    public init(Location: Swift.String? = nil) {
+                        self.Location = Location
+                    }
+                }
+                /// Received HTTP response headers
+                public var headers: Operations.issues_sol_remove_hyphen_sub_hyphen_issue.Output.Ok.Headers
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issue/DELETE/responses/200/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issue/DELETE/responses/200/content/application\/json`.
+                    case json(Components.Schemas.issue)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Components.Schemas.issue {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.issues_sol_remove_hyphen_sub_hyphen_issue.Output.Ok.Body
+                /// Creates a new `Ok`.
+                ///
+                /// - Parameters:
+                ///   - headers: Received HTTP response headers
+                ///   - body: Received HTTP response body
+                public init(
+                    headers: Operations.issues_sol_remove_hyphen_sub_hyphen_issue.Output.Ok.Headers = .init(),
+                    body: Operations.issues_sol_remove_hyphen_sub_hyphen_issue.Output.Ok.Body
+                ) {
+                    self.headers = headers
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/sub_issue/delete(issues/remove-sub-issue)/responses/200`.
+            ///
+            /// HTTP response code: `200 ok`.
+            case ok(Operations.issues_sol_remove_hyphen_sub_hyphen_issue.Output.Ok)
+            /// The associated value of the enum case if `self` is `.ok`.
+            ///
+            /// - Throws: An error if `self` is not `.ok`.
+            /// - SeeAlso: `.ok`.
+            public var ok: Operations.issues_sol_remove_hyphen_sub_hyphen_issue.Output.Ok {
+                get throws {
+                    switch self {
+                    case let .ok(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "ok",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Bad Request
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/sub_issue/delete(issues/remove-sub-issue)/responses/400`.
+            ///
+            /// HTTP response code: `400 badRequest`.
+            case badRequest(Components.Responses.bad_request)
+            /// The associated value of the enum case if `self` is `.badRequest`.
+            ///
+            /// - Throws: An error if `self` is not `.badRequest`.
+            /// - SeeAlso: `.badRequest`.
+            public var badRequest: Components.Responses.bad_request {
+                get throws {
+                    switch self {
+                    case let .badRequest(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "badRequest",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Resource not found
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/sub_issue/delete(issues/remove-sub-issue)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            case notFound(Components.Responses.not_found)
+            /// The associated value of the enum case if `self` is `.notFound`.
+            ///
+            /// - Throws: An error if `self` is not `.notFound`.
+            /// - SeeAlso: `.notFound`.
+            public var notFound: Components.Responses.not_found {
+                get throws {
+                    switch self {
+                    case let .notFound(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "notFound",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case application_scim_plus_json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                case "application/scim+json":
+                    self = .application_scim_plus_json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                case .application_scim_plus_json:
+                    return "application/scim+json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json,
+                    .application_scim_plus_json
+                ]
+            }
+        }
+    }
+    /// List sub-issues
+    ///
+    /// You can use the REST API to list the sub-issues on an issue.
+    ///
+    /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
+    ///
+    /// - **`application/vnd.github.raw+json`**: Returns the raw markdown body. Response will include `body`. This is the default if you do not pass any specific media type.
+    /// - **`application/vnd.github.text+json`**: Returns a text only representation of the markdown body. Response will include `body_text`.
+    /// - **`application/vnd.github.html+json`**: Returns HTML rendered from the body's markdown. Response will include `body_html`.
+    /// - **`application/vnd.github.full+json`**: Returns raw, text, and HTML representations. Response will include `body`, `body_text`, and `body_html`.
+    ///
+    /// - Remark: HTTP `GET /repos/{owner}/{repo}/issues/{issue_number}/sub_issues`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/sub_issues/get(issues/list-sub-issues)`.
+    public enum issues_sol_list_hyphen_sub_hyphen_issues {
+        public static let id: Swift.String = "issues/list-sub-issues"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issues/GET/path`.
+            public struct Path: Sendable, Hashable {
+                /// The account owner of the repository. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issues/GET/path/owner`.
+                public var owner: Components.Parameters.owner
+                /// The name of the repository without the `.git` extension. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issues/GET/path/repo`.
+                public var repo: Components.Parameters.repo
+                /// The number that identifies the issue.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issues/GET/path/issue_number`.
+                public var issue_number: Components.Parameters.issue_hyphen_number
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - owner: The account owner of the repository. The name is not case sensitive.
+                ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
+                ///   - issue_number: The number that identifies the issue.
+                public init(
+                    owner: Components.Parameters.owner,
+                    repo: Components.Parameters.repo,
+                    issue_number: Components.Parameters.issue_hyphen_number
+                ) {
+                    self.owner = owner
+                    self.repo = repo
+                    self.issue_number = issue_number
+                }
+            }
+            public var path: Operations.issues_sol_list_hyphen_sub_hyphen_issues.Input.Path
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issues/GET/query`.
+            public struct Query: Sendable, Hashable {
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issues/GET/query/per_page`.
+                public var per_page: Components.Parameters.per_hyphen_page?
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issues/GET/query/page`.
+                public var page: Components.Parameters.page?
+                /// Creates a new `Query`.
+                ///
+                /// - Parameters:
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                public init(
+                    per_page: Components.Parameters.per_hyphen_page? = nil,
+                    page: Components.Parameters.page? = nil
+                ) {
+                    self.per_page = per_page
+                    self.page = page
+                }
+            }
+            public var query: Operations.issues_sol_list_hyphen_sub_hyphen_issues.Input.Query
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issues/GET/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.issues_sol_list_hyphen_sub_hyphen_issues.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.issues_sol_list_hyphen_sub_hyphen_issues.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.issues_sol_list_hyphen_sub_hyphen_issues.Input.Headers
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - query:
+            ///   - headers:
+            public init(
+                path: Operations.issues_sol_list_hyphen_sub_hyphen_issues.Input.Path,
+                query: Operations.issues_sol_list_hyphen_sub_hyphen_issues.Input.Query = .init(),
+                headers: Operations.issues_sol_list_hyphen_sub_hyphen_issues.Input.Headers = .init()
+            ) {
+                self.path = path
+                self.query = query
+                self.headers = headers
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Ok: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issues/GET/responses/200/headers`.
+                public struct Headers: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issues/GET/responses/200/headers/Link`.
+                    public var Link: Components.Headers.link?
+                    /// Creates a new `Headers`.
+                    ///
+                    /// - Parameters:
+                    ///   - Link:
+                    public init(Link: Components.Headers.link? = nil) {
+                        self.Link = Link
+                    }
+                }
+                /// Received HTTP response headers
+                public var headers: Operations.issues_sol_list_hyphen_sub_hyphen_issues.Output.Ok.Headers
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issues/GET/responses/200/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issues/GET/responses/200/content/application\/json`.
+                    case json([Components.Schemas.issue])
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: [Components.Schemas.issue] {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.issues_sol_list_hyphen_sub_hyphen_issues.Output.Ok.Body
+                /// Creates a new `Ok`.
+                ///
+                /// - Parameters:
+                ///   - headers: Received HTTP response headers
+                ///   - body: Received HTTP response body
+                public init(
+                    headers: Operations.issues_sol_list_hyphen_sub_hyphen_issues.Output.Ok.Headers = .init(),
+                    body: Operations.issues_sol_list_hyphen_sub_hyphen_issues.Output.Ok.Body
+                ) {
+                    self.headers = headers
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/sub_issues/get(issues/list-sub-issues)/responses/200`.
+            ///
+            /// HTTP response code: `200 ok`.
+            case ok(Operations.issues_sol_list_hyphen_sub_hyphen_issues.Output.Ok)
+            /// The associated value of the enum case if `self` is `.ok`.
+            ///
+            /// - Throws: An error if `self` is not `.ok`.
+            /// - SeeAlso: `.ok`.
+            public var ok: Operations.issues_sol_list_hyphen_sub_hyphen_issues.Output.Ok {
+                get throws {
+                    switch self {
+                    case let .ok(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "ok",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Resource not found
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/sub_issues/get(issues/list-sub-issues)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            case notFound(Components.Responses.not_found)
+            /// The associated value of the enum case if `self` is `.notFound`.
+            ///
+            /// - Throws: An error if `self` is not `.notFound`.
+            /// - SeeAlso: `.notFound`.
+            public var notFound: Components.Responses.not_found {
+                get throws {
+                    switch self {
+                    case let .notFound(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "notFound",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Gone
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/sub_issues/get(issues/list-sub-issues)/responses/410`.
+            ///
+            /// HTTP response code: `410 gone`.
+            case gone(Components.Responses.gone)
+            /// The associated value of the enum case if `self` is `.gone`.
+            ///
+            /// - Throws: An error if `self` is not `.gone`.
+            /// - SeeAlso: `.gone`.
+            public var gone: Components.Responses.gone {
+                get throws {
+                    switch self {
+                    case let .gone(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "gone",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
+    /// Add sub-issue
+    ///
+    /// You can use the REST API to add sub-issues to issues.
+    ///
+    /// Creating content too quickly using this endpoint may result in secondary rate limiting.
+    /// For more information, see "[Rate limits for the API](https://docs.github.com/rest/using-the-rest-api/rate-limits-for-the-rest-api#about-secondary-rate-limits)"
+    /// and "[Best practices for using the REST API](https://docs.github.com/rest/guides/best-practices-for-using-the-rest-api)."
+    ///
+    /// This endpoint supports the following custom media types. For more information, see "[Media types](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types)."
+    ///
+    /// - **`application/vnd.github.raw+json`**: Returns the raw markdown body. Response will include `body`. This is the default if you do not pass any specific media type.
+    /// - **`application/vnd.github.text+json`**: Returns a text only representation of the markdown body. Response will include `body_text`.
+    /// - **`application/vnd.github.html+json`**: Returns HTML rendered from the body's markdown. Response will include `body_html`.
+    /// - **`application/vnd.github.full+json`**: Returns raw, text, and HTML representations. Response will include `body`, `body_text`, and `body_html`.
+    ///
+    /// - Remark: HTTP `POST /repos/{owner}/{repo}/issues/{issue_number}/sub_issues`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/sub_issues/post(issues/add-sub-issue)`.
+    public enum issues_sol_add_hyphen_sub_hyphen_issue {
+        public static let id: Swift.String = "issues/add-sub-issue"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issues/POST/path`.
+            public struct Path: Sendable, Hashable {
+                /// The account owner of the repository. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issues/POST/path/owner`.
+                public var owner: Components.Parameters.owner
+                /// The name of the repository without the `.git` extension. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issues/POST/path/repo`.
+                public var repo: Components.Parameters.repo
+                /// The number that identifies the issue.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issues/POST/path/issue_number`.
+                public var issue_number: Components.Parameters.issue_hyphen_number
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - owner: The account owner of the repository. The name is not case sensitive.
+                ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
+                ///   - issue_number: The number that identifies the issue.
+                public init(
+                    owner: Components.Parameters.owner,
+                    repo: Components.Parameters.repo,
+                    issue_number: Components.Parameters.issue_hyphen_number
+                ) {
+                    self.owner = owner
+                    self.repo = repo
+                    self.issue_number = issue_number
+                }
+            }
+            public var path: Operations.issues_sol_add_hyphen_sub_hyphen_issue.Input.Path
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issues/POST/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.issues_sol_add_hyphen_sub_hyphen_issue.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.issues_sol_add_hyphen_sub_hyphen_issue.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.issues_sol_add_hyphen_sub_hyphen_issue.Input.Headers
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issues/POST/requestBody`.
+            @frozen public enum Body: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issues/POST/requestBody/json`.
+                public struct jsonPayload: Codable, Hashable, Sendable {
+                    /// The sub-issue to add
+                    ///
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issues/POST/requestBody/json/sub_issue_id`.
+                    public var sub_issue_id: Swift.Int
+                    /// Option that, when true, instructs the operation to replace the sub-issues current parent issue
+                    ///
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issues/POST/requestBody/json/replace_parent`.
+                    public var replace_parent: Swift.Bool?
+                    /// Creates a new `jsonPayload`.
+                    ///
+                    /// - Parameters:
+                    ///   - sub_issue_id: The sub-issue to add
+                    ///   - replace_parent: Option that, when true, instructs the operation to replace the sub-issues current parent issue
+                    public init(
+                        sub_issue_id: Swift.Int,
+                        replace_parent: Swift.Bool? = nil
+                    ) {
+                        self.sub_issue_id = sub_issue_id
+                        self.replace_parent = replace_parent
+                    }
+                    public enum CodingKeys: String, CodingKey {
+                        case sub_issue_id
+                        case replace_parent
+                    }
+                }
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issues/POST/requestBody/content/application\/json`.
+                case json(Operations.issues_sol_add_hyphen_sub_hyphen_issue.Input.Body.jsonPayload)
+            }
+            public var body: Operations.issues_sol_add_hyphen_sub_hyphen_issue.Input.Body
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - headers:
+            ///   - body:
+            public init(
+                path: Operations.issues_sol_add_hyphen_sub_hyphen_issue.Input.Path,
+                headers: Operations.issues_sol_add_hyphen_sub_hyphen_issue.Input.Headers = .init(),
+                body: Operations.issues_sol_add_hyphen_sub_hyphen_issue.Input.Body
+            ) {
+                self.path = path
+                self.headers = headers
+                self.body = body
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Created: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issues/POST/responses/201/headers`.
+                public struct Headers: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issues/POST/responses/201/headers/Location`.
+                    public var Location: Swift.String?
+                    /// Creates a new `Headers`.
+                    ///
+                    /// - Parameters:
+                    ///   - Location:
+                    public init(Location: Swift.String? = nil) {
+                        self.Location = Location
+                    }
+                }
+                /// Received HTTP response headers
+                public var headers: Operations.issues_sol_add_hyphen_sub_hyphen_issue.Output.Created.Headers
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issues/POST/responses/201/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issues/POST/responses/201/content/application\/json`.
+                    case json(Components.Schemas.issue)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Components.Schemas.issue {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.issues_sol_add_hyphen_sub_hyphen_issue.Output.Created.Body
+                /// Creates a new `Created`.
+                ///
+                /// - Parameters:
+                ///   - headers: Received HTTP response headers
+                ///   - body: Received HTTP response body
+                public init(
+                    headers: Operations.issues_sol_add_hyphen_sub_hyphen_issue.Output.Created.Headers = .init(),
+                    body: Operations.issues_sol_add_hyphen_sub_hyphen_issue.Output.Created.Body
+                ) {
+                    self.headers = headers
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/sub_issues/post(issues/add-sub-issue)/responses/201`.
+            ///
+            /// HTTP response code: `201 created`.
+            case created(Operations.issues_sol_add_hyphen_sub_hyphen_issue.Output.Created)
+            /// The associated value of the enum case if `self` is `.created`.
+            ///
+            /// - Throws: An error if `self` is not `.created`.
+            /// - SeeAlso: `.created`.
+            public var created: Operations.issues_sol_add_hyphen_sub_hyphen_issue.Output.Created {
+                get throws {
+                    switch self {
+                    case let .created(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "created",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Forbidden
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/sub_issues/post(issues/add-sub-issue)/responses/403`.
+            ///
+            /// HTTP response code: `403 forbidden`.
+            case forbidden(Components.Responses.forbidden)
+            /// The associated value of the enum case if `self` is `.forbidden`.
+            ///
+            /// - Throws: An error if `self` is not `.forbidden`.
+            /// - SeeAlso: `.forbidden`.
+            public var forbidden: Components.Responses.forbidden {
+                get throws {
+                    switch self {
+                    case let .forbidden(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "forbidden",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Gone
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/sub_issues/post(issues/add-sub-issue)/responses/410`.
+            ///
+            /// HTTP response code: `410 gone`.
+            case gone(Components.Responses.gone)
+            /// The associated value of the enum case if `self` is `.gone`.
+            ///
+            /// - Throws: An error if `self` is not `.gone`.
+            /// - SeeAlso: `.gone`.
+            public var gone: Components.Responses.gone {
+                get throws {
+                    switch self {
+                    case let .gone(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "gone",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Validation failed, or the endpoint has been spammed.
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/sub_issues/post(issues/add-sub-issue)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            case unprocessableContent(Components.Responses.validation_failed)
+            /// The associated value of the enum case if `self` is `.unprocessableContent`.
+            ///
+            /// - Throws: An error if `self` is not `.unprocessableContent`.
+            /// - SeeAlso: `.unprocessableContent`.
+            public var unprocessableContent: Components.Responses.validation_failed {
+                get throws {
+                    switch self {
+                    case let .unprocessableContent(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "unprocessableContent",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Resource not found
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/sub_issues/post(issues/add-sub-issue)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            case notFound(Components.Responses.not_found)
+            /// The associated value of the enum case if `self` is `.notFound`.
+            ///
+            /// - Throws: An error if `self` is not `.notFound`.
+            /// - SeeAlso: `.notFound`.
+            public var notFound: Components.Responses.not_found {
+                get throws {
+                    switch self {
+                    case let .notFound(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "notFound",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
+    /// Reprioritize sub-issue
+    ///
+    /// You can use the REST API to reprioritize a sub-issue to a different position in the parent list.
+    ///
+    /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/issues/{issue_number}/sub_issues/priority`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/sub_issues/priority/patch(issues/reprioritize-sub-issue)`.
+    public enum issues_sol_reprioritize_hyphen_sub_hyphen_issue {
+        public static let id: Swift.String = "issues/reprioritize-sub-issue"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issues/priority/PATCH/path`.
+            public struct Path: Sendable, Hashable {
+                /// The account owner of the repository. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issues/priority/PATCH/path/owner`.
+                public var owner: Components.Parameters.owner
+                /// The name of the repository without the `.git` extension. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issues/priority/PATCH/path/repo`.
+                public var repo: Components.Parameters.repo
+                /// The number that identifies the issue.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issues/priority/PATCH/path/issue_number`.
+                public var issue_number: Components.Parameters.issue_hyphen_number
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - owner: The account owner of the repository. The name is not case sensitive.
+                ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
+                ///   - issue_number: The number that identifies the issue.
+                public init(
+                    owner: Components.Parameters.owner,
+                    repo: Components.Parameters.repo,
+                    issue_number: Components.Parameters.issue_hyphen_number
+                ) {
+                    self.owner = owner
+                    self.repo = repo
+                    self.issue_number = issue_number
+                }
+            }
+            public var path: Operations.issues_sol_reprioritize_hyphen_sub_hyphen_issue.Input.Path
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issues/priority/PATCH/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.issues_sol_reprioritize_hyphen_sub_hyphen_issue.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.issues_sol_reprioritize_hyphen_sub_hyphen_issue.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.issues_sol_reprioritize_hyphen_sub_hyphen_issue.Input.Headers
+            /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issues/priority/PATCH/requestBody`.
+            @frozen public enum Body: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issues/priority/PATCH/requestBody/json`.
+                public struct jsonPayload: Codable, Hashable, Sendable {
+                    /// The id of the sub-issue to reprioritize
+                    ///
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issues/priority/PATCH/requestBody/json/sub_issue_id`.
+                    public var sub_issue_id: Swift.Int
+                    /// The id of the sub-issue to be prioritized after (either positional argument after OR before should be specified).
+                    ///
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issues/priority/PATCH/requestBody/json/after_id`.
+                    public var after_id: Swift.Int?
+                    /// The id of the sub-issue to be prioritized before (either positional argument after OR before should be specified).
+                    ///
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issues/priority/PATCH/requestBody/json/before_id`.
+                    public var before_id: Swift.Int?
+                    /// Creates a new `jsonPayload`.
+                    ///
+                    /// - Parameters:
+                    ///   - sub_issue_id: The id of the sub-issue to reprioritize
+                    ///   - after_id: The id of the sub-issue to be prioritized after (either positional argument after OR before should be specified).
+                    ///   - before_id: The id of the sub-issue to be prioritized before (either positional argument after OR before should be specified).
+                    public init(
+                        sub_issue_id: Swift.Int,
+                        after_id: Swift.Int? = nil,
+                        before_id: Swift.Int? = nil
+                    ) {
+                        self.sub_issue_id = sub_issue_id
+                        self.after_id = after_id
+                        self.before_id = before_id
+                    }
+                    public enum CodingKeys: String, CodingKey {
+                        case sub_issue_id
+                        case after_id
+                        case before_id
+                    }
+                }
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issues/priority/PATCH/requestBody/content/application\/json`.
+                case json(Operations.issues_sol_reprioritize_hyphen_sub_hyphen_issue.Input.Body.jsonPayload)
+            }
+            public var body: Operations.issues_sol_reprioritize_hyphen_sub_hyphen_issue.Input.Body
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - headers:
+            ///   - body:
+            public init(
+                path: Operations.issues_sol_reprioritize_hyphen_sub_hyphen_issue.Input.Path,
+                headers: Operations.issues_sol_reprioritize_hyphen_sub_hyphen_issue.Input.Headers = .init(),
+                body: Operations.issues_sol_reprioritize_hyphen_sub_hyphen_issue.Input.Body
+            ) {
+                self.path = path
+                self.headers = headers
+                self.body = body
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Ok: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issues/priority/PATCH/responses/200/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/sub_issues/priority/PATCH/responses/200/content/application\/json`.
+                    case json(Components.Schemas.issue)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Components.Schemas.issue {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.issues_sol_reprioritize_hyphen_sub_hyphen_issue.Output.Ok.Body
+                /// Creates a new `Ok`.
+                ///
+                /// - Parameters:
+                ///   - body: Received HTTP response body
+                public init(body: Operations.issues_sol_reprioritize_hyphen_sub_hyphen_issue.Output.Ok.Body) {
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/sub_issues/priority/patch(issues/reprioritize-sub-issue)/responses/200`.
+            ///
+            /// HTTP response code: `200 ok`.
+            case ok(Operations.issues_sol_reprioritize_hyphen_sub_hyphen_issue.Output.Ok)
+            /// The associated value of the enum case if `self` is `.ok`.
+            ///
+            /// - Throws: An error if `self` is not `.ok`.
+            /// - SeeAlso: `.ok`.
+            public var ok: Operations.issues_sol_reprioritize_hyphen_sub_hyphen_issue.Output.Ok {
+                get throws {
+                    switch self {
+                    case let .ok(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "ok",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Forbidden
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/sub_issues/priority/patch(issues/reprioritize-sub-issue)/responses/403`.
+            ///
+            /// HTTP response code: `403 forbidden`.
+            case forbidden(Components.Responses.forbidden)
+            /// The associated value of the enum case if `self` is `.forbidden`.
+            ///
+            /// - Throws: An error if `self` is not `.forbidden`.
+            /// - SeeAlso: `.forbidden`.
+            public var forbidden: Components.Responses.forbidden {
+                get throws {
+                    switch self {
+                    case let .forbidden(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "forbidden",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Resource not found
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/sub_issues/priority/patch(issues/reprioritize-sub-issue)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            case notFound(Components.Responses.not_found)
+            /// The associated value of the enum case if `self` is `.notFound`.
+            ///
+            /// - Throws: An error if `self` is not `.notFound`.
+            /// - SeeAlso: `.notFound`.
+            public var notFound: Components.Responses.not_found {
+                get throws {
+                    switch self {
+                    case let .notFound(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "notFound",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Validation failed, or the endpoint has been spammed.
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/sub_issues/priority/patch(issues/reprioritize-sub-issue)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            case unprocessableContent(Components.Responses.validation_failed_simple)
+            /// The associated value of the enum case if `self` is `.unprocessableContent`.
+            ///
+            /// - Throws: An error if `self` is not `.unprocessableContent`.
+            /// - SeeAlso: `.unprocessableContent`.
+            public var unprocessableContent: Components.Responses.validation_failed_simple {
+                get throws {
+                    switch self {
+                    case let .unprocessableContent(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "unprocessableContent",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Service unavailable
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/sub_issues/priority/patch(issues/reprioritize-sub-issue)/responses/503`.
+            ///
+            /// HTTP response code: `503 serviceUnavailable`.
+            case serviceUnavailable(Components.Responses.service_unavailable)
+            /// The associated value of the enum case if `self` is `.serviceUnavailable`.
+            ///
+            /// - Throws: An error if `self` is not `.serviceUnavailable`.
+            /// - SeeAlso: `.serviceUnavailable`.
+            public var serviceUnavailable: Components.Responses.service_unavailable {
+                get throws {
+                    switch self {
+                    case let .serviceUnavailable(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "serviceUnavailable",
                             response: self
                         )
                     }
