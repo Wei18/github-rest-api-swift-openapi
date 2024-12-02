@@ -1302,7 +1302,9 @@ public protocol APIProtocol: Sendable {
     func repos_sol_update_hyphen_webhook(_ input: Operations.repos_sol_update_hyphen_webhook.Input) async throws -> Operations.repos_sol_update_hyphen_webhook.Output
     /// Delete a repository webhook
     ///
+    /// Delete a webhook for an organization.
     ///
+    /// The authenticated user must be a repository owner, or have admin access in the repository, to delete the webhook.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/hooks/{hook_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/hooks/{hook_id}/delete(repos/delete-webhook)`.
@@ -4336,7 +4338,9 @@ extension APIProtocol {
     }
     /// Delete a repository webhook
     ///
+    /// Delete a webhook for an organization.
     ///
+    /// The authenticated user must be a repository owner, or have admin access in the repository, to delete the webhook.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/hooks/{hook_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/hooks/{hook_id}/delete(repos/delete-webhook)`.
@@ -15011,6 +15015,8 @@ public enum Components {
             public var payload: Swift.String?
             /// - Remark: Generated from `#/components/schemas/verification/signature`.
             public var signature: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/verification/verified_at`.
+            public var verified_at: Swift.String?
             /// Creates a new `verification`.
             ///
             /// - Parameters:
@@ -15018,22 +15024,26 @@ public enum Components {
             ///   - reason:
             ///   - payload:
             ///   - signature:
+            ///   - verified_at:
             public init(
                 verified: Swift.Bool,
                 reason: Swift.String,
                 payload: Swift.String? = nil,
-                signature: Swift.String? = nil
+                signature: Swift.String? = nil,
+                verified_at: Swift.String? = nil
             ) {
                 self.verified = verified
                 self.reason = reason
                 self.payload = payload
                 self.signature = signature
+                self.verified_at = verified_at
             }
             public enum CodingKeys: String, CodingKey {
                 case verified
                 case reason
                 case payload
                 case signature
+                case verified_at
             }
         }
         /// Diff Entry
@@ -18672,6 +18682,8 @@ public enum Components {
                     public var signature: Swift.String?
                     /// - Remark: Generated from `#/components/schemas/file-commit/commit/verification/payload`.
                     public var payload: Swift.String?
+                    /// - Remark: Generated from `#/components/schemas/file-commit/commit/verification/verified_at`.
+                    public var verified_at: Swift.String?
                     /// Creates a new `verificationPayload`.
                     ///
                     /// - Parameters:
@@ -18679,22 +18691,26 @@ public enum Components {
                     ///   - reason:
                     ///   - signature:
                     ///   - payload:
+                    ///   - verified_at:
                     public init(
                         verified: Swift.Bool? = nil,
                         reason: Swift.String? = nil,
                         signature: Swift.String? = nil,
-                        payload: Swift.String? = nil
+                        payload: Swift.String? = nil,
+                        verified_at: Swift.String? = nil
                     ) {
                         self.verified = verified
                         self.reason = reason
                         self.signature = signature
                         self.payload = payload
+                        self.verified_at = verified_at
                     }
                     public enum CodingKeys: String, CodingKey {
                         case verified
                         case reason
                         case signature
                         case payload
+                        case verified_at
                     }
                 }
                 /// - Remark: Generated from `#/components/schemas/file-commit/commit/verification`.
@@ -22210,10 +22226,10 @@ public enum Components {
         ///
         /// - Remark: Generated from `#/components/parameters/ref-in-query`.
         public typealias ref_hyphen_in_hyphen_query = Swift.String
-        /// The name of the repository to filter on. When specified, only rule evaluations from this repository will be returned.
+        /// The name of the repository to filter on.
         ///
         /// - Remark: Generated from `#/components/parameters/repository-name-in-query`.
-        public typealias repository_hyphen_name_hyphen_in_hyphen_query = Swift.Int
+        public typealias repository_hyphen_name_hyphen_in_hyphen_query = Swift.String
         /// The time period to filter by.
         ///
         /// For example, `day` will filter for rule suites that occurred in the past 24 hours, and `week` will filter for insights that occurred in the past 7 days (168 hours).
@@ -23997,7 +24013,7 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/rule-suites/GET/query/ref`.
                 public var ref: Components.Parameters.ref_hyphen_in_hyphen_query?
-                /// The name of the repository to filter on. When specified, only rule evaluations from this repository will be returned.
+                /// The name of the repository to filter on.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/rule-suites/GET/query/repository_name`.
                 public var repository_name: Components.Parameters.repository_hyphen_name_hyphen_in_hyphen_query?
@@ -24041,7 +24057,7 @@ public enum Operations {
                 ///
                 /// - Parameters:
                 ///   - ref: The name of the ref. Cannot contain wildcard characters. Optionally prefix with `refs/heads/` to limit to branches or `refs/tags/` to limit to tags. Omit the prefix to search across all refs. When specified, only rule evaluations triggered for this ref will be returned.
-                ///   - repository_name: The name of the repository to filter on. When specified, only rule evaluations from this repository will be returned.
+                ///   - repository_name: The name of the repository to filter on.
                 ///   - time_period: The time period to filter by.
                 ///   - actor_name: The handle for the GitHub user account to filter on. When specified, only rule evaluations triggered by this actor will be returned.
                 ///   - rule_suite_result: The rule results to filter on. When specified, only suites with this result will be returned.
@@ -46909,7 +46925,9 @@ public enum Operations {
     }
     /// Delete a repository webhook
     ///
+    /// Delete a webhook for an organization.
     ///
+    /// The authenticated user must be a repository owner, or have admin access in the repository, to delete the webhook.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/hooks/{hook_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/hooks/{hook_id}/delete(repos/delete-webhook)`.
