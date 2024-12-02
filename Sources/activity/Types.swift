@@ -2611,6 +2611,35 @@ public enum Components {
                 case rocket
             }
         }
+        /// - Remark: Generated from `#/components/schemas/sub-issues-summary`.
+        public struct sub_hyphen_issues_hyphen_summary: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/sub-issues-summary/total`.
+            public var total: Swift.Int
+            /// - Remark: Generated from `#/components/schemas/sub-issues-summary/completed`.
+            public var completed: Swift.Int
+            /// - Remark: Generated from `#/components/schemas/sub-issues-summary/percent_completed`.
+            public var percent_completed: Swift.Int
+            /// Creates a new `sub_hyphen_issues_hyphen_summary`.
+            ///
+            /// - Parameters:
+            ///   - total:
+            ///   - completed:
+            ///   - percent_completed:
+            public init(
+                total: Swift.Int,
+                completed: Swift.Int,
+                percent_completed: Swift.Int
+            ) {
+                self.total = total
+                self.completed = completed
+                self.percent_completed = percent_completed
+            }
+            public enum CodingKeys: String, CodingKey {
+                case total
+                case completed
+                case percent_completed
+            }
+        }
         /// Issues are a great way to keep track of tasks, enhancements, and bugs for your projects.
         ///
         /// - Remark: Generated from `#/components/schemas/issue`.
@@ -2838,6 +2867,8 @@ public enum Components {
             public var author_association: Components.Schemas.author_hyphen_association
             /// - Remark: Generated from `#/components/schemas/issue/reactions`.
             public var reactions: Components.Schemas.reaction_hyphen_rollup?
+            /// - Remark: Generated from `#/components/schemas/issue/sub_issues_summary`.
+            public var sub_issues_summary: Components.Schemas.sub_hyphen_issues_hyphen_summary?
             /// Creates a new `issue`.
             ///
             /// - Parameters:
@@ -2875,6 +2906,7 @@ public enum Components {
             ///   - performed_via_github_app:
             ///   - author_association:
             ///   - reactions:
+            ///   - sub_issues_summary:
             public init(
                 id: Swift.Int64,
                 node_id: Swift.String,
@@ -2909,7 +2941,8 @@ public enum Components {
                 repository: Components.Schemas.repository? = nil,
                 performed_via_github_app: Components.Schemas.nullable_hyphen_integration? = nil,
                 author_association: Components.Schemas.author_hyphen_association,
-                reactions: Components.Schemas.reaction_hyphen_rollup? = nil
+                reactions: Components.Schemas.reaction_hyphen_rollup? = nil,
+                sub_issues_summary: Components.Schemas.sub_hyphen_issues_hyphen_summary? = nil
             ) {
                 self.id = id
                 self.node_id = node_id
@@ -2945,6 +2978,7 @@ public enum Components {
                 self.performed_via_github_app = performed_via_github_app
                 self.author_association = author_association
                 self.reactions = reactions
+                self.sub_issues_summary = sub_issues_summary
             }
             public enum CodingKeys: String, CodingKey {
                 case id
@@ -2981,6 +3015,7 @@ public enum Components {
                 case performed_via_github_app
                 case author_association
                 case reactions
+                case sub_issues_summary
             }
         }
         /// Comments provide a way for people to collaborate on an issue.

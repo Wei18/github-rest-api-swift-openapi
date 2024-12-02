@@ -1043,4 +1043,95 @@ public struct Client: APIProtocol {
             }
         )
     }
+    /// Get secret scanning scan history for a repository
+    ///
+    /// Lists the latest incremental and backfill scans by type for a repository.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` or `security_events` scope to use this endpoint. If this endpoint is only used with public repositories, the token can use the `public_repo` scope instead.
+    ///
+    /// - Remark: HTTP `GET /repos/{owner}/{repo}/secret-scanning/scan-history`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/scan-history/get(secret-scanning/get-scan-history)`.
+    public func secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history(_ input: Operations.secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history.Input) async throws -> Operations.secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history.Output {
+        try await client.send(
+            input: input,
+            forOperation: Operations.secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history.id,
+            serializer: { input in
+                let path = try converter.renderedPath(
+                    template: "/repos/{}/{}/secret-scanning/scan-history",
+                    parameters: [
+                        input.path.owner,
+                        input.path.repo
+                    ]
+                )
+                var request: HTTPTypes.HTTPRequest = .init(
+                    soar_path: path,
+                    method: .get
+                )
+                suppressMutabilityWarning(&request)
+                converter.setAcceptHeader(
+                    in: &request.headerFields,
+                    contentTypes: input.headers.accept
+                )
+                return (request, nil)
+            },
+            deserializer: { response, responseBody in
+                switch response.status.code {
+                case 404:
+                    return .notFound(.init())
+                case 503:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Components.Responses.service_unavailable.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Responses.service_unavailable.Body.jsonPayload.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .serviceUnavailable(.init(body: body))
+                case 200:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Operations.secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history.Output.Ok.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Schemas.secret_hyphen_scanning_hyphen_scan_hyphen_history.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .ok(.init(body: body))
+                default:
+                    return .undocumented(
+                        statusCode: response.status.code,
+                        .init(
+                            headerFields: response.headerFields,
+                            body: responseBody
+                        )
+                    )
+                }
+            }
+        )
+    }
 }

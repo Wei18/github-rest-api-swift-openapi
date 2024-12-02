@@ -2883,6 +2883,8 @@ public enum Components {
             public var payload: Swift.String?
             /// - Remark: Generated from `#/components/schemas/verification/signature`.
             public var signature: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/verification/verified_at`.
+            public var verified_at: Swift.String?
             /// Creates a new `verification`.
             ///
             /// - Parameters:
@@ -2890,22 +2892,26 @@ public enum Components {
             ///   - reason:
             ///   - payload:
             ///   - signature:
+            ///   - verified_at:
             public init(
                 verified: Swift.Bool,
                 reason: Swift.String,
                 payload: Swift.String? = nil,
-                signature: Swift.String? = nil
+                signature: Swift.String? = nil,
+                verified_at: Swift.String? = nil
             ) {
                 self.verified = verified
                 self.reason = reason
                 self.payload = payload
                 self.signature = signature
+                self.verified_at = verified_at
             }
             public enum CodingKeys: String, CodingKey {
                 case verified
                 case reason
                 case payload
                 case signature
+                case verified_at
             }
         }
         /// - Remark: Generated from `#/components/schemas/search_hyphen_result_hyphen_text_hyphen_matches`.
@@ -3377,6 +3383,37 @@ public enum Components {
             public typealias labelsPayload = [Components.Schemas.issue_hyphen_search_hyphen_result_hyphen_item.labelsPayloadPayload]
             /// - Remark: Generated from `#/components/schemas/issue-search-result-item/labels`.
             public var labels: Components.Schemas.issue_hyphen_search_hyphen_result_hyphen_item.labelsPayload
+            /// - Remark: Generated from `#/components/schemas/issue-search-result-item/sub_issues_summary`.
+            public struct sub_issues_summaryPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/issue-search-result-item/sub_issues_summary/total`.
+                public var total: Swift.Int
+                /// - Remark: Generated from `#/components/schemas/issue-search-result-item/sub_issues_summary/completed`.
+                public var completed: Swift.Int
+                /// - Remark: Generated from `#/components/schemas/issue-search-result-item/sub_issues_summary/percent_completed`.
+                public var percent_completed: Swift.Int
+                /// Creates a new `sub_issues_summaryPayload`.
+                ///
+                /// - Parameters:
+                ///   - total:
+                ///   - completed:
+                ///   - percent_completed:
+                public init(
+                    total: Swift.Int,
+                    completed: Swift.Int,
+                    percent_completed: Swift.Int
+                ) {
+                    self.total = total
+                    self.completed = completed
+                    self.percent_completed = percent_completed
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case total
+                    case completed
+                    case percent_completed
+                }
+            }
+            /// - Remark: Generated from `#/components/schemas/issue-search-result-item/sub_issues_summary`.
+            public var sub_issues_summary: Components.Schemas.issue_hyphen_search_hyphen_result_hyphen_item.sub_issues_summaryPayload?
             /// - Remark: Generated from `#/components/schemas/issue-search-result-item/state`.
             public var state: Swift.String
             /// - Remark: Generated from `#/components/schemas/issue-search-result-item/state_reason`.
@@ -3476,6 +3513,7 @@ public enum Components {
             ///   - assignees:
             ///   - user:
             ///   - labels:
+            ///   - sub_issues_summary:
             ///   - state:
             ///   - state_reason:
             ///   - assignee:
@@ -3512,6 +3550,7 @@ public enum Components {
                 assignees: [Components.Schemas.simple_hyphen_user]? = nil,
                 user: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
                 labels: Components.Schemas.issue_hyphen_search_hyphen_result_hyphen_item.labelsPayload,
+                sub_issues_summary: Components.Schemas.issue_hyphen_search_hyphen_result_hyphen_item.sub_issues_summaryPayload? = nil,
                 state: Swift.String,
                 state_reason: Swift.String? = nil,
                 assignee: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
@@ -3548,6 +3587,7 @@ public enum Components {
                 self.assignees = assignees
                 self.user = user
                 self.labels = labels
+                self.sub_issues_summary = sub_issues_summary
                 self.state = state
                 self.state_reason = state_reason
                 self.assignee = assignee
@@ -3585,6 +3625,7 @@ public enum Components {
                 case assignees
                 case user
                 case labels
+                case sub_issues_summary
                 case state
                 case state_reason
                 case assignee

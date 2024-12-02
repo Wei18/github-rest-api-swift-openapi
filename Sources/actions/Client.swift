@@ -6723,7 +6723,7 @@ public struct Client: APIProtocol {
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
     ///
-    /// This API will return up to 1,000 results for each search when using the following parameters: `actor`, `branch`, `check_suite_id`, `created`, `event`, `head_sha`, `status`.
+    /// This endpoint will return up to 1,000 results for each search when using the following parameters: `actor`, `branch`, `check_suite_id`, `created`, `event`, `head_sha`, `status`.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/runs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/get(actions/list-workflow-runs-for-repo)`.
@@ -9383,6 +9383,8 @@ public struct Client: APIProtocol {
     /// Anyone with read access to the repository can use this endpoint
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
+    ///
+    /// This endpoint will return up to 1,000 results for each search when using the following parameters: `actor`, `branch`, `check_suite_id`, `created`, `event`, `head_sha`, `status`.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/actions/workflows/{workflow_id}/runs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/workflows/{workflow_id}/runs/get(actions/list-workflow-runs)`.

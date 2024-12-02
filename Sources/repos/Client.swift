@@ -11479,7 +11479,9 @@ public struct Client: APIProtocol {
     }
     /// Delete a repository webhook
     ///
+    /// Delete a webhook for an organization.
     ///
+    /// The authenticated user must be a repository owner, or have admin access in the repository, to delete the webhook.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/hooks/{hook_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/hooks/{hook_id}/delete(repos/delete-webhook)`.

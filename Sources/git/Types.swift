@@ -787,6 +787,8 @@ public enum Components {
             public var payload: Swift.String?
             /// - Remark: Generated from `#/components/schemas/verification/signature`.
             public var signature: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/verification/verified_at`.
+            public var verified_at: Swift.String?
             /// Creates a new `verification`.
             ///
             /// - Parameters:
@@ -794,22 +796,26 @@ public enum Components {
             ///   - reason:
             ///   - payload:
             ///   - signature:
+            ///   - verified_at:
             public init(
                 verified: Swift.Bool,
                 reason: Swift.String,
                 payload: Swift.String? = nil,
-                signature: Swift.String? = nil
+                signature: Swift.String? = nil,
+                verified_at: Swift.String? = nil
             ) {
                 self.verified = verified
                 self.reason = reason
                 self.payload = payload
                 self.signature = signature
+                self.verified_at = verified_at
             }
             public enum CodingKeys: String, CodingKey {
                 case verified
                 case reason
                 case payload
                 case signature
+                case verified_at
             }
         }
         /// The ID of the push protection bypass placeholder. This value is returned on any push protected routes.
@@ -1158,6 +1164,8 @@ public enum Components {
                 public var signature: Swift.String?
                 /// - Remark: Generated from `#/components/schemas/git-commit/verification/payload`.
                 public var payload: Swift.String?
+                /// - Remark: Generated from `#/components/schemas/git-commit/verification/verified_at`.
+                public var verified_at: Swift.String?
                 /// Creates a new `verificationPayload`.
                 ///
                 /// - Parameters:
@@ -1165,22 +1173,26 @@ public enum Components {
                 ///   - reason:
                 ///   - signature:
                 ///   - payload:
+                ///   - verified_at:
                 public init(
                     verified: Swift.Bool,
                     reason: Swift.String,
                     signature: Swift.String? = nil,
-                    payload: Swift.String? = nil
+                    payload: Swift.String? = nil,
+                    verified_at: Swift.String? = nil
                 ) {
                     self.verified = verified
                     self.reason = reason
                     self.signature = signature
                     self.payload = payload
+                    self.verified_at = verified_at
                 }
                 public enum CodingKeys: String, CodingKey {
                     case verified
                     case reason
                     case signature
                     case payload
+                    case verified_at
                 }
             }
             /// - Remark: Generated from `#/components/schemas/git-commit/verification`.

@@ -114,7 +114,9 @@ public protocol APIProtocol: Sendable {
     func orgs_sol_list_hyphen_failed_hyphen_invitations(_ input: Operations.orgs_sol_list_hyphen_failed_hyphen_invitations.Input) async throws -> Operations.orgs_sol_list_hyphen_failed_hyphen_invitations.Output
     /// List organization webhooks
     ///
-    /// You must be an organization owner to use this endpoint.
+    /// List webhooks for an organization.
+    ///
+    /// The authenticated user must be an organization owner to use this endpoint.
     ///
     /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit
     /// webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
@@ -165,7 +167,9 @@ public protocol APIProtocol: Sendable {
     func orgs_sol_update_hyphen_webhook(_ input: Operations.orgs_sol_update_hyphen_webhook.Input) async throws -> Operations.orgs_sol_update_hyphen_webhook.Output
     /// Delete an organization webhook
     ///
-    /// You must be an organization owner to use this endpoint.
+    /// Delete a webhook for an organization.
+    ///
+    /// The authenticated user must be an organization owner to use this endpoint.
     ///
     /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit
     /// webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
@@ -1000,7 +1004,9 @@ extension APIProtocol {
     }
     /// List organization webhooks
     ///
-    /// You must be an organization owner to use this endpoint.
+    /// List webhooks for an organization.
+    ///
+    /// The authenticated user must be an organization owner to use this endpoint.
     ///
     /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit
     /// webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
@@ -1089,7 +1095,9 @@ extension APIProtocol {
     }
     /// Delete an organization webhook
     ///
-    /// You must be an organization owner to use this endpoint.
+    /// Delete a webhook for an organization.
+    ///
+    /// The authenticated user must be an organization owner to use this endpoint.
     ///
     /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit
     /// webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
@@ -10158,7 +10166,9 @@ public enum Operations {
     }
     /// List organization webhooks
     ///
-    /// You must be an organization owner to use this endpoint.
+    /// List webhooks for an organization.
+    ///
+    /// The authenticated user must be an organization owner to use this endpoint.
     ///
     /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit
     /// webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
@@ -11118,7 +11128,9 @@ public enum Operations {
     }
     /// Delete an organization webhook
     ///
-    /// You must be an organization owner to use this endpoint.
+    /// Delete a webhook for an organization.
+    ///
+    /// The authenticated user must be an organization owner to use this endpoint.
     ///
     /// OAuth app tokens and personal access tokens (classic) need `admin:org_hook` scope. OAuth apps cannot list, view, or edit
     /// webhooks that they did not create and users cannot list, view, or edit webhooks that were created by OAuth apps.
