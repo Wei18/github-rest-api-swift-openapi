@@ -2023,15 +2023,15 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-scan/type`.
             public var _type: Swift.String?
-            /// The state of the scan. Either "completed" or "running"
+            /// The state of the scan. Either "completed", "running", or "pending"
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-scan/status`.
             public var status: Swift.String?
-            /// The time that the scan was completed. Empty if the scan is active
+            /// The time that the scan was completed. Empty if the scan is running
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-scan/completed_at`.
             public var completed_at: Foundation.Date?
-            /// The time that the scan was started
+            /// The time that the scan was started. Empty if the scan is pending
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-scan/started_at`.
             public var started_at: Foundation.Date?
@@ -2039,9 +2039,9 @@ public enum Components {
             ///
             /// - Parameters:
             ///   - _type: The type of scan
-            ///   - status: The state of the scan. Either "completed" or "running"
-            ///   - completed_at: The time that the scan was completed. Empty if the scan is active
-            ///   - started_at: The time that the scan was started
+            ///   - status: The state of the scan. Either "completed", "running", or "pending"
+            ///   - completed_at: The time that the scan was completed. Empty if the scan is running
+            ///   - started_at: The time that the scan was started. Empty if the scan is pending
             public init(
                 _type: Swift.String? = nil,
                 status: Swift.String? = nil,
