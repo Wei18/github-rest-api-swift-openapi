@@ -2127,6 +2127,13 @@ public struct Client: APIProtocol {
                     name: "sort",
                     value: input.query.sort
                 )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "api_route_substring",
+                    value: input.query.api_route_substring
+                )
                 converter.setAcceptHeader(
                     in: &request.headerFields,
                     contentTypes: input.headers.accept
@@ -2232,6 +2239,13 @@ public struct Client: APIProtocol {
                     explode: true,
                     name: "sort",
                     value: input.query.sort
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "subject_name_substring",
+                    value: input.query.subject_name_substring
                 )
                 converter.setAcceptHeader(
                     in: &request.headerFields,
@@ -2834,6 +2848,13 @@ public struct Client: APIProtocol {
                     explode: true,
                     name: "sort",
                     value: input.query.sort
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "actor_name_substring",
+                    value: input.query.actor_name_substring
                 )
                 converter.setAcceptHeader(
                     in: &request.headerFields,
