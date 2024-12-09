@@ -3106,6 +3106,21 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup-update/state`.
             public var state: Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup_hyphen_update.statePayload?
+            /// Runner type to be used.
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup-update/runner_type`.
+            @frozen public enum runner_typePayload: String, Codable, Hashable, Sendable {
+                case standard = "standard"
+                case labeled = "labeled"
+            }
+            /// Runner type to be used.
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup-update/runner_type`.
+            public var runner_type: Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup_hyphen_update.runner_typePayload?
+            /// Runner label to be used if the runner type is labeled.
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup-update/runner_label`.
+            public var runner_label: Swift.String?
             /// CodeQL query suite to be used.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup-update/query_suite`.
@@ -3140,19 +3155,27 @@ public enum Components {
             ///
             /// - Parameters:
             ///   - state: The desired state of code scanning default setup.
+            ///   - runner_type: Runner type to be used.
+            ///   - runner_label: Runner label to be used if the runner type is labeled.
             ///   - query_suite: CodeQL query suite to be used.
             ///   - languages: CodeQL languages to be analyzed.
             public init(
                 state: Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup_hyphen_update.statePayload? = nil,
+                runner_type: Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup_hyphen_update.runner_typePayload? = nil,
+                runner_label: Swift.String? = nil,
                 query_suite: Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup_hyphen_update.query_suitePayload? = nil,
                 languages: Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup_hyphen_update.languagesPayload? = nil
             ) {
                 self.state = state
+                self.runner_type = runner_type
+                self.runner_label = runner_label
                 self.query_suite = query_suite
                 self.languages = languages
             }
             public enum CodingKeys: String, CodingKey {
                 case state
+                case runner_type
+                case runner_label
                 case query_suite
                 case languages
             }
@@ -3161,6 +3184,14 @@ public enum Components {
                 state = try container.decodeIfPresent(
                     Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup_hyphen_update.statePayload.self,
                     forKey: .state
+                )
+                runner_type = try container.decodeIfPresent(
+                    Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup_hyphen_update.runner_typePayload.self,
+                    forKey: .runner_type
+                )
+                runner_label = try container.decodeIfPresent(
+                    Swift.String.self,
+                    forKey: .runner_label
                 )
                 query_suite = try container.decodeIfPresent(
                     Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup_hyphen_update.query_suitePayload.self,
@@ -3172,6 +3203,8 @@ public enum Components {
                 )
                 try decoder.ensureNoAdditionalProperties(knownKeys: [
                     "state",
+                    "runner_type",
+                    "runner_label",
                     "query_suite",
                     "languages"
                 ])

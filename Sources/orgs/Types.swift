@@ -7670,11 +7670,11 @@ public enum Components {
         ///
         /// - Remark: Generated from `#/components/parameters/api-insights-actor-type`.
         @frozen public enum api_hyphen_insights_hyphen_actor_hyphen_type: String, Codable, Hashable, Sendable {
-            case installations = "installations"
-            case classic_pats = "classic_pats"
-            case fine_grained_pats = "fine_grained_pats"
-            case oauth_apps = "oauth_apps"
-            case github_apps_user_to_server = "github_apps_user_to_server"
+            case installation = "installation"
+            case classic_pat = "classic_pat"
+            case fine_grained_pat = "fine_grained_pat"
+            case oauth_app = "oauth_app"
+            case github_app_user_to_server = "github_app_user_to_server"
         }
         /// The ID of the actor
         ///
@@ -7701,6 +7701,10 @@ public enum Components {
         ///
         /// - Remark: Generated from `#/components/parameters/api-insights-route-stats-sort`.
         public typealias api_hyphen_insights_hyphen_route_hyphen_stats_hyphen_sort = [Components.Parameters.api_hyphen_insights_hyphen_route_hyphen_stats_hyphen_sortPayload]
+        /// Providing a substring will filter results where the API route contains the substring. This is a case-insensitive search.
+        ///
+        /// - Remark: Generated from `#/components/parameters/api-insights-api-route-substring`.
+        public typealias api_hyphen_insights_hyphen_api_hyphen_route_hyphen_substring = Swift.String
         /// - Remark: Generated from `#/components/parameters/api_hyphen_insights_hyphen_sort`.
         @frozen public enum api_hyphen_insights_hyphen_sortPayload: String, Codable, Hashable, Sendable {
             case last_rate_limited_timestamp = "last_rate_limited_timestamp"
@@ -7713,6 +7717,10 @@ public enum Components {
         ///
         /// - Remark: Generated from `#/components/parameters/api-insights-sort`.
         public typealias api_hyphen_insights_hyphen_sort = [Components.Parameters.api_hyphen_insights_hyphen_sortPayload]
+        /// Providing a substring will filter results where the subject name contains the substring. This is a case-insensitive search.
+        ///
+        /// - Remark: Generated from `#/components/parameters/api-insights-subject-name-substring`.
+        public typealias api_hyphen_insights_hyphen_subject_hyphen_name_hyphen_substring = Swift.String
         /// The ID of the user to query for stats
         ///
         /// - Remark: Generated from `#/components/parameters/api-insights-user-id`.
@@ -7721,6 +7729,10 @@ public enum Components {
         ///
         /// - Remark: Generated from `#/components/parameters/api-insights-timestamp-increment`.
         public typealias api_hyphen_insights_hyphen_timestamp_hyphen_increment = Swift.String
+        /// Providing a substring will filter results where the actor name contains the substring. This is a case-insensitive search.
+        ///
+        /// - Remark: Generated from `#/components/parameters/api-insights-actor-name-substring`.
+        public typealias api_hyphen_insights_hyphen_actor_hyphen_name_hyphen_substring = Swift.String
         /// The unique identifier of the invitation.
         ///
         /// - Remark: Generated from `#/components/parameters/invitation-id`.
@@ -12373,11 +12385,11 @@ public enum Operations {
                 public var org: Components.Parameters.org
                 /// - Remark: Generated from `#/components/parameters/api-insights-actor-type`.
                 @frozen public enum api_hyphen_insights_hyphen_actor_hyphen_type: String, Codable, Hashable, Sendable {
-                    case installations = "installations"
-                    case classic_pats = "classic_pats"
-                    case fine_grained_pats = "fine_grained_pats"
-                    case oauth_apps = "oauth_apps"
-                    case github_apps_user_to_server = "github_apps_user_to_server"
+                    case installation = "installation"
+                    case classic_pat = "classic_pat"
+                    case fine_grained_pat = "fine_grained_pat"
+                    case oauth_app = "oauth_app"
+                    case github_app_user_to_server = "github_app_user_to_server"
                 }
                 /// The type of the actor
                 ///
@@ -12446,6 +12458,10 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/route-stats/{actor_type}/{actor_id}/GET/query/sort`.
                 public var sort: Components.Parameters.api_hyphen_insights_hyphen_route_hyphen_stats_hyphen_sort?
+                /// Providing a substring will filter results where the API route contains the substring. This is a case-insensitive search.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/route-stats/{actor_type}/{actor_id}/GET/query/api_route_substring`.
+                public var api_route_substring: Components.Parameters.api_hyphen_insights_hyphen_api_hyphen_route_hyphen_substring?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
@@ -12455,13 +12471,15 @@ public enum Operations {
                 ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - direction: The direction to sort the results by.
                 ///   - sort: The property to sort the results by.
+                ///   - api_route_substring: Providing a substring will filter results where the API route contains the substring. This is a case-insensitive search.
                 public init(
                     min_timestamp: Components.Parameters.api_hyphen_insights_hyphen_min_hyphen_timestamp,
                     max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp? = nil,
                     page: Components.Parameters.page? = nil,
                     per_page: Components.Parameters.per_hyphen_page? = nil,
                     direction: Components.Parameters.direction? = nil,
-                    sort: Components.Parameters.api_hyphen_insights_hyphen_route_hyphen_stats_hyphen_sort? = nil
+                    sort: Components.Parameters.api_hyphen_insights_hyphen_route_hyphen_stats_hyphen_sort? = nil,
+                    api_route_substring: Components.Parameters.api_hyphen_insights_hyphen_api_hyphen_route_hyphen_substring? = nil
                 ) {
                     self.min_timestamp = min_timestamp
                     self.max_timestamp = max_timestamp
@@ -12469,6 +12487,7 @@ public enum Operations {
                     self.per_page = per_page
                     self.direction = direction
                     self.sort = sort
+                    self.api_route_substring = api_route_substring
                 }
             }
             public var query: Operations.api_hyphen_insights_sol_get_hyphen_route_hyphen_stats_hyphen_by_hyphen_actor.Input.Query
@@ -12648,6 +12667,10 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/subject-stats/GET/query/sort`.
                 public var sort: Components.Parameters.api_hyphen_insights_hyphen_sort?
+                /// Providing a substring will filter results where the subject name contains the substring. This is a case-insensitive search.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/subject-stats/GET/query/subject_name_substring`.
+                public var subject_name_substring: Components.Parameters.api_hyphen_insights_hyphen_subject_hyphen_name_hyphen_substring?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
@@ -12657,13 +12680,15 @@ public enum Operations {
                 ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - direction: The direction to sort the results by.
                 ///   - sort: The property to sort the results by.
+                ///   - subject_name_substring: Providing a substring will filter results where the subject name contains the substring. This is a case-insensitive search.
                 public init(
                     min_timestamp: Components.Parameters.api_hyphen_insights_hyphen_min_hyphen_timestamp,
                     max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp? = nil,
                     page: Components.Parameters.page? = nil,
                     per_page: Components.Parameters.per_hyphen_page? = nil,
                     direction: Components.Parameters.direction? = nil,
-                    sort: Components.Parameters.api_hyphen_insights_hyphen_sort? = nil
+                    sort: Components.Parameters.api_hyphen_insights_hyphen_sort? = nil,
+                    subject_name_substring: Components.Parameters.api_hyphen_insights_hyphen_subject_hyphen_name_hyphen_substring? = nil
                 ) {
                     self.min_timestamp = min_timestamp
                     self.max_timestamp = max_timestamp
@@ -12671,6 +12696,7 @@ public enum Operations {
                     self.per_page = per_page
                     self.direction = direction
                     self.sort = sort
+                    self.subject_name_substring = subject_name_substring
                 }
             }
             public var query: Operations.api_hyphen_insights_sol_get_hyphen_subject_hyphen_stats.Input.Query
@@ -13129,11 +13155,11 @@ public enum Operations {
                 public var org: Components.Parameters.org
                 /// - Remark: Generated from `#/components/parameters/api-insights-actor-type`.
                 @frozen public enum api_hyphen_insights_hyphen_actor_hyphen_type: String, Codable, Hashable, Sendable {
-                    case installations = "installations"
-                    case classic_pats = "classic_pats"
-                    case fine_grained_pats = "fine_grained_pats"
-                    case oauth_apps = "oauth_apps"
-                    case github_apps_user_to_server = "github_apps_user_to_server"
+                    case installation = "installation"
+                    case classic_pat = "classic_pat"
+                    case fine_grained_pat = "fine_grained_pat"
+                    case oauth_app = "oauth_app"
+                    case github_app_user_to_server = "github_app_user_to_server"
                 }
                 /// The type of the actor
                 ///
@@ -13653,11 +13679,11 @@ public enum Operations {
                 public var org: Components.Parameters.org
                 /// - Remark: Generated from `#/components/parameters/api-insights-actor-type`.
                 @frozen public enum api_hyphen_insights_hyphen_actor_hyphen_type: String, Codable, Hashable, Sendable {
-                    case installations = "installations"
-                    case classic_pats = "classic_pats"
-                    case fine_grained_pats = "fine_grained_pats"
-                    case oauth_apps = "oauth_apps"
-                    case github_apps_user_to_server = "github_apps_user_to_server"
+                    case installation = "installation"
+                    case classic_pat = "classic_pat"
+                    case fine_grained_pat = "fine_grained_pat"
+                    case oauth_app = "oauth_app"
+                    case github_app_user_to_server = "github_app_user_to_server"
                 }
                 /// The type of the actor
                 ///
@@ -13900,6 +13926,10 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/user-stats/{user_id}/GET/query/sort`.
                 public var sort: Components.Parameters.api_hyphen_insights_hyphen_sort?
+                /// Providing a substring will filter results where the actor name contains the substring. This is a case-insensitive search.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/user-stats/{user_id}/GET/query/actor_name_substring`.
+                public var actor_name_substring: Components.Parameters.api_hyphen_insights_hyphen_actor_hyphen_name_hyphen_substring?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
@@ -13909,13 +13939,15 @@ public enum Operations {
                 ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - direction: The direction to sort the results by.
                 ///   - sort: The property to sort the results by.
+                ///   - actor_name_substring: Providing a substring will filter results where the actor name contains the substring. This is a case-insensitive search.
                 public init(
                     min_timestamp: Components.Parameters.api_hyphen_insights_hyphen_min_hyphen_timestamp,
                     max_timestamp: Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp? = nil,
                     page: Components.Parameters.page? = nil,
                     per_page: Components.Parameters.per_hyphen_page? = nil,
                     direction: Components.Parameters.direction? = nil,
-                    sort: Components.Parameters.api_hyphen_insights_hyphen_sort? = nil
+                    sort: Components.Parameters.api_hyphen_insights_hyphen_sort? = nil,
+                    actor_name_substring: Components.Parameters.api_hyphen_insights_hyphen_actor_hyphen_name_hyphen_substring? = nil
                 ) {
                     self.min_timestamp = min_timestamp
                     self.max_timestamp = max_timestamp
@@ -13923,6 +13955,7 @@ public enum Operations {
                     self.per_page = per_page
                     self.direction = direction
                     self.sort = sort
+                    self.actor_name_substring = actor_name_substring
                 }
             }
             public var query: Operations.api_hyphen_insights_sol_get_hyphen_user_hyphen_stats.Input.Query

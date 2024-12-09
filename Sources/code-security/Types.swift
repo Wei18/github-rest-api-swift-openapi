@@ -1121,6 +1121,47 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/code-security-configuration/code_scanning_default_setup`.
             public var code_scanning_default_setup: Components.Schemas.code_hyphen_security_hyphen_configuration.code_scanning_default_setupPayload?
+            /// Feature options for code scanning default setup
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-security-configuration/code_scanning_default_setup_options`.
+            public struct code_scanning_default_setup_optionsPayload: Codable, Hashable, Sendable {
+                /// Whether to use labeled runners or standard GitHub runners.
+                ///
+                /// - Remark: Generated from `#/components/schemas/code-security-configuration/code_scanning_default_setup_options/runner_type`.
+                @frozen public enum runner_typePayload: String, Codable, Hashable, Sendable {
+                    case standard = "standard"
+                    case labeled = "labeled"
+                    case not_set = "not_set"
+                }
+                /// Whether to use labeled runners or standard GitHub runners.
+                ///
+                /// - Remark: Generated from `#/components/schemas/code-security-configuration/code_scanning_default_setup_options/runner_type`.
+                public var runner_type: Components.Schemas.code_hyphen_security_hyphen_configuration.code_scanning_default_setup_optionsPayload.runner_typePayload?
+                /// The label of the runner to use for code scanning when runner_type is 'labeled'.
+                ///
+                /// - Remark: Generated from `#/components/schemas/code-security-configuration/code_scanning_default_setup_options/runner_label`.
+                public var runner_label: Swift.String?
+                /// Creates a new `code_scanning_default_setup_optionsPayload`.
+                ///
+                /// - Parameters:
+                ///   - runner_type: Whether to use labeled runners or standard GitHub runners.
+                ///   - runner_label: The label of the runner to use for code scanning when runner_type is 'labeled'.
+                public init(
+                    runner_type: Components.Schemas.code_hyphen_security_hyphen_configuration.code_scanning_default_setup_optionsPayload.runner_typePayload? = nil,
+                    runner_label: Swift.String? = nil
+                ) {
+                    self.runner_type = runner_type
+                    self.runner_label = runner_label
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case runner_type
+                    case runner_label
+                }
+            }
+            /// Feature options for code scanning default setup
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-security-configuration/code_scanning_default_setup_options`.
+            public var code_scanning_default_setup_options: Components.Schemas.code_hyphen_security_hyphen_configuration.code_scanning_default_setup_optionsPayload?
             /// The enablement status of secret scanning
             ///
             /// - Remark: Generated from `#/components/schemas/code-security-configuration/secret_scanning`.
@@ -1291,6 +1332,7 @@ public enum Components {
             ///   - dependabot_alerts: The enablement status of Dependabot alerts
             ///   - dependabot_security_updates: The enablement status of Dependabot security updates
             ///   - code_scanning_default_setup: The enablement status of code scanning default setup
+            ///   - code_scanning_default_setup_options: Feature options for code scanning default setup
             ///   - secret_scanning: The enablement status of secret scanning
             ///   - secret_scanning_push_protection: The enablement status of secret scanning push protection
             ///   - secret_scanning_delegated_bypass: The enablement status of secret scanning delegated bypass
@@ -1315,6 +1357,7 @@ public enum Components {
                 dependabot_alerts: Components.Schemas.code_hyphen_security_hyphen_configuration.dependabot_alertsPayload? = nil,
                 dependabot_security_updates: Components.Schemas.code_hyphen_security_hyphen_configuration.dependabot_security_updatesPayload? = nil,
                 code_scanning_default_setup: Components.Schemas.code_hyphen_security_hyphen_configuration.code_scanning_default_setupPayload? = nil,
+                code_scanning_default_setup_options: Components.Schemas.code_hyphen_security_hyphen_configuration.code_scanning_default_setup_optionsPayload? = nil,
                 secret_scanning: Components.Schemas.code_hyphen_security_hyphen_configuration.secret_scanningPayload? = nil,
                 secret_scanning_push_protection: Components.Schemas.code_hyphen_security_hyphen_configuration.secret_scanning_push_protectionPayload? = nil,
                 secret_scanning_delegated_bypass: Components.Schemas.code_hyphen_security_hyphen_configuration.secret_scanning_delegated_bypassPayload? = nil,
@@ -1339,6 +1382,7 @@ public enum Components {
                 self.dependabot_alerts = dependabot_alerts
                 self.dependabot_security_updates = dependabot_security_updates
                 self.code_scanning_default_setup = code_scanning_default_setup
+                self.code_scanning_default_setup_options = code_scanning_default_setup_options
                 self.secret_scanning = secret_scanning
                 self.secret_scanning_push_protection = secret_scanning_push_protection
                 self.secret_scanning_delegated_bypass = secret_scanning_delegated_bypass
@@ -1364,6 +1408,7 @@ public enum Components {
                 case dependabot_alerts
                 case dependabot_security_updates
                 case code_scanning_default_setup
+                case code_scanning_default_setup_options
                 case secret_scanning
                 case secret_scanning_push_protection
                 case secret_scanning_delegated_bypass
@@ -1376,6 +1421,43 @@ public enum Components {
                 case html_url
                 case created_at
                 case updated_at
+            }
+        }
+        /// Feature options for code scanning default setup
+        ///
+        /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup-options`.
+        public struct code_hyphen_scanning_hyphen_default_hyphen_setup_hyphen_options: Codable, Hashable, Sendable {
+            /// Whether to use labeled runners or standard GitHub runners.
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup-options/runner_type`.
+            @frozen public enum runner_typePayload: String, Codable, Hashable, Sendable {
+                case standard = "standard"
+                case labeled = "labeled"
+                case not_set = "not_set"
+            }
+            /// Whether to use labeled runners or standard GitHub runners.
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup-options/runner_type`.
+            public var runner_type: Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup_hyphen_options.runner_typePayload?
+            /// The label of the runner to use for code scanning default setup when runner_type is 'labeled'.
+            ///
+            /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup-options/runner_label`.
+            public var runner_label: Swift.String?
+            /// Creates a new `code_hyphen_scanning_hyphen_default_hyphen_setup_hyphen_options`.
+            ///
+            /// - Parameters:
+            ///   - runner_type: Whether to use labeled runners or standard GitHub runners.
+            ///   - runner_label: The label of the runner to use for code scanning default setup when runner_type is 'labeled'.
+            public init(
+                runner_type: Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup_hyphen_options.runner_typePayload? = nil,
+                runner_label: Swift.String? = nil
+            ) {
+                self.runner_type = runner_type
+                self.runner_label = runner_label
+            }
+            public enum CodingKeys: String, CodingKey {
+                case runner_type
+                case runner_label
             }
         }
         /// - Remark: Generated from `#/components/schemas/code_hyphen_security_hyphen_default_hyphen_configurations`.
@@ -2072,6 +2154,8 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/code_scanning_default_setup`.
                     public var code_scanning_default_setup: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.code_scanning_default_setupPayload?
+                    /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/code_scanning_default_setup_options`.
+                    public var code_scanning_default_setup_options: Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup_hyphen_options?
                     /// The enablement status of secret scanning
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/secret_scanning`.
@@ -2228,6 +2312,7 @@ public enum Operations {
                     ///   - dependabot_alerts: The enablement status of Dependabot alerts
                     ///   - dependabot_security_updates: The enablement status of Dependabot security updates
                     ///   - code_scanning_default_setup: The enablement status of code scanning default setup
+                    ///   - code_scanning_default_setup_options:
                     ///   - secret_scanning: The enablement status of secret scanning
                     ///   - secret_scanning_push_protection: The enablement status of secret scanning push protection
                     ///   - secret_scanning_delegated_bypass: The enablement status of secret scanning delegated bypass
@@ -2246,6 +2331,7 @@ public enum Operations {
                         dependabot_alerts: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.dependabot_alertsPayload? = nil,
                         dependabot_security_updates: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.dependabot_security_updatesPayload? = nil,
                         code_scanning_default_setup: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.code_scanning_default_setupPayload? = nil,
+                        code_scanning_default_setup_options: Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup_hyphen_options? = nil,
                         secret_scanning: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.secret_scanningPayload? = nil,
                         secret_scanning_push_protection: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_push_protectionPayload? = nil,
                         secret_scanning_delegated_bypass: Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_delegated_bypassPayload? = nil,
@@ -2264,6 +2350,7 @@ public enum Operations {
                         self.dependabot_alerts = dependabot_alerts
                         self.dependabot_security_updates = dependabot_security_updates
                         self.code_scanning_default_setup = code_scanning_default_setup
+                        self.code_scanning_default_setup_options = code_scanning_default_setup_options
                         self.secret_scanning = secret_scanning
                         self.secret_scanning_push_protection = secret_scanning_push_protection
                         self.secret_scanning_delegated_bypass = secret_scanning_delegated_bypass
@@ -2283,6 +2370,7 @@ public enum Operations {
                         case dependabot_alerts
                         case dependabot_security_updates
                         case code_scanning_default_setup
+                        case code_scanning_default_setup_options
                         case secret_scanning
                         case secret_scanning_push_protection
                         case secret_scanning_delegated_bypass
@@ -2330,6 +2418,10 @@ public enum Operations {
                             Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.code_scanning_default_setupPayload.self,
                             forKey: .code_scanning_default_setup
                         )
+                        code_scanning_default_setup_options = try container.decodeIfPresent(
+                            Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup_hyphen_options.self,
+                            forKey: .code_scanning_default_setup_options
+                        )
                         secret_scanning = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.secret_scanningPayload.self,
                             forKey: .secret_scanning
@@ -2372,6 +2464,7 @@ public enum Operations {
                             "dependabot_alerts",
                             "dependabot_security_updates",
                             "code_scanning_default_setup",
+                            "code_scanning_default_setup_options",
                             "secret_scanning",
                             "secret_scanning_push_protection",
                             "secret_scanning_delegated_bypass",
@@ -3303,6 +3396,8 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/code_scanning_default_setup`.
                     public var code_scanning_default_setup: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.code_scanning_default_setupPayload?
+                    /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/code_scanning_default_setup_options`.
+                    public var code_scanning_default_setup_options: Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup_hyphen_options?
                     /// The enablement status of secret scanning
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/secret_scanning`.
@@ -3459,6 +3554,7 @@ public enum Operations {
                     ///   - dependabot_alerts: The enablement status of Dependabot alerts
                     ///   - dependabot_security_updates: The enablement status of Dependabot security updates
                     ///   - code_scanning_default_setup: The enablement status of code scanning default setup
+                    ///   - code_scanning_default_setup_options:
                     ///   - secret_scanning: The enablement status of secret scanning
                     ///   - secret_scanning_push_protection: The enablement status of secret scanning push protection
                     ///   - secret_scanning_delegated_bypass: The enablement status of secret scanning delegated bypass
@@ -3477,6 +3573,7 @@ public enum Operations {
                         dependabot_alerts: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.dependabot_alertsPayload? = nil,
                         dependabot_security_updates: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.dependabot_security_updatesPayload? = nil,
                         code_scanning_default_setup: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.code_scanning_default_setupPayload? = nil,
+                        code_scanning_default_setup_options: Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup_hyphen_options? = nil,
                         secret_scanning: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.secret_scanningPayload? = nil,
                         secret_scanning_push_protection: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_push_protectionPayload? = nil,
                         secret_scanning_delegated_bypass: Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_delegated_bypassPayload? = nil,
@@ -3495,6 +3592,7 @@ public enum Operations {
                         self.dependabot_alerts = dependabot_alerts
                         self.dependabot_security_updates = dependabot_security_updates
                         self.code_scanning_default_setup = code_scanning_default_setup
+                        self.code_scanning_default_setup_options = code_scanning_default_setup_options
                         self.secret_scanning = secret_scanning
                         self.secret_scanning_push_protection = secret_scanning_push_protection
                         self.secret_scanning_delegated_bypass = secret_scanning_delegated_bypass
@@ -3514,6 +3612,7 @@ public enum Operations {
                         case dependabot_alerts
                         case dependabot_security_updates
                         case code_scanning_default_setup
+                        case code_scanning_default_setup_options
                         case secret_scanning
                         case secret_scanning_push_protection
                         case secret_scanning_delegated_bypass
@@ -3561,6 +3660,10 @@ public enum Operations {
                             Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.code_scanning_default_setupPayload.self,
                             forKey: .code_scanning_default_setup
                         )
+                        code_scanning_default_setup_options = try container.decodeIfPresent(
+                            Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup_hyphen_options.self,
+                            forKey: .code_scanning_default_setup_options
+                        )
                         secret_scanning = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.secret_scanningPayload.self,
                             forKey: .secret_scanning
@@ -3603,6 +3706,7 @@ public enum Operations {
                             "dependabot_alerts",
                             "dependabot_security_updates",
                             "code_scanning_default_setup",
+                            "code_scanning_default_setup_options",
                             "secret_scanning",
                             "secret_scanning_push_protection",
                             "secret_scanning_delegated_bypass",

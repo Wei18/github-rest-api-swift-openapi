@@ -383,6 +383,7 @@ public struct Client: APIProtocol {
     /// | `reason` | `string` | The reason for verified value. Possible values and their meanings are enumerated in the table below. |
     /// | `signature` | `string` | The signature that was extracted from the commit. |
     /// | `payload` | `string` | The value that was signed. |
+    /// | `verified_at` | `string` | The date the signature was verified by GitHub. |
     ///
     /// These are the possible values for `reason` in the `verification` object:
     ///
@@ -562,6 +563,7 @@ public struct Client: APIProtocol {
     /// | `reason` | `string` | The reason for verified value. Possible values and their meanings are enumerated in the table below. |
     /// | `signature` | `string` | The signature that was extracted from the commit. |
     /// | `payload` | `string` | The value that was signed. |
+    /// | `verified_at` | `string` | The date the signature was verified by GitHub. |
     ///
     /// These are the possible values for `reason` in the `verification` object:
     ///
@@ -1252,6 +1254,7 @@ public struct Client: APIProtocol {
     /// | `reason` | `string` | The reason for verified value. Possible values and their meanings are enumerated in table below. |
     /// | `signature` | `string` | The signature that was extracted from the commit. |
     /// | `payload` | `string` | The value that was signed. |
+    /// | `verified_at` | `string` | The date the signature was verified by GitHub. |
     ///
     /// These are the possible values for `reason` in the `verification` object:
     ///
@@ -1405,6 +1408,7 @@ public struct Client: APIProtocol {
     /// | `reason` | `string` | The reason for verified value. Possible values and their meanings are enumerated in table below. |
     /// | `signature` | `string` | The signature that was extracted from the commit. |
     /// | `payload` | `string` | The value that was signed. |
+    /// | `verified_at` | `string` | The date the signature was verified by GitHub. |
     ///
     /// These are the possible values for `reason` in the `verification` object:
     ///
