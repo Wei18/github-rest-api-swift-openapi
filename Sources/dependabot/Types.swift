@@ -628,6 +628,31 @@ public enum Components {
                 case cvss_v4
             }
         }
+        /// The EPSS scores as calculated by the [Exploit Prediction Scoring System](https://www.first.org/epss).
+        ///
+        /// - Remark: Generated from `#/components/schemas/security-advisory-epss`.
+        public struct security_hyphen_advisory_hyphen_epss: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/security-advisory-epss/percentage`.
+            public var percentage: Swift.Double?
+            /// - Remark: Generated from `#/components/schemas/security-advisory-epss/percentile`.
+            public var percentile: Swift.Double?
+            /// Creates a new `security_hyphen_advisory_hyphen_epss`.
+            ///
+            /// - Parameters:
+            ///   - percentage:
+            ///   - percentile:
+            public init(
+                percentage: Swift.Double? = nil,
+                percentile: Swift.Double? = nil
+            ) {
+                self.percentage = percentage
+                self.percentile = percentile
+            }
+            public enum CodingKeys: String, CodingKey {
+                case percentage
+                case percentile
+            }
+        }
         /// A GitHub user.
         ///
         /// - Remark: Generated from `#/components/schemas/simple-user`.
@@ -841,6 +866,55 @@ public enum Components {
                 case errors
             }
         }
+        /// Scim Error
+        ///
+        /// - Remark: Generated from `#/components/schemas/scim-error`.
+        public struct scim_hyphen_error: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/scim-error/message`.
+            public var message: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/scim-error/documentation_url`.
+            public var documentation_url: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/scim-error/detail`.
+            public var detail: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/scim-error/status`.
+            public var status: Swift.Int?
+            /// - Remark: Generated from `#/components/schemas/scim-error/scimType`.
+            public var scimType: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/scim-error/schemas`.
+            public var schemas: [Swift.String]?
+            /// Creates a new `scim_hyphen_error`.
+            ///
+            /// - Parameters:
+            ///   - message:
+            ///   - documentation_url:
+            ///   - detail:
+            ///   - status:
+            ///   - scimType:
+            ///   - schemas:
+            public init(
+                message: Swift.String? = nil,
+                documentation_url: Swift.String? = nil,
+                detail: Swift.String? = nil,
+                status: Swift.Int? = nil,
+                scimType: Swift.String? = nil,
+                schemas: [Swift.String]? = nil
+            ) {
+                self.message = message
+                self.documentation_url = documentation_url
+                self.detail = detail
+                self.status = status
+                self.scimType = scimType
+                self.schemas = schemas
+            }
+            public enum CodingKeys: String, CodingKey {
+                case message
+                case documentation_url
+                case detail
+                case status
+                case scimType
+                case schemas
+            }
+        }
         /// A GitHub user.
         ///
         /// - Remark: Generated from `#/components/schemas/nullable-simple-user`.
@@ -986,55 +1060,6 @@ public enum Components {
                 case user_view_type
             }
         }
-        /// Scim Error
-        ///
-        /// - Remark: Generated from `#/components/schemas/scim-error`.
-        public struct scim_hyphen_error: Codable, Hashable, Sendable {
-            /// - Remark: Generated from `#/components/schemas/scim-error/message`.
-            public var message: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/scim-error/documentation_url`.
-            public var documentation_url: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/scim-error/detail`.
-            public var detail: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/scim-error/status`.
-            public var status: Swift.Int?
-            /// - Remark: Generated from `#/components/schemas/scim-error/scimType`.
-            public var scimType: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/scim-error/schemas`.
-            public var schemas: [Swift.String]?
-            /// Creates a new `scim_hyphen_error`.
-            ///
-            /// - Parameters:
-            ///   - message:
-            ///   - documentation_url:
-            ///   - detail:
-            ///   - status:
-            ///   - scimType:
-            ///   - schemas:
-            public init(
-                message: Swift.String? = nil,
-                documentation_url: Swift.String? = nil,
-                detail: Swift.String? = nil,
-                status: Swift.Int? = nil,
-                scimType: Swift.String? = nil,
-                schemas: [Swift.String]? = nil
-            ) {
-                self.message = message
-                self.documentation_url = documentation_url
-                self.detail = detail
-                self.status = status
-                self.scimType = scimType
-                self.schemas = schemas
-            }
-            public enum CodingKeys: String, CodingKey {
-                case message
-                case documentation_url
-                case detail
-                case status
-                case scimType
-                case schemas
-            }
-        }
         /// Code Of Conduct
         ///
         /// - Remark: Generated from `#/components/schemas/code-of-conduct`.
@@ -1078,575 +1103,6 @@ public enum Components {
                 case html_url
             }
         }
-        /// The security alert number.
-        ///
-        /// - Remark: Generated from `#/components/schemas/alert-number`.
-        public typealias alert_hyphen_number = Swift.Int
-        /// Details for the vulnerable package.
-        ///
-        /// - Remark: Generated from `#/components/schemas/dependabot-alert-package`.
-        public struct dependabot_hyphen_alert_hyphen_package: Codable, Hashable, Sendable {
-            /// The package's language or package management ecosystem.
-            ///
-            /// - Remark: Generated from `#/components/schemas/dependabot-alert-package/ecosystem`.
-            public var ecosystem: Swift.String
-            /// The unique package name within its ecosystem.
-            ///
-            /// - Remark: Generated from `#/components/schemas/dependabot-alert-package/name`.
-            public var name: Swift.String
-            /// Creates a new `dependabot_hyphen_alert_hyphen_package`.
-            ///
-            /// - Parameters:
-            ///   - ecosystem: The package's language or package management ecosystem.
-            ///   - name: The unique package name within its ecosystem.
-            public init(
-                ecosystem: Swift.String,
-                name: Swift.String
-            ) {
-                self.ecosystem = ecosystem
-                self.name = name
-            }
-            public enum CodingKeys: String, CodingKey {
-                case ecosystem
-                case name
-            }
-            public init(from decoder: any Decoder) throws {
-                let container = try decoder.container(keyedBy: CodingKeys.self)
-                ecosystem = try container.decode(
-                    Swift.String.self,
-                    forKey: .ecosystem
-                )
-                name = try container.decode(
-                    Swift.String.self,
-                    forKey: .name
-                )
-                try decoder.ensureNoAdditionalProperties(knownKeys: [
-                    "ecosystem",
-                    "name"
-                ])
-            }
-        }
-        /// Details pertaining to one vulnerable version range for the advisory.
-        ///
-        /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-vulnerability`.
-        public struct dependabot_hyphen_alert_hyphen_security_hyphen_vulnerability: Codable, Hashable, Sendable {
-            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-vulnerability/package`.
-            public var package: Components.Schemas.dependabot_hyphen_alert_hyphen_package
-            /// The severity of the vulnerability.
-            ///
-            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-vulnerability/severity`.
-            @frozen public enum severityPayload: String, Codable, Hashable, Sendable {
-                case low = "low"
-                case medium = "medium"
-                case high = "high"
-                case critical = "critical"
-            }
-            /// The severity of the vulnerability.
-            ///
-            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-vulnerability/severity`.
-            public var severity: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_vulnerability.severityPayload
-            /// Conditions that identify vulnerable versions of this vulnerability's package.
-            ///
-            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-vulnerability/vulnerable_version_range`.
-            public var vulnerable_version_range: Swift.String
-            /// Details pertaining to the package version that patches this vulnerability.
-            ///
-            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-vulnerability/first_patched_version`.
-            public struct first_patched_versionPayload: Codable, Hashable, Sendable {
-                /// The package version that patches this vulnerability.
-                ///
-                /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-vulnerability/first_patched_version/identifier`.
-                public var identifier: Swift.String
-                /// Creates a new `first_patched_versionPayload`.
-                ///
-                /// - Parameters:
-                ///   - identifier: The package version that patches this vulnerability.
-                public init(identifier: Swift.String) {
-                    self.identifier = identifier
-                }
-                public enum CodingKeys: String, CodingKey {
-                    case identifier
-                }
-                public init(from decoder: any Decoder) throws {
-                    let container = try decoder.container(keyedBy: CodingKeys.self)
-                    identifier = try container.decode(
-                        Swift.String.self,
-                        forKey: .identifier
-                    )
-                    try decoder.ensureNoAdditionalProperties(knownKeys: [
-                        "identifier"
-                    ])
-                }
-            }
-            /// Details pertaining to the package version that patches this vulnerability.
-            ///
-            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-vulnerability/first_patched_version`.
-            public var first_patched_version: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_vulnerability.first_patched_versionPayload?
-            /// Creates a new `dependabot_hyphen_alert_hyphen_security_hyphen_vulnerability`.
-            ///
-            /// - Parameters:
-            ///   - package:
-            ///   - severity: The severity of the vulnerability.
-            ///   - vulnerable_version_range: Conditions that identify vulnerable versions of this vulnerability's package.
-            ///   - first_patched_version: Details pertaining to the package version that patches this vulnerability.
-            public init(
-                package: Components.Schemas.dependabot_hyphen_alert_hyphen_package,
-                severity: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_vulnerability.severityPayload,
-                vulnerable_version_range: Swift.String,
-                first_patched_version: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_vulnerability.first_patched_versionPayload? = nil
-            ) {
-                self.package = package
-                self.severity = severity
-                self.vulnerable_version_range = vulnerable_version_range
-                self.first_patched_version = first_patched_version
-            }
-            public enum CodingKeys: String, CodingKey {
-                case package
-                case severity
-                case vulnerable_version_range
-                case first_patched_version
-            }
-            public init(from decoder: any Decoder) throws {
-                let container = try decoder.container(keyedBy: CodingKeys.self)
-                package = try container.decode(
-                    Components.Schemas.dependabot_hyphen_alert_hyphen_package.self,
-                    forKey: .package
-                )
-                severity = try container.decode(
-                    Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_vulnerability.severityPayload.self,
-                    forKey: .severity
-                )
-                vulnerable_version_range = try container.decode(
-                    Swift.String.self,
-                    forKey: .vulnerable_version_range
-                )
-                first_patched_version = try container.decodeIfPresent(
-                    Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_vulnerability.first_patched_versionPayload.self,
-                    forKey: .first_patched_version
-                )
-                try decoder.ensureNoAdditionalProperties(knownKeys: [
-                    "package",
-                    "severity",
-                    "vulnerable_version_range",
-                    "first_patched_version"
-                ])
-            }
-        }
-        /// Details for the GitHub Security Advisory.
-        ///
-        /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory`.
-        public struct dependabot_hyphen_alert_hyphen_security_hyphen_advisory: Codable, Hashable, Sendable {
-            /// The unique GitHub Security Advisory ID assigned to the advisory.
-            ///
-            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/ghsa_id`.
-            public var ghsa_id: Swift.String
-            /// The unique CVE ID assigned to the advisory.
-            ///
-            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/cve_id`.
-            public var cve_id: Swift.String?
-            /// A short, plain text summary of the advisory.
-            ///
-            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/summary`.
-            public var summary: Swift.String
-            /// A long-form Markdown-supported description of the advisory.
-            ///
-            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/description`.
-            public var description: Swift.String
-            /// Vulnerable version range information for the advisory.
-            ///
-            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/vulnerabilities`.
-            public var vulnerabilities: [Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_vulnerability]
-            /// The severity of the advisory.
-            ///
-            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/severity`.
-            @frozen public enum severityPayload: String, Codable, Hashable, Sendable {
-                case low = "low"
-                case medium = "medium"
-                case high = "high"
-                case critical = "critical"
-            }
-            /// The severity of the advisory.
-            ///
-            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/severity`.
-            public var severity: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.severityPayload
-            /// Details for the advisory pertaining to the Common Vulnerability Scoring System.
-            ///
-            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/cvss`.
-            public struct cvssPayload: Codable, Hashable, Sendable {
-                /// The overall CVSS score of the advisory.
-                ///
-                /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/cvss/score`.
-                public var score: Swift.Double
-                /// The full CVSS vector string for the advisory.
-                ///
-                /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/cvss/vector_string`.
-                public var vector_string: Swift.String?
-                /// Creates a new `cvssPayload`.
-                ///
-                /// - Parameters:
-                ///   - score: The overall CVSS score of the advisory.
-                ///   - vector_string: The full CVSS vector string for the advisory.
-                public init(
-                    score: Swift.Double,
-                    vector_string: Swift.String? = nil
-                ) {
-                    self.score = score
-                    self.vector_string = vector_string
-                }
-                public enum CodingKeys: String, CodingKey {
-                    case score
-                    case vector_string
-                }
-                public init(from decoder: any Decoder) throws {
-                    let container = try decoder.container(keyedBy: CodingKeys.self)
-                    score = try container.decode(
-                        Swift.Double.self,
-                        forKey: .score
-                    )
-                    vector_string = try container.decodeIfPresent(
-                        Swift.String.self,
-                        forKey: .vector_string
-                    )
-                    try decoder.ensureNoAdditionalProperties(knownKeys: [
-                        "score",
-                        "vector_string"
-                    ])
-                }
-            }
-            /// Details for the advisory pertaining to the Common Vulnerability Scoring System.
-            ///
-            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/cvss`.
-            public var cvss: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.cvssPayload
-            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/cvss_severities`.
-            public var cvss_severities: Components.Schemas.cvss_hyphen_severities?
-            /// A CWE weakness assigned to the advisory.
-            ///
-            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/cwesPayload`.
-            public struct cwesPayloadPayload: Codable, Hashable, Sendable {
-                /// The unique CWE ID.
-                ///
-                /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/cwesPayload/cwe_id`.
-                public var cwe_id: Swift.String
-                /// The short, plain text name of the CWE.
-                ///
-                /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/cwesPayload/name`.
-                public var name: Swift.String
-                /// Creates a new `cwesPayloadPayload`.
-                ///
-                /// - Parameters:
-                ///   - cwe_id: The unique CWE ID.
-                ///   - name: The short, plain text name of the CWE.
-                public init(
-                    cwe_id: Swift.String,
-                    name: Swift.String
-                ) {
-                    self.cwe_id = cwe_id
-                    self.name = name
-                }
-                public enum CodingKeys: String, CodingKey {
-                    case cwe_id
-                    case name
-                }
-                public init(from decoder: any Decoder) throws {
-                    let container = try decoder.container(keyedBy: CodingKeys.self)
-                    cwe_id = try container.decode(
-                        Swift.String.self,
-                        forKey: .cwe_id
-                    )
-                    name = try container.decode(
-                        Swift.String.self,
-                        forKey: .name
-                    )
-                    try decoder.ensureNoAdditionalProperties(knownKeys: [
-                        "cwe_id",
-                        "name"
-                    ])
-                }
-            }
-            /// Details for the advisory pertaining to Common Weakness Enumeration.
-            ///
-            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/cwes`.
-            public typealias cwesPayload = [Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.cwesPayloadPayload]
-            /// Details for the advisory pertaining to Common Weakness Enumeration.
-            ///
-            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/cwes`.
-            public var cwes: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.cwesPayload
-            /// An advisory identifier.
-            ///
-            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/identifiersPayload`.
-            public struct identifiersPayloadPayload: Codable, Hashable, Sendable {
-                /// The type of advisory identifier.
-                ///
-                /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/identifiersPayload/type`.
-                @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
-                    case CVE = "CVE"
-                    case GHSA = "GHSA"
-                }
-                /// The type of advisory identifier.
-                ///
-                /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/identifiersPayload/type`.
-                public var _type: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.identifiersPayloadPayload._typePayload
-                /// The value of the advisory identifer.
-                ///
-                /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/identifiersPayload/value`.
-                public var value: Swift.String
-                /// Creates a new `identifiersPayloadPayload`.
-                ///
-                /// - Parameters:
-                ///   - _type: The type of advisory identifier.
-                ///   - value: The value of the advisory identifer.
-                public init(
-                    _type: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.identifiersPayloadPayload._typePayload,
-                    value: Swift.String
-                ) {
-                    self._type = _type
-                    self.value = value
-                }
-                public enum CodingKeys: String, CodingKey {
-                    case _type = "type"
-                    case value
-                }
-                public init(from decoder: any Decoder) throws {
-                    let container = try decoder.container(keyedBy: CodingKeys.self)
-                    _type = try container.decode(
-                        Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.identifiersPayloadPayload._typePayload.self,
-                        forKey: ._type
-                    )
-                    value = try container.decode(
-                        Swift.String.self,
-                        forKey: .value
-                    )
-                    try decoder.ensureNoAdditionalProperties(knownKeys: [
-                        "type",
-                        "value"
-                    ])
-                }
-            }
-            /// Values that identify this advisory among security information sources.
-            ///
-            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/identifiers`.
-            public typealias identifiersPayload = [Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.identifiersPayloadPayload]
-            /// Values that identify this advisory among security information sources.
-            ///
-            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/identifiers`.
-            public var identifiers: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.identifiersPayload
-            /// A link to additional advisory information.
-            ///
-            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/referencesPayload`.
-            public struct referencesPayloadPayload: Codable, Hashable, Sendable {
-                /// The URL of the reference.
-                ///
-                /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/referencesPayload/url`.
-                public var url: Swift.String
-                /// Creates a new `referencesPayloadPayload`.
-                ///
-                /// - Parameters:
-                ///   - url: The URL of the reference.
-                public init(url: Swift.String) {
-                    self.url = url
-                }
-                public enum CodingKeys: String, CodingKey {
-                    case url
-                }
-                public init(from decoder: any Decoder) throws {
-                    let container = try decoder.container(keyedBy: CodingKeys.self)
-                    url = try container.decode(
-                        Swift.String.self,
-                        forKey: .url
-                    )
-                    try decoder.ensureNoAdditionalProperties(knownKeys: [
-                        "url"
-                    ])
-                }
-            }
-            /// Links to additional advisory information.
-            ///
-            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/references`.
-            public typealias referencesPayload = [Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.referencesPayloadPayload]
-            /// Links to additional advisory information.
-            ///
-            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/references`.
-            public var references: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.referencesPayload
-            /// The time that the advisory was published in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
-            ///
-            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/published_at`.
-            public var published_at: Foundation.Date
-            /// The time that the advisory was last modified in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
-            ///
-            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/updated_at`.
-            public var updated_at: Foundation.Date
-            /// The time that the advisory was withdrawn in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
-            ///
-            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/withdrawn_at`.
-            public var withdrawn_at: Foundation.Date?
-            /// Creates a new `dependabot_hyphen_alert_hyphen_security_hyphen_advisory`.
-            ///
-            /// - Parameters:
-            ///   - ghsa_id: The unique GitHub Security Advisory ID assigned to the advisory.
-            ///   - cve_id: The unique CVE ID assigned to the advisory.
-            ///   - summary: A short, plain text summary of the advisory.
-            ///   - description: A long-form Markdown-supported description of the advisory.
-            ///   - vulnerabilities: Vulnerable version range information for the advisory.
-            ///   - severity: The severity of the advisory.
-            ///   - cvss: Details for the advisory pertaining to the Common Vulnerability Scoring System.
-            ///   - cvss_severities:
-            ///   - cwes: Details for the advisory pertaining to Common Weakness Enumeration.
-            ///   - identifiers: Values that identify this advisory among security information sources.
-            ///   - references: Links to additional advisory information.
-            ///   - published_at: The time that the advisory was published in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
-            ///   - updated_at: The time that the advisory was last modified in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
-            ///   - withdrawn_at: The time that the advisory was withdrawn in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
-            public init(
-                ghsa_id: Swift.String,
-                cve_id: Swift.String? = nil,
-                summary: Swift.String,
-                description: Swift.String,
-                vulnerabilities: [Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_vulnerability],
-                severity: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.severityPayload,
-                cvss: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.cvssPayload,
-                cvss_severities: Components.Schemas.cvss_hyphen_severities? = nil,
-                cwes: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.cwesPayload,
-                identifiers: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.identifiersPayload,
-                references: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.referencesPayload,
-                published_at: Foundation.Date,
-                updated_at: Foundation.Date,
-                withdrawn_at: Foundation.Date? = nil
-            ) {
-                self.ghsa_id = ghsa_id
-                self.cve_id = cve_id
-                self.summary = summary
-                self.description = description
-                self.vulnerabilities = vulnerabilities
-                self.severity = severity
-                self.cvss = cvss
-                self.cvss_severities = cvss_severities
-                self.cwes = cwes
-                self.identifiers = identifiers
-                self.references = references
-                self.published_at = published_at
-                self.updated_at = updated_at
-                self.withdrawn_at = withdrawn_at
-            }
-            public enum CodingKeys: String, CodingKey {
-                case ghsa_id
-                case cve_id
-                case summary
-                case description
-                case vulnerabilities
-                case severity
-                case cvss
-                case cvss_severities
-                case cwes
-                case identifiers
-                case references
-                case published_at
-                case updated_at
-                case withdrawn_at
-            }
-            public init(from decoder: any Decoder) throws {
-                let container = try decoder.container(keyedBy: CodingKeys.self)
-                ghsa_id = try container.decode(
-                    Swift.String.self,
-                    forKey: .ghsa_id
-                )
-                cve_id = try container.decodeIfPresent(
-                    Swift.String.self,
-                    forKey: .cve_id
-                )
-                summary = try container.decode(
-                    Swift.String.self,
-                    forKey: .summary
-                )
-                description = try container.decode(
-                    Swift.String.self,
-                    forKey: .description
-                )
-                vulnerabilities = try container.decode(
-                    [Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_vulnerability].self,
-                    forKey: .vulnerabilities
-                )
-                severity = try container.decode(
-                    Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.severityPayload.self,
-                    forKey: .severity
-                )
-                cvss = try container.decode(
-                    Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.cvssPayload.self,
-                    forKey: .cvss
-                )
-                cvss_severities = try container.decodeIfPresent(
-                    Components.Schemas.cvss_hyphen_severities.self,
-                    forKey: .cvss_severities
-                )
-                cwes = try container.decode(
-                    Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.cwesPayload.self,
-                    forKey: .cwes
-                )
-                identifiers = try container.decode(
-                    Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.identifiersPayload.self,
-                    forKey: .identifiers
-                )
-                references = try container.decode(
-                    Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.referencesPayload.self,
-                    forKey: .references
-                )
-                published_at = try container.decode(
-                    Foundation.Date.self,
-                    forKey: .published_at
-                )
-                updated_at = try container.decode(
-                    Foundation.Date.self,
-                    forKey: .updated_at
-                )
-                withdrawn_at = try container.decodeIfPresent(
-                    Foundation.Date.self,
-                    forKey: .withdrawn_at
-                )
-                try decoder.ensureNoAdditionalProperties(knownKeys: [
-                    "ghsa_id",
-                    "cve_id",
-                    "summary",
-                    "description",
-                    "vulnerabilities",
-                    "severity",
-                    "cvss",
-                    "cvss_severities",
-                    "cwes",
-                    "identifiers",
-                    "references",
-                    "published_at",
-                    "updated_at",
-                    "withdrawn_at"
-                ])
-            }
-        }
-        /// The REST API URL of the alert resource.
-        ///
-        /// - Remark: Generated from `#/components/schemas/alert-url`.
-        public typealias alert_hyphen_url = Swift.String
-        /// The GitHub URL of the alert resource.
-        ///
-        /// - Remark: Generated from `#/components/schemas/alert-html-url`.
-        public typealias alert_hyphen_html_hyphen_url = Swift.String
-        /// The time that the alert was created in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
-        ///
-        /// - Remark: Generated from `#/components/schemas/alert-created-at`.
-        public typealias alert_hyphen_created_hyphen_at = Foundation.Date
-        /// The time that the alert was last updated in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
-        ///
-        /// - Remark: Generated from `#/components/schemas/alert-updated-at`.
-        public typealias alert_hyphen_updated_hyphen_at = Foundation.Date
-        /// The time that the alert was dismissed in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
-        ///
-        /// - Remark: Generated from `#/components/schemas/alert-dismissed-at`.
-        public typealias alert_hyphen_dismissed_hyphen_at = Foundation.Date
-        /// The time that the alert was no longer detected and was considered fixed in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
-        ///
-        /// - Remark: Generated from `#/components/schemas/alert-fixed-at`.
-        public typealias alert_hyphen_fixed_hyphen_at = Foundation.Date
-        /// The time that the alert was auto-dismissed in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
-        ///
-        /// - Remark: Generated from `#/components/schemas/alert-auto-dismissed-at`.
-        public typealias alert_hyphen_auto_hyphen_dismissed_hyphen_at = Foundation.Date
         /// A GitHub repository.
         ///
         /// - Remark: Generated from `#/components/schemas/simple-repository`.
@@ -2026,6 +1482,586 @@ public enum Components {
                 case hooks_url
             }
         }
+        /// The security alert number.
+        ///
+        /// - Remark: Generated from `#/components/schemas/alert-number`.
+        public typealias alert_hyphen_number = Swift.Int
+        /// Details for the vulnerable package.
+        ///
+        /// - Remark: Generated from `#/components/schemas/dependabot-alert-package`.
+        public struct dependabot_hyphen_alert_hyphen_package: Codable, Hashable, Sendable {
+            /// The package's language or package management ecosystem.
+            ///
+            /// - Remark: Generated from `#/components/schemas/dependabot-alert-package/ecosystem`.
+            public var ecosystem: Swift.String
+            /// The unique package name within its ecosystem.
+            ///
+            /// - Remark: Generated from `#/components/schemas/dependabot-alert-package/name`.
+            public var name: Swift.String
+            /// Creates a new `dependabot_hyphen_alert_hyphen_package`.
+            ///
+            /// - Parameters:
+            ///   - ecosystem: The package's language or package management ecosystem.
+            ///   - name: The unique package name within its ecosystem.
+            public init(
+                ecosystem: Swift.String,
+                name: Swift.String
+            ) {
+                self.ecosystem = ecosystem
+                self.name = name
+            }
+            public enum CodingKeys: String, CodingKey {
+                case ecosystem
+                case name
+            }
+            public init(from decoder: any Decoder) throws {
+                let container = try decoder.container(keyedBy: CodingKeys.self)
+                ecosystem = try container.decode(
+                    Swift.String.self,
+                    forKey: .ecosystem
+                )
+                name = try container.decode(
+                    Swift.String.self,
+                    forKey: .name
+                )
+                try decoder.ensureNoAdditionalProperties(knownKeys: [
+                    "ecosystem",
+                    "name"
+                ])
+            }
+        }
+        /// Details pertaining to one vulnerable version range for the advisory.
+        ///
+        /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-vulnerability`.
+        public struct dependabot_hyphen_alert_hyphen_security_hyphen_vulnerability: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-vulnerability/package`.
+            public var package: Components.Schemas.dependabot_hyphen_alert_hyphen_package
+            /// The severity of the vulnerability.
+            ///
+            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-vulnerability/severity`.
+            @frozen public enum severityPayload: String, Codable, Hashable, Sendable {
+                case low = "low"
+                case medium = "medium"
+                case high = "high"
+                case critical = "critical"
+            }
+            /// The severity of the vulnerability.
+            ///
+            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-vulnerability/severity`.
+            public var severity: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_vulnerability.severityPayload
+            /// Conditions that identify vulnerable versions of this vulnerability's package.
+            ///
+            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-vulnerability/vulnerable_version_range`.
+            public var vulnerable_version_range: Swift.String
+            /// Details pertaining to the package version that patches this vulnerability.
+            ///
+            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-vulnerability/first_patched_version`.
+            public struct first_patched_versionPayload: Codable, Hashable, Sendable {
+                /// The package version that patches this vulnerability.
+                ///
+                /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-vulnerability/first_patched_version/identifier`.
+                public var identifier: Swift.String
+                /// Creates a new `first_patched_versionPayload`.
+                ///
+                /// - Parameters:
+                ///   - identifier: The package version that patches this vulnerability.
+                public init(identifier: Swift.String) {
+                    self.identifier = identifier
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case identifier
+                }
+                public init(from decoder: any Decoder) throws {
+                    let container = try decoder.container(keyedBy: CodingKeys.self)
+                    identifier = try container.decode(
+                        Swift.String.self,
+                        forKey: .identifier
+                    )
+                    try decoder.ensureNoAdditionalProperties(knownKeys: [
+                        "identifier"
+                    ])
+                }
+            }
+            /// Details pertaining to the package version that patches this vulnerability.
+            ///
+            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-vulnerability/first_patched_version`.
+            public var first_patched_version: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_vulnerability.first_patched_versionPayload?
+            /// Creates a new `dependabot_hyphen_alert_hyphen_security_hyphen_vulnerability`.
+            ///
+            /// - Parameters:
+            ///   - package:
+            ///   - severity: The severity of the vulnerability.
+            ///   - vulnerable_version_range: Conditions that identify vulnerable versions of this vulnerability's package.
+            ///   - first_patched_version: Details pertaining to the package version that patches this vulnerability.
+            public init(
+                package: Components.Schemas.dependabot_hyphen_alert_hyphen_package,
+                severity: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_vulnerability.severityPayload,
+                vulnerable_version_range: Swift.String,
+                first_patched_version: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_vulnerability.first_patched_versionPayload? = nil
+            ) {
+                self.package = package
+                self.severity = severity
+                self.vulnerable_version_range = vulnerable_version_range
+                self.first_patched_version = first_patched_version
+            }
+            public enum CodingKeys: String, CodingKey {
+                case package
+                case severity
+                case vulnerable_version_range
+                case first_patched_version
+            }
+            public init(from decoder: any Decoder) throws {
+                let container = try decoder.container(keyedBy: CodingKeys.self)
+                package = try container.decode(
+                    Components.Schemas.dependabot_hyphen_alert_hyphen_package.self,
+                    forKey: .package
+                )
+                severity = try container.decode(
+                    Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_vulnerability.severityPayload.self,
+                    forKey: .severity
+                )
+                vulnerable_version_range = try container.decode(
+                    Swift.String.self,
+                    forKey: .vulnerable_version_range
+                )
+                first_patched_version = try container.decodeIfPresent(
+                    Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_vulnerability.first_patched_versionPayload.self,
+                    forKey: .first_patched_version
+                )
+                try decoder.ensureNoAdditionalProperties(knownKeys: [
+                    "package",
+                    "severity",
+                    "vulnerable_version_range",
+                    "first_patched_version"
+                ])
+            }
+        }
+        /// Details for the GitHub Security Advisory.
+        ///
+        /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory`.
+        public struct dependabot_hyphen_alert_hyphen_security_hyphen_advisory: Codable, Hashable, Sendable {
+            /// The unique GitHub Security Advisory ID assigned to the advisory.
+            ///
+            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/ghsa_id`.
+            public var ghsa_id: Swift.String
+            /// The unique CVE ID assigned to the advisory.
+            ///
+            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/cve_id`.
+            public var cve_id: Swift.String?
+            /// A short, plain text summary of the advisory.
+            ///
+            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/summary`.
+            public var summary: Swift.String
+            /// A long-form Markdown-supported description of the advisory.
+            ///
+            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/description`.
+            public var description: Swift.String
+            /// Vulnerable version range information for the advisory.
+            ///
+            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/vulnerabilities`.
+            public var vulnerabilities: [Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_vulnerability]
+            /// The severity of the advisory.
+            ///
+            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/severity`.
+            @frozen public enum severityPayload: String, Codable, Hashable, Sendable {
+                case low = "low"
+                case medium = "medium"
+                case high = "high"
+                case critical = "critical"
+            }
+            /// The severity of the advisory.
+            ///
+            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/severity`.
+            public var severity: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.severityPayload
+            /// Details for the advisory pertaining to the Common Vulnerability Scoring System.
+            ///
+            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/cvss`.
+            public struct cvssPayload: Codable, Hashable, Sendable {
+                /// The overall CVSS score of the advisory.
+                ///
+                /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/cvss/score`.
+                public var score: Swift.Double
+                /// The full CVSS vector string for the advisory.
+                ///
+                /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/cvss/vector_string`.
+                public var vector_string: Swift.String?
+                /// Creates a new `cvssPayload`.
+                ///
+                /// - Parameters:
+                ///   - score: The overall CVSS score of the advisory.
+                ///   - vector_string: The full CVSS vector string for the advisory.
+                public init(
+                    score: Swift.Double,
+                    vector_string: Swift.String? = nil
+                ) {
+                    self.score = score
+                    self.vector_string = vector_string
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case score
+                    case vector_string
+                }
+                public init(from decoder: any Decoder) throws {
+                    let container = try decoder.container(keyedBy: CodingKeys.self)
+                    score = try container.decode(
+                        Swift.Double.self,
+                        forKey: .score
+                    )
+                    vector_string = try container.decodeIfPresent(
+                        Swift.String.self,
+                        forKey: .vector_string
+                    )
+                    try decoder.ensureNoAdditionalProperties(knownKeys: [
+                        "score",
+                        "vector_string"
+                    ])
+                }
+            }
+            /// Details for the advisory pertaining to the Common Vulnerability Scoring System.
+            ///
+            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/cvss`.
+            public var cvss: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.cvssPayload
+            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/cvss_severities`.
+            public var cvss_severities: Components.Schemas.cvss_hyphen_severities?
+            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/epss`.
+            public var epss: Components.Schemas.security_hyphen_advisory_hyphen_epss?
+            /// A CWE weakness assigned to the advisory.
+            ///
+            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/cwesPayload`.
+            public struct cwesPayloadPayload: Codable, Hashable, Sendable {
+                /// The unique CWE ID.
+                ///
+                /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/cwesPayload/cwe_id`.
+                public var cwe_id: Swift.String
+                /// The short, plain text name of the CWE.
+                ///
+                /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/cwesPayload/name`.
+                public var name: Swift.String
+                /// Creates a new `cwesPayloadPayload`.
+                ///
+                /// - Parameters:
+                ///   - cwe_id: The unique CWE ID.
+                ///   - name: The short, plain text name of the CWE.
+                public init(
+                    cwe_id: Swift.String,
+                    name: Swift.String
+                ) {
+                    self.cwe_id = cwe_id
+                    self.name = name
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case cwe_id
+                    case name
+                }
+                public init(from decoder: any Decoder) throws {
+                    let container = try decoder.container(keyedBy: CodingKeys.self)
+                    cwe_id = try container.decode(
+                        Swift.String.self,
+                        forKey: .cwe_id
+                    )
+                    name = try container.decode(
+                        Swift.String.self,
+                        forKey: .name
+                    )
+                    try decoder.ensureNoAdditionalProperties(knownKeys: [
+                        "cwe_id",
+                        "name"
+                    ])
+                }
+            }
+            /// Details for the advisory pertaining to Common Weakness Enumeration.
+            ///
+            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/cwes`.
+            public typealias cwesPayload = [Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.cwesPayloadPayload]
+            /// Details for the advisory pertaining to Common Weakness Enumeration.
+            ///
+            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/cwes`.
+            public var cwes: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.cwesPayload
+            /// An advisory identifier.
+            ///
+            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/identifiersPayload`.
+            public struct identifiersPayloadPayload: Codable, Hashable, Sendable {
+                /// The type of advisory identifier.
+                ///
+                /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/identifiersPayload/type`.
+                @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+                    case CVE = "CVE"
+                    case GHSA = "GHSA"
+                }
+                /// The type of advisory identifier.
+                ///
+                /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/identifiersPayload/type`.
+                public var _type: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.identifiersPayloadPayload._typePayload
+                /// The value of the advisory identifer.
+                ///
+                /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/identifiersPayload/value`.
+                public var value: Swift.String
+                /// Creates a new `identifiersPayloadPayload`.
+                ///
+                /// - Parameters:
+                ///   - _type: The type of advisory identifier.
+                ///   - value: The value of the advisory identifer.
+                public init(
+                    _type: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.identifiersPayloadPayload._typePayload,
+                    value: Swift.String
+                ) {
+                    self._type = _type
+                    self.value = value
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case _type = "type"
+                    case value
+                }
+                public init(from decoder: any Decoder) throws {
+                    let container = try decoder.container(keyedBy: CodingKeys.self)
+                    _type = try container.decode(
+                        Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.identifiersPayloadPayload._typePayload.self,
+                        forKey: ._type
+                    )
+                    value = try container.decode(
+                        Swift.String.self,
+                        forKey: .value
+                    )
+                    try decoder.ensureNoAdditionalProperties(knownKeys: [
+                        "type",
+                        "value"
+                    ])
+                }
+            }
+            /// Values that identify this advisory among security information sources.
+            ///
+            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/identifiers`.
+            public typealias identifiersPayload = [Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.identifiersPayloadPayload]
+            /// Values that identify this advisory among security information sources.
+            ///
+            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/identifiers`.
+            public var identifiers: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.identifiersPayload
+            /// A link to additional advisory information.
+            ///
+            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/referencesPayload`.
+            public struct referencesPayloadPayload: Codable, Hashable, Sendable {
+                /// The URL of the reference.
+                ///
+                /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/referencesPayload/url`.
+                public var url: Swift.String
+                /// Creates a new `referencesPayloadPayload`.
+                ///
+                /// - Parameters:
+                ///   - url: The URL of the reference.
+                public init(url: Swift.String) {
+                    self.url = url
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case url
+                }
+                public init(from decoder: any Decoder) throws {
+                    let container = try decoder.container(keyedBy: CodingKeys.self)
+                    url = try container.decode(
+                        Swift.String.self,
+                        forKey: .url
+                    )
+                    try decoder.ensureNoAdditionalProperties(knownKeys: [
+                        "url"
+                    ])
+                }
+            }
+            /// Links to additional advisory information.
+            ///
+            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/references`.
+            public typealias referencesPayload = [Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.referencesPayloadPayload]
+            /// Links to additional advisory information.
+            ///
+            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/references`.
+            public var references: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.referencesPayload
+            /// The time that the advisory was published in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
+            ///
+            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/published_at`.
+            public var published_at: Foundation.Date
+            /// The time that the advisory was last modified in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
+            ///
+            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/updated_at`.
+            public var updated_at: Foundation.Date
+            /// The time that the advisory was withdrawn in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
+            ///
+            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/withdrawn_at`.
+            public var withdrawn_at: Foundation.Date?
+            /// Creates a new `dependabot_hyphen_alert_hyphen_security_hyphen_advisory`.
+            ///
+            /// - Parameters:
+            ///   - ghsa_id: The unique GitHub Security Advisory ID assigned to the advisory.
+            ///   - cve_id: The unique CVE ID assigned to the advisory.
+            ///   - summary: A short, plain text summary of the advisory.
+            ///   - description: A long-form Markdown-supported description of the advisory.
+            ///   - vulnerabilities: Vulnerable version range information for the advisory.
+            ///   - severity: The severity of the advisory.
+            ///   - cvss: Details for the advisory pertaining to the Common Vulnerability Scoring System.
+            ///   - cvss_severities:
+            ///   - epss:
+            ///   - cwes: Details for the advisory pertaining to Common Weakness Enumeration.
+            ///   - identifiers: Values that identify this advisory among security information sources.
+            ///   - references: Links to additional advisory information.
+            ///   - published_at: The time that the advisory was published in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
+            ///   - updated_at: The time that the advisory was last modified in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
+            ///   - withdrawn_at: The time that the advisory was withdrawn in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
+            public init(
+                ghsa_id: Swift.String,
+                cve_id: Swift.String? = nil,
+                summary: Swift.String,
+                description: Swift.String,
+                vulnerabilities: [Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_vulnerability],
+                severity: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.severityPayload,
+                cvss: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.cvssPayload,
+                cvss_severities: Components.Schemas.cvss_hyphen_severities? = nil,
+                epss: Components.Schemas.security_hyphen_advisory_hyphen_epss? = nil,
+                cwes: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.cwesPayload,
+                identifiers: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.identifiersPayload,
+                references: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.referencesPayload,
+                published_at: Foundation.Date,
+                updated_at: Foundation.Date,
+                withdrawn_at: Foundation.Date? = nil
+            ) {
+                self.ghsa_id = ghsa_id
+                self.cve_id = cve_id
+                self.summary = summary
+                self.description = description
+                self.vulnerabilities = vulnerabilities
+                self.severity = severity
+                self.cvss = cvss
+                self.cvss_severities = cvss_severities
+                self.epss = epss
+                self.cwes = cwes
+                self.identifiers = identifiers
+                self.references = references
+                self.published_at = published_at
+                self.updated_at = updated_at
+                self.withdrawn_at = withdrawn_at
+            }
+            public enum CodingKeys: String, CodingKey {
+                case ghsa_id
+                case cve_id
+                case summary
+                case description
+                case vulnerabilities
+                case severity
+                case cvss
+                case cvss_severities
+                case epss
+                case cwes
+                case identifiers
+                case references
+                case published_at
+                case updated_at
+                case withdrawn_at
+            }
+            public init(from decoder: any Decoder) throws {
+                let container = try decoder.container(keyedBy: CodingKeys.self)
+                ghsa_id = try container.decode(
+                    Swift.String.self,
+                    forKey: .ghsa_id
+                )
+                cve_id = try container.decodeIfPresent(
+                    Swift.String.self,
+                    forKey: .cve_id
+                )
+                summary = try container.decode(
+                    Swift.String.self,
+                    forKey: .summary
+                )
+                description = try container.decode(
+                    Swift.String.self,
+                    forKey: .description
+                )
+                vulnerabilities = try container.decode(
+                    [Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_vulnerability].self,
+                    forKey: .vulnerabilities
+                )
+                severity = try container.decode(
+                    Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.severityPayload.self,
+                    forKey: .severity
+                )
+                cvss = try container.decode(
+                    Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.cvssPayload.self,
+                    forKey: .cvss
+                )
+                cvss_severities = try container.decodeIfPresent(
+                    Components.Schemas.cvss_hyphen_severities.self,
+                    forKey: .cvss_severities
+                )
+                epss = try container.decodeIfPresent(
+                    Components.Schemas.security_hyphen_advisory_hyphen_epss.self,
+                    forKey: .epss
+                )
+                cwes = try container.decode(
+                    Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.cwesPayload.self,
+                    forKey: .cwes
+                )
+                identifiers = try container.decode(
+                    Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.identifiersPayload.self,
+                    forKey: .identifiers
+                )
+                references = try container.decode(
+                    Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.referencesPayload.self,
+                    forKey: .references
+                )
+                published_at = try container.decode(
+                    Foundation.Date.self,
+                    forKey: .published_at
+                )
+                updated_at = try container.decode(
+                    Foundation.Date.self,
+                    forKey: .updated_at
+                )
+                withdrawn_at = try container.decodeIfPresent(
+                    Foundation.Date.self,
+                    forKey: .withdrawn_at
+                )
+                try decoder.ensureNoAdditionalProperties(knownKeys: [
+                    "ghsa_id",
+                    "cve_id",
+                    "summary",
+                    "description",
+                    "vulnerabilities",
+                    "severity",
+                    "cvss",
+                    "cvss_severities",
+                    "epss",
+                    "cwes",
+                    "identifiers",
+                    "references",
+                    "published_at",
+                    "updated_at",
+                    "withdrawn_at"
+                ])
+            }
+        }
+        /// The REST API URL of the alert resource.
+        ///
+        /// - Remark: Generated from `#/components/schemas/alert-url`.
+        public typealias alert_hyphen_url = Swift.String
+        /// The GitHub URL of the alert resource.
+        ///
+        /// - Remark: Generated from `#/components/schemas/alert-html-url`.
+        public typealias alert_hyphen_html_hyphen_url = Swift.String
+        /// The time that the alert was created in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
+        ///
+        /// - Remark: Generated from `#/components/schemas/alert-created-at`.
+        public typealias alert_hyphen_created_hyphen_at = Foundation.Date
+        /// The time that the alert was last updated in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
+        ///
+        /// - Remark: Generated from `#/components/schemas/alert-updated-at`.
+        public typealias alert_hyphen_updated_hyphen_at = Foundation.Date
+        /// The time that the alert was dismissed in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
+        ///
+        /// - Remark: Generated from `#/components/schemas/alert-dismissed-at`.
+        public typealias alert_hyphen_dismissed_hyphen_at = Foundation.Date
+        /// The time that the alert was no longer detected and was considered fixed in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
+        ///
+        /// - Remark: Generated from `#/components/schemas/alert-fixed-at`.
+        public typealias alert_hyphen_fixed_hyphen_at = Foundation.Date
+        /// The time that the alert was auto-dismissed in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
+        ///
+        /// - Remark: Generated from `#/components/schemas/alert-auto-dismissed-at`.
+        public typealias alert_hyphen_auto_hyphen_dismissed_hyphen_at = Foundation.Date
         /// A Dependabot alert.
         ///
         /// - Remark: Generated from `#/components/schemas/dependabot-alert-with-repository`.
@@ -2066,25 +2102,49 @@ public enum Components {
                 ///
                 /// - Remark: Generated from `#/components/schemas/dependabot-alert-with-repository/dependency/scope`.
                 public var scope: Components.Schemas.dependabot_hyphen_alert_hyphen_with_hyphen_repository.dependencyPayload.scopePayload?
+                /// The vulnerable dependency's relationship to your project.
+                ///
+                /// > [!NOTE]
+                /// > We are rolling out support for dependency relationship across ecosystems. This value will be "unknown" for all dependencies in unsupported ecosystems.
+                ///
+                ///
+                /// - Remark: Generated from `#/components/schemas/dependabot-alert-with-repository/dependency/relationship`.
+                @frozen public enum relationshipPayload: String, Codable, Hashable, Sendable {
+                    case unknown = "unknown"
+                    case direct = "direct"
+                    case transitive = "transitive"
+                }
+                /// The vulnerable dependency's relationship to your project.
+                ///
+                /// > [!NOTE]
+                /// > We are rolling out support for dependency relationship across ecosystems. This value will be "unknown" for all dependencies in unsupported ecosystems.
+                ///
+                ///
+                /// - Remark: Generated from `#/components/schemas/dependabot-alert-with-repository/dependency/relationship`.
+                public var relationship: Components.Schemas.dependabot_hyphen_alert_hyphen_with_hyphen_repository.dependencyPayload.relationshipPayload?
                 /// Creates a new `dependencyPayload`.
                 ///
                 /// - Parameters:
                 ///   - package:
                 ///   - manifest_path: The full path to the dependency manifest file, relative to the root of the repository.
                 ///   - scope: The execution scope of the vulnerable dependency.
+                ///   - relationship: The vulnerable dependency's relationship to your project.
                 public init(
                     package: Components.Schemas.dependabot_hyphen_alert_hyphen_package? = nil,
                     manifest_path: Swift.String? = nil,
-                    scope: Components.Schemas.dependabot_hyphen_alert_hyphen_with_hyphen_repository.dependencyPayload.scopePayload? = nil
+                    scope: Components.Schemas.dependabot_hyphen_alert_hyphen_with_hyphen_repository.dependencyPayload.scopePayload? = nil,
+                    relationship: Components.Schemas.dependabot_hyphen_alert_hyphen_with_hyphen_repository.dependencyPayload.relationshipPayload? = nil
                 ) {
                     self.package = package
                     self.manifest_path = manifest_path
                     self.scope = scope
+                    self.relationship = relationship
                 }
                 public enum CodingKeys: String, CodingKey {
                     case package
                     case manifest_path
                     case scope
+                    case relationship
                 }
             }
             /// Details for the vulnerable dependency.
@@ -2313,6 +2373,28 @@ public enum Components {
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security`.
             public var advanced_security: Components.Schemas.security_hyphen_and_hyphen_analysis.advanced_securityPayload?
+            /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security`.
+            public struct code_securityPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security/status`.
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                    case enabled = "enabled"
+                    case disabled = "disabled"
+                }
+                /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security/status`.
+                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.code_securityPayload.statusPayload?
+                /// Creates a new `code_securityPayload`.
+                ///
+                /// - Parameters:
+                ///   - status:
+                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.code_securityPayload.statusPayload? = nil) {
+                    self.status = status
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case status
+                }
+            }
+            /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security`.
+            public var code_security: Components.Schemas.security_hyphen_and_hyphen_analysis.code_securityPayload?
             /// Enable or disable Dependabot security updates for the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/dependabot_security_updates`.
@@ -2435,6 +2517,7 @@ public enum Components {
             ///
             /// - Parameters:
             ///   - advanced_security:
+            ///   - code_security:
             ///   - dependabot_security_updates: Enable or disable Dependabot security updates for the repository.
             ///   - secret_scanning:
             ///   - secret_scanning_push_protection:
@@ -2442,6 +2525,7 @@ public enum Components {
             ///   - secret_scanning_ai_detection:
             public init(
                 advanced_security: Components.Schemas.security_hyphen_and_hyphen_analysis.advanced_securityPayload? = nil,
+                code_security: Components.Schemas.security_hyphen_and_hyphen_analysis.code_securityPayload? = nil,
                 dependabot_security_updates: Components.Schemas.security_hyphen_and_hyphen_analysis.dependabot_security_updatesPayload? = nil,
                 secret_scanning: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanningPayload? = nil,
                 secret_scanning_push_protection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_push_protectionPayload? = nil,
@@ -2449,6 +2533,7 @@ public enum Components {
                 secret_scanning_ai_detection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload? = nil
             ) {
                 self.advanced_security = advanced_security
+                self.code_security = code_security
                 self.dependabot_security_updates = dependabot_security_updates
                 self.secret_scanning = secret_scanning
                 self.secret_scanning_push_protection = secret_scanning_push_protection
@@ -2457,6 +2542,7 @@ public enum Components {
             }
             public enum CodingKeys: String, CodingKey {
                 case advanced_security
+                case code_security
                 case dependabot_security_updates
                 case secret_scanning
                 case secret_scanning_push_protection
@@ -3217,25 +3303,49 @@ public enum Components {
                 ///
                 /// - Remark: Generated from `#/components/schemas/dependabot-alert/dependency/scope`.
                 public var scope: Components.Schemas.dependabot_hyphen_alert.dependencyPayload.scopePayload?
+                /// The vulnerable dependency's relationship to your project.
+                ///
+                /// > [!NOTE]
+                /// > We are rolling out support for dependency relationship across ecosystems. This value will be "unknown" for all dependencies in unsupported ecosystems.
+                ///
+                ///
+                /// - Remark: Generated from `#/components/schemas/dependabot-alert/dependency/relationship`.
+                @frozen public enum relationshipPayload: String, Codable, Hashable, Sendable {
+                    case unknown = "unknown"
+                    case direct = "direct"
+                    case transitive = "transitive"
+                }
+                /// The vulnerable dependency's relationship to your project.
+                ///
+                /// > [!NOTE]
+                /// > We are rolling out support for dependency relationship across ecosystems. This value will be "unknown" for all dependencies in unsupported ecosystems.
+                ///
+                ///
+                /// - Remark: Generated from `#/components/schemas/dependabot-alert/dependency/relationship`.
+                public var relationship: Components.Schemas.dependabot_hyphen_alert.dependencyPayload.relationshipPayload?
                 /// Creates a new `dependencyPayload`.
                 ///
                 /// - Parameters:
                 ///   - package:
                 ///   - manifest_path: The full path to the dependency manifest file, relative to the root of the repository.
                 ///   - scope: The execution scope of the vulnerable dependency.
+                ///   - relationship: The vulnerable dependency's relationship to your project.
                 public init(
                     package: Components.Schemas.dependabot_hyphen_alert_hyphen_package? = nil,
                     manifest_path: Swift.String? = nil,
-                    scope: Components.Schemas.dependabot_hyphen_alert.dependencyPayload.scopePayload? = nil
+                    scope: Components.Schemas.dependabot_hyphen_alert.dependencyPayload.scopePayload? = nil,
+                    relationship: Components.Schemas.dependabot_hyphen_alert.dependencyPayload.relationshipPayload? = nil
                 ) {
                     self.package = package
                     self.manifest_path = manifest_path
                     self.scope = scope
+                    self.relationship = relationship
                 }
                 public enum CodingKeys: String, CodingKey {
                     case package
                     case manifest_path
                     case scope
+                    case relationship
                 }
             }
             /// Details for the vulnerable dependency.
@@ -3514,6 +3624,15 @@ public enum Components {
         ///
         /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-packages`.
         public typealias dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_packages = Swift.String
+        /// CVE Exploit Prediction Scoring System (EPSS) percentage. Can be specified as:
+        /// - An exact number (`n`)
+        /// - Comparators such as `>n`, `<n`, `>=n`, `<=n`
+        /// - A range like `n..n`, where `n` is a number from 0.0 to 1.0
+        ///
+        /// Filters the list of alerts based on EPSS percentages. If specified, only alerts with the provided EPSS percentages will be returned.
+        ///
+        /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-epss`.
+        public typealias dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_epss = Swift.String
         /// The scope of the vulnerable dependency. If specified, only alerts with this scope will be returned.
         ///
         /// - Remark: Generated from `#/components/parameters/dependabot-alert-scope`.
@@ -3524,11 +3643,13 @@ public enum Components {
         /// The property by which to sort the results.
         /// `created` means when the alert was created.
         /// `updated` means when the alert's state last changed.
+        /// `epss_percentage` sorts alerts by the Exploit Prediction Scoring System (EPSS) percentage.
         ///
         /// - Remark: Generated from `#/components/parameters/dependabot-alert-sort`.
         @frozen public enum dependabot_hyphen_alert_hyphen_sort: String, Codable, Hashable, Sendable {
             case created = "created"
             case updated = "updated"
+            case epss_percentage = "epss_percentage"
         }
         /// **Deprecated**. The number of results per page (max 100), starting from the first matching result.
         /// This parameter must not be used in combination with `last`.
@@ -3806,6 +3927,15 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/enterprises/{enterprise}/dependabot/alerts/GET/query/package`.
                 public var package: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_packages?
+                /// CVE Exploit Prediction Scoring System (EPSS) percentage. Can be specified as:
+                /// - An exact number (`n`)
+                /// - Comparators such as `>n`, `<n`, `>=n`, `<=n`
+                /// - A range like `n..n`, where `n` is a number from 0.0 to 1.0
+                ///
+                /// Filters the list of alerts based on EPSS percentages. If specified, only alerts with the provided EPSS percentages will be returned.
+                ///
+                /// - Remark: Generated from `#/paths/enterprises/{enterprise}/dependabot/alerts/GET/query/epss_percentage`.
+                public var epss_percentage: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_epss?
                 /// - Remark: Generated from `#/components/parameters/dependabot-alert-scope`.
                 @frozen public enum dependabot_hyphen_alert_hyphen_scope: String, Codable, Hashable, Sendable {
                     case development = "development"
@@ -3819,10 +3949,12 @@ public enum Operations {
                 @frozen public enum dependabot_hyphen_alert_hyphen_sort: String, Codable, Hashable, Sendable {
                     case created = "created"
                     case updated = "updated"
+                    case epss_percentage = "epss_percentage"
                 }
                 /// The property by which to sort the results.
                 /// `created` means when the alert was created.
                 /// `updated` means when the alert's state last changed.
+                /// `epss_percentage` sorts alerts by the Exploit Prediction Scoring System (EPSS) percentage.
                 ///
                 /// - Remark: Generated from `#/paths/enterprises/{enterprise}/dependabot/alerts/GET/query/sort`.
                 public var sort: Components.Parameters.dependabot_hyphen_alert_hyphen_sort?
@@ -3866,6 +3998,7 @@ public enum Operations {
                 ///   - severity: A comma-separated list of severities. If specified, only alerts with these severities will be returned.
                 ///   - ecosystem: A comma-separated list of ecosystems. If specified, only alerts for these ecosystems will be returned.
                 ///   - package: A comma-separated list of package names. If specified, only alerts for these packages will be returned.
+                ///   - epss_percentage: CVE Exploit Prediction Scoring System (EPSS) percentage. Can be specified as:
                 ///   - scope: The scope of the vulnerable dependency. If specified, only alerts with this scope will be returned.
                 ///   - sort: The property by which to sort the results.
                 ///   - direction: The direction to sort the results by.
@@ -3879,6 +4012,7 @@ public enum Operations {
                     severity: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_severities? = nil,
                     ecosystem: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_ecosystems? = nil,
                     package: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_packages? = nil,
+                    epss_percentage: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_epss? = nil,
                     scope: Components.Parameters.dependabot_hyphen_alert_hyphen_scope? = nil,
                     sort: Components.Parameters.dependabot_hyphen_alert_hyphen_sort? = nil,
                     direction: Components.Parameters.direction? = nil,
@@ -3892,6 +4026,7 @@ public enum Operations {
                     self.severity = severity
                     self.ecosystem = ecosystem
                     self.package = package
+                    self.epss_percentage = epss_percentage
                     self.scope = scope
                     self.sort = sort
                     self.direction = direction
@@ -4158,6 +4293,15 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/alerts/GET/query/package`.
                 public var package: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_packages?
+                /// CVE Exploit Prediction Scoring System (EPSS) percentage. Can be specified as:
+                /// - An exact number (`n`)
+                /// - Comparators such as `>n`, `<n`, `>=n`, `<=n`
+                /// - A range like `n..n`, where `n` is a number from 0.0 to 1.0
+                ///
+                /// Filters the list of alerts based on EPSS percentages. If specified, only alerts with the provided EPSS percentages will be returned.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/alerts/GET/query/epss_percentage`.
+                public var epss_percentage: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_epss?
                 /// - Remark: Generated from `#/components/parameters/dependabot-alert-scope`.
                 @frozen public enum dependabot_hyphen_alert_hyphen_scope: String, Codable, Hashable, Sendable {
                     case development = "development"
@@ -4171,10 +4315,12 @@ public enum Operations {
                 @frozen public enum dependabot_hyphen_alert_hyphen_sort: String, Codable, Hashable, Sendable {
                     case created = "created"
                     case updated = "updated"
+                    case epss_percentage = "epss_percentage"
                 }
                 /// The property by which to sort the results.
                 /// `created` means when the alert was created.
                 /// `updated` means when the alert's state last changed.
+                /// `epss_percentage` sorts alerts by the Exploit Prediction Scoring System (EPSS) percentage.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/alerts/GET/query/sort`.
                 public var sort: Components.Parameters.dependabot_hyphen_alert_hyphen_sort?
@@ -4218,6 +4364,7 @@ public enum Operations {
                 ///   - severity: A comma-separated list of severities. If specified, only alerts with these severities will be returned.
                 ///   - ecosystem: A comma-separated list of ecosystems. If specified, only alerts for these ecosystems will be returned.
                 ///   - package: A comma-separated list of package names. If specified, only alerts for these packages will be returned.
+                ///   - epss_percentage: CVE Exploit Prediction Scoring System (EPSS) percentage. Can be specified as:
                 ///   - scope: The scope of the vulnerable dependency. If specified, only alerts with this scope will be returned.
                 ///   - sort: The property by which to sort the results.
                 ///   - direction: The direction to sort the results by.
@@ -4231,6 +4378,7 @@ public enum Operations {
                     severity: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_severities? = nil,
                     ecosystem: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_ecosystems? = nil,
                     package: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_packages? = nil,
+                    epss_percentage: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_epss? = nil,
                     scope: Components.Parameters.dependabot_hyphen_alert_hyphen_scope? = nil,
                     sort: Components.Parameters.dependabot_hyphen_alert_hyphen_sort? = nil,
                     direction: Components.Parameters.direction? = nil,
@@ -4244,6 +4392,7 @@ public enum Operations {
                     self.severity = severity
                     self.ecosystem = ecosystem
                     self.package = package
+                    self.epss_percentage = epss_percentage
                     self.scope = scope
                     self.sort = sort
                     self.direction = direction
@@ -5861,6 +6010,15 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/GET/query/manifest`.
                 public var manifest: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_manifests?
+                /// CVE Exploit Prediction Scoring System (EPSS) percentage. Can be specified as:
+                /// - An exact number (`n`)
+                /// - Comparators such as `>n`, `<n`, `>=n`, `<=n`
+                /// - A range like `n..n`, where `n` is a number from 0.0 to 1.0
+                ///
+                /// Filters the list of alerts based on EPSS percentages. If specified, only alerts with the provided EPSS percentages will be returned.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/GET/query/epss_percentage`.
+                public var epss_percentage: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_epss?
                 /// - Remark: Generated from `#/components/parameters/dependabot-alert-scope`.
                 @frozen public enum dependabot_hyphen_alert_hyphen_scope: String, Codable, Hashable, Sendable {
                     case development = "development"
@@ -5874,10 +6032,12 @@ public enum Operations {
                 @frozen public enum dependabot_hyphen_alert_hyphen_sort: String, Codable, Hashable, Sendable {
                     case created = "created"
                     case updated = "updated"
+                    case epss_percentage = "epss_percentage"
                 }
                 /// The property by which to sort the results.
                 /// `created` means when the alert was created.
                 /// `updated` means when the alert's state last changed.
+                /// `epss_percentage` sorts alerts by the Exploit Prediction Scoring System (EPSS) percentage.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/GET/query/sort`.
                 public var sort: Components.Parameters.dependabot_hyphen_alert_hyphen_sort?
@@ -5928,6 +6088,7 @@ public enum Operations {
                 ///   - ecosystem: A comma-separated list of ecosystems. If specified, only alerts for these ecosystems will be returned.
                 ///   - package: A comma-separated list of package names. If specified, only alerts for these packages will be returned.
                 ///   - manifest: A comma-separated list of full manifest paths. If specified, only alerts for these manifests will be returned.
+                ///   - epss_percentage: CVE Exploit Prediction Scoring System (EPSS) percentage. Can be specified as:
                 ///   - scope: The scope of the vulnerable dependency. If specified, only alerts with this scope will be returned.
                 ///   - sort: The property by which to sort the results.
                 ///   - direction: The direction to sort the results by.
@@ -5943,6 +6104,7 @@ public enum Operations {
                     ecosystem: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_ecosystems? = nil,
                     package: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_packages? = nil,
                     manifest: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_manifests? = nil,
+                    epss_percentage: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_epss? = nil,
                     scope: Components.Parameters.dependabot_hyphen_alert_hyphen_scope? = nil,
                     sort: Components.Parameters.dependabot_hyphen_alert_hyphen_sort? = nil,
                     direction: Components.Parameters.direction? = nil,
@@ -5958,6 +6120,7 @@ public enum Operations {
                     self.ecosystem = ecosystem
                     self.package = package
                     self.manifest = manifest
+                    self.epss_percentage = epss_percentage
                     self.scope = scope
                     self.sort = sort
                     self.direction = direction
