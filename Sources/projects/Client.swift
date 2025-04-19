@@ -40,10 +40,13 @@ public struct Client: APIProtocol {
     }
     /// List organization projects
     ///
-    /// Lists the projects in an organization. Returns a `404 Not Found` status if projects are disabled in the organization. If you do not have sufficient privileges to perform this action, a `401 Unauthorized` or `410 Gone` status is returned.
+    /// > [!WARNING]
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/projects`.
     /// - Remark: Generated from `#/paths//orgs/{org}/projects/get(projects/list-for-org)`.
+    @available(*, deprecated)
     public func projects_sol_list_hyphen_for_hyphen_org(_ input: Operations.projects_sol_list_hyphen_for_hyphen_org.Input) async throws -> Operations.projects_sol_list_hyphen_for_hyphen_org.Output {
         try await client.send(
             input: input,
@@ -155,10 +158,13 @@ public struct Client: APIProtocol {
     }
     /// Create an organization project
     ///
-    /// Creates an organization project board. Returns a `410 Gone` status if projects are disabled in the organization or if the organization does not have existing classic projects. If you do not have sufficient privileges to perform this action, a `401 Unauthorized` or `410 Gone` status is returned.
+    /// > [!WARNING]
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/projects`.
     /// - Remark: Generated from `#/paths//orgs/{org}/projects/post(projects/create-for-org)`.
+    @available(*, deprecated)
     public func projects_sol_create_hyphen_for_hyphen_org(_ input: Operations.projects_sol_create_hyphen_for_hyphen_org.Input) async throws -> Operations.projects_sol_create_hyphen_for_hyphen_org.Output {
         try await client.send(
             input: input,
@@ -338,10 +344,13 @@ public struct Client: APIProtocol {
     }
     /// Get a project card
     ///
-    /// Gets information about a project card.
+    /// > [!WARNING]
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `GET /projects/columns/cards/{card_id}`.
     /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/get(projects/get-card)`.
+    @available(*, deprecated)
     public func projects_sol_get_hyphen_card(_ input: Operations.projects_sol_get_hyphen_card.Input) async throws -> Operations.projects_sol_get_hyphen_card.Output {
         try await client.send(
             input: input,
@@ -470,10 +479,13 @@ public struct Client: APIProtocol {
     }
     /// Update an existing project card
     ///
-    ///
+    /// > [!WARNING]
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `PATCH /projects/columns/cards/{card_id}`.
     /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/patch(projects/update-card)`.
+    @available(*, deprecated)
     public func projects_sol_update_hyphen_card(_ input: Operations.projects_sol_update_hyphen_card.Input) async throws -> Operations.projects_sol_update_hyphen_card.Output {
         try await client.send(
             input: input,
@@ -635,10 +647,13 @@ public struct Client: APIProtocol {
     }
     /// Delete a project card
     ///
-    /// Deletes a project card
+    /// > [!WARNING]
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `DELETE /projects/columns/cards/{card_id}`.
     /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/delete(projects/delete-card)`.
+    @available(*, deprecated)
     public func projects_sol_delete_hyphen_card(_ input: Operations.projects_sol_delete_hyphen_card.Input) async throws -> Operations.projects_sol_delete_hyphen_card.Output {
         try await client.send(
             input: input,
@@ -747,10 +762,13 @@ public struct Client: APIProtocol {
     }
     /// Move a project card
     ///
-    ///
+    /// > [!WARNING]
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `POST /projects/columns/cards/{card_id}/moves`.
     /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/moves/post(projects/move-card)`.
+    @available(*, deprecated)
     public func projects_sol_move_hyphen_card(_ input: Operations.projects_sol_move_hyphen_card.Input) async throws -> Operations.projects_sol_move_hyphen_card.Output {
         try await client.send(
             input: input,
@@ -910,10 +928,13 @@ public struct Client: APIProtocol {
     }
     /// Get a project column
     ///
-    /// Gets information about a project column.
+    /// > [!WARNING]
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `GET /projects/columns/{column_id}`.
     /// - Remark: Generated from `#/paths//projects/columns/{column_id}/get(projects/get-column)`.
+    @available(*, deprecated)
     public func projects_sol_get_hyphen_column(_ input: Operations.projects_sol_get_hyphen_column.Input) async throws -> Operations.projects_sol_get_hyphen_column.Output {
         try await client.send(
             input: input,
@@ -1042,10 +1063,13 @@ public struct Client: APIProtocol {
     }
     /// Update an existing project column
     ///
-    ///
+    /// > [!WARNING]
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `PATCH /projects/columns/{column_id}`.
     /// - Remark: Generated from `#/paths//projects/columns/{column_id}/patch(projects/update-column)`.
+    @available(*, deprecated)
     public func projects_sol_update_hyphen_column(_ input: Operations.projects_sol_update_hyphen_column.Input) async throws -> Operations.projects_sol_update_hyphen_column.Output {
         try await client.send(
             input: input,
@@ -1161,10 +1185,13 @@ public struct Client: APIProtocol {
     }
     /// Delete a project column
     ///
-    /// Deletes a project column.
+    /// > [!WARNING]
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `DELETE /projects/columns/{column_id}`.
     /// - Remark: Generated from `#/paths//projects/columns/{column_id}/delete(projects/delete-column)`.
+    @available(*, deprecated)
     public func projects_sol_delete_hyphen_column(_ input: Operations.projects_sol_delete_hyphen_column.Input) async throws -> Operations.projects_sol_delete_hyphen_column.Output {
         try await client.send(
             input: input,
@@ -1251,10 +1278,13 @@ public struct Client: APIProtocol {
     }
     /// List project cards
     ///
-    /// Lists the project cards in a project.
+    /// > [!WARNING]
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `GET /projects/columns/{column_id}/cards`.
     /// - Remark: Generated from `#/paths//projects/columns/{column_id}/cards/get(projects/list-cards)`.
+    @available(*, deprecated)
     public func projects_sol_list_hyphen_cards(_ input: Operations.projects_sol_list_hyphen_cards.Input) async throws -> Operations.projects_sol_list_hyphen_cards.Output {
         try await client.send(
             input: input,
@@ -1390,10 +1420,13 @@ public struct Client: APIProtocol {
     }
     /// Create a project card
     ///
-    ///
+    /// > [!WARNING]
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `POST /projects/columns/{column_id}/cards`.
     /// - Remark: Generated from `#/paths//projects/columns/{column_id}/cards/post(projects/create-card)`.
+    @available(*, deprecated)
     public func projects_sol_create_hyphen_card(_ input: Operations.projects_sol_create_hyphen_card.Input) async throws -> Operations.projects_sol_create_hyphen_card.Output {
         try await client.send(
             input: input,
@@ -1553,10 +1586,13 @@ public struct Client: APIProtocol {
     }
     /// Move a project column
     ///
-    ///
+    /// > [!WARNING]
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `POST /projects/columns/{column_id}/moves`.
     /// - Remark: Generated from `#/paths//projects/columns/{column_id}/moves/post(projects/move-column)`.
+    @available(*, deprecated)
     public func projects_sol_move_hyphen_column(_ input: Operations.projects_sol_move_hyphen_column.Input) async throws -> Operations.projects_sol_move_hyphen_column.Output {
         try await client.send(
             input: input,
@@ -1694,10 +1730,13 @@ public struct Client: APIProtocol {
     }
     /// Get a project
     ///
-    /// Gets a project by its `id`. Returns a `404 Not Found` status if projects are disabled. If you do not have sufficient privileges to perform this action, a `401 Unauthorized` or `410 Gone` status is returned.
+    /// > [!WARNING]
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `GET /projects/{project_id}`.
     /// - Remark: Generated from `#/paths//projects/{project_id}/get(projects/get)`.
+    @available(*, deprecated)
     public func projects_sol_get(_ input: Operations.projects_sol_get.Input) async throws -> Operations.projects_sol_get.Output {
         try await client.send(
             input: input,
@@ -1804,10 +1843,13 @@ public struct Client: APIProtocol {
     }
     /// Update a project
     ///
-    /// Updates a project board's information. Returns a `404 Not Found` status if projects are disabled. If you do not have sufficient privileges to perform this action, a `401 Unauthorized` or `410 Gone` status is returned.
+    /// > [!WARNING]
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `PATCH /projects/{project_id}`.
     /// - Remark: Generated from `#/paths//projects/{project_id}/patch(projects/update)`.
+    @available(*, deprecated)
     public func projects_sol_update(_ input: Operations.projects_sol_update.Input) async throws -> Operations.projects_sol_update.Output {
         try await client.send(
             input: input,
@@ -1971,10 +2013,13 @@ public struct Client: APIProtocol {
     }
     /// Delete a project
     ///
-    /// Deletes a project board. Returns a `404 Not Found` status if projects are disabled.
+    /// > [!WARNING]
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `DELETE /projects/{project_id}`.
     /// - Remark: Generated from `#/paths//projects/{project_id}/delete(projects/delete)`.
+    @available(*, deprecated)
     public func projects_sol_delete(_ input: Operations.projects_sol_delete.Input) async throws -> Operations.projects_sol_delete.Output {
         try await client.send(
             input: input,
@@ -2105,10 +2150,13 @@ public struct Client: APIProtocol {
     }
     /// List project collaborators
     ///
-    /// Lists the collaborators for an organization project. For a project, the list of collaborators includes outside collaborators, organization members that are direct collaborators, organization members with access through team memberships, organization members with access through default organization permissions, and organization owners. You must be an organization owner or a project `admin` to list collaborators.
+    /// > [!WARNING]
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `GET /projects/{project_id}/collaborators`.
     /// - Remark: Generated from `#/paths//projects/{project_id}/collaborators/get(projects/list-collaborators)`.
+    @available(*, deprecated)
     public func projects_sol_list_hyphen_collaborators(_ input: Operations.projects_sol_list_hyphen_collaborators.Input) async throws -> Operations.projects_sol_list_hyphen_collaborators.Output {
         try await client.send(
             input: input,
@@ -2288,10 +2336,13 @@ public struct Client: APIProtocol {
     }
     /// Add project collaborator
     ///
-    /// Adds a collaborator to an organization project and sets their permission level. You must be an organization owner or a project `admin` to add a collaborator.
+    /// > [!WARNING]
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `PUT /projects/{project_id}/collaborators/{username}`.
     /// - Remark: Generated from `#/paths//projects/{project_id}/collaborators/{username}/put(projects/add-collaborator)`.
+    @available(*, deprecated)
     public func projects_sol_add_hyphen_collaborator(_ input: Operations.projects_sol_add_hyphen_collaborator.Input) async throws -> Operations.projects_sol_add_hyphen_collaborator.Output {
         try await client.send(
             input: input,
@@ -2434,10 +2485,13 @@ public struct Client: APIProtocol {
     }
     /// Remove user as a collaborator
     ///
-    /// Removes a collaborator from an organization project. You must be an organization owner or a project `admin` to remove a collaborator.
+    /// > [!WARNING]
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `DELETE /projects/{project_id}/collaborators/{username}`.
     /// - Remark: Generated from `#/paths//projects/{project_id}/collaborators/{username}/delete(projects/remove-collaborator)`.
+    @available(*, deprecated)
     public func projects_sol_remove_hyphen_collaborator(_ input: Operations.projects_sol_remove_hyphen_collaborator.Input) async throws -> Operations.projects_sol_remove_hyphen_collaborator.Output {
         try await client.send(
             input: input,
@@ -2569,10 +2623,13 @@ public struct Client: APIProtocol {
     }
     /// Get project permission for a user
     ///
-    /// Returns the collaborator's permission level for an organization project. Possible values for the `permission` key: `admin`, `write`, `read`, `none`. You must be an organization owner or a project `admin` to review a user's permission level.
+    /// > [!WARNING]
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `GET /projects/{project_id}/collaborators/{username}/permission`.
     /// - Remark: Generated from `#/paths//projects/{project_id}/collaborators/{username}/permission/get(projects/get-permission-for-user)`.
+    @available(*, deprecated)
     public func projects_sol_get_hyphen_permission_hyphen_for_hyphen_user(_ input: Operations.projects_sol_get_hyphen_permission_hyphen_for_hyphen_user.Input) async throws -> Operations.projects_sol_get_hyphen_permission_hyphen_for_hyphen_user.Output {
         try await client.send(
             input: input,
@@ -2724,10 +2781,13 @@ public struct Client: APIProtocol {
     }
     /// List project columns
     ///
-    /// Lists the project columns in a project.
+    /// > [!WARNING]
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `GET /projects/{project_id}/columns`.
     /// - Remark: Generated from `#/paths//projects/{project_id}/columns/get(projects/list-columns)`.
+    @available(*, deprecated)
     public func projects_sol_list_hyphen_columns(_ input: Operations.projects_sol_list_hyphen_columns.Input) async throws -> Operations.projects_sol_list_hyphen_columns.Output {
         try await client.send(
             input: input,
@@ -2856,10 +2916,13 @@ public struct Client: APIProtocol {
     }
     /// Create a project column
     ///
-    /// Creates a new project column.
+    /// > [!WARNING]
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `POST /projects/{project_id}/columns`.
     /// - Remark: Generated from `#/paths//projects/{project_id}/columns/post(projects/create-column)`.
+    @available(*, deprecated)
     public func projects_sol_create_hyphen_column(_ input: Operations.projects_sol_create_hyphen_column.Input) async throws -> Operations.projects_sol_create_hyphen_column.Output {
         try await client.send(
             input: input,
@@ -2997,10 +3060,13 @@ public struct Client: APIProtocol {
     }
     /// List repository projects
     ///
-    /// Lists the projects in a repository. Returns a `404 Not Found` status if projects are disabled in the repository. If you do not have sufficient privileges to perform this action, a `401 Unauthorized` or `410 Gone` status is returned.
+    /// > [!WARNING]
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/projects`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/projects/get(projects/list-for-repo)`.
+    @available(*, deprecated)
     public func projects_sol_list_hyphen_for_hyphen_repo(_ input: Operations.projects_sol_list_hyphen_for_hyphen_repo.Input) async throws -> Operations.projects_sol_list_hyphen_for_hyphen_repo.Output {
         try await client.send(
             input: input,
@@ -3201,10 +3267,13 @@ public struct Client: APIProtocol {
     }
     /// Create a repository project
     ///
-    /// Creates a repository project board. Returns a `410 Gone` status if projects are disabled in the repository or if the repository does not have existing classic projects. If you do not have sufficient privileges to perform this action, a `401 Unauthorized` or `410 Gone` status is returned.
+    /// > [!WARNING]
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/projects`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/projects/post(projects/create-for-repo)`.
+    @available(*, deprecated)
     public func projects_sol_create_hyphen_for_hyphen_repo(_ input: Operations.projects_sol_create_hyphen_for_hyphen_repo.Input) async throws -> Operations.projects_sol_create_hyphen_for_hyphen_repo.Output {
         try await client.send(
             input: input,
@@ -3385,10 +3454,13 @@ public struct Client: APIProtocol {
     }
     /// Create a user project
     ///
-    /// Creates a user project board. Returns a `410 Gone` status if the user does not have existing classic projects. If you do not have sufficient privileges to perform this action, a `401 Unauthorized` or `410 Gone` status is returned.
+    /// > [!WARNING]
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `POST /user/projects`.
     /// - Remark: Generated from `#/paths//user/projects/post(projects/create-for-authenticated-user)`.
+    @available(*, deprecated)
     public func projects_sol_create_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.projects_sol_create_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.projects_sol_create_hyphen_for_hyphen_authenticated_hyphen_user.Output {
         try await client.send(
             input: input,
@@ -3524,10 +3596,13 @@ public struct Client: APIProtocol {
     }
     /// List user projects
     ///
-    /// Lists projects for a user.
+    /// > [!WARNING]
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `GET /users/{username}/projects`.
     /// - Remark: Generated from `#/paths//users/{username}/projects/get(projects/list-for-user)`.
+    @available(*, deprecated)
     public func projects_sol_list_hyphen_for_hyphen_user(_ input: Operations.projects_sol_list_hyphen_for_hyphen_user.Input) async throws -> Operations.projects_sol_list_hyphen_for_hyphen_user.Output {
         try await client.send(
             input: input,
