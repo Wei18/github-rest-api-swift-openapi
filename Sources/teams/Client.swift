@@ -1749,13 +1749,13 @@ public struct Client: APIProtocol {
     }
     /// List team projects
     ///
-    /// Lists the organization projects for a team.
-    ///
-    /// > [!NOTE]
-    /// > You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/{org_id}/team/{team_id}/projects`.
+    /// > [!WARNING]
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/projects`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/projects/get(teams/list-projects-in-org)`.
+    @available(*, deprecated)
     public func teams_sol_list_hyphen_projects_hyphen_in_hyphen_org(_ input: Operations.teams_sol_list_hyphen_projects_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_list_hyphen_projects_hyphen_in_hyphen_org.Output {
         try await client.send(
             input: input,
@@ -1839,13 +1839,13 @@ public struct Client: APIProtocol {
     }
     /// Check team permissions for a project
     ///
-    /// Checks whether a team has `read`, `write`, or `admin` permissions for an organization project. The response includes projects inherited from a parent team.
-    ///
-    /// > [!NOTE]
-    /// > You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/{org_id}/team/{team_id}/projects/{project_id}`.
+    /// > [!WARNING]
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/projects/{project_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/projects/{project_id}/get(teams/check-permissions-for-project-in-org)`.
+    @available(*, deprecated)
     public func teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_in_hyphen_org(_ input: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_in_hyphen_org.Output {
         try await client.send(
             input: input,
@@ -1910,13 +1910,13 @@ public struct Client: APIProtocol {
     }
     /// Add or update team project permissions
     ///
-    /// Adds an organization project to a team. To add a project to a team or update the team's permission on a project, the authenticated user must have `admin` permissions for the project. The project and team must be part of the same organization.
-    ///
-    /// > [!NOTE]
-    /// > You can also specify a team by `org_id` and `team_id` using the route `PUT /organizations/{org_id}/team/{team_id}/projects/{project_id}`.
+    /// > [!WARNING]
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/teams/{team_slug}/projects/{project_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/projects/{project_id}/put(teams/add-or-update-project-permissions-in-org)`.
+    @available(*, deprecated)
     public func teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_in_hyphen_org(_ input: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_in_hyphen_org.Output {
         try await client.send(
             input: input,
@@ -1992,13 +1992,13 @@ public struct Client: APIProtocol {
     }
     /// Remove a project from a team
     ///
-    /// Removes an organization project from a team. An organization owner or a team maintainer can remove any project from the team. To remove a project from a team as an organization member, the authenticated user must have `read` access to both the team and project, or `admin` access to the team or project. This endpoint removes the project from the team, but does not delete the project.
-    ///
-    /// > [!NOTE]
-    /// > You can also specify a team by `org_id` and `team_id` using the route `DELETE /organizations/{org_id}/team/{team_id}/projects/{project_id}`.
+    /// > [!WARNING]
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/teams/{team_slug}/projects/{project_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/projects/{project_id}/delete(teams/remove-project-in-org)`.
+    @available(*, deprecated)
     public func teams_sol_remove_hyphen_project_hyphen_in_hyphen_org(_ input: Operations.teams_sol_remove_hyphen_project_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_remove_hyphen_project_hyphen_in_hyphen_org.Output {
         try await client.send(
             input: input,
@@ -4174,9 +4174,8 @@ public struct Client: APIProtocol {
     /// List team projects (Legacy)
     ///
     /// > [!WARNING]
-    /// > **Endpoint closing down notice:** This endpoint route is closing down and will be removed from the Teams API. We recommend migrating your existing code to use the new [`List team projects`](https://docs.github.com/rest/teams/teams#list-team-projects) endpoint.
-    ///
-    /// Lists the organization projects for a team.
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `GET /teams/{team_id}/projects`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/projects/get(teams/list-projects-legacy)`.
@@ -4286,9 +4285,8 @@ public struct Client: APIProtocol {
     /// Check team permissions for a project (Legacy)
     ///
     /// > [!WARNING]
-    /// > **Endpoint closing down notice:** This endpoint route is closing down and will be removed from the Teams API. We recommend migrating your existing code to use the new [Check team permissions for a project](https://docs.github.com/rest/teams/teams#check-team-permissions-for-a-project) endpoint.
-    ///
-    /// Checks whether a team has `read`, `write`, or `admin` permissions for an organization project. The response includes projects inherited from a parent team.
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `GET /teams/{team_id}/projects/{project_id}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/projects/{project_id}/get(teams/check-permissions-for-project-legacy)`.
@@ -4357,9 +4355,8 @@ public struct Client: APIProtocol {
     /// Add or update team project permissions (Legacy)
     ///
     /// > [!WARNING]
-    /// > **Endpoint closing down notice:** This endpoint route is closing down and will be removed from the Teams API. We recommend migrating your existing code to use the new [Add or update team project permissions](https://docs.github.com/rest/teams/teams#add-or-update-team-project-permissions) endpoint.
-    ///
-    /// Adds an organization project to a team. To add a project to a team or update the team's permission on a project, the authenticated user must have `admin` permissions for the project. The project and team must be part of the same organization.
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `PUT /teams/{team_id}/projects/{project_id}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/projects/{project_id}/put(teams/add-or-update-project-permissions-legacy)`.
@@ -4483,9 +4480,8 @@ public struct Client: APIProtocol {
     /// Remove a project from a team (Legacy)
     ///
     /// > [!WARNING]
-    /// > **Endpoint closing down notice:** This endpoint route is closing down and will be removed from the Teams API. We recommend migrating your existing code to use the new [Remove a project from a team](https://docs.github.com/rest/teams/teams#remove-a-project-from-a-team) endpoint.
-    ///
-    /// Removes an organization project from a team. An organization owner or a team maintainer can remove any project from the team. To remove a project from a team as an organization member, the authenticated user must have `read` access to both the team and project, or `admin` access to the team or project. **Note:** This endpoint removes the project from the team, but does not delete it.
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `DELETE /teams/{team_id}/projects/{project_id}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/projects/{project_id}/delete(teams/remove-project-legacy)`.

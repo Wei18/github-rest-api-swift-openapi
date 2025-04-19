@@ -255,43 +255,43 @@ public protocol APIProtocol: Sendable {
     func teams_sol_remove_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org(_ input: Operations.teams_sol_remove_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_remove_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Output
     /// List team projects
     ///
-    /// Lists the organization projects for a team.
-    ///
-    /// > [!NOTE]
-    /// > You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/{org_id}/team/{team_id}/projects`.
+    /// > [!WARNING]
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/projects`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/projects/get(teams/list-projects-in-org)`.
+    @available(*, deprecated)
     func teams_sol_list_hyphen_projects_hyphen_in_hyphen_org(_ input: Operations.teams_sol_list_hyphen_projects_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_list_hyphen_projects_hyphen_in_hyphen_org.Output
     /// Check team permissions for a project
     ///
-    /// Checks whether a team has `read`, `write`, or `admin` permissions for an organization project. The response includes projects inherited from a parent team.
-    ///
-    /// > [!NOTE]
-    /// > You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/{org_id}/team/{team_id}/projects/{project_id}`.
+    /// > [!WARNING]
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/projects/{project_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/projects/{project_id}/get(teams/check-permissions-for-project-in-org)`.
+    @available(*, deprecated)
     func teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_in_hyphen_org(_ input: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_in_hyphen_org.Output
     /// Add or update team project permissions
     ///
-    /// Adds an organization project to a team. To add a project to a team or update the team's permission on a project, the authenticated user must have `admin` permissions for the project. The project and team must be part of the same organization.
-    ///
-    /// > [!NOTE]
-    /// > You can also specify a team by `org_id` and `team_id` using the route `PUT /organizations/{org_id}/team/{team_id}/projects/{project_id}`.
+    /// > [!WARNING]
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/teams/{team_slug}/projects/{project_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/projects/{project_id}/put(teams/add-or-update-project-permissions-in-org)`.
+    @available(*, deprecated)
     func teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_in_hyphen_org(_ input: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_in_hyphen_org.Output
     /// Remove a project from a team
     ///
-    /// Removes an organization project from a team. An organization owner or a team maintainer can remove any project from the team. To remove a project from a team as an organization member, the authenticated user must have `read` access to both the team and project, or `admin` access to the team or project. This endpoint removes the project from the team, but does not delete the project.
-    ///
-    /// > [!NOTE]
-    /// > You can also specify a team by `org_id` and `team_id` using the route `DELETE /organizations/{org_id}/team/{team_id}/projects/{project_id}`.
+    /// > [!WARNING]
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/teams/{team_slug}/projects/{project_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/projects/{project_id}/delete(teams/remove-project-in-org)`.
+    @available(*, deprecated)
     func teams_sol_remove_hyphen_project_hyphen_in_hyphen_org(_ input: Operations.teams_sol_remove_hyphen_project_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_remove_hyphen_project_hyphen_in_hyphen_org.Output
     /// List team repositories
     ///
@@ -648,9 +648,8 @@ public protocol APIProtocol: Sendable {
     /// List team projects (Legacy)
     ///
     /// > [!WARNING]
-    /// > **Endpoint closing down notice:** This endpoint route is closing down and will be removed from the Teams API. We recommend migrating your existing code to use the new [`List team projects`](https://docs.github.com/rest/teams/teams#list-team-projects) endpoint.
-    ///
-    /// Lists the organization projects for a team.
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `GET /teams/{team_id}/projects`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/projects/get(teams/list-projects-legacy)`.
@@ -659,9 +658,8 @@ public protocol APIProtocol: Sendable {
     /// Check team permissions for a project (Legacy)
     ///
     /// > [!WARNING]
-    /// > **Endpoint closing down notice:** This endpoint route is closing down and will be removed from the Teams API. We recommend migrating your existing code to use the new [Check team permissions for a project](https://docs.github.com/rest/teams/teams#check-team-permissions-for-a-project) endpoint.
-    ///
-    /// Checks whether a team has `read`, `write`, or `admin` permissions for an organization project. The response includes projects inherited from a parent team.
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `GET /teams/{team_id}/projects/{project_id}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/projects/{project_id}/get(teams/check-permissions-for-project-legacy)`.
@@ -670,9 +668,8 @@ public protocol APIProtocol: Sendable {
     /// Add or update team project permissions (Legacy)
     ///
     /// > [!WARNING]
-    /// > **Endpoint closing down notice:** This endpoint route is closing down and will be removed from the Teams API. We recommend migrating your existing code to use the new [Add or update team project permissions](https://docs.github.com/rest/teams/teams#add-or-update-team-project-permissions) endpoint.
-    ///
-    /// Adds an organization project to a team. To add a project to a team or update the team's permission on a project, the authenticated user must have `admin` permissions for the project. The project and team must be part of the same organization.
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `PUT /teams/{team_id}/projects/{project_id}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/projects/{project_id}/put(teams/add-or-update-project-permissions-legacy)`.
@@ -681,9 +678,8 @@ public protocol APIProtocol: Sendable {
     /// Remove a project from a team (Legacy)
     ///
     /// > [!WARNING]
-    /// > **Endpoint closing down notice:** This endpoint route is closing down and will be removed from the Teams API. We recommend migrating your existing code to use the new [Remove a project from a team](https://docs.github.com/rest/teams/teams#remove-a-project-from-a-team) endpoint.
-    ///
-    /// Removes an organization project from a team. An organization owner or a team maintainer can remove any project from the team. To remove a project from a team as an organization member, the authenticated user must have `read` access to both the team and project, or `admin` access to the team or project. **Note:** This endpoint removes the project from the team, but does not delete it.
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `DELETE /teams/{team_id}/projects/{project_id}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/projects/{project_id}/delete(teams/remove-project-legacy)`.
@@ -1165,13 +1161,13 @@ extension APIProtocol {
     }
     /// List team projects
     ///
-    /// Lists the organization projects for a team.
-    ///
-    /// > [!NOTE]
-    /// > You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/{org_id}/team/{team_id}/projects`.
+    /// > [!WARNING]
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/projects`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/projects/get(teams/list-projects-in-org)`.
+    @available(*, deprecated)
     public func teams_sol_list_hyphen_projects_hyphen_in_hyphen_org(
         path: Operations.teams_sol_list_hyphen_projects_hyphen_in_hyphen_org.Input.Path,
         query: Operations.teams_sol_list_hyphen_projects_hyphen_in_hyphen_org.Input.Query = .init(),
@@ -1185,13 +1181,13 @@ extension APIProtocol {
     }
     /// Check team permissions for a project
     ///
-    /// Checks whether a team has `read`, `write`, or `admin` permissions for an organization project. The response includes projects inherited from a parent team.
-    ///
-    /// > [!NOTE]
-    /// > You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/{org_id}/team/{team_id}/projects/{project_id}`.
+    /// > [!WARNING]
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/projects/{project_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/projects/{project_id}/get(teams/check-permissions-for-project-in-org)`.
+    @available(*, deprecated)
     public func teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_in_hyphen_org(
         path: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_in_hyphen_org.Input.Path,
         headers: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_in_hyphen_org.Input.Headers = .init()
@@ -1203,13 +1199,13 @@ extension APIProtocol {
     }
     /// Add or update team project permissions
     ///
-    /// Adds an organization project to a team. To add a project to a team or update the team's permission on a project, the authenticated user must have `admin` permissions for the project. The project and team must be part of the same organization.
-    ///
-    /// > [!NOTE]
-    /// > You can also specify a team by `org_id` and `team_id` using the route `PUT /organizations/{org_id}/team/{team_id}/projects/{project_id}`.
+    /// > [!WARNING]
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/teams/{team_slug}/projects/{project_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/projects/{project_id}/put(teams/add-or-update-project-permissions-in-org)`.
+    @available(*, deprecated)
     public func teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_in_hyphen_org(
         path: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_in_hyphen_org.Input.Path,
         headers: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_in_hyphen_org.Input.Headers = .init(),
@@ -1223,13 +1219,13 @@ extension APIProtocol {
     }
     /// Remove a project from a team
     ///
-    /// Removes an organization project from a team. An organization owner or a team maintainer can remove any project from the team. To remove a project from a team as an organization member, the authenticated user must have `read` access to both the team and project, or `admin` access to the team or project. This endpoint removes the project from the team, but does not delete the project.
-    ///
-    /// > [!NOTE]
-    /// > You can also specify a team by `org_id` and `team_id` using the route `DELETE /organizations/{org_id}/team/{team_id}/projects/{project_id}`.
+    /// > [!WARNING]
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/teams/{team_slug}/projects/{project_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/projects/{project_id}/delete(teams/remove-project-in-org)`.
+    @available(*, deprecated)
     public func teams_sol_remove_hyphen_project_hyphen_in_hyphen_org(path: Operations.teams_sol_remove_hyphen_project_hyphen_in_hyphen_org.Input.Path) async throws -> Operations.teams_sol_remove_hyphen_project_hyphen_in_hyphen_org.Output {
         try await teams_sol_remove_hyphen_project_hyphen_in_hyphen_org(Operations.teams_sol_remove_hyphen_project_hyphen_in_hyphen_org.Input(path: path))
     }
@@ -1784,9 +1780,8 @@ extension APIProtocol {
     /// List team projects (Legacy)
     ///
     /// > [!WARNING]
-    /// > **Endpoint closing down notice:** This endpoint route is closing down and will be removed from the Teams API. We recommend migrating your existing code to use the new [`List team projects`](https://docs.github.com/rest/teams/teams#list-team-projects) endpoint.
-    ///
-    /// Lists the organization projects for a team.
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `GET /teams/{team_id}/projects`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/projects/get(teams/list-projects-legacy)`.
@@ -1805,9 +1800,8 @@ extension APIProtocol {
     /// Check team permissions for a project (Legacy)
     ///
     /// > [!WARNING]
-    /// > **Endpoint closing down notice:** This endpoint route is closing down and will be removed from the Teams API. We recommend migrating your existing code to use the new [Check team permissions for a project](https://docs.github.com/rest/teams/teams#check-team-permissions-for-a-project) endpoint.
-    ///
-    /// Checks whether a team has `read`, `write`, or `admin` permissions for an organization project. The response includes projects inherited from a parent team.
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `GET /teams/{team_id}/projects/{project_id}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/projects/{project_id}/get(teams/check-permissions-for-project-legacy)`.
@@ -1824,9 +1818,8 @@ extension APIProtocol {
     /// Add or update team project permissions (Legacy)
     ///
     /// > [!WARNING]
-    /// > **Endpoint closing down notice:** This endpoint route is closing down and will be removed from the Teams API. We recommend migrating your existing code to use the new [Add or update team project permissions](https://docs.github.com/rest/teams/teams#add-or-update-team-project-permissions) endpoint.
-    ///
-    /// Adds an organization project to a team. To add a project to a team or update the team's permission on a project, the authenticated user must have `admin` permissions for the project. The project and team must be part of the same organization.
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `PUT /teams/{team_id}/projects/{project_id}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/projects/{project_id}/put(teams/add-or-update-project-permissions-legacy)`.
@@ -1845,9 +1838,8 @@ extension APIProtocol {
     /// Remove a project from a team (Legacy)
     ///
     /// > [!WARNING]
-    /// > **Endpoint closing down notice:** This endpoint route is closing down and will be removed from the Teams API. We recommend migrating your existing code to use the new [Remove a project from a team](https://docs.github.com/rest/teams/teams#remove-a-project-from-a-team) endpoint.
-    ///
-    /// Removes an organization project from a team. An organization owner or a team maintainer can remove any project from the team. To remove a project from a team as an organization member, the authenticated user must have `read` access to both the team and project, or `admin` access to the team or project. **Note:** This endpoint removes the project from the team, but does not delete it.
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `DELETE /teams/{team_id}/projects/{project_id}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/projects/{project_id}/delete(teams/remove-project-legacy)`.
@@ -2175,6 +2167,131 @@ public enum Components {
                 case status
             }
         }
+        /// Validation Error
+        ///
+        /// - Remark: Generated from `#/components/schemas/validation-error`.
+        public struct validation_hyphen_error: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/validation-error/message`.
+            public var message: Swift.String
+            /// - Remark: Generated from `#/components/schemas/validation-error/documentation_url`.
+            public var documentation_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload`.
+            public struct errorsPayloadPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/resource`.
+                public var resource: Swift.String?
+                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/field`.
+                public var field: Swift.String?
+                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/message`.
+                public var message: Swift.String?
+                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/code`.
+                public var code: Swift.String
+                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/index`.
+                public var index: Swift.Int?
+                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value`.
+                @frozen public enum valuePayload: Codable, Hashable, Sendable {
+                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case1`.
+                    case case1(Swift.String?)
+                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case2`.
+                    case case2(Swift.Int?)
+                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case3`.
+                    case case3([Swift.String]?)
+                    public init(from decoder: any Decoder) throws {
+                        var errors: [any Error] = []
+                        do {
+                            self = .case1(try decoder.decodeFromSingleValueContainer())
+                            return
+                        } catch {
+                            errors.append(error)
+                        }
+                        do {
+                            self = .case2(try decoder.decodeFromSingleValueContainer())
+                            return
+                        } catch {
+                            errors.append(error)
+                        }
+                        do {
+                            self = .case3(try decoder.decodeFromSingleValueContainer())
+                            return
+                        } catch {
+                            errors.append(error)
+                        }
+                        throw Swift.DecodingError.failedToDecodeOneOfSchema(
+                            type: Self.self,
+                            codingPath: decoder.codingPath,
+                            errors: errors
+                        )
+                    }
+                    public func encode(to encoder: any Encoder) throws {
+                        switch self {
+                        case let .case1(value):
+                            try encoder.encodeToSingleValueContainer(value)
+                        case let .case2(value):
+                            try encoder.encodeToSingleValueContainer(value)
+                        case let .case3(value):
+                            try encoder.encodeToSingleValueContainer(value)
+                        }
+                    }
+                }
+                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value`.
+                public var value: Components.Schemas.validation_hyphen_error.errorsPayloadPayload.valuePayload?
+                /// Creates a new `errorsPayloadPayload`.
+                ///
+                /// - Parameters:
+                ///   - resource:
+                ///   - field:
+                ///   - message:
+                ///   - code:
+                ///   - index:
+                ///   - value:
+                public init(
+                    resource: Swift.String? = nil,
+                    field: Swift.String? = nil,
+                    message: Swift.String? = nil,
+                    code: Swift.String,
+                    index: Swift.Int? = nil,
+                    value: Components.Schemas.validation_hyphen_error.errorsPayloadPayload.valuePayload? = nil
+                ) {
+                    self.resource = resource
+                    self.field = field
+                    self.message = message
+                    self.code = code
+                    self.index = index
+                    self.value = value
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case resource
+                    case field
+                    case message
+                    case code
+                    case index
+                    case value
+                }
+            }
+            /// - Remark: Generated from `#/components/schemas/validation-error/errors`.
+            public typealias errorsPayload = [Components.Schemas.validation_hyphen_error.errorsPayloadPayload]
+            /// - Remark: Generated from `#/components/schemas/validation-error/errors`.
+            public var errors: Components.Schemas.validation_hyphen_error.errorsPayload?
+            /// Creates a new `validation_hyphen_error`.
+            ///
+            /// - Parameters:
+            ///   - message:
+            ///   - documentation_url:
+            ///   - errors:
+            public init(
+                message: Swift.String,
+                documentation_url: Swift.String,
+                errors: Components.Schemas.validation_hyphen_error.errorsPayload? = nil
+            ) {
+                self.message = message
+                self.documentation_url = documentation_url
+                self.errors = errors
+            }
+            public enum CodingKeys: String, CodingKey {
+                case message
+                case documentation_url
+                case errors
+            }
+        }
         /// A GitHub user.
         ///
         /// - Remark: Generated from `#/components/schemas/nullable-simple-user`.
@@ -2320,131 +2437,6 @@ public enum Components {
                 case user_view_type
             }
         }
-        /// Validation Error
-        ///
-        /// - Remark: Generated from `#/components/schemas/validation-error`.
-        public struct validation_hyphen_error: Codable, Hashable, Sendable {
-            /// - Remark: Generated from `#/components/schemas/validation-error/message`.
-            public var message: Swift.String
-            /// - Remark: Generated from `#/components/schemas/validation-error/documentation_url`.
-            public var documentation_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload`.
-            public struct errorsPayloadPayload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/resource`.
-                public var resource: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/field`.
-                public var field: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/message`.
-                public var message: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/code`.
-                public var code: Swift.String
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/index`.
-                public var index: Swift.Int?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value`.
-                @frozen public enum valuePayload: Codable, Hashable, Sendable {
-                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case1`.
-                    case case1(Swift.String?)
-                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case2`.
-                    case case2(Swift.Int?)
-                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case3`.
-                    case case3([Swift.String]?)
-                    public init(from decoder: any Decoder) throws {
-                        var errors: [any Error] = []
-                        do {
-                            self = .case1(try decoder.decodeFromSingleValueContainer())
-                            return
-                        } catch {
-                            errors.append(error)
-                        }
-                        do {
-                            self = .case2(try decoder.decodeFromSingleValueContainer())
-                            return
-                        } catch {
-                            errors.append(error)
-                        }
-                        do {
-                            self = .case3(try decoder.decodeFromSingleValueContainer())
-                            return
-                        } catch {
-                            errors.append(error)
-                        }
-                        throw Swift.DecodingError.failedToDecodeOneOfSchema(
-                            type: Self.self,
-                            codingPath: decoder.codingPath,
-                            errors: errors
-                        )
-                    }
-                    public func encode(to encoder: any Encoder) throws {
-                        switch self {
-                        case let .case1(value):
-                            try encoder.encodeToSingleValueContainer(value)
-                        case let .case2(value):
-                            try encoder.encodeToSingleValueContainer(value)
-                        case let .case3(value):
-                            try encoder.encodeToSingleValueContainer(value)
-                        }
-                    }
-                }
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value`.
-                public var value: Components.Schemas.validation_hyphen_error.errorsPayloadPayload.valuePayload?
-                /// Creates a new `errorsPayloadPayload`.
-                ///
-                /// - Parameters:
-                ///   - resource:
-                ///   - field:
-                ///   - message:
-                ///   - code:
-                ///   - index:
-                ///   - value:
-                public init(
-                    resource: Swift.String? = nil,
-                    field: Swift.String? = nil,
-                    message: Swift.String? = nil,
-                    code: Swift.String,
-                    index: Swift.Int? = nil,
-                    value: Components.Schemas.validation_hyphen_error.errorsPayloadPayload.valuePayload? = nil
-                ) {
-                    self.resource = resource
-                    self.field = field
-                    self.message = message
-                    self.code = code
-                    self.index = index
-                    self.value = value
-                }
-                public enum CodingKeys: String, CodingKey {
-                    case resource
-                    case field
-                    case message
-                    case code
-                    case index
-                    case value
-                }
-            }
-            /// - Remark: Generated from `#/components/schemas/validation-error/errors`.
-            public typealias errorsPayload = [Components.Schemas.validation_hyphen_error.errorsPayloadPayload]
-            /// - Remark: Generated from `#/components/schemas/validation-error/errors`.
-            public var errors: Components.Schemas.validation_hyphen_error.errorsPayload?
-            /// Creates a new `validation_hyphen_error`.
-            ///
-            /// - Parameters:
-            ///   - message:
-            ///   - documentation_url:
-            ///   - errors:
-            public init(
-                message: Swift.String,
-                documentation_url: Swift.String,
-                errors: Components.Schemas.validation_hyphen_error.errorsPayload? = nil
-            ) {
-                self.message = message
-                self.documentation_url = documentation_url
-                self.errors = errors
-            }
-            public enum CodingKeys: String, CodingKey {
-                case message
-                case documentation_url
-                case errors
-            }
-        }
         /// License Simple
         ///
         /// - Remark: Generated from `#/components/schemas/nullable-license-simple`.
@@ -2535,251 +2527,6 @@ public enum Components {
                 case url
                 case body
                 case html_url
-            }
-        }
-        /// Groups of organization members that gives permissions on specified repositories.
-        ///
-        /// - Remark: Generated from `#/components/schemas/nullable-team-simple`.
-        public struct nullable_hyphen_team_hyphen_simple: Codable, Hashable, Sendable {
-            /// Unique identifier of the team
-            ///
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/id`.
-            public var id: Swift.Int
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/node_id`.
-            public var node_id: Swift.String
-            /// URL for the team
-            ///
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/url`.
-            public var url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/members_url`.
-            public var members_url: Swift.String
-            /// Name of the team
-            ///
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/name`.
-            public var name: Swift.String
-            /// Description of the team
-            ///
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/description`.
-            public var description: Swift.String?
-            /// Permission that the team will have for its repositories
-            ///
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/permission`.
-            public var permission: Swift.String
-            /// The level of privacy this team should have
-            ///
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/privacy`.
-            public var privacy: Swift.String?
-            /// The notification setting the team has set
-            ///
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/notification_setting`.
-            public var notification_setting: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/html_url`.
-            public var html_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/repositories_url`.
-            public var repositories_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/slug`.
-            public var slug: Swift.String
-            /// Distinguished Name (DN) that team maps to within LDAP environment
-            ///
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/ldap_dn`.
-            public var ldap_dn: Swift.String?
-            /// Creates a new `nullable_hyphen_team_hyphen_simple`.
-            ///
-            /// - Parameters:
-            ///   - id: Unique identifier of the team
-            ///   - node_id:
-            ///   - url: URL for the team
-            ///   - members_url:
-            ///   - name: Name of the team
-            ///   - description: Description of the team
-            ///   - permission: Permission that the team will have for its repositories
-            ///   - privacy: The level of privacy this team should have
-            ///   - notification_setting: The notification setting the team has set
-            ///   - html_url:
-            ///   - repositories_url:
-            ///   - slug:
-            ///   - ldap_dn: Distinguished Name (DN) that team maps to within LDAP environment
-            public init(
-                id: Swift.Int,
-                node_id: Swift.String,
-                url: Swift.String,
-                members_url: Swift.String,
-                name: Swift.String,
-                description: Swift.String? = nil,
-                permission: Swift.String,
-                privacy: Swift.String? = nil,
-                notification_setting: Swift.String? = nil,
-                html_url: Swift.String,
-                repositories_url: Swift.String,
-                slug: Swift.String,
-                ldap_dn: Swift.String? = nil
-            ) {
-                self.id = id
-                self.node_id = node_id
-                self.url = url
-                self.members_url = members_url
-                self.name = name
-                self.description = description
-                self.permission = permission
-                self.privacy = privacy
-                self.notification_setting = notification_setting
-                self.html_url = html_url
-                self.repositories_url = repositories_url
-                self.slug = slug
-                self.ldap_dn = ldap_dn
-            }
-            public enum CodingKeys: String, CodingKey {
-                case id
-                case node_id
-                case url
-                case members_url
-                case name
-                case description
-                case permission
-                case privacy
-                case notification_setting
-                case html_url
-                case repositories_url
-                case slug
-                case ldap_dn
-            }
-        }
-        /// Groups of organization members that gives permissions on specified repositories.
-        ///
-        /// - Remark: Generated from `#/components/schemas/team`.
-        public struct team: Codable, Hashable, Sendable {
-            /// - Remark: Generated from `#/components/schemas/team/id`.
-            public var id: Swift.Int
-            /// - Remark: Generated from `#/components/schemas/team/node_id`.
-            public var node_id: Swift.String
-            /// - Remark: Generated from `#/components/schemas/team/name`.
-            public var name: Swift.String
-            /// - Remark: Generated from `#/components/schemas/team/slug`.
-            public var slug: Swift.String
-            /// - Remark: Generated from `#/components/schemas/team/description`.
-            public var description: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/team/privacy`.
-            public var privacy: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/team/notification_setting`.
-            public var notification_setting: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/team/permission`.
-            public var permission: Swift.String
-            /// - Remark: Generated from `#/components/schemas/team/permissions`.
-            public struct permissionsPayload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/team/permissions/pull`.
-                public var pull: Swift.Bool
-                /// - Remark: Generated from `#/components/schemas/team/permissions/triage`.
-                public var triage: Swift.Bool
-                /// - Remark: Generated from `#/components/schemas/team/permissions/push`.
-                public var push: Swift.Bool
-                /// - Remark: Generated from `#/components/schemas/team/permissions/maintain`.
-                public var maintain: Swift.Bool
-                /// - Remark: Generated from `#/components/schemas/team/permissions/admin`.
-                public var admin: Swift.Bool
-                /// Creates a new `permissionsPayload`.
-                ///
-                /// - Parameters:
-                ///   - pull:
-                ///   - triage:
-                ///   - push:
-                ///   - maintain:
-                ///   - admin:
-                public init(
-                    pull: Swift.Bool,
-                    triage: Swift.Bool,
-                    push: Swift.Bool,
-                    maintain: Swift.Bool,
-                    admin: Swift.Bool
-                ) {
-                    self.pull = pull
-                    self.triage = triage
-                    self.push = push
-                    self.maintain = maintain
-                    self.admin = admin
-                }
-                public enum CodingKeys: String, CodingKey {
-                    case pull
-                    case triage
-                    case push
-                    case maintain
-                    case admin
-                }
-            }
-            /// - Remark: Generated from `#/components/schemas/team/permissions`.
-            public var permissions: Components.Schemas.team.permissionsPayload?
-            /// - Remark: Generated from `#/components/schemas/team/url`.
-            public var url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/team/html_url`.
-            public var html_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/team/members_url`.
-            public var members_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/team/repositories_url`.
-            public var repositories_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/team/parent`.
-            public var parent: Components.Schemas.nullable_hyphen_team_hyphen_simple?
-            /// Creates a new `team`.
-            ///
-            /// - Parameters:
-            ///   - id:
-            ///   - node_id:
-            ///   - name:
-            ///   - slug:
-            ///   - description:
-            ///   - privacy:
-            ///   - notification_setting:
-            ///   - permission:
-            ///   - permissions:
-            ///   - url:
-            ///   - html_url:
-            ///   - members_url:
-            ///   - repositories_url:
-            ///   - parent:
-            public init(
-                id: Swift.Int,
-                node_id: Swift.String,
-                name: Swift.String,
-                slug: Swift.String,
-                description: Swift.String? = nil,
-                privacy: Swift.String? = nil,
-                notification_setting: Swift.String? = nil,
-                permission: Swift.String,
-                permissions: Components.Schemas.team.permissionsPayload? = nil,
-                url: Swift.String,
-                html_url: Swift.String,
-                members_url: Swift.String,
-                repositories_url: Swift.String,
-                parent: Components.Schemas.nullable_hyphen_team_hyphen_simple? = nil
-            ) {
-                self.id = id
-                self.node_id = node_id
-                self.name = name
-                self.slug = slug
-                self.description = description
-                self.privacy = privacy
-                self.notification_setting = notification_setting
-                self.permission = permission
-                self.permissions = permissions
-                self.url = url
-                self.html_url = html_url
-                self.members_url = members_url
-                self.repositories_url = repositories_url
-                self.parent = parent
-            }
-            public enum CodingKeys: String, CodingKey {
-                case id
-                case node_id
-                case name
-                case slug
-                case description
-                case privacy
-                case notification_setting
-                case permission
-                case permissions
-                case url
-                case html_url
-                case members_url
-                case repositories_url
-                case parent
             }
         }
         /// - Remark: Generated from `#/components/schemas/reaction-rollup`.
@@ -2877,6 +2624,28 @@ public enum Components {
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security`.
             public var advanced_security: Components.Schemas.security_hyphen_and_hyphen_analysis.advanced_securityPayload?
+            /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security`.
+            public struct code_securityPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security/status`.
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                    case enabled = "enabled"
+                    case disabled = "disabled"
+                }
+                /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security/status`.
+                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.code_securityPayload.statusPayload?
+                /// Creates a new `code_securityPayload`.
+                ///
+                /// - Parameters:
+                ///   - status:
+                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.code_securityPayload.statusPayload? = nil) {
+                    self.status = status
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case status
+                }
+            }
+            /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security`.
+            public var code_security: Components.Schemas.security_hyphen_and_hyphen_analysis.code_securityPayload?
             /// Enable or disable Dependabot security updates for the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/dependabot_security_updates`.
@@ -2999,6 +2768,7 @@ public enum Components {
             ///
             /// - Parameters:
             ///   - advanced_security:
+            ///   - code_security:
             ///   - dependabot_security_updates: Enable or disable Dependabot security updates for the repository.
             ///   - secret_scanning:
             ///   - secret_scanning_push_protection:
@@ -3006,6 +2776,7 @@ public enum Components {
             ///   - secret_scanning_ai_detection:
             public init(
                 advanced_security: Components.Schemas.security_hyphen_and_hyphen_analysis.advanced_securityPayload? = nil,
+                code_security: Components.Schemas.security_hyphen_and_hyphen_analysis.code_securityPayload? = nil,
                 dependabot_security_updates: Components.Schemas.security_hyphen_and_hyphen_analysis.dependabot_security_updatesPayload? = nil,
                 secret_scanning: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanningPayload? = nil,
                 secret_scanning_push_protection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_push_protectionPayload? = nil,
@@ -3013,6 +2784,7 @@ public enum Components {
                 secret_scanning_ai_detection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload? = nil
             ) {
                 self.advanced_security = advanced_security
+                self.code_security = code_security
                 self.dependabot_security_updates = dependabot_security_updates
                 self.secret_scanning = secret_scanning
                 self.secret_scanning_push_protection = secret_scanning_push_protection
@@ -3021,6 +2793,7 @@ public enum Components {
             }
             public enum CodingKeys: String, CodingKey {
                 case advanced_security
+                case code_security
                 case dependabot_security_updates
                 case secret_scanning
                 case secret_scanning_push_protection
@@ -3645,6 +3418,251 @@ public enum Components {
                 case allow_forking
                 case web_commit_signoff_required
                 case security_and_analysis
+            }
+        }
+        /// Groups of organization members that gives permissions on specified repositories.
+        ///
+        /// - Remark: Generated from `#/components/schemas/nullable-team-simple`.
+        public struct nullable_hyphen_team_hyphen_simple: Codable, Hashable, Sendable {
+            /// Unique identifier of the team
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/id`.
+            public var id: Swift.Int
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/node_id`.
+            public var node_id: Swift.String
+            /// URL for the team
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/url`.
+            public var url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/members_url`.
+            public var members_url: Swift.String
+            /// Name of the team
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/name`.
+            public var name: Swift.String
+            /// Description of the team
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/description`.
+            public var description: Swift.String?
+            /// Permission that the team will have for its repositories
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/permission`.
+            public var permission: Swift.String
+            /// The level of privacy this team should have
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/privacy`.
+            public var privacy: Swift.String?
+            /// The notification setting the team has set
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/notification_setting`.
+            public var notification_setting: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/html_url`.
+            public var html_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/repositories_url`.
+            public var repositories_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/slug`.
+            public var slug: Swift.String
+            /// Distinguished Name (DN) that team maps to within LDAP environment
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/ldap_dn`.
+            public var ldap_dn: Swift.String?
+            /// Creates a new `nullable_hyphen_team_hyphen_simple`.
+            ///
+            /// - Parameters:
+            ///   - id: Unique identifier of the team
+            ///   - node_id:
+            ///   - url: URL for the team
+            ///   - members_url:
+            ///   - name: Name of the team
+            ///   - description: Description of the team
+            ///   - permission: Permission that the team will have for its repositories
+            ///   - privacy: The level of privacy this team should have
+            ///   - notification_setting: The notification setting the team has set
+            ///   - html_url:
+            ///   - repositories_url:
+            ///   - slug:
+            ///   - ldap_dn: Distinguished Name (DN) that team maps to within LDAP environment
+            public init(
+                id: Swift.Int,
+                node_id: Swift.String,
+                url: Swift.String,
+                members_url: Swift.String,
+                name: Swift.String,
+                description: Swift.String? = nil,
+                permission: Swift.String,
+                privacy: Swift.String? = nil,
+                notification_setting: Swift.String? = nil,
+                html_url: Swift.String,
+                repositories_url: Swift.String,
+                slug: Swift.String,
+                ldap_dn: Swift.String? = nil
+            ) {
+                self.id = id
+                self.node_id = node_id
+                self.url = url
+                self.members_url = members_url
+                self.name = name
+                self.description = description
+                self.permission = permission
+                self.privacy = privacy
+                self.notification_setting = notification_setting
+                self.html_url = html_url
+                self.repositories_url = repositories_url
+                self.slug = slug
+                self.ldap_dn = ldap_dn
+            }
+            public enum CodingKeys: String, CodingKey {
+                case id
+                case node_id
+                case url
+                case members_url
+                case name
+                case description
+                case permission
+                case privacy
+                case notification_setting
+                case html_url
+                case repositories_url
+                case slug
+                case ldap_dn
+            }
+        }
+        /// Groups of organization members that gives permissions on specified repositories.
+        ///
+        /// - Remark: Generated from `#/components/schemas/team`.
+        public struct team: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/team/id`.
+            public var id: Swift.Int
+            /// - Remark: Generated from `#/components/schemas/team/node_id`.
+            public var node_id: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team/name`.
+            public var name: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team/slug`.
+            public var slug: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team/description`.
+            public var description: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/team/privacy`.
+            public var privacy: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/team/notification_setting`.
+            public var notification_setting: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/team/permission`.
+            public var permission: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team/permissions`.
+            public struct permissionsPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/team/permissions/pull`.
+                public var pull: Swift.Bool
+                /// - Remark: Generated from `#/components/schemas/team/permissions/triage`.
+                public var triage: Swift.Bool
+                /// - Remark: Generated from `#/components/schemas/team/permissions/push`.
+                public var push: Swift.Bool
+                /// - Remark: Generated from `#/components/schemas/team/permissions/maintain`.
+                public var maintain: Swift.Bool
+                /// - Remark: Generated from `#/components/schemas/team/permissions/admin`.
+                public var admin: Swift.Bool
+                /// Creates a new `permissionsPayload`.
+                ///
+                /// - Parameters:
+                ///   - pull:
+                ///   - triage:
+                ///   - push:
+                ///   - maintain:
+                ///   - admin:
+                public init(
+                    pull: Swift.Bool,
+                    triage: Swift.Bool,
+                    push: Swift.Bool,
+                    maintain: Swift.Bool,
+                    admin: Swift.Bool
+                ) {
+                    self.pull = pull
+                    self.triage = triage
+                    self.push = push
+                    self.maintain = maintain
+                    self.admin = admin
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case pull
+                    case triage
+                    case push
+                    case maintain
+                    case admin
+                }
+            }
+            /// - Remark: Generated from `#/components/schemas/team/permissions`.
+            public var permissions: Components.Schemas.team.permissionsPayload?
+            /// - Remark: Generated from `#/components/schemas/team/url`.
+            public var url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team/html_url`.
+            public var html_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team/members_url`.
+            public var members_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team/repositories_url`.
+            public var repositories_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team/parent`.
+            public var parent: Components.Schemas.nullable_hyphen_team_hyphen_simple?
+            /// Creates a new `team`.
+            ///
+            /// - Parameters:
+            ///   - id:
+            ///   - node_id:
+            ///   - name:
+            ///   - slug:
+            ///   - description:
+            ///   - privacy:
+            ///   - notification_setting:
+            ///   - permission:
+            ///   - permissions:
+            ///   - url:
+            ///   - html_url:
+            ///   - members_url:
+            ///   - repositories_url:
+            ///   - parent:
+            public init(
+                id: Swift.Int,
+                node_id: Swift.String,
+                name: Swift.String,
+                slug: Swift.String,
+                description: Swift.String? = nil,
+                privacy: Swift.String? = nil,
+                notification_setting: Swift.String? = nil,
+                permission: Swift.String,
+                permissions: Components.Schemas.team.permissionsPayload? = nil,
+                url: Swift.String,
+                html_url: Swift.String,
+                members_url: Swift.String,
+                repositories_url: Swift.String,
+                parent: Components.Schemas.nullable_hyphen_team_hyphen_simple? = nil
+            ) {
+                self.id = id
+                self.node_id = node_id
+                self.name = name
+                self.slug = slug
+                self.description = description
+                self.privacy = privacy
+                self.notification_setting = notification_setting
+                self.permission = permission
+                self.permissions = permissions
+                self.url = url
+                self.html_url = html_url
+                self.members_url = members_url
+                self.repositories_url = repositories_url
+                self.parent = parent
+            }
+            public enum CodingKeys: String, CodingKey {
+                case id
+                case node_id
+                case name
+                case slug
+                case description
+                case privacy
+                case notification_setting
+                case permission
+                case permissions
+                case url
+                case html_url
+                case members_url
+                case repositories_url
+                case parent
             }
         }
         /// Organization Invitation
@@ -5300,10 +5318,6 @@ public enum Components {
         ///
         /// - Remark: Generated from `#/components/parameters/page`.
         public typealias page = Swift.Int
-        /// The slug of the team name.
-        ///
-        /// - Remark: Generated from `#/components/parameters/team-slug`.
-        public typealias team_hyphen_slug = Swift.String
         /// The account owner of the repository. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/owner`.
@@ -5320,6 +5334,10 @@ public enum Components {
         ///
         /// - Remark: Generated from `#/components/parameters/username`.
         public typealias username = Swift.String
+        /// The slug of the team name.
+        ///
+        /// - Remark: Generated from `#/components/parameters/team-slug`.
+        public typealias team_hyphen_slug = Swift.String
         /// The number that identifies the discussion.
         ///
         /// - Remark: Generated from `#/components/parameters/discussion-number`.
@@ -9167,10 +9185,9 @@ public enum Operations {
     }
     /// List team projects
     ///
-    /// Lists the organization projects for a team.
-    ///
-    /// > [!NOTE]
-    /// > You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/{org_id}/team/{team_id}/projects`.
+    /// > [!WARNING]
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/projects`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/projects/get(teams/list-projects-in-org)`.
@@ -9357,10 +9374,9 @@ public enum Operations {
     }
     /// Check team permissions for a project
     ///
-    /// Checks whether a team has `read`, `write`, or `admin` permissions for an organization project. The response includes projects inherited from a parent team.
-    ///
-    /// > [!NOTE]
-    /// > You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/{org_id}/team/{team_id}/projects/{project_id}`.
+    /// > [!WARNING]
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/projects/{project_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/projects/{project_id}/get(teams/check-permissions-for-project-in-org)`.
@@ -9535,10 +9551,9 @@ public enum Operations {
     }
     /// Add or update team project permissions
     ///
-    /// Adds an organization project to a team. To add a project to a team or update the team's permission on a project, the authenticated user must have `admin` permissions for the project. The project and team must be part of the same organization.
-    ///
-    /// > [!NOTE]
-    /// > You can also specify a team by `org_id` and `team_id` using the route `PUT /organizations/{org_id}/team/{team_id}/projects/{project_id}`.
+    /// > [!WARNING]
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/teams/{team_slug}/projects/{project_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/projects/{project_id}/put(teams/add-or-update-project-permissions-in-org)`.
@@ -9770,10 +9785,9 @@ public enum Operations {
     }
     /// Remove a project from a team
     ///
-    /// Removes an organization project from a team. An organization owner or a team maintainer can remove any project from the team. To remove a project from a team as an organization member, the authenticated user must have `read` access to both the team and project, or `admin` access to the team or project. This endpoint removes the project from the team, but does not delete the project.
-    ///
-    /// > [!NOTE]
-    /// > You can also specify a team by `org_id` and `team_id` using the route `DELETE /organizations/{org_id}/team/{team_id}/projects/{project_id}`.
+    /// > [!WARNING]
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/teams/{team_slug}/projects/{project_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/projects/{project_id}/delete(teams/remove-project-in-org)`.
@@ -14295,9 +14309,8 @@ public enum Operations {
     /// List team projects (Legacy)
     ///
     /// > [!WARNING]
-    /// > **Endpoint closing down notice:** This endpoint route is closing down and will be removed from the Teams API. We recommend migrating your existing code to use the new [`List team projects`](https://docs.github.com/rest/teams/teams#list-team-projects) endpoint.
-    ///
-    /// Lists the organization projects for a team.
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `GET /teams/{team_id}/projects`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/projects/get(teams/list-projects-legacy)`.
@@ -14499,9 +14512,8 @@ public enum Operations {
     /// Check team permissions for a project (Legacy)
     ///
     /// > [!WARNING]
-    /// > **Endpoint closing down notice:** This endpoint route is closing down and will be removed from the Teams API. We recommend migrating your existing code to use the new [Check team permissions for a project](https://docs.github.com/rest/teams/teams#check-team-permissions-for-a-project) endpoint.
-    ///
-    /// Checks whether a team has `read`, `write`, or `admin` permissions for an organization project. The response includes projects inherited from a parent team.
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `GET /teams/{team_id}/projects/{project_id}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/projects/{project_id}/get(teams/check-permissions-for-project-legacy)`.
@@ -14670,9 +14682,8 @@ public enum Operations {
     /// Add or update team project permissions (Legacy)
     ///
     /// > [!WARNING]
-    /// > **Endpoint closing down notice:** This endpoint route is closing down and will be removed from the Teams API. We recommend migrating your existing code to use the new [Add or update team project permissions](https://docs.github.com/rest/teams/teams#add-or-update-team-project-permissions) endpoint.
-    ///
-    /// Adds an organization project to a team. To add a project to a team or update the team's permission on a project, the authenticated user must have `admin` permissions for the project. The project and team must be part of the same organization.
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `PUT /teams/{team_id}/projects/{project_id}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/projects/{project_id}/put(teams/add-or-update-project-permissions-legacy)`.
@@ -14944,9 +14955,8 @@ public enum Operations {
     /// Remove a project from a team (Legacy)
     ///
     /// > [!WARNING]
-    /// > **Endpoint closing down notice:** This endpoint route is closing down and will be removed from the Teams API. We recommend migrating your existing code to use the new [Remove a project from a team](https://docs.github.com/rest/teams/teams#remove-a-project-from-a-team) endpoint.
-    ///
-    /// Removes an organization project from a team. An organization owner or a team maintainer can remove any project from the team. To remove a project from a team as an organization member, the authenticated user must have `read` access to both the team and project, or `admin` access to the team or project. **Note:** This endpoint removes the project from the team, but does not delete it.
+    /// > **Closing down notice:** Projects (classic) is being deprecated in favor of the new Projects experience.
+    /// > See the [changelog](https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/) for more information.
     ///
     /// - Remark: HTTP `DELETE /teams/{team_id}/projects/{project_id}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/projects/{project_id}/delete(teams/remove-project-legacy)`.
