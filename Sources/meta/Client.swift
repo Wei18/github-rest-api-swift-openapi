@@ -42,15 +42,15 @@ public struct Client: APIProtocol {
     ///
     /// Get Hypermedia links to resources accessible in GitHub's REST API
     ///
-    /// - Remark: HTTP `GET //`.
-    /// - Remark: Generated from `#/paths////get(meta/root)`.
+    /// - Remark: HTTP `GET /`.
+    /// - Remark: Generated from `#/paths///get(meta/root)`.
     public func meta_sol_root(_ input: Operations.meta_sol_root.Input) async throws -> Operations.meta_sol_root.Output {
         try await client.send(
             input: input,
             forOperation: Operations.meta_sol_root.id,
             serializer: { input in
                 let path = try converter.renderedPath(
-                    template: "//",
+                    template: "/",
                     parameters: []
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -358,16 +358,16 @@ public struct Client: APIProtocol {
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
-                            "application/json"
+                            "text/plain"
                         ]
                     )
                     switch chosenContentType {
-                    case "application/json":
-                        body = try await converter.getResponseBodyAsJSON(
-                            Swift.String.self,
+                    case "text/plain":
+                        body = try converter.getResponseBodyAsBinary(
+                            OpenAPIRuntime.HTTPBody.self,
                             from: responseBody,
                             transforming: { value in
-                                .json(value)
+                                .plainText(value)
                             }
                         )
                     default:
