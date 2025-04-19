@@ -31,6 +31,82 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /orgs/{org}/actions/cache/usage-by-repository`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/cache/usage-by-repository/get(actions/get-actions-cache-usage-by-repo-for-org)`.
     func actions_sol_get_hyphen_actions_hyphen_cache_hyphen_usage_hyphen_by_hyphen_repo_hyphen_for_hyphen_org(_ input: Operations.actions_sol_get_hyphen_actions_hyphen_cache_hyphen_usage_hyphen_by_hyphen_repo_hyphen_for_hyphen_org.Input) async throws -> Operations.actions_sol_get_hyphen_actions_hyphen_cache_hyphen_usage_hyphen_by_hyphen_repo_hyphen_for_hyphen_org.Output
+    /// List GitHub-hosted runners for an organization
+    ///
+    /// Lists all GitHub-hosted runners configured in an organization.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `manage_runner:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/actions/hosted-runners`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/get(actions/list-hosted-runners-for-org)`.
+    func actions_sol_list_hyphen_hosted_hyphen_runners_hyphen_for_hyphen_org(_ input: Operations.actions_sol_list_hyphen_hosted_hyphen_runners_hyphen_for_hyphen_org.Input) async throws -> Operations.actions_sol_list_hyphen_hosted_hyphen_runners_hyphen_for_hyphen_org.Output
+    /// Create a GitHub-hosted runner for an organization
+    ///
+    /// Creates a GitHub-hosted runner for an organization.
+    /// OAuth tokens and personal access tokens (classic) need the `manage_runners:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `POST /orgs/{org}/actions/hosted-runners`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/post(actions/create-hosted-runner-for-org)`.
+    func actions_sol_create_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org(_ input: Operations.actions_sol_create_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input) async throws -> Operations.actions_sol_create_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Output
+    /// Get GitHub-owned images for GitHub-hosted runners in an organization
+    ///
+    /// Get the list of GitHub-owned images available for GitHub-hosted runners for an organization.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/actions/hosted-runners/images/github-owned`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/images/github-owned/get(actions/get-hosted-runners-github-owned-images-for-org)`.
+    func actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_github_hyphen_owned_hyphen_images_hyphen_for_hyphen_org(_ input: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_github_hyphen_owned_hyphen_images_hyphen_for_hyphen_org.Input) async throws -> Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_github_hyphen_owned_hyphen_images_hyphen_for_hyphen_org.Output
+    /// Get partner images for GitHub-hosted runners in an organization
+    ///
+    /// Get the list of partner images available for GitHub-hosted runners for an organization.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/actions/hosted-runners/images/partner`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/images/partner/get(actions/get-hosted-runners-partner-images-for-org)`.
+    func actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_partner_hyphen_images_hyphen_for_hyphen_org(_ input: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_partner_hyphen_images_hyphen_for_hyphen_org.Input) async throws -> Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_partner_hyphen_images_hyphen_for_hyphen_org.Output
+    /// Get limits on GitHub-hosted runners for an organization
+    ///
+    /// Get the GitHub-hosted runners limits for an organization.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/actions/hosted-runners/limits`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/limits/get(actions/get-hosted-runners-limits-for-org)`.
+    func actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_limits_hyphen_for_hyphen_org(_ input: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_limits_hyphen_for_hyphen_org.Input) async throws -> Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_limits_hyphen_for_hyphen_org.Output
+    /// Get GitHub-hosted runners machine specs for an organization
+    ///
+    /// Get the list of machine specs available for GitHub-hosted runners for an organization.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/actions/hosted-runners/machine-sizes`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/machine-sizes/get(actions/get-hosted-runners-machine-specs-for-org)`.
+    func actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_machine_hyphen_specs_hyphen_for_hyphen_org(_ input: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_machine_hyphen_specs_hyphen_for_hyphen_org.Input) async throws -> Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_machine_hyphen_specs_hyphen_for_hyphen_org.Output
+    /// Get platforms for GitHub-hosted runners in an organization
+    ///
+    /// Get the list of platforms available for GitHub-hosted runners for an organization.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/actions/hosted-runners/platforms`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/platforms/get(actions/get-hosted-runners-platforms-for-org)`.
+    func actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_platforms_hyphen_for_hyphen_org(_ input: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_platforms_hyphen_for_hyphen_org.Input) async throws -> Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_platforms_hyphen_for_hyphen_org.Output
+    /// Get a GitHub-hosted runner for an organization
+    ///
+    /// Gets a GitHub-hosted runner configured in an organization.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `manage_runners:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/actions/hosted-runners/{hosted_runner_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/{hosted_runner_id}/get(actions/get-hosted-runner-for-org)`.
+    func actions_sol_get_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org(_ input: Operations.actions_sol_get_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input) async throws -> Operations.actions_sol_get_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Output
+    /// Update a GitHub-hosted runner for an organization
+    ///
+    /// Updates a GitHub-hosted runner for an organization.
+    /// OAuth app tokens and personal access tokens (classic) need the `manage_runners:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `PATCH /orgs/{org}/actions/hosted-runners/{hosted_runner_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/{hosted_runner_id}/patch(actions/update-hosted-runner-for-org)`.
+    func actions_sol_update_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org(_ input: Operations.actions_sol_update_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input) async throws -> Operations.actions_sol_update_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Output
+    /// Delete a GitHub-hosted runner for an organization
+    ///
+    /// Deletes a GitHub-hosted runner for an organization.
+    ///
+    /// - Remark: HTTP `DELETE /orgs/{org}/actions/hosted-runners/{hosted_runner_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/{hosted_runner_id}/delete(actions/delete-hosted-runner-for-org)`.
+    func actions_sol_delete_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org(_ input: Operations.actions_sol_delete_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input) async throws -> Operations.actions_sol_delete_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Output
     /// Get GitHub Actions permissions for an organization
     ///
     /// Gets the GitHub Actions permissions policy for repositories and allowed actions and reusable workflows in an organization.
@@ -171,6 +247,15 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `DELETE /orgs/{org}/actions/runner-groups/{runner_group_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/delete(actions/delete-self-hosted-runner-group-from-org)`.
     func actions_sol_delete_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_from_hyphen_org(_ input: Operations.actions_sol_delete_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_from_hyphen_org.Input) async throws -> Operations.actions_sol_delete_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_from_hyphen_org.Output
+    /// List GitHub-hosted runners in a group for an organization
+    ///
+    /// Lists the GitHub-hosted runners in an organization group.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/actions/runner-groups/{runner_group_id}/hosted-runners`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/hosted-runners/get(actions/list-github-hosted-runners-in-group-for-org)`.
+    func actions_sol_list_hyphen_github_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org(_ input: Operations.actions_sol_list_hyphen_github_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Input) async throws -> Operations.actions_sol_list_hyphen_github_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Output
     /// List repository access to a self-hosted runner group in an organization
     ///
     /// Lists the repositories with access to a self-hosted runner group configured in an organization.
@@ -1194,6 +1279,9 @@ public protocol APIProtocol: Sendable {
     func actions_sol_re_hyphen_run_hyphen_workflow_hyphen_failed_hyphen_jobs(_ input: Operations.actions_sol_re_hyphen_run_hyphen_workflow_hyphen_failed_hyphen_jobs.Input) async throws -> Operations.actions_sol_re_hyphen_run_hyphen_workflow_hyphen_failed_hyphen_jobs.Output
     /// Get workflow run usage
     ///
+    /// > [!WARNING]  
+    /// > This endpoint is in the process of closing down. Refer to "[Actions Get workflow usage and Get workflow run usage endpoints closing down](https://github.blog/changelog/2025-02-02-actions-get-workflow-usage-and-get-workflow-run-usage-endpoints-closing-down/)" for more information.
+    ///
     /// Gets the number of billable minutes and total run time for a specific workflow run. Billable minutes only apply to workflows in private repositories that use GitHub-hosted runners. Usage is listed for each GitHub-hosted runner operating system in milliseconds. Any job re-runs are also included in the usage. The usage does not include the multiplier for macOS and Windows runners and is not rounded up to the nearest whole minute. For more information, see "[Managing billing for GitHub Actions](https://docs.github.com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-actions)".
     ///
     /// Anyone with read access to the repository can use this endpoint.
@@ -1383,6 +1471,9 @@ public protocol APIProtocol: Sendable {
     func actions_sol_list_hyphen_workflow_hyphen_runs(_ input: Operations.actions_sol_list_hyphen_workflow_hyphen_runs.Input) async throws -> Operations.actions_sol_list_hyphen_workflow_hyphen_runs.Output
     /// Get workflow usage
     ///
+    /// > [!WARNING]  
+    /// > This endpoint is in the process of closing down. Refer to "[Actions Get workflow usage and Get workflow run usage endpoints closing down](https://github.blog/changelog/2025-02-02-actions-get-workflow-usage-and-get-workflow-run-usage-endpoints-closing-down/)" for more information.
+    ///
     /// Gets the number of billable minutes used by a specific workflow during the current billing cycle. Billable minutes only apply to workflows in private repositories that use GitHub-hosted runners. Usage is listed for each GitHub-hosted runner operating system in milliseconds. Any job re-runs are also included in the usage. The usage does not include the multiplier for macOS and Windows runners and is not rounded up to the nearest whole minute. For more information, see "[Managing billing for GitHub Actions](https://docs.github.com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-actions)".
     ///
     /// You can replace `workflow_id` with the workflow file name. For example, you could use `main.yaml`.
@@ -1546,6 +1637,168 @@ extension APIProtocol {
         try await actions_sol_get_hyphen_actions_hyphen_cache_hyphen_usage_hyphen_by_hyphen_repo_hyphen_for_hyphen_org(Operations.actions_sol_get_hyphen_actions_hyphen_cache_hyphen_usage_hyphen_by_hyphen_repo_hyphen_for_hyphen_org.Input(
             path: path,
             query: query,
+            headers: headers
+        ))
+    }
+    /// List GitHub-hosted runners for an organization
+    ///
+    /// Lists all GitHub-hosted runners configured in an organization.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `manage_runner:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/actions/hosted-runners`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/get(actions/list-hosted-runners-for-org)`.
+    public func actions_sol_list_hyphen_hosted_hyphen_runners_hyphen_for_hyphen_org(
+        path: Operations.actions_sol_list_hyphen_hosted_hyphen_runners_hyphen_for_hyphen_org.Input.Path,
+        query: Operations.actions_sol_list_hyphen_hosted_hyphen_runners_hyphen_for_hyphen_org.Input.Query = .init(),
+        headers: Operations.actions_sol_list_hyphen_hosted_hyphen_runners_hyphen_for_hyphen_org.Input.Headers = .init()
+    ) async throws -> Operations.actions_sol_list_hyphen_hosted_hyphen_runners_hyphen_for_hyphen_org.Output {
+        try await actions_sol_list_hyphen_hosted_hyphen_runners_hyphen_for_hyphen_org(Operations.actions_sol_list_hyphen_hosted_hyphen_runners_hyphen_for_hyphen_org.Input(
+            path: path,
+            query: query,
+            headers: headers
+        ))
+    }
+    /// Create a GitHub-hosted runner for an organization
+    ///
+    /// Creates a GitHub-hosted runner for an organization.
+    /// OAuth tokens and personal access tokens (classic) need the `manage_runners:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `POST /orgs/{org}/actions/hosted-runners`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/post(actions/create-hosted-runner-for-org)`.
+    public func actions_sol_create_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org(
+        path: Operations.actions_sol_create_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input.Path,
+        headers: Operations.actions_sol_create_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input.Headers = .init(),
+        body: Operations.actions_sol_create_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input.Body
+    ) async throws -> Operations.actions_sol_create_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Output {
+        try await actions_sol_create_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org(Operations.actions_sol_create_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input(
+            path: path,
+            headers: headers,
+            body: body
+        ))
+    }
+    /// Get GitHub-owned images for GitHub-hosted runners in an organization
+    ///
+    /// Get the list of GitHub-owned images available for GitHub-hosted runners for an organization.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/actions/hosted-runners/images/github-owned`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/images/github-owned/get(actions/get-hosted-runners-github-owned-images-for-org)`.
+    public func actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_github_hyphen_owned_hyphen_images_hyphen_for_hyphen_org(
+        path: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_github_hyphen_owned_hyphen_images_hyphen_for_hyphen_org.Input.Path,
+        headers: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_github_hyphen_owned_hyphen_images_hyphen_for_hyphen_org.Input.Headers = .init()
+    ) async throws -> Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_github_hyphen_owned_hyphen_images_hyphen_for_hyphen_org.Output {
+        try await actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_github_hyphen_owned_hyphen_images_hyphen_for_hyphen_org(Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_github_hyphen_owned_hyphen_images_hyphen_for_hyphen_org.Input(
+            path: path,
+            headers: headers
+        ))
+    }
+    /// Get partner images for GitHub-hosted runners in an organization
+    ///
+    /// Get the list of partner images available for GitHub-hosted runners for an organization.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/actions/hosted-runners/images/partner`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/images/partner/get(actions/get-hosted-runners-partner-images-for-org)`.
+    public func actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_partner_hyphen_images_hyphen_for_hyphen_org(
+        path: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_partner_hyphen_images_hyphen_for_hyphen_org.Input.Path,
+        headers: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_partner_hyphen_images_hyphen_for_hyphen_org.Input.Headers = .init()
+    ) async throws -> Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_partner_hyphen_images_hyphen_for_hyphen_org.Output {
+        try await actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_partner_hyphen_images_hyphen_for_hyphen_org(Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_partner_hyphen_images_hyphen_for_hyphen_org.Input(
+            path: path,
+            headers: headers
+        ))
+    }
+    /// Get limits on GitHub-hosted runners for an organization
+    ///
+    /// Get the GitHub-hosted runners limits for an organization.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/actions/hosted-runners/limits`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/limits/get(actions/get-hosted-runners-limits-for-org)`.
+    public func actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_limits_hyphen_for_hyphen_org(
+        path: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_limits_hyphen_for_hyphen_org.Input.Path,
+        headers: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_limits_hyphen_for_hyphen_org.Input.Headers = .init()
+    ) async throws -> Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_limits_hyphen_for_hyphen_org.Output {
+        try await actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_limits_hyphen_for_hyphen_org(Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_limits_hyphen_for_hyphen_org.Input(
+            path: path,
+            headers: headers
+        ))
+    }
+    /// Get GitHub-hosted runners machine specs for an organization
+    ///
+    /// Get the list of machine specs available for GitHub-hosted runners for an organization.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/actions/hosted-runners/machine-sizes`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/machine-sizes/get(actions/get-hosted-runners-machine-specs-for-org)`.
+    public func actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_machine_hyphen_specs_hyphen_for_hyphen_org(
+        path: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_machine_hyphen_specs_hyphen_for_hyphen_org.Input.Path,
+        headers: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_machine_hyphen_specs_hyphen_for_hyphen_org.Input.Headers = .init()
+    ) async throws -> Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_machine_hyphen_specs_hyphen_for_hyphen_org.Output {
+        try await actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_machine_hyphen_specs_hyphen_for_hyphen_org(Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_machine_hyphen_specs_hyphen_for_hyphen_org.Input(
+            path: path,
+            headers: headers
+        ))
+    }
+    /// Get platforms for GitHub-hosted runners in an organization
+    ///
+    /// Get the list of platforms available for GitHub-hosted runners for an organization.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/actions/hosted-runners/platforms`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/platforms/get(actions/get-hosted-runners-platforms-for-org)`.
+    public func actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_platforms_hyphen_for_hyphen_org(
+        path: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_platforms_hyphen_for_hyphen_org.Input.Path,
+        headers: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_platforms_hyphen_for_hyphen_org.Input.Headers = .init()
+    ) async throws -> Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_platforms_hyphen_for_hyphen_org.Output {
+        try await actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_platforms_hyphen_for_hyphen_org(Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_platforms_hyphen_for_hyphen_org.Input(
+            path: path,
+            headers: headers
+        ))
+    }
+    /// Get a GitHub-hosted runner for an organization
+    ///
+    /// Gets a GitHub-hosted runner configured in an organization.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `manage_runners:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/actions/hosted-runners/{hosted_runner_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/{hosted_runner_id}/get(actions/get-hosted-runner-for-org)`.
+    public func actions_sol_get_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org(
+        path: Operations.actions_sol_get_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input.Path,
+        headers: Operations.actions_sol_get_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input.Headers = .init()
+    ) async throws -> Operations.actions_sol_get_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Output {
+        try await actions_sol_get_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org(Operations.actions_sol_get_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input(
+            path: path,
+            headers: headers
+        ))
+    }
+    /// Update a GitHub-hosted runner for an organization
+    ///
+    /// Updates a GitHub-hosted runner for an organization.
+    /// OAuth app tokens and personal access tokens (classic) need the `manage_runners:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `PATCH /orgs/{org}/actions/hosted-runners/{hosted_runner_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/{hosted_runner_id}/patch(actions/update-hosted-runner-for-org)`.
+    public func actions_sol_update_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org(
+        path: Operations.actions_sol_update_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input.Path,
+        headers: Operations.actions_sol_update_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input.Headers = .init(),
+        body: Operations.actions_sol_update_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input.Body
+    ) async throws -> Operations.actions_sol_update_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Output {
+        try await actions_sol_update_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org(Operations.actions_sol_update_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input(
+            path: path,
+            headers: headers,
+            body: body
+        ))
+    }
+    /// Delete a GitHub-hosted runner for an organization
+    ///
+    /// Deletes a GitHub-hosted runner for an organization.
+    ///
+    /// - Remark: HTTP `DELETE /orgs/{org}/actions/hosted-runners/{hosted_runner_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/{hosted_runner_id}/delete(actions/delete-hosted-runner-for-org)`.
+    public func actions_sol_delete_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org(
+        path: Operations.actions_sol_delete_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input.Path,
+        headers: Operations.actions_sol_delete_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input.Headers = .init()
+    ) async throws -> Operations.actions_sol_delete_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Output {
+        try await actions_sol_delete_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org(Operations.actions_sol_delete_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input(
+            path: path,
             headers: headers
         ))
     }
@@ -1798,6 +2051,25 @@ extension APIProtocol {
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/delete(actions/delete-self-hosted-runner-group-from-org)`.
     public func actions_sol_delete_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_from_hyphen_org(path: Operations.actions_sol_delete_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_from_hyphen_org.Input.Path) async throws -> Operations.actions_sol_delete_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_from_hyphen_org.Output {
         try await actions_sol_delete_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_from_hyphen_org(Operations.actions_sol_delete_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_from_hyphen_org.Input(path: path))
+    }
+    /// List GitHub-hosted runners in a group for an organization
+    ///
+    /// Lists the GitHub-hosted runners in an organization group.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/actions/runner-groups/{runner_group_id}/hosted-runners`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/hosted-runners/get(actions/list-github-hosted-runners-in-group-for-org)`.
+    public func actions_sol_list_hyphen_github_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org(
+        path: Operations.actions_sol_list_hyphen_github_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Input.Path,
+        query: Operations.actions_sol_list_hyphen_github_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Input.Query = .init(),
+        headers: Operations.actions_sol_list_hyphen_github_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Input.Headers = .init()
+    ) async throws -> Operations.actions_sol_list_hyphen_github_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Output {
+        try await actions_sol_list_hyphen_github_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org(Operations.actions_sol_list_hyphen_github_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Input(
+            path: path,
+            query: query,
+            headers: headers
+        ))
     }
     /// List repository access to a self-hosted runner group in an organization
     ///
@@ -3514,6 +3786,9 @@ extension APIProtocol {
     }
     /// Get workflow run usage
     ///
+    /// > [!WARNING]  
+    /// > This endpoint is in the process of closing down. Refer to "[Actions Get workflow usage and Get workflow run usage endpoints closing down](https://github.blog/changelog/2025-02-02-actions-get-workflow-usage-and-get-workflow-run-usage-endpoints-closing-down/)" for more information.
+    ///
     /// Gets the number of billable minutes and total run time for a specific workflow run. Billable minutes only apply to workflows in private repositories that use GitHub-hosted runners. Usage is listed for each GitHub-hosted runner operating system in milliseconds. Any job re-runs are also included in the usage. The usage does not include the multiplier for macOS and Windows runners and is not rounded up to the nearest whole minute. For more information, see "[Managing billing for GitHub Actions](https://docs.github.com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-actions)".
     ///
     /// Anyone with read access to the repository can use this endpoint.
@@ -3826,6 +4101,9 @@ extension APIProtocol {
         ))
     }
     /// Get workflow usage
+    ///
+    /// > [!WARNING]  
+    /// > This endpoint is in the process of closing down. Refer to "[Actions Get workflow usage and Get workflow run usage endpoints closing down](https://github.blog/changelog/2025-02-02-actions-get-workflow-usage-and-get-workflow-run-usage-endpoints-closing-down/)" for more information.
     ///
     /// Gets the number of billable minutes used by a specific workflow during the current billing cycle. Billable minutes only apply to workflows in private repositories that use GitHub-hosted runners. Usage is listed for each GitHub-hosted runner operating system in milliseconds. Any job re-runs are also included in the usage. The usage does not include the multiplier for macOS and Windows runners and is not rounded up to the nearest whole minute. For more information, see "[Managing billing for GitHub Actions](https://docs.github.com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-actions)".
     ///
@@ -4264,6 +4542,138 @@ public enum Components {
                 case errors
             }
         }
+        /// An enterprise on GitHub.
+        ///
+        /// - Remark: Generated from `#/components/schemas/enterprise`.
+        public struct enterprise: Codable, Hashable, Sendable {
+            /// A short description of the enterprise.
+            ///
+            /// - Remark: Generated from `#/components/schemas/enterprise/description`.
+            public var description: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/enterprise/html_url`.
+            public var html_url: Swift.String
+            /// The enterprise's website URL.
+            ///
+            /// - Remark: Generated from `#/components/schemas/enterprise/website_url`.
+            public var website_url: Swift.String?
+            /// Unique identifier of the enterprise
+            ///
+            /// - Remark: Generated from `#/components/schemas/enterprise/id`.
+            public var id: Swift.Int
+            /// - Remark: Generated from `#/components/schemas/enterprise/node_id`.
+            public var node_id: Swift.String
+            /// The name of the enterprise.
+            ///
+            /// - Remark: Generated from `#/components/schemas/enterprise/name`.
+            public var name: Swift.String
+            /// The slug url identifier for the enterprise.
+            ///
+            /// - Remark: Generated from `#/components/schemas/enterprise/slug`.
+            public var slug: Swift.String
+            /// - Remark: Generated from `#/components/schemas/enterprise/created_at`.
+            public var created_at: Foundation.Date?
+            /// - Remark: Generated from `#/components/schemas/enterprise/updated_at`.
+            public var updated_at: Foundation.Date?
+            /// - Remark: Generated from `#/components/schemas/enterprise/avatar_url`.
+            public var avatar_url: Swift.String
+            /// Creates a new `enterprise`.
+            ///
+            /// - Parameters:
+            ///   - description: A short description of the enterprise.
+            ///   - html_url:
+            ///   - website_url: The enterprise's website URL.
+            ///   - id: Unique identifier of the enterprise
+            ///   - node_id:
+            ///   - name: The name of the enterprise.
+            ///   - slug: The slug url identifier for the enterprise.
+            ///   - created_at:
+            ///   - updated_at:
+            ///   - avatar_url:
+            public init(
+                description: Swift.String? = nil,
+                html_url: Swift.String,
+                website_url: Swift.String? = nil,
+                id: Swift.Int,
+                node_id: Swift.String,
+                name: Swift.String,
+                slug: Swift.String,
+                created_at: Foundation.Date? = nil,
+                updated_at: Foundation.Date? = nil,
+                avatar_url: Swift.String
+            ) {
+                self.description = description
+                self.html_url = html_url
+                self.website_url = website_url
+                self.id = id
+                self.node_id = node_id
+                self.name = name
+                self.slug = slug
+                self.created_at = created_at
+                self.updated_at = updated_at
+                self.avatar_url = avatar_url
+            }
+            public enum CodingKeys: String, CodingKey {
+                case description
+                case html_url
+                case website_url
+                case id
+                case node_id
+                case name
+                case slug
+                case created_at
+                case updated_at
+                case avatar_url
+            }
+        }
+        /// Scim Error
+        ///
+        /// - Remark: Generated from `#/components/schemas/scim-error`.
+        public struct scim_hyphen_error: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/scim-error/message`.
+            public var message: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/scim-error/documentation_url`.
+            public var documentation_url: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/scim-error/detail`.
+            public var detail: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/scim-error/status`.
+            public var status: Swift.Int?
+            /// - Remark: Generated from `#/components/schemas/scim-error/scimType`.
+            public var scimType: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/scim-error/schemas`.
+            public var schemas: [Swift.String]?
+            /// Creates a new `scim_hyphen_error`.
+            ///
+            /// - Parameters:
+            ///   - message:
+            ///   - documentation_url:
+            ///   - detail:
+            ///   - status:
+            ///   - scimType:
+            ///   - schemas:
+            public init(
+                message: Swift.String? = nil,
+                documentation_url: Swift.String? = nil,
+                detail: Swift.String? = nil,
+                status: Swift.Int? = nil,
+                scimType: Swift.String? = nil,
+                schemas: [Swift.String]? = nil
+            ) {
+                self.message = message
+                self.documentation_url = documentation_url
+                self.detail = detail
+                self.status = status
+                self.scimType = scimType
+                self.schemas = schemas
+            }
+            public enum CodingKeys: String, CodingKey {
+                case message
+                case documentation_url
+                case detail
+                case status
+                case scimType
+                case schemas
+            }
+        }
         /// A GitHub user.
         ///
         /// - Remark: Generated from `#/components/schemas/nullable-simple-user`.
@@ -4407,55 +4817,6 @@ public enum Components {
                 case site_admin
                 case starred_at
                 case user_view_type
-            }
-        }
-        /// Scim Error
-        ///
-        /// - Remark: Generated from `#/components/schemas/scim-error`.
-        public struct scim_hyphen_error: Codable, Hashable, Sendable {
-            /// - Remark: Generated from `#/components/schemas/scim-error/message`.
-            public var message: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/scim-error/documentation_url`.
-            public var documentation_url: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/scim-error/detail`.
-            public var detail: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/scim-error/status`.
-            public var status: Swift.Int?
-            /// - Remark: Generated from `#/components/schemas/scim-error/scimType`.
-            public var scimType: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/scim-error/schemas`.
-            public var schemas: [Swift.String]?
-            /// Creates a new `scim_hyphen_error`.
-            ///
-            /// - Parameters:
-            ///   - message:
-            ///   - documentation_url:
-            ///   - detail:
-            ///   - status:
-            ///   - scimType:
-            ///   - schemas:
-            public init(
-                message: Swift.String? = nil,
-                documentation_url: Swift.String? = nil,
-                detail: Swift.String? = nil,
-                status: Swift.Int? = nil,
-                scimType: Swift.String? = nil,
-                schemas: [Swift.String]? = nil
-            ) {
-                self.message = message
-                self.documentation_url = documentation_url
-                self.detail = detail
-                self.status = status
-                self.scimType = scimType
-                self.schemas = schemas
-            }
-            public enum CodingKeys: String, CodingKey {
-                case message
-                case documentation_url
-                case detail
-                case status
-                case scimType
-                case schemas
             }
         }
         /// License Simple
@@ -5290,251 +5651,6 @@ public enum Components {
                 case html_url
             }
         }
-        /// Groups of organization members that gives permissions on specified repositories.
-        ///
-        /// - Remark: Generated from `#/components/schemas/nullable-team-simple`.
-        public struct nullable_hyphen_team_hyphen_simple: Codable, Hashable, Sendable {
-            /// Unique identifier of the team
-            ///
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/id`.
-            public var id: Swift.Int
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/node_id`.
-            public var node_id: Swift.String
-            /// URL for the team
-            ///
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/url`.
-            public var url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/members_url`.
-            public var members_url: Swift.String
-            /// Name of the team
-            ///
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/name`.
-            public var name: Swift.String
-            /// Description of the team
-            ///
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/description`.
-            public var description: Swift.String?
-            /// Permission that the team will have for its repositories
-            ///
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/permission`.
-            public var permission: Swift.String
-            /// The level of privacy this team should have
-            ///
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/privacy`.
-            public var privacy: Swift.String?
-            /// The notification setting the team has set
-            ///
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/notification_setting`.
-            public var notification_setting: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/html_url`.
-            public var html_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/repositories_url`.
-            public var repositories_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/slug`.
-            public var slug: Swift.String
-            /// Distinguished Name (DN) that team maps to within LDAP environment
-            ///
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/ldap_dn`.
-            public var ldap_dn: Swift.String?
-            /// Creates a new `nullable_hyphen_team_hyphen_simple`.
-            ///
-            /// - Parameters:
-            ///   - id: Unique identifier of the team
-            ///   - node_id:
-            ///   - url: URL for the team
-            ///   - members_url:
-            ///   - name: Name of the team
-            ///   - description: Description of the team
-            ///   - permission: Permission that the team will have for its repositories
-            ///   - privacy: The level of privacy this team should have
-            ///   - notification_setting: The notification setting the team has set
-            ///   - html_url:
-            ///   - repositories_url:
-            ///   - slug:
-            ///   - ldap_dn: Distinguished Name (DN) that team maps to within LDAP environment
-            public init(
-                id: Swift.Int,
-                node_id: Swift.String,
-                url: Swift.String,
-                members_url: Swift.String,
-                name: Swift.String,
-                description: Swift.String? = nil,
-                permission: Swift.String,
-                privacy: Swift.String? = nil,
-                notification_setting: Swift.String? = nil,
-                html_url: Swift.String,
-                repositories_url: Swift.String,
-                slug: Swift.String,
-                ldap_dn: Swift.String? = nil
-            ) {
-                self.id = id
-                self.node_id = node_id
-                self.url = url
-                self.members_url = members_url
-                self.name = name
-                self.description = description
-                self.permission = permission
-                self.privacy = privacy
-                self.notification_setting = notification_setting
-                self.html_url = html_url
-                self.repositories_url = repositories_url
-                self.slug = slug
-                self.ldap_dn = ldap_dn
-            }
-            public enum CodingKeys: String, CodingKey {
-                case id
-                case node_id
-                case url
-                case members_url
-                case name
-                case description
-                case permission
-                case privacy
-                case notification_setting
-                case html_url
-                case repositories_url
-                case slug
-                case ldap_dn
-            }
-        }
-        /// Groups of organization members that gives permissions on specified repositories.
-        ///
-        /// - Remark: Generated from `#/components/schemas/team`.
-        public struct team: Codable, Hashable, Sendable {
-            /// - Remark: Generated from `#/components/schemas/team/id`.
-            public var id: Swift.Int
-            /// - Remark: Generated from `#/components/schemas/team/node_id`.
-            public var node_id: Swift.String
-            /// - Remark: Generated from `#/components/schemas/team/name`.
-            public var name: Swift.String
-            /// - Remark: Generated from `#/components/schemas/team/slug`.
-            public var slug: Swift.String
-            /// - Remark: Generated from `#/components/schemas/team/description`.
-            public var description: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/team/privacy`.
-            public var privacy: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/team/notification_setting`.
-            public var notification_setting: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/team/permission`.
-            public var permission: Swift.String
-            /// - Remark: Generated from `#/components/schemas/team/permissions`.
-            public struct permissionsPayload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/team/permissions/pull`.
-                public var pull: Swift.Bool
-                /// - Remark: Generated from `#/components/schemas/team/permissions/triage`.
-                public var triage: Swift.Bool
-                /// - Remark: Generated from `#/components/schemas/team/permissions/push`.
-                public var push: Swift.Bool
-                /// - Remark: Generated from `#/components/schemas/team/permissions/maintain`.
-                public var maintain: Swift.Bool
-                /// - Remark: Generated from `#/components/schemas/team/permissions/admin`.
-                public var admin: Swift.Bool
-                /// Creates a new `permissionsPayload`.
-                ///
-                /// - Parameters:
-                ///   - pull:
-                ///   - triage:
-                ///   - push:
-                ///   - maintain:
-                ///   - admin:
-                public init(
-                    pull: Swift.Bool,
-                    triage: Swift.Bool,
-                    push: Swift.Bool,
-                    maintain: Swift.Bool,
-                    admin: Swift.Bool
-                ) {
-                    self.pull = pull
-                    self.triage = triage
-                    self.push = push
-                    self.maintain = maintain
-                    self.admin = admin
-                }
-                public enum CodingKeys: String, CodingKey {
-                    case pull
-                    case triage
-                    case push
-                    case maintain
-                    case admin
-                }
-            }
-            /// - Remark: Generated from `#/components/schemas/team/permissions`.
-            public var permissions: Components.Schemas.team.permissionsPayload?
-            /// - Remark: Generated from `#/components/schemas/team/url`.
-            public var url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/team/html_url`.
-            public var html_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/team/members_url`.
-            public var members_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/team/repositories_url`.
-            public var repositories_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/team/parent`.
-            public var parent: Components.Schemas.nullable_hyphen_team_hyphen_simple?
-            /// Creates a new `team`.
-            ///
-            /// - Parameters:
-            ///   - id:
-            ///   - node_id:
-            ///   - name:
-            ///   - slug:
-            ///   - description:
-            ///   - privacy:
-            ///   - notification_setting:
-            ///   - permission:
-            ///   - permissions:
-            ///   - url:
-            ///   - html_url:
-            ///   - members_url:
-            ///   - repositories_url:
-            ///   - parent:
-            public init(
-                id: Swift.Int,
-                node_id: Swift.String,
-                name: Swift.String,
-                slug: Swift.String,
-                description: Swift.String? = nil,
-                privacy: Swift.String? = nil,
-                notification_setting: Swift.String? = nil,
-                permission: Swift.String,
-                permissions: Components.Schemas.team.permissionsPayload? = nil,
-                url: Swift.String,
-                html_url: Swift.String,
-                members_url: Swift.String,
-                repositories_url: Swift.String,
-                parent: Components.Schemas.nullable_hyphen_team_hyphen_simple? = nil
-            ) {
-                self.id = id
-                self.node_id = node_id
-                self.name = name
-                self.slug = slug
-                self.description = description
-                self.privacy = privacy
-                self.notification_setting = notification_setting
-                self.permission = permission
-                self.permissions = permissions
-                self.url = url
-                self.html_url = html_url
-                self.members_url = members_url
-                self.repositories_url = repositories_url
-                self.parent = parent
-            }
-            public enum CodingKeys: String, CodingKey {
-                case id
-                case node_id
-                case name
-                case slug
-                case description
-                case privacy
-                case notification_setting
-                case permission
-                case permissions
-                case url
-                case html_url
-                case members_url
-                case repositories_url
-                case parent
-            }
-        }
         /// GitHub apps are a new way to extend GitHub. They can be installed directly on organizations and user accounts and granted access to specific repositories. They come with granular permissions and built-in webhooks. GitHub apps are first class actors within GitHub.
         ///
         /// - Remark: Generated from `#/components/schemas/nullable-integration`.
@@ -5552,7 +5668,42 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/nullable-integration/client_id`.
             public var client_id: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-integration/owner`.
-            public var owner: Components.Schemas.nullable_hyphen_simple_hyphen_user?
+            @frozen public enum ownerPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/nullable-integration/owner/case1`.
+                case simple_hyphen_user(Components.Schemas.simple_hyphen_user)
+                /// - Remark: Generated from `#/components/schemas/nullable-integration/owner/case2`.
+                case enterprise(Components.Schemas.enterprise)
+                public init(from decoder: any Decoder) throws {
+                    var errors: [any Error] = []
+                    do {
+                        self = .simple_hyphen_user(try .init(from: decoder))
+                        return
+                    } catch {
+                        errors.append(error)
+                    }
+                    do {
+                        self = .enterprise(try .init(from: decoder))
+                        return
+                    } catch {
+                        errors.append(error)
+                    }
+                    throw Swift.DecodingError.failedToDecodeOneOfSchema(
+                        type: Self.self,
+                        codingPath: decoder.codingPath,
+                        errors: errors
+                    )
+                }
+                public func encode(to encoder: any Encoder) throws {
+                    switch self {
+                    case let .simple_hyphen_user(value):
+                        try value.encode(to: encoder)
+                    case let .enterprise(value):
+                        try value.encode(to: encoder)
+                    }
+                }
+            }
+            /// - Remark: Generated from `#/components/schemas/nullable-integration/owner`.
+            public var owner: Components.Schemas.nullable_hyphen_integration.ownerPayload
             /// The name of the GitHub app
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-integration/name`.
@@ -5712,7 +5863,7 @@ public enum Components {
                 slug: Swift.String? = nil,
                 node_id: Swift.String,
                 client_id: Swift.String? = nil,
-                owner: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
+                owner: Components.Schemas.nullable_hyphen_integration.ownerPayload,
                 name: Swift.String,
                 description: Swift.String? = nil,
                 external_url: Swift.String,
@@ -5788,6 +5939,28 @@ public enum Components {
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security`.
             public var advanced_security: Components.Schemas.security_hyphen_and_hyphen_analysis.advanced_securityPayload?
+            /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security`.
+            public struct code_securityPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security/status`.
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                    case enabled = "enabled"
+                    case disabled = "disabled"
+                }
+                /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security/status`.
+                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.code_securityPayload.statusPayload?
+                /// Creates a new `code_securityPayload`.
+                ///
+                /// - Parameters:
+                ///   - status:
+                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.code_securityPayload.statusPayload? = nil) {
+                    self.status = status
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case status
+                }
+            }
+            /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security`.
+            public var code_security: Components.Schemas.security_hyphen_and_hyphen_analysis.code_securityPayload?
             /// Enable or disable Dependabot security updates for the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/dependabot_security_updates`.
@@ -5910,6 +6083,7 @@ public enum Components {
             ///
             /// - Parameters:
             ///   - advanced_security:
+            ///   - code_security:
             ///   - dependabot_security_updates: Enable or disable Dependabot security updates for the repository.
             ///   - secret_scanning:
             ///   - secret_scanning_push_protection:
@@ -5917,6 +6091,7 @@ public enum Components {
             ///   - secret_scanning_ai_detection:
             public init(
                 advanced_security: Components.Schemas.security_hyphen_and_hyphen_analysis.advanced_securityPayload? = nil,
+                code_security: Components.Schemas.security_hyphen_and_hyphen_analysis.code_securityPayload? = nil,
                 dependabot_security_updates: Components.Schemas.security_hyphen_and_hyphen_analysis.dependabot_security_updatesPayload? = nil,
                 secret_scanning: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanningPayload? = nil,
                 secret_scanning_push_protection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_push_protectionPayload? = nil,
@@ -5924,6 +6099,7 @@ public enum Components {
                 secret_scanning_ai_detection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload? = nil
             ) {
                 self.advanced_security = advanced_security
+                self.code_security = code_security
                 self.dependabot_security_updates = dependabot_security_updates
                 self.secret_scanning = secret_scanning
                 self.secret_scanning_push_protection = secret_scanning_push_protection
@@ -5932,6 +6108,7 @@ public enum Components {
             }
             public enum CodingKeys: String, CodingKey {
                 case advanced_security
+                case code_security
                 case dependabot_security_updates
                 case secret_scanning
                 case secret_scanning_push_protection
@@ -6622,6 +6799,355 @@ public enum Components {
                 case active_caches_count
             }
         }
+        /// Provides details of a hosted runner image
+        ///
+        /// - Remark: Generated from `#/components/schemas/nullable-actions-hosted-runner-pool-image`.
+        public struct nullable_hyphen_actions_hyphen_hosted_hyphen_runner_hyphen_pool_hyphen_image: Codable, Hashable, Sendable {
+            /// The ID of the image. Use this ID for the `image` parameter when creating a new larger runner.
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-actions-hosted-runner-pool-image/id`.
+            public var id: Swift.String
+            /// Image size in GB.
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-actions-hosted-runner-pool-image/size_gb`.
+            public var size_gb: Swift.Int
+            /// Display name for this image.
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-actions-hosted-runner-pool-image/display_name`.
+            public var display_name: Swift.String
+            /// The image provider.
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-actions-hosted-runner-pool-image/source`.
+            @frozen public enum sourcePayload: String, Codable, Hashable, Sendable {
+                case github = "github"
+                case partner = "partner"
+                case custom = "custom"
+            }
+            /// The image provider.
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-actions-hosted-runner-pool-image/source`.
+            public var source: Components.Schemas.nullable_hyphen_actions_hyphen_hosted_hyphen_runner_hyphen_pool_hyphen_image.sourcePayload
+            /// Creates a new `nullable_hyphen_actions_hyphen_hosted_hyphen_runner_hyphen_pool_hyphen_image`.
+            ///
+            /// - Parameters:
+            ///   - id: The ID of the image. Use this ID for the `image` parameter when creating a new larger runner.
+            ///   - size_gb: Image size in GB.
+            ///   - display_name: Display name for this image.
+            ///   - source: The image provider.
+            public init(
+                id: Swift.String,
+                size_gb: Swift.Int,
+                display_name: Swift.String,
+                source: Components.Schemas.nullable_hyphen_actions_hyphen_hosted_hyphen_runner_hyphen_pool_hyphen_image.sourcePayload
+            ) {
+                self.id = id
+                self.size_gb = size_gb
+                self.display_name = display_name
+                self.source = source
+            }
+            public enum CodingKeys: String, CodingKey {
+                case id
+                case size_gb
+                case display_name
+                case source
+            }
+        }
+        /// Provides details of a particular machine spec.
+        ///
+        /// - Remark: Generated from `#/components/schemas/actions-hosted-runner-machine-spec`.
+        public struct actions_hyphen_hosted_hyphen_runner_hyphen_machine_hyphen_spec: Codable, Hashable, Sendable {
+            /// The ID used for the `size` parameter when creating a new runner.
+            ///
+            /// - Remark: Generated from `#/components/schemas/actions-hosted-runner-machine-spec/id`.
+            public var id: Swift.String
+            /// The number of cores.
+            ///
+            /// - Remark: Generated from `#/components/schemas/actions-hosted-runner-machine-spec/cpu_cores`.
+            public var cpu_cores: Swift.Int
+            /// The available RAM for the machine spec.
+            ///
+            /// - Remark: Generated from `#/components/schemas/actions-hosted-runner-machine-spec/memory_gb`.
+            public var memory_gb: Swift.Int
+            /// The available SSD storage for the machine spec.
+            ///
+            /// - Remark: Generated from `#/components/schemas/actions-hosted-runner-machine-spec/storage_gb`.
+            public var storage_gb: Swift.Int
+            /// Creates a new `actions_hyphen_hosted_hyphen_runner_hyphen_machine_hyphen_spec`.
+            ///
+            /// - Parameters:
+            ///   - id: The ID used for the `size` parameter when creating a new runner.
+            ///   - cpu_cores: The number of cores.
+            ///   - memory_gb: The available RAM for the machine spec.
+            ///   - storage_gb: The available SSD storage for the machine spec.
+            public init(
+                id: Swift.String,
+                cpu_cores: Swift.Int,
+                memory_gb: Swift.Int,
+                storage_gb: Swift.Int
+            ) {
+                self.id = id
+                self.cpu_cores = cpu_cores
+                self.memory_gb = memory_gb
+                self.storage_gb = storage_gb
+            }
+            public enum CodingKeys: String, CodingKey {
+                case id
+                case cpu_cores
+                case memory_gb
+                case storage_gb
+            }
+        }
+        /// Provides details of Public IP for a GitHub-hosted larger runners
+        ///
+        /// - Remark: Generated from `#/components/schemas/public-ip`.
+        public struct public_hyphen_ip: Codable, Hashable, Sendable {
+            /// Whether public IP is enabled.
+            ///
+            /// - Remark: Generated from `#/components/schemas/public-ip/enabled`.
+            public var enabled: Swift.Bool?
+            /// The prefix for the public IP.
+            ///
+            /// - Remark: Generated from `#/components/schemas/public-ip/prefix`.
+            public var prefix: Swift.String?
+            /// The length of the IP prefix.
+            ///
+            /// - Remark: Generated from `#/components/schemas/public-ip/length`.
+            public var length: Swift.Int?
+            /// Creates a new `public_hyphen_ip`.
+            ///
+            /// - Parameters:
+            ///   - enabled: Whether public IP is enabled.
+            ///   - prefix: The prefix for the public IP.
+            ///   - length: The length of the IP prefix.
+            public init(
+                enabled: Swift.Bool? = nil,
+                prefix: Swift.String? = nil,
+                length: Swift.Int? = nil
+            ) {
+                self.enabled = enabled
+                self.prefix = prefix
+                self.length = length
+            }
+            public enum CodingKeys: String, CodingKey {
+                case enabled
+                case prefix
+                case length
+            }
+        }
+        /// A Github-hosted hosted runner.
+        ///
+        /// - Remark: Generated from `#/components/schemas/actions-hosted-runner`.
+        public struct actions_hyphen_hosted_hyphen_runner: Codable, Hashable, Sendable {
+            /// The unique identifier of the hosted runner.
+            ///
+            /// - Remark: Generated from `#/components/schemas/actions-hosted-runner/id`.
+            public var id: Swift.Int
+            /// The name of the hosted runner.
+            ///
+            /// - Remark: Generated from `#/components/schemas/actions-hosted-runner/name`.
+            public var name: Swift.String
+            /// The unique identifier of the group that the hosted runner belongs to.
+            ///
+            /// - Remark: Generated from `#/components/schemas/actions-hosted-runner/runner_group_id`.
+            public var runner_group_id: Swift.Int?
+            /// - Remark: Generated from `#/components/schemas/actions-hosted-runner/image_details`.
+            public var image_details: Components.Schemas.nullable_hyphen_actions_hyphen_hosted_hyphen_runner_hyphen_pool_hyphen_image?
+            /// - Remark: Generated from `#/components/schemas/actions-hosted-runner/machine_size_details`.
+            public var machine_size_details: Components.Schemas.actions_hyphen_hosted_hyphen_runner_hyphen_machine_hyphen_spec
+            /// The status of the runner.
+            ///
+            /// - Remark: Generated from `#/components/schemas/actions-hosted-runner/status`.
+            @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                case Ready = "Ready"
+                case Provisioning = "Provisioning"
+                case Shutdown = "Shutdown"
+                case Deleting = "Deleting"
+                case Stuck = "Stuck"
+            }
+            /// The status of the runner.
+            ///
+            /// - Remark: Generated from `#/components/schemas/actions-hosted-runner/status`.
+            public var status: Components.Schemas.actions_hyphen_hosted_hyphen_runner.statusPayload
+            /// The operating system of the image.
+            ///
+            /// - Remark: Generated from `#/components/schemas/actions-hosted-runner/platform`.
+            public var platform: Swift.String
+            /// The maximum amount of hosted runners. Runners will not scale automatically above this number. Use this setting to limit your cost.
+            ///
+            /// - Remark: Generated from `#/components/schemas/actions-hosted-runner/maximum_runners`.
+            public var maximum_runners: Swift.Int?
+            /// Whether public IP is enabled for the hosted runners.
+            ///
+            /// - Remark: Generated from `#/components/schemas/actions-hosted-runner/public_ip_enabled`.
+            public var public_ip_enabled: Swift.Bool
+            /// The public IP ranges when public IP is enabled for the hosted runners.
+            ///
+            /// - Remark: Generated from `#/components/schemas/actions-hosted-runner/public_ips`.
+            public var public_ips: [Components.Schemas.public_hyphen_ip]?
+            /// The time at which the runner was last used, in ISO 8601 format.
+            ///
+            /// - Remark: Generated from `#/components/schemas/actions-hosted-runner/last_active_on`.
+            public var last_active_on: Foundation.Date?
+            /// Creates a new `actions_hyphen_hosted_hyphen_runner`.
+            ///
+            /// - Parameters:
+            ///   - id: The unique identifier of the hosted runner.
+            ///   - name: The name of the hosted runner.
+            ///   - runner_group_id: The unique identifier of the group that the hosted runner belongs to.
+            ///   - image_details:
+            ///   - machine_size_details:
+            ///   - status: The status of the runner.
+            ///   - platform: The operating system of the image.
+            ///   - maximum_runners: The maximum amount of hosted runners. Runners will not scale automatically above this number. Use this setting to limit your cost.
+            ///   - public_ip_enabled: Whether public IP is enabled for the hosted runners.
+            ///   - public_ips: The public IP ranges when public IP is enabled for the hosted runners.
+            ///   - last_active_on: The time at which the runner was last used, in ISO 8601 format.
+            public init(
+                id: Swift.Int,
+                name: Swift.String,
+                runner_group_id: Swift.Int? = nil,
+                image_details: Components.Schemas.nullable_hyphen_actions_hyphen_hosted_hyphen_runner_hyphen_pool_hyphen_image? = nil,
+                machine_size_details: Components.Schemas.actions_hyphen_hosted_hyphen_runner_hyphen_machine_hyphen_spec,
+                status: Components.Schemas.actions_hyphen_hosted_hyphen_runner.statusPayload,
+                platform: Swift.String,
+                maximum_runners: Swift.Int? = nil,
+                public_ip_enabled: Swift.Bool,
+                public_ips: [Components.Schemas.public_hyphen_ip]? = nil,
+                last_active_on: Foundation.Date? = nil
+            ) {
+                self.id = id
+                self.name = name
+                self.runner_group_id = runner_group_id
+                self.image_details = image_details
+                self.machine_size_details = machine_size_details
+                self.status = status
+                self.platform = platform
+                self.maximum_runners = maximum_runners
+                self.public_ip_enabled = public_ip_enabled
+                self.public_ips = public_ips
+                self.last_active_on = last_active_on
+            }
+            public enum CodingKeys: String, CodingKey {
+                case id
+                case name
+                case runner_group_id
+                case image_details
+                case machine_size_details
+                case status
+                case platform
+                case maximum_runners
+                case public_ip_enabled
+                case public_ips
+                case last_active_on
+            }
+        }
+        /// Provides details of a hosted runner image
+        ///
+        /// - Remark: Generated from `#/components/schemas/actions-hosted-runner-image`.
+        public struct actions_hyphen_hosted_hyphen_runner_hyphen_image: Codable, Hashable, Sendable {
+            /// The ID of the image. Use this ID for the `image` parameter when creating a new larger runner.
+            ///
+            /// - Remark: Generated from `#/components/schemas/actions-hosted-runner-image/id`.
+            public var id: Swift.String
+            /// The operating system of the image.
+            ///
+            /// - Remark: Generated from `#/components/schemas/actions-hosted-runner-image/platform`.
+            public var platform: Swift.String
+            /// Image size in GB.
+            ///
+            /// - Remark: Generated from `#/components/schemas/actions-hosted-runner-image/size_gb`.
+            public var size_gb: Swift.Int
+            /// Display name for this image.
+            ///
+            /// - Remark: Generated from `#/components/schemas/actions-hosted-runner-image/display_name`.
+            public var display_name: Swift.String
+            /// The image provider.
+            ///
+            /// - Remark: Generated from `#/components/schemas/actions-hosted-runner-image/source`.
+            @frozen public enum sourcePayload: String, Codable, Hashable, Sendable {
+                case github = "github"
+                case partner = "partner"
+                case custom = "custom"
+            }
+            /// The image provider.
+            ///
+            /// - Remark: Generated from `#/components/schemas/actions-hosted-runner-image/source`.
+            public var source: Components.Schemas.actions_hyphen_hosted_hyphen_runner_hyphen_image.sourcePayload
+            /// Creates a new `actions_hyphen_hosted_hyphen_runner_hyphen_image`.
+            ///
+            /// - Parameters:
+            ///   - id: The ID of the image. Use this ID for the `image` parameter when creating a new larger runner.
+            ///   - platform: The operating system of the image.
+            ///   - size_gb: Image size in GB.
+            ///   - display_name: Display name for this image.
+            ///   - source: The image provider.
+            public init(
+                id: Swift.String,
+                platform: Swift.String,
+                size_gb: Swift.Int,
+                display_name: Swift.String,
+                source: Components.Schemas.actions_hyphen_hosted_hyphen_runner_hyphen_image.sourcePayload
+            ) {
+                self.id = id
+                self.platform = platform
+                self.size_gb = size_gb
+                self.display_name = display_name
+                self.source = source
+            }
+            public enum CodingKeys: String, CodingKey {
+                case id
+                case platform
+                case size_gb
+                case display_name
+                case source
+            }
+        }
+        /// - Remark: Generated from `#/components/schemas/actions-hosted-runner-limits`.
+        public struct actions_hyphen_hosted_hyphen_runner_hyphen_limits: Codable, Hashable, Sendable {
+            /// Provides details of static public IP limits for GitHub-hosted Hosted Runners
+            ///
+            /// - Remark: Generated from `#/components/schemas/actions-hosted-runner-limits/public_ips`.
+            public struct public_ipsPayload: Codable, Hashable, Sendable {
+                /// The maximum number of static public IP addresses that can be used for Hosted Runners.
+                ///
+                /// - Remark: Generated from `#/components/schemas/actions-hosted-runner-limits/public_ips/maximum`.
+                public var maximum: Swift.Int
+                /// The current number of static public IP addresses in use by Hosted Runners.
+                ///
+                /// - Remark: Generated from `#/components/schemas/actions-hosted-runner-limits/public_ips/current_usage`.
+                public var current_usage: Swift.Int
+                /// Creates a new `public_ipsPayload`.
+                ///
+                /// - Parameters:
+                ///   - maximum: The maximum number of static public IP addresses that can be used for Hosted Runners.
+                ///   - current_usage: The current number of static public IP addresses in use by Hosted Runners.
+                public init(
+                    maximum: Swift.Int,
+                    current_usage: Swift.Int
+                ) {
+                    self.maximum = maximum
+                    self.current_usage = current_usage
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case maximum
+                    case current_usage
+                }
+            }
+            /// Provides details of static public IP limits for GitHub-hosted Hosted Runners
+            ///
+            /// - Remark: Generated from `#/components/schemas/actions-hosted-runner-limits/public_ips`.
+            public var public_ips: Components.Schemas.actions_hyphen_hosted_hyphen_runner_hyphen_limits.public_ipsPayload
+            /// Creates a new `actions_hyphen_hosted_hyphen_runner_hyphen_limits`.
+            ///
+            /// - Parameters:
+            ///   - public_ips: Provides details of static public IP limits for GitHub-hosted Hosted Runners
+            public init(public_ips: Components.Schemas.actions_hyphen_hosted_hyphen_runner_hyphen_limits.public_ipsPayload) {
+                self.public_ips = public_ips
+            }
+            public enum CodingKeys: String, CodingKey {
+                case public_ips
+            }
+        }
         /// An object without any properties.
         ///
         /// - Remark: Generated from `#/components/schemas/empty-object`.
@@ -6802,6 +7328,10 @@ public enum Components {
             public var runners_url: Swift.String
             /// - Remark: Generated from `#/components/schemas/runner-groups-org/hosted_runners_url`.
             public var hosted_runners_url: Swift.String?
+            /// The identifier of a hosted compute network configuration.
+            ///
+            /// - Remark: Generated from `#/components/schemas/runner-groups-org/network_configuration_id`.
+            public var network_configuration_id: Swift.String?
             /// - Remark: Generated from `#/components/schemas/runner-groups-org/inherited`.
             public var inherited: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/runner-groups-org/inherited_allows_public_repositories`.
@@ -6830,6 +7360,7 @@ public enum Components {
             ///   - selected_repositories_url: Link to the selected repositories resource for this runner group. Not present unless visibility was set to `selected`
             ///   - runners_url:
             ///   - hosted_runners_url:
+            ///   - network_configuration_id: The identifier of a hosted compute network configuration.
             ///   - inherited:
             ///   - inherited_allows_public_repositories:
             ///   - allows_public_repositories:
@@ -6844,6 +7375,7 @@ public enum Components {
                 selected_repositories_url: Swift.String? = nil,
                 runners_url: Swift.String,
                 hosted_runners_url: Swift.String? = nil,
+                network_configuration_id: Swift.String? = nil,
                 inherited: Swift.Bool,
                 inherited_allows_public_repositories: Swift.Bool? = nil,
                 allows_public_repositories: Swift.Bool,
@@ -6858,6 +7390,7 @@ public enum Components {
                 self.selected_repositories_url = selected_repositories_url
                 self.runners_url = runners_url
                 self.hosted_runners_url = hosted_runners_url
+                self.network_configuration_id = network_configuration_id
                 self.inherited = inherited
                 self.inherited_allows_public_repositories = inherited_allows_public_repositories
                 self.allows_public_repositories = allows_public_repositories
@@ -6873,6 +7406,7 @@ public enum Components {
                 case selected_repositories_url
                 case runners_url
                 case hosted_runners_url
+                case network_configuration_id
                 case inherited
                 case inherited_allows_public_repositories
                 case allows_public_repositories
@@ -6929,11 +7463,11 @@ public enum Components {
         ///
         /// - Remark: Generated from `#/components/schemas/runner`.
         public struct runner: Codable, Hashable, Sendable {
-            /// The id of the runner.
+            /// The ID of the runner.
             ///
             /// - Remark: Generated from `#/components/schemas/runner/id`.
             public var id: Swift.Int
-            /// The id of the runner group.
+            /// The ID of the runner group.
             ///
             /// - Remark: Generated from `#/components/schemas/runner/runner_group_id`.
             public var runner_group_id: Swift.Int?
@@ -6953,16 +7487,19 @@ public enum Components {
             public var busy: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/runner/labels`.
             public var labels: [Components.Schemas.runner_hyphen_label]
+            /// - Remark: Generated from `#/components/schemas/runner/ephemeral`.
+            public var ephemeral: Swift.Bool?
             /// Creates a new `runner`.
             ///
             /// - Parameters:
-            ///   - id: The id of the runner.
-            ///   - runner_group_id: The id of the runner group.
+            ///   - id: The ID of the runner.
+            ///   - runner_group_id: The ID of the runner group.
             ///   - name: The name of the runner.
             ///   - os: The Operating System of the runner.
             ///   - status: The status of the runner.
             ///   - busy:
             ///   - labels:
+            ///   - ephemeral:
             public init(
                 id: Swift.Int,
                 runner_group_id: Swift.Int? = nil,
@@ -6970,7 +7507,8 @@ public enum Components {
                 os: Swift.String,
                 status: Swift.String,
                 busy: Swift.Bool,
-                labels: [Components.Schemas.runner_hyphen_label]
+                labels: [Components.Schemas.runner_hyphen_label],
+                ephemeral: Swift.Bool? = nil
             ) {
                 self.id = id
                 self.runner_group_id = runner_group_id
@@ -6979,6 +7517,7 @@ public enum Components {
                 self.status = status
                 self.busy = busy
                 self.labels = labels
+                self.ephemeral = ephemeral
             }
             public enum CodingKeys: String, CodingKey {
                 case id
@@ -6988,6 +7527,7 @@ public enum Components {
                 case status
                 case busy
                 case labels
+                case ephemeral
             }
         }
         /// Runner Application
@@ -7280,6 +7820,251 @@ public enum Components {
                 case selected_repositories_url
             }
         }
+        /// Groups of organization members that gives permissions on specified repositories.
+        ///
+        /// - Remark: Generated from `#/components/schemas/nullable-team-simple`.
+        public struct nullable_hyphen_team_hyphen_simple: Codable, Hashable, Sendable {
+            /// Unique identifier of the team
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/id`.
+            public var id: Swift.Int
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/node_id`.
+            public var node_id: Swift.String
+            /// URL for the team
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/url`.
+            public var url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/members_url`.
+            public var members_url: Swift.String
+            /// Name of the team
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/name`.
+            public var name: Swift.String
+            /// Description of the team
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/description`.
+            public var description: Swift.String?
+            /// Permission that the team will have for its repositories
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/permission`.
+            public var permission: Swift.String
+            /// The level of privacy this team should have
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/privacy`.
+            public var privacy: Swift.String?
+            /// The notification setting the team has set
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/notification_setting`.
+            public var notification_setting: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/html_url`.
+            public var html_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/repositories_url`.
+            public var repositories_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/slug`.
+            public var slug: Swift.String
+            /// Distinguished Name (DN) that team maps to within LDAP environment
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/ldap_dn`.
+            public var ldap_dn: Swift.String?
+            /// Creates a new `nullable_hyphen_team_hyphen_simple`.
+            ///
+            /// - Parameters:
+            ///   - id: Unique identifier of the team
+            ///   - node_id:
+            ///   - url: URL for the team
+            ///   - members_url:
+            ///   - name: Name of the team
+            ///   - description: Description of the team
+            ///   - permission: Permission that the team will have for its repositories
+            ///   - privacy: The level of privacy this team should have
+            ///   - notification_setting: The notification setting the team has set
+            ///   - html_url:
+            ///   - repositories_url:
+            ///   - slug:
+            ///   - ldap_dn: Distinguished Name (DN) that team maps to within LDAP environment
+            public init(
+                id: Swift.Int,
+                node_id: Swift.String,
+                url: Swift.String,
+                members_url: Swift.String,
+                name: Swift.String,
+                description: Swift.String? = nil,
+                permission: Swift.String,
+                privacy: Swift.String? = nil,
+                notification_setting: Swift.String? = nil,
+                html_url: Swift.String,
+                repositories_url: Swift.String,
+                slug: Swift.String,
+                ldap_dn: Swift.String? = nil
+            ) {
+                self.id = id
+                self.node_id = node_id
+                self.url = url
+                self.members_url = members_url
+                self.name = name
+                self.description = description
+                self.permission = permission
+                self.privacy = privacy
+                self.notification_setting = notification_setting
+                self.html_url = html_url
+                self.repositories_url = repositories_url
+                self.slug = slug
+                self.ldap_dn = ldap_dn
+            }
+            public enum CodingKeys: String, CodingKey {
+                case id
+                case node_id
+                case url
+                case members_url
+                case name
+                case description
+                case permission
+                case privacy
+                case notification_setting
+                case html_url
+                case repositories_url
+                case slug
+                case ldap_dn
+            }
+        }
+        /// Groups of organization members that gives permissions on specified repositories.
+        ///
+        /// - Remark: Generated from `#/components/schemas/team`.
+        public struct team: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/team/id`.
+            public var id: Swift.Int
+            /// - Remark: Generated from `#/components/schemas/team/node_id`.
+            public var node_id: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team/name`.
+            public var name: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team/slug`.
+            public var slug: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team/description`.
+            public var description: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/team/privacy`.
+            public var privacy: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/team/notification_setting`.
+            public var notification_setting: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/team/permission`.
+            public var permission: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team/permissions`.
+            public struct permissionsPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/team/permissions/pull`.
+                public var pull: Swift.Bool
+                /// - Remark: Generated from `#/components/schemas/team/permissions/triage`.
+                public var triage: Swift.Bool
+                /// - Remark: Generated from `#/components/schemas/team/permissions/push`.
+                public var push: Swift.Bool
+                /// - Remark: Generated from `#/components/schemas/team/permissions/maintain`.
+                public var maintain: Swift.Bool
+                /// - Remark: Generated from `#/components/schemas/team/permissions/admin`.
+                public var admin: Swift.Bool
+                /// Creates a new `permissionsPayload`.
+                ///
+                /// - Parameters:
+                ///   - pull:
+                ///   - triage:
+                ///   - push:
+                ///   - maintain:
+                ///   - admin:
+                public init(
+                    pull: Swift.Bool,
+                    triage: Swift.Bool,
+                    push: Swift.Bool,
+                    maintain: Swift.Bool,
+                    admin: Swift.Bool
+                ) {
+                    self.pull = pull
+                    self.triage = triage
+                    self.push = push
+                    self.maintain = maintain
+                    self.admin = admin
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case pull
+                    case triage
+                    case push
+                    case maintain
+                    case admin
+                }
+            }
+            /// - Remark: Generated from `#/components/schemas/team/permissions`.
+            public var permissions: Components.Schemas.team.permissionsPayload?
+            /// - Remark: Generated from `#/components/schemas/team/url`.
+            public var url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team/html_url`.
+            public var html_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team/members_url`.
+            public var members_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team/repositories_url`.
+            public var repositories_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team/parent`.
+            public var parent: Components.Schemas.nullable_hyphen_team_hyphen_simple?
+            /// Creates a new `team`.
+            ///
+            /// - Parameters:
+            ///   - id:
+            ///   - node_id:
+            ///   - name:
+            ///   - slug:
+            ///   - description:
+            ///   - privacy:
+            ///   - notification_setting:
+            ///   - permission:
+            ///   - permissions:
+            ///   - url:
+            ///   - html_url:
+            ///   - members_url:
+            ///   - repositories_url:
+            ///   - parent:
+            public init(
+                id: Swift.Int,
+                node_id: Swift.String,
+                name: Swift.String,
+                slug: Swift.String,
+                description: Swift.String? = nil,
+                privacy: Swift.String? = nil,
+                notification_setting: Swift.String? = nil,
+                permission: Swift.String,
+                permissions: Components.Schemas.team.permissionsPayload? = nil,
+                url: Swift.String,
+                html_url: Swift.String,
+                members_url: Swift.String,
+                repositories_url: Swift.String,
+                parent: Components.Schemas.nullable_hyphen_team_hyphen_simple? = nil
+            ) {
+                self.id = id
+                self.node_id = node_id
+                self.name = name
+                self.slug = slug
+                self.description = description
+                self.privacy = privacy
+                self.notification_setting = notification_setting
+                self.permission = permission
+                self.permissions = permissions
+                self.url = url
+                self.html_url = html_url
+                self.members_url = members_url
+                self.repositories_url = repositories_url
+                self.parent = parent
+            }
+            public enum CodingKeys: String, CodingKey {
+                case id
+                case node_id
+                case name
+                case slug
+                case description
+                case privacy
+                case notification_setting
+                case permission
+                case permissions
+                case url
+                case html_url
+                case members_url
+                case repositories_url
+                case parent
+            }
+        }
         /// An artifact
         ///
         /// - Remark: Generated from `#/components/schemas/artifact`.
@@ -7310,6 +8095,10 @@ public enum Components {
             public var expires_at: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/artifact/updated_at`.
             public var updated_at: Foundation.Date?
+            /// The SHA256 digest of the artifact. This field will only be populated on artifacts uploaded with upload-artifact v4 or newer. For older versions, this field will be null.
+            ///
+            /// - Remark: Generated from `#/components/schemas/artifact/digest`.
+            public var digest: Swift.String?
             /// - Remark: Generated from `#/components/schemas/artifact/workflow_run`.
             public struct workflow_runPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/artifact/workflow_run/id`.
@@ -7366,6 +8155,7 @@ public enum Components {
             ///   - created_at:
             ///   - expires_at:
             ///   - updated_at:
+            ///   - digest: The SHA256 digest of the artifact. This field will only be populated on artifacts uploaded with upload-artifact v4 or newer. For older versions, this field will be null.
             ///   - workflow_run:
             public init(
                 id: Swift.Int,
@@ -7378,6 +8168,7 @@ public enum Components {
                 created_at: Foundation.Date? = nil,
                 expires_at: Foundation.Date? = nil,
                 updated_at: Foundation.Date? = nil,
+                digest: Swift.String? = nil,
                 workflow_run: Components.Schemas.artifact.workflow_runPayload? = nil
             ) {
                 self.id = id
@@ -7390,6 +8181,7 @@ public enum Components {
                 self.created_at = created_at
                 self.expires_at = expires_at
                 self.updated_at = updated_at
+                self.digest = digest
                 self.workflow_run = workflow_run
             }
             public enum CodingKeys: String, CodingKey {
@@ -7403,6 +8195,7 @@ public enum Components {
                 case created_at
                 case expires_at
                 case updated_at
+                case digest
                 case workflow_run
             }
         }
@@ -9488,6 +10281,10 @@ public enum Components {
         ///
         /// - Remark: Generated from `#/components/parameters/org`.
         public typealias org = Swift.String
+        /// Unique identifier of the GitHub-hosted runner.
+        ///
+        /// - Remark: Generated from `#/components/parameters/hosted-runner-id`.
+        public typealias hosted_hyphen_runner_hyphen_id = Swift.Int
         /// The unique identifier of the repository.
         ///
         /// - Remark: Generated from `#/components/parameters/repository-id`.
@@ -9793,34 +10590,6 @@ public enum Components {
                 self.body = body
             }
         }
-        public struct internal_error: Sendable, Hashable {
-            /// - Remark: Generated from `#/components/responses/internal_error/content`.
-            @frozen public enum Body: Sendable, Hashable {
-                /// - Remark: Generated from `#/components/responses/internal_error/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
-                /// The associated value of the enum case if `self` is `.json`.
-                ///
-                /// - Throws: An error if `self` is not `.json`.
-                /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
-                    get throws {
-                        switch self {
-                        case let .json(body):
-                            return body
-                        }
-                    }
-                }
-            }
-            /// Received HTTP response body
-            public var body: Components.Responses.internal_error.Body
-            /// Creates a new `internal_error`.
-            ///
-            /// - Parameters:
-            ///   - body: Received HTTP response body
-            public init(body: Components.Responses.internal_error.Body) {
-                self.body = body
-            }
-        }
         public struct conflict: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/conflict/content`.
             @frozen public enum Body: Sendable, Hashable {
@@ -9846,6 +10615,34 @@ public enum Components {
             /// - Parameters:
             ///   - body: Received HTTP response body
             public init(body: Components.Responses.conflict.Body) {
+                self.body = body
+            }
+        }
+        public struct internal_error: Sendable, Hashable {
+            /// - Remark: Generated from `#/components/responses/internal_error/content`.
+            @frozen public enum Body: Sendable, Hashable {
+                /// - Remark: Generated from `#/components/responses/internal_error/content/application\/json`.
+                case json(Components.Schemas.basic_hyphen_error)
+                /// The associated value of the enum case if `self` is `.json`.
+                ///
+                /// - Throws: An error if `self` is not `.json`.
+                /// - SeeAlso: `.json`.
+                public var json: Components.Schemas.basic_hyphen_error {
+                    get throws {
+                        switch self {
+                        case let .json(body):
+                            return body
+                        }
+                    }
+                }
+            }
+            /// Received HTTP response body
+            public var body: Components.Responses.internal_error.Body
+            /// Creates a new `internal_error`.
+            ///
+            /// - Parameters:
+            ///   - body: Received HTTP response body
+            public init(body: Components.Responses.internal_error.Body) {
                 self.body = body
             }
         }
@@ -10366,6 +11163,1696 @@ public enum Operations {
                     default:
                         try throwUnexpectedResponseStatus(
                             expectedStatus: "ok",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
+    /// List GitHub-hosted runners for an organization
+    ///
+    /// Lists all GitHub-hosted runners configured in an organization.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `manage_runner:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/actions/hosted-runners`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/get(actions/list-hosted-runners-for-org)`.
+    public enum actions_sol_list_hyphen_hosted_hyphen_runners_hyphen_for_hyphen_org {
+        public static let id: Swift.String = "actions/list-hosted-runners-for-org"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/GET/path`.
+            public struct Path: Sendable, Hashable {
+                /// The organization name. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/GET/path/org`.
+                public var org: Components.Parameters.org
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - org: The organization name. The name is not case sensitive.
+                public init(org: Components.Parameters.org) {
+                    self.org = org
+                }
+            }
+            public var path: Operations.actions_sol_list_hyphen_hosted_hyphen_runners_hyphen_for_hyphen_org.Input.Path
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/GET/query`.
+            public struct Query: Sendable, Hashable {
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/GET/query/per_page`.
+                public var per_page: Components.Parameters.per_hyphen_page?
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/GET/query/page`.
+                public var page: Components.Parameters.page?
+                /// Creates a new `Query`.
+                ///
+                /// - Parameters:
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                public init(
+                    per_page: Components.Parameters.per_hyphen_page? = nil,
+                    page: Components.Parameters.page? = nil
+                ) {
+                    self.per_page = per_page
+                    self.page = page
+                }
+            }
+            public var query: Operations.actions_sol_list_hyphen_hosted_hyphen_runners_hyphen_for_hyphen_org.Input.Query
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/GET/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.actions_sol_list_hyphen_hosted_hyphen_runners_hyphen_for_hyphen_org.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.actions_sol_list_hyphen_hosted_hyphen_runners_hyphen_for_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.actions_sol_list_hyphen_hosted_hyphen_runners_hyphen_for_hyphen_org.Input.Headers
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - query:
+            ///   - headers:
+            public init(
+                path: Operations.actions_sol_list_hyphen_hosted_hyphen_runners_hyphen_for_hyphen_org.Input.Path,
+                query: Operations.actions_sol_list_hyphen_hosted_hyphen_runners_hyphen_for_hyphen_org.Input.Query = .init(),
+                headers: Operations.actions_sol_list_hyphen_hosted_hyphen_runners_hyphen_for_hyphen_org.Input.Headers = .init()
+            ) {
+                self.path = path
+                self.query = query
+                self.headers = headers
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Ok: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/GET/responses/200/headers`.
+                public struct Headers: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/GET/responses/200/headers/Link`.
+                    public var Link: Components.Headers.link?
+                    /// Creates a new `Headers`.
+                    ///
+                    /// - Parameters:
+                    ///   - Link:
+                    public init(Link: Components.Headers.link? = nil) {
+                        self.Link = Link
+                    }
+                }
+                /// Received HTTP response headers
+                public var headers: Operations.actions_sol_list_hyphen_hosted_hyphen_runners_hyphen_for_hyphen_org.Output.Ok.Headers
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/GET/responses/200/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/GET/responses/200/content/json`.
+                    public struct jsonPayload: Codable, Hashable, Sendable {
+                        /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/GET/responses/200/content/json/total_count`.
+                        public var total_count: Swift.Int
+                        /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/GET/responses/200/content/json/runners`.
+                        public var runners: [Components.Schemas.actions_hyphen_hosted_hyphen_runner]
+                        /// Creates a new `jsonPayload`.
+                        ///
+                        /// - Parameters:
+                        ///   - total_count:
+                        ///   - runners:
+                        public init(
+                            total_count: Swift.Int,
+                            runners: [Components.Schemas.actions_hyphen_hosted_hyphen_runner]
+                        ) {
+                            self.total_count = total_count
+                            self.runners = runners
+                        }
+                        public enum CodingKeys: String, CodingKey {
+                            case total_count
+                            case runners
+                        }
+                    }
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/GET/responses/200/content/application\/json`.
+                    case json(Operations.actions_sol_list_hyphen_hosted_hyphen_runners_hyphen_for_hyphen_org.Output.Ok.Body.jsonPayload)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Operations.actions_sol_list_hyphen_hosted_hyphen_runners_hyphen_for_hyphen_org.Output.Ok.Body.jsonPayload {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.actions_sol_list_hyphen_hosted_hyphen_runners_hyphen_for_hyphen_org.Output.Ok.Body
+                /// Creates a new `Ok`.
+                ///
+                /// - Parameters:
+                ///   - headers: Received HTTP response headers
+                ///   - body: Received HTTP response body
+                public init(
+                    headers: Operations.actions_sol_list_hyphen_hosted_hyphen_runners_hyphen_for_hyphen_org.Output.Ok.Headers = .init(),
+                    body: Operations.actions_sol_list_hyphen_hosted_hyphen_runners_hyphen_for_hyphen_org.Output.Ok.Body
+                ) {
+                    self.headers = headers
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/get(actions/list-hosted-runners-for-org)/responses/200`.
+            ///
+            /// HTTP response code: `200 ok`.
+            case ok(Operations.actions_sol_list_hyphen_hosted_hyphen_runners_hyphen_for_hyphen_org.Output.Ok)
+            /// The associated value of the enum case if `self` is `.ok`.
+            ///
+            /// - Throws: An error if `self` is not `.ok`.
+            /// - SeeAlso: `.ok`.
+            public var ok: Operations.actions_sol_list_hyphen_hosted_hyphen_runners_hyphen_for_hyphen_org.Output.Ok {
+                get throws {
+                    switch self {
+                    case let .ok(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "ok",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
+    /// Create a GitHub-hosted runner for an organization
+    ///
+    /// Creates a GitHub-hosted runner for an organization.
+    /// OAuth tokens and personal access tokens (classic) need the `manage_runners:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `POST /orgs/{org}/actions/hosted-runners`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/post(actions/create-hosted-runner-for-org)`.
+    public enum actions_sol_create_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org {
+        public static let id: Swift.String = "actions/create-hosted-runner-for-org"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/POST/path`.
+            public struct Path: Sendable, Hashable {
+                /// The organization name. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/POST/path/org`.
+                public var org: Components.Parameters.org
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - org: The organization name. The name is not case sensitive.
+                public init(org: Components.Parameters.org) {
+                    self.org = org
+                }
+            }
+            public var path: Operations.actions_sol_create_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input.Path
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/POST/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.actions_sol_create_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.actions_sol_create_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.actions_sol_create_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input.Headers
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/POST/requestBody`.
+            @frozen public enum Body: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/POST/requestBody/json`.
+                public struct jsonPayload: Codable, Hashable, Sendable {
+                    /// Name of the runner. Must be between 1 and 64 characters and may only contain upper and lowercase letters a-z, numbers 0-9, '.', '-', and '_'.
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/POST/requestBody/json/name`.
+                    public var name: Swift.String
+                    /// The image of runner. To list all available images, use `GET /actions/hosted-runners/images/github-owned` or `GET /actions/hosted-runners/images/partner`.
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/POST/requestBody/json/image`.
+                    public struct imagePayload: Codable, Hashable, Sendable {
+                        /// The unique identifier of the runner image.
+                        ///
+                        /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/POST/requestBody/json/image/id`.
+                        public var id: Swift.String?
+                        /// The source of the runner image.
+                        ///
+                        /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/POST/requestBody/json/image/source`.
+                        @frozen public enum sourcePayload: String, Codable, Hashable, Sendable {
+                            case github = "github"
+                            case partner = "partner"
+                            case custom = "custom"
+                        }
+                        /// The source of the runner image.
+                        ///
+                        /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/POST/requestBody/json/image/source`.
+                        public var source: Operations.actions_sol_create_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input.Body.jsonPayload.imagePayload.sourcePayload?
+                        /// Creates a new `imagePayload`.
+                        ///
+                        /// - Parameters:
+                        ///   - id: The unique identifier of the runner image.
+                        ///   - source: The source of the runner image.
+                        public init(
+                            id: Swift.String? = nil,
+                            source: Operations.actions_sol_create_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input.Body.jsonPayload.imagePayload.sourcePayload? = nil
+                        ) {
+                            self.id = id
+                            self.source = source
+                        }
+                        public enum CodingKeys: String, CodingKey {
+                            case id
+                            case source
+                        }
+                    }
+                    /// The image of runner. To list all available images, use `GET /actions/hosted-runners/images/github-owned` or `GET /actions/hosted-runners/images/partner`.
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/POST/requestBody/json/image`.
+                    public var image: Operations.actions_sol_create_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input.Body.jsonPayload.imagePayload
+                    /// The machine size of the runner. To list available sizes, use `GET actions/hosted-runners/machine-sizes`
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/POST/requestBody/json/size`.
+                    public var size: Swift.String
+                    /// The existing runner group to add this runner to.
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/POST/requestBody/json/runner_group_id`.
+                    public var runner_group_id: Swift.Int
+                    /// The maximum amount of runners to scale up to. Runners will not auto-scale above this number. Use this setting to limit your cost.
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/POST/requestBody/json/maximum_runners`.
+                    public var maximum_runners: Swift.Int?
+                    /// Whether this runner should be created with a static public IP. Note limit on account. To list limits on account, use `GET actions/hosted-runners/limits`
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/POST/requestBody/json/enable_static_ip`.
+                    public var enable_static_ip: Swift.Bool?
+                    /// Creates a new `jsonPayload`.
+                    ///
+                    /// - Parameters:
+                    ///   - name: Name of the runner. Must be between 1 and 64 characters and may only contain upper and lowercase letters a-z, numbers 0-9, '.', '-', and '_'.
+                    ///   - image: The image of runner. To list all available images, use `GET /actions/hosted-runners/images/github-owned` or `GET /actions/hosted-runners/images/partner`.
+                    ///   - size: The machine size of the runner. To list available sizes, use `GET actions/hosted-runners/machine-sizes`
+                    ///   - runner_group_id: The existing runner group to add this runner to.
+                    ///   - maximum_runners: The maximum amount of runners to scale up to. Runners will not auto-scale above this number. Use this setting to limit your cost.
+                    ///   - enable_static_ip: Whether this runner should be created with a static public IP. Note limit on account. To list limits on account, use `GET actions/hosted-runners/limits`
+                    public init(
+                        name: Swift.String,
+                        image: Operations.actions_sol_create_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input.Body.jsonPayload.imagePayload,
+                        size: Swift.String,
+                        runner_group_id: Swift.Int,
+                        maximum_runners: Swift.Int? = nil,
+                        enable_static_ip: Swift.Bool? = nil
+                    ) {
+                        self.name = name
+                        self.image = image
+                        self.size = size
+                        self.runner_group_id = runner_group_id
+                        self.maximum_runners = maximum_runners
+                        self.enable_static_ip = enable_static_ip
+                    }
+                    public enum CodingKeys: String, CodingKey {
+                        case name
+                        case image
+                        case size
+                        case runner_group_id
+                        case maximum_runners
+                        case enable_static_ip
+                    }
+                }
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/POST/requestBody/content/application\/json`.
+                case json(Operations.actions_sol_create_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input.Body.jsonPayload)
+            }
+            public var body: Operations.actions_sol_create_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input.Body
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - headers:
+            ///   - body:
+            public init(
+                path: Operations.actions_sol_create_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input.Path,
+                headers: Operations.actions_sol_create_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input.Headers = .init(),
+                body: Operations.actions_sol_create_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input.Body
+            ) {
+                self.path = path
+                self.headers = headers
+                self.body = body
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Created: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/POST/responses/201/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/POST/responses/201/content/application\/json`.
+                    case json(Components.Schemas.actions_hyphen_hosted_hyphen_runner)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Components.Schemas.actions_hyphen_hosted_hyphen_runner {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.actions_sol_create_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Output.Created.Body
+                /// Creates a new `Created`.
+                ///
+                /// - Parameters:
+                ///   - body: Received HTTP response body
+                public init(body: Operations.actions_sol_create_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Output.Created.Body) {
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/post(actions/create-hosted-runner-for-org)/responses/201`.
+            ///
+            /// HTTP response code: `201 created`.
+            case created(Operations.actions_sol_create_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Output.Created)
+            /// The associated value of the enum case if `self` is `.created`.
+            ///
+            /// - Throws: An error if `self` is not `.created`.
+            /// - SeeAlso: `.created`.
+            public var created: Operations.actions_sol_create_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Output.Created {
+                get throws {
+                    switch self {
+                    case let .created(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "created",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
+    /// Get GitHub-owned images for GitHub-hosted runners in an organization
+    ///
+    /// Get the list of GitHub-owned images available for GitHub-hosted runners for an organization.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/actions/hosted-runners/images/github-owned`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/images/github-owned/get(actions/get-hosted-runners-github-owned-images-for-org)`.
+    public enum actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_github_hyphen_owned_hyphen_images_hyphen_for_hyphen_org {
+        public static let id: Swift.String = "actions/get-hosted-runners-github-owned-images-for-org"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/images/github-owned/GET/path`.
+            public struct Path: Sendable, Hashable {
+                /// The organization name. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/images/github-owned/GET/path/org`.
+                public var org: Components.Parameters.org
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - org: The organization name. The name is not case sensitive.
+                public init(org: Components.Parameters.org) {
+                    self.org = org
+                }
+            }
+            public var path: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_github_hyphen_owned_hyphen_images_hyphen_for_hyphen_org.Input.Path
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/images/github-owned/GET/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_github_hyphen_owned_hyphen_images_hyphen_for_hyphen_org.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_github_hyphen_owned_hyphen_images_hyphen_for_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_github_hyphen_owned_hyphen_images_hyphen_for_hyphen_org.Input.Headers
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - headers:
+            public init(
+                path: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_github_hyphen_owned_hyphen_images_hyphen_for_hyphen_org.Input.Path,
+                headers: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_github_hyphen_owned_hyphen_images_hyphen_for_hyphen_org.Input.Headers = .init()
+            ) {
+                self.path = path
+                self.headers = headers
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Ok: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/images/github-owned/GET/responses/200/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/images/github-owned/GET/responses/200/content/json`.
+                    public struct jsonPayload: Codable, Hashable, Sendable {
+                        /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/images/github-owned/GET/responses/200/content/json/total_count`.
+                        public var total_count: Swift.Int
+                        /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/images/github-owned/GET/responses/200/content/json/images`.
+                        public var images: [Components.Schemas.actions_hyphen_hosted_hyphen_runner_hyphen_image]
+                        /// Creates a new `jsonPayload`.
+                        ///
+                        /// - Parameters:
+                        ///   - total_count:
+                        ///   - images:
+                        public init(
+                            total_count: Swift.Int,
+                            images: [Components.Schemas.actions_hyphen_hosted_hyphen_runner_hyphen_image]
+                        ) {
+                            self.total_count = total_count
+                            self.images = images
+                        }
+                        public enum CodingKeys: String, CodingKey {
+                            case total_count
+                            case images
+                        }
+                    }
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/images/github-owned/GET/responses/200/content/application\/json`.
+                    case json(Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_github_hyphen_owned_hyphen_images_hyphen_for_hyphen_org.Output.Ok.Body.jsonPayload)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_github_hyphen_owned_hyphen_images_hyphen_for_hyphen_org.Output.Ok.Body.jsonPayload {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_github_hyphen_owned_hyphen_images_hyphen_for_hyphen_org.Output.Ok.Body
+                /// Creates a new `Ok`.
+                ///
+                /// - Parameters:
+                ///   - body: Received HTTP response body
+                public init(body: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_github_hyphen_owned_hyphen_images_hyphen_for_hyphen_org.Output.Ok.Body) {
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/images/github-owned/get(actions/get-hosted-runners-github-owned-images-for-org)/responses/200`.
+            ///
+            /// HTTP response code: `200 ok`.
+            case ok(Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_github_hyphen_owned_hyphen_images_hyphen_for_hyphen_org.Output.Ok)
+            /// The associated value of the enum case if `self` is `.ok`.
+            ///
+            /// - Throws: An error if `self` is not `.ok`.
+            /// - SeeAlso: `.ok`.
+            public var ok: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_github_hyphen_owned_hyphen_images_hyphen_for_hyphen_org.Output.Ok {
+                get throws {
+                    switch self {
+                    case let .ok(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "ok",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
+    /// Get partner images for GitHub-hosted runners in an organization
+    ///
+    /// Get the list of partner images available for GitHub-hosted runners for an organization.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/actions/hosted-runners/images/partner`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/images/partner/get(actions/get-hosted-runners-partner-images-for-org)`.
+    public enum actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_partner_hyphen_images_hyphen_for_hyphen_org {
+        public static let id: Swift.String = "actions/get-hosted-runners-partner-images-for-org"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/images/partner/GET/path`.
+            public struct Path: Sendable, Hashable {
+                /// The organization name. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/images/partner/GET/path/org`.
+                public var org: Components.Parameters.org
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - org: The organization name. The name is not case sensitive.
+                public init(org: Components.Parameters.org) {
+                    self.org = org
+                }
+            }
+            public var path: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_partner_hyphen_images_hyphen_for_hyphen_org.Input.Path
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/images/partner/GET/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_partner_hyphen_images_hyphen_for_hyphen_org.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_partner_hyphen_images_hyphen_for_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_partner_hyphen_images_hyphen_for_hyphen_org.Input.Headers
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - headers:
+            public init(
+                path: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_partner_hyphen_images_hyphen_for_hyphen_org.Input.Path,
+                headers: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_partner_hyphen_images_hyphen_for_hyphen_org.Input.Headers = .init()
+            ) {
+                self.path = path
+                self.headers = headers
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Ok: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/images/partner/GET/responses/200/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/images/partner/GET/responses/200/content/json`.
+                    public struct jsonPayload: Codable, Hashable, Sendable {
+                        /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/images/partner/GET/responses/200/content/json/total_count`.
+                        public var total_count: Swift.Int
+                        /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/images/partner/GET/responses/200/content/json/images`.
+                        public var images: [Components.Schemas.actions_hyphen_hosted_hyphen_runner_hyphen_image]
+                        /// Creates a new `jsonPayload`.
+                        ///
+                        /// - Parameters:
+                        ///   - total_count:
+                        ///   - images:
+                        public init(
+                            total_count: Swift.Int,
+                            images: [Components.Schemas.actions_hyphen_hosted_hyphen_runner_hyphen_image]
+                        ) {
+                            self.total_count = total_count
+                            self.images = images
+                        }
+                        public enum CodingKeys: String, CodingKey {
+                            case total_count
+                            case images
+                        }
+                    }
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/images/partner/GET/responses/200/content/application\/json`.
+                    case json(Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_partner_hyphen_images_hyphen_for_hyphen_org.Output.Ok.Body.jsonPayload)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_partner_hyphen_images_hyphen_for_hyphen_org.Output.Ok.Body.jsonPayload {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_partner_hyphen_images_hyphen_for_hyphen_org.Output.Ok.Body
+                /// Creates a new `Ok`.
+                ///
+                /// - Parameters:
+                ///   - body: Received HTTP response body
+                public init(body: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_partner_hyphen_images_hyphen_for_hyphen_org.Output.Ok.Body) {
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/images/partner/get(actions/get-hosted-runners-partner-images-for-org)/responses/200`.
+            ///
+            /// HTTP response code: `200 ok`.
+            case ok(Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_partner_hyphen_images_hyphen_for_hyphen_org.Output.Ok)
+            /// The associated value of the enum case if `self` is `.ok`.
+            ///
+            /// - Throws: An error if `self` is not `.ok`.
+            /// - SeeAlso: `.ok`.
+            public var ok: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_partner_hyphen_images_hyphen_for_hyphen_org.Output.Ok {
+                get throws {
+                    switch self {
+                    case let .ok(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "ok",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
+    /// Get limits on GitHub-hosted runners for an organization
+    ///
+    /// Get the GitHub-hosted runners limits for an organization.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/actions/hosted-runners/limits`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/limits/get(actions/get-hosted-runners-limits-for-org)`.
+    public enum actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_limits_hyphen_for_hyphen_org {
+        public static let id: Swift.String = "actions/get-hosted-runners-limits-for-org"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/limits/GET/path`.
+            public struct Path: Sendable, Hashable {
+                /// The organization name. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/limits/GET/path/org`.
+                public var org: Components.Parameters.org
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - org: The organization name. The name is not case sensitive.
+                public init(org: Components.Parameters.org) {
+                    self.org = org
+                }
+            }
+            public var path: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_limits_hyphen_for_hyphen_org.Input.Path
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/limits/GET/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_limits_hyphen_for_hyphen_org.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_limits_hyphen_for_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_limits_hyphen_for_hyphen_org.Input.Headers
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - headers:
+            public init(
+                path: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_limits_hyphen_for_hyphen_org.Input.Path,
+                headers: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_limits_hyphen_for_hyphen_org.Input.Headers = .init()
+            ) {
+                self.path = path
+                self.headers = headers
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Ok: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/limits/GET/responses/200/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/limits/GET/responses/200/content/application\/json`.
+                    case json(Components.Schemas.actions_hyphen_hosted_hyphen_runner_hyphen_limits)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Components.Schemas.actions_hyphen_hosted_hyphen_runner_hyphen_limits {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_limits_hyphen_for_hyphen_org.Output.Ok.Body
+                /// Creates a new `Ok`.
+                ///
+                /// - Parameters:
+                ///   - body: Received HTTP response body
+                public init(body: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_limits_hyphen_for_hyphen_org.Output.Ok.Body) {
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/limits/get(actions/get-hosted-runners-limits-for-org)/responses/200`.
+            ///
+            /// HTTP response code: `200 ok`.
+            case ok(Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_limits_hyphen_for_hyphen_org.Output.Ok)
+            /// The associated value of the enum case if `self` is `.ok`.
+            ///
+            /// - Throws: An error if `self` is not `.ok`.
+            /// - SeeAlso: `.ok`.
+            public var ok: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_limits_hyphen_for_hyphen_org.Output.Ok {
+                get throws {
+                    switch self {
+                    case let .ok(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "ok",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
+    /// Get GitHub-hosted runners machine specs for an organization
+    ///
+    /// Get the list of machine specs available for GitHub-hosted runners for an organization.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/actions/hosted-runners/machine-sizes`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/machine-sizes/get(actions/get-hosted-runners-machine-specs-for-org)`.
+    public enum actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_machine_hyphen_specs_hyphen_for_hyphen_org {
+        public static let id: Swift.String = "actions/get-hosted-runners-machine-specs-for-org"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/machine-sizes/GET/path`.
+            public struct Path: Sendable, Hashable {
+                /// The organization name. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/machine-sizes/GET/path/org`.
+                public var org: Components.Parameters.org
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - org: The organization name. The name is not case sensitive.
+                public init(org: Components.Parameters.org) {
+                    self.org = org
+                }
+            }
+            public var path: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_machine_hyphen_specs_hyphen_for_hyphen_org.Input.Path
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/machine-sizes/GET/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_machine_hyphen_specs_hyphen_for_hyphen_org.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_machine_hyphen_specs_hyphen_for_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_machine_hyphen_specs_hyphen_for_hyphen_org.Input.Headers
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - headers:
+            public init(
+                path: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_machine_hyphen_specs_hyphen_for_hyphen_org.Input.Path,
+                headers: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_machine_hyphen_specs_hyphen_for_hyphen_org.Input.Headers = .init()
+            ) {
+                self.path = path
+                self.headers = headers
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Ok: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/machine-sizes/GET/responses/200/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/machine-sizes/GET/responses/200/content/json`.
+                    public struct jsonPayload: Codable, Hashable, Sendable {
+                        /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/machine-sizes/GET/responses/200/content/json/total_count`.
+                        public var total_count: Swift.Int
+                        /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/machine-sizes/GET/responses/200/content/json/machine_specs`.
+                        public var machine_specs: [Components.Schemas.actions_hyphen_hosted_hyphen_runner_hyphen_machine_hyphen_spec]
+                        /// Creates a new `jsonPayload`.
+                        ///
+                        /// - Parameters:
+                        ///   - total_count:
+                        ///   - machine_specs:
+                        public init(
+                            total_count: Swift.Int,
+                            machine_specs: [Components.Schemas.actions_hyphen_hosted_hyphen_runner_hyphen_machine_hyphen_spec]
+                        ) {
+                            self.total_count = total_count
+                            self.machine_specs = machine_specs
+                        }
+                        public enum CodingKeys: String, CodingKey {
+                            case total_count
+                            case machine_specs
+                        }
+                    }
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/machine-sizes/GET/responses/200/content/application\/json`.
+                    case json(Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_machine_hyphen_specs_hyphen_for_hyphen_org.Output.Ok.Body.jsonPayload)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_machine_hyphen_specs_hyphen_for_hyphen_org.Output.Ok.Body.jsonPayload {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_machine_hyphen_specs_hyphen_for_hyphen_org.Output.Ok.Body
+                /// Creates a new `Ok`.
+                ///
+                /// - Parameters:
+                ///   - body: Received HTTP response body
+                public init(body: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_machine_hyphen_specs_hyphen_for_hyphen_org.Output.Ok.Body) {
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/machine-sizes/get(actions/get-hosted-runners-machine-specs-for-org)/responses/200`.
+            ///
+            /// HTTP response code: `200 ok`.
+            case ok(Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_machine_hyphen_specs_hyphen_for_hyphen_org.Output.Ok)
+            /// The associated value of the enum case if `self` is `.ok`.
+            ///
+            /// - Throws: An error if `self` is not `.ok`.
+            /// - SeeAlso: `.ok`.
+            public var ok: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_machine_hyphen_specs_hyphen_for_hyphen_org.Output.Ok {
+                get throws {
+                    switch self {
+                    case let .ok(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "ok",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
+    /// Get platforms for GitHub-hosted runners in an organization
+    ///
+    /// Get the list of platforms available for GitHub-hosted runners for an organization.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/actions/hosted-runners/platforms`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/platforms/get(actions/get-hosted-runners-platforms-for-org)`.
+    public enum actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_platforms_hyphen_for_hyphen_org {
+        public static let id: Swift.String = "actions/get-hosted-runners-platforms-for-org"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/platforms/GET/path`.
+            public struct Path: Sendable, Hashable {
+                /// The organization name. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/platforms/GET/path/org`.
+                public var org: Components.Parameters.org
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - org: The organization name. The name is not case sensitive.
+                public init(org: Components.Parameters.org) {
+                    self.org = org
+                }
+            }
+            public var path: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_platforms_hyphen_for_hyphen_org.Input.Path
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/platforms/GET/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_platforms_hyphen_for_hyphen_org.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_platforms_hyphen_for_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_platforms_hyphen_for_hyphen_org.Input.Headers
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - headers:
+            public init(
+                path: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_platforms_hyphen_for_hyphen_org.Input.Path,
+                headers: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_platforms_hyphen_for_hyphen_org.Input.Headers = .init()
+            ) {
+                self.path = path
+                self.headers = headers
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Ok: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/platforms/GET/responses/200/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/platforms/GET/responses/200/content/json`.
+                    public struct jsonPayload: Codable, Hashable, Sendable {
+                        /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/platforms/GET/responses/200/content/json/total_count`.
+                        public var total_count: Swift.Int
+                        /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/platforms/GET/responses/200/content/json/platforms`.
+                        public var platforms: [Swift.String]
+                        /// Creates a new `jsonPayload`.
+                        ///
+                        /// - Parameters:
+                        ///   - total_count:
+                        ///   - platforms:
+                        public init(
+                            total_count: Swift.Int,
+                            platforms: [Swift.String]
+                        ) {
+                            self.total_count = total_count
+                            self.platforms = platforms
+                        }
+                        public enum CodingKeys: String, CodingKey {
+                            case total_count
+                            case platforms
+                        }
+                    }
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/platforms/GET/responses/200/content/application\/json`.
+                    case json(Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_platforms_hyphen_for_hyphen_org.Output.Ok.Body.jsonPayload)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_platforms_hyphen_for_hyphen_org.Output.Ok.Body.jsonPayload {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_platforms_hyphen_for_hyphen_org.Output.Ok.Body
+                /// Creates a new `Ok`.
+                ///
+                /// - Parameters:
+                ///   - body: Received HTTP response body
+                public init(body: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_platforms_hyphen_for_hyphen_org.Output.Ok.Body) {
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/platforms/get(actions/get-hosted-runners-platforms-for-org)/responses/200`.
+            ///
+            /// HTTP response code: `200 ok`.
+            case ok(Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_platforms_hyphen_for_hyphen_org.Output.Ok)
+            /// The associated value of the enum case if `self` is `.ok`.
+            ///
+            /// - Throws: An error if `self` is not `.ok`.
+            /// - SeeAlso: `.ok`.
+            public var ok: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_platforms_hyphen_for_hyphen_org.Output.Ok {
+                get throws {
+                    switch self {
+                    case let .ok(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "ok",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
+    /// Get a GitHub-hosted runner for an organization
+    ///
+    /// Gets a GitHub-hosted runner configured in an organization.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `manage_runners:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/actions/hosted-runners/{hosted_runner_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/{hosted_runner_id}/get(actions/get-hosted-runner-for-org)`.
+    public enum actions_sol_get_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org {
+        public static let id: Swift.String = "actions/get-hosted-runner-for-org"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/{hosted_runner_id}/GET/path`.
+            public struct Path: Sendable, Hashable {
+                /// The organization name. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/{hosted_runner_id}/GET/path/org`.
+                public var org: Components.Parameters.org
+                /// Unique identifier of the GitHub-hosted runner.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/{hosted_runner_id}/GET/path/hosted_runner_id`.
+                public var hosted_runner_id: Components.Parameters.hosted_hyphen_runner_hyphen_id
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - org: The organization name. The name is not case sensitive.
+                ///   - hosted_runner_id: Unique identifier of the GitHub-hosted runner.
+                public init(
+                    org: Components.Parameters.org,
+                    hosted_runner_id: Components.Parameters.hosted_hyphen_runner_hyphen_id
+                ) {
+                    self.org = org
+                    self.hosted_runner_id = hosted_runner_id
+                }
+            }
+            public var path: Operations.actions_sol_get_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input.Path
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/{hosted_runner_id}/GET/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.actions_sol_get_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.actions_sol_get_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.actions_sol_get_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input.Headers
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - headers:
+            public init(
+                path: Operations.actions_sol_get_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input.Path,
+                headers: Operations.actions_sol_get_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input.Headers = .init()
+            ) {
+                self.path = path
+                self.headers = headers
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Ok: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/{hosted_runner_id}/GET/responses/200/headers`.
+                public struct Headers: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/{hosted_runner_id}/GET/responses/200/headers/Link`.
+                    public var Link: Components.Headers.link?
+                    /// Creates a new `Headers`.
+                    ///
+                    /// - Parameters:
+                    ///   - Link:
+                    public init(Link: Components.Headers.link? = nil) {
+                        self.Link = Link
+                    }
+                }
+                /// Received HTTP response headers
+                public var headers: Operations.actions_sol_get_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Output.Ok.Headers
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/{hosted_runner_id}/GET/responses/200/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/{hosted_runner_id}/GET/responses/200/content/application\/json`.
+                    case json(Components.Schemas.actions_hyphen_hosted_hyphen_runner)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Components.Schemas.actions_hyphen_hosted_hyphen_runner {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.actions_sol_get_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Output.Ok.Body
+                /// Creates a new `Ok`.
+                ///
+                /// - Parameters:
+                ///   - headers: Received HTTP response headers
+                ///   - body: Received HTTP response body
+                public init(
+                    headers: Operations.actions_sol_get_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Output.Ok.Headers = .init(),
+                    body: Operations.actions_sol_get_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Output.Ok.Body
+                ) {
+                    self.headers = headers
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/{hosted_runner_id}/get(actions/get-hosted-runner-for-org)/responses/200`.
+            ///
+            /// HTTP response code: `200 ok`.
+            case ok(Operations.actions_sol_get_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Output.Ok)
+            /// The associated value of the enum case if `self` is `.ok`.
+            ///
+            /// - Throws: An error if `self` is not `.ok`.
+            /// - SeeAlso: `.ok`.
+            public var ok: Operations.actions_sol_get_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Output.Ok {
+                get throws {
+                    switch self {
+                    case let .ok(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "ok",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
+    /// Update a GitHub-hosted runner for an organization
+    ///
+    /// Updates a GitHub-hosted runner for an organization.
+    /// OAuth app tokens and personal access tokens (classic) need the `manage_runners:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `PATCH /orgs/{org}/actions/hosted-runners/{hosted_runner_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/{hosted_runner_id}/patch(actions/update-hosted-runner-for-org)`.
+    public enum actions_sol_update_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org {
+        public static let id: Swift.String = "actions/update-hosted-runner-for-org"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/{hosted_runner_id}/PATCH/path`.
+            public struct Path: Sendable, Hashable {
+                /// The organization name. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/{hosted_runner_id}/PATCH/path/org`.
+                public var org: Components.Parameters.org
+                /// Unique identifier of the GitHub-hosted runner.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/{hosted_runner_id}/PATCH/path/hosted_runner_id`.
+                public var hosted_runner_id: Components.Parameters.hosted_hyphen_runner_hyphen_id
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - org: The organization name. The name is not case sensitive.
+                ///   - hosted_runner_id: Unique identifier of the GitHub-hosted runner.
+                public init(
+                    org: Components.Parameters.org,
+                    hosted_runner_id: Components.Parameters.hosted_hyphen_runner_hyphen_id
+                ) {
+                    self.org = org
+                    self.hosted_runner_id = hosted_runner_id
+                }
+            }
+            public var path: Operations.actions_sol_update_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input.Path
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/{hosted_runner_id}/PATCH/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.actions_sol_update_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.actions_sol_update_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.actions_sol_update_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input.Headers
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/{hosted_runner_id}/PATCH/requestBody`.
+            @frozen public enum Body: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/{hosted_runner_id}/PATCH/requestBody/json`.
+                public struct jsonPayload: Codable, Hashable, Sendable {
+                    /// Name of the runner. Must be between 1 and 64 characters and may only contain upper and lowercase letters a-z, numbers 0-9, '.', '-', and '_'.
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/{hosted_runner_id}/PATCH/requestBody/json/name`.
+                    public var name: Swift.String?
+                    /// The existing runner group to add this runner to.
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/{hosted_runner_id}/PATCH/requestBody/json/runner_group_id`.
+                    public var runner_group_id: Swift.Int?
+                    /// The maximum amount of runners to scale up to. Runners will not auto-scale above this number. Use this setting to limit your cost.
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/{hosted_runner_id}/PATCH/requestBody/json/maximum_runners`.
+                    public var maximum_runners: Swift.Int?
+                    /// Whether this runner should be updated with a static public IP. Note limit on account. To list limits on account, use `GET actions/hosted-runners/limits`
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/{hosted_runner_id}/PATCH/requestBody/json/enable_static_ip`.
+                    public var enable_static_ip: Swift.Bool?
+                    /// Creates a new `jsonPayload`.
+                    ///
+                    /// - Parameters:
+                    ///   - name: Name of the runner. Must be between 1 and 64 characters and may only contain upper and lowercase letters a-z, numbers 0-9, '.', '-', and '_'.
+                    ///   - runner_group_id: The existing runner group to add this runner to.
+                    ///   - maximum_runners: The maximum amount of runners to scale up to. Runners will not auto-scale above this number. Use this setting to limit your cost.
+                    ///   - enable_static_ip: Whether this runner should be updated with a static public IP. Note limit on account. To list limits on account, use `GET actions/hosted-runners/limits`
+                    public init(
+                        name: Swift.String? = nil,
+                        runner_group_id: Swift.Int? = nil,
+                        maximum_runners: Swift.Int? = nil,
+                        enable_static_ip: Swift.Bool? = nil
+                    ) {
+                        self.name = name
+                        self.runner_group_id = runner_group_id
+                        self.maximum_runners = maximum_runners
+                        self.enable_static_ip = enable_static_ip
+                    }
+                    public enum CodingKeys: String, CodingKey {
+                        case name
+                        case runner_group_id
+                        case maximum_runners
+                        case enable_static_ip
+                    }
+                }
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/{hosted_runner_id}/PATCH/requestBody/content/application\/json`.
+                case json(Operations.actions_sol_update_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input.Body.jsonPayload)
+            }
+            public var body: Operations.actions_sol_update_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input.Body
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - headers:
+            ///   - body:
+            public init(
+                path: Operations.actions_sol_update_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input.Path,
+                headers: Operations.actions_sol_update_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input.Headers = .init(),
+                body: Operations.actions_sol_update_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input.Body
+            ) {
+                self.path = path
+                self.headers = headers
+                self.body = body
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Ok: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/{hosted_runner_id}/PATCH/responses/200/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/{hosted_runner_id}/PATCH/responses/200/content/application\/json`.
+                    case json(Components.Schemas.actions_hyphen_hosted_hyphen_runner)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Components.Schemas.actions_hyphen_hosted_hyphen_runner {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.actions_sol_update_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Output.Ok.Body
+                /// Creates a new `Ok`.
+                ///
+                /// - Parameters:
+                ///   - body: Received HTTP response body
+                public init(body: Operations.actions_sol_update_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Output.Ok.Body) {
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/{hosted_runner_id}/patch(actions/update-hosted-runner-for-org)/responses/200`.
+            ///
+            /// HTTP response code: `200 ok`.
+            case ok(Operations.actions_sol_update_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Output.Ok)
+            /// The associated value of the enum case if `self` is `.ok`.
+            ///
+            /// - Throws: An error if `self` is not `.ok`.
+            /// - SeeAlso: `.ok`.
+            public var ok: Operations.actions_sol_update_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Output.Ok {
+                get throws {
+                    switch self {
+                    case let .ok(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "ok",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
+    /// Delete a GitHub-hosted runner for an organization
+    ///
+    /// Deletes a GitHub-hosted runner for an organization.
+    ///
+    /// - Remark: HTTP `DELETE /orgs/{org}/actions/hosted-runners/{hosted_runner_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/{hosted_runner_id}/delete(actions/delete-hosted-runner-for-org)`.
+    public enum actions_sol_delete_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org {
+        public static let id: Swift.String = "actions/delete-hosted-runner-for-org"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/{hosted_runner_id}/DELETE/path`.
+            public struct Path: Sendable, Hashable {
+                /// The organization name. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/{hosted_runner_id}/DELETE/path/org`.
+                public var org: Components.Parameters.org
+                /// Unique identifier of the GitHub-hosted runner.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/{hosted_runner_id}/DELETE/path/hosted_runner_id`.
+                public var hosted_runner_id: Components.Parameters.hosted_hyphen_runner_hyphen_id
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - org: The organization name. The name is not case sensitive.
+                ///   - hosted_runner_id: Unique identifier of the GitHub-hosted runner.
+                public init(
+                    org: Components.Parameters.org,
+                    hosted_runner_id: Components.Parameters.hosted_hyphen_runner_hyphen_id
+                ) {
+                    self.org = org
+                    self.hosted_runner_id = hosted_runner_id
+                }
+            }
+            public var path: Operations.actions_sol_delete_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input.Path
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/{hosted_runner_id}/DELETE/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.actions_sol_delete_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.actions_sol_delete_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.actions_sol_delete_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input.Headers
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - headers:
+            public init(
+                path: Operations.actions_sol_delete_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input.Path,
+                headers: Operations.actions_sol_delete_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input.Headers = .init()
+            ) {
+                self.path = path
+                self.headers = headers
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Accepted: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/{hosted_runner_id}/DELETE/responses/202/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/{hosted_runner_id}/DELETE/responses/202/content/application\/json`.
+                    case json(Components.Schemas.actions_hyphen_hosted_hyphen_runner)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Components.Schemas.actions_hyphen_hosted_hyphen_runner {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.actions_sol_delete_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Output.Accepted.Body
+                /// Creates a new `Accepted`.
+                ///
+                /// - Parameters:
+                ///   - body: Received HTTP response body
+                public init(body: Operations.actions_sol_delete_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Output.Accepted.Body) {
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/{hosted_runner_id}/delete(actions/delete-hosted-runner-for-org)/responses/202`.
+            ///
+            /// HTTP response code: `202 accepted`.
+            case accepted(Operations.actions_sol_delete_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Output.Accepted)
+            /// The associated value of the enum case if `self` is `.accepted`.
+            ///
+            /// - Throws: An error if `self` is not `.accepted`.
+            /// - SeeAlso: `.accepted`.
+            public var accepted: Operations.actions_sol_delete_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Output.Accepted {
+                get throws {
+                    switch self {
+                    case let .accepted(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "accepted",
                             response: self
                         )
                     }
@@ -11772,6 +14259,10 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/POST/requestBody/json/selected_workflows`.
                     public var selected_workflows: [Swift.String]?
+                    /// The identifier of a hosted compute network configuration.
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/POST/requestBody/json/network_configuration_id`.
+                    public var network_configuration_id: Swift.String?
                     /// Creates a new `jsonPayload`.
                     ///
                     /// - Parameters:
@@ -11782,6 +14273,7 @@ public enum Operations {
                     ///   - allows_public_repositories: Whether the runner group can be used by `public` repositories.
                     ///   - restricted_to_workflows: If `true`, the runner group will be restricted to running only the workflows specified in the `selected_workflows` array.
                     ///   - selected_workflows: List of workflows the runner group should be allowed to run. This setting will be ignored unless `restricted_to_workflows` is set to `true`.
+                    ///   - network_configuration_id: The identifier of a hosted compute network configuration.
                     public init(
                         name: Swift.String,
                         visibility: Operations.actions_sol_create_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Input.Body.jsonPayload.visibilityPayload? = nil,
@@ -11789,7 +14281,8 @@ public enum Operations {
                         runners: [Swift.Int]? = nil,
                         allows_public_repositories: Swift.Bool? = nil,
                         restricted_to_workflows: Swift.Bool? = nil,
-                        selected_workflows: [Swift.String]? = nil
+                        selected_workflows: [Swift.String]? = nil,
+                        network_configuration_id: Swift.String? = nil
                     ) {
                         self.name = name
                         self.visibility = visibility
@@ -11798,6 +14291,7 @@ public enum Operations {
                         self.allows_public_repositories = allows_public_repositories
                         self.restricted_to_workflows = restricted_to_workflows
                         self.selected_workflows = selected_workflows
+                        self.network_configuration_id = network_configuration_id
                     }
                     public enum CodingKeys: String, CodingKey {
                         case name
@@ -11807,6 +14301,7 @@ public enum Operations {
                         case allows_public_repositories
                         case restricted_to_workflows
                         case selected_workflows
+                        case network_configuration_id
                     }
                 }
                 /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/POST/requestBody/content/application\/json`.
@@ -12134,6 +14629,10 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/PATCH/requestBody/json/selected_workflows`.
                     public var selected_workflows: [Swift.String]?
+                    /// The identifier of a hosted compute network configuration.
+                    ///
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/PATCH/requestBody/json/network_configuration_id`.
+                    public var network_configuration_id: Swift.String?
                     /// Creates a new `jsonPayload`.
                     ///
                     /// - Parameters:
@@ -12142,18 +14641,21 @@ public enum Operations {
                     ///   - allows_public_repositories: Whether the runner group can be used by `public` repositories.
                     ///   - restricted_to_workflows: If `true`, the runner group will be restricted to running only the workflows specified in the `selected_workflows` array.
                     ///   - selected_workflows: List of workflows the runner group should be allowed to run. This setting will be ignored unless `restricted_to_workflows` is set to `true`.
+                    ///   - network_configuration_id: The identifier of a hosted compute network configuration.
                     public init(
                         name: Swift.String,
                         visibility: Operations.actions_sol_update_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_for_hyphen_org.Input.Body.jsonPayload.visibilityPayload? = nil,
                         allows_public_repositories: Swift.Bool? = nil,
                         restricted_to_workflows: Swift.Bool? = nil,
-                        selected_workflows: [Swift.String]? = nil
+                        selected_workflows: [Swift.String]? = nil,
+                        network_configuration_id: Swift.String? = nil
                     ) {
                         self.name = name
                         self.visibility = visibility
                         self.allows_public_repositories = allows_public_repositories
                         self.restricted_to_workflows = restricted_to_workflows
                         self.selected_workflows = selected_workflows
+                        self.network_configuration_id = network_configuration_id
                     }
                     public enum CodingKeys: String, CodingKey {
                         case name
@@ -12161,6 +14663,7 @@ public enum Operations {
                         case allows_public_repositories
                         case restricted_to_workflows
                         case selected_workflows
+                        case network_configuration_id
                     }
                 }
                 /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/PATCH/requestBody/content/application\/json`.
@@ -12341,6 +14844,218 @@ public enum Operations {
             ///
             /// A response with a code that is not documented in the OpenAPI document.
             case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+    }
+    /// List GitHub-hosted runners in a group for an organization
+    ///
+    /// Lists the GitHub-hosted runners in an organization group.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/actions/runner-groups/{runner_group_id}/hosted-runners`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/hosted-runners/get(actions/list-github-hosted-runners-in-group-for-org)`.
+    public enum actions_sol_list_hyphen_github_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org {
+        public static let id: Swift.String = "actions/list-github-hosted-runners-in-group-for-org"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/hosted-runners/GET/path`.
+            public struct Path: Sendable, Hashable {
+                /// The organization name. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/hosted-runners/GET/path/org`.
+                public var org: Components.Parameters.org
+                /// Unique identifier of the self-hosted runner group.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/hosted-runners/GET/path/runner_group_id`.
+                public var runner_group_id: Components.Parameters.runner_hyphen_group_hyphen_id
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - org: The organization name. The name is not case sensitive.
+                ///   - runner_group_id: Unique identifier of the self-hosted runner group.
+                public init(
+                    org: Components.Parameters.org,
+                    runner_group_id: Components.Parameters.runner_hyphen_group_hyphen_id
+                ) {
+                    self.org = org
+                    self.runner_group_id = runner_group_id
+                }
+            }
+            public var path: Operations.actions_sol_list_hyphen_github_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Input.Path
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/hosted-runners/GET/query`.
+            public struct Query: Sendable, Hashable {
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/hosted-runners/GET/query/per_page`.
+                public var per_page: Components.Parameters.per_hyphen_page?
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/hosted-runners/GET/query/page`.
+                public var page: Components.Parameters.page?
+                /// Creates a new `Query`.
+                ///
+                /// - Parameters:
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                public init(
+                    per_page: Components.Parameters.per_hyphen_page? = nil,
+                    page: Components.Parameters.page? = nil
+                ) {
+                    self.per_page = per_page
+                    self.page = page
+                }
+            }
+            public var query: Operations.actions_sol_list_hyphen_github_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Input.Query
+            /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/hosted-runners/GET/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.actions_sol_list_hyphen_github_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.actions_sol_list_hyphen_github_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.actions_sol_list_hyphen_github_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Input.Headers
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - query:
+            ///   - headers:
+            public init(
+                path: Operations.actions_sol_list_hyphen_github_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Input.Path,
+                query: Operations.actions_sol_list_hyphen_github_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Input.Query = .init(),
+                headers: Operations.actions_sol_list_hyphen_github_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Input.Headers = .init()
+            ) {
+                self.path = path
+                self.query = query
+                self.headers = headers
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Ok: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/hosted-runners/GET/responses/200/headers`.
+                public struct Headers: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/hosted-runners/GET/responses/200/headers/Link`.
+                    public var Link: Components.Headers.link?
+                    /// Creates a new `Headers`.
+                    ///
+                    /// - Parameters:
+                    ///   - Link:
+                    public init(Link: Components.Headers.link? = nil) {
+                        self.Link = Link
+                    }
+                }
+                /// Received HTTP response headers
+                public var headers: Operations.actions_sol_list_hyphen_github_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Output.Ok.Headers
+                /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/hosted-runners/GET/responses/200/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/hosted-runners/GET/responses/200/content/json`.
+                    public struct jsonPayload: Codable, Hashable, Sendable {
+                        /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/hosted-runners/GET/responses/200/content/json/total_count`.
+                        public var total_count: Swift.Double
+                        /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/hosted-runners/GET/responses/200/content/json/runners`.
+                        public var runners: [Components.Schemas.actions_hyphen_hosted_hyphen_runner]
+                        /// Creates a new `jsonPayload`.
+                        ///
+                        /// - Parameters:
+                        ///   - total_count:
+                        ///   - runners:
+                        public init(
+                            total_count: Swift.Double,
+                            runners: [Components.Schemas.actions_hyphen_hosted_hyphen_runner]
+                        ) {
+                            self.total_count = total_count
+                            self.runners = runners
+                        }
+                        public enum CodingKeys: String, CodingKey {
+                            case total_count
+                            case runners
+                        }
+                    }
+                    /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/hosted-runners/GET/responses/200/content/application\/json`.
+                    case json(Operations.actions_sol_list_hyphen_github_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Output.Ok.Body.jsonPayload)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Operations.actions_sol_list_hyphen_github_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Output.Ok.Body.jsonPayload {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.actions_sol_list_hyphen_github_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Output.Ok.Body
+                /// Creates a new `Ok`.
+                ///
+                /// - Parameters:
+                ///   - headers: Received HTTP response headers
+                ///   - body: Received HTTP response body
+                public init(
+                    headers: Operations.actions_sol_list_hyphen_github_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Output.Ok.Headers = .init(),
+                    body: Operations.actions_sol_list_hyphen_github_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Output.Ok.Body
+                ) {
+                    self.headers = headers
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/hosted-runners/get(actions/list-github-hosted-runners-in-group-for-org)/responses/200`.
+            ///
+            /// HTTP response code: `200 ok`.
+            case ok(Operations.actions_sol_list_hyphen_github_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Output.Ok)
+            /// The associated value of the enum case if `self` is `.ok`.
+            ///
+            /// - Throws: An error if `self` is not `.ok`.
+            /// - SeeAlso: `.ok`.
+            public var ok: Operations.actions_sol_list_hyphen_github_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Output.Ok {
+                get throws {
+                    switch self {
+                    case let .ok(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "ok",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
         }
     }
     /// List repository access to a self-hosted runner group in an organization
@@ -13812,6 +16527,29 @@ public enum Operations {
                     default:
                         try throwUnexpectedResponseStatus(
                             expectedStatus: "unprocessableContent",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Conflict
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/runners/generate-jitconfig/post(actions/generate-runner-jitconfig-for-org)/responses/409`.
+            ///
+            /// HTTP response code: `409 conflict`.
+            case conflict(Components.Responses.conflict)
+            /// The associated value of the enum case if `self` is `.conflict`.
+            ///
+            /// - Throws: An error if `self` is not `.conflict`.
+            /// - SeeAlso: `.conflict`.
+            public var conflict: Components.Responses.conflict {
+                get throws {
+                    switch self {
+                    case let .conflict(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "conflict",
                             response: self
                         )
                     }
@@ -15735,11 +18473,11 @@ public enum Operations {
                     /// Value for your secret, encrypted with [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages) using the public key retrieved from the [Get an organization public key](https://docs.github.com/rest/actions/secrets#get-an-organization-public-key) endpoint.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/actions/secrets/{secret_name}/PUT/requestBody/json/encrypted_value`.
-                    public var encrypted_value: Swift.String?
+                    public var encrypted_value: Swift.String
                     /// ID of the key you used to encrypt the secret.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/actions/secrets/{secret_name}/PUT/requestBody/json/key_id`.
-                    public var key_id: Swift.String?
+                    public var key_id: Swift.String
                     /// Which type of organization repositories have access to the organization secret. `selected` means only the repositories specified by `selected_repository_ids` can access the secret.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/actions/secrets/{secret_name}/PUT/requestBody/json/visibility`.
@@ -15764,8 +18502,8 @@ public enum Operations {
                     ///   - visibility: Which type of organization repositories have access to the organization secret. `selected` means only the repositories specified by `selected_repository_ids` can access the secret.
                     ///   - selected_repository_ids: An array of repository ids that can access the organization secret. You can only provide a list of repository ids when the `visibility` is set to `selected`. You can manage the list of selected repositories using the [List selected repositories for an organization secret](https://docs.github.com/rest/actions/secrets#list-selected-repositories-for-an-organization-secret), [Set selected repositories for an organization secret](https://docs.github.com/rest/actions/secrets#set-selected-repositories-for-an-organization-secret), and [Remove selected repository from an organization secret](https://docs.github.com/rest/actions/secrets#remove-selected-repository-from-an-organization-secret) endpoints.
                     public init(
-                        encrypted_value: Swift.String? = nil,
-                        key_id: Swift.String? = nil,
+                        encrypted_value: Swift.String,
+                        key_id: Swift.String,
                         visibility: Operations.actions_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret.Input.Body.jsonPayload.visibilityPayload,
                         selected_repository_ids: [Swift.Int]? = nil
                     ) {
@@ -21998,6 +24736,29 @@ public enum Operations {
                     }
                 }
             }
+            /// Conflict
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runners/generate-jitconfig/post(actions/generate-runner-jitconfig-for-repo)/responses/409`.
+            ///
+            /// HTTP response code: `409 conflict`.
+            case conflict(Components.Responses.conflict)
+            /// The associated value of the enum case if `self` is `.conflict`.
+            ///
+            /// - Throws: An error if `self` is not `.conflict`.
+            /// - SeeAlso: `.conflict`.
+            public var conflict: Components.Responses.conflict {
+                get throws {
+                    switch self {
+                    case let .conflict(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "conflict",
+                            response: self
+                        )
+                    }
+                }
+            }
             /// Undocumented response.
             ///
             /// A response with a code that is not documented in the OpenAPI document.
@@ -26810,6 +29571,9 @@ public enum Operations {
     }
     /// Get workflow run usage
     ///
+    /// > [!WARNING]  
+    /// > This endpoint is in the process of closing down. Refer to "[Actions Get workflow usage and Get workflow run usage endpoints closing down](https://github.blog/changelog/2025-02-02-actions-get-workflow-usage-and-get-workflow-run-usage-endpoints-closing-down/)" for more information.
+    ///
     /// Gets the number of billable minutes and total run time for a specific workflow run. Billable minutes only apply to workflows in private repositories that use GitHub-hosted runners. Usage is listed for each GitHub-hosted runner operating system in milliseconds. Any job re-runs are also included in the usage. The usage does not include the multiplier for macOS and Windows runners and is not rounded up to the nearest whole minute. For more information, see "[Managing billing for GitHub Actions](https://docs.github.com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-actions)".
     ///
     /// Anyone with read access to the repository can use this endpoint.
@@ -27537,19 +30301,19 @@ public enum Operations {
                     /// Value for your secret, encrypted with [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages) using the public key retrieved from the [Get a repository public key](https://docs.github.com/rest/actions/secrets#get-a-repository-public-key) endpoint.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/actions/secrets/{secret_name}/PUT/requestBody/json/encrypted_value`.
-                    public var encrypted_value: Swift.String?
+                    public var encrypted_value: Swift.String
                     /// ID of the key you used to encrypt the secret.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/actions/secrets/{secret_name}/PUT/requestBody/json/key_id`.
-                    public var key_id: Swift.String?
+                    public var key_id: Swift.String
                     /// Creates a new `jsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - encrypted_value: Value for your secret, encrypted with [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages) using the public key retrieved from the [Get a repository public key](https://docs.github.com/rest/actions/secrets#get-a-repository-public-key) endpoint.
                     ///   - key_id: ID of the key you used to encrypt the secret.
                     public init(
-                        encrypted_value: Swift.String? = nil,
-                        key_id: Swift.String? = nil
+                        encrypted_value: Swift.String,
+                        key_id: Swift.String
                     ) {
                         self.encrypted_value = encrypted_value
                         self.key_id = key_id
@@ -29683,6 +32447,9 @@ public enum Operations {
         }
     }
     /// Get workflow usage
+    ///
+    /// > [!WARNING]  
+    /// > This endpoint is in the process of closing down. Refer to "[Actions Get workflow usage and Get workflow run usage endpoints closing down](https://github.blog/changelog/2025-02-02-actions-get-workflow-usage-and-get-workflow-run-usage-endpoints-closing-down/)" for more information.
     ///
     /// Gets the number of billable minutes used by a specific workflow during the current billing cycle. Billable minutes only apply to workflows in private repositories that use GitHub-hosted runners. Usage is listed for each GitHub-hosted runner operating system in milliseconds. Any job re-runs are also included in the usage. The usage does not include the multiplier for macOS and Windows runners and is not rounded up to the nearest whole minute. For more information, see "[Managing billing for GitHub Actions](https://docs.github.com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-actions)".
     ///

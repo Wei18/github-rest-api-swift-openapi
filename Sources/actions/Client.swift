@@ -202,6 +202,703 @@ public struct Client: APIProtocol {
             }
         )
     }
+    /// List GitHub-hosted runners for an organization
+    ///
+    /// Lists all GitHub-hosted runners configured in an organization.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `manage_runner:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/actions/hosted-runners`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/get(actions/list-hosted-runners-for-org)`.
+    public func actions_sol_list_hyphen_hosted_hyphen_runners_hyphen_for_hyphen_org(_ input: Operations.actions_sol_list_hyphen_hosted_hyphen_runners_hyphen_for_hyphen_org.Input) async throws -> Operations.actions_sol_list_hyphen_hosted_hyphen_runners_hyphen_for_hyphen_org.Output {
+        try await client.send(
+            input: input,
+            forOperation: Operations.actions_sol_list_hyphen_hosted_hyphen_runners_hyphen_for_hyphen_org.id,
+            serializer: { input in
+                let path = try converter.renderedPath(
+                    template: "/orgs/{}/actions/hosted-runners",
+                    parameters: [
+                        input.path.org
+                    ]
+                )
+                var request: HTTPTypes.HTTPRequest = .init(
+                    soar_path: path,
+                    method: .get
+                )
+                suppressMutabilityWarning(&request)
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "per_page",
+                    value: input.query.per_page
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "page",
+                    value: input.query.page
+                )
+                converter.setAcceptHeader(
+                    in: &request.headerFields,
+                    contentTypes: input.headers.accept
+                )
+                return (request, nil)
+            },
+            deserializer: { response, responseBody in
+                switch response.status.code {
+                case 200:
+                    let headers: Operations.actions_sol_list_hyphen_hosted_hyphen_runners_hyphen_for_hyphen_org.Output.Ok.Headers = .init(Link: try converter.getOptionalHeaderFieldAsURI(
+                        in: response.headerFields,
+                        name: "Link",
+                        as: Components.Headers.link.self
+                    ))
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Operations.actions_sol_list_hyphen_hosted_hyphen_runners_hyphen_for_hyphen_org.Output.Ok.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Operations.actions_sol_list_hyphen_hosted_hyphen_runners_hyphen_for_hyphen_org.Output.Ok.Body.jsonPayload.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .ok(.init(
+                        headers: headers,
+                        body: body
+                    ))
+                default:
+                    return .undocumented(
+                        statusCode: response.status.code,
+                        .init(
+                            headerFields: response.headerFields,
+                            body: responseBody
+                        )
+                    )
+                }
+            }
+        )
+    }
+    /// Create a GitHub-hosted runner for an organization
+    ///
+    /// Creates a GitHub-hosted runner for an organization.
+    /// OAuth tokens and personal access tokens (classic) need the `manage_runners:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `POST /orgs/{org}/actions/hosted-runners`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/post(actions/create-hosted-runner-for-org)`.
+    public func actions_sol_create_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org(_ input: Operations.actions_sol_create_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input) async throws -> Operations.actions_sol_create_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Output {
+        try await client.send(
+            input: input,
+            forOperation: Operations.actions_sol_create_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.id,
+            serializer: { input in
+                let path = try converter.renderedPath(
+                    template: "/orgs/{}/actions/hosted-runners",
+                    parameters: [
+                        input.path.org
+                    ]
+                )
+                var request: HTTPTypes.HTTPRequest = .init(
+                    soar_path: path,
+                    method: .post
+                )
+                suppressMutabilityWarning(&request)
+                converter.setAcceptHeader(
+                    in: &request.headerFields,
+                    contentTypes: input.headers.accept
+                )
+                let body: OpenAPIRuntime.HTTPBody?
+                switch input.body {
+                case let .json(value):
+                    body = try converter.setRequiredRequestBodyAsJSON(
+                        value,
+                        headerFields: &request.headerFields,
+                        contentType: "application/json; charset=utf-8"
+                    )
+                }
+                return (request, body)
+            },
+            deserializer: { response, responseBody in
+                switch response.status.code {
+                case 201:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Operations.actions_sol_create_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Output.Created.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Schemas.actions_hyphen_hosted_hyphen_runner.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .created(.init(body: body))
+                default:
+                    return .undocumented(
+                        statusCode: response.status.code,
+                        .init(
+                            headerFields: response.headerFields,
+                            body: responseBody
+                        )
+                    )
+                }
+            }
+        )
+    }
+    /// Get GitHub-owned images for GitHub-hosted runners in an organization
+    ///
+    /// Get the list of GitHub-owned images available for GitHub-hosted runners for an organization.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/actions/hosted-runners/images/github-owned`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/images/github-owned/get(actions/get-hosted-runners-github-owned-images-for-org)`.
+    public func actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_github_hyphen_owned_hyphen_images_hyphen_for_hyphen_org(_ input: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_github_hyphen_owned_hyphen_images_hyphen_for_hyphen_org.Input) async throws -> Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_github_hyphen_owned_hyphen_images_hyphen_for_hyphen_org.Output {
+        try await client.send(
+            input: input,
+            forOperation: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_github_hyphen_owned_hyphen_images_hyphen_for_hyphen_org.id,
+            serializer: { input in
+                let path = try converter.renderedPath(
+                    template: "/orgs/{}/actions/hosted-runners/images/github-owned",
+                    parameters: [
+                        input.path.org
+                    ]
+                )
+                var request: HTTPTypes.HTTPRequest = .init(
+                    soar_path: path,
+                    method: .get
+                )
+                suppressMutabilityWarning(&request)
+                converter.setAcceptHeader(
+                    in: &request.headerFields,
+                    contentTypes: input.headers.accept
+                )
+                return (request, nil)
+            },
+            deserializer: { response, responseBody in
+                switch response.status.code {
+                case 200:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_github_hyphen_owned_hyphen_images_hyphen_for_hyphen_org.Output.Ok.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_github_hyphen_owned_hyphen_images_hyphen_for_hyphen_org.Output.Ok.Body.jsonPayload.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .ok(.init(body: body))
+                default:
+                    return .undocumented(
+                        statusCode: response.status.code,
+                        .init(
+                            headerFields: response.headerFields,
+                            body: responseBody
+                        )
+                    )
+                }
+            }
+        )
+    }
+    /// Get partner images for GitHub-hosted runners in an organization
+    ///
+    /// Get the list of partner images available for GitHub-hosted runners for an organization.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/actions/hosted-runners/images/partner`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/images/partner/get(actions/get-hosted-runners-partner-images-for-org)`.
+    public func actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_partner_hyphen_images_hyphen_for_hyphen_org(_ input: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_partner_hyphen_images_hyphen_for_hyphen_org.Input) async throws -> Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_partner_hyphen_images_hyphen_for_hyphen_org.Output {
+        try await client.send(
+            input: input,
+            forOperation: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_partner_hyphen_images_hyphen_for_hyphen_org.id,
+            serializer: { input in
+                let path = try converter.renderedPath(
+                    template: "/orgs/{}/actions/hosted-runners/images/partner",
+                    parameters: [
+                        input.path.org
+                    ]
+                )
+                var request: HTTPTypes.HTTPRequest = .init(
+                    soar_path: path,
+                    method: .get
+                )
+                suppressMutabilityWarning(&request)
+                converter.setAcceptHeader(
+                    in: &request.headerFields,
+                    contentTypes: input.headers.accept
+                )
+                return (request, nil)
+            },
+            deserializer: { response, responseBody in
+                switch response.status.code {
+                case 200:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_partner_hyphen_images_hyphen_for_hyphen_org.Output.Ok.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_partner_hyphen_images_hyphen_for_hyphen_org.Output.Ok.Body.jsonPayload.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .ok(.init(body: body))
+                default:
+                    return .undocumented(
+                        statusCode: response.status.code,
+                        .init(
+                            headerFields: response.headerFields,
+                            body: responseBody
+                        )
+                    )
+                }
+            }
+        )
+    }
+    /// Get limits on GitHub-hosted runners for an organization
+    ///
+    /// Get the GitHub-hosted runners limits for an organization.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/actions/hosted-runners/limits`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/limits/get(actions/get-hosted-runners-limits-for-org)`.
+    public func actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_limits_hyphen_for_hyphen_org(_ input: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_limits_hyphen_for_hyphen_org.Input) async throws -> Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_limits_hyphen_for_hyphen_org.Output {
+        try await client.send(
+            input: input,
+            forOperation: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_limits_hyphen_for_hyphen_org.id,
+            serializer: { input in
+                let path = try converter.renderedPath(
+                    template: "/orgs/{}/actions/hosted-runners/limits",
+                    parameters: [
+                        input.path.org
+                    ]
+                )
+                var request: HTTPTypes.HTTPRequest = .init(
+                    soar_path: path,
+                    method: .get
+                )
+                suppressMutabilityWarning(&request)
+                converter.setAcceptHeader(
+                    in: &request.headerFields,
+                    contentTypes: input.headers.accept
+                )
+                return (request, nil)
+            },
+            deserializer: { response, responseBody in
+                switch response.status.code {
+                case 200:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_limits_hyphen_for_hyphen_org.Output.Ok.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Schemas.actions_hyphen_hosted_hyphen_runner_hyphen_limits.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .ok(.init(body: body))
+                default:
+                    return .undocumented(
+                        statusCode: response.status.code,
+                        .init(
+                            headerFields: response.headerFields,
+                            body: responseBody
+                        )
+                    )
+                }
+            }
+        )
+    }
+    /// Get GitHub-hosted runners machine specs for an organization
+    ///
+    /// Get the list of machine specs available for GitHub-hosted runners for an organization.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/actions/hosted-runners/machine-sizes`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/machine-sizes/get(actions/get-hosted-runners-machine-specs-for-org)`.
+    public func actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_machine_hyphen_specs_hyphen_for_hyphen_org(_ input: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_machine_hyphen_specs_hyphen_for_hyphen_org.Input) async throws -> Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_machine_hyphen_specs_hyphen_for_hyphen_org.Output {
+        try await client.send(
+            input: input,
+            forOperation: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_machine_hyphen_specs_hyphen_for_hyphen_org.id,
+            serializer: { input in
+                let path = try converter.renderedPath(
+                    template: "/orgs/{}/actions/hosted-runners/machine-sizes",
+                    parameters: [
+                        input.path.org
+                    ]
+                )
+                var request: HTTPTypes.HTTPRequest = .init(
+                    soar_path: path,
+                    method: .get
+                )
+                suppressMutabilityWarning(&request)
+                converter.setAcceptHeader(
+                    in: &request.headerFields,
+                    contentTypes: input.headers.accept
+                )
+                return (request, nil)
+            },
+            deserializer: { response, responseBody in
+                switch response.status.code {
+                case 200:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_machine_hyphen_specs_hyphen_for_hyphen_org.Output.Ok.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_machine_hyphen_specs_hyphen_for_hyphen_org.Output.Ok.Body.jsonPayload.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .ok(.init(body: body))
+                default:
+                    return .undocumented(
+                        statusCode: response.status.code,
+                        .init(
+                            headerFields: response.headerFields,
+                            body: responseBody
+                        )
+                    )
+                }
+            }
+        )
+    }
+    /// Get platforms for GitHub-hosted runners in an organization
+    ///
+    /// Get the list of platforms available for GitHub-hosted runners for an organization.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/actions/hosted-runners/platforms`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/platforms/get(actions/get-hosted-runners-platforms-for-org)`.
+    public func actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_platforms_hyphen_for_hyphen_org(_ input: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_platforms_hyphen_for_hyphen_org.Input) async throws -> Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_platforms_hyphen_for_hyphen_org.Output {
+        try await client.send(
+            input: input,
+            forOperation: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_platforms_hyphen_for_hyphen_org.id,
+            serializer: { input in
+                let path = try converter.renderedPath(
+                    template: "/orgs/{}/actions/hosted-runners/platforms",
+                    parameters: [
+                        input.path.org
+                    ]
+                )
+                var request: HTTPTypes.HTTPRequest = .init(
+                    soar_path: path,
+                    method: .get
+                )
+                suppressMutabilityWarning(&request)
+                converter.setAcceptHeader(
+                    in: &request.headerFields,
+                    contentTypes: input.headers.accept
+                )
+                return (request, nil)
+            },
+            deserializer: { response, responseBody in
+                switch response.status.code {
+                case 200:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_platforms_hyphen_for_hyphen_org.Output.Ok.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Operations.actions_sol_get_hyphen_hosted_hyphen_runners_hyphen_platforms_hyphen_for_hyphen_org.Output.Ok.Body.jsonPayload.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .ok(.init(body: body))
+                default:
+                    return .undocumented(
+                        statusCode: response.status.code,
+                        .init(
+                            headerFields: response.headerFields,
+                            body: responseBody
+                        )
+                    )
+                }
+            }
+        )
+    }
+    /// Get a GitHub-hosted runner for an organization
+    ///
+    /// Gets a GitHub-hosted runner configured in an organization.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `manage_runners:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/actions/hosted-runners/{hosted_runner_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/{hosted_runner_id}/get(actions/get-hosted-runner-for-org)`.
+    public func actions_sol_get_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org(_ input: Operations.actions_sol_get_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input) async throws -> Operations.actions_sol_get_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Output {
+        try await client.send(
+            input: input,
+            forOperation: Operations.actions_sol_get_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.id,
+            serializer: { input in
+                let path = try converter.renderedPath(
+                    template: "/orgs/{}/actions/hosted-runners/{}",
+                    parameters: [
+                        input.path.org,
+                        input.path.hosted_runner_id
+                    ]
+                )
+                var request: HTTPTypes.HTTPRequest = .init(
+                    soar_path: path,
+                    method: .get
+                )
+                suppressMutabilityWarning(&request)
+                converter.setAcceptHeader(
+                    in: &request.headerFields,
+                    contentTypes: input.headers.accept
+                )
+                return (request, nil)
+            },
+            deserializer: { response, responseBody in
+                switch response.status.code {
+                case 200:
+                    let headers: Operations.actions_sol_get_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Output.Ok.Headers = .init(Link: try converter.getOptionalHeaderFieldAsURI(
+                        in: response.headerFields,
+                        name: "Link",
+                        as: Components.Headers.link.self
+                    ))
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Operations.actions_sol_get_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Output.Ok.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Schemas.actions_hyphen_hosted_hyphen_runner.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .ok(.init(
+                        headers: headers,
+                        body: body
+                    ))
+                default:
+                    return .undocumented(
+                        statusCode: response.status.code,
+                        .init(
+                            headerFields: response.headerFields,
+                            body: responseBody
+                        )
+                    )
+                }
+            }
+        )
+    }
+    /// Update a GitHub-hosted runner for an organization
+    ///
+    /// Updates a GitHub-hosted runner for an organization.
+    /// OAuth app tokens and personal access tokens (classic) need the `manage_runners:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `PATCH /orgs/{org}/actions/hosted-runners/{hosted_runner_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/{hosted_runner_id}/patch(actions/update-hosted-runner-for-org)`.
+    public func actions_sol_update_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org(_ input: Operations.actions_sol_update_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input) async throws -> Operations.actions_sol_update_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Output {
+        try await client.send(
+            input: input,
+            forOperation: Operations.actions_sol_update_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.id,
+            serializer: { input in
+                let path = try converter.renderedPath(
+                    template: "/orgs/{}/actions/hosted-runners/{}",
+                    parameters: [
+                        input.path.org,
+                        input.path.hosted_runner_id
+                    ]
+                )
+                var request: HTTPTypes.HTTPRequest = .init(
+                    soar_path: path,
+                    method: .patch
+                )
+                suppressMutabilityWarning(&request)
+                converter.setAcceptHeader(
+                    in: &request.headerFields,
+                    contentTypes: input.headers.accept
+                )
+                let body: OpenAPIRuntime.HTTPBody?
+                switch input.body {
+                case let .json(value):
+                    body = try converter.setRequiredRequestBodyAsJSON(
+                        value,
+                        headerFields: &request.headerFields,
+                        contentType: "application/json; charset=utf-8"
+                    )
+                }
+                return (request, body)
+            },
+            deserializer: { response, responseBody in
+                switch response.status.code {
+                case 200:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Operations.actions_sol_update_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Output.Ok.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Schemas.actions_hyphen_hosted_hyphen_runner.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .ok(.init(body: body))
+                default:
+                    return .undocumented(
+                        statusCode: response.status.code,
+                        .init(
+                            headerFields: response.headerFields,
+                            body: responseBody
+                        )
+                    )
+                }
+            }
+        )
+    }
+    /// Delete a GitHub-hosted runner for an organization
+    ///
+    /// Deletes a GitHub-hosted runner for an organization.
+    ///
+    /// - Remark: HTTP `DELETE /orgs/{org}/actions/hosted-runners/{hosted_runner_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/hosted-runners/{hosted_runner_id}/delete(actions/delete-hosted-runner-for-org)`.
+    public func actions_sol_delete_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org(_ input: Operations.actions_sol_delete_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Input) async throws -> Operations.actions_sol_delete_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Output {
+        try await client.send(
+            input: input,
+            forOperation: Operations.actions_sol_delete_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.id,
+            serializer: { input in
+                let path = try converter.renderedPath(
+                    template: "/orgs/{}/actions/hosted-runners/{}",
+                    parameters: [
+                        input.path.org,
+                        input.path.hosted_runner_id
+                    ]
+                )
+                var request: HTTPTypes.HTTPRequest = .init(
+                    soar_path: path,
+                    method: .delete
+                )
+                suppressMutabilityWarning(&request)
+                converter.setAcceptHeader(
+                    in: &request.headerFields,
+                    contentTypes: input.headers.accept
+                )
+                return (request, nil)
+            },
+            deserializer: { response, responseBody in
+                switch response.status.code {
+                case 202:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Operations.actions_sol_delete_hyphen_hosted_hyphen_runner_hyphen_for_hyphen_org.Output.Accepted.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Schemas.actions_hyphen_hosted_hyphen_runner.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .accepted(.init(body: body))
+                default:
+                    return .undocumented(
+                        statusCode: response.status.code,
+                        .init(
+                            headerFields: response.headerFields,
+                            body: responseBody
+                        )
+                    )
+                }
+            }
+        )
+    }
     /// Get GitHub Actions permissions for an organization
     ///
     /// Gets the GitHub Actions permissions policy for repositories and allowed actions and reusable workflows in an organization.
@@ -1127,6 +1824,95 @@ public struct Client: APIProtocol {
             }
         )
     }
+    /// List GitHub-hosted runners in a group for an organization
+    ///
+    /// Lists the GitHub-hosted runners in an organization group.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/actions/runner-groups/{runner_group_id}/hosted-runners`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/hosted-runners/get(actions/list-github-hosted-runners-in-group-for-org)`.
+    public func actions_sol_list_hyphen_github_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org(_ input: Operations.actions_sol_list_hyphen_github_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Input) async throws -> Operations.actions_sol_list_hyphen_github_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Output {
+        try await client.send(
+            input: input,
+            forOperation: Operations.actions_sol_list_hyphen_github_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.id,
+            serializer: { input in
+                let path = try converter.renderedPath(
+                    template: "/orgs/{}/actions/runner-groups/{}/hosted-runners",
+                    parameters: [
+                        input.path.org,
+                        input.path.runner_group_id
+                    ]
+                )
+                var request: HTTPTypes.HTTPRequest = .init(
+                    soar_path: path,
+                    method: .get
+                )
+                suppressMutabilityWarning(&request)
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "per_page",
+                    value: input.query.per_page
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "page",
+                    value: input.query.page
+                )
+                converter.setAcceptHeader(
+                    in: &request.headerFields,
+                    contentTypes: input.headers.accept
+                )
+                return (request, nil)
+            },
+            deserializer: { response, responseBody in
+                switch response.status.code {
+                case 200:
+                    let headers: Operations.actions_sol_list_hyphen_github_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Output.Ok.Headers = .init(Link: try converter.getOptionalHeaderFieldAsURI(
+                        in: response.headerFields,
+                        name: "Link",
+                        as: Components.Headers.link.self
+                    ))
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Operations.actions_sol_list_hyphen_github_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Output.Ok.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Operations.actions_sol_list_hyphen_github_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Output.Ok.Body.jsonPayload.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .ok(.init(
+                        headers: headers,
+                        body: body
+                    ))
+                default:
+                    return .undocumented(
+                        statusCode: response.status.code,
+                        .init(
+                            headerFields: response.headerFields,
+                            body: responseBody
+                        )
+                    )
+                }
+            }
+        )
+    }
     /// List repository access to a self-hosted runner group in an organization
     ///
     /// Lists the repositories with access to a self-hosted runner group configured in an organization.
@@ -1851,6 +2637,28 @@ public struct Client: APIProtocol {
                         preconditionFailure("bestContentType chose an invalid content type.")
                     }
                     return .unprocessableContent(.init(body: body))
+                case 409:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Components.Responses.conflict.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Schemas.basic_hyphen_error.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .conflict(.init(body: body))
                 default:
                     return .undocumented(
                         statusCode: response.status.code,
@@ -5886,6 +6694,28 @@ public struct Client: APIProtocol {
                         preconditionFailure("bestContentType chose an invalid content type.")
                     }
                     return .unprocessableContent(.init(body: body))
+                case 409:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Components.Responses.conflict.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Schemas.basic_hyphen_error.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .conflict(.init(body: body))
                 default:
                     return .undocumented(
                         statusCode: response.status.code,
@@ -8303,6 +9133,9 @@ public struct Client: APIProtocol {
     }
     /// Get workflow run usage
     ///
+    /// > [!WARNING]  
+    /// > This endpoint is in the process of closing down. Refer to "[Actions Get workflow usage and Get workflow run usage endpoints closing down](https://github.blog/changelog/2025-02-02-actions-get-workflow-usage-and-get-workflow-run-usage-endpoints-closing-down/)" for more information.
+    ///
     /// Gets the number of billable minutes and total run time for a specific workflow run. Billable minutes only apply to workflows in private repositories that use GitHub-hosted runners. Usage is listed for each GitHub-hosted runner operating system in milliseconds. Any job re-runs are also included in the usage. The usage does not include the multiplier for macOS and Windows runners and is not rounded up to the nearest whole minute. For more information, see "[Managing billing for GitHub Actions](https://docs.github.com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-actions)".
     ///
     /// Anyone with read access to the repository can use this endpoint.
@@ -9527,6 +10360,9 @@ public struct Client: APIProtocol {
         )
     }
     /// Get workflow usage
+    ///
+    /// > [!WARNING]  
+    /// > This endpoint is in the process of closing down. Refer to "[Actions Get workflow usage and Get workflow run usage endpoints closing down](https://github.blog/changelog/2025-02-02-actions-get-workflow-usage-and-get-workflow-run-usage-endpoints-closing-down/)" for more information.
     ///
     /// Gets the number of billable minutes used by a specific workflow during the current billing cycle. Billable minutes only apply to workflows in private repositories that use GitHub-hosted runners. Usage is listed for each GitHub-hosted runner operating system in milliseconds. Any job re-runs are also included in the usage. The usage does not include the multiplier for macOS and Windows runners and is not rounded up to the nearest whole minute. For more information, see "[Managing billing for GitHub Actions](https://docs.github.com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-actions)".
     ///
