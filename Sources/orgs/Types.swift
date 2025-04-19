@@ -25,7 +25,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// Gets information about an organization.
     ///
-    /// When the value of `two_factor_requirement_enabled` is `true`, the organization requires all members, billing managers, and outside collaborators to enable [two-factor authentication](https://docs.github.com/articles/securing-your-account-with-two-factor-authentication-2fa/).
+    /// When the value of `two_factor_requirement_enabled` is `true`, the organization requires all members, billing managers, outside collaborators, guest collaborators, repository collaborators, or everyone with access to any repository within the organization to enable [two-factor authentication](https://docs.github.com/articles/securing-your-account-with-two-factor-authentication-2fa/).
     ///
     /// To see the full details about an organization, the authenticated user must be an organization owner.
     ///
@@ -361,6 +361,49 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /orgs/{org}/invitations/{invitation_id}/teams`.
     /// - Remark: Generated from `#/paths//orgs/{org}/invitations/{invitation_id}/teams/get(orgs/list-invitation-teams)`.
     func orgs_sol_list_hyphen_invitation_hyphen_teams(_ input: Operations.orgs_sol_list_hyphen_invitation_hyphen_teams.Input) async throws -> Operations.orgs_sol_list_hyphen_invitation_hyphen_teams.Output
+    /// List issue types for an organization
+    ///
+    /// Lists all issue types for an organization. OAuth app tokens and personal access tokens (classic) need the read:org scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/issue-types`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/issue-types/get(orgs/list-issue-types)`.
+    func orgs_sol_list_hyphen_issue_hyphen_types(_ input: Operations.orgs_sol_list_hyphen_issue_hyphen_types.Input) async throws -> Operations.orgs_sol_list_hyphen_issue_hyphen_types.Output
+    /// Create issue type for an organization
+    ///
+    /// Create a new issue type for an organization.
+    ///
+    /// You can find out more about issue types in [Managing issue types in an organization](https://docs.github.com/issues/tracking-your-work-with-issues/configuring-issues/managing-issue-types-in-an-organization).
+    ///
+    /// To use this endpoint, the authenticated user must be an administrator for the organization. OAuth app tokens and
+    /// personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `POST /orgs/{org}/issue-types`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/issue-types/post(orgs/create-issue-type)`.
+    func orgs_sol_create_hyphen_issue_hyphen_type(_ input: Operations.orgs_sol_create_hyphen_issue_hyphen_type.Input) async throws -> Operations.orgs_sol_create_hyphen_issue_hyphen_type.Output
+    /// Update issue type for an organization
+    ///
+    /// Updates an issue type for an organization.
+    ///
+    /// You can find out more about issue types in [Managing issue types in an organization](https://docs.github.com/issues/tracking-your-work-with-issues/configuring-issues/managing-issue-types-in-an-organization).
+    ///
+    /// To use this endpoint, the authenticated user must be an administrator for the organization. OAuth app tokens and
+    /// personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `PUT /orgs/{org}/issue-types/{issue_type_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/issue-types/{issue_type_id}/put(orgs/update-issue-type)`.
+    func orgs_sol_update_hyphen_issue_hyphen_type(_ input: Operations.orgs_sol_update_hyphen_issue_hyphen_type.Input) async throws -> Operations.orgs_sol_update_hyphen_issue_hyphen_type.Output
+    /// Delete issue type for an organization
+    ///
+    /// Deletes an issue type for an organization.
+    ///
+    /// You can find out more about issue types in [Managing issue types in an organization](https://docs.github.com/issues/tracking-your-work-with-issues/configuring-issues/managing-issue-types-in-an-organization).
+    ///
+    /// To use this endpoint, the authenticated user must be an administrator for the organization. OAuth app tokens and
+    /// personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `DELETE /orgs/{org}/issue-types/{issue_type_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/issue-types/{issue_type_id}/delete(orgs/delete-issue-type)`.
+    func orgs_sol_delete_hyphen_issue_hyphen_type(_ input: Operations.orgs_sol_delete_hyphen_issue_hyphen_type.Input) async throws -> Operations.orgs_sol_delete_hyphen_issue_hyphen_type.Output
     /// List organization members
     ///
     /// List all users who are members of an organization. If the authenticated user is also a member of this organization then both concealed and public members will be returned.
@@ -634,6 +677,10 @@ public protocol APIProtocol: Sendable {
     ///
     /// Creates new or updates existing custom properties defined for an organization in a batch.
     ///
+    /// If the property already exists, the existing property will be replaced with the new values.
+    /// Missing optional values will fall back to default values, previous values will be overwritten.
+    /// E.g. if a property exists with `values_editable_by: org_and_repo_actors` and it's updated without specifying `values_editable_by`, it will be updated to default value `org_actors`.
+    ///
     /// To use this endpoint, the authenticated user must be one of:
     ///   - An administrator for the organization.
     ///   - A user, or a user on a team, with the fine-grained permission of `custom_properties_org_definitions_manager` in the organization.
@@ -725,38 +772,46 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `DELETE /orgs/{org}/public_members/{username}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/public_members/{username}/delete(orgs/remove-public-membership-for-authenticated-user)`.
     func orgs_sol_remove_hyphen_public_hyphen_membership_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.orgs_sol_remove_hyphen_public_hyphen_membership_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.orgs_sol_remove_hyphen_public_hyphen_membership_hyphen_for_hyphen_authenticated_hyphen_user.Output
+    /// Get organization ruleset history
+    ///
+    /// Get the history of an organization ruleset.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/rulesets/{ruleset_id}/history`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/rulesets/{ruleset_id}/history/get(orgs/get-org-ruleset-history)`.
+    func orgs_sol_get_hyphen_org_hyphen_ruleset_hyphen_history(_ input: Operations.orgs_sol_get_hyphen_org_hyphen_ruleset_hyphen_history.Input) async throws -> Operations.orgs_sol_get_hyphen_org_hyphen_ruleset_hyphen_history.Output
+    /// Get organization ruleset version
+    ///
+    /// Get a version of an organization ruleset.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/rulesets/{ruleset_id}/history/{version_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/rulesets/{ruleset_id}/history/{version_id}/get(orgs/get-org-ruleset-version)`.
+    func orgs_sol_get_hyphen_org_hyphen_ruleset_hyphen_version(_ input: Operations.orgs_sol_get_hyphen_org_hyphen_ruleset_hyphen_version.Input) async throws -> Operations.orgs_sol_get_hyphen_org_hyphen_ruleset_hyphen_version.Output
     /// List security manager teams
     ///
-    /// Lists teams that are security managers for an organization. For more information, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."
-    ///
-    /// The authenticated user must be an administrator or security manager for the organization to use this endpoint.
-    ///
-    /// OAuth app tokens and personal access tokens (classic) need the `read:org` scope to use this endpoint.
+    /// > [!WARNING]
+    /// > **Closing down notice:** This operation is closing down and will be removed starting January 1, 2026. Please use the "[Organization Roles](https://docs.github.com/rest/orgs/organization-roles)" endpoints instead.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/security-managers`.
     /// - Remark: Generated from `#/paths//orgs/{org}/security-managers/get(orgs/list-security-manager-teams)`.
+    @available(*, deprecated)
     func orgs_sol_list_hyphen_security_hyphen_manager_hyphen_teams(_ input: Operations.orgs_sol_list_hyphen_security_hyphen_manager_hyphen_teams.Input) async throws -> Operations.orgs_sol_list_hyphen_security_hyphen_manager_hyphen_teams.Output
     /// Add a security manager team
     ///
-    /// Adds a team as a security manager for an organization. For more information, see "[Managing security for an organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization) for an organization."
-    ///
-    /// The authenticated user must be an administrator for the organization to use this endpoint.
-    ///
-    /// OAuth app tokens and personal access tokens (classic) need the `write:org` scope to use this endpoint.
+    /// > [!WARNING]
+    /// > **Closing down notice:** This operation is closing down and will be removed starting January 1, 2026. Please use the "[Organization Roles](https://docs.github.com/rest/orgs/organization-roles)" endpoints instead.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/security-managers/teams/{team_slug}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/security-managers/teams/{team_slug}/put(orgs/add-security-manager-team)`.
+    @available(*, deprecated)
     func orgs_sol_add_hyphen_security_hyphen_manager_hyphen_team(_ input: Operations.orgs_sol_add_hyphen_security_hyphen_manager_hyphen_team.Input) async throws -> Operations.orgs_sol_add_hyphen_security_hyphen_manager_hyphen_team.Output
     /// Remove a security manager team
     ///
-    /// Removes the security manager role from a team for an organization. For more information, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization) team from an organization."
-    ///
-    /// The authenticated user must be an administrator for the organization to use this endpoint.
-    ///
-    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    /// > [!WARNING]
+    /// > **Closing down notice:** This operation is closing down and will be removed starting January 1, 2026. Please use the "[Organization Roles](https://docs.github.com/rest/orgs/organization-roles)" endpoints instead.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/security-managers/teams/{team_slug}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/security-managers/teams/{team_slug}/delete(orgs/remove-security-manager-team)`.
+    @available(*, deprecated)
     func orgs_sol_remove_hyphen_security_hyphen_manager_hyphen_team(_ input: Operations.orgs_sol_remove_hyphen_security_hyphen_manager_hyphen_team.Input) async throws -> Operations.orgs_sol_remove_hyphen_security_hyphen_manager_hyphen_team.Output
     /// Enable or disable a security feature for an organization
     ///
@@ -841,7 +896,7 @@ extension APIProtocol {
     ///
     /// Gets information about an organization.
     ///
-    /// When the value of `two_factor_requirement_enabled` is `true`, the organization requires all members, billing managers, and outside collaborators to enable [two-factor authentication](https://docs.github.com/articles/securing-your-account-with-two-factor-authentication-2fa/).
+    /// When the value of `two_factor_requirement_enabled` is `true`, the organization requires all members, billing managers, outside collaborators, guest collaborators, repository collaborators, or everyone with access to any repository within the organization to enable [two-factor authentication](https://docs.github.com/articles/securing-your-account-with-two-factor-authentication-2fa/).
     ///
     /// To see the full details about an organization, the authenticated user must be an organization owner.
     ///
@@ -1487,6 +1542,85 @@ extension APIProtocol {
             headers: headers
         ))
     }
+    /// List issue types for an organization
+    ///
+    /// Lists all issue types for an organization. OAuth app tokens and personal access tokens (classic) need the read:org scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/issue-types`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/issue-types/get(orgs/list-issue-types)`.
+    public func orgs_sol_list_hyphen_issue_hyphen_types(
+        path: Operations.orgs_sol_list_hyphen_issue_hyphen_types.Input.Path,
+        headers: Operations.orgs_sol_list_hyphen_issue_hyphen_types.Input.Headers = .init()
+    ) async throws -> Operations.orgs_sol_list_hyphen_issue_hyphen_types.Output {
+        try await orgs_sol_list_hyphen_issue_hyphen_types(Operations.orgs_sol_list_hyphen_issue_hyphen_types.Input(
+            path: path,
+            headers: headers
+        ))
+    }
+    /// Create issue type for an organization
+    ///
+    /// Create a new issue type for an organization.
+    ///
+    /// You can find out more about issue types in [Managing issue types in an organization](https://docs.github.com/issues/tracking-your-work-with-issues/configuring-issues/managing-issue-types-in-an-organization).
+    ///
+    /// To use this endpoint, the authenticated user must be an administrator for the organization. OAuth app tokens and
+    /// personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `POST /orgs/{org}/issue-types`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/issue-types/post(orgs/create-issue-type)`.
+    public func orgs_sol_create_hyphen_issue_hyphen_type(
+        path: Operations.orgs_sol_create_hyphen_issue_hyphen_type.Input.Path,
+        headers: Operations.orgs_sol_create_hyphen_issue_hyphen_type.Input.Headers = .init(),
+        body: Operations.orgs_sol_create_hyphen_issue_hyphen_type.Input.Body
+    ) async throws -> Operations.orgs_sol_create_hyphen_issue_hyphen_type.Output {
+        try await orgs_sol_create_hyphen_issue_hyphen_type(Operations.orgs_sol_create_hyphen_issue_hyphen_type.Input(
+            path: path,
+            headers: headers,
+            body: body
+        ))
+    }
+    /// Update issue type for an organization
+    ///
+    /// Updates an issue type for an organization.
+    ///
+    /// You can find out more about issue types in [Managing issue types in an organization](https://docs.github.com/issues/tracking-your-work-with-issues/configuring-issues/managing-issue-types-in-an-organization).
+    ///
+    /// To use this endpoint, the authenticated user must be an administrator for the organization. OAuth app tokens and
+    /// personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `PUT /orgs/{org}/issue-types/{issue_type_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/issue-types/{issue_type_id}/put(orgs/update-issue-type)`.
+    public func orgs_sol_update_hyphen_issue_hyphen_type(
+        path: Operations.orgs_sol_update_hyphen_issue_hyphen_type.Input.Path,
+        headers: Operations.orgs_sol_update_hyphen_issue_hyphen_type.Input.Headers = .init(),
+        body: Operations.orgs_sol_update_hyphen_issue_hyphen_type.Input.Body
+    ) async throws -> Operations.orgs_sol_update_hyphen_issue_hyphen_type.Output {
+        try await orgs_sol_update_hyphen_issue_hyphen_type(Operations.orgs_sol_update_hyphen_issue_hyphen_type.Input(
+            path: path,
+            headers: headers,
+            body: body
+        ))
+    }
+    /// Delete issue type for an organization
+    ///
+    /// Deletes an issue type for an organization.
+    ///
+    /// You can find out more about issue types in [Managing issue types in an organization](https://docs.github.com/issues/tracking-your-work-with-issues/configuring-issues/managing-issue-types-in-an-organization).
+    ///
+    /// To use this endpoint, the authenticated user must be an administrator for the organization. OAuth app tokens and
+    /// personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `DELETE /orgs/{org}/issue-types/{issue_type_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/issue-types/{issue_type_id}/delete(orgs/delete-issue-type)`.
+    public func orgs_sol_delete_hyphen_issue_hyphen_type(
+        path: Operations.orgs_sol_delete_hyphen_issue_hyphen_type.Input.Path,
+        headers: Operations.orgs_sol_delete_hyphen_issue_hyphen_type.Input.Headers = .init()
+    ) async throws -> Operations.orgs_sol_delete_hyphen_issue_hyphen_type.Output {
+        try await orgs_sol_delete_hyphen_issue_hyphen_type(Operations.orgs_sol_delete_hyphen_issue_hyphen_type.Input(
+            path: path,
+            headers: headers
+        ))
+    }
     /// List organization members
     ///
     /// List all users who are members of an organization. If the authenticated user is also a member of this organization then both concealed and public members will be returned.
@@ -1970,6 +2104,10 @@ extension APIProtocol {
     ///
     /// Creates new or updates existing custom properties defined for an organization in a batch.
     ///
+    /// If the property already exists, the existing property will be replaced with the new values.
+    /// Missing optional values will fall back to default values, previous values will be overwritten.
+    /// E.g. if a property exists with `values_editable_by: org_and_repo_actors` and it's updated without specifying `values_editable_by`, it will be updated to default value `org_actors`.
+    ///
     /// To use this endpoint, the authenticated user must be one of:
     ///   - An administrator for the organization.
     ///   - A user, or a user on a team, with the fine-grained permission of `custom_properties_org_definitions_manager` in the organization.
@@ -2139,16 +2277,46 @@ extension APIProtocol {
     public func orgs_sol_remove_hyphen_public_hyphen_membership_hyphen_for_hyphen_authenticated_hyphen_user(path: Operations.orgs_sol_remove_hyphen_public_hyphen_membership_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path) async throws -> Operations.orgs_sol_remove_hyphen_public_hyphen_membership_hyphen_for_hyphen_authenticated_hyphen_user.Output {
         try await orgs_sol_remove_hyphen_public_hyphen_membership_hyphen_for_hyphen_authenticated_hyphen_user(Operations.orgs_sol_remove_hyphen_public_hyphen_membership_hyphen_for_hyphen_authenticated_hyphen_user.Input(path: path))
     }
+    /// Get organization ruleset history
+    ///
+    /// Get the history of an organization ruleset.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/rulesets/{ruleset_id}/history`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/rulesets/{ruleset_id}/history/get(orgs/get-org-ruleset-history)`.
+    public func orgs_sol_get_hyphen_org_hyphen_ruleset_hyphen_history(
+        path: Operations.orgs_sol_get_hyphen_org_hyphen_ruleset_hyphen_history.Input.Path,
+        query: Operations.orgs_sol_get_hyphen_org_hyphen_ruleset_hyphen_history.Input.Query = .init(),
+        headers: Operations.orgs_sol_get_hyphen_org_hyphen_ruleset_hyphen_history.Input.Headers = .init()
+    ) async throws -> Operations.orgs_sol_get_hyphen_org_hyphen_ruleset_hyphen_history.Output {
+        try await orgs_sol_get_hyphen_org_hyphen_ruleset_hyphen_history(Operations.orgs_sol_get_hyphen_org_hyphen_ruleset_hyphen_history.Input(
+            path: path,
+            query: query,
+            headers: headers
+        ))
+    }
+    /// Get organization ruleset version
+    ///
+    /// Get a version of an organization ruleset.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/rulesets/{ruleset_id}/history/{version_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/rulesets/{ruleset_id}/history/{version_id}/get(orgs/get-org-ruleset-version)`.
+    public func orgs_sol_get_hyphen_org_hyphen_ruleset_hyphen_version(
+        path: Operations.orgs_sol_get_hyphen_org_hyphen_ruleset_hyphen_version.Input.Path,
+        headers: Operations.orgs_sol_get_hyphen_org_hyphen_ruleset_hyphen_version.Input.Headers = .init()
+    ) async throws -> Operations.orgs_sol_get_hyphen_org_hyphen_ruleset_hyphen_version.Output {
+        try await orgs_sol_get_hyphen_org_hyphen_ruleset_hyphen_version(Operations.orgs_sol_get_hyphen_org_hyphen_ruleset_hyphen_version.Input(
+            path: path,
+            headers: headers
+        ))
+    }
     /// List security manager teams
     ///
-    /// Lists teams that are security managers for an organization. For more information, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."
-    ///
-    /// The authenticated user must be an administrator or security manager for the organization to use this endpoint.
-    ///
-    /// OAuth app tokens and personal access tokens (classic) need the `read:org` scope to use this endpoint.
+    /// > [!WARNING]
+    /// > **Closing down notice:** This operation is closing down and will be removed starting January 1, 2026. Please use the "[Organization Roles](https://docs.github.com/rest/orgs/organization-roles)" endpoints instead.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/security-managers`.
     /// - Remark: Generated from `#/paths//orgs/{org}/security-managers/get(orgs/list-security-manager-teams)`.
+    @available(*, deprecated)
     public func orgs_sol_list_hyphen_security_hyphen_manager_hyphen_teams(
         path: Operations.orgs_sol_list_hyphen_security_hyphen_manager_hyphen_teams.Input.Path,
         headers: Operations.orgs_sol_list_hyphen_security_hyphen_manager_hyphen_teams.Input.Headers = .init()
@@ -2160,27 +2328,23 @@ extension APIProtocol {
     }
     /// Add a security manager team
     ///
-    /// Adds a team as a security manager for an organization. For more information, see "[Managing security for an organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization) for an organization."
-    ///
-    /// The authenticated user must be an administrator for the organization to use this endpoint.
-    ///
-    /// OAuth app tokens and personal access tokens (classic) need the `write:org` scope to use this endpoint.
+    /// > [!WARNING]
+    /// > **Closing down notice:** This operation is closing down and will be removed starting January 1, 2026. Please use the "[Organization Roles](https://docs.github.com/rest/orgs/organization-roles)" endpoints instead.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/security-managers/teams/{team_slug}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/security-managers/teams/{team_slug}/put(orgs/add-security-manager-team)`.
+    @available(*, deprecated)
     public func orgs_sol_add_hyphen_security_hyphen_manager_hyphen_team(path: Operations.orgs_sol_add_hyphen_security_hyphen_manager_hyphen_team.Input.Path) async throws -> Operations.orgs_sol_add_hyphen_security_hyphen_manager_hyphen_team.Output {
         try await orgs_sol_add_hyphen_security_hyphen_manager_hyphen_team(Operations.orgs_sol_add_hyphen_security_hyphen_manager_hyphen_team.Input(path: path))
     }
     /// Remove a security manager team
     ///
-    /// Removes the security manager role from a team for an organization. For more information, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization) team from an organization."
-    ///
-    /// The authenticated user must be an administrator for the organization to use this endpoint.
-    ///
-    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    /// > [!WARNING]
+    /// > **Closing down notice:** This operation is closing down and will be removed starting January 1, 2026. Please use the "[Organization Roles](https://docs.github.com/rest/orgs/organization-roles)" endpoints instead.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/security-managers/teams/{team_slug}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/security-managers/teams/{team_slug}/delete(orgs/remove-security-manager-team)`.
+    @available(*, deprecated)
     public func orgs_sol_remove_hyphen_security_hyphen_manager_hyphen_team(path: Operations.orgs_sol_remove_hyphen_security_hyphen_manager_hyphen_team.Input.Path) async throws -> Operations.orgs_sol_remove_hyphen_security_hyphen_manager_hyphen_team.Output {
         try await orgs_sol_remove_hyphen_security_hyphen_manager_hyphen_team(Operations.orgs_sol_remove_hyphen_security_hyphen_manager_hyphen_team.Input(path: path))
     }
@@ -2522,149 +2686,87 @@ public enum Components {
                 case errors
             }
         }
-        /// A GitHub user.
+        /// An enterprise on GitHub.
         ///
-        /// - Remark: Generated from `#/components/schemas/nullable-simple-user`.
-        public struct nullable_hyphen_simple_hyphen_user: Codable, Hashable, Sendable {
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/name`.
-            public var name: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/email`.
-            public var email: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/login`.
-            public var login: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/id`.
-            public var id: Swift.Int64
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/node_id`.
-            public var node_id: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/avatar_url`.
-            public var avatar_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/gravatar_id`.
-            public var gravatar_id: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/url`.
-            public var url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/html_url`.
+        /// - Remark: Generated from `#/components/schemas/enterprise`.
+        public struct enterprise: Codable, Hashable, Sendable {
+            /// A short description of the enterprise.
+            ///
+            /// - Remark: Generated from `#/components/schemas/enterprise/description`.
+            public var description: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/enterprise/html_url`.
             public var html_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/followers_url`.
-            public var followers_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/following_url`.
-            public var following_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/gists_url`.
-            public var gists_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/starred_url`.
-            public var starred_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/subscriptions_url`.
-            public var subscriptions_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/organizations_url`.
-            public var organizations_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/repos_url`.
-            public var repos_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/events_url`.
-            public var events_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/received_events_url`.
-            public var received_events_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/type`.
-            public var _type: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/site_admin`.
-            public var site_admin: Swift.Bool
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/starred_at`.
-            public var starred_at: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/user_view_type`.
-            public var user_view_type: Swift.String?
-            /// Creates a new `nullable_hyphen_simple_hyphen_user`.
+            /// The enterprise's website URL.
+            ///
+            /// - Remark: Generated from `#/components/schemas/enterprise/website_url`.
+            public var website_url: Swift.String?
+            /// Unique identifier of the enterprise
+            ///
+            /// - Remark: Generated from `#/components/schemas/enterprise/id`.
+            public var id: Swift.Int
+            /// - Remark: Generated from `#/components/schemas/enterprise/node_id`.
+            public var node_id: Swift.String
+            /// The name of the enterprise.
+            ///
+            /// - Remark: Generated from `#/components/schemas/enterprise/name`.
+            public var name: Swift.String
+            /// The slug url identifier for the enterprise.
+            ///
+            /// - Remark: Generated from `#/components/schemas/enterprise/slug`.
+            public var slug: Swift.String
+            /// - Remark: Generated from `#/components/schemas/enterprise/created_at`.
+            public var created_at: Foundation.Date?
+            /// - Remark: Generated from `#/components/schemas/enterprise/updated_at`.
+            public var updated_at: Foundation.Date?
+            /// - Remark: Generated from `#/components/schemas/enterprise/avatar_url`.
+            public var avatar_url: Swift.String
+            /// Creates a new `enterprise`.
             ///
             /// - Parameters:
-            ///   - name:
-            ///   - email:
-            ///   - login:
-            ///   - id:
-            ///   - node_id:
-            ///   - avatar_url:
-            ///   - gravatar_id:
-            ///   - url:
+            ///   - description: A short description of the enterprise.
             ///   - html_url:
-            ///   - followers_url:
-            ///   - following_url:
-            ///   - gists_url:
-            ///   - starred_url:
-            ///   - subscriptions_url:
-            ///   - organizations_url:
-            ///   - repos_url:
-            ///   - events_url:
-            ///   - received_events_url:
-            ///   - _type:
-            ///   - site_admin:
-            ///   - starred_at:
-            ///   - user_view_type:
+            ///   - website_url: The enterprise's website URL.
+            ///   - id: Unique identifier of the enterprise
+            ///   - node_id:
+            ///   - name: The name of the enterprise.
+            ///   - slug: The slug url identifier for the enterprise.
+            ///   - created_at:
+            ///   - updated_at:
+            ///   - avatar_url:
             public init(
-                name: Swift.String? = nil,
-                email: Swift.String? = nil,
-                login: Swift.String,
-                id: Swift.Int64,
-                node_id: Swift.String,
-                avatar_url: Swift.String,
-                gravatar_id: Swift.String? = nil,
-                url: Swift.String,
+                description: Swift.String? = nil,
                 html_url: Swift.String,
-                followers_url: Swift.String,
-                following_url: Swift.String,
-                gists_url: Swift.String,
-                starred_url: Swift.String,
-                subscriptions_url: Swift.String,
-                organizations_url: Swift.String,
-                repos_url: Swift.String,
-                events_url: Swift.String,
-                received_events_url: Swift.String,
-                _type: Swift.String,
-                site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil,
-                user_view_type: Swift.String? = nil
+                website_url: Swift.String? = nil,
+                id: Swift.Int,
+                node_id: Swift.String,
+                name: Swift.String,
+                slug: Swift.String,
+                created_at: Foundation.Date? = nil,
+                updated_at: Foundation.Date? = nil,
+                avatar_url: Swift.String
             ) {
-                self.name = name
-                self.email = email
-                self.login = login
+                self.description = description
+                self.html_url = html_url
+                self.website_url = website_url
                 self.id = id
                 self.node_id = node_id
+                self.name = name
+                self.slug = slug
+                self.created_at = created_at
+                self.updated_at = updated_at
                 self.avatar_url = avatar_url
-                self.gravatar_id = gravatar_id
-                self.url = url
-                self.html_url = html_url
-                self.followers_url = followers_url
-                self.following_url = following_url
-                self.gists_url = gists_url
-                self.starred_url = starred_url
-                self.subscriptions_url = subscriptions_url
-                self.organizations_url = organizations_url
-                self.repos_url = repos_url
-                self.events_url = events_url
-                self.received_events_url = received_events_url
-                self._type = _type
-                self.site_admin = site_admin
-                self.starred_at = starred_at
-                self.user_view_type = user_view_type
             }
             public enum CodingKeys: String, CodingKey {
-                case name
-                case email
-                case login
+                case description
+                case html_url
+                case website_url
                 case id
                 case node_id
+                case name
+                case slug
+                case created_at
+                case updated_at
                 case avatar_url
-                case gravatar_id
-                case url
-                case html_url
-                case followers_url
-                case following_url
-                case gists_url
-                case starred_url
-                case subscriptions_url
-                case organizations_url
-                case repos_url
-                case events_url
-                case received_events_url
-                case _type = "type"
-                case site_admin
-                case starred_at
-                case user_view_type
             }
         }
         /// The URL to which the payloads will be delivered.
@@ -2760,7 +2862,7 @@ public enum Components {
             /// Unique identifier of the webhook delivery.
             ///
             /// - Remark: Generated from `#/components/schemas/hook-delivery-item/id`.
-            public var id: Swift.Int
+            public var id: Swift.Int64
             /// Unique identifier for the event (shared with all deliveries for all webhooks that subscribe to this event).
             ///
             /// - Remark: Generated from `#/components/schemas/hook-delivery-item/guid`.
@@ -2796,11 +2898,11 @@ public enum Components {
             /// The id of the GitHub App installation associated with this event.
             ///
             /// - Remark: Generated from `#/components/schemas/hook-delivery-item/installation_id`.
-            public var installation_id: Swift.Int?
+            public var installation_id: Swift.Int64?
             /// The id of the repository associated with this event.
             ///
             /// - Remark: Generated from `#/components/schemas/hook-delivery-item/repository_id`.
-            public var repository_id: Swift.Int?
+            public var repository_id: Swift.Int64?
             /// Time when the webhook delivery was throttled.
             ///
             /// - Remark: Generated from `#/components/schemas/hook-delivery-item/throttled_at`.
@@ -2821,7 +2923,7 @@ public enum Components {
             ///   - repository_id: The id of the repository associated with this event.
             ///   - throttled_at: Time when the webhook delivery was throttled.
             public init(
-                id: Swift.Int,
+                id: Swift.Int64,
                 guid: Swift.String,
                 delivered_at: Foundation.Date,
                 redelivery: Swift.Bool,
@@ -2830,8 +2932,8 @@ public enum Components {
                 status_code: Swift.Int,
                 event: Swift.String,
                 action: Swift.String? = nil,
-                installation_id: Swift.Int? = nil,
-                repository_id: Swift.Int? = nil,
+                installation_id: Swift.Int64? = nil,
+                repository_id: Swift.Int64? = nil,
                 throttled_at: Foundation.Date? = nil
             ) {
                 self.id = id
@@ -3279,89 +3381,6 @@ public enum Components {
                 case response
             }
         }
-        /// An enterprise on GitHub.
-        ///
-        /// - Remark: Generated from `#/components/schemas/enterprise`.
-        public struct enterprise: Codable, Hashable, Sendable {
-            /// A short description of the enterprise.
-            ///
-            /// - Remark: Generated from `#/components/schemas/enterprise/description`.
-            public var description: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/enterprise/html_url`.
-            public var html_url: Swift.String
-            /// The enterprise's website URL.
-            ///
-            /// - Remark: Generated from `#/components/schemas/enterprise/website_url`.
-            public var website_url: Swift.String?
-            /// Unique identifier of the enterprise
-            ///
-            /// - Remark: Generated from `#/components/schemas/enterprise/id`.
-            public var id: Swift.Int
-            /// - Remark: Generated from `#/components/schemas/enterprise/node_id`.
-            public var node_id: Swift.String
-            /// The name of the enterprise.
-            ///
-            /// - Remark: Generated from `#/components/schemas/enterprise/name`.
-            public var name: Swift.String
-            /// The slug url identifier for the enterprise.
-            ///
-            /// - Remark: Generated from `#/components/schemas/enterprise/slug`.
-            public var slug: Swift.String
-            /// - Remark: Generated from `#/components/schemas/enterprise/created_at`.
-            public var created_at: Foundation.Date?
-            /// - Remark: Generated from `#/components/schemas/enterprise/updated_at`.
-            public var updated_at: Foundation.Date?
-            /// - Remark: Generated from `#/components/schemas/enterprise/avatar_url`.
-            public var avatar_url: Swift.String
-            /// Creates a new `enterprise`.
-            ///
-            /// - Parameters:
-            ///   - description: A short description of the enterprise.
-            ///   - html_url:
-            ///   - website_url: The enterprise's website URL.
-            ///   - id: Unique identifier of the enterprise
-            ///   - node_id:
-            ///   - name: The name of the enterprise.
-            ///   - slug: The slug url identifier for the enterprise.
-            ///   - created_at:
-            ///   - updated_at:
-            ///   - avatar_url:
-            public init(
-                description: Swift.String? = nil,
-                html_url: Swift.String,
-                website_url: Swift.String? = nil,
-                id: Swift.Int,
-                node_id: Swift.String,
-                name: Swift.String,
-                slug: Swift.String,
-                created_at: Foundation.Date? = nil,
-                updated_at: Foundation.Date? = nil,
-                avatar_url: Swift.String
-            ) {
-                self.description = description
-                self.html_url = html_url
-                self.website_url = website_url
-                self.id = id
-                self.node_id = node_id
-                self.name = name
-                self.slug = slug
-                self.created_at = created_at
-                self.updated_at = updated_at
-                self.avatar_url = avatar_url
-            }
-            public enum CodingKeys: String, CodingKey {
-                case description
-                case html_url
-                case website_url
-                case id
-                case node_id
-                case name
-                case slug
-                case created_at
-                case updated_at
-                case avatar_url
-            }
-        }
         /// The permissions granted to the user access token.
         ///
         /// - Remark: Generated from `#/components/schemas/app-permissions`.
@@ -3421,14 +3440,14 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/contents`.
             public var contents: Components.Schemas.app_hyphen_permissions.contentsPayload?
-            /// The leve of permission to grant the access token to manage Dependabot secrets.
+            /// The level of permission to grant the access token to manage Dependabot secrets.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/dependabot_secrets`.
             @frozen public enum dependabot_secretsPayload: String, Codable, Hashable, Sendable {
                 case read = "read"
                 case write = "write"
             }
-            /// The leve of permission to grant the access token to manage Dependabot secrets.
+            /// The level of permission to grant the access token to manage Dependabot secrets.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/dependabot_secrets`.
             public var dependabot_secrets: Components.Schemas.app_hyphen_permissions.dependabot_secretsPayload?
@@ -3900,7 +3919,7 @@ public enum Components {
             ///   - checks: The level of permission to grant the access token for checks on code.
             ///   - codespaces: The level of permission to grant the access token to create, edit, delete, and list Codespaces.
             ///   - contents: The level of permission to grant the access token for repository contents, commits, branches, downloads, releases, and merges.
-            ///   - dependabot_secrets: The leve of permission to grant the access token to manage Dependabot secrets.
+            ///   - dependabot_secrets: The level of permission to grant the access token to manage Dependabot secrets.
             ///   - deployments: The level of permission to grant the access token for deployments and deployment statuses.
             ///   - environments: The level of permission to grant the access token for managing repository environments.
             ///   - issues: The level of permission to grant the access token for issues and related comments, assignees, labels, and milestones.
@@ -4091,6 +4110,151 @@ public enum Components {
                 case interaction_limits
                 case profile
                 case starring
+            }
+        }
+        /// A GitHub user.
+        ///
+        /// - Remark: Generated from `#/components/schemas/nullable-simple-user`.
+        public struct nullable_hyphen_simple_hyphen_user: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/name`.
+            public var name: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/email`.
+            public var email: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/login`.
+            public var login: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/id`.
+            public var id: Swift.Int64
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/node_id`.
+            public var node_id: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/avatar_url`.
+            public var avatar_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/gravatar_id`.
+            public var gravatar_id: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/url`.
+            public var url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/html_url`.
+            public var html_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/followers_url`.
+            public var followers_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/following_url`.
+            public var following_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/gists_url`.
+            public var gists_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/starred_url`.
+            public var starred_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/subscriptions_url`.
+            public var subscriptions_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/organizations_url`.
+            public var organizations_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/repos_url`.
+            public var repos_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/events_url`.
+            public var events_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/received_events_url`.
+            public var received_events_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/type`.
+            public var _type: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/site_admin`.
+            public var site_admin: Swift.Bool
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/starred_at`.
+            public var starred_at: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/user_view_type`.
+            public var user_view_type: Swift.String?
+            /// Creates a new `nullable_hyphen_simple_hyphen_user`.
+            ///
+            /// - Parameters:
+            ///   - name:
+            ///   - email:
+            ///   - login:
+            ///   - id:
+            ///   - node_id:
+            ///   - avatar_url:
+            ///   - gravatar_id:
+            ///   - url:
+            ///   - html_url:
+            ///   - followers_url:
+            ///   - following_url:
+            ///   - gists_url:
+            ///   - starred_url:
+            ///   - subscriptions_url:
+            ///   - organizations_url:
+            ///   - repos_url:
+            ///   - events_url:
+            ///   - received_events_url:
+            ///   - _type:
+            ///   - site_admin:
+            ///   - starred_at:
+            ///   - user_view_type:
+            public init(
+                name: Swift.String? = nil,
+                email: Swift.String? = nil,
+                login: Swift.String,
+                id: Swift.Int64,
+                node_id: Swift.String,
+                avatar_url: Swift.String,
+                gravatar_id: Swift.String? = nil,
+                url: Swift.String,
+                html_url: Swift.String,
+                followers_url: Swift.String,
+                following_url: Swift.String,
+                gists_url: Swift.String,
+                starred_url: Swift.String,
+                subscriptions_url: Swift.String,
+                organizations_url: Swift.String,
+                repos_url: Swift.String,
+                events_url: Swift.String,
+                received_events_url: Swift.String,
+                _type: Swift.String,
+                site_admin: Swift.Bool,
+                starred_at: Swift.String? = nil,
+                user_view_type: Swift.String? = nil
+            ) {
+                self.name = name
+                self.email = email
+                self.login = login
+                self.id = id
+                self.node_id = node_id
+                self.avatar_url = avatar_url
+                self.gravatar_id = gravatar_id
+                self.url = url
+                self.html_url = html_url
+                self.followers_url = followers_url
+                self.following_url = following_url
+                self.gists_url = gists_url
+                self.starred_url = starred_url
+                self.subscriptions_url = subscriptions_url
+                self.organizations_url = organizations_url
+                self.repos_url = repos_url
+                self.events_url = events_url
+                self.received_events_url = received_events_url
+                self._type = _type
+                self.site_admin = site_admin
+                self.starred_at = starred_at
+                self.user_view_type = user_view_type
+            }
+            public enum CodingKeys: String, CodingKey {
+                case name
+                case email
+                case login
+                case id
+                case node_id
+                case avatar_url
+                case gravatar_id
+                case url
+                case html_url
+                case followers_url
+                case following_url
+                case gists_url
+                case starred_url
+                case subscriptions_url
+                case organizations_url
+                case repos_url
+                case events_url
+                case received_events_url
+                case _type = "type"
+                case site_admin
+                case starred_at
+                case user_view_type
             }
         }
         /// Installation
@@ -4327,249 +4491,94 @@ public enum Components {
                 case html_url
             }
         }
-        /// Groups of organization members that gives permissions on specified repositories.
+        /// The type of issue.
         ///
-        /// - Remark: Generated from `#/components/schemas/nullable-team-simple`.
-        public struct nullable_hyphen_team_hyphen_simple: Codable, Hashable, Sendable {
-            /// Unique identifier of the team
+        /// - Remark: Generated from `#/components/schemas/issue-type`.
+        public struct issue_hyphen_type: Codable, Hashable, Sendable {
+            /// The unique identifier of the issue type.
             ///
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/id`.
+            /// - Remark: Generated from `#/components/schemas/issue-type/id`.
             public var id: Swift.Int
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/node_id`.
+            /// The node identifier of the issue type.
+            ///
+            /// - Remark: Generated from `#/components/schemas/issue-type/node_id`.
             public var node_id: Swift.String
-            /// URL for the team
+            /// The name of the issue type.
             ///
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/url`.
-            public var url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/members_url`.
-            public var members_url: Swift.String
-            /// Name of the team
-            ///
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/name`.
+            /// - Remark: Generated from `#/components/schemas/issue-type/name`.
             public var name: Swift.String
-            /// Description of the team
+            /// The description of the issue type.
             ///
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/description`.
+            /// - Remark: Generated from `#/components/schemas/issue-type/description`.
             public var description: Swift.String?
-            /// Permission that the team will have for its repositories
+            /// The color of the issue type.
             ///
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/permission`.
-            public var permission: Swift.String
-            /// The level of privacy this team should have
+            /// - Remark: Generated from `#/components/schemas/issue-type/color`.
+            @frozen public enum colorPayload: String, Codable, Hashable, Sendable {
+                case gray = "gray"
+                case blue = "blue"
+                case green = "green"
+                case yellow = "yellow"
+                case orange = "orange"
+                case red = "red"
+                case pink = "pink"
+                case purple = "purple"
+            }
+            /// The color of the issue type.
             ///
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/privacy`.
-            public var privacy: Swift.String?
-            /// The notification setting the team has set
+            /// - Remark: Generated from `#/components/schemas/issue-type/color`.
+            public var color: Components.Schemas.issue_hyphen_type.colorPayload?
+            /// The time the issue type created.
             ///
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/notification_setting`.
-            public var notification_setting: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/html_url`.
-            public var html_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/repositories_url`.
-            public var repositories_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/slug`.
-            public var slug: Swift.String
-            /// Distinguished Name (DN) that team maps to within LDAP environment
+            /// - Remark: Generated from `#/components/schemas/issue-type/created_at`.
+            public var created_at: Foundation.Date?
+            /// The time the issue type last updated.
             ///
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/ldap_dn`.
-            public var ldap_dn: Swift.String?
-            /// Creates a new `nullable_hyphen_team_hyphen_simple`.
+            /// - Remark: Generated from `#/components/schemas/issue-type/updated_at`.
+            public var updated_at: Foundation.Date?
+            /// The enabled state of the issue type.
+            ///
+            /// - Remark: Generated from `#/components/schemas/issue-type/is_enabled`.
+            public var is_enabled: Swift.Bool?
+            /// Creates a new `issue_hyphen_type`.
             ///
             /// - Parameters:
-            ///   - id: Unique identifier of the team
-            ///   - node_id:
-            ///   - url: URL for the team
-            ///   - members_url:
-            ///   - name: Name of the team
-            ///   - description: Description of the team
-            ///   - permission: Permission that the team will have for its repositories
-            ///   - privacy: The level of privacy this team should have
-            ///   - notification_setting: The notification setting the team has set
-            ///   - html_url:
-            ///   - repositories_url:
-            ///   - slug:
-            ///   - ldap_dn: Distinguished Name (DN) that team maps to within LDAP environment
-            public init(
-                id: Swift.Int,
-                node_id: Swift.String,
-                url: Swift.String,
-                members_url: Swift.String,
-                name: Swift.String,
-                description: Swift.String? = nil,
-                permission: Swift.String,
-                privacy: Swift.String? = nil,
-                notification_setting: Swift.String? = nil,
-                html_url: Swift.String,
-                repositories_url: Swift.String,
-                slug: Swift.String,
-                ldap_dn: Swift.String? = nil
-            ) {
-                self.id = id
-                self.node_id = node_id
-                self.url = url
-                self.members_url = members_url
-                self.name = name
-                self.description = description
-                self.permission = permission
-                self.privacy = privacy
-                self.notification_setting = notification_setting
-                self.html_url = html_url
-                self.repositories_url = repositories_url
-                self.slug = slug
-                self.ldap_dn = ldap_dn
-            }
-            public enum CodingKeys: String, CodingKey {
-                case id
-                case node_id
-                case url
-                case members_url
-                case name
-                case description
-                case permission
-                case privacy
-                case notification_setting
-                case html_url
-                case repositories_url
-                case slug
-                case ldap_dn
-            }
-        }
-        /// Groups of organization members that gives permissions on specified repositories.
-        ///
-        /// - Remark: Generated from `#/components/schemas/team`.
-        public struct team: Codable, Hashable, Sendable {
-            /// - Remark: Generated from `#/components/schemas/team/id`.
-            public var id: Swift.Int
-            /// - Remark: Generated from `#/components/schemas/team/node_id`.
-            public var node_id: Swift.String
-            /// - Remark: Generated from `#/components/schemas/team/name`.
-            public var name: Swift.String
-            /// - Remark: Generated from `#/components/schemas/team/slug`.
-            public var slug: Swift.String
-            /// - Remark: Generated from `#/components/schemas/team/description`.
-            public var description: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/team/privacy`.
-            public var privacy: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/team/notification_setting`.
-            public var notification_setting: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/team/permission`.
-            public var permission: Swift.String
-            /// - Remark: Generated from `#/components/schemas/team/permissions`.
-            public struct permissionsPayload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/team/permissions/pull`.
-                public var pull: Swift.Bool
-                /// - Remark: Generated from `#/components/schemas/team/permissions/triage`.
-                public var triage: Swift.Bool
-                /// - Remark: Generated from `#/components/schemas/team/permissions/push`.
-                public var push: Swift.Bool
-                /// - Remark: Generated from `#/components/schemas/team/permissions/maintain`.
-                public var maintain: Swift.Bool
-                /// - Remark: Generated from `#/components/schemas/team/permissions/admin`.
-                public var admin: Swift.Bool
-                /// Creates a new `permissionsPayload`.
-                ///
-                /// - Parameters:
-                ///   - pull:
-                ///   - triage:
-                ///   - push:
-                ///   - maintain:
-                ///   - admin:
-                public init(
-                    pull: Swift.Bool,
-                    triage: Swift.Bool,
-                    push: Swift.Bool,
-                    maintain: Swift.Bool,
-                    admin: Swift.Bool
-                ) {
-                    self.pull = pull
-                    self.triage = triage
-                    self.push = push
-                    self.maintain = maintain
-                    self.admin = admin
-                }
-                public enum CodingKeys: String, CodingKey {
-                    case pull
-                    case triage
-                    case push
-                    case maintain
-                    case admin
-                }
-            }
-            /// - Remark: Generated from `#/components/schemas/team/permissions`.
-            public var permissions: Components.Schemas.team.permissionsPayload?
-            /// - Remark: Generated from `#/components/schemas/team/url`.
-            public var url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/team/html_url`.
-            public var html_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/team/members_url`.
-            public var members_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/team/repositories_url`.
-            public var repositories_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/team/parent`.
-            public var parent: Components.Schemas.nullable_hyphen_team_hyphen_simple?
-            /// Creates a new `team`.
-            ///
-            /// - Parameters:
-            ///   - id:
-            ///   - node_id:
-            ///   - name:
-            ///   - slug:
-            ///   - description:
-            ///   - privacy:
-            ///   - notification_setting:
-            ///   - permission:
-            ///   - permissions:
-            ///   - url:
-            ///   - html_url:
-            ///   - members_url:
-            ///   - repositories_url:
-            ///   - parent:
+            ///   - id: The unique identifier of the issue type.
+            ///   - node_id: The node identifier of the issue type.
+            ///   - name: The name of the issue type.
+            ///   - description: The description of the issue type.
+            ///   - color: The color of the issue type.
+            ///   - created_at: The time the issue type created.
+            ///   - updated_at: The time the issue type last updated.
+            ///   - is_enabled: The enabled state of the issue type.
             public init(
                 id: Swift.Int,
                 node_id: Swift.String,
                 name: Swift.String,
-                slug: Swift.String,
                 description: Swift.String? = nil,
-                privacy: Swift.String? = nil,
-                notification_setting: Swift.String? = nil,
-                permission: Swift.String,
-                permissions: Components.Schemas.team.permissionsPayload? = nil,
-                url: Swift.String,
-                html_url: Swift.String,
-                members_url: Swift.String,
-                repositories_url: Swift.String,
-                parent: Components.Schemas.nullable_hyphen_team_hyphen_simple? = nil
+                color: Components.Schemas.issue_hyphen_type.colorPayload? = nil,
+                created_at: Foundation.Date? = nil,
+                updated_at: Foundation.Date? = nil,
+                is_enabled: Swift.Bool? = nil
             ) {
                 self.id = id
                 self.node_id = node_id
                 self.name = name
-                self.slug = slug
                 self.description = description
-                self.privacy = privacy
-                self.notification_setting = notification_setting
-                self.permission = permission
-                self.permissions = permissions
-                self.url = url
-                self.html_url = html_url
-                self.members_url = members_url
-                self.repositories_url = repositories_url
-                self.parent = parent
+                self.color = color
+                self.created_at = created_at
+                self.updated_at = updated_at
+                self.is_enabled = is_enabled
             }
             public enum CodingKeys: String, CodingKey {
                 case id
                 case node_id
                 case name
-                case slug
                 case description
-                case privacy
-                case notification_setting
-                case permission
-                case permissions
-                case url
-                case html_url
-                case members_url
-                case repositories_url
-                case parent
+                case color
+                case created_at
+                case updated_at
+                case is_enabled
             }
         }
         /// - Remark: Generated from `#/components/schemas/security-and-analysis`.
@@ -4596,6 +4605,28 @@ public enum Components {
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security`.
             public var advanced_security: Components.Schemas.security_hyphen_and_hyphen_analysis.advanced_securityPayload?
+            /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security`.
+            public struct code_securityPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security/status`.
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                    case enabled = "enabled"
+                    case disabled = "disabled"
+                }
+                /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security/status`.
+                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.code_securityPayload.statusPayload?
+                /// Creates a new `code_securityPayload`.
+                ///
+                /// - Parameters:
+                ///   - status:
+                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.code_securityPayload.statusPayload? = nil) {
+                    self.status = status
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case status
+                }
+            }
+            /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security`.
+            public var code_security: Components.Schemas.security_hyphen_and_hyphen_analysis.code_securityPayload?
             /// Enable or disable Dependabot security updates for the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/dependabot_security_updates`.
@@ -4718,6 +4749,7 @@ public enum Components {
             ///
             /// - Parameters:
             ///   - advanced_security:
+            ///   - code_security:
             ///   - dependabot_security_updates: Enable or disable Dependabot security updates for the repository.
             ///   - secret_scanning:
             ///   - secret_scanning_push_protection:
@@ -4725,6 +4757,7 @@ public enum Components {
             ///   - secret_scanning_ai_detection:
             public init(
                 advanced_security: Components.Schemas.security_hyphen_and_hyphen_analysis.advanced_securityPayload? = nil,
+                code_security: Components.Schemas.security_hyphen_and_hyphen_analysis.code_securityPayload? = nil,
                 dependabot_security_updates: Components.Schemas.security_hyphen_and_hyphen_analysis.dependabot_security_updatesPayload? = nil,
                 secret_scanning: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanningPayload? = nil,
                 secret_scanning_push_protection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_push_protectionPayload? = nil,
@@ -4732,6 +4765,7 @@ public enum Components {
                 secret_scanning_ai_detection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload? = nil
             ) {
                 self.advanced_security = advanced_security
+                self.code_security = code_security
                 self.dependabot_security_updates = dependabot_security_updates
                 self.secret_scanning = secret_scanning
                 self.secret_scanning_push_protection = secret_scanning_push_protection
@@ -4740,6 +4774,7 @@ public enum Components {
             }
             public enum CodingKeys: String, CodingKey {
                 case advanced_security
+                case code_security
                 case dependabot_security_updates
                 case secret_scanning
                 case secret_scanning_push_protection
@@ -5905,6 +5940,251 @@ public enum Components {
                 case deploy_keys_enabled_for_repositories
             }
         }
+        /// Groups of organization members that gives permissions on specified repositories.
+        ///
+        /// - Remark: Generated from `#/components/schemas/nullable-team-simple`.
+        public struct nullable_hyphen_team_hyphen_simple: Codable, Hashable, Sendable {
+            /// Unique identifier of the team
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/id`.
+            public var id: Swift.Int
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/node_id`.
+            public var node_id: Swift.String
+            /// URL for the team
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/url`.
+            public var url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/members_url`.
+            public var members_url: Swift.String
+            /// Name of the team
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/name`.
+            public var name: Swift.String
+            /// Description of the team
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/description`.
+            public var description: Swift.String?
+            /// Permission that the team will have for its repositories
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/permission`.
+            public var permission: Swift.String
+            /// The level of privacy this team should have
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/privacy`.
+            public var privacy: Swift.String?
+            /// The notification setting the team has set
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/notification_setting`.
+            public var notification_setting: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/html_url`.
+            public var html_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/repositories_url`.
+            public var repositories_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/slug`.
+            public var slug: Swift.String
+            /// Distinguished Name (DN) that team maps to within LDAP environment
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/ldap_dn`.
+            public var ldap_dn: Swift.String?
+            /// Creates a new `nullable_hyphen_team_hyphen_simple`.
+            ///
+            /// - Parameters:
+            ///   - id: Unique identifier of the team
+            ///   - node_id:
+            ///   - url: URL for the team
+            ///   - members_url:
+            ///   - name: Name of the team
+            ///   - description: Description of the team
+            ///   - permission: Permission that the team will have for its repositories
+            ///   - privacy: The level of privacy this team should have
+            ///   - notification_setting: The notification setting the team has set
+            ///   - html_url:
+            ///   - repositories_url:
+            ///   - slug:
+            ///   - ldap_dn: Distinguished Name (DN) that team maps to within LDAP environment
+            public init(
+                id: Swift.Int,
+                node_id: Swift.String,
+                url: Swift.String,
+                members_url: Swift.String,
+                name: Swift.String,
+                description: Swift.String? = nil,
+                permission: Swift.String,
+                privacy: Swift.String? = nil,
+                notification_setting: Swift.String? = nil,
+                html_url: Swift.String,
+                repositories_url: Swift.String,
+                slug: Swift.String,
+                ldap_dn: Swift.String? = nil
+            ) {
+                self.id = id
+                self.node_id = node_id
+                self.url = url
+                self.members_url = members_url
+                self.name = name
+                self.description = description
+                self.permission = permission
+                self.privacy = privacy
+                self.notification_setting = notification_setting
+                self.html_url = html_url
+                self.repositories_url = repositories_url
+                self.slug = slug
+                self.ldap_dn = ldap_dn
+            }
+            public enum CodingKeys: String, CodingKey {
+                case id
+                case node_id
+                case url
+                case members_url
+                case name
+                case description
+                case permission
+                case privacy
+                case notification_setting
+                case html_url
+                case repositories_url
+                case slug
+                case ldap_dn
+            }
+        }
+        /// Groups of organization members that gives permissions on specified repositories.
+        ///
+        /// - Remark: Generated from `#/components/schemas/team`.
+        public struct team: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/team/id`.
+            public var id: Swift.Int
+            /// - Remark: Generated from `#/components/schemas/team/node_id`.
+            public var node_id: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team/name`.
+            public var name: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team/slug`.
+            public var slug: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team/description`.
+            public var description: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/team/privacy`.
+            public var privacy: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/team/notification_setting`.
+            public var notification_setting: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/team/permission`.
+            public var permission: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team/permissions`.
+            public struct permissionsPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/team/permissions/pull`.
+                public var pull: Swift.Bool
+                /// - Remark: Generated from `#/components/schemas/team/permissions/triage`.
+                public var triage: Swift.Bool
+                /// - Remark: Generated from `#/components/schemas/team/permissions/push`.
+                public var push: Swift.Bool
+                /// - Remark: Generated from `#/components/schemas/team/permissions/maintain`.
+                public var maintain: Swift.Bool
+                /// - Remark: Generated from `#/components/schemas/team/permissions/admin`.
+                public var admin: Swift.Bool
+                /// Creates a new `permissionsPayload`.
+                ///
+                /// - Parameters:
+                ///   - pull:
+                ///   - triage:
+                ///   - push:
+                ///   - maintain:
+                ///   - admin:
+                public init(
+                    pull: Swift.Bool,
+                    triage: Swift.Bool,
+                    push: Swift.Bool,
+                    maintain: Swift.Bool,
+                    admin: Swift.Bool
+                ) {
+                    self.pull = pull
+                    self.triage = triage
+                    self.push = push
+                    self.maintain = maintain
+                    self.admin = admin
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case pull
+                    case triage
+                    case push
+                    case maintain
+                    case admin
+                }
+            }
+            /// - Remark: Generated from `#/components/schemas/team/permissions`.
+            public var permissions: Components.Schemas.team.permissionsPayload?
+            /// - Remark: Generated from `#/components/schemas/team/url`.
+            public var url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team/html_url`.
+            public var html_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team/members_url`.
+            public var members_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team/repositories_url`.
+            public var repositories_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team/parent`.
+            public var parent: Components.Schemas.nullable_hyphen_team_hyphen_simple?
+            /// Creates a new `team`.
+            ///
+            /// - Parameters:
+            ///   - id:
+            ///   - node_id:
+            ///   - name:
+            ///   - slug:
+            ///   - description:
+            ///   - privacy:
+            ///   - notification_setting:
+            ///   - permission:
+            ///   - permissions:
+            ///   - url:
+            ///   - html_url:
+            ///   - members_url:
+            ///   - repositories_url:
+            ///   - parent:
+            public init(
+                id: Swift.Int,
+                node_id: Swift.String,
+                name: Swift.String,
+                slug: Swift.String,
+                description: Swift.String? = nil,
+                privacy: Swift.String? = nil,
+                notification_setting: Swift.String? = nil,
+                permission: Swift.String,
+                permissions: Components.Schemas.team.permissionsPayload? = nil,
+                url: Swift.String,
+                html_url: Swift.String,
+                members_url: Swift.String,
+                repositories_url: Swift.String,
+                parent: Components.Schemas.nullable_hyphen_team_hyphen_simple? = nil
+            ) {
+                self.id = id
+                self.node_id = node_id
+                self.name = name
+                self.slug = slug
+                self.description = description
+                self.privacy = privacy
+                self.notification_setting = notification_setting
+                self.permission = permission
+                self.permissions = permissions
+                self.url = url
+                self.html_url = html_url
+                self.members_url = members_url
+                self.repositories_url = repositories_url
+                self.parent = parent
+            }
+            public enum CodingKeys: String, CodingKey {
+                case id
+                case node_id
+                case name
+                case slug
+                case description
+                case privacy
+                case notification_setting
+                case permission
+                case permissions
+                case url
+                case html_url
+                case members_url
+                case repositories_url
+                case parent
+            }
+        }
         /// Organization Invitation
         ///
         /// - Remark: Generated from `#/components/schemas/organization-invitation`.
@@ -6351,6 +6631,118 @@ public enum Components {
         ///
         /// - Remark: Generated from `#/components/schemas/api-insights-user-stats`.
         public typealias api_hyphen_insights_hyphen_user_hyphen_stats = [Components.Schemas.api_hyphen_insights_hyphen_user_hyphen_statsPayload]
+        /// - Remark: Generated from `#/components/schemas/organization-create-issue-type`.
+        public struct organization_hyphen_create_hyphen_issue_hyphen_type: Codable, Hashable, Sendable {
+            /// Name of the issue type.
+            ///
+            /// - Remark: Generated from `#/components/schemas/organization-create-issue-type/name`.
+            public var name: Swift.String
+            /// Whether or not the issue type is enabled at the organization level.
+            ///
+            /// - Remark: Generated from `#/components/schemas/organization-create-issue-type/is_enabled`.
+            public var is_enabled: Swift.Bool
+            /// Description of the issue type.
+            ///
+            /// - Remark: Generated from `#/components/schemas/organization-create-issue-type/description`.
+            public var description: Swift.String?
+            /// Color for the issue type.
+            ///
+            /// - Remark: Generated from `#/components/schemas/organization-create-issue-type/color`.
+            @frozen public enum colorPayload: String, Codable, Hashable, Sendable {
+                case gray = "gray"
+                case blue = "blue"
+                case green = "green"
+                case yellow = "yellow"
+                case orange = "orange"
+                case red = "red"
+                case pink = "pink"
+                case purple = "purple"
+            }
+            /// Color for the issue type.
+            ///
+            /// - Remark: Generated from `#/components/schemas/organization-create-issue-type/color`.
+            public var color: Components.Schemas.organization_hyphen_create_hyphen_issue_hyphen_type.colorPayload?
+            /// Creates a new `organization_hyphen_create_hyphen_issue_hyphen_type`.
+            ///
+            /// - Parameters:
+            ///   - name: Name of the issue type.
+            ///   - is_enabled: Whether or not the issue type is enabled at the organization level.
+            ///   - description: Description of the issue type.
+            ///   - color: Color for the issue type.
+            public init(
+                name: Swift.String,
+                is_enabled: Swift.Bool,
+                description: Swift.String? = nil,
+                color: Components.Schemas.organization_hyphen_create_hyphen_issue_hyphen_type.colorPayload? = nil
+            ) {
+                self.name = name
+                self.is_enabled = is_enabled
+                self.description = description
+                self.color = color
+            }
+            public enum CodingKeys: String, CodingKey {
+                case name
+                case is_enabled
+                case description
+                case color
+            }
+        }
+        /// - Remark: Generated from `#/components/schemas/organization-update-issue-type`.
+        public struct organization_hyphen_update_hyphen_issue_hyphen_type: Codable, Hashable, Sendable {
+            /// Name of the issue type.
+            ///
+            /// - Remark: Generated from `#/components/schemas/organization-update-issue-type/name`.
+            public var name: Swift.String
+            /// Whether or not the issue type is enabled at the organization level.
+            ///
+            /// - Remark: Generated from `#/components/schemas/organization-update-issue-type/is_enabled`.
+            public var is_enabled: Swift.Bool
+            /// Description of the issue type.
+            ///
+            /// - Remark: Generated from `#/components/schemas/organization-update-issue-type/description`.
+            public var description: Swift.String?
+            /// Color for the issue type.
+            ///
+            /// - Remark: Generated from `#/components/schemas/organization-update-issue-type/color`.
+            @frozen public enum colorPayload: String, Codable, Hashable, Sendable {
+                case gray = "gray"
+                case blue = "blue"
+                case green = "green"
+                case yellow = "yellow"
+                case orange = "orange"
+                case red = "red"
+                case pink = "pink"
+                case purple = "purple"
+            }
+            /// Color for the issue type.
+            ///
+            /// - Remark: Generated from `#/components/schemas/organization-update-issue-type/color`.
+            public var color: Components.Schemas.organization_hyphen_update_hyphen_issue_hyphen_type.colorPayload?
+            /// Creates a new `organization_hyphen_update_hyphen_issue_hyphen_type`.
+            ///
+            /// - Parameters:
+            ///   - name: Name of the issue type.
+            ///   - is_enabled: Whether or not the issue type is enabled at the organization level.
+            ///   - description: Description of the issue type.
+            ///   - color: Color for the issue type.
+            public init(
+                name: Swift.String,
+                is_enabled: Swift.Bool,
+                description: Swift.String? = nil,
+                color: Components.Schemas.organization_hyphen_update_hyphen_issue_hyphen_type.colorPayload? = nil
+            ) {
+                self.name = name
+                self.is_enabled = is_enabled
+                self.description = description
+                self.color = color
+            }
+            public enum CodingKeys: String, CodingKey {
+                case name
+                case is_enabled
+                case description
+                case color
+            }
+        }
         /// Org Membership
         ///
         /// - Remark: Generated from `#/components/schemas/org-membership`.
@@ -7509,6 +7901,121 @@ public enum Components {
                 case values_editable_by
             }
         }
+        /// Custom property set payload
+        ///
+        /// - Remark: Generated from `#/components/schemas/custom-property-set-payload`.
+        public struct custom_hyphen_property_hyphen_set_hyphen_payload: Codable, Hashable, Sendable {
+            /// The type of the value for the property
+            ///
+            /// - Remark: Generated from `#/components/schemas/custom-property-set-payload/value_type`.
+            @frozen public enum value_typePayload: String, Codable, Hashable, Sendable {
+                case string = "string"
+                case single_select = "single_select"
+                case multi_select = "multi_select"
+                case true_false = "true_false"
+            }
+            /// The type of the value for the property
+            ///
+            /// - Remark: Generated from `#/components/schemas/custom-property-set-payload/value_type`.
+            public var value_type: Components.Schemas.custom_hyphen_property_hyphen_set_hyphen_payload.value_typePayload
+            /// Whether the property is required.
+            ///
+            /// - Remark: Generated from `#/components/schemas/custom-property-set-payload/required`.
+            public var required: Swift.Bool?
+            /// Default value of the property
+            ///
+            /// - Remark: Generated from `#/components/schemas/custom-property-set-payload/default_value`.
+            @frozen public enum default_valuePayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/custom-property-set-payload/default_value/case1`.
+                case case1(Swift.String)
+                /// - Remark: Generated from `#/components/schemas/custom-property-set-payload/default_value/case2`.
+                case case2([Swift.String])
+                public init(from decoder: any Decoder) throws {
+                    var errors: [any Error] = []
+                    do {
+                        self = .case1(try decoder.decodeFromSingleValueContainer())
+                        return
+                    } catch {
+                        errors.append(error)
+                    }
+                    do {
+                        self = .case2(try decoder.decodeFromSingleValueContainer())
+                        return
+                    } catch {
+                        errors.append(error)
+                    }
+                    throw Swift.DecodingError.failedToDecodeOneOfSchema(
+                        type: Self.self,
+                        codingPath: decoder.codingPath,
+                        errors: errors
+                    )
+                }
+                public func encode(to encoder: any Encoder) throws {
+                    switch self {
+                    case let .case1(value):
+                        try encoder.encodeToSingleValueContainer(value)
+                    case let .case2(value):
+                        try encoder.encodeToSingleValueContainer(value)
+                    }
+                }
+            }
+            /// Default value of the property
+            ///
+            /// - Remark: Generated from `#/components/schemas/custom-property-set-payload/default_value`.
+            public var default_value: Components.Schemas.custom_hyphen_property_hyphen_set_hyphen_payload.default_valuePayload?
+            /// Short description of the property
+            ///
+            /// - Remark: Generated from `#/components/schemas/custom-property-set-payload/description`.
+            public var description: Swift.String?
+            /// An ordered list of the allowed values of the property.
+            /// The property can have up to 200 allowed values.
+            ///
+            /// - Remark: Generated from `#/components/schemas/custom-property-set-payload/allowed_values`.
+            public var allowed_values: [Swift.String]?
+            /// Who can edit the values of the property
+            ///
+            /// - Remark: Generated from `#/components/schemas/custom-property-set-payload/values_editable_by`.
+            @frozen public enum values_editable_byPayload: String, Codable, Hashable, Sendable {
+                case org_actors = "org_actors"
+                case org_and_repo_actors = "org_and_repo_actors"
+            }
+            /// Who can edit the values of the property
+            ///
+            /// - Remark: Generated from `#/components/schemas/custom-property-set-payload/values_editable_by`.
+            public var values_editable_by: Components.Schemas.custom_hyphen_property_hyphen_set_hyphen_payload.values_editable_byPayload?
+            /// Creates a new `custom_hyphen_property_hyphen_set_hyphen_payload`.
+            ///
+            /// - Parameters:
+            ///   - value_type: The type of the value for the property
+            ///   - required: Whether the property is required.
+            ///   - default_value: Default value of the property
+            ///   - description: Short description of the property
+            ///   - allowed_values: An ordered list of the allowed values of the property.
+            ///   - values_editable_by: Who can edit the values of the property
+            public init(
+                value_type: Components.Schemas.custom_hyphen_property_hyphen_set_hyphen_payload.value_typePayload,
+                required: Swift.Bool? = nil,
+                default_value: Components.Schemas.custom_hyphen_property_hyphen_set_hyphen_payload.default_valuePayload? = nil,
+                description: Swift.String? = nil,
+                allowed_values: [Swift.String]? = nil,
+                values_editable_by: Components.Schemas.custom_hyphen_property_hyphen_set_hyphen_payload.values_editable_byPayload? = nil
+            ) {
+                self.value_type = value_type
+                self.required = required
+                self.default_value = default_value
+                self.description = description
+                self.allowed_values = allowed_values
+                self.values_editable_by = values_editable_by
+            }
+            public enum CodingKeys: String, CodingKey {
+                case value_type
+                case required
+                case default_value
+                case description
+                case allowed_values
+                case values_editable_by
+            }
+        }
         /// Custom property name and associated value
         ///
         /// - Remark: Generated from `#/components/schemas/custom-property-value`.
@@ -7614,6 +8121,110 @@ public enum Components {
                 case properties
             }
         }
+        /// The historical version of a ruleset
+        ///
+        /// - Remark: Generated from `#/components/schemas/ruleset-version`.
+        public struct ruleset_hyphen_version: Codable, Hashable, Sendable {
+            /// The ID of the previous version of the ruleset
+            ///
+            /// - Remark: Generated from `#/components/schemas/ruleset-version/version_id`.
+            public var version_id: Swift.Int
+            /// The actor who updated the ruleset
+            ///
+            /// - Remark: Generated from `#/components/schemas/ruleset-version/actor`.
+            public struct actorPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/ruleset-version/actor/id`.
+                public var id: Swift.Int?
+                /// - Remark: Generated from `#/components/schemas/ruleset-version/actor/type`.
+                public var _type: Swift.String?
+                /// Creates a new `actorPayload`.
+                ///
+                /// - Parameters:
+                ///   - id:
+                ///   - _type:
+                public init(
+                    id: Swift.Int? = nil,
+                    _type: Swift.String? = nil
+                ) {
+                    self.id = id
+                    self._type = _type
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case id
+                    case _type = "type"
+                }
+            }
+            /// The actor who updated the ruleset
+            ///
+            /// - Remark: Generated from `#/components/schemas/ruleset-version/actor`.
+            public var actor: Components.Schemas.ruleset_hyphen_version.actorPayload
+            /// - Remark: Generated from `#/components/schemas/ruleset-version/updated_at`.
+            public var updated_at: Foundation.Date
+            /// Creates a new `ruleset_hyphen_version`.
+            ///
+            /// - Parameters:
+            ///   - version_id: The ID of the previous version of the ruleset
+            ///   - actor: The actor who updated the ruleset
+            ///   - updated_at:
+            public init(
+                version_id: Swift.Int,
+                actor: Components.Schemas.ruleset_hyphen_version.actorPayload,
+                updated_at: Foundation.Date
+            ) {
+                self.version_id = version_id
+                self.actor = actor
+                self.updated_at = updated_at
+            }
+            public enum CodingKeys: String, CodingKey {
+                case version_id
+                case actor
+                case updated_at
+            }
+        }
+        /// - Remark: Generated from `#/components/schemas/ruleset-version-with-state`.
+        public struct ruleset_hyphen_version_hyphen_with_hyphen_state: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/ruleset-version-with-state/value1`.
+            public var value1: Components.Schemas.ruleset_hyphen_version
+            /// - Remark: Generated from `#/components/schemas/ruleset-version-with-state/value2`.
+            public struct Value2Payload: Codable, Hashable, Sendable {
+                /// The state of the ruleset version
+                ///
+                /// - Remark: Generated from `#/components/schemas/ruleset-version-with-state/value2/state`.
+                public var state: OpenAPIRuntime.OpenAPIObjectContainer
+                /// Creates a new `Value2Payload`.
+                ///
+                /// - Parameters:
+                ///   - state: The state of the ruleset version
+                public init(state: OpenAPIRuntime.OpenAPIObjectContainer) {
+                    self.state = state
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case state
+                }
+            }
+            /// - Remark: Generated from `#/components/schemas/ruleset-version-with-state/value2`.
+            public var value2: Components.Schemas.ruleset_hyphen_version_hyphen_with_hyphen_state.Value2Payload
+            /// Creates a new `ruleset_hyphen_version_hyphen_with_hyphen_state`.
+            ///
+            /// - Parameters:
+            ///   - value1:
+            ///   - value2:
+            public init(
+                value1: Components.Schemas.ruleset_hyphen_version,
+                value2: Components.Schemas.ruleset_hyphen_version_hyphen_with_hyphen_state.Value2Payload
+            ) {
+                self.value1 = value1
+                self.value2 = value2
+            }
+            public init(from decoder: any Decoder) throws {
+                value1 = try .init(from: decoder)
+                value2 = try .init(from: decoder)
+            }
+            public func encode(to encoder: any Encoder) throws {
+                try value1.encode(to: encoder)
+                try value2.encode(to: encoder)
+            }
+        }
     }
     /// Types generated from the `#/components/parameters` section of the OpenAPI document.
     public enum Parameters {
@@ -7646,10 +8257,6 @@ public enum Components {
         ///
         /// - Remark: Generated from `#/components/parameters/page`.
         public typealias page = Swift.Int
-        /// The slug of the team name.
-        ///
-        /// - Remark: Generated from `#/components/parameters/team-slug`.
-        public typealias team_hyphen_slug = Swift.String
         /// An organization ID. Only return organizations with an ID greater than this ID.
         ///
         /// - Remark: Generated from `#/components/parameters/since-org`.
@@ -7737,6 +8344,14 @@ public enum Components {
         ///
         /// - Remark: Generated from `#/components/parameters/invitation-id`.
         public typealias invitation_hyphen_id = Swift.Int
+        /// The unique identifier of the issue type.
+        ///
+        /// - Remark: Generated from `#/components/parameters/issue-type-id`.
+        public typealias issue_hyphen_type_hyphen_id = Swift.Int
+        /// The slug of the team name.
+        ///
+        /// - Remark: Generated from `#/components/parameters/team-slug`.
+        public typealias team_hyphen_slug = Swift.String
         /// The unique identifier of the role.
         ///
         /// - Remark: Generated from `#/components/parameters/role-id`.
@@ -7767,6 +8382,10 @@ public enum Components {
         ///
         /// - Remark: Generated from `#/components/parameters/personal-access-token-after`.
         public typealias personal_hyphen_access_hyphen_token_hyphen_after = Foundation.Date
+        /// The ID of the token
+        ///
+        /// - Remark: Generated from `#/components/parameters/personal-access-token-token-id`.
+        public typealias personal_hyphen_access_hyphen_token_hyphen_token_hyphen_id = [Swift.String]
         /// The unique identifier of the fine-grained personal access token.
         ///
         /// - Remark: Generated from `#/components/parameters/fine-grained-personal-access-token-id`.
@@ -7802,6 +8421,34 @@ public enum Components {
     public enum RequestBodies {}
     /// Types generated from the `#/components/responses` section of the OpenAPI document.
     public enum Responses {
+        public struct validation_failed_simple: Sendable, Hashable {
+            /// - Remark: Generated from `#/components/responses/validation_failed_simple/content`.
+            @frozen public enum Body: Sendable, Hashable {
+                /// - Remark: Generated from `#/components/responses/validation_failed_simple/content/application\/json`.
+                case json(Components.Schemas.validation_hyphen_error_hyphen_simple)
+                /// The associated value of the enum case if `self` is `.json`.
+                ///
+                /// - Throws: An error if `self` is not `.json`.
+                /// - SeeAlso: `.json`.
+                public var json: Components.Schemas.validation_hyphen_error_hyphen_simple {
+                    get throws {
+                        switch self {
+                        case let .json(body):
+                            return body
+                        }
+                    }
+                }
+            }
+            /// Received HTTP response body
+            public var body: Components.Responses.validation_failed_simple.Body
+            /// Creates a new `validation_failed_simple`.
+            ///
+            /// - Parameters:
+            ///   - body: Received HTTP response body
+            public init(body: Components.Responses.validation_failed_simple.Body) {
+                self.body = body
+            }
+        }
         public struct not_found: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/not_found/content`.
             @frozen public enum Body: Sendable, Hashable {
@@ -7998,34 +8645,6 @@ public enum Components {
                 self.body = body
             }
         }
-        public struct internal_error: Sendable, Hashable {
-            /// - Remark: Generated from `#/components/responses/internal_error/content`.
-            @frozen public enum Body: Sendable, Hashable {
-                /// - Remark: Generated from `#/components/responses/internal_error/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
-                /// The associated value of the enum case if `self` is `.json`.
-                ///
-                /// - Throws: An error if `self` is not `.json`.
-                /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
-                    get throws {
-                        switch self {
-                        case let .json(body):
-                            return body
-                        }
-                    }
-                }
-            }
-            /// Received HTTP response body
-            public var body: Components.Responses.internal_error.Body
-            /// Creates a new `internal_error`.
-            ///
-            /// - Parameters:
-            ///   - body: Received HTTP response body
-            public init(body: Components.Responses.internal_error.Body) {
-                self.body = body
-            }
-        }
         public struct conflict: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/conflict/content`.
             @frozen public enum Body: Sendable, Hashable {
@@ -8057,6 +8676,34 @@ public enum Components {
         public struct no_content: Sendable, Hashable {
             /// Creates a new `no_content`.
             public init() {}
+        }
+        public struct internal_error: Sendable, Hashable {
+            /// - Remark: Generated from `#/components/responses/internal_error/content`.
+            @frozen public enum Body: Sendable, Hashable {
+                /// - Remark: Generated from `#/components/responses/internal_error/content/application\/json`.
+                case json(Components.Schemas.basic_hyphen_error)
+                /// The associated value of the enum case if `self` is `.json`.
+                ///
+                /// - Throws: An error if `self` is not `.json`.
+                /// - SeeAlso: `.json`.
+                public var json: Components.Schemas.basic_hyphen_error {
+                    get throws {
+                        switch self {
+                        case let .json(body):
+                            return body
+                        }
+                    }
+                }
+            }
+            /// Received HTTP response body
+            public var body: Components.Responses.internal_error.Body
+            /// Creates a new `internal_error`.
+            ///
+            /// - Parameters:
+            ///   - body: Received HTTP response body
+            public init(body: Components.Responses.internal_error.Body) {
+                self.body = body
+            }
         }
     }
     /// Types generated from the `#/components/headers` section of the OpenAPI document.
@@ -8258,7 +8905,7 @@ public enum Operations {
     ///
     /// Gets information about an organization.
     ///
-    /// When the value of `two_factor_requirement_enabled` is `true`, the organization requires all members, billing managers, and outside collaborators to enable [two-factor authentication](https://docs.github.com/articles/securing-your-account-with-two-factor-authentication-2fa/).
+    /// When the value of `two_factor_requirement_enabled` is `true`, the organization requires all members, billing managers, outside collaborators, guest collaborators, repository collaborators, or everyone with access to any repository within the organization to enable [two-factor authentication](https://docs.github.com/articles/securing-your-account-with-two-factor-authentication-2fa/).
     ///
     /// To see the full details about an organization, the authenticated user must be an organization owner.
     ///
@@ -9194,20 +9841,28 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/attestations/{subject_digest}/GET/query/after`.
                 public var after: Components.Parameters.pagination_hyphen_after?
+                /// Optional filter for fetching attestations with a given predicate type.
+                /// This option accepts `provenance`, `sbom`, or freeform text for custom predicate types.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/attestations/{subject_digest}/GET/query/predicate_type`.
+                public var predicate_type: Swift.String?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - before: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - after: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - predicate_type: Optional filter for fetching attestations with a given predicate type.
                 public init(
                     per_page: Components.Parameters.per_hyphen_page? = nil,
                     before: Components.Parameters.pagination_hyphen_before? = nil,
-                    after: Components.Parameters.pagination_hyphen_after? = nil
+                    after: Components.Parameters.pagination_hyphen_after? = nil,
+                    predicate_type: Swift.String? = nil
                 ) {
                     self.per_page = per_page
                     self.before = before
                     self.after = after
+                    self.predicate_type = predicate_type
                 }
             }
             public var query: Operations.orgs_sol_list_hyphen_attestations.Input.Query
@@ -9322,21 +9977,27 @@ public enum Operations {
                             public var bundle: Operations.orgs_sol_list_hyphen_attestations.Output.Ok.Body.jsonPayload.attestationsPayloadPayload.bundlePayload?
                             /// - Remark: Generated from `#/paths/orgs/{org}/attestations/{subject_digest}/GET/responses/200/content/json/attestationsPayload/repository_id`.
                             public var repository_id: Swift.Int?
+                            /// - Remark: Generated from `#/paths/orgs/{org}/attestations/{subject_digest}/GET/responses/200/content/json/attestationsPayload/bundle_url`.
+                            public var bundle_url: Swift.String?
                             /// Creates a new `attestationsPayloadPayload`.
                             ///
                             /// - Parameters:
                             ///   - bundle: The attestation's Sigstore Bundle.
                             ///   - repository_id:
+                            ///   - bundle_url:
                             public init(
                                 bundle: Operations.orgs_sol_list_hyphen_attestations.Output.Ok.Body.jsonPayload.attestationsPayloadPayload.bundlePayload? = nil,
-                                repository_id: Swift.Int? = nil
+                                repository_id: Swift.Int? = nil,
+                                bundle_url: Swift.String? = nil
                             ) {
                                 self.bundle = bundle
                                 self.repository_id = repository_id
+                                self.bundle_url = bundle_url
                             }
                             public enum CodingKeys: String, CodingKey {
                                 case bundle
                                 case repository_id
+                                case bundle_url
                             }
                         }
                         /// - Remark: Generated from `#/paths/orgs/{org}/attestations/{subject_digest}/GET/responses/200/content/json/attestations`.
@@ -15133,6 +15794,722 @@ public enum Operations {
             }
         }
     }
+    /// List issue types for an organization
+    ///
+    /// Lists all issue types for an organization. OAuth app tokens and personal access tokens (classic) need the read:org scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/issue-types`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/issue-types/get(orgs/list-issue-types)`.
+    public enum orgs_sol_list_hyphen_issue_hyphen_types {
+        public static let id: Swift.String = "orgs/list-issue-types"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/orgs/{org}/issue-types/GET/path`.
+            public struct Path: Sendable, Hashable {
+                /// The organization name. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/issue-types/GET/path/org`.
+                public var org: Components.Parameters.org
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - org: The organization name. The name is not case sensitive.
+                public init(org: Components.Parameters.org) {
+                    self.org = org
+                }
+            }
+            public var path: Operations.orgs_sol_list_hyphen_issue_hyphen_types.Input.Path
+            /// - Remark: Generated from `#/paths/orgs/{org}/issue-types/GET/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.orgs_sol_list_hyphen_issue_hyphen_types.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.orgs_sol_list_hyphen_issue_hyphen_types.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.orgs_sol_list_hyphen_issue_hyphen_types.Input.Headers
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - headers:
+            public init(
+                path: Operations.orgs_sol_list_hyphen_issue_hyphen_types.Input.Path,
+                headers: Operations.orgs_sol_list_hyphen_issue_hyphen_types.Input.Headers = .init()
+            ) {
+                self.path = path
+                self.headers = headers
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Ok: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/orgs/{org}/issue-types/GET/responses/200/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/orgs/{org}/issue-types/GET/responses/200/content/application\/json`.
+                    case json([Components.Schemas.issue_hyphen_type])
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: [Components.Schemas.issue_hyphen_type] {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.orgs_sol_list_hyphen_issue_hyphen_types.Output.Ok.Body
+                /// Creates a new `Ok`.
+                ///
+                /// - Parameters:
+                ///   - body: Received HTTP response body
+                public init(body: Operations.orgs_sol_list_hyphen_issue_hyphen_types.Output.Ok.Body) {
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/issue-types/get(orgs/list-issue-types)/responses/200`.
+            ///
+            /// HTTP response code: `200 ok`.
+            case ok(Operations.orgs_sol_list_hyphen_issue_hyphen_types.Output.Ok)
+            /// The associated value of the enum case if `self` is `.ok`.
+            ///
+            /// - Throws: An error if `self` is not `.ok`.
+            /// - SeeAlso: `.ok`.
+            public var ok: Operations.orgs_sol_list_hyphen_issue_hyphen_types.Output.Ok {
+                get throws {
+                    switch self {
+                    case let .ok(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "ok",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Resource not found
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/issue-types/get(orgs/list-issue-types)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            case notFound(Components.Responses.not_found)
+            /// The associated value of the enum case if `self` is `.notFound`.
+            ///
+            /// - Throws: An error if `self` is not `.notFound`.
+            /// - SeeAlso: `.notFound`.
+            public var notFound: Components.Responses.not_found {
+                get throws {
+                    switch self {
+                    case let .notFound(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "notFound",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
+    /// Create issue type for an organization
+    ///
+    /// Create a new issue type for an organization.
+    ///
+    /// You can find out more about issue types in [Managing issue types in an organization](https://docs.github.com/issues/tracking-your-work-with-issues/configuring-issues/managing-issue-types-in-an-organization).
+    ///
+    /// To use this endpoint, the authenticated user must be an administrator for the organization. OAuth app tokens and
+    /// personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `POST /orgs/{org}/issue-types`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/issue-types/post(orgs/create-issue-type)`.
+    public enum orgs_sol_create_hyphen_issue_hyphen_type {
+        public static let id: Swift.String = "orgs/create-issue-type"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/orgs/{org}/issue-types/POST/path`.
+            public struct Path: Sendable, Hashable {
+                /// The organization name. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/issue-types/POST/path/org`.
+                public var org: Components.Parameters.org
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - org: The organization name. The name is not case sensitive.
+                public init(org: Components.Parameters.org) {
+                    self.org = org
+                }
+            }
+            public var path: Operations.orgs_sol_create_hyphen_issue_hyphen_type.Input.Path
+            /// - Remark: Generated from `#/paths/orgs/{org}/issue-types/POST/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.orgs_sol_create_hyphen_issue_hyphen_type.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.orgs_sol_create_hyphen_issue_hyphen_type.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.orgs_sol_create_hyphen_issue_hyphen_type.Input.Headers
+            /// - Remark: Generated from `#/paths/orgs/{org}/issue-types/POST/requestBody`.
+            @frozen public enum Body: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/orgs/{org}/issue-types/POST/requestBody/content/application\/json`.
+                case json(Components.Schemas.organization_hyphen_create_hyphen_issue_hyphen_type)
+            }
+            public var body: Operations.orgs_sol_create_hyphen_issue_hyphen_type.Input.Body
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - headers:
+            ///   - body:
+            public init(
+                path: Operations.orgs_sol_create_hyphen_issue_hyphen_type.Input.Path,
+                headers: Operations.orgs_sol_create_hyphen_issue_hyphen_type.Input.Headers = .init(),
+                body: Operations.orgs_sol_create_hyphen_issue_hyphen_type.Input.Body
+            ) {
+                self.path = path
+                self.headers = headers
+                self.body = body
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Ok: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/orgs/{org}/issue-types/POST/responses/200/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/orgs/{org}/issue-types/POST/responses/200/content/application\/json`.
+                    case json(Components.Schemas.issue_hyphen_type)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Components.Schemas.issue_hyphen_type {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.orgs_sol_create_hyphen_issue_hyphen_type.Output.Ok.Body
+                /// Creates a new `Ok`.
+                ///
+                /// - Parameters:
+                ///   - body: Received HTTP response body
+                public init(body: Operations.orgs_sol_create_hyphen_issue_hyphen_type.Output.Ok.Body) {
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/issue-types/post(orgs/create-issue-type)/responses/200`.
+            ///
+            /// HTTP response code: `200 ok`.
+            case ok(Operations.orgs_sol_create_hyphen_issue_hyphen_type.Output.Ok)
+            /// The associated value of the enum case if `self` is `.ok`.
+            ///
+            /// - Throws: An error if `self` is not `.ok`.
+            /// - SeeAlso: `.ok`.
+            public var ok: Operations.orgs_sol_create_hyphen_issue_hyphen_type.Output.Ok {
+                get throws {
+                    switch self {
+                    case let .ok(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "ok",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Resource not found
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/issue-types/post(orgs/create-issue-type)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            case notFound(Components.Responses.not_found)
+            /// The associated value of the enum case if `self` is `.notFound`.
+            ///
+            /// - Throws: An error if `self` is not `.notFound`.
+            /// - SeeAlso: `.notFound`.
+            public var notFound: Components.Responses.not_found {
+                get throws {
+                    switch self {
+                    case let .notFound(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "notFound",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Validation failed, or the endpoint has been spammed.
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/issue-types/post(orgs/create-issue-type)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            case unprocessableContent(Components.Responses.validation_failed_simple)
+            /// The associated value of the enum case if `self` is `.unprocessableContent`.
+            ///
+            /// - Throws: An error if `self` is not `.unprocessableContent`.
+            /// - SeeAlso: `.unprocessableContent`.
+            public var unprocessableContent: Components.Responses.validation_failed_simple {
+                get throws {
+                    switch self {
+                    case let .unprocessableContent(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "unprocessableContent",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
+    /// Update issue type for an organization
+    ///
+    /// Updates an issue type for an organization.
+    ///
+    /// You can find out more about issue types in [Managing issue types in an organization](https://docs.github.com/issues/tracking-your-work-with-issues/configuring-issues/managing-issue-types-in-an-organization).
+    ///
+    /// To use this endpoint, the authenticated user must be an administrator for the organization. OAuth app tokens and
+    /// personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `PUT /orgs/{org}/issue-types/{issue_type_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/issue-types/{issue_type_id}/put(orgs/update-issue-type)`.
+    public enum orgs_sol_update_hyphen_issue_hyphen_type {
+        public static let id: Swift.String = "orgs/update-issue-type"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/orgs/{org}/issue-types/{issue_type_id}/PUT/path`.
+            public struct Path: Sendable, Hashable {
+                /// The organization name. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/issue-types/{issue_type_id}/PUT/path/org`.
+                public var org: Components.Parameters.org
+                /// The unique identifier of the issue type.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/issue-types/{issue_type_id}/PUT/path/issue_type_id`.
+                public var issue_type_id: Components.Parameters.issue_hyphen_type_hyphen_id
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - org: The organization name. The name is not case sensitive.
+                ///   - issue_type_id: The unique identifier of the issue type.
+                public init(
+                    org: Components.Parameters.org,
+                    issue_type_id: Components.Parameters.issue_hyphen_type_hyphen_id
+                ) {
+                    self.org = org
+                    self.issue_type_id = issue_type_id
+                }
+            }
+            public var path: Operations.orgs_sol_update_hyphen_issue_hyphen_type.Input.Path
+            /// - Remark: Generated from `#/paths/orgs/{org}/issue-types/{issue_type_id}/PUT/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.orgs_sol_update_hyphen_issue_hyphen_type.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.orgs_sol_update_hyphen_issue_hyphen_type.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.orgs_sol_update_hyphen_issue_hyphen_type.Input.Headers
+            /// - Remark: Generated from `#/paths/orgs/{org}/issue-types/{issue_type_id}/PUT/requestBody`.
+            @frozen public enum Body: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/orgs/{org}/issue-types/{issue_type_id}/PUT/requestBody/content/application\/json`.
+                case json(Components.Schemas.organization_hyphen_update_hyphen_issue_hyphen_type)
+            }
+            public var body: Operations.orgs_sol_update_hyphen_issue_hyphen_type.Input.Body
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - headers:
+            ///   - body:
+            public init(
+                path: Operations.orgs_sol_update_hyphen_issue_hyphen_type.Input.Path,
+                headers: Operations.orgs_sol_update_hyphen_issue_hyphen_type.Input.Headers = .init(),
+                body: Operations.orgs_sol_update_hyphen_issue_hyphen_type.Input.Body
+            ) {
+                self.path = path
+                self.headers = headers
+                self.body = body
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Ok: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/orgs/{org}/issue-types/{issue_type_id}/PUT/responses/200/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/orgs/{org}/issue-types/{issue_type_id}/PUT/responses/200/content/application\/json`.
+                    case json(Components.Schemas.issue_hyphen_type)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Components.Schemas.issue_hyphen_type {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.orgs_sol_update_hyphen_issue_hyphen_type.Output.Ok.Body
+                /// Creates a new `Ok`.
+                ///
+                /// - Parameters:
+                ///   - body: Received HTTP response body
+                public init(body: Operations.orgs_sol_update_hyphen_issue_hyphen_type.Output.Ok.Body) {
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/issue-types/{issue_type_id}/put(orgs/update-issue-type)/responses/200`.
+            ///
+            /// HTTP response code: `200 ok`.
+            case ok(Operations.orgs_sol_update_hyphen_issue_hyphen_type.Output.Ok)
+            /// The associated value of the enum case if `self` is `.ok`.
+            ///
+            /// - Throws: An error if `self` is not `.ok`.
+            /// - SeeAlso: `.ok`.
+            public var ok: Operations.orgs_sol_update_hyphen_issue_hyphen_type.Output.Ok {
+                get throws {
+                    switch self {
+                    case let .ok(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "ok",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Resource not found
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/issue-types/{issue_type_id}/put(orgs/update-issue-type)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            case notFound(Components.Responses.not_found)
+            /// The associated value of the enum case if `self` is `.notFound`.
+            ///
+            /// - Throws: An error if `self` is not `.notFound`.
+            /// - SeeAlso: `.notFound`.
+            public var notFound: Components.Responses.not_found {
+                get throws {
+                    switch self {
+                    case let .notFound(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "notFound",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Validation failed, or the endpoint has been spammed.
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/issue-types/{issue_type_id}/put(orgs/update-issue-type)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            case unprocessableContent(Components.Responses.validation_failed_simple)
+            /// The associated value of the enum case if `self` is `.unprocessableContent`.
+            ///
+            /// - Throws: An error if `self` is not `.unprocessableContent`.
+            /// - SeeAlso: `.unprocessableContent`.
+            public var unprocessableContent: Components.Responses.validation_failed_simple {
+                get throws {
+                    switch self {
+                    case let .unprocessableContent(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "unprocessableContent",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
+    /// Delete issue type for an organization
+    ///
+    /// Deletes an issue type for an organization.
+    ///
+    /// You can find out more about issue types in [Managing issue types in an organization](https://docs.github.com/issues/tracking-your-work-with-issues/configuring-issues/managing-issue-types-in-an-organization).
+    ///
+    /// To use this endpoint, the authenticated user must be an administrator for the organization. OAuth app tokens and
+    /// personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `DELETE /orgs/{org}/issue-types/{issue_type_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/issue-types/{issue_type_id}/delete(orgs/delete-issue-type)`.
+    public enum orgs_sol_delete_hyphen_issue_hyphen_type {
+        public static let id: Swift.String = "orgs/delete-issue-type"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/orgs/{org}/issue-types/{issue_type_id}/DELETE/path`.
+            public struct Path: Sendable, Hashable {
+                /// The organization name. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/issue-types/{issue_type_id}/DELETE/path/org`.
+                public var org: Components.Parameters.org
+                /// The unique identifier of the issue type.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/issue-types/{issue_type_id}/DELETE/path/issue_type_id`.
+                public var issue_type_id: Components.Parameters.issue_hyphen_type_hyphen_id
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - org: The organization name. The name is not case sensitive.
+                ///   - issue_type_id: The unique identifier of the issue type.
+                public init(
+                    org: Components.Parameters.org,
+                    issue_type_id: Components.Parameters.issue_hyphen_type_hyphen_id
+                ) {
+                    self.org = org
+                    self.issue_type_id = issue_type_id
+                }
+            }
+            public var path: Operations.orgs_sol_delete_hyphen_issue_hyphen_type.Input.Path
+            /// - Remark: Generated from `#/paths/orgs/{org}/issue-types/{issue_type_id}/DELETE/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.orgs_sol_delete_hyphen_issue_hyphen_type.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.orgs_sol_delete_hyphen_issue_hyphen_type.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.orgs_sol_delete_hyphen_issue_hyphen_type.Input.Headers
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - headers:
+            public init(
+                path: Operations.orgs_sol_delete_hyphen_issue_hyphen_type.Input.Path,
+                headers: Operations.orgs_sol_delete_hyphen_issue_hyphen_type.Input.Headers = .init()
+            ) {
+                self.path = path
+                self.headers = headers
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct NoContent: Sendable, Hashable {
+                /// Creates a new `NoContent`.
+                public init() {}
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/issue-types/{issue_type_id}/delete(orgs/delete-issue-type)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            case noContent(Operations.orgs_sol_delete_hyphen_issue_hyphen_type.Output.NoContent)
+            /// The associated value of the enum case if `self` is `.noContent`.
+            ///
+            /// - Throws: An error if `self` is not `.noContent`.
+            /// - SeeAlso: `.noContent`.
+            public var noContent: Operations.orgs_sol_delete_hyphen_issue_hyphen_type.Output.NoContent {
+                get throws {
+                    switch self {
+                    case let .noContent(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "noContent",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Validation failed, or the endpoint has been spammed.
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/issue-types/{issue_type_id}/delete(orgs/delete-issue-type)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            case unprocessableContent(Components.Responses.validation_failed_simple)
+            /// The associated value of the enum case if `self` is `.unprocessableContent`.
+            ///
+            /// - Throws: An error if `self` is not `.unprocessableContent`.
+            /// - SeeAlso: `.unprocessableContent`.
+            public var unprocessableContent: Components.Responses.validation_failed_simple {
+                get throws {
+                    switch self {
+                    case let .unprocessableContent(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "unprocessableContent",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Resource not found
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/issue-types/{issue_type_id}/delete(orgs/delete-issue-type)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            case notFound(Components.Responses.not_found)
+            /// The associated value of the enum case if `self` is `.notFound`.
+            ///
+            /// - Throws: An error if `self` is not `.notFound`.
+            /// - SeeAlso: `.notFound`.
+            public var notFound: Components.Responses.not_found {
+                get throws {
+                    switch self {
+                    case let .notFound(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "notFound",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
     /// List organization members
     ///
     /// List all users who are members of an organization. If the authenticated user is also a member of this organization then both concealed and public members will be returned.
@@ -18443,6 +19820,10 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/personal-access-token-requests/GET/query/last_used_after`.
                 public var last_used_after: Components.Parameters.personal_hyphen_access_hyphen_token_hyphen_after?
+                /// The ID of the token
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/personal-access-token-requests/GET/query/token_id`.
+                public var token_id: Components.Parameters.personal_hyphen_access_hyphen_token_hyphen_token_hyphen_id?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
@@ -18455,6 +19836,7 @@ public enum Operations {
                 ///   - permission: The permission to use to filter the results.
                 ///   - last_used_before: Only show fine-grained personal access tokens used before the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
                 ///   - last_used_after: Only show fine-grained personal access tokens used after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
+                ///   - token_id: The ID of the token
                 public init(
                     per_page: Components.Parameters.per_hyphen_page? = nil,
                     page: Components.Parameters.page? = nil,
@@ -18464,7 +19846,8 @@ public enum Operations {
                     repository: Components.Parameters.personal_hyphen_access_hyphen_token_hyphen_repository? = nil,
                     permission: Components.Parameters.personal_hyphen_access_hyphen_token_hyphen_permission? = nil,
                     last_used_before: Components.Parameters.personal_hyphen_access_hyphen_token_hyphen_before? = nil,
-                    last_used_after: Components.Parameters.personal_hyphen_access_hyphen_token_hyphen_after? = nil
+                    last_used_after: Components.Parameters.personal_hyphen_access_hyphen_token_hyphen_after? = nil,
+                    token_id: Components.Parameters.personal_hyphen_access_hyphen_token_hyphen_token_hyphen_id? = nil
                 ) {
                     self.per_page = per_page
                     self.page = page
@@ -18475,6 +19858,7 @@ public enum Operations {
                     self.permission = permission
                     self.last_used_before = last_used_before
                     self.last_used_after = last_used_after
+                    self.token_id = token_id
                 }
             }
             public var query: Operations.orgs_sol_list_hyphen_pat_hyphen_grant_hyphen_requests.Input.Query
@@ -19530,6 +20914,10 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/personal-access-tokens/GET/query/last_used_after`.
                 public var last_used_after: Components.Parameters.personal_hyphen_access_hyphen_token_hyphen_after?
+                /// The ID of the token
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/personal-access-tokens/GET/query/token_id`.
+                public var token_id: Components.Parameters.personal_hyphen_access_hyphen_token_hyphen_token_hyphen_id?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
@@ -19542,6 +20930,7 @@ public enum Operations {
                 ///   - permission: The permission to use to filter the results.
                 ///   - last_used_before: Only show fine-grained personal access tokens used before the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
                 ///   - last_used_after: Only show fine-grained personal access tokens used after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
+                ///   - token_id: The ID of the token
                 public init(
                     per_page: Components.Parameters.per_hyphen_page? = nil,
                     page: Components.Parameters.page? = nil,
@@ -19551,7 +20940,8 @@ public enum Operations {
                     repository: Components.Parameters.personal_hyphen_access_hyphen_token_hyphen_repository? = nil,
                     permission: Components.Parameters.personal_hyphen_access_hyphen_token_hyphen_permission? = nil,
                     last_used_before: Components.Parameters.personal_hyphen_access_hyphen_token_hyphen_before? = nil,
-                    last_used_after: Components.Parameters.personal_hyphen_access_hyphen_token_hyphen_after? = nil
+                    last_used_after: Components.Parameters.personal_hyphen_access_hyphen_token_hyphen_after? = nil,
+                    token_id: Components.Parameters.personal_hyphen_access_hyphen_token_hyphen_token_hyphen_id? = nil
                 ) {
                     self.per_page = per_page
                     self.page = page
@@ -19562,6 +20952,7 @@ public enum Operations {
                     self.permission = permission
                     self.last_used_before = last_used_before
                     self.last_used_after = last_used_after
+                    self.token_id = token_id
                 }
             }
             public var query: Operations.orgs_sol_list_hyphen_pat_hyphen_grants.Input.Query
@@ -20707,6 +22098,10 @@ public enum Operations {
     ///
     /// Creates new or updates existing custom properties defined for an organization in a batch.
     ///
+    /// If the property already exists, the existing property will be replaced with the new values.
+    /// Missing optional values will fall back to default values, previous values will be overwritten.
+    /// E.g. if a property exists with `values_editable_by: org_and_repo_actors` and it's updated without specifying `values_editable_by`, it will be updated to default value `org_actors`.
+    ///
     /// To use this endpoint, the authenticated user must be one of:
     ///   - An administrator for the organization.
     ///   - A user, or a user on a team, with the fine-grained permission of `custom_properties_org_definitions_manager` in the organization.
@@ -21150,106 +22545,8 @@ public enum Operations {
             public var headers: Operations.orgs_sol_create_hyphen_or_hyphen_update_hyphen_custom_hyphen_property.Input.Headers
             /// - Remark: Generated from `#/paths/orgs/{org}/properties/schema/{custom_property_name}/PUT/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
-                /// - Remark: Generated from `#/paths/orgs/{org}/properties/schema/{custom_property_name}/PUT/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
-                    /// The type of the value for the property
-                    ///
-                    /// - Remark: Generated from `#/paths/orgs/{org}/properties/schema/{custom_property_name}/PUT/requestBody/json/value_type`.
-                    @frozen public enum value_typePayload: String, Codable, Hashable, Sendable {
-                        case string = "string"
-                        case single_select = "single_select"
-                        case multi_select = "multi_select"
-                        case true_false = "true_false"
-                    }
-                    /// The type of the value for the property
-                    ///
-                    /// - Remark: Generated from `#/paths/orgs/{org}/properties/schema/{custom_property_name}/PUT/requestBody/json/value_type`.
-                    public var value_type: Operations.orgs_sol_create_hyphen_or_hyphen_update_hyphen_custom_hyphen_property.Input.Body.jsonPayload.value_typePayload
-                    /// Whether the property is required.
-                    ///
-                    /// - Remark: Generated from `#/paths/orgs/{org}/properties/schema/{custom_property_name}/PUT/requestBody/json/required`.
-                    public var required: Swift.Bool?
-                    /// Default value of the property
-                    ///
-                    /// - Remark: Generated from `#/paths/orgs/{org}/properties/schema/{custom_property_name}/PUT/requestBody/json/default_value`.
-                    @frozen public enum default_valuePayload: Codable, Hashable, Sendable {
-                        /// - Remark: Generated from `#/paths/orgs/{org}/properties/schema/{custom_property_name}/PUT/requestBody/json/default_value/case1`.
-                        case case1(Swift.String)
-                        /// - Remark: Generated from `#/paths/orgs/{org}/properties/schema/{custom_property_name}/PUT/requestBody/json/default_value/case2`.
-                        case case2([Swift.String])
-                        public init(from decoder: any Decoder) throws {
-                            var errors: [any Error] = []
-                            do {
-                                self = .case1(try decoder.decodeFromSingleValueContainer())
-                                return
-                            } catch {
-                                errors.append(error)
-                            }
-                            do {
-                                self = .case2(try decoder.decodeFromSingleValueContainer())
-                                return
-                            } catch {
-                                errors.append(error)
-                            }
-                            throw Swift.DecodingError.failedToDecodeOneOfSchema(
-                                type: Self.self,
-                                codingPath: decoder.codingPath,
-                                errors: errors
-                            )
-                        }
-                        public func encode(to encoder: any Encoder) throws {
-                            switch self {
-                            case let .case1(value):
-                                try encoder.encodeToSingleValueContainer(value)
-                            case let .case2(value):
-                                try encoder.encodeToSingleValueContainer(value)
-                            }
-                        }
-                    }
-                    /// Default value of the property
-                    ///
-                    /// - Remark: Generated from `#/paths/orgs/{org}/properties/schema/{custom_property_name}/PUT/requestBody/json/default_value`.
-                    public var default_value: Operations.orgs_sol_create_hyphen_or_hyphen_update_hyphen_custom_hyphen_property.Input.Body.jsonPayload.default_valuePayload?
-                    /// Short description of the property
-                    ///
-                    /// - Remark: Generated from `#/paths/orgs/{org}/properties/schema/{custom_property_name}/PUT/requestBody/json/description`.
-                    public var description: Swift.String?
-                    /// An ordered list of the allowed values of the property.
-                    /// The property can have up to 200 allowed values.
-                    ///
-                    /// - Remark: Generated from `#/paths/orgs/{org}/properties/schema/{custom_property_name}/PUT/requestBody/json/allowed_values`.
-                    public var allowed_values: [Swift.String]?
-                    /// Creates a new `jsonPayload`.
-                    ///
-                    /// - Parameters:
-                    ///   - value_type: The type of the value for the property
-                    ///   - required: Whether the property is required.
-                    ///   - default_value: Default value of the property
-                    ///   - description: Short description of the property
-                    ///   - allowed_values: An ordered list of the allowed values of the property.
-                    public init(
-                        value_type: Operations.orgs_sol_create_hyphen_or_hyphen_update_hyphen_custom_hyphen_property.Input.Body.jsonPayload.value_typePayload,
-                        required: Swift.Bool? = nil,
-                        default_value: Operations.orgs_sol_create_hyphen_or_hyphen_update_hyphen_custom_hyphen_property.Input.Body.jsonPayload.default_valuePayload? = nil,
-                        description: Swift.String? = nil,
-                        allowed_values: [Swift.String]? = nil
-                    ) {
-                        self.value_type = value_type
-                        self.required = required
-                        self.default_value = default_value
-                        self.description = description
-                        self.allowed_values = allowed_values
-                    }
-                    public enum CodingKeys: String, CodingKey {
-                        case value_type
-                        case required
-                        case default_value
-                        case description
-                        case allowed_values
-                    }
-                }
                 /// - Remark: Generated from `#/paths/orgs/{org}/properties/schema/{custom_property_name}/PUT/requestBody/content/application\/json`.
-                case json(Operations.orgs_sol_create_hyphen_or_hyphen_update_hyphen_custom_hyphen_property.Input.Body.jsonPayload)
+                case json(Components.Schemas.custom_hyphen_property_hyphen_set_hyphen_payload)
             }
             public var body: Operations.orgs_sol_create_hyphen_or_hyphen_update_hyphen_custom_hyphen_property.Input.Body
             /// Creates a new `Input`.
@@ -22511,13 +23808,418 @@ public enum Operations {
             case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
         }
     }
+    /// Get organization ruleset history
+    ///
+    /// Get the history of an organization ruleset.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/rulesets/{ruleset_id}/history`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/rulesets/{ruleset_id}/history/get(orgs/get-org-ruleset-history)`.
+    public enum orgs_sol_get_hyphen_org_hyphen_ruleset_hyphen_history {
+        public static let id: Swift.String = "orgs/get-org-ruleset-history"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/{ruleset_id}/history/GET/path`.
+            public struct Path: Sendable, Hashable {
+                /// The organization name. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/{ruleset_id}/history/GET/path/org`.
+                public var org: Components.Parameters.org
+                /// The ID of the ruleset.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/{ruleset_id}/history/GET/path/ruleset_id`.
+                public var ruleset_id: Swift.Int
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - org: The organization name. The name is not case sensitive.
+                ///   - ruleset_id: The ID of the ruleset.
+                public init(
+                    org: Components.Parameters.org,
+                    ruleset_id: Swift.Int
+                ) {
+                    self.org = org
+                    self.ruleset_id = ruleset_id
+                }
+            }
+            public var path: Operations.orgs_sol_get_hyphen_org_hyphen_ruleset_hyphen_history.Input.Path
+            /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/{ruleset_id}/history/GET/query`.
+            public struct Query: Sendable, Hashable {
+                /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/{ruleset_id}/history/GET/query/per_page`.
+                public var per_page: Components.Parameters.per_hyphen_page?
+                /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/{ruleset_id}/history/GET/query/page`.
+                public var page: Components.Parameters.page?
+                /// Creates a new `Query`.
+                ///
+                /// - Parameters:
+                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                public init(
+                    per_page: Components.Parameters.per_hyphen_page? = nil,
+                    page: Components.Parameters.page? = nil
+                ) {
+                    self.per_page = per_page
+                    self.page = page
+                }
+            }
+            public var query: Operations.orgs_sol_get_hyphen_org_hyphen_ruleset_hyphen_history.Input.Query
+            /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/{ruleset_id}/history/GET/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.orgs_sol_get_hyphen_org_hyphen_ruleset_hyphen_history.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.orgs_sol_get_hyphen_org_hyphen_ruleset_hyphen_history.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.orgs_sol_get_hyphen_org_hyphen_ruleset_hyphen_history.Input.Headers
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - query:
+            ///   - headers:
+            public init(
+                path: Operations.orgs_sol_get_hyphen_org_hyphen_ruleset_hyphen_history.Input.Path,
+                query: Operations.orgs_sol_get_hyphen_org_hyphen_ruleset_hyphen_history.Input.Query = .init(),
+                headers: Operations.orgs_sol_get_hyphen_org_hyphen_ruleset_hyphen_history.Input.Headers = .init()
+            ) {
+                self.path = path
+                self.query = query
+                self.headers = headers
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Ok: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/{ruleset_id}/history/GET/responses/200/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/{ruleset_id}/history/GET/responses/200/content/application\/json`.
+                    case json([Components.Schemas.ruleset_hyphen_version])
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: [Components.Schemas.ruleset_hyphen_version] {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.orgs_sol_get_hyphen_org_hyphen_ruleset_hyphen_history.Output.Ok.Body
+                /// Creates a new `Ok`.
+                ///
+                /// - Parameters:
+                ///   - body: Received HTTP response body
+                public init(body: Operations.orgs_sol_get_hyphen_org_hyphen_ruleset_hyphen_history.Output.Ok.Body) {
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/rulesets/{ruleset_id}/history/get(orgs/get-org-ruleset-history)/responses/200`.
+            ///
+            /// HTTP response code: `200 ok`.
+            case ok(Operations.orgs_sol_get_hyphen_org_hyphen_ruleset_hyphen_history.Output.Ok)
+            /// The associated value of the enum case if `self` is `.ok`.
+            ///
+            /// - Throws: An error if `self` is not `.ok`.
+            /// - SeeAlso: `.ok`.
+            public var ok: Operations.orgs_sol_get_hyphen_org_hyphen_ruleset_hyphen_history.Output.Ok {
+                get throws {
+                    switch self {
+                    case let .ok(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "ok",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Resource not found
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/rulesets/{ruleset_id}/history/get(orgs/get-org-ruleset-history)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            case notFound(Components.Responses.not_found)
+            /// The associated value of the enum case if `self` is `.notFound`.
+            ///
+            /// - Throws: An error if `self` is not `.notFound`.
+            /// - SeeAlso: `.notFound`.
+            public var notFound: Components.Responses.not_found {
+                get throws {
+                    switch self {
+                    case let .notFound(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "notFound",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Internal Error
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/rulesets/{ruleset_id}/history/get(orgs/get-org-ruleset-history)/responses/500`.
+            ///
+            /// HTTP response code: `500 internalServerError`.
+            case internalServerError(Components.Responses.internal_error)
+            /// The associated value of the enum case if `self` is `.internalServerError`.
+            ///
+            /// - Throws: An error if `self` is not `.internalServerError`.
+            /// - SeeAlso: `.internalServerError`.
+            public var internalServerError: Components.Responses.internal_error {
+                get throws {
+                    switch self {
+                    case let .internalServerError(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "internalServerError",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
+    /// Get organization ruleset version
+    ///
+    /// Get a version of an organization ruleset.
+    ///
+    /// - Remark: HTTP `GET /orgs/{org}/rulesets/{ruleset_id}/history/{version_id}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/rulesets/{ruleset_id}/history/{version_id}/get(orgs/get-org-ruleset-version)`.
+    public enum orgs_sol_get_hyphen_org_hyphen_ruleset_hyphen_version {
+        public static let id: Swift.String = "orgs/get-org-ruleset-version"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/{ruleset_id}/history/{version_id}/GET/path`.
+            public struct Path: Sendable, Hashable {
+                /// The organization name. The name is not case sensitive.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/{ruleset_id}/history/{version_id}/GET/path/org`.
+                public var org: Components.Parameters.org
+                /// The ID of the ruleset.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/{ruleset_id}/history/{version_id}/GET/path/ruleset_id`.
+                public var ruleset_id: Swift.Int
+                /// The ID of the version
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/{ruleset_id}/history/{version_id}/GET/path/version_id`.
+                public var version_id: Swift.Int
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - org: The organization name. The name is not case sensitive.
+                ///   - ruleset_id: The ID of the ruleset.
+                ///   - version_id: The ID of the version
+                public init(
+                    org: Components.Parameters.org,
+                    ruleset_id: Swift.Int,
+                    version_id: Swift.Int
+                ) {
+                    self.org = org
+                    self.ruleset_id = ruleset_id
+                    self.version_id = version_id
+                }
+            }
+            public var path: Operations.orgs_sol_get_hyphen_org_hyphen_ruleset_hyphen_version.Input.Path
+            /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/{ruleset_id}/history/{version_id}/GET/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.orgs_sol_get_hyphen_org_hyphen_ruleset_hyphen_version.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.orgs_sol_get_hyphen_org_hyphen_ruleset_hyphen_version.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.orgs_sol_get_hyphen_org_hyphen_ruleset_hyphen_version.Input.Headers
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - headers:
+            public init(
+                path: Operations.orgs_sol_get_hyphen_org_hyphen_ruleset_hyphen_version.Input.Path,
+                headers: Operations.orgs_sol_get_hyphen_org_hyphen_ruleset_hyphen_version.Input.Headers = .init()
+            ) {
+                self.path = path
+                self.headers = headers
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            public struct Ok: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/{ruleset_id}/history/{version_id}/GET/responses/200/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/{ruleset_id}/history/{version_id}/GET/responses/200/content/application\/json`.
+                    case json(Components.Schemas.ruleset_hyphen_version_hyphen_with_hyphen_state)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Components.Schemas.ruleset_hyphen_version_hyphen_with_hyphen_state {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.orgs_sol_get_hyphen_org_hyphen_ruleset_hyphen_version.Output.Ok.Body
+                /// Creates a new `Ok`.
+                ///
+                /// - Parameters:
+                ///   - body: Received HTTP response body
+                public init(body: Operations.orgs_sol_get_hyphen_org_hyphen_ruleset_hyphen_version.Output.Ok.Body) {
+                    self.body = body
+                }
+            }
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/rulesets/{ruleset_id}/history/{version_id}/get(orgs/get-org-ruleset-version)/responses/200`.
+            ///
+            /// HTTP response code: `200 ok`.
+            case ok(Operations.orgs_sol_get_hyphen_org_hyphen_ruleset_hyphen_version.Output.Ok)
+            /// The associated value of the enum case if `self` is `.ok`.
+            ///
+            /// - Throws: An error if `self` is not `.ok`.
+            /// - SeeAlso: `.ok`.
+            public var ok: Operations.orgs_sol_get_hyphen_org_hyphen_ruleset_hyphen_version.Output.Ok {
+                get throws {
+                    switch self {
+                    case let .ok(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "ok",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Resource not found
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/rulesets/{ruleset_id}/history/{version_id}/get(orgs/get-org-ruleset-version)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            case notFound(Components.Responses.not_found)
+            /// The associated value of the enum case if `self` is `.notFound`.
+            ///
+            /// - Throws: An error if `self` is not `.notFound`.
+            /// - SeeAlso: `.notFound`.
+            public var notFound: Components.Responses.not_found {
+                get throws {
+                    switch self {
+                    case let .notFound(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "notFound",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Internal Error
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/rulesets/{ruleset_id}/history/{version_id}/get(orgs/get-org-ruleset-version)/responses/500`.
+            ///
+            /// HTTP response code: `500 internalServerError`.
+            case internalServerError(Components.Responses.internal_error)
+            /// The associated value of the enum case if `self` is `.internalServerError`.
+            ///
+            /// - Throws: An error if `self` is not `.internalServerError`.
+            /// - SeeAlso: `.internalServerError`.
+            public var internalServerError: Components.Responses.internal_error {
+                get throws {
+                    switch self {
+                    case let .internalServerError(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "internalServerError",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json
+                ]
+            }
+        }
+    }
     /// List security manager teams
     ///
-    /// Lists teams that are security managers for an organization. For more information, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."
-    ///
-    /// The authenticated user must be an administrator or security manager for the organization to use this endpoint.
-    ///
-    /// OAuth app tokens and personal access tokens (classic) need the `read:org` scope to use this endpoint.
+    /// > [!WARNING]
+    /// > **Closing down notice:** This operation is closing down and will be removed starting January 1, 2026. Please use the "[Organization Roles](https://docs.github.com/rest/orgs/organization-roles)" endpoints instead.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/security-managers`.
     /// - Remark: Generated from `#/paths//orgs/{org}/security-managers/get(orgs/list-security-manager-teams)`.
@@ -22649,11 +24351,8 @@ public enum Operations {
     }
     /// Add a security manager team
     ///
-    /// Adds a team as a security manager for an organization. For more information, see "[Managing security for an organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization) for an organization."
-    ///
-    /// The authenticated user must be an administrator for the organization to use this endpoint.
-    ///
-    /// OAuth app tokens and personal access tokens (classic) need the `write:org` scope to use this endpoint.
+    /// > [!WARNING]
+    /// > **Closing down notice:** This operation is closing down and will be removed starting January 1, 2026. Please use the "[Organization Roles](https://docs.github.com/rest/orgs/organization-roles)" endpoints instead.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/security-managers/teams/{team_slug}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/security-managers/teams/{team_slug}/put(orgs/add-security-manager-team)`.
@@ -22728,11 +24427,8 @@ public enum Operations {
     }
     /// Remove a security manager team
     ///
-    /// Removes the security manager role from a team for an organization. For more information, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization) team from an organization."
-    ///
-    /// The authenticated user must be an administrator for the organization to use this endpoint.
-    ///
-    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    /// > [!WARNING]
+    /// > **Closing down notice:** This operation is closing down and will be removed starting January 1, 2026. Please use the "[Organization Roles](https://docs.github.com/rest/orgs/organization-roles)" endpoints instead.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/security-managers/teams/{team_slug}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/security-managers/teams/{team_slug}/delete(orgs/remove-security-manager-team)`.
