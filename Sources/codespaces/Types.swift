@@ -257,7 +257,7 @@ public protocol APIProtocol: Sendable {
     /// Creates or updates a repository development environment secret with an encrypted value. Encrypt your secret using
     /// [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages). For more information, see "[Encrypting secrets for the REST API](https://docs.github.com/rest/guides/encrypting-secrets-for-the-rest-api)."
     ///
-    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint. The associated user must be a repository admin.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/codespaces/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/codespaces/secrets/{secret_name}/put(codespaces/create-or-update-repo-secret)`.
@@ -266,7 +266,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// Deletes a development environment secret in a repository using the secret name.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint. The associated user must be a repository admin.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/codespaces/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/codespaces/secrets/{secret_name}/delete(codespaces/delete-repo-secret)`.
@@ -972,7 +972,7 @@ extension APIProtocol {
     /// Creates or updates a repository development environment secret with an encrypted value. Encrypt your secret using
     /// [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages). For more information, see "[Encrypting secrets for the REST API](https://docs.github.com/rest/guides/encrypting-secrets-for-the-rest-api)."
     ///
-    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint. The associated user must be a repository admin.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/codespaces/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/codespaces/secrets/{secret_name}/put(codespaces/create-or-update-repo-secret)`.
@@ -991,7 +991,7 @@ extension APIProtocol {
     ///
     /// Deletes a development environment secret in a repository using the secret name.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint. The associated user must be a repository admin.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/codespaces/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/codespaces/secrets/{secret_name}/delete(codespaces/delete-repo-secret)`.
@@ -1581,151 +1581,6 @@ public enum Components {
                 case status
             }
         }
-        /// A GitHub user.
-        ///
-        /// - Remark: Generated from `#/components/schemas/nullable-simple-user`.
-        public struct nullable_hyphen_simple_hyphen_user: Codable, Hashable, Sendable {
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/name`.
-            public var name: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/email`.
-            public var email: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/login`.
-            public var login: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/id`.
-            public var id: Swift.Int64
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/node_id`.
-            public var node_id: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/avatar_url`.
-            public var avatar_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/gravatar_id`.
-            public var gravatar_id: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/url`.
-            public var url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/html_url`.
-            public var html_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/followers_url`.
-            public var followers_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/following_url`.
-            public var following_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/gists_url`.
-            public var gists_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/starred_url`.
-            public var starred_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/subscriptions_url`.
-            public var subscriptions_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/organizations_url`.
-            public var organizations_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/repos_url`.
-            public var repos_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/events_url`.
-            public var events_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/received_events_url`.
-            public var received_events_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/type`.
-            public var _type: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/site_admin`.
-            public var site_admin: Swift.Bool
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/starred_at`.
-            public var starred_at: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/user_view_type`.
-            public var user_view_type: Swift.String?
-            /// Creates a new `nullable_hyphen_simple_hyphen_user`.
-            ///
-            /// - Parameters:
-            ///   - name:
-            ///   - email:
-            ///   - login:
-            ///   - id:
-            ///   - node_id:
-            ///   - avatar_url:
-            ///   - gravatar_id:
-            ///   - url:
-            ///   - html_url:
-            ///   - followers_url:
-            ///   - following_url:
-            ///   - gists_url:
-            ///   - starred_url:
-            ///   - subscriptions_url:
-            ///   - organizations_url:
-            ///   - repos_url:
-            ///   - events_url:
-            ///   - received_events_url:
-            ///   - _type:
-            ///   - site_admin:
-            ///   - starred_at:
-            ///   - user_view_type:
-            public init(
-                name: Swift.String? = nil,
-                email: Swift.String? = nil,
-                login: Swift.String,
-                id: Swift.Int64,
-                node_id: Swift.String,
-                avatar_url: Swift.String,
-                gravatar_id: Swift.String? = nil,
-                url: Swift.String,
-                html_url: Swift.String,
-                followers_url: Swift.String,
-                following_url: Swift.String,
-                gists_url: Swift.String,
-                starred_url: Swift.String,
-                subscriptions_url: Swift.String,
-                organizations_url: Swift.String,
-                repos_url: Swift.String,
-                events_url: Swift.String,
-                received_events_url: Swift.String,
-                _type: Swift.String,
-                site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil,
-                user_view_type: Swift.String? = nil
-            ) {
-                self.name = name
-                self.email = email
-                self.login = login
-                self.id = id
-                self.node_id = node_id
-                self.avatar_url = avatar_url
-                self.gravatar_id = gravatar_id
-                self.url = url
-                self.html_url = html_url
-                self.followers_url = followers_url
-                self.following_url = following_url
-                self.gists_url = gists_url
-                self.starred_url = starred_url
-                self.subscriptions_url = subscriptions_url
-                self.organizations_url = organizations_url
-                self.repos_url = repos_url
-                self.events_url = events_url
-                self.received_events_url = received_events_url
-                self._type = _type
-                self.site_admin = site_admin
-                self.starred_at = starred_at
-                self.user_view_type = user_view_type
-            }
-            public enum CodingKeys: String, CodingKey {
-                case name
-                case email
-                case login
-                case id
-                case node_id
-                case avatar_url
-                case gravatar_id
-                case url
-                case html_url
-                case followers_url
-                case following_url
-                case gists_url
-                case starred_url
-                case subscriptions_url
-                case organizations_url
-                case repos_url
-                case events_url
-                case received_events_url
-                case _type = "type"
-                case site_admin
-                case starred_at
-                case user_view_type
-            }
-        }
         /// Scim Error
         ///
         /// - Remark: Generated from `#/components/schemas/scim-error`.
@@ -1898,6 +1753,151 @@ public enum Components {
                 case message
                 case documentation_url
                 case errors
+            }
+        }
+        /// A GitHub user.
+        ///
+        /// - Remark: Generated from `#/components/schemas/nullable-simple-user`.
+        public struct nullable_hyphen_simple_hyphen_user: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/name`.
+            public var name: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/email`.
+            public var email: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/login`.
+            public var login: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/id`.
+            public var id: Swift.Int64
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/node_id`.
+            public var node_id: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/avatar_url`.
+            public var avatar_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/gravatar_id`.
+            public var gravatar_id: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/url`.
+            public var url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/html_url`.
+            public var html_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/followers_url`.
+            public var followers_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/following_url`.
+            public var following_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/gists_url`.
+            public var gists_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/starred_url`.
+            public var starred_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/subscriptions_url`.
+            public var subscriptions_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/organizations_url`.
+            public var organizations_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/repos_url`.
+            public var repos_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/events_url`.
+            public var events_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/received_events_url`.
+            public var received_events_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/type`.
+            public var _type: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/site_admin`.
+            public var site_admin: Swift.Bool
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/starred_at`.
+            public var starred_at: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/user_view_type`.
+            public var user_view_type: Swift.String?
+            /// Creates a new `nullable_hyphen_simple_hyphen_user`.
+            ///
+            /// - Parameters:
+            ///   - name:
+            ///   - email:
+            ///   - login:
+            ///   - id:
+            ///   - node_id:
+            ///   - avatar_url:
+            ///   - gravatar_id:
+            ///   - url:
+            ///   - html_url:
+            ///   - followers_url:
+            ///   - following_url:
+            ///   - gists_url:
+            ///   - starred_url:
+            ///   - subscriptions_url:
+            ///   - organizations_url:
+            ///   - repos_url:
+            ///   - events_url:
+            ///   - received_events_url:
+            ///   - _type:
+            ///   - site_admin:
+            ///   - starred_at:
+            ///   - user_view_type:
+            public init(
+                name: Swift.String? = nil,
+                email: Swift.String? = nil,
+                login: Swift.String,
+                id: Swift.Int64,
+                node_id: Swift.String,
+                avatar_url: Swift.String,
+                gravatar_id: Swift.String? = nil,
+                url: Swift.String,
+                html_url: Swift.String,
+                followers_url: Swift.String,
+                following_url: Swift.String,
+                gists_url: Swift.String,
+                starred_url: Swift.String,
+                subscriptions_url: Swift.String,
+                organizations_url: Swift.String,
+                repos_url: Swift.String,
+                events_url: Swift.String,
+                received_events_url: Swift.String,
+                _type: Swift.String,
+                site_admin: Swift.Bool,
+                starred_at: Swift.String? = nil,
+                user_view_type: Swift.String? = nil
+            ) {
+                self.name = name
+                self.email = email
+                self.login = login
+                self.id = id
+                self.node_id = node_id
+                self.avatar_url = avatar_url
+                self.gravatar_id = gravatar_id
+                self.url = url
+                self.html_url = html_url
+                self.followers_url = followers_url
+                self.following_url = following_url
+                self.gists_url = gists_url
+                self.starred_url = starred_url
+                self.subscriptions_url = subscriptions_url
+                self.organizations_url = organizations_url
+                self.repos_url = repos_url
+                self.events_url = events_url
+                self.received_events_url = received_events_url
+                self._type = _type
+                self.site_admin = site_admin
+                self.starred_at = starred_at
+                self.user_view_type = user_view_type
+            }
+            public enum CodingKeys: String, CodingKey {
+                case name
+                case email
+                case login
+                case id
+                case node_id
+                case avatar_url
+                case gravatar_id
+                case url
+                case html_url
+                case followers_url
+                case following_url
+                case gists_url
+                case starred_url
+                case subscriptions_url
+                case organizations_url
+                case repos_url
+                case events_url
+                case received_events_url
+                case _type = "type"
+                case site_admin
+                case starred_at
+                case user_view_type
             }
         }
         /// License Simple
@@ -2756,6 +2756,28 @@ public enum Components {
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security`.
             public var advanced_security: Components.Schemas.security_hyphen_and_hyphen_analysis.advanced_securityPayload?
+            /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security`.
+            public struct code_securityPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security/status`.
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                    case enabled = "enabled"
+                    case disabled = "disabled"
+                }
+                /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security/status`.
+                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.code_securityPayload.statusPayload?
+                /// Creates a new `code_securityPayload`.
+                ///
+                /// - Parameters:
+                ///   - status:
+                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.code_securityPayload.statusPayload? = nil) {
+                    self.status = status
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case status
+                }
+            }
+            /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security`.
+            public var code_security: Components.Schemas.security_hyphen_and_hyphen_analysis.code_securityPayload?
             /// Enable or disable Dependabot security updates for the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/dependabot_security_updates`.
@@ -2878,6 +2900,7 @@ public enum Components {
             ///
             /// - Parameters:
             ///   - advanced_security:
+            ///   - code_security:
             ///   - dependabot_security_updates: Enable or disable Dependabot security updates for the repository.
             ///   - secret_scanning:
             ///   - secret_scanning_push_protection:
@@ -2885,6 +2908,7 @@ public enum Components {
             ///   - secret_scanning_ai_detection:
             public init(
                 advanced_security: Components.Schemas.security_hyphen_and_hyphen_analysis.advanced_securityPayload? = nil,
+                code_security: Components.Schemas.security_hyphen_and_hyphen_analysis.code_securityPayload? = nil,
                 dependabot_security_updates: Components.Schemas.security_hyphen_and_hyphen_analysis.dependabot_security_updatesPayload? = nil,
                 secret_scanning: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanningPayload? = nil,
                 secret_scanning_push_protection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_push_protectionPayload? = nil,
@@ -2892,6 +2916,7 @@ public enum Components {
                 secret_scanning_ai_detection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload? = nil
             ) {
                 self.advanced_security = advanced_security
+                self.code_security = code_security
                 self.dependabot_security_updates = dependabot_security_updates
                 self.secret_scanning = secret_scanning
                 self.secret_scanning_push_protection = secret_scanning_push_protection
@@ -2900,6 +2925,7 @@ public enum Components {
             }
             public enum CodingKeys: String, CodingKey {
                 case advanced_security
+                case code_security
                 case dependabot_security_updates
                 case secret_scanning
                 case secret_scanning_push_protection
@@ -6504,10 +6530,10 @@ public enum Components {
                 self.body = body
             }
         }
-        public struct internal_error: Sendable, Hashable {
-            /// - Remark: Generated from `#/components/responses/internal_error/content`.
+        public struct conflict: Sendable, Hashable {
+            /// - Remark: Generated from `#/components/responses/conflict/content`.
             @frozen public enum Body: Sendable, Hashable {
-                /// - Remark: Generated from `#/components/responses/internal_error/content/application\/json`.
+                /// - Remark: Generated from `#/components/responses/conflict/content/application\/json`.
                 case json(Components.Schemas.basic_hyphen_error)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
@@ -6523,12 +6549,12 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.internal_error.Body
-            /// Creates a new `internal_error`.
+            public var body: Components.Responses.conflict.Body
+            /// Creates a new `conflict`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.internal_error.Body) {
+            public init(body: Components.Responses.conflict.Body) {
                 self.body = body
             }
         }
@@ -6589,10 +6615,10 @@ public enum Components {
                 self.body = body
             }
         }
-        public struct conflict: Sendable, Hashable {
-            /// - Remark: Generated from `#/components/responses/conflict/content`.
+        public struct internal_error: Sendable, Hashable {
+            /// - Remark: Generated from `#/components/responses/internal_error/content`.
             @frozen public enum Body: Sendable, Hashable {
-                /// - Remark: Generated from `#/components/responses/conflict/content/application\/json`.
+                /// - Remark: Generated from `#/components/responses/internal_error/content/application\/json`.
                 case json(Components.Schemas.basic_hyphen_error)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
@@ -6608,12 +6634,12 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.conflict.Body
-            /// Creates a new `conflict`.
+            public var body: Components.Responses.internal_error.Body
+            /// Creates a new `internal_error`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.conflict.Body) {
+            public init(body: Components.Responses.internal_error.Body) {
                 self.body = body
             }
         }
@@ -12712,7 +12738,7 @@ public enum Operations {
     /// Creates or updates a repository development environment secret with an encrypted value. Encrypt your secret using
     /// [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages). For more information, see "[Encrypting secrets for the REST API](https://docs.github.com/rest/guides/encrypting-secrets-for-the-rest-api)."
     ///
-    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint. The associated user must be a repository admin.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/codespaces/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/codespaces/secrets/{secret_name}/put(codespaces/create-or-update-repo-secret)`.
@@ -12925,7 +12951,7 @@ public enum Operations {
     ///
     /// Deletes a development environment secret in a repository using the secret name.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint. The associated user must be a repository admin.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/codespaces/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/codespaces/secrets/{secret_name}/delete(codespaces/delete-repo-secret)`.
