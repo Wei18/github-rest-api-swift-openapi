@@ -1456,19 +1456,19 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/git-tree/sha`.
             public var sha: Swift.String
             /// - Remark: Generated from `#/components/schemas/git-tree/url`.
-            public var url: Swift.String
+            public var url: Swift.String?
             /// - Remark: Generated from `#/components/schemas/git-tree/truncated`.
             public var truncated: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/git-tree/treePayload`.
             public struct treePayloadPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/git-tree/treePayload/path`.
-                public var path: Swift.String?
+                public var path: Swift.String
                 /// - Remark: Generated from `#/components/schemas/git-tree/treePayload/mode`.
-                public var mode: Swift.String?
+                public var mode: Swift.String
                 /// - Remark: Generated from `#/components/schemas/git-tree/treePayload/type`.
-                public var _type: Swift.String?
+                public var _type: Swift.String
                 /// - Remark: Generated from `#/components/schemas/git-tree/treePayload/sha`.
-                public var sha: Swift.String?
+                public var sha: Swift.String
                 /// - Remark: Generated from `#/components/schemas/git-tree/treePayload/size`.
                 public var size: Swift.Int?
                 /// - Remark: Generated from `#/components/schemas/git-tree/treePayload/url`.
@@ -1483,10 +1483,10 @@ public enum Components {
                 ///   - size:
                 ///   - url:
                 public init(
-                    path: Swift.String? = nil,
-                    mode: Swift.String? = nil,
-                    _type: Swift.String? = nil,
-                    sha: Swift.String? = nil,
+                    path: Swift.String,
+                    mode: Swift.String,
+                    _type: Swift.String,
+                    sha: Swift.String,
                     size: Swift.Int? = nil,
                     url: Swift.String? = nil
                 ) {
@@ -1523,7 +1523,7 @@ public enum Components {
             ///   - tree: Objects specifying a tree structure
             public init(
                 sha: Swift.String,
-                url: Swift.String,
+                url: Swift.String? = nil,
                 truncated: Swift.Bool,
                 tree: Components.Schemas.git_hyphen_tree.treePayload
             ) {
@@ -3867,17 +3867,21 @@ public enum Operations {
                     }
                 }
             }
-            /// Validation failed, or the endpoint has been spammed.
+            public struct UnprocessableContent: Sendable, Hashable {
+                /// Creates a new `UnprocessableContent`.
+                public init() {}
+            }
+            /// Validation failed, an attempt was made to delete the default branch, or the endpoint has been spammed.
             ///
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/refs/{ref}/delete(git/delete-ref)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Operations.git_sol_delete_hyphen_ref.Output.UnprocessableContent)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Operations.git_sol_delete_hyphen_ref.Output.UnprocessableContent {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
