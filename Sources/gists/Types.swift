@@ -755,6 +755,131 @@ public enum Components {
                 case status
             }
         }
+        /// Validation Error
+        ///
+        /// - Remark: Generated from `#/components/schemas/validation-error`.
+        public struct validation_hyphen_error: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/validation-error/message`.
+            public var message: Swift.String
+            /// - Remark: Generated from `#/components/schemas/validation-error/documentation_url`.
+            public var documentation_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload`.
+            public struct errorsPayloadPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/resource`.
+                public var resource: Swift.String?
+                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/field`.
+                public var field: Swift.String?
+                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/message`.
+                public var message: Swift.String?
+                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/code`.
+                public var code: Swift.String
+                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/index`.
+                public var index: Swift.Int?
+                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value`.
+                @frozen public enum valuePayload: Codable, Hashable, Sendable {
+                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case1`.
+                    case case1(Swift.String?)
+                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case2`.
+                    case case2(Swift.Int?)
+                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case3`.
+                    case case3([Swift.String]?)
+                    public init(from decoder: any Decoder) throws {
+                        var errors: [any Error] = []
+                        do {
+                            self = .case1(try decoder.decodeFromSingleValueContainer())
+                            return
+                        } catch {
+                            errors.append(error)
+                        }
+                        do {
+                            self = .case2(try decoder.decodeFromSingleValueContainer())
+                            return
+                        } catch {
+                            errors.append(error)
+                        }
+                        do {
+                            self = .case3(try decoder.decodeFromSingleValueContainer())
+                            return
+                        } catch {
+                            errors.append(error)
+                        }
+                        throw Swift.DecodingError.failedToDecodeOneOfSchema(
+                            type: Self.self,
+                            codingPath: decoder.codingPath,
+                            errors: errors
+                        )
+                    }
+                    public func encode(to encoder: any Encoder) throws {
+                        switch self {
+                        case let .case1(value):
+                            try encoder.encodeToSingleValueContainer(value)
+                        case let .case2(value):
+                            try encoder.encodeToSingleValueContainer(value)
+                        case let .case3(value):
+                            try encoder.encodeToSingleValueContainer(value)
+                        }
+                    }
+                }
+                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value`.
+                public var value: Components.Schemas.validation_hyphen_error.errorsPayloadPayload.valuePayload?
+                /// Creates a new `errorsPayloadPayload`.
+                ///
+                /// - Parameters:
+                ///   - resource:
+                ///   - field:
+                ///   - message:
+                ///   - code:
+                ///   - index:
+                ///   - value:
+                public init(
+                    resource: Swift.String? = nil,
+                    field: Swift.String? = nil,
+                    message: Swift.String? = nil,
+                    code: Swift.String,
+                    index: Swift.Int? = nil,
+                    value: Components.Schemas.validation_hyphen_error.errorsPayloadPayload.valuePayload? = nil
+                ) {
+                    self.resource = resource
+                    self.field = field
+                    self.message = message
+                    self.code = code
+                    self.index = index
+                    self.value = value
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case resource
+                    case field
+                    case message
+                    case code
+                    case index
+                    case value
+                }
+            }
+            /// - Remark: Generated from `#/components/schemas/validation-error/errors`.
+            public typealias errorsPayload = [Components.Schemas.validation_hyphen_error.errorsPayloadPayload]
+            /// - Remark: Generated from `#/components/schemas/validation-error/errors`.
+            public var errors: Components.Schemas.validation_hyphen_error.errorsPayload?
+            /// Creates a new `validation_hyphen_error`.
+            ///
+            /// - Parameters:
+            ///   - message:
+            ///   - documentation_url:
+            ///   - errors:
+            public init(
+                message: Swift.String,
+                documentation_url: Swift.String,
+                errors: Components.Schemas.validation_hyphen_error.errorsPayload? = nil
+            ) {
+                self.message = message
+                self.documentation_url = documentation_url
+                self.errors = errors
+            }
+            public enum CodingKeys: String, CodingKey {
+                case message
+                case documentation_url
+                case errors
+            }
+        }
         /// A GitHub user.
         ///
         /// - Remark: Generated from `#/components/schemas/nullable-simple-user`.
@@ -900,131 +1025,6 @@ public enum Components {
                 case user_view_type
             }
         }
-        /// Validation Error
-        ///
-        /// - Remark: Generated from `#/components/schemas/validation-error`.
-        public struct validation_hyphen_error: Codable, Hashable, Sendable {
-            /// - Remark: Generated from `#/components/schemas/validation-error/message`.
-            public var message: Swift.String
-            /// - Remark: Generated from `#/components/schemas/validation-error/documentation_url`.
-            public var documentation_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload`.
-            public struct errorsPayloadPayload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/resource`.
-                public var resource: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/field`.
-                public var field: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/message`.
-                public var message: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/code`.
-                public var code: Swift.String
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/index`.
-                public var index: Swift.Int?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value`.
-                @frozen public enum valuePayload: Codable, Hashable, Sendable {
-                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case1`.
-                    case case1(Swift.String?)
-                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case2`.
-                    case case2(Swift.Int?)
-                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case3`.
-                    case case3([Swift.String]?)
-                    public init(from decoder: any Decoder) throws {
-                        var errors: [any Error] = []
-                        do {
-                            self = .case1(try decoder.decodeFromSingleValueContainer())
-                            return
-                        } catch {
-                            errors.append(error)
-                        }
-                        do {
-                            self = .case2(try decoder.decodeFromSingleValueContainer())
-                            return
-                        } catch {
-                            errors.append(error)
-                        }
-                        do {
-                            self = .case3(try decoder.decodeFromSingleValueContainer())
-                            return
-                        } catch {
-                            errors.append(error)
-                        }
-                        throw Swift.DecodingError.failedToDecodeOneOfSchema(
-                            type: Self.self,
-                            codingPath: decoder.codingPath,
-                            errors: errors
-                        )
-                    }
-                    public func encode(to encoder: any Encoder) throws {
-                        switch self {
-                        case let .case1(value):
-                            try encoder.encodeToSingleValueContainer(value)
-                        case let .case2(value):
-                            try encoder.encodeToSingleValueContainer(value)
-                        case let .case3(value):
-                            try encoder.encodeToSingleValueContainer(value)
-                        }
-                    }
-                }
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value`.
-                public var value: Components.Schemas.validation_hyphen_error.errorsPayloadPayload.valuePayload?
-                /// Creates a new `errorsPayloadPayload`.
-                ///
-                /// - Parameters:
-                ///   - resource:
-                ///   - field:
-                ///   - message:
-                ///   - code:
-                ///   - index:
-                ///   - value:
-                public init(
-                    resource: Swift.String? = nil,
-                    field: Swift.String? = nil,
-                    message: Swift.String? = nil,
-                    code: Swift.String,
-                    index: Swift.Int? = nil,
-                    value: Components.Schemas.validation_hyphen_error.errorsPayloadPayload.valuePayload? = nil
-                ) {
-                    self.resource = resource
-                    self.field = field
-                    self.message = message
-                    self.code = code
-                    self.index = index
-                    self.value = value
-                }
-                public enum CodingKeys: String, CodingKey {
-                    case resource
-                    case field
-                    case message
-                    case code
-                    case index
-                    case value
-                }
-            }
-            /// - Remark: Generated from `#/components/schemas/validation-error/errors`.
-            public typealias errorsPayload = [Components.Schemas.validation_hyphen_error.errorsPayloadPayload]
-            /// - Remark: Generated from `#/components/schemas/validation-error/errors`.
-            public var errors: Components.Schemas.validation_hyphen_error.errorsPayload?
-            /// Creates a new `validation_hyphen_error`.
-            ///
-            /// - Parameters:
-            ///   - message:
-            ///   - documentation_url:
-            ///   - errors:
-            public init(
-                message: Swift.String,
-                documentation_url: Swift.String,
-                errors: Components.Schemas.validation_hyphen_error.errorsPayload? = nil
-            ) {
-                self.message = message
-                self.documentation_url = documentation_url
-                self.errors = errors
-            }
-            public enum CodingKeys: String, CodingKey {
-                case message
-                case documentation_url
-                case errors
-            }
-        }
         /// How the author is associated with the repository.
         ///
         /// - Remark: Generated from `#/components/schemas/author-association`.
@@ -1137,6 +1137,8 @@ public enum Components {
             public var description: Swift.String?
             /// - Remark: Generated from `#/components/schemas/base-gist/comments`.
             public var comments: Swift.Int
+            /// - Remark: Generated from `#/components/schemas/base-gist/comments_enabled`.
+            public var comments_enabled: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/base-gist/user`.
             public var user: Components.Schemas.nullable_hyphen_simple_hyphen_user?
             /// - Remark: Generated from `#/components/schemas/base-gist/comments_url`.
@@ -1166,6 +1168,7 @@ public enum Components {
             ///   - updated_at:
             ///   - description:
             ///   - comments:
+            ///   - comments_enabled:
             ///   - user:
             ///   - comments_url:
             ///   - owner:
@@ -1187,6 +1190,7 @@ public enum Components {
                 updated_at: Foundation.Date,
                 description: Swift.String? = nil,
                 comments: Swift.Int,
+                comments_enabled: Swift.Bool? = nil,
                 user: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
                 comments_url: Swift.String,
                 owner: Components.Schemas.simple_hyphen_user? = nil,
@@ -1208,6 +1212,7 @@ public enum Components {
                 self.updated_at = updated_at
                 self.description = description
                 self.comments = comments
+                self.comments_enabled = comments_enabled
                 self.user = user
                 self.comments_url = comments_url
                 self.owner = owner
@@ -1230,6 +1235,7 @@ public enum Components {
                 case updated_at
                 case description
                 case comments
+                case comments_enabled
                 case user
                 case comments_url
                 case owner
@@ -1947,6 +1953,8 @@ public enum Components {
                 public var description: Swift.String?
                 /// - Remark: Generated from `#/components/schemas/gist-simple/fork_of/comments`.
                 public var comments: Swift.Int
+                /// - Remark: Generated from `#/components/schemas/gist-simple/fork_of/comments_enabled`.
+                public var comments_enabled: Swift.Bool?
                 /// - Remark: Generated from `#/components/schemas/gist-simple/fork_of/user`.
                 public var user: Components.Schemas.nullable_hyphen_simple_hyphen_user?
                 /// - Remark: Generated from `#/components/schemas/gist-simple/fork_of/comments_url`.
@@ -1976,6 +1984,7 @@ public enum Components {
                 ///   - updated_at:
                 ///   - description:
                 ///   - comments:
+                ///   - comments_enabled:
                 ///   - user:
                 ///   - comments_url:
                 ///   - owner:
@@ -1997,6 +2006,7 @@ public enum Components {
                     updated_at: Foundation.Date,
                     description: Swift.String? = nil,
                     comments: Swift.Int,
+                    comments_enabled: Swift.Bool? = nil,
                     user: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
                     comments_url: Swift.String,
                     owner: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
@@ -2018,6 +2028,7 @@ public enum Components {
                     self.updated_at = updated_at
                     self.description = description
                     self.comments = comments
+                    self.comments_enabled = comments_enabled
                     self.user = user
                     self.comments_url = comments_url
                     self.owner = owner
@@ -2040,6 +2051,7 @@ public enum Components {
                     case updated_at
                     case description
                     case comments
+                    case comments_enabled
                     case user
                     case comments_url
                     case owner
@@ -2159,6 +2171,8 @@ public enum Components {
             public var description: Swift.String?
             /// - Remark: Generated from `#/components/schemas/gist-simple/comments`.
             public var comments: Swift.Int?
+            /// - Remark: Generated from `#/components/schemas/gist-simple/comments_enabled`.
+            public var comments_enabled: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/gist-simple/user`.
             public var user: Swift.String?
             /// - Remark: Generated from `#/components/schemas/gist-simple/comments_url`.
@@ -2187,6 +2201,7 @@ public enum Components {
             ///   - updated_at:
             ///   - description:
             ///   - comments:
+            ///   - comments_enabled:
             ///   - user:
             ///   - comments_url:
             ///   - owner:
@@ -2209,6 +2224,7 @@ public enum Components {
                 updated_at: Swift.String? = nil,
                 description: Swift.String? = nil,
                 comments: Swift.Int? = nil,
+                comments_enabled: Swift.Bool? = nil,
                 user: Swift.String? = nil,
                 comments_url: Swift.String? = nil,
                 owner: Components.Schemas.simple_hyphen_user? = nil,
@@ -2231,6 +2247,7 @@ public enum Components {
                 self.updated_at = updated_at
                 self.description = description
                 self.comments = comments
+                self.comments_enabled = comments_enabled
                 self.user = user
                 self.comments_url = comments_url
                 self.owner = owner
@@ -2254,6 +2271,7 @@ public enum Components {
                 case updated_at
                 case description
                 case comments
+                case comments_enabled
                 case user
                 case comments_url
                 case owner
