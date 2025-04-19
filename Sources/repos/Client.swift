@@ -1849,6 +1849,13 @@ public struct Client: APIProtocol {
                     name: "after",
                     value: input.query.after
                 )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "predicate_type",
+                    value: input.query.predicate_type
+                )
                 converter.setAcceptHeader(
                     in: &request.headerFields,
                     contentTypes: input.headers.accept
@@ -2222,9 +2229,9 @@ public struct Client: APIProtocol {
             }
         )
     }
-    /// Check if automated security fixes are enabled for a repository
+    /// Check if Dependabot security updates are enabled for a repository
     ///
-    /// Shows whether automated security fixes are enabled, disabled or paused for a repository. The authenticated user must have admin read access to the repository. For more information, see "[Configuring automated security fixes](https://docs.github.com/articles/configuring-automated-security-fixes)".
+    /// Shows whether Dependabot security updates are enabled, disabled or paused for a repository. The authenticated user must have admin read access to the repository. For more information, see "[Configuring Dependabot security updates](https://docs.github.com/articles/configuring-automated-security-fixes)".
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/automated-security-fixes`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/automated-security-fixes/get(repos/check-automated-security-fixes)`.
@@ -2289,9 +2296,9 @@ public struct Client: APIProtocol {
             }
         )
     }
-    /// Enable automated security fixes
+    /// Enable Dependabot security updates
     ///
-    /// Enables automated security fixes for a repository. The authenticated user must have admin access to the repository. For more information, see "[Configuring automated security fixes](https://docs.github.com/articles/configuring-automated-security-fixes)".
+    /// Enables Dependabot security updates for a repository. The authenticated user must have admin access to the repository. For more information, see "[Configuring Dependabot security updates](https://docs.github.com/articles/configuring-automated-security-fixes)".
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/automated-security-fixes`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/automated-security-fixes/put(repos/enable-automated-security-fixes)`.
@@ -2330,9 +2337,9 @@ public struct Client: APIProtocol {
             }
         )
     }
-    /// Disable automated security fixes
+    /// Disable Dependabot security updates
     ///
-    /// Disables automated security fixes for a repository. The authenticated user must have admin access to the repository. For more information, see "[Configuring automated security fixes](https://docs.github.com/articles/configuring-automated-security-fixes)".
+    /// Disables Dependabot security updates for a repository. The authenticated user must have admin access to the repository. For more information, see "[Configuring Dependabot security updates](https://docs.github.com/articles/configuring-automated-security-fixes)".
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/automated-security-fixes`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/automated-security-fixes/delete(repos/disable-automated-security-fixes)`.
@@ -6195,8 +6202,8 @@ public struct Client: APIProtocol {
     /// To use this endpoint, the authenticated user must either be an administrator of the repository or target themselves for removal.
     ///
     /// This endpoint also:
-    /// - Cancels any outstanding invitations
-    /// - Unasigns the user from any issues
+    /// - Cancels any outstanding invitations sent by the collaborator
+    /// - Unassigns the user from any issues
     /// - Removes access to organization projects if the user is not an organization member and is not a collaborator on any other organization repositories.
     /// - Unstars the repository
     /// - Updates access permissions to packages
@@ -7353,7 +7360,7 @@ public struct Client: APIProtocol {
     }
     /// List pull requests associated with a commit
     ///
-    /// Lists the merged pull request that introduced the commit to the repository. If the commit is not present in the default branch, will only return open pull requests associated with the commit.
+    /// Lists the merged pull request that introduced the commit to the repository. If the commit is not present in the default branch, it will return merged and open pull requests associated with the commit.
     ///
     /// To list the open or merged pull requests associated with a branch, you can set the `commit_sha` parameter to the branch name.
     ///
@@ -10428,7 +10435,7 @@ public struct Client: APIProtocol {
     ///
     /// The authenticated user must have admin or owner permissions to the repository to use this endpoint.
     ///
-    /// For more information about the app that is providing this custom deployment rule, see the [documentation for the `GET /apps/{app_slug}` endpoint](https://docs.github.com/rest/apps/apps#get-an-app).
+    /// For more information about the app that is providing this custom deployment rule, see the [documentation for the `GET /apps/{app_slug}` endpoint](https://docs.github.com/rest/apps/apps#get-an-app), as well as the [guide to creating custom deployment protection rules](https://docs.github.com/actions/managing-workflow-runs-and-deployments/managing-deployments/creating-custom-deployment-protection-rules).
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
     ///
@@ -16957,6 +16964,241 @@ public struct Client: APIProtocol {
             }
         )
     }
+    /// Get repository ruleset history
+    ///
+    /// Get the history of a repository ruleset.
+    ///
+    /// - Remark: HTTP `GET /repos/{owner}/{repo}/rulesets/{ruleset_id}/history`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/rulesets/{ruleset_id}/history/get(repos/get-repo-ruleset-history)`.
+    public func repos_sol_get_hyphen_repo_hyphen_ruleset_hyphen_history(_ input: Operations.repos_sol_get_hyphen_repo_hyphen_ruleset_hyphen_history.Input) async throws -> Operations.repos_sol_get_hyphen_repo_hyphen_ruleset_hyphen_history.Output {
+        try await client.send(
+            input: input,
+            forOperation: Operations.repos_sol_get_hyphen_repo_hyphen_ruleset_hyphen_history.id,
+            serializer: { input in
+                let path = try converter.renderedPath(
+                    template: "/repos/{}/{}/rulesets/{}/history",
+                    parameters: [
+                        input.path.owner,
+                        input.path.repo,
+                        input.path.ruleset_id
+                    ]
+                )
+                var request: HTTPTypes.HTTPRequest = .init(
+                    soar_path: path,
+                    method: .get
+                )
+                suppressMutabilityWarning(&request)
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "per_page",
+                    value: input.query.per_page
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "page",
+                    value: input.query.page
+                )
+                converter.setAcceptHeader(
+                    in: &request.headerFields,
+                    contentTypes: input.headers.accept
+                )
+                return (request, nil)
+            },
+            deserializer: { response, responseBody in
+                switch response.status.code {
+                case 200:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Operations.repos_sol_get_hyphen_repo_hyphen_ruleset_hyphen_history.Output.Ok.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            [Components.Schemas.ruleset_hyphen_version].self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .ok(.init(body: body))
+                case 404:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Components.Responses.not_found.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Schemas.basic_hyphen_error.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .notFound(.init(body: body))
+                case 500:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Components.Responses.internal_error.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Schemas.basic_hyphen_error.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .internalServerError(.init(body: body))
+                default:
+                    return .undocumented(
+                        statusCode: response.status.code,
+                        .init(
+                            headerFields: response.headerFields,
+                            body: responseBody
+                        )
+                    )
+                }
+            }
+        )
+    }
+    /// Get repository ruleset version
+    ///
+    /// Get a version of a repository ruleset.
+    ///
+    /// - Remark: HTTP `GET /repos/{owner}/{repo}/rulesets/{ruleset_id}/history/{version_id}`.
+    /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/rulesets/{ruleset_id}/history/{version_id}/get(repos/get-repo-ruleset-version)`.
+    public func repos_sol_get_hyphen_repo_hyphen_ruleset_hyphen_version(_ input: Operations.repos_sol_get_hyphen_repo_hyphen_ruleset_hyphen_version.Input) async throws -> Operations.repos_sol_get_hyphen_repo_hyphen_ruleset_hyphen_version.Output {
+        try await client.send(
+            input: input,
+            forOperation: Operations.repos_sol_get_hyphen_repo_hyphen_ruleset_hyphen_version.id,
+            serializer: { input in
+                let path = try converter.renderedPath(
+                    template: "/repos/{}/{}/rulesets/{}/history/{}",
+                    parameters: [
+                        input.path.owner,
+                        input.path.repo,
+                        input.path.ruleset_id,
+                        input.path.version_id
+                    ]
+                )
+                var request: HTTPTypes.HTTPRequest = .init(
+                    soar_path: path,
+                    method: .get
+                )
+                suppressMutabilityWarning(&request)
+                converter.setAcceptHeader(
+                    in: &request.headerFields,
+                    contentTypes: input.headers.accept
+                )
+                return (request, nil)
+            },
+            deserializer: { response, responseBody in
+                switch response.status.code {
+                case 200:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Operations.repos_sol_get_hyphen_repo_hyphen_ruleset_hyphen_version.Output.Ok.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Schemas.ruleset_hyphen_version_hyphen_with_hyphen_state.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .ok(.init(body: body))
+                case 404:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Components.Responses.not_found.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Schemas.basic_hyphen_error.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .notFound(.init(body: body))
+                case 500:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Components.Responses.internal_error.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Schemas.basic_hyphen_error.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .internalServerError(.init(body: body))
+                default:
+                    return .undocumented(
+                        statusCode: response.status.code,
+                        .init(
+                            headerFields: response.headerFields,
+                            body: responseBody
+                        )
+                    )
+                }
+            }
+        )
+    }
     /// Get the weekly commit activity
     ///
     /// Returns a weekly aggregate of the number of additions and deletions pushed to a repository.
@@ -19189,6 +19431,11 @@ public struct Client: APIProtocol {
             deserializer: { response, responseBody in
                 switch response.status.code {
                 case 200:
+                    let headers: Operations.repos_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Headers = .init(Link: try converter.getOptionalHeaderFieldAsURI(
+                        in: response.headerFields,
+                        name: "Link",
+                        as: Components.Headers.link.self
+                    ))
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
                     let body: Operations.repos_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
@@ -19209,7 +19456,10 @@ public struct Client: APIProtocol {
                     default:
                         preconditionFailure("bestContentType chose an invalid content type.")
                     }
-                    return .ok(.init(body: body))
+                    return .ok(.init(
+                        headers: headers,
+                        body: body
+                    ))
                 case 422:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
                     let body: Components.Responses.validation_failed.Body

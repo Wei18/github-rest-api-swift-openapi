@@ -690,19 +690,19 @@ public enum Components {
         ///
         /// - Remark: Generated from `#/components/parameters/org`.
         public typealias org = Swift.String
-        /// If specified, only return results for a single year. The value of `year` is an integer with four digits representing a year. For example, `2024`. Default value is the current year.
+        /// If specified, only return results for a single year. The value of `year` is an integer with four digits representing a year. For example, `2025`. Default value is the current year.
         ///
         /// - Remark: Generated from `#/components/parameters/billing-usage-report-year`.
         public typealias billing_hyphen_usage_hyphen_report_hyphen_year = Swift.Int
-        /// If specified, only return results for a single month. The value of `month` is an integer between `1` and `12`.
+        /// If specified, only return results for a single month. The value of `month` is an integer between `1` and `12`. If no year is specified the default `year` is used.
         ///
         /// - Remark: Generated from `#/components/parameters/billing-usage-report-month`.
         public typealias billing_hyphen_usage_hyphen_report_hyphen_month = Swift.Int
-        /// If specified, only return results for a single day. The value of `day` is an integer between `1` and `31`.
+        /// If specified, only return results for a single day. The value of `day` is an integer between `1` and `31`. If no `year` or `month` is specified, the default `year` and `month` are used.
         ///
         /// - Remark: Generated from `#/components/parameters/billing-usage-report-day`.
         public typealias billing_hyphen_usage_hyphen_report_hyphen_day = Swift.Int
-        /// If specified, only return results for a single hour. The value of `hour` is an integer between `0` and `23`.
+        /// If specified, only return results for a single hour. The value of `hour` is an integer between `0` and `23`. If no `year`, `month`, or `day` is specified, the default `year`, `month`, and `day` are used.
         ///
         /// - Remark: Generated from `#/components/parameters/billing-usage-report-hour`.
         public typealias billing_hyphen_usage_hyphen_report_hyphen_hour = Swift.Int
@@ -795,34 +795,6 @@ public enum Components {
                 self.body = body
             }
         }
-        public struct internal_error: Sendable, Hashable {
-            /// - Remark: Generated from `#/components/responses/internal_error/content`.
-            @frozen public enum Body: Sendable, Hashable {
-                /// - Remark: Generated from `#/components/responses/internal_error/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
-                /// The associated value of the enum case if `self` is `.json`.
-                ///
-                /// - Throws: An error if `self` is not `.json`.
-                /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
-                    get throws {
-                        switch self {
-                        case let .json(body):
-                            return body
-                        }
-                    }
-                }
-            }
-            /// Received HTTP response body
-            public var body: Components.Responses.internal_error.Body
-            /// Creates a new `internal_error`.
-            ///
-            /// - Parameters:
-            ///   - body: Received HTTP response body
-            public init(body: Components.Responses.internal_error.Body) {
-                self.body = body
-            }
-        }
         public struct service_unavailable: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/service_unavailable/content`.
             @frozen public enum Body: Sendable, Hashable {
@@ -908,6 +880,34 @@ public enum Components {
                 self.body = body
             }
         }
+        public struct internal_error: Sendable, Hashable {
+            /// - Remark: Generated from `#/components/responses/internal_error/content`.
+            @frozen public enum Body: Sendable, Hashable {
+                /// - Remark: Generated from `#/components/responses/internal_error/content/application\/json`.
+                case json(Components.Schemas.basic_hyphen_error)
+                /// The associated value of the enum case if `self` is `.json`.
+                ///
+                /// - Throws: An error if `self` is not `.json`.
+                /// - SeeAlso: `.json`.
+                public var json: Components.Schemas.basic_hyphen_error {
+                    get throws {
+                        switch self {
+                        case let .json(body):
+                            return body
+                        }
+                    }
+                }
+            }
+            /// Received HTTP response body
+            public var body: Components.Responses.internal_error.Body
+            /// Creates a new `internal_error`.
+            ///
+            /// - Parameters:
+            ///   - body: Received HTTP response body
+            public init(body: Components.Responses.internal_error.Body) {
+                self.body = body
+            }
+        }
     }
     /// Types generated from the `#/components/headers` section of the OpenAPI document.
     public enum Headers {}
@@ -943,29 +943,29 @@ public enum Operations {
             public var path: Operations.billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org.Input.Path
             /// - Remark: Generated from `#/paths/organizations/{org}/settings/billing/usage/GET/query`.
             public struct Query: Sendable, Hashable {
-                /// If specified, only return results for a single year. The value of `year` is an integer with four digits representing a year. For example, `2024`. Default value is the current year.
+                /// If specified, only return results for a single year. The value of `year` is an integer with four digits representing a year. For example, `2025`. Default value is the current year.
                 ///
                 /// - Remark: Generated from `#/paths/organizations/{org}/settings/billing/usage/GET/query/year`.
                 public var year: Components.Parameters.billing_hyphen_usage_hyphen_report_hyphen_year?
-                /// If specified, only return results for a single month. The value of `month` is an integer between `1` and `12`.
+                /// If specified, only return results for a single month. The value of `month` is an integer between `1` and `12`. If no year is specified the default `year` is used.
                 ///
                 /// - Remark: Generated from `#/paths/organizations/{org}/settings/billing/usage/GET/query/month`.
                 public var month: Components.Parameters.billing_hyphen_usage_hyphen_report_hyphen_month?
-                /// If specified, only return results for a single day. The value of `day` is an integer between `1` and `31`.
+                /// If specified, only return results for a single day. The value of `day` is an integer between `1` and `31`. If no `year` or `month` is specified, the default `year` and `month` are used.
                 ///
                 /// - Remark: Generated from `#/paths/organizations/{org}/settings/billing/usage/GET/query/day`.
                 public var day: Components.Parameters.billing_hyphen_usage_hyphen_report_hyphen_day?
-                /// If specified, only return results for a single hour. The value of `hour` is an integer between `0` and `23`.
+                /// If specified, only return results for a single hour. The value of `hour` is an integer between `0` and `23`. If no `year`, `month`, or `day` is specified, the default `year`, `month`, and `day` are used.
                 ///
                 /// - Remark: Generated from `#/paths/organizations/{org}/settings/billing/usage/GET/query/hour`.
                 public var hour: Components.Parameters.billing_hyphen_usage_hyphen_report_hyphen_hour?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - year: If specified, only return results for a single year. The value of `year` is an integer with four digits representing a year. For example, `2024`. Default value is the current year.
-                ///   - month: If specified, only return results for a single month. The value of `month` is an integer between `1` and `12`.
-                ///   - day: If specified, only return results for a single day. The value of `day` is an integer between `1` and `31`.
-                ///   - hour: If specified, only return results for a single hour. The value of `hour` is an integer between `0` and `23`.
+                ///   - year: If specified, only return results for a single year. The value of `year` is an integer with four digits representing a year. For example, `2025`. Default value is the current year.
+                ///   - month: If specified, only return results for a single month. The value of `month` is an integer between `1` and `12`. If no year is specified the default `year` is used.
+                ///   - day: If specified, only return results for a single day. The value of `day` is an integer between `1` and `31`. If no `year` or `month` is specified, the default `year` and `month` are used.
+                ///   - hour: If specified, only return results for a single hour. The value of `hour` is an integer between `0` and `23`. If no `year`, `month`, or `day` is specified, the default `year`, `month`, and `day` are used.
                 public init(
                     year: Components.Parameters.billing_hyphen_usage_hyphen_report_hyphen_year? = nil,
                     month: Components.Parameters.billing_hyphen_usage_hyphen_report_hyphen_month? = nil,

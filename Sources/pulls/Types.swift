@@ -1270,6 +1270,131 @@ public enum Components {
                 case errors
             }
         }
+        /// Validation Error
+        ///
+        /// - Remark: Generated from `#/components/schemas/validation-error`.
+        public struct validation_hyphen_error: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/validation-error/message`.
+            public var message: Swift.String
+            /// - Remark: Generated from `#/components/schemas/validation-error/documentation_url`.
+            public var documentation_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload`.
+            public struct errorsPayloadPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/resource`.
+                public var resource: Swift.String?
+                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/field`.
+                public var field: Swift.String?
+                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/message`.
+                public var message: Swift.String?
+                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/code`.
+                public var code: Swift.String
+                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/index`.
+                public var index: Swift.Int?
+                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value`.
+                @frozen public enum valuePayload: Codable, Hashable, Sendable {
+                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case1`.
+                    case case1(Swift.String?)
+                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case2`.
+                    case case2(Swift.Int?)
+                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case3`.
+                    case case3([Swift.String]?)
+                    public init(from decoder: any Decoder) throws {
+                        var errors: [any Error] = []
+                        do {
+                            self = .case1(try decoder.decodeFromSingleValueContainer())
+                            return
+                        } catch {
+                            errors.append(error)
+                        }
+                        do {
+                            self = .case2(try decoder.decodeFromSingleValueContainer())
+                            return
+                        } catch {
+                            errors.append(error)
+                        }
+                        do {
+                            self = .case3(try decoder.decodeFromSingleValueContainer())
+                            return
+                        } catch {
+                            errors.append(error)
+                        }
+                        throw Swift.DecodingError.failedToDecodeOneOfSchema(
+                            type: Self.self,
+                            codingPath: decoder.codingPath,
+                            errors: errors
+                        )
+                    }
+                    public func encode(to encoder: any Encoder) throws {
+                        switch self {
+                        case let .case1(value):
+                            try encoder.encodeToSingleValueContainer(value)
+                        case let .case2(value):
+                            try encoder.encodeToSingleValueContainer(value)
+                        case let .case3(value):
+                            try encoder.encodeToSingleValueContainer(value)
+                        }
+                    }
+                }
+                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value`.
+                public var value: Components.Schemas.validation_hyphen_error.errorsPayloadPayload.valuePayload?
+                /// Creates a new `errorsPayloadPayload`.
+                ///
+                /// - Parameters:
+                ///   - resource:
+                ///   - field:
+                ///   - message:
+                ///   - code:
+                ///   - index:
+                ///   - value:
+                public init(
+                    resource: Swift.String? = nil,
+                    field: Swift.String? = nil,
+                    message: Swift.String? = nil,
+                    code: Swift.String,
+                    index: Swift.Int? = nil,
+                    value: Components.Schemas.validation_hyphen_error.errorsPayloadPayload.valuePayload? = nil
+                ) {
+                    self.resource = resource
+                    self.field = field
+                    self.message = message
+                    self.code = code
+                    self.index = index
+                    self.value = value
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case resource
+                    case field
+                    case message
+                    case code
+                    case index
+                    case value
+                }
+            }
+            /// - Remark: Generated from `#/components/schemas/validation-error/errors`.
+            public typealias errorsPayload = [Components.Schemas.validation_hyphen_error.errorsPayloadPayload]
+            /// - Remark: Generated from `#/components/schemas/validation-error/errors`.
+            public var errors: Components.Schemas.validation_hyphen_error.errorsPayload?
+            /// Creates a new `validation_hyphen_error`.
+            ///
+            /// - Parameters:
+            ///   - message:
+            ///   - documentation_url:
+            ///   - errors:
+            public init(
+                message: Swift.String,
+                documentation_url: Swift.String,
+                errors: Components.Schemas.validation_hyphen_error.errorsPayload? = nil
+            ) {
+                self.message = message
+                self.documentation_url = documentation_url
+                self.errors = errors
+            }
+            public enum CodingKeys: String, CodingKey {
+                case message
+                case documentation_url
+                case errors
+            }
+        }
         /// A GitHub user.
         ///
         /// - Remark: Generated from `#/components/schemas/nullable-simple-user`.
@@ -1413,131 +1538,6 @@ public enum Components {
                 case site_admin
                 case starred_at
                 case user_view_type
-            }
-        }
-        /// Validation Error
-        ///
-        /// - Remark: Generated from `#/components/schemas/validation-error`.
-        public struct validation_hyphen_error: Codable, Hashable, Sendable {
-            /// - Remark: Generated from `#/components/schemas/validation-error/message`.
-            public var message: Swift.String
-            /// - Remark: Generated from `#/components/schemas/validation-error/documentation_url`.
-            public var documentation_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload`.
-            public struct errorsPayloadPayload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/resource`.
-                public var resource: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/field`.
-                public var field: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/message`.
-                public var message: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/code`.
-                public var code: Swift.String
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/index`.
-                public var index: Swift.Int?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value`.
-                @frozen public enum valuePayload: Codable, Hashable, Sendable {
-                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case1`.
-                    case case1(Swift.String?)
-                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case2`.
-                    case case2(Swift.Int?)
-                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case3`.
-                    case case3([Swift.String]?)
-                    public init(from decoder: any Decoder) throws {
-                        var errors: [any Error] = []
-                        do {
-                            self = .case1(try decoder.decodeFromSingleValueContainer())
-                            return
-                        } catch {
-                            errors.append(error)
-                        }
-                        do {
-                            self = .case2(try decoder.decodeFromSingleValueContainer())
-                            return
-                        } catch {
-                            errors.append(error)
-                        }
-                        do {
-                            self = .case3(try decoder.decodeFromSingleValueContainer())
-                            return
-                        } catch {
-                            errors.append(error)
-                        }
-                        throw Swift.DecodingError.failedToDecodeOneOfSchema(
-                            type: Self.self,
-                            codingPath: decoder.codingPath,
-                            errors: errors
-                        )
-                    }
-                    public func encode(to encoder: any Encoder) throws {
-                        switch self {
-                        case let .case1(value):
-                            try encoder.encodeToSingleValueContainer(value)
-                        case let .case2(value):
-                            try encoder.encodeToSingleValueContainer(value)
-                        case let .case3(value):
-                            try encoder.encodeToSingleValueContainer(value)
-                        }
-                    }
-                }
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value`.
-                public var value: Components.Schemas.validation_hyphen_error.errorsPayloadPayload.valuePayload?
-                /// Creates a new `errorsPayloadPayload`.
-                ///
-                /// - Parameters:
-                ///   - resource:
-                ///   - field:
-                ///   - message:
-                ///   - code:
-                ///   - index:
-                ///   - value:
-                public init(
-                    resource: Swift.String? = nil,
-                    field: Swift.String? = nil,
-                    message: Swift.String? = nil,
-                    code: Swift.String,
-                    index: Swift.Int? = nil,
-                    value: Components.Schemas.validation_hyphen_error.errorsPayloadPayload.valuePayload? = nil
-                ) {
-                    self.resource = resource
-                    self.field = field
-                    self.message = message
-                    self.code = code
-                    self.index = index
-                    self.value = value
-                }
-                public enum CodingKeys: String, CodingKey {
-                    case resource
-                    case field
-                    case message
-                    case code
-                    case index
-                    case value
-                }
-            }
-            /// - Remark: Generated from `#/components/schemas/validation-error/errors`.
-            public typealias errorsPayload = [Components.Schemas.validation_hyphen_error.errorsPayloadPayload]
-            /// - Remark: Generated from `#/components/schemas/validation-error/errors`.
-            public var errors: Components.Schemas.validation_hyphen_error.errorsPayload?
-            /// Creates a new `validation_hyphen_error`.
-            ///
-            /// - Parameters:
-            ///   - message:
-            ///   - documentation_url:
-            ///   - errors:
-            public init(
-                message: Swift.String,
-                documentation_url: Swift.String,
-                errors: Components.Schemas.validation_hyphen_error.errorsPayload? = nil
-            ) {
-                self.message = message
-                self.documentation_url = documentation_url
-                self.errors = errors
-            }
-            public enum CodingKeys: String, CodingKey {
-                case message
-                case documentation_url
-                case errors
             }
         }
         /// License Simple
@@ -2329,6 +2329,222 @@ public enum Components {
                 case anonymous_access_enabled
             }
         }
+        /// A collection of related issues and pull requests.
+        ///
+        /// - Remark: Generated from `#/components/schemas/nullable-milestone`.
+        public struct nullable_hyphen_milestone: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/nullable-milestone/url`.
+            public var url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-milestone/html_url`.
+            public var html_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-milestone/labels_url`.
+            public var labels_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-milestone/id`.
+            public var id: Swift.Int
+            /// - Remark: Generated from `#/components/schemas/nullable-milestone/node_id`.
+            public var node_id: Swift.String
+            /// The number of the milestone.
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-milestone/number`.
+            public var number: Swift.Int
+            /// The state of the milestone.
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-milestone/state`.
+            @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+                case open = "open"
+                case closed = "closed"
+            }
+            /// The state of the milestone.
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-milestone/state`.
+            public var state: Components.Schemas.nullable_hyphen_milestone.statePayload
+            /// The title of the milestone.
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-milestone/title`.
+            public var title: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-milestone/description`.
+            public var description: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/nullable-milestone/creator`.
+            public var creator: Components.Schemas.nullable_hyphen_simple_hyphen_user?
+            /// - Remark: Generated from `#/components/schemas/nullable-milestone/open_issues`.
+            public var open_issues: Swift.Int
+            /// - Remark: Generated from `#/components/schemas/nullable-milestone/closed_issues`.
+            public var closed_issues: Swift.Int
+            /// - Remark: Generated from `#/components/schemas/nullable-milestone/created_at`.
+            public var created_at: Foundation.Date
+            /// - Remark: Generated from `#/components/schemas/nullable-milestone/updated_at`.
+            public var updated_at: Foundation.Date
+            /// - Remark: Generated from `#/components/schemas/nullable-milestone/closed_at`.
+            public var closed_at: Foundation.Date?
+            /// - Remark: Generated from `#/components/schemas/nullable-milestone/due_on`.
+            public var due_on: Foundation.Date?
+            /// Creates a new `nullable_hyphen_milestone`.
+            ///
+            /// - Parameters:
+            ///   - url:
+            ///   - html_url:
+            ///   - labels_url:
+            ///   - id:
+            ///   - node_id:
+            ///   - number: The number of the milestone.
+            ///   - state: The state of the milestone.
+            ///   - title: The title of the milestone.
+            ///   - description:
+            ///   - creator:
+            ///   - open_issues:
+            ///   - closed_issues:
+            ///   - created_at:
+            ///   - updated_at:
+            ///   - closed_at:
+            ///   - due_on:
+            public init(
+                url: Swift.String,
+                html_url: Swift.String,
+                labels_url: Swift.String,
+                id: Swift.Int,
+                node_id: Swift.String,
+                number: Swift.Int,
+                state: Components.Schemas.nullable_hyphen_milestone.statePayload,
+                title: Swift.String,
+                description: Swift.String? = nil,
+                creator: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
+                open_issues: Swift.Int,
+                closed_issues: Swift.Int,
+                created_at: Foundation.Date,
+                updated_at: Foundation.Date,
+                closed_at: Foundation.Date? = nil,
+                due_on: Foundation.Date? = nil
+            ) {
+                self.url = url
+                self.html_url = html_url
+                self.labels_url = labels_url
+                self.id = id
+                self.node_id = node_id
+                self.number = number
+                self.state = state
+                self.title = title
+                self.description = description
+                self.creator = creator
+                self.open_issues = open_issues
+                self.closed_issues = closed_issues
+                self.created_at = created_at
+                self.updated_at = updated_at
+                self.closed_at = closed_at
+                self.due_on = due_on
+            }
+            public enum CodingKeys: String, CodingKey {
+                case url
+                case html_url
+                case labels_url
+                case id
+                case node_id
+                case number
+                case state
+                case title
+                case description
+                case creator
+                case open_issues
+                case closed_issues
+                case created_at
+                case updated_at
+                case closed_at
+                case due_on
+            }
+        }
+        /// How the author is associated with the repository.
+        ///
+        /// - Remark: Generated from `#/components/schemas/author-association`.
+        @frozen public enum author_hyphen_association: String, Codable, Hashable, Sendable {
+            case COLLABORATOR = "COLLABORATOR"
+            case CONTRIBUTOR = "CONTRIBUTOR"
+            case FIRST_TIMER = "FIRST_TIMER"
+            case FIRST_TIME_CONTRIBUTOR = "FIRST_TIME_CONTRIBUTOR"
+            case MANNEQUIN = "MANNEQUIN"
+            case MEMBER = "MEMBER"
+            case NONE = "NONE"
+            case OWNER = "OWNER"
+        }
+        /// - Remark: Generated from `#/components/schemas/reaction-rollup`.
+        public struct reaction_hyphen_rollup: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/reaction-rollup/url`.
+            public var url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/reaction-rollup/total_count`.
+            public var total_count: Swift.Int
+            /// - Remark: Generated from `#/components/schemas/reaction-rollup/+1`.
+            public var _plus_1: Swift.Int
+            /// - Remark: Generated from `#/components/schemas/reaction-rollup/-1`.
+            public var _hyphen_1: Swift.Int
+            /// - Remark: Generated from `#/components/schemas/reaction-rollup/laugh`.
+            public var laugh: Swift.Int
+            /// - Remark: Generated from `#/components/schemas/reaction-rollup/confused`.
+            public var confused: Swift.Int
+            /// - Remark: Generated from `#/components/schemas/reaction-rollup/heart`.
+            public var heart: Swift.Int
+            /// - Remark: Generated from `#/components/schemas/reaction-rollup/hooray`.
+            public var hooray: Swift.Int
+            /// - Remark: Generated from `#/components/schemas/reaction-rollup/eyes`.
+            public var eyes: Swift.Int
+            /// - Remark: Generated from `#/components/schemas/reaction-rollup/rocket`.
+            public var rocket: Swift.Int
+            /// Creates a new `reaction_hyphen_rollup`.
+            ///
+            /// - Parameters:
+            ///   - url:
+            ///   - total_count:
+            ///   - _plus_1:
+            ///   - _hyphen_1:
+            ///   - laugh:
+            ///   - confused:
+            ///   - heart:
+            ///   - hooray:
+            ///   - eyes:
+            ///   - rocket:
+            public init(
+                url: Swift.String,
+                total_count: Swift.Int,
+                _plus_1: Swift.Int,
+                _hyphen_1: Swift.Int,
+                laugh: Swift.Int,
+                confused: Swift.Int,
+                heart: Swift.Int,
+                hooray: Swift.Int,
+                eyes: Swift.Int,
+                rocket: Swift.Int
+            ) {
+                self.url = url
+                self.total_count = total_count
+                self._plus_1 = _plus_1
+                self._hyphen_1 = _hyphen_1
+                self.laugh = laugh
+                self.confused = confused
+                self.heart = heart
+                self.hooray = hooray
+                self.eyes = eyes
+                self.rocket = rocket
+            }
+            public enum CodingKeys: String, CodingKey {
+                case url
+                case total_count
+                case _plus_1 = "+1"
+                case _hyphen_1 = "-1"
+                case laugh
+                case confused
+                case heart
+                case hooray
+                case eyes
+                case rocket
+            }
+        }
+        /// An object without any properties.
+        ///
+        /// - Remark: Generated from `#/components/schemas/empty-object`.
+        public struct empty_hyphen_object: Codable, Hashable, Sendable {
+            /// Creates a new `empty_hyphen_object`.
+            public init() {}
+            public init(from decoder: any Decoder) throws {
+                try decoder.ensureNoAdditionalProperties(knownKeys: [])
+            }
+        }
         /// Groups of organization members that gives permissions on specified repositories.
         ///
         /// - Remark: Generated from `#/components/schemas/nullable-team-simple`.
@@ -2572,222 +2788,6 @@ public enum Components {
                 case members_url
                 case repositories_url
                 case parent
-            }
-        }
-        /// A collection of related issues and pull requests.
-        ///
-        /// - Remark: Generated from `#/components/schemas/nullable-milestone`.
-        public struct nullable_hyphen_milestone: Codable, Hashable, Sendable {
-            /// - Remark: Generated from `#/components/schemas/nullable-milestone/url`.
-            public var url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-milestone/html_url`.
-            public var html_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-milestone/labels_url`.
-            public var labels_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-milestone/id`.
-            public var id: Swift.Int
-            /// - Remark: Generated from `#/components/schemas/nullable-milestone/node_id`.
-            public var node_id: Swift.String
-            /// The number of the milestone.
-            ///
-            /// - Remark: Generated from `#/components/schemas/nullable-milestone/number`.
-            public var number: Swift.Int
-            /// The state of the milestone.
-            ///
-            /// - Remark: Generated from `#/components/schemas/nullable-milestone/state`.
-            @frozen public enum statePayload: String, Codable, Hashable, Sendable {
-                case open = "open"
-                case closed = "closed"
-            }
-            /// The state of the milestone.
-            ///
-            /// - Remark: Generated from `#/components/schemas/nullable-milestone/state`.
-            public var state: Components.Schemas.nullable_hyphen_milestone.statePayload
-            /// The title of the milestone.
-            ///
-            /// - Remark: Generated from `#/components/schemas/nullable-milestone/title`.
-            public var title: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-milestone/description`.
-            public var description: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/nullable-milestone/creator`.
-            public var creator: Components.Schemas.nullable_hyphen_simple_hyphen_user?
-            /// - Remark: Generated from `#/components/schemas/nullable-milestone/open_issues`.
-            public var open_issues: Swift.Int
-            /// - Remark: Generated from `#/components/schemas/nullable-milestone/closed_issues`.
-            public var closed_issues: Swift.Int
-            /// - Remark: Generated from `#/components/schemas/nullable-milestone/created_at`.
-            public var created_at: Foundation.Date
-            /// - Remark: Generated from `#/components/schemas/nullable-milestone/updated_at`.
-            public var updated_at: Foundation.Date
-            /// - Remark: Generated from `#/components/schemas/nullable-milestone/closed_at`.
-            public var closed_at: Foundation.Date?
-            /// - Remark: Generated from `#/components/schemas/nullable-milestone/due_on`.
-            public var due_on: Foundation.Date?
-            /// Creates a new `nullable_hyphen_milestone`.
-            ///
-            /// - Parameters:
-            ///   - url:
-            ///   - html_url:
-            ///   - labels_url:
-            ///   - id:
-            ///   - node_id:
-            ///   - number: The number of the milestone.
-            ///   - state: The state of the milestone.
-            ///   - title: The title of the milestone.
-            ///   - description:
-            ///   - creator:
-            ///   - open_issues:
-            ///   - closed_issues:
-            ///   - created_at:
-            ///   - updated_at:
-            ///   - closed_at:
-            ///   - due_on:
-            public init(
-                url: Swift.String,
-                html_url: Swift.String,
-                labels_url: Swift.String,
-                id: Swift.Int,
-                node_id: Swift.String,
-                number: Swift.Int,
-                state: Components.Schemas.nullable_hyphen_milestone.statePayload,
-                title: Swift.String,
-                description: Swift.String? = nil,
-                creator: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
-                open_issues: Swift.Int,
-                closed_issues: Swift.Int,
-                created_at: Foundation.Date,
-                updated_at: Foundation.Date,
-                closed_at: Foundation.Date? = nil,
-                due_on: Foundation.Date? = nil
-            ) {
-                self.url = url
-                self.html_url = html_url
-                self.labels_url = labels_url
-                self.id = id
-                self.node_id = node_id
-                self.number = number
-                self.state = state
-                self.title = title
-                self.description = description
-                self.creator = creator
-                self.open_issues = open_issues
-                self.closed_issues = closed_issues
-                self.created_at = created_at
-                self.updated_at = updated_at
-                self.closed_at = closed_at
-                self.due_on = due_on
-            }
-            public enum CodingKeys: String, CodingKey {
-                case url
-                case html_url
-                case labels_url
-                case id
-                case node_id
-                case number
-                case state
-                case title
-                case description
-                case creator
-                case open_issues
-                case closed_issues
-                case created_at
-                case updated_at
-                case closed_at
-                case due_on
-            }
-        }
-        /// How the author is associated with the repository.
-        ///
-        /// - Remark: Generated from `#/components/schemas/author-association`.
-        @frozen public enum author_hyphen_association: String, Codable, Hashable, Sendable {
-            case COLLABORATOR = "COLLABORATOR"
-            case CONTRIBUTOR = "CONTRIBUTOR"
-            case FIRST_TIMER = "FIRST_TIMER"
-            case FIRST_TIME_CONTRIBUTOR = "FIRST_TIME_CONTRIBUTOR"
-            case MANNEQUIN = "MANNEQUIN"
-            case MEMBER = "MEMBER"
-            case NONE = "NONE"
-            case OWNER = "OWNER"
-        }
-        /// - Remark: Generated from `#/components/schemas/reaction-rollup`.
-        public struct reaction_hyphen_rollup: Codable, Hashable, Sendable {
-            /// - Remark: Generated from `#/components/schemas/reaction-rollup/url`.
-            public var url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/reaction-rollup/total_count`.
-            public var total_count: Swift.Int
-            /// - Remark: Generated from `#/components/schemas/reaction-rollup/+1`.
-            public var _plus_1: Swift.Int
-            /// - Remark: Generated from `#/components/schemas/reaction-rollup/-1`.
-            public var _hyphen_1: Swift.Int
-            /// - Remark: Generated from `#/components/schemas/reaction-rollup/laugh`.
-            public var laugh: Swift.Int
-            /// - Remark: Generated from `#/components/schemas/reaction-rollup/confused`.
-            public var confused: Swift.Int
-            /// - Remark: Generated from `#/components/schemas/reaction-rollup/heart`.
-            public var heart: Swift.Int
-            /// - Remark: Generated from `#/components/schemas/reaction-rollup/hooray`.
-            public var hooray: Swift.Int
-            /// - Remark: Generated from `#/components/schemas/reaction-rollup/eyes`.
-            public var eyes: Swift.Int
-            /// - Remark: Generated from `#/components/schemas/reaction-rollup/rocket`.
-            public var rocket: Swift.Int
-            /// Creates a new `reaction_hyphen_rollup`.
-            ///
-            /// - Parameters:
-            ///   - url:
-            ///   - total_count:
-            ///   - _plus_1:
-            ///   - _hyphen_1:
-            ///   - laugh:
-            ///   - confused:
-            ///   - heart:
-            ///   - hooray:
-            ///   - eyes:
-            ///   - rocket:
-            public init(
-                url: Swift.String,
-                total_count: Swift.Int,
-                _plus_1: Swift.Int,
-                _hyphen_1: Swift.Int,
-                laugh: Swift.Int,
-                confused: Swift.Int,
-                heart: Swift.Int,
-                hooray: Swift.Int,
-                eyes: Swift.Int,
-                rocket: Swift.Int
-            ) {
-                self.url = url
-                self.total_count = total_count
-                self._plus_1 = _plus_1
-                self._hyphen_1 = _hyphen_1
-                self.laugh = laugh
-                self.confused = confused
-                self.heart = heart
-                self.hooray = hooray
-                self.eyes = eyes
-                self.rocket = rocket
-            }
-            public enum CodingKeys: String, CodingKey {
-                case url
-                case total_count
-                case _plus_1 = "+1"
-                case _hyphen_1 = "-1"
-                case laugh
-                case confused
-                case heart
-                case hooray
-                case eyes
-                case rocket
-            }
-        }
-        /// An object without any properties.
-        ///
-        /// - Remark: Generated from `#/components/schemas/empty-object`.
-        public struct empty_hyphen_object: Codable, Hashable, Sendable {
-            /// Creates a new `empty_hyphen_object`.
-            public init() {}
-            public init(from decoder: any Decoder) throws {
-                try decoder.ensureNoAdditionalProperties(knownKeys: [])
             }
         }
         /// Groups of organization members that gives permissions on specified repositories.
@@ -5281,34 +5281,6 @@ public enum Components {
                 self.body = body
             }
         }
-        public struct internal_error: Sendable, Hashable {
-            /// - Remark: Generated from `#/components/responses/internal_error/content`.
-            @frozen public enum Body: Sendable, Hashable {
-                /// - Remark: Generated from `#/components/responses/internal_error/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
-                /// The associated value of the enum case if `self` is `.json`.
-                ///
-                /// - Throws: An error if `self` is not `.json`.
-                /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
-                    get throws {
-                        switch self {
-                        case let .json(body):
-                            return body
-                        }
-                    }
-                }
-            }
-            /// Received HTTP response body
-            public var body: Components.Responses.internal_error.Body
-            /// Creates a new `internal_error`.
-            ///
-            /// - Parameters:
-            ///   - body: Received HTTP response body
-            public init(body: Components.Responses.internal_error.Body) {
-                self.body = body
-            }
-        }
         public struct service_unavailable: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/service_unavailable/content`.
             @frozen public enum Body: Sendable, Hashable {
@@ -5363,6 +5335,34 @@ public enum Components {
             /// - Parameters:
             ///   - body: Received HTTP response body
             public init(body: Components.Responses.service_unavailable.Body) {
+                self.body = body
+            }
+        }
+        public struct internal_error: Sendable, Hashable {
+            /// - Remark: Generated from `#/components/responses/internal_error/content`.
+            @frozen public enum Body: Sendable, Hashable {
+                /// - Remark: Generated from `#/components/responses/internal_error/content/application\/json`.
+                case json(Components.Schemas.basic_hyphen_error)
+                /// The associated value of the enum case if `self` is `.json`.
+                ///
+                /// - Throws: An error if `self` is not `.json`.
+                /// - SeeAlso: `.json`.
+                public var json: Components.Schemas.basic_hyphen_error {
+                    get throws {
+                        switch self {
+                        case let .json(body):
+                            return body
+                        }
+                    }
+                }
+            }
+            /// Received HTTP response body
+            public var body: Components.Responses.internal_error.Body
+            /// Creates a new `internal_error`.
+            ///
+            /// - Parameters:
+            ///   - body: Received HTTP response body
+            public init(body: Components.Responses.internal_error.Body) {
                 self.body = body
             }
         }

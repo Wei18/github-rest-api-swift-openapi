@@ -15,8 +15,8 @@ public protocol APIProtocol: Sendable {
     ///
     /// Get Hypermedia links to resources accessible in GitHub's REST API
     ///
-    /// - Remark: HTTP `GET //`.
-    /// - Remark: Generated from `#/paths////get(meta/root)`.
+    /// - Remark: HTTP `GET /`.
+    /// - Remark: Generated from `#/paths///get(meta/root)`.
     func meta_sol_root(_ input: Operations.meta_sol_root.Input) async throws -> Operations.meta_sol_root.Output
     /// Get GitHub meta information
     ///
@@ -61,8 +61,8 @@ extension APIProtocol {
     ///
     /// Get Hypermedia links to resources accessible in GitHub's REST API
     ///
-    /// - Remark: HTTP `GET //`.
-    /// - Remark: Generated from `#/paths////get(meta/root)`.
+    /// - Remark: HTTP `GET /`.
+    /// - Remark: Generated from `#/paths///get(meta/root)`.
     public func meta_sol_root(headers: Operations.meta_sol_root.Input.Headers = .init()) async throws -> Operations.meta_sol_root.Output {
         try await meta_sol_root(Operations.meta_sol_root.Input(headers: headers))
     }
@@ -461,6 +461,31 @@ public enum Components {
                 public var packages: [Swift.String]?
                 /// - Remark: Generated from `#/components/schemas/api-overview/domains/actions`.
                 public var actions: [Swift.String]?
+                /// - Remark: Generated from `#/components/schemas/api-overview/domains/actions_inbound`.
+                public struct actions_inboundPayload: Codable, Hashable, Sendable {
+                    /// - Remark: Generated from `#/components/schemas/api-overview/domains/actions_inbound/full_domains`.
+                    public var full_domains: [Swift.String]?
+                    /// - Remark: Generated from `#/components/schemas/api-overview/domains/actions_inbound/wildcard_domains`.
+                    public var wildcard_domains: [Swift.String]?
+                    /// Creates a new `actions_inboundPayload`.
+                    ///
+                    /// - Parameters:
+                    ///   - full_domains:
+                    ///   - wildcard_domains:
+                    public init(
+                        full_domains: [Swift.String]? = nil,
+                        wildcard_domains: [Swift.String]? = nil
+                    ) {
+                        self.full_domains = full_domains
+                        self.wildcard_domains = wildcard_domains
+                    }
+                    public enum CodingKeys: String, CodingKey {
+                        case full_domains
+                        case wildcard_domains
+                    }
+                }
+                /// - Remark: Generated from `#/components/schemas/api-overview/domains/actions_inbound`.
+                public var actions_inbound: Components.Schemas.api_hyphen_overview.domainsPayload.actions_inboundPayload?
                 /// - Remark: Generated from `#/components/schemas/api-overview/domains/artifact_attestations`.
                 public struct artifact_attestationsPayload: Codable, Hashable, Sendable {
                     /// - Remark: Generated from `#/components/schemas/api-overview/domains/artifact_attestations/trust_domain`.
@@ -494,6 +519,7 @@ public enum Components {
                 ///   - copilot:
                 ///   - packages:
                 ///   - actions:
+                ///   - actions_inbound:
                 ///   - artifact_attestations:
                 public init(
                     website: [Swift.String]? = nil,
@@ -501,6 +527,7 @@ public enum Components {
                     copilot: [Swift.String]? = nil,
                     packages: [Swift.String]? = nil,
                     actions: [Swift.String]? = nil,
+                    actions_inbound: Components.Schemas.api_hyphen_overview.domainsPayload.actions_inboundPayload? = nil,
                     artifact_attestations: Components.Schemas.api_hyphen_overview.domainsPayload.artifact_attestationsPayload? = nil
                 ) {
                     self.website = website
@@ -508,6 +535,7 @@ public enum Components {
                     self.copilot = copilot
                     self.packages = packages
                     self.actions = actions
+                    self.actions_inbound = actions_inbound
                     self.artifact_attestations = artifact_attestations
                 }
                 public enum CodingKeys: String, CodingKey {
@@ -516,6 +544,7 @@ public enum Components {
                     case copilot
                     case packages
                     case actions
+                    case actions_inbound
                     case artifact_attestations
                 }
             }
@@ -648,8 +677,8 @@ public enum Operations {
     ///
     /// Get Hypermedia links to resources accessible in GitHub's REST API
     ///
-    /// - Remark: HTTP `GET //`.
-    /// - Remark: Generated from `#/paths////get(meta/root)`.
+    /// - Remark: HTTP `GET /`.
+    /// - Remark: Generated from `#/paths///get(meta/root)`.
     public enum meta_sol_root {
         public static let id: Swift.String = "meta/root"
         public struct Input: Sendable, Hashable {
@@ -704,7 +733,7 @@ public enum Operations {
             }
             /// Response
             ///
-            /// - Remark: Generated from `#/paths////get(meta/root)/responses/200`.
+            /// - Remark: Generated from `#/paths///get(meta/root)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
             case ok(Operations.meta_sol_root.Output.Ok)
@@ -1198,16 +1227,16 @@ public enum Operations {
             public struct Ok: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/zen/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
-                    /// - Remark: Generated from `#/paths/zen/GET/responses/200/content/application\/json`.
-                    case json(Swift.String)
-                    /// The associated value of the enum case if `self` is `.json`.
+                    /// - Remark: Generated from `#/paths/zen/GET/responses/200/content/text\/plain`.
+                    case plainText(OpenAPIRuntime.HTTPBody)
+                    /// The associated value of the enum case if `self` is `.plainText`.
                     ///
-                    /// - Throws: An error if `self` is not `.json`.
-                    /// - SeeAlso: `.json`.
-                    public var json: Swift.String {
+                    /// - Throws: An error if `self` is not `.plainText`.
+                    /// - SeeAlso: `.plainText`.
+                    public var plainText: OpenAPIRuntime.HTTPBody {
                         get throws {
                             switch self {
-                            case let .json(body):
+                            case let .plainText(body):
                                 return body
                             }
                         }
@@ -1252,12 +1281,12 @@ public enum Operations {
             case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
         }
         @frozen public enum AcceptableContentType: AcceptableProtocol {
-            case json
+            case plainText
             case other(Swift.String)
             public init?(rawValue: Swift.String) {
                 switch rawValue.lowercased() {
-                case "application/json":
-                    self = .json
+                case "text/plain":
+                    self = .plainText
                 default:
                     self = .other(rawValue)
                 }
@@ -1266,13 +1295,13 @@ public enum Operations {
                 switch self {
                 case let .other(string):
                     return string
-                case .json:
-                    return "application/json"
+                case .plainText:
+                    return "text/plain"
                 }
             }
             public static var allCases: [Self] {
                 [
-                    .json
+                    .plainText
                 ]
             }
         }

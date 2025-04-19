@@ -175,6 +175,8 @@ public enum Components {
                 public var scim: Components.Schemas.rate_hyphen_limit?
                 /// - Remark: Generated from `#/components/schemas/rate-limit-overview/resources/dependency_snapshots`.
                 public var dependency_snapshots: Components.Schemas.rate_hyphen_limit?
+                /// - Remark: Generated from `#/components/schemas/rate-limit-overview/resources/code_scanning_autofix`.
+                public var code_scanning_autofix: Components.Schemas.rate_hyphen_limit?
                 /// Creates a new `resourcesPayload`.
                 ///
                 /// - Parameters:
@@ -188,6 +190,7 @@ public enum Components {
                 ///   - actions_runner_registration:
                 ///   - scim:
                 ///   - dependency_snapshots:
+                ///   - code_scanning_autofix:
                 public init(
                     core: Components.Schemas.rate_hyphen_limit,
                     graphql: Components.Schemas.rate_hyphen_limit? = nil,
@@ -198,7 +201,8 @@ public enum Components {
                     code_scanning_upload: Components.Schemas.rate_hyphen_limit? = nil,
                     actions_runner_registration: Components.Schemas.rate_hyphen_limit? = nil,
                     scim: Components.Schemas.rate_hyphen_limit? = nil,
-                    dependency_snapshots: Components.Schemas.rate_hyphen_limit? = nil
+                    dependency_snapshots: Components.Schemas.rate_hyphen_limit? = nil,
+                    code_scanning_autofix: Components.Schemas.rate_hyphen_limit? = nil
                 ) {
                     self.core = core
                     self.graphql = graphql
@@ -210,6 +214,7 @@ public enum Components {
                     self.actions_runner_registration = actions_runner_registration
                     self.scim = scim
                     self.dependency_snapshots = dependency_snapshots
+                    self.code_scanning_autofix = code_scanning_autofix
                 }
                 public enum CodingKeys: String, CodingKey {
                     case core
@@ -222,6 +227,7 @@ public enum Components {
                     case actions_runner_registration
                     case scim
                     case dependency_snapshots
+                    case code_scanning_autofix
                 }
             }
             /// - Remark: Generated from `#/components/schemas/rate-limit-overview/resources`.

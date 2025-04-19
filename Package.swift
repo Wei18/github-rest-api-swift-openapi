@@ -15,6 +15,7 @@ let package = Package(
         .library(name: "GitHubRestAPIActivity", targets: ["GitHubRestAPIActivity"]),
         .library(name: "GitHubRestAPIApps", targets: ["GitHubRestAPIApps"]),
         .library(name: "GitHubRestAPIBilling", targets: ["GitHubRestAPIBilling"]),
+        .library(name: "GitHubRestAPICampaigns", targets: ["GitHubRestAPICampaigns"]),
         .library(name: "GitHubRestAPIChecks", targets: ["GitHubRestAPIChecks"]),
         .library(name: "GitHubRestAPIClassroom", targets: ["GitHubRestAPIClassroom"]),
         .library(name: "GitHubRestAPICode_Scanning", targets: ["GitHubRestAPICode_Scanning"]),
@@ -30,6 +31,7 @@ let package = Package(
         .library(name: "GitHubRestAPIGists", targets: ["GitHubRestAPIGists"]),
         .library(name: "GitHubRestAPIGit", targets: ["GitHubRestAPIGit"]),
         .library(name: "GitHubRestAPIGitignore", targets: ["GitHubRestAPIGitignore"]),
+        .library(name: "GitHubRestAPIHosted_Compute", targets: ["GitHubRestAPIHosted_Compute"]),
         .library(name: "GitHubRestAPIInteractions", targets: ["GitHubRestAPIInteractions"]),
         .library(name: "GitHubRestAPIIssues", targets: ["GitHubRestAPIIssues"]),
         .library(name: "GitHubRestAPILicenses", targets: ["GitHubRestAPILicenses"]),
@@ -88,6 +90,14 @@ let package = Package(
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
             ],
             path: "Sources/billing"
+        ),
+        .target(
+            name: "GitHubRestAPICampaigns",
+            dependencies: [
+                .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
+                .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
+            ],
+            path: "Sources/campaigns"
         ),
         .target(
             name: "GitHubRestAPIChecks",
@@ -208,6 +218,14 @@ let package = Package(
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
             ],
             path: "Sources/gitignore"
+        ),
+        .target(
+            name: "GitHubRestAPIHosted_Compute",
+            dependencies: [
+                .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
+                .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
+            ],
+            path: "Sources/hosted-compute"
         ),
         .target(
             name: "GitHubRestAPIInteractions",

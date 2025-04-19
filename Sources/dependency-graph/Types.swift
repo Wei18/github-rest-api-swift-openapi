@@ -1387,7 +1387,7 @@ public enum Operations {
                     }
                 }
             }
-            /// Response if GitHub Advanced Security is not enabled for this repository
+            /// Response for a private repository when GitHub Advanced Security is not enabled, or if used against a fork
             ///
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependency-graph/compare/{basehead}/get(dependency-graph/diff-range)/responses/403`.
             ///

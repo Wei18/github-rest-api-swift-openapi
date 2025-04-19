@@ -92,7 +92,7 @@ public protocol APIProtocol: Sendable {
     func secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass(_ input: Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Input) async throws -> Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Output
     /// Get secret scanning scan history for a repository
     ///
-    /// Lists the latest incremental and backfill scans by type for a repository.
+    /// Lists the latest default incremental and backfill scans by type for a repository. Scans from Copilot Secret Scanning are not included.
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `repo` or `security_events` scope to use this endpoint. If this endpoint is only used with public repositories, the token can use the `public_repo` scope instead.
     ///
@@ -252,7 +252,7 @@ extension APIProtocol {
     }
     /// Get secret scanning scan history for a repository
     ///
-    /// Lists the latest incremental and backfill scans by type for a repository.
+    /// Lists the latest default incremental and backfill scans by type for a repository. Scans from Copilot Secret Scanning are not included.
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `repo` or `security_events` scope to use this endpoint. If this endpoint is only used with public repositories, the token can use the `public_repo` scope instead.
     ///
@@ -610,22 +610,6 @@ public enum Components {
                 case user_view_type
             }
         }
-        /// The security alert number.
-        ///
-        /// - Remark: Generated from `#/components/schemas/alert-number`.
-        public typealias alert_hyphen_number = Swift.Int
-        /// The REST API URL of the alert resource.
-        ///
-        /// - Remark: Generated from `#/components/schemas/alert-url`.
-        public typealias alert_hyphen_url = Swift.String
-        /// The GitHub URL of the alert resource.
-        ///
-        /// - Remark: Generated from `#/components/schemas/alert-html-url`.
-        public typealias alert_hyphen_html_hyphen_url = Swift.String
-        /// The time that the alert was created in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
-        ///
-        /// - Remark: Generated from `#/components/schemas/alert-created-at`.
-        public typealias alert_hyphen_created_hyphen_at = Foundation.Date
         /// A GitHub repository.
         ///
         /// - Remark: Generated from `#/components/schemas/simple-repository`.
@@ -1005,6 +989,22 @@ public enum Components {
                 case hooks_url
             }
         }
+        /// The security alert number.
+        ///
+        /// - Remark: Generated from `#/components/schemas/alert-number`.
+        public typealias alert_hyphen_number = Swift.Int
+        /// The REST API URL of the alert resource.
+        ///
+        /// - Remark: Generated from `#/components/schemas/alert-url`.
+        public typealias alert_hyphen_url = Swift.String
+        /// The GitHub URL of the alert resource.
+        ///
+        /// - Remark: Generated from `#/components/schemas/alert-html-url`.
+        public typealias alert_hyphen_html_hyphen_url = Swift.String
+        /// The time that the alert was created in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
+        ///
+        /// - Remark: Generated from `#/components/schemas/alert-created-at`.
+        public typealias alert_hyphen_created_hyphen_at = Foundation.Date
         /// The time that the alert was last updated in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
         ///
         /// - Remark: Generated from `#/components/schemas/nullable-alert-updated-at`.
@@ -1078,6 +1078,10 @@ public enum Components {
             public var push_protection_bypassed_at: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/organization-secret-scanning-alert/push_protection_bypass_request_reviewer`.
             public var push_protection_bypass_request_reviewer: Components.Schemas.nullable_hyphen_simple_hyphen_user?
+            /// An optional comment when reviewing a push protection bypass.
+            ///
+            /// - Remark: Generated from `#/components/schemas/organization-secret-scanning-alert/push_protection_bypass_request_reviewer_comment`.
+            public var push_protection_bypass_request_reviewer_comment: Swift.String?
             /// An optional comment when requesting a push protection bypass.
             ///
             /// - Remark: Generated from `#/components/schemas/organization-secret-scanning-alert/push_protection_bypass_request_comment`.
@@ -1110,6 +1114,10 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/organization-secret-scanning-alert/multi_repo`.
             public var multi_repo: Swift.Bool?
+            /// A boolean value representing whether or not alert is base64 encoded
+            ///
+            /// - Remark: Generated from `#/components/schemas/organization-secret-scanning-alert/is_base64_encoded`.
+            public var is_base64_encoded: Swift.Bool?
             /// Creates a new `organization_hyphen_secret_hyphen_scanning_hyphen_alert`.
             ///
             /// - Parameters:
@@ -1131,12 +1139,14 @@ public enum Components {
             ///   - push_protection_bypassed_by:
             ///   - push_protection_bypassed_at: The time that push protection was bypassed in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
             ///   - push_protection_bypass_request_reviewer:
+            ///   - push_protection_bypass_request_reviewer_comment: An optional comment when reviewing a push protection bypass.
             ///   - push_protection_bypass_request_comment: An optional comment when requesting a push protection bypass.
             ///   - push_protection_bypass_request_html_url: The URL to a push protection bypass request.
             ///   - resolution_comment: The comment that was optionally added when this alert was closed
             ///   - validity: The token status as of the latest validity check.
             ///   - publicly_leaked: Whether the secret was publicly leaked.
             ///   - multi_repo: Whether the detected secret was found in multiple repositories in the same organization or enterprise.
+            ///   - is_base64_encoded: A boolean value representing whether or not alert is base64 encoded
             public init(
                 number: Components.Schemas.alert_hyphen_number? = nil,
                 created_at: Components.Schemas.alert_hyphen_created_hyphen_at? = nil,
@@ -1156,12 +1166,14 @@ public enum Components {
                 push_protection_bypassed_by: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
                 push_protection_bypassed_at: Foundation.Date? = nil,
                 push_protection_bypass_request_reviewer: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
+                push_protection_bypass_request_reviewer_comment: Swift.String? = nil,
                 push_protection_bypass_request_comment: Swift.String? = nil,
                 push_protection_bypass_request_html_url: Swift.String? = nil,
                 resolution_comment: Swift.String? = nil,
                 validity: Components.Schemas.organization_hyphen_secret_hyphen_scanning_hyphen_alert.validityPayload? = nil,
                 publicly_leaked: Swift.Bool? = nil,
-                multi_repo: Swift.Bool? = nil
+                multi_repo: Swift.Bool? = nil,
+                is_base64_encoded: Swift.Bool? = nil
             ) {
                 self.number = number
                 self.created_at = created_at
@@ -1181,12 +1193,14 @@ public enum Components {
                 self.push_protection_bypassed_by = push_protection_bypassed_by
                 self.push_protection_bypassed_at = push_protection_bypassed_at
                 self.push_protection_bypass_request_reviewer = push_protection_bypass_request_reviewer
+                self.push_protection_bypass_request_reviewer_comment = push_protection_bypass_request_reviewer_comment
                 self.push_protection_bypass_request_comment = push_protection_bypass_request_comment
                 self.push_protection_bypass_request_html_url = push_protection_bypass_request_html_url
                 self.resolution_comment = resolution_comment
                 self.validity = validity
                 self.publicly_leaked = publicly_leaked
                 self.multi_repo = multi_repo
+                self.is_base64_encoded = is_base64_encoded
             }
             public enum CodingKeys: String, CodingKey {
                 case number
@@ -1207,12 +1221,14 @@ public enum Components {
                 case push_protection_bypassed_by
                 case push_protection_bypassed_at
                 case push_protection_bypass_request_reviewer
+                case push_protection_bypass_request_reviewer_comment
                 case push_protection_bypass_request_comment
                 case push_protection_bypass_request_html_url
                 case resolution_comment
                 case validity
                 case publicly_leaked
                 case multi_repo
+                case is_base64_encoded
             }
         }
         /// The ID of the push protection bypass placeholder. This value is returned on any push protected routes.
@@ -1274,6 +1290,10 @@ public enum Components {
             public var push_protection_bypassed_at: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/secret-scanning-alert/push_protection_bypass_request_reviewer`.
             public var push_protection_bypass_request_reviewer: Components.Schemas.nullable_hyphen_simple_hyphen_user?
+            /// An optional comment when reviewing a push protection bypass.
+            ///
+            /// - Remark: Generated from `#/components/schemas/secret-scanning-alert/push_protection_bypass_request_reviewer_comment`.
+            public var push_protection_bypass_request_reviewer_comment: Swift.String?
             /// An optional comment when requesting a push protection bypass.
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-alert/push_protection_bypass_request_comment`.
@@ -1302,6 +1322,10 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-alert/multi_repo`.
             public var multi_repo: Swift.Bool?
+            /// A boolean value representing whether or not alert is base64 encoded
+            ///
+            /// - Remark: Generated from `#/components/schemas/secret-scanning-alert/is_base64_encoded`.
+            public var is_base64_encoded: Swift.Bool?
             /// Creates a new `secret_hyphen_scanning_hyphen_alert`.
             ///
             /// - Parameters:
@@ -1323,11 +1347,13 @@ public enum Components {
             ///   - push_protection_bypassed_by:
             ///   - push_protection_bypassed_at: The time that push protection was bypassed in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
             ///   - push_protection_bypass_request_reviewer:
+            ///   - push_protection_bypass_request_reviewer_comment: An optional comment when reviewing a push protection bypass.
             ///   - push_protection_bypass_request_comment: An optional comment when requesting a push protection bypass.
             ///   - push_protection_bypass_request_html_url: The URL to a push protection bypass request.
             ///   - validity: The token status as of the latest validity check.
             ///   - publicly_leaked: Whether the detected secret was publicly leaked.
             ///   - multi_repo: Whether the detected secret was found in multiple repositories under the same organization or enterprise.
+            ///   - is_base64_encoded: A boolean value representing whether or not alert is base64 encoded
             public init(
                 number: Components.Schemas.alert_hyphen_number? = nil,
                 created_at: Components.Schemas.alert_hyphen_created_hyphen_at? = nil,
@@ -1347,11 +1373,13 @@ public enum Components {
                 push_protection_bypassed_by: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
                 push_protection_bypassed_at: Foundation.Date? = nil,
                 push_protection_bypass_request_reviewer: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
+                push_protection_bypass_request_reviewer_comment: Swift.String? = nil,
                 push_protection_bypass_request_comment: Swift.String? = nil,
                 push_protection_bypass_request_html_url: Swift.String? = nil,
                 validity: Components.Schemas.secret_hyphen_scanning_hyphen_alert.validityPayload? = nil,
                 publicly_leaked: Swift.Bool? = nil,
-                multi_repo: Swift.Bool? = nil
+                multi_repo: Swift.Bool? = nil,
+                is_base64_encoded: Swift.Bool? = nil
             ) {
                 self.number = number
                 self.created_at = created_at
@@ -1371,11 +1399,13 @@ public enum Components {
                 self.push_protection_bypassed_by = push_protection_bypassed_by
                 self.push_protection_bypassed_at = push_protection_bypassed_at
                 self.push_protection_bypass_request_reviewer = push_protection_bypass_request_reviewer
+                self.push_protection_bypass_request_reviewer_comment = push_protection_bypass_request_reviewer_comment
                 self.push_protection_bypass_request_comment = push_protection_bypass_request_comment
                 self.push_protection_bypass_request_html_url = push_protection_bypass_request_html_url
                 self.validity = validity
                 self.publicly_leaked = publicly_leaked
                 self.multi_repo = multi_repo
+                self.is_base64_encoded = is_base64_encoded
             }
             public enum CodingKeys: String, CodingKey {
                 case number
@@ -1396,11 +1426,13 @@ public enum Components {
                 case push_protection_bypassed_by
                 case push_protection_bypassed_at
                 case push_protection_bypass_request_reviewer
+                case push_protection_bypass_request_reviewer_comment
                 case push_protection_bypass_request_comment
                 case push_protection_bypass_request_html_url
                 case validity
                 case publicly_leaked
                 case multi_repo
+                case is_base64_encoded
             }
         }
         /// An optional comment when closing an alert. Cannot be updated or deleted. Must be `null` when changing `state` to `open`.
@@ -2188,9 +2220,7 @@ public enum Components {
             case open = "open"
             case resolved = "resolved"
         }
-        /// A comma-separated list of secret types to return. By default all secret types are returned.
-        /// See "[Supported secret scanning patterns](https://docs.github.com/code-security/secret-scanning/introduction/supported-secret-scanning-patterns#supported-secrets)"
-        /// for a complete list of secret types.
+        /// A comma-separated list of secret types to return. All default secret patterns are returned. To return generic patterns, pass the token name(s) in the parameter. See "[Supported secret scanning patterns](https://docs.github.com/code-security/secret-scanning/introduction/supported-secret-scanning-patterns#supported-secrets)" for a complete list of secret types.
         ///
         /// - Remark: Generated from `#/components/parameters/secret-scanning-alert-secret-type`.
         public typealias secret_hyphen_scanning_hyphen_alert_hyphen_secret_hyphen_type = Swift.String
@@ -2386,9 +2416,7 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/enterprises/{enterprise}/secret-scanning/alerts/GET/query/state`.
                 public var state: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_state?
-                /// A comma-separated list of secret types to return. By default all secret types are returned.
-                /// See "[Supported secret scanning patterns](https://docs.github.com/code-security/secret-scanning/introduction/supported-secret-scanning-patterns#supported-secrets)"
-                /// for a complete list of secret types.
+                /// A comma-separated list of secret types to return. All default secret patterns are returned. To return generic patterns, pass the token name(s) in the parameter. See "[Supported secret scanning patterns](https://docs.github.com/code-security/secret-scanning/introduction/supported-secret-scanning-patterns#supported-secrets)" for a complete list of secret types.
                 ///
                 /// - Remark: Generated from `#/paths/enterprises/{enterprise}/secret-scanning/alerts/GET/query/secret_type`.
                 public var secret_type: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_secret_hyphen_type?
@@ -2442,7 +2470,7 @@ public enum Operations {
                 ///
                 /// - Parameters:
                 ///   - state: Set to `open` or `resolved` to only list secret scanning alerts in a specific state.
-                ///   - secret_type: A comma-separated list of secret types to return. By default all secret types are returned.
+                ///   - secret_type: A comma-separated list of secret types to return. All default secret patterns are returned. To return generic patterns, pass the token name(s) in the parameter. See "[Supported secret scanning patterns](https://docs.github.com/code-security/secret-scanning/introduction/supported-secret-scanning-patterns#supported-secrets)" for a complete list of secret types.
                 ///   - resolution: A comma-separated list of resolutions. Only secret scanning alerts with one of these resolutions are listed. Valid resolutions are `false_positive`, `wont_fix`, `revoked`, `pattern_edited`, `pattern_deleted` or `used_in_tests`.
                 ///   - sort: The property to sort the results by. `created` means when the alert was created. `updated` means when the alert was updated or resolved.
                 ///   - direction: The direction to sort the results by.
@@ -2694,9 +2722,7 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/secret-scanning/alerts/GET/query/state`.
                 public var state: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_state?
-                /// A comma-separated list of secret types to return. By default all secret types are returned.
-                /// See "[Supported secret scanning patterns](https://docs.github.com/code-security/secret-scanning/introduction/supported-secret-scanning-patterns#supported-secrets)"
-                /// for a complete list of secret types.
+                /// A comma-separated list of secret types to return. All default secret patterns are returned. To return generic patterns, pass the token name(s) in the parameter. See "[Supported secret scanning patterns](https://docs.github.com/code-security/secret-scanning/introduction/supported-secret-scanning-patterns#supported-secrets)" for a complete list of secret types.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/secret-scanning/alerts/GET/query/secret_type`.
                 public var secret_type: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_secret_hyphen_type?
@@ -2754,7 +2780,7 @@ public enum Operations {
                 ///
                 /// - Parameters:
                 ///   - state: Set to `open` or `resolved` to only list secret scanning alerts in a specific state.
-                ///   - secret_type: A comma-separated list of secret types to return. By default all secret types are returned.
+                ///   - secret_type: A comma-separated list of secret types to return. All default secret patterns are returned. To return generic patterns, pass the token name(s) in the parameter. See "[Supported secret scanning patterns](https://docs.github.com/code-security/secret-scanning/introduction/supported-secret-scanning-patterns#supported-secrets)" for a complete list of secret types.
                 ///   - resolution: A comma-separated list of resolutions. Only secret scanning alerts with one of these resolutions are listed. Valid resolutions are `false_positive`, `wont_fix`, `revoked`, `pattern_edited`, `pattern_deleted` or `used_in_tests`.
                 ///   - sort: The property to sort the results by. `created` means when the alert was created. `updated` means when the alert was updated or resolved.
                 ///   - direction: The direction to sort the results by.
@@ -3018,9 +3044,7 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/GET/query/state`.
                 public var state: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_state?
-                /// A comma-separated list of secret types to return. By default all secret types are returned.
-                /// See "[Supported secret scanning patterns](https://docs.github.com/code-security/secret-scanning/introduction/supported-secret-scanning-patterns#supported-secrets)"
-                /// for a complete list of secret types.
+                /// A comma-separated list of secret types to return. All default secret patterns are returned. To return generic patterns, pass the token name(s) in the parameter. See "[Supported secret scanning patterns](https://docs.github.com/code-security/secret-scanning/introduction/supported-secret-scanning-patterns#supported-secrets)" for a complete list of secret types.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/GET/query/secret_type`.
                 public var secret_type: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_secret_hyphen_type?
@@ -3078,7 +3102,7 @@ public enum Operations {
                 ///
                 /// - Parameters:
                 ///   - state: Set to `open` or `resolved` to only list secret scanning alerts in a specific state.
-                ///   - secret_type: A comma-separated list of secret types to return. By default all secret types are returned.
+                ///   - secret_type: A comma-separated list of secret types to return. All default secret patterns are returned. To return generic patterns, pass the token name(s) in the parameter. See "[Supported secret scanning patterns](https://docs.github.com/code-security/secret-scanning/introduction/supported-secret-scanning-patterns#supported-secrets)" for a complete list of secret types.
                 ///   - resolution: A comma-separated list of resolutions. Only secret scanning alerts with one of these resolutions are listed. Valid resolutions are `false_positive`, `wont_fix`, `revoked`, `pattern_edited`, `pattern_deleted` or `used_in_tests`.
                 ///   - sort: The property to sort the results by. `created` means when the alert was created. `updated` means when the alert was updated or resolved.
                 ///   - direction: The direction to sort the results by.
@@ -4329,7 +4353,7 @@ public enum Operations {
     }
     /// Get secret scanning scan history for a repository
     ///
-    /// Lists the latest incremental and backfill scans by type for a repository.
+    /// Lists the latest default incremental and backfill scans by type for a repository. Scans from Copilot Secret Scanning are not included.
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `repo` or `security_events` scope to use this endpoint. If this endpoint is only used with public repositories, the token can use the `public_repo` scope instead.
     ///

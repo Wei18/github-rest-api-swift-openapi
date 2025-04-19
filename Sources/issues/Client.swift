@@ -307,6 +307,13 @@ public struct Client: APIProtocol {
                     in: &request,
                     style: .form,
                     explode: true,
+                    name: "type",
+                    value: input.query._type
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
                     name: "sort",
                     value: input.query.sort
                 )
@@ -644,6 +651,13 @@ public struct Client: APIProtocol {
                     explode: true,
                     name: "assignee",
                     value: input.query.assignee
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "type",
+                    value: input.query._type
                 )
                 try converter.setQueryItemAsURI(
                     in: &request,

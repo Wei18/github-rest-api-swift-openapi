@@ -38,23 +38,23 @@ public struct Client: APIProtocol {
     private var converter: Converter {
         client.converter
     }
-    /// List private registries for an organization
+    /// List campaigns for an organization
     ///
+    /// Lists campaigns in an organization.
     ///
-    /// Lists all private registry configurations available at the organization-level without revealing their encrypted
-    /// values.
+    /// The authenticated user must be an owner or security manager for the organization to use this endpoint.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint.
     ///
-    /// - Remark: HTTP `GET /orgs/{org}/private-registries`.
-    /// - Remark: Generated from `#/paths//orgs/{org}/private-registries/get(private-registries/list-org-private-registries)`.
-    public func private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries(_ input: Operations.private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries.Input) async throws -> Operations.private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries.Output {
+    /// - Remark: HTTP `GET /orgs/{org}/campaigns`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/campaigns/get(campaigns/list-org-campaigns)`.
+    public func campaigns_sol_list_hyphen_org_hyphen_campaigns(_ input: Operations.campaigns_sol_list_hyphen_org_hyphen_campaigns.Input) async throws -> Operations.campaigns_sol_list_hyphen_org_hyphen_campaigns.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries.id,
+            forOperation: Operations.campaigns_sol_list_hyphen_org_hyphen_campaigns.id,
             serializer: { input in
                 let path = try converter.renderedPath(
-                    template: "/orgs/{}/private-registries",
+                    template: "/orgs/{}/campaigns",
                     parameters: [
                         input.path.org
                     ]
@@ -68,6 +68,13 @@ public struct Client: APIProtocol {
                     in: &request,
                     style: .form,
                     explode: true,
+                    name: "page",
+                    value: input.query.page
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
                     name: "per_page",
                     value: input.query.per_page
                 )
@@ -75,8 +82,22 @@ public struct Client: APIProtocol {
                     in: &request,
                     style: .form,
                     explode: true,
-                    name: "page",
-                    value: input.query.page
+                    name: "direction",
+                    value: input.query.direction
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "state",
+                    value: input.query.state
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "sort",
+                    value: input.query.sort
                 )
                 converter.setAcceptHeader(
                     in: &request.headerFields,
@@ -87,13 +108,13 @@ public struct Client: APIProtocol {
             deserializer: { response, responseBody in
                 switch response.status.code {
                 case 200:
-                    let headers: Operations.private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries.Output.Ok.Headers = .init(Link: try converter.getOptionalHeaderFieldAsURI(
+                    let headers: Operations.campaigns_sol_list_hyphen_org_hyphen_campaigns.Output.Ok.Headers = .init(Link: try converter.getOptionalHeaderFieldAsURI(
                         in: response.headerFields,
                         name: "Link",
                         as: Components.Headers.link.self
                     ))
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries.Output.Ok.Body
+                    let body: Operations.campaigns_sol_list_hyphen_org_hyphen_campaigns.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -103,7 +124,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Operations.private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries.Output.Ok.Body.jsonPayload.self,
+                            [Components.Schemas.campaign_hyphen_summary].self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -116,14 +137,13 @@ public struct Client: APIProtocol {
                         headers: headers,
                         body: body
                     ))
-                case 400:
+                case 404:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.bad_request.Body
+                    let body: Components.Responses.not_found.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
-                            "application/json",
-                            "application/scim+json"
+                            "application/json"
                         ]
                     )
                     switch chosenContentType {
@@ -135,12 +155,128 @@ public struct Client: APIProtocol {
                                 .json(value)
                             }
                         )
-                    case "application/scim+json":
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .notFound(.init(body: body))
+                case 503:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Components.Responses.service_unavailable.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.scim_hyphen_error.self,
+                            Components.Responses.service_unavailable.Body.jsonPayload.self,
                             from: responseBody,
                             transforming: { value in
-                                .application_scim_plus_json(value)
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .serviceUnavailable(.init(body: body))
+                default:
+                    return .undocumented(
+                        statusCode: response.status.code,
+                        .init(
+                            headerFields: response.headerFields,
+                            body: responseBody
+                        )
+                    )
+                }
+            }
+        )
+    }
+    /// Create a campaign for an organization
+    ///
+    /// Create a campaign for an organization.
+    ///
+    /// The authenticated user must be an owner or security manager for the organization to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint.
+    ///
+    /// Fine-grained tokens must have the "Code scanning alerts" repository permissions (read) on all repositories included
+    /// in the campaign.
+    ///
+    /// - Remark: HTTP `POST /orgs/{org}/campaigns`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/campaigns/post(campaigns/create-campaign)`.
+    public func campaigns_sol_create_hyphen_campaign(_ input: Operations.campaigns_sol_create_hyphen_campaign.Input) async throws -> Operations.campaigns_sol_create_hyphen_campaign.Output {
+        try await client.send(
+            input: input,
+            forOperation: Operations.campaigns_sol_create_hyphen_campaign.id,
+            serializer: { input in
+                let path = try converter.renderedPath(
+                    template: "/orgs/{}/campaigns",
+                    parameters: [
+                        input.path.org
+                    ]
+                )
+                var request: HTTPTypes.HTTPRequest = .init(
+                    soar_path: path,
+                    method: .post
+                )
+                suppressMutabilityWarning(&request)
+                converter.setAcceptHeader(
+                    in: &request.headerFields,
+                    contentTypes: input.headers.accept
+                )
+                let body: OpenAPIRuntime.HTTPBody?
+                switch input.body {
+                case let .json(value):
+                    body = try converter.setRequiredRequestBodyAsJSON(
+                        value,
+                        headerFields: &request.headerFields,
+                        contentType: "application/json; charset=utf-8"
+                    )
+                }
+                return (request, body)
+            },
+            deserializer: { response, responseBody in
+                switch response.status.code {
+                case 200:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Operations.campaigns_sol_create_hyphen_campaign.Output.Ok.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Schemas.campaign_hyphen_summary.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .ok(.init(body: body))
+                case 400:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Operations.campaigns_sol_create_hyphen_campaign.Output.BadRequest.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Schemas.basic_hyphen_error.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
                             }
                         )
                     default:
@@ -169,85 +305,9 @@ public struct Client: APIProtocol {
                         preconditionFailure("bestContentType chose an invalid content type.")
                     }
                     return .notFound(.init(body: body))
-                default:
-                    return .undocumented(
-                        statusCode: response.status.code,
-                        .init(
-                            headerFields: response.headerFields,
-                            body: responseBody
-                        )
-                    )
-                }
-            }
-        )
-    }
-    /// Create a private registry for an organization
-    ///
-    ///
-    /// Creates a private registry configuration with an encrypted value for an organization. Encrypt your secret using [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages). For more information, see "[Encrypting secrets for the REST API](https://docs.github.com/rest/guides/encrypting-secrets-for-the-rest-api)."
-    ///
-    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
-    ///
-    /// - Remark: HTTP `POST /orgs/{org}/private-registries`.
-    /// - Remark: Generated from `#/paths//orgs/{org}/private-registries/post(private-registries/create-org-private-registry)`.
-    public func private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry(_ input: Operations.private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry.Input) async throws -> Operations.private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry.Output {
-        try await client.send(
-            input: input,
-            forOperation: Operations.private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry.id,
-            serializer: { input in
-                let path = try converter.renderedPath(
-                    template: "/orgs/{}/private-registries",
-                    parameters: [
-                        input.path.org
-                    ]
-                )
-                var request: HTTPTypes.HTTPRequest = .init(
-                    soar_path: path,
-                    method: .post
-                )
-                suppressMutabilityWarning(&request)
-                converter.setAcceptHeader(
-                    in: &request.headerFields,
-                    contentTypes: input.headers.accept
-                )
-                let body: OpenAPIRuntime.HTTPBody?
-                switch input.body {
-                case let .json(value):
-                    body = try converter.setRequiredRequestBodyAsJSON(
-                        value,
-                        headerFields: &request.headerFields,
-                        contentType: "application/json; charset=utf-8"
-                    )
-                }
-                return (request, body)
-            },
-            deserializer: { response, responseBody in
-                switch response.status.code {
-                case 201:
+                case 422:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry.Output.Created.Body
-                    let chosenContentType = try converter.bestContentType(
-                        received: contentType,
-                        options: [
-                            "application/json"
-                        ]
-                    )
-                    switch chosenContentType {
-                    case "application/json":
-                        body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.org_hyphen_private_hyphen_registry_hyphen_configuration_hyphen_with_hyphen_selected_hyphen_repositories.self,
-                            from: responseBody,
-                            transforming: { value in
-                                .json(value)
-                            }
-                        )
-                    default:
-                        preconditionFailure("bestContentType chose an invalid content type.")
-                    }
-                    return .created(.init(body: body))
-                case 404:
-                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.not_found.Body
+                    let body: Operations.campaigns_sol_create_hyphen_campaign.Output.UnprocessableContent.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -258,28 +318,6 @@ public struct Client: APIProtocol {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
                             Components.Schemas.basic_hyphen_error.self,
-                            from: responseBody,
-                            transforming: { value in
-                                .json(value)
-                            }
-                        )
-                    default:
-                        preconditionFailure("bestContentType chose an invalid content type.")
-                    }
-                    return .notFound(.init(body: body))
-                case 422:
-                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.validation_failed.Body
-                    let chosenContentType = try converter.bestContentType(
-                        received: contentType,
-                        options: [
-                            "application/json"
-                        ]
-                    )
-                    switch chosenContentType {
-                    case "application/json":
-                        body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.validation_hyphen_error.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -289,6 +327,30 @@ public struct Client: APIProtocol {
                         preconditionFailure("bestContentType chose an invalid content type.")
                     }
                     return .unprocessableContent(.init(body: body))
+                case 429:
+                    return .tooManyRequests(.init())
+                case 503:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Components.Responses.service_unavailable.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Responses.service_unavailable.Body.jsonPayload.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .serviceUnavailable(.init(body: body))
                 default:
                     return .undocumented(
                         statusCode: response.status.code,
@@ -301,122 +363,26 @@ public struct Client: APIProtocol {
             }
         )
     }
-    /// Get private registries public key for an organization
+    /// Get a campaign for an organization
     ///
+    /// Gets a campaign for an organization.
     ///
-    /// Gets the org public key, which is needed to encrypt private registry secrets. You need to encrypt a secret before you can create or update secrets.
+    /// The authenticated user must be an owner or security manager for the organization to use this endpoint.
     ///
-    /// OAuth tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint.
     ///
-    /// - Remark: HTTP `GET /orgs/{org}/private-registries/public-key`.
-    /// - Remark: Generated from `#/paths//orgs/{org}/private-registries/public-key/get(private-registries/get-org-public-key)`.
-    public func private_hyphen_registries_sol_get_hyphen_org_hyphen_public_hyphen_key(_ input: Operations.private_hyphen_registries_sol_get_hyphen_org_hyphen_public_hyphen_key.Input) async throws -> Operations.private_hyphen_registries_sol_get_hyphen_org_hyphen_public_hyphen_key.Output {
+    /// - Remark: HTTP `GET /orgs/{org}/campaigns/{campaign_number}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/campaigns/{campaign_number}/get(campaigns/get-campaign-summary)`.
+    public func campaigns_sol_get_hyphen_campaign_hyphen_summary(_ input: Operations.campaigns_sol_get_hyphen_campaign_hyphen_summary.Input) async throws -> Operations.campaigns_sol_get_hyphen_campaign_hyphen_summary.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.private_hyphen_registries_sol_get_hyphen_org_hyphen_public_hyphen_key.id,
+            forOperation: Operations.campaigns_sol_get_hyphen_campaign_hyphen_summary.id,
             serializer: { input in
                 let path = try converter.renderedPath(
-                    template: "/orgs/{}/private-registries/public-key",
-                    parameters: [
-                        input.path.org
-                    ]
-                )
-                var request: HTTPTypes.HTTPRequest = .init(
-                    soar_path: path,
-                    method: .get
-                )
-                suppressMutabilityWarning(&request)
-                converter.setAcceptHeader(
-                    in: &request.headerFields,
-                    contentTypes: input.headers.accept
-                )
-                return (request, nil)
-            },
-            deserializer: { response, responseBody in
-                switch response.status.code {
-                case 200:
-                    let headers: Operations.private_hyphen_registries_sol_get_hyphen_org_hyphen_public_hyphen_key.Output.Ok.Headers = .init(Link: try converter.getOptionalHeaderFieldAsURI(
-                        in: response.headerFields,
-                        name: "Link",
-                        as: Components.Headers.link.self
-                    ))
-                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.private_hyphen_registries_sol_get_hyphen_org_hyphen_public_hyphen_key.Output.Ok.Body
-                    let chosenContentType = try converter.bestContentType(
-                        received: contentType,
-                        options: [
-                            "application/json"
-                        ]
-                    )
-                    switch chosenContentType {
-                    case "application/json":
-                        body = try await converter.getResponseBodyAsJSON(
-                            Operations.private_hyphen_registries_sol_get_hyphen_org_hyphen_public_hyphen_key.Output.Ok.Body.jsonPayload.self,
-                            from: responseBody,
-                            transforming: { value in
-                                .json(value)
-                            }
-                        )
-                    default:
-                        preconditionFailure("bestContentType chose an invalid content type.")
-                    }
-                    return .ok(.init(
-                        headers: headers,
-                        body: body
-                    ))
-                case 404:
-                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.not_found.Body
-                    let chosenContentType = try converter.bestContentType(
-                        received: contentType,
-                        options: [
-                            "application/json"
-                        ]
-                    )
-                    switch chosenContentType {
-                    case "application/json":
-                        body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
-                            from: responseBody,
-                            transforming: { value in
-                                .json(value)
-                            }
-                        )
-                    default:
-                        preconditionFailure("bestContentType chose an invalid content type.")
-                    }
-                    return .notFound(.init(body: body))
-                default:
-                    return .undocumented(
-                        statusCode: response.status.code,
-                        .init(
-                            headerFields: response.headerFields,
-                            body: responseBody
-                        )
-                    )
-                }
-            }
-        )
-    }
-    /// Get a private registry for an organization
-    ///
-    ///
-    /// Get the configuration of a single private registry defined for an organization, omitting its encrypted value.
-    ///
-    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
-    ///
-    /// - Remark: HTTP `GET /orgs/{org}/private-registries/{secret_name}`.
-    /// - Remark: Generated from `#/paths//orgs/{org}/private-registries/{secret_name}/get(private-registries/get-org-private-registry)`.
-    public func private_hyphen_registries_sol_get_hyphen_org_hyphen_private_hyphen_registry(_ input: Operations.private_hyphen_registries_sol_get_hyphen_org_hyphen_private_hyphen_registry.Input) async throws -> Operations.private_hyphen_registries_sol_get_hyphen_org_hyphen_private_hyphen_registry.Output {
-        try await client.send(
-            input: input,
-            forOperation: Operations.private_hyphen_registries_sol_get_hyphen_org_hyphen_private_hyphen_registry.id,
-            serializer: { input in
-                let path = try converter.renderedPath(
-                    template: "/orgs/{}/private-registries/{}",
+                    template: "/orgs/{}/campaigns/{}",
                     parameters: [
                         input.path.org,
-                        input.path.secret_name
+                        input.path.campaign_number
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -434,7 +400,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.private_hyphen_registries_sol_get_hyphen_org_hyphen_private_hyphen_registry.Output.Ok.Body
+                    let body: Operations.campaigns_sol_get_hyphen_campaign_hyphen_summary.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -444,7 +410,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.org_hyphen_private_hyphen_registry_hyphen_configuration.self,
+                            Components.Schemas.campaign_hyphen_summary.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -476,6 +442,50 @@ public struct Client: APIProtocol {
                         preconditionFailure("bestContentType chose an invalid content type.")
                     }
                     return .notFound(.init(body: body))
+                case 422:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Operations.campaigns_sol_get_hyphen_campaign_hyphen_summary.Output.UnprocessableContent.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Schemas.basic_hyphen_error.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .unprocessableContent(.init(body: body))
+                case 503:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Components.Responses.service_unavailable.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Responses.service_unavailable.Body.jsonPayload.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .serviceUnavailable(.init(body: body))
                 default:
                     return .undocumented(
                         statusCode: response.status.code,
@@ -488,25 +498,26 @@ public struct Client: APIProtocol {
             }
         )
     }
-    /// Update a private registry for an organization
+    /// Update a campaign
     ///
+    /// Updates a campaign in an organization.
     ///
-    /// Updates a private registry configuration with an encrypted value for an organization. Encrypt your secret using [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages). For more information, see "[Encrypting secrets for the REST API](https://docs.github.com/rest/guides/encrypting-secrets-for-the-rest-api)."
+    /// The authenticated user must be an owner or security manager for the organization to use this endpoint.
     ///
-    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
+    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint.
     ///
-    /// - Remark: HTTP `PATCH /orgs/{org}/private-registries/{secret_name}`.
-    /// - Remark: Generated from `#/paths//orgs/{org}/private-registries/{secret_name}/patch(private-registries/update-org-private-registry)`.
-    public func private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry(_ input: Operations.private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry.Input) async throws -> Operations.private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry.Output {
+    /// - Remark: HTTP `PATCH /orgs/{org}/campaigns/{campaign_number}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/campaigns/{campaign_number}/patch(campaigns/update-campaign)`.
+    public func campaigns_sol_update_hyphen_campaign(_ input: Operations.campaigns_sol_update_hyphen_campaign.Input) async throws -> Operations.campaigns_sol_update_hyphen_campaign.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry.id,
+            forOperation: Operations.campaigns_sol_update_hyphen_campaign.id,
             serializer: { input in
                 let path = try converter.renderedPath(
-                    template: "/orgs/{}/private-registries/{}",
+                    template: "/orgs/{}/campaigns/{}",
                     parameters: [
                         input.path.org,
-                        input.path.secret_name
+                        input.path.campaign_number
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -531,11 +542,9 @@ public struct Client: APIProtocol {
             },
             deserializer: { response, responseBody in
                 switch response.status.code {
-                case 204:
-                    return .noContent(.init())
-                case 404:
+                case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.not_found.Body
+                    let body: Operations.campaigns_sol_update_hyphen_campaign.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -545,7 +554,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.campaign_hyphen_summary.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -554,85 +563,14 @@ public struct Client: APIProtocol {
                     default:
                         preconditionFailure("bestContentType chose an invalid content type.")
                     }
-                    return .notFound(.init(body: body))
-                case 422:
-                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.validation_failed.Body
-                    let chosenContentType = try converter.bestContentType(
-                        received: contentType,
-                        options: [
-                            "application/json"
-                        ]
-                    )
-                    switch chosenContentType {
-                    case "application/json":
-                        body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.validation_hyphen_error.self,
-                            from: responseBody,
-                            transforming: { value in
-                                .json(value)
-                            }
-                        )
-                    default:
-                        preconditionFailure("bestContentType chose an invalid content type.")
-                    }
-                    return .unprocessableContent(.init(body: body))
-                default:
-                    return .undocumented(
-                        statusCode: response.status.code,
-                        .init(
-                            headerFields: response.headerFields,
-                            body: responseBody
-                        )
-                    )
-                }
-            }
-        )
-    }
-    /// Delete a private registry for an organization
-    ///
-    ///
-    /// Delete a private registry configuration at the organization-level.
-    ///
-    /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
-    ///
-    /// - Remark: HTTP `DELETE /orgs/{org}/private-registries/{secret_name}`.
-    /// - Remark: Generated from `#/paths//orgs/{org}/private-registries/{secret_name}/delete(private-registries/delete-org-private-registry)`.
-    public func private_hyphen_registries_sol_delete_hyphen_org_hyphen_private_hyphen_registry(_ input: Operations.private_hyphen_registries_sol_delete_hyphen_org_hyphen_private_hyphen_registry.Input) async throws -> Operations.private_hyphen_registries_sol_delete_hyphen_org_hyphen_private_hyphen_registry.Output {
-        try await client.send(
-            input: input,
-            forOperation: Operations.private_hyphen_registries_sol_delete_hyphen_org_hyphen_private_hyphen_registry.id,
-            serializer: { input in
-                let path = try converter.renderedPath(
-                    template: "/orgs/{}/private-registries/{}",
-                    parameters: [
-                        input.path.org,
-                        input.path.secret_name
-                    ]
-                )
-                var request: HTTPTypes.HTTPRequest = .init(
-                    soar_path: path,
-                    method: .delete
-                )
-                suppressMutabilityWarning(&request)
-                converter.setAcceptHeader(
-                    in: &request.headerFields,
-                    contentTypes: input.headers.accept
-                )
-                return (request, nil)
-            },
-            deserializer: { response, responseBody in
-                switch response.status.code {
-                case 204:
-                    return .noContent(.init())
+                    return .ok(.init(body: body))
                 case 400:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.bad_request.Body
+                    let body: Operations.campaigns_sol_update_hyphen_campaign.Output.BadRequest.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
-                            "application/json",
-                            "application/scim+json"
+                            "application/json"
                         ]
                     )
                     switch chosenContentType {
@@ -642,14 +580,6 @@ public struct Client: APIProtocol {
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
-                            }
-                        )
-                    case "application/scim+json":
-                        body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.scim_hyphen_error.self,
-                            from: responseBody,
-                            transforming: { value in
-                                .application_scim_plus_json(value)
                             }
                         )
                     default:
@@ -678,6 +608,143 @@ public struct Client: APIProtocol {
                         preconditionFailure("bestContentType chose an invalid content type.")
                     }
                     return .notFound(.init(body: body))
+                case 422:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Operations.campaigns_sol_update_hyphen_campaign.Output.UnprocessableContent.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Schemas.basic_hyphen_error.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .unprocessableContent(.init(body: body))
+                case 503:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Components.Responses.service_unavailable.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Responses.service_unavailable.Body.jsonPayload.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .serviceUnavailable(.init(body: body))
+                default:
+                    return .undocumented(
+                        statusCode: response.status.code,
+                        .init(
+                            headerFields: response.headerFields,
+                            body: responseBody
+                        )
+                    )
+                }
+            }
+        )
+    }
+    /// Delete a campaign for an organization
+    ///
+    /// Deletes a campaign in an organization.
+    ///
+    /// The authenticated user must be an owner or security manager for the organization to use this endpoint.
+    ///
+    /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint.
+    ///
+    /// - Remark: HTTP `DELETE /orgs/{org}/campaigns/{campaign_number}`.
+    /// - Remark: Generated from `#/paths//orgs/{org}/campaigns/{campaign_number}/delete(campaigns/delete-campaign)`.
+    public func campaigns_sol_delete_hyphen_campaign(_ input: Operations.campaigns_sol_delete_hyphen_campaign.Input) async throws -> Operations.campaigns_sol_delete_hyphen_campaign.Output {
+        try await client.send(
+            input: input,
+            forOperation: Operations.campaigns_sol_delete_hyphen_campaign.id,
+            serializer: { input in
+                let path = try converter.renderedPath(
+                    template: "/orgs/{}/campaigns/{}",
+                    parameters: [
+                        input.path.org,
+                        input.path.campaign_number
+                    ]
+                )
+                var request: HTTPTypes.HTTPRequest = .init(
+                    soar_path: path,
+                    method: .delete
+                )
+                suppressMutabilityWarning(&request)
+                converter.setAcceptHeader(
+                    in: &request.headerFields,
+                    contentTypes: input.headers.accept
+                )
+                return (request, nil)
+            },
+            deserializer: { response, responseBody in
+                switch response.status.code {
+                case 204:
+                    return .noContent(.init())
+                case 404:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Components.Responses.not_found.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Schemas.basic_hyphen_error.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .notFound(.init(body: body))
+                case 503:
+                    let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
+                    let body: Components.Responses.service_unavailable.Body
+                    let chosenContentType = try converter.bestContentType(
+                        received: contentType,
+                        options: [
+                            "application/json"
+                        ]
+                    )
+                    switch chosenContentType {
+                    case "application/json":
+                        body = try await converter.getResponseBodyAsJSON(
+                            Components.Responses.service_unavailable.Body.jsonPayload.self,
+                            from: responseBody,
+                            transforming: { value in
+                                .json(value)
+                            }
+                        )
+                    default:
+                        preconditionFailure("bestContentType chose an invalid content type.")
+                    }
+                    return .serviceUnavailable(.init(body: body))
                 default:
                     return .undocumented(
                         statusCode: response.status.code,

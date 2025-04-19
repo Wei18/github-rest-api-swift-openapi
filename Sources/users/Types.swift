@@ -269,9 +269,11 @@ public protocol APIProtocol: Sendable {
     ///
     /// Provides publicly available information about someone with a GitHub account. This method takes their durable user `ID` instead of their `login`, which can change over time.
     ///
-    /// The `email` key in the following response is the publicly visible email address from your GitHub [profile page](https://github.com/settings/profile). When setting up your profile, you can select a primary email address to be “public” which provides an email entry for this endpoint. If you do not set a public email address for `email`, then it will have a value of `null`. You only see publicly visible email addresses when authenticated with GitHub. For more information, see [Authentication](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#authentication).
+    /// If you are requesting information about an [Enterprise Managed User](https://docs.github.com/enterprise-cloud@latest/admin/managing-iam/understanding-iam-for-enterprises/about-enterprise-managed-users), or a GitHub App bot that is installed in an organization that uses Enterprise Managed Users, your requests must be authenticated as a user or GitHub App that has access to the organization to view that account's information. If you are not authorized, the request will return a `404 Not Found` status.
     ///
-    /// The Emails API enables you to list all of your email addresses, and toggle a primary email to be visible publicly. For more information, see "[Emails API](https://docs.github.com/rest/users/emails)".
+    /// The `email` key in the following response is the publicly visible email address from your GitHub [profile page](https://github.com/settings/profile). When setting up your profile, you can select a primary email address to be public which provides an email entry for this endpoint. If you do not set a public email address for `email`, then it will have a value of `null`. You only see publicly visible email addresses when authenticated with GitHub. For more information, see [Authentication](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#authentication).
+    ///
+    /// The Emails API enables you to list all of your email addresses, and toggle a primary email to be visible publicly. For more information, see [Emails API](https://docs.github.com/rest/users/emails).
     ///
     /// - Remark: HTTP `GET /user/{account_id}`.
     /// - Remark: Generated from `#/paths//user/{account_id}/get(users/get-by-id)`.
@@ -289,9 +291,11 @@ public protocol APIProtocol: Sendable {
     ///
     /// Provides publicly available information about someone with a GitHub account.
     ///
-    /// The `email` key in the following response is the publicly visible email address from your GitHub [profile page](https://github.com/settings/profile). When setting up your profile, you can select a primary email address to be “public” which provides an email entry for this endpoint. If you do not set a public email address for `email`, then it will have a value of `null`. You only see publicly visible email addresses when authenticated with GitHub. For more information, see [Authentication](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#authentication).
+    /// If you are requesting information about an [Enterprise Managed User](https://docs.github.com/enterprise-cloud@latest/admin/managing-iam/understanding-iam-for-enterprises/about-enterprise-managed-users), or a GitHub App bot that is installed in an organization that uses Enterprise Managed Users, your requests must be authenticated as a user or GitHub App that has access to the organization to view that account's information. If you are not authorized, the request will return a `404 Not Found` status.
     ///
-    /// The Emails API enables you to list all of your email addresses, and toggle a primary email to be visible publicly. For more information, see "[Emails API](https://docs.github.com/rest/users/emails)".
+    /// The `email` key in the following response is the publicly visible email address from your GitHub [profile page](https://github.com/settings/profile). When setting up your profile, you can select a primary email address to be public which provides an email entry for this endpoint. If you do not set a public email address for `email`, then it will have a value of `null`. You only see publicly visible email addresses when authenticated with GitHub. For more information, see [Authentication](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#authentication).
+    ///
+    /// The Emails API enables you to list all of your email addresses, and toggle a primary email to be visible publicly. For more information, see [Emails API](https://docs.github.com/rest/users/emails).
     ///
     /// - Remark: HTTP `GET /users/{username}`.
     /// - Remark: Generated from `#/paths//users/{username}/get(users/get-by-username)`.
@@ -871,9 +875,11 @@ extension APIProtocol {
     ///
     /// Provides publicly available information about someone with a GitHub account. This method takes their durable user `ID` instead of their `login`, which can change over time.
     ///
-    /// The `email` key in the following response is the publicly visible email address from your GitHub [profile page](https://github.com/settings/profile). When setting up your profile, you can select a primary email address to be “public” which provides an email entry for this endpoint. If you do not set a public email address for `email`, then it will have a value of `null`. You only see publicly visible email addresses when authenticated with GitHub. For more information, see [Authentication](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#authentication).
+    /// If you are requesting information about an [Enterprise Managed User](https://docs.github.com/enterprise-cloud@latest/admin/managing-iam/understanding-iam-for-enterprises/about-enterprise-managed-users), or a GitHub App bot that is installed in an organization that uses Enterprise Managed Users, your requests must be authenticated as a user or GitHub App that has access to the organization to view that account's information. If you are not authorized, the request will return a `404 Not Found` status.
     ///
-    /// The Emails API enables you to list all of your email addresses, and toggle a primary email to be visible publicly. For more information, see "[Emails API](https://docs.github.com/rest/users/emails)".
+    /// The `email` key in the following response is the publicly visible email address from your GitHub [profile page](https://github.com/settings/profile). When setting up your profile, you can select a primary email address to be public which provides an email entry for this endpoint. If you do not set a public email address for `email`, then it will have a value of `null`. You only see publicly visible email addresses when authenticated with GitHub. For more information, see [Authentication](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#authentication).
+    ///
+    /// The Emails API enables you to list all of your email addresses, and toggle a primary email to be visible publicly. For more information, see [Emails API](https://docs.github.com/rest/users/emails).
     ///
     /// - Remark: HTTP `GET /user/{account_id}`.
     /// - Remark: Generated from `#/paths//user/{account_id}/get(users/get-by-id)`.
@@ -907,9 +913,11 @@ extension APIProtocol {
     ///
     /// Provides publicly available information about someone with a GitHub account.
     ///
-    /// The `email` key in the following response is the publicly visible email address from your GitHub [profile page](https://github.com/settings/profile). When setting up your profile, you can select a primary email address to be “public” which provides an email entry for this endpoint. If you do not set a public email address for `email`, then it will have a value of `null`. You only see publicly visible email addresses when authenticated with GitHub. For more information, see [Authentication](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#authentication).
+    /// If you are requesting information about an [Enterprise Managed User](https://docs.github.com/enterprise-cloud@latest/admin/managing-iam/understanding-iam-for-enterprises/about-enterprise-managed-users), or a GitHub App bot that is installed in an organization that uses Enterprise Managed Users, your requests must be authenticated as a user or GitHub App that has access to the organization to view that account's information. If you are not authorized, the request will return a `404 Not Found` status.
     ///
-    /// The Emails API enables you to list all of your email addresses, and toggle a primary email to be visible publicly. For more information, see "[Emails API](https://docs.github.com/rest/users/emails)".
+    /// The `email` key in the following response is the publicly visible email address from your GitHub [profile page](https://github.com/settings/profile). When setting up your profile, you can select a primary email address to be public which provides an email entry for this endpoint. If you do not set a public email address for `email`, then it will have a value of `null`. You only see publicly visible email addresses when authenticated with GitHub. For more information, see [Authentication](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#authentication).
+    ///
+    /// The Emails API enables you to list all of your email addresses, and toggle a primary email to be visible publicly. For more information, see [Emails API](https://docs.github.com/rest/users/emails).
     ///
     /// - Remark: HTTP `GET /users/{username}`.
     /// - Remark: Generated from `#/paths//users/{username}/get(users/get-by-username)`.
@@ -2609,260 +2617,6 @@ public enum Components {
                 case id
                 case title
                 case created_at
-            }
-        }
-        /// Sigstore Bundle v0.1
-        ///
-        /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0`.
-        public struct sigstore_hyphen_bundle_hyphen_0: Codable, Hashable, Sendable {
-            /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/mediaType`.
-            public var mediaType: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial`.
-            public struct verificationMaterialPayload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial/x509CertificateChain`.
-                public struct x509CertificateChainPayload: Codable, Hashable, Sendable {
-                    /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial/x509CertificateChain/certificatesPayload`.
-                    public struct certificatesPayloadPayload: Codable, Hashable, Sendable {
-                        /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial/x509CertificateChain/certificatesPayload/rawBytes`.
-                        public var rawBytes: Swift.String?
-                        /// Creates a new `certificatesPayloadPayload`.
-                        ///
-                        /// - Parameters:
-                        ///   - rawBytes:
-                        public init(rawBytes: Swift.String? = nil) {
-                            self.rawBytes = rawBytes
-                        }
-                        public enum CodingKeys: String, CodingKey {
-                            case rawBytes
-                        }
-                    }
-                    /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial/x509CertificateChain/certificates`.
-                    public typealias certificatesPayload = [Components.Schemas.sigstore_hyphen_bundle_hyphen_0.verificationMaterialPayload.x509CertificateChainPayload.certificatesPayloadPayload]
-                    /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial/x509CertificateChain/certificates`.
-                    public var certificates: Components.Schemas.sigstore_hyphen_bundle_hyphen_0.verificationMaterialPayload.x509CertificateChainPayload.certificatesPayload?
-                    /// Creates a new `x509CertificateChainPayload`.
-                    ///
-                    /// - Parameters:
-                    ///   - certificates:
-                    public init(certificates: Components.Schemas.sigstore_hyphen_bundle_hyphen_0.verificationMaterialPayload.x509CertificateChainPayload.certificatesPayload? = nil) {
-                        self.certificates = certificates
-                    }
-                    public enum CodingKeys: String, CodingKey {
-                        case certificates
-                    }
-                }
-                /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial/x509CertificateChain`.
-                public var x509CertificateChain: Components.Schemas.sigstore_hyphen_bundle_hyphen_0.verificationMaterialPayload.x509CertificateChainPayload?
-                /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial/tlogEntriesPayload`.
-                public struct tlogEntriesPayloadPayload: Codable, Hashable, Sendable {
-                    /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial/tlogEntriesPayload/logIndex`.
-                    public var logIndex: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial/tlogEntriesPayload/logId`.
-                    public struct logIdPayload: Codable, Hashable, Sendable {
-                        /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial/tlogEntriesPayload/logId/keyId`.
-                        public var keyId: Swift.String?
-                        /// Creates a new `logIdPayload`.
-                        ///
-                        /// - Parameters:
-                        ///   - keyId:
-                        public init(keyId: Swift.String? = nil) {
-                            self.keyId = keyId
-                        }
-                        public enum CodingKeys: String, CodingKey {
-                            case keyId
-                        }
-                    }
-                    /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial/tlogEntriesPayload/logId`.
-                    public var logId: Components.Schemas.sigstore_hyphen_bundle_hyphen_0.verificationMaterialPayload.tlogEntriesPayloadPayload.logIdPayload?
-                    /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial/tlogEntriesPayload/kindVersion`.
-                    public struct kindVersionPayload: Codable, Hashable, Sendable {
-                        /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial/tlogEntriesPayload/kindVersion/kind`.
-                        public var kind: Swift.String?
-                        /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial/tlogEntriesPayload/kindVersion/version`.
-                        public var version: Swift.String?
-                        /// Creates a new `kindVersionPayload`.
-                        ///
-                        /// - Parameters:
-                        ///   - kind:
-                        ///   - version:
-                        public init(
-                            kind: Swift.String? = nil,
-                            version: Swift.String? = nil
-                        ) {
-                            self.kind = kind
-                            self.version = version
-                        }
-                        public enum CodingKeys: String, CodingKey {
-                            case kind
-                            case version
-                        }
-                    }
-                    /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial/tlogEntriesPayload/kindVersion`.
-                    public var kindVersion: Components.Schemas.sigstore_hyphen_bundle_hyphen_0.verificationMaterialPayload.tlogEntriesPayloadPayload.kindVersionPayload?
-                    /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial/tlogEntriesPayload/integratedTime`.
-                    public var integratedTime: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial/tlogEntriesPayload/inclusionPromise`.
-                    public struct inclusionPromisePayload: Codable, Hashable, Sendable {
-                        /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial/tlogEntriesPayload/inclusionPromise/signedEntryTimestamp`.
-                        public var signedEntryTimestamp: Swift.String?
-                        /// Creates a new `inclusionPromisePayload`.
-                        ///
-                        /// - Parameters:
-                        ///   - signedEntryTimestamp:
-                        public init(signedEntryTimestamp: Swift.String? = nil) {
-                            self.signedEntryTimestamp = signedEntryTimestamp
-                        }
-                        public enum CodingKeys: String, CodingKey {
-                            case signedEntryTimestamp
-                        }
-                    }
-                    /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial/tlogEntriesPayload/inclusionPromise`.
-                    public var inclusionPromise: Components.Schemas.sigstore_hyphen_bundle_hyphen_0.verificationMaterialPayload.tlogEntriesPayloadPayload.inclusionPromisePayload?
-                    /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial/tlogEntriesPayload/inclusionProof`.
-                    public var inclusionProof: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial/tlogEntriesPayload/canonicalizedBody`.
-                    public var canonicalizedBody: Swift.String?
-                    /// Creates a new `tlogEntriesPayloadPayload`.
-                    ///
-                    /// - Parameters:
-                    ///   - logIndex:
-                    ///   - logId:
-                    ///   - kindVersion:
-                    ///   - integratedTime:
-                    ///   - inclusionPromise:
-                    ///   - inclusionProof:
-                    ///   - canonicalizedBody:
-                    public init(
-                        logIndex: Swift.String? = nil,
-                        logId: Components.Schemas.sigstore_hyphen_bundle_hyphen_0.verificationMaterialPayload.tlogEntriesPayloadPayload.logIdPayload? = nil,
-                        kindVersion: Components.Schemas.sigstore_hyphen_bundle_hyphen_0.verificationMaterialPayload.tlogEntriesPayloadPayload.kindVersionPayload? = nil,
-                        integratedTime: Swift.String? = nil,
-                        inclusionPromise: Components.Schemas.sigstore_hyphen_bundle_hyphen_0.verificationMaterialPayload.tlogEntriesPayloadPayload.inclusionPromisePayload? = nil,
-                        inclusionProof: Swift.String? = nil,
-                        canonicalizedBody: Swift.String? = nil
-                    ) {
-                        self.logIndex = logIndex
-                        self.logId = logId
-                        self.kindVersion = kindVersion
-                        self.integratedTime = integratedTime
-                        self.inclusionPromise = inclusionPromise
-                        self.inclusionProof = inclusionProof
-                        self.canonicalizedBody = canonicalizedBody
-                    }
-                    public enum CodingKeys: String, CodingKey {
-                        case logIndex
-                        case logId
-                        case kindVersion
-                        case integratedTime
-                        case inclusionPromise
-                        case inclusionProof
-                        case canonicalizedBody
-                    }
-                }
-                /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial/tlogEntries`.
-                public typealias tlogEntriesPayload = [Components.Schemas.sigstore_hyphen_bundle_hyphen_0.verificationMaterialPayload.tlogEntriesPayloadPayload]
-                /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial/tlogEntries`.
-                public var tlogEntries: Components.Schemas.sigstore_hyphen_bundle_hyphen_0.verificationMaterialPayload.tlogEntriesPayload?
-                /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial/timestampVerificationData`.
-                public var timestampVerificationData: Swift.String?
-                /// Creates a new `verificationMaterialPayload`.
-                ///
-                /// - Parameters:
-                ///   - x509CertificateChain:
-                ///   - tlogEntries:
-                ///   - timestampVerificationData:
-                public init(
-                    x509CertificateChain: Components.Schemas.sigstore_hyphen_bundle_hyphen_0.verificationMaterialPayload.x509CertificateChainPayload? = nil,
-                    tlogEntries: Components.Schemas.sigstore_hyphen_bundle_hyphen_0.verificationMaterialPayload.tlogEntriesPayload? = nil,
-                    timestampVerificationData: Swift.String? = nil
-                ) {
-                    self.x509CertificateChain = x509CertificateChain
-                    self.tlogEntries = tlogEntries
-                    self.timestampVerificationData = timestampVerificationData
-                }
-                public enum CodingKeys: String, CodingKey {
-                    case x509CertificateChain
-                    case tlogEntries
-                    case timestampVerificationData
-                }
-            }
-            /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/verificationMaterial`.
-            public var verificationMaterial: Components.Schemas.sigstore_hyphen_bundle_hyphen_0.verificationMaterialPayload?
-            /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/dsseEnvelope`.
-            public struct dsseEnvelopePayload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/dsseEnvelope/payload`.
-                public var payload: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/dsseEnvelope/payloadType`.
-                public var payloadType: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/dsseEnvelope/signaturesPayload`.
-                public struct signaturesPayloadPayload: Codable, Hashable, Sendable {
-                    /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/dsseEnvelope/signaturesPayload/sig`.
-                    public var sig: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/dsseEnvelope/signaturesPayload/keyid`.
-                    public var keyid: Swift.String?
-                    /// Creates a new `signaturesPayloadPayload`.
-                    ///
-                    /// - Parameters:
-                    ///   - sig:
-                    ///   - keyid:
-                    public init(
-                        sig: Swift.String? = nil,
-                        keyid: Swift.String? = nil
-                    ) {
-                        self.sig = sig
-                        self.keyid = keyid
-                    }
-                    public enum CodingKeys: String, CodingKey {
-                        case sig
-                        case keyid
-                    }
-                }
-                /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/dsseEnvelope/signatures`.
-                public typealias signaturesPayload = [Components.Schemas.sigstore_hyphen_bundle_hyphen_0.dsseEnvelopePayload.signaturesPayloadPayload]
-                /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/dsseEnvelope/signatures`.
-                public var signatures: Components.Schemas.sigstore_hyphen_bundle_hyphen_0.dsseEnvelopePayload.signaturesPayload?
-                /// Creates a new `dsseEnvelopePayload`.
-                ///
-                /// - Parameters:
-                ///   - payload:
-                ///   - payloadType:
-                ///   - signatures:
-                public init(
-                    payload: Swift.String? = nil,
-                    payloadType: Swift.String? = nil,
-                    signatures: Components.Schemas.sigstore_hyphen_bundle_hyphen_0.dsseEnvelopePayload.signaturesPayload? = nil
-                ) {
-                    self.payload = payload
-                    self.payloadType = payloadType
-                    self.signatures = signatures
-                }
-                public enum CodingKeys: String, CodingKey {
-                    case payload
-                    case payloadType
-                    case signatures
-                }
-            }
-            /// - Remark: Generated from `#/components/schemas/sigstore-bundle-0/dsseEnvelope`.
-            public var dsseEnvelope: Components.Schemas.sigstore_hyphen_bundle_hyphen_0.dsseEnvelopePayload?
-            /// Creates a new `sigstore_hyphen_bundle_hyphen_0`.
-            ///
-            /// - Parameters:
-            ///   - mediaType:
-            ///   - verificationMaterial:
-            ///   - dsseEnvelope:
-            public init(
-                mediaType: Swift.String? = nil,
-                verificationMaterial: Components.Schemas.sigstore_hyphen_bundle_hyphen_0.verificationMaterialPayload? = nil,
-                dsseEnvelope: Components.Schemas.sigstore_hyphen_bundle_hyphen_0.dsseEnvelopePayload? = nil
-            ) {
-                self.mediaType = mediaType
-                self.verificationMaterial = verificationMaterial
-                self.dsseEnvelope = dsseEnvelope
-            }
-            public enum CodingKeys: String, CodingKey {
-                case mediaType
-                case verificationMaterial
-                case dsseEnvelope
             }
         }
         /// Hovercard
@@ -10601,9 +10355,11 @@ public enum Operations {
     ///
     /// Provides publicly available information about someone with a GitHub account. This method takes their durable user `ID` instead of their `login`, which can change over time.
     ///
-    /// The `email` key in the following response is the publicly visible email address from your GitHub [profile page](https://github.com/settings/profile). When setting up your profile, you can select a primary email address to be “public” which provides an email entry for this endpoint. If you do not set a public email address for `email`, then it will have a value of `null`. You only see publicly visible email addresses when authenticated with GitHub. For more information, see [Authentication](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#authentication).
+    /// If you are requesting information about an [Enterprise Managed User](https://docs.github.com/enterprise-cloud@latest/admin/managing-iam/understanding-iam-for-enterprises/about-enterprise-managed-users), or a GitHub App bot that is installed in an organization that uses Enterprise Managed Users, your requests must be authenticated as a user or GitHub App that has access to the organization to view that account's information. If you are not authorized, the request will return a `404 Not Found` status.
     ///
-    /// The Emails API enables you to list all of your email addresses, and toggle a primary email to be visible publicly. For more information, see "[Emails API](https://docs.github.com/rest/users/emails)".
+    /// The `email` key in the following response is the publicly visible email address from your GitHub [profile page](https://github.com/settings/profile). When setting up your profile, you can select a primary email address to be public which provides an email entry for this endpoint. If you do not set a public email address for `email`, then it will have a value of `null`. You only see publicly visible email addresses when authenticated with GitHub. For more information, see [Authentication](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#authentication).
+    ///
+    /// The Emails API enables you to list all of your email addresses, and toggle a primary email to be visible publicly. For more information, see [Emails API](https://docs.github.com/rest/users/emails).
     ///
     /// - Remark: HTTP `GET /user/{account_id}`.
     /// - Remark: Generated from `#/paths//user/{account_id}/get(users/get-by-id)`.
@@ -10982,9 +10738,11 @@ public enum Operations {
     ///
     /// Provides publicly available information about someone with a GitHub account.
     ///
-    /// The `email` key in the following response is the publicly visible email address from your GitHub [profile page](https://github.com/settings/profile). When setting up your profile, you can select a primary email address to be “public” which provides an email entry for this endpoint. If you do not set a public email address for `email`, then it will have a value of `null`. You only see publicly visible email addresses when authenticated with GitHub. For more information, see [Authentication](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#authentication).
+    /// If you are requesting information about an [Enterprise Managed User](https://docs.github.com/enterprise-cloud@latest/admin/managing-iam/understanding-iam-for-enterprises/about-enterprise-managed-users), or a GitHub App bot that is installed in an organization that uses Enterprise Managed Users, your requests must be authenticated as a user or GitHub App that has access to the organization to view that account's information. If you are not authorized, the request will return a `404 Not Found` status.
     ///
-    /// The Emails API enables you to list all of your email addresses, and toggle a primary email to be visible publicly. For more information, see "[Emails API](https://docs.github.com/rest/users/emails)".
+    /// The `email` key in the following response is the publicly visible email address from your GitHub [profile page](https://github.com/settings/profile). When setting up your profile, you can select a primary email address to be public which provides an email entry for this endpoint. If you do not set a public email address for `email`, then it will have a value of `null`. You only see publicly visible email addresses when authenticated with GitHub. For more information, see [Authentication](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#authentication).
+    ///
+    /// The Emails API enables you to list all of your email addresses, and toggle a primary email to be visible publicly. For more information, see [Emails API](https://docs.github.com/rest/users/emails).
     ///
     /// - Remark: HTTP `GET /users/{username}`.
     /// - Remark: Generated from `#/paths//users/{username}/get(users/get-by-username)`.
@@ -11225,20 +10983,28 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/query/after`.
                 public var after: Components.Parameters.pagination_hyphen_after?
+                /// Optional filter for fetching attestations with a given predicate type.
+                /// This option accepts `provenance`, `sbom`, or freeform text for custom predicate types.
+                ///
+                /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/query/predicate_type`.
+                public var predicate_type: Swift.String?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - before: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - after: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - predicate_type: Optional filter for fetching attestations with a given predicate type.
                 public init(
                     per_page: Components.Parameters.per_hyphen_page? = nil,
                     before: Components.Parameters.pagination_hyphen_before? = nil,
-                    after: Components.Parameters.pagination_hyphen_after? = nil
+                    after: Components.Parameters.pagination_hyphen_after? = nil,
+                    predicate_type: Swift.String? = nil
                 ) {
                     self.per_page = per_page
                     self.before = before
                     self.after = after
+                    self.predicate_type = predicate_type
                 }
             }
             public var query: Operations.users_sol_list_hyphen_attestations.Input.Query
@@ -11278,25 +11044,102 @@ public enum Operations {
                     public struct jsonPayload: Codable, Hashable, Sendable {
                         /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/responses/200/content/json/attestationsPayload`.
                         public struct attestationsPayloadPayload: Codable, Hashable, Sendable {
+                            /// The attestation's Sigstore Bundle.
+                            /// Refer to the [Sigstore Bundle Specification](https://github.com/sigstore/protobuf-specs/blob/main/protos/sigstore_bundle.proto) for more information.
+                            ///
                             /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/responses/200/content/json/attestationsPayload/bundle`.
-                            public var bundle: Components.Schemas.sigstore_hyphen_bundle_hyphen_0?
+                            public struct bundlePayload: Codable, Hashable, Sendable {
+                                /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/responses/200/content/json/attestationsPayload/bundle/mediaType`.
+                                public var mediaType: Swift.String?
+                                /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/responses/200/content/json/attestationsPayload/bundle/verificationMaterial`.
+                                public struct verificationMaterialPayload: Codable, Hashable, Sendable {
+                                    /// A container of undocumented properties.
+                                    public var additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer
+                                    /// Creates a new `verificationMaterialPayload`.
+                                    ///
+                                    /// - Parameters:
+                                    ///   - additionalProperties: A container of undocumented properties.
+                                    public init(additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer = .init()) {
+                                        self.additionalProperties = additionalProperties
+                                    }
+                                    public init(from decoder: any Decoder) throws {
+                                        additionalProperties = try decoder.decodeAdditionalProperties(knownKeys: [])
+                                    }
+                                    public func encode(to encoder: any Encoder) throws {
+                                        try encoder.encodeAdditionalProperties(additionalProperties)
+                                    }
+                                }
+                                /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/responses/200/content/json/attestationsPayload/bundle/verificationMaterial`.
+                                public var verificationMaterial: Operations.users_sol_list_hyphen_attestations.Output.Ok.Body.jsonPayload.attestationsPayloadPayload.bundlePayload.verificationMaterialPayload?
+                                /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/responses/200/content/json/attestationsPayload/bundle/dsseEnvelope`.
+                                public struct dsseEnvelopePayload: Codable, Hashable, Sendable {
+                                    /// A container of undocumented properties.
+                                    public var additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer
+                                    /// Creates a new `dsseEnvelopePayload`.
+                                    ///
+                                    /// - Parameters:
+                                    ///   - additionalProperties: A container of undocumented properties.
+                                    public init(additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer = .init()) {
+                                        self.additionalProperties = additionalProperties
+                                    }
+                                    public init(from decoder: any Decoder) throws {
+                                        additionalProperties = try decoder.decodeAdditionalProperties(knownKeys: [])
+                                    }
+                                    public func encode(to encoder: any Encoder) throws {
+                                        try encoder.encodeAdditionalProperties(additionalProperties)
+                                    }
+                                }
+                                /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/responses/200/content/json/attestationsPayload/bundle/dsseEnvelope`.
+                                public var dsseEnvelope: Operations.users_sol_list_hyphen_attestations.Output.Ok.Body.jsonPayload.attestationsPayloadPayload.bundlePayload.dsseEnvelopePayload?
+                                /// Creates a new `bundlePayload`.
+                                ///
+                                /// - Parameters:
+                                ///   - mediaType:
+                                ///   - verificationMaterial:
+                                ///   - dsseEnvelope:
+                                public init(
+                                    mediaType: Swift.String? = nil,
+                                    verificationMaterial: Operations.users_sol_list_hyphen_attestations.Output.Ok.Body.jsonPayload.attestationsPayloadPayload.bundlePayload.verificationMaterialPayload? = nil,
+                                    dsseEnvelope: Operations.users_sol_list_hyphen_attestations.Output.Ok.Body.jsonPayload.attestationsPayloadPayload.bundlePayload.dsseEnvelopePayload? = nil
+                                ) {
+                                    self.mediaType = mediaType
+                                    self.verificationMaterial = verificationMaterial
+                                    self.dsseEnvelope = dsseEnvelope
+                                }
+                                public enum CodingKeys: String, CodingKey {
+                                    case mediaType
+                                    case verificationMaterial
+                                    case dsseEnvelope
+                                }
+                            }
+                            /// The attestation's Sigstore Bundle.
+                            /// Refer to the [Sigstore Bundle Specification](https://github.com/sigstore/protobuf-specs/blob/main/protos/sigstore_bundle.proto) for more information.
+                            ///
+                            /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/responses/200/content/json/attestationsPayload/bundle`.
+                            public var bundle: Operations.users_sol_list_hyphen_attestations.Output.Ok.Body.jsonPayload.attestationsPayloadPayload.bundlePayload?
                             /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/responses/200/content/json/attestationsPayload/repository_id`.
                             public var repository_id: Swift.Int?
+                            /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/responses/200/content/json/attestationsPayload/bundle_url`.
+                            public var bundle_url: Swift.String?
                             /// Creates a new `attestationsPayloadPayload`.
                             ///
                             /// - Parameters:
-                            ///   - bundle:
+                            ///   - bundle: The attestation's Sigstore Bundle.
                             ///   - repository_id:
+                            ///   - bundle_url:
                             public init(
-                                bundle: Components.Schemas.sigstore_hyphen_bundle_hyphen_0? = nil,
-                                repository_id: Swift.Int? = nil
+                                bundle: Operations.users_sol_list_hyphen_attestations.Output.Ok.Body.jsonPayload.attestationsPayloadPayload.bundlePayload? = nil,
+                                repository_id: Swift.Int? = nil,
+                                bundle_url: Swift.String? = nil
                             ) {
                                 self.bundle = bundle
                                 self.repository_id = repository_id
+                                self.bundle_url = bundle_url
                             }
                             public enum CodingKeys: String, CodingKey {
                                 case bundle
                                 case repository_id
+                                case bundle_url
                             }
                         }
                         /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/responses/200/content/json/attestations`.
