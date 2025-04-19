@@ -500,6 +500,31 @@ public enum Components {
                 case cvss_v4
             }
         }
+        /// The EPSS scores as calculated by the [Exploit Prediction Scoring System](https://www.first.org/epss).
+        ///
+        /// - Remark: Generated from `#/components/schemas/security-advisory-epss`.
+        public struct security_hyphen_advisory_hyphen_epss: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/security-advisory-epss/percentage`.
+            public var percentage: Swift.Double?
+            /// - Remark: Generated from `#/components/schemas/security-advisory-epss/percentile`.
+            public var percentile: Swift.Double?
+            /// Creates a new `security_hyphen_advisory_hyphen_epss`.
+            ///
+            /// - Parameters:
+            ///   - percentage:
+            ///   - percentile:
+            public init(
+                percentage: Swift.Double? = nil,
+                percentile: Swift.Double? = nil
+            ) {
+                self.percentage = percentage
+                self.percentile = percentile
+            }
+            public enum CodingKeys: String, CodingKey {
+                case percentage
+                case percentile
+            }
+        }
         /// A GitHub user.
         ///
         /// - Remark: Generated from `#/components/schemas/simple-user`.
@@ -818,6 +843,8 @@ public enum Components {
             public var cvss: Components.Schemas.global_hyphen_advisory.cvssPayload?
             /// - Remark: Generated from `#/components/schemas/global-advisory/cvss_severities`.
             public var cvss_severities: Components.Schemas.cvss_hyphen_severities?
+            /// - Remark: Generated from `#/components/schemas/global-advisory/epss`.
+            public var epss: Components.Schemas.security_hyphen_advisory_hyphen_epss?
             /// - Remark: Generated from `#/components/schemas/global-advisory/cwesPayload`.
             public struct cwesPayloadPayload: Codable, Hashable, Sendable {
                 /// The Common Weakness Enumeration (CWE) identifier.
@@ -849,31 +876,6 @@ public enum Components {
             public typealias cwesPayload = [Components.Schemas.global_hyphen_advisory.cwesPayloadPayload]
             /// - Remark: Generated from `#/components/schemas/global-advisory/cwes`.
             public var cwes: Components.Schemas.global_hyphen_advisory.cwesPayload?
-            /// - Remark: Generated from `#/components/schemas/global-advisory/epss`.
-            public struct epssPayload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/global-advisory/epss/percentage`.
-                public var percentage: Swift.Double?
-                /// - Remark: Generated from `#/components/schemas/global-advisory/epss/percentile`.
-                public var percentile: Swift.Double?
-                /// Creates a new `epssPayload`.
-                ///
-                /// - Parameters:
-                ///   - percentage:
-                ///   - percentile:
-                public init(
-                    percentage: Swift.Double? = nil,
-                    percentile: Swift.Double? = nil
-                ) {
-                    self.percentage = percentage
-                    self.percentile = percentile
-                }
-                public enum CodingKeys: String, CodingKey {
-                    case percentage
-                    case percentile
-                }
-            }
-            /// - Remark: Generated from `#/components/schemas/global-advisory/epss`.
-            public var epss: Components.Schemas.global_hyphen_advisory.epssPayload?
             /// - Remark: Generated from `#/components/schemas/global-advisory/creditsPayload`.
             public struct creditsPayloadPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/global-advisory/creditsPayload/user`.
@@ -928,8 +930,8 @@ public enum Components {
             ///   - vulnerabilities: The products and respective version ranges affected by the advisory.
             ///   - cvss:
             ///   - cvss_severities:
-            ///   - cwes:
             ///   - epss:
+            ///   - cwes:
             ///   - credits: The users who contributed to the advisory.
             public init(
                 ghsa_id: Swift.String,
@@ -952,8 +954,8 @@ public enum Components {
                 vulnerabilities: [Components.Schemas.vulnerability]? = nil,
                 cvss: Components.Schemas.global_hyphen_advisory.cvssPayload? = nil,
                 cvss_severities: Components.Schemas.cvss_hyphen_severities? = nil,
+                epss: Components.Schemas.security_hyphen_advisory_hyphen_epss? = nil,
                 cwes: Components.Schemas.global_hyphen_advisory.cwesPayload? = nil,
-                epss: Components.Schemas.global_hyphen_advisory.epssPayload? = nil,
                 credits: Components.Schemas.global_hyphen_advisory.creditsPayload? = nil
             ) {
                 self.ghsa_id = ghsa_id
@@ -976,8 +978,8 @@ public enum Components {
                 self.vulnerabilities = vulnerabilities
                 self.cvss = cvss
                 self.cvss_severities = cvss_severities
-                self.cwes = cwes
                 self.epss = epss
+                self.cwes = cwes
                 self.credits = credits
             }
             public enum CodingKeys: String, CodingKey {
@@ -1001,8 +1003,8 @@ public enum Components {
                 case vulnerabilities
                 case cvss
                 case cvss_severities
-                case cwes
                 case epss
+                case cwes
                 case credits
             }
             public init(from decoder: any Decoder) throws {
@@ -1087,13 +1089,13 @@ public enum Components {
                     Components.Schemas.cvss_hyphen_severities.self,
                     forKey: .cvss_severities
                 )
+                epss = try container.decodeIfPresent(
+                    Components.Schemas.security_hyphen_advisory_hyphen_epss.self,
+                    forKey: .epss
+                )
                 cwes = try container.decodeIfPresent(
                     Components.Schemas.global_hyphen_advisory.cwesPayload.self,
                     forKey: .cwes
-                )
-                epss = try container.decodeIfPresent(
-                    Components.Schemas.global_hyphen_advisory.epssPayload.self,
-                    forKey: .epss
                 )
                 credits = try container.decodeIfPresent(
                     Components.Schemas.global_hyphen_advisory.creditsPayload.self,
@@ -1120,8 +1122,8 @@ public enum Components {
                     "vulnerabilities",
                     "cvss",
                     "cvss_severities",
-                    "cwes",
                     "epss",
+                    "cwes",
                     "credits"
                 ])
             }
@@ -1192,151 +1194,6 @@ public enum Components {
                 case message
                 case documentation_url
                 case errors
-            }
-        }
-        /// A GitHub user.
-        ///
-        /// - Remark: Generated from `#/components/schemas/nullable-simple-user`.
-        public struct nullable_hyphen_simple_hyphen_user: Codable, Hashable, Sendable {
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/name`.
-            public var name: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/email`.
-            public var email: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/login`.
-            public var login: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/id`.
-            public var id: Swift.Int64
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/node_id`.
-            public var node_id: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/avatar_url`.
-            public var avatar_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/gravatar_id`.
-            public var gravatar_id: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/url`.
-            public var url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/html_url`.
-            public var html_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/followers_url`.
-            public var followers_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/following_url`.
-            public var following_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/gists_url`.
-            public var gists_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/starred_url`.
-            public var starred_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/subscriptions_url`.
-            public var subscriptions_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/organizations_url`.
-            public var organizations_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/repos_url`.
-            public var repos_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/events_url`.
-            public var events_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/received_events_url`.
-            public var received_events_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/type`.
-            public var _type: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/site_admin`.
-            public var site_admin: Swift.Bool
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/starred_at`.
-            public var starred_at: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/user_view_type`.
-            public var user_view_type: Swift.String?
-            /// Creates a new `nullable_hyphen_simple_hyphen_user`.
-            ///
-            /// - Parameters:
-            ///   - name:
-            ///   - email:
-            ///   - login:
-            ///   - id:
-            ///   - node_id:
-            ///   - avatar_url:
-            ///   - gravatar_id:
-            ///   - url:
-            ///   - html_url:
-            ///   - followers_url:
-            ///   - following_url:
-            ///   - gists_url:
-            ///   - starred_url:
-            ///   - subscriptions_url:
-            ///   - organizations_url:
-            ///   - repos_url:
-            ///   - events_url:
-            ///   - received_events_url:
-            ///   - _type:
-            ///   - site_admin:
-            ///   - starred_at:
-            ///   - user_view_type:
-            public init(
-                name: Swift.String? = nil,
-                email: Swift.String? = nil,
-                login: Swift.String,
-                id: Swift.Int64,
-                node_id: Swift.String,
-                avatar_url: Swift.String,
-                gravatar_id: Swift.String? = nil,
-                url: Swift.String,
-                html_url: Swift.String,
-                followers_url: Swift.String,
-                following_url: Swift.String,
-                gists_url: Swift.String,
-                starred_url: Swift.String,
-                subscriptions_url: Swift.String,
-                organizations_url: Swift.String,
-                repos_url: Swift.String,
-                events_url: Swift.String,
-                received_events_url: Swift.String,
-                _type: Swift.String,
-                site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil,
-                user_view_type: Swift.String? = nil
-            ) {
-                self.name = name
-                self.email = email
-                self.login = login
-                self.id = id
-                self.node_id = node_id
-                self.avatar_url = avatar_url
-                self.gravatar_id = gravatar_id
-                self.url = url
-                self.html_url = html_url
-                self.followers_url = followers_url
-                self.following_url = following_url
-                self.gists_url = gists_url
-                self.starred_url = starred_url
-                self.subscriptions_url = subscriptions_url
-                self.organizations_url = organizations_url
-                self.repos_url = repos_url
-                self.events_url = events_url
-                self.received_events_url = received_events_url
-                self._type = _type
-                self.site_admin = site_admin
-                self.starred_at = starred_at
-                self.user_view_type = user_view_type
-            }
-            public enum CodingKeys: String, CodingKey {
-                case name
-                case email
-                case login
-                case id
-                case node_id
-                case avatar_url
-                case gravatar_id
-                case url
-                case html_url
-                case followers_url
-                case following_url
-                case gists_url
-                case starred_url
-                case subscriptions_url
-                case organizations_url
-                case repos_url
-                case events_url
-                case received_events_url
-                case _type = "type"
-                case site_admin
-                case starred_at
-                case user_view_type
             }
         }
         /// Scim Error
@@ -1511,6 +1368,151 @@ public enum Components {
                 case message
                 case documentation_url
                 case errors
+            }
+        }
+        /// A GitHub user.
+        ///
+        /// - Remark: Generated from `#/components/schemas/nullable-simple-user`.
+        public struct nullable_hyphen_simple_hyphen_user: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/name`.
+            public var name: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/email`.
+            public var email: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/login`.
+            public var login: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/id`.
+            public var id: Swift.Int64
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/node_id`.
+            public var node_id: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/avatar_url`.
+            public var avatar_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/gravatar_id`.
+            public var gravatar_id: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/url`.
+            public var url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/html_url`.
+            public var html_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/followers_url`.
+            public var followers_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/following_url`.
+            public var following_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/gists_url`.
+            public var gists_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/starred_url`.
+            public var starred_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/subscriptions_url`.
+            public var subscriptions_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/organizations_url`.
+            public var organizations_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/repos_url`.
+            public var repos_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/events_url`.
+            public var events_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/received_events_url`.
+            public var received_events_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/type`.
+            public var _type: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/site_admin`.
+            public var site_admin: Swift.Bool
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/starred_at`.
+            public var starred_at: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/nullable-simple-user/user_view_type`.
+            public var user_view_type: Swift.String?
+            /// Creates a new `nullable_hyphen_simple_hyphen_user`.
+            ///
+            /// - Parameters:
+            ///   - name:
+            ///   - email:
+            ///   - login:
+            ///   - id:
+            ///   - node_id:
+            ///   - avatar_url:
+            ///   - gravatar_id:
+            ///   - url:
+            ///   - html_url:
+            ///   - followers_url:
+            ///   - following_url:
+            ///   - gists_url:
+            ///   - starred_url:
+            ///   - subscriptions_url:
+            ///   - organizations_url:
+            ///   - repos_url:
+            ///   - events_url:
+            ///   - received_events_url:
+            ///   - _type:
+            ///   - site_admin:
+            ///   - starred_at:
+            ///   - user_view_type:
+            public init(
+                name: Swift.String? = nil,
+                email: Swift.String? = nil,
+                login: Swift.String,
+                id: Swift.Int64,
+                node_id: Swift.String,
+                avatar_url: Swift.String,
+                gravatar_id: Swift.String? = nil,
+                url: Swift.String,
+                html_url: Swift.String,
+                followers_url: Swift.String,
+                following_url: Swift.String,
+                gists_url: Swift.String,
+                starred_url: Swift.String,
+                subscriptions_url: Swift.String,
+                organizations_url: Swift.String,
+                repos_url: Swift.String,
+                events_url: Swift.String,
+                received_events_url: Swift.String,
+                _type: Swift.String,
+                site_admin: Swift.Bool,
+                starred_at: Swift.String? = nil,
+                user_view_type: Swift.String? = nil
+            ) {
+                self.name = name
+                self.email = email
+                self.login = login
+                self.id = id
+                self.node_id = node_id
+                self.avatar_url = avatar_url
+                self.gravatar_id = gravatar_id
+                self.url = url
+                self.html_url = html_url
+                self.followers_url = followers_url
+                self.following_url = following_url
+                self.gists_url = gists_url
+                self.starred_url = starred_url
+                self.subscriptions_url = subscriptions_url
+                self.organizations_url = organizations_url
+                self.repos_url = repos_url
+                self.events_url = events_url
+                self.received_events_url = received_events_url
+                self._type = _type
+                self.site_admin = site_admin
+                self.starred_at = starred_at
+                self.user_view_type = user_view_type
+            }
+            public enum CodingKeys: String, CodingKey {
+                case name
+                case email
+                case login
+                case id
+                case node_id
+                case avatar_url
+                case gravatar_id
+                case url
+                case html_url
+                case followers_url
+                case following_url
+                case gists_url
+                case starred_url
+                case subscriptions_url
+                case organizations_url
+                case repos_url
+                case events_url
+                case received_events_url
+                case _type = "type"
+                case site_admin
+                case starred_at
+                case user_view_type
             }
         }
         /// License Simple
@@ -2302,251 +2304,6 @@ public enum Components {
                 case anonymous_access_enabled
             }
         }
-        /// Groups of organization members that gives permissions on specified repositories.
-        ///
-        /// - Remark: Generated from `#/components/schemas/nullable-team-simple`.
-        public struct nullable_hyphen_team_hyphen_simple: Codable, Hashable, Sendable {
-            /// Unique identifier of the team
-            ///
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/id`.
-            public var id: Swift.Int
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/node_id`.
-            public var node_id: Swift.String
-            /// URL for the team
-            ///
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/url`.
-            public var url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/members_url`.
-            public var members_url: Swift.String
-            /// Name of the team
-            ///
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/name`.
-            public var name: Swift.String
-            /// Description of the team
-            ///
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/description`.
-            public var description: Swift.String?
-            /// Permission that the team will have for its repositories
-            ///
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/permission`.
-            public var permission: Swift.String
-            /// The level of privacy this team should have
-            ///
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/privacy`.
-            public var privacy: Swift.String?
-            /// The notification setting the team has set
-            ///
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/notification_setting`.
-            public var notification_setting: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/html_url`.
-            public var html_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/repositories_url`.
-            public var repositories_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/slug`.
-            public var slug: Swift.String
-            /// Distinguished Name (DN) that team maps to within LDAP environment
-            ///
-            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/ldap_dn`.
-            public var ldap_dn: Swift.String?
-            /// Creates a new `nullable_hyphen_team_hyphen_simple`.
-            ///
-            /// - Parameters:
-            ///   - id: Unique identifier of the team
-            ///   - node_id:
-            ///   - url: URL for the team
-            ///   - members_url:
-            ///   - name: Name of the team
-            ///   - description: Description of the team
-            ///   - permission: Permission that the team will have for its repositories
-            ///   - privacy: The level of privacy this team should have
-            ///   - notification_setting: The notification setting the team has set
-            ///   - html_url:
-            ///   - repositories_url:
-            ///   - slug:
-            ///   - ldap_dn: Distinguished Name (DN) that team maps to within LDAP environment
-            public init(
-                id: Swift.Int,
-                node_id: Swift.String,
-                url: Swift.String,
-                members_url: Swift.String,
-                name: Swift.String,
-                description: Swift.String? = nil,
-                permission: Swift.String,
-                privacy: Swift.String? = nil,
-                notification_setting: Swift.String? = nil,
-                html_url: Swift.String,
-                repositories_url: Swift.String,
-                slug: Swift.String,
-                ldap_dn: Swift.String? = nil
-            ) {
-                self.id = id
-                self.node_id = node_id
-                self.url = url
-                self.members_url = members_url
-                self.name = name
-                self.description = description
-                self.permission = permission
-                self.privacy = privacy
-                self.notification_setting = notification_setting
-                self.html_url = html_url
-                self.repositories_url = repositories_url
-                self.slug = slug
-                self.ldap_dn = ldap_dn
-            }
-            public enum CodingKeys: String, CodingKey {
-                case id
-                case node_id
-                case url
-                case members_url
-                case name
-                case description
-                case permission
-                case privacy
-                case notification_setting
-                case html_url
-                case repositories_url
-                case slug
-                case ldap_dn
-            }
-        }
-        /// Groups of organization members that gives permissions on specified repositories.
-        ///
-        /// - Remark: Generated from `#/components/schemas/team`.
-        public struct team: Codable, Hashable, Sendable {
-            /// - Remark: Generated from `#/components/schemas/team/id`.
-            public var id: Swift.Int
-            /// - Remark: Generated from `#/components/schemas/team/node_id`.
-            public var node_id: Swift.String
-            /// - Remark: Generated from `#/components/schemas/team/name`.
-            public var name: Swift.String
-            /// - Remark: Generated from `#/components/schemas/team/slug`.
-            public var slug: Swift.String
-            /// - Remark: Generated from `#/components/schemas/team/description`.
-            public var description: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/team/privacy`.
-            public var privacy: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/team/notification_setting`.
-            public var notification_setting: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/team/permission`.
-            public var permission: Swift.String
-            /// - Remark: Generated from `#/components/schemas/team/permissions`.
-            public struct permissionsPayload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/team/permissions/pull`.
-                public var pull: Swift.Bool
-                /// - Remark: Generated from `#/components/schemas/team/permissions/triage`.
-                public var triage: Swift.Bool
-                /// - Remark: Generated from `#/components/schemas/team/permissions/push`.
-                public var push: Swift.Bool
-                /// - Remark: Generated from `#/components/schemas/team/permissions/maintain`.
-                public var maintain: Swift.Bool
-                /// - Remark: Generated from `#/components/schemas/team/permissions/admin`.
-                public var admin: Swift.Bool
-                /// Creates a new `permissionsPayload`.
-                ///
-                /// - Parameters:
-                ///   - pull:
-                ///   - triage:
-                ///   - push:
-                ///   - maintain:
-                ///   - admin:
-                public init(
-                    pull: Swift.Bool,
-                    triage: Swift.Bool,
-                    push: Swift.Bool,
-                    maintain: Swift.Bool,
-                    admin: Swift.Bool
-                ) {
-                    self.pull = pull
-                    self.triage = triage
-                    self.push = push
-                    self.maintain = maintain
-                    self.admin = admin
-                }
-                public enum CodingKeys: String, CodingKey {
-                    case pull
-                    case triage
-                    case push
-                    case maintain
-                    case admin
-                }
-            }
-            /// - Remark: Generated from `#/components/schemas/team/permissions`.
-            public var permissions: Components.Schemas.team.permissionsPayload?
-            /// - Remark: Generated from `#/components/schemas/team/url`.
-            public var url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/team/html_url`.
-            public var html_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/team/members_url`.
-            public var members_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/team/repositories_url`.
-            public var repositories_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/team/parent`.
-            public var parent: Components.Schemas.nullable_hyphen_team_hyphen_simple?
-            /// Creates a new `team`.
-            ///
-            /// - Parameters:
-            ///   - id:
-            ///   - node_id:
-            ///   - name:
-            ///   - slug:
-            ///   - description:
-            ///   - privacy:
-            ///   - notification_setting:
-            ///   - permission:
-            ///   - permissions:
-            ///   - url:
-            ///   - html_url:
-            ///   - members_url:
-            ///   - repositories_url:
-            ///   - parent:
-            public init(
-                id: Swift.Int,
-                node_id: Swift.String,
-                name: Swift.String,
-                slug: Swift.String,
-                description: Swift.String? = nil,
-                privacy: Swift.String? = nil,
-                notification_setting: Swift.String? = nil,
-                permission: Swift.String,
-                permissions: Components.Schemas.team.permissionsPayload? = nil,
-                url: Swift.String,
-                html_url: Swift.String,
-                members_url: Swift.String,
-                repositories_url: Swift.String,
-                parent: Components.Schemas.nullable_hyphen_team_hyphen_simple? = nil
-            ) {
-                self.id = id
-                self.node_id = node_id
-                self.name = name
-                self.slug = slug
-                self.description = description
-                self.privacy = privacy
-                self.notification_setting = notification_setting
-                self.permission = permission
-                self.permissions = permissions
-                self.url = url
-                self.html_url = html_url
-                self.members_url = members_url
-                self.repositories_url = repositories_url
-                self.parent = parent
-            }
-            public enum CodingKeys: String, CodingKey {
-                case id
-                case node_id
-                case name
-                case slug
-                case description
-                case privacy
-                case notification_setting
-                case permission
-                case permissions
-                case url
-                case html_url
-                case members_url
-                case repositories_url
-                case parent
-            }
-        }
         /// A GitHub repository.
         ///
         /// - Remark: Generated from `#/components/schemas/simple-repository`.
@@ -2950,6 +2707,28 @@ public enum Components {
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security`.
             public var advanced_security: Components.Schemas.security_hyphen_and_hyphen_analysis.advanced_securityPayload?
+            /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security`.
+            public struct code_securityPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security/status`.
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                    case enabled = "enabled"
+                    case disabled = "disabled"
+                }
+                /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security/status`.
+                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.code_securityPayload.statusPayload?
+                /// Creates a new `code_securityPayload`.
+                ///
+                /// - Parameters:
+                ///   - status:
+                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.code_securityPayload.statusPayload? = nil) {
+                    self.status = status
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case status
+                }
+            }
+            /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security`.
+            public var code_security: Components.Schemas.security_hyphen_and_hyphen_analysis.code_securityPayload?
             /// Enable or disable Dependabot security updates for the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/dependabot_security_updates`.
@@ -3072,6 +2851,7 @@ public enum Components {
             ///
             /// - Parameters:
             ///   - advanced_security:
+            ///   - code_security:
             ///   - dependabot_security_updates: Enable or disable Dependabot security updates for the repository.
             ///   - secret_scanning:
             ///   - secret_scanning_push_protection:
@@ -3079,6 +2859,7 @@ public enum Components {
             ///   - secret_scanning_ai_detection:
             public init(
                 advanced_security: Components.Schemas.security_hyphen_and_hyphen_analysis.advanced_securityPayload? = nil,
+                code_security: Components.Schemas.security_hyphen_and_hyphen_analysis.code_securityPayload? = nil,
                 dependabot_security_updates: Components.Schemas.security_hyphen_and_hyphen_analysis.dependabot_security_updatesPayload? = nil,
                 secret_scanning: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanningPayload? = nil,
                 secret_scanning_push_protection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_push_protectionPayload? = nil,
@@ -3086,6 +2867,7 @@ public enum Components {
                 secret_scanning_ai_detection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload? = nil
             ) {
                 self.advanced_security = advanced_security
+                self.code_security = code_security
                 self.dependabot_security_updates = dependabot_security_updates
                 self.secret_scanning = secret_scanning
                 self.secret_scanning_push_protection = secret_scanning_push_protection
@@ -3094,11 +2876,257 @@ public enum Components {
             }
             public enum CodingKeys: String, CodingKey {
                 case advanced_security
+                case code_security
                 case dependabot_security_updates
                 case secret_scanning
                 case secret_scanning_push_protection
                 case secret_scanning_non_provider_patterns
                 case secret_scanning_ai_detection
+            }
+        }
+        /// Groups of organization members that gives permissions on specified repositories.
+        ///
+        /// - Remark: Generated from `#/components/schemas/nullable-team-simple`.
+        public struct nullable_hyphen_team_hyphen_simple: Codable, Hashable, Sendable {
+            /// Unique identifier of the team
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/id`.
+            public var id: Swift.Int
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/node_id`.
+            public var node_id: Swift.String
+            /// URL for the team
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/url`.
+            public var url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/members_url`.
+            public var members_url: Swift.String
+            /// Name of the team
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/name`.
+            public var name: Swift.String
+            /// Description of the team
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/description`.
+            public var description: Swift.String?
+            /// Permission that the team will have for its repositories
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/permission`.
+            public var permission: Swift.String
+            /// The level of privacy this team should have
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/privacy`.
+            public var privacy: Swift.String?
+            /// The notification setting the team has set
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/notification_setting`.
+            public var notification_setting: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/html_url`.
+            public var html_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/repositories_url`.
+            public var repositories_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/slug`.
+            public var slug: Swift.String
+            /// Distinguished Name (DN) that team maps to within LDAP environment
+            ///
+            /// - Remark: Generated from `#/components/schemas/nullable-team-simple/ldap_dn`.
+            public var ldap_dn: Swift.String?
+            /// Creates a new `nullable_hyphen_team_hyphen_simple`.
+            ///
+            /// - Parameters:
+            ///   - id: Unique identifier of the team
+            ///   - node_id:
+            ///   - url: URL for the team
+            ///   - members_url:
+            ///   - name: Name of the team
+            ///   - description: Description of the team
+            ///   - permission: Permission that the team will have for its repositories
+            ///   - privacy: The level of privacy this team should have
+            ///   - notification_setting: The notification setting the team has set
+            ///   - html_url:
+            ///   - repositories_url:
+            ///   - slug:
+            ///   - ldap_dn: Distinguished Name (DN) that team maps to within LDAP environment
+            public init(
+                id: Swift.Int,
+                node_id: Swift.String,
+                url: Swift.String,
+                members_url: Swift.String,
+                name: Swift.String,
+                description: Swift.String? = nil,
+                permission: Swift.String,
+                privacy: Swift.String? = nil,
+                notification_setting: Swift.String? = nil,
+                html_url: Swift.String,
+                repositories_url: Swift.String,
+                slug: Swift.String,
+                ldap_dn: Swift.String? = nil
+            ) {
+                self.id = id
+                self.node_id = node_id
+                self.url = url
+                self.members_url = members_url
+                self.name = name
+                self.description = description
+                self.permission = permission
+                self.privacy = privacy
+                self.notification_setting = notification_setting
+                self.html_url = html_url
+                self.repositories_url = repositories_url
+                self.slug = slug
+                self.ldap_dn = ldap_dn
+            }
+            public enum CodingKeys: String, CodingKey {
+                case id
+                case node_id
+                case url
+                case members_url
+                case name
+                case description
+                case permission
+                case privacy
+                case notification_setting
+                case html_url
+                case repositories_url
+                case slug
+                case ldap_dn
+            }
+        }
+        /// Groups of organization members that gives permissions on specified repositories.
+        ///
+        /// - Remark: Generated from `#/components/schemas/team`.
+        public struct team: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/team/id`.
+            public var id: Swift.Int
+            /// - Remark: Generated from `#/components/schemas/team/node_id`.
+            public var node_id: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team/name`.
+            public var name: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team/slug`.
+            public var slug: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team/description`.
+            public var description: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/team/privacy`.
+            public var privacy: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/team/notification_setting`.
+            public var notification_setting: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/team/permission`.
+            public var permission: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team/permissions`.
+            public struct permissionsPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/team/permissions/pull`.
+                public var pull: Swift.Bool
+                /// - Remark: Generated from `#/components/schemas/team/permissions/triage`.
+                public var triage: Swift.Bool
+                /// - Remark: Generated from `#/components/schemas/team/permissions/push`.
+                public var push: Swift.Bool
+                /// - Remark: Generated from `#/components/schemas/team/permissions/maintain`.
+                public var maintain: Swift.Bool
+                /// - Remark: Generated from `#/components/schemas/team/permissions/admin`.
+                public var admin: Swift.Bool
+                /// Creates a new `permissionsPayload`.
+                ///
+                /// - Parameters:
+                ///   - pull:
+                ///   - triage:
+                ///   - push:
+                ///   - maintain:
+                ///   - admin:
+                public init(
+                    pull: Swift.Bool,
+                    triage: Swift.Bool,
+                    push: Swift.Bool,
+                    maintain: Swift.Bool,
+                    admin: Swift.Bool
+                ) {
+                    self.pull = pull
+                    self.triage = triage
+                    self.push = push
+                    self.maintain = maintain
+                    self.admin = admin
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case pull
+                    case triage
+                    case push
+                    case maintain
+                    case admin
+                }
+            }
+            /// - Remark: Generated from `#/components/schemas/team/permissions`.
+            public var permissions: Components.Schemas.team.permissionsPayload?
+            /// - Remark: Generated from `#/components/schemas/team/url`.
+            public var url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team/html_url`.
+            public var html_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team/members_url`.
+            public var members_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team/repositories_url`.
+            public var repositories_url: Swift.String
+            /// - Remark: Generated from `#/components/schemas/team/parent`.
+            public var parent: Components.Schemas.nullable_hyphen_team_hyphen_simple?
+            /// Creates a new `team`.
+            ///
+            /// - Parameters:
+            ///   - id:
+            ///   - node_id:
+            ///   - name:
+            ///   - slug:
+            ///   - description:
+            ///   - privacy:
+            ///   - notification_setting:
+            ///   - permission:
+            ///   - permissions:
+            ///   - url:
+            ///   - html_url:
+            ///   - members_url:
+            ///   - repositories_url:
+            ///   - parent:
+            public init(
+                id: Swift.Int,
+                node_id: Swift.String,
+                name: Swift.String,
+                slug: Swift.String,
+                description: Swift.String? = nil,
+                privacy: Swift.String? = nil,
+                notification_setting: Swift.String? = nil,
+                permission: Swift.String,
+                permissions: Components.Schemas.team.permissionsPayload? = nil,
+                url: Swift.String,
+                html_url: Swift.String,
+                members_url: Swift.String,
+                repositories_url: Swift.String,
+                parent: Components.Schemas.nullable_hyphen_team_hyphen_simple? = nil
+            ) {
+                self.id = id
+                self.node_id = node_id
+                self.name = name
+                self.slug = slug
+                self.description = description
+                self.privacy = privacy
+                self.notification_setting = notification_setting
+                self.permission = permission
+                self.permissions = permissions
+                self.url = url
+                self.html_url = html_url
+                self.members_url = members_url
+                self.repositories_url = repositories_url
+                self.parent = parent
+            }
+            public enum CodingKeys: String, CodingKey {
+                case id
+                case node_id
+                case name
+                case slug
+                case description
+                case privacy
+                case notification_setting
+                case permission
+                case permissions
+                case url
+                case html_url
+                case members_url
+                case repositories_url
+                case parent
             }
         }
         /// A repository on GitHub.
