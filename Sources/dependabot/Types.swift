@@ -3633,6 +3633,50 @@ public enum Components {
         ///
         /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-epss`.
         public typealias dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_epss = Swift.String
+        /// Filters the list of alerts based on whether the alert has a patch. If specified, only alerts with a patch will be returned.
+        /// Multiple `has` filters can be chained to check if multiple properties are present.
+        ///
+        /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has`.
+        @frozen public enum dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_has: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has/case1`.
+            case case1(Swift.String)
+            /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has/Case2Payload`.
+            @frozen public enum Case2PayloadPayload: String, Codable, Hashable, Sendable {
+                case patch = "patch"
+            }
+            /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has/case2`.
+            public typealias Case2Payload = [Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_has.Case2PayloadPayload]
+            /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has/case2`.
+            case case2(Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_has.Case2Payload)
+            public init(from decoder: any Decoder) throws {
+                var errors: [any Error] = []
+                do {
+                    self = .case1(try decoder.decodeFromSingleValueContainer())
+                    return
+                } catch {
+                    errors.append(error)
+                }
+                do {
+                    self = .case2(try decoder.decodeFromSingleValueContainer())
+                    return
+                } catch {
+                    errors.append(error)
+                }
+                throw Swift.DecodingError.failedToDecodeOneOfSchema(
+                    type: Self.self,
+                    codingPath: decoder.codingPath,
+                    errors: errors
+                )
+            }
+            public func encode(to encoder: any Encoder) throws {
+                switch self {
+                case let .case1(value):
+                    try encoder.encodeToSingleValueContainer(value)
+                case let .case2(value):
+                    try encoder.encodeToSingleValueContainer(value)
+                }
+            }
+        }
         /// The scope of the vulnerable dependency. If specified, only alerts with this scope will be returned.
         ///
         /// - Remark: Generated from `#/components/parameters/dependabot-alert-scope`.
@@ -3936,6 +3980,52 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/enterprises/{enterprise}/dependabot/alerts/GET/query/epss_percentage`.
                 public var epss_percentage: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_epss?
+                /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has`.
+                @frozen public enum dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_has: Codable, Hashable, Sendable {
+                    /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has/case1`.
+                    case case1(Swift.String)
+                    /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has/Case2Payload`.
+                    @frozen public enum Case2PayloadPayload: String, Codable, Hashable, Sendable {
+                        case patch = "patch"
+                    }
+                    /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has/case2`.
+                    public typealias Case2Payload = [Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_has.Case2PayloadPayload]
+                    /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has/case2`.
+                    case case2(Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_has.Case2Payload)
+                    public init(from decoder: any Decoder) throws {
+                        var errors: [any Error] = []
+                        do {
+                            self = .case1(try decoder.decodeFromSingleValueContainer())
+                            return
+                        } catch {
+                            errors.append(error)
+                        }
+                        do {
+                            self = .case2(try decoder.decodeFromSingleValueContainer())
+                            return
+                        } catch {
+                            errors.append(error)
+                        }
+                        throw Swift.DecodingError.failedToDecodeOneOfSchema(
+                            type: Self.self,
+                            codingPath: decoder.codingPath,
+                            errors: errors
+                        )
+                    }
+                    public func encode(to encoder: any Encoder) throws {
+                        switch self {
+                        case let .case1(value):
+                            try encoder.encodeToSingleValueContainer(value)
+                        case let .case2(value):
+                            try encoder.encodeToSingleValueContainer(value)
+                        }
+                    }
+                }
+                /// Filters the list of alerts based on whether the alert has a patch. If specified, only alerts with a patch will be returned.
+                /// Multiple `has` filters can be chained to check if multiple properties are present.
+                ///
+                /// - Remark: Generated from `#/paths/enterprises/{enterprise}/dependabot/alerts/GET/query/has`.
+                public var has: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_has?
                 /// - Remark: Generated from `#/components/parameters/dependabot-alert-scope`.
                 @frozen public enum dependabot_hyphen_alert_hyphen_scope: String, Codable, Hashable, Sendable {
                     case development = "development"
@@ -3999,6 +4089,7 @@ public enum Operations {
                 ///   - ecosystem: A comma-separated list of ecosystems. If specified, only alerts for these ecosystems will be returned.
                 ///   - package: A comma-separated list of package names. If specified, only alerts for these packages will be returned.
                 ///   - epss_percentage: CVE Exploit Prediction Scoring System (EPSS) percentage. Can be specified as:
+                ///   - has: Filters the list of alerts based on whether the alert has a patch. If specified, only alerts with a patch will be returned.
                 ///   - scope: The scope of the vulnerable dependency. If specified, only alerts with this scope will be returned.
                 ///   - sort: The property by which to sort the results.
                 ///   - direction: The direction to sort the results by.
@@ -4013,6 +4104,7 @@ public enum Operations {
                     ecosystem: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_ecosystems? = nil,
                     package: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_packages? = nil,
                     epss_percentage: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_epss? = nil,
+                    has: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_has? = nil,
                     scope: Components.Parameters.dependabot_hyphen_alert_hyphen_scope? = nil,
                     sort: Components.Parameters.dependabot_hyphen_alert_hyphen_sort? = nil,
                     direction: Components.Parameters.direction? = nil,
@@ -4027,6 +4119,7 @@ public enum Operations {
                     self.ecosystem = ecosystem
                     self.package = package
                     self.epss_percentage = epss_percentage
+                    self.has = has
                     self.scope = scope
                     self.sort = sort
                     self.direction = direction
@@ -4302,6 +4395,52 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/alerts/GET/query/epss_percentage`.
                 public var epss_percentage: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_epss?
+                /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has`.
+                @frozen public enum dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_has: Codable, Hashable, Sendable {
+                    /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has/case1`.
+                    case case1(Swift.String)
+                    /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has/Case2Payload`.
+                    @frozen public enum Case2PayloadPayload: String, Codable, Hashable, Sendable {
+                        case patch = "patch"
+                    }
+                    /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has/case2`.
+                    public typealias Case2Payload = [Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_has.Case2PayloadPayload]
+                    /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has/case2`.
+                    case case2(Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_has.Case2Payload)
+                    public init(from decoder: any Decoder) throws {
+                        var errors: [any Error] = []
+                        do {
+                            self = .case1(try decoder.decodeFromSingleValueContainer())
+                            return
+                        } catch {
+                            errors.append(error)
+                        }
+                        do {
+                            self = .case2(try decoder.decodeFromSingleValueContainer())
+                            return
+                        } catch {
+                            errors.append(error)
+                        }
+                        throw Swift.DecodingError.failedToDecodeOneOfSchema(
+                            type: Self.self,
+                            codingPath: decoder.codingPath,
+                            errors: errors
+                        )
+                    }
+                    public func encode(to encoder: any Encoder) throws {
+                        switch self {
+                        case let .case1(value):
+                            try encoder.encodeToSingleValueContainer(value)
+                        case let .case2(value):
+                            try encoder.encodeToSingleValueContainer(value)
+                        }
+                    }
+                }
+                /// Filters the list of alerts based on whether the alert has a patch. If specified, only alerts with a patch will be returned.
+                /// Multiple `has` filters can be chained to check if multiple properties are present.
+                ///
+                /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/alerts/GET/query/has`.
+                public var has: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_has?
                 /// - Remark: Generated from `#/components/parameters/dependabot-alert-scope`.
                 @frozen public enum dependabot_hyphen_alert_hyphen_scope: String, Codable, Hashable, Sendable {
                     case development = "development"
@@ -4365,6 +4504,7 @@ public enum Operations {
                 ///   - ecosystem: A comma-separated list of ecosystems. If specified, only alerts for these ecosystems will be returned.
                 ///   - package: A comma-separated list of package names. If specified, only alerts for these packages will be returned.
                 ///   - epss_percentage: CVE Exploit Prediction Scoring System (EPSS) percentage. Can be specified as:
+                ///   - has: Filters the list of alerts based on whether the alert has a patch. If specified, only alerts with a patch will be returned.
                 ///   - scope: The scope of the vulnerable dependency. If specified, only alerts with this scope will be returned.
                 ///   - sort: The property by which to sort the results.
                 ///   - direction: The direction to sort the results by.
@@ -4379,6 +4519,7 @@ public enum Operations {
                     ecosystem: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_ecosystems? = nil,
                     package: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_packages? = nil,
                     epss_percentage: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_epss? = nil,
+                    has: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_has? = nil,
                     scope: Components.Parameters.dependabot_hyphen_alert_hyphen_scope? = nil,
                     sort: Components.Parameters.dependabot_hyphen_alert_hyphen_sort? = nil,
                     direction: Components.Parameters.direction? = nil,
@@ -4393,6 +4534,7 @@ public enum Operations {
                     self.ecosystem = ecosystem
                     self.package = package
                     self.epss_percentage = epss_percentage
+                    self.has = has
                     self.scope = scope
                     self.sort = sort
                     self.direction = direction
@@ -6019,6 +6161,52 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/GET/query/epss_percentage`.
                 public var epss_percentage: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_epss?
+                /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has`.
+                @frozen public enum dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_has: Codable, Hashable, Sendable {
+                    /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has/case1`.
+                    case case1(Swift.String)
+                    /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has/Case2Payload`.
+                    @frozen public enum Case2PayloadPayload: String, Codable, Hashable, Sendable {
+                        case patch = "patch"
+                    }
+                    /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has/case2`.
+                    public typealias Case2Payload = [Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_has.Case2PayloadPayload]
+                    /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has/case2`.
+                    case case2(Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_has.Case2Payload)
+                    public init(from decoder: any Decoder) throws {
+                        var errors: [any Error] = []
+                        do {
+                            self = .case1(try decoder.decodeFromSingleValueContainer())
+                            return
+                        } catch {
+                            errors.append(error)
+                        }
+                        do {
+                            self = .case2(try decoder.decodeFromSingleValueContainer())
+                            return
+                        } catch {
+                            errors.append(error)
+                        }
+                        throw Swift.DecodingError.failedToDecodeOneOfSchema(
+                            type: Self.self,
+                            codingPath: decoder.codingPath,
+                            errors: errors
+                        )
+                    }
+                    public func encode(to encoder: any Encoder) throws {
+                        switch self {
+                        case let .case1(value):
+                            try encoder.encodeToSingleValueContainer(value)
+                        case let .case2(value):
+                            try encoder.encodeToSingleValueContainer(value)
+                        }
+                    }
+                }
+                /// Filters the list of alerts based on whether the alert has a patch. If specified, only alerts with a patch will be returned.
+                /// Multiple `has` filters can be chained to check if multiple properties are present.
+                ///
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/GET/query/has`.
+                public var has: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_has?
                 /// - Remark: Generated from `#/components/parameters/dependabot-alert-scope`.
                 @frozen public enum dependabot_hyphen_alert_hyphen_scope: String, Codable, Hashable, Sendable {
                     case development = "development"
@@ -6089,6 +6277,7 @@ public enum Operations {
                 ///   - package: A comma-separated list of package names. If specified, only alerts for these packages will be returned.
                 ///   - manifest: A comma-separated list of full manifest paths. If specified, only alerts for these manifests will be returned.
                 ///   - epss_percentage: CVE Exploit Prediction Scoring System (EPSS) percentage. Can be specified as:
+                ///   - has: Filters the list of alerts based on whether the alert has a patch. If specified, only alerts with a patch will be returned.
                 ///   - scope: The scope of the vulnerable dependency. If specified, only alerts with this scope will be returned.
                 ///   - sort: The property by which to sort the results.
                 ///   - direction: The direction to sort the results by.
@@ -6105,6 +6294,7 @@ public enum Operations {
                     package: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_packages? = nil,
                     manifest: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_manifests? = nil,
                     epss_percentage: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_epss? = nil,
+                    has: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_has? = nil,
                     scope: Components.Parameters.dependabot_hyphen_alert_hyphen_scope? = nil,
                     sort: Components.Parameters.dependabot_hyphen_alert_hyphen_sort? = nil,
                     direction: Components.Parameters.direction? = nil,
@@ -6121,6 +6311,7 @@ public enum Operations {
                     self.package = package
                     self.manifest = manifest
                     self.epss_percentage = epss_percentage
+                    self.has = has
                     self.scope = scope
                     self.sort = sort
                     self.direction = direction
