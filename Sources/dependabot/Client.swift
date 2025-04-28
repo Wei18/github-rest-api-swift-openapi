@@ -105,6 +105,13 @@ public struct Client: APIProtocol {
                     in: &request,
                     style: .form,
                     explode: true,
+                    name: "has",
+                    value: input.query.has
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
                     name: "scope",
                     value: input.query.scope
                 )
@@ -327,6 +334,13 @@ public struct Client: APIProtocol {
                     explode: true,
                     name: "epss_percentage",
                     value: input.query.epss_percentage
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "has",
+                    value: input.query.has
                 )
                 try converter.setQueryItemAsURI(
                     in: &request,
@@ -1166,6 +1180,13 @@ public struct Client: APIProtocol {
                     explode: true,
                     name: "epss_percentage",
                     value: input.query.epss_percentage
+                )
+                try converter.setQueryItemAsURI(
+                    in: &request,
+                    style: .form,
+                    explode: true,
+                    name: "has",
+                    value: input.query.has
                 )
                 try converter.setQueryItemAsURI(
                     in: &request,
