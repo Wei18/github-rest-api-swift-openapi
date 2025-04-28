@@ -64,8 +64,6 @@ public protocol APIProtocol: Sendable {
     ///
     /// For more information about how to re-run GitHub Actions jobs, see "[Re-run a job from a workflow run](https://docs.github.com/rest/actions/workflow-runs#re-run-a-job-from-a-workflow-run)".
     ///
-    /// OAuth apps and personal access tokens (classic) cannot use this endpoint.
-    ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/check-runs/{check_run_id}/rerequest`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-runs/{check_run_id}/rerequest/post(checks/rerequest-run)`.
     func checks_sol_rerequest_hyphen_run(_ input: Operations.checks_sol_rerequest_hyphen_run.Input) async throws -> Operations.checks_sol_rerequest_hyphen_run.Output
@@ -116,8 +114,6 @@ public protocol APIProtocol: Sendable {
     /// Rerequest a check suite
     ///
     /// Triggers GitHub to rerequest an existing check suite, without pushing new code to a repository. This endpoint will trigger the [`check_suite` webhook](https://docs.github.com/webhooks/event-payloads/#check_suite) event with the action `rerequested`. When a check suite is `rerequested`, its `status` is reset to `queued` and the `conclusion` is cleared.
-    ///
-    /// OAuth apps and personal access tokens (classic) cannot use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/check-suites/{check_suite_id}/rerequest`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-suites/{check_suite_id}/rerequest/post(checks/rerequest-suite)`.
@@ -243,8 +239,6 @@ extension APIProtocol {
     ///
     /// For more information about how to re-run GitHub Actions jobs, see "[Re-run a job from a workflow run](https://docs.github.com/rest/actions/workflow-runs#re-run-a-job-from-a-workflow-run)".
     ///
-    /// OAuth apps and personal access tokens (classic) cannot use this endpoint.
-    ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/check-runs/{check_run_id}/rerequest`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-runs/{check_run_id}/rerequest/post(checks/rerequest-run)`.
     public func checks_sol_rerequest_hyphen_run(
@@ -341,8 +335,6 @@ extension APIProtocol {
     /// Rerequest a check suite
     ///
     /// Triggers GitHub to rerequest an existing check suite, without pushing new code to a repository. This endpoint will trigger the [`check_suite` webhook](https://docs.github.com/webhooks/event-payloads/#check_suite) event with the action `rerequested`. When a check suite is `rerequested`, its `status` is reset to `queued` and the `conclusion` is cleared.
-    ///
-    /// OAuth apps and personal access tokens (classic) cannot use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/check-suites/{check_suite_id}/rerequest`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-suites/{check_suite_id}/rerequest/post(checks/rerequest-suite)`.
@@ -3607,8 +3599,6 @@ public enum Operations {
     ///
     /// For more information about how to re-run GitHub Actions jobs, see "[Re-run a job from a workflow run](https://docs.github.com/rest/actions/workflow-runs#re-run-a-job-from-a-workflow-run)".
     ///
-    /// OAuth apps and personal access tokens (classic) cannot use this endpoint.
-    ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/check-runs/{check_run_id}/rerequest`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-runs/{check_run_id}/rerequest/post(checks/rerequest-run)`.
     public enum checks_sol_rerequest_hyphen_run {
@@ -4710,8 +4700,6 @@ public enum Operations {
     /// Rerequest a check suite
     ///
     /// Triggers GitHub to rerequest an existing check suite, without pushing new code to a repository. This endpoint will trigger the [`check_suite` webhook](https://docs.github.com/webhooks/event-payloads/#check_suite) event with the action `rerequested`. When a check suite is `rerequested`, its `status` is reset to `queued` and the `conclusion` is cleared.
-    ///
-    /// OAuth apps and personal access tokens (classic) cannot use this endpoint.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/check-suites/{check_suite_id}/rerequest`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-suites/{check_suite_id}/rerequest/post(checks/rerequest-suite)`.
