@@ -17,7 +17,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /emojis`.
     /// - Remark: Generated from `#/paths//emojis/get(emojis/get)`.
-    func emojis_sol_get(_ input: Operations.emojis_sol_get.Input) async throws -> Operations.emojis_sol_get.Output
+    func emojisGet(_ input: Operations.EmojisGet.Input) async throws -> Operations.EmojisGet.Output
 }
 
 /// Convenience overloads for operation inputs.
@@ -28,13 +28,22 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /emojis`.
     /// - Remark: Generated from `#/paths//emojis/get(emojis/get)`.
-    public func emojis_sol_get(headers: Operations.emojis_sol_get.Input.Headers = .init()) async throws -> Operations.emojis_sol_get.Output {
-        try await emojis_sol_get(Operations.emojis_sol_get.Input(headers: headers))
+    public func emojisGet(headers: Operations.EmojisGet.Input.Headers = .init()) async throws -> Operations.EmojisGet.Output {
+        try await emojisGet(Operations.EmojisGet.Input(headers: headers))
     }
 }
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -53,8 +62,8 @@ public enum Components {
     public enum RequestBodies {}
     /// Types generated from the `#/components/responses` section of the OpenAPI document.
     public enum Responses {
-        public struct not_modified: Sendable, Hashable {
-            /// Creates a new `not_modified`.
+        public struct NotModified: Sendable, Hashable {
+            /// Creates a new `NotModified`.
             public init() {}
         }
     }
@@ -70,26 +79,26 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /emojis`.
     /// - Remark: Generated from `#/paths//emojis/get(emojis/get)`.
-    public enum emojis_sol_get {
+    public enum EmojisGet {
         public static let id: Swift.String = "emojis/get"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/emojis/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.emojis_sol_get.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.EmojisGet.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.emojis_sol_get.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.EmojisGet.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.emojis_sol_get.Input.Headers
+            public var headers: Operations.EmojisGet.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - headers:
-            public init(headers: Operations.emojis_sol_get.Input.Headers = .init()) {
+            public init(headers: Operations.EmojisGet.Input.Headers = .init()) {
                 self.headers = headers
             }
         }
@@ -98,10 +107,10 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/emojis/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/emojis/GET/responses/200/content/json`.
-                    public struct jsonPayload: Codable, Hashable, Sendable {
+                    public struct JsonPayload: Codable, Hashable, Sendable {
                         /// A container of undocumented properties.
                         public var additionalProperties: [String: Swift.String]
-                        /// Creates a new `jsonPayload`.
+                        /// Creates a new `JsonPayload`.
                         ///
                         /// - Parameters:
                         ///   - additionalProperties: A container of undocumented properties.
@@ -116,12 +125,12 @@ public enum Operations {
                         }
                     }
                     /// - Remark: Generated from `#/paths/emojis/GET/responses/200/content/application\/json`.
-                    case json(Operations.emojis_sol_get.Output.Ok.Body.jsonPayload)
+                    case json(Operations.EmojisGet.Output.Ok.Body.JsonPayload)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Operations.emojis_sol_get.Output.Ok.Body.jsonPayload {
+                    public var json: Operations.EmojisGet.Output.Ok.Body.JsonPayload {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -131,12 +140,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.emojis_sol_get.Output.Ok.Body
+                public var body: Operations.EmojisGet.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.emojis_sol_get.Output.Ok.Body) {
+                public init(body: Operations.EmojisGet.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -145,12 +154,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//emojis/get(emojis/get)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.emojis_sol_get.Output.Ok)
+            case ok(Operations.EmojisGet.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.emojis_sol_get.Output.Ok {
+            public var ok: Operations.EmojisGet.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -168,12 +177,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//emojis/get(emojis/get)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//emojis/get(emojis/get)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):

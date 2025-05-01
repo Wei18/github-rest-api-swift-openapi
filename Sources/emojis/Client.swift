@@ -44,10 +44,10 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /emojis`.
     /// - Remark: Generated from `#/paths//emojis/get(emojis/get)`.
-    public func emojis_sol_get(_ input: Operations.emojis_sol_get.Input) async throws -> Operations.emojis_sol_get.Output {
+    public func emojisGet(_ input: Operations.EmojisGet.Input) async throws -> Operations.EmojisGet.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.emojis_sol_get.id,
+            forOperation: Operations.EmojisGet.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/emojis",
@@ -68,7 +68,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.emojis_sol_get.Output.Ok.Body
+                    let body: Operations.EmojisGet.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -78,7 +78,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Operations.emojis_sol_get.Output.Ok.Body.jsonPayload.self,
+                            Operations.EmojisGet.Output.Ok.Body.JsonPayload.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
