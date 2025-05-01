@@ -20,7 +20,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /orgs/{org}/projects`.
     /// - Remark: Generated from `#/paths//orgs/{org}/projects/get(projects/list-for-org)`.
     @available(*, deprecated)
-    func projects_sol_list_hyphen_for_hyphen_org(_ input: Operations.projects_sol_list_hyphen_for_hyphen_org.Input) async throws -> Operations.projects_sol_list_hyphen_for_hyphen_org.Output
+    func projectsListForOrg(_ input: Operations.ProjectsListForOrg.Input) async throws -> Operations.ProjectsListForOrg.Output
     /// Create an organization project
     ///
     /// > [!WARNING]
@@ -30,7 +30,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `POST /orgs/{org}/projects`.
     /// - Remark: Generated from `#/paths//orgs/{org}/projects/post(projects/create-for-org)`.
     @available(*, deprecated)
-    func projects_sol_create_hyphen_for_hyphen_org(_ input: Operations.projects_sol_create_hyphen_for_hyphen_org.Input) async throws -> Operations.projects_sol_create_hyphen_for_hyphen_org.Output
+    func projectsCreateForOrg(_ input: Operations.ProjectsCreateForOrg.Input) async throws -> Operations.ProjectsCreateForOrg.Output
     /// Get a project card
     ///
     /// > [!WARNING]
@@ -40,7 +40,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /projects/columns/cards/{card_id}`.
     /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/get(projects/get-card)`.
     @available(*, deprecated)
-    func projects_sol_get_hyphen_card(_ input: Operations.projects_sol_get_hyphen_card.Input) async throws -> Operations.projects_sol_get_hyphen_card.Output
+    func projectsGetCard(_ input: Operations.ProjectsGetCard.Input) async throws -> Operations.ProjectsGetCard.Output
     /// Update an existing project card
     ///
     /// > [!WARNING]
@@ -50,7 +50,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `PATCH /projects/columns/cards/{card_id}`.
     /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/patch(projects/update-card)`.
     @available(*, deprecated)
-    func projects_sol_update_hyphen_card(_ input: Operations.projects_sol_update_hyphen_card.Input) async throws -> Operations.projects_sol_update_hyphen_card.Output
+    func projectsUpdateCard(_ input: Operations.ProjectsUpdateCard.Input) async throws -> Operations.ProjectsUpdateCard.Output
     /// Delete a project card
     ///
     /// > [!WARNING]
@@ -60,7 +60,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `DELETE /projects/columns/cards/{card_id}`.
     /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/delete(projects/delete-card)`.
     @available(*, deprecated)
-    func projects_sol_delete_hyphen_card(_ input: Operations.projects_sol_delete_hyphen_card.Input) async throws -> Operations.projects_sol_delete_hyphen_card.Output
+    func projectsDeleteCard(_ input: Operations.ProjectsDeleteCard.Input) async throws -> Operations.ProjectsDeleteCard.Output
     /// Move a project card
     ///
     /// > [!WARNING]
@@ -70,7 +70,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `POST /projects/columns/cards/{card_id}/moves`.
     /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/moves/post(projects/move-card)`.
     @available(*, deprecated)
-    func projects_sol_move_hyphen_card(_ input: Operations.projects_sol_move_hyphen_card.Input) async throws -> Operations.projects_sol_move_hyphen_card.Output
+    func projectsMoveCard(_ input: Operations.ProjectsMoveCard.Input) async throws -> Operations.ProjectsMoveCard.Output
     /// Get a project column
     ///
     /// > [!WARNING]
@@ -80,7 +80,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /projects/columns/{column_id}`.
     /// - Remark: Generated from `#/paths//projects/columns/{column_id}/get(projects/get-column)`.
     @available(*, deprecated)
-    func projects_sol_get_hyphen_column(_ input: Operations.projects_sol_get_hyphen_column.Input) async throws -> Operations.projects_sol_get_hyphen_column.Output
+    func projectsGetColumn(_ input: Operations.ProjectsGetColumn.Input) async throws -> Operations.ProjectsGetColumn.Output
     /// Update an existing project column
     ///
     /// > [!WARNING]
@@ -90,7 +90,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `PATCH /projects/columns/{column_id}`.
     /// - Remark: Generated from `#/paths//projects/columns/{column_id}/patch(projects/update-column)`.
     @available(*, deprecated)
-    func projects_sol_update_hyphen_column(_ input: Operations.projects_sol_update_hyphen_column.Input) async throws -> Operations.projects_sol_update_hyphen_column.Output
+    func projectsUpdateColumn(_ input: Operations.ProjectsUpdateColumn.Input) async throws -> Operations.ProjectsUpdateColumn.Output
     /// Delete a project column
     ///
     /// > [!WARNING]
@@ -100,7 +100,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `DELETE /projects/columns/{column_id}`.
     /// - Remark: Generated from `#/paths//projects/columns/{column_id}/delete(projects/delete-column)`.
     @available(*, deprecated)
-    func projects_sol_delete_hyphen_column(_ input: Operations.projects_sol_delete_hyphen_column.Input) async throws -> Operations.projects_sol_delete_hyphen_column.Output
+    func projectsDeleteColumn(_ input: Operations.ProjectsDeleteColumn.Input) async throws -> Operations.ProjectsDeleteColumn.Output
     /// List project cards
     ///
     /// > [!WARNING]
@@ -110,7 +110,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /projects/columns/{column_id}/cards`.
     /// - Remark: Generated from `#/paths//projects/columns/{column_id}/cards/get(projects/list-cards)`.
     @available(*, deprecated)
-    func projects_sol_list_hyphen_cards(_ input: Operations.projects_sol_list_hyphen_cards.Input) async throws -> Operations.projects_sol_list_hyphen_cards.Output
+    func projectsListCards(_ input: Operations.ProjectsListCards.Input) async throws -> Operations.ProjectsListCards.Output
     /// Create a project card
     ///
     /// > [!WARNING]
@@ -120,7 +120,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `POST /projects/columns/{column_id}/cards`.
     /// - Remark: Generated from `#/paths//projects/columns/{column_id}/cards/post(projects/create-card)`.
     @available(*, deprecated)
-    func projects_sol_create_hyphen_card(_ input: Operations.projects_sol_create_hyphen_card.Input) async throws -> Operations.projects_sol_create_hyphen_card.Output
+    func projectsCreateCard(_ input: Operations.ProjectsCreateCard.Input) async throws -> Operations.ProjectsCreateCard.Output
     /// Move a project column
     ///
     /// > [!WARNING]
@@ -130,7 +130,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `POST /projects/columns/{column_id}/moves`.
     /// - Remark: Generated from `#/paths//projects/columns/{column_id}/moves/post(projects/move-column)`.
     @available(*, deprecated)
-    func projects_sol_move_hyphen_column(_ input: Operations.projects_sol_move_hyphen_column.Input) async throws -> Operations.projects_sol_move_hyphen_column.Output
+    func projectsMoveColumn(_ input: Operations.ProjectsMoveColumn.Input) async throws -> Operations.ProjectsMoveColumn.Output
     /// Get a project
     ///
     /// > [!WARNING]
@@ -140,7 +140,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /projects/{project_id}`.
     /// - Remark: Generated from `#/paths//projects/{project_id}/get(projects/get)`.
     @available(*, deprecated)
-    func projects_sol_get(_ input: Operations.projects_sol_get.Input) async throws -> Operations.projects_sol_get.Output
+    func projectsGet(_ input: Operations.ProjectsGet.Input) async throws -> Operations.ProjectsGet.Output
     /// Update a project
     ///
     /// > [!WARNING]
@@ -150,7 +150,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `PATCH /projects/{project_id}`.
     /// - Remark: Generated from `#/paths//projects/{project_id}/patch(projects/update)`.
     @available(*, deprecated)
-    func projects_sol_update(_ input: Operations.projects_sol_update.Input) async throws -> Operations.projects_sol_update.Output
+    func projectsUpdate(_ input: Operations.ProjectsUpdate.Input) async throws -> Operations.ProjectsUpdate.Output
     /// Delete a project
     ///
     /// > [!WARNING]
@@ -160,7 +160,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `DELETE /projects/{project_id}`.
     /// - Remark: Generated from `#/paths//projects/{project_id}/delete(projects/delete)`.
     @available(*, deprecated)
-    func projects_sol_delete(_ input: Operations.projects_sol_delete.Input) async throws -> Operations.projects_sol_delete.Output
+    func projectsDelete(_ input: Operations.ProjectsDelete.Input) async throws -> Operations.ProjectsDelete.Output
     /// List project collaborators
     ///
     /// > [!WARNING]
@@ -170,7 +170,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /projects/{project_id}/collaborators`.
     /// - Remark: Generated from `#/paths//projects/{project_id}/collaborators/get(projects/list-collaborators)`.
     @available(*, deprecated)
-    func projects_sol_list_hyphen_collaborators(_ input: Operations.projects_sol_list_hyphen_collaborators.Input) async throws -> Operations.projects_sol_list_hyphen_collaborators.Output
+    func projectsListCollaborators(_ input: Operations.ProjectsListCollaborators.Input) async throws -> Operations.ProjectsListCollaborators.Output
     /// Add project collaborator
     ///
     /// > [!WARNING]
@@ -180,7 +180,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `PUT /projects/{project_id}/collaborators/{username}`.
     /// - Remark: Generated from `#/paths//projects/{project_id}/collaborators/{username}/put(projects/add-collaborator)`.
     @available(*, deprecated)
-    func projects_sol_add_hyphen_collaborator(_ input: Operations.projects_sol_add_hyphen_collaborator.Input) async throws -> Operations.projects_sol_add_hyphen_collaborator.Output
+    func projectsAddCollaborator(_ input: Operations.ProjectsAddCollaborator.Input) async throws -> Operations.ProjectsAddCollaborator.Output
     /// Remove user as a collaborator
     ///
     /// > [!WARNING]
@@ -190,7 +190,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `DELETE /projects/{project_id}/collaborators/{username}`.
     /// - Remark: Generated from `#/paths//projects/{project_id}/collaborators/{username}/delete(projects/remove-collaborator)`.
     @available(*, deprecated)
-    func projects_sol_remove_hyphen_collaborator(_ input: Operations.projects_sol_remove_hyphen_collaborator.Input) async throws -> Operations.projects_sol_remove_hyphen_collaborator.Output
+    func projectsRemoveCollaborator(_ input: Operations.ProjectsRemoveCollaborator.Input) async throws -> Operations.ProjectsRemoveCollaborator.Output
     /// Get project permission for a user
     ///
     /// > [!WARNING]
@@ -200,7 +200,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /projects/{project_id}/collaborators/{username}/permission`.
     /// - Remark: Generated from `#/paths//projects/{project_id}/collaborators/{username}/permission/get(projects/get-permission-for-user)`.
     @available(*, deprecated)
-    func projects_sol_get_hyphen_permission_hyphen_for_hyphen_user(_ input: Operations.projects_sol_get_hyphen_permission_hyphen_for_hyphen_user.Input) async throws -> Operations.projects_sol_get_hyphen_permission_hyphen_for_hyphen_user.Output
+    func projectsGetPermissionForUser(_ input: Operations.ProjectsGetPermissionForUser.Input) async throws -> Operations.ProjectsGetPermissionForUser.Output
     /// List project columns
     ///
     /// > [!WARNING]
@@ -210,7 +210,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /projects/{project_id}/columns`.
     /// - Remark: Generated from `#/paths//projects/{project_id}/columns/get(projects/list-columns)`.
     @available(*, deprecated)
-    func projects_sol_list_hyphen_columns(_ input: Operations.projects_sol_list_hyphen_columns.Input) async throws -> Operations.projects_sol_list_hyphen_columns.Output
+    func projectsListColumns(_ input: Operations.ProjectsListColumns.Input) async throws -> Operations.ProjectsListColumns.Output
     /// Create a project column
     ///
     /// > [!WARNING]
@@ -220,7 +220,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `POST /projects/{project_id}/columns`.
     /// - Remark: Generated from `#/paths//projects/{project_id}/columns/post(projects/create-column)`.
     @available(*, deprecated)
-    func projects_sol_create_hyphen_column(_ input: Operations.projects_sol_create_hyphen_column.Input) async throws -> Operations.projects_sol_create_hyphen_column.Output
+    func projectsCreateColumn(_ input: Operations.ProjectsCreateColumn.Input) async throws -> Operations.ProjectsCreateColumn.Output
     /// List repository projects
     ///
     /// > [!WARNING]
@@ -230,7 +230,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/projects`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/projects/get(projects/list-for-repo)`.
     @available(*, deprecated)
-    func projects_sol_list_hyphen_for_hyphen_repo(_ input: Operations.projects_sol_list_hyphen_for_hyphen_repo.Input) async throws -> Operations.projects_sol_list_hyphen_for_hyphen_repo.Output
+    func projectsListForRepo(_ input: Operations.ProjectsListForRepo.Input) async throws -> Operations.ProjectsListForRepo.Output
     /// Create a repository project
     ///
     /// > [!WARNING]
@@ -240,7 +240,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/projects`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/projects/post(projects/create-for-repo)`.
     @available(*, deprecated)
-    func projects_sol_create_hyphen_for_hyphen_repo(_ input: Operations.projects_sol_create_hyphen_for_hyphen_repo.Input) async throws -> Operations.projects_sol_create_hyphen_for_hyphen_repo.Output
+    func projectsCreateForRepo(_ input: Operations.ProjectsCreateForRepo.Input) async throws -> Operations.ProjectsCreateForRepo.Output
     /// Create a user project
     ///
     /// > [!WARNING]
@@ -250,7 +250,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `POST /user/projects`.
     /// - Remark: Generated from `#/paths//user/projects/post(projects/create-for-authenticated-user)`.
     @available(*, deprecated)
-    func projects_sol_create_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.projects_sol_create_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.projects_sol_create_hyphen_for_hyphen_authenticated_hyphen_user.Output
+    func projectsCreateForAuthenticatedUser(_ input: Operations.ProjectsCreateForAuthenticatedUser.Input) async throws -> Operations.ProjectsCreateForAuthenticatedUser.Output
     /// List user projects
     ///
     /// > [!WARNING]
@@ -260,7 +260,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /users/{username}/projects`.
     /// - Remark: Generated from `#/paths//users/{username}/projects/get(projects/list-for-user)`.
     @available(*, deprecated)
-    func projects_sol_list_hyphen_for_hyphen_user(_ input: Operations.projects_sol_list_hyphen_for_hyphen_user.Input) async throws -> Operations.projects_sol_list_hyphen_for_hyphen_user.Output
+    func projectsListForUser(_ input: Operations.ProjectsListForUser.Input) async throws -> Operations.ProjectsListForUser.Output
 }
 
 /// Convenience overloads for operation inputs.
@@ -274,12 +274,12 @@ extension APIProtocol {
     /// - Remark: HTTP `GET /orgs/{org}/projects`.
     /// - Remark: Generated from `#/paths//orgs/{org}/projects/get(projects/list-for-org)`.
     @available(*, deprecated)
-    public func projects_sol_list_hyphen_for_hyphen_org(
-        path: Operations.projects_sol_list_hyphen_for_hyphen_org.Input.Path,
-        query: Operations.projects_sol_list_hyphen_for_hyphen_org.Input.Query = .init(),
-        headers: Operations.projects_sol_list_hyphen_for_hyphen_org.Input.Headers = .init()
-    ) async throws -> Operations.projects_sol_list_hyphen_for_hyphen_org.Output {
-        try await projects_sol_list_hyphen_for_hyphen_org(Operations.projects_sol_list_hyphen_for_hyphen_org.Input(
+    public func projectsListForOrg(
+        path: Operations.ProjectsListForOrg.Input.Path,
+        query: Operations.ProjectsListForOrg.Input.Query = .init(),
+        headers: Operations.ProjectsListForOrg.Input.Headers = .init()
+    ) async throws -> Operations.ProjectsListForOrg.Output {
+        try await projectsListForOrg(Operations.ProjectsListForOrg.Input(
             path: path,
             query: query,
             headers: headers
@@ -294,12 +294,12 @@ extension APIProtocol {
     /// - Remark: HTTP `POST /orgs/{org}/projects`.
     /// - Remark: Generated from `#/paths//orgs/{org}/projects/post(projects/create-for-org)`.
     @available(*, deprecated)
-    public func projects_sol_create_hyphen_for_hyphen_org(
-        path: Operations.projects_sol_create_hyphen_for_hyphen_org.Input.Path,
-        headers: Operations.projects_sol_create_hyphen_for_hyphen_org.Input.Headers = .init(),
-        body: Operations.projects_sol_create_hyphen_for_hyphen_org.Input.Body
-    ) async throws -> Operations.projects_sol_create_hyphen_for_hyphen_org.Output {
-        try await projects_sol_create_hyphen_for_hyphen_org(Operations.projects_sol_create_hyphen_for_hyphen_org.Input(
+    public func projectsCreateForOrg(
+        path: Operations.ProjectsCreateForOrg.Input.Path,
+        headers: Operations.ProjectsCreateForOrg.Input.Headers = .init(),
+        body: Operations.ProjectsCreateForOrg.Input.Body
+    ) async throws -> Operations.ProjectsCreateForOrg.Output {
+        try await projectsCreateForOrg(Operations.ProjectsCreateForOrg.Input(
             path: path,
             headers: headers,
             body: body
@@ -314,11 +314,11 @@ extension APIProtocol {
     /// - Remark: HTTP `GET /projects/columns/cards/{card_id}`.
     /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/get(projects/get-card)`.
     @available(*, deprecated)
-    public func projects_sol_get_hyphen_card(
-        path: Operations.projects_sol_get_hyphen_card.Input.Path,
-        headers: Operations.projects_sol_get_hyphen_card.Input.Headers = .init()
-    ) async throws -> Operations.projects_sol_get_hyphen_card.Output {
-        try await projects_sol_get_hyphen_card(Operations.projects_sol_get_hyphen_card.Input(
+    public func projectsGetCard(
+        path: Operations.ProjectsGetCard.Input.Path,
+        headers: Operations.ProjectsGetCard.Input.Headers = .init()
+    ) async throws -> Operations.ProjectsGetCard.Output {
+        try await projectsGetCard(Operations.ProjectsGetCard.Input(
             path: path,
             headers: headers
         ))
@@ -332,12 +332,12 @@ extension APIProtocol {
     /// - Remark: HTTP `PATCH /projects/columns/cards/{card_id}`.
     /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/patch(projects/update-card)`.
     @available(*, deprecated)
-    public func projects_sol_update_hyphen_card(
-        path: Operations.projects_sol_update_hyphen_card.Input.Path,
-        headers: Operations.projects_sol_update_hyphen_card.Input.Headers = .init(),
-        body: Operations.projects_sol_update_hyphen_card.Input.Body? = nil
-    ) async throws -> Operations.projects_sol_update_hyphen_card.Output {
-        try await projects_sol_update_hyphen_card(Operations.projects_sol_update_hyphen_card.Input(
+    public func projectsUpdateCard(
+        path: Operations.ProjectsUpdateCard.Input.Path,
+        headers: Operations.ProjectsUpdateCard.Input.Headers = .init(),
+        body: Operations.ProjectsUpdateCard.Input.Body? = nil
+    ) async throws -> Operations.ProjectsUpdateCard.Output {
+        try await projectsUpdateCard(Operations.ProjectsUpdateCard.Input(
             path: path,
             headers: headers,
             body: body
@@ -352,11 +352,11 @@ extension APIProtocol {
     /// - Remark: HTTP `DELETE /projects/columns/cards/{card_id}`.
     /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/delete(projects/delete-card)`.
     @available(*, deprecated)
-    public func projects_sol_delete_hyphen_card(
-        path: Operations.projects_sol_delete_hyphen_card.Input.Path,
-        headers: Operations.projects_sol_delete_hyphen_card.Input.Headers = .init()
-    ) async throws -> Operations.projects_sol_delete_hyphen_card.Output {
-        try await projects_sol_delete_hyphen_card(Operations.projects_sol_delete_hyphen_card.Input(
+    public func projectsDeleteCard(
+        path: Operations.ProjectsDeleteCard.Input.Path,
+        headers: Operations.ProjectsDeleteCard.Input.Headers = .init()
+    ) async throws -> Operations.ProjectsDeleteCard.Output {
+        try await projectsDeleteCard(Operations.ProjectsDeleteCard.Input(
             path: path,
             headers: headers
         ))
@@ -370,12 +370,12 @@ extension APIProtocol {
     /// - Remark: HTTP `POST /projects/columns/cards/{card_id}/moves`.
     /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/moves/post(projects/move-card)`.
     @available(*, deprecated)
-    public func projects_sol_move_hyphen_card(
-        path: Operations.projects_sol_move_hyphen_card.Input.Path,
-        headers: Operations.projects_sol_move_hyphen_card.Input.Headers = .init(),
-        body: Operations.projects_sol_move_hyphen_card.Input.Body
-    ) async throws -> Operations.projects_sol_move_hyphen_card.Output {
-        try await projects_sol_move_hyphen_card(Operations.projects_sol_move_hyphen_card.Input(
+    public func projectsMoveCard(
+        path: Operations.ProjectsMoveCard.Input.Path,
+        headers: Operations.ProjectsMoveCard.Input.Headers = .init(),
+        body: Operations.ProjectsMoveCard.Input.Body
+    ) async throws -> Operations.ProjectsMoveCard.Output {
+        try await projectsMoveCard(Operations.ProjectsMoveCard.Input(
             path: path,
             headers: headers,
             body: body
@@ -390,11 +390,11 @@ extension APIProtocol {
     /// - Remark: HTTP `GET /projects/columns/{column_id}`.
     /// - Remark: Generated from `#/paths//projects/columns/{column_id}/get(projects/get-column)`.
     @available(*, deprecated)
-    public func projects_sol_get_hyphen_column(
-        path: Operations.projects_sol_get_hyphen_column.Input.Path,
-        headers: Operations.projects_sol_get_hyphen_column.Input.Headers = .init()
-    ) async throws -> Operations.projects_sol_get_hyphen_column.Output {
-        try await projects_sol_get_hyphen_column(Operations.projects_sol_get_hyphen_column.Input(
+    public func projectsGetColumn(
+        path: Operations.ProjectsGetColumn.Input.Path,
+        headers: Operations.ProjectsGetColumn.Input.Headers = .init()
+    ) async throws -> Operations.ProjectsGetColumn.Output {
+        try await projectsGetColumn(Operations.ProjectsGetColumn.Input(
             path: path,
             headers: headers
         ))
@@ -408,12 +408,12 @@ extension APIProtocol {
     /// - Remark: HTTP `PATCH /projects/columns/{column_id}`.
     /// - Remark: Generated from `#/paths//projects/columns/{column_id}/patch(projects/update-column)`.
     @available(*, deprecated)
-    public func projects_sol_update_hyphen_column(
-        path: Operations.projects_sol_update_hyphen_column.Input.Path,
-        headers: Operations.projects_sol_update_hyphen_column.Input.Headers = .init(),
-        body: Operations.projects_sol_update_hyphen_column.Input.Body
-    ) async throws -> Operations.projects_sol_update_hyphen_column.Output {
-        try await projects_sol_update_hyphen_column(Operations.projects_sol_update_hyphen_column.Input(
+    public func projectsUpdateColumn(
+        path: Operations.ProjectsUpdateColumn.Input.Path,
+        headers: Operations.ProjectsUpdateColumn.Input.Headers = .init(),
+        body: Operations.ProjectsUpdateColumn.Input.Body
+    ) async throws -> Operations.ProjectsUpdateColumn.Output {
+        try await projectsUpdateColumn(Operations.ProjectsUpdateColumn.Input(
             path: path,
             headers: headers,
             body: body
@@ -428,11 +428,11 @@ extension APIProtocol {
     /// - Remark: HTTP `DELETE /projects/columns/{column_id}`.
     /// - Remark: Generated from `#/paths//projects/columns/{column_id}/delete(projects/delete-column)`.
     @available(*, deprecated)
-    public func projects_sol_delete_hyphen_column(
-        path: Operations.projects_sol_delete_hyphen_column.Input.Path,
-        headers: Operations.projects_sol_delete_hyphen_column.Input.Headers = .init()
-    ) async throws -> Operations.projects_sol_delete_hyphen_column.Output {
-        try await projects_sol_delete_hyphen_column(Operations.projects_sol_delete_hyphen_column.Input(
+    public func projectsDeleteColumn(
+        path: Operations.ProjectsDeleteColumn.Input.Path,
+        headers: Operations.ProjectsDeleteColumn.Input.Headers = .init()
+    ) async throws -> Operations.ProjectsDeleteColumn.Output {
+        try await projectsDeleteColumn(Operations.ProjectsDeleteColumn.Input(
             path: path,
             headers: headers
         ))
@@ -446,12 +446,12 @@ extension APIProtocol {
     /// - Remark: HTTP `GET /projects/columns/{column_id}/cards`.
     /// - Remark: Generated from `#/paths//projects/columns/{column_id}/cards/get(projects/list-cards)`.
     @available(*, deprecated)
-    public func projects_sol_list_hyphen_cards(
-        path: Operations.projects_sol_list_hyphen_cards.Input.Path,
-        query: Operations.projects_sol_list_hyphen_cards.Input.Query = .init(),
-        headers: Operations.projects_sol_list_hyphen_cards.Input.Headers = .init()
-    ) async throws -> Operations.projects_sol_list_hyphen_cards.Output {
-        try await projects_sol_list_hyphen_cards(Operations.projects_sol_list_hyphen_cards.Input(
+    public func projectsListCards(
+        path: Operations.ProjectsListCards.Input.Path,
+        query: Operations.ProjectsListCards.Input.Query = .init(),
+        headers: Operations.ProjectsListCards.Input.Headers = .init()
+    ) async throws -> Operations.ProjectsListCards.Output {
+        try await projectsListCards(Operations.ProjectsListCards.Input(
             path: path,
             query: query,
             headers: headers
@@ -466,12 +466,12 @@ extension APIProtocol {
     /// - Remark: HTTP `POST /projects/columns/{column_id}/cards`.
     /// - Remark: Generated from `#/paths//projects/columns/{column_id}/cards/post(projects/create-card)`.
     @available(*, deprecated)
-    public func projects_sol_create_hyphen_card(
-        path: Operations.projects_sol_create_hyphen_card.Input.Path,
-        headers: Operations.projects_sol_create_hyphen_card.Input.Headers = .init(),
-        body: Operations.projects_sol_create_hyphen_card.Input.Body
-    ) async throws -> Operations.projects_sol_create_hyphen_card.Output {
-        try await projects_sol_create_hyphen_card(Operations.projects_sol_create_hyphen_card.Input(
+    public func projectsCreateCard(
+        path: Operations.ProjectsCreateCard.Input.Path,
+        headers: Operations.ProjectsCreateCard.Input.Headers = .init(),
+        body: Operations.ProjectsCreateCard.Input.Body
+    ) async throws -> Operations.ProjectsCreateCard.Output {
+        try await projectsCreateCard(Operations.ProjectsCreateCard.Input(
             path: path,
             headers: headers,
             body: body
@@ -486,12 +486,12 @@ extension APIProtocol {
     /// - Remark: HTTP `POST /projects/columns/{column_id}/moves`.
     /// - Remark: Generated from `#/paths//projects/columns/{column_id}/moves/post(projects/move-column)`.
     @available(*, deprecated)
-    public func projects_sol_move_hyphen_column(
-        path: Operations.projects_sol_move_hyphen_column.Input.Path,
-        headers: Operations.projects_sol_move_hyphen_column.Input.Headers = .init(),
-        body: Operations.projects_sol_move_hyphen_column.Input.Body
-    ) async throws -> Operations.projects_sol_move_hyphen_column.Output {
-        try await projects_sol_move_hyphen_column(Operations.projects_sol_move_hyphen_column.Input(
+    public func projectsMoveColumn(
+        path: Operations.ProjectsMoveColumn.Input.Path,
+        headers: Operations.ProjectsMoveColumn.Input.Headers = .init(),
+        body: Operations.ProjectsMoveColumn.Input.Body
+    ) async throws -> Operations.ProjectsMoveColumn.Output {
+        try await projectsMoveColumn(Operations.ProjectsMoveColumn.Input(
             path: path,
             headers: headers,
             body: body
@@ -506,11 +506,11 @@ extension APIProtocol {
     /// - Remark: HTTP `GET /projects/{project_id}`.
     /// - Remark: Generated from `#/paths//projects/{project_id}/get(projects/get)`.
     @available(*, deprecated)
-    public func projects_sol_get(
-        path: Operations.projects_sol_get.Input.Path,
-        headers: Operations.projects_sol_get.Input.Headers = .init()
-    ) async throws -> Operations.projects_sol_get.Output {
-        try await projects_sol_get(Operations.projects_sol_get.Input(
+    public func projectsGet(
+        path: Operations.ProjectsGet.Input.Path,
+        headers: Operations.ProjectsGet.Input.Headers = .init()
+    ) async throws -> Operations.ProjectsGet.Output {
+        try await projectsGet(Operations.ProjectsGet.Input(
             path: path,
             headers: headers
         ))
@@ -524,12 +524,12 @@ extension APIProtocol {
     /// - Remark: HTTP `PATCH /projects/{project_id}`.
     /// - Remark: Generated from `#/paths//projects/{project_id}/patch(projects/update)`.
     @available(*, deprecated)
-    public func projects_sol_update(
-        path: Operations.projects_sol_update.Input.Path,
-        headers: Operations.projects_sol_update.Input.Headers = .init(),
-        body: Operations.projects_sol_update.Input.Body? = nil
-    ) async throws -> Operations.projects_sol_update.Output {
-        try await projects_sol_update(Operations.projects_sol_update.Input(
+    public func projectsUpdate(
+        path: Operations.ProjectsUpdate.Input.Path,
+        headers: Operations.ProjectsUpdate.Input.Headers = .init(),
+        body: Operations.ProjectsUpdate.Input.Body? = nil
+    ) async throws -> Operations.ProjectsUpdate.Output {
+        try await projectsUpdate(Operations.ProjectsUpdate.Input(
             path: path,
             headers: headers,
             body: body
@@ -544,11 +544,11 @@ extension APIProtocol {
     /// - Remark: HTTP `DELETE /projects/{project_id}`.
     /// - Remark: Generated from `#/paths//projects/{project_id}/delete(projects/delete)`.
     @available(*, deprecated)
-    public func projects_sol_delete(
-        path: Operations.projects_sol_delete.Input.Path,
-        headers: Operations.projects_sol_delete.Input.Headers = .init()
-    ) async throws -> Operations.projects_sol_delete.Output {
-        try await projects_sol_delete(Operations.projects_sol_delete.Input(
+    public func projectsDelete(
+        path: Operations.ProjectsDelete.Input.Path,
+        headers: Operations.ProjectsDelete.Input.Headers = .init()
+    ) async throws -> Operations.ProjectsDelete.Output {
+        try await projectsDelete(Operations.ProjectsDelete.Input(
             path: path,
             headers: headers
         ))
@@ -562,12 +562,12 @@ extension APIProtocol {
     /// - Remark: HTTP `GET /projects/{project_id}/collaborators`.
     /// - Remark: Generated from `#/paths//projects/{project_id}/collaborators/get(projects/list-collaborators)`.
     @available(*, deprecated)
-    public func projects_sol_list_hyphen_collaborators(
-        path: Operations.projects_sol_list_hyphen_collaborators.Input.Path,
-        query: Operations.projects_sol_list_hyphen_collaborators.Input.Query = .init(),
-        headers: Operations.projects_sol_list_hyphen_collaborators.Input.Headers = .init()
-    ) async throws -> Operations.projects_sol_list_hyphen_collaborators.Output {
-        try await projects_sol_list_hyphen_collaborators(Operations.projects_sol_list_hyphen_collaborators.Input(
+    public func projectsListCollaborators(
+        path: Operations.ProjectsListCollaborators.Input.Path,
+        query: Operations.ProjectsListCollaborators.Input.Query = .init(),
+        headers: Operations.ProjectsListCollaborators.Input.Headers = .init()
+    ) async throws -> Operations.ProjectsListCollaborators.Output {
+        try await projectsListCollaborators(Operations.ProjectsListCollaborators.Input(
             path: path,
             query: query,
             headers: headers
@@ -582,12 +582,12 @@ extension APIProtocol {
     /// - Remark: HTTP `PUT /projects/{project_id}/collaborators/{username}`.
     /// - Remark: Generated from `#/paths//projects/{project_id}/collaborators/{username}/put(projects/add-collaborator)`.
     @available(*, deprecated)
-    public func projects_sol_add_hyphen_collaborator(
-        path: Operations.projects_sol_add_hyphen_collaborator.Input.Path,
-        headers: Operations.projects_sol_add_hyphen_collaborator.Input.Headers = .init(),
-        body: Operations.projects_sol_add_hyphen_collaborator.Input.Body? = nil
-    ) async throws -> Operations.projects_sol_add_hyphen_collaborator.Output {
-        try await projects_sol_add_hyphen_collaborator(Operations.projects_sol_add_hyphen_collaborator.Input(
+    public func projectsAddCollaborator(
+        path: Operations.ProjectsAddCollaborator.Input.Path,
+        headers: Operations.ProjectsAddCollaborator.Input.Headers = .init(),
+        body: Operations.ProjectsAddCollaborator.Input.Body? = nil
+    ) async throws -> Operations.ProjectsAddCollaborator.Output {
+        try await projectsAddCollaborator(Operations.ProjectsAddCollaborator.Input(
             path: path,
             headers: headers,
             body: body
@@ -602,11 +602,11 @@ extension APIProtocol {
     /// - Remark: HTTP `DELETE /projects/{project_id}/collaborators/{username}`.
     /// - Remark: Generated from `#/paths//projects/{project_id}/collaborators/{username}/delete(projects/remove-collaborator)`.
     @available(*, deprecated)
-    public func projects_sol_remove_hyphen_collaborator(
-        path: Operations.projects_sol_remove_hyphen_collaborator.Input.Path,
-        headers: Operations.projects_sol_remove_hyphen_collaborator.Input.Headers = .init()
-    ) async throws -> Operations.projects_sol_remove_hyphen_collaborator.Output {
-        try await projects_sol_remove_hyphen_collaborator(Operations.projects_sol_remove_hyphen_collaborator.Input(
+    public func projectsRemoveCollaborator(
+        path: Operations.ProjectsRemoveCollaborator.Input.Path,
+        headers: Operations.ProjectsRemoveCollaborator.Input.Headers = .init()
+    ) async throws -> Operations.ProjectsRemoveCollaborator.Output {
+        try await projectsRemoveCollaborator(Operations.ProjectsRemoveCollaborator.Input(
             path: path,
             headers: headers
         ))
@@ -620,11 +620,11 @@ extension APIProtocol {
     /// - Remark: HTTP `GET /projects/{project_id}/collaborators/{username}/permission`.
     /// - Remark: Generated from `#/paths//projects/{project_id}/collaborators/{username}/permission/get(projects/get-permission-for-user)`.
     @available(*, deprecated)
-    public func projects_sol_get_hyphen_permission_hyphen_for_hyphen_user(
-        path: Operations.projects_sol_get_hyphen_permission_hyphen_for_hyphen_user.Input.Path,
-        headers: Operations.projects_sol_get_hyphen_permission_hyphen_for_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.projects_sol_get_hyphen_permission_hyphen_for_hyphen_user.Output {
-        try await projects_sol_get_hyphen_permission_hyphen_for_hyphen_user(Operations.projects_sol_get_hyphen_permission_hyphen_for_hyphen_user.Input(
+    public func projectsGetPermissionForUser(
+        path: Operations.ProjectsGetPermissionForUser.Input.Path,
+        headers: Operations.ProjectsGetPermissionForUser.Input.Headers = .init()
+    ) async throws -> Operations.ProjectsGetPermissionForUser.Output {
+        try await projectsGetPermissionForUser(Operations.ProjectsGetPermissionForUser.Input(
             path: path,
             headers: headers
         ))
@@ -638,12 +638,12 @@ extension APIProtocol {
     /// - Remark: HTTP `GET /projects/{project_id}/columns`.
     /// - Remark: Generated from `#/paths//projects/{project_id}/columns/get(projects/list-columns)`.
     @available(*, deprecated)
-    public func projects_sol_list_hyphen_columns(
-        path: Operations.projects_sol_list_hyphen_columns.Input.Path,
-        query: Operations.projects_sol_list_hyphen_columns.Input.Query = .init(),
-        headers: Operations.projects_sol_list_hyphen_columns.Input.Headers = .init()
-    ) async throws -> Operations.projects_sol_list_hyphen_columns.Output {
-        try await projects_sol_list_hyphen_columns(Operations.projects_sol_list_hyphen_columns.Input(
+    public func projectsListColumns(
+        path: Operations.ProjectsListColumns.Input.Path,
+        query: Operations.ProjectsListColumns.Input.Query = .init(),
+        headers: Operations.ProjectsListColumns.Input.Headers = .init()
+    ) async throws -> Operations.ProjectsListColumns.Output {
+        try await projectsListColumns(Operations.ProjectsListColumns.Input(
             path: path,
             query: query,
             headers: headers
@@ -658,12 +658,12 @@ extension APIProtocol {
     /// - Remark: HTTP `POST /projects/{project_id}/columns`.
     /// - Remark: Generated from `#/paths//projects/{project_id}/columns/post(projects/create-column)`.
     @available(*, deprecated)
-    public func projects_sol_create_hyphen_column(
-        path: Operations.projects_sol_create_hyphen_column.Input.Path,
-        headers: Operations.projects_sol_create_hyphen_column.Input.Headers = .init(),
-        body: Operations.projects_sol_create_hyphen_column.Input.Body
-    ) async throws -> Operations.projects_sol_create_hyphen_column.Output {
-        try await projects_sol_create_hyphen_column(Operations.projects_sol_create_hyphen_column.Input(
+    public func projectsCreateColumn(
+        path: Operations.ProjectsCreateColumn.Input.Path,
+        headers: Operations.ProjectsCreateColumn.Input.Headers = .init(),
+        body: Operations.ProjectsCreateColumn.Input.Body
+    ) async throws -> Operations.ProjectsCreateColumn.Output {
+        try await projectsCreateColumn(Operations.ProjectsCreateColumn.Input(
             path: path,
             headers: headers,
             body: body
@@ -678,12 +678,12 @@ extension APIProtocol {
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/projects`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/projects/get(projects/list-for-repo)`.
     @available(*, deprecated)
-    public func projects_sol_list_hyphen_for_hyphen_repo(
-        path: Operations.projects_sol_list_hyphen_for_hyphen_repo.Input.Path,
-        query: Operations.projects_sol_list_hyphen_for_hyphen_repo.Input.Query = .init(),
-        headers: Operations.projects_sol_list_hyphen_for_hyphen_repo.Input.Headers = .init()
-    ) async throws -> Operations.projects_sol_list_hyphen_for_hyphen_repo.Output {
-        try await projects_sol_list_hyphen_for_hyphen_repo(Operations.projects_sol_list_hyphen_for_hyphen_repo.Input(
+    public func projectsListForRepo(
+        path: Operations.ProjectsListForRepo.Input.Path,
+        query: Operations.ProjectsListForRepo.Input.Query = .init(),
+        headers: Operations.ProjectsListForRepo.Input.Headers = .init()
+    ) async throws -> Operations.ProjectsListForRepo.Output {
+        try await projectsListForRepo(Operations.ProjectsListForRepo.Input(
             path: path,
             query: query,
             headers: headers
@@ -698,12 +698,12 @@ extension APIProtocol {
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/projects`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/projects/post(projects/create-for-repo)`.
     @available(*, deprecated)
-    public func projects_sol_create_hyphen_for_hyphen_repo(
-        path: Operations.projects_sol_create_hyphen_for_hyphen_repo.Input.Path,
-        headers: Operations.projects_sol_create_hyphen_for_hyphen_repo.Input.Headers = .init(),
-        body: Operations.projects_sol_create_hyphen_for_hyphen_repo.Input.Body
-    ) async throws -> Operations.projects_sol_create_hyphen_for_hyphen_repo.Output {
-        try await projects_sol_create_hyphen_for_hyphen_repo(Operations.projects_sol_create_hyphen_for_hyphen_repo.Input(
+    public func projectsCreateForRepo(
+        path: Operations.ProjectsCreateForRepo.Input.Path,
+        headers: Operations.ProjectsCreateForRepo.Input.Headers = .init(),
+        body: Operations.ProjectsCreateForRepo.Input.Body
+    ) async throws -> Operations.ProjectsCreateForRepo.Output {
+        try await projectsCreateForRepo(Operations.ProjectsCreateForRepo.Input(
             path: path,
             headers: headers,
             body: body
@@ -718,11 +718,11 @@ extension APIProtocol {
     /// - Remark: HTTP `POST /user/projects`.
     /// - Remark: Generated from `#/paths//user/projects/post(projects/create-for-authenticated-user)`.
     @available(*, deprecated)
-    public func projects_sol_create_hyphen_for_hyphen_authenticated_hyphen_user(
-        headers: Operations.projects_sol_create_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init(),
-        body: Operations.projects_sol_create_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body
-    ) async throws -> Operations.projects_sol_create_hyphen_for_hyphen_authenticated_hyphen_user.Output {
-        try await projects_sol_create_hyphen_for_hyphen_authenticated_hyphen_user(Operations.projects_sol_create_hyphen_for_hyphen_authenticated_hyphen_user.Input(
+    public func projectsCreateForAuthenticatedUser(
+        headers: Operations.ProjectsCreateForAuthenticatedUser.Input.Headers = .init(),
+        body: Operations.ProjectsCreateForAuthenticatedUser.Input.Body
+    ) async throws -> Operations.ProjectsCreateForAuthenticatedUser.Output {
+        try await projectsCreateForAuthenticatedUser(Operations.ProjectsCreateForAuthenticatedUser.Input(
             headers: headers,
             body: body
         ))
@@ -736,12 +736,12 @@ extension APIProtocol {
     /// - Remark: HTTP `GET /users/{username}/projects`.
     /// - Remark: Generated from `#/paths//users/{username}/projects/get(projects/list-for-user)`.
     @available(*, deprecated)
-    public func projects_sol_list_hyphen_for_hyphen_user(
-        path: Operations.projects_sol_list_hyphen_for_hyphen_user.Input.Path,
-        query: Operations.projects_sol_list_hyphen_for_hyphen_user.Input.Query = .init(),
-        headers: Operations.projects_sol_list_hyphen_for_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.projects_sol_list_hyphen_for_hyphen_user.Output {
-        try await projects_sol_list_hyphen_for_hyphen_user(Operations.projects_sol_list_hyphen_for_hyphen_user.Input(
+    public func projectsListForUser(
+        path: Operations.ProjectsListForUser.Input.Path,
+        query: Operations.ProjectsListForUser.Input.Query = .init(),
+        headers: Operations.ProjectsListForUser.Input.Headers = .init()
+    ) async throws -> Operations.ProjectsListForUser.Output {
+        try await projectsListForUser(Operations.ProjectsListForUser.Input(
             path: path,
             query: query,
             headers: headers
@@ -751,6 +751,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -766,7 +775,7 @@ public enum Components {
         /// A GitHub user.
         ///
         /// - Remark: Generated from `#/components/schemas/simple-user`.
-        public struct simple_hyphen_user: Codable, Hashable, Sendable {
+        public struct SimpleUser: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/simple-user/name`.
             public var name: Swift.String?
             /// - Remark: Generated from `#/components/schemas/simple-user/email`.
@@ -776,171 +785,171 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/simple-user/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/simple-user/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/avatar_url`.
-            public var avatar_url: Swift.String
+            public var avatarUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/gravatar_id`.
-            public var gravatar_id: Swift.String?
+            public var gravatarId: Swift.String?
             /// - Remark: Generated from `#/components/schemas/simple-user/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/followers_url`.
-            public var followers_url: Swift.String
+            public var followersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/following_url`.
-            public var following_url: Swift.String
+            public var followingUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/gists_url`.
-            public var gists_url: Swift.String
+            public var gistsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/starred_url`.
-            public var starred_url: Swift.String
+            public var starredUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/subscriptions_url`.
-            public var subscriptions_url: Swift.String
+            public var subscriptionsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/organizations_url`.
-            public var organizations_url: Swift.String
+            public var organizationsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/repos_url`.
-            public var repos_url: Swift.String
+            public var reposUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/events_url`.
-            public var events_url: Swift.String
+            public var eventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/received_events_url`.
-            public var received_events_url: Swift.String
+            public var receivedEventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/type`.
             public var _type: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/site_admin`.
-            public var site_admin: Swift.Bool
+            public var siteAdmin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/simple-user/starred_at`.
-            public var starred_at: Swift.String?
+            public var starredAt: Swift.String?
             /// - Remark: Generated from `#/components/schemas/simple-user/user_view_type`.
-            public var user_view_type: Swift.String?
-            /// Creates a new `simple_hyphen_user`.
+            public var userViewType: Swift.String?
+            /// Creates a new `SimpleUser`.
             ///
             /// - Parameters:
             ///   - name:
             ///   - email:
             ///   - login:
             ///   - id:
-            ///   - node_id:
-            ///   - avatar_url:
-            ///   - gravatar_id:
+            ///   - nodeId:
+            ///   - avatarUrl:
+            ///   - gravatarId:
             ///   - url:
-            ///   - html_url:
-            ///   - followers_url:
-            ///   - following_url:
-            ///   - gists_url:
-            ///   - starred_url:
-            ///   - subscriptions_url:
-            ///   - organizations_url:
-            ///   - repos_url:
-            ///   - events_url:
-            ///   - received_events_url:
+            ///   - htmlUrl:
+            ///   - followersUrl:
+            ///   - followingUrl:
+            ///   - gistsUrl:
+            ///   - starredUrl:
+            ///   - subscriptionsUrl:
+            ///   - organizationsUrl:
+            ///   - reposUrl:
+            ///   - eventsUrl:
+            ///   - receivedEventsUrl:
             ///   - _type:
-            ///   - site_admin:
-            ///   - starred_at:
-            ///   - user_view_type:
+            ///   - siteAdmin:
+            ///   - starredAt:
+            ///   - userViewType:
             public init(
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
                 login: Swift.String,
                 id: Swift.Int64,
-                node_id: Swift.String,
-                avatar_url: Swift.String,
-                gravatar_id: Swift.String? = nil,
+                nodeId: Swift.String,
+                avatarUrl: Swift.String,
+                gravatarId: Swift.String? = nil,
                 url: Swift.String,
-                html_url: Swift.String,
-                followers_url: Swift.String,
-                following_url: Swift.String,
-                gists_url: Swift.String,
-                starred_url: Swift.String,
-                subscriptions_url: Swift.String,
-                organizations_url: Swift.String,
-                repos_url: Swift.String,
-                events_url: Swift.String,
-                received_events_url: Swift.String,
+                htmlUrl: Swift.String,
+                followersUrl: Swift.String,
+                followingUrl: Swift.String,
+                gistsUrl: Swift.String,
+                starredUrl: Swift.String,
+                subscriptionsUrl: Swift.String,
+                organizationsUrl: Swift.String,
+                reposUrl: Swift.String,
+                eventsUrl: Swift.String,
+                receivedEventsUrl: Swift.String,
                 _type: Swift.String,
-                site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil,
-                user_view_type: Swift.String? = nil
+                siteAdmin: Swift.Bool,
+                starredAt: Swift.String? = nil,
+                userViewType: Swift.String? = nil
             ) {
                 self.name = name
                 self.email = email
                 self.login = login
                 self.id = id
-                self.node_id = node_id
-                self.avatar_url = avatar_url
-                self.gravatar_id = gravatar_id
+                self.nodeId = nodeId
+                self.avatarUrl = avatarUrl
+                self.gravatarId = gravatarId
                 self.url = url
-                self.html_url = html_url
-                self.followers_url = followers_url
-                self.following_url = following_url
-                self.gists_url = gists_url
-                self.starred_url = starred_url
-                self.subscriptions_url = subscriptions_url
-                self.organizations_url = organizations_url
-                self.repos_url = repos_url
-                self.events_url = events_url
-                self.received_events_url = received_events_url
+                self.htmlUrl = htmlUrl
+                self.followersUrl = followersUrl
+                self.followingUrl = followingUrl
+                self.gistsUrl = gistsUrl
+                self.starredUrl = starredUrl
+                self.subscriptionsUrl = subscriptionsUrl
+                self.organizationsUrl = organizationsUrl
+                self.reposUrl = reposUrl
+                self.eventsUrl = eventsUrl
+                self.receivedEventsUrl = receivedEventsUrl
                 self._type = _type
-                self.site_admin = site_admin
-                self.starred_at = starred_at
-                self.user_view_type = user_view_type
+                self.siteAdmin = siteAdmin
+                self.starredAt = starredAt
+                self.userViewType = userViewType
             }
             public enum CodingKeys: String, CodingKey {
                 case name
                 case email
                 case login
                 case id
-                case node_id
-                case avatar_url
-                case gravatar_id
+                case nodeId = "node_id"
+                case avatarUrl = "avatar_url"
+                case gravatarId = "gravatar_id"
                 case url
-                case html_url
-                case followers_url
-                case following_url
-                case gists_url
-                case starred_url
-                case subscriptions_url
-                case organizations_url
-                case repos_url
-                case events_url
-                case received_events_url
+                case htmlUrl = "html_url"
+                case followersUrl = "followers_url"
+                case followingUrl = "following_url"
+                case gistsUrl = "gists_url"
+                case starredUrl = "starred_url"
+                case subscriptionsUrl = "subscriptions_url"
+                case organizationsUrl = "organizations_url"
+                case reposUrl = "repos_url"
+                case eventsUrl = "events_url"
+                case receivedEventsUrl = "received_events_url"
                 case _type = "type"
-                case site_admin
-                case starred_at
-                case user_view_type
+                case siteAdmin = "site_admin"
+                case starredAt = "starred_at"
+                case userViewType = "user_view_type"
             }
         }
         /// Basic Error
         ///
         /// - Remark: Generated from `#/components/schemas/basic-error`.
-        public struct basic_hyphen_error: Codable, Hashable, Sendable {
+        public struct BasicError: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/basic-error/message`.
             public var message: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/documentation_url`.
-            public var documentation_url: Swift.String?
+            public var documentationUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/url`.
             public var url: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/status`.
             public var status: Swift.String?
-            /// Creates a new `basic_hyphen_error`.
+            /// Creates a new `BasicError`.
             ///
             /// - Parameters:
             ///   - message:
-            ///   - documentation_url:
+            ///   - documentationUrl:
             ///   - url:
             ///   - status:
             public init(
                 message: Swift.String? = nil,
-                documentation_url: Swift.String? = nil,
+                documentationUrl: Swift.String? = nil,
                 url: Swift.String? = nil,
                 status: Swift.String? = nil
             ) {
                 self.message = message
-                self.documentation_url = documentation_url
+                self.documentationUrl = documentationUrl
                 self.url = url
                 self.status = status
             }
             public enum CodingKeys: String, CodingKey {
                 case message
-                case documentation_url
+                case documentationUrl = "documentation_url"
                 case url
                 case status
             }
@@ -948,61 +957,61 @@ public enum Components {
         /// Validation Error Simple
         ///
         /// - Remark: Generated from `#/components/schemas/validation-error-simple`.
-        public struct validation_hyphen_error_hyphen_simple: Codable, Hashable, Sendable {
+        public struct ValidationErrorSimple: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/validation-error-simple/message`.
             public var message: Swift.String
             /// - Remark: Generated from `#/components/schemas/validation-error-simple/documentation_url`.
-            public var documentation_url: Swift.String
+            public var documentationUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/validation-error-simple/errors`.
             public var errors: [Swift.String]?
-            /// Creates a new `validation_hyphen_error_hyphen_simple`.
+            /// Creates a new `ValidationErrorSimple`.
             ///
             /// - Parameters:
             ///   - message:
-            ///   - documentation_url:
+            ///   - documentationUrl:
             ///   - errors:
             public init(
                 message: Swift.String,
-                documentation_url: Swift.String,
+                documentationUrl: Swift.String,
                 errors: [Swift.String]? = nil
             ) {
                 self.message = message
-                self.documentation_url = documentation_url
+                self.documentationUrl = documentationUrl
                 self.errors = errors
             }
             public enum CodingKeys: String, CodingKey {
                 case message
-                case documentation_url
+                case documentationUrl = "documentation_url"
                 case errors
             }
         }
         /// Validation Error
         ///
         /// - Remark: Generated from `#/components/schemas/validation-error`.
-        public struct validation_hyphen_error: Codable, Hashable, Sendable {
+        public struct ValidationError: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/validation-error/message`.
             public var message: Swift.String
             /// - Remark: Generated from `#/components/schemas/validation-error/documentation_url`.
-            public var documentation_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload`.
-            public struct errorsPayloadPayload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/resource`.
+            public var documentationUrl: Swift.String
+            /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload`.
+            public struct ErrorsPayloadPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/resource`.
                 public var resource: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/field`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/field`.
                 public var field: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/message`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/message`.
                 public var message: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/code`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/code`.
                 public var code: Swift.String
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/index`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/index`.
                 public var index: Swift.Int?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value`.
-                @frozen public enum valuePayload: Codable, Hashable, Sendable {
-                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case1`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value`.
+                @frozen public enum ValuePayload: Codable, Hashable, Sendable {
+                    /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value/case1`.
                     case case1(Swift.String?)
-                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case2`.
+                    /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value/case2`.
                     case case2(Swift.Int?)
-                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case3`.
+                    /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value/case3`.
                     case case3([Swift.String]?)
                     public init(from decoder: any Decoder) throws {
                         var errors: [any Error] = []
@@ -1041,9 +1050,9 @@ public enum Components {
                         }
                     }
                 }
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value`.
-                public var value: Components.Schemas.validation_hyphen_error.errorsPayloadPayload.valuePayload?
-                /// Creates a new `errorsPayloadPayload`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value`.
+                public var value: Components.Schemas.ValidationError.ErrorsPayloadPayload.ValuePayload?
+                /// Creates a new `ErrorsPayloadPayload`.
                 ///
                 /// - Parameters:
                 ///   - resource:
@@ -1058,7 +1067,7 @@ public enum Components {
                     message: Swift.String? = nil,
                     code: Swift.String,
                     index: Swift.Int? = nil,
-                    value: Components.Schemas.validation_hyphen_error.errorsPayloadPayload.valuePayload? = nil
+                    value: Components.Schemas.ValidationError.ErrorsPayloadPayload.ValuePayload? = nil
                 ) {
                     self.resource = resource
                     self.field = field
@@ -1077,34 +1086,34 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/validation-error/errors`.
-            public typealias errorsPayload = [Components.Schemas.validation_hyphen_error.errorsPayloadPayload]
+            public typealias ErrorsPayload = [Components.Schemas.ValidationError.ErrorsPayloadPayload]
             /// - Remark: Generated from `#/components/schemas/validation-error/errors`.
-            public var errors: Components.Schemas.validation_hyphen_error.errorsPayload?
-            /// Creates a new `validation_hyphen_error`.
+            public var errors: Components.Schemas.ValidationError.ErrorsPayload?
+            /// Creates a new `ValidationError`.
             ///
             /// - Parameters:
             ///   - message:
-            ///   - documentation_url:
+            ///   - documentationUrl:
             ///   - errors:
             public init(
                 message: Swift.String,
-                documentation_url: Swift.String,
-                errors: Components.Schemas.validation_hyphen_error.errorsPayload? = nil
+                documentationUrl: Swift.String,
+                errors: Components.Schemas.ValidationError.ErrorsPayload? = nil
             ) {
                 self.message = message
-                self.documentation_url = documentation_url
+                self.documentationUrl = documentationUrl
                 self.errors = errors
             }
             public enum CodingKeys: String, CodingKey {
                 case message
-                case documentation_url
+                case documentationUrl = "documentation_url"
                 case errors
             }
         }
         /// A GitHub user.
         ///
         /// - Remark: Generated from `#/components/schemas/nullable-simple-user`.
-        public struct nullable_hyphen_simple_hyphen_user: Codable, Hashable, Sendable {
+        public struct NullableSimpleUser: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/name`.
             public var name: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/email`.
@@ -1114,154 +1123,154 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/avatar_url`.
-            public var avatar_url: Swift.String
+            public var avatarUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/gravatar_id`.
-            public var gravatar_id: Swift.String?
+            public var gravatarId: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/followers_url`.
-            public var followers_url: Swift.String
+            public var followersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/following_url`.
-            public var following_url: Swift.String
+            public var followingUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/gists_url`.
-            public var gists_url: Swift.String
+            public var gistsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/starred_url`.
-            public var starred_url: Swift.String
+            public var starredUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/subscriptions_url`.
-            public var subscriptions_url: Swift.String
+            public var subscriptionsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/organizations_url`.
-            public var organizations_url: Swift.String
+            public var organizationsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/repos_url`.
-            public var repos_url: Swift.String
+            public var reposUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/events_url`.
-            public var events_url: Swift.String
+            public var eventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/received_events_url`.
-            public var received_events_url: Swift.String
+            public var receivedEventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/type`.
             public var _type: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/site_admin`.
-            public var site_admin: Swift.Bool
+            public var siteAdmin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/starred_at`.
-            public var starred_at: Swift.String?
+            public var starredAt: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/user_view_type`.
-            public var user_view_type: Swift.String?
-            /// Creates a new `nullable_hyphen_simple_hyphen_user`.
+            public var userViewType: Swift.String?
+            /// Creates a new `NullableSimpleUser`.
             ///
             /// - Parameters:
             ///   - name:
             ///   - email:
             ///   - login:
             ///   - id:
-            ///   - node_id:
-            ///   - avatar_url:
-            ///   - gravatar_id:
+            ///   - nodeId:
+            ///   - avatarUrl:
+            ///   - gravatarId:
             ///   - url:
-            ///   - html_url:
-            ///   - followers_url:
-            ///   - following_url:
-            ///   - gists_url:
-            ///   - starred_url:
-            ///   - subscriptions_url:
-            ///   - organizations_url:
-            ///   - repos_url:
-            ///   - events_url:
-            ///   - received_events_url:
+            ///   - htmlUrl:
+            ///   - followersUrl:
+            ///   - followingUrl:
+            ///   - gistsUrl:
+            ///   - starredUrl:
+            ///   - subscriptionsUrl:
+            ///   - organizationsUrl:
+            ///   - reposUrl:
+            ///   - eventsUrl:
+            ///   - receivedEventsUrl:
             ///   - _type:
-            ///   - site_admin:
-            ///   - starred_at:
-            ///   - user_view_type:
+            ///   - siteAdmin:
+            ///   - starredAt:
+            ///   - userViewType:
             public init(
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
                 login: Swift.String,
                 id: Swift.Int64,
-                node_id: Swift.String,
-                avatar_url: Swift.String,
-                gravatar_id: Swift.String? = nil,
+                nodeId: Swift.String,
+                avatarUrl: Swift.String,
+                gravatarId: Swift.String? = nil,
                 url: Swift.String,
-                html_url: Swift.String,
-                followers_url: Swift.String,
-                following_url: Swift.String,
-                gists_url: Swift.String,
-                starred_url: Swift.String,
-                subscriptions_url: Swift.String,
-                organizations_url: Swift.String,
-                repos_url: Swift.String,
-                events_url: Swift.String,
-                received_events_url: Swift.String,
+                htmlUrl: Swift.String,
+                followersUrl: Swift.String,
+                followingUrl: Swift.String,
+                gistsUrl: Swift.String,
+                starredUrl: Swift.String,
+                subscriptionsUrl: Swift.String,
+                organizationsUrl: Swift.String,
+                reposUrl: Swift.String,
+                eventsUrl: Swift.String,
+                receivedEventsUrl: Swift.String,
                 _type: Swift.String,
-                site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil,
-                user_view_type: Swift.String? = nil
+                siteAdmin: Swift.Bool,
+                starredAt: Swift.String? = nil,
+                userViewType: Swift.String? = nil
             ) {
                 self.name = name
                 self.email = email
                 self.login = login
                 self.id = id
-                self.node_id = node_id
-                self.avatar_url = avatar_url
-                self.gravatar_id = gravatar_id
+                self.nodeId = nodeId
+                self.avatarUrl = avatarUrl
+                self.gravatarId = gravatarId
                 self.url = url
-                self.html_url = html_url
-                self.followers_url = followers_url
-                self.following_url = following_url
-                self.gists_url = gists_url
-                self.starred_url = starred_url
-                self.subscriptions_url = subscriptions_url
-                self.organizations_url = organizations_url
-                self.repos_url = repos_url
-                self.events_url = events_url
-                self.received_events_url = received_events_url
+                self.htmlUrl = htmlUrl
+                self.followersUrl = followersUrl
+                self.followingUrl = followingUrl
+                self.gistsUrl = gistsUrl
+                self.starredUrl = starredUrl
+                self.subscriptionsUrl = subscriptionsUrl
+                self.organizationsUrl = organizationsUrl
+                self.reposUrl = reposUrl
+                self.eventsUrl = eventsUrl
+                self.receivedEventsUrl = receivedEventsUrl
                 self._type = _type
-                self.site_admin = site_admin
-                self.starred_at = starred_at
-                self.user_view_type = user_view_type
+                self.siteAdmin = siteAdmin
+                self.starredAt = starredAt
+                self.userViewType = userViewType
             }
             public enum CodingKeys: String, CodingKey {
                 case name
                 case email
                 case login
                 case id
-                case node_id
-                case avatar_url
-                case gravatar_id
+                case nodeId = "node_id"
+                case avatarUrl = "avatar_url"
+                case gravatarId = "gravatar_id"
                 case url
-                case html_url
-                case followers_url
-                case following_url
-                case gists_url
-                case starred_url
-                case subscriptions_url
-                case organizations_url
-                case repos_url
-                case events_url
-                case received_events_url
+                case htmlUrl = "html_url"
+                case followersUrl = "followers_url"
+                case followingUrl = "following_url"
+                case gistsUrl = "gists_url"
+                case starredUrl = "starred_url"
+                case subscriptionsUrl = "subscriptions_url"
+                case organizationsUrl = "organizations_url"
+                case reposUrl = "repos_url"
+                case eventsUrl = "events_url"
+                case receivedEventsUrl = "received_events_url"
                 case _type = "type"
-                case site_admin
-                case starred_at
-                case user_view_type
+                case siteAdmin = "site_admin"
+                case starredAt = "starred_at"
+                case userViewType = "user_view_type"
             }
         }
         /// Projects are a way to organize columns and cards of work.
         ///
         /// - Remark: Generated from `#/components/schemas/project`.
-        public struct project: Codable, Hashable, Sendable {
+        public struct Project: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/project/owner_url`.
-            public var owner_url: Swift.String
+            public var ownerUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/project/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/project/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/project/columns_url`.
-            public var columns_url: Swift.String
+            public var columnsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/project/id`.
             public var id: Swift.Int
             /// - Remark: Generated from `#/components/schemas/project/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// Name of the project
             ///
             /// - Remark: Generated from `#/components/schemas/project/name`.
@@ -1277,15 +1286,15 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/project/state`.
             public var state: Swift.String
             /// - Remark: Generated from `#/components/schemas/project/creator`.
-            public var creator: Components.Schemas.nullable_hyphen_simple_hyphen_user?
+            public var creator: Components.Schemas.NullableSimpleUser?
             /// - Remark: Generated from `#/components/schemas/project/created_at`.
-            public var created_at: Foundation.Date
+            public var createdAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/project/updated_at`.
-            public var updated_at: Foundation.Date
+            public var updatedAt: Foundation.Date
             /// The baseline permission that all organization members have on this project. Only present if owner is an organization.
             ///
             /// - Remark: Generated from `#/components/schemas/project/organization_permission`.
-            @frozen public enum organization_permissionPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum OrganizationPermissionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
                 case admin = "admin"
@@ -1294,84 +1303,84 @@ public enum Components {
             /// The baseline permission that all organization members have on this project. Only present if owner is an organization.
             ///
             /// - Remark: Generated from `#/components/schemas/project/organization_permission`.
-            public var organization_permission: Components.Schemas.project.organization_permissionPayload?
+            public var organizationPermission: Components.Schemas.Project.OrganizationPermissionPayload?
             /// Whether or not this project can be seen by everyone. Only present if owner is an organization.
             ///
             /// - Remark: Generated from `#/components/schemas/project/private`.
             public var _private: Swift.Bool?
-            /// Creates a new `project`.
+            /// Creates a new `Project`.
             ///
             /// - Parameters:
-            ///   - owner_url:
+            ///   - ownerUrl:
             ///   - url:
-            ///   - html_url:
-            ///   - columns_url:
+            ///   - htmlUrl:
+            ///   - columnsUrl:
             ///   - id:
-            ///   - node_id:
+            ///   - nodeId:
             ///   - name: Name of the project
             ///   - body: Body of the project
             ///   - number:
             ///   - state: State of the project; either 'open' or 'closed'
             ///   - creator:
-            ///   - created_at:
-            ///   - updated_at:
-            ///   - organization_permission: The baseline permission that all organization members have on this project. Only present if owner is an organization.
+            ///   - createdAt:
+            ///   - updatedAt:
+            ///   - organizationPermission: The baseline permission that all organization members have on this project. Only present if owner is an organization.
             ///   - _private: Whether or not this project can be seen by everyone. Only present if owner is an organization.
             public init(
-                owner_url: Swift.String,
+                ownerUrl: Swift.String,
                 url: Swift.String,
-                html_url: Swift.String,
-                columns_url: Swift.String,
+                htmlUrl: Swift.String,
+                columnsUrl: Swift.String,
                 id: Swift.Int,
-                node_id: Swift.String,
+                nodeId: Swift.String,
                 name: Swift.String,
                 body: Swift.String? = nil,
                 number: Swift.Int,
                 state: Swift.String,
-                creator: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
-                created_at: Foundation.Date,
-                updated_at: Foundation.Date,
-                organization_permission: Components.Schemas.project.organization_permissionPayload? = nil,
+                creator: Components.Schemas.NullableSimpleUser? = nil,
+                createdAt: Foundation.Date,
+                updatedAt: Foundation.Date,
+                organizationPermission: Components.Schemas.Project.OrganizationPermissionPayload? = nil,
                 _private: Swift.Bool? = nil
             ) {
-                self.owner_url = owner_url
+                self.ownerUrl = ownerUrl
                 self.url = url
-                self.html_url = html_url
-                self.columns_url = columns_url
+                self.htmlUrl = htmlUrl
+                self.columnsUrl = columnsUrl
                 self.id = id
-                self.node_id = node_id
+                self.nodeId = nodeId
                 self.name = name
                 self.body = body
                 self.number = number
                 self.state = state
                 self.creator = creator
-                self.created_at = created_at
-                self.updated_at = updated_at
-                self.organization_permission = organization_permission
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
+                self.organizationPermission = organizationPermission
                 self._private = _private
             }
             public enum CodingKeys: String, CodingKey {
-                case owner_url
+                case ownerUrl = "owner_url"
                 case url
-                case html_url
-                case columns_url
+                case htmlUrl = "html_url"
+                case columnsUrl = "columns_url"
                 case id
-                case node_id
+                case nodeId = "node_id"
                 case name
                 case body
                 case number
                 case state
                 case creator
-                case created_at
-                case updated_at
-                case organization_permission
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
+                case organizationPermission = "organization_permission"
                 case _private = "private"
             }
         }
         /// Project cards represent a scope of work.
         ///
         /// - Remark: Generated from `#/components/schemas/project-card`.
-        public struct project_hyphen_card: Codable, Hashable, Sendable {
+        public struct ProjectCard: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/project-card/url`.
             public var url: Swift.String
             /// The project card's ID
@@ -1379,171 +1388,171 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/project-card/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/project-card/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/project-card/note`.
             public var note: Swift.String?
             /// - Remark: Generated from `#/components/schemas/project-card/creator`.
-            public var creator: Components.Schemas.nullable_hyphen_simple_hyphen_user?
+            public var creator: Components.Schemas.NullableSimpleUser?
             /// - Remark: Generated from `#/components/schemas/project-card/created_at`.
-            public var created_at: Foundation.Date
+            public var createdAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/project-card/updated_at`.
-            public var updated_at: Foundation.Date
+            public var updatedAt: Foundation.Date
             /// Whether or not the card is archived
             ///
             /// - Remark: Generated from `#/components/schemas/project-card/archived`.
             public var archived: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/project-card/column_name`.
-            public var column_name: Swift.String?
+            public var columnName: Swift.String?
             /// - Remark: Generated from `#/components/schemas/project-card/project_id`.
-            public var project_id: Swift.String?
+            public var projectId: Swift.String?
             /// - Remark: Generated from `#/components/schemas/project-card/column_url`.
-            public var column_url: Swift.String
+            public var columnUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/project-card/content_url`.
-            public var content_url: Swift.String?
+            public var contentUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/project-card/project_url`.
-            public var project_url: Swift.String
-            /// Creates a new `project_hyphen_card`.
+            public var projectUrl: Swift.String
+            /// Creates a new `ProjectCard`.
             ///
             /// - Parameters:
             ///   - url:
             ///   - id: The project card's ID
-            ///   - node_id:
+            ///   - nodeId:
             ///   - note:
             ///   - creator:
-            ///   - created_at:
-            ///   - updated_at:
+            ///   - createdAt:
+            ///   - updatedAt:
             ///   - archived: Whether or not the card is archived
-            ///   - column_name:
-            ///   - project_id:
-            ///   - column_url:
-            ///   - content_url:
-            ///   - project_url:
+            ///   - columnName:
+            ///   - projectId:
+            ///   - columnUrl:
+            ///   - contentUrl:
+            ///   - projectUrl:
             public init(
                 url: Swift.String,
                 id: Swift.Int64,
-                node_id: Swift.String,
+                nodeId: Swift.String,
                 note: Swift.String? = nil,
-                creator: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
-                created_at: Foundation.Date,
-                updated_at: Foundation.Date,
+                creator: Components.Schemas.NullableSimpleUser? = nil,
+                createdAt: Foundation.Date,
+                updatedAt: Foundation.Date,
                 archived: Swift.Bool? = nil,
-                column_name: Swift.String? = nil,
-                project_id: Swift.String? = nil,
-                column_url: Swift.String,
-                content_url: Swift.String? = nil,
-                project_url: Swift.String
+                columnName: Swift.String? = nil,
+                projectId: Swift.String? = nil,
+                columnUrl: Swift.String,
+                contentUrl: Swift.String? = nil,
+                projectUrl: Swift.String
             ) {
                 self.url = url
                 self.id = id
-                self.node_id = node_id
+                self.nodeId = nodeId
                 self.note = note
                 self.creator = creator
-                self.created_at = created_at
-                self.updated_at = updated_at
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
                 self.archived = archived
-                self.column_name = column_name
-                self.project_id = project_id
-                self.column_url = column_url
-                self.content_url = content_url
-                self.project_url = project_url
+                self.columnName = columnName
+                self.projectId = projectId
+                self.columnUrl = columnUrl
+                self.contentUrl = contentUrl
+                self.projectUrl = projectUrl
             }
             public enum CodingKeys: String, CodingKey {
                 case url
                 case id
-                case node_id
+                case nodeId = "node_id"
                 case note
                 case creator
-                case created_at
-                case updated_at
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
                 case archived
-                case column_name
-                case project_id
-                case column_url
-                case content_url
-                case project_url
+                case columnName = "column_name"
+                case projectId = "project_id"
+                case columnUrl = "column_url"
+                case contentUrl = "content_url"
+                case projectUrl = "project_url"
             }
         }
         /// Project columns contain cards of work.
         ///
         /// - Remark: Generated from `#/components/schemas/project-column`.
-        public struct project_hyphen_column: Codable, Hashable, Sendable {
+        public struct ProjectColumn: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/project-column/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/project-column/project_url`.
-            public var project_url: Swift.String
+            public var projectUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/project-column/cards_url`.
-            public var cards_url: Swift.String
+            public var cardsUrl: Swift.String
             /// The unique identifier of the project column
             ///
             /// - Remark: Generated from `#/components/schemas/project-column/id`.
             public var id: Swift.Int
             /// - Remark: Generated from `#/components/schemas/project-column/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// Name of the project column
             ///
             /// - Remark: Generated from `#/components/schemas/project-column/name`.
             public var name: Swift.String
             /// - Remark: Generated from `#/components/schemas/project-column/created_at`.
-            public var created_at: Foundation.Date
+            public var createdAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/project-column/updated_at`.
-            public var updated_at: Foundation.Date
-            /// Creates a new `project_hyphen_column`.
+            public var updatedAt: Foundation.Date
+            /// Creates a new `ProjectColumn`.
             ///
             /// - Parameters:
             ///   - url:
-            ///   - project_url:
-            ///   - cards_url:
+            ///   - projectUrl:
+            ///   - cardsUrl:
             ///   - id: The unique identifier of the project column
-            ///   - node_id:
+            ///   - nodeId:
             ///   - name: Name of the project column
-            ///   - created_at:
-            ///   - updated_at:
+            ///   - createdAt:
+            ///   - updatedAt:
             public init(
                 url: Swift.String,
-                project_url: Swift.String,
-                cards_url: Swift.String,
+                projectUrl: Swift.String,
+                cardsUrl: Swift.String,
                 id: Swift.Int,
-                node_id: Swift.String,
+                nodeId: Swift.String,
                 name: Swift.String,
-                created_at: Foundation.Date,
-                updated_at: Foundation.Date
+                createdAt: Foundation.Date,
+                updatedAt: Foundation.Date
             ) {
                 self.url = url
-                self.project_url = project_url
-                self.cards_url = cards_url
+                self.projectUrl = projectUrl
+                self.cardsUrl = cardsUrl
                 self.id = id
-                self.node_id = node_id
+                self.nodeId = nodeId
                 self.name = name
-                self.created_at = created_at
-                self.updated_at = updated_at
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
             }
             public enum CodingKeys: String, CodingKey {
                 case url
-                case project_url
-                case cards_url
+                case projectUrl = "project_url"
+                case cardsUrl = "cards_url"
                 case id
-                case node_id
+                case nodeId = "node_id"
                 case name
-                case created_at
-                case updated_at
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
             }
         }
         /// Project Collaborator Permission
         ///
         /// - Remark: Generated from `#/components/schemas/project-collaborator-permission`.
-        public struct project_hyphen_collaborator_hyphen_permission: Codable, Hashable, Sendable {
+        public struct ProjectCollaboratorPermission: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/project-collaborator-permission/permission`.
             public var permission: Swift.String
             /// - Remark: Generated from `#/components/schemas/project-collaborator-permission/user`.
-            public var user: Components.Schemas.nullable_hyphen_simple_hyphen_user?
-            /// Creates a new `project_hyphen_collaborator_hyphen_permission`.
+            public var user: Components.Schemas.NullableSimpleUser?
+            /// Creates a new `ProjectCollaboratorPermission`.
             ///
             /// - Parameters:
             ///   - permission:
             ///   - user:
             public init(
                 permission: Swift.String,
-                user: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil
+                user: Components.Schemas.NullableSimpleUser? = nil
             ) {
                 self.permission = permission
                 self.user = user
@@ -1559,54 +1568,54 @@ public enum Components {
         /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/per-page`.
-        public typealias per_hyphen_page = Swift.Int
+        public typealias PerPage = Swift.Int
         /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/page`.
-        public typealias page = Swift.Int
+        public typealias Page = Swift.Int
         /// The account owner of the repository. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/owner`.
-        public typealias owner = Swift.String
+        public typealias Owner = Swift.String
         /// The name of the repository without the `.git` extension. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/repo`.
-        public typealias repo = Swift.String
+        public typealias Repo = Swift.String
         /// The organization name. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/org`.
-        public typealias org = Swift.String
+        public typealias Org = Swift.String
         /// The handle for the GitHub user account.
         ///
         /// - Remark: Generated from `#/components/parameters/username`.
-        public typealias username = Swift.String
+        public typealias Username = Swift.String
         /// The unique identifier of the project.
         ///
         /// - Remark: Generated from `#/components/parameters/project-id`.
-        public typealias project_hyphen_id = Swift.Int
+        public typealias ProjectId = Swift.Int
         /// The unique identifier of the card.
         ///
         /// - Remark: Generated from `#/components/parameters/card-id`.
-        public typealias card_hyphen_id = Swift.Int
+        public typealias CardId = Swift.Int
         /// The unique identifier of the column.
         ///
         /// - Remark: Generated from `#/components/parameters/column-id`.
-        public typealias column_hyphen_id = Swift.Int
+        public typealias ColumnId = Swift.Int
     }
     /// Types generated from the `#/components/requestBodies` section of the OpenAPI document.
     public enum RequestBodies {}
     /// Types generated from the `#/components/responses` section of the OpenAPI document.
     public enum Responses {
-        public struct validation_failed_simple: Sendable, Hashable {
+        public struct ValidationFailedSimple: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/validation_failed_simple/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/validation_failed_simple/content/application\/json`.
-                case json(Components.Schemas.validation_hyphen_error_hyphen_simple)
+                case json(Components.Schemas.ValidationErrorSimple)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.validation_hyphen_error_hyphen_simple {
+                public var json: Components.Schemas.ValidationErrorSimple {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -1616,25 +1625,25 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.validation_failed_simple.Body
-            /// Creates a new `validation_failed_simple`.
+            public var body: Components.Responses.ValidationFailedSimple.Body
+            /// Creates a new `ValidationFailedSimple`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.validation_failed_simple.Body) {
+            public init(body: Components.Responses.ValidationFailedSimple.Body) {
                 self.body = body
             }
         }
-        public struct not_found: Sendable, Hashable {
+        public struct NotFound: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/not_found/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/not_found/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -1644,25 +1653,25 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.not_found.Body
-            /// Creates a new `not_found`.
+            public var body: Components.Responses.NotFound.Body
+            /// Creates a new `NotFound`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.not_found.Body) {
+            public init(body: Components.Responses.NotFound.Body) {
                 self.body = body
             }
         }
-        public struct validation_failed: Sendable, Hashable {
+        public struct ValidationFailed: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/validation_failed/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/validation_failed/content/application\/json`.
-                case json(Components.Schemas.validation_hyphen_error)
+                case json(Components.Schemas.ValidationError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.validation_hyphen_error {
+                public var json: Components.Schemas.ValidationError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -1672,29 +1681,29 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.validation_failed.Body
-            /// Creates a new `validation_failed`.
+            public var body: Components.Responses.ValidationFailed.Body
+            /// Creates a new `ValidationFailed`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.validation_failed.Body) {
+            public init(body: Components.Responses.ValidationFailed.Body) {
                 self.body = body
             }
         }
-        public struct not_modified: Sendable, Hashable {
-            /// Creates a new `not_modified`.
+        public struct NotModified: Sendable, Hashable {
+            /// Creates a new `NotModified`.
             public init() {}
         }
-        public struct requires_authentication: Sendable, Hashable {
+        public struct RequiresAuthentication: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/requires_authentication/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/requires_authentication/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -1704,25 +1713,25 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.requires_authentication.Body
-            /// Creates a new `requires_authentication`.
+            public var body: Components.Responses.RequiresAuthentication.Body
+            /// Creates a new `RequiresAuthentication`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.requires_authentication.Body) {
+            public init(body: Components.Responses.RequiresAuthentication.Body) {
                 self.body = body
             }
         }
-        public struct forbidden: Sendable, Hashable {
+        public struct Forbidden: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/forbidden/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/forbidden/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -1732,25 +1741,25 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.forbidden.Body
-            /// Creates a new `forbidden`.
+            public var body: Components.Responses.Forbidden.Body
+            /// Creates a new `Forbidden`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.forbidden.Body) {
+            public init(body: Components.Responses.Forbidden.Body) {
                 self.body = body
             }
         }
-        public struct gone: Sendable, Hashable {
+        public struct Gone: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/gone/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/gone/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -1760,12 +1769,12 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.gone.Body
-            /// Creates a new `gone`.
+            public var body: Components.Responses.Gone.Body
+            /// Creates a new `Gone`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.gone.Body) {
+            public init(body: Components.Responses.Gone.Body) {
                 self.body = body
             }
         }
@@ -1773,7 +1782,7 @@ public enum Components {
     /// Types generated from the `#/components/headers` section of the OpenAPI document.
     public enum Headers {
         /// - Remark: Generated from `#/components/headers/link`.
-        public typealias link = Swift.String
+        public typealias Link = Swift.String
     }
 }
 
@@ -1787,7 +1796,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/projects`.
     /// - Remark: Generated from `#/paths//orgs/{org}/projects/get(projects/list-for-org)`.
-    public enum projects_sol_list_hyphen_for_hyphen_org {
+    public enum ProjectsListForOrg {
         public static let id: Swift.String = "projects/list-for-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/projects/GET/path`.
@@ -1795,20 +1804,20 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/projects/GET/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                public init(org: Components.Parameters.org) {
+                public init(org: Components.Parameters.Org) {
                     self.org = org
                 }
             }
-            public var path: Operations.projects_sol_list_hyphen_for_hyphen_org.Input.Path
+            public var path: Operations.ProjectsListForOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/projects/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/orgs/{org}/projects/GET/query/state`.
-                @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case open = "open"
                     case closed = "closed"
                     case all = "all"
@@ -1816,44 +1825,44 @@ public enum Operations {
                 /// Indicates the state of the projects to return.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/projects/GET/query/state`.
-                public var state: Operations.projects_sol_list_hyphen_for_hyphen_org.Input.Query.statePayload?
+                public var state: Operations.ProjectsListForOrg.Input.Query.StatePayload?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/projects/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/projects/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - state: Indicates the state of the projects to return.
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    state: Operations.projects_sol_list_hyphen_for_hyphen_org.Input.Query.statePayload? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    state: Operations.ProjectsListForOrg.Input.Query.StatePayload? = nil,
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
                     self.state = state
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.projects_sol_list_hyphen_for_hyphen_org.Input.Query
+            public var query: Operations.ProjectsListForOrg.Input.Query
             /// - Remark: Generated from `#/paths/orgs/{org}/projects/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_list_hyphen_for_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsListForOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_list_hyphen_for_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsListForOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.projects_sol_list_hyphen_for_hyphen_org.Input.Headers
+            public var headers: Operations.ProjectsListForOrg.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -1861,9 +1870,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.projects_sol_list_hyphen_for_hyphen_org.Input.Path,
-                query: Operations.projects_sol_list_hyphen_for_hyphen_org.Input.Query = .init(),
-                headers: Operations.projects_sol_list_hyphen_for_hyphen_org.Input.Headers = .init()
+                path: Operations.ProjectsListForOrg.Input.Path,
+                query: Operations.ProjectsListForOrg.Input.Query = .init(),
+                headers: Operations.ProjectsListForOrg.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -1875,26 +1884,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/projects/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/projects/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.projects_sol_list_hyphen_for_hyphen_org.Output.Ok.Headers
+                public var headers: Operations.ProjectsListForOrg.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/orgs/{org}/projects/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/projects/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.project])
+                    case json([Components.Schemas.Project])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.project] {
+                    public var json: [Components.Schemas.Project] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -1904,15 +1913,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.projects_sol_list_hyphen_for_hyphen_org.Output.Ok.Body
+                public var body: Operations.ProjectsListForOrg.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.projects_sol_list_hyphen_for_hyphen_org.Output.Ok.Headers = .init(),
-                    body: Operations.projects_sol_list_hyphen_for_hyphen_org.Output.Ok.Body
+                    headers: Operations.ProjectsListForOrg.Output.Ok.Headers = .init(),
+                    body: Operations.ProjectsListForOrg.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -1923,12 +1932,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/projects/get(projects/list-for-org)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.projects_sol_list_hyphen_for_hyphen_org.Output.Ok)
+            case ok(Operations.ProjectsListForOrg.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.projects_sol_list_hyphen_for_hyphen_org.Output.Ok {
+            public var ok: Operations.ProjectsListForOrg.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -1946,12 +1955,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/projects/get(projects/list-for-org)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed_simple)
+            case unprocessableContent(Components.Responses.ValidationFailedSimple)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed_simple {
+            public var unprocessableContent: Components.Responses.ValidationFailedSimple {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -2003,7 +2012,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /orgs/{org}/projects`.
     /// - Remark: Generated from `#/paths//orgs/{org}/projects/post(projects/create-for-org)`.
-    public enum projects_sol_create_hyphen_for_hyphen_org {
+    public enum ProjectsCreateForOrg {
         public static let id: Swift.String = "projects/create-for-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/projects/POST/path`.
@@ -2011,32 +2020,32 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/projects/POST/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                public init(org: Components.Parameters.org) {
+                public init(org: Components.Parameters.Org) {
                     self.org = org
                 }
             }
-            public var path: Operations.projects_sol_create_hyphen_for_hyphen_org.Input.Path
+            public var path: Operations.ProjectsCreateForOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/projects/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_create_hyphen_for_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsCreateForOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_create_hyphen_for_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsCreateForOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.projects_sol_create_hyphen_for_hyphen_org.Input.Headers
+            public var headers: Operations.ProjectsCreateForOrg.Input.Headers
             /// - Remark: Generated from `#/paths/orgs/{org}/projects/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/orgs/{org}/projects/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The name of the project.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/projects/POST/requestBody/json/name`.
@@ -2045,7 +2054,7 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/projects/POST/requestBody/json/body`.
                     public var body: Swift.String?
-                    /// Creates a new `jsonPayload`.
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - name: The name of the project.
@@ -2063,9 +2072,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/orgs/{org}/projects/POST/requestBody/content/application\/json`.
-                case json(Operations.projects_sol_create_hyphen_for_hyphen_org.Input.Body.jsonPayload)
+                case json(Operations.ProjectsCreateForOrg.Input.Body.JsonPayload)
             }
-            public var body: Operations.projects_sol_create_hyphen_for_hyphen_org.Input.Body
+            public var body: Operations.ProjectsCreateForOrg.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -2073,9 +2082,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.projects_sol_create_hyphen_for_hyphen_org.Input.Path,
-                headers: Operations.projects_sol_create_hyphen_for_hyphen_org.Input.Headers = .init(),
-                body: Operations.projects_sol_create_hyphen_for_hyphen_org.Input.Body
+                path: Operations.ProjectsCreateForOrg.Input.Path,
+                headers: Operations.ProjectsCreateForOrg.Input.Headers = .init(),
+                body: Operations.ProjectsCreateForOrg.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -2087,12 +2096,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/projects/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/projects/POST/responses/201/content/application\/json`.
-                    case json(Components.Schemas.project)
+                    case json(Components.Schemas.Project)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.project {
+                    public var json: Components.Schemas.Project {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -2102,12 +2111,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.projects_sol_create_hyphen_for_hyphen_org.Output.Created.Body
+                public var body: Operations.ProjectsCreateForOrg.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.projects_sol_create_hyphen_for_hyphen_org.Output.Created.Body) {
+                public init(body: Operations.ProjectsCreateForOrg.Output.Created.Body) {
                     self.body = body
                 }
             }
@@ -2116,12 +2125,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/projects/post(projects/create-for-org)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.projects_sol_create_hyphen_for_hyphen_org.Output.Created)
+            case created(Operations.ProjectsCreateForOrg.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.projects_sol_create_hyphen_for_hyphen_org.Output.Created {
+            public var created: Operations.ProjectsCreateForOrg.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -2139,12 +2148,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/projects/post(projects/create-for-org)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -2162,12 +2171,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/projects/post(projects/create-for-org)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -2185,12 +2194,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/projects/post(projects/create-for-org)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -2208,12 +2217,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/projects/post(projects/create-for-org)/responses/410`.
             ///
             /// HTTP response code: `410 gone`.
-            case gone(Components.Responses.gone)
+            case gone(Components.Responses.Gone)
             /// The associated value of the enum case if `self` is `.gone`.
             ///
             /// - Throws: An error if `self` is not `.gone`.
             /// - SeeAlso: `.gone`.
-            public var gone: Components.Responses.gone {
+            public var gone: Components.Responses.Gone {
                 get throws {
                     switch self {
                     case let .gone(response):
@@ -2231,12 +2240,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/projects/post(projects/create-for-org)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed_simple)
+            case unprocessableContent(Components.Responses.ValidationFailedSimple)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed_simple {
+            public var unprocessableContent: Components.Responses.ValidationFailedSimple {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -2288,7 +2297,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /projects/columns/cards/{card_id}`.
     /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/get(projects/get-card)`.
-    public enum projects_sol_get_hyphen_card {
+    public enum ProjectsGetCard {
         public static let id: Swift.String = "projects/get-card"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/GET/path`.
@@ -2296,36 +2305,36 @@ public enum Operations {
                 /// The unique identifier of the card.
                 ///
                 /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/GET/path/card_id`.
-                public var card_id: Components.Parameters.card_hyphen_id
+                public var cardId: Components.Parameters.CardId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - card_id: The unique identifier of the card.
-                public init(card_id: Components.Parameters.card_hyphen_id) {
-                    self.card_id = card_id
+                ///   - cardId: The unique identifier of the card.
+                public init(cardId: Components.Parameters.CardId) {
+                    self.cardId = cardId
                 }
             }
-            public var path: Operations.projects_sol_get_hyphen_card.Input.Path
+            public var path: Operations.ProjectsGetCard.Input.Path
             /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_get_hyphen_card.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsGetCard.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_get_hyphen_card.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsGetCard.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.projects_sol_get_hyphen_card.Input.Headers
+            public var headers: Operations.ProjectsGetCard.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.projects_sol_get_hyphen_card.Input.Path,
-                headers: Operations.projects_sol_get_hyphen_card.Input.Headers = .init()
+                path: Operations.ProjectsGetCard.Input.Path,
+                headers: Operations.ProjectsGetCard.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -2336,12 +2345,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.project_hyphen_card)
+                    case json(Components.Schemas.ProjectCard)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.project_hyphen_card {
+                    public var json: Components.Schemas.ProjectCard {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -2351,12 +2360,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.projects_sol_get_hyphen_card.Output.Ok.Body
+                public var body: Operations.ProjectsGetCard.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.projects_sol_get_hyphen_card.Output.Ok.Body) {
+                public init(body: Operations.ProjectsGetCard.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -2365,12 +2374,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/get(projects/get-card)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.projects_sol_get_hyphen_card.Output.Ok)
+            case ok(Operations.ProjectsGetCard.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.projects_sol_get_hyphen_card.Output.Ok {
+            public var ok: Operations.ProjectsGetCard.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -2388,12 +2397,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/get(projects/get-card)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/get(projects/get-card)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -2411,12 +2428,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/get(projects/get-card)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -2434,12 +2451,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/get(projects/get-card)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -2457,12 +2474,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/get(projects/get-card)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -2514,7 +2531,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PATCH /projects/columns/cards/{card_id}`.
     /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/patch(projects/update-card)`.
-    public enum projects_sol_update_hyphen_card {
+    public enum ProjectsUpdateCard {
         public static let id: Swift.String = "projects/update-card"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/PATCH/path`.
@@ -2522,32 +2539,32 @@ public enum Operations {
                 /// The unique identifier of the card.
                 ///
                 /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/PATCH/path/card_id`.
-                public var card_id: Components.Parameters.card_hyphen_id
+                public var cardId: Components.Parameters.CardId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - card_id: The unique identifier of the card.
-                public init(card_id: Components.Parameters.card_hyphen_id) {
-                    self.card_id = card_id
+                ///   - cardId: The unique identifier of the card.
+                public init(cardId: Components.Parameters.CardId) {
+                    self.cardId = cardId
                 }
             }
-            public var path: Operations.projects_sol_update_hyphen_card.Input.Path
+            public var path: Operations.ProjectsUpdateCard.Input.Path
             /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/PATCH/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_update_hyphen_card.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsUpdateCard.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_update_hyphen_card.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsUpdateCard.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.projects_sol_update_hyphen_card.Input.Headers
+            public var headers: Operations.ProjectsUpdateCard.Input.Headers
             /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/PATCH/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/PATCH/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The project card's note
                     ///
                     /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/PATCH/requestBody/json/note`.
@@ -2556,7 +2573,7 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/PATCH/requestBody/json/archived`.
                     public var archived: Swift.Bool?
-                    /// Creates a new `jsonPayload`.
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - note: The project card's note
@@ -2574,9 +2591,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/PATCH/requestBody/content/application\/json`.
-                case json(Operations.projects_sol_update_hyphen_card.Input.Body.jsonPayload)
+                case json(Operations.ProjectsUpdateCard.Input.Body.JsonPayload)
             }
-            public var body: Operations.projects_sol_update_hyphen_card.Input.Body?
+            public var body: Operations.ProjectsUpdateCard.Input.Body?
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -2584,9 +2601,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.projects_sol_update_hyphen_card.Input.Path,
-                headers: Operations.projects_sol_update_hyphen_card.Input.Headers = .init(),
-                body: Operations.projects_sol_update_hyphen_card.Input.Body? = nil
+                path: Operations.ProjectsUpdateCard.Input.Path,
+                headers: Operations.ProjectsUpdateCard.Input.Headers = .init(),
+                body: Operations.ProjectsUpdateCard.Input.Body? = nil
             ) {
                 self.path = path
                 self.headers = headers
@@ -2598,12 +2615,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/PATCH/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/PATCH/responses/200/content/application\/json`.
-                    case json(Components.Schemas.project_hyphen_card)
+                    case json(Components.Schemas.ProjectCard)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.project_hyphen_card {
+                    public var json: Components.Schemas.ProjectCard {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -2613,12 +2630,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.projects_sol_update_hyphen_card.Output.Ok.Body
+                public var body: Operations.ProjectsUpdateCard.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.projects_sol_update_hyphen_card.Output.Ok.Body) {
+                public init(body: Operations.ProjectsUpdateCard.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -2627,12 +2644,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/patch(projects/update-card)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.projects_sol_update_hyphen_card.Output.Ok)
+            case ok(Operations.ProjectsUpdateCard.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.projects_sol_update_hyphen_card.Output.Ok {
+            public var ok: Operations.ProjectsUpdateCard.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -2650,12 +2667,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/patch(projects/update-card)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/patch(projects/update-card)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -2673,12 +2698,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/patch(projects/update-card)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -2696,12 +2721,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/patch(projects/update-card)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -2719,12 +2744,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/patch(projects/update-card)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -2742,12 +2767,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/patch(projects/update-card)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed_simple)
+            case unprocessableContent(Components.Responses.ValidationFailedSimple)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed_simple {
+            public var unprocessableContent: Components.Responses.ValidationFailedSimple {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -2799,7 +2824,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /projects/columns/cards/{card_id}`.
     /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/delete(projects/delete-card)`.
-    public enum projects_sol_delete_hyphen_card {
+    public enum ProjectsDeleteCard {
         public static let id: Swift.String = "projects/delete-card"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/DELETE/path`.
@@ -2807,36 +2832,36 @@ public enum Operations {
                 /// The unique identifier of the card.
                 ///
                 /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/DELETE/path/card_id`.
-                public var card_id: Components.Parameters.card_hyphen_id
+                public var cardId: Components.Parameters.CardId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - card_id: The unique identifier of the card.
-                public init(card_id: Components.Parameters.card_hyphen_id) {
-                    self.card_id = card_id
+                ///   - cardId: The unique identifier of the card.
+                public init(cardId: Components.Parameters.CardId) {
+                    self.cardId = cardId
                 }
             }
-            public var path: Operations.projects_sol_delete_hyphen_card.Input.Path
+            public var path: Operations.ProjectsDeleteCard.Input.Path
             /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/DELETE/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_delete_hyphen_card.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsDeleteCard.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_delete_hyphen_card.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsDeleteCard.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.projects_sol_delete_hyphen_card.Input.Headers
+            public var headers: Operations.ProjectsDeleteCard.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.projects_sol_delete_hyphen_card.Input.Path,
-                headers: Operations.projects_sol_delete_hyphen_card.Input.Headers = .init()
+                path: Operations.ProjectsDeleteCard.Input.Path,
+                headers: Operations.ProjectsDeleteCard.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -2852,12 +2877,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/delete(projects/delete-card)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.projects_sol_delete_hyphen_card.Output.NoContent)
+            case noContent(Operations.ProjectsDeleteCard.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/delete(projects/delete-card)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.projects_sol_delete_hyphen_card.Output.NoContent {
+            public var noContent: Operations.ProjectsDeleteCard.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -2875,12 +2908,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/delete(projects/delete-card)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/delete(projects/delete-card)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -2897,41 +2938,41 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/DELETE/responses/403/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/DELETE/responses/403/content/json`.
-                    public struct jsonPayload: Codable, Hashable, Sendable {
+                    public struct JsonPayload: Codable, Hashable, Sendable {
                         /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/DELETE/responses/403/content/json/message`.
                         public var message: Swift.String?
                         /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/DELETE/responses/403/content/json/documentation_url`.
-                        public var documentation_url: Swift.String?
+                        public var documentationUrl: Swift.String?
                         /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/DELETE/responses/403/content/json/errors`.
                         public var errors: [Swift.String]?
-                        /// Creates a new `jsonPayload`.
+                        /// Creates a new `JsonPayload`.
                         ///
                         /// - Parameters:
                         ///   - message:
-                        ///   - documentation_url:
+                        ///   - documentationUrl:
                         ///   - errors:
                         public init(
                             message: Swift.String? = nil,
-                            documentation_url: Swift.String? = nil,
+                            documentationUrl: Swift.String? = nil,
                             errors: [Swift.String]? = nil
                         ) {
                             self.message = message
-                            self.documentation_url = documentation_url
+                            self.documentationUrl = documentationUrl
                             self.errors = errors
                         }
                         public enum CodingKeys: String, CodingKey {
                             case message
-                            case documentation_url
+                            case documentationUrl = "documentation_url"
                             case errors
                         }
                     }
                     /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/DELETE/responses/403/content/application\/json`.
-                    case json(Operations.projects_sol_delete_hyphen_card.Output.Forbidden.Body.jsonPayload)
+                    case json(Operations.ProjectsDeleteCard.Output.Forbidden.Body.JsonPayload)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Operations.projects_sol_delete_hyphen_card.Output.Forbidden.Body.jsonPayload {
+                    public var json: Operations.ProjectsDeleteCard.Output.Forbidden.Body.JsonPayload {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -2941,12 +2982,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.projects_sol_delete_hyphen_card.Output.Forbidden.Body
+                public var body: Operations.ProjectsDeleteCard.Output.Forbidden.Body
                 /// Creates a new `Forbidden`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.projects_sol_delete_hyphen_card.Output.Forbidden.Body) {
+                public init(body: Operations.ProjectsDeleteCard.Output.Forbidden.Body) {
                     self.body = body
                 }
             }
@@ -2955,12 +2996,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/delete(projects/delete-card)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Operations.projects_sol_delete_hyphen_card.Output.Forbidden)
+            case forbidden(Operations.ProjectsDeleteCard.Output.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Operations.projects_sol_delete_hyphen_card.Output.Forbidden {
+            public var forbidden: Operations.ProjectsDeleteCard.Output.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -2978,12 +3019,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/delete(projects/delete-card)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -3001,12 +3042,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/delete(projects/delete-card)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -3058,7 +3099,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /projects/columns/cards/{card_id}/moves`.
     /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/moves/post(projects/move-card)`.
-    public enum projects_sol_move_hyphen_card {
+    public enum ProjectsMoveCard {
         public static let id: Swift.String = "projects/move-card"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/moves/POST/path`.
@@ -3066,32 +3107,32 @@ public enum Operations {
                 /// The unique identifier of the card.
                 ///
                 /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/moves/POST/path/card_id`.
-                public var card_id: Components.Parameters.card_hyphen_id
+                public var cardId: Components.Parameters.CardId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - card_id: The unique identifier of the card.
-                public init(card_id: Components.Parameters.card_hyphen_id) {
-                    self.card_id = card_id
+                ///   - cardId: The unique identifier of the card.
+                public init(cardId: Components.Parameters.CardId) {
+                    self.cardId = cardId
                 }
             }
-            public var path: Operations.projects_sol_move_hyphen_card.Input.Path
+            public var path: Operations.ProjectsMoveCard.Input.Path
             /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/moves/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_move_hyphen_card.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsMoveCard.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_move_hyphen_card.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsMoveCard.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.projects_sol_move_hyphen_card.Input.Headers
+            public var headers: Operations.ProjectsMoveCard.Input.Headers
             /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/moves/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/moves/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The position of the card in a column. Can be one of: `top`, `bottom`, or `after:<card_id>` to place after the specified card.
                     ///
                     /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/moves/POST/requestBody/json/position`.
@@ -3099,28 +3140,28 @@ public enum Operations {
                     /// The unique identifier of the column the card should be moved to
                     ///
                     /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/moves/POST/requestBody/json/column_id`.
-                    public var column_id: Swift.Int?
-                    /// Creates a new `jsonPayload`.
+                    public var columnId: Swift.Int?
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - position: The position of the card in a column. Can be one of: `top`, `bottom`, or `after:<card_id>` to place after the specified card.
-                    ///   - column_id: The unique identifier of the column the card should be moved to
+                    ///   - columnId: The unique identifier of the column the card should be moved to
                     public init(
                         position: Swift.String,
-                        column_id: Swift.Int? = nil
+                        columnId: Swift.Int? = nil
                     ) {
                         self.position = position
-                        self.column_id = column_id
+                        self.columnId = columnId
                     }
                     public enum CodingKeys: String, CodingKey {
                         case position
-                        case column_id
+                        case columnId = "column_id"
                     }
                 }
                 /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/moves/POST/requestBody/content/application\/json`.
-                case json(Operations.projects_sol_move_hyphen_card.Input.Body.jsonPayload)
+                case json(Operations.ProjectsMoveCard.Input.Body.JsonPayload)
             }
-            public var body: Operations.projects_sol_move_hyphen_card.Input.Body
+            public var body: Operations.ProjectsMoveCard.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -3128,9 +3169,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.projects_sol_move_hyphen_card.Input.Path,
-                headers: Operations.projects_sol_move_hyphen_card.Input.Headers = .init(),
-                body: Operations.projects_sol_move_hyphen_card.Input.Body
+                path: Operations.ProjectsMoveCard.Input.Path,
+                headers: Operations.ProjectsMoveCard.Input.Headers = .init(),
+                body: Operations.ProjectsMoveCard.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -3142,20 +3183,20 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/moves/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/moves/POST/responses/201/content/json`.
-                    public struct jsonPayload: Codable, Hashable, Sendable {
-                        /// Creates a new `jsonPayload`.
+                    public struct JsonPayload: Codable, Hashable, Sendable {
+                        /// Creates a new `JsonPayload`.
                         public init() {}
                         public init(from decoder: any Decoder) throws {
                             try decoder.ensureNoAdditionalProperties(knownKeys: [])
                         }
                     }
                     /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/moves/POST/responses/201/content/application\/json`.
-                    case json(Operations.projects_sol_move_hyphen_card.Output.Created.Body.jsonPayload)
+                    case json(Operations.ProjectsMoveCard.Output.Created.Body.JsonPayload)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Operations.projects_sol_move_hyphen_card.Output.Created.Body.jsonPayload {
+                    public var json: Operations.ProjectsMoveCard.Output.Created.Body.JsonPayload {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -3165,12 +3206,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.projects_sol_move_hyphen_card.Output.Created.Body
+                public var body: Operations.ProjectsMoveCard.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.projects_sol_move_hyphen_card.Output.Created.Body) {
+                public init(body: Operations.ProjectsMoveCard.Output.Created.Body) {
                     self.body = body
                 }
             }
@@ -3179,12 +3220,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/moves/post(projects/move-card)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.projects_sol_move_hyphen_card.Output.Created)
+            case created(Operations.ProjectsMoveCard.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.projects_sol_move_hyphen_card.Output.Created {
+            public var created: Operations.ProjectsMoveCard.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -3202,12 +3243,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/moves/post(projects/move-card)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/moves/post(projects/move-card)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -3224,22 +3273,22 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/moves/POST/responses/403/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/moves/POST/responses/403/content/json`.
-                    public struct jsonPayload: Codable, Hashable, Sendable {
+                    public struct JsonPayload: Codable, Hashable, Sendable {
                         /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/moves/POST/responses/403/content/json/message`.
                         public var message: Swift.String?
                         /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/moves/POST/responses/403/content/json/documentation_url`.
-                        public var documentation_url: Swift.String?
-                        /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/moves/POST/responses/403/content/json/errorsPayload`.
-                        public struct errorsPayloadPayload: Codable, Hashable, Sendable {
-                            /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/moves/POST/responses/403/content/json/errorsPayload/code`.
+                        public var documentationUrl: Swift.String?
+                        /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/moves/POST/responses/403/content/json/ErrorsPayload`.
+                        public struct ErrorsPayloadPayload: Codable, Hashable, Sendable {
+                            /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/moves/POST/responses/403/content/json/ErrorsPayload/code`.
                             public var code: Swift.String?
-                            /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/moves/POST/responses/403/content/json/errorsPayload/message`.
+                            /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/moves/POST/responses/403/content/json/ErrorsPayload/message`.
                             public var message: Swift.String?
-                            /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/moves/POST/responses/403/content/json/errorsPayload/resource`.
+                            /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/moves/POST/responses/403/content/json/ErrorsPayload/resource`.
                             public var resource: Swift.String?
-                            /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/moves/POST/responses/403/content/json/errorsPayload/field`.
+                            /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/moves/POST/responses/403/content/json/ErrorsPayload/field`.
                             public var field: Swift.String?
-                            /// Creates a new `errorsPayloadPayload`.
+                            /// Creates a new `ErrorsPayloadPayload`.
                             ///
                             /// - Parameters:
                             ///   - code:
@@ -3265,37 +3314,37 @@ public enum Operations {
                             }
                         }
                         /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/moves/POST/responses/403/content/json/errors`.
-                        public typealias errorsPayload = [Operations.projects_sol_move_hyphen_card.Output.Forbidden.Body.jsonPayload.errorsPayloadPayload]
+                        public typealias ErrorsPayload = [Operations.ProjectsMoveCard.Output.Forbidden.Body.JsonPayload.ErrorsPayloadPayload]
                         /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/moves/POST/responses/403/content/json/errors`.
-                        public var errors: Operations.projects_sol_move_hyphen_card.Output.Forbidden.Body.jsonPayload.errorsPayload?
-                        /// Creates a new `jsonPayload`.
+                        public var errors: Operations.ProjectsMoveCard.Output.Forbidden.Body.JsonPayload.ErrorsPayload?
+                        /// Creates a new `JsonPayload`.
                         ///
                         /// - Parameters:
                         ///   - message:
-                        ///   - documentation_url:
+                        ///   - documentationUrl:
                         ///   - errors:
                         public init(
                             message: Swift.String? = nil,
-                            documentation_url: Swift.String? = nil,
-                            errors: Operations.projects_sol_move_hyphen_card.Output.Forbidden.Body.jsonPayload.errorsPayload? = nil
+                            documentationUrl: Swift.String? = nil,
+                            errors: Operations.ProjectsMoveCard.Output.Forbidden.Body.JsonPayload.ErrorsPayload? = nil
                         ) {
                             self.message = message
-                            self.documentation_url = documentation_url
+                            self.documentationUrl = documentationUrl
                             self.errors = errors
                         }
                         public enum CodingKeys: String, CodingKey {
                             case message
-                            case documentation_url
+                            case documentationUrl = "documentation_url"
                             case errors
                         }
                     }
                     /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/moves/POST/responses/403/content/application\/json`.
-                    case json(Operations.projects_sol_move_hyphen_card.Output.Forbidden.Body.jsonPayload)
+                    case json(Operations.ProjectsMoveCard.Output.Forbidden.Body.JsonPayload)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Operations.projects_sol_move_hyphen_card.Output.Forbidden.Body.jsonPayload {
+                    public var json: Operations.ProjectsMoveCard.Output.Forbidden.Body.JsonPayload {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -3305,12 +3354,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.projects_sol_move_hyphen_card.Output.Forbidden.Body
+                public var body: Operations.ProjectsMoveCard.Output.Forbidden.Body
                 /// Creates a new `Forbidden`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.projects_sol_move_hyphen_card.Output.Forbidden.Body) {
+                public init(body: Operations.ProjectsMoveCard.Output.Forbidden.Body) {
                     self.body = body
                 }
             }
@@ -3319,12 +3368,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/moves/post(projects/move-card)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Operations.projects_sol_move_hyphen_card.Output.Forbidden)
+            case forbidden(Operations.ProjectsMoveCard.Output.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Operations.projects_sol_move_hyphen_card.Output.Forbidden {
+            public var forbidden: Operations.ProjectsMoveCard.Output.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -3342,12 +3391,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/moves/post(projects/move-card)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -3364,20 +3413,20 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/moves/POST/responses/503/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/moves/POST/responses/503/content/json`.
-                    public struct jsonPayload: Codable, Hashable, Sendable {
+                    public struct JsonPayload: Codable, Hashable, Sendable {
                         /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/moves/POST/responses/503/content/json/code`.
                         public var code: Swift.String?
                         /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/moves/POST/responses/503/content/json/message`.
                         public var message: Swift.String?
                         /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/moves/POST/responses/503/content/json/documentation_url`.
-                        public var documentation_url: Swift.String?
-                        /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/moves/POST/responses/503/content/json/errorsPayload`.
-                        public struct errorsPayloadPayload: Codable, Hashable, Sendable {
-                            /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/moves/POST/responses/503/content/json/errorsPayload/code`.
+                        public var documentationUrl: Swift.String?
+                        /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/moves/POST/responses/503/content/json/ErrorsPayload`.
+                        public struct ErrorsPayloadPayload: Codable, Hashable, Sendable {
+                            /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/moves/POST/responses/503/content/json/ErrorsPayload/code`.
                             public var code: Swift.String?
-                            /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/moves/POST/responses/503/content/json/errorsPayload/message`.
+                            /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/moves/POST/responses/503/content/json/ErrorsPayload/message`.
                             public var message: Swift.String?
-                            /// Creates a new `errorsPayloadPayload`.
+                            /// Creates a new `ErrorsPayloadPayload`.
                             ///
                             /// - Parameters:
                             ///   - code:
@@ -3395,41 +3444,41 @@ public enum Operations {
                             }
                         }
                         /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/moves/POST/responses/503/content/json/errors`.
-                        public typealias errorsPayload = [Operations.projects_sol_move_hyphen_card.Output.ServiceUnavailable.Body.jsonPayload.errorsPayloadPayload]
+                        public typealias ErrorsPayload = [Operations.ProjectsMoveCard.Output.ServiceUnavailable.Body.JsonPayload.ErrorsPayloadPayload]
                         /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/moves/POST/responses/503/content/json/errors`.
-                        public var errors: Operations.projects_sol_move_hyphen_card.Output.ServiceUnavailable.Body.jsonPayload.errorsPayload?
-                        /// Creates a new `jsonPayload`.
+                        public var errors: Operations.ProjectsMoveCard.Output.ServiceUnavailable.Body.JsonPayload.ErrorsPayload?
+                        /// Creates a new `JsonPayload`.
                         ///
                         /// - Parameters:
                         ///   - code:
                         ///   - message:
-                        ///   - documentation_url:
+                        ///   - documentationUrl:
                         ///   - errors:
                         public init(
                             code: Swift.String? = nil,
                             message: Swift.String? = nil,
-                            documentation_url: Swift.String? = nil,
-                            errors: Operations.projects_sol_move_hyphen_card.Output.ServiceUnavailable.Body.jsonPayload.errorsPayload? = nil
+                            documentationUrl: Swift.String? = nil,
+                            errors: Operations.ProjectsMoveCard.Output.ServiceUnavailable.Body.JsonPayload.ErrorsPayload? = nil
                         ) {
                             self.code = code
                             self.message = message
-                            self.documentation_url = documentation_url
+                            self.documentationUrl = documentationUrl
                             self.errors = errors
                         }
                         public enum CodingKeys: String, CodingKey {
                             case code
                             case message
-                            case documentation_url
+                            case documentationUrl = "documentation_url"
                             case errors
                         }
                     }
                     /// - Remark: Generated from `#/paths/projects/columns/cards/{card_id}/moves/POST/responses/503/content/application\/json`.
-                    case json(Operations.projects_sol_move_hyphen_card.Output.ServiceUnavailable.Body.jsonPayload)
+                    case json(Operations.ProjectsMoveCard.Output.ServiceUnavailable.Body.JsonPayload)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Operations.projects_sol_move_hyphen_card.Output.ServiceUnavailable.Body.jsonPayload {
+                    public var json: Operations.ProjectsMoveCard.Output.ServiceUnavailable.Body.JsonPayload {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -3439,12 +3488,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.projects_sol_move_hyphen_card.Output.ServiceUnavailable.Body
+                public var body: Operations.ProjectsMoveCard.Output.ServiceUnavailable.Body
                 /// Creates a new `ServiceUnavailable`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.projects_sol_move_hyphen_card.Output.ServiceUnavailable.Body) {
+                public init(body: Operations.ProjectsMoveCard.Output.ServiceUnavailable.Body) {
                     self.body = body
                 }
             }
@@ -3453,12 +3502,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/moves/post(projects/move-card)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
-            case serviceUnavailable(Operations.projects_sol_move_hyphen_card.Output.ServiceUnavailable)
+            case serviceUnavailable(Operations.ProjectsMoveCard.Output.ServiceUnavailable)
             /// The associated value of the enum case if `self` is `.serviceUnavailable`.
             ///
             /// - Throws: An error if `self` is not `.serviceUnavailable`.
             /// - SeeAlso: `.serviceUnavailable`.
-            public var serviceUnavailable: Operations.projects_sol_move_hyphen_card.Output.ServiceUnavailable {
+            public var serviceUnavailable: Operations.ProjectsMoveCard.Output.ServiceUnavailable {
                 get throws {
                     switch self {
                     case let .serviceUnavailable(response):
@@ -3476,12 +3525,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/cards/{card_id}/moves/post(projects/move-card)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -3533,7 +3582,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /projects/columns/{column_id}`.
     /// - Remark: Generated from `#/paths//projects/columns/{column_id}/get(projects/get-column)`.
-    public enum projects_sol_get_hyphen_column {
+    public enum ProjectsGetColumn {
         public static let id: Swift.String = "projects/get-column"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/projects/columns/{column_id}/GET/path`.
@@ -3541,36 +3590,36 @@ public enum Operations {
                 /// The unique identifier of the column.
                 ///
                 /// - Remark: Generated from `#/paths/projects/columns/{column_id}/GET/path/column_id`.
-                public var column_id: Components.Parameters.column_hyphen_id
+                public var columnId: Components.Parameters.ColumnId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - column_id: The unique identifier of the column.
-                public init(column_id: Components.Parameters.column_hyphen_id) {
-                    self.column_id = column_id
+                ///   - columnId: The unique identifier of the column.
+                public init(columnId: Components.Parameters.ColumnId) {
+                    self.columnId = columnId
                 }
             }
-            public var path: Operations.projects_sol_get_hyphen_column.Input.Path
+            public var path: Operations.ProjectsGetColumn.Input.Path
             /// - Remark: Generated from `#/paths/projects/columns/{column_id}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_get_hyphen_column.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsGetColumn.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_get_hyphen_column.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsGetColumn.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.projects_sol_get_hyphen_column.Input.Headers
+            public var headers: Operations.ProjectsGetColumn.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.projects_sol_get_hyphen_column.Input.Path,
-                headers: Operations.projects_sol_get_hyphen_column.Input.Headers = .init()
+                path: Operations.ProjectsGetColumn.Input.Path,
+                headers: Operations.ProjectsGetColumn.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -3581,12 +3630,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/projects/columns/{column_id}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/projects/columns/{column_id}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.project_hyphen_column)
+                    case json(Components.Schemas.ProjectColumn)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.project_hyphen_column {
+                    public var json: Components.Schemas.ProjectColumn {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -3596,12 +3645,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.projects_sol_get_hyphen_column.Output.Ok.Body
+                public var body: Operations.ProjectsGetColumn.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.projects_sol_get_hyphen_column.Output.Ok.Body) {
+                public init(body: Operations.ProjectsGetColumn.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -3610,12 +3659,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/{column_id}/get(projects/get-column)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.projects_sol_get_hyphen_column.Output.Ok)
+            case ok(Operations.ProjectsGetColumn.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.projects_sol_get_hyphen_column.Output.Ok {
+            public var ok: Operations.ProjectsGetColumn.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -3633,12 +3682,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/{column_id}/get(projects/get-column)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//projects/columns/{column_id}/get(projects/get-column)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -3656,12 +3713,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/{column_id}/get(projects/get-column)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -3679,12 +3736,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/{column_id}/get(projects/get-column)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -3702,12 +3759,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/{column_id}/get(projects/get-column)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -3759,7 +3816,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PATCH /projects/columns/{column_id}`.
     /// - Remark: Generated from `#/paths//projects/columns/{column_id}/patch(projects/update-column)`.
-    public enum projects_sol_update_hyphen_column {
+    public enum ProjectsUpdateColumn {
         public static let id: Swift.String = "projects/update-column"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/projects/columns/{column_id}/PATCH/path`.
@@ -3767,37 +3824,37 @@ public enum Operations {
                 /// The unique identifier of the column.
                 ///
                 /// - Remark: Generated from `#/paths/projects/columns/{column_id}/PATCH/path/column_id`.
-                public var column_id: Components.Parameters.column_hyphen_id
+                public var columnId: Components.Parameters.ColumnId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - column_id: The unique identifier of the column.
-                public init(column_id: Components.Parameters.column_hyphen_id) {
-                    self.column_id = column_id
+                ///   - columnId: The unique identifier of the column.
+                public init(columnId: Components.Parameters.ColumnId) {
+                    self.columnId = columnId
                 }
             }
-            public var path: Operations.projects_sol_update_hyphen_column.Input.Path
+            public var path: Operations.ProjectsUpdateColumn.Input.Path
             /// - Remark: Generated from `#/paths/projects/columns/{column_id}/PATCH/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_update_hyphen_column.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsUpdateColumn.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_update_hyphen_column.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsUpdateColumn.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.projects_sol_update_hyphen_column.Input.Headers
+            public var headers: Operations.ProjectsUpdateColumn.Input.Headers
             /// - Remark: Generated from `#/paths/projects/columns/{column_id}/PATCH/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/projects/columns/{column_id}/PATCH/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// Name of the project column
                     ///
                     /// - Remark: Generated from `#/paths/projects/columns/{column_id}/PATCH/requestBody/json/name`.
                     public var name: Swift.String
-                    /// Creates a new `jsonPayload`.
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - name: Name of the project column
@@ -3809,9 +3866,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/projects/columns/{column_id}/PATCH/requestBody/content/application\/json`.
-                case json(Operations.projects_sol_update_hyphen_column.Input.Body.jsonPayload)
+                case json(Operations.ProjectsUpdateColumn.Input.Body.JsonPayload)
             }
-            public var body: Operations.projects_sol_update_hyphen_column.Input.Body
+            public var body: Operations.ProjectsUpdateColumn.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -3819,9 +3876,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.projects_sol_update_hyphen_column.Input.Path,
-                headers: Operations.projects_sol_update_hyphen_column.Input.Headers = .init(),
-                body: Operations.projects_sol_update_hyphen_column.Input.Body
+                path: Operations.ProjectsUpdateColumn.Input.Path,
+                headers: Operations.ProjectsUpdateColumn.Input.Headers = .init(),
+                body: Operations.ProjectsUpdateColumn.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -3833,12 +3890,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/projects/columns/{column_id}/PATCH/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/projects/columns/{column_id}/PATCH/responses/200/content/application\/json`.
-                    case json(Components.Schemas.project_hyphen_column)
+                    case json(Components.Schemas.ProjectColumn)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.project_hyphen_column {
+                    public var json: Components.Schemas.ProjectColumn {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -3848,12 +3905,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.projects_sol_update_hyphen_column.Output.Ok.Body
+                public var body: Operations.ProjectsUpdateColumn.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.projects_sol_update_hyphen_column.Output.Ok.Body) {
+                public init(body: Operations.ProjectsUpdateColumn.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -3862,12 +3919,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/{column_id}/patch(projects/update-column)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.projects_sol_update_hyphen_column.Output.Ok)
+            case ok(Operations.ProjectsUpdateColumn.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.projects_sol_update_hyphen_column.Output.Ok {
+            public var ok: Operations.ProjectsUpdateColumn.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -3885,12 +3942,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/{column_id}/patch(projects/update-column)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//projects/columns/{column_id}/patch(projects/update-column)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -3908,12 +3973,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/{column_id}/patch(projects/update-column)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -3931,12 +3996,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/{column_id}/patch(projects/update-column)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -3988,7 +4053,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /projects/columns/{column_id}`.
     /// - Remark: Generated from `#/paths//projects/columns/{column_id}/delete(projects/delete-column)`.
-    public enum projects_sol_delete_hyphen_column {
+    public enum ProjectsDeleteColumn {
         public static let id: Swift.String = "projects/delete-column"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/projects/columns/{column_id}/DELETE/path`.
@@ -3996,36 +4061,36 @@ public enum Operations {
                 /// The unique identifier of the column.
                 ///
                 /// - Remark: Generated from `#/paths/projects/columns/{column_id}/DELETE/path/column_id`.
-                public var column_id: Components.Parameters.column_hyphen_id
+                public var columnId: Components.Parameters.ColumnId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - column_id: The unique identifier of the column.
-                public init(column_id: Components.Parameters.column_hyphen_id) {
-                    self.column_id = column_id
+                ///   - columnId: The unique identifier of the column.
+                public init(columnId: Components.Parameters.ColumnId) {
+                    self.columnId = columnId
                 }
             }
-            public var path: Operations.projects_sol_delete_hyphen_column.Input.Path
+            public var path: Operations.ProjectsDeleteColumn.Input.Path
             /// - Remark: Generated from `#/paths/projects/columns/{column_id}/DELETE/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_delete_hyphen_column.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsDeleteColumn.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_delete_hyphen_column.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsDeleteColumn.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.projects_sol_delete_hyphen_column.Input.Headers
+            public var headers: Operations.ProjectsDeleteColumn.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.projects_sol_delete_hyphen_column.Input.Path,
-                headers: Operations.projects_sol_delete_hyphen_column.Input.Headers = .init()
+                path: Operations.ProjectsDeleteColumn.Input.Path,
+                headers: Operations.ProjectsDeleteColumn.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -4041,12 +4106,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/{column_id}/delete(projects/delete-column)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.projects_sol_delete_hyphen_column.Output.NoContent)
+            case noContent(Operations.ProjectsDeleteColumn.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//projects/columns/{column_id}/delete(projects/delete-column)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.projects_sol_delete_hyphen_column.Output.NoContent {
+            public var noContent: Operations.ProjectsDeleteColumn.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -4064,12 +4137,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/{column_id}/delete(projects/delete-column)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//projects/columns/{column_id}/delete(projects/delete-column)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -4087,12 +4168,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/{column_id}/delete(projects/delete-column)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -4110,12 +4191,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/{column_id}/delete(projects/delete-column)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -4167,7 +4248,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /projects/columns/{column_id}/cards`.
     /// - Remark: Generated from `#/paths//projects/columns/{column_id}/cards/get(projects/list-cards)`.
-    public enum projects_sol_list_hyphen_cards {
+    public enum ProjectsListCards {
         public static let id: Swift.String = "projects/list-cards"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/projects/columns/{column_id}/cards/GET/path`.
@@ -4175,65 +4256,65 @@ public enum Operations {
                 /// The unique identifier of the column.
                 ///
                 /// - Remark: Generated from `#/paths/projects/columns/{column_id}/cards/GET/path/column_id`.
-                public var column_id: Components.Parameters.column_hyphen_id
+                public var columnId: Components.Parameters.ColumnId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - column_id: The unique identifier of the column.
-                public init(column_id: Components.Parameters.column_hyphen_id) {
-                    self.column_id = column_id
+                ///   - columnId: The unique identifier of the column.
+                public init(columnId: Components.Parameters.ColumnId) {
+                    self.columnId = columnId
                 }
             }
-            public var path: Operations.projects_sol_list_hyphen_cards.Input.Path
+            public var path: Operations.ProjectsListCards.Input.Path
             /// - Remark: Generated from `#/paths/projects/columns/{column_id}/cards/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/projects/columns/{column_id}/cards/GET/query/archived_state`.
-                @frozen public enum archived_statePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum ArchivedStatePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case all = "all"
                     case archived = "archived"
-                    case not_archived = "not_archived"
+                    case notArchived = "not_archived"
                 }
                 /// Filters the project cards that are returned by the card's state.
                 ///
                 /// - Remark: Generated from `#/paths/projects/columns/{column_id}/cards/GET/query/archived_state`.
-                public var archived_state: Operations.projects_sol_list_hyphen_cards.Input.Query.archived_statePayload?
+                public var archivedState: Operations.ProjectsListCards.Input.Query.ArchivedStatePayload?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/projects/columns/{column_id}/cards/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/projects/columns/{column_id}/cards/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - archived_state: Filters the project cards that are returned by the card's state.
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - archivedState: Filters the project cards that are returned by the card's state.
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    archived_state: Operations.projects_sol_list_hyphen_cards.Input.Query.archived_statePayload? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    archivedState: Operations.ProjectsListCards.Input.Query.ArchivedStatePayload? = nil,
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.archived_state = archived_state
-                    self.per_page = per_page
+                    self.archivedState = archivedState
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.projects_sol_list_hyphen_cards.Input.Query
+            public var query: Operations.ProjectsListCards.Input.Query
             /// - Remark: Generated from `#/paths/projects/columns/{column_id}/cards/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_list_hyphen_cards.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsListCards.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_list_hyphen_cards.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsListCards.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.projects_sol_list_hyphen_cards.Input.Headers
+            public var headers: Operations.ProjectsListCards.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -4241,9 +4322,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.projects_sol_list_hyphen_cards.Input.Path,
-                query: Operations.projects_sol_list_hyphen_cards.Input.Query = .init(),
-                headers: Operations.projects_sol_list_hyphen_cards.Input.Headers = .init()
+                path: Operations.ProjectsListCards.Input.Path,
+                query: Operations.ProjectsListCards.Input.Query = .init(),
+                headers: Operations.ProjectsListCards.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -4255,26 +4336,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/projects/columns/{column_id}/cards/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/projects/columns/{column_id}/cards/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.projects_sol_list_hyphen_cards.Output.Ok.Headers
+                public var headers: Operations.ProjectsListCards.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/projects/columns/{column_id}/cards/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/projects/columns/{column_id}/cards/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.project_hyphen_card])
+                    case json([Components.Schemas.ProjectCard])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.project_hyphen_card] {
+                    public var json: [Components.Schemas.ProjectCard] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -4284,15 +4365,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.projects_sol_list_hyphen_cards.Output.Ok.Body
+                public var body: Operations.ProjectsListCards.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.projects_sol_list_hyphen_cards.Output.Ok.Headers = .init(),
-                    body: Operations.projects_sol_list_hyphen_cards.Output.Ok.Body
+                    headers: Operations.ProjectsListCards.Output.Ok.Headers = .init(),
+                    body: Operations.ProjectsListCards.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -4303,12 +4384,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/{column_id}/cards/get(projects/list-cards)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.projects_sol_list_hyphen_cards.Output.Ok)
+            case ok(Operations.ProjectsListCards.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.projects_sol_list_hyphen_cards.Output.Ok {
+            public var ok: Operations.ProjectsListCards.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -4326,12 +4407,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/{column_id}/cards/get(projects/list-cards)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//projects/columns/{column_id}/cards/get(projects/list-cards)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -4349,12 +4438,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/{column_id}/cards/get(projects/list-cards)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -4372,12 +4461,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/{column_id}/cards/get(projects/list-cards)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -4429,7 +4518,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /projects/columns/{column_id}/cards`.
     /// - Remark: Generated from `#/paths//projects/columns/{column_id}/cards/post(projects/create-card)`.
-    public enum projects_sol_create_hyphen_card {
+    public enum ProjectsCreateCard {
         public static let id: Swift.String = "projects/create-card"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/projects/columns/{column_id}/cards/POST/path`.
@@ -4437,32 +4526,32 @@ public enum Operations {
                 /// The unique identifier of the column.
                 ///
                 /// - Remark: Generated from `#/paths/projects/columns/{column_id}/cards/POST/path/column_id`.
-                public var column_id: Components.Parameters.column_hyphen_id
+                public var columnId: Components.Parameters.ColumnId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - column_id: The unique identifier of the column.
-                public init(column_id: Components.Parameters.column_hyphen_id) {
-                    self.column_id = column_id
+                ///   - columnId: The unique identifier of the column.
+                public init(columnId: Components.Parameters.ColumnId) {
+                    self.columnId = columnId
                 }
             }
-            public var path: Operations.projects_sol_create_hyphen_card.Input.Path
+            public var path: Operations.ProjectsCreateCard.Input.Path
             /// - Remark: Generated from `#/paths/projects/columns/{column_id}/cards/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_create_hyphen_card.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsCreateCard.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_create_hyphen_card.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsCreateCard.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.projects_sol_create_hyphen_card.Input.Headers
+            public var headers: Operations.ProjectsCreateCard.Input.Headers
             /// - Remark: Generated from `#/paths/projects/columns/{column_id}/cards/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/projects/columns/{column_id}/cards/POST/requestBody/json`.
-                @frozen public enum jsonPayload: Codable, Hashable, Sendable {
+                @frozen public enum JsonPayload: Codable, Hashable, Sendable {
                     /// - Remark: Generated from `#/paths/projects/columns/{column_id}/cards/POST/requestBody/json/case1`.
                     public struct Case1Payload: Codable, Hashable, Sendable {
                         /// The project card's note
@@ -4481,36 +4570,36 @@ public enum Operations {
                         }
                     }
                     /// - Remark: Generated from `#/paths/projects/columns/{column_id}/cards/POST/requestBody/json/case1`.
-                    case case1(Operations.projects_sol_create_hyphen_card.Input.Body.jsonPayload.Case1Payload)
+                    case case1(Operations.ProjectsCreateCard.Input.Body.JsonPayload.Case1Payload)
                     /// - Remark: Generated from `#/paths/projects/columns/{column_id}/cards/POST/requestBody/json/case2`.
                     public struct Case2Payload: Codable, Hashable, Sendable {
                         /// The unique identifier of the content associated with the card
                         ///
                         /// - Remark: Generated from `#/paths/projects/columns/{column_id}/cards/POST/requestBody/json/case2/content_id`.
-                        public var content_id: Swift.Int
+                        public var contentId: Swift.Int
                         /// The piece of content associated with the card
                         ///
                         /// - Remark: Generated from `#/paths/projects/columns/{column_id}/cards/POST/requestBody/json/case2/content_type`.
-                        public var content_type: Swift.String
+                        public var contentType: Swift.String
                         /// Creates a new `Case2Payload`.
                         ///
                         /// - Parameters:
-                        ///   - content_id: The unique identifier of the content associated with the card
-                        ///   - content_type: The piece of content associated with the card
+                        ///   - contentId: The unique identifier of the content associated with the card
+                        ///   - contentType: The piece of content associated with the card
                         public init(
-                            content_id: Swift.Int,
-                            content_type: Swift.String
+                            contentId: Swift.Int,
+                            contentType: Swift.String
                         ) {
-                            self.content_id = content_id
-                            self.content_type = content_type
+                            self.contentId = contentId
+                            self.contentType = contentType
                         }
                         public enum CodingKeys: String, CodingKey {
-                            case content_id
-                            case content_type
+                            case contentId = "content_id"
+                            case contentType = "content_type"
                         }
                     }
                     /// - Remark: Generated from `#/paths/projects/columns/{column_id}/cards/POST/requestBody/json/case2`.
-                    case case2(Operations.projects_sol_create_hyphen_card.Input.Body.jsonPayload.Case2Payload)
+                    case case2(Operations.ProjectsCreateCard.Input.Body.JsonPayload.Case2Payload)
                     public init(from decoder: any Decoder) throws {
                         var errors: [any Error] = []
                         do {
@@ -4541,9 +4630,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/projects/columns/{column_id}/cards/POST/requestBody/content/application\/json`.
-                case json(Operations.projects_sol_create_hyphen_card.Input.Body.jsonPayload)
+                case json(Operations.ProjectsCreateCard.Input.Body.JsonPayload)
             }
-            public var body: Operations.projects_sol_create_hyphen_card.Input.Body
+            public var body: Operations.ProjectsCreateCard.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -4551,9 +4640,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.projects_sol_create_hyphen_card.Input.Path,
-                headers: Operations.projects_sol_create_hyphen_card.Input.Headers = .init(),
-                body: Operations.projects_sol_create_hyphen_card.Input.Body
+                path: Operations.ProjectsCreateCard.Input.Path,
+                headers: Operations.ProjectsCreateCard.Input.Headers = .init(),
+                body: Operations.ProjectsCreateCard.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -4565,12 +4654,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/projects/columns/{column_id}/cards/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/projects/columns/{column_id}/cards/POST/responses/201/content/application\/json`.
-                    case json(Components.Schemas.project_hyphen_card)
+                    case json(Components.Schemas.ProjectCard)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.project_hyphen_card {
+                    public var json: Components.Schemas.ProjectCard {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -4580,12 +4669,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.projects_sol_create_hyphen_card.Output.Created.Body
+                public var body: Operations.ProjectsCreateCard.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.projects_sol_create_hyphen_card.Output.Created.Body) {
+                public init(body: Operations.ProjectsCreateCard.Output.Created.Body) {
                     self.body = body
                 }
             }
@@ -4594,12 +4683,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/{column_id}/cards/post(projects/create-card)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.projects_sol_create_hyphen_card.Output.Created)
+            case created(Operations.ProjectsCreateCard.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.projects_sol_create_hyphen_card.Output.Created {
+            public var created: Operations.ProjectsCreateCard.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -4617,12 +4706,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/{column_id}/cards/post(projects/create-card)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//projects/columns/{column_id}/cards/post(projects/create-card)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -4640,12 +4737,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/{column_id}/cards/post(projects/create-card)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -4663,12 +4760,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/{column_id}/cards/post(projects/create-card)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -4685,21 +4782,21 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/projects/columns/{column_id}/cards/POST/responses/422/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/projects/columns/{column_id}/cards/POST/responses/422/content/json`.
-                    @frozen public enum jsonPayload: Codable, Hashable, Sendable {
+                    @frozen public enum JsonPayload: Codable, Hashable, Sendable {
                         /// - Remark: Generated from `#/paths/projects/columns/{column_id}/cards/POST/responses/422/content/json/case1`.
-                        case validation_hyphen_error(Components.Schemas.validation_hyphen_error)
+                        case ValidationError(Components.Schemas.ValidationError)
                         /// - Remark: Generated from `#/paths/projects/columns/{column_id}/cards/POST/responses/422/content/json/case2`.
-                        case validation_hyphen_error_hyphen_simple(Components.Schemas.validation_hyphen_error_hyphen_simple)
+                        case ValidationErrorSimple(Components.Schemas.ValidationErrorSimple)
                         public init(from decoder: any Decoder) throws {
                             var errors: [any Error] = []
                             do {
-                                self = .validation_hyphen_error(try .init(from: decoder))
+                                self = .ValidationError(try .init(from: decoder))
                                 return
                             } catch {
                                 errors.append(error)
                             }
                             do {
-                                self = .validation_hyphen_error_hyphen_simple(try .init(from: decoder))
+                                self = .ValidationErrorSimple(try .init(from: decoder))
                                 return
                             } catch {
                                 errors.append(error)
@@ -4712,20 +4809,20 @@ public enum Operations {
                         }
                         public func encode(to encoder: any Encoder) throws {
                             switch self {
-                            case let .validation_hyphen_error(value):
+                            case let .ValidationError(value):
                                 try value.encode(to: encoder)
-                            case let .validation_hyphen_error_hyphen_simple(value):
+                            case let .ValidationErrorSimple(value):
                                 try value.encode(to: encoder)
                             }
                         }
                     }
                     /// - Remark: Generated from `#/paths/projects/columns/{column_id}/cards/POST/responses/422/content/application\/json`.
-                    case json(Operations.projects_sol_create_hyphen_card.Output.UnprocessableContent.Body.jsonPayload)
+                    case json(Operations.ProjectsCreateCard.Output.UnprocessableContent.Body.JsonPayload)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Operations.projects_sol_create_hyphen_card.Output.UnprocessableContent.Body.jsonPayload {
+                    public var json: Operations.ProjectsCreateCard.Output.UnprocessableContent.Body.JsonPayload {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -4735,12 +4832,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.projects_sol_create_hyphen_card.Output.UnprocessableContent.Body
+                public var body: Operations.ProjectsCreateCard.Output.UnprocessableContent.Body
                 /// Creates a new `UnprocessableContent`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.projects_sol_create_hyphen_card.Output.UnprocessableContent.Body) {
+                public init(body: Operations.ProjectsCreateCard.Output.UnprocessableContent.Body) {
                     self.body = body
                 }
             }
@@ -4749,12 +4846,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/{column_id}/cards/post(projects/create-card)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Operations.projects_sol_create_hyphen_card.Output.UnprocessableContent)
+            case unprocessableContent(Operations.ProjectsCreateCard.Output.UnprocessableContent)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Operations.projects_sol_create_hyphen_card.Output.UnprocessableContent {
+            public var unprocessableContent: Operations.ProjectsCreateCard.Output.UnprocessableContent {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -4771,20 +4868,20 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/projects/columns/{column_id}/cards/POST/responses/503/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/projects/columns/{column_id}/cards/POST/responses/503/content/json`.
-                    public struct jsonPayload: Codable, Hashable, Sendable {
+                    public struct JsonPayload: Codable, Hashable, Sendable {
                         /// - Remark: Generated from `#/paths/projects/columns/{column_id}/cards/POST/responses/503/content/json/code`.
                         public var code: Swift.String?
                         /// - Remark: Generated from `#/paths/projects/columns/{column_id}/cards/POST/responses/503/content/json/message`.
                         public var message: Swift.String?
                         /// - Remark: Generated from `#/paths/projects/columns/{column_id}/cards/POST/responses/503/content/json/documentation_url`.
-                        public var documentation_url: Swift.String?
-                        /// - Remark: Generated from `#/paths/projects/columns/{column_id}/cards/POST/responses/503/content/json/errorsPayload`.
-                        public struct errorsPayloadPayload: Codable, Hashable, Sendable {
-                            /// - Remark: Generated from `#/paths/projects/columns/{column_id}/cards/POST/responses/503/content/json/errorsPayload/code`.
+                        public var documentationUrl: Swift.String?
+                        /// - Remark: Generated from `#/paths/projects/columns/{column_id}/cards/POST/responses/503/content/json/ErrorsPayload`.
+                        public struct ErrorsPayloadPayload: Codable, Hashable, Sendable {
+                            /// - Remark: Generated from `#/paths/projects/columns/{column_id}/cards/POST/responses/503/content/json/ErrorsPayload/code`.
                             public var code: Swift.String?
-                            /// - Remark: Generated from `#/paths/projects/columns/{column_id}/cards/POST/responses/503/content/json/errorsPayload/message`.
+                            /// - Remark: Generated from `#/paths/projects/columns/{column_id}/cards/POST/responses/503/content/json/ErrorsPayload/message`.
                             public var message: Swift.String?
-                            /// Creates a new `errorsPayloadPayload`.
+                            /// Creates a new `ErrorsPayloadPayload`.
                             ///
                             /// - Parameters:
                             ///   - code:
@@ -4802,41 +4899,41 @@ public enum Operations {
                             }
                         }
                         /// - Remark: Generated from `#/paths/projects/columns/{column_id}/cards/POST/responses/503/content/json/errors`.
-                        public typealias errorsPayload = [Operations.projects_sol_create_hyphen_card.Output.ServiceUnavailable.Body.jsonPayload.errorsPayloadPayload]
+                        public typealias ErrorsPayload = [Operations.ProjectsCreateCard.Output.ServiceUnavailable.Body.JsonPayload.ErrorsPayloadPayload]
                         /// - Remark: Generated from `#/paths/projects/columns/{column_id}/cards/POST/responses/503/content/json/errors`.
-                        public var errors: Operations.projects_sol_create_hyphen_card.Output.ServiceUnavailable.Body.jsonPayload.errorsPayload?
-                        /// Creates a new `jsonPayload`.
+                        public var errors: Operations.ProjectsCreateCard.Output.ServiceUnavailable.Body.JsonPayload.ErrorsPayload?
+                        /// Creates a new `JsonPayload`.
                         ///
                         /// - Parameters:
                         ///   - code:
                         ///   - message:
-                        ///   - documentation_url:
+                        ///   - documentationUrl:
                         ///   - errors:
                         public init(
                             code: Swift.String? = nil,
                             message: Swift.String? = nil,
-                            documentation_url: Swift.String? = nil,
-                            errors: Operations.projects_sol_create_hyphen_card.Output.ServiceUnavailable.Body.jsonPayload.errorsPayload? = nil
+                            documentationUrl: Swift.String? = nil,
+                            errors: Operations.ProjectsCreateCard.Output.ServiceUnavailable.Body.JsonPayload.ErrorsPayload? = nil
                         ) {
                             self.code = code
                             self.message = message
-                            self.documentation_url = documentation_url
+                            self.documentationUrl = documentationUrl
                             self.errors = errors
                         }
                         public enum CodingKeys: String, CodingKey {
                             case code
                             case message
-                            case documentation_url
+                            case documentationUrl = "documentation_url"
                             case errors
                         }
                     }
                     /// - Remark: Generated from `#/paths/projects/columns/{column_id}/cards/POST/responses/503/content/application\/json`.
-                    case json(Operations.projects_sol_create_hyphen_card.Output.ServiceUnavailable.Body.jsonPayload)
+                    case json(Operations.ProjectsCreateCard.Output.ServiceUnavailable.Body.JsonPayload)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Operations.projects_sol_create_hyphen_card.Output.ServiceUnavailable.Body.jsonPayload {
+                    public var json: Operations.ProjectsCreateCard.Output.ServiceUnavailable.Body.JsonPayload {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -4846,12 +4943,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.projects_sol_create_hyphen_card.Output.ServiceUnavailable.Body
+                public var body: Operations.ProjectsCreateCard.Output.ServiceUnavailable.Body
                 /// Creates a new `ServiceUnavailable`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.projects_sol_create_hyphen_card.Output.ServiceUnavailable.Body) {
+                public init(body: Operations.ProjectsCreateCard.Output.ServiceUnavailable.Body) {
                     self.body = body
                 }
             }
@@ -4860,12 +4957,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/{column_id}/cards/post(projects/create-card)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
-            case serviceUnavailable(Operations.projects_sol_create_hyphen_card.Output.ServiceUnavailable)
+            case serviceUnavailable(Operations.ProjectsCreateCard.Output.ServiceUnavailable)
             /// The associated value of the enum case if `self` is `.serviceUnavailable`.
             ///
             /// - Throws: An error if `self` is not `.serviceUnavailable`.
             /// - SeeAlso: `.serviceUnavailable`.
-            public var serviceUnavailable: Operations.projects_sol_create_hyphen_card.Output.ServiceUnavailable {
+            public var serviceUnavailable: Operations.ProjectsCreateCard.Output.ServiceUnavailable {
                 get throws {
                     switch self {
                     case let .serviceUnavailable(response):
@@ -4917,7 +5014,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /projects/columns/{column_id}/moves`.
     /// - Remark: Generated from `#/paths//projects/columns/{column_id}/moves/post(projects/move-column)`.
-    public enum projects_sol_move_hyphen_column {
+    public enum ProjectsMoveColumn {
         public static let id: Swift.String = "projects/move-column"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/projects/columns/{column_id}/moves/POST/path`.
@@ -4925,37 +5022,37 @@ public enum Operations {
                 /// The unique identifier of the column.
                 ///
                 /// - Remark: Generated from `#/paths/projects/columns/{column_id}/moves/POST/path/column_id`.
-                public var column_id: Components.Parameters.column_hyphen_id
+                public var columnId: Components.Parameters.ColumnId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - column_id: The unique identifier of the column.
-                public init(column_id: Components.Parameters.column_hyphen_id) {
-                    self.column_id = column_id
+                ///   - columnId: The unique identifier of the column.
+                public init(columnId: Components.Parameters.ColumnId) {
+                    self.columnId = columnId
                 }
             }
-            public var path: Operations.projects_sol_move_hyphen_column.Input.Path
+            public var path: Operations.ProjectsMoveColumn.Input.Path
             /// - Remark: Generated from `#/paths/projects/columns/{column_id}/moves/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_move_hyphen_column.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsMoveColumn.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_move_hyphen_column.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsMoveColumn.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.projects_sol_move_hyphen_column.Input.Headers
+            public var headers: Operations.ProjectsMoveColumn.Input.Headers
             /// - Remark: Generated from `#/paths/projects/columns/{column_id}/moves/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/projects/columns/{column_id}/moves/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The position of the column in a project. Can be one of: `first`, `last`, or `after:<column_id>` to place after the specified column.
                     ///
                     /// - Remark: Generated from `#/paths/projects/columns/{column_id}/moves/POST/requestBody/json/position`.
                     public var position: Swift.String
-                    /// Creates a new `jsonPayload`.
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - position: The position of the column in a project. Can be one of: `first`, `last`, or `after:<column_id>` to place after the specified column.
@@ -4967,9 +5064,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/projects/columns/{column_id}/moves/POST/requestBody/content/application\/json`.
-                case json(Operations.projects_sol_move_hyphen_column.Input.Body.jsonPayload)
+                case json(Operations.ProjectsMoveColumn.Input.Body.JsonPayload)
             }
-            public var body: Operations.projects_sol_move_hyphen_column.Input.Body
+            public var body: Operations.ProjectsMoveColumn.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -4977,9 +5074,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.projects_sol_move_hyphen_column.Input.Path,
-                headers: Operations.projects_sol_move_hyphen_column.Input.Headers = .init(),
-                body: Operations.projects_sol_move_hyphen_column.Input.Body
+                path: Operations.ProjectsMoveColumn.Input.Path,
+                headers: Operations.ProjectsMoveColumn.Input.Headers = .init(),
+                body: Operations.ProjectsMoveColumn.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -4991,20 +5088,20 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/projects/columns/{column_id}/moves/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/projects/columns/{column_id}/moves/POST/responses/201/content/json`.
-                    public struct jsonPayload: Codable, Hashable, Sendable {
-                        /// Creates a new `jsonPayload`.
+                    public struct JsonPayload: Codable, Hashable, Sendable {
+                        /// Creates a new `JsonPayload`.
                         public init() {}
                         public init(from decoder: any Decoder) throws {
                             try decoder.ensureNoAdditionalProperties(knownKeys: [])
                         }
                     }
                     /// - Remark: Generated from `#/paths/projects/columns/{column_id}/moves/POST/responses/201/content/application\/json`.
-                    case json(Operations.projects_sol_move_hyphen_column.Output.Created.Body.jsonPayload)
+                    case json(Operations.ProjectsMoveColumn.Output.Created.Body.JsonPayload)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Operations.projects_sol_move_hyphen_column.Output.Created.Body.jsonPayload {
+                    public var json: Operations.ProjectsMoveColumn.Output.Created.Body.JsonPayload {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -5014,12 +5111,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.projects_sol_move_hyphen_column.Output.Created.Body
+                public var body: Operations.ProjectsMoveColumn.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.projects_sol_move_hyphen_column.Output.Created.Body) {
+                public init(body: Operations.ProjectsMoveColumn.Output.Created.Body) {
                     self.body = body
                 }
             }
@@ -5028,12 +5125,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/{column_id}/moves/post(projects/move-column)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.projects_sol_move_hyphen_column.Output.Created)
+            case created(Operations.ProjectsMoveColumn.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.projects_sol_move_hyphen_column.Output.Created {
+            public var created: Operations.ProjectsMoveColumn.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -5051,12 +5148,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/{column_id}/moves/post(projects/move-column)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//projects/columns/{column_id}/moves/post(projects/move-column)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -5074,12 +5179,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/{column_id}/moves/post(projects/move-column)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -5097,12 +5202,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/{column_id}/moves/post(projects/move-column)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed_simple)
+            case unprocessableContent(Components.Responses.ValidationFailedSimple)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed_simple {
+            public var unprocessableContent: Components.Responses.ValidationFailedSimple {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -5120,12 +5225,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/columns/{column_id}/moves/post(projects/move-column)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -5177,7 +5282,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /projects/{project_id}`.
     /// - Remark: Generated from `#/paths//projects/{project_id}/get(projects/get)`.
-    public enum projects_sol_get {
+    public enum ProjectsGet {
         public static let id: Swift.String = "projects/get"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/projects/{project_id}/GET/path`.
@@ -5185,36 +5290,36 @@ public enum Operations {
                 /// The unique identifier of the project.
                 ///
                 /// - Remark: Generated from `#/paths/projects/{project_id}/GET/path/project_id`.
-                public var project_id: Components.Parameters.project_hyphen_id
+                public var projectId: Components.Parameters.ProjectId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - project_id: The unique identifier of the project.
-                public init(project_id: Components.Parameters.project_hyphen_id) {
-                    self.project_id = project_id
+                ///   - projectId: The unique identifier of the project.
+                public init(projectId: Components.Parameters.ProjectId) {
+                    self.projectId = projectId
                 }
             }
-            public var path: Operations.projects_sol_get.Input.Path
+            public var path: Operations.ProjectsGet.Input.Path
             /// - Remark: Generated from `#/paths/projects/{project_id}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_get.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsGet.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_get.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsGet.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.projects_sol_get.Input.Headers
+            public var headers: Operations.ProjectsGet.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.projects_sol_get.Input.Path,
-                headers: Operations.projects_sol_get.Input.Headers = .init()
+                path: Operations.ProjectsGet.Input.Path,
+                headers: Operations.ProjectsGet.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -5225,12 +5330,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/projects/{project_id}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/projects/{project_id}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.project)
+                    case json(Components.Schemas.Project)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.project {
+                    public var json: Components.Schemas.Project {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -5240,12 +5345,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.projects_sol_get.Output.Ok.Body
+                public var body: Operations.ProjectsGet.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.projects_sol_get.Output.Ok.Body) {
+                public init(body: Operations.ProjectsGet.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -5254,12 +5359,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/get(projects/get)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.projects_sol_get.Output.Ok)
+            case ok(Operations.ProjectsGet.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.projects_sol_get.Output.Ok {
+            public var ok: Operations.ProjectsGet.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -5277,12 +5382,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/get(projects/get)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//projects/{project_id}/get(projects/get)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -5300,12 +5413,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/get(projects/get)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -5323,12 +5436,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/get(projects/get)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -5380,7 +5493,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PATCH /projects/{project_id}`.
     /// - Remark: Generated from `#/paths//projects/{project_id}/patch(projects/update)`.
-    public enum projects_sol_update {
+    public enum ProjectsUpdate {
         public static let id: Swift.String = "projects/update"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/projects/{project_id}/PATCH/path`.
@@ -5388,32 +5501,32 @@ public enum Operations {
                 /// The unique identifier of the project.
                 ///
                 /// - Remark: Generated from `#/paths/projects/{project_id}/PATCH/path/project_id`.
-                public var project_id: Components.Parameters.project_hyphen_id
+                public var projectId: Components.Parameters.ProjectId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - project_id: The unique identifier of the project.
-                public init(project_id: Components.Parameters.project_hyphen_id) {
-                    self.project_id = project_id
+                ///   - projectId: The unique identifier of the project.
+                public init(projectId: Components.Parameters.ProjectId) {
+                    self.projectId = projectId
                 }
             }
-            public var path: Operations.projects_sol_update.Input.Path
+            public var path: Operations.ProjectsUpdate.Input.Path
             /// - Remark: Generated from `#/paths/projects/{project_id}/PATCH/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_update.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsUpdate.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_update.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsUpdate.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.projects_sol_update.Input.Headers
+            public var headers: Operations.ProjectsUpdate.Input.Headers
             /// - Remark: Generated from `#/paths/projects/{project_id}/PATCH/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/projects/{project_id}/PATCH/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// Name of the project
                     ///
                     /// - Remark: Generated from `#/paths/projects/{project_id}/PATCH/requestBody/json/name`.
@@ -5429,7 +5542,7 @@ public enum Operations {
                     /// The baseline permission that all organization members have on this project
                     ///
                     /// - Remark: Generated from `#/paths/projects/{project_id}/PATCH/requestBody/json/organization_permission`.
-                    @frozen public enum organization_permissionPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum OrganizationPermissionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case read = "read"
                         case write = "write"
                         case admin = "admin"
@@ -5438,44 +5551,44 @@ public enum Operations {
                     /// The baseline permission that all organization members have on this project
                     ///
                     /// - Remark: Generated from `#/paths/projects/{project_id}/PATCH/requestBody/json/organization_permission`.
-                    public var organization_permission: Operations.projects_sol_update.Input.Body.jsonPayload.organization_permissionPayload?
+                    public var organizationPermission: Operations.ProjectsUpdate.Input.Body.JsonPayload.OrganizationPermissionPayload?
                     /// Whether or not this project can be seen by everyone.
                     ///
                     /// - Remark: Generated from `#/paths/projects/{project_id}/PATCH/requestBody/json/private`.
                     public var _private: Swift.Bool?
-                    /// Creates a new `jsonPayload`.
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - name: Name of the project
                     ///   - body: Body of the project
                     ///   - state: State of the project; either 'open' or 'closed'
-                    ///   - organization_permission: The baseline permission that all organization members have on this project
+                    ///   - organizationPermission: The baseline permission that all organization members have on this project
                     ///   - _private: Whether or not this project can be seen by everyone.
                     public init(
                         name: Swift.String? = nil,
                         body: Swift.String? = nil,
                         state: Swift.String? = nil,
-                        organization_permission: Operations.projects_sol_update.Input.Body.jsonPayload.organization_permissionPayload? = nil,
+                        organizationPermission: Operations.ProjectsUpdate.Input.Body.JsonPayload.OrganizationPermissionPayload? = nil,
                         _private: Swift.Bool? = nil
                     ) {
                         self.name = name
                         self.body = body
                         self.state = state
-                        self.organization_permission = organization_permission
+                        self.organizationPermission = organizationPermission
                         self._private = _private
                     }
                     public enum CodingKeys: String, CodingKey {
                         case name
                         case body
                         case state
-                        case organization_permission
+                        case organizationPermission = "organization_permission"
                         case _private = "private"
                     }
                 }
                 /// - Remark: Generated from `#/paths/projects/{project_id}/PATCH/requestBody/content/application\/json`.
-                case json(Operations.projects_sol_update.Input.Body.jsonPayload)
+                case json(Operations.ProjectsUpdate.Input.Body.JsonPayload)
             }
-            public var body: Operations.projects_sol_update.Input.Body?
+            public var body: Operations.ProjectsUpdate.Input.Body?
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -5483,9 +5596,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.projects_sol_update.Input.Path,
-                headers: Operations.projects_sol_update.Input.Headers = .init(),
-                body: Operations.projects_sol_update.Input.Body? = nil
+                path: Operations.ProjectsUpdate.Input.Path,
+                headers: Operations.ProjectsUpdate.Input.Headers = .init(),
+                body: Operations.ProjectsUpdate.Input.Body? = nil
             ) {
                 self.path = path
                 self.headers = headers
@@ -5497,12 +5610,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/projects/{project_id}/PATCH/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/projects/{project_id}/PATCH/responses/200/content/application\/json`.
-                    case json(Components.Schemas.project)
+                    case json(Components.Schemas.Project)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.project {
+                    public var json: Components.Schemas.Project {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -5512,12 +5625,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.projects_sol_update.Output.Ok.Body
+                public var body: Operations.ProjectsUpdate.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.projects_sol_update.Output.Ok.Body) {
+                public init(body: Operations.ProjectsUpdate.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -5526,12 +5639,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/patch(projects/update)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.projects_sol_update.Output.Ok)
+            case ok(Operations.ProjectsUpdate.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.projects_sol_update.Output.Ok {
+            public var ok: Operations.ProjectsUpdate.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -5553,12 +5666,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/patch(projects/update)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Operations.projects_sol_update.Output.NotFound)
+            case notFound(Operations.ProjectsUpdate.Output.NotFound)
+            /// Not Found if the authenticated user does not have access to the project
+            ///
+            /// - Remark: Generated from `#/paths//projects/{project_id}/patch(projects/update)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Operations.projects_sol_update.Output.NotFound {
+            public var notFound: Operations.ProjectsUpdate.Output.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -5576,12 +5697,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/patch(projects/update)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//projects/{project_id}/patch(projects/update)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -5598,41 +5727,41 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/projects/{project_id}/PATCH/responses/403/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/projects/{project_id}/PATCH/responses/403/content/json`.
-                    public struct jsonPayload: Codable, Hashable, Sendable {
+                    public struct JsonPayload: Codable, Hashable, Sendable {
                         /// - Remark: Generated from `#/paths/projects/{project_id}/PATCH/responses/403/content/json/message`.
                         public var message: Swift.String?
                         /// - Remark: Generated from `#/paths/projects/{project_id}/PATCH/responses/403/content/json/documentation_url`.
-                        public var documentation_url: Swift.String?
+                        public var documentationUrl: Swift.String?
                         /// - Remark: Generated from `#/paths/projects/{project_id}/PATCH/responses/403/content/json/errors`.
                         public var errors: [Swift.String]?
-                        /// Creates a new `jsonPayload`.
+                        /// Creates a new `JsonPayload`.
                         ///
                         /// - Parameters:
                         ///   - message:
-                        ///   - documentation_url:
+                        ///   - documentationUrl:
                         ///   - errors:
                         public init(
                             message: Swift.String? = nil,
-                            documentation_url: Swift.String? = nil,
+                            documentationUrl: Swift.String? = nil,
                             errors: [Swift.String]? = nil
                         ) {
                             self.message = message
-                            self.documentation_url = documentation_url
+                            self.documentationUrl = documentationUrl
                             self.errors = errors
                         }
                         public enum CodingKeys: String, CodingKey {
                             case message
-                            case documentation_url
+                            case documentationUrl = "documentation_url"
                             case errors
                         }
                     }
                     /// - Remark: Generated from `#/paths/projects/{project_id}/PATCH/responses/403/content/application\/json`.
-                    case json(Operations.projects_sol_update.Output.Forbidden.Body.jsonPayload)
+                    case json(Operations.ProjectsUpdate.Output.Forbidden.Body.JsonPayload)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Operations.projects_sol_update.Output.Forbidden.Body.jsonPayload {
+                    public var json: Operations.ProjectsUpdate.Output.Forbidden.Body.JsonPayload {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -5642,12 +5771,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.projects_sol_update.Output.Forbidden.Body
+                public var body: Operations.ProjectsUpdate.Output.Forbidden.Body
                 /// Creates a new `Forbidden`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.projects_sol_update.Output.Forbidden.Body) {
+                public init(body: Operations.ProjectsUpdate.Output.Forbidden.Body) {
                     self.body = body
                 }
             }
@@ -5656,12 +5785,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/patch(projects/update)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Operations.projects_sol_update.Output.Forbidden)
+            case forbidden(Operations.ProjectsUpdate.Output.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Operations.projects_sol_update.Output.Forbidden {
+            public var forbidden: Operations.ProjectsUpdate.Output.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -5679,12 +5808,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/patch(projects/update)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -5702,12 +5831,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/patch(projects/update)/responses/410`.
             ///
             /// HTTP response code: `410 gone`.
-            case gone(Components.Responses.gone)
+            case gone(Components.Responses.Gone)
             /// The associated value of the enum case if `self` is `.gone`.
             ///
             /// - Throws: An error if `self` is not `.gone`.
             /// - SeeAlso: `.gone`.
-            public var gone: Components.Responses.gone {
+            public var gone: Components.Responses.Gone {
                 get throws {
                     switch self {
                     case let .gone(response):
@@ -5725,12 +5854,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/patch(projects/update)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed_simple)
+            case unprocessableContent(Components.Responses.ValidationFailedSimple)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed_simple {
+            public var unprocessableContent: Components.Responses.ValidationFailedSimple {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -5782,7 +5911,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /projects/{project_id}`.
     /// - Remark: Generated from `#/paths//projects/{project_id}/delete(projects/delete)`.
-    public enum projects_sol_delete {
+    public enum ProjectsDelete {
         public static let id: Swift.String = "projects/delete"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/projects/{project_id}/DELETE/path`.
@@ -5790,36 +5919,36 @@ public enum Operations {
                 /// The unique identifier of the project.
                 ///
                 /// - Remark: Generated from `#/paths/projects/{project_id}/DELETE/path/project_id`.
-                public var project_id: Components.Parameters.project_hyphen_id
+                public var projectId: Components.Parameters.ProjectId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - project_id: The unique identifier of the project.
-                public init(project_id: Components.Parameters.project_hyphen_id) {
-                    self.project_id = project_id
+                ///   - projectId: The unique identifier of the project.
+                public init(projectId: Components.Parameters.ProjectId) {
+                    self.projectId = projectId
                 }
             }
-            public var path: Operations.projects_sol_delete.Input.Path
+            public var path: Operations.ProjectsDelete.Input.Path
             /// - Remark: Generated from `#/paths/projects/{project_id}/DELETE/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_delete.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsDelete.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_delete.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsDelete.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.projects_sol_delete.Input.Headers
+            public var headers: Operations.ProjectsDelete.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.projects_sol_delete.Input.Path,
-                headers: Operations.projects_sol_delete.Input.Headers = .init()
+                path: Operations.ProjectsDelete.Input.Path,
+                headers: Operations.ProjectsDelete.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -5835,12 +5964,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/delete(projects/delete)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.projects_sol_delete.Output.NoContent)
+            case noContent(Operations.ProjectsDelete.Output.NoContent)
+            /// Delete Success
+            ///
+            /// - Remark: Generated from `#/paths//projects/{project_id}/delete(projects/delete)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.projects_sol_delete.Output.NoContent {
+            public var noContent: Operations.ProjectsDelete.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -5858,12 +5995,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/delete(projects/delete)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//projects/{project_id}/delete(projects/delete)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -5880,41 +6025,41 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/projects/{project_id}/DELETE/responses/403/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/projects/{project_id}/DELETE/responses/403/content/json`.
-                    public struct jsonPayload: Codable, Hashable, Sendable {
+                    public struct JsonPayload: Codable, Hashable, Sendable {
                         /// - Remark: Generated from `#/paths/projects/{project_id}/DELETE/responses/403/content/json/message`.
                         public var message: Swift.String?
                         /// - Remark: Generated from `#/paths/projects/{project_id}/DELETE/responses/403/content/json/documentation_url`.
-                        public var documentation_url: Swift.String?
+                        public var documentationUrl: Swift.String?
                         /// - Remark: Generated from `#/paths/projects/{project_id}/DELETE/responses/403/content/json/errors`.
                         public var errors: [Swift.String]?
-                        /// Creates a new `jsonPayload`.
+                        /// Creates a new `JsonPayload`.
                         ///
                         /// - Parameters:
                         ///   - message:
-                        ///   - documentation_url:
+                        ///   - documentationUrl:
                         ///   - errors:
                         public init(
                             message: Swift.String? = nil,
-                            documentation_url: Swift.String? = nil,
+                            documentationUrl: Swift.String? = nil,
                             errors: [Swift.String]? = nil
                         ) {
                             self.message = message
-                            self.documentation_url = documentation_url
+                            self.documentationUrl = documentationUrl
                             self.errors = errors
                         }
                         public enum CodingKeys: String, CodingKey {
                             case message
-                            case documentation_url
+                            case documentationUrl = "documentation_url"
                             case errors
                         }
                     }
                     /// - Remark: Generated from `#/paths/projects/{project_id}/DELETE/responses/403/content/application\/json`.
-                    case json(Operations.projects_sol_delete.Output.Forbidden.Body.jsonPayload)
+                    case json(Operations.ProjectsDelete.Output.Forbidden.Body.JsonPayload)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Operations.projects_sol_delete.Output.Forbidden.Body.jsonPayload {
+                    public var json: Operations.ProjectsDelete.Output.Forbidden.Body.JsonPayload {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -5924,12 +6069,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.projects_sol_delete.Output.Forbidden.Body
+                public var body: Operations.ProjectsDelete.Output.Forbidden.Body
                 /// Creates a new `Forbidden`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.projects_sol_delete.Output.Forbidden.Body) {
+                public init(body: Operations.ProjectsDelete.Output.Forbidden.Body) {
                     self.body = body
                 }
             }
@@ -5938,12 +6083,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/delete(projects/delete)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Operations.projects_sol_delete.Output.Forbidden)
+            case forbidden(Operations.ProjectsDelete.Output.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Operations.projects_sol_delete.Output.Forbidden {
+            public var forbidden: Operations.ProjectsDelete.Output.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -5961,12 +6106,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/delete(projects/delete)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -5984,12 +6129,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/delete(projects/delete)/responses/410`.
             ///
             /// HTTP response code: `410 gone`.
-            case gone(Components.Responses.gone)
+            case gone(Components.Responses.Gone)
             /// The associated value of the enum case if `self` is `.gone`.
             ///
             /// - Throws: An error if `self` is not `.gone`.
             /// - SeeAlso: `.gone`.
-            public var gone: Components.Responses.gone {
+            public var gone: Components.Responses.Gone {
                 get throws {
                     switch self {
                     case let .gone(response):
@@ -6007,12 +6152,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/delete(projects/delete)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -6064,7 +6209,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /projects/{project_id}/collaborators`.
     /// - Remark: Generated from `#/paths//projects/{project_id}/collaborators/get(projects/list-collaborators)`.
-    public enum projects_sol_list_hyphen_collaborators {
+    public enum ProjectsListCollaborators {
         public static let id: Swift.String = "projects/list-collaborators"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/projects/{project_id}/collaborators/GET/path`.
@@ -6072,20 +6217,20 @@ public enum Operations {
                 /// The unique identifier of the project.
                 ///
                 /// - Remark: Generated from `#/paths/projects/{project_id}/collaborators/GET/path/project_id`.
-                public var project_id: Components.Parameters.project_hyphen_id
+                public var projectId: Components.Parameters.ProjectId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - project_id: The unique identifier of the project.
-                public init(project_id: Components.Parameters.project_hyphen_id) {
-                    self.project_id = project_id
+                ///   - projectId: The unique identifier of the project.
+                public init(projectId: Components.Parameters.ProjectId) {
+                    self.projectId = projectId
                 }
             }
-            public var path: Operations.projects_sol_list_hyphen_collaborators.Input.Path
+            public var path: Operations.ProjectsListCollaborators.Input.Path
             /// - Remark: Generated from `#/paths/projects/{project_id}/collaborators/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/projects/{project_id}/collaborators/GET/query/affiliation`.
-                @frozen public enum affiliationPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum AffiliationPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case outside = "outside"
                     case direct = "direct"
                     case all = "all"
@@ -6093,44 +6238,44 @@ public enum Operations {
                 /// Filters the collaborators by their affiliation. `outside` means outside collaborators of a project that are not a member of the project's organization. `direct` means collaborators with permissions to a project, regardless of organization membership status. `all` means all collaborators the authenticated user can see.
                 ///
                 /// - Remark: Generated from `#/paths/projects/{project_id}/collaborators/GET/query/affiliation`.
-                public var affiliation: Operations.projects_sol_list_hyphen_collaborators.Input.Query.affiliationPayload?
+                public var affiliation: Operations.ProjectsListCollaborators.Input.Query.AffiliationPayload?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/projects/{project_id}/collaborators/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/projects/{project_id}/collaborators/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - affiliation: Filters the collaborators by their affiliation. `outside` means outside collaborators of a project that are not a member of the project's organization. `direct` means collaborators with permissions to a project, regardless of organization membership status. `all` means all collaborators the authenticated user can see.
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    affiliation: Operations.projects_sol_list_hyphen_collaborators.Input.Query.affiliationPayload? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    affiliation: Operations.ProjectsListCollaborators.Input.Query.AffiliationPayload? = nil,
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
                     self.affiliation = affiliation
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.projects_sol_list_hyphen_collaborators.Input.Query
+            public var query: Operations.ProjectsListCollaborators.Input.Query
             /// - Remark: Generated from `#/paths/projects/{project_id}/collaborators/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_list_hyphen_collaborators.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsListCollaborators.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_list_hyphen_collaborators.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsListCollaborators.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.projects_sol_list_hyphen_collaborators.Input.Headers
+            public var headers: Operations.ProjectsListCollaborators.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -6138,9 +6283,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.projects_sol_list_hyphen_collaborators.Input.Path,
-                query: Operations.projects_sol_list_hyphen_collaborators.Input.Query = .init(),
-                headers: Operations.projects_sol_list_hyphen_collaborators.Input.Headers = .init()
+                path: Operations.ProjectsListCollaborators.Input.Path,
+                query: Operations.ProjectsListCollaborators.Input.Query = .init(),
+                headers: Operations.ProjectsListCollaborators.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -6152,26 +6297,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/projects/{project_id}/collaborators/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/projects/{project_id}/collaborators/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.projects_sol_list_hyphen_collaborators.Output.Ok.Headers
+                public var headers: Operations.ProjectsListCollaborators.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/projects/{project_id}/collaborators/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/projects/{project_id}/collaborators/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.simple_hyphen_user])
+                    case json([Components.Schemas.SimpleUser])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.simple_hyphen_user] {
+                    public var json: [Components.Schemas.SimpleUser] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -6181,15 +6326,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.projects_sol_list_hyphen_collaborators.Output.Ok.Body
+                public var body: Operations.ProjectsListCollaborators.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.projects_sol_list_hyphen_collaborators.Output.Ok.Headers = .init(),
-                    body: Operations.projects_sol_list_hyphen_collaborators.Output.Ok.Body
+                    headers: Operations.ProjectsListCollaborators.Output.Ok.Headers = .init(),
+                    body: Operations.ProjectsListCollaborators.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -6200,12 +6345,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/collaborators/get(projects/list-collaborators)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.projects_sol_list_hyphen_collaborators.Output.Ok)
+            case ok(Operations.ProjectsListCollaborators.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.projects_sol_list_hyphen_collaborators.Output.Ok {
+            public var ok: Operations.ProjectsListCollaborators.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -6223,12 +6368,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/collaborators/get(projects/list-collaborators)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -6246,12 +6391,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/collaborators/get(projects/list-collaborators)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -6269,12 +6414,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/collaborators/get(projects/list-collaborators)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//projects/{project_id}/collaborators/get(projects/list-collaborators)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -6292,12 +6445,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/collaborators/get(projects/list-collaborators)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -6315,12 +6468,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/collaborators/get(projects/list-collaborators)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -6372,7 +6525,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PUT /projects/{project_id}/collaborators/{username}`.
     /// - Remark: Generated from `#/paths//projects/{project_id}/collaborators/{username}/put(projects/add-collaborator)`.
-    public enum projects_sol_add_hyphen_collaborator {
+    public enum ProjectsAddCollaborator {
         public static let id: Swift.String = "projects/add-collaborator"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/projects/{project_id}/collaborators/{username}/PUT/path`.
@@ -6380,45 +6533,45 @@ public enum Operations {
                 /// The unique identifier of the project.
                 ///
                 /// - Remark: Generated from `#/paths/projects/{project_id}/collaborators/{username}/PUT/path/project_id`.
-                public var project_id: Components.Parameters.project_hyphen_id
+                public var projectId: Components.Parameters.ProjectId
                 /// The handle for the GitHub user account.
                 ///
                 /// - Remark: Generated from `#/paths/projects/{project_id}/collaborators/{username}/PUT/path/username`.
-                public var username: Components.Parameters.username
+                public var username: Components.Parameters.Username
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - project_id: The unique identifier of the project.
+                ///   - projectId: The unique identifier of the project.
                 ///   - username: The handle for the GitHub user account.
                 public init(
-                    project_id: Components.Parameters.project_hyphen_id,
-                    username: Components.Parameters.username
+                    projectId: Components.Parameters.ProjectId,
+                    username: Components.Parameters.Username
                 ) {
-                    self.project_id = project_id
+                    self.projectId = projectId
                     self.username = username
                 }
             }
-            public var path: Operations.projects_sol_add_hyphen_collaborator.Input.Path
+            public var path: Operations.ProjectsAddCollaborator.Input.Path
             /// - Remark: Generated from `#/paths/projects/{project_id}/collaborators/{username}/PUT/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_add_hyphen_collaborator.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsAddCollaborator.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_add_hyphen_collaborator.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsAddCollaborator.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.projects_sol_add_hyphen_collaborator.Input.Headers
+            public var headers: Operations.ProjectsAddCollaborator.Input.Headers
             /// - Remark: Generated from `#/paths/projects/{project_id}/collaborators/{username}/PUT/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/projects/{project_id}/collaborators/{username}/PUT/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The permission to grant the collaborator.
                     ///
                     /// - Remark: Generated from `#/paths/projects/{project_id}/collaborators/{username}/PUT/requestBody/json/permission`.
-                    @frozen public enum permissionPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum PermissionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case read = "read"
                         case write = "write"
                         case admin = "admin"
@@ -6426,12 +6579,12 @@ public enum Operations {
                     /// The permission to grant the collaborator.
                     ///
                     /// - Remark: Generated from `#/paths/projects/{project_id}/collaborators/{username}/PUT/requestBody/json/permission`.
-                    public var permission: Operations.projects_sol_add_hyphen_collaborator.Input.Body.jsonPayload.permissionPayload?
-                    /// Creates a new `jsonPayload`.
+                    public var permission: Operations.ProjectsAddCollaborator.Input.Body.JsonPayload.PermissionPayload?
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - permission: The permission to grant the collaborator.
-                    public init(permission: Operations.projects_sol_add_hyphen_collaborator.Input.Body.jsonPayload.permissionPayload? = nil) {
+                    public init(permission: Operations.ProjectsAddCollaborator.Input.Body.JsonPayload.PermissionPayload? = nil) {
                         self.permission = permission
                     }
                     public enum CodingKeys: String, CodingKey {
@@ -6439,9 +6592,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/projects/{project_id}/collaborators/{username}/PUT/requestBody/content/application\/json`.
-                case json(Operations.projects_sol_add_hyphen_collaborator.Input.Body.jsonPayload)
+                case json(Operations.ProjectsAddCollaborator.Input.Body.JsonPayload)
             }
-            public var body: Operations.projects_sol_add_hyphen_collaborator.Input.Body?
+            public var body: Operations.ProjectsAddCollaborator.Input.Body?
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -6449,9 +6602,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.projects_sol_add_hyphen_collaborator.Input.Path,
-                headers: Operations.projects_sol_add_hyphen_collaborator.Input.Headers = .init(),
-                body: Operations.projects_sol_add_hyphen_collaborator.Input.Body? = nil
+                path: Operations.ProjectsAddCollaborator.Input.Path,
+                headers: Operations.ProjectsAddCollaborator.Input.Headers = .init(),
+                body: Operations.ProjectsAddCollaborator.Input.Body? = nil
             ) {
                 self.path = path
                 self.headers = headers
@@ -6468,12 +6621,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/collaborators/{username}/put(projects/add-collaborator)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.projects_sol_add_hyphen_collaborator.Output.NoContent)
+            case noContent(Operations.ProjectsAddCollaborator.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//projects/{project_id}/collaborators/{username}/put(projects/add-collaborator)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.projects_sol_add_hyphen_collaborator.Output.NoContent {
+            public var noContent: Operations.ProjectsAddCollaborator.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -6491,12 +6652,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/collaborators/{username}/put(projects/add-collaborator)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -6514,12 +6675,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/collaborators/{username}/put(projects/add-collaborator)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -6537,12 +6698,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/collaborators/{username}/put(projects/add-collaborator)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//projects/{project_id}/collaborators/{username}/put(projects/add-collaborator)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -6560,12 +6729,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/collaborators/{username}/put(projects/add-collaborator)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -6583,12 +6752,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/collaborators/{username}/put(projects/add-collaborator)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -6640,7 +6809,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /projects/{project_id}/collaborators/{username}`.
     /// - Remark: Generated from `#/paths//projects/{project_id}/collaborators/{username}/delete(projects/remove-collaborator)`.
-    public enum projects_sol_remove_hyphen_collaborator {
+    public enum ProjectsRemoveCollaborator {
         public static let id: Swift.String = "projects/remove-collaborator"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/projects/{project_id}/collaborators/{username}/DELETE/path`.
@@ -6648,45 +6817,45 @@ public enum Operations {
                 /// The unique identifier of the project.
                 ///
                 /// - Remark: Generated from `#/paths/projects/{project_id}/collaborators/{username}/DELETE/path/project_id`.
-                public var project_id: Components.Parameters.project_hyphen_id
+                public var projectId: Components.Parameters.ProjectId
                 /// The handle for the GitHub user account.
                 ///
                 /// - Remark: Generated from `#/paths/projects/{project_id}/collaborators/{username}/DELETE/path/username`.
-                public var username: Components.Parameters.username
+                public var username: Components.Parameters.Username
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - project_id: The unique identifier of the project.
+                ///   - projectId: The unique identifier of the project.
                 ///   - username: The handle for the GitHub user account.
                 public init(
-                    project_id: Components.Parameters.project_hyphen_id,
-                    username: Components.Parameters.username
+                    projectId: Components.Parameters.ProjectId,
+                    username: Components.Parameters.Username
                 ) {
-                    self.project_id = project_id
+                    self.projectId = projectId
                     self.username = username
                 }
             }
-            public var path: Operations.projects_sol_remove_hyphen_collaborator.Input.Path
+            public var path: Operations.ProjectsRemoveCollaborator.Input.Path
             /// - Remark: Generated from `#/paths/projects/{project_id}/collaborators/{username}/DELETE/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_remove_hyphen_collaborator.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsRemoveCollaborator.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_remove_hyphen_collaborator.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsRemoveCollaborator.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.projects_sol_remove_hyphen_collaborator.Input.Headers
+            public var headers: Operations.ProjectsRemoveCollaborator.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.projects_sol_remove_hyphen_collaborator.Input.Path,
-                headers: Operations.projects_sol_remove_hyphen_collaborator.Input.Headers = .init()
+                path: Operations.ProjectsRemoveCollaborator.Input.Path,
+                headers: Operations.ProjectsRemoveCollaborator.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -6702,12 +6871,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/collaborators/{username}/delete(projects/remove-collaborator)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.projects_sol_remove_hyphen_collaborator.Output.NoContent)
+            case noContent(Operations.ProjectsRemoveCollaborator.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//projects/{project_id}/collaborators/{username}/delete(projects/remove-collaborator)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.projects_sol_remove_hyphen_collaborator.Output.NoContent {
+            public var noContent: Operations.ProjectsRemoveCollaborator.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -6725,12 +6902,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/collaborators/{username}/delete(projects/remove-collaborator)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//projects/{project_id}/collaborators/{username}/delete(projects/remove-collaborator)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -6748,12 +6933,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/collaborators/{username}/delete(projects/remove-collaborator)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -6771,12 +6956,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/collaborators/{username}/delete(projects/remove-collaborator)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -6794,12 +6979,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/collaborators/{username}/delete(projects/remove-collaborator)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -6817,12 +7002,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/collaborators/{username}/delete(projects/remove-collaborator)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -6874,7 +7059,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /projects/{project_id}/collaborators/{username}/permission`.
     /// - Remark: Generated from `#/paths//projects/{project_id}/collaborators/{username}/permission/get(projects/get-permission-for-user)`.
-    public enum projects_sol_get_hyphen_permission_hyphen_for_hyphen_user {
+    public enum ProjectsGetPermissionForUser {
         public static let id: Swift.String = "projects/get-permission-for-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/projects/{project_id}/collaborators/{username}/permission/GET/path`.
@@ -6882,45 +7067,45 @@ public enum Operations {
                 /// The unique identifier of the project.
                 ///
                 /// - Remark: Generated from `#/paths/projects/{project_id}/collaborators/{username}/permission/GET/path/project_id`.
-                public var project_id: Components.Parameters.project_hyphen_id
+                public var projectId: Components.Parameters.ProjectId
                 /// The handle for the GitHub user account.
                 ///
                 /// - Remark: Generated from `#/paths/projects/{project_id}/collaborators/{username}/permission/GET/path/username`.
-                public var username: Components.Parameters.username
+                public var username: Components.Parameters.Username
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - project_id: The unique identifier of the project.
+                ///   - projectId: The unique identifier of the project.
                 ///   - username: The handle for the GitHub user account.
                 public init(
-                    project_id: Components.Parameters.project_hyphen_id,
-                    username: Components.Parameters.username
+                    projectId: Components.Parameters.ProjectId,
+                    username: Components.Parameters.Username
                 ) {
-                    self.project_id = project_id
+                    self.projectId = projectId
                     self.username = username
                 }
             }
-            public var path: Operations.projects_sol_get_hyphen_permission_hyphen_for_hyphen_user.Input.Path
+            public var path: Operations.ProjectsGetPermissionForUser.Input.Path
             /// - Remark: Generated from `#/paths/projects/{project_id}/collaborators/{username}/permission/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_get_hyphen_permission_hyphen_for_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsGetPermissionForUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_get_hyphen_permission_hyphen_for_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsGetPermissionForUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.projects_sol_get_hyphen_permission_hyphen_for_hyphen_user.Input.Headers
+            public var headers: Operations.ProjectsGetPermissionForUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.projects_sol_get_hyphen_permission_hyphen_for_hyphen_user.Input.Path,
-                headers: Operations.projects_sol_get_hyphen_permission_hyphen_for_hyphen_user.Input.Headers = .init()
+                path: Operations.ProjectsGetPermissionForUser.Input.Path,
+                headers: Operations.ProjectsGetPermissionForUser.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -6931,12 +7116,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/projects/{project_id}/collaborators/{username}/permission/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/projects/{project_id}/collaborators/{username}/permission/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.project_hyphen_collaborator_hyphen_permission)
+                    case json(Components.Schemas.ProjectCollaboratorPermission)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.project_hyphen_collaborator_hyphen_permission {
+                    public var json: Components.Schemas.ProjectCollaboratorPermission {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -6946,12 +7131,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.projects_sol_get_hyphen_permission_hyphen_for_hyphen_user.Output.Ok.Body
+                public var body: Operations.ProjectsGetPermissionForUser.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.projects_sol_get_hyphen_permission_hyphen_for_hyphen_user.Output.Ok.Body) {
+                public init(body: Operations.ProjectsGetPermissionForUser.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -6960,12 +7145,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/collaborators/{username}/permission/get(projects/get-permission-for-user)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.projects_sol_get_hyphen_permission_hyphen_for_hyphen_user.Output.Ok)
+            case ok(Operations.ProjectsGetPermissionForUser.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.projects_sol_get_hyphen_permission_hyphen_for_hyphen_user.Output.Ok {
+            public var ok: Operations.ProjectsGetPermissionForUser.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -6983,12 +7168,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/collaborators/{username}/permission/get(projects/get-permission-for-user)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -7006,12 +7191,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/collaborators/{username}/permission/get(projects/get-permission-for-user)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -7029,12 +7214,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/collaborators/{username}/permission/get(projects/get-permission-for-user)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//projects/{project_id}/collaborators/{username}/permission/get(projects/get-permission-for-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -7052,12 +7245,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/collaborators/{username}/permission/get(projects/get-permission-for-user)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -7075,12 +7268,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/collaborators/{username}/permission/get(projects/get-permission-for-user)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -7132,7 +7325,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /projects/{project_id}/columns`.
     /// - Remark: Generated from `#/paths//projects/{project_id}/columns/get(projects/list-columns)`.
-    public enum projects_sol_list_hyphen_columns {
+    public enum ProjectsListColumns {
         public static let id: Swift.String = "projects/list-columns"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/projects/{project_id}/columns/GET/path`.
@@ -7140,52 +7333,52 @@ public enum Operations {
                 /// The unique identifier of the project.
                 ///
                 /// - Remark: Generated from `#/paths/projects/{project_id}/columns/GET/path/project_id`.
-                public var project_id: Components.Parameters.project_hyphen_id
+                public var projectId: Components.Parameters.ProjectId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - project_id: The unique identifier of the project.
-                public init(project_id: Components.Parameters.project_hyphen_id) {
-                    self.project_id = project_id
+                ///   - projectId: The unique identifier of the project.
+                public init(projectId: Components.Parameters.ProjectId) {
+                    self.projectId = projectId
                 }
             }
-            public var path: Operations.projects_sol_list_hyphen_columns.Input.Path
+            public var path: Operations.ProjectsListColumns.Input.Path
             /// - Remark: Generated from `#/paths/projects/{project_id}/columns/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/projects/{project_id}/columns/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/projects/{project_id}/columns/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.projects_sol_list_hyphen_columns.Input.Query
+            public var query: Operations.ProjectsListColumns.Input.Query
             /// - Remark: Generated from `#/paths/projects/{project_id}/columns/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_list_hyphen_columns.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsListColumns.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_list_hyphen_columns.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsListColumns.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.projects_sol_list_hyphen_columns.Input.Headers
+            public var headers: Operations.ProjectsListColumns.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -7193,9 +7386,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.projects_sol_list_hyphen_columns.Input.Path,
-                query: Operations.projects_sol_list_hyphen_columns.Input.Query = .init(),
-                headers: Operations.projects_sol_list_hyphen_columns.Input.Headers = .init()
+                path: Operations.ProjectsListColumns.Input.Path,
+                query: Operations.ProjectsListColumns.Input.Query = .init(),
+                headers: Operations.ProjectsListColumns.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -7207,26 +7400,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/projects/{project_id}/columns/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/projects/{project_id}/columns/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.projects_sol_list_hyphen_columns.Output.Ok.Headers
+                public var headers: Operations.ProjectsListColumns.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/projects/{project_id}/columns/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/projects/{project_id}/columns/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.project_hyphen_column])
+                    case json([Components.Schemas.ProjectColumn])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.project_hyphen_column] {
+                    public var json: [Components.Schemas.ProjectColumn] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -7236,15 +7429,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.projects_sol_list_hyphen_columns.Output.Ok.Body
+                public var body: Operations.ProjectsListColumns.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.projects_sol_list_hyphen_columns.Output.Ok.Headers = .init(),
-                    body: Operations.projects_sol_list_hyphen_columns.Output.Ok.Body
+                    headers: Operations.ProjectsListColumns.Output.Ok.Headers = .init(),
+                    body: Operations.ProjectsListColumns.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -7255,12 +7448,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/columns/get(projects/list-columns)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.projects_sol_list_hyphen_columns.Output.Ok)
+            case ok(Operations.ProjectsListColumns.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.projects_sol_list_hyphen_columns.Output.Ok {
+            public var ok: Operations.ProjectsListColumns.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -7278,12 +7471,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/columns/get(projects/list-columns)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//projects/{project_id}/columns/get(projects/list-columns)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -7301,12 +7502,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/columns/get(projects/list-columns)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -7324,12 +7525,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/columns/get(projects/list-columns)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -7381,7 +7582,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /projects/{project_id}/columns`.
     /// - Remark: Generated from `#/paths//projects/{project_id}/columns/post(projects/create-column)`.
-    public enum projects_sol_create_hyphen_column {
+    public enum ProjectsCreateColumn {
         public static let id: Swift.String = "projects/create-column"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/projects/{project_id}/columns/POST/path`.
@@ -7389,37 +7590,37 @@ public enum Operations {
                 /// The unique identifier of the project.
                 ///
                 /// - Remark: Generated from `#/paths/projects/{project_id}/columns/POST/path/project_id`.
-                public var project_id: Components.Parameters.project_hyphen_id
+                public var projectId: Components.Parameters.ProjectId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - project_id: The unique identifier of the project.
-                public init(project_id: Components.Parameters.project_hyphen_id) {
-                    self.project_id = project_id
+                ///   - projectId: The unique identifier of the project.
+                public init(projectId: Components.Parameters.ProjectId) {
+                    self.projectId = projectId
                 }
             }
-            public var path: Operations.projects_sol_create_hyphen_column.Input.Path
+            public var path: Operations.ProjectsCreateColumn.Input.Path
             /// - Remark: Generated from `#/paths/projects/{project_id}/columns/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_create_hyphen_column.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsCreateColumn.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_create_hyphen_column.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsCreateColumn.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.projects_sol_create_hyphen_column.Input.Headers
+            public var headers: Operations.ProjectsCreateColumn.Input.Headers
             /// - Remark: Generated from `#/paths/projects/{project_id}/columns/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/projects/{project_id}/columns/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// Name of the project column
                     ///
                     /// - Remark: Generated from `#/paths/projects/{project_id}/columns/POST/requestBody/json/name`.
                     public var name: Swift.String
-                    /// Creates a new `jsonPayload`.
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - name: Name of the project column
@@ -7431,9 +7632,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/projects/{project_id}/columns/POST/requestBody/content/application\/json`.
-                case json(Operations.projects_sol_create_hyphen_column.Input.Body.jsonPayload)
+                case json(Operations.ProjectsCreateColumn.Input.Body.JsonPayload)
             }
-            public var body: Operations.projects_sol_create_hyphen_column.Input.Body
+            public var body: Operations.ProjectsCreateColumn.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -7441,9 +7642,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.projects_sol_create_hyphen_column.Input.Path,
-                headers: Operations.projects_sol_create_hyphen_column.Input.Headers = .init(),
-                body: Operations.projects_sol_create_hyphen_column.Input.Body
+                path: Operations.ProjectsCreateColumn.Input.Path,
+                headers: Operations.ProjectsCreateColumn.Input.Headers = .init(),
+                body: Operations.ProjectsCreateColumn.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -7455,12 +7656,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/projects/{project_id}/columns/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/projects/{project_id}/columns/POST/responses/201/content/application\/json`.
-                    case json(Components.Schemas.project_hyphen_column)
+                    case json(Components.Schemas.ProjectColumn)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.project_hyphen_column {
+                    public var json: Components.Schemas.ProjectColumn {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -7470,12 +7671,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.projects_sol_create_hyphen_column.Output.Created.Body
+                public var body: Operations.ProjectsCreateColumn.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.projects_sol_create_hyphen_column.Output.Created.Body) {
+                public init(body: Operations.ProjectsCreateColumn.Output.Created.Body) {
                     self.body = body
                 }
             }
@@ -7484,12 +7685,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/columns/post(projects/create-column)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.projects_sol_create_hyphen_column.Output.Created)
+            case created(Operations.ProjectsCreateColumn.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.projects_sol_create_hyphen_column.Output.Created {
+            public var created: Operations.ProjectsCreateColumn.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -7507,12 +7708,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/columns/post(projects/create-column)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//projects/{project_id}/columns/post(projects/create-column)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -7530,12 +7739,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/columns/post(projects/create-column)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -7553,12 +7762,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/columns/post(projects/create-column)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed_simple)
+            case unprocessableContent(Components.Responses.ValidationFailedSimple)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed_simple {
+            public var unprocessableContent: Components.Responses.ValidationFailedSimple {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -7576,12 +7785,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//projects/{project_id}/columns/post(projects/create-column)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -7633,7 +7842,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/projects`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/projects/get(projects/list-for-repo)`.
-    public enum projects_sol_list_hyphen_for_hyphen_repo {
+    public enum ProjectsListForRepo {
         public static let id: Swift.String = "projects/list-for-repo"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/projects/GET/path`.
@@ -7641,29 +7850,29 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/projects/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/projects/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.projects_sol_list_hyphen_for_hyphen_repo.Input.Path
+            public var path: Operations.ProjectsListForRepo.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/projects/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/projects/GET/query/state`.
-                @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case open = "open"
                     case closed = "closed"
                     case all = "all"
@@ -7671,44 +7880,44 @@ public enum Operations {
                 /// Indicates the state of the projects to return.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/projects/GET/query/state`.
-                public var state: Operations.projects_sol_list_hyphen_for_hyphen_repo.Input.Query.statePayload?
+                public var state: Operations.ProjectsListForRepo.Input.Query.StatePayload?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/projects/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/projects/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - state: Indicates the state of the projects to return.
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    state: Operations.projects_sol_list_hyphen_for_hyphen_repo.Input.Query.statePayload? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    state: Operations.ProjectsListForRepo.Input.Query.StatePayload? = nil,
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
                     self.state = state
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.projects_sol_list_hyphen_for_hyphen_repo.Input.Query
+            public var query: Operations.ProjectsListForRepo.Input.Query
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/projects/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_list_hyphen_for_hyphen_repo.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsListForRepo.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_list_hyphen_for_hyphen_repo.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsListForRepo.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.projects_sol_list_hyphen_for_hyphen_repo.Input.Headers
+            public var headers: Operations.ProjectsListForRepo.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -7716,9 +7925,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.projects_sol_list_hyphen_for_hyphen_repo.Input.Path,
-                query: Operations.projects_sol_list_hyphen_for_hyphen_repo.Input.Query = .init(),
-                headers: Operations.projects_sol_list_hyphen_for_hyphen_repo.Input.Headers = .init()
+                path: Operations.ProjectsListForRepo.Input.Path,
+                query: Operations.ProjectsListForRepo.Input.Query = .init(),
+                headers: Operations.ProjectsListForRepo.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -7730,26 +7939,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/projects/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/projects/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.projects_sol_list_hyphen_for_hyphen_repo.Output.Ok.Headers
+                public var headers: Operations.ProjectsListForRepo.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/projects/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/projects/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.project])
+                    case json([Components.Schemas.Project])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.project] {
+                    public var json: [Components.Schemas.Project] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -7759,15 +7968,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.projects_sol_list_hyphen_for_hyphen_repo.Output.Ok.Body
+                public var body: Operations.ProjectsListForRepo.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.projects_sol_list_hyphen_for_hyphen_repo.Output.Ok.Headers = .init(),
-                    body: Operations.projects_sol_list_hyphen_for_hyphen_repo.Output.Ok.Body
+                    headers: Operations.ProjectsListForRepo.Output.Ok.Headers = .init(),
+                    body: Operations.ProjectsListForRepo.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -7778,12 +7987,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/projects/get(projects/list-for-repo)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.projects_sol_list_hyphen_for_hyphen_repo.Output.Ok)
+            case ok(Operations.ProjectsListForRepo.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.projects_sol_list_hyphen_for_hyphen_repo.Output.Ok {
+            public var ok: Operations.ProjectsListForRepo.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -7801,12 +8010,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/projects/get(projects/list-for-repo)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -7824,12 +8033,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/projects/get(projects/list-for-repo)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -7847,12 +8056,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/projects/get(projects/list-for-repo)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -7870,12 +8079,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/projects/get(projects/list-for-repo)/responses/410`.
             ///
             /// HTTP response code: `410 gone`.
-            case gone(Components.Responses.gone)
+            case gone(Components.Responses.Gone)
             /// The associated value of the enum case if `self` is `.gone`.
             ///
             /// - Throws: An error if `self` is not `.gone`.
             /// - SeeAlso: `.gone`.
-            public var gone: Components.Responses.gone {
+            public var gone: Components.Responses.Gone {
                 get throws {
                     switch self {
                     case let .gone(response):
@@ -7893,12 +8102,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/projects/get(projects/list-for-repo)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed_simple)
+            case unprocessableContent(Components.Responses.ValidationFailedSimple)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed_simple {
+            public var unprocessableContent: Components.Responses.ValidationFailedSimple {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -7950,7 +8159,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/projects`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/projects/post(projects/create-for-repo)`.
-    public enum projects_sol_create_hyphen_for_hyphen_repo {
+    public enum ProjectsCreateForRepo {
         public static let id: Swift.String = "projects/create-for-repo"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/projects/POST/path`.
@@ -7958,41 +8167,41 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/projects/POST/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/projects/POST/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.projects_sol_create_hyphen_for_hyphen_repo.Input.Path
+            public var path: Operations.ProjectsCreateForRepo.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/projects/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_create_hyphen_for_hyphen_repo.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsCreateForRepo.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_create_hyphen_for_hyphen_repo.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsCreateForRepo.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.projects_sol_create_hyphen_for_hyphen_repo.Input.Headers
+            public var headers: Operations.ProjectsCreateForRepo.Input.Headers
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/projects/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/projects/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The name of the project.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/projects/POST/requestBody/json/name`.
@@ -8001,7 +8210,7 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/projects/POST/requestBody/json/body`.
                     public var body: Swift.String?
-                    /// Creates a new `jsonPayload`.
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - name: The name of the project.
@@ -8019,9 +8228,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/projects/POST/requestBody/content/application\/json`.
-                case json(Operations.projects_sol_create_hyphen_for_hyphen_repo.Input.Body.jsonPayload)
+                case json(Operations.ProjectsCreateForRepo.Input.Body.JsonPayload)
             }
-            public var body: Operations.projects_sol_create_hyphen_for_hyphen_repo.Input.Body
+            public var body: Operations.ProjectsCreateForRepo.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -8029,9 +8238,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.projects_sol_create_hyphen_for_hyphen_repo.Input.Path,
-                headers: Operations.projects_sol_create_hyphen_for_hyphen_repo.Input.Headers = .init(),
-                body: Operations.projects_sol_create_hyphen_for_hyphen_repo.Input.Body
+                path: Operations.ProjectsCreateForRepo.Input.Path,
+                headers: Operations.ProjectsCreateForRepo.Input.Headers = .init(),
+                body: Operations.ProjectsCreateForRepo.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -8043,12 +8252,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/projects/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/projects/POST/responses/201/content/application\/json`.
-                    case json(Components.Schemas.project)
+                    case json(Components.Schemas.Project)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.project {
+                    public var json: Components.Schemas.Project {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -8058,12 +8267,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.projects_sol_create_hyphen_for_hyphen_repo.Output.Created.Body
+                public var body: Operations.ProjectsCreateForRepo.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.projects_sol_create_hyphen_for_hyphen_repo.Output.Created.Body) {
+                public init(body: Operations.ProjectsCreateForRepo.Output.Created.Body) {
                     self.body = body
                 }
             }
@@ -8072,12 +8281,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/projects/post(projects/create-for-repo)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.projects_sol_create_hyphen_for_hyphen_repo.Output.Created)
+            case created(Operations.ProjectsCreateForRepo.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.projects_sol_create_hyphen_for_hyphen_repo.Output.Created {
+            public var created: Operations.ProjectsCreateForRepo.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -8095,12 +8304,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/projects/post(projects/create-for-repo)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -8118,12 +8327,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/projects/post(projects/create-for-repo)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -8141,12 +8350,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/projects/post(projects/create-for-repo)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -8164,12 +8373,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/projects/post(projects/create-for-repo)/responses/410`.
             ///
             /// HTTP response code: `410 gone`.
-            case gone(Components.Responses.gone)
+            case gone(Components.Responses.Gone)
             /// The associated value of the enum case if `self` is `.gone`.
             ///
             /// - Throws: An error if `self` is not `.gone`.
             /// - SeeAlso: `.gone`.
-            public var gone: Components.Responses.gone {
+            public var gone: Components.Responses.Gone {
                 get throws {
                     switch self {
                     case let .gone(response):
@@ -8187,12 +8396,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/projects/post(projects/create-for-repo)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed_simple)
+            case unprocessableContent(Components.Responses.ValidationFailedSimple)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed_simple {
+            public var unprocessableContent: Components.Responses.ValidationFailedSimple {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -8244,25 +8453,25 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /user/projects`.
     /// - Remark: Generated from `#/paths//user/projects/post(projects/create-for-authenticated-user)`.
-    public enum projects_sol_create_hyphen_for_hyphen_authenticated_hyphen_user {
+    public enum ProjectsCreateForAuthenticatedUser {
         public static let id: Swift.String = "projects/create-for-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/projects/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_create_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsCreateForAuthenticatedUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_create_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsCreateForAuthenticatedUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.projects_sol_create_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers
+            public var headers: Operations.ProjectsCreateForAuthenticatedUser.Input.Headers
             /// - Remark: Generated from `#/paths/user/projects/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/user/projects/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// Name of the project
                     ///
                     /// - Remark: Generated from `#/paths/user/projects/POST/requestBody/json/name`.
@@ -8271,7 +8480,7 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/user/projects/POST/requestBody/json/body`.
                     public var body: Swift.String?
-                    /// Creates a new `jsonPayload`.
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - name: Name of the project
@@ -8289,17 +8498,17 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/user/projects/POST/requestBody/content/application\/json`.
-                case json(Operations.projects_sol_create_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body.jsonPayload)
+                case json(Operations.ProjectsCreateForAuthenticatedUser.Input.Body.JsonPayload)
             }
-            public var body: Operations.projects_sol_create_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body
+            public var body: Operations.ProjectsCreateForAuthenticatedUser.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - headers:
             ///   - body:
             public init(
-                headers: Operations.projects_sol_create_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init(),
-                body: Operations.projects_sol_create_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body
+                headers: Operations.ProjectsCreateForAuthenticatedUser.Input.Headers = .init(),
+                body: Operations.ProjectsCreateForAuthenticatedUser.Input.Body
             ) {
                 self.headers = headers
                 self.body = body
@@ -8310,12 +8519,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/projects/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/projects/POST/responses/201/content/application\/json`.
-                    case json(Components.Schemas.project)
+                    case json(Components.Schemas.Project)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.project {
+                    public var json: Components.Schemas.Project {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -8325,12 +8534,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.projects_sol_create_hyphen_for_hyphen_authenticated_hyphen_user.Output.Created.Body
+                public var body: Operations.ProjectsCreateForAuthenticatedUser.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.projects_sol_create_hyphen_for_hyphen_authenticated_hyphen_user.Output.Created.Body) {
+                public init(body: Operations.ProjectsCreateForAuthenticatedUser.Output.Created.Body) {
                     self.body = body
                 }
             }
@@ -8339,12 +8548,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/projects/post(projects/create-for-authenticated-user)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.projects_sol_create_hyphen_for_hyphen_authenticated_hyphen_user.Output.Created)
+            case created(Operations.ProjectsCreateForAuthenticatedUser.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.projects_sol_create_hyphen_for_hyphen_authenticated_hyphen_user.Output.Created {
+            public var created: Operations.ProjectsCreateForAuthenticatedUser.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -8362,12 +8571,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/projects/post(projects/create-for-authenticated-user)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/projects/post(projects/create-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -8385,12 +8602,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/projects/post(projects/create-for-authenticated-user)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -8408,12 +8625,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/projects/post(projects/create-for-authenticated-user)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -8431,12 +8648,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/projects/post(projects/create-for-authenticated-user)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed_simple)
+            case unprocessableContent(Components.Responses.ValidationFailedSimple)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed_simple {
+            public var unprocessableContent: Components.Responses.ValidationFailedSimple {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -8488,7 +8705,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /users/{username}/projects`.
     /// - Remark: Generated from `#/paths//users/{username}/projects/get(projects/list-for-user)`.
-    public enum projects_sol_list_hyphen_for_hyphen_user {
+    public enum ProjectsListForUser {
         public static let id: Swift.String = "projects/list-for-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/users/{username}/projects/GET/path`.
@@ -8496,20 +8713,20 @@ public enum Operations {
                 /// The handle for the GitHub user account.
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/projects/GET/path/username`.
-                public var username: Components.Parameters.username
+                public var username: Components.Parameters.Username
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - username: The handle for the GitHub user account.
-                public init(username: Components.Parameters.username) {
+                public init(username: Components.Parameters.Username) {
                     self.username = username
                 }
             }
-            public var path: Operations.projects_sol_list_hyphen_for_hyphen_user.Input.Path
+            public var path: Operations.ProjectsListForUser.Input.Path
             /// - Remark: Generated from `#/paths/users/{username}/projects/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/users/{username}/projects/GET/query/state`.
-                @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case open = "open"
                     case closed = "closed"
                     case all = "all"
@@ -8517,44 +8734,44 @@ public enum Operations {
                 /// Indicates the state of the projects to return.
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/projects/GET/query/state`.
-                public var state: Operations.projects_sol_list_hyphen_for_hyphen_user.Input.Query.statePayload?
+                public var state: Operations.ProjectsListForUser.Input.Query.StatePayload?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/projects/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/projects/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - state: Indicates the state of the projects to return.
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    state: Operations.projects_sol_list_hyphen_for_hyphen_user.Input.Query.statePayload? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    state: Operations.ProjectsListForUser.Input.Query.StatePayload? = nil,
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
                     self.state = state
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.projects_sol_list_hyphen_for_hyphen_user.Input.Query
+            public var query: Operations.ProjectsListForUser.Input.Query
             /// - Remark: Generated from `#/paths/users/{username}/projects/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_list_hyphen_for_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsListForUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.projects_sol_list_hyphen_for_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ProjectsListForUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.projects_sol_list_hyphen_for_hyphen_user.Input.Headers
+            public var headers: Operations.ProjectsListForUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -8562,9 +8779,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.projects_sol_list_hyphen_for_hyphen_user.Input.Path,
-                query: Operations.projects_sol_list_hyphen_for_hyphen_user.Input.Query = .init(),
-                headers: Operations.projects_sol_list_hyphen_for_hyphen_user.Input.Headers = .init()
+                path: Operations.ProjectsListForUser.Input.Path,
+                query: Operations.ProjectsListForUser.Input.Query = .init(),
+                headers: Operations.ProjectsListForUser.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -8576,26 +8793,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/users/{username}/projects/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/users/{username}/projects/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.projects_sol_list_hyphen_for_hyphen_user.Output.Ok.Headers
+                public var headers: Operations.ProjectsListForUser.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/users/{username}/projects/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/users/{username}/projects/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.project])
+                    case json([Components.Schemas.Project])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.project] {
+                    public var json: [Components.Schemas.Project] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -8605,15 +8822,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.projects_sol_list_hyphen_for_hyphen_user.Output.Ok.Body
+                public var body: Operations.ProjectsListForUser.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.projects_sol_list_hyphen_for_hyphen_user.Output.Ok.Headers = .init(),
-                    body: Operations.projects_sol_list_hyphen_for_hyphen_user.Output.Ok.Body
+                    headers: Operations.ProjectsListForUser.Output.Ok.Headers = .init(),
+                    body: Operations.ProjectsListForUser.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -8624,12 +8841,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/projects/get(projects/list-for-user)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.projects_sol_list_hyphen_for_hyphen_user.Output.Ok)
+            case ok(Operations.ProjectsListForUser.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.projects_sol_list_hyphen_for_hyphen_user.Output.Ok {
+            public var ok: Operations.ProjectsListForUser.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -8647,12 +8864,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/projects/get(projects/list-for-user)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
