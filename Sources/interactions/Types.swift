@@ -17,63 +17,63 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/interaction-limits`.
     /// - Remark: Generated from `#/paths//orgs/{org}/interaction-limits/get(interactions/get-restrictions-for-org)`.
-    func interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org(_ input: Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org.Input) async throws -> Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org.Output
+    func interactionsGetRestrictionsForOrg(_ input: Operations.InteractionsGetRestrictionsForOrg.Input) async throws -> Operations.InteractionsGetRestrictionsForOrg.Output
     /// Set interaction restrictions for an organization
     ///
     /// Temporarily restricts interactions to a certain type of GitHub user in any public repository in the given organization. You must be an organization owner to set these restrictions. Setting the interaction limit at the organization level will overwrite any interaction limits that are set for individual repositories owned by the organization.
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/interaction-limits`.
     /// - Remark: Generated from `#/paths//orgs/{org}/interaction-limits/put(interactions/set-restrictions-for-org)`.
-    func interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_org(_ input: Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_org.Input) async throws -> Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_org.Output
+    func interactionsSetRestrictionsForOrg(_ input: Operations.InteractionsSetRestrictionsForOrg.Input) async throws -> Operations.InteractionsSetRestrictionsForOrg.Output
     /// Remove interaction restrictions for an organization
     ///
     /// Removes all interaction restrictions from public repositories in the given organization. You must be an organization owner to remove restrictions.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/interaction-limits`.
     /// - Remark: Generated from `#/paths//orgs/{org}/interaction-limits/delete(interactions/remove-restrictions-for-org)`.
-    func interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org(_ input: Operations.interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org.Input) async throws -> Operations.interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org.Output
+    func interactionsRemoveRestrictionsForOrg(_ input: Operations.InteractionsRemoveRestrictionsForOrg.Input) async throws -> Operations.InteractionsRemoveRestrictionsForOrg.Output
     /// Get interaction restrictions for a repository
     ///
     /// Shows which type of GitHub user can interact with this repository and when the restriction expires. If there are no restrictions, you will see an empty response.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/interaction-limits`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/interaction-limits/get(interactions/get-restrictions-for-repo)`.
-    func interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_repo(_ input: Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_repo.Input) async throws -> Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_repo.Output
+    func interactionsGetRestrictionsForRepo(_ input: Operations.InteractionsGetRestrictionsForRepo.Input) async throws -> Operations.InteractionsGetRestrictionsForRepo.Output
     /// Set interaction restrictions for a repository
     ///
     /// Temporarily restricts interactions to a certain type of GitHub user within the given repository. You must have owner or admin access to set these restrictions. If an interaction limit is set for the user or organization that owns this repository, you will receive a `409 Conflict` response and will not be able to use this endpoint to change the interaction limit for a single repository.
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/interaction-limits`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/interaction-limits/put(interactions/set-restrictions-for-repo)`.
-    func interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo(_ input: Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo.Input) async throws -> Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo.Output
+    func interactionsSetRestrictionsForRepo(_ input: Operations.InteractionsSetRestrictionsForRepo.Input) async throws -> Operations.InteractionsSetRestrictionsForRepo.Output
     /// Remove interaction restrictions for a repository
     ///
     /// Removes all interaction restrictions from the given repository. You must have owner or admin access to remove restrictions. If the interaction limit is set for the user or organization that owns this repository, you will receive a `409 Conflict` response and will not be able to use this endpoint to change the interaction limit for a single repository.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/interaction-limits`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/interaction-limits/delete(interactions/remove-restrictions-for-repo)`.
-    func interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_repo(_ input: Operations.interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_repo.Input) async throws -> Operations.interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_repo.Output
+    func interactionsRemoveRestrictionsForRepo(_ input: Operations.InteractionsRemoveRestrictionsForRepo.Input) async throws -> Operations.InteractionsRemoveRestrictionsForRepo.Output
     /// Get interaction restrictions for your public repositories
     ///
     /// Shows which type of GitHub user can interact with your public repositories and when the restriction expires.
     ///
     /// - Remark: HTTP `GET /user/interaction-limits`.
     /// - Remark: Generated from `#/paths//user/interaction-limits/get(interactions/get-restrictions-for-authenticated-user)`.
-    func interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.Output
+    func interactionsGetRestrictionsForAuthenticatedUser(_ input: Operations.InteractionsGetRestrictionsForAuthenticatedUser.Input) async throws -> Operations.InteractionsGetRestrictionsForAuthenticatedUser.Output
     /// Set interaction restrictions for your public repositories
     ///
     /// Temporarily restricts which type of GitHub user can interact with your public repositories. Setting the interaction limit at the user level will overwrite any interaction limits that are set for individual repositories owned by the user.
     ///
     /// - Remark: HTTP `PUT /user/interaction-limits`.
     /// - Remark: Generated from `#/paths//user/interaction-limits/put(interactions/set-restrictions-for-authenticated-user)`.
-    func interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.Output
+    func interactionsSetRestrictionsForAuthenticatedUser(_ input: Operations.InteractionsSetRestrictionsForAuthenticatedUser.Input) async throws -> Operations.InteractionsSetRestrictionsForAuthenticatedUser.Output
     /// Remove interaction restrictions from your public repositories
     ///
     /// Removes any interaction restrictions from your public repositories.
     ///
     /// - Remark: HTTP `DELETE /user/interaction-limits`.
     /// - Remark: Generated from `#/paths//user/interaction-limits/delete(interactions/remove-restrictions-for-authenticated-user)`.
-    func interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.Output
+    func interactionsRemoveRestrictionsForAuthenticatedUser(_ input: Operations.InteractionsRemoveRestrictionsForAuthenticatedUser.Input) async throws -> Operations.InteractionsRemoveRestrictionsForAuthenticatedUser.Output
 }
 
 /// Convenience overloads for operation inputs.
@@ -84,11 +84,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/interaction-limits`.
     /// - Remark: Generated from `#/paths//orgs/{org}/interaction-limits/get(interactions/get-restrictions-for-org)`.
-    public func interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org(
-        path: Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org.Input.Path,
-        headers: Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org.Input.Headers = .init()
-    ) async throws -> Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org.Output {
-        try await interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org(Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org.Input(
+    public func interactionsGetRestrictionsForOrg(
+        path: Operations.InteractionsGetRestrictionsForOrg.Input.Path,
+        headers: Operations.InteractionsGetRestrictionsForOrg.Input.Headers = .init()
+    ) async throws -> Operations.InteractionsGetRestrictionsForOrg.Output {
+        try await interactionsGetRestrictionsForOrg(Operations.InteractionsGetRestrictionsForOrg.Input(
             path: path,
             headers: headers
         ))
@@ -99,12 +99,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/interaction-limits`.
     /// - Remark: Generated from `#/paths//orgs/{org}/interaction-limits/put(interactions/set-restrictions-for-org)`.
-    public func interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_org(
-        path: Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_org.Input.Path,
-        headers: Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_org.Input.Headers = .init(),
-        body: Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_org.Input.Body
-    ) async throws -> Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_org.Output {
-        try await interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_org(Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_org.Input(
+    public func interactionsSetRestrictionsForOrg(
+        path: Operations.InteractionsSetRestrictionsForOrg.Input.Path,
+        headers: Operations.InteractionsSetRestrictionsForOrg.Input.Headers = .init(),
+        body: Operations.InteractionsSetRestrictionsForOrg.Input.Body
+    ) async throws -> Operations.InteractionsSetRestrictionsForOrg.Output {
+        try await interactionsSetRestrictionsForOrg(Operations.InteractionsSetRestrictionsForOrg.Input(
             path: path,
             headers: headers,
             body: body
@@ -116,8 +116,8 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/interaction-limits`.
     /// - Remark: Generated from `#/paths//orgs/{org}/interaction-limits/delete(interactions/remove-restrictions-for-org)`.
-    public func interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org(path: Operations.interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org.Input.Path) async throws -> Operations.interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org.Output {
-        try await interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org(Operations.interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org.Input(path: path))
+    public func interactionsRemoveRestrictionsForOrg(path: Operations.InteractionsRemoveRestrictionsForOrg.Input.Path) async throws -> Operations.InteractionsRemoveRestrictionsForOrg.Output {
+        try await interactionsRemoveRestrictionsForOrg(Operations.InteractionsRemoveRestrictionsForOrg.Input(path: path))
     }
     /// Get interaction restrictions for a repository
     ///
@@ -125,11 +125,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/interaction-limits`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/interaction-limits/get(interactions/get-restrictions-for-repo)`.
-    public func interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_repo(
-        path: Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_repo.Input.Path,
-        headers: Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_repo.Input.Headers = .init()
-    ) async throws -> Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_repo.Output {
-        try await interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_repo(Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_repo.Input(
+    public func interactionsGetRestrictionsForRepo(
+        path: Operations.InteractionsGetRestrictionsForRepo.Input.Path,
+        headers: Operations.InteractionsGetRestrictionsForRepo.Input.Headers = .init()
+    ) async throws -> Operations.InteractionsGetRestrictionsForRepo.Output {
+        try await interactionsGetRestrictionsForRepo(Operations.InteractionsGetRestrictionsForRepo.Input(
             path: path,
             headers: headers
         ))
@@ -140,12 +140,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/interaction-limits`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/interaction-limits/put(interactions/set-restrictions-for-repo)`.
-    public func interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo(
-        path: Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo.Input.Path,
-        headers: Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo.Input.Headers = .init(),
-        body: Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo.Input.Body
-    ) async throws -> Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo.Output {
-        try await interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo(Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo.Input(
+    public func interactionsSetRestrictionsForRepo(
+        path: Operations.InteractionsSetRestrictionsForRepo.Input.Path,
+        headers: Operations.InteractionsSetRestrictionsForRepo.Input.Headers = .init(),
+        body: Operations.InteractionsSetRestrictionsForRepo.Input.Body
+    ) async throws -> Operations.InteractionsSetRestrictionsForRepo.Output {
+        try await interactionsSetRestrictionsForRepo(Operations.InteractionsSetRestrictionsForRepo.Input(
             path: path,
             headers: headers,
             body: body
@@ -157,8 +157,8 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/interaction-limits`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/interaction-limits/delete(interactions/remove-restrictions-for-repo)`.
-    public func interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_repo(path: Operations.interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_repo.Input.Path) async throws -> Operations.interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_repo.Output {
-        try await interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_repo(Operations.interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_repo.Input(path: path))
+    public func interactionsRemoveRestrictionsForRepo(path: Operations.InteractionsRemoveRestrictionsForRepo.Input.Path) async throws -> Operations.InteractionsRemoveRestrictionsForRepo.Output {
+        try await interactionsRemoveRestrictionsForRepo(Operations.InteractionsRemoveRestrictionsForRepo.Input(path: path))
     }
     /// Get interaction restrictions for your public repositories
     ///
@@ -166,8 +166,8 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /user/interaction-limits`.
     /// - Remark: Generated from `#/paths//user/interaction-limits/get(interactions/get-restrictions-for-authenticated-user)`.
-    public func interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user(headers: Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()) async throws -> Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.Output {
-        try await interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user(Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.Input(headers: headers))
+    public func interactionsGetRestrictionsForAuthenticatedUser(headers: Operations.InteractionsGetRestrictionsForAuthenticatedUser.Input.Headers = .init()) async throws -> Operations.InteractionsGetRestrictionsForAuthenticatedUser.Output {
+        try await interactionsGetRestrictionsForAuthenticatedUser(Operations.InteractionsGetRestrictionsForAuthenticatedUser.Input(headers: headers))
     }
     /// Set interaction restrictions for your public repositories
     ///
@@ -175,11 +175,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `PUT /user/interaction-limits`.
     /// - Remark: Generated from `#/paths//user/interaction-limits/put(interactions/set-restrictions-for-authenticated-user)`.
-    public func interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user(
-        headers: Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init(),
-        body: Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body
-    ) async throws -> Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.Output {
-        try await interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user(Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.Input(
+    public func interactionsSetRestrictionsForAuthenticatedUser(
+        headers: Operations.InteractionsSetRestrictionsForAuthenticatedUser.Input.Headers = .init(),
+        body: Operations.InteractionsSetRestrictionsForAuthenticatedUser.Input.Body
+    ) async throws -> Operations.InteractionsSetRestrictionsForAuthenticatedUser.Output {
+        try await interactionsSetRestrictionsForAuthenticatedUser(Operations.InteractionsSetRestrictionsForAuthenticatedUser.Input(
             headers: headers,
             body: body
         ))
@@ -190,13 +190,22 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /user/interaction-limits`.
     /// - Remark: Generated from `#/paths//user/interaction-limits/delete(interactions/remove-restrictions-for-authenticated-user)`.
-    public func interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user() async throws -> Operations.interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.Output {
-        try await interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user(Operations.interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.Input())
+    public func interactionsRemoveRestrictionsForAuthenticatedUser() async throws -> Operations.InteractionsRemoveRestrictionsForAuthenticatedUser.Output {
+        try await interactionsRemoveRestrictionsForAuthenticatedUser(Operations.InteractionsRemoveRestrictionsForAuthenticatedUser.Input())
     }
 }
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -212,30 +221,30 @@ public enum Components {
         /// Validation Error
         ///
         /// - Remark: Generated from `#/components/schemas/validation-error`.
-        public struct validation_hyphen_error: Codable, Hashable, Sendable {
+        public struct ValidationError: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/validation-error/message`.
             public var message: Swift.String
             /// - Remark: Generated from `#/components/schemas/validation-error/documentation_url`.
-            public var documentation_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload`.
-            public struct errorsPayloadPayload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/resource`.
+            public var documentationUrl: Swift.String
+            /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload`.
+            public struct ErrorsPayloadPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/resource`.
                 public var resource: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/field`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/field`.
                 public var field: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/message`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/message`.
                 public var message: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/code`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/code`.
                 public var code: Swift.String
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/index`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/index`.
                 public var index: Swift.Int?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value`.
-                @frozen public enum valuePayload: Codable, Hashable, Sendable {
-                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case1`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value`.
+                @frozen public enum ValuePayload: Codable, Hashable, Sendable {
+                    /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value/case1`.
                     case case1(Swift.String?)
-                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case2`.
+                    /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value/case2`.
                     case case2(Swift.Int?)
-                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case3`.
+                    /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value/case3`.
                     case case3([Swift.String]?)
                     public init(from decoder: any Decoder) throws {
                         var errors: [any Error] = []
@@ -274,9 +283,9 @@ public enum Components {
                         }
                     }
                 }
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value`.
-                public var value: Components.Schemas.validation_hyphen_error.errorsPayloadPayload.valuePayload?
-                /// Creates a new `errorsPayloadPayload`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value`.
+                public var value: Components.Schemas.ValidationError.ErrorsPayloadPayload.ValuePayload?
+                /// Creates a new `ErrorsPayloadPayload`.
                 ///
                 /// - Parameters:
                 ///   - resource:
@@ -291,7 +300,7 @@ public enum Components {
                     message: Swift.String? = nil,
                     code: Swift.String,
                     index: Swift.Int? = nil,
-                    value: Components.Schemas.validation_hyphen_error.errorsPayloadPayload.valuePayload? = nil
+                    value: Components.Schemas.ValidationError.ErrorsPayloadPayload.ValuePayload? = nil
                 ) {
                     self.resource = resource
                     self.field = field
@@ -310,95 +319,95 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/validation-error/errors`.
-            public typealias errorsPayload = [Components.Schemas.validation_hyphen_error.errorsPayloadPayload]
+            public typealias ErrorsPayload = [Components.Schemas.ValidationError.ErrorsPayloadPayload]
             /// - Remark: Generated from `#/components/schemas/validation-error/errors`.
-            public var errors: Components.Schemas.validation_hyphen_error.errorsPayload?
-            /// Creates a new `validation_hyphen_error`.
+            public var errors: Components.Schemas.ValidationError.ErrorsPayload?
+            /// Creates a new `ValidationError`.
             ///
             /// - Parameters:
             ///   - message:
-            ///   - documentation_url:
+            ///   - documentationUrl:
             ///   - errors:
             public init(
                 message: Swift.String,
-                documentation_url: Swift.String,
-                errors: Components.Schemas.validation_hyphen_error.errorsPayload? = nil
+                documentationUrl: Swift.String,
+                errors: Components.Schemas.ValidationError.ErrorsPayload? = nil
             ) {
                 self.message = message
-                self.documentation_url = documentation_url
+                self.documentationUrl = documentationUrl
                 self.errors = errors
             }
             public enum CodingKeys: String, CodingKey {
                 case message
-                case documentation_url
+                case documentationUrl = "documentation_url"
                 case errors
             }
         }
         /// The type of GitHub user that can comment, open issues, or create pull requests while the interaction limit is in effect.
         ///
         /// - Remark: Generated from `#/components/schemas/interaction-group`.
-        @frozen public enum interaction_hyphen_group: String, Codable, Hashable, Sendable {
-            case existing_users = "existing_users"
-            case contributors_only = "contributors_only"
-            case collaborators_only = "collaborators_only"
+        @frozen public enum InteractionGroup: String, Codable, Hashable, Sendable, CaseIterable {
+            case existingUsers = "existing_users"
+            case contributorsOnly = "contributors_only"
+            case collaboratorsOnly = "collaborators_only"
         }
         /// Interaction limit settings.
         ///
         /// - Remark: Generated from `#/components/schemas/interaction-limit-response`.
-        public struct interaction_hyphen_limit_hyphen_response: Codable, Hashable, Sendable {
+        public struct InteractionLimitResponse: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/interaction-limit-response/limit`.
-            public var limit: Components.Schemas.interaction_hyphen_group
+            public var limit: Components.Schemas.InteractionGroup
             /// - Remark: Generated from `#/components/schemas/interaction-limit-response/origin`.
             public var origin: Swift.String
             /// - Remark: Generated from `#/components/schemas/interaction-limit-response/expires_at`.
-            public var expires_at: Foundation.Date
-            /// Creates a new `interaction_hyphen_limit_hyphen_response`.
+            public var expiresAt: Foundation.Date
+            /// Creates a new `InteractionLimitResponse`.
             ///
             /// - Parameters:
             ///   - limit:
             ///   - origin:
-            ///   - expires_at:
+            ///   - expiresAt:
             public init(
-                limit: Components.Schemas.interaction_hyphen_group,
+                limit: Components.Schemas.InteractionGroup,
                 origin: Swift.String,
-                expires_at: Foundation.Date
+                expiresAt: Foundation.Date
             ) {
                 self.limit = limit
                 self.origin = origin
-                self.expires_at = expires_at
+                self.expiresAt = expiresAt
             }
             public enum CodingKeys: String, CodingKey {
                 case limit
                 case origin
-                case expires_at
+                case expiresAt = "expires_at"
             }
         }
         /// The duration of the interaction restriction. Default: `one_day`.
         ///
         /// - Remark: Generated from `#/components/schemas/interaction-expiry`.
-        @frozen public enum interaction_hyphen_expiry: String, Codable, Hashable, Sendable {
-            case one_day = "one_day"
-            case three_days = "three_days"
-            case one_week = "one_week"
-            case one_month = "one_month"
-            case six_months = "six_months"
+        @frozen public enum InteractionExpiry: String, Codable, Hashable, Sendable, CaseIterable {
+            case oneDay = "one_day"
+            case threeDays = "three_days"
+            case oneWeek = "one_week"
+            case oneMonth = "one_month"
+            case sixMonths = "six_months"
         }
         /// Limit interactions to a specific type of user for a specified duration
         ///
         /// - Remark: Generated from `#/components/schemas/interaction-limit`.
-        public struct interaction_hyphen_limit: Codable, Hashable, Sendable {
+        public struct InteractionLimit: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/interaction-limit/limit`.
-            public var limit: Components.Schemas.interaction_hyphen_group
+            public var limit: Components.Schemas.InteractionGroup
             /// - Remark: Generated from `#/components/schemas/interaction-limit/expiry`.
-            public var expiry: Components.Schemas.interaction_hyphen_expiry?
-            /// Creates a new `interaction_hyphen_limit`.
+            public var expiry: Components.Schemas.InteractionExpiry?
+            /// Creates a new `InteractionLimit`.
             ///
             /// - Parameters:
             ///   - limit:
             ///   - expiry:
             public init(
-                limit: Components.Schemas.interaction_hyphen_group,
-                expiry: Components.Schemas.interaction_hyphen_expiry? = nil
+                limit: Components.Schemas.InteractionGroup,
+                expiry: Components.Schemas.InteractionExpiry? = nil
             ) {
                 self.limit = limit
                 self.expiry = expiry
@@ -414,30 +423,30 @@ public enum Components {
         /// The account owner of the repository. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/owner`.
-        public typealias owner = Swift.String
+        public typealias Owner = Swift.String
         /// The name of the repository without the `.git` extension. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/repo`.
-        public typealias repo = Swift.String
+        public typealias Repo = Swift.String
         /// The organization name. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/org`.
-        public typealias org = Swift.String
+        public typealias Org = Swift.String
     }
     /// Types generated from the `#/components/requestBodies` section of the OpenAPI document.
     public enum RequestBodies {}
     /// Types generated from the `#/components/responses` section of the OpenAPI document.
     public enum Responses {
-        public struct validation_failed: Sendable, Hashable {
+        public struct ValidationFailed: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/validation_failed/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/validation_failed/content/application\/json`.
-                case json(Components.Schemas.validation_hyphen_error)
+                case json(Components.Schemas.ValidationError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.validation_hyphen_error {
+                public var json: Components.Schemas.ValidationError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -447,12 +456,12 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.validation_failed.Body
-            /// Creates a new `validation_failed`.
+            public var body: Components.Responses.ValidationFailed.Body
+            /// Creates a new `ValidationFailed`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.validation_failed.Body) {
+            public init(body: Components.Responses.ValidationFailed.Body) {
                 self.body = body
             }
         }
@@ -469,7 +478,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/interaction-limits`.
     /// - Remark: Generated from `#/paths//orgs/{org}/interaction-limits/get(interactions/get-restrictions-for-org)`.
-    public enum interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org {
+    public enum InteractionsGetRestrictionsForOrg {
         public static let id: Swift.String = "interactions/get-restrictions-for-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/interaction-limits/GET/path`.
@@ -477,36 +486,36 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/interaction-limits/GET/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                public init(org: Components.Parameters.org) {
+                public init(org: Components.Parameters.Org) {
                     self.org = org
                 }
             }
-            public var path: Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org.Input.Path
+            public var path: Operations.InteractionsGetRestrictionsForOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/interaction-limits/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.InteractionsGetRestrictionsForOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.InteractionsGetRestrictionsForOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org.Input.Headers
+            public var headers: Operations.InteractionsGetRestrictionsForOrg.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org.Input.Path,
-                headers: Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org.Input.Headers = .init()
+                path: Operations.InteractionsGetRestrictionsForOrg.Input.Path,
+                headers: Operations.InteractionsGetRestrictionsForOrg.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -517,9 +526,9 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/interaction-limits/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/interaction-limits/GET/responses/200/content/json`.
-                    public struct jsonPayload: Codable, Hashable, Sendable {
+                    public struct JsonPayload: Codable, Hashable, Sendable {
                         /// - Remark: Generated from `#/paths/orgs/{org}/interaction-limits/GET/responses/200/content/json/value1`.
-                        public var value1: Components.Schemas.interaction_hyphen_limit_hyphen_response?
+                        public var value1: Components.Schemas.InteractionLimitResponse?
                         /// - Remark: Generated from `#/paths/orgs/{org}/interaction-limits/GET/responses/200/content/json/value2`.
                         public struct Value2Payload: Codable, Hashable, Sendable {
                             /// Creates a new `Value2Payload`.
@@ -529,15 +538,15 @@ public enum Operations {
                             }
                         }
                         /// - Remark: Generated from `#/paths/orgs/{org}/interaction-limits/GET/responses/200/content/json/value2`.
-                        public var value2: Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org.Output.Ok.Body.jsonPayload.Value2Payload?
-                        /// Creates a new `jsonPayload`.
+                        public var value2: Operations.InteractionsGetRestrictionsForOrg.Output.Ok.Body.JsonPayload.Value2Payload?
+                        /// Creates a new `JsonPayload`.
                         ///
                         /// - Parameters:
                         ///   - value1:
                         ///   - value2:
                         public init(
-                            value1: Components.Schemas.interaction_hyphen_limit_hyphen_response? = nil,
-                            value2: Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org.Output.Ok.Body.jsonPayload.Value2Payload? = nil
+                            value1: Components.Schemas.InteractionLimitResponse? = nil,
+                            value2: Operations.InteractionsGetRestrictionsForOrg.Output.Ok.Body.JsonPayload.Value2Payload? = nil
                         ) {
                             self.value1 = value1
                             self.value2 = value2
@@ -545,19 +554,19 @@ public enum Operations {
                         public init(from decoder: any Decoder) throws {
                             var errors: [any Error] = []
                             do {
-                                value1 = try .init(from: decoder)
+                                self.value1 = try .init(from: decoder)
                             } catch {
                                 errors.append(error)
                             }
                             do {
-                                value2 = try .init(from: decoder)
+                                self.value2 = try .init(from: decoder)
                             } catch {
                                 errors.append(error)
                             }
                             try Swift.DecodingError.verifyAtLeastOneSchemaIsNotNil(
                                 [
-                                    value1,
-                                    value2
+                                    self.value1,
+                                    self.value2
                                 ],
                                 type: Self.self,
                                 codingPath: decoder.codingPath,
@@ -565,17 +574,17 @@ public enum Operations {
                             )
                         }
                         public func encode(to encoder: any Encoder) throws {
-                            try value1?.encode(to: encoder)
-                            try value2?.encode(to: encoder)
+                            try self.value1?.encode(to: encoder)
+                            try self.value2?.encode(to: encoder)
                         }
                     }
                     /// - Remark: Generated from `#/paths/orgs/{org}/interaction-limits/GET/responses/200/content/application\/json`.
-                    case json(Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org.Output.Ok.Body.jsonPayload)
+                    case json(Operations.InteractionsGetRestrictionsForOrg.Output.Ok.Body.JsonPayload)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org.Output.Ok.Body.jsonPayload {
+                    public var json: Operations.InteractionsGetRestrictionsForOrg.Output.Ok.Body.JsonPayload {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -585,12 +594,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org.Output.Ok.Body
+                public var body: Operations.InteractionsGetRestrictionsForOrg.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org.Output.Ok.Body) {
+                public init(body: Operations.InteractionsGetRestrictionsForOrg.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -599,12 +608,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/interaction-limits/get(interactions/get-restrictions-for-org)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org.Output.Ok)
+            case ok(Operations.InteractionsGetRestrictionsForOrg.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org.Output.Ok {
+            public var ok: Operations.InteractionsGetRestrictionsForOrg.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -654,7 +663,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/interaction-limits`.
     /// - Remark: Generated from `#/paths//orgs/{org}/interaction-limits/put(interactions/set-restrictions-for-org)`.
-    public enum interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_org {
+    public enum InteractionsSetRestrictionsForOrg {
         public static let id: Swift.String = "interactions/set-restrictions-for-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/interaction-limits/PUT/path`.
@@ -662,34 +671,34 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/interaction-limits/PUT/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                public init(org: Components.Parameters.org) {
+                public init(org: Components.Parameters.Org) {
                     self.org = org
                 }
             }
-            public var path: Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_org.Input.Path
+            public var path: Operations.InteractionsSetRestrictionsForOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/interaction-limits/PUT/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.InteractionsSetRestrictionsForOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.InteractionsSetRestrictionsForOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_org.Input.Headers
+            public var headers: Operations.InteractionsSetRestrictionsForOrg.Input.Headers
             /// - Remark: Generated from `#/paths/orgs/{org}/interaction-limits/PUT/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/orgs/{org}/interaction-limits/PUT/requestBody/content/application\/json`.
-                case json(Components.Schemas.interaction_hyphen_limit)
+                case json(Components.Schemas.InteractionLimit)
             }
-            public var body: Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_org.Input.Body
+            public var body: Operations.InteractionsSetRestrictionsForOrg.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -697,9 +706,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_org.Input.Path,
-                headers: Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_org.Input.Headers = .init(),
-                body: Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_org.Input.Body
+                path: Operations.InteractionsSetRestrictionsForOrg.Input.Path,
+                headers: Operations.InteractionsSetRestrictionsForOrg.Input.Headers = .init(),
+                body: Operations.InteractionsSetRestrictionsForOrg.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -711,12 +720,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/interaction-limits/PUT/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/interaction-limits/PUT/responses/200/content/application\/json`.
-                    case json(Components.Schemas.interaction_hyphen_limit_hyphen_response)
+                    case json(Components.Schemas.InteractionLimitResponse)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.interaction_hyphen_limit_hyphen_response {
+                    public var json: Components.Schemas.InteractionLimitResponse {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -726,12 +735,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_org.Output.Ok.Body
+                public var body: Operations.InteractionsSetRestrictionsForOrg.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_org.Output.Ok.Body) {
+                public init(body: Operations.InteractionsSetRestrictionsForOrg.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -740,12 +749,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/interaction-limits/put(interactions/set-restrictions-for-org)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_org.Output.Ok)
+            case ok(Operations.InteractionsSetRestrictionsForOrg.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_org.Output.Ok {
+            public var ok: Operations.InteractionsSetRestrictionsForOrg.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -763,12 +772,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/interaction-limits/put(interactions/set-restrictions-for-org)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -818,7 +827,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/interaction-limits`.
     /// - Remark: Generated from `#/paths//orgs/{org}/interaction-limits/delete(interactions/remove-restrictions-for-org)`.
-    public enum interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org {
+    public enum InteractionsRemoveRestrictionsForOrg {
         public static let id: Swift.String = "interactions/remove-restrictions-for-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/interaction-limits/DELETE/path`.
@@ -826,21 +835,21 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/interaction-limits/DELETE/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                public init(org: Components.Parameters.org) {
+                public init(org: Components.Parameters.Org) {
                     self.org = org
                 }
             }
-            public var path: Operations.interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org.Input.Path
+            public var path: Operations.InteractionsRemoveRestrictionsForOrg.Input.Path
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
-            public init(path: Operations.interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org.Input.Path) {
+            public init(path: Operations.InteractionsRemoveRestrictionsForOrg.Input.Path) {
                 self.path = path
             }
         }
@@ -854,12 +863,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/interaction-limits/delete(interactions/remove-restrictions-for-org)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org.Output.NoContent)
+            case noContent(Operations.InteractionsRemoveRestrictionsForOrg.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/interaction-limits/delete(interactions/remove-restrictions-for-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org.Output.NoContent {
+            public var noContent: Operations.InteractionsRemoveRestrictionsForOrg.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -884,7 +901,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/interaction-limits`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/interaction-limits/get(interactions/get-restrictions-for-repo)`.
-    public enum interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_repo {
+    public enum InteractionsGetRestrictionsForRepo {
         public static let id: Swift.String = "interactions/get-restrictions-for-repo"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/interaction-limits/GET/path`.
@@ -892,45 +909,45 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/interaction-limits/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/interaction-limits/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_repo.Input.Path
+            public var path: Operations.InteractionsGetRestrictionsForRepo.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/interaction-limits/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_repo.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.InteractionsGetRestrictionsForRepo.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_repo.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.InteractionsGetRestrictionsForRepo.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_repo.Input.Headers
+            public var headers: Operations.InteractionsGetRestrictionsForRepo.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_repo.Input.Path,
-                headers: Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_repo.Input.Headers = .init()
+                path: Operations.InteractionsGetRestrictionsForRepo.Input.Path,
+                headers: Operations.InteractionsGetRestrictionsForRepo.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -941,9 +958,9 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/interaction-limits/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/interaction-limits/GET/responses/200/content/json`.
-                    public struct jsonPayload: Codable, Hashable, Sendable {
+                    public struct JsonPayload: Codable, Hashable, Sendable {
                         /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/interaction-limits/GET/responses/200/content/json/value1`.
-                        public var value1: Components.Schemas.interaction_hyphen_limit_hyphen_response?
+                        public var value1: Components.Schemas.InteractionLimitResponse?
                         /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/interaction-limits/GET/responses/200/content/json/value2`.
                         public struct Value2Payload: Codable, Hashable, Sendable {
                             /// Creates a new `Value2Payload`.
@@ -953,15 +970,15 @@ public enum Operations {
                             }
                         }
                         /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/interaction-limits/GET/responses/200/content/json/value2`.
-                        public var value2: Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_repo.Output.Ok.Body.jsonPayload.Value2Payload?
-                        /// Creates a new `jsonPayload`.
+                        public var value2: Operations.InteractionsGetRestrictionsForRepo.Output.Ok.Body.JsonPayload.Value2Payload?
+                        /// Creates a new `JsonPayload`.
                         ///
                         /// - Parameters:
                         ///   - value1:
                         ///   - value2:
                         public init(
-                            value1: Components.Schemas.interaction_hyphen_limit_hyphen_response? = nil,
-                            value2: Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_repo.Output.Ok.Body.jsonPayload.Value2Payload? = nil
+                            value1: Components.Schemas.InteractionLimitResponse? = nil,
+                            value2: Operations.InteractionsGetRestrictionsForRepo.Output.Ok.Body.JsonPayload.Value2Payload? = nil
                         ) {
                             self.value1 = value1
                             self.value2 = value2
@@ -969,19 +986,19 @@ public enum Operations {
                         public init(from decoder: any Decoder) throws {
                             var errors: [any Error] = []
                             do {
-                                value1 = try .init(from: decoder)
+                                self.value1 = try .init(from: decoder)
                             } catch {
                                 errors.append(error)
                             }
                             do {
-                                value2 = try .init(from: decoder)
+                                self.value2 = try .init(from: decoder)
                             } catch {
                                 errors.append(error)
                             }
                             try Swift.DecodingError.verifyAtLeastOneSchemaIsNotNil(
                                 [
-                                    value1,
-                                    value2
+                                    self.value1,
+                                    self.value2
                                 ],
                                 type: Self.self,
                                 codingPath: decoder.codingPath,
@@ -989,17 +1006,17 @@ public enum Operations {
                             )
                         }
                         public func encode(to encoder: any Encoder) throws {
-                            try value1?.encode(to: encoder)
-                            try value2?.encode(to: encoder)
+                            try self.value1?.encode(to: encoder)
+                            try self.value2?.encode(to: encoder)
                         }
                     }
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/interaction-limits/GET/responses/200/content/application\/json`.
-                    case json(Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_repo.Output.Ok.Body.jsonPayload)
+                    case json(Operations.InteractionsGetRestrictionsForRepo.Output.Ok.Body.JsonPayload)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_repo.Output.Ok.Body.jsonPayload {
+                    public var json: Operations.InteractionsGetRestrictionsForRepo.Output.Ok.Body.JsonPayload {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -1009,12 +1026,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_repo.Output.Ok.Body
+                public var body: Operations.InteractionsGetRestrictionsForRepo.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_repo.Output.Ok.Body) {
+                public init(body: Operations.InteractionsGetRestrictionsForRepo.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -1023,12 +1040,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/interaction-limits/get(interactions/get-restrictions-for-repo)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_repo.Output.Ok)
+            case ok(Operations.InteractionsGetRestrictionsForRepo.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_repo.Output.Ok {
+            public var ok: Operations.InteractionsGetRestrictionsForRepo.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -1078,7 +1095,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/interaction-limits`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/interaction-limits/put(interactions/set-restrictions-for-repo)`.
-    public enum interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo {
+    public enum InteractionsSetRestrictionsForRepo {
         public static let id: Swift.String = "interactions/set-restrictions-for-repo"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/interaction-limits/PUT/path`.
@@ -1086,43 +1103,43 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/interaction-limits/PUT/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/interaction-limits/PUT/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo.Input.Path
+            public var path: Operations.InteractionsSetRestrictionsForRepo.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/interaction-limits/PUT/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.InteractionsSetRestrictionsForRepo.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.InteractionsSetRestrictionsForRepo.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo.Input.Headers
+            public var headers: Operations.InteractionsSetRestrictionsForRepo.Input.Headers
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/interaction-limits/PUT/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/interaction-limits/PUT/requestBody/content/application\/json`.
-                case json(Components.Schemas.interaction_hyphen_limit)
+                case json(Components.Schemas.InteractionLimit)
             }
-            public var body: Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo.Input.Body
+            public var body: Operations.InteractionsSetRestrictionsForRepo.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -1130,9 +1147,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo.Input.Path,
-                headers: Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo.Input.Headers = .init(),
-                body: Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo.Input.Body
+                path: Operations.InteractionsSetRestrictionsForRepo.Input.Path,
+                headers: Operations.InteractionsSetRestrictionsForRepo.Input.Headers = .init(),
+                body: Operations.InteractionsSetRestrictionsForRepo.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -1144,12 +1161,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/interaction-limits/PUT/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/interaction-limits/PUT/responses/200/content/application\/json`.
-                    case json(Components.Schemas.interaction_hyphen_limit_hyphen_response)
+                    case json(Components.Schemas.InteractionLimitResponse)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.interaction_hyphen_limit_hyphen_response {
+                    public var json: Components.Schemas.InteractionLimitResponse {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -1159,12 +1176,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo.Output.Ok.Body
+                public var body: Operations.InteractionsSetRestrictionsForRepo.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo.Output.Ok.Body) {
+                public init(body: Operations.InteractionsSetRestrictionsForRepo.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -1173,12 +1190,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/interaction-limits/put(interactions/set-restrictions-for-repo)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo.Output.Ok)
+            case ok(Operations.InteractionsSetRestrictionsForRepo.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo.Output.Ok {
+            public var ok: Operations.InteractionsSetRestrictionsForRepo.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -1200,12 +1217,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/interaction-limits/put(interactions/set-restrictions-for-repo)/responses/409`.
             ///
             /// HTTP response code: `409 conflict`.
-            case conflict(Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo.Output.Conflict)
+            case conflict(Operations.InteractionsSetRestrictionsForRepo.Output.Conflict)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/interaction-limits/put(interactions/set-restrictions-for-repo)/responses/409`.
+            ///
+            /// HTTP response code: `409 conflict`.
+            public static var conflict: Self {
+                .conflict(.init())
+            }
             /// The associated value of the enum case if `self` is `.conflict`.
             ///
             /// - Throws: An error if `self` is not `.conflict`.
             /// - SeeAlso: `.conflict`.
-            public var conflict: Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo.Output.Conflict {
+            public var conflict: Operations.InteractionsSetRestrictionsForRepo.Output.Conflict {
                 get throws {
                     switch self {
                     case let .conflict(response):
@@ -1255,7 +1280,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/interaction-limits`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/interaction-limits/delete(interactions/remove-restrictions-for-repo)`.
-    public enum interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_repo {
+    public enum InteractionsRemoveRestrictionsForRepo {
         public static let id: Swift.String = "interactions/remove-restrictions-for-repo"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/interaction-limits/DELETE/path`.
@@ -1263,30 +1288,30 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/interaction-limits/DELETE/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/interaction-limits/DELETE/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_repo.Input.Path
+            public var path: Operations.InteractionsRemoveRestrictionsForRepo.Input.Path
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
-            public init(path: Operations.interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_repo.Input.Path) {
+            public init(path: Operations.InteractionsRemoveRestrictionsForRepo.Input.Path) {
                 self.path = path
             }
         }
@@ -1300,12 +1325,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/interaction-limits/delete(interactions/remove-restrictions-for-repo)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_repo.Output.NoContent)
+            case noContent(Operations.InteractionsRemoveRestrictionsForRepo.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/interaction-limits/delete(interactions/remove-restrictions-for-repo)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_repo.Output.NoContent {
+            public var noContent: Operations.InteractionsRemoveRestrictionsForRepo.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -1327,12 +1360,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/interaction-limits/delete(interactions/remove-restrictions-for-repo)/responses/409`.
             ///
             /// HTTP response code: `409 conflict`.
-            case conflict(Operations.interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_repo.Output.Conflict)
+            case conflict(Operations.InteractionsRemoveRestrictionsForRepo.Output.Conflict)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/interaction-limits/delete(interactions/remove-restrictions-for-repo)/responses/409`.
+            ///
+            /// HTTP response code: `409 conflict`.
+            public static var conflict: Self {
+                .conflict(.init())
+            }
             /// The associated value of the enum case if `self` is `.conflict`.
             ///
             /// - Throws: An error if `self` is not `.conflict`.
             /// - SeeAlso: `.conflict`.
-            public var conflict: Operations.interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_repo.Output.Conflict {
+            public var conflict: Operations.InteractionsRemoveRestrictionsForRepo.Output.Conflict {
                 get throws {
                     switch self {
                     case let .conflict(response):
@@ -1357,26 +1398,26 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /user/interaction-limits`.
     /// - Remark: Generated from `#/paths//user/interaction-limits/get(interactions/get-restrictions-for-authenticated-user)`.
-    public enum interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user {
+    public enum InteractionsGetRestrictionsForAuthenticatedUser {
         public static let id: Swift.String = "interactions/get-restrictions-for-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/interaction-limits/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.InteractionsGetRestrictionsForAuthenticatedUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.InteractionsGetRestrictionsForAuthenticatedUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers
+            public var headers: Operations.InteractionsGetRestrictionsForAuthenticatedUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - headers:
-            public init(headers: Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()) {
+            public init(headers: Operations.InteractionsGetRestrictionsForAuthenticatedUser.Input.Headers = .init()) {
                 self.headers = headers
             }
         }
@@ -1385,9 +1426,9 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/interaction-limits/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/interaction-limits/GET/responses/200/content/json`.
-                    public struct jsonPayload: Codable, Hashable, Sendable {
+                    public struct JsonPayload: Codable, Hashable, Sendable {
                         /// - Remark: Generated from `#/paths/user/interaction-limits/GET/responses/200/content/json/value1`.
-                        public var value1: Components.Schemas.interaction_hyphen_limit_hyphen_response?
+                        public var value1: Components.Schemas.InteractionLimitResponse?
                         /// - Remark: Generated from `#/paths/user/interaction-limits/GET/responses/200/content/json/value2`.
                         public struct Value2Payload: Codable, Hashable, Sendable {
                             /// Creates a new `Value2Payload`.
@@ -1397,15 +1438,15 @@ public enum Operations {
                             }
                         }
                         /// - Remark: Generated from `#/paths/user/interaction-limits/GET/responses/200/content/json/value2`.
-                        public var value2: Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body.jsonPayload.Value2Payload?
-                        /// Creates a new `jsonPayload`.
+                        public var value2: Operations.InteractionsGetRestrictionsForAuthenticatedUser.Output.Ok.Body.JsonPayload.Value2Payload?
+                        /// Creates a new `JsonPayload`.
                         ///
                         /// - Parameters:
                         ///   - value1:
                         ///   - value2:
                         public init(
-                            value1: Components.Schemas.interaction_hyphen_limit_hyphen_response? = nil,
-                            value2: Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body.jsonPayload.Value2Payload? = nil
+                            value1: Components.Schemas.InteractionLimitResponse? = nil,
+                            value2: Operations.InteractionsGetRestrictionsForAuthenticatedUser.Output.Ok.Body.JsonPayload.Value2Payload? = nil
                         ) {
                             self.value1 = value1
                             self.value2 = value2
@@ -1413,19 +1454,19 @@ public enum Operations {
                         public init(from decoder: any Decoder) throws {
                             var errors: [any Error] = []
                             do {
-                                value1 = try .init(from: decoder)
+                                self.value1 = try .init(from: decoder)
                             } catch {
                                 errors.append(error)
                             }
                             do {
-                                value2 = try .init(from: decoder)
+                                self.value2 = try .init(from: decoder)
                             } catch {
                                 errors.append(error)
                             }
                             try Swift.DecodingError.verifyAtLeastOneSchemaIsNotNil(
                                 [
-                                    value1,
-                                    value2
+                                    self.value1,
+                                    self.value2
                                 ],
                                 type: Self.self,
                                 codingPath: decoder.codingPath,
@@ -1433,17 +1474,17 @@ public enum Operations {
                             )
                         }
                         public func encode(to encoder: any Encoder) throws {
-                            try value1?.encode(to: encoder)
-                            try value2?.encode(to: encoder)
+                            try self.value1?.encode(to: encoder)
+                            try self.value2?.encode(to: encoder)
                         }
                     }
                     /// - Remark: Generated from `#/paths/user/interaction-limits/GET/responses/200/content/application\/json`.
-                    case json(Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body.jsonPayload)
+                    case json(Operations.InteractionsGetRestrictionsForAuthenticatedUser.Output.Ok.Body.JsonPayload)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body.jsonPayload {
+                    public var json: Operations.InteractionsGetRestrictionsForAuthenticatedUser.Output.Ok.Body.JsonPayload {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -1453,12 +1494,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body
+                public var body: Operations.InteractionsGetRestrictionsForAuthenticatedUser.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body) {
+                public init(body: Operations.InteractionsGetRestrictionsForAuthenticatedUser.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -1467,12 +1508,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/interaction-limits/get(interactions/get-restrictions-for-authenticated-user)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok)
+            case ok(Operations.InteractionsGetRestrictionsForAuthenticatedUser.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok {
+            public var ok: Operations.InteractionsGetRestrictionsForAuthenticatedUser.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -1494,12 +1535,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/interaction-limits/get(interactions/get-restrictions-for-authenticated-user)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent)
+            case noContent(Operations.InteractionsGetRestrictionsForAuthenticatedUser.Output.NoContent)
+            /// Response when there are no restrictions
+            ///
+            /// - Remark: Generated from `#/paths//user/interaction-limits/get(interactions/get-restrictions-for-authenticated-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent {
+            public var noContent: Operations.InteractionsGetRestrictionsForAuthenticatedUser.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -1549,35 +1598,35 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PUT /user/interaction-limits`.
     /// - Remark: Generated from `#/paths//user/interaction-limits/put(interactions/set-restrictions-for-authenticated-user)`.
-    public enum interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user {
+    public enum InteractionsSetRestrictionsForAuthenticatedUser {
         public static let id: Swift.String = "interactions/set-restrictions-for-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/interaction-limits/PUT/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.InteractionsSetRestrictionsForAuthenticatedUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.InteractionsSetRestrictionsForAuthenticatedUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers
+            public var headers: Operations.InteractionsSetRestrictionsForAuthenticatedUser.Input.Headers
             /// - Remark: Generated from `#/paths/user/interaction-limits/PUT/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/user/interaction-limits/PUT/requestBody/content/application\/json`.
-                case json(Components.Schemas.interaction_hyphen_limit)
+                case json(Components.Schemas.InteractionLimit)
             }
-            public var body: Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body
+            public var body: Operations.InteractionsSetRestrictionsForAuthenticatedUser.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - headers:
             ///   - body:
             public init(
-                headers: Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init(),
-                body: Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body
+                headers: Operations.InteractionsSetRestrictionsForAuthenticatedUser.Input.Headers = .init(),
+                body: Operations.InteractionsSetRestrictionsForAuthenticatedUser.Input.Body
             ) {
                 self.headers = headers
                 self.body = body
@@ -1588,12 +1637,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/interaction-limits/PUT/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/interaction-limits/PUT/responses/200/content/application\/json`.
-                    case json(Components.Schemas.interaction_hyphen_limit_hyphen_response)
+                    case json(Components.Schemas.InteractionLimitResponse)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.interaction_hyphen_limit_hyphen_response {
+                    public var json: Components.Schemas.InteractionLimitResponse {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -1603,12 +1652,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body
+                public var body: Operations.InteractionsSetRestrictionsForAuthenticatedUser.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body) {
+                public init(body: Operations.InteractionsSetRestrictionsForAuthenticatedUser.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -1617,12 +1666,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/interaction-limits/put(interactions/set-restrictions-for-authenticated-user)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok)
+            case ok(Operations.InteractionsSetRestrictionsForAuthenticatedUser.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok {
+            public var ok: Operations.InteractionsSetRestrictionsForAuthenticatedUser.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -1640,12 +1689,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/interaction-limits/put(interactions/set-restrictions-for-authenticated-user)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -1695,7 +1744,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /user/interaction-limits`.
     /// - Remark: Generated from `#/paths//user/interaction-limits/delete(interactions/remove-restrictions-for-authenticated-user)`.
-    public enum interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user {
+    public enum InteractionsRemoveRestrictionsForAuthenticatedUser {
         public static let id: Swift.String = "interactions/remove-restrictions-for-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// Creates a new `Input`.
@@ -1711,12 +1760,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/interaction-limits/delete(interactions/remove-restrictions-for-authenticated-user)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent)
+            case noContent(Operations.InteractionsRemoveRestrictionsForAuthenticatedUser.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//user/interaction-limits/delete(interactions/remove-restrictions-for-authenticated-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent {
+            public var noContent: Operations.InteractionsRemoveRestrictionsForAuthenticatedUser.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
