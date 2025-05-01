@@ -17,49 +17,49 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /user`.
     /// - Remark: Generated from `#/paths//user/get(users/get-authenticated)`.
-    func users_sol_get_hyphen_authenticated(_ input: Operations.users_sol_get_hyphen_authenticated.Input) async throws -> Operations.users_sol_get_hyphen_authenticated.Output
+    func usersGetAuthenticated(_ input: Operations.UsersGetAuthenticated.Input) async throws -> Operations.UsersGetAuthenticated.Output
     /// Update the authenticated user
     ///
     /// **Note:** If your email is set to private and you send an `email` parameter as part of this request to update your profile, your privacy settings are still enforced: the email address will not be displayed on your public profile or via the API.
     ///
     /// - Remark: HTTP `PATCH /user`.
     /// - Remark: Generated from `#/paths//user/patch(users/update-authenticated)`.
-    func users_sol_update_hyphen_authenticated(_ input: Operations.users_sol_update_hyphen_authenticated.Input) async throws -> Operations.users_sol_update_hyphen_authenticated.Output
+    func usersUpdateAuthenticated(_ input: Operations.UsersUpdateAuthenticated.Input) async throws -> Operations.UsersUpdateAuthenticated.Output
     /// List users blocked by the authenticated user
     ///
     /// List the users you've blocked on your personal account.
     ///
     /// - Remark: HTTP `GET /user/blocks`.
     /// - Remark: Generated from `#/paths//user/blocks/get(users/list-blocked-by-authenticated-user)`.
-    func users_sol_list_hyphen_blocked_hyphen_by_hyphen_authenticated_hyphen_user(_ input: Operations.users_sol_list_hyphen_blocked_hyphen_by_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.users_sol_list_hyphen_blocked_hyphen_by_hyphen_authenticated_hyphen_user.Output
+    func usersListBlockedByAuthenticatedUser(_ input: Operations.UsersListBlockedByAuthenticatedUser.Input) async throws -> Operations.UsersListBlockedByAuthenticatedUser.Output
     /// Check if a user is blocked by the authenticated user
     ///
     /// Returns a 204 if the given user is blocked by the authenticated user. Returns a 404 if the given user is not blocked by the authenticated user, or if the given user account has been identified as spam by GitHub.
     ///
     /// - Remark: HTTP `GET /user/blocks/{username}`.
     /// - Remark: Generated from `#/paths//user/blocks/{username}/get(users/check-blocked)`.
-    func users_sol_check_hyphen_blocked(_ input: Operations.users_sol_check_hyphen_blocked.Input) async throws -> Operations.users_sol_check_hyphen_blocked.Output
+    func usersCheckBlocked(_ input: Operations.UsersCheckBlocked.Input) async throws -> Operations.UsersCheckBlocked.Output
     /// Block a user
     ///
     /// Blocks the given user and returns a 204. If the authenticated user cannot block the given user a 422 is returned.
     ///
     /// - Remark: HTTP `PUT /user/blocks/{username}`.
     /// - Remark: Generated from `#/paths//user/blocks/{username}/put(users/block)`.
-    func users_sol_block(_ input: Operations.users_sol_block.Input) async throws -> Operations.users_sol_block.Output
+    func usersBlock(_ input: Operations.UsersBlock.Input) async throws -> Operations.UsersBlock.Output
     /// Unblock a user
     ///
     /// Unblocks the given user and returns a 204.
     ///
     /// - Remark: HTTP `DELETE /user/blocks/{username}`.
     /// - Remark: Generated from `#/paths//user/blocks/{username}/delete(users/unblock)`.
-    func users_sol_unblock(_ input: Operations.users_sol_unblock.Input) async throws -> Operations.users_sol_unblock.Output
+    func usersUnblock(_ input: Operations.UsersUnblock.Input) async throws -> Operations.UsersUnblock.Output
     /// Set primary email visibility for the authenticated user
     ///
     /// Sets the visibility for your primary email addresses.
     ///
     /// - Remark: HTTP `PATCH /user/email/visibility`.
     /// - Remark: Generated from `#/paths//user/email/visibility/patch(users/set-primary-email-visibility-for-authenticated-user)`.
-    func users_sol_set_hyphen_primary_hyphen_email_hyphen_visibility_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.users_sol_set_hyphen_primary_hyphen_email_hyphen_visibility_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.users_sol_set_hyphen_primary_hyphen_email_hyphen_visibility_hyphen_for_hyphen_authenticated_hyphen_user.Output
+    func usersSetPrimaryEmailVisibilityForAuthenticatedUser(_ input: Operations.UsersSetPrimaryEmailVisibilityForAuthenticatedUser.Input) async throws -> Operations.UsersSetPrimaryEmailVisibilityForAuthenticatedUser.Output
     /// List email addresses for the authenticated user
     ///
     /// Lists all of your email addresses, and specifies which one is visible
@@ -69,42 +69,42 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /user/emails`.
     /// - Remark: Generated from `#/paths//user/emails/get(users/list-emails-for-authenticated-user)`.
-    func users_sol_list_hyphen_emails_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.users_sol_list_hyphen_emails_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.users_sol_list_hyphen_emails_hyphen_for_hyphen_authenticated_hyphen_user.Output
+    func usersListEmailsForAuthenticatedUser(_ input: Operations.UsersListEmailsForAuthenticatedUser.Input) async throws -> Operations.UsersListEmailsForAuthenticatedUser.Output
     /// Add an email address for the authenticated user
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `user` scope to use this endpoint.
     ///
     /// - Remark: HTTP `POST /user/emails`.
     /// - Remark: Generated from `#/paths//user/emails/post(users/add-email-for-authenticated-user)`.
-    func users_sol_add_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.users_sol_add_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.users_sol_add_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user.Output
+    func usersAddEmailForAuthenticatedUser(_ input: Operations.UsersAddEmailForAuthenticatedUser.Input) async throws -> Operations.UsersAddEmailForAuthenticatedUser.Output
     /// Delete an email address for the authenticated user
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `user` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /user/emails`.
     /// - Remark: Generated from `#/paths//user/emails/delete(users/delete-email-for-authenticated-user)`.
-    func users_sol_delete_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.users_sol_delete_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.users_sol_delete_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user.Output
+    func usersDeleteEmailForAuthenticatedUser(_ input: Operations.UsersDeleteEmailForAuthenticatedUser.Input) async throws -> Operations.UsersDeleteEmailForAuthenticatedUser.Output
     /// List followers of the authenticated user
     ///
     /// Lists the people following the authenticated user.
     ///
     /// - Remark: HTTP `GET /user/followers`.
     /// - Remark: Generated from `#/paths//user/followers/get(users/list-followers-for-authenticated-user)`.
-    func users_sol_list_hyphen_followers_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.users_sol_list_hyphen_followers_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.users_sol_list_hyphen_followers_hyphen_for_hyphen_authenticated_hyphen_user.Output
+    func usersListFollowersForAuthenticatedUser(_ input: Operations.UsersListFollowersForAuthenticatedUser.Input) async throws -> Operations.UsersListFollowersForAuthenticatedUser.Output
     /// List the people the authenticated user follows
     ///
     /// Lists the people who the authenticated user follows.
     ///
     /// - Remark: HTTP `GET /user/following`.
     /// - Remark: Generated from `#/paths//user/following/get(users/list-followed-by-authenticated-user)`.
-    func users_sol_list_hyphen_followed_hyphen_by_hyphen_authenticated_hyphen_user(_ input: Operations.users_sol_list_hyphen_followed_hyphen_by_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.users_sol_list_hyphen_followed_hyphen_by_hyphen_authenticated_hyphen_user.Output
+    func usersListFollowedByAuthenticatedUser(_ input: Operations.UsersListFollowedByAuthenticatedUser.Input) async throws -> Operations.UsersListFollowedByAuthenticatedUser.Output
     /// Check if a person is followed by the authenticated user
     ///
     ///
     ///
     /// - Remark: HTTP `GET /user/following/{username}`.
     /// - Remark: Generated from `#/paths//user/following/{username}/get(users/check-person-is-followed-by-authenticated)`.
-    func users_sol_check_hyphen_person_hyphen_is_hyphen_followed_hyphen_by_hyphen_authenticated(_ input: Operations.users_sol_check_hyphen_person_hyphen_is_hyphen_followed_hyphen_by_hyphen_authenticated.Input) async throws -> Operations.users_sol_check_hyphen_person_hyphen_is_hyphen_followed_hyphen_by_hyphen_authenticated.Output
+    func usersCheckPersonIsFollowedByAuthenticated(_ input: Operations.UsersCheckPersonIsFollowedByAuthenticated.Input) async throws -> Operations.UsersCheckPersonIsFollowedByAuthenticated.Output
     /// Follow a user
     ///
     /// Note that you'll need to set `Content-Length` to zero when calling out to this endpoint. For more information, see "[HTTP verbs](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#http-method)."
@@ -113,14 +113,14 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `PUT /user/following/{username}`.
     /// - Remark: Generated from `#/paths//user/following/{username}/put(users/follow)`.
-    func users_sol_follow(_ input: Operations.users_sol_follow.Input) async throws -> Operations.users_sol_follow.Output
+    func usersFollow(_ input: Operations.UsersFollow.Input) async throws -> Operations.UsersFollow.Output
     /// Unfollow a user
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `user:follow` scope to use this endpoint.
     ///
     /// - Remark: HTTP `DELETE /user/following/{username}`.
     /// - Remark: Generated from `#/paths//user/following/{username}/delete(users/unfollow)`.
-    func users_sol_unfollow(_ input: Operations.users_sol_unfollow.Input) async throws -> Operations.users_sol_unfollow.Output
+    func usersUnfollow(_ input: Operations.UsersUnfollow.Input) async throws -> Operations.UsersUnfollow.Output
     /// List GPG keys for the authenticated user
     ///
     /// Lists the current user's GPG keys.
@@ -129,7 +129,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /user/gpg_keys`.
     /// - Remark: Generated from `#/paths//user/gpg_keys/get(users/list-gpg-keys-for-authenticated-user)`.
-    func users_sol_list_hyphen_gpg_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.users_sol_list_hyphen_gpg_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.users_sol_list_hyphen_gpg_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.Output
+    func usersListGpgKeysForAuthenticatedUser(_ input: Operations.UsersListGpgKeysForAuthenticatedUser.Input) async throws -> Operations.UsersListGpgKeysForAuthenticatedUser.Output
     /// Create a GPG key for the authenticated user
     ///
     /// Adds a GPG key to the authenticated user's GitHub account.
@@ -138,7 +138,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `POST /user/gpg_keys`.
     /// - Remark: Generated from `#/paths//user/gpg_keys/post(users/create-gpg-key-for-authenticated-user)`.
-    func users_sol_create_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.users_sol_create_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.users_sol_create_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output
+    func usersCreateGpgKeyForAuthenticatedUser(_ input: Operations.UsersCreateGpgKeyForAuthenticatedUser.Input) async throws -> Operations.UsersCreateGpgKeyForAuthenticatedUser.Output
     /// Get a GPG key for the authenticated user
     ///
     /// View extended details for a single GPG key.
@@ -147,7 +147,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /user/gpg_keys/{gpg_key_id}`.
     /// - Remark: Generated from `#/paths//user/gpg_keys/{gpg_key_id}/get(users/get-gpg-key-for-authenticated-user)`.
-    func users_sol_get_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.users_sol_get_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.users_sol_get_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output
+    func usersGetGpgKeyForAuthenticatedUser(_ input: Operations.UsersGetGpgKeyForAuthenticatedUser.Input) async throws -> Operations.UsersGetGpgKeyForAuthenticatedUser.Output
     /// Delete a GPG key for the authenticated user
     ///
     /// Removes a GPG key from the authenticated user's GitHub account.
@@ -156,7 +156,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `DELETE /user/gpg_keys/{gpg_key_id}`.
     /// - Remark: Generated from `#/paths//user/gpg_keys/{gpg_key_id}/delete(users/delete-gpg-key-for-authenticated-user)`.
-    func users_sol_delete_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.users_sol_delete_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.users_sol_delete_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output
+    func usersDeleteGpgKeyForAuthenticatedUser(_ input: Operations.UsersDeleteGpgKeyForAuthenticatedUser.Input) async throws -> Operations.UsersDeleteGpgKeyForAuthenticatedUser.Output
     /// List public SSH keys for the authenticated user
     ///
     /// Lists the public SSH keys for the authenticated user's GitHub account.
@@ -165,7 +165,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /user/keys`.
     /// - Remark: Generated from `#/paths//user/keys/get(users/list-public-ssh-keys-for-authenticated-user)`.
-    func users_sol_list_hyphen_public_hyphen_ssh_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.users_sol_list_hyphen_public_hyphen_ssh_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.users_sol_list_hyphen_public_hyphen_ssh_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.Output
+    func usersListPublicSshKeysForAuthenticatedUser(_ input: Operations.UsersListPublicSshKeysForAuthenticatedUser.Input) async throws -> Operations.UsersListPublicSshKeysForAuthenticatedUser.Output
     /// Create a public SSH key for the authenticated user
     ///
     /// Adds a public SSH key to the authenticated user's GitHub account.
@@ -174,7 +174,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `POST /user/keys`.
     /// - Remark: Generated from `#/paths//user/keys/post(users/create-public-ssh-key-for-authenticated-user)`.
-    func users_sol_create_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.users_sol_create_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.users_sol_create_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output
+    func usersCreatePublicSshKeyForAuthenticatedUser(_ input: Operations.UsersCreatePublicSshKeyForAuthenticatedUser.Input) async throws -> Operations.UsersCreatePublicSshKeyForAuthenticatedUser.Output
     /// Get a public SSH key for the authenticated user
     ///
     /// View extended details for a single public SSH key.
@@ -183,7 +183,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /user/keys/{key_id}`.
     /// - Remark: Generated from `#/paths//user/keys/{key_id}/get(users/get-public-ssh-key-for-authenticated-user)`.
-    func users_sol_get_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.users_sol_get_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.users_sol_get_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output
+    func usersGetPublicSshKeyForAuthenticatedUser(_ input: Operations.UsersGetPublicSshKeyForAuthenticatedUser.Input) async throws -> Operations.UsersGetPublicSshKeyForAuthenticatedUser.Output
     /// Delete a public SSH key for the authenticated user
     ///
     /// Removes a public SSH key from the authenticated user's GitHub account.
@@ -192,7 +192,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `DELETE /user/keys/{key_id}`.
     /// - Remark: Generated from `#/paths//user/keys/{key_id}/delete(users/delete-public-ssh-key-for-authenticated-user)`.
-    func users_sol_delete_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.users_sol_delete_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.users_sol_delete_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output
+    func usersDeletePublicSshKeyForAuthenticatedUser(_ input: Operations.UsersDeletePublicSshKeyForAuthenticatedUser.Input) async throws -> Operations.UsersDeletePublicSshKeyForAuthenticatedUser.Output
     /// List public email addresses for the authenticated user
     ///
     /// Lists your publicly visible email address, which you can set with the
@@ -203,14 +203,14 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /user/public_emails`.
     /// - Remark: Generated from `#/paths//user/public_emails/get(users/list-public-emails-for-authenticated-user)`.
-    func users_sol_list_hyphen_public_hyphen_emails_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.users_sol_list_hyphen_public_hyphen_emails_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.users_sol_list_hyphen_public_hyphen_emails_hyphen_for_hyphen_authenticated_hyphen_user.Output
+    func usersListPublicEmailsForAuthenticatedUser(_ input: Operations.UsersListPublicEmailsForAuthenticatedUser.Input) async throws -> Operations.UsersListPublicEmailsForAuthenticatedUser.Output
     /// List social accounts for the authenticated user
     ///
     /// Lists all of your social accounts.
     ///
     /// - Remark: HTTP `GET /user/social_accounts`.
     /// - Remark: Generated from `#/paths//user/social_accounts/get(users/list-social-accounts-for-authenticated-user)`.
-    func users_sol_list_hyphen_social_hyphen_accounts_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.users_sol_list_hyphen_social_hyphen_accounts_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.users_sol_list_hyphen_social_hyphen_accounts_hyphen_for_hyphen_authenticated_hyphen_user.Output
+    func usersListSocialAccountsForAuthenticatedUser(_ input: Operations.UsersListSocialAccountsForAuthenticatedUser.Input) async throws -> Operations.UsersListSocialAccountsForAuthenticatedUser.Output
     /// Add social accounts for the authenticated user
     ///
     /// Add one or more social accounts to the authenticated user's profile.
@@ -219,7 +219,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `POST /user/social_accounts`.
     /// - Remark: Generated from `#/paths//user/social_accounts/post(users/add-social-account-for-authenticated-user)`.
-    func users_sol_add_hyphen_social_hyphen_account_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.users_sol_add_hyphen_social_hyphen_account_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.users_sol_add_hyphen_social_hyphen_account_hyphen_for_hyphen_authenticated_hyphen_user.Output
+    func usersAddSocialAccountForAuthenticatedUser(_ input: Operations.UsersAddSocialAccountForAuthenticatedUser.Input) async throws -> Operations.UsersAddSocialAccountForAuthenticatedUser.Output
     /// Delete social accounts for the authenticated user
     ///
     /// Deletes one or more social accounts from the authenticated user's profile.
@@ -228,7 +228,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `DELETE /user/social_accounts`.
     /// - Remark: Generated from `#/paths//user/social_accounts/delete(users/delete-social-account-for-authenticated-user)`.
-    func users_sol_delete_hyphen_social_hyphen_account_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.users_sol_delete_hyphen_social_hyphen_account_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.users_sol_delete_hyphen_social_hyphen_account_hyphen_for_hyphen_authenticated_hyphen_user.Output
+    func usersDeleteSocialAccountForAuthenticatedUser(_ input: Operations.UsersDeleteSocialAccountForAuthenticatedUser.Input) async throws -> Operations.UsersDeleteSocialAccountForAuthenticatedUser.Output
     /// List SSH signing keys for the authenticated user
     ///
     /// Lists the SSH signing keys for the authenticated user's GitHub account.
@@ -237,7 +237,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /user/ssh_signing_keys`.
     /// - Remark: Generated from `#/paths//user/ssh_signing_keys/get(users/list-ssh-signing-keys-for-authenticated-user)`.
-    func users_sol_list_hyphen_ssh_hyphen_signing_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.users_sol_list_hyphen_ssh_hyphen_signing_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.users_sol_list_hyphen_ssh_hyphen_signing_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.Output
+    func usersListSshSigningKeysForAuthenticatedUser(_ input: Operations.UsersListSshSigningKeysForAuthenticatedUser.Input) async throws -> Operations.UsersListSshSigningKeysForAuthenticatedUser.Output
     /// Create a SSH signing key for the authenticated user
     ///
     /// Creates an SSH signing key for the authenticated user's GitHub account.
@@ -246,7 +246,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `POST /user/ssh_signing_keys`.
     /// - Remark: Generated from `#/paths//user/ssh_signing_keys/post(users/create-ssh-signing-key-for-authenticated-user)`.
-    func users_sol_create_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.users_sol_create_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.users_sol_create_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output
+    func usersCreateSshSigningKeyForAuthenticatedUser(_ input: Operations.UsersCreateSshSigningKeyForAuthenticatedUser.Input) async throws -> Operations.UsersCreateSshSigningKeyForAuthenticatedUser.Output
     /// Get an SSH signing key for the authenticated user
     ///
     /// Gets extended details for an SSH signing key.
@@ -255,7 +255,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /user/ssh_signing_keys/{ssh_signing_key_id}`.
     /// - Remark: Generated from `#/paths//user/ssh_signing_keys/{ssh_signing_key_id}/get(users/get-ssh-signing-key-for-authenticated-user)`.
-    func users_sol_get_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.users_sol_get_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.users_sol_get_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output
+    func usersGetSshSigningKeyForAuthenticatedUser(_ input: Operations.UsersGetSshSigningKeyForAuthenticatedUser.Input) async throws -> Operations.UsersGetSshSigningKeyForAuthenticatedUser.Output
     /// Delete an SSH signing key for the authenticated user
     ///
     /// Deletes an SSH signing key from the authenticated user's GitHub account.
@@ -264,7 +264,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `DELETE /user/ssh_signing_keys/{ssh_signing_key_id}`.
     /// - Remark: Generated from `#/paths//user/ssh_signing_keys/{ssh_signing_key_id}/delete(users/delete-ssh-signing-key-for-authenticated-user)`.
-    func users_sol_delete_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.users_sol_delete_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.users_sol_delete_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output
+    func usersDeleteSshSigningKeyForAuthenticatedUser(_ input: Operations.UsersDeleteSshSigningKeyForAuthenticatedUser.Input) async throws -> Operations.UsersDeleteSshSigningKeyForAuthenticatedUser.Output
     /// Get a user using their ID
     ///
     /// Provides publicly available information about someone with a GitHub account. This method takes their durable user `ID` instead of their `login`, which can change over time.
@@ -277,7 +277,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /user/{account_id}`.
     /// - Remark: Generated from `#/paths//user/{account_id}/get(users/get-by-id)`.
-    func users_sol_get_hyphen_by_hyphen_id(_ input: Operations.users_sol_get_hyphen_by_hyphen_id.Input) async throws -> Operations.users_sol_get_hyphen_by_hyphen_id.Output
+    func usersGetById(_ input: Operations.UsersGetById.Input) async throws -> Operations.UsersGetById.Output
     /// List users
     ///
     /// Lists all users, in the order that they signed up on GitHub. This list includes personal user accounts and organization accounts.
@@ -286,7 +286,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /users`.
     /// - Remark: Generated from `#/paths//users/get(users/list)`.
-    func users_sol_list(_ input: Operations.users_sol_list.Input) async throws -> Operations.users_sol_list.Output
+    func usersList(_ input: Operations.UsersList.Input) async throws -> Operations.UsersList.Output
     /// Get a user
     ///
     /// Provides publicly available information about someone with a GitHub account.
@@ -299,7 +299,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /users/{username}`.
     /// - Remark: Generated from `#/paths//users/{username}/get(users/get-by-username)`.
-    func users_sol_get_hyphen_by_hyphen_username(_ input: Operations.users_sol_get_hyphen_by_hyphen_username.Input) async throws -> Operations.users_sol_get_hyphen_by_hyphen_username.Output
+    func usersGetByUsername(_ input: Operations.UsersGetByUsername.Input) async throws -> Operations.UsersGetByUsername.Output
     /// List attestations
     ///
     /// List a collection of artifact attestations with a given subject digest that are associated with repositories owned by a user.
@@ -310,35 +310,35 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /users/{username}/attestations/{subject_digest}`.
     /// - Remark: Generated from `#/paths//users/{username}/attestations/{subject_digest}/get(users/list-attestations)`.
-    func users_sol_list_hyphen_attestations(_ input: Operations.users_sol_list_hyphen_attestations.Input) async throws -> Operations.users_sol_list_hyphen_attestations.Output
+    func usersListAttestations(_ input: Operations.UsersListAttestations.Input) async throws -> Operations.UsersListAttestations.Output
     /// List followers of a user
     ///
     /// Lists the people following the specified user.
     ///
     /// - Remark: HTTP `GET /users/{username}/followers`.
     /// - Remark: Generated from `#/paths//users/{username}/followers/get(users/list-followers-for-user)`.
-    func users_sol_list_hyphen_followers_hyphen_for_hyphen_user(_ input: Operations.users_sol_list_hyphen_followers_hyphen_for_hyphen_user.Input) async throws -> Operations.users_sol_list_hyphen_followers_hyphen_for_hyphen_user.Output
+    func usersListFollowersForUser(_ input: Operations.UsersListFollowersForUser.Input) async throws -> Operations.UsersListFollowersForUser.Output
     /// List the people a user follows
     ///
     /// Lists the people who the specified user follows.
     ///
     /// - Remark: HTTP `GET /users/{username}/following`.
     /// - Remark: Generated from `#/paths//users/{username}/following/get(users/list-following-for-user)`.
-    func users_sol_list_hyphen_following_hyphen_for_hyphen_user(_ input: Operations.users_sol_list_hyphen_following_hyphen_for_hyphen_user.Input) async throws -> Operations.users_sol_list_hyphen_following_hyphen_for_hyphen_user.Output
+    func usersListFollowingForUser(_ input: Operations.UsersListFollowingForUser.Input) async throws -> Operations.UsersListFollowingForUser.Output
     /// Check if a user follows another user
     ///
     ///
     ///
     /// - Remark: HTTP `GET /users/{username}/following/{target_user}`.
     /// - Remark: Generated from `#/paths//users/{username}/following/{target_user}/get(users/check-following-for-user)`.
-    func users_sol_check_hyphen_following_hyphen_for_hyphen_user(_ input: Operations.users_sol_check_hyphen_following_hyphen_for_hyphen_user.Input) async throws -> Operations.users_sol_check_hyphen_following_hyphen_for_hyphen_user.Output
+    func usersCheckFollowingForUser(_ input: Operations.UsersCheckFollowingForUser.Input) async throws -> Operations.UsersCheckFollowingForUser.Output
     /// List GPG keys for a user
     ///
     /// Lists the GPG keys for a user. This information is accessible by anyone.
     ///
     /// - Remark: HTTP `GET /users/{username}/gpg_keys`.
     /// - Remark: Generated from `#/paths//users/{username}/gpg_keys/get(users/list-gpg-keys-for-user)`.
-    func users_sol_list_hyphen_gpg_hyphen_keys_hyphen_for_hyphen_user(_ input: Operations.users_sol_list_hyphen_gpg_hyphen_keys_hyphen_for_hyphen_user.Input) async throws -> Operations.users_sol_list_hyphen_gpg_hyphen_keys_hyphen_for_hyphen_user.Output
+    func usersListGpgKeysForUser(_ input: Operations.UsersListGpgKeysForUser.Input) async throws -> Operations.UsersListGpgKeysForUser.Output
     /// Get contextual information for a user
     ///
     /// Provides hovercard information. You can find out more about someone in relation to their pull requests, issues, repositories, and organizations.
@@ -349,28 +349,28 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /users/{username}/hovercard`.
     /// - Remark: Generated from `#/paths//users/{username}/hovercard/get(users/get-context-for-user)`.
-    func users_sol_get_hyphen_context_hyphen_for_hyphen_user(_ input: Operations.users_sol_get_hyphen_context_hyphen_for_hyphen_user.Input) async throws -> Operations.users_sol_get_hyphen_context_hyphen_for_hyphen_user.Output
+    func usersGetContextForUser(_ input: Operations.UsersGetContextForUser.Input) async throws -> Operations.UsersGetContextForUser.Output
     /// List public keys for a user
     ///
     /// Lists the _verified_ public SSH keys for a user. This is accessible by anyone.
     ///
     /// - Remark: HTTP `GET /users/{username}/keys`.
     /// - Remark: Generated from `#/paths//users/{username}/keys/get(users/list-public-keys-for-user)`.
-    func users_sol_list_hyphen_public_hyphen_keys_hyphen_for_hyphen_user(_ input: Operations.users_sol_list_hyphen_public_hyphen_keys_hyphen_for_hyphen_user.Input) async throws -> Operations.users_sol_list_hyphen_public_hyphen_keys_hyphen_for_hyphen_user.Output
+    func usersListPublicKeysForUser(_ input: Operations.UsersListPublicKeysForUser.Input) async throws -> Operations.UsersListPublicKeysForUser.Output
     /// List social accounts for a user
     ///
     /// Lists social media accounts for a user. This endpoint is accessible by anyone.
     ///
     /// - Remark: HTTP `GET /users/{username}/social_accounts`.
     /// - Remark: Generated from `#/paths//users/{username}/social_accounts/get(users/list-social-accounts-for-user)`.
-    func users_sol_list_hyphen_social_hyphen_accounts_hyphen_for_hyphen_user(_ input: Operations.users_sol_list_hyphen_social_hyphen_accounts_hyphen_for_hyphen_user.Input) async throws -> Operations.users_sol_list_hyphen_social_hyphen_accounts_hyphen_for_hyphen_user.Output
+    func usersListSocialAccountsForUser(_ input: Operations.UsersListSocialAccountsForUser.Input) async throws -> Operations.UsersListSocialAccountsForUser.Output
     /// List SSH signing keys for a user
     ///
     /// Lists the SSH signing keys for a user. This operation is accessible by anyone.
     ///
     /// - Remark: HTTP `GET /users/{username}/ssh_signing_keys`.
     /// - Remark: Generated from `#/paths//users/{username}/ssh_signing_keys/get(users/list-ssh-signing-keys-for-user)`.
-    func users_sol_list_hyphen_ssh_hyphen_signing_hyphen_keys_hyphen_for_hyphen_user(_ input: Operations.users_sol_list_hyphen_ssh_hyphen_signing_hyphen_keys_hyphen_for_hyphen_user.Input) async throws -> Operations.users_sol_list_hyphen_ssh_hyphen_signing_hyphen_keys_hyphen_for_hyphen_user.Output
+    func usersListSshSigningKeysForUser(_ input: Operations.UsersListSshSigningKeysForUser.Input) async throws -> Operations.UsersListSshSigningKeysForUser.Output
 }
 
 /// Convenience overloads for operation inputs.
@@ -381,8 +381,8 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /user`.
     /// - Remark: Generated from `#/paths//user/get(users/get-authenticated)`.
-    public func users_sol_get_hyphen_authenticated(headers: Operations.users_sol_get_hyphen_authenticated.Input.Headers = .init()) async throws -> Operations.users_sol_get_hyphen_authenticated.Output {
-        try await users_sol_get_hyphen_authenticated(Operations.users_sol_get_hyphen_authenticated.Input(headers: headers))
+    public func usersGetAuthenticated(headers: Operations.UsersGetAuthenticated.Input.Headers = .init()) async throws -> Operations.UsersGetAuthenticated.Output {
+        try await usersGetAuthenticated(Operations.UsersGetAuthenticated.Input(headers: headers))
     }
     /// Update the authenticated user
     ///
@@ -390,11 +390,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `PATCH /user`.
     /// - Remark: Generated from `#/paths//user/patch(users/update-authenticated)`.
-    public func users_sol_update_hyphen_authenticated(
-        headers: Operations.users_sol_update_hyphen_authenticated.Input.Headers = .init(),
-        body: Operations.users_sol_update_hyphen_authenticated.Input.Body? = nil
-    ) async throws -> Operations.users_sol_update_hyphen_authenticated.Output {
-        try await users_sol_update_hyphen_authenticated(Operations.users_sol_update_hyphen_authenticated.Input(
+    public func usersUpdateAuthenticated(
+        headers: Operations.UsersUpdateAuthenticated.Input.Headers = .init(),
+        body: Operations.UsersUpdateAuthenticated.Input.Body? = nil
+    ) async throws -> Operations.UsersUpdateAuthenticated.Output {
+        try await usersUpdateAuthenticated(Operations.UsersUpdateAuthenticated.Input(
             headers: headers,
             body: body
         ))
@@ -405,11 +405,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /user/blocks`.
     /// - Remark: Generated from `#/paths//user/blocks/get(users/list-blocked-by-authenticated-user)`.
-    public func users_sol_list_hyphen_blocked_hyphen_by_hyphen_authenticated_hyphen_user(
-        query: Operations.users_sol_list_hyphen_blocked_hyphen_by_hyphen_authenticated_hyphen_user.Input.Query = .init(),
-        headers: Operations.users_sol_list_hyphen_blocked_hyphen_by_hyphen_authenticated_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.users_sol_list_hyphen_blocked_hyphen_by_hyphen_authenticated_hyphen_user.Output {
-        try await users_sol_list_hyphen_blocked_hyphen_by_hyphen_authenticated_hyphen_user(Operations.users_sol_list_hyphen_blocked_hyphen_by_hyphen_authenticated_hyphen_user.Input(
+    public func usersListBlockedByAuthenticatedUser(
+        query: Operations.UsersListBlockedByAuthenticatedUser.Input.Query = .init(),
+        headers: Operations.UsersListBlockedByAuthenticatedUser.Input.Headers = .init()
+    ) async throws -> Operations.UsersListBlockedByAuthenticatedUser.Output {
+        try await usersListBlockedByAuthenticatedUser(Operations.UsersListBlockedByAuthenticatedUser.Input(
             query: query,
             headers: headers
         ))
@@ -420,11 +420,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /user/blocks/{username}`.
     /// - Remark: Generated from `#/paths//user/blocks/{username}/get(users/check-blocked)`.
-    public func users_sol_check_hyphen_blocked(
-        path: Operations.users_sol_check_hyphen_blocked.Input.Path,
-        headers: Operations.users_sol_check_hyphen_blocked.Input.Headers = .init()
-    ) async throws -> Operations.users_sol_check_hyphen_blocked.Output {
-        try await users_sol_check_hyphen_blocked(Operations.users_sol_check_hyphen_blocked.Input(
+    public func usersCheckBlocked(
+        path: Operations.UsersCheckBlocked.Input.Path,
+        headers: Operations.UsersCheckBlocked.Input.Headers = .init()
+    ) async throws -> Operations.UsersCheckBlocked.Output {
+        try await usersCheckBlocked(Operations.UsersCheckBlocked.Input(
             path: path,
             headers: headers
         ))
@@ -435,11 +435,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `PUT /user/blocks/{username}`.
     /// - Remark: Generated from `#/paths//user/blocks/{username}/put(users/block)`.
-    public func users_sol_block(
-        path: Operations.users_sol_block.Input.Path,
-        headers: Operations.users_sol_block.Input.Headers = .init()
-    ) async throws -> Operations.users_sol_block.Output {
-        try await users_sol_block(Operations.users_sol_block.Input(
+    public func usersBlock(
+        path: Operations.UsersBlock.Input.Path,
+        headers: Operations.UsersBlock.Input.Headers = .init()
+    ) async throws -> Operations.UsersBlock.Output {
+        try await usersBlock(Operations.UsersBlock.Input(
             path: path,
             headers: headers
         ))
@@ -450,11 +450,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /user/blocks/{username}`.
     /// - Remark: Generated from `#/paths//user/blocks/{username}/delete(users/unblock)`.
-    public func users_sol_unblock(
-        path: Operations.users_sol_unblock.Input.Path,
-        headers: Operations.users_sol_unblock.Input.Headers = .init()
-    ) async throws -> Operations.users_sol_unblock.Output {
-        try await users_sol_unblock(Operations.users_sol_unblock.Input(
+    public func usersUnblock(
+        path: Operations.UsersUnblock.Input.Path,
+        headers: Operations.UsersUnblock.Input.Headers = .init()
+    ) async throws -> Operations.UsersUnblock.Output {
+        try await usersUnblock(Operations.UsersUnblock.Input(
             path: path,
             headers: headers
         ))
@@ -465,11 +465,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `PATCH /user/email/visibility`.
     /// - Remark: Generated from `#/paths//user/email/visibility/patch(users/set-primary-email-visibility-for-authenticated-user)`.
-    public func users_sol_set_hyphen_primary_hyphen_email_hyphen_visibility_hyphen_for_hyphen_authenticated_hyphen_user(
-        headers: Operations.users_sol_set_hyphen_primary_hyphen_email_hyphen_visibility_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init(),
-        body: Operations.users_sol_set_hyphen_primary_hyphen_email_hyphen_visibility_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body
-    ) async throws -> Operations.users_sol_set_hyphen_primary_hyphen_email_hyphen_visibility_hyphen_for_hyphen_authenticated_hyphen_user.Output {
-        try await users_sol_set_hyphen_primary_hyphen_email_hyphen_visibility_hyphen_for_hyphen_authenticated_hyphen_user(Operations.users_sol_set_hyphen_primary_hyphen_email_hyphen_visibility_hyphen_for_hyphen_authenticated_hyphen_user.Input(
+    public func usersSetPrimaryEmailVisibilityForAuthenticatedUser(
+        headers: Operations.UsersSetPrimaryEmailVisibilityForAuthenticatedUser.Input.Headers = .init(),
+        body: Operations.UsersSetPrimaryEmailVisibilityForAuthenticatedUser.Input.Body
+    ) async throws -> Operations.UsersSetPrimaryEmailVisibilityForAuthenticatedUser.Output {
+        try await usersSetPrimaryEmailVisibilityForAuthenticatedUser(Operations.UsersSetPrimaryEmailVisibilityForAuthenticatedUser.Input(
             headers: headers,
             body: body
         ))
@@ -483,11 +483,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /user/emails`.
     /// - Remark: Generated from `#/paths//user/emails/get(users/list-emails-for-authenticated-user)`.
-    public func users_sol_list_hyphen_emails_hyphen_for_hyphen_authenticated_hyphen_user(
-        query: Operations.users_sol_list_hyphen_emails_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query = .init(),
-        headers: Operations.users_sol_list_hyphen_emails_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.users_sol_list_hyphen_emails_hyphen_for_hyphen_authenticated_hyphen_user.Output {
-        try await users_sol_list_hyphen_emails_hyphen_for_hyphen_authenticated_hyphen_user(Operations.users_sol_list_hyphen_emails_hyphen_for_hyphen_authenticated_hyphen_user.Input(
+    public func usersListEmailsForAuthenticatedUser(
+        query: Operations.UsersListEmailsForAuthenticatedUser.Input.Query = .init(),
+        headers: Operations.UsersListEmailsForAuthenticatedUser.Input.Headers = .init()
+    ) async throws -> Operations.UsersListEmailsForAuthenticatedUser.Output {
+        try await usersListEmailsForAuthenticatedUser(Operations.UsersListEmailsForAuthenticatedUser.Input(
             query: query,
             headers: headers
         ))
@@ -498,11 +498,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /user/emails`.
     /// - Remark: Generated from `#/paths//user/emails/post(users/add-email-for-authenticated-user)`.
-    public func users_sol_add_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user(
-        headers: Operations.users_sol_add_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init(),
-        body: Operations.users_sol_add_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body? = nil
-    ) async throws -> Operations.users_sol_add_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user.Output {
-        try await users_sol_add_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user(Operations.users_sol_add_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user.Input(
+    public func usersAddEmailForAuthenticatedUser(
+        headers: Operations.UsersAddEmailForAuthenticatedUser.Input.Headers = .init(),
+        body: Operations.UsersAddEmailForAuthenticatedUser.Input.Body? = nil
+    ) async throws -> Operations.UsersAddEmailForAuthenticatedUser.Output {
+        try await usersAddEmailForAuthenticatedUser(Operations.UsersAddEmailForAuthenticatedUser.Input(
             headers: headers,
             body: body
         ))
@@ -513,11 +513,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /user/emails`.
     /// - Remark: Generated from `#/paths//user/emails/delete(users/delete-email-for-authenticated-user)`.
-    public func users_sol_delete_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user(
-        headers: Operations.users_sol_delete_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init(),
-        body: Operations.users_sol_delete_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body? = nil
-    ) async throws -> Operations.users_sol_delete_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user.Output {
-        try await users_sol_delete_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user(Operations.users_sol_delete_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user.Input(
+    public func usersDeleteEmailForAuthenticatedUser(
+        headers: Operations.UsersDeleteEmailForAuthenticatedUser.Input.Headers = .init(),
+        body: Operations.UsersDeleteEmailForAuthenticatedUser.Input.Body? = nil
+    ) async throws -> Operations.UsersDeleteEmailForAuthenticatedUser.Output {
+        try await usersDeleteEmailForAuthenticatedUser(Operations.UsersDeleteEmailForAuthenticatedUser.Input(
             headers: headers,
             body: body
         ))
@@ -528,11 +528,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /user/followers`.
     /// - Remark: Generated from `#/paths//user/followers/get(users/list-followers-for-authenticated-user)`.
-    public func users_sol_list_hyphen_followers_hyphen_for_hyphen_authenticated_hyphen_user(
-        query: Operations.users_sol_list_hyphen_followers_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query = .init(),
-        headers: Operations.users_sol_list_hyphen_followers_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.users_sol_list_hyphen_followers_hyphen_for_hyphen_authenticated_hyphen_user.Output {
-        try await users_sol_list_hyphen_followers_hyphen_for_hyphen_authenticated_hyphen_user(Operations.users_sol_list_hyphen_followers_hyphen_for_hyphen_authenticated_hyphen_user.Input(
+    public func usersListFollowersForAuthenticatedUser(
+        query: Operations.UsersListFollowersForAuthenticatedUser.Input.Query = .init(),
+        headers: Operations.UsersListFollowersForAuthenticatedUser.Input.Headers = .init()
+    ) async throws -> Operations.UsersListFollowersForAuthenticatedUser.Output {
+        try await usersListFollowersForAuthenticatedUser(Operations.UsersListFollowersForAuthenticatedUser.Input(
             query: query,
             headers: headers
         ))
@@ -543,11 +543,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /user/following`.
     /// - Remark: Generated from `#/paths//user/following/get(users/list-followed-by-authenticated-user)`.
-    public func users_sol_list_hyphen_followed_hyphen_by_hyphen_authenticated_hyphen_user(
-        query: Operations.users_sol_list_hyphen_followed_hyphen_by_hyphen_authenticated_hyphen_user.Input.Query = .init(),
-        headers: Operations.users_sol_list_hyphen_followed_hyphen_by_hyphen_authenticated_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.users_sol_list_hyphen_followed_hyphen_by_hyphen_authenticated_hyphen_user.Output {
-        try await users_sol_list_hyphen_followed_hyphen_by_hyphen_authenticated_hyphen_user(Operations.users_sol_list_hyphen_followed_hyphen_by_hyphen_authenticated_hyphen_user.Input(
+    public func usersListFollowedByAuthenticatedUser(
+        query: Operations.UsersListFollowedByAuthenticatedUser.Input.Query = .init(),
+        headers: Operations.UsersListFollowedByAuthenticatedUser.Input.Headers = .init()
+    ) async throws -> Operations.UsersListFollowedByAuthenticatedUser.Output {
+        try await usersListFollowedByAuthenticatedUser(Operations.UsersListFollowedByAuthenticatedUser.Input(
             query: query,
             headers: headers
         ))
@@ -558,11 +558,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /user/following/{username}`.
     /// - Remark: Generated from `#/paths//user/following/{username}/get(users/check-person-is-followed-by-authenticated)`.
-    public func users_sol_check_hyphen_person_hyphen_is_hyphen_followed_hyphen_by_hyphen_authenticated(
-        path: Operations.users_sol_check_hyphen_person_hyphen_is_hyphen_followed_hyphen_by_hyphen_authenticated.Input.Path,
-        headers: Operations.users_sol_check_hyphen_person_hyphen_is_hyphen_followed_hyphen_by_hyphen_authenticated.Input.Headers = .init()
-    ) async throws -> Operations.users_sol_check_hyphen_person_hyphen_is_hyphen_followed_hyphen_by_hyphen_authenticated.Output {
-        try await users_sol_check_hyphen_person_hyphen_is_hyphen_followed_hyphen_by_hyphen_authenticated(Operations.users_sol_check_hyphen_person_hyphen_is_hyphen_followed_hyphen_by_hyphen_authenticated.Input(
+    public func usersCheckPersonIsFollowedByAuthenticated(
+        path: Operations.UsersCheckPersonIsFollowedByAuthenticated.Input.Path,
+        headers: Operations.UsersCheckPersonIsFollowedByAuthenticated.Input.Headers = .init()
+    ) async throws -> Operations.UsersCheckPersonIsFollowedByAuthenticated.Output {
+        try await usersCheckPersonIsFollowedByAuthenticated(Operations.UsersCheckPersonIsFollowedByAuthenticated.Input(
             path: path,
             headers: headers
         ))
@@ -575,11 +575,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `PUT /user/following/{username}`.
     /// - Remark: Generated from `#/paths//user/following/{username}/put(users/follow)`.
-    public func users_sol_follow(
-        path: Operations.users_sol_follow.Input.Path,
-        headers: Operations.users_sol_follow.Input.Headers = .init()
-    ) async throws -> Operations.users_sol_follow.Output {
-        try await users_sol_follow(Operations.users_sol_follow.Input(
+    public func usersFollow(
+        path: Operations.UsersFollow.Input.Path,
+        headers: Operations.UsersFollow.Input.Headers = .init()
+    ) async throws -> Operations.UsersFollow.Output {
+        try await usersFollow(Operations.UsersFollow.Input(
             path: path,
             headers: headers
         ))
@@ -590,11 +590,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /user/following/{username}`.
     /// - Remark: Generated from `#/paths//user/following/{username}/delete(users/unfollow)`.
-    public func users_sol_unfollow(
-        path: Operations.users_sol_unfollow.Input.Path,
-        headers: Operations.users_sol_unfollow.Input.Headers = .init()
-    ) async throws -> Operations.users_sol_unfollow.Output {
-        try await users_sol_unfollow(Operations.users_sol_unfollow.Input(
+    public func usersUnfollow(
+        path: Operations.UsersUnfollow.Input.Path,
+        headers: Operations.UsersUnfollow.Input.Headers = .init()
+    ) async throws -> Operations.UsersUnfollow.Output {
+        try await usersUnfollow(Operations.UsersUnfollow.Input(
             path: path,
             headers: headers
         ))
@@ -607,11 +607,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /user/gpg_keys`.
     /// - Remark: Generated from `#/paths//user/gpg_keys/get(users/list-gpg-keys-for-authenticated-user)`.
-    public func users_sol_list_hyphen_gpg_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user(
-        query: Operations.users_sol_list_hyphen_gpg_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query = .init(),
-        headers: Operations.users_sol_list_hyphen_gpg_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.users_sol_list_hyphen_gpg_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.Output {
-        try await users_sol_list_hyphen_gpg_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user(Operations.users_sol_list_hyphen_gpg_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.Input(
+    public func usersListGpgKeysForAuthenticatedUser(
+        query: Operations.UsersListGpgKeysForAuthenticatedUser.Input.Query = .init(),
+        headers: Operations.UsersListGpgKeysForAuthenticatedUser.Input.Headers = .init()
+    ) async throws -> Operations.UsersListGpgKeysForAuthenticatedUser.Output {
+        try await usersListGpgKeysForAuthenticatedUser(Operations.UsersListGpgKeysForAuthenticatedUser.Input(
             query: query,
             headers: headers
         ))
@@ -624,11 +624,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /user/gpg_keys`.
     /// - Remark: Generated from `#/paths//user/gpg_keys/post(users/create-gpg-key-for-authenticated-user)`.
-    public func users_sol_create_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user(
-        headers: Operations.users_sol_create_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init(),
-        body: Operations.users_sol_create_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body
-    ) async throws -> Operations.users_sol_create_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output {
-        try await users_sol_create_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user(Operations.users_sol_create_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input(
+    public func usersCreateGpgKeyForAuthenticatedUser(
+        headers: Operations.UsersCreateGpgKeyForAuthenticatedUser.Input.Headers = .init(),
+        body: Operations.UsersCreateGpgKeyForAuthenticatedUser.Input.Body
+    ) async throws -> Operations.UsersCreateGpgKeyForAuthenticatedUser.Output {
+        try await usersCreateGpgKeyForAuthenticatedUser(Operations.UsersCreateGpgKeyForAuthenticatedUser.Input(
             headers: headers,
             body: body
         ))
@@ -641,11 +641,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /user/gpg_keys/{gpg_key_id}`.
     /// - Remark: Generated from `#/paths//user/gpg_keys/{gpg_key_id}/get(users/get-gpg-key-for-authenticated-user)`.
-    public func users_sol_get_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user(
-        path: Operations.users_sol_get_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path,
-        headers: Operations.users_sol_get_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.users_sol_get_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output {
-        try await users_sol_get_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user(Operations.users_sol_get_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input(
+    public func usersGetGpgKeyForAuthenticatedUser(
+        path: Operations.UsersGetGpgKeyForAuthenticatedUser.Input.Path,
+        headers: Operations.UsersGetGpgKeyForAuthenticatedUser.Input.Headers = .init()
+    ) async throws -> Operations.UsersGetGpgKeyForAuthenticatedUser.Output {
+        try await usersGetGpgKeyForAuthenticatedUser(Operations.UsersGetGpgKeyForAuthenticatedUser.Input(
             path: path,
             headers: headers
         ))
@@ -658,11 +658,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /user/gpg_keys/{gpg_key_id}`.
     /// - Remark: Generated from `#/paths//user/gpg_keys/{gpg_key_id}/delete(users/delete-gpg-key-for-authenticated-user)`.
-    public func users_sol_delete_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user(
-        path: Operations.users_sol_delete_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path,
-        headers: Operations.users_sol_delete_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.users_sol_delete_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output {
-        try await users_sol_delete_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user(Operations.users_sol_delete_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input(
+    public func usersDeleteGpgKeyForAuthenticatedUser(
+        path: Operations.UsersDeleteGpgKeyForAuthenticatedUser.Input.Path,
+        headers: Operations.UsersDeleteGpgKeyForAuthenticatedUser.Input.Headers = .init()
+    ) async throws -> Operations.UsersDeleteGpgKeyForAuthenticatedUser.Output {
+        try await usersDeleteGpgKeyForAuthenticatedUser(Operations.UsersDeleteGpgKeyForAuthenticatedUser.Input(
             path: path,
             headers: headers
         ))
@@ -675,11 +675,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /user/keys`.
     /// - Remark: Generated from `#/paths//user/keys/get(users/list-public-ssh-keys-for-authenticated-user)`.
-    public func users_sol_list_hyphen_public_hyphen_ssh_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user(
-        query: Operations.users_sol_list_hyphen_public_hyphen_ssh_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query = .init(),
-        headers: Operations.users_sol_list_hyphen_public_hyphen_ssh_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.users_sol_list_hyphen_public_hyphen_ssh_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.Output {
-        try await users_sol_list_hyphen_public_hyphen_ssh_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user(Operations.users_sol_list_hyphen_public_hyphen_ssh_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.Input(
+    public func usersListPublicSshKeysForAuthenticatedUser(
+        query: Operations.UsersListPublicSshKeysForAuthenticatedUser.Input.Query = .init(),
+        headers: Operations.UsersListPublicSshKeysForAuthenticatedUser.Input.Headers = .init()
+    ) async throws -> Operations.UsersListPublicSshKeysForAuthenticatedUser.Output {
+        try await usersListPublicSshKeysForAuthenticatedUser(Operations.UsersListPublicSshKeysForAuthenticatedUser.Input(
             query: query,
             headers: headers
         ))
@@ -692,11 +692,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /user/keys`.
     /// - Remark: Generated from `#/paths//user/keys/post(users/create-public-ssh-key-for-authenticated-user)`.
-    public func users_sol_create_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user(
-        headers: Operations.users_sol_create_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init(),
-        body: Operations.users_sol_create_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body
-    ) async throws -> Operations.users_sol_create_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output {
-        try await users_sol_create_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user(Operations.users_sol_create_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input(
+    public func usersCreatePublicSshKeyForAuthenticatedUser(
+        headers: Operations.UsersCreatePublicSshKeyForAuthenticatedUser.Input.Headers = .init(),
+        body: Operations.UsersCreatePublicSshKeyForAuthenticatedUser.Input.Body
+    ) async throws -> Operations.UsersCreatePublicSshKeyForAuthenticatedUser.Output {
+        try await usersCreatePublicSshKeyForAuthenticatedUser(Operations.UsersCreatePublicSshKeyForAuthenticatedUser.Input(
             headers: headers,
             body: body
         ))
@@ -709,11 +709,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /user/keys/{key_id}`.
     /// - Remark: Generated from `#/paths//user/keys/{key_id}/get(users/get-public-ssh-key-for-authenticated-user)`.
-    public func users_sol_get_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user(
-        path: Operations.users_sol_get_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path,
-        headers: Operations.users_sol_get_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.users_sol_get_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output {
-        try await users_sol_get_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user(Operations.users_sol_get_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input(
+    public func usersGetPublicSshKeyForAuthenticatedUser(
+        path: Operations.UsersGetPublicSshKeyForAuthenticatedUser.Input.Path,
+        headers: Operations.UsersGetPublicSshKeyForAuthenticatedUser.Input.Headers = .init()
+    ) async throws -> Operations.UsersGetPublicSshKeyForAuthenticatedUser.Output {
+        try await usersGetPublicSshKeyForAuthenticatedUser(Operations.UsersGetPublicSshKeyForAuthenticatedUser.Input(
             path: path,
             headers: headers
         ))
@@ -726,11 +726,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /user/keys/{key_id}`.
     /// - Remark: Generated from `#/paths//user/keys/{key_id}/delete(users/delete-public-ssh-key-for-authenticated-user)`.
-    public func users_sol_delete_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user(
-        path: Operations.users_sol_delete_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path,
-        headers: Operations.users_sol_delete_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.users_sol_delete_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output {
-        try await users_sol_delete_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user(Operations.users_sol_delete_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input(
+    public func usersDeletePublicSshKeyForAuthenticatedUser(
+        path: Operations.UsersDeletePublicSshKeyForAuthenticatedUser.Input.Path,
+        headers: Operations.UsersDeletePublicSshKeyForAuthenticatedUser.Input.Headers = .init()
+    ) async throws -> Operations.UsersDeletePublicSshKeyForAuthenticatedUser.Output {
+        try await usersDeletePublicSshKeyForAuthenticatedUser(Operations.UsersDeletePublicSshKeyForAuthenticatedUser.Input(
             path: path,
             headers: headers
         ))
@@ -745,11 +745,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /user/public_emails`.
     /// - Remark: Generated from `#/paths//user/public_emails/get(users/list-public-emails-for-authenticated-user)`.
-    public func users_sol_list_hyphen_public_hyphen_emails_hyphen_for_hyphen_authenticated_hyphen_user(
-        query: Operations.users_sol_list_hyphen_public_hyphen_emails_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query = .init(),
-        headers: Operations.users_sol_list_hyphen_public_hyphen_emails_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.users_sol_list_hyphen_public_hyphen_emails_hyphen_for_hyphen_authenticated_hyphen_user.Output {
-        try await users_sol_list_hyphen_public_hyphen_emails_hyphen_for_hyphen_authenticated_hyphen_user(Operations.users_sol_list_hyphen_public_hyphen_emails_hyphen_for_hyphen_authenticated_hyphen_user.Input(
+    public func usersListPublicEmailsForAuthenticatedUser(
+        query: Operations.UsersListPublicEmailsForAuthenticatedUser.Input.Query = .init(),
+        headers: Operations.UsersListPublicEmailsForAuthenticatedUser.Input.Headers = .init()
+    ) async throws -> Operations.UsersListPublicEmailsForAuthenticatedUser.Output {
+        try await usersListPublicEmailsForAuthenticatedUser(Operations.UsersListPublicEmailsForAuthenticatedUser.Input(
             query: query,
             headers: headers
         ))
@@ -760,11 +760,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /user/social_accounts`.
     /// - Remark: Generated from `#/paths//user/social_accounts/get(users/list-social-accounts-for-authenticated-user)`.
-    public func users_sol_list_hyphen_social_hyphen_accounts_hyphen_for_hyphen_authenticated_hyphen_user(
-        query: Operations.users_sol_list_hyphen_social_hyphen_accounts_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query = .init(),
-        headers: Operations.users_sol_list_hyphen_social_hyphen_accounts_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.users_sol_list_hyphen_social_hyphen_accounts_hyphen_for_hyphen_authenticated_hyphen_user.Output {
-        try await users_sol_list_hyphen_social_hyphen_accounts_hyphen_for_hyphen_authenticated_hyphen_user(Operations.users_sol_list_hyphen_social_hyphen_accounts_hyphen_for_hyphen_authenticated_hyphen_user.Input(
+    public func usersListSocialAccountsForAuthenticatedUser(
+        query: Operations.UsersListSocialAccountsForAuthenticatedUser.Input.Query = .init(),
+        headers: Operations.UsersListSocialAccountsForAuthenticatedUser.Input.Headers = .init()
+    ) async throws -> Operations.UsersListSocialAccountsForAuthenticatedUser.Output {
+        try await usersListSocialAccountsForAuthenticatedUser(Operations.UsersListSocialAccountsForAuthenticatedUser.Input(
             query: query,
             headers: headers
         ))
@@ -777,11 +777,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /user/social_accounts`.
     /// - Remark: Generated from `#/paths//user/social_accounts/post(users/add-social-account-for-authenticated-user)`.
-    public func users_sol_add_hyphen_social_hyphen_account_hyphen_for_hyphen_authenticated_hyphen_user(
-        headers: Operations.users_sol_add_hyphen_social_hyphen_account_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init(),
-        body: Operations.users_sol_add_hyphen_social_hyphen_account_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body
-    ) async throws -> Operations.users_sol_add_hyphen_social_hyphen_account_hyphen_for_hyphen_authenticated_hyphen_user.Output {
-        try await users_sol_add_hyphen_social_hyphen_account_hyphen_for_hyphen_authenticated_hyphen_user(Operations.users_sol_add_hyphen_social_hyphen_account_hyphen_for_hyphen_authenticated_hyphen_user.Input(
+    public func usersAddSocialAccountForAuthenticatedUser(
+        headers: Operations.UsersAddSocialAccountForAuthenticatedUser.Input.Headers = .init(),
+        body: Operations.UsersAddSocialAccountForAuthenticatedUser.Input.Body
+    ) async throws -> Operations.UsersAddSocialAccountForAuthenticatedUser.Output {
+        try await usersAddSocialAccountForAuthenticatedUser(Operations.UsersAddSocialAccountForAuthenticatedUser.Input(
             headers: headers,
             body: body
         ))
@@ -794,11 +794,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /user/social_accounts`.
     /// - Remark: Generated from `#/paths//user/social_accounts/delete(users/delete-social-account-for-authenticated-user)`.
-    public func users_sol_delete_hyphen_social_hyphen_account_hyphen_for_hyphen_authenticated_hyphen_user(
-        headers: Operations.users_sol_delete_hyphen_social_hyphen_account_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init(),
-        body: Operations.users_sol_delete_hyphen_social_hyphen_account_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body
-    ) async throws -> Operations.users_sol_delete_hyphen_social_hyphen_account_hyphen_for_hyphen_authenticated_hyphen_user.Output {
-        try await users_sol_delete_hyphen_social_hyphen_account_hyphen_for_hyphen_authenticated_hyphen_user(Operations.users_sol_delete_hyphen_social_hyphen_account_hyphen_for_hyphen_authenticated_hyphen_user.Input(
+    public func usersDeleteSocialAccountForAuthenticatedUser(
+        headers: Operations.UsersDeleteSocialAccountForAuthenticatedUser.Input.Headers = .init(),
+        body: Operations.UsersDeleteSocialAccountForAuthenticatedUser.Input.Body
+    ) async throws -> Operations.UsersDeleteSocialAccountForAuthenticatedUser.Output {
+        try await usersDeleteSocialAccountForAuthenticatedUser(Operations.UsersDeleteSocialAccountForAuthenticatedUser.Input(
             headers: headers,
             body: body
         ))
@@ -811,11 +811,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /user/ssh_signing_keys`.
     /// - Remark: Generated from `#/paths//user/ssh_signing_keys/get(users/list-ssh-signing-keys-for-authenticated-user)`.
-    public func users_sol_list_hyphen_ssh_hyphen_signing_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user(
-        query: Operations.users_sol_list_hyphen_ssh_hyphen_signing_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query = .init(),
-        headers: Operations.users_sol_list_hyphen_ssh_hyphen_signing_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.users_sol_list_hyphen_ssh_hyphen_signing_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.Output {
-        try await users_sol_list_hyphen_ssh_hyphen_signing_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user(Operations.users_sol_list_hyphen_ssh_hyphen_signing_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.Input(
+    public func usersListSshSigningKeysForAuthenticatedUser(
+        query: Operations.UsersListSshSigningKeysForAuthenticatedUser.Input.Query = .init(),
+        headers: Operations.UsersListSshSigningKeysForAuthenticatedUser.Input.Headers = .init()
+    ) async throws -> Operations.UsersListSshSigningKeysForAuthenticatedUser.Output {
+        try await usersListSshSigningKeysForAuthenticatedUser(Operations.UsersListSshSigningKeysForAuthenticatedUser.Input(
             query: query,
             headers: headers
         ))
@@ -828,11 +828,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /user/ssh_signing_keys`.
     /// - Remark: Generated from `#/paths//user/ssh_signing_keys/post(users/create-ssh-signing-key-for-authenticated-user)`.
-    public func users_sol_create_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user(
-        headers: Operations.users_sol_create_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init(),
-        body: Operations.users_sol_create_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body
-    ) async throws -> Operations.users_sol_create_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output {
-        try await users_sol_create_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user(Operations.users_sol_create_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input(
+    public func usersCreateSshSigningKeyForAuthenticatedUser(
+        headers: Operations.UsersCreateSshSigningKeyForAuthenticatedUser.Input.Headers = .init(),
+        body: Operations.UsersCreateSshSigningKeyForAuthenticatedUser.Input.Body
+    ) async throws -> Operations.UsersCreateSshSigningKeyForAuthenticatedUser.Output {
+        try await usersCreateSshSigningKeyForAuthenticatedUser(Operations.UsersCreateSshSigningKeyForAuthenticatedUser.Input(
             headers: headers,
             body: body
         ))
@@ -845,11 +845,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /user/ssh_signing_keys/{ssh_signing_key_id}`.
     /// - Remark: Generated from `#/paths//user/ssh_signing_keys/{ssh_signing_key_id}/get(users/get-ssh-signing-key-for-authenticated-user)`.
-    public func users_sol_get_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user(
-        path: Operations.users_sol_get_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path,
-        headers: Operations.users_sol_get_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.users_sol_get_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output {
-        try await users_sol_get_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user(Operations.users_sol_get_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input(
+    public func usersGetSshSigningKeyForAuthenticatedUser(
+        path: Operations.UsersGetSshSigningKeyForAuthenticatedUser.Input.Path,
+        headers: Operations.UsersGetSshSigningKeyForAuthenticatedUser.Input.Headers = .init()
+    ) async throws -> Operations.UsersGetSshSigningKeyForAuthenticatedUser.Output {
+        try await usersGetSshSigningKeyForAuthenticatedUser(Operations.UsersGetSshSigningKeyForAuthenticatedUser.Input(
             path: path,
             headers: headers
         ))
@@ -862,11 +862,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /user/ssh_signing_keys/{ssh_signing_key_id}`.
     /// - Remark: Generated from `#/paths//user/ssh_signing_keys/{ssh_signing_key_id}/delete(users/delete-ssh-signing-key-for-authenticated-user)`.
-    public func users_sol_delete_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user(
-        path: Operations.users_sol_delete_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path,
-        headers: Operations.users_sol_delete_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.users_sol_delete_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output {
-        try await users_sol_delete_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user(Operations.users_sol_delete_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input(
+    public func usersDeleteSshSigningKeyForAuthenticatedUser(
+        path: Operations.UsersDeleteSshSigningKeyForAuthenticatedUser.Input.Path,
+        headers: Operations.UsersDeleteSshSigningKeyForAuthenticatedUser.Input.Headers = .init()
+    ) async throws -> Operations.UsersDeleteSshSigningKeyForAuthenticatedUser.Output {
+        try await usersDeleteSshSigningKeyForAuthenticatedUser(Operations.UsersDeleteSshSigningKeyForAuthenticatedUser.Input(
             path: path,
             headers: headers
         ))
@@ -883,11 +883,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /user/{account_id}`.
     /// - Remark: Generated from `#/paths//user/{account_id}/get(users/get-by-id)`.
-    public func users_sol_get_hyphen_by_hyphen_id(
-        path: Operations.users_sol_get_hyphen_by_hyphen_id.Input.Path,
-        headers: Operations.users_sol_get_hyphen_by_hyphen_id.Input.Headers = .init()
-    ) async throws -> Operations.users_sol_get_hyphen_by_hyphen_id.Output {
-        try await users_sol_get_hyphen_by_hyphen_id(Operations.users_sol_get_hyphen_by_hyphen_id.Input(
+    public func usersGetById(
+        path: Operations.UsersGetById.Input.Path,
+        headers: Operations.UsersGetById.Input.Headers = .init()
+    ) async throws -> Operations.UsersGetById.Output {
+        try await usersGetById(Operations.UsersGetById.Input(
             path: path,
             headers: headers
         ))
@@ -900,11 +900,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /users`.
     /// - Remark: Generated from `#/paths//users/get(users/list)`.
-    public func users_sol_list(
-        query: Operations.users_sol_list.Input.Query = .init(),
-        headers: Operations.users_sol_list.Input.Headers = .init()
-    ) async throws -> Operations.users_sol_list.Output {
-        try await users_sol_list(Operations.users_sol_list.Input(
+    public func usersList(
+        query: Operations.UsersList.Input.Query = .init(),
+        headers: Operations.UsersList.Input.Headers = .init()
+    ) async throws -> Operations.UsersList.Output {
+        try await usersList(Operations.UsersList.Input(
             query: query,
             headers: headers
         ))
@@ -921,11 +921,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /users/{username}`.
     /// - Remark: Generated from `#/paths//users/{username}/get(users/get-by-username)`.
-    public func users_sol_get_hyphen_by_hyphen_username(
-        path: Operations.users_sol_get_hyphen_by_hyphen_username.Input.Path,
-        headers: Operations.users_sol_get_hyphen_by_hyphen_username.Input.Headers = .init()
-    ) async throws -> Operations.users_sol_get_hyphen_by_hyphen_username.Output {
-        try await users_sol_get_hyphen_by_hyphen_username(Operations.users_sol_get_hyphen_by_hyphen_username.Input(
+    public func usersGetByUsername(
+        path: Operations.UsersGetByUsername.Input.Path,
+        headers: Operations.UsersGetByUsername.Input.Headers = .init()
+    ) async throws -> Operations.UsersGetByUsername.Output {
+        try await usersGetByUsername(Operations.UsersGetByUsername.Input(
             path: path,
             headers: headers
         ))
@@ -940,12 +940,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /users/{username}/attestations/{subject_digest}`.
     /// - Remark: Generated from `#/paths//users/{username}/attestations/{subject_digest}/get(users/list-attestations)`.
-    public func users_sol_list_hyphen_attestations(
-        path: Operations.users_sol_list_hyphen_attestations.Input.Path,
-        query: Operations.users_sol_list_hyphen_attestations.Input.Query = .init(),
-        headers: Operations.users_sol_list_hyphen_attestations.Input.Headers = .init()
-    ) async throws -> Operations.users_sol_list_hyphen_attestations.Output {
-        try await users_sol_list_hyphen_attestations(Operations.users_sol_list_hyphen_attestations.Input(
+    public func usersListAttestations(
+        path: Operations.UsersListAttestations.Input.Path,
+        query: Operations.UsersListAttestations.Input.Query = .init(),
+        headers: Operations.UsersListAttestations.Input.Headers = .init()
+    ) async throws -> Operations.UsersListAttestations.Output {
+        try await usersListAttestations(Operations.UsersListAttestations.Input(
             path: path,
             query: query,
             headers: headers
@@ -957,12 +957,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /users/{username}/followers`.
     /// - Remark: Generated from `#/paths//users/{username}/followers/get(users/list-followers-for-user)`.
-    public func users_sol_list_hyphen_followers_hyphen_for_hyphen_user(
-        path: Operations.users_sol_list_hyphen_followers_hyphen_for_hyphen_user.Input.Path,
-        query: Operations.users_sol_list_hyphen_followers_hyphen_for_hyphen_user.Input.Query = .init(),
-        headers: Operations.users_sol_list_hyphen_followers_hyphen_for_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.users_sol_list_hyphen_followers_hyphen_for_hyphen_user.Output {
-        try await users_sol_list_hyphen_followers_hyphen_for_hyphen_user(Operations.users_sol_list_hyphen_followers_hyphen_for_hyphen_user.Input(
+    public func usersListFollowersForUser(
+        path: Operations.UsersListFollowersForUser.Input.Path,
+        query: Operations.UsersListFollowersForUser.Input.Query = .init(),
+        headers: Operations.UsersListFollowersForUser.Input.Headers = .init()
+    ) async throws -> Operations.UsersListFollowersForUser.Output {
+        try await usersListFollowersForUser(Operations.UsersListFollowersForUser.Input(
             path: path,
             query: query,
             headers: headers
@@ -974,12 +974,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /users/{username}/following`.
     /// - Remark: Generated from `#/paths//users/{username}/following/get(users/list-following-for-user)`.
-    public func users_sol_list_hyphen_following_hyphen_for_hyphen_user(
-        path: Operations.users_sol_list_hyphen_following_hyphen_for_hyphen_user.Input.Path,
-        query: Operations.users_sol_list_hyphen_following_hyphen_for_hyphen_user.Input.Query = .init(),
-        headers: Operations.users_sol_list_hyphen_following_hyphen_for_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.users_sol_list_hyphen_following_hyphen_for_hyphen_user.Output {
-        try await users_sol_list_hyphen_following_hyphen_for_hyphen_user(Operations.users_sol_list_hyphen_following_hyphen_for_hyphen_user.Input(
+    public func usersListFollowingForUser(
+        path: Operations.UsersListFollowingForUser.Input.Path,
+        query: Operations.UsersListFollowingForUser.Input.Query = .init(),
+        headers: Operations.UsersListFollowingForUser.Input.Headers = .init()
+    ) async throws -> Operations.UsersListFollowingForUser.Output {
+        try await usersListFollowingForUser(Operations.UsersListFollowingForUser.Input(
             path: path,
             query: query,
             headers: headers
@@ -991,8 +991,8 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /users/{username}/following/{target_user}`.
     /// - Remark: Generated from `#/paths//users/{username}/following/{target_user}/get(users/check-following-for-user)`.
-    public func users_sol_check_hyphen_following_hyphen_for_hyphen_user(path: Operations.users_sol_check_hyphen_following_hyphen_for_hyphen_user.Input.Path) async throws -> Operations.users_sol_check_hyphen_following_hyphen_for_hyphen_user.Output {
-        try await users_sol_check_hyphen_following_hyphen_for_hyphen_user(Operations.users_sol_check_hyphen_following_hyphen_for_hyphen_user.Input(path: path))
+    public func usersCheckFollowingForUser(path: Operations.UsersCheckFollowingForUser.Input.Path) async throws -> Operations.UsersCheckFollowingForUser.Output {
+        try await usersCheckFollowingForUser(Operations.UsersCheckFollowingForUser.Input(path: path))
     }
     /// List GPG keys for a user
     ///
@@ -1000,12 +1000,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /users/{username}/gpg_keys`.
     /// - Remark: Generated from `#/paths//users/{username}/gpg_keys/get(users/list-gpg-keys-for-user)`.
-    public func users_sol_list_hyphen_gpg_hyphen_keys_hyphen_for_hyphen_user(
-        path: Operations.users_sol_list_hyphen_gpg_hyphen_keys_hyphen_for_hyphen_user.Input.Path,
-        query: Operations.users_sol_list_hyphen_gpg_hyphen_keys_hyphen_for_hyphen_user.Input.Query = .init(),
-        headers: Operations.users_sol_list_hyphen_gpg_hyphen_keys_hyphen_for_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.users_sol_list_hyphen_gpg_hyphen_keys_hyphen_for_hyphen_user.Output {
-        try await users_sol_list_hyphen_gpg_hyphen_keys_hyphen_for_hyphen_user(Operations.users_sol_list_hyphen_gpg_hyphen_keys_hyphen_for_hyphen_user.Input(
+    public func usersListGpgKeysForUser(
+        path: Operations.UsersListGpgKeysForUser.Input.Path,
+        query: Operations.UsersListGpgKeysForUser.Input.Query = .init(),
+        headers: Operations.UsersListGpgKeysForUser.Input.Headers = .init()
+    ) async throws -> Operations.UsersListGpgKeysForUser.Output {
+        try await usersListGpgKeysForUser(Operations.UsersListGpgKeysForUser.Input(
             path: path,
             query: query,
             headers: headers
@@ -1021,12 +1021,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /users/{username}/hovercard`.
     /// - Remark: Generated from `#/paths//users/{username}/hovercard/get(users/get-context-for-user)`.
-    public func users_sol_get_hyphen_context_hyphen_for_hyphen_user(
-        path: Operations.users_sol_get_hyphen_context_hyphen_for_hyphen_user.Input.Path,
-        query: Operations.users_sol_get_hyphen_context_hyphen_for_hyphen_user.Input.Query = .init(),
-        headers: Operations.users_sol_get_hyphen_context_hyphen_for_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.users_sol_get_hyphen_context_hyphen_for_hyphen_user.Output {
-        try await users_sol_get_hyphen_context_hyphen_for_hyphen_user(Operations.users_sol_get_hyphen_context_hyphen_for_hyphen_user.Input(
+    public func usersGetContextForUser(
+        path: Operations.UsersGetContextForUser.Input.Path,
+        query: Operations.UsersGetContextForUser.Input.Query = .init(),
+        headers: Operations.UsersGetContextForUser.Input.Headers = .init()
+    ) async throws -> Operations.UsersGetContextForUser.Output {
+        try await usersGetContextForUser(Operations.UsersGetContextForUser.Input(
             path: path,
             query: query,
             headers: headers
@@ -1038,12 +1038,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /users/{username}/keys`.
     /// - Remark: Generated from `#/paths//users/{username}/keys/get(users/list-public-keys-for-user)`.
-    public func users_sol_list_hyphen_public_hyphen_keys_hyphen_for_hyphen_user(
-        path: Operations.users_sol_list_hyphen_public_hyphen_keys_hyphen_for_hyphen_user.Input.Path,
-        query: Operations.users_sol_list_hyphen_public_hyphen_keys_hyphen_for_hyphen_user.Input.Query = .init(),
-        headers: Operations.users_sol_list_hyphen_public_hyphen_keys_hyphen_for_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.users_sol_list_hyphen_public_hyphen_keys_hyphen_for_hyphen_user.Output {
-        try await users_sol_list_hyphen_public_hyphen_keys_hyphen_for_hyphen_user(Operations.users_sol_list_hyphen_public_hyphen_keys_hyphen_for_hyphen_user.Input(
+    public func usersListPublicKeysForUser(
+        path: Operations.UsersListPublicKeysForUser.Input.Path,
+        query: Operations.UsersListPublicKeysForUser.Input.Query = .init(),
+        headers: Operations.UsersListPublicKeysForUser.Input.Headers = .init()
+    ) async throws -> Operations.UsersListPublicKeysForUser.Output {
+        try await usersListPublicKeysForUser(Operations.UsersListPublicKeysForUser.Input(
             path: path,
             query: query,
             headers: headers
@@ -1055,12 +1055,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /users/{username}/social_accounts`.
     /// - Remark: Generated from `#/paths//users/{username}/social_accounts/get(users/list-social-accounts-for-user)`.
-    public func users_sol_list_hyphen_social_hyphen_accounts_hyphen_for_hyphen_user(
-        path: Operations.users_sol_list_hyphen_social_hyphen_accounts_hyphen_for_hyphen_user.Input.Path,
-        query: Operations.users_sol_list_hyphen_social_hyphen_accounts_hyphen_for_hyphen_user.Input.Query = .init(),
-        headers: Operations.users_sol_list_hyphen_social_hyphen_accounts_hyphen_for_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.users_sol_list_hyphen_social_hyphen_accounts_hyphen_for_hyphen_user.Output {
-        try await users_sol_list_hyphen_social_hyphen_accounts_hyphen_for_hyphen_user(Operations.users_sol_list_hyphen_social_hyphen_accounts_hyphen_for_hyphen_user.Input(
+    public func usersListSocialAccountsForUser(
+        path: Operations.UsersListSocialAccountsForUser.Input.Path,
+        query: Operations.UsersListSocialAccountsForUser.Input.Query = .init(),
+        headers: Operations.UsersListSocialAccountsForUser.Input.Headers = .init()
+    ) async throws -> Operations.UsersListSocialAccountsForUser.Output {
+        try await usersListSocialAccountsForUser(Operations.UsersListSocialAccountsForUser.Input(
             path: path,
             query: query,
             headers: headers
@@ -1072,12 +1072,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /users/{username}/ssh_signing_keys`.
     /// - Remark: Generated from `#/paths//users/{username}/ssh_signing_keys/get(users/list-ssh-signing-keys-for-user)`.
-    public func users_sol_list_hyphen_ssh_hyphen_signing_hyphen_keys_hyphen_for_hyphen_user(
-        path: Operations.users_sol_list_hyphen_ssh_hyphen_signing_hyphen_keys_hyphen_for_hyphen_user.Input.Path,
-        query: Operations.users_sol_list_hyphen_ssh_hyphen_signing_hyphen_keys_hyphen_for_hyphen_user.Input.Query = .init(),
-        headers: Operations.users_sol_list_hyphen_ssh_hyphen_signing_hyphen_keys_hyphen_for_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.users_sol_list_hyphen_ssh_hyphen_signing_hyphen_keys_hyphen_for_hyphen_user.Output {
-        try await users_sol_list_hyphen_ssh_hyphen_signing_hyphen_keys_hyphen_for_hyphen_user(Operations.users_sol_list_hyphen_ssh_hyphen_signing_hyphen_keys_hyphen_for_hyphen_user.Input(
+    public func usersListSshSigningKeysForUser(
+        path: Operations.UsersListSshSigningKeysForUser.Input.Path,
+        query: Operations.UsersListSshSigningKeysForUser.Input.Query = .init(),
+        headers: Operations.UsersListSshSigningKeysForUser.Input.Headers = .init()
+    ) async throws -> Operations.UsersListSshSigningKeysForUser.Output {
+        try await usersListSshSigningKeysForUser(Operations.UsersListSshSigningKeysForUser.Input(
             path: path,
             query: query,
             headers: headers
@@ -1087,6 +1087,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -1102,7 +1111,7 @@ public enum Components {
         /// A GitHub user.
         ///
         /// - Remark: Generated from `#/components/schemas/simple-user`.
-        public struct simple_hyphen_user: Codable, Hashable, Sendable {
+        public struct SimpleUser: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/simple-user/name`.
             public var name: Swift.String?
             /// - Remark: Generated from `#/components/schemas/simple-user/email`.
@@ -1112,171 +1121,171 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/simple-user/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/simple-user/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/avatar_url`.
-            public var avatar_url: Swift.String
+            public var avatarUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/gravatar_id`.
-            public var gravatar_id: Swift.String?
+            public var gravatarId: Swift.String?
             /// - Remark: Generated from `#/components/schemas/simple-user/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/followers_url`.
-            public var followers_url: Swift.String
+            public var followersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/following_url`.
-            public var following_url: Swift.String
+            public var followingUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/gists_url`.
-            public var gists_url: Swift.String
+            public var gistsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/starred_url`.
-            public var starred_url: Swift.String
+            public var starredUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/subscriptions_url`.
-            public var subscriptions_url: Swift.String
+            public var subscriptionsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/organizations_url`.
-            public var organizations_url: Swift.String
+            public var organizationsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/repos_url`.
-            public var repos_url: Swift.String
+            public var reposUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/events_url`.
-            public var events_url: Swift.String
+            public var eventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/received_events_url`.
-            public var received_events_url: Swift.String
+            public var receivedEventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/type`.
             public var _type: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/site_admin`.
-            public var site_admin: Swift.Bool
+            public var siteAdmin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/simple-user/starred_at`.
-            public var starred_at: Swift.String?
+            public var starredAt: Swift.String?
             /// - Remark: Generated from `#/components/schemas/simple-user/user_view_type`.
-            public var user_view_type: Swift.String?
-            /// Creates a new `simple_hyphen_user`.
+            public var userViewType: Swift.String?
+            /// Creates a new `SimpleUser`.
             ///
             /// - Parameters:
             ///   - name:
             ///   - email:
             ///   - login:
             ///   - id:
-            ///   - node_id:
-            ///   - avatar_url:
-            ///   - gravatar_id:
+            ///   - nodeId:
+            ///   - avatarUrl:
+            ///   - gravatarId:
             ///   - url:
-            ///   - html_url:
-            ///   - followers_url:
-            ///   - following_url:
-            ///   - gists_url:
-            ///   - starred_url:
-            ///   - subscriptions_url:
-            ///   - organizations_url:
-            ///   - repos_url:
-            ///   - events_url:
-            ///   - received_events_url:
+            ///   - htmlUrl:
+            ///   - followersUrl:
+            ///   - followingUrl:
+            ///   - gistsUrl:
+            ///   - starredUrl:
+            ///   - subscriptionsUrl:
+            ///   - organizationsUrl:
+            ///   - reposUrl:
+            ///   - eventsUrl:
+            ///   - receivedEventsUrl:
             ///   - _type:
-            ///   - site_admin:
-            ///   - starred_at:
-            ///   - user_view_type:
+            ///   - siteAdmin:
+            ///   - starredAt:
+            ///   - userViewType:
             public init(
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
                 login: Swift.String,
                 id: Swift.Int64,
-                node_id: Swift.String,
-                avatar_url: Swift.String,
-                gravatar_id: Swift.String? = nil,
+                nodeId: Swift.String,
+                avatarUrl: Swift.String,
+                gravatarId: Swift.String? = nil,
                 url: Swift.String,
-                html_url: Swift.String,
-                followers_url: Swift.String,
-                following_url: Swift.String,
-                gists_url: Swift.String,
-                starred_url: Swift.String,
-                subscriptions_url: Swift.String,
-                organizations_url: Swift.String,
-                repos_url: Swift.String,
-                events_url: Swift.String,
-                received_events_url: Swift.String,
+                htmlUrl: Swift.String,
+                followersUrl: Swift.String,
+                followingUrl: Swift.String,
+                gistsUrl: Swift.String,
+                starredUrl: Swift.String,
+                subscriptionsUrl: Swift.String,
+                organizationsUrl: Swift.String,
+                reposUrl: Swift.String,
+                eventsUrl: Swift.String,
+                receivedEventsUrl: Swift.String,
                 _type: Swift.String,
-                site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil,
-                user_view_type: Swift.String? = nil
+                siteAdmin: Swift.Bool,
+                starredAt: Swift.String? = nil,
+                userViewType: Swift.String? = nil
             ) {
                 self.name = name
                 self.email = email
                 self.login = login
                 self.id = id
-                self.node_id = node_id
-                self.avatar_url = avatar_url
-                self.gravatar_id = gravatar_id
+                self.nodeId = nodeId
+                self.avatarUrl = avatarUrl
+                self.gravatarId = gravatarId
                 self.url = url
-                self.html_url = html_url
-                self.followers_url = followers_url
-                self.following_url = following_url
-                self.gists_url = gists_url
-                self.starred_url = starred_url
-                self.subscriptions_url = subscriptions_url
-                self.organizations_url = organizations_url
-                self.repos_url = repos_url
-                self.events_url = events_url
-                self.received_events_url = received_events_url
+                self.htmlUrl = htmlUrl
+                self.followersUrl = followersUrl
+                self.followingUrl = followingUrl
+                self.gistsUrl = gistsUrl
+                self.starredUrl = starredUrl
+                self.subscriptionsUrl = subscriptionsUrl
+                self.organizationsUrl = organizationsUrl
+                self.reposUrl = reposUrl
+                self.eventsUrl = eventsUrl
+                self.receivedEventsUrl = receivedEventsUrl
                 self._type = _type
-                self.site_admin = site_admin
-                self.starred_at = starred_at
-                self.user_view_type = user_view_type
+                self.siteAdmin = siteAdmin
+                self.starredAt = starredAt
+                self.userViewType = userViewType
             }
             public enum CodingKeys: String, CodingKey {
                 case name
                 case email
                 case login
                 case id
-                case node_id
-                case avatar_url
-                case gravatar_id
+                case nodeId = "node_id"
+                case avatarUrl = "avatar_url"
+                case gravatarId = "gravatar_id"
                 case url
-                case html_url
-                case followers_url
-                case following_url
-                case gists_url
-                case starred_url
-                case subscriptions_url
-                case organizations_url
-                case repos_url
-                case events_url
-                case received_events_url
+                case htmlUrl = "html_url"
+                case followersUrl = "followers_url"
+                case followingUrl = "following_url"
+                case gistsUrl = "gists_url"
+                case starredUrl = "starred_url"
+                case subscriptionsUrl = "subscriptions_url"
+                case organizationsUrl = "organizations_url"
+                case reposUrl = "repos_url"
+                case eventsUrl = "events_url"
+                case receivedEventsUrl = "received_events_url"
                 case _type = "type"
-                case site_admin
-                case starred_at
-                case user_view_type
+                case siteAdmin = "site_admin"
+                case starredAt = "starred_at"
+                case userViewType = "user_view_type"
             }
         }
         /// Basic Error
         ///
         /// - Remark: Generated from `#/components/schemas/basic-error`.
-        public struct basic_hyphen_error: Codable, Hashable, Sendable {
+        public struct BasicError: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/basic-error/message`.
             public var message: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/documentation_url`.
-            public var documentation_url: Swift.String?
+            public var documentationUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/url`.
             public var url: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/status`.
             public var status: Swift.String?
-            /// Creates a new `basic_hyphen_error`.
+            /// Creates a new `BasicError`.
             ///
             /// - Parameters:
             ///   - message:
-            ///   - documentation_url:
+            ///   - documentationUrl:
             ///   - url:
             ///   - status:
             public init(
                 message: Swift.String? = nil,
-                documentation_url: Swift.String? = nil,
+                documentationUrl: Swift.String? = nil,
                 url: Swift.String? = nil,
                 status: Swift.String? = nil
             ) {
                 self.message = message
-                self.documentation_url = documentation_url
+                self.documentationUrl = documentationUrl
                 self.url = url
                 self.status = status
             }
             public enum CodingKeys: String, CodingKey {
                 case message
-                case documentation_url
+                case documentationUrl = "documentation_url"
                 case url
                 case status
             }
@@ -1284,30 +1293,30 @@ public enum Components {
         /// Validation Error
         ///
         /// - Remark: Generated from `#/components/schemas/validation-error`.
-        public struct validation_hyphen_error: Codable, Hashable, Sendable {
+        public struct ValidationError: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/validation-error/message`.
             public var message: Swift.String
             /// - Remark: Generated from `#/components/schemas/validation-error/documentation_url`.
-            public var documentation_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload`.
-            public struct errorsPayloadPayload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/resource`.
+            public var documentationUrl: Swift.String
+            /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload`.
+            public struct ErrorsPayloadPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/resource`.
                 public var resource: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/field`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/field`.
                 public var field: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/message`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/message`.
                 public var message: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/code`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/code`.
                 public var code: Swift.String
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/index`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/index`.
                 public var index: Swift.Int?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value`.
-                @frozen public enum valuePayload: Codable, Hashable, Sendable {
-                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case1`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value`.
+                @frozen public enum ValuePayload: Codable, Hashable, Sendable {
+                    /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value/case1`.
                     case case1(Swift.String?)
-                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case2`.
+                    /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value/case2`.
                     case case2(Swift.Int?)
-                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case3`.
+                    /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value/case3`.
                     case case3([Swift.String]?)
                     public init(from decoder: any Decoder) throws {
                         var errors: [any Error] = []
@@ -1346,9 +1355,9 @@ public enum Components {
                         }
                     }
                 }
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value`.
-                public var value: Components.Schemas.validation_hyphen_error.errorsPayloadPayload.valuePayload?
-                /// Creates a new `errorsPayloadPayload`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value`.
+                public var value: Components.Schemas.ValidationError.ErrorsPayloadPayload.ValuePayload?
+                /// Creates a new `ErrorsPayloadPayload`.
                 ///
                 /// - Parameters:
                 ///   - resource:
@@ -1363,7 +1372,7 @@ public enum Components {
                     message: Swift.String? = nil,
                     code: Swift.String,
                     index: Swift.Int? = nil,
-                    value: Components.Schemas.validation_hyphen_error.errorsPayloadPayload.valuePayload? = nil
+                    value: Components.Schemas.ValidationError.ErrorsPayloadPayload.ValuePayload? = nil
                 ) {
                     self.resource = resource
                     self.field = field
@@ -1382,72 +1391,72 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/validation-error/errors`.
-            public typealias errorsPayload = [Components.Schemas.validation_hyphen_error.errorsPayloadPayload]
+            public typealias ErrorsPayload = [Components.Schemas.ValidationError.ErrorsPayloadPayload]
             /// - Remark: Generated from `#/components/schemas/validation-error/errors`.
-            public var errors: Components.Schemas.validation_hyphen_error.errorsPayload?
-            /// Creates a new `validation_hyphen_error`.
+            public var errors: Components.Schemas.ValidationError.ErrorsPayload?
+            /// Creates a new `ValidationError`.
             ///
             /// - Parameters:
             ///   - message:
-            ///   - documentation_url:
+            ///   - documentationUrl:
             ///   - errors:
             public init(
                 message: Swift.String,
-                documentation_url: Swift.String,
-                errors: Components.Schemas.validation_hyphen_error.errorsPayload? = nil
+                documentationUrl: Swift.String,
+                errors: Components.Schemas.ValidationError.ErrorsPayload? = nil
             ) {
                 self.message = message
-                self.documentation_url = documentation_url
+                self.documentationUrl = documentationUrl
                 self.errors = errors
             }
             public enum CodingKeys: String, CodingKey {
                 case message
-                case documentation_url
+                case documentationUrl = "documentation_url"
                 case errors
             }
         }
         /// Public User
         ///
         /// - Remark: Generated from `#/components/schemas/public-user`.
-        public struct public_hyphen_user: Codable, Hashable, Sendable {
+        public struct PublicUser: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/public-user/login`.
             public var login: Swift.String
             /// - Remark: Generated from `#/components/schemas/public-user/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/public-user/user_view_type`.
-            public var user_view_type: Swift.String?
+            public var userViewType: Swift.String?
             /// - Remark: Generated from `#/components/schemas/public-user/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/public-user/avatar_url`.
-            public var avatar_url: Swift.String
+            public var avatarUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/public-user/gravatar_id`.
-            public var gravatar_id: Swift.String?
+            public var gravatarId: Swift.String?
             /// - Remark: Generated from `#/components/schemas/public-user/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/public-user/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/public-user/followers_url`.
-            public var followers_url: Swift.String
+            public var followersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/public-user/following_url`.
-            public var following_url: Swift.String
+            public var followingUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/public-user/gists_url`.
-            public var gists_url: Swift.String
+            public var gistsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/public-user/starred_url`.
-            public var starred_url: Swift.String
+            public var starredUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/public-user/subscriptions_url`.
-            public var subscriptions_url: Swift.String
+            public var subscriptionsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/public-user/organizations_url`.
-            public var organizations_url: Swift.String
+            public var organizationsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/public-user/repos_url`.
-            public var repos_url: Swift.String
+            public var reposUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/public-user/events_url`.
-            public var events_url: Swift.String
+            public var eventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/public-user/received_events_url`.
-            public var received_events_url: Swift.String
+            public var receivedEventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/public-user/type`.
             public var _type: Swift.String
             /// - Remark: Generated from `#/components/schemas/public-user/site_admin`.
-            public var site_admin: Swift.Bool
+            public var siteAdmin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/public-user/name`.
             public var name: Swift.String?
             /// - Remark: Generated from `#/components/schemas/public-user/company`.
@@ -1459,27 +1468,27 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/public-user/email`.
             public var email: Swift.String?
             /// - Remark: Generated from `#/components/schemas/public-user/notification_email`.
-            public var notification_email: Swift.String?
+            public var notificationEmail: Swift.String?
             /// - Remark: Generated from `#/components/schemas/public-user/hireable`.
             public var hireable: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/public-user/bio`.
             public var bio: Swift.String?
             /// - Remark: Generated from `#/components/schemas/public-user/twitter_username`.
-            public var twitter_username: Swift.String?
+            public var twitterUsername: Swift.String?
             /// - Remark: Generated from `#/components/schemas/public-user/public_repos`.
-            public var public_repos: Swift.Int
+            public var publicRepos: Swift.Int
             /// - Remark: Generated from `#/components/schemas/public-user/public_gists`.
-            public var public_gists: Swift.Int
+            public var publicGists: Swift.Int
             /// - Remark: Generated from `#/components/schemas/public-user/followers`.
             public var followers: Swift.Int
             /// - Remark: Generated from `#/components/schemas/public-user/following`.
             public var following: Swift.Int
             /// - Remark: Generated from `#/components/schemas/public-user/created_at`.
-            public var created_at: Foundation.Date
+            public var createdAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/public-user/updated_at`.
-            public var updated_at: Foundation.Date
+            public var updatedAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/public-user/plan`.
-            public struct planPayload: Codable, Hashable, Sendable {
+            public struct PlanPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/public-user/plan/collaborators`.
                 public var collaborators: Swift.Int
                 /// - Remark: Generated from `#/components/schemas/public-user/plan/name`.
@@ -1487,371 +1496,371 @@ public enum Components {
                 /// - Remark: Generated from `#/components/schemas/public-user/plan/space`.
                 public var space: Swift.Int
                 /// - Remark: Generated from `#/components/schemas/public-user/plan/private_repos`.
-                public var private_repos: Swift.Int
-                /// Creates a new `planPayload`.
+                public var privateRepos: Swift.Int
+                /// Creates a new `PlanPayload`.
                 ///
                 /// - Parameters:
                 ///   - collaborators:
                 ///   - name:
                 ///   - space:
-                ///   - private_repos:
+                ///   - privateRepos:
                 public init(
                     collaborators: Swift.Int,
                     name: Swift.String,
                     space: Swift.Int,
-                    private_repos: Swift.Int
+                    privateRepos: Swift.Int
                 ) {
                     self.collaborators = collaborators
                     self.name = name
                     self.space = space
-                    self.private_repos = private_repos
+                    self.privateRepos = privateRepos
                 }
                 public enum CodingKeys: String, CodingKey {
                     case collaborators
                     case name
                     case space
-                    case private_repos
+                    case privateRepos = "private_repos"
                 }
             }
             /// - Remark: Generated from `#/components/schemas/public-user/plan`.
-            public var plan: Components.Schemas.public_hyphen_user.planPayload?
+            public var plan: Components.Schemas.PublicUser.PlanPayload?
             /// - Remark: Generated from `#/components/schemas/public-user/private_gists`.
-            public var private_gists: Swift.Int?
+            public var privateGists: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/public-user/total_private_repos`.
-            public var total_private_repos: Swift.Int?
+            public var totalPrivateRepos: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/public-user/owned_private_repos`.
-            public var owned_private_repos: Swift.Int?
+            public var ownedPrivateRepos: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/public-user/disk_usage`.
-            public var disk_usage: Swift.Int?
+            public var diskUsage: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/public-user/collaborators`.
             public var collaborators: Swift.Int?
-            /// Creates a new `public_hyphen_user`.
+            /// Creates a new `PublicUser`.
             ///
             /// - Parameters:
             ///   - login:
             ///   - id:
-            ///   - user_view_type:
-            ///   - node_id:
-            ///   - avatar_url:
-            ///   - gravatar_id:
+            ///   - userViewType:
+            ///   - nodeId:
+            ///   - avatarUrl:
+            ///   - gravatarId:
             ///   - url:
-            ///   - html_url:
-            ///   - followers_url:
-            ///   - following_url:
-            ///   - gists_url:
-            ///   - starred_url:
-            ///   - subscriptions_url:
-            ///   - organizations_url:
-            ///   - repos_url:
-            ///   - events_url:
-            ///   - received_events_url:
+            ///   - htmlUrl:
+            ///   - followersUrl:
+            ///   - followingUrl:
+            ///   - gistsUrl:
+            ///   - starredUrl:
+            ///   - subscriptionsUrl:
+            ///   - organizationsUrl:
+            ///   - reposUrl:
+            ///   - eventsUrl:
+            ///   - receivedEventsUrl:
             ///   - _type:
-            ///   - site_admin:
+            ///   - siteAdmin:
             ///   - name:
             ///   - company:
             ///   - blog:
             ///   - location:
             ///   - email:
-            ///   - notification_email:
+            ///   - notificationEmail:
             ///   - hireable:
             ///   - bio:
-            ///   - twitter_username:
-            ///   - public_repos:
-            ///   - public_gists:
+            ///   - twitterUsername:
+            ///   - publicRepos:
+            ///   - publicGists:
             ///   - followers:
             ///   - following:
-            ///   - created_at:
-            ///   - updated_at:
+            ///   - createdAt:
+            ///   - updatedAt:
             ///   - plan:
-            ///   - private_gists:
-            ///   - total_private_repos:
-            ///   - owned_private_repos:
-            ///   - disk_usage:
+            ///   - privateGists:
+            ///   - totalPrivateRepos:
+            ///   - ownedPrivateRepos:
+            ///   - diskUsage:
             ///   - collaborators:
             public init(
                 login: Swift.String,
                 id: Swift.Int64,
-                user_view_type: Swift.String? = nil,
-                node_id: Swift.String,
-                avatar_url: Swift.String,
-                gravatar_id: Swift.String? = nil,
+                userViewType: Swift.String? = nil,
+                nodeId: Swift.String,
+                avatarUrl: Swift.String,
+                gravatarId: Swift.String? = nil,
                 url: Swift.String,
-                html_url: Swift.String,
-                followers_url: Swift.String,
-                following_url: Swift.String,
-                gists_url: Swift.String,
-                starred_url: Swift.String,
-                subscriptions_url: Swift.String,
-                organizations_url: Swift.String,
-                repos_url: Swift.String,
-                events_url: Swift.String,
-                received_events_url: Swift.String,
+                htmlUrl: Swift.String,
+                followersUrl: Swift.String,
+                followingUrl: Swift.String,
+                gistsUrl: Swift.String,
+                starredUrl: Swift.String,
+                subscriptionsUrl: Swift.String,
+                organizationsUrl: Swift.String,
+                reposUrl: Swift.String,
+                eventsUrl: Swift.String,
+                receivedEventsUrl: Swift.String,
                 _type: Swift.String,
-                site_admin: Swift.Bool,
+                siteAdmin: Swift.Bool,
                 name: Swift.String? = nil,
                 company: Swift.String? = nil,
                 blog: Swift.String? = nil,
                 location: Swift.String? = nil,
                 email: Swift.String? = nil,
-                notification_email: Swift.String? = nil,
+                notificationEmail: Swift.String? = nil,
                 hireable: Swift.Bool? = nil,
                 bio: Swift.String? = nil,
-                twitter_username: Swift.String? = nil,
-                public_repos: Swift.Int,
-                public_gists: Swift.Int,
+                twitterUsername: Swift.String? = nil,
+                publicRepos: Swift.Int,
+                publicGists: Swift.Int,
                 followers: Swift.Int,
                 following: Swift.Int,
-                created_at: Foundation.Date,
-                updated_at: Foundation.Date,
-                plan: Components.Schemas.public_hyphen_user.planPayload? = nil,
-                private_gists: Swift.Int? = nil,
-                total_private_repos: Swift.Int? = nil,
-                owned_private_repos: Swift.Int? = nil,
-                disk_usage: Swift.Int? = nil,
+                createdAt: Foundation.Date,
+                updatedAt: Foundation.Date,
+                plan: Components.Schemas.PublicUser.PlanPayload? = nil,
+                privateGists: Swift.Int? = nil,
+                totalPrivateRepos: Swift.Int? = nil,
+                ownedPrivateRepos: Swift.Int? = nil,
+                diskUsage: Swift.Int? = nil,
                 collaborators: Swift.Int? = nil
             ) {
                 self.login = login
                 self.id = id
-                self.user_view_type = user_view_type
-                self.node_id = node_id
-                self.avatar_url = avatar_url
-                self.gravatar_id = gravatar_id
+                self.userViewType = userViewType
+                self.nodeId = nodeId
+                self.avatarUrl = avatarUrl
+                self.gravatarId = gravatarId
                 self.url = url
-                self.html_url = html_url
-                self.followers_url = followers_url
-                self.following_url = following_url
-                self.gists_url = gists_url
-                self.starred_url = starred_url
-                self.subscriptions_url = subscriptions_url
-                self.organizations_url = organizations_url
-                self.repos_url = repos_url
-                self.events_url = events_url
-                self.received_events_url = received_events_url
+                self.htmlUrl = htmlUrl
+                self.followersUrl = followersUrl
+                self.followingUrl = followingUrl
+                self.gistsUrl = gistsUrl
+                self.starredUrl = starredUrl
+                self.subscriptionsUrl = subscriptionsUrl
+                self.organizationsUrl = organizationsUrl
+                self.reposUrl = reposUrl
+                self.eventsUrl = eventsUrl
+                self.receivedEventsUrl = receivedEventsUrl
                 self._type = _type
-                self.site_admin = site_admin
+                self.siteAdmin = siteAdmin
                 self.name = name
                 self.company = company
                 self.blog = blog
                 self.location = location
                 self.email = email
-                self.notification_email = notification_email
+                self.notificationEmail = notificationEmail
                 self.hireable = hireable
                 self.bio = bio
-                self.twitter_username = twitter_username
-                self.public_repos = public_repos
-                self.public_gists = public_gists
+                self.twitterUsername = twitterUsername
+                self.publicRepos = publicRepos
+                self.publicGists = publicGists
                 self.followers = followers
                 self.following = following
-                self.created_at = created_at
-                self.updated_at = updated_at
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
                 self.plan = plan
-                self.private_gists = private_gists
-                self.total_private_repos = total_private_repos
-                self.owned_private_repos = owned_private_repos
-                self.disk_usage = disk_usage
+                self.privateGists = privateGists
+                self.totalPrivateRepos = totalPrivateRepos
+                self.ownedPrivateRepos = ownedPrivateRepos
+                self.diskUsage = diskUsage
                 self.collaborators = collaborators
             }
             public enum CodingKeys: String, CodingKey {
                 case login
                 case id
-                case user_view_type
-                case node_id
-                case avatar_url
-                case gravatar_id
+                case userViewType = "user_view_type"
+                case nodeId = "node_id"
+                case avatarUrl = "avatar_url"
+                case gravatarId = "gravatar_id"
                 case url
-                case html_url
-                case followers_url
-                case following_url
-                case gists_url
-                case starred_url
-                case subscriptions_url
-                case organizations_url
-                case repos_url
-                case events_url
-                case received_events_url
+                case htmlUrl = "html_url"
+                case followersUrl = "followers_url"
+                case followingUrl = "following_url"
+                case gistsUrl = "gists_url"
+                case starredUrl = "starred_url"
+                case subscriptionsUrl = "subscriptions_url"
+                case organizationsUrl = "organizations_url"
+                case reposUrl = "repos_url"
+                case eventsUrl = "events_url"
+                case receivedEventsUrl = "received_events_url"
                 case _type = "type"
-                case site_admin
+                case siteAdmin = "site_admin"
                 case name
                 case company
                 case blog
                 case location
                 case email
-                case notification_email
+                case notificationEmail = "notification_email"
                 case hireable
                 case bio
-                case twitter_username
-                case public_repos
-                case public_gists
+                case twitterUsername = "twitter_username"
+                case publicRepos = "public_repos"
+                case publicGists = "public_gists"
                 case followers
                 case following
-                case created_at
-                case updated_at
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
                 case plan
-                case private_gists
-                case total_private_repos
-                case owned_private_repos
-                case disk_usage
+                case privateGists = "private_gists"
+                case totalPrivateRepos = "total_private_repos"
+                case ownedPrivateRepos = "owned_private_repos"
+                case diskUsage = "disk_usage"
                 case collaborators
             }
             public init(from decoder: any Decoder) throws {
                 let container = try decoder.container(keyedBy: CodingKeys.self)
-                login = try container.decode(
+                self.login = try container.decode(
                     Swift.String.self,
                     forKey: .login
                 )
-                id = try container.decode(
+                self.id = try container.decode(
                     Swift.Int64.self,
                     forKey: .id
                 )
-                user_view_type = try container.decodeIfPresent(
+                self.userViewType = try container.decodeIfPresent(
                     Swift.String.self,
-                    forKey: .user_view_type
+                    forKey: .userViewType
                 )
-                node_id = try container.decode(
+                self.nodeId = try container.decode(
                     Swift.String.self,
-                    forKey: .node_id
+                    forKey: .nodeId
                 )
-                avatar_url = try container.decode(
+                self.avatarUrl = try container.decode(
                     Swift.String.self,
-                    forKey: .avatar_url
+                    forKey: .avatarUrl
                 )
-                gravatar_id = try container.decodeIfPresent(
+                self.gravatarId = try container.decodeIfPresent(
                     Swift.String.self,
-                    forKey: .gravatar_id
+                    forKey: .gravatarId
                 )
-                url = try container.decode(
+                self.url = try container.decode(
                     Swift.String.self,
                     forKey: .url
                 )
-                html_url = try container.decode(
+                self.htmlUrl = try container.decode(
                     Swift.String.self,
-                    forKey: .html_url
+                    forKey: .htmlUrl
                 )
-                followers_url = try container.decode(
+                self.followersUrl = try container.decode(
                     Swift.String.self,
-                    forKey: .followers_url
+                    forKey: .followersUrl
                 )
-                following_url = try container.decode(
+                self.followingUrl = try container.decode(
                     Swift.String.self,
-                    forKey: .following_url
+                    forKey: .followingUrl
                 )
-                gists_url = try container.decode(
+                self.gistsUrl = try container.decode(
                     Swift.String.self,
-                    forKey: .gists_url
+                    forKey: .gistsUrl
                 )
-                starred_url = try container.decode(
+                self.starredUrl = try container.decode(
                     Swift.String.self,
-                    forKey: .starred_url
+                    forKey: .starredUrl
                 )
-                subscriptions_url = try container.decode(
+                self.subscriptionsUrl = try container.decode(
                     Swift.String.self,
-                    forKey: .subscriptions_url
+                    forKey: .subscriptionsUrl
                 )
-                organizations_url = try container.decode(
+                self.organizationsUrl = try container.decode(
                     Swift.String.self,
-                    forKey: .organizations_url
+                    forKey: .organizationsUrl
                 )
-                repos_url = try container.decode(
+                self.reposUrl = try container.decode(
                     Swift.String.self,
-                    forKey: .repos_url
+                    forKey: .reposUrl
                 )
-                events_url = try container.decode(
+                self.eventsUrl = try container.decode(
                     Swift.String.self,
-                    forKey: .events_url
+                    forKey: .eventsUrl
                 )
-                received_events_url = try container.decode(
+                self.receivedEventsUrl = try container.decode(
                     Swift.String.self,
-                    forKey: .received_events_url
+                    forKey: .receivedEventsUrl
                 )
-                _type = try container.decode(
+                self._type = try container.decode(
                     Swift.String.self,
                     forKey: ._type
                 )
-                site_admin = try container.decode(
+                self.siteAdmin = try container.decode(
                     Swift.Bool.self,
-                    forKey: .site_admin
+                    forKey: .siteAdmin
                 )
-                name = try container.decodeIfPresent(
+                self.name = try container.decodeIfPresent(
                     Swift.String.self,
                     forKey: .name
                 )
-                company = try container.decodeIfPresent(
+                self.company = try container.decodeIfPresent(
                     Swift.String.self,
                     forKey: .company
                 )
-                blog = try container.decodeIfPresent(
+                self.blog = try container.decodeIfPresent(
                     Swift.String.self,
                     forKey: .blog
                 )
-                location = try container.decodeIfPresent(
+                self.location = try container.decodeIfPresent(
                     Swift.String.self,
                     forKey: .location
                 )
-                email = try container.decodeIfPresent(
+                self.email = try container.decodeIfPresent(
                     Swift.String.self,
                     forKey: .email
                 )
-                notification_email = try container.decodeIfPresent(
+                self.notificationEmail = try container.decodeIfPresent(
                     Swift.String.self,
-                    forKey: .notification_email
+                    forKey: .notificationEmail
                 )
-                hireable = try container.decodeIfPresent(
+                self.hireable = try container.decodeIfPresent(
                     Swift.Bool.self,
                     forKey: .hireable
                 )
-                bio = try container.decodeIfPresent(
+                self.bio = try container.decodeIfPresent(
                     Swift.String.self,
                     forKey: .bio
                 )
-                twitter_username = try container.decodeIfPresent(
+                self.twitterUsername = try container.decodeIfPresent(
                     Swift.String.self,
-                    forKey: .twitter_username
+                    forKey: .twitterUsername
                 )
-                public_repos = try container.decode(
+                self.publicRepos = try container.decode(
                     Swift.Int.self,
-                    forKey: .public_repos
+                    forKey: .publicRepos
                 )
-                public_gists = try container.decode(
+                self.publicGists = try container.decode(
                     Swift.Int.self,
-                    forKey: .public_gists
+                    forKey: .publicGists
                 )
-                followers = try container.decode(
+                self.followers = try container.decode(
                     Swift.Int.self,
                     forKey: .followers
                 )
-                following = try container.decode(
+                self.following = try container.decode(
                     Swift.Int.self,
                     forKey: .following
                 )
-                created_at = try container.decode(
+                self.createdAt = try container.decode(
                     Foundation.Date.self,
-                    forKey: .created_at
+                    forKey: .createdAt
                 )
-                updated_at = try container.decode(
+                self.updatedAt = try container.decode(
                     Foundation.Date.self,
-                    forKey: .updated_at
+                    forKey: .updatedAt
                 )
-                plan = try container.decodeIfPresent(
-                    Components.Schemas.public_hyphen_user.planPayload.self,
+                self.plan = try container.decodeIfPresent(
+                    Components.Schemas.PublicUser.PlanPayload.self,
                     forKey: .plan
                 )
-                private_gists = try container.decodeIfPresent(
+                self.privateGists = try container.decodeIfPresent(
                     Swift.Int.self,
-                    forKey: .private_gists
+                    forKey: .privateGists
                 )
-                total_private_repos = try container.decodeIfPresent(
+                self.totalPrivateRepos = try container.decodeIfPresent(
                     Swift.Int.self,
-                    forKey: .total_private_repos
+                    forKey: .totalPrivateRepos
                 )
-                owned_private_repos = try container.decodeIfPresent(
+                self.ownedPrivateRepos = try container.decodeIfPresent(
                     Swift.Int.self,
-                    forKey: .owned_private_repos
+                    forKey: .ownedPrivateRepos
                 )
-                disk_usage = try container.decodeIfPresent(
+                self.diskUsage = try container.decodeIfPresent(
                     Swift.Int.self,
-                    forKey: .disk_usage
+                    forKey: .diskUsage
                 )
-                collaborators = try container.decodeIfPresent(
+                self.collaborators = try container.decodeIfPresent(
                     Swift.Int.self,
                     forKey: .collaborators
                 )
@@ -1902,8 +1911,8 @@ public enum Components {
         /// An object without any properties.
         ///
         /// - Remark: Generated from `#/components/schemas/empty-object`.
-        public struct empty_hyphen_object: Codable, Hashable, Sendable {
-            /// Creates a new `empty_hyphen_object`.
+        public struct EmptyObject: Codable, Hashable, Sendable {
+            /// Creates a new `EmptyObject`.
             public init() {}
             public init(from decoder: any Decoder) throws {
                 try decoder.ensureNoAdditionalProperties(knownKeys: [])
@@ -1912,45 +1921,45 @@ public enum Components {
         /// Private User
         ///
         /// - Remark: Generated from `#/components/schemas/private-user`.
-        public struct private_hyphen_user: Codable, Hashable, Sendable {
+        public struct PrivateUser: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/private-user/login`.
             public var login: Swift.String
             /// - Remark: Generated from `#/components/schemas/private-user/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/private-user/user_view_type`.
-            public var user_view_type: Swift.String?
+            public var userViewType: Swift.String?
             /// - Remark: Generated from `#/components/schemas/private-user/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/private-user/avatar_url`.
-            public var avatar_url: Swift.String
+            public var avatarUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/private-user/gravatar_id`.
-            public var gravatar_id: Swift.String?
+            public var gravatarId: Swift.String?
             /// - Remark: Generated from `#/components/schemas/private-user/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/private-user/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/private-user/followers_url`.
-            public var followers_url: Swift.String
+            public var followersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/private-user/following_url`.
-            public var following_url: Swift.String
+            public var followingUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/private-user/gists_url`.
-            public var gists_url: Swift.String
+            public var gistsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/private-user/starred_url`.
-            public var starred_url: Swift.String
+            public var starredUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/private-user/subscriptions_url`.
-            public var subscriptions_url: Swift.String
+            public var subscriptionsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/private-user/organizations_url`.
-            public var organizations_url: Swift.String
+            public var organizationsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/private-user/repos_url`.
-            public var repos_url: Swift.String
+            public var reposUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/private-user/events_url`.
-            public var events_url: Swift.String
+            public var eventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/private-user/received_events_url`.
-            public var received_events_url: Swift.String
+            public var receivedEventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/private-user/type`.
             public var _type: Swift.String
             /// - Remark: Generated from `#/components/schemas/private-user/site_admin`.
-            public var site_admin: Swift.Bool
+            public var siteAdmin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/private-user/name`.
             public var name: Swift.String?
             /// - Remark: Generated from `#/components/schemas/private-user/company`.
@@ -1962,39 +1971,39 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/private-user/email`.
             public var email: Swift.String?
             /// - Remark: Generated from `#/components/schemas/private-user/notification_email`.
-            public var notification_email: Swift.String?
+            public var notificationEmail: Swift.String?
             /// - Remark: Generated from `#/components/schemas/private-user/hireable`.
             public var hireable: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/private-user/bio`.
             public var bio: Swift.String?
             /// - Remark: Generated from `#/components/schemas/private-user/twitter_username`.
-            public var twitter_username: Swift.String?
+            public var twitterUsername: Swift.String?
             /// - Remark: Generated from `#/components/schemas/private-user/public_repos`.
-            public var public_repos: Swift.Int
+            public var publicRepos: Swift.Int
             /// - Remark: Generated from `#/components/schemas/private-user/public_gists`.
-            public var public_gists: Swift.Int
+            public var publicGists: Swift.Int
             /// - Remark: Generated from `#/components/schemas/private-user/followers`.
             public var followers: Swift.Int
             /// - Remark: Generated from `#/components/schemas/private-user/following`.
             public var following: Swift.Int
             /// - Remark: Generated from `#/components/schemas/private-user/created_at`.
-            public var created_at: Foundation.Date
+            public var createdAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/private-user/updated_at`.
-            public var updated_at: Foundation.Date
+            public var updatedAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/private-user/private_gists`.
-            public var private_gists: Swift.Int
+            public var privateGists: Swift.Int
             /// - Remark: Generated from `#/components/schemas/private-user/total_private_repos`.
-            public var total_private_repos: Swift.Int
+            public var totalPrivateRepos: Swift.Int
             /// - Remark: Generated from `#/components/schemas/private-user/owned_private_repos`.
-            public var owned_private_repos: Swift.Int
+            public var ownedPrivateRepos: Swift.Int
             /// - Remark: Generated from `#/components/schemas/private-user/disk_usage`.
-            public var disk_usage: Swift.Int
+            public var diskUsage: Swift.Int
             /// - Remark: Generated from `#/components/schemas/private-user/collaborators`.
             public var collaborators: Swift.Int
             /// - Remark: Generated from `#/components/schemas/private-user/two_factor_authentication`.
-            public var two_factor_authentication: Swift.Bool
+            public var twoFactorAuthentication: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/private-user/plan`.
-            public struct planPayload: Codable, Hashable, Sendable {
+            public struct PlanPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/private-user/plan/collaborators`.
                 public var collaborators: Swift.Int
                 /// - Remark: Generated from `#/components/schemas/private-user/plan/name`.
@@ -2002,223 +2011,223 @@ public enum Components {
                 /// - Remark: Generated from `#/components/schemas/private-user/plan/space`.
                 public var space: Swift.Int
                 /// - Remark: Generated from `#/components/schemas/private-user/plan/private_repos`.
-                public var private_repos: Swift.Int
-                /// Creates a new `planPayload`.
+                public var privateRepos: Swift.Int
+                /// Creates a new `PlanPayload`.
                 ///
                 /// - Parameters:
                 ///   - collaborators:
                 ///   - name:
                 ///   - space:
-                ///   - private_repos:
+                ///   - privateRepos:
                 public init(
                     collaborators: Swift.Int,
                     name: Swift.String,
                     space: Swift.Int,
-                    private_repos: Swift.Int
+                    privateRepos: Swift.Int
                 ) {
                     self.collaborators = collaborators
                     self.name = name
                     self.space = space
-                    self.private_repos = private_repos
+                    self.privateRepos = privateRepos
                 }
                 public enum CodingKeys: String, CodingKey {
                     case collaborators
                     case name
                     case space
-                    case private_repos
+                    case privateRepos = "private_repos"
                 }
             }
             /// - Remark: Generated from `#/components/schemas/private-user/plan`.
-            public var plan: Components.Schemas.private_hyphen_user.planPayload?
+            public var plan: Components.Schemas.PrivateUser.PlanPayload?
             /// - Remark: Generated from `#/components/schemas/private-user/business_plus`.
-            public var business_plus: Swift.Bool?
+            public var businessPlus: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/private-user/ldap_dn`.
-            public var ldap_dn: Swift.String?
-            /// Creates a new `private_hyphen_user`.
+            public var ldapDn: Swift.String?
+            /// Creates a new `PrivateUser`.
             ///
             /// - Parameters:
             ///   - login:
             ///   - id:
-            ///   - user_view_type:
-            ///   - node_id:
-            ///   - avatar_url:
-            ///   - gravatar_id:
+            ///   - userViewType:
+            ///   - nodeId:
+            ///   - avatarUrl:
+            ///   - gravatarId:
             ///   - url:
-            ///   - html_url:
-            ///   - followers_url:
-            ///   - following_url:
-            ///   - gists_url:
-            ///   - starred_url:
-            ///   - subscriptions_url:
-            ///   - organizations_url:
-            ///   - repos_url:
-            ///   - events_url:
-            ///   - received_events_url:
+            ///   - htmlUrl:
+            ///   - followersUrl:
+            ///   - followingUrl:
+            ///   - gistsUrl:
+            ///   - starredUrl:
+            ///   - subscriptionsUrl:
+            ///   - organizationsUrl:
+            ///   - reposUrl:
+            ///   - eventsUrl:
+            ///   - receivedEventsUrl:
             ///   - _type:
-            ///   - site_admin:
+            ///   - siteAdmin:
             ///   - name:
             ///   - company:
             ///   - blog:
             ///   - location:
             ///   - email:
-            ///   - notification_email:
+            ///   - notificationEmail:
             ///   - hireable:
             ///   - bio:
-            ///   - twitter_username:
-            ///   - public_repos:
-            ///   - public_gists:
+            ///   - twitterUsername:
+            ///   - publicRepos:
+            ///   - publicGists:
             ///   - followers:
             ///   - following:
-            ///   - created_at:
-            ///   - updated_at:
-            ///   - private_gists:
-            ///   - total_private_repos:
-            ///   - owned_private_repos:
-            ///   - disk_usage:
+            ///   - createdAt:
+            ///   - updatedAt:
+            ///   - privateGists:
+            ///   - totalPrivateRepos:
+            ///   - ownedPrivateRepos:
+            ///   - diskUsage:
             ///   - collaborators:
-            ///   - two_factor_authentication:
+            ///   - twoFactorAuthentication:
             ///   - plan:
-            ///   - business_plus:
-            ///   - ldap_dn:
+            ///   - businessPlus:
+            ///   - ldapDn:
             public init(
                 login: Swift.String,
                 id: Swift.Int64,
-                user_view_type: Swift.String? = nil,
-                node_id: Swift.String,
-                avatar_url: Swift.String,
-                gravatar_id: Swift.String? = nil,
+                userViewType: Swift.String? = nil,
+                nodeId: Swift.String,
+                avatarUrl: Swift.String,
+                gravatarId: Swift.String? = nil,
                 url: Swift.String,
-                html_url: Swift.String,
-                followers_url: Swift.String,
-                following_url: Swift.String,
-                gists_url: Swift.String,
-                starred_url: Swift.String,
-                subscriptions_url: Swift.String,
-                organizations_url: Swift.String,
-                repos_url: Swift.String,
-                events_url: Swift.String,
-                received_events_url: Swift.String,
+                htmlUrl: Swift.String,
+                followersUrl: Swift.String,
+                followingUrl: Swift.String,
+                gistsUrl: Swift.String,
+                starredUrl: Swift.String,
+                subscriptionsUrl: Swift.String,
+                organizationsUrl: Swift.String,
+                reposUrl: Swift.String,
+                eventsUrl: Swift.String,
+                receivedEventsUrl: Swift.String,
                 _type: Swift.String,
-                site_admin: Swift.Bool,
+                siteAdmin: Swift.Bool,
                 name: Swift.String? = nil,
                 company: Swift.String? = nil,
                 blog: Swift.String? = nil,
                 location: Swift.String? = nil,
                 email: Swift.String? = nil,
-                notification_email: Swift.String? = nil,
+                notificationEmail: Swift.String? = nil,
                 hireable: Swift.Bool? = nil,
                 bio: Swift.String? = nil,
-                twitter_username: Swift.String? = nil,
-                public_repos: Swift.Int,
-                public_gists: Swift.Int,
+                twitterUsername: Swift.String? = nil,
+                publicRepos: Swift.Int,
+                publicGists: Swift.Int,
                 followers: Swift.Int,
                 following: Swift.Int,
-                created_at: Foundation.Date,
-                updated_at: Foundation.Date,
-                private_gists: Swift.Int,
-                total_private_repos: Swift.Int,
-                owned_private_repos: Swift.Int,
-                disk_usage: Swift.Int,
+                createdAt: Foundation.Date,
+                updatedAt: Foundation.Date,
+                privateGists: Swift.Int,
+                totalPrivateRepos: Swift.Int,
+                ownedPrivateRepos: Swift.Int,
+                diskUsage: Swift.Int,
                 collaborators: Swift.Int,
-                two_factor_authentication: Swift.Bool,
-                plan: Components.Schemas.private_hyphen_user.planPayload? = nil,
-                business_plus: Swift.Bool? = nil,
-                ldap_dn: Swift.String? = nil
+                twoFactorAuthentication: Swift.Bool,
+                plan: Components.Schemas.PrivateUser.PlanPayload? = nil,
+                businessPlus: Swift.Bool? = nil,
+                ldapDn: Swift.String? = nil
             ) {
                 self.login = login
                 self.id = id
-                self.user_view_type = user_view_type
-                self.node_id = node_id
-                self.avatar_url = avatar_url
-                self.gravatar_id = gravatar_id
+                self.userViewType = userViewType
+                self.nodeId = nodeId
+                self.avatarUrl = avatarUrl
+                self.gravatarId = gravatarId
                 self.url = url
-                self.html_url = html_url
-                self.followers_url = followers_url
-                self.following_url = following_url
-                self.gists_url = gists_url
-                self.starred_url = starred_url
-                self.subscriptions_url = subscriptions_url
-                self.organizations_url = organizations_url
-                self.repos_url = repos_url
-                self.events_url = events_url
-                self.received_events_url = received_events_url
+                self.htmlUrl = htmlUrl
+                self.followersUrl = followersUrl
+                self.followingUrl = followingUrl
+                self.gistsUrl = gistsUrl
+                self.starredUrl = starredUrl
+                self.subscriptionsUrl = subscriptionsUrl
+                self.organizationsUrl = organizationsUrl
+                self.reposUrl = reposUrl
+                self.eventsUrl = eventsUrl
+                self.receivedEventsUrl = receivedEventsUrl
                 self._type = _type
-                self.site_admin = site_admin
+                self.siteAdmin = siteAdmin
                 self.name = name
                 self.company = company
                 self.blog = blog
                 self.location = location
                 self.email = email
-                self.notification_email = notification_email
+                self.notificationEmail = notificationEmail
                 self.hireable = hireable
                 self.bio = bio
-                self.twitter_username = twitter_username
-                self.public_repos = public_repos
-                self.public_gists = public_gists
+                self.twitterUsername = twitterUsername
+                self.publicRepos = publicRepos
+                self.publicGists = publicGists
                 self.followers = followers
                 self.following = following
-                self.created_at = created_at
-                self.updated_at = updated_at
-                self.private_gists = private_gists
-                self.total_private_repos = total_private_repos
-                self.owned_private_repos = owned_private_repos
-                self.disk_usage = disk_usage
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
+                self.privateGists = privateGists
+                self.totalPrivateRepos = totalPrivateRepos
+                self.ownedPrivateRepos = ownedPrivateRepos
+                self.diskUsage = diskUsage
                 self.collaborators = collaborators
-                self.two_factor_authentication = two_factor_authentication
+                self.twoFactorAuthentication = twoFactorAuthentication
                 self.plan = plan
-                self.business_plus = business_plus
-                self.ldap_dn = ldap_dn
+                self.businessPlus = businessPlus
+                self.ldapDn = ldapDn
             }
             public enum CodingKeys: String, CodingKey {
                 case login
                 case id
-                case user_view_type
-                case node_id
-                case avatar_url
-                case gravatar_id
+                case userViewType = "user_view_type"
+                case nodeId = "node_id"
+                case avatarUrl = "avatar_url"
+                case gravatarId = "gravatar_id"
                 case url
-                case html_url
-                case followers_url
-                case following_url
-                case gists_url
-                case starred_url
-                case subscriptions_url
-                case organizations_url
-                case repos_url
-                case events_url
-                case received_events_url
+                case htmlUrl = "html_url"
+                case followersUrl = "followers_url"
+                case followingUrl = "following_url"
+                case gistsUrl = "gists_url"
+                case starredUrl = "starred_url"
+                case subscriptionsUrl = "subscriptions_url"
+                case organizationsUrl = "organizations_url"
+                case reposUrl = "repos_url"
+                case eventsUrl = "events_url"
+                case receivedEventsUrl = "received_events_url"
                 case _type = "type"
-                case site_admin
+                case siteAdmin = "site_admin"
                 case name
                 case company
                 case blog
                 case location
                 case email
-                case notification_email
+                case notificationEmail = "notification_email"
                 case hireable
                 case bio
-                case twitter_username
-                case public_repos
-                case public_gists
+                case twitterUsername = "twitter_username"
+                case publicRepos = "public_repos"
+                case publicGists = "public_gists"
                 case followers
                 case following
-                case created_at
-                case updated_at
-                case private_gists
-                case total_private_repos
-                case owned_private_repos
-                case disk_usage
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
+                case privateGists = "private_gists"
+                case totalPrivateRepos = "total_private_repos"
+                case ownedPrivateRepos = "owned_private_repos"
+                case diskUsage = "disk_usage"
                 case collaborators
-                case two_factor_authentication
+                case twoFactorAuthentication = "two_factor_authentication"
                 case plan
-                case business_plus
-                case ldap_dn
+                case businessPlus = "business_plus"
+                case ldapDn = "ldap_dn"
             }
         }
         /// Email
         ///
         /// - Remark: Generated from `#/components/schemas/email`.
-        public struct email: Codable, Hashable, Sendable {
+        public struct Email: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/email/email`.
             public var email: Swift.String
             /// - Remark: Generated from `#/components/schemas/email/primary`.
@@ -2227,7 +2236,7 @@ public enum Components {
             public var verified: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/email/visibility`.
             public var visibility: Swift.String?
-            /// Creates a new `email`.
+            /// Creates a new `Email`.
             ///
             /// - Parameters:
             ///   - email:
@@ -2255,24 +2264,24 @@ public enum Components {
         /// A unique encryption key
         ///
         /// - Remark: Generated from `#/components/schemas/gpg-key`.
-        public struct gpg_hyphen_key: Codable, Hashable, Sendable {
+        public struct GpgKey: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/gpg-key/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/gpg-key/name`.
             public var name: Swift.String?
             /// - Remark: Generated from `#/components/schemas/gpg-key/primary_key_id`.
-            public var primary_key_id: Swift.Int?
+            public var primaryKeyId: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/gpg-key/key_id`.
-            public var key_id: Swift.String
+            public var keyId: Swift.String
             /// - Remark: Generated from `#/components/schemas/gpg-key/public_key`.
-            public var public_key: Swift.String
-            /// - Remark: Generated from `#/components/schemas/gpg-key/emailsPayload`.
-            public struct emailsPayloadPayload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/gpg-key/emailsPayload/email`.
+            public var publicKey: Swift.String
+            /// - Remark: Generated from `#/components/schemas/gpg-key/EmailsPayload`.
+            public struct EmailsPayloadPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/gpg-key/EmailsPayload/email`.
                 public var email: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/gpg-key/emailsPayload/verified`.
+                /// - Remark: Generated from `#/components/schemas/gpg-key/EmailsPayload/verified`.
                 public var verified: Swift.Bool?
-                /// Creates a new `emailsPayloadPayload`.
+                /// Creates a new `EmailsPayloadPayload`.
                 ///
                 /// - Parameters:
                 ///   - email:
@@ -2290,26 +2299,26 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/gpg-key/emails`.
-            public typealias emailsPayload = [Components.Schemas.gpg_hyphen_key.emailsPayloadPayload]
+            public typealias EmailsPayload = [Components.Schemas.GpgKey.EmailsPayloadPayload]
             /// - Remark: Generated from `#/components/schemas/gpg-key/emails`.
-            public var emails: Components.Schemas.gpg_hyphen_key.emailsPayload
-            /// - Remark: Generated from `#/components/schemas/gpg-key/subkeysPayload`.
-            public struct subkeysPayloadPayload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/gpg-key/subkeysPayload/id`.
+            public var emails: Components.Schemas.GpgKey.EmailsPayload
+            /// - Remark: Generated from `#/components/schemas/gpg-key/SubkeysPayload`.
+            public struct SubkeysPayloadPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/gpg-key/SubkeysPayload/id`.
                 public var id: Swift.Int64?
-                /// - Remark: Generated from `#/components/schemas/gpg-key/subkeysPayload/primary_key_id`.
-                public var primary_key_id: Swift.Int?
-                /// - Remark: Generated from `#/components/schemas/gpg-key/subkeysPayload/key_id`.
-                public var key_id: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/gpg-key/subkeysPayload/public_key`.
-                public var public_key: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/gpg-key/subkeysPayload/emailsPayload`.
-                public struct emailsPayloadPayload: Codable, Hashable, Sendable {
-                    /// - Remark: Generated from `#/components/schemas/gpg-key/subkeysPayload/emailsPayload/email`.
+                /// - Remark: Generated from `#/components/schemas/gpg-key/SubkeysPayload/primary_key_id`.
+                public var primaryKeyId: Swift.Int?
+                /// - Remark: Generated from `#/components/schemas/gpg-key/SubkeysPayload/key_id`.
+                public var keyId: Swift.String?
+                /// - Remark: Generated from `#/components/schemas/gpg-key/SubkeysPayload/public_key`.
+                public var publicKey: Swift.String?
+                /// - Remark: Generated from `#/components/schemas/gpg-key/SubkeysPayload/EmailsPayload`.
+                public struct EmailsPayloadPayload: Codable, Hashable, Sendable {
+                    /// - Remark: Generated from `#/components/schemas/gpg-key/SubkeysPayload/EmailsPayload/email`.
                     public var email: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/gpg-key/subkeysPayload/emailsPayload/verified`.
+                    /// - Remark: Generated from `#/components/schemas/gpg-key/SubkeysPayload/EmailsPayload/verified`.
                     public var verified: Swift.Bool?
-                    /// Creates a new `emailsPayloadPayload`.
+                    /// Creates a new `EmailsPayloadPayload`.
                     ///
                     /// - Parameters:
                     ///   - email:
@@ -2326,186 +2335,186 @@ public enum Components {
                         case verified
                     }
                 }
-                /// - Remark: Generated from `#/components/schemas/gpg-key/subkeysPayload/emails`.
-                public typealias emailsPayload = [Components.Schemas.gpg_hyphen_key.subkeysPayloadPayload.emailsPayloadPayload]
-                /// - Remark: Generated from `#/components/schemas/gpg-key/subkeysPayload/emails`.
-                public var emails: Components.Schemas.gpg_hyphen_key.subkeysPayloadPayload.emailsPayload?
-                /// - Remark: Generated from `#/components/schemas/gpg-key/subkeysPayload/subkeys`.
+                /// - Remark: Generated from `#/components/schemas/gpg-key/SubkeysPayload/emails`.
+                public typealias EmailsPayload = [Components.Schemas.GpgKey.SubkeysPayloadPayload.EmailsPayloadPayload]
+                /// - Remark: Generated from `#/components/schemas/gpg-key/SubkeysPayload/emails`.
+                public var emails: Components.Schemas.GpgKey.SubkeysPayloadPayload.EmailsPayload?
+                /// - Remark: Generated from `#/components/schemas/gpg-key/SubkeysPayload/subkeys`.
                 public var subkeys: [OpenAPIRuntime.OpenAPIValueContainer]?
-                /// - Remark: Generated from `#/components/schemas/gpg-key/subkeysPayload/can_sign`.
-                public var can_sign: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/gpg-key/subkeysPayload/can_encrypt_comms`.
-                public var can_encrypt_comms: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/gpg-key/subkeysPayload/can_encrypt_storage`.
-                public var can_encrypt_storage: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/gpg-key/subkeysPayload/can_certify`.
-                public var can_certify: Swift.Bool?
-                /// - Remark: Generated from `#/components/schemas/gpg-key/subkeysPayload/created_at`.
-                public var created_at: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/gpg-key/subkeysPayload/expires_at`.
-                public var expires_at: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/gpg-key/subkeysPayload/raw_key`.
-                public var raw_key: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/gpg-key/subkeysPayload/revoked`.
+                /// - Remark: Generated from `#/components/schemas/gpg-key/SubkeysPayload/can_sign`.
+                public var canSign: Swift.Bool?
+                /// - Remark: Generated from `#/components/schemas/gpg-key/SubkeysPayload/can_encrypt_comms`.
+                public var canEncryptComms: Swift.Bool?
+                /// - Remark: Generated from `#/components/schemas/gpg-key/SubkeysPayload/can_encrypt_storage`.
+                public var canEncryptStorage: Swift.Bool?
+                /// - Remark: Generated from `#/components/schemas/gpg-key/SubkeysPayload/can_certify`.
+                public var canCertify: Swift.Bool?
+                /// - Remark: Generated from `#/components/schemas/gpg-key/SubkeysPayload/created_at`.
+                public var createdAt: Swift.String?
+                /// - Remark: Generated from `#/components/schemas/gpg-key/SubkeysPayload/expires_at`.
+                public var expiresAt: Swift.String?
+                /// - Remark: Generated from `#/components/schemas/gpg-key/SubkeysPayload/raw_key`.
+                public var rawKey: Swift.String?
+                /// - Remark: Generated from `#/components/schemas/gpg-key/SubkeysPayload/revoked`.
                 public var revoked: Swift.Bool?
-                /// Creates a new `subkeysPayloadPayload`.
+                /// Creates a new `SubkeysPayloadPayload`.
                 ///
                 /// - Parameters:
                 ///   - id:
-                ///   - primary_key_id:
-                ///   - key_id:
-                ///   - public_key:
+                ///   - primaryKeyId:
+                ///   - keyId:
+                ///   - publicKey:
                 ///   - emails:
                 ///   - subkeys:
-                ///   - can_sign:
-                ///   - can_encrypt_comms:
-                ///   - can_encrypt_storage:
-                ///   - can_certify:
-                ///   - created_at:
-                ///   - expires_at:
-                ///   - raw_key:
+                ///   - canSign:
+                ///   - canEncryptComms:
+                ///   - canEncryptStorage:
+                ///   - canCertify:
+                ///   - createdAt:
+                ///   - expiresAt:
+                ///   - rawKey:
                 ///   - revoked:
                 public init(
                     id: Swift.Int64? = nil,
-                    primary_key_id: Swift.Int? = nil,
-                    key_id: Swift.String? = nil,
-                    public_key: Swift.String? = nil,
-                    emails: Components.Schemas.gpg_hyphen_key.subkeysPayloadPayload.emailsPayload? = nil,
+                    primaryKeyId: Swift.Int? = nil,
+                    keyId: Swift.String? = nil,
+                    publicKey: Swift.String? = nil,
+                    emails: Components.Schemas.GpgKey.SubkeysPayloadPayload.EmailsPayload? = nil,
                     subkeys: [OpenAPIRuntime.OpenAPIValueContainer]? = nil,
-                    can_sign: Swift.Bool? = nil,
-                    can_encrypt_comms: Swift.Bool? = nil,
-                    can_encrypt_storage: Swift.Bool? = nil,
-                    can_certify: Swift.Bool? = nil,
-                    created_at: Swift.String? = nil,
-                    expires_at: Swift.String? = nil,
-                    raw_key: Swift.String? = nil,
+                    canSign: Swift.Bool? = nil,
+                    canEncryptComms: Swift.Bool? = nil,
+                    canEncryptStorage: Swift.Bool? = nil,
+                    canCertify: Swift.Bool? = nil,
+                    createdAt: Swift.String? = nil,
+                    expiresAt: Swift.String? = nil,
+                    rawKey: Swift.String? = nil,
                     revoked: Swift.Bool? = nil
                 ) {
                     self.id = id
-                    self.primary_key_id = primary_key_id
-                    self.key_id = key_id
-                    self.public_key = public_key
+                    self.primaryKeyId = primaryKeyId
+                    self.keyId = keyId
+                    self.publicKey = publicKey
                     self.emails = emails
                     self.subkeys = subkeys
-                    self.can_sign = can_sign
-                    self.can_encrypt_comms = can_encrypt_comms
-                    self.can_encrypt_storage = can_encrypt_storage
-                    self.can_certify = can_certify
-                    self.created_at = created_at
-                    self.expires_at = expires_at
-                    self.raw_key = raw_key
+                    self.canSign = canSign
+                    self.canEncryptComms = canEncryptComms
+                    self.canEncryptStorage = canEncryptStorage
+                    self.canCertify = canCertify
+                    self.createdAt = createdAt
+                    self.expiresAt = expiresAt
+                    self.rawKey = rawKey
                     self.revoked = revoked
                 }
                 public enum CodingKeys: String, CodingKey {
                     case id
-                    case primary_key_id
-                    case key_id
-                    case public_key
+                    case primaryKeyId = "primary_key_id"
+                    case keyId = "key_id"
+                    case publicKey = "public_key"
                     case emails
                     case subkeys
-                    case can_sign
-                    case can_encrypt_comms
-                    case can_encrypt_storage
-                    case can_certify
-                    case created_at
-                    case expires_at
-                    case raw_key
+                    case canSign = "can_sign"
+                    case canEncryptComms = "can_encrypt_comms"
+                    case canEncryptStorage = "can_encrypt_storage"
+                    case canCertify = "can_certify"
+                    case createdAt = "created_at"
+                    case expiresAt = "expires_at"
+                    case rawKey = "raw_key"
                     case revoked
                 }
             }
             /// - Remark: Generated from `#/components/schemas/gpg-key/subkeys`.
-            public typealias subkeysPayload = [Components.Schemas.gpg_hyphen_key.subkeysPayloadPayload]
+            public typealias SubkeysPayload = [Components.Schemas.GpgKey.SubkeysPayloadPayload]
             /// - Remark: Generated from `#/components/schemas/gpg-key/subkeys`.
-            public var subkeys: Components.Schemas.gpg_hyphen_key.subkeysPayload
+            public var subkeys: Components.Schemas.GpgKey.SubkeysPayload
             /// - Remark: Generated from `#/components/schemas/gpg-key/can_sign`.
-            public var can_sign: Swift.Bool
+            public var canSign: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/gpg-key/can_encrypt_comms`.
-            public var can_encrypt_comms: Swift.Bool
+            public var canEncryptComms: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/gpg-key/can_encrypt_storage`.
-            public var can_encrypt_storage: Swift.Bool
+            public var canEncryptStorage: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/gpg-key/can_certify`.
-            public var can_certify: Swift.Bool
+            public var canCertify: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/gpg-key/created_at`.
-            public var created_at: Foundation.Date
+            public var createdAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/gpg-key/expires_at`.
-            public var expires_at: Foundation.Date?
+            public var expiresAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/gpg-key/revoked`.
             public var revoked: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/gpg-key/raw_key`.
-            public var raw_key: Swift.String?
-            /// Creates a new `gpg_hyphen_key`.
+            public var rawKey: Swift.String?
+            /// Creates a new `GpgKey`.
             ///
             /// - Parameters:
             ///   - id:
             ///   - name:
-            ///   - primary_key_id:
-            ///   - key_id:
-            ///   - public_key:
+            ///   - primaryKeyId:
+            ///   - keyId:
+            ///   - publicKey:
             ///   - emails:
             ///   - subkeys:
-            ///   - can_sign:
-            ///   - can_encrypt_comms:
-            ///   - can_encrypt_storage:
-            ///   - can_certify:
-            ///   - created_at:
-            ///   - expires_at:
+            ///   - canSign:
+            ///   - canEncryptComms:
+            ///   - canEncryptStorage:
+            ///   - canCertify:
+            ///   - createdAt:
+            ///   - expiresAt:
             ///   - revoked:
-            ///   - raw_key:
+            ///   - rawKey:
             public init(
                 id: Swift.Int64,
                 name: Swift.String? = nil,
-                primary_key_id: Swift.Int? = nil,
-                key_id: Swift.String,
-                public_key: Swift.String,
-                emails: Components.Schemas.gpg_hyphen_key.emailsPayload,
-                subkeys: Components.Schemas.gpg_hyphen_key.subkeysPayload,
-                can_sign: Swift.Bool,
-                can_encrypt_comms: Swift.Bool,
-                can_encrypt_storage: Swift.Bool,
-                can_certify: Swift.Bool,
-                created_at: Foundation.Date,
-                expires_at: Foundation.Date? = nil,
+                primaryKeyId: Swift.Int? = nil,
+                keyId: Swift.String,
+                publicKey: Swift.String,
+                emails: Components.Schemas.GpgKey.EmailsPayload,
+                subkeys: Components.Schemas.GpgKey.SubkeysPayload,
+                canSign: Swift.Bool,
+                canEncryptComms: Swift.Bool,
+                canEncryptStorage: Swift.Bool,
+                canCertify: Swift.Bool,
+                createdAt: Foundation.Date,
+                expiresAt: Foundation.Date? = nil,
                 revoked: Swift.Bool,
-                raw_key: Swift.String? = nil
+                rawKey: Swift.String? = nil
             ) {
                 self.id = id
                 self.name = name
-                self.primary_key_id = primary_key_id
-                self.key_id = key_id
-                self.public_key = public_key
+                self.primaryKeyId = primaryKeyId
+                self.keyId = keyId
+                self.publicKey = publicKey
                 self.emails = emails
                 self.subkeys = subkeys
-                self.can_sign = can_sign
-                self.can_encrypt_comms = can_encrypt_comms
-                self.can_encrypt_storage = can_encrypt_storage
-                self.can_certify = can_certify
-                self.created_at = created_at
-                self.expires_at = expires_at
+                self.canSign = canSign
+                self.canEncryptComms = canEncryptComms
+                self.canEncryptStorage = canEncryptStorage
+                self.canCertify = canCertify
+                self.createdAt = createdAt
+                self.expiresAt = expiresAt
                 self.revoked = revoked
-                self.raw_key = raw_key
+                self.rawKey = rawKey
             }
             public enum CodingKeys: String, CodingKey {
                 case id
                 case name
-                case primary_key_id
-                case key_id
-                case public_key
+                case primaryKeyId = "primary_key_id"
+                case keyId = "key_id"
+                case publicKey = "public_key"
                 case emails
                 case subkeys
-                case can_sign
-                case can_encrypt_comms
-                case can_encrypt_storage
-                case can_certify
-                case created_at
-                case expires_at
+                case canSign = "can_sign"
+                case canEncryptComms = "can_encrypt_comms"
+                case canEncryptStorage = "can_encrypt_storage"
+                case canCertify = "can_certify"
+                case createdAt = "created_at"
+                case expiresAt = "expires_at"
                 case revoked
-                case raw_key
+                case rawKey = "raw_key"
             }
         }
         /// Key
         ///
         /// - Remark: Generated from `#/components/schemas/key`.
-        public struct key: Codable, Hashable, Sendable {
+        public struct Key: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/key/key`.
             public var key: Swift.String
             /// - Remark: Generated from `#/components/schemas/key/id`.
@@ -2515,57 +2524,57 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/key/title`.
             public var title: Swift.String
             /// - Remark: Generated from `#/components/schemas/key/created_at`.
-            public var created_at: Foundation.Date
+            public var createdAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/key/verified`.
             public var verified: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/key/read_only`.
-            public var read_only: Swift.Bool
-            /// Creates a new `key`.
+            public var readOnly: Swift.Bool
+            /// Creates a new `Key`.
             ///
             /// - Parameters:
             ///   - key:
             ///   - id:
             ///   - url:
             ///   - title:
-            ///   - created_at:
+            ///   - createdAt:
             ///   - verified:
-            ///   - read_only:
+            ///   - readOnly:
             public init(
                 key: Swift.String,
                 id: Swift.Int64,
                 url: Swift.String,
                 title: Swift.String,
-                created_at: Foundation.Date,
+                createdAt: Foundation.Date,
                 verified: Swift.Bool,
-                read_only: Swift.Bool
+                readOnly: Swift.Bool
             ) {
                 self.key = key
                 self.id = id
                 self.url = url
                 self.title = title
-                self.created_at = created_at
+                self.createdAt = createdAt
                 self.verified = verified
-                self.read_only = read_only
+                self.readOnly = readOnly
             }
             public enum CodingKeys: String, CodingKey {
                 case key
                 case id
                 case url
                 case title
-                case created_at
+                case createdAt = "created_at"
                 case verified
-                case read_only
+                case readOnly = "read_only"
             }
         }
         /// Social media account
         ///
         /// - Remark: Generated from `#/components/schemas/social-account`.
-        public struct social_hyphen_account: Codable, Hashable, Sendable {
+        public struct SocialAccount: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/social-account/provider`.
             public var provider: Swift.String
             /// - Remark: Generated from `#/components/schemas/social-account/url`.
             public var url: Swift.String
-            /// Creates a new `social_hyphen_account`.
+            /// Creates a new `SocialAccount`.
             ///
             /// - Parameters:
             ///   - provider:
@@ -2585,7 +2594,7 @@ public enum Components {
         /// A public SSH key used to sign Git commits
         ///
         /// - Remark: Generated from `#/components/schemas/ssh-signing-key`.
-        public struct ssh_hyphen_signing_hyphen_key: Codable, Hashable, Sendable {
+        public struct SshSigningKey: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/ssh-signing-key/key`.
             public var key: Swift.String
             /// - Remark: Generated from `#/components/schemas/ssh-signing-key/id`.
@@ -2593,43 +2602,43 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/ssh-signing-key/title`.
             public var title: Swift.String
             /// - Remark: Generated from `#/components/schemas/ssh-signing-key/created_at`.
-            public var created_at: Foundation.Date
-            /// Creates a new `ssh_hyphen_signing_hyphen_key`.
+            public var createdAt: Foundation.Date
+            /// Creates a new `SshSigningKey`.
             ///
             /// - Parameters:
             ///   - key:
             ///   - id:
             ///   - title:
-            ///   - created_at:
+            ///   - createdAt:
             public init(
                 key: Swift.String,
                 id: Swift.Int,
                 title: Swift.String,
-                created_at: Foundation.Date
+                createdAt: Foundation.Date
             ) {
                 self.key = key
                 self.id = id
                 self.title = title
-                self.created_at = created_at
+                self.createdAt = createdAt
             }
             public enum CodingKeys: String, CodingKey {
                 case key
                 case id
                 case title
-                case created_at
+                case createdAt = "created_at"
             }
         }
         /// Hovercard
         ///
         /// - Remark: Generated from `#/components/schemas/hovercard`.
-        public struct hovercard: Codable, Hashable, Sendable {
-            /// - Remark: Generated from `#/components/schemas/hovercard/contextsPayload`.
-            public struct contextsPayloadPayload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/hovercard/contextsPayload/message`.
+        public struct Hovercard: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/hovercard/ContextsPayload`.
+            public struct ContextsPayloadPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/hovercard/ContextsPayload/message`.
                 public var message: Swift.String
-                /// - Remark: Generated from `#/components/schemas/hovercard/contextsPayload/octicon`.
+                /// - Remark: Generated from `#/components/schemas/hovercard/ContextsPayload/octicon`.
                 public var octicon: Swift.String
-                /// Creates a new `contextsPayloadPayload`.
+                /// Creates a new `ContextsPayloadPayload`.
                 ///
                 /// - Parameters:
                 ///   - message:
@@ -2647,14 +2656,14 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/hovercard/contexts`.
-            public typealias contextsPayload = [Components.Schemas.hovercard.contextsPayloadPayload]
+            public typealias ContextsPayload = [Components.Schemas.Hovercard.ContextsPayloadPayload]
             /// - Remark: Generated from `#/components/schemas/hovercard/contexts`.
-            public var contexts: Components.Schemas.hovercard.contextsPayload
-            /// Creates a new `hovercard`.
+            public var contexts: Components.Schemas.Hovercard.ContextsPayload
+            /// Creates a new `Hovercard`.
             ///
             /// - Parameters:
             ///   - contexts:
-            public init(contexts: Components.Schemas.hovercard.contextsPayload) {
+            public init(contexts: Components.Schemas.Hovercard.ContextsPayload) {
                 self.contexts = contexts
             }
             public enum CodingKeys: String, CodingKey {
@@ -2664,12 +2673,12 @@ public enum Components {
         /// Key Simple
         ///
         /// - Remark: Generated from `#/components/schemas/key-simple`.
-        public struct key_hyphen_simple: Codable, Hashable, Sendable {
+        public struct KeySimple: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/key-simple/id`.
             public var id: Swift.Int
             /// - Remark: Generated from `#/components/schemas/key-simple/key`.
             public var key: Swift.String
-            /// Creates a new `key_hyphen_simple`.
+            /// Creates a new `KeySimple`.
             ///
             /// - Parameters:
             ///   - id:
@@ -2692,58 +2701,58 @@ public enum Components {
         /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/pagination-before`.
-        public typealias pagination_hyphen_before = Swift.String
+        public typealias PaginationBefore = Swift.String
         /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/pagination-after`.
-        public typealias pagination_hyphen_after = Swift.String
+        public typealias PaginationAfter = Swift.String
         /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/per-page`.
-        public typealias per_hyphen_page = Swift.Int
+        public typealias PerPage = Swift.Int
         /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/page`.
-        public typealias page = Swift.Int
+        public typealias Page = Swift.Int
         /// account_id parameter
         ///
         /// - Remark: Generated from `#/components/parameters/account-id`.
-        public typealias account_hyphen_id = Swift.Int
+        public typealias AccountId = Swift.Int
         /// The handle for the GitHub user account.
         ///
         /// - Remark: Generated from `#/components/parameters/username`.
-        public typealias username = Swift.String
+        public typealias Username = Swift.String
         /// A user ID. Only return users with an ID greater than this ID.
         ///
         /// - Remark: Generated from `#/components/parameters/since-user`.
-        public typealias since_hyphen_user = Swift.Int
+        public typealias SinceUser = Swift.Int
         /// The unique identifier of the key.
         ///
         /// - Remark: Generated from `#/components/parameters/key-id`.
-        public typealias key_hyphen_id = Swift.Int
+        public typealias KeyId = Swift.Int
         /// The unique identifier of the GPG key.
         ///
         /// - Remark: Generated from `#/components/parameters/gpg-key-id`.
-        public typealias gpg_hyphen_key_hyphen_id = Swift.Int
+        public typealias GpgKeyId = Swift.Int
         /// The unique identifier of the SSH signing key.
         ///
         /// - Remark: Generated from `#/components/parameters/ssh-signing-key-id`.
-        public typealias ssh_hyphen_signing_hyphen_key_hyphen_id = Swift.Int
+        public typealias SshSigningKeyId = Swift.Int
     }
     /// Types generated from the `#/components/requestBodies` section of the OpenAPI document.
     public enum RequestBodies {}
     /// Types generated from the `#/components/responses` section of the OpenAPI document.
     public enum Responses {
-        public struct not_found: Sendable, Hashable {
+        public struct NotFound: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/not_found/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/not_found/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -2753,25 +2762,25 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.not_found.Body
-            /// Creates a new `not_found`.
+            public var body: Components.Responses.NotFound.Body
+            /// Creates a new `NotFound`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.not_found.Body) {
+            public init(body: Components.Responses.NotFound.Body) {
                 self.body = body
             }
         }
-        public struct validation_failed: Sendable, Hashable {
+        public struct ValidationFailed: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/validation_failed/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/validation_failed/content/application\/json`.
-                case json(Components.Schemas.validation_hyphen_error)
+                case json(Components.Schemas.ValidationError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.validation_hyphen_error {
+                public var json: Components.Schemas.ValidationError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -2781,29 +2790,29 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.validation_failed.Body
-            /// Creates a new `validation_failed`.
+            public var body: Components.Responses.ValidationFailed.Body
+            /// Creates a new `ValidationFailed`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.validation_failed.Body) {
+            public init(body: Components.Responses.ValidationFailed.Body) {
                 self.body = body
             }
         }
-        public struct not_modified: Sendable, Hashable {
-            /// Creates a new `not_modified`.
+        public struct NotModified: Sendable, Hashable {
+            /// Creates a new `NotModified`.
             public init() {}
         }
-        public struct requires_authentication: Sendable, Hashable {
+        public struct RequiresAuthentication: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/requires_authentication/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/requires_authentication/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -2813,25 +2822,25 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.requires_authentication.Body
-            /// Creates a new `requires_authentication`.
+            public var body: Components.Responses.RequiresAuthentication.Body
+            /// Creates a new `RequiresAuthentication`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.requires_authentication.Body) {
+            public init(body: Components.Responses.RequiresAuthentication.Body) {
                 self.body = body
             }
         }
-        public struct forbidden: Sendable, Hashable {
+        public struct Forbidden: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/forbidden/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/forbidden/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -2841,12 +2850,12 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.forbidden.Body
-            /// Creates a new `forbidden`.
+            public var body: Components.Responses.Forbidden.Body
+            /// Creates a new `Forbidden`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.forbidden.Body) {
+            public init(body: Components.Responses.Forbidden.Body) {
                 self.body = body
             }
         }
@@ -2854,7 +2863,7 @@ public enum Components {
     /// Types generated from the `#/components/headers` section of the OpenAPI document.
     public enum Headers {
         /// - Remark: Generated from `#/components/headers/link`.
-        public typealias link = Swift.String
+        public typealias Link = Swift.String
     }
 }
 
@@ -2866,26 +2875,26 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /user`.
     /// - Remark: Generated from `#/paths//user/get(users/get-authenticated)`.
-    public enum users_sol_get_hyphen_authenticated {
+    public enum UsersGetAuthenticated {
         public static let id: Swift.String = "users/get-authenticated"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_get_hyphen_authenticated.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersGetAuthenticated.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_get_hyphen_authenticated.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersGetAuthenticated.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.users_sol_get_hyphen_authenticated.Input.Headers
+            public var headers: Operations.UsersGetAuthenticated.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - headers:
-            public init(headers: Operations.users_sol_get_hyphen_authenticated.Input.Headers = .init()) {
+            public init(headers: Operations.UsersGetAuthenticated.Input.Headers = .init()) {
                 self.headers = headers
             }
         }
@@ -2894,19 +2903,19 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/GET/responses/200/content/json`.
-                    @frozen public enum jsonPayload: Codable, Hashable, Sendable {
-                        /// - Remark: Generated from `#/paths/user/GET/responses/200/content/json/private_hyphen_user`.
-                        case _private(Components.Schemas.private_hyphen_user)
-                        /// - Remark: Generated from `#/paths/user/GET/responses/200/content/json/public_hyphen_user`.
-                        case _public(Components.Schemas.public_hyphen_user)
+                    @frozen public enum JsonPayload: Codable, Hashable, Sendable {
+                        /// - Remark: Generated from `#/paths/user/GET/responses/200/content/json/PrivateUser`.
+                        case _private(Components.Schemas.PrivateUser)
+                        /// - Remark: Generated from `#/paths/user/GET/responses/200/content/json/PublicUser`.
+                        case _public(Components.Schemas.PublicUser)
                         public enum CodingKeys: String, CodingKey {
-                            case user_view_type
+                            case userViewType = "user_view_type"
                         }
                         public init(from decoder: any Decoder) throws {
                             let container = try decoder.container(keyedBy: CodingKeys.self)
                             let discriminator = try container.decode(
                                 Swift.String.self,
-                                forKey: .user_view_type
+                                forKey: .userViewType
                             )
                             switch discriminator {
                             case "private":
@@ -2915,7 +2924,7 @@ public enum Operations {
                                 self = ._public(try .init(from: decoder))
                             default:
                                 throw Swift.DecodingError.unknownOneOfDiscriminator(
-                                    discriminatorKey: CodingKeys.user_view_type,
+                                    discriminatorKey: CodingKeys.userViewType,
                                     discriminatorValue: discriminator,
                                     codingPath: decoder.codingPath
                                 )
@@ -2931,12 +2940,12 @@ public enum Operations {
                         }
                     }
                     /// - Remark: Generated from `#/paths/user/GET/responses/200/content/application\/json`.
-                    case json(Operations.users_sol_get_hyphen_authenticated.Output.Ok.Body.jsonPayload)
+                    case json(Operations.UsersGetAuthenticated.Output.Ok.Body.JsonPayload)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Operations.users_sol_get_hyphen_authenticated.Output.Ok.Body.jsonPayload {
+                    public var json: Operations.UsersGetAuthenticated.Output.Ok.Body.JsonPayload {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -2946,12 +2955,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.users_sol_get_hyphen_authenticated.Output.Ok.Body
+                public var body: Operations.UsersGetAuthenticated.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.users_sol_get_hyphen_authenticated.Output.Ok.Body) {
+                public init(body: Operations.UsersGetAuthenticated.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -2960,12 +2969,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/get(users/get-authenticated)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.users_sol_get_hyphen_authenticated.Output.Ok)
+            case ok(Operations.UsersGetAuthenticated.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.users_sol_get_hyphen_authenticated.Output.Ok {
+            public var ok: Operations.UsersGetAuthenticated.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -2983,12 +2992,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/get(users/get-authenticated)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/get(users/get-authenticated)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -3006,12 +3023,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/get(users/get-authenticated)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -3029,12 +3046,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/get(users/get-authenticated)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -3084,25 +3101,25 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PATCH /user`.
     /// - Remark: Generated from `#/paths//user/patch(users/update-authenticated)`.
-    public enum users_sol_update_hyphen_authenticated {
+    public enum UsersUpdateAuthenticated {
         public static let id: Swift.String = "users/update-authenticated"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/PATCH/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_update_hyphen_authenticated.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersUpdateAuthenticated.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_update_hyphen_authenticated.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersUpdateAuthenticated.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.users_sol_update_hyphen_authenticated.Input.Headers
+            public var headers: Operations.UsersUpdateAuthenticated.Input.Headers
             /// - Remark: Generated from `#/paths/user/PATCH/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/user/PATCH/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The new name of the user.
                     ///
                     /// - Remark: Generated from `#/paths/user/PATCH/requestBody/json/name`.
@@ -3118,7 +3135,7 @@ public enum Operations {
                     /// The new Twitter username of the user.
                     ///
                     /// - Remark: Generated from `#/paths/user/PATCH/requestBody/json/twitter_username`.
-                    public var twitter_username: Swift.String?
+                    public var twitterUsername: Swift.String?
                     /// The new company of the user.
                     ///
                     /// - Remark: Generated from `#/paths/user/PATCH/requestBody/json/company`.
@@ -3135,13 +3152,13 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/user/PATCH/requestBody/json/bio`.
                     public var bio: Swift.String?
-                    /// Creates a new `jsonPayload`.
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - name: The new name of the user.
                     ///   - email: The publicly visible email address of the user.
                     ///   - blog: The new blog URL of the user.
-                    ///   - twitter_username: The new Twitter username of the user.
+                    ///   - twitterUsername: The new Twitter username of the user.
                     ///   - company: The new company of the user.
                     ///   - location: The new location of the user.
                     ///   - hireable: The new hiring availability of the user.
@@ -3150,7 +3167,7 @@ public enum Operations {
                         name: Swift.String? = nil,
                         email: Swift.String? = nil,
                         blog: Swift.String? = nil,
-                        twitter_username: Swift.String? = nil,
+                        twitterUsername: Swift.String? = nil,
                         company: Swift.String? = nil,
                         location: Swift.String? = nil,
                         hireable: Swift.Bool? = nil,
@@ -3159,7 +3176,7 @@ public enum Operations {
                         self.name = name
                         self.email = email
                         self.blog = blog
-                        self.twitter_username = twitter_username
+                        self.twitterUsername = twitterUsername
                         self.company = company
                         self.location = location
                         self.hireable = hireable
@@ -3169,7 +3186,7 @@ public enum Operations {
                         case name
                         case email
                         case blog
-                        case twitter_username
+                        case twitterUsername = "twitter_username"
                         case company
                         case location
                         case hireable
@@ -3177,17 +3194,17 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/user/PATCH/requestBody/content/application\/json`.
-                case json(Operations.users_sol_update_hyphen_authenticated.Input.Body.jsonPayload)
+                case json(Operations.UsersUpdateAuthenticated.Input.Body.JsonPayload)
             }
-            public var body: Operations.users_sol_update_hyphen_authenticated.Input.Body?
+            public var body: Operations.UsersUpdateAuthenticated.Input.Body?
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - headers:
             ///   - body:
             public init(
-                headers: Operations.users_sol_update_hyphen_authenticated.Input.Headers = .init(),
-                body: Operations.users_sol_update_hyphen_authenticated.Input.Body? = nil
+                headers: Operations.UsersUpdateAuthenticated.Input.Headers = .init(),
+                body: Operations.UsersUpdateAuthenticated.Input.Body? = nil
             ) {
                 self.headers = headers
                 self.body = body
@@ -3198,12 +3215,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/PATCH/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/PATCH/responses/200/content/application\/json`.
-                    case json(Components.Schemas.private_hyphen_user)
+                    case json(Components.Schemas.PrivateUser)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.private_hyphen_user {
+                    public var json: Components.Schemas.PrivateUser {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -3213,12 +3230,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.users_sol_update_hyphen_authenticated.Output.Ok.Body
+                public var body: Operations.UsersUpdateAuthenticated.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.users_sol_update_hyphen_authenticated.Output.Ok.Body) {
+                public init(body: Operations.UsersUpdateAuthenticated.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -3227,12 +3244,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/patch(users/update-authenticated)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.users_sol_update_hyphen_authenticated.Output.Ok)
+            case ok(Operations.UsersUpdateAuthenticated.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.users_sol_update_hyphen_authenticated.Output.Ok {
+            public var ok: Operations.UsersUpdateAuthenticated.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -3250,12 +3267,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/patch(users/update-authenticated)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/patch(users/update-authenticated)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -3273,12 +3298,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/patch(users/update-authenticated)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -3296,12 +3321,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/patch(users/update-authenticated)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -3319,12 +3344,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/patch(users/update-authenticated)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -3342,12 +3367,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/patch(users/update-authenticated)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -3397,7 +3422,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /user/blocks`.
     /// - Remark: Generated from `#/paths//user/blocks/get(users/list-blocked-by-authenticated-user)`.
-    public enum users_sol_list_hyphen_blocked_hyphen_by_hyphen_authenticated_hyphen_user {
+    public enum UsersListBlockedByAuthenticatedUser {
         public static let id: Swift.String = "users/list-blocked-by-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/blocks/GET/query`.
@@ -3405,45 +3430,45 @@ public enum Operations {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/user/blocks/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/user/blocks/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.users_sol_list_hyphen_blocked_hyphen_by_hyphen_authenticated_hyphen_user.Input.Query
+            public var query: Operations.UsersListBlockedByAuthenticatedUser.Input.Query
             /// - Remark: Generated from `#/paths/user/blocks/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_list_hyphen_blocked_hyphen_by_hyphen_authenticated_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersListBlockedByAuthenticatedUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_list_hyphen_blocked_hyphen_by_hyphen_authenticated_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersListBlockedByAuthenticatedUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.users_sol_list_hyphen_blocked_hyphen_by_hyphen_authenticated_hyphen_user.Input.Headers
+            public var headers: Operations.UsersListBlockedByAuthenticatedUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - query:
             ///   - headers:
             public init(
-                query: Operations.users_sol_list_hyphen_blocked_hyphen_by_hyphen_authenticated_hyphen_user.Input.Query = .init(),
-                headers: Operations.users_sol_list_hyphen_blocked_hyphen_by_hyphen_authenticated_hyphen_user.Input.Headers = .init()
+                query: Operations.UsersListBlockedByAuthenticatedUser.Input.Query = .init(),
+                headers: Operations.UsersListBlockedByAuthenticatedUser.Input.Headers = .init()
             ) {
                 self.query = query
                 self.headers = headers
@@ -3454,12 +3479,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/blocks/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/blocks/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.simple_hyphen_user])
+                    case json([Components.Schemas.SimpleUser])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.simple_hyphen_user] {
+                    public var json: [Components.Schemas.SimpleUser] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -3469,12 +3494,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.users_sol_list_hyphen_blocked_hyphen_by_hyphen_authenticated_hyphen_user.Output.Ok.Body
+                public var body: Operations.UsersListBlockedByAuthenticatedUser.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.users_sol_list_hyphen_blocked_hyphen_by_hyphen_authenticated_hyphen_user.Output.Ok.Body) {
+                public init(body: Operations.UsersListBlockedByAuthenticatedUser.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -3483,12 +3508,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/blocks/get(users/list-blocked-by-authenticated-user)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.users_sol_list_hyphen_blocked_hyphen_by_hyphen_authenticated_hyphen_user.Output.Ok)
+            case ok(Operations.UsersListBlockedByAuthenticatedUser.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.users_sol_list_hyphen_blocked_hyphen_by_hyphen_authenticated_hyphen_user.Output.Ok {
+            public var ok: Operations.UsersListBlockedByAuthenticatedUser.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -3506,12 +3531,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/blocks/get(users/list-blocked-by-authenticated-user)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/blocks/get(users/list-blocked-by-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -3529,12 +3562,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/blocks/get(users/list-blocked-by-authenticated-user)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -3552,12 +3585,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/blocks/get(users/list-blocked-by-authenticated-user)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -3575,12 +3608,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/blocks/get(users/list-blocked-by-authenticated-user)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -3630,7 +3663,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /user/blocks/{username}`.
     /// - Remark: Generated from `#/paths//user/blocks/{username}/get(users/check-blocked)`.
-    public enum users_sol_check_hyphen_blocked {
+    public enum UsersCheckBlocked {
         public static let id: Swift.String = "users/check-blocked"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/blocks/{username}/GET/path`.
@@ -3638,36 +3671,36 @@ public enum Operations {
                 /// The handle for the GitHub user account.
                 ///
                 /// - Remark: Generated from `#/paths/user/blocks/{username}/GET/path/username`.
-                public var username: Components.Parameters.username
+                public var username: Components.Parameters.Username
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - username: The handle for the GitHub user account.
-                public init(username: Components.Parameters.username) {
+                public init(username: Components.Parameters.Username) {
                     self.username = username
                 }
             }
-            public var path: Operations.users_sol_check_hyphen_blocked.Input.Path
+            public var path: Operations.UsersCheckBlocked.Input.Path
             /// - Remark: Generated from `#/paths/user/blocks/{username}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_check_hyphen_blocked.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersCheckBlocked.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_check_hyphen_blocked.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersCheckBlocked.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.users_sol_check_hyphen_blocked.Input.Headers
+            public var headers: Operations.UsersCheckBlocked.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.users_sol_check_hyphen_blocked.Input.Path,
-                headers: Operations.users_sol_check_hyphen_blocked.Input.Headers = .init()
+                path: Operations.UsersCheckBlocked.Input.Path,
+                headers: Operations.UsersCheckBlocked.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -3683,12 +3716,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/blocks/{username}/get(users/check-blocked)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.users_sol_check_hyphen_blocked.Output.NoContent)
+            case noContent(Operations.UsersCheckBlocked.Output.NoContent)
+            /// If the user is blocked
+            ///
+            /// - Remark: Generated from `#/paths//user/blocks/{username}/get(users/check-blocked)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.users_sol_check_hyphen_blocked.Output.NoContent {
+            public var noContent: Operations.UsersCheckBlocked.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -3705,12 +3746,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/blocks/{username}/GET/responses/404/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/blocks/{username}/GET/responses/404/content/application\/json`.
-                    case json(Components.Schemas.basic_hyphen_error)
+                    case json(Components.Schemas.BasicError)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.basic_hyphen_error {
+                    public var json: Components.Schemas.BasicError {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -3720,12 +3761,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.users_sol_check_hyphen_blocked.Output.NotFound.Body
+                public var body: Operations.UsersCheckBlocked.Output.NotFound.Body
                 /// Creates a new `NotFound`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.users_sol_check_hyphen_blocked.Output.NotFound.Body) {
+                public init(body: Operations.UsersCheckBlocked.Output.NotFound.Body) {
                     self.body = body
                 }
             }
@@ -3734,12 +3775,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/blocks/{username}/get(users/check-blocked)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Operations.users_sol_check_hyphen_blocked.Output.NotFound)
+            case notFound(Operations.UsersCheckBlocked.Output.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Operations.users_sol_check_hyphen_blocked.Output.NotFound {
+            public var notFound: Operations.UsersCheckBlocked.Output.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -3757,12 +3798,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/blocks/{username}/get(users/check-blocked)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/blocks/{username}/get(users/check-blocked)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -3780,12 +3829,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/blocks/{username}/get(users/check-blocked)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -3803,12 +3852,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/blocks/{username}/get(users/check-blocked)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -3858,7 +3907,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PUT /user/blocks/{username}`.
     /// - Remark: Generated from `#/paths//user/blocks/{username}/put(users/block)`.
-    public enum users_sol_block {
+    public enum UsersBlock {
         public static let id: Swift.String = "users/block"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/blocks/{username}/PUT/path`.
@@ -3866,36 +3915,36 @@ public enum Operations {
                 /// The handle for the GitHub user account.
                 ///
                 /// - Remark: Generated from `#/paths/user/blocks/{username}/PUT/path/username`.
-                public var username: Components.Parameters.username
+                public var username: Components.Parameters.Username
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - username: The handle for the GitHub user account.
-                public init(username: Components.Parameters.username) {
+                public init(username: Components.Parameters.Username) {
                     self.username = username
                 }
             }
-            public var path: Operations.users_sol_block.Input.Path
+            public var path: Operations.UsersBlock.Input.Path
             /// - Remark: Generated from `#/paths/user/blocks/{username}/PUT/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_block.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersBlock.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_block.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersBlock.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.users_sol_block.Input.Headers
+            public var headers: Operations.UsersBlock.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.users_sol_block.Input.Path,
-                headers: Operations.users_sol_block.Input.Headers = .init()
+                path: Operations.UsersBlock.Input.Path,
+                headers: Operations.UsersBlock.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -3911,12 +3960,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/blocks/{username}/put(users/block)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.users_sol_block.Output.NoContent)
+            case noContent(Operations.UsersBlock.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//user/blocks/{username}/put(users/block)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.users_sol_block.Output.NoContent {
+            public var noContent: Operations.UsersBlock.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -3934,12 +3991,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/blocks/{username}/put(users/block)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/blocks/{username}/put(users/block)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -3957,12 +4022,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/blocks/{username}/put(users/block)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -3980,12 +4045,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/blocks/{username}/put(users/block)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -4003,12 +4068,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/blocks/{username}/put(users/block)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -4026,12 +4091,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/blocks/{username}/put(users/block)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -4081,7 +4146,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /user/blocks/{username}`.
     /// - Remark: Generated from `#/paths//user/blocks/{username}/delete(users/unblock)`.
-    public enum users_sol_unblock {
+    public enum UsersUnblock {
         public static let id: Swift.String = "users/unblock"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/blocks/{username}/DELETE/path`.
@@ -4089,36 +4154,36 @@ public enum Operations {
                 /// The handle for the GitHub user account.
                 ///
                 /// - Remark: Generated from `#/paths/user/blocks/{username}/DELETE/path/username`.
-                public var username: Components.Parameters.username
+                public var username: Components.Parameters.Username
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - username: The handle for the GitHub user account.
-                public init(username: Components.Parameters.username) {
+                public init(username: Components.Parameters.Username) {
                     self.username = username
                 }
             }
-            public var path: Operations.users_sol_unblock.Input.Path
+            public var path: Operations.UsersUnblock.Input.Path
             /// - Remark: Generated from `#/paths/user/blocks/{username}/DELETE/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_unblock.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersUnblock.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_unblock.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersUnblock.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.users_sol_unblock.Input.Headers
+            public var headers: Operations.UsersUnblock.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.users_sol_unblock.Input.Path,
-                headers: Operations.users_sol_unblock.Input.Headers = .init()
+                path: Operations.UsersUnblock.Input.Path,
+                headers: Operations.UsersUnblock.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -4134,12 +4199,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/blocks/{username}/delete(users/unblock)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.users_sol_unblock.Output.NoContent)
+            case noContent(Operations.UsersUnblock.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//user/blocks/{username}/delete(users/unblock)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.users_sol_unblock.Output.NoContent {
+            public var noContent: Operations.UsersUnblock.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -4157,12 +4230,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/blocks/{username}/delete(users/unblock)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/blocks/{username}/delete(users/unblock)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -4180,12 +4261,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/blocks/{username}/delete(users/unblock)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -4203,12 +4284,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/blocks/{username}/delete(users/unblock)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -4226,12 +4307,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/blocks/{username}/delete(users/unblock)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -4281,41 +4362,41 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PATCH /user/email/visibility`.
     /// - Remark: Generated from `#/paths//user/email/visibility/patch(users/set-primary-email-visibility-for-authenticated-user)`.
-    public enum users_sol_set_hyphen_primary_hyphen_email_hyphen_visibility_hyphen_for_hyphen_authenticated_hyphen_user {
+    public enum UsersSetPrimaryEmailVisibilityForAuthenticatedUser {
         public static let id: Swift.String = "users/set-primary-email-visibility-for-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/email/visibility/PATCH/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_set_hyphen_primary_hyphen_email_hyphen_visibility_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersSetPrimaryEmailVisibilityForAuthenticatedUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_set_hyphen_primary_hyphen_email_hyphen_visibility_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersSetPrimaryEmailVisibilityForAuthenticatedUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.users_sol_set_hyphen_primary_hyphen_email_hyphen_visibility_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers
+            public var headers: Operations.UsersSetPrimaryEmailVisibilityForAuthenticatedUser.Input.Headers
             /// - Remark: Generated from `#/paths/user/email/visibility/PATCH/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/user/email/visibility/PATCH/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// Denotes whether an email is publicly visible.
                     ///
                     /// - Remark: Generated from `#/paths/user/email/visibility/PATCH/requestBody/json/visibility`.
-                    @frozen public enum visibilityPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum VisibilityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case _public = "public"
                         case _private = "private"
                     }
                     /// Denotes whether an email is publicly visible.
                     ///
                     /// - Remark: Generated from `#/paths/user/email/visibility/PATCH/requestBody/json/visibility`.
-                    public var visibility: Operations.users_sol_set_hyphen_primary_hyphen_email_hyphen_visibility_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body.jsonPayload.visibilityPayload
-                    /// Creates a new `jsonPayload`.
+                    public var visibility: Operations.UsersSetPrimaryEmailVisibilityForAuthenticatedUser.Input.Body.JsonPayload.VisibilityPayload
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - visibility: Denotes whether an email is publicly visible.
-                    public init(visibility: Operations.users_sol_set_hyphen_primary_hyphen_email_hyphen_visibility_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body.jsonPayload.visibilityPayload) {
+                    public init(visibility: Operations.UsersSetPrimaryEmailVisibilityForAuthenticatedUser.Input.Body.JsonPayload.VisibilityPayload) {
                         self.visibility = visibility
                     }
                     public enum CodingKeys: String, CodingKey {
@@ -4323,17 +4404,17 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/user/email/visibility/PATCH/requestBody/content/application\/json`.
-                case json(Operations.users_sol_set_hyphen_primary_hyphen_email_hyphen_visibility_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body.jsonPayload)
+                case json(Operations.UsersSetPrimaryEmailVisibilityForAuthenticatedUser.Input.Body.JsonPayload)
             }
-            public var body: Operations.users_sol_set_hyphen_primary_hyphen_email_hyphen_visibility_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body
+            public var body: Operations.UsersSetPrimaryEmailVisibilityForAuthenticatedUser.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - headers:
             ///   - body:
             public init(
-                headers: Operations.users_sol_set_hyphen_primary_hyphen_email_hyphen_visibility_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init(),
-                body: Operations.users_sol_set_hyphen_primary_hyphen_email_hyphen_visibility_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body
+                headers: Operations.UsersSetPrimaryEmailVisibilityForAuthenticatedUser.Input.Headers = .init(),
+                body: Operations.UsersSetPrimaryEmailVisibilityForAuthenticatedUser.Input.Body
             ) {
                 self.headers = headers
                 self.body = body
@@ -4344,12 +4425,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/email/visibility/PATCH/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/email/visibility/PATCH/responses/200/content/application\/json`.
-                    case json([Components.Schemas.email])
+                    case json([Components.Schemas.Email])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.email] {
+                    public var json: [Components.Schemas.Email] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -4359,12 +4440,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.users_sol_set_hyphen_primary_hyphen_email_hyphen_visibility_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body
+                public var body: Operations.UsersSetPrimaryEmailVisibilityForAuthenticatedUser.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.users_sol_set_hyphen_primary_hyphen_email_hyphen_visibility_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body) {
+                public init(body: Operations.UsersSetPrimaryEmailVisibilityForAuthenticatedUser.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -4373,12 +4454,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/email/visibility/patch(users/set-primary-email-visibility-for-authenticated-user)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.users_sol_set_hyphen_primary_hyphen_email_hyphen_visibility_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok)
+            case ok(Operations.UsersSetPrimaryEmailVisibilityForAuthenticatedUser.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.users_sol_set_hyphen_primary_hyphen_email_hyphen_visibility_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok {
+            public var ok: Operations.UsersSetPrimaryEmailVisibilityForAuthenticatedUser.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -4396,12 +4477,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/email/visibility/patch(users/set-primary-email-visibility-for-authenticated-user)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/email/visibility/patch(users/set-primary-email-visibility-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -4419,12 +4508,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/email/visibility/patch(users/set-primary-email-visibility-for-authenticated-user)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -4442,12 +4531,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/email/visibility/patch(users/set-primary-email-visibility-for-authenticated-user)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -4465,12 +4554,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/email/visibility/patch(users/set-primary-email-visibility-for-authenticated-user)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -4488,12 +4577,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/email/visibility/patch(users/set-primary-email-visibility-for-authenticated-user)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -4546,7 +4635,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /user/emails`.
     /// - Remark: Generated from `#/paths//user/emails/get(users/list-emails-for-authenticated-user)`.
-    public enum users_sol_list_hyphen_emails_hyphen_for_hyphen_authenticated_hyphen_user {
+    public enum UsersListEmailsForAuthenticatedUser {
         public static let id: Swift.String = "users/list-emails-for-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/emails/GET/query`.
@@ -4554,45 +4643,45 @@ public enum Operations {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/user/emails/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/user/emails/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.users_sol_list_hyphen_emails_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query
+            public var query: Operations.UsersListEmailsForAuthenticatedUser.Input.Query
             /// - Remark: Generated from `#/paths/user/emails/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_list_hyphen_emails_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersListEmailsForAuthenticatedUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_list_hyphen_emails_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersListEmailsForAuthenticatedUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.users_sol_list_hyphen_emails_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers
+            public var headers: Operations.UsersListEmailsForAuthenticatedUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - query:
             ///   - headers:
             public init(
-                query: Operations.users_sol_list_hyphen_emails_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query = .init(),
-                headers: Operations.users_sol_list_hyphen_emails_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
+                query: Operations.UsersListEmailsForAuthenticatedUser.Input.Query = .init(),
+                headers: Operations.UsersListEmailsForAuthenticatedUser.Input.Headers = .init()
             ) {
                 self.query = query
                 self.headers = headers
@@ -4603,26 +4692,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/emails/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/emails/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.users_sol_list_hyphen_emails_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Headers
+                public var headers: Operations.UsersListEmailsForAuthenticatedUser.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/user/emails/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/emails/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.email])
+                    case json([Components.Schemas.Email])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.email] {
+                    public var json: [Components.Schemas.Email] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -4632,15 +4721,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.users_sol_list_hyphen_emails_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body
+                public var body: Operations.UsersListEmailsForAuthenticatedUser.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.users_sol_list_hyphen_emails_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Headers = .init(),
-                    body: Operations.users_sol_list_hyphen_emails_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body
+                    headers: Operations.UsersListEmailsForAuthenticatedUser.Output.Ok.Headers = .init(),
+                    body: Operations.UsersListEmailsForAuthenticatedUser.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -4651,12 +4740,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/emails/get(users/list-emails-for-authenticated-user)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.users_sol_list_hyphen_emails_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok)
+            case ok(Operations.UsersListEmailsForAuthenticatedUser.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.users_sol_list_hyphen_emails_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok {
+            public var ok: Operations.UsersListEmailsForAuthenticatedUser.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -4674,12 +4763,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/emails/get(users/list-emails-for-authenticated-user)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/emails/get(users/list-emails-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -4697,12 +4794,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/emails/get(users/list-emails-for-authenticated-user)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -4720,12 +4817,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/emails/get(users/list-emails-for-authenticated-user)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -4743,12 +4840,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/emails/get(users/list-emails-for-authenticated-user)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -4798,25 +4895,25 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /user/emails`.
     /// - Remark: Generated from `#/paths//user/emails/post(users/add-email-for-authenticated-user)`.
-    public enum users_sol_add_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user {
+    public enum UsersAddEmailForAuthenticatedUser {
         public static let id: Swift.String = "users/add-email-for-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/emails/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_add_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersAddEmailForAuthenticatedUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_add_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersAddEmailForAuthenticatedUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.users_sol_add_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers
+            public var headers: Operations.UsersAddEmailForAuthenticatedUser.Input.Headers
             /// - Remark: Generated from `#/paths/user/emails/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/user/emails/POST/requestBody/json`.
-                @frozen public enum jsonPayload: Codable, Hashable, Sendable {
+                @frozen public enum JsonPayload: Codable, Hashable, Sendable {
                     /// - Remark: Generated from `#/paths/user/emails/POST/requestBody/json/case1`.
                     public struct Case1Payload: Codable, Hashable, Sendable {
                         /// Adds one or more email addresses to your GitHub account. Must contain at least one email address. **Note:** Alternatively, you can pass a single email address or an `array` of emails addresses directly, but we recommend that you pass an object using the `emails` key.
@@ -4835,7 +4932,7 @@ public enum Operations {
                         }
                     }
                     /// - Remark: Generated from `#/paths/user/emails/POST/requestBody/json/case1`.
-                    case case1(Operations.users_sol_add_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body.jsonPayload.Case1Payload)
+                    case case1(Operations.UsersAddEmailForAuthenticatedUser.Input.Body.JsonPayload.Case1Payload)
                     /// - Remark: Generated from `#/paths/user/emails/POST/requestBody/json/case2`.
                     case case2([Swift.String])
                     /// - Remark: Generated from `#/paths/user/emails/POST/requestBody/json/case3`.
@@ -4878,17 +4975,17 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/user/emails/POST/requestBody/content/application\/json`.
-                case json(Operations.users_sol_add_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body.jsonPayload)
+                case json(Operations.UsersAddEmailForAuthenticatedUser.Input.Body.JsonPayload)
             }
-            public var body: Operations.users_sol_add_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body?
+            public var body: Operations.UsersAddEmailForAuthenticatedUser.Input.Body?
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - headers:
             ///   - body:
             public init(
-                headers: Operations.users_sol_add_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init(),
-                body: Operations.users_sol_add_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body? = nil
+                headers: Operations.UsersAddEmailForAuthenticatedUser.Input.Headers = .init(),
+                body: Operations.UsersAddEmailForAuthenticatedUser.Input.Body? = nil
             ) {
                 self.headers = headers
                 self.body = body
@@ -4899,12 +4996,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/emails/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/emails/POST/responses/201/content/application\/json`.
-                    case json([Components.Schemas.email])
+                    case json([Components.Schemas.Email])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.email] {
+                    public var json: [Components.Schemas.Email] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -4914,12 +5011,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.users_sol_add_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user.Output.Created.Body
+                public var body: Operations.UsersAddEmailForAuthenticatedUser.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.users_sol_add_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user.Output.Created.Body) {
+                public init(body: Operations.UsersAddEmailForAuthenticatedUser.Output.Created.Body) {
                     self.body = body
                 }
             }
@@ -4928,12 +5025,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/emails/post(users/add-email-for-authenticated-user)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.users_sol_add_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user.Output.Created)
+            case created(Operations.UsersAddEmailForAuthenticatedUser.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.users_sol_add_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user.Output.Created {
+            public var created: Operations.UsersAddEmailForAuthenticatedUser.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -4951,12 +5048,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/emails/post(users/add-email-for-authenticated-user)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -4974,12 +5071,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/emails/post(users/add-email-for-authenticated-user)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/emails/post(users/add-email-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -4997,12 +5102,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/emails/post(users/add-email-for-authenticated-user)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -5020,12 +5125,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/emails/post(users/add-email-for-authenticated-user)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -5043,12 +5148,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/emails/post(users/add-email-for-authenticated-user)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -5098,25 +5203,25 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /user/emails`.
     /// - Remark: Generated from `#/paths//user/emails/delete(users/delete-email-for-authenticated-user)`.
-    public enum users_sol_delete_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user {
+    public enum UsersDeleteEmailForAuthenticatedUser {
         public static let id: Swift.String = "users/delete-email-for-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/emails/DELETE/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_delete_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersDeleteEmailForAuthenticatedUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_delete_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersDeleteEmailForAuthenticatedUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.users_sol_delete_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers
+            public var headers: Operations.UsersDeleteEmailForAuthenticatedUser.Input.Headers
             /// - Remark: Generated from `#/paths/user/emails/DELETE/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/user/emails/DELETE/requestBody/json`.
-                @frozen public enum jsonPayload: Codable, Hashable, Sendable {
+                @frozen public enum JsonPayload: Codable, Hashable, Sendable {
                     /// Deletes one or more email addresses from your GitHub account. Must contain at least one email address. **Note:** Alternatively, you can pass a single email address or an `array` of emails addresses directly, but we recommend that you pass an object using the `emails` key.
                     ///
                     /// - Remark: Generated from `#/paths/user/emails/DELETE/requestBody/json/case1`.
@@ -5139,7 +5244,7 @@ public enum Operations {
                     /// Deletes one or more email addresses from your GitHub account. Must contain at least one email address. **Note:** Alternatively, you can pass a single email address or an `array` of emails addresses directly, but we recommend that you pass an object using the `emails` key.
                     ///
                     /// - Remark: Generated from `#/paths/user/emails/DELETE/requestBody/json/case1`.
-                    case case1(Operations.users_sol_delete_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body.jsonPayload.Case1Payload)
+                    case case1(Operations.UsersDeleteEmailForAuthenticatedUser.Input.Body.JsonPayload.Case1Payload)
                     /// - Remark: Generated from `#/paths/user/emails/DELETE/requestBody/json/case2`.
                     case case2([Swift.String])
                     /// - Remark: Generated from `#/paths/user/emails/DELETE/requestBody/json/case3`.
@@ -5182,17 +5287,17 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/user/emails/DELETE/requestBody/content/application\/json`.
-                case json(Operations.users_sol_delete_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body.jsonPayload)
+                case json(Operations.UsersDeleteEmailForAuthenticatedUser.Input.Body.JsonPayload)
             }
-            public var body: Operations.users_sol_delete_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body?
+            public var body: Operations.UsersDeleteEmailForAuthenticatedUser.Input.Body?
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - headers:
             ///   - body:
             public init(
-                headers: Operations.users_sol_delete_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init(),
-                body: Operations.users_sol_delete_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body? = nil
+                headers: Operations.UsersDeleteEmailForAuthenticatedUser.Input.Headers = .init(),
+                body: Operations.UsersDeleteEmailForAuthenticatedUser.Input.Body? = nil
             ) {
                 self.headers = headers
                 self.body = body
@@ -5208,12 +5313,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/emails/delete(users/delete-email-for-authenticated-user)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.users_sol_delete_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent)
+            case noContent(Operations.UsersDeleteEmailForAuthenticatedUser.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//user/emails/delete(users/delete-email-for-authenticated-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.users_sol_delete_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent {
+            public var noContent: Operations.UsersDeleteEmailForAuthenticatedUser.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -5231,12 +5344,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/emails/delete(users/delete-email-for-authenticated-user)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/emails/delete(users/delete-email-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -5254,12 +5375,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/emails/delete(users/delete-email-for-authenticated-user)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -5277,12 +5398,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/emails/delete(users/delete-email-for-authenticated-user)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -5300,12 +5421,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/emails/delete(users/delete-email-for-authenticated-user)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -5323,12 +5444,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/emails/delete(users/delete-email-for-authenticated-user)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -5378,7 +5499,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /user/followers`.
     /// - Remark: Generated from `#/paths//user/followers/get(users/list-followers-for-authenticated-user)`.
-    public enum users_sol_list_hyphen_followers_hyphen_for_hyphen_authenticated_hyphen_user {
+    public enum UsersListFollowersForAuthenticatedUser {
         public static let id: Swift.String = "users/list-followers-for-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/followers/GET/query`.
@@ -5386,45 +5507,45 @@ public enum Operations {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/user/followers/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/user/followers/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.users_sol_list_hyphen_followers_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query
+            public var query: Operations.UsersListFollowersForAuthenticatedUser.Input.Query
             /// - Remark: Generated from `#/paths/user/followers/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_list_hyphen_followers_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersListFollowersForAuthenticatedUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_list_hyphen_followers_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersListFollowersForAuthenticatedUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.users_sol_list_hyphen_followers_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers
+            public var headers: Operations.UsersListFollowersForAuthenticatedUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - query:
             ///   - headers:
             public init(
-                query: Operations.users_sol_list_hyphen_followers_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query = .init(),
-                headers: Operations.users_sol_list_hyphen_followers_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
+                query: Operations.UsersListFollowersForAuthenticatedUser.Input.Query = .init(),
+                headers: Operations.UsersListFollowersForAuthenticatedUser.Input.Headers = .init()
             ) {
                 self.query = query
                 self.headers = headers
@@ -5435,26 +5556,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/followers/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/followers/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.users_sol_list_hyphen_followers_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Headers
+                public var headers: Operations.UsersListFollowersForAuthenticatedUser.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/user/followers/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/followers/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.simple_hyphen_user])
+                    case json([Components.Schemas.SimpleUser])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.simple_hyphen_user] {
+                    public var json: [Components.Schemas.SimpleUser] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -5464,15 +5585,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.users_sol_list_hyphen_followers_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body
+                public var body: Operations.UsersListFollowersForAuthenticatedUser.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.users_sol_list_hyphen_followers_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Headers = .init(),
-                    body: Operations.users_sol_list_hyphen_followers_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body
+                    headers: Operations.UsersListFollowersForAuthenticatedUser.Output.Ok.Headers = .init(),
+                    body: Operations.UsersListFollowersForAuthenticatedUser.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -5483,12 +5604,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/followers/get(users/list-followers-for-authenticated-user)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.users_sol_list_hyphen_followers_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok)
+            case ok(Operations.UsersListFollowersForAuthenticatedUser.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.users_sol_list_hyphen_followers_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok {
+            public var ok: Operations.UsersListFollowersForAuthenticatedUser.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -5506,12 +5627,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/followers/get(users/list-followers-for-authenticated-user)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/followers/get(users/list-followers-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -5529,12 +5658,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/followers/get(users/list-followers-for-authenticated-user)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -5552,12 +5681,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/followers/get(users/list-followers-for-authenticated-user)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -5607,7 +5736,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /user/following`.
     /// - Remark: Generated from `#/paths//user/following/get(users/list-followed-by-authenticated-user)`.
-    public enum users_sol_list_hyphen_followed_hyphen_by_hyphen_authenticated_hyphen_user {
+    public enum UsersListFollowedByAuthenticatedUser {
         public static let id: Swift.String = "users/list-followed-by-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/following/GET/query`.
@@ -5615,45 +5744,45 @@ public enum Operations {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/user/following/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/user/following/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.users_sol_list_hyphen_followed_hyphen_by_hyphen_authenticated_hyphen_user.Input.Query
+            public var query: Operations.UsersListFollowedByAuthenticatedUser.Input.Query
             /// - Remark: Generated from `#/paths/user/following/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_list_hyphen_followed_hyphen_by_hyphen_authenticated_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersListFollowedByAuthenticatedUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_list_hyphen_followed_hyphen_by_hyphen_authenticated_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersListFollowedByAuthenticatedUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.users_sol_list_hyphen_followed_hyphen_by_hyphen_authenticated_hyphen_user.Input.Headers
+            public var headers: Operations.UsersListFollowedByAuthenticatedUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - query:
             ///   - headers:
             public init(
-                query: Operations.users_sol_list_hyphen_followed_hyphen_by_hyphen_authenticated_hyphen_user.Input.Query = .init(),
-                headers: Operations.users_sol_list_hyphen_followed_hyphen_by_hyphen_authenticated_hyphen_user.Input.Headers = .init()
+                query: Operations.UsersListFollowedByAuthenticatedUser.Input.Query = .init(),
+                headers: Operations.UsersListFollowedByAuthenticatedUser.Input.Headers = .init()
             ) {
                 self.query = query
                 self.headers = headers
@@ -5664,26 +5793,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/following/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/following/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.users_sol_list_hyphen_followed_hyphen_by_hyphen_authenticated_hyphen_user.Output.Ok.Headers
+                public var headers: Operations.UsersListFollowedByAuthenticatedUser.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/user/following/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/following/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.simple_hyphen_user])
+                    case json([Components.Schemas.SimpleUser])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.simple_hyphen_user] {
+                    public var json: [Components.Schemas.SimpleUser] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -5693,15 +5822,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.users_sol_list_hyphen_followed_hyphen_by_hyphen_authenticated_hyphen_user.Output.Ok.Body
+                public var body: Operations.UsersListFollowedByAuthenticatedUser.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.users_sol_list_hyphen_followed_hyphen_by_hyphen_authenticated_hyphen_user.Output.Ok.Headers = .init(),
-                    body: Operations.users_sol_list_hyphen_followed_hyphen_by_hyphen_authenticated_hyphen_user.Output.Ok.Body
+                    headers: Operations.UsersListFollowedByAuthenticatedUser.Output.Ok.Headers = .init(),
+                    body: Operations.UsersListFollowedByAuthenticatedUser.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -5712,12 +5841,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/following/get(users/list-followed-by-authenticated-user)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.users_sol_list_hyphen_followed_hyphen_by_hyphen_authenticated_hyphen_user.Output.Ok)
+            case ok(Operations.UsersListFollowedByAuthenticatedUser.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.users_sol_list_hyphen_followed_hyphen_by_hyphen_authenticated_hyphen_user.Output.Ok {
+            public var ok: Operations.UsersListFollowedByAuthenticatedUser.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -5735,12 +5864,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/following/get(users/list-followed-by-authenticated-user)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/following/get(users/list-followed-by-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -5758,12 +5895,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/following/get(users/list-followed-by-authenticated-user)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -5781,12 +5918,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/following/get(users/list-followed-by-authenticated-user)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -5836,7 +5973,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /user/following/{username}`.
     /// - Remark: Generated from `#/paths//user/following/{username}/get(users/check-person-is-followed-by-authenticated)`.
-    public enum users_sol_check_hyphen_person_hyphen_is_hyphen_followed_hyphen_by_hyphen_authenticated {
+    public enum UsersCheckPersonIsFollowedByAuthenticated {
         public static let id: Swift.String = "users/check-person-is-followed-by-authenticated"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/following/{username}/GET/path`.
@@ -5844,36 +5981,36 @@ public enum Operations {
                 /// The handle for the GitHub user account.
                 ///
                 /// - Remark: Generated from `#/paths/user/following/{username}/GET/path/username`.
-                public var username: Components.Parameters.username
+                public var username: Components.Parameters.Username
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - username: The handle for the GitHub user account.
-                public init(username: Components.Parameters.username) {
+                public init(username: Components.Parameters.Username) {
                     self.username = username
                 }
             }
-            public var path: Operations.users_sol_check_hyphen_person_hyphen_is_hyphen_followed_hyphen_by_hyphen_authenticated.Input.Path
+            public var path: Operations.UsersCheckPersonIsFollowedByAuthenticated.Input.Path
             /// - Remark: Generated from `#/paths/user/following/{username}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_check_hyphen_person_hyphen_is_hyphen_followed_hyphen_by_hyphen_authenticated.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersCheckPersonIsFollowedByAuthenticated.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_check_hyphen_person_hyphen_is_hyphen_followed_hyphen_by_hyphen_authenticated.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersCheckPersonIsFollowedByAuthenticated.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.users_sol_check_hyphen_person_hyphen_is_hyphen_followed_hyphen_by_hyphen_authenticated.Input.Headers
+            public var headers: Operations.UsersCheckPersonIsFollowedByAuthenticated.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.users_sol_check_hyphen_person_hyphen_is_hyphen_followed_hyphen_by_hyphen_authenticated.Input.Path,
-                headers: Operations.users_sol_check_hyphen_person_hyphen_is_hyphen_followed_hyphen_by_hyphen_authenticated.Input.Headers = .init()
+                path: Operations.UsersCheckPersonIsFollowedByAuthenticated.Input.Path,
+                headers: Operations.UsersCheckPersonIsFollowedByAuthenticated.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -5889,12 +6026,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/following/{username}/get(users/check-person-is-followed-by-authenticated)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.users_sol_check_hyphen_person_hyphen_is_hyphen_followed_hyphen_by_hyphen_authenticated.Output.NoContent)
+            case noContent(Operations.UsersCheckPersonIsFollowedByAuthenticated.Output.NoContent)
+            /// if the person is followed by the authenticated user
+            ///
+            /// - Remark: Generated from `#/paths//user/following/{username}/get(users/check-person-is-followed-by-authenticated)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.users_sol_check_hyphen_person_hyphen_is_hyphen_followed_hyphen_by_hyphen_authenticated.Output.NoContent {
+            public var noContent: Operations.UsersCheckPersonIsFollowedByAuthenticated.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -5911,12 +6056,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/following/{username}/GET/responses/404/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/following/{username}/GET/responses/404/content/application\/json`.
-                    case json(Components.Schemas.basic_hyphen_error)
+                    case json(Components.Schemas.BasicError)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.basic_hyphen_error {
+                    public var json: Components.Schemas.BasicError {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -5926,12 +6071,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.users_sol_check_hyphen_person_hyphen_is_hyphen_followed_hyphen_by_hyphen_authenticated.Output.NotFound.Body
+                public var body: Operations.UsersCheckPersonIsFollowedByAuthenticated.Output.NotFound.Body
                 /// Creates a new `NotFound`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.users_sol_check_hyphen_person_hyphen_is_hyphen_followed_hyphen_by_hyphen_authenticated.Output.NotFound.Body) {
+                public init(body: Operations.UsersCheckPersonIsFollowedByAuthenticated.Output.NotFound.Body) {
                     self.body = body
                 }
             }
@@ -5940,12 +6085,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/following/{username}/get(users/check-person-is-followed-by-authenticated)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Operations.users_sol_check_hyphen_person_hyphen_is_hyphen_followed_hyphen_by_hyphen_authenticated.Output.NotFound)
+            case notFound(Operations.UsersCheckPersonIsFollowedByAuthenticated.Output.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Operations.users_sol_check_hyphen_person_hyphen_is_hyphen_followed_hyphen_by_hyphen_authenticated.Output.NotFound {
+            public var notFound: Operations.UsersCheckPersonIsFollowedByAuthenticated.Output.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -5963,12 +6108,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/following/{username}/get(users/check-person-is-followed-by-authenticated)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/following/{username}/get(users/check-person-is-followed-by-authenticated)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -5986,12 +6139,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/following/{username}/get(users/check-person-is-followed-by-authenticated)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -6009,12 +6162,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/following/{username}/get(users/check-person-is-followed-by-authenticated)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -6066,7 +6219,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PUT /user/following/{username}`.
     /// - Remark: Generated from `#/paths//user/following/{username}/put(users/follow)`.
-    public enum users_sol_follow {
+    public enum UsersFollow {
         public static let id: Swift.String = "users/follow"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/following/{username}/PUT/path`.
@@ -6074,36 +6227,36 @@ public enum Operations {
                 /// The handle for the GitHub user account.
                 ///
                 /// - Remark: Generated from `#/paths/user/following/{username}/PUT/path/username`.
-                public var username: Components.Parameters.username
+                public var username: Components.Parameters.Username
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - username: The handle for the GitHub user account.
-                public init(username: Components.Parameters.username) {
+                public init(username: Components.Parameters.Username) {
                     self.username = username
                 }
             }
-            public var path: Operations.users_sol_follow.Input.Path
+            public var path: Operations.UsersFollow.Input.Path
             /// - Remark: Generated from `#/paths/user/following/{username}/PUT/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_follow.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersFollow.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_follow.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersFollow.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.users_sol_follow.Input.Headers
+            public var headers: Operations.UsersFollow.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.users_sol_follow.Input.Path,
-                headers: Operations.users_sol_follow.Input.Headers = .init()
+                path: Operations.UsersFollow.Input.Path,
+                headers: Operations.UsersFollow.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -6119,12 +6272,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/following/{username}/put(users/follow)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.users_sol_follow.Output.NoContent)
+            case noContent(Operations.UsersFollow.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//user/following/{username}/put(users/follow)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.users_sol_follow.Output.NoContent {
+            public var noContent: Operations.UsersFollow.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -6142,12 +6303,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/following/{username}/put(users/follow)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/following/{username}/put(users/follow)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -6165,12 +6334,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/following/{username}/put(users/follow)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -6188,12 +6357,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/following/{username}/put(users/follow)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -6211,12 +6380,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/following/{username}/put(users/follow)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -6234,12 +6403,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/following/{username}/put(users/follow)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -6289,7 +6458,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /user/following/{username}`.
     /// - Remark: Generated from `#/paths//user/following/{username}/delete(users/unfollow)`.
-    public enum users_sol_unfollow {
+    public enum UsersUnfollow {
         public static let id: Swift.String = "users/unfollow"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/following/{username}/DELETE/path`.
@@ -6297,36 +6466,36 @@ public enum Operations {
                 /// The handle for the GitHub user account.
                 ///
                 /// - Remark: Generated from `#/paths/user/following/{username}/DELETE/path/username`.
-                public var username: Components.Parameters.username
+                public var username: Components.Parameters.Username
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - username: The handle for the GitHub user account.
-                public init(username: Components.Parameters.username) {
+                public init(username: Components.Parameters.Username) {
                     self.username = username
                 }
             }
-            public var path: Operations.users_sol_unfollow.Input.Path
+            public var path: Operations.UsersUnfollow.Input.Path
             /// - Remark: Generated from `#/paths/user/following/{username}/DELETE/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_unfollow.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersUnfollow.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_unfollow.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersUnfollow.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.users_sol_unfollow.Input.Headers
+            public var headers: Operations.UsersUnfollow.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.users_sol_unfollow.Input.Path,
-                headers: Operations.users_sol_unfollow.Input.Headers = .init()
+                path: Operations.UsersUnfollow.Input.Path,
+                headers: Operations.UsersUnfollow.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -6342,12 +6511,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/following/{username}/delete(users/unfollow)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.users_sol_unfollow.Output.NoContent)
+            case noContent(Operations.UsersUnfollow.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//user/following/{username}/delete(users/unfollow)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.users_sol_unfollow.Output.NoContent {
+            public var noContent: Operations.UsersUnfollow.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -6365,12 +6542,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/following/{username}/delete(users/unfollow)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/following/{username}/delete(users/unfollow)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -6388,12 +6573,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/following/{username}/delete(users/unfollow)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -6411,12 +6596,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/following/{username}/delete(users/unfollow)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -6434,12 +6619,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/following/{username}/delete(users/unfollow)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -6491,7 +6676,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /user/gpg_keys`.
     /// - Remark: Generated from `#/paths//user/gpg_keys/get(users/list-gpg-keys-for-authenticated-user)`.
-    public enum users_sol_list_hyphen_gpg_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user {
+    public enum UsersListGpgKeysForAuthenticatedUser {
         public static let id: Swift.String = "users/list-gpg-keys-for-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/gpg_keys/GET/query`.
@@ -6499,45 +6684,45 @@ public enum Operations {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/user/gpg_keys/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/user/gpg_keys/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.users_sol_list_hyphen_gpg_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query
+            public var query: Operations.UsersListGpgKeysForAuthenticatedUser.Input.Query
             /// - Remark: Generated from `#/paths/user/gpg_keys/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_list_hyphen_gpg_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersListGpgKeysForAuthenticatedUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_list_hyphen_gpg_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersListGpgKeysForAuthenticatedUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.users_sol_list_hyphen_gpg_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers
+            public var headers: Operations.UsersListGpgKeysForAuthenticatedUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - query:
             ///   - headers:
             public init(
-                query: Operations.users_sol_list_hyphen_gpg_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query = .init(),
-                headers: Operations.users_sol_list_hyphen_gpg_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
+                query: Operations.UsersListGpgKeysForAuthenticatedUser.Input.Query = .init(),
+                headers: Operations.UsersListGpgKeysForAuthenticatedUser.Input.Headers = .init()
             ) {
                 self.query = query
                 self.headers = headers
@@ -6548,26 +6733,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/gpg_keys/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/gpg_keys/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.users_sol_list_hyphen_gpg_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Headers
+                public var headers: Operations.UsersListGpgKeysForAuthenticatedUser.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/user/gpg_keys/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/gpg_keys/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.gpg_hyphen_key])
+                    case json([Components.Schemas.GpgKey])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.gpg_hyphen_key] {
+                    public var json: [Components.Schemas.GpgKey] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -6577,15 +6762,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.users_sol_list_hyphen_gpg_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body
+                public var body: Operations.UsersListGpgKeysForAuthenticatedUser.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.users_sol_list_hyphen_gpg_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Headers = .init(),
-                    body: Operations.users_sol_list_hyphen_gpg_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body
+                    headers: Operations.UsersListGpgKeysForAuthenticatedUser.Output.Ok.Headers = .init(),
+                    body: Operations.UsersListGpgKeysForAuthenticatedUser.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -6596,12 +6781,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/gpg_keys/get(users/list-gpg-keys-for-authenticated-user)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.users_sol_list_hyphen_gpg_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok)
+            case ok(Operations.UsersListGpgKeysForAuthenticatedUser.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.users_sol_list_hyphen_gpg_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok {
+            public var ok: Operations.UsersListGpgKeysForAuthenticatedUser.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -6619,12 +6804,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/gpg_keys/get(users/list-gpg-keys-for-authenticated-user)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/gpg_keys/get(users/list-gpg-keys-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -6642,12 +6835,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/gpg_keys/get(users/list-gpg-keys-for-authenticated-user)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -6665,12 +6858,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/gpg_keys/get(users/list-gpg-keys-for-authenticated-user)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -6688,12 +6881,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/gpg_keys/get(users/list-gpg-keys-for-authenticated-user)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -6745,25 +6938,25 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /user/gpg_keys`.
     /// - Remark: Generated from `#/paths//user/gpg_keys/post(users/create-gpg-key-for-authenticated-user)`.
-    public enum users_sol_create_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user {
+    public enum UsersCreateGpgKeyForAuthenticatedUser {
         public static let id: Swift.String = "users/create-gpg-key-for-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/gpg_keys/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_create_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersCreateGpgKeyForAuthenticatedUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_create_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersCreateGpgKeyForAuthenticatedUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.users_sol_create_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers
+            public var headers: Operations.UsersCreateGpgKeyForAuthenticatedUser.Input.Headers
             /// - Remark: Generated from `#/paths/user/gpg_keys/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/user/gpg_keys/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// A descriptive name for the new key.
                     ///
                     /// - Remark: Generated from `#/paths/user/gpg_keys/POST/requestBody/json/name`.
@@ -6771,36 +6964,36 @@ public enum Operations {
                     /// A GPG key in ASCII-armored format.
                     ///
                     /// - Remark: Generated from `#/paths/user/gpg_keys/POST/requestBody/json/armored_public_key`.
-                    public var armored_public_key: Swift.String
-                    /// Creates a new `jsonPayload`.
+                    public var armoredPublicKey: Swift.String
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - name: A descriptive name for the new key.
-                    ///   - armored_public_key: A GPG key in ASCII-armored format.
+                    ///   - armoredPublicKey: A GPG key in ASCII-armored format.
                     public init(
                         name: Swift.String? = nil,
-                        armored_public_key: Swift.String
+                        armoredPublicKey: Swift.String
                     ) {
                         self.name = name
-                        self.armored_public_key = armored_public_key
+                        self.armoredPublicKey = armoredPublicKey
                     }
                     public enum CodingKeys: String, CodingKey {
                         case name
-                        case armored_public_key
+                        case armoredPublicKey = "armored_public_key"
                     }
                 }
                 /// - Remark: Generated from `#/paths/user/gpg_keys/POST/requestBody/content/application\/json`.
-                case json(Operations.users_sol_create_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body.jsonPayload)
+                case json(Operations.UsersCreateGpgKeyForAuthenticatedUser.Input.Body.JsonPayload)
             }
-            public var body: Operations.users_sol_create_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body
+            public var body: Operations.UsersCreateGpgKeyForAuthenticatedUser.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - headers:
             ///   - body:
             public init(
-                headers: Operations.users_sol_create_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init(),
-                body: Operations.users_sol_create_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body
+                headers: Operations.UsersCreateGpgKeyForAuthenticatedUser.Input.Headers = .init(),
+                body: Operations.UsersCreateGpgKeyForAuthenticatedUser.Input.Body
             ) {
                 self.headers = headers
                 self.body = body
@@ -6811,12 +7004,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/gpg_keys/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/gpg_keys/POST/responses/201/content/application\/json`.
-                    case json(Components.Schemas.gpg_hyphen_key)
+                    case json(Components.Schemas.GpgKey)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.gpg_hyphen_key {
+                    public var json: Components.Schemas.GpgKey {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -6826,12 +7019,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.users_sol_create_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output.Created.Body
+                public var body: Operations.UsersCreateGpgKeyForAuthenticatedUser.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.users_sol_create_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output.Created.Body) {
+                public init(body: Operations.UsersCreateGpgKeyForAuthenticatedUser.Output.Created.Body) {
                     self.body = body
                 }
             }
@@ -6840,12 +7033,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/gpg_keys/post(users/create-gpg-key-for-authenticated-user)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.users_sol_create_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output.Created)
+            case created(Operations.UsersCreateGpgKeyForAuthenticatedUser.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.users_sol_create_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output.Created {
+            public var created: Operations.UsersCreateGpgKeyForAuthenticatedUser.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -6863,12 +7056,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/gpg_keys/post(users/create-gpg-key-for-authenticated-user)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -6886,12 +7079,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/gpg_keys/post(users/create-gpg-key-for-authenticated-user)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/gpg_keys/post(users/create-gpg-key-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -6909,12 +7110,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/gpg_keys/post(users/create-gpg-key-for-authenticated-user)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -6932,12 +7133,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/gpg_keys/post(users/create-gpg-key-for-authenticated-user)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -6955,12 +7156,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/gpg_keys/post(users/create-gpg-key-for-authenticated-user)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -7012,7 +7213,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /user/gpg_keys/{gpg_key_id}`.
     /// - Remark: Generated from `#/paths//user/gpg_keys/{gpg_key_id}/get(users/get-gpg-key-for-authenticated-user)`.
-    public enum users_sol_get_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user {
+    public enum UsersGetGpgKeyForAuthenticatedUser {
         public static let id: Swift.String = "users/get-gpg-key-for-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/gpg_keys/{gpg_key_id}/GET/path`.
@@ -7020,36 +7221,36 @@ public enum Operations {
                 /// The unique identifier of the GPG key.
                 ///
                 /// - Remark: Generated from `#/paths/user/gpg_keys/{gpg_key_id}/GET/path/gpg_key_id`.
-                public var gpg_key_id: Components.Parameters.gpg_hyphen_key_hyphen_id
+                public var gpgKeyId: Components.Parameters.GpgKeyId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - gpg_key_id: The unique identifier of the GPG key.
-                public init(gpg_key_id: Components.Parameters.gpg_hyphen_key_hyphen_id) {
-                    self.gpg_key_id = gpg_key_id
+                ///   - gpgKeyId: The unique identifier of the GPG key.
+                public init(gpgKeyId: Components.Parameters.GpgKeyId) {
+                    self.gpgKeyId = gpgKeyId
                 }
             }
-            public var path: Operations.users_sol_get_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path
+            public var path: Operations.UsersGetGpgKeyForAuthenticatedUser.Input.Path
             /// - Remark: Generated from `#/paths/user/gpg_keys/{gpg_key_id}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_get_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersGetGpgKeyForAuthenticatedUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_get_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersGetGpgKeyForAuthenticatedUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.users_sol_get_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers
+            public var headers: Operations.UsersGetGpgKeyForAuthenticatedUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.users_sol_get_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path,
-                headers: Operations.users_sol_get_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
+                path: Operations.UsersGetGpgKeyForAuthenticatedUser.Input.Path,
+                headers: Operations.UsersGetGpgKeyForAuthenticatedUser.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -7060,12 +7261,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/gpg_keys/{gpg_key_id}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/gpg_keys/{gpg_key_id}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.gpg_hyphen_key)
+                    case json(Components.Schemas.GpgKey)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.gpg_hyphen_key {
+                    public var json: Components.Schemas.GpgKey {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -7075,12 +7276,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.users_sol_get_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body
+                public var body: Operations.UsersGetGpgKeyForAuthenticatedUser.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.users_sol_get_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body) {
+                public init(body: Operations.UsersGetGpgKeyForAuthenticatedUser.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -7089,12 +7290,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/gpg_keys/{gpg_key_id}/get(users/get-gpg-key-for-authenticated-user)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.users_sol_get_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok)
+            case ok(Operations.UsersGetGpgKeyForAuthenticatedUser.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.users_sol_get_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok {
+            public var ok: Operations.UsersGetGpgKeyForAuthenticatedUser.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -7112,12 +7313,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/gpg_keys/{gpg_key_id}/get(users/get-gpg-key-for-authenticated-user)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -7135,12 +7336,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/gpg_keys/{gpg_key_id}/get(users/get-gpg-key-for-authenticated-user)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/gpg_keys/{gpg_key_id}/get(users/get-gpg-key-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -7158,12 +7367,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/gpg_keys/{gpg_key_id}/get(users/get-gpg-key-for-authenticated-user)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -7181,12 +7390,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/gpg_keys/{gpg_key_id}/get(users/get-gpg-key-for-authenticated-user)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -7238,7 +7447,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /user/gpg_keys/{gpg_key_id}`.
     /// - Remark: Generated from `#/paths//user/gpg_keys/{gpg_key_id}/delete(users/delete-gpg-key-for-authenticated-user)`.
-    public enum users_sol_delete_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user {
+    public enum UsersDeleteGpgKeyForAuthenticatedUser {
         public static let id: Swift.String = "users/delete-gpg-key-for-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/gpg_keys/{gpg_key_id}/DELETE/path`.
@@ -7246,36 +7455,36 @@ public enum Operations {
                 /// The unique identifier of the GPG key.
                 ///
                 /// - Remark: Generated from `#/paths/user/gpg_keys/{gpg_key_id}/DELETE/path/gpg_key_id`.
-                public var gpg_key_id: Components.Parameters.gpg_hyphen_key_hyphen_id
+                public var gpgKeyId: Components.Parameters.GpgKeyId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - gpg_key_id: The unique identifier of the GPG key.
-                public init(gpg_key_id: Components.Parameters.gpg_hyphen_key_hyphen_id) {
-                    self.gpg_key_id = gpg_key_id
+                ///   - gpgKeyId: The unique identifier of the GPG key.
+                public init(gpgKeyId: Components.Parameters.GpgKeyId) {
+                    self.gpgKeyId = gpgKeyId
                 }
             }
-            public var path: Operations.users_sol_delete_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path
+            public var path: Operations.UsersDeleteGpgKeyForAuthenticatedUser.Input.Path
             /// - Remark: Generated from `#/paths/user/gpg_keys/{gpg_key_id}/DELETE/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_delete_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersDeleteGpgKeyForAuthenticatedUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_delete_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersDeleteGpgKeyForAuthenticatedUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.users_sol_delete_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers
+            public var headers: Operations.UsersDeleteGpgKeyForAuthenticatedUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.users_sol_delete_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path,
-                headers: Operations.users_sol_delete_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
+                path: Operations.UsersDeleteGpgKeyForAuthenticatedUser.Input.Path,
+                headers: Operations.UsersDeleteGpgKeyForAuthenticatedUser.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -7291,12 +7500,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/gpg_keys/{gpg_key_id}/delete(users/delete-gpg-key-for-authenticated-user)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.users_sol_delete_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent)
+            case noContent(Operations.UsersDeleteGpgKeyForAuthenticatedUser.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//user/gpg_keys/{gpg_key_id}/delete(users/delete-gpg-key-for-authenticated-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.users_sol_delete_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent {
+            public var noContent: Operations.UsersDeleteGpgKeyForAuthenticatedUser.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -7314,12 +7531,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/gpg_keys/{gpg_key_id}/delete(users/delete-gpg-key-for-authenticated-user)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -7337,12 +7554,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/gpg_keys/{gpg_key_id}/delete(users/delete-gpg-key-for-authenticated-user)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -7360,12 +7577,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/gpg_keys/{gpg_key_id}/delete(users/delete-gpg-key-for-authenticated-user)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/gpg_keys/{gpg_key_id}/delete(users/delete-gpg-key-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -7383,12 +7608,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/gpg_keys/{gpg_key_id}/delete(users/delete-gpg-key-for-authenticated-user)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -7406,12 +7631,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/gpg_keys/{gpg_key_id}/delete(users/delete-gpg-key-for-authenticated-user)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -7463,7 +7688,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /user/keys`.
     /// - Remark: Generated from `#/paths//user/keys/get(users/list-public-ssh-keys-for-authenticated-user)`.
-    public enum users_sol_list_hyphen_public_hyphen_ssh_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user {
+    public enum UsersListPublicSshKeysForAuthenticatedUser {
         public static let id: Swift.String = "users/list-public-ssh-keys-for-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/keys/GET/query`.
@@ -7471,45 +7696,45 @@ public enum Operations {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/user/keys/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/user/keys/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.users_sol_list_hyphen_public_hyphen_ssh_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query
+            public var query: Operations.UsersListPublicSshKeysForAuthenticatedUser.Input.Query
             /// - Remark: Generated from `#/paths/user/keys/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_list_hyphen_public_hyphen_ssh_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersListPublicSshKeysForAuthenticatedUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_list_hyphen_public_hyphen_ssh_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersListPublicSshKeysForAuthenticatedUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.users_sol_list_hyphen_public_hyphen_ssh_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers
+            public var headers: Operations.UsersListPublicSshKeysForAuthenticatedUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - query:
             ///   - headers:
             public init(
-                query: Operations.users_sol_list_hyphen_public_hyphen_ssh_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query = .init(),
-                headers: Operations.users_sol_list_hyphen_public_hyphen_ssh_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
+                query: Operations.UsersListPublicSshKeysForAuthenticatedUser.Input.Query = .init(),
+                headers: Operations.UsersListPublicSshKeysForAuthenticatedUser.Input.Headers = .init()
             ) {
                 self.query = query
                 self.headers = headers
@@ -7520,26 +7745,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/keys/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/keys/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.users_sol_list_hyphen_public_hyphen_ssh_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Headers
+                public var headers: Operations.UsersListPublicSshKeysForAuthenticatedUser.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/user/keys/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/keys/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.key])
+                    case json([Components.Schemas.Key])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.key] {
+                    public var json: [Components.Schemas.Key] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -7549,15 +7774,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.users_sol_list_hyphen_public_hyphen_ssh_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body
+                public var body: Operations.UsersListPublicSshKeysForAuthenticatedUser.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.users_sol_list_hyphen_public_hyphen_ssh_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Headers = .init(),
-                    body: Operations.users_sol_list_hyphen_public_hyphen_ssh_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body
+                    headers: Operations.UsersListPublicSshKeysForAuthenticatedUser.Output.Ok.Headers = .init(),
+                    body: Operations.UsersListPublicSshKeysForAuthenticatedUser.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -7568,12 +7793,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/keys/get(users/list-public-ssh-keys-for-authenticated-user)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.users_sol_list_hyphen_public_hyphen_ssh_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok)
+            case ok(Operations.UsersListPublicSshKeysForAuthenticatedUser.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.users_sol_list_hyphen_public_hyphen_ssh_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok {
+            public var ok: Operations.UsersListPublicSshKeysForAuthenticatedUser.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -7591,12 +7816,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/keys/get(users/list-public-ssh-keys-for-authenticated-user)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/keys/get(users/list-public-ssh-keys-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -7614,12 +7847,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/keys/get(users/list-public-ssh-keys-for-authenticated-user)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -7637,12 +7870,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/keys/get(users/list-public-ssh-keys-for-authenticated-user)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -7660,12 +7893,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/keys/get(users/list-public-ssh-keys-for-authenticated-user)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -7717,25 +7950,25 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /user/keys`.
     /// - Remark: Generated from `#/paths//user/keys/post(users/create-public-ssh-key-for-authenticated-user)`.
-    public enum users_sol_create_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user {
+    public enum UsersCreatePublicSshKeyForAuthenticatedUser {
         public static let id: Swift.String = "users/create-public-ssh-key-for-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/keys/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_create_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersCreatePublicSshKeyForAuthenticatedUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_create_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersCreatePublicSshKeyForAuthenticatedUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.users_sol_create_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers
+            public var headers: Operations.UsersCreatePublicSshKeyForAuthenticatedUser.Input.Headers
             /// - Remark: Generated from `#/paths/user/keys/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/user/keys/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// A descriptive name for the new key.
                     ///
                     /// - Remark: Generated from `#/paths/user/keys/POST/requestBody/json/title`.
@@ -7744,7 +7977,7 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/user/keys/POST/requestBody/json/key`.
                     public var key: Swift.String
-                    /// Creates a new `jsonPayload`.
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - title: A descriptive name for the new key.
@@ -7762,17 +7995,17 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/user/keys/POST/requestBody/content/application\/json`.
-                case json(Operations.users_sol_create_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body.jsonPayload)
+                case json(Operations.UsersCreatePublicSshKeyForAuthenticatedUser.Input.Body.JsonPayload)
             }
-            public var body: Operations.users_sol_create_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body
+            public var body: Operations.UsersCreatePublicSshKeyForAuthenticatedUser.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - headers:
             ///   - body:
             public init(
-                headers: Operations.users_sol_create_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init(),
-                body: Operations.users_sol_create_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body
+                headers: Operations.UsersCreatePublicSshKeyForAuthenticatedUser.Input.Headers = .init(),
+                body: Operations.UsersCreatePublicSshKeyForAuthenticatedUser.Input.Body
             ) {
                 self.headers = headers
                 self.body = body
@@ -7783,12 +8016,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/keys/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/keys/POST/responses/201/content/application\/json`.
-                    case json(Components.Schemas.key)
+                    case json(Components.Schemas.Key)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.key {
+                    public var json: Components.Schemas.Key {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -7798,12 +8031,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.users_sol_create_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output.Created.Body
+                public var body: Operations.UsersCreatePublicSshKeyForAuthenticatedUser.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.users_sol_create_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output.Created.Body) {
+                public init(body: Operations.UsersCreatePublicSshKeyForAuthenticatedUser.Output.Created.Body) {
                     self.body = body
                 }
             }
@@ -7812,12 +8045,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/keys/post(users/create-public-ssh-key-for-authenticated-user)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.users_sol_create_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output.Created)
+            case created(Operations.UsersCreatePublicSshKeyForAuthenticatedUser.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.users_sol_create_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output.Created {
+            public var created: Operations.UsersCreatePublicSshKeyForAuthenticatedUser.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -7835,12 +8068,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/keys/post(users/create-public-ssh-key-for-authenticated-user)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -7858,12 +8091,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/keys/post(users/create-public-ssh-key-for-authenticated-user)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/keys/post(users/create-public-ssh-key-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -7881,12 +8122,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/keys/post(users/create-public-ssh-key-for-authenticated-user)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -7904,12 +8145,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/keys/post(users/create-public-ssh-key-for-authenticated-user)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -7927,12 +8168,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/keys/post(users/create-public-ssh-key-for-authenticated-user)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -7984,7 +8225,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /user/keys/{key_id}`.
     /// - Remark: Generated from `#/paths//user/keys/{key_id}/get(users/get-public-ssh-key-for-authenticated-user)`.
-    public enum users_sol_get_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user {
+    public enum UsersGetPublicSshKeyForAuthenticatedUser {
         public static let id: Swift.String = "users/get-public-ssh-key-for-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/keys/{key_id}/GET/path`.
@@ -7992,36 +8233,36 @@ public enum Operations {
                 /// The unique identifier of the key.
                 ///
                 /// - Remark: Generated from `#/paths/user/keys/{key_id}/GET/path/key_id`.
-                public var key_id: Components.Parameters.key_hyphen_id
+                public var keyId: Components.Parameters.KeyId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - key_id: The unique identifier of the key.
-                public init(key_id: Components.Parameters.key_hyphen_id) {
-                    self.key_id = key_id
+                ///   - keyId: The unique identifier of the key.
+                public init(keyId: Components.Parameters.KeyId) {
+                    self.keyId = keyId
                 }
             }
-            public var path: Operations.users_sol_get_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path
+            public var path: Operations.UsersGetPublicSshKeyForAuthenticatedUser.Input.Path
             /// - Remark: Generated from `#/paths/user/keys/{key_id}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_get_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersGetPublicSshKeyForAuthenticatedUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_get_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersGetPublicSshKeyForAuthenticatedUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.users_sol_get_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers
+            public var headers: Operations.UsersGetPublicSshKeyForAuthenticatedUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.users_sol_get_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path,
-                headers: Operations.users_sol_get_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
+                path: Operations.UsersGetPublicSshKeyForAuthenticatedUser.Input.Path,
+                headers: Operations.UsersGetPublicSshKeyForAuthenticatedUser.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -8032,12 +8273,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/keys/{key_id}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/keys/{key_id}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.key)
+                    case json(Components.Schemas.Key)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.key {
+                    public var json: Components.Schemas.Key {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -8047,12 +8288,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.users_sol_get_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body
+                public var body: Operations.UsersGetPublicSshKeyForAuthenticatedUser.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.users_sol_get_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body) {
+                public init(body: Operations.UsersGetPublicSshKeyForAuthenticatedUser.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -8061,12 +8302,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/keys/{key_id}/get(users/get-public-ssh-key-for-authenticated-user)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.users_sol_get_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok)
+            case ok(Operations.UsersGetPublicSshKeyForAuthenticatedUser.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.users_sol_get_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok {
+            public var ok: Operations.UsersGetPublicSshKeyForAuthenticatedUser.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -8084,12 +8325,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/keys/{key_id}/get(users/get-public-ssh-key-for-authenticated-user)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -8107,12 +8348,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/keys/{key_id}/get(users/get-public-ssh-key-for-authenticated-user)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/keys/{key_id}/get(users/get-public-ssh-key-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -8130,12 +8379,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/keys/{key_id}/get(users/get-public-ssh-key-for-authenticated-user)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -8153,12 +8402,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/keys/{key_id}/get(users/get-public-ssh-key-for-authenticated-user)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -8210,7 +8459,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /user/keys/{key_id}`.
     /// - Remark: Generated from `#/paths//user/keys/{key_id}/delete(users/delete-public-ssh-key-for-authenticated-user)`.
-    public enum users_sol_delete_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user {
+    public enum UsersDeletePublicSshKeyForAuthenticatedUser {
         public static let id: Swift.String = "users/delete-public-ssh-key-for-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/keys/{key_id}/DELETE/path`.
@@ -8218,36 +8467,36 @@ public enum Operations {
                 /// The unique identifier of the key.
                 ///
                 /// - Remark: Generated from `#/paths/user/keys/{key_id}/DELETE/path/key_id`.
-                public var key_id: Components.Parameters.key_hyphen_id
+                public var keyId: Components.Parameters.KeyId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - key_id: The unique identifier of the key.
-                public init(key_id: Components.Parameters.key_hyphen_id) {
-                    self.key_id = key_id
+                ///   - keyId: The unique identifier of the key.
+                public init(keyId: Components.Parameters.KeyId) {
+                    self.keyId = keyId
                 }
             }
-            public var path: Operations.users_sol_delete_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path
+            public var path: Operations.UsersDeletePublicSshKeyForAuthenticatedUser.Input.Path
             /// - Remark: Generated from `#/paths/user/keys/{key_id}/DELETE/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_delete_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersDeletePublicSshKeyForAuthenticatedUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_delete_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersDeletePublicSshKeyForAuthenticatedUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.users_sol_delete_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers
+            public var headers: Operations.UsersDeletePublicSshKeyForAuthenticatedUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.users_sol_delete_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path,
-                headers: Operations.users_sol_delete_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
+                path: Operations.UsersDeletePublicSshKeyForAuthenticatedUser.Input.Path,
+                headers: Operations.UsersDeletePublicSshKeyForAuthenticatedUser.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -8263,12 +8512,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/keys/{key_id}/delete(users/delete-public-ssh-key-for-authenticated-user)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.users_sol_delete_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent)
+            case noContent(Operations.UsersDeletePublicSshKeyForAuthenticatedUser.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//user/keys/{key_id}/delete(users/delete-public-ssh-key-for-authenticated-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.users_sol_delete_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent {
+            public var noContent: Operations.UsersDeletePublicSshKeyForAuthenticatedUser.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -8286,12 +8543,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/keys/{key_id}/delete(users/delete-public-ssh-key-for-authenticated-user)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/keys/{key_id}/delete(users/delete-public-ssh-key-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -8309,12 +8574,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/keys/{key_id}/delete(users/delete-public-ssh-key-for-authenticated-user)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -8332,12 +8597,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/keys/{key_id}/delete(users/delete-public-ssh-key-for-authenticated-user)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -8355,12 +8620,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/keys/{key_id}/delete(users/delete-public-ssh-key-for-authenticated-user)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -8414,7 +8679,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /user/public_emails`.
     /// - Remark: Generated from `#/paths//user/public_emails/get(users/list-public-emails-for-authenticated-user)`.
-    public enum users_sol_list_hyphen_public_hyphen_emails_hyphen_for_hyphen_authenticated_hyphen_user {
+    public enum UsersListPublicEmailsForAuthenticatedUser {
         public static let id: Swift.String = "users/list-public-emails-for-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/public_emails/GET/query`.
@@ -8422,45 +8687,45 @@ public enum Operations {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/user/public_emails/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/user/public_emails/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.users_sol_list_hyphen_public_hyphen_emails_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query
+            public var query: Operations.UsersListPublicEmailsForAuthenticatedUser.Input.Query
             /// - Remark: Generated from `#/paths/user/public_emails/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_list_hyphen_public_hyphen_emails_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersListPublicEmailsForAuthenticatedUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_list_hyphen_public_hyphen_emails_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersListPublicEmailsForAuthenticatedUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.users_sol_list_hyphen_public_hyphen_emails_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers
+            public var headers: Operations.UsersListPublicEmailsForAuthenticatedUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - query:
             ///   - headers:
             public init(
-                query: Operations.users_sol_list_hyphen_public_hyphen_emails_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query = .init(),
-                headers: Operations.users_sol_list_hyphen_public_hyphen_emails_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
+                query: Operations.UsersListPublicEmailsForAuthenticatedUser.Input.Query = .init(),
+                headers: Operations.UsersListPublicEmailsForAuthenticatedUser.Input.Headers = .init()
             ) {
                 self.query = query
                 self.headers = headers
@@ -8471,26 +8736,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/public_emails/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/public_emails/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.users_sol_list_hyphen_public_hyphen_emails_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Headers
+                public var headers: Operations.UsersListPublicEmailsForAuthenticatedUser.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/user/public_emails/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/public_emails/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.email])
+                    case json([Components.Schemas.Email])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.email] {
+                    public var json: [Components.Schemas.Email] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -8500,15 +8765,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.users_sol_list_hyphen_public_hyphen_emails_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body
+                public var body: Operations.UsersListPublicEmailsForAuthenticatedUser.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.users_sol_list_hyphen_public_hyphen_emails_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Headers = .init(),
-                    body: Operations.users_sol_list_hyphen_public_hyphen_emails_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body
+                    headers: Operations.UsersListPublicEmailsForAuthenticatedUser.Output.Ok.Headers = .init(),
+                    body: Operations.UsersListPublicEmailsForAuthenticatedUser.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -8519,12 +8784,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/public_emails/get(users/list-public-emails-for-authenticated-user)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.users_sol_list_hyphen_public_hyphen_emails_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok)
+            case ok(Operations.UsersListPublicEmailsForAuthenticatedUser.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.users_sol_list_hyphen_public_hyphen_emails_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok {
+            public var ok: Operations.UsersListPublicEmailsForAuthenticatedUser.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -8542,12 +8807,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/public_emails/get(users/list-public-emails-for-authenticated-user)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/public_emails/get(users/list-public-emails-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -8565,12 +8838,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/public_emails/get(users/list-public-emails-for-authenticated-user)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -8588,12 +8861,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/public_emails/get(users/list-public-emails-for-authenticated-user)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -8611,12 +8884,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/public_emails/get(users/list-public-emails-for-authenticated-user)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -8666,7 +8939,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /user/social_accounts`.
     /// - Remark: Generated from `#/paths//user/social_accounts/get(users/list-social-accounts-for-authenticated-user)`.
-    public enum users_sol_list_hyphen_social_hyphen_accounts_hyphen_for_hyphen_authenticated_hyphen_user {
+    public enum UsersListSocialAccountsForAuthenticatedUser {
         public static let id: Swift.String = "users/list-social-accounts-for-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/social_accounts/GET/query`.
@@ -8674,45 +8947,45 @@ public enum Operations {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/user/social_accounts/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/user/social_accounts/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.users_sol_list_hyphen_social_hyphen_accounts_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query
+            public var query: Operations.UsersListSocialAccountsForAuthenticatedUser.Input.Query
             /// - Remark: Generated from `#/paths/user/social_accounts/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_list_hyphen_social_hyphen_accounts_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersListSocialAccountsForAuthenticatedUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_list_hyphen_social_hyphen_accounts_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersListSocialAccountsForAuthenticatedUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.users_sol_list_hyphen_social_hyphen_accounts_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers
+            public var headers: Operations.UsersListSocialAccountsForAuthenticatedUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - query:
             ///   - headers:
             public init(
-                query: Operations.users_sol_list_hyphen_social_hyphen_accounts_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query = .init(),
-                headers: Operations.users_sol_list_hyphen_social_hyphen_accounts_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
+                query: Operations.UsersListSocialAccountsForAuthenticatedUser.Input.Query = .init(),
+                headers: Operations.UsersListSocialAccountsForAuthenticatedUser.Input.Headers = .init()
             ) {
                 self.query = query
                 self.headers = headers
@@ -8723,26 +8996,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/social_accounts/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/social_accounts/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.users_sol_list_hyphen_social_hyphen_accounts_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Headers
+                public var headers: Operations.UsersListSocialAccountsForAuthenticatedUser.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/user/social_accounts/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/social_accounts/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.social_hyphen_account])
+                    case json([Components.Schemas.SocialAccount])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.social_hyphen_account] {
+                    public var json: [Components.Schemas.SocialAccount] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -8752,15 +9025,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.users_sol_list_hyphen_social_hyphen_accounts_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body
+                public var body: Operations.UsersListSocialAccountsForAuthenticatedUser.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.users_sol_list_hyphen_social_hyphen_accounts_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Headers = .init(),
-                    body: Operations.users_sol_list_hyphen_social_hyphen_accounts_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body
+                    headers: Operations.UsersListSocialAccountsForAuthenticatedUser.Output.Ok.Headers = .init(),
+                    body: Operations.UsersListSocialAccountsForAuthenticatedUser.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -8771,12 +9044,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/social_accounts/get(users/list-social-accounts-for-authenticated-user)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.users_sol_list_hyphen_social_hyphen_accounts_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok)
+            case ok(Operations.UsersListSocialAccountsForAuthenticatedUser.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.users_sol_list_hyphen_social_hyphen_accounts_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok {
+            public var ok: Operations.UsersListSocialAccountsForAuthenticatedUser.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -8794,12 +9067,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/social_accounts/get(users/list-social-accounts-for-authenticated-user)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/social_accounts/get(users/list-social-accounts-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -8817,12 +9098,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/social_accounts/get(users/list-social-accounts-for-authenticated-user)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -8840,12 +9121,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/social_accounts/get(users/list-social-accounts-for-authenticated-user)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -8863,12 +9144,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/social_accounts/get(users/list-social-accounts-for-authenticated-user)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -8920,52 +9201,52 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /user/social_accounts`.
     /// - Remark: Generated from `#/paths//user/social_accounts/post(users/add-social-account-for-authenticated-user)`.
-    public enum users_sol_add_hyphen_social_hyphen_account_hyphen_for_hyphen_authenticated_hyphen_user {
+    public enum UsersAddSocialAccountForAuthenticatedUser {
         public static let id: Swift.String = "users/add-social-account-for-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/social_accounts/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_add_hyphen_social_hyphen_account_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersAddSocialAccountForAuthenticatedUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_add_hyphen_social_hyphen_account_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersAddSocialAccountForAuthenticatedUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.users_sol_add_hyphen_social_hyphen_account_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers
+            public var headers: Operations.UsersAddSocialAccountForAuthenticatedUser.Input.Headers
             /// - Remark: Generated from `#/paths/user/social_accounts/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/user/social_accounts/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// Full URLs for the social media profiles to add.
                     ///
                     /// - Remark: Generated from `#/paths/user/social_accounts/POST/requestBody/json/account_urls`.
-                    public var account_urls: [Swift.String]
-                    /// Creates a new `jsonPayload`.
+                    public var accountUrls: [Swift.String]
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
-                    ///   - account_urls: Full URLs for the social media profiles to add.
-                    public init(account_urls: [Swift.String]) {
-                        self.account_urls = account_urls
+                    ///   - accountUrls: Full URLs for the social media profiles to add.
+                    public init(accountUrls: [Swift.String]) {
+                        self.accountUrls = accountUrls
                     }
                     public enum CodingKeys: String, CodingKey {
-                        case account_urls
+                        case accountUrls = "account_urls"
                     }
                 }
                 /// - Remark: Generated from `#/paths/user/social_accounts/POST/requestBody/content/application\/json`.
-                case json(Operations.users_sol_add_hyphen_social_hyphen_account_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body.jsonPayload)
+                case json(Operations.UsersAddSocialAccountForAuthenticatedUser.Input.Body.JsonPayload)
             }
-            public var body: Operations.users_sol_add_hyphen_social_hyphen_account_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body
+            public var body: Operations.UsersAddSocialAccountForAuthenticatedUser.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - headers:
             ///   - body:
             public init(
-                headers: Operations.users_sol_add_hyphen_social_hyphen_account_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init(),
-                body: Operations.users_sol_add_hyphen_social_hyphen_account_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body
+                headers: Operations.UsersAddSocialAccountForAuthenticatedUser.Input.Headers = .init(),
+                body: Operations.UsersAddSocialAccountForAuthenticatedUser.Input.Body
             ) {
                 self.headers = headers
                 self.body = body
@@ -8976,12 +9257,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/social_accounts/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/social_accounts/POST/responses/201/content/application\/json`.
-                    case json([Components.Schemas.social_hyphen_account])
+                    case json([Components.Schemas.SocialAccount])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.social_hyphen_account] {
+                    public var json: [Components.Schemas.SocialAccount] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -8991,12 +9272,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.users_sol_add_hyphen_social_hyphen_account_hyphen_for_hyphen_authenticated_hyphen_user.Output.Created.Body
+                public var body: Operations.UsersAddSocialAccountForAuthenticatedUser.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.users_sol_add_hyphen_social_hyphen_account_hyphen_for_hyphen_authenticated_hyphen_user.Output.Created.Body) {
+                public init(body: Operations.UsersAddSocialAccountForAuthenticatedUser.Output.Created.Body) {
                     self.body = body
                 }
             }
@@ -9005,12 +9286,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/social_accounts/post(users/add-social-account-for-authenticated-user)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.users_sol_add_hyphen_social_hyphen_account_hyphen_for_hyphen_authenticated_hyphen_user.Output.Created)
+            case created(Operations.UsersAddSocialAccountForAuthenticatedUser.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.users_sol_add_hyphen_social_hyphen_account_hyphen_for_hyphen_authenticated_hyphen_user.Output.Created {
+            public var created: Operations.UsersAddSocialAccountForAuthenticatedUser.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -9028,12 +9309,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/social_accounts/post(users/add-social-account-for-authenticated-user)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -9051,12 +9332,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/social_accounts/post(users/add-social-account-for-authenticated-user)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/social_accounts/post(users/add-social-account-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -9074,12 +9363,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/social_accounts/post(users/add-social-account-for-authenticated-user)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -9097,12 +9386,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/social_accounts/post(users/add-social-account-for-authenticated-user)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -9120,12 +9409,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/social_accounts/post(users/add-social-account-for-authenticated-user)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -9177,52 +9466,52 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /user/social_accounts`.
     /// - Remark: Generated from `#/paths//user/social_accounts/delete(users/delete-social-account-for-authenticated-user)`.
-    public enum users_sol_delete_hyphen_social_hyphen_account_hyphen_for_hyphen_authenticated_hyphen_user {
+    public enum UsersDeleteSocialAccountForAuthenticatedUser {
         public static let id: Swift.String = "users/delete-social-account-for-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/social_accounts/DELETE/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_delete_hyphen_social_hyphen_account_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersDeleteSocialAccountForAuthenticatedUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_delete_hyphen_social_hyphen_account_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersDeleteSocialAccountForAuthenticatedUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.users_sol_delete_hyphen_social_hyphen_account_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers
+            public var headers: Operations.UsersDeleteSocialAccountForAuthenticatedUser.Input.Headers
             /// - Remark: Generated from `#/paths/user/social_accounts/DELETE/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/user/social_accounts/DELETE/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// Full URLs for the social media profiles to delete.
                     ///
                     /// - Remark: Generated from `#/paths/user/social_accounts/DELETE/requestBody/json/account_urls`.
-                    public var account_urls: [Swift.String]
-                    /// Creates a new `jsonPayload`.
+                    public var accountUrls: [Swift.String]
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
-                    ///   - account_urls: Full URLs for the social media profiles to delete.
-                    public init(account_urls: [Swift.String]) {
-                        self.account_urls = account_urls
+                    ///   - accountUrls: Full URLs for the social media profiles to delete.
+                    public init(accountUrls: [Swift.String]) {
+                        self.accountUrls = accountUrls
                     }
                     public enum CodingKeys: String, CodingKey {
-                        case account_urls
+                        case accountUrls = "account_urls"
                     }
                 }
                 /// - Remark: Generated from `#/paths/user/social_accounts/DELETE/requestBody/content/application\/json`.
-                case json(Operations.users_sol_delete_hyphen_social_hyphen_account_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body.jsonPayload)
+                case json(Operations.UsersDeleteSocialAccountForAuthenticatedUser.Input.Body.JsonPayload)
             }
-            public var body: Operations.users_sol_delete_hyphen_social_hyphen_account_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body
+            public var body: Operations.UsersDeleteSocialAccountForAuthenticatedUser.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - headers:
             ///   - body:
             public init(
-                headers: Operations.users_sol_delete_hyphen_social_hyphen_account_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init(),
-                body: Operations.users_sol_delete_hyphen_social_hyphen_account_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body
+                headers: Operations.UsersDeleteSocialAccountForAuthenticatedUser.Input.Headers = .init(),
+                body: Operations.UsersDeleteSocialAccountForAuthenticatedUser.Input.Body
             ) {
                 self.headers = headers
                 self.body = body
@@ -9238,12 +9527,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/social_accounts/delete(users/delete-social-account-for-authenticated-user)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.users_sol_delete_hyphen_social_hyphen_account_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent)
+            case noContent(Operations.UsersDeleteSocialAccountForAuthenticatedUser.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//user/social_accounts/delete(users/delete-social-account-for-authenticated-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.users_sol_delete_hyphen_social_hyphen_account_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent {
+            public var noContent: Operations.UsersDeleteSocialAccountForAuthenticatedUser.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -9261,12 +9558,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/social_accounts/delete(users/delete-social-account-for-authenticated-user)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -9284,12 +9581,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/social_accounts/delete(users/delete-social-account-for-authenticated-user)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/social_accounts/delete(users/delete-social-account-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -9307,12 +9612,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/social_accounts/delete(users/delete-social-account-for-authenticated-user)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -9330,12 +9635,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/social_accounts/delete(users/delete-social-account-for-authenticated-user)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -9353,12 +9658,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/social_accounts/delete(users/delete-social-account-for-authenticated-user)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -9410,7 +9715,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /user/ssh_signing_keys`.
     /// - Remark: Generated from `#/paths//user/ssh_signing_keys/get(users/list-ssh-signing-keys-for-authenticated-user)`.
-    public enum users_sol_list_hyphen_ssh_hyphen_signing_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user {
+    public enum UsersListSshSigningKeysForAuthenticatedUser {
         public static let id: Swift.String = "users/list-ssh-signing-keys-for-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/ssh_signing_keys/GET/query`.
@@ -9418,45 +9723,45 @@ public enum Operations {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/user/ssh_signing_keys/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/user/ssh_signing_keys/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.users_sol_list_hyphen_ssh_hyphen_signing_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query
+            public var query: Operations.UsersListSshSigningKeysForAuthenticatedUser.Input.Query
             /// - Remark: Generated from `#/paths/user/ssh_signing_keys/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_list_hyphen_ssh_hyphen_signing_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersListSshSigningKeysForAuthenticatedUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_list_hyphen_ssh_hyphen_signing_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersListSshSigningKeysForAuthenticatedUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.users_sol_list_hyphen_ssh_hyphen_signing_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers
+            public var headers: Operations.UsersListSshSigningKeysForAuthenticatedUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - query:
             ///   - headers:
             public init(
-                query: Operations.users_sol_list_hyphen_ssh_hyphen_signing_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query = .init(),
-                headers: Operations.users_sol_list_hyphen_ssh_hyphen_signing_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
+                query: Operations.UsersListSshSigningKeysForAuthenticatedUser.Input.Query = .init(),
+                headers: Operations.UsersListSshSigningKeysForAuthenticatedUser.Input.Headers = .init()
             ) {
                 self.query = query
                 self.headers = headers
@@ -9467,26 +9772,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/ssh_signing_keys/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/ssh_signing_keys/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.users_sol_list_hyphen_ssh_hyphen_signing_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Headers
+                public var headers: Operations.UsersListSshSigningKeysForAuthenticatedUser.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/user/ssh_signing_keys/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/ssh_signing_keys/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.ssh_hyphen_signing_hyphen_key])
+                    case json([Components.Schemas.SshSigningKey])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.ssh_hyphen_signing_hyphen_key] {
+                    public var json: [Components.Schemas.SshSigningKey] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -9496,15 +9801,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.users_sol_list_hyphen_ssh_hyphen_signing_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body
+                public var body: Operations.UsersListSshSigningKeysForAuthenticatedUser.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.users_sol_list_hyphen_ssh_hyphen_signing_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Headers = .init(),
-                    body: Operations.users_sol_list_hyphen_ssh_hyphen_signing_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body
+                    headers: Operations.UsersListSshSigningKeysForAuthenticatedUser.Output.Ok.Headers = .init(),
+                    body: Operations.UsersListSshSigningKeysForAuthenticatedUser.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -9515,12 +9820,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/ssh_signing_keys/get(users/list-ssh-signing-keys-for-authenticated-user)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.users_sol_list_hyphen_ssh_hyphen_signing_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok)
+            case ok(Operations.UsersListSshSigningKeysForAuthenticatedUser.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.users_sol_list_hyphen_ssh_hyphen_signing_hyphen_keys_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok {
+            public var ok: Operations.UsersListSshSigningKeysForAuthenticatedUser.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -9538,12 +9843,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/ssh_signing_keys/get(users/list-ssh-signing-keys-for-authenticated-user)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/ssh_signing_keys/get(users/list-ssh-signing-keys-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -9561,12 +9874,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/ssh_signing_keys/get(users/list-ssh-signing-keys-for-authenticated-user)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -9584,12 +9897,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/ssh_signing_keys/get(users/list-ssh-signing-keys-for-authenticated-user)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -9607,12 +9920,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/ssh_signing_keys/get(users/list-ssh-signing-keys-for-authenticated-user)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -9664,25 +9977,25 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /user/ssh_signing_keys`.
     /// - Remark: Generated from `#/paths//user/ssh_signing_keys/post(users/create-ssh-signing-key-for-authenticated-user)`.
-    public enum users_sol_create_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user {
+    public enum UsersCreateSshSigningKeyForAuthenticatedUser {
         public static let id: Swift.String = "users/create-ssh-signing-key-for-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/ssh_signing_keys/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_create_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersCreateSshSigningKeyForAuthenticatedUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_create_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersCreateSshSigningKeyForAuthenticatedUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.users_sol_create_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers
+            public var headers: Operations.UsersCreateSshSigningKeyForAuthenticatedUser.Input.Headers
             /// - Remark: Generated from `#/paths/user/ssh_signing_keys/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/user/ssh_signing_keys/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// A descriptive name for the new key.
                     ///
                     /// - Remark: Generated from `#/paths/user/ssh_signing_keys/POST/requestBody/json/title`.
@@ -9691,7 +10004,7 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/user/ssh_signing_keys/POST/requestBody/json/key`.
                     public var key: Swift.String
-                    /// Creates a new `jsonPayload`.
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - title: A descriptive name for the new key.
@@ -9709,17 +10022,17 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/user/ssh_signing_keys/POST/requestBody/content/application\/json`.
-                case json(Operations.users_sol_create_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body.jsonPayload)
+                case json(Operations.UsersCreateSshSigningKeyForAuthenticatedUser.Input.Body.JsonPayload)
             }
-            public var body: Operations.users_sol_create_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body
+            public var body: Operations.UsersCreateSshSigningKeyForAuthenticatedUser.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - headers:
             ///   - body:
             public init(
-                headers: Operations.users_sol_create_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init(),
-                body: Operations.users_sol_create_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body
+                headers: Operations.UsersCreateSshSigningKeyForAuthenticatedUser.Input.Headers = .init(),
+                body: Operations.UsersCreateSshSigningKeyForAuthenticatedUser.Input.Body
             ) {
                 self.headers = headers
                 self.body = body
@@ -9730,12 +10043,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/ssh_signing_keys/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/ssh_signing_keys/POST/responses/201/content/application\/json`.
-                    case json(Components.Schemas.ssh_hyphen_signing_hyphen_key)
+                    case json(Components.Schemas.SshSigningKey)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.ssh_hyphen_signing_hyphen_key {
+                    public var json: Components.Schemas.SshSigningKey {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -9745,12 +10058,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.users_sol_create_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output.Created.Body
+                public var body: Operations.UsersCreateSshSigningKeyForAuthenticatedUser.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.users_sol_create_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output.Created.Body) {
+                public init(body: Operations.UsersCreateSshSigningKeyForAuthenticatedUser.Output.Created.Body) {
                     self.body = body
                 }
             }
@@ -9759,12 +10072,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/ssh_signing_keys/post(users/create-ssh-signing-key-for-authenticated-user)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.users_sol_create_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output.Created)
+            case created(Operations.UsersCreateSshSigningKeyForAuthenticatedUser.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.users_sol_create_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output.Created {
+            public var created: Operations.UsersCreateSshSigningKeyForAuthenticatedUser.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -9782,12 +10095,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/ssh_signing_keys/post(users/create-ssh-signing-key-for-authenticated-user)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -9805,12 +10118,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/ssh_signing_keys/post(users/create-ssh-signing-key-for-authenticated-user)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/ssh_signing_keys/post(users/create-ssh-signing-key-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -9828,12 +10149,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/ssh_signing_keys/post(users/create-ssh-signing-key-for-authenticated-user)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -9851,12 +10172,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/ssh_signing_keys/post(users/create-ssh-signing-key-for-authenticated-user)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -9874,12 +10195,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/ssh_signing_keys/post(users/create-ssh-signing-key-for-authenticated-user)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -9931,7 +10252,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /user/ssh_signing_keys/{ssh_signing_key_id}`.
     /// - Remark: Generated from `#/paths//user/ssh_signing_keys/{ssh_signing_key_id}/get(users/get-ssh-signing-key-for-authenticated-user)`.
-    public enum users_sol_get_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user {
+    public enum UsersGetSshSigningKeyForAuthenticatedUser {
         public static let id: Swift.String = "users/get-ssh-signing-key-for-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/ssh_signing_keys/{ssh_signing_key_id}/GET/path`.
@@ -9939,36 +10260,36 @@ public enum Operations {
                 /// The unique identifier of the SSH signing key.
                 ///
                 /// - Remark: Generated from `#/paths/user/ssh_signing_keys/{ssh_signing_key_id}/GET/path/ssh_signing_key_id`.
-                public var ssh_signing_key_id: Components.Parameters.ssh_hyphen_signing_hyphen_key_hyphen_id
+                public var sshSigningKeyId: Components.Parameters.SshSigningKeyId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - ssh_signing_key_id: The unique identifier of the SSH signing key.
-                public init(ssh_signing_key_id: Components.Parameters.ssh_hyphen_signing_hyphen_key_hyphen_id) {
-                    self.ssh_signing_key_id = ssh_signing_key_id
+                ///   - sshSigningKeyId: The unique identifier of the SSH signing key.
+                public init(sshSigningKeyId: Components.Parameters.SshSigningKeyId) {
+                    self.sshSigningKeyId = sshSigningKeyId
                 }
             }
-            public var path: Operations.users_sol_get_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path
+            public var path: Operations.UsersGetSshSigningKeyForAuthenticatedUser.Input.Path
             /// - Remark: Generated from `#/paths/user/ssh_signing_keys/{ssh_signing_key_id}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_get_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersGetSshSigningKeyForAuthenticatedUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_get_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersGetSshSigningKeyForAuthenticatedUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.users_sol_get_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers
+            public var headers: Operations.UsersGetSshSigningKeyForAuthenticatedUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.users_sol_get_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path,
-                headers: Operations.users_sol_get_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
+                path: Operations.UsersGetSshSigningKeyForAuthenticatedUser.Input.Path,
+                headers: Operations.UsersGetSshSigningKeyForAuthenticatedUser.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -9979,12 +10300,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/ssh_signing_keys/{ssh_signing_key_id}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/ssh_signing_keys/{ssh_signing_key_id}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.ssh_hyphen_signing_hyphen_key)
+                    case json(Components.Schemas.SshSigningKey)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.ssh_hyphen_signing_hyphen_key {
+                    public var json: Components.Schemas.SshSigningKey {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -9994,12 +10315,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.users_sol_get_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body
+                public var body: Operations.UsersGetSshSigningKeyForAuthenticatedUser.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.users_sol_get_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body) {
+                public init(body: Operations.UsersGetSshSigningKeyForAuthenticatedUser.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -10008,12 +10329,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/ssh_signing_keys/{ssh_signing_key_id}/get(users/get-ssh-signing-key-for-authenticated-user)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.users_sol_get_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok)
+            case ok(Operations.UsersGetSshSigningKeyForAuthenticatedUser.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.users_sol_get_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok {
+            public var ok: Operations.UsersGetSshSigningKeyForAuthenticatedUser.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -10031,12 +10352,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/ssh_signing_keys/{ssh_signing_key_id}/get(users/get-ssh-signing-key-for-authenticated-user)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -10054,12 +10375,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/ssh_signing_keys/{ssh_signing_key_id}/get(users/get-ssh-signing-key-for-authenticated-user)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/ssh_signing_keys/{ssh_signing_key_id}/get(users/get-ssh-signing-key-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -10077,12 +10406,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/ssh_signing_keys/{ssh_signing_key_id}/get(users/get-ssh-signing-key-for-authenticated-user)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -10100,12 +10429,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/ssh_signing_keys/{ssh_signing_key_id}/get(users/get-ssh-signing-key-for-authenticated-user)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -10157,7 +10486,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /user/ssh_signing_keys/{ssh_signing_key_id}`.
     /// - Remark: Generated from `#/paths//user/ssh_signing_keys/{ssh_signing_key_id}/delete(users/delete-ssh-signing-key-for-authenticated-user)`.
-    public enum users_sol_delete_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user {
+    public enum UsersDeleteSshSigningKeyForAuthenticatedUser {
         public static let id: Swift.String = "users/delete-ssh-signing-key-for-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/ssh_signing_keys/{ssh_signing_key_id}/DELETE/path`.
@@ -10165,36 +10494,36 @@ public enum Operations {
                 /// The unique identifier of the SSH signing key.
                 ///
                 /// - Remark: Generated from `#/paths/user/ssh_signing_keys/{ssh_signing_key_id}/DELETE/path/ssh_signing_key_id`.
-                public var ssh_signing_key_id: Components.Parameters.ssh_hyphen_signing_hyphen_key_hyphen_id
+                public var sshSigningKeyId: Components.Parameters.SshSigningKeyId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - ssh_signing_key_id: The unique identifier of the SSH signing key.
-                public init(ssh_signing_key_id: Components.Parameters.ssh_hyphen_signing_hyphen_key_hyphen_id) {
-                    self.ssh_signing_key_id = ssh_signing_key_id
+                ///   - sshSigningKeyId: The unique identifier of the SSH signing key.
+                public init(sshSigningKeyId: Components.Parameters.SshSigningKeyId) {
+                    self.sshSigningKeyId = sshSigningKeyId
                 }
             }
-            public var path: Operations.users_sol_delete_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path
+            public var path: Operations.UsersDeleteSshSigningKeyForAuthenticatedUser.Input.Path
             /// - Remark: Generated from `#/paths/user/ssh_signing_keys/{ssh_signing_key_id}/DELETE/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_delete_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersDeleteSshSigningKeyForAuthenticatedUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_delete_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersDeleteSshSigningKeyForAuthenticatedUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.users_sol_delete_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers
+            public var headers: Operations.UsersDeleteSshSigningKeyForAuthenticatedUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.users_sol_delete_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path,
-                headers: Operations.users_sol_delete_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
+                path: Operations.UsersDeleteSshSigningKeyForAuthenticatedUser.Input.Path,
+                headers: Operations.UsersDeleteSshSigningKeyForAuthenticatedUser.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -10210,12 +10539,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/ssh_signing_keys/{ssh_signing_key_id}/delete(users/delete-ssh-signing-key-for-authenticated-user)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.users_sol_delete_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent)
+            case noContent(Operations.UsersDeleteSshSigningKeyForAuthenticatedUser.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//user/ssh_signing_keys/{ssh_signing_key_id}/delete(users/delete-ssh-signing-key-for-authenticated-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.users_sol_delete_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent {
+            public var noContent: Operations.UsersDeleteSshSigningKeyForAuthenticatedUser.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -10233,12 +10570,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/ssh_signing_keys/{ssh_signing_key_id}/delete(users/delete-ssh-signing-key-for-authenticated-user)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/ssh_signing_keys/{ssh_signing_key_id}/delete(users/delete-ssh-signing-key-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -10256,12 +10601,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/ssh_signing_keys/{ssh_signing_key_id}/delete(users/delete-ssh-signing-key-for-authenticated-user)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -10279,12 +10624,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/ssh_signing_keys/{ssh_signing_key_id}/delete(users/delete-ssh-signing-key-for-authenticated-user)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -10302,12 +10647,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/ssh_signing_keys/{ssh_signing_key_id}/delete(users/delete-ssh-signing-key-for-authenticated-user)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -10363,7 +10708,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /user/{account_id}`.
     /// - Remark: Generated from `#/paths//user/{account_id}/get(users/get-by-id)`.
-    public enum users_sol_get_hyphen_by_hyphen_id {
+    public enum UsersGetById {
         public static let id: Swift.String = "users/get-by-id"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/{account_id}/GET/path`.
@@ -10371,36 +10716,36 @@ public enum Operations {
                 /// account_id parameter
                 ///
                 /// - Remark: Generated from `#/paths/user/{account_id}/GET/path/account_id`.
-                public var account_id: Components.Parameters.account_hyphen_id
+                public var accountId: Components.Parameters.AccountId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - account_id: account_id parameter
-                public init(account_id: Components.Parameters.account_hyphen_id) {
-                    self.account_id = account_id
+                ///   - accountId: account_id parameter
+                public init(accountId: Components.Parameters.AccountId) {
+                    self.accountId = accountId
                 }
             }
-            public var path: Operations.users_sol_get_hyphen_by_hyphen_id.Input.Path
+            public var path: Operations.UsersGetById.Input.Path
             /// - Remark: Generated from `#/paths/user/{account_id}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_get_hyphen_by_hyphen_id.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersGetById.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_get_hyphen_by_hyphen_id.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersGetById.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.users_sol_get_hyphen_by_hyphen_id.Input.Headers
+            public var headers: Operations.UsersGetById.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.users_sol_get_hyphen_by_hyphen_id.Input.Path,
-                headers: Operations.users_sol_get_hyphen_by_hyphen_id.Input.Headers = .init()
+                path: Operations.UsersGetById.Input.Path,
+                headers: Operations.UsersGetById.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -10411,19 +10756,19 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/{account_id}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/{account_id}/GET/responses/200/content/json`.
-                    @frozen public enum jsonPayload: Codable, Hashable, Sendable {
-                        /// - Remark: Generated from `#/paths/user/{account_id}/GET/responses/200/content/json/private_hyphen_user`.
-                        case _private(Components.Schemas.private_hyphen_user)
-                        /// - Remark: Generated from `#/paths/user/{account_id}/GET/responses/200/content/json/public_hyphen_user`.
-                        case _public(Components.Schemas.public_hyphen_user)
+                    @frozen public enum JsonPayload: Codable, Hashable, Sendable {
+                        /// - Remark: Generated from `#/paths/user/{account_id}/GET/responses/200/content/json/PrivateUser`.
+                        case _private(Components.Schemas.PrivateUser)
+                        /// - Remark: Generated from `#/paths/user/{account_id}/GET/responses/200/content/json/PublicUser`.
+                        case _public(Components.Schemas.PublicUser)
                         public enum CodingKeys: String, CodingKey {
-                            case user_view_type
+                            case userViewType = "user_view_type"
                         }
                         public init(from decoder: any Decoder) throws {
                             let container = try decoder.container(keyedBy: CodingKeys.self)
                             let discriminator = try container.decode(
                                 Swift.String.self,
-                                forKey: .user_view_type
+                                forKey: .userViewType
                             )
                             switch discriminator {
                             case "private":
@@ -10432,7 +10777,7 @@ public enum Operations {
                                 self = ._public(try .init(from: decoder))
                             default:
                                 throw Swift.DecodingError.unknownOneOfDiscriminator(
-                                    discriminatorKey: CodingKeys.user_view_type,
+                                    discriminatorKey: CodingKeys.userViewType,
                                     discriminatorValue: discriminator,
                                     codingPath: decoder.codingPath
                                 )
@@ -10448,12 +10793,12 @@ public enum Operations {
                         }
                     }
                     /// - Remark: Generated from `#/paths/user/{account_id}/GET/responses/200/content/application\/json`.
-                    case json(Operations.users_sol_get_hyphen_by_hyphen_id.Output.Ok.Body.jsonPayload)
+                    case json(Operations.UsersGetById.Output.Ok.Body.JsonPayload)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Operations.users_sol_get_hyphen_by_hyphen_id.Output.Ok.Body.jsonPayload {
+                    public var json: Operations.UsersGetById.Output.Ok.Body.JsonPayload {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -10463,12 +10808,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.users_sol_get_hyphen_by_hyphen_id.Output.Ok.Body
+                public var body: Operations.UsersGetById.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.users_sol_get_hyphen_by_hyphen_id.Output.Ok.Body) {
+                public init(body: Operations.UsersGetById.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -10477,12 +10822,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/{account_id}/get(users/get-by-id)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.users_sol_get_hyphen_by_hyphen_id.Output.Ok)
+            case ok(Operations.UsersGetById.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.users_sol_get_hyphen_by_hyphen_id.Output.Ok {
+            public var ok: Operations.UsersGetById.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -10500,12 +10845,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/{account_id}/get(users/get-by-id)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -10557,7 +10902,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /users`.
     /// - Remark: Generated from `#/paths//users/get(users/list)`.
-    public enum users_sol_list {
+    public enum UsersList {
         public static let id: Swift.String = "users/list"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/users/GET/query`.
@@ -10565,45 +10910,45 @@ public enum Operations {
                 /// A user ID. Only return users with an ID greater than this ID.
                 ///
                 /// - Remark: Generated from `#/paths/users/GET/query/since`.
-                public var since: Components.Parameters.since_hyphen_user?
+                public var since: Components.Parameters.SinceUser?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/users/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - since: A user ID. Only return users with an ID greater than this ID.
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    since: Components.Parameters.since_hyphen_user? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil
+                    since: Components.Parameters.SinceUser? = nil,
+                    perPage: Components.Parameters.PerPage? = nil
                 ) {
                     self.since = since
-                    self.per_page = per_page
+                    self.perPage = perPage
                 }
             }
-            public var query: Operations.users_sol_list.Input.Query
+            public var query: Operations.UsersList.Input.Query
             /// - Remark: Generated from `#/paths/users/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_list.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersList.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_list.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersList.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.users_sol_list.Input.Headers
+            public var headers: Operations.UsersList.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - query:
             ///   - headers:
             public init(
-                query: Operations.users_sol_list.Input.Query = .init(),
-                headers: Operations.users_sol_list.Input.Headers = .init()
+                query: Operations.UsersList.Input.Query = .init(),
+                headers: Operations.UsersList.Input.Headers = .init()
             ) {
                 self.query = query
                 self.headers = headers
@@ -10614,26 +10959,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/users/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/users/GET/responses/200/headers/Link`.
-                    public var Link: Swift.String?
+                    public var link: Swift.String?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Swift.String? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Swift.String? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.users_sol_list.Output.Ok.Headers
+                public var headers: Operations.UsersList.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/users/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/users/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.simple_hyphen_user])
+                    case json([Components.Schemas.SimpleUser])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.simple_hyphen_user] {
+                    public var json: [Components.Schemas.SimpleUser] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -10643,15 +10988,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.users_sol_list.Output.Ok.Body
+                public var body: Operations.UsersList.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.users_sol_list.Output.Ok.Headers = .init(),
-                    body: Operations.users_sol_list.Output.Ok.Body
+                    headers: Operations.UsersList.Output.Ok.Headers = .init(),
+                    body: Operations.UsersList.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -10662,12 +11007,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/get(users/list)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.users_sol_list.Output.Ok)
+            case ok(Operations.UsersList.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.users_sol_list.Output.Ok {
+            public var ok: Operations.UsersList.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -10685,12 +11030,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/get(users/list)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//users/get(users/list)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -10746,7 +11099,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /users/{username}`.
     /// - Remark: Generated from `#/paths//users/{username}/get(users/get-by-username)`.
-    public enum users_sol_get_hyphen_by_hyphen_username {
+    public enum UsersGetByUsername {
         public static let id: Swift.String = "users/get-by-username"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/users/{username}/GET/path`.
@@ -10754,36 +11107,36 @@ public enum Operations {
                 /// The handle for the GitHub user account.
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/GET/path/username`.
-                public var username: Components.Parameters.username
+                public var username: Components.Parameters.Username
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - username: The handle for the GitHub user account.
-                public init(username: Components.Parameters.username) {
+                public init(username: Components.Parameters.Username) {
                     self.username = username
                 }
             }
-            public var path: Operations.users_sol_get_hyphen_by_hyphen_username.Input.Path
+            public var path: Operations.UsersGetByUsername.Input.Path
             /// - Remark: Generated from `#/paths/users/{username}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_get_hyphen_by_hyphen_username.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersGetByUsername.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_get_hyphen_by_hyphen_username.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersGetByUsername.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.users_sol_get_hyphen_by_hyphen_username.Input.Headers
+            public var headers: Operations.UsersGetByUsername.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.users_sol_get_hyphen_by_hyphen_username.Input.Path,
-                headers: Operations.users_sol_get_hyphen_by_hyphen_username.Input.Headers = .init()
+                path: Operations.UsersGetByUsername.Input.Path,
+                headers: Operations.UsersGetByUsername.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -10794,19 +11147,19 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/users/{username}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/users/{username}/GET/responses/200/content/json`.
-                    @frozen public enum jsonPayload: Codable, Hashable, Sendable {
-                        /// - Remark: Generated from `#/paths/users/{username}/GET/responses/200/content/json/private_hyphen_user`.
-                        case _private(Components.Schemas.private_hyphen_user)
-                        /// - Remark: Generated from `#/paths/users/{username}/GET/responses/200/content/json/public_hyphen_user`.
-                        case _public(Components.Schemas.public_hyphen_user)
+                    @frozen public enum JsonPayload: Codable, Hashable, Sendable {
+                        /// - Remark: Generated from `#/paths/users/{username}/GET/responses/200/content/json/PrivateUser`.
+                        case _private(Components.Schemas.PrivateUser)
+                        /// - Remark: Generated from `#/paths/users/{username}/GET/responses/200/content/json/PublicUser`.
+                        case _public(Components.Schemas.PublicUser)
                         public enum CodingKeys: String, CodingKey {
-                            case user_view_type
+                            case userViewType = "user_view_type"
                         }
                         public init(from decoder: any Decoder) throws {
                             let container = try decoder.container(keyedBy: CodingKeys.self)
                             let discriminator = try container.decode(
                                 Swift.String.self,
-                                forKey: .user_view_type
+                                forKey: .userViewType
                             )
                             switch discriminator {
                             case "private":
@@ -10815,7 +11168,7 @@ public enum Operations {
                                 self = ._public(try .init(from: decoder))
                             default:
                                 throw Swift.DecodingError.unknownOneOfDiscriminator(
-                                    discriminatorKey: CodingKeys.user_view_type,
+                                    discriminatorKey: CodingKeys.userViewType,
                                     discriminatorValue: discriminator,
                                     codingPath: decoder.codingPath
                                 )
@@ -10831,12 +11184,12 @@ public enum Operations {
                         }
                     }
                     /// - Remark: Generated from `#/paths/users/{username}/GET/responses/200/content/application\/json`.
-                    case json(Operations.users_sol_get_hyphen_by_hyphen_username.Output.Ok.Body.jsonPayload)
+                    case json(Operations.UsersGetByUsername.Output.Ok.Body.JsonPayload)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Operations.users_sol_get_hyphen_by_hyphen_username.Output.Ok.Body.jsonPayload {
+                    public var json: Operations.UsersGetByUsername.Output.Ok.Body.JsonPayload {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -10846,12 +11199,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.users_sol_get_hyphen_by_hyphen_username.Output.Ok.Body
+                public var body: Operations.UsersGetByUsername.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.users_sol_get_hyphen_by_hyphen_username.Output.Ok.Body) {
+                public init(body: Operations.UsersGetByUsername.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -10860,12 +11213,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/get(users/get-by-username)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.users_sol_get_hyphen_by_hyphen_username.Output.Ok)
+            case ok(Operations.UsersGetByUsername.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.users_sol_get_hyphen_by_hyphen_username.Output.Ok {
+            public var ok: Operations.UsersGetByUsername.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -10883,12 +11236,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/get(users/get-by-username)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -10942,7 +11295,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /users/{username}/attestations/{subject_digest}`.
     /// - Remark: Generated from `#/paths//users/{username}/attestations/{subject_digest}/get(users/list-attestations)`.
-    public enum users_sol_list_hyphen_attestations {
+    public enum UsersListAttestations {
         public static let id: Swift.String = "users/list-attestations"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/path`.
@@ -10950,76 +11303,76 @@ public enum Operations {
                 /// The handle for the GitHub user account.
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/path/username`.
-                public var username: Components.Parameters.username
+                public var username: Components.Parameters.Username
                 /// Subject Digest
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/path/subject_digest`.
-                public var subject_digest: Swift.String
+                public var subjectDigest: Swift.String
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - username: The handle for the GitHub user account.
-                ///   - subject_digest: Subject Digest
+                ///   - subjectDigest: Subject Digest
                 public init(
-                    username: Components.Parameters.username,
-                    subject_digest: Swift.String
+                    username: Components.Parameters.Username,
+                    subjectDigest: Swift.String
                 ) {
                     self.username = username
-                    self.subject_digest = subject_digest
+                    self.subjectDigest = subjectDigest
                 }
             }
-            public var path: Operations.users_sol_list_hyphen_attestations.Input.Path
+            public var path: Operations.UsersListAttestations.Input.Path
             /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/query/before`.
-                public var before: Components.Parameters.pagination_hyphen_before?
+                public var before: Components.Parameters.PaginationBefore?
                 /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/query/after`.
-                public var after: Components.Parameters.pagination_hyphen_after?
+                public var after: Components.Parameters.PaginationAfter?
                 /// Optional filter for fetching attestations with a given predicate type.
                 /// This option accepts `provenance`, `sbom`, or freeform text for custom predicate types.
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/query/predicate_type`.
-                public var predicate_type: Swift.String?
+                public var predicateType: Swift.String?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - before: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - after: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
-                ///   - predicate_type: Optional filter for fetching attestations with a given predicate type.
+                ///   - predicateType: Optional filter for fetching attestations with a given predicate type.
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    before: Components.Parameters.pagination_hyphen_before? = nil,
-                    after: Components.Parameters.pagination_hyphen_after? = nil,
-                    predicate_type: Swift.String? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    before: Components.Parameters.PaginationBefore? = nil,
+                    after: Components.Parameters.PaginationAfter? = nil,
+                    predicateType: Swift.String? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.before = before
                     self.after = after
-                    self.predicate_type = predicate_type
+                    self.predicateType = predicateType
                 }
             }
-            public var query: Operations.users_sol_list_hyphen_attestations.Input.Query
+            public var query: Operations.UsersListAttestations.Input.Query
             /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_list_hyphen_attestations.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersListAttestations.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_list_hyphen_attestations.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersListAttestations.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.users_sol_list_hyphen_attestations.Input.Headers
+            public var headers: Operations.UsersListAttestations.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -11027,9 +11380,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.users_sol_list_hyphen_attestations.Input.Path,
-                query: Operations.users_sol_list_hyphen_attestations.Input.Query = .init(),
-                headers: Operations.users_sol_list_hyphen_attestations.Input.Headers = .init()
+                path: Operations.UsersListAttestations.Input.Path,
+                query: Operations.UsersListAttestations.Input.Query = .init(),
+                headers: Operations.UsersListAttestations.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -11041,21 +11394,21 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/responses/200/content/json`.
-                    public struct jsonPayload: Codable, Hashable, Sendable {
-                        /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/responses/200/content/json/attestationsPayload`.
-                        public struct attestationsPayloadPayload: Codable, Hashable, Sendable {
+                    public struct JsonPayload: Codable, Hashable, Sendable {
+                        /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/responses/200/content/json/AttestationsPayload`.
+                        public struct AttestationsPayloadPayload: Codable, Hashable, Sendable {
                             /// The attestation's Sigstore Bundle.
                             /// Refer to the [Sigstore Bundle Specification](https://github.com/sigstore/protobuf-specs/blob/main/protos/sigstore_bundle.proto) for more information.
                             ///
-                            /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/responses/200/content/json/attestationsPayload/bundle`.
-                            public struct bundlePayload: Codable, Hashable, Sendable {
-                                /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/responses/200/content/json/attestationsPayload/bundle/mediaType`.
+                            /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/responses/200/content/json/AttestationsPayload/bundle`.
+                            public struct BundlePayload: Codable, Hashable, Sendable {
+                                /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/responses/200/content/json/AttestationsPayload/bundle/mediaType`.
                                 public var mediaType: Swift.String?
-                                /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/responses/200/content/json/attestationsPayload/bundle/verificationMaterial`.
-                                public struct verificationMaterialPayload: Codable, Hashable, Sendable {
+                                /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/responses/200/content/json/AttestationsPayload/bundle/verificationMaterial`.
+                                public struct VerificationMaterialPayload: Codable, Hashable, Sendable {
                                     /// A container of undocumented properties.
                                     public var additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer
-                                    /// Creates a new `verificationMaterialPayload`.
+                                    /// Creates a new `VerificationMaterialPayload`.
                                     ///
                                     /// - Parameters:
                                     ///   - additionalProperties: A container of undocumented properties.
@@ -11069,13 +11422,13 @@ public enum Operations {
                                         try encoder.encodeAdditionalProperties(additionalProperties)
                                     }
                                 }
-                                /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/responses/200/content/json/attestationsPayload/bundle/verificationMaterial`.
-                                public var verificationMaterial: Operations.users_sol_list_hyphen_attestations.Output.Ok.Body.jsonPayload.attestationsPayloadPayload.bundlePayload.verificationMaterialPayload?
-                                /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/responses/200/content/json/attestationsPayload/bundle/dsseEnvelope`.
-                                public struct dsseEnvelopePayload: Codable, Hashable, Sendable {
+                                /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/responses/200/content/json/AttestationsPayload/bundle/verificationMaterial`.
+                                public var verificationMaterial: Operations.UsersListAttestations.Output.Ok.Body.JsonPayload.AttestationsPayloadPayload.BundlePayload.VerificationMaterialPayload?
+                                /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/responses/200/content/json/AttestationsPayload/bundle/dsseEnvelope`.
+                                public struct DsseEnvelopePayload: Codable, Hashable, Sendable {
                                     /// A container of undocumented properties.
                                     public var additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer
-                                    /// Creates a new `dsseEnvelopePayload`.
+                                    /// Creates a new `DsseEnvelopePayload`.
                                     ///
                                     /// - Parameters:
                                     ///   - additionalProperties: A container of undocumented properties.
@@ -11089,9 +11442,9 @@ public enum Operations {
                                         try encoder.encodeAdditionalProperties(additionalProperties)
                                     }
                                 }
-                                /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/responses/200/content/json/attestationsPayload/bundle/dsseEnvelope`.
-                                public var dsseEnvelope: Operations.users_sol_list_hyphen_attestations.Output.Ok.Body.jsonPayload.attestationsPayloadPayload.bundlePayload.dsseEnvelopePayload?
-                                /// Creates a new `bundlePayload`.
+                                /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/responses/200/content/json/AttestationsPayload/bundle/dsseEnvelope`.
+                                public var dsseEnvelope: Operations.UsersListAttestations.Output.Ok.Body.JsonPayload.AttestationsPayloadPayload.BundlePayload.DsseEnvelopePayload?
+                                /// Creates a new `BundlePayload`.
                                 ///
                                 /// - Parameters:
                                 ///   - mediaType:
@@ -11099,8 +11452,8 @@ public enum Operations {
                                 ///   - dsseEnvelope:
                                 public init(
                                     mediaType: Swift.String? = nil,
-                                    verificationMaterial: Operations.users_sol_list_hyphen_attestations.Output.Ok.Body.jsonPayload.attestationsPayloadPayload.bundlePayload.verificationMaterialPayload? = nil,
-                                    dsseEnvelope: Operations.users_sol_list_hyphen_attestations.Output.Ok.Body.jsonPayload.attestationsPayloadPayload.bundlePayload.dsseEnvelopePayload? = nil
+                                    verificationMaterial: Operations.UsersListAttestations.Output.Ok.Body.JsonPayload.AttestationsPayloadPayload.BundlePayload.VerificationMaterialPayload? = nil,
+                                    dsseEnvelope: Operations.UsersListAttestations.Output.Ok.Body.JsonPayload.AttestationsPayloadPayload.BundlePayload.DsseEnvelopePayload? = nil
                                 ) {
                                     self.mediaType = mediaType
                                     self.verificationMaterial = verificationMaterial
@@ -11115,42 +11468,42 @@ public enum Operations {
                             /// The attestation's Sigstore Bundle.
                             /// Refer to the [Sigstore Bundle Specification](https://github.com/sigstore/protobuf-specs/blob/main/protos/sigstore_bundle.proto) for more information.
                             ///
-                            /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/responses/200/content/json/attestationsPayload/bundle`.
-                            public var bundle: Operations.users_sol_list_hyphen_attestations.Output.Ok.Body.jsonPayload.attestationsPayloadPayload.bundlePayload?
-                            /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/responses/200/content/json/attestationsPayload/repository_id`.
-                            public var repository_id: Swift.Int?
-                            /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/responses/200/content/json/attestationsPayload/bundle_url`.
-                            public var bundle_url: Swift.String?
-                            /// Creates a new `attestationsPayloadPayload`.
+                            /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/responses/200/content/json/AttestationsPayload/bundle`.
+                            public var bundle: Operations.UsersListAttestations.Output.Ok.Body.JsonPayload.AttestationsPayloadPayload.BundlePayload?
+                            /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/responses/200/content/json/AttestationsPayload/repository_id`.
+                            public var repositoryId: Swift.Int?
+                            /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/responses/200/content/json/AttestationsPayload/bundle_url`.
+                            public var bundleUrl: Swift.String?
+                            /// Creates a new `AttestationsPayloadPayload`.
                             ///
                             /// - Parameters:
                             ///   - bundle: The attestation's Sigstore Bundle.
-                            ///   - repository_id:
-                            ///   - bundle_url:
+                            ///   - repositoryId:
+                            ///   - bundleUrl:
                             public init(
-                                bundle: Operations.users_sol_list_hyphen_attestations.Output.Ok.Body.jsonPayload.attestationsPayloadPayload.bundlePayload? = nil,
-                                repository_id: Swift.Int? = nil,
-                                bundle_url: Swift.String? = nil
+                                bundle: Operations.UsersListAttestations.Output.Ok.Body.JsonPayload.AttestationsPayloadPayload.BundlePayload? = nil,
+                                repositoryId: Swift.Int? = nil,
+                                bundleUrl: Swift.String? = nil
                             ) {
                                 self.bundle = bundle
-                                self.repository_id = repository_id
-                                self.bundle_url = bundle_url
+                                self.repositoryId = repositoryId
+                                self.bundleUrl = bundleUrl
                             }
                             public enum CodingKeys: String, CodingKey {
                                 case bundle
-                                case repository_id
-                                case bundle_url
+                                case repositoryId = "repository_id"
+                                case bundleUrl = "bundle_url"
                             }
                         }
                         /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/responses/200/content/json/attestations`.
-                        public typealias attestationsPayload = [Operations.users_sol_list_hyphen_attestations.Output.Ok.Body.jsonPayload.attestationsPayloadPayload]
+                        public typealias AttestationsPayload = [Operations.UsersListAttestations.Output.Ok.Body.JsonPayload.AttestationsPayloadPayload]
                         /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/responses/200/content/json/attestations`.
-                        public var attestations: Operations.users_sol_list_hyphen_attestations.Output.Ok.Body.jsonPayload.attestationsPayload?
-                        /// Creates a new `jsonPayload`.
+                        public var attestations: Operations.UsersListAttestations.Output.Ok.Body.JsonPayload.AttestationsPayload?
+                        /// Creates a new `JsonPayload`.
                         ///
                         /// - Parameters:
                         ///   - attestations:
-                        public init(attestations: Operations.users_sol_list_hyphen_attestations.Output.Ok.Body.jsonPayload.attestationsPayload? = nil) {
+                        public init(attestations: Operations.UsersListAttestations.Output.Ok.Body.JsonPayload.AttestationsPayload? = nil) {
                             self.attestations = attestations
                         }
                         public enum CodingKeys: String, CodingKey {
@@ -11158,12 +11511,12 @@ public enum Operations {
                         }
                     }
                     /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/responses/200/content/application\/json`.
-                    case json(Operations.users_sol_list_hyphen_attestations.Output.Ok.Body.jsonPayload)
+                    case json(Operations.UsersListAttestations.Output.Ok.Body.JsonPayload)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Operations.users_sol_list_hyphen_attestations.Output.Ok.Body.jsonPayload {
+                    public var json: Operations.UsersListAttestations.Output.Ok.Body.JsonPayload {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -11173,12 +11526,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.users_sol_list_hyphen_attestations.Output.Ok.Body
+                public var body: Operations.UsersListAttestations.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.users_sol_list_hyphen_attestations.Output.Ok.Body) {
+                public init(body: Operations.UsersListAttestations.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -11187,12 +11540,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/attestations/{subject_digest}/get(users/list-attestations)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.users_sol_list_hyphen_attestations.Output.Ok)
+            case ok(Operations.UsersListAttestations.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.users_sol_list_hyphen_attestations.Output.Ok {
+            public var ok: Operations.UsersListAttestations.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -11209,12 +11562,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/users/{username}/attestations/{subject_digest}/GET/responses/201/content/application\/json`.
-                    case json(Components.Schemas.empty_hyphen_object)
+                    case json(Components.Schemas.EmptyObject)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.empty_hyphen_object {
+                    public var json: Components.Schemas.EmptyObject {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -11224,12 +11577,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.users_sol_list_hyphen_attestations.Output.Created.Body
+                public var body: Operations.UsersListAttestations.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.users_sol_list_hyphen_attestations.Output.Created.Body) {
+                public init(body: Operations.UsersListAttestations.Output.Created.Body) {
                     self.body = body
                 }
             }
@@ -11238,12 +11591,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/attestations/{subject_digest}/get(users/list-attestations)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.users_sol_list_hyphen_attestations.Output.Created)
+            case created(Operations.UsersListAttestations.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.users_sol_list_hyphen_attestations.Output.Created {
+            public var created: Operations.UsersListAttestations.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -11265,12 +11618,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/attestations/{subject_digest}/get(users/list-attestations)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.users_sol_list_hyphen_attestations.Output.NoContent)
+            case noContent(Operations.UsersListAttestations.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//users/{username}/attestations/{subject_digest}/get(users/list-attestations)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.users_sol_list_hyphen_attestations.Output.NoContent {
+            public var noContent: Operations.UsersListAttestations.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -11288,12 +11649,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/attestations/{subject_digest}/get(users/list-attestations)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -11343,7 +11704,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /users/{username}/followers`.
     /// - Remark: Generated from `#/paths//users/{username}/followers/get(users/list-followers-for-user)`.
-    public enum users_sol_list_hyphen_followers_hyphen_for_hyphen_user {
+    public enum UsersListFollowersForUser {
         public static let id: Swift.String = "users/list-followers-for-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/users/{username}/followers/GET/path`.
@@ -11351,52 +11712,52 @@ public enum Operations {
                 /// The handle for the GitHub user account.
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/followers/GET/path/username`.
-                public var username: Components.Parameters.username
+                public var username: Components.Parameters.Username
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - username: The handle for the GitHub user account.
-                public init(username: Components.Parameters.username) {
+                public init(username: Components.Parameters.Username) {
                     self.username = username
                 }
             }
-            public var path: Operations.users_sol_list_hyphen_followers_hyphen_for_hyphen_user.Input.Path
+            public var path: Operations.UsersListFollowersForUser.Input.Path
             /// - Remark: Generated from `#/paths/users/{username}/followers/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/followers/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/followers/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.users_sol_list_hyphen_followers_hyphen_for_hyphen_user.Input.Query
+            public var query: Operations.UsersListFollowersForUser.Input.Query
             /// - Remark: Generated from `#/paths/users/{username}/followers/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_list_hyphen_followers_hyphen_for_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersListFollowersForUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_list_hyphen_followers_hyphen_for_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersListFollowersForUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.users_sol_list_hyphen_followers_hyphen_for_hyphen_user.Input.Headers
+            public var headers: Operations.UsersListFollowersForUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -11404,9 +11765,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.users_sol_list_hyphen_followers_hyphen_for_hyphen_user.Input.Path,
-                query: Operations.users_sol_list_hyphen_followers_hyphen_for_hyphen_user.Input.Query = .init(),
-                headers: Operations.users_sol_list_hyphen_followers_hyphen_for_hyphen_user.Input.Headers = .init()
+                path: Operations.UsersListFollowersForUser.Input.Path,
+                query: Operations.UsersListFollowersForUser.Input.Query = .init(),
+                headers: Operations.UsersListFollowersForUser.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -11418,26 +11779,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/users/{username}/followers/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/users/{username}/followers/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.users_sol_list_hyphen_followers_hyphen_for_hyphen_user.Output.Ok.Headers
+                public var headers: Operations.UsersListFollowersForUser.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/users/{username}/followers/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/users/{username}/followers/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.simple_hyphen_user])
+                    case json([Components.Schemas.SimpleUser])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.simple_hyphen_user] {
+                    public var json: [Components.Schemas.SimpleUser] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -11447,15 +11808,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.users_sol_list_hyphen_followers_hyphen_for_hyphen_user.Output.Ok.Body
+                public var body: Operations.UsersListFollowersForUser.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.users_sol_list_hyphen_followers_hyphen_for_hyphen_user.Output.Ok.Headers = .init(),
-                    body: Operations.users_sol_list_hyphen_followers_hyphen_for_hyphen_user.Output.Ok.Body
+                    headers: Operations.UsersListFollowersForUser.Output.Ok.Headers = .init(),
+                    body: Operations.UsersListFollowersForUser.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -11466,12 +11827,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/followers/get(users/list-followers-for-user)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.users_sol_list_hyphen_followers_hyphen_for_hyphen_user.Output.Ok)
+            case ok(Operations.UsersListFollowersForUser.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.users_sol_list_hyphen_followers_hyphen_for_hyphen_user.Output.Ok {
+            public var ok: Operations.UsersListFollowersForUser.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -11521,7 +11882,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /users/{username}/following`.
     /// - Remark: Generated from `#/paths//users/{username}/following/get(users/list-following-for-user)`.
-    public enum users_sol_list_hyphen_following_hyphen_for_hyphen_user {
+    public enum UsersListFollowingForUser {
         public static let id: Swift.String = "users/list-following-for-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/users/{username}/following/GET/path`.
@@ -11529,52 +11890,52 @@ public enum Operations {
                 /// The handle for the GitHub user account.
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/following/GET/path/username`.
-                public var username: Components.Parameters.username
+                public var username: Components.Parameters.Username
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - username: The handle for the GitHub user account.
-                public init(username: Components.Parameters.username) {
+                public init(username: Components.Parameters.Username) {
                     self.username = username
                 }
             }
-            public var path: Operations.users_sol_list_hyphen_following_hyphen_for_hyphen_user.Input.Path
+            public var path: Operations.UsersListFollowingForUser.Input.Path
             /// - Remark: Generated from `#/paths/users/{username}/following/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/following/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/following/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.users_sol_list_hyphen_following_hyphen_for_hyphen_user.Input.Query
+            public var query: Operations.UsersListFollowingForUser.Input.Query
             /// - Remark: Generated from `#/paths/users/{username}/following/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_list_hyphen_following_hyphen_for_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersListFollowingForUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_list_hyphen_following_hyphen_for_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersListFollowingForUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.users_sol_list_hyphen_following_hyphen_for_hyphen_user.Input.Headers
+            public var headers: Operations.UsersListFollowingForUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -11582,9 +11943,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.users_sol_list_hyphen_following_hyphen_for_hyphen_user.Input.Path,
-                query: Operations.users_sol_list_hyphen_following_hyphen_for_hyphen_user.Input.Query = .init(),
-                headers: Operations.users_sol_list_hyphen_following_hyphen_for_hyphen_user.Input.Headers = .init()
+                path: Operations.UsersListFollowingForUser.Input.Path,
+                query: Operations.UsersListFollowingForUser.Input.Query = .init(),
+                headers: Operations.UsersListFollowingForUser.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -11596,26 +11957,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/users/{username}/following/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/users/{username}/following/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.users_sol_list_hyphen_following_hyphen_for_hyphen_user.Output.Ok.Headers
+                public var headers: Operations.UsersListFollowingForUser.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/users/{username}/following/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/users/{username}/following/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.simple_hyphen_user])
+                    case json([Components.Schemas.SimpleUser])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.simple_hyphen_user] {
+                    public var json: [Components.Schemas.SimpleUser] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -11625,15 +11986,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.users_sol_list_hyphen_following_hyphen_for_hyphen_user.Output.Ok.Body
+                public var body: Operations.UsersListFollowingForUser.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.users_sol_list_hyphen_following_hyphen_for_hyphen_user.Output.Ok.Headers = .init(),
-                    body: Operations.users_sol_list_hyphen_following_hyphen_for_hyphen_user.Output.Ok.Body
+                    headers: Operations.UsersListFollowingForUser.Output.Ok.Headers = .init(),
+                    body: Operations.UsersListFollowingForUser.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -11644,12 +12005,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/following/get(users/list-following-for-user)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.users_sol_list_hyphen_following_hyphen_for_hyphen_user.Output.Ok)
+            case ok(Operations.UsersListFollowingForUser.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.users_sol_list_hyphen_following_hyphen_for_hyphen_user.Output.Ok {
+            public var ok: Operations.UsersListFollowingForUser.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -11699,7 +12060,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /users/{username}/following/{target_user}`.
     /// - Remark: Generated from `#/paths//users/{username}/following/{target_user}/get(users/check-following-for-user)`.
-    public enum users_sol_check_hyphen_following_hyphen_for_hyphen_user {
+    public enum UsersCheckFollowingForUser {
         public static let id: Swift.String = "users/check-following-for-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/users/{username}/following/{target_user}/GET/path`.
@@ -11707,28 +12068,28 @@ public enum Operations {
                 /// The handle for the GitHub user account.
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/following/{target_user}/GET/path/username`.
-                public var username: Components.Parameters.username
+                public var username: Components.Parameters.Username
                 /// - Remark: Generated from `#/paths/users/{username}/following/{target_user}/GET/path/target_user`.
-                public var target_user: Swift.String
+                public var targetUser: Swift.String
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - username: The handle for the GitHub user account.
-                ///   - target_user:
+                ///   - targetUser:
                 public init(
-                    username: Components.Parameters.username,
-                    target_user: Swift.String
+                    username: Components.Parameters.Username,
+                    targetUser: Swift.String
                 ) {
                     self.username = username
-                    self.target_user = target_user
+                    self.targetUser = targetUser
                 }
             }
-            public var path: Operations.users_sol_check_hyphen_following_hyphen_for_hyphen_user.Input.Path
+            public var path: Operations.UsersCheckFollowingForUser.Input.Path
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
-            public init(path: Operations.users_sol_check_hyphen_following_hyphen_for_hyphen_user.Input.Path) {
+            public init(path: Operations.UsersCheckFollowingForUser.Input.Path) {
                 self.path = path
             }
         }
@@ -11742,12 +12103,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/following/{target_user}/get(users/check-following-for-user)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.users_sol_check_hyphen_following_hyphen_for_hyphen_user.Output.NoContent)
+            case noContent(Operations.UsersCheckFollowingForUser.Output.NoContent)
+            /// if the user follows the target user
+            ///
+            /// - Remark: Generated from `#/paths//users/{username}/following/{target_user}/get(users/check-following-for-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.users_sol_check_hyphen_following_hyphen_for_hyphen_user.Output.NoContent {
+            public var noContent: Operations.UsersCheckFollowingForUser.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -11769,12 +12138,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/following/{target_user}/get(users/check-following-for-user)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Operations.users_sol_check_hyphen_following_hyphen_for_hyphen_user.Output.NotFound)
+            case notFound(Operations.UsersCheckFollowingForUser.Output.NotFound)
+            /// if the user does not follow the target user
+            ///
+            /// - Remark: Generated from `#/paths//users/{username}/following/{target_user}/get(users/check-following-for-user)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Operations.users_sol_check_hyphen_following_hyphen_for_hyphen_user.Output.NotFound {
+            public var notFound: Operations.UsersCheckFollowingForUser.Output.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -11799,7 +12176,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /users/{username}/gpg_keys`.
     /// - Remark: Generated from `#/paths//users/{username}/gpg_keys/get(users/list-gpg-keys-for-user)`.
-    public enum users_sol_list_hyphen_gpg_hyphen_keys_hyphen_for_hyphen_user {
+    public enum UsersListGpgKeysForUser {
         public static let id: Swift.String = "users/list-gpg-keys-for-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/users/{username}/gpg_keys/GET/path`.
@@ -11807,52 +12184,52 @@ public enum Operations {
                 /// The handle for the GitHub user account.
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/gpg_keys/GET/path/username`.
-                public var username: Components.Parameters.username
+                public var username: Components.Parameters.Username
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - username: The handle for the GitHub user account.
-                public init(username: Components.Parameters.username) {
+                public init(username: Components.Parameters.Username) {
                     self.username = username
                 }
             }
-            public var path: Operations.users_sol_list_hyphen_gpg_hyphen_keys_hyphen_for_hyphen_user.Input.Path
+            public var path: Operations.UsersListGpgKeysForUser.Input.Path
             /// - Remark: Generated from `#/paths/users/{username}/gpg_keys/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/gpg_keys/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/gpg_keys/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.users_sol_list_hyphen_gpg_hyphen_keys_hyphen_for_hyphen_user.Input.Query
+            public var query: Operations.UsersListGpgKeysForUser.Input.Query
             /// - Remark: Generated from `#/paths/users/{username}/gpg_keys/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_list_hyphen_gpg_hyphen_keys_hyphen_for_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersListGpgKeysForUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_list_hyphen_gpg_hyphen_keys_hyphen_for_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersListGpgKeysForUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.users_sol_list_hyphen_gpg_hyphen_keys_hyphen_for_hyphen_user.Input.Headers
+            public var headers: Operations.UsersListGpgKeysForUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -11860,9 +12237,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.users_sol_list_hyphen_gpg_hyphen_keys_hyphen_for_hyphen_user.Input.Path,
-                query: Operations.users_sol_list_hyphen_gpg_hyphen_keys_hyphen_for_hyphen_user.Input.Query = .init(),
-                headers: Operations.users_sol_list_hyphen_gpg_hyphen_keys_hyphen_for_hyphen_user.Input.Headers = .init()
+                path: Operations.UsersListGpgKeysForUser.Input.Path,
+                query: Operations.UsersListGpgKeysForUser.Input.Query = .init(),
+                headers: Operations.UsersListGpgKeysForUser.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -11874,26 +12251,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/users/{username}/gpg_keys/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/users/{username}/gpg_keys/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.users_sol_list_hyphen_gpg_hyphen_keys_hyphen_for_hyphen_user.Output.Ok.Headers
+                public var headers: Operations.UsersListGpgKeysForUser.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/users/{username}/gpg_keys/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/users/{username}/gpg_keys/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.gpg_hyphen_key])
+                    case json([Components.Schemas.GpgKey])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.gpg_hyphen_key] {
+                    public var json: [Components.Schemas.GpgKey] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -11903,15 +12280,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.users_sol_list_hyphen_gpg_hyphen_keys_hyphen_for_hyphen_user.Output.Ok.Body
+                public var body: Operations.UsersListGpgKeysForUser.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.users_sol_list_hyphen_gpg_hyphen_keys_hyphen_for_hyphen_user.Output.Ok.Headers = .init(),
-                    body: Operations.users_sol_list_hyphen_gpg_hyphen_keys_hyphen_for_hyphen_user.Output.Ok.Body
+                    headers: Operations.UsersListGpgKeysForUser.Output.Ok.Headers = .init(),
+                    body: Operations.UsersListGpgKeysForUser.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -11922,12 +12299,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/gpg_keys/get(users/list-gpg-keys-for-user)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.users_sol_list_hyphen_gpg_hyphen_keys_hyphen_for_hyphen_user.Output.Ok)
+            case ok(Operations.UsersListGpgKeysForUser.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.users_sol_list_hyphen_gpg_hyphen_keys_hyphen_for_hyphen_user.Output.Ok {
+            public var ok: Operations.UsersListGpgKeysForUser.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -11981,7 +12358,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /users/{username}/hovercard`.
     /// - Remark: Generated from `#/paths//users/{username}/hovercard/get(users/get-context-for-user)`.
-    public enum users_sol_get_hyphen_context_hyphen_for_hyphen_user {
+    public enum UsersGetContextForUser {
         public static let id: Swift.String = "users/get-context-for-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/users/{username}/hovercard/GET/path`.
@@ -11989,59 +12366,59 @@ public enum Operations {
                 /// The handle for the GitHub user account.
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/hovercard/GET/path/username`.
-                public var username: Components.Parameters.username
+                public var username: Components.Parameters.Username
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - username: The handle for the GitHub user account.
-                public init(username: Components.Parameters.username) {
+                public init(username: Components.Parameters.Username) {
                     self.username = username
                 }
             }
-            public var path: Operations.users_sol_get_hyphen_context_hyphen_for_hyphen_user.Input.Path
+            public var path: Operations.UsersGetContextForUser.Input.Path
             /// - Remark: Generated from `#/paths/users/{username}/hovercard/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/users/{username}/hovercard/GET/query/subject_type`.
-                @frozen public enum subject_typePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum SubjectTypePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case organization = "organization"
                     case repository = "repository"
                     case issue = "issue"
-                    case pull_request = "pull_request"
+                    case pullRequest = "pull_request"
                 }
                 /// Identifies which additional information you'd like to receive about the person's hovercard. Can be `organization`, `repository`, `issue`, `pull_request`. **Required** when using `subject_id`.
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/hovercard/GET/query/subject_type`.
-                public var subject_type: Operations.users_sol_get_hyphen_context_hyphen_for_hyphen_user.Input.Query.subject_typePayload?
+                public var subjectType: Operations.UsersGetContextForUser.Input.Query.SubjectTypePayload?
                 /// Uses the ID for the `subject_type` you specified. **Required** when using `subject_type`.
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/hovercard/GET/query/subject_id`.
-                public var subject_id: Swift.String?
+                public var subjectId: Swift.String?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - subject_type: Identifies which additional information you'd like to receive about the person's hovercard. Can be `organization`, `repository`, `issue`, `pull_request`. **Required** when using `subject_id`.
-                ///   - subject_id: Uses the ID for the `subject_type` you specified. **Required** when using `subject_type`.
+                ///   - subjectType: Identifies which additional information you'd like to receive about the person's hovercard. Can be `organization`, `repository`, `issue`, `pull_request`. **Required** when using `subject_id`.
+                ///   - subjectId: Uses the ID for the `subject_type` you specified. **Required** when using `subject_type`.
                 public init(
-                    subject_type: Operations.users_sol_get_hyphen_context_hyphen_for_hyphen_user.Input.Query.subject_typePayload? = nil,
-                    subject_id: Swift.String? = nil
+                    subjectType: Operations.UsersGetContextForUser.Input.Query.SubjectTypePayload? = nil,
+                    subjectId: Swift.String? = nil
                 ) {
-                    self.subject_type = subject_type
-                    self.subject_id = subject_id
+                    self.subjectType = subjectType
+                    self.subjectId = subjectId
                 }
             }
-            public var query: Operations.users_sol_get_hyphen_context_hyphen_for_hyphen_user.Input.Query
+            public var query: Operations.UsersGetContextForUser.Input.Query
             /// - Remark: Generated from `#/paths/users/{username}/hovercard/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_get_hyphen_context_hyphen_for_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersGetContextForUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_get_hyphen_context_hyphen_for_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersGetContextForUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.users_sol_get_hyphen_context_hyphen_for_hyphen_user.Input.Headers
+            public var headers: Operations.UsersGetContextForUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -12049,9 +12426,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.users_sol_get_hyphen_context_hyphen_for_hyphen_user.Input.Path,
-                query: Operations.users_sol_get_hyphen_context_hyphen_for_hyphen_user.Input.Query = .init(),
-                headers: Operations.users_sol_get_hyphen_context_hyphen_for_hyphen_user.Input.Headers = .init()
+                path: Operations.UsersGetContextForUser.Input.Path,
+                query: Operations.UsersGetContextForUser.Input.Query = .init(),
+                headers: Operations.UsersGetContextForUser.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -12063,12 +12440,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/users/{username}/hovercard/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/users/{username}/hovercard/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.hovercard)
+                    case json(Components.Schemas.Hovercard)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.hovercard {
+                    public var json: Components.Schemas.Hovercard {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -12078,12 +12455,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.users_sol_get_hyphen_context_hyphen_for_hyphen_user.Output.Ok.Body
+                public var body: Operations.UsersGetContextForUser.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.users_sol_get_hyphen_context_hyphen_for_hyphen_user.Output.Ok.Body) {
+                public init(body: Operations.UsersGetContextForUser.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -12092,12 +12469,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/hovercard/get(users/get-context-for-user)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.users_sol_get_hyphen_context_hyphen_for_hyphen_user.Output.Ok)
+            case ok(Operations.UsersGetContextForUser.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.users_sol_get_hyphen_context_hyphen_for_hyphen_user.Output.Ok {
+            public var ok: Operations.UsersGetContextForUser.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -12115,12 +12492,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/hovercard/get(users/get-context-for-user)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -12138,12 +12515,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/hovercard/get(users/get-context-for-user)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -12193,7 +12570,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /users/{username}/keys`.
     /// - Remark: Generated from `#/paths//users/{username}/keys/get(users/list-public-keys-for-user)`.
-    public enum users_sol_list_hyphen_public_hyphen_keys_hyphen_for_hyphen_user {
+    public enum UsersListPublicKeysForUser {
         public static let id: Swift.String = "users/list-public-keys-for-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/users/{username}/keys/GET/path`.
@@ -12201,52 +12578,52 @@ public enum Operations {
                 /// The handle for the GitHub user account.
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/keys/GET/path/username`.
-                public var username: Components.Parameters.username
+                public var username: Components.Parameters.Username
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - username: The handle for the GitHub user account.
-                public init(username: Components.Parameters.username) {
+                public init(username: Components.Parameters.Username) {
                     self.username = username
                 }
             }
-            public var path: Operations.users_sol_list_hyphen_public_hyphen_keys_hyphen_for_hyphen_user.Input.Path
+            public var path: Operations.UsersListPublicKeysForUser.Input.Path
             /// - Remark: Generated from `#/paths/users/{username}/keys/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/keys/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/keys/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.users_sol_list_hyphen_public_hyphen_keys_hyphen_for_hyphen_user.Input.Query
+            public var query: Operations.UsersListPublicKeysForUser.Input.Query
             /// - Remark: Generated from `#/paths/users/{username}/keys/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_list_hyphen_public_hyphen_keys_hyphen_for_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersListPublicKeysForUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_list_hyphen_public_hyphen_keys_hyphen_for_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersListPublicKeysForUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.users_sol_list_hyphen_public_hyphen_keys_hyphen_for_hyphen_user.Input.Headers
+            public var headers: Operations.UsersListPublicKeysForUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -12254,9 +12631,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.users_sol_list_hyphen_public_hyphen_keys_hyphen_for_hyphen_user.Input.Path,
-                query: Operations.users_sol_list_hyphen_public_hyphen_keys_hyphen_for_hyphen_user.Input.Query = .init(),
-                headers: Operations.users_sol_list_hyphen_public_hyphen_keys_hyphen_for_hyphen_user.Input.Headers = .init()
+                path: Operations.UsersListPublicKeysForUser.Input.Path,
+                query: Operations.UsersListPublicKeysForUser.Input.Query = .init(),
+                headers: Operations.UsersListPublicKeysForUser.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -12268,26 +12645,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/users/{username}/keys/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/users/{username}/keys/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.users_sol_list_hyphen_public_hyphen_keys_hyphen_for_hyphen_user.Output.Ok.Headers
+                public var headers: Operations.UsersListPublicKeysForUser.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/users/{username}/keys/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/users/{username}/keys/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.key_hyphen_simple])
+                    case json([Components.Schemas.KeySimple])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.key_hyphen_simple] {
+                    public var json: [Components.Schemas.KeySimple] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -12297,15 +12674,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.users_sol_list_hyphen_public_hyphen_keys_hyphen_for_hyphen_user.Output.Ok.Body
+                public var body: Operations.UsersListPublicKeysForUser.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.users_sol_list_hyphen_public_hyphen_keys_hyphen_for_hyphen_user.Output.Ok.Headers = .init(),
-                    body: Operations.users_sol_list_hyphen_public_hyphen_keys_hyphen_for_hyphen_user.Output.Ok.Body
+                    headers: Operations.UsersListPublicKeysForUser.Output.Ok.Headers = .init(),
+                    body: Operations.UsersListPublicKeysForUser.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -12316,12 +12693,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/keys/get(users/list-public-keys-for-user)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.users_sol_list_hyphen_public_hyphen_keys_hyphen_for_hyphen_user.Output.Ok)
+            case ok(Operations.UsersListPublicKeysForUser.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.users_sol_list_hyphen_public_hyphen_keys_hyphen_for_hyphen_user.Output.Ok {
+            public var ok: Operations.UsersListPublicKeysForUser.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -12371,7 +12748,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /users/{username}/social_accounts`.
     /// - Remark: Generated from `#/paths//users/{username}/social_accounts/get(users/list-social-accounts-for-user)`.
-    public enum users_sol_list_hyphen_social_hyphen_accounts_hyphen_for_hyphen_user {
+    public enum UsersListSocialAccountsForUser {
         public static let id: Swift.String = "users/list-social-accounts-for-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/users/{username}/social_accounts/GET/path`.
@@ -12379,52 +12756,52 @@ public enum Operations {
                 /// The handle for the GitHub user account.
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/social_accounts/GET/path/username`.
-                public var username: Components.Parameters.username
+                public var username: Components.Parameters.Username
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - username: The handle for the GitHub user account.
-                public init(username: Components.Parameters.username) {
+                public init(username: Components.Parameters.Username) {
                     self.username = username
                 }
             }
-            public var path: Operations.users_sol_list_hyphen_social_hyphen_accounts_hyphen_for_hyphen_user.Input.Path
+            public var path: Operations.UsersListSocialAccountsForUser.Input.Path
             /// - Remark: Generated from `#/paths/users/{username}/social_accounts/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/social_accounts/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/social_accounts/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.users_sol_list_hyphen_social_hyphen_accounts_hyphen_for_hyphen_user.Input.Query
+            public var query: Operations.UsersListSocialAccountsForUser.Input.Query
             /// - Remark: Generated from `#/paths/users/{username}/social_accounts/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_list_hyphen_social_hyphen_accounts_hyphen_for_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersListSocialAccountsForUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_list_hyphen_social_hyphen_accounts_hyphen_for_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersListSocialAccountsForUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.users_sol_list_hyphen_social_hyphen_accounts_hyphen_for_hyphen_user.Input.Headers
+            public var headers: Operations.UsersListSocialAccountsForUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -12432,9 +12809,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.users_sol_list_hyphen_social_hyphen_accounts_hyphen_for_hyphen_user.Input.Path,
-                query: Operations.users_sol_list_hyphen_social_hyphen_accounts_hyphen_for_hyphen_user.Input.Query = .init(),
-                headers: Operations.users_sol_list_hyphen_social_hyphen_accounts_hyphen_for_hyphen_user.Input.Headers = .init()
+                path: Operations.UsersListSocialAccountsForUser.Input.Path,
+                query: Operations.UsersListSocialAccountsForUser.Input.Query = .init(),
+                headers: Operations.UsersListSocialAccountsForUser.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -12446,26 +12823,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/users/{username}/social_accounts/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/users/{username}/social_accounts/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.users_sol_list_hyphen_social_hyphen_accounts_hyphen_for_hyphen_user.Output.Ok.Headers
+                public var headers: Operations.UsersListSocialAccountsForUser.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/users/{username}/social_accounts/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/users/{username}/social_accounts/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.social_hyphen_account])
+                    case json([Components.Schemas.SocialAccount])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.social_hyphen_account] {
+                    public var json: [Components.Schemas.SocialAccount] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -12475,15 +12852,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.users_sol_list_hyphen_social_hyphen_accounts_hyphen_for_hyphen_user.Output.Ok.Body
+                public var body: Operations.UsersListSocialAccountsForUser.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.users_sol_list_hyphen_social_hyphen_accounts_hyphen_for_hyphen_user.Output.Ok.Headers = .init(),
-                    body: Operations.users_sol_list_hyphen_social_hyphen_accounts_hyphen_for_hyphen_user.Output.Ok.Body
+                    headers: Operations.UsersListSocialAccountsForUser.Output.Ok.Headers = .init(),
+                    body: Operations.UsersListSocialAccountsForUser.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -12494,12 +12871,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/social_accounts/get(users/list-social-accounts-for-user)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.users_sol_list_hyphen_social_hyphen_accounts_hyphen_for_hyphen_user.Output.Ok)
+            case ok(Operations.UsersListSocialAccountsForUser.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.users_sol_list_hyphen_social_hyphen_accounts_hyphen_for_hyphen_user.Output.Ok {
+            public var ok: Operations.UsersListSocialAccountsForUser.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -12549,7 +12926,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /users/{username}/ssh_signing_keys`.
     /// - Remark: Generated from `#/paths//users/{username}/ssh_signing_keys/get(users/list-ssh-signing-keys-for-user)`.
-    public enum users_sol_list_hyphen_ssh_hyphen_signing_hyphen_keys_hyphen_for_hyphen_user {
+    public enum UsersListSshSigningKeysForUser {
         public static let id: Swift.String = "users/list-ssh-signing-keys-for-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/users/{username}/ssh_signing_keys/GET/path`.
@@ -12557,52 +12934,52 @@ public enum Operations {
                 /// The handle for the GitHub user account.
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/ssh_signing_keys/GET/path/username`.
-                public var username: Components.Parameters.username
+                public var username: Components.Parameters.Username
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - username: The handle for the GitHub user account.
-                public init(username: Components.Parameters.username) {
+                public init(username: Components.Parameters.Username) {
                     self.username = username
                 }
             }
-            public var path: Operations.users_sol_list_hyphen_ssh_hyphen_signing_hyphen_keys_hyphen_for_hyphen_user.Input.Path
+            public var path: Operations.UsersListSshSigningKeysForUser.Input.Path
             /// - Remark: Generated from `#/paths/users/{username}/ssh_signing_keys/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/ssh_signing_keys/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/ssh_signing_keys/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.users_sol_list_hyphen_ssh_hyphen_signing_hyphen_keys_hyphen_for_hyphen_user.Input.Query
+            public var query: Operations.UsersListSshSigningKeysForUser.Input.Query
             /// - Remark: Generated from `#/paths/users/{username}/ssh_signing_keys/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_list_hyphen_ssh_hyphen_signing_hyphen_keys_hyphen_for_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersListSshSigningKeysForUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.users_sol_list_hyphen_ssh_hyphen_signing_hyphen_keys_hyphen_for_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.UsersListSshSigningKeysForUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.users_sol_list_hyphen_ssh_hyphen_signing_hyphen_keys_hyphen_for_hyphen_user.Input.Headers
+            public var headers: Operations.UsersListSshSigningKeysForUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -12610,9 +12987,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.users_sol_list_hyphen_ssh_hyphen_signing_hyphen_keys_hyphen_for_hyphen_user.Input.Path,
-                query: Operations.users_sol_list_hyphen_ssh_hyphen_signing_hyphen_keys_hyphen_for_hyphen_user.Input.Query = .init(),
-                headers: Operations.users_sol_list_hyphen_ssh_hyphen_signing_hyphen_keys_hyphen_for_hyphen_user.Input.Headers = .init()
+                path: Operations.UsersListSshSigningKeysForUser.Input.Path,
+                query: Operations.UsersListSshSigningKeysForUser.Input.Query = .init(),
+                headers: Operations.UsersListSshSigningKeysForUser.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -12624,26 +13001,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/users/{username}/ssh_signing_keys/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/users/{username}/ssh_signing_keys/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.users_sol_list_hyphen_ssh_hyphen_signing_hyphen_keys_hyphen_for_hyphen_user.Output.Ok.Headers
+                public var headers: Operations.UsersListSshSigningKeysForUser.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/users/{username}/ssh_signing_keys/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/users/{username}/ssh_signing_keys/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.ssh_hyphen_signing_hyphen_key])
+                    case json([Components.Schemas.SshSigningKey])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.ssh_hyphen_signing_hyphen_key] {
+                    public var json: [Components.Schemas.SshSigningKey] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -12653,15 +13030,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.users_sol_list_hyphen_ssh_hyphen_signing_hyphen_keys_hyphen_for_hyphen_user.Output.Ok.Body
+                public var body: Operations.UsersListSshSigningKeysForUser.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.users_sol_list_hyphen_ssh_hyphen_signing_hyphen_keys_hyphen_for_hyphen_user.Output.Ok.Headers = .init(),
-                    body: Operations.users_sol_list_hyphen_ssh_hyphen_signing_hyphen_keys_hyphen_for_hyphen_user.Output.Ok.Body
+                    headers: Operations.UsersListSshSigningKeysForUser.Output.Ok.Headers = .init(),
+                    body: Operations.UsersListSshSigningKeysForUser.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -12672,12 +13049,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/ssh_signing_keys/get(users/list-ssh-signing-keys-for-user)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.users_sol_list_hyphen_ssh_hyphen_signing_hyphen_keys_hyphen_for_hyphen_user.Output.Ok)
+            case ok(Operations.UsersListSshSigningKeysForUser.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.users_sol_list_hyphen_ssh_hyphen_signing_hyphen_keys_hyphen_for_hyphen_user.Output.Ok {
+            public var ok: Operations.UsersListSshSigningKeysForUser.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
