@@ -23,7 +23,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /enterprises/{enterprise}/dependabot/alerts`.
     /// - Remark: Generated from `#/paths//enterprises/{enterprise}/dependabot/alerts/get(dependabot/list-alerts-for-enterprise)`.
-    func dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise(_ input: Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.Input) async throws -> Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.Output
+    func dependabotListAlertsForEnterprise(_ input: Operations.DependabotListAlertsForEnterprise.Input) async throws -> Operations.DependabotListAlertsForEnterprise.Output
     /// List Dependabot alerts for an organization
     ///
     /// Lists Dependabot alerts for an organization.
@@ -34,7 +34,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/dependabot/alerts`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/alerts/get(dependabot/list-alerts-for-org)`.
-    func dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_org(_ input: Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Input) async throws -> Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Output
+    func dependabotListAlertsForOrg(_ input: Operations.DependabotListAlertsForOrg.Input) async throws -> Operations.DependabotListAlertsForOrg.Output
     /// List organization secrets
     ///
     /// Lists all secrets available in an organization without revealing their
@@ -44,7 +44,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/dependabot/secrets`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/get(dependabot/list-org-secrets)`.
-    func dependabot_sol_list_hyphen_org_hyphen_secrets(_ input: Operations.dependabot_sol_list_hyphen_org_hyphen_secrets.Input) async throws -> Operations.dependabot_sol_list_hyphen_org_hyphen_secrets.Output
+    func dependabotListOrgSecrets(_ input: Operations.DependabotListOrgSecrets.Input) async throws -> Operations.DependabotListOrgSecrets.Output
     /// Get an organization public key
     ///
     /// Gets your public key, which you need to encrypt secrets. You need to
@@ -54,7 +54,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/dependabot/secrets/public-key`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/public-key/get(dependabot/get-org-public-key)`.
-    func dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key(_ input: Operations.dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key.Input) async throws -> Operations.dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key.Output
+    func dependabotGetOrgPublicKey(_ input: Operations.DependabotGetOrgPublicKey.Input) async throws -> Operations.DependabotGetOrgPublicKey.Output
     /// Get an organization secret
     ///
     /// Gets a single organization secret without revealing its encrypted value.
@@ -63,7 +63,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/dependabot/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/get(dependabot/get-org-secret)`.
-    func dependabot_sol_get_hyphen_org_hyphen_secret(_ input: Operations.dependabot_sol_get_hyphen_org_hyphen_secret.Input) async throws -> Operations.dependabot_sol_get_hyphen_org_hyphen_secret.Output
+    func dependabotGetOrgSecret(_ input: Operations.DependabotGetOrgSecret.Input) async throws -> Operations.DependabotGetOrgSecret.Output
     /// Create or update an organization secret
     ///
     /// Creates or updates an organization secret with an encrypted value. Encrypt your secret using
@@ -73,7 +73,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/dependabot/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/put(dependabot/create-or-update-org-secret)`.
-    func dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret(_ input: Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret.Input) async throws -> Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret.Output
+    func dependabotCreateOrUpdateOrgSecret(_ input: Operations.DependabotCreateOrUpdateOrgSecret.Input) async throws -> Operations.DependabotCreateOrUpdateOrgSecret.Output
     /// Delete an organization secret
     ///
     /// Deletes a secret in an organization using the secret name.
@@ -82,7 +82,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/dependabot/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/delete(dependabot/delete-org-secret)`.
-    func dependabot_sol_delete_hyphen_org_hyphen_secret(_ input: Operations.dependabot_sol_delete_hyphen_org_hyphen_secret.Input) async throws -> Operations.dependabot_sol_delete_hyphen_org_hyphen_secret.Output
+    func dependabotDeleteOrgSecret(_ input: Operations.DependabotDeleteOrgSecret.Input) async throws -> Operations.DependabotDeleteOrgSecret.Output
     /// List selected repositories for an organization secret
     ///
     /// Lists all repositories that have been selected when the `visibility`
@@ -92,7 +92,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/dependabot/secrets/{secret_name}/repositories`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/repositories/get(dependabot/list-selected-repos-for-org-secret)`.
-    func dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret(_ input: Operations.dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret.Input) async throws -> Operations.dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret.Output
+    func dependabotListSelectedReposForOrgSecret(_ input: Operations.DependabotListSelectedReposForOrgSecret.Input) async throws -> Operations.DependabotListSelectedReposForOrgSecret.Output
     /// Set selected repositories for an organization secret
     ///
     /// Replaces all repositories for an organization secret when the `visibility`
@@ -103,7 +103,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/dependabot/secrets/{secret_name}/repositories`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/repositories/put(dependabot/set-selected-repos-for-org-secret)`.
-    func dependabot_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret(_ input: Operations.dependabot_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret.Input) async throws -> Operations.dependabot_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret.Output
+    func dependabotSetSelectedReposForOrgSecret(_ input: Operations.DependabotSetSelectedReposForOrgSecret.Input) async throws -> Operations.DependabotSetSelectedReposForOrgSecret.Output
     /// Add selected repository to an organization secret
     ///
     /// Adds a repository to an organization secret when the `visibility` for
@@ -114,7 +114,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}/put(dependabot/add-selected-repo-to-org-secret)`.
-    func dependabot_sol_add_hyphen_selected_hyphen_repo_hyphen_to_hyphen_org_hyphen_secret(_ input: Operations.dependabot_sol_add_hyphen_selected_hyphen_repo_hyphen_to_hyphen_org_hyphen_secret.Input) async throws -> Operations.dependabot_sol_add_hyphen_selected_hyphen_repo_hyphen_to_hyphen_org_hyphen_secret.Output
+    func dependabotAddSelectedRepoToOrgSecret(_ input: Operations.DependabotAddSelectedRepoToOrgSecret.Input) async throws -> Operations.DependabotAddSelectedRepoToOrgSecret.Output
     /// Remove selected repository from an organization secret
     ///
     /// Removes a repository from an organization secret when the `visibility`
@@ -125,21 +125,21 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}/delete(dependabot/remove-selected-repo-from-org-secret)`.
-    func dependabot_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_secret(_ input: Operations.dependabot_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_secret.Input) async throws -> Operations.dependabot_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_secret.Output
+    func dependabotRemoveSelectedRepoFromOrgSecret(_ input: Operations.DependabotRemoveSelectedRepoFromOrgSecret.Input) async throws -> Operations.DependabotRemoveSelectedRepoFromOrgSecret.Output
     /// List Dependabot alerts for a repository
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint. If this endpoint is only used with public repositories, the token can use the `public_repo` scope instead.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/dependabot/alerts`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/alerts/get(dependabot/list-alerts-for-repo)`.
-    func dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_repo(_ input: Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Input) async throws -> Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Output
+    func dependabotListAlertsForRepo(_ input: Operations.DependabotListAlertsForRepo.Input) async throws -> Operations.DependabotListAlertsForRepo.Output
     /// Get a Dependabot alert
     ///
     /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint. If this endpoint is only used with public repositories, the token can use the `public_repo` scope instead.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/dependabot/alerts/{alert_number}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/alerts/{alert_number}/get(dependabot/get-alert)`.
-    func dependabot_sol_get_hyphen_alert(_ input: Operations.dependabot_sol_get_hyphen_alert.Input) async throws -> Operations.dependabot_sol_get_hyphen_alert.Output
+    func dependabotGetAlert(_ input: Operations.DependabotGetAlert.Input) async throws -> Operations.DependabotGetAlert.Output
     /// Update a Dependabot alert
     ///
     /// The authenticated user must have access to security alerts for the repository to use this endpoint. For more information, see "[Granting access to security alerts](https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-security-and-analysis-settings-for-your-repository#granting-access-to-security-alerts)."
@@ -148,7 +148,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/dependabot/alerts/{alert_number}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/alerts/{alert_number}/patch(dependabot/update-alert)`.
-    func dependabot_sol_update_hyphen_alert(_ input: Operations.dependabot_sol_update_hyphen_alert.Input) async throws -> Operations.dependabot_sol_update_hyphen_alert.Output
+    func dependabotUpdateAlert(_ input: Operations.DependabotUpdateAlert.Input) async throws -> Operations.DependabotUpdateAlert.Output
     /// List repository secrets
     ///
     /// Lists all secrets available in a repository without revealing their encrypted
@@ -158,7 +158,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/dependabot/secrets`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/secrets/get(dependabot/list-repo-secrets)`.
-    func dependabot_sol_list_hyphen_repo_hyphen_secrets(_ input: Operations.dependabot_sol_list_hyphen_repo_hyphen_secrets.Input) async throws -> Operations.dependabot_sol_list_hyphen_repo_hyphen_secrets.Output
+    func dependabotListRepoSecrets(_ input: Operations.DependabotListRepoSecrets.Input) async throws -> Operations.DependabotListRepoSecrets.Output
     /// Get a repository public key
     ///
     /// Gets your public key, which you need to encrypt secrets. You need to
@@ -169,7 +169,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/dependabot/secrets/public-key`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/secrets/public-key/get(dependabot/get-repo-public-key)`.
-    func dependabot_sol_get_hyphen_repo_hyphen_public_hyphen_key(_ input: Operations.dependabot_sol_get_hyphen_repo_hyphen_public_hyphen_key.Input) async throws -> Operations.dependabot_sol_get_hyphen_repo_hyphen_public_hyphen_key.Output
+    func dependabotGetRepoPublicKey(_ input: Operations.DependabotGetRepoPublicKey.Input) async throws -> Operations.DependabotGetRepoPublicKey.Output
     /// Get a repository secret
     ///
     /// Gets a single repository secret without revealing its encrypted value.
@@ -178,7 +178,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/dependabot/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/secrets/{secret_name}/get(dependabot/get-repo-secret)`.
-    func dependabot_sol_get_hyphen_repo_hyphen_secret(_ input: Operations.dependabot_sol_get_hyphen_repo_hyphen_secret.Input) async throws -> Operations.dependabot_sol_get_hyphen_repo_hyphen_secret.Output
+    func dependabotGetRepoSecret(_ input: Operations.DependabotGetRepoSecret.Input) async throws -> Operations.DependabotGetRepoSecret.Output
     /// Create or update a repository secret
     ///
     /// Creates or updates a repository secret with an encrypted value. Encrypt your secret using
@@ -188,7 +188,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/dependabot/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/secrets/{secret_name}/put(dependabot/create-or-update-repo-secret)`.
-    func dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret(_ input: Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret.Input) async throws -> Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret.Output
+    func dependabotCreateOrUpdateRepoSecret(_ input: Operations.DependabotCreateOrUpdateRepoSecret.Input) async throws -> Operations.DependabotCreateOrUpdateRepoSecret.Output
     /// Delete a repository secret
     ///
     /// Deletes a secret in a repository using the secret name.
@@ -197,7 +197,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/dependabot/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/secrets/{secret_name}/delete(dependabot/delete-repo-secret)`.
-    func dependabot_sol_delete_hyphen_repo_hyphen_secret(_ input: Operations.dependabot_sol_delete_hyphen_repo_hyphen_secret.Input) async throws -> Operations.dependabot_sol_delete_hyphen_repo_hyphen_secret.Output
+    func dependabotDeleteRepoSecret(_ input: Operations.DependabotDeleteRepoSecret.Input) async throws -> Operations.DependabotDeleteRepoSecret.Output
 }
 
 /// Convenience overloads for operation inputs.
@@ -214,12 +214,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /enterprises/{enterprise}/dependabot/alerts`.
     /// - Remark: Generated from `#/paths//enterprises/{enterprise}/dependabot/alerts/get(dependabot/list-alerts-for-enterprise)`.
-    public func dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise(
-        path: Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.Input.Path,
-        query: Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.Input.Query = .init(),
-        headers: Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.Input.Headers = .init()
-    ) async throws -> Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.Output {
-        try await dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise(Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.Input(
+    public func dependabotListAlertsForEnterprise(
+        path: Operations.DependabotListAlertsForEnterprise.Input.Path,
+        query: Operations.DependabotListAlertsForEnterprise.Input.Query = .init(),
+        headers: Operations.DependabotListAlertsForEnterprise.Input.Headers = .init()
+    ) async throws -> Operations.DependabotListAlertsForEnterprise.Output {
+        try await dependabotListAlertsForEnterprise(Operations.DependabotListAlertsForEnterprise.Input(
             path: path,
             query: query,
             headers: headers
@@ -235,12 +235,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/dependabot/alerts`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/alerts/get(dependabot/list-alerts-for-org)`.
-    public func dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_org(
-        path: Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Input.Path,
-        query: Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Input.Query = .init(),
-        headers: Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Input.Headers = .init()
-    ) async throws -> Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Output {
-        try await dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_org(Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Input(
+    public func dependabotListAlertsForOrg(
+        path: Operations.DependabotListAlertsForOrg.Input.Path,
+        query: Operations.DependabotListAlertsForOrg.Input.Query = .init(),
+        headers: Operations.DependabotListAlertsForOrg.Input.Headers = .init()
+    ) async throws -> Operations.DependabotListAlertsForOrg.Output {
+        try await dependabotListAlertsForOrg(Operations.DependabotListAlertsForOrg.Input(
             path: path,
             query: query,
             headers: headers
@@ -255,12 +255,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/dependabot/secrets`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/get(dependabot/list-org-secrets)`.
-    public func dependabot_sol_list_hyphen_org_hyphen_secrets(
-        path: Operations.dependabot_sol_list_hyphen_org_hyphen_secrets.Input.Path,
-        query: Operations.dependabot_sol_list_hyphen_org_hyphen_secrets.Input.Query = .init(),
-        headers: Operations.dependabot_sol_list_hyphen_org_hyphen_secrets.Input.Headers = .init()
-    ) async throws -> Operations.dependabot_sol_list_hyphen_org_hyphen_secrets.Output {
-        try await dependabot_sol_list_hyphen_org_hyphen_secrets(Operations.dependabot_sol_list_hyphen_org_hyphen_secrets.Input(
+    public func dependabotListOrgSecrets(
+        path: Operations.DependabotListOrgSecrets.Input.Path,
+        query: Operations.DependabotListOrgSecrets.Input.Query = .init(),
+        headers: Operations.DependabotListOrgSecrets.Input.Headers = .init()
+    ) async throws -> Operations.DependabotListOrgSecrets.Output {
+        try await dependabotListOrgSecrets(Operations.DependabotListOrgSecrets.Input(
             path: path,
             query: query,
             headers: headers
@@ -275,11 +275,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/dependabot/secrets/public-key`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/public-key/get(dependabot/get-org-public-key)`.
-    public func dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key(
-        path: Operations.dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key.Input.Path,
-        headers: Operations.dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key.Input.Headers = .init()
-    ) async throws -> Operations.dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key.Output {
-        try await dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key(Operations.dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key.Input(
+    public func dependabotGetOrgPublicKey(
+        path: Operations.DependabotGetOrgPublicKey.Input.Path,
+        headers: Operations.DependabotGetOrgPublicKey.Input.Headers = .init()
+    ) async throws -> Operations.DependabotGetOrgPublicKey.Output {
+        try await dependabotGetOrgPublicKey(Operations.DependabotGetOrgPublicKey.Input(
             path: path,
             headers: headers
         ))
@@ -292,11 +292,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/dependabot/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/get(dependabot/get-org-secret)`.
-    public func dependabot_sol_get_hyphen_org_hyphen_secret(
-        path: Operations.dependabot_sol_get_hyphen_org_hyphen_secret.Input.Path,
-        headers: Operations.dependabot_sol_get_hyphen_org_hyphen_secret.Input.Headers = .init()
-    ) async throws -> Operations.dependabot_sol_get_hyphen_org_hyphen_secret.Output {
-        try await dependabot_sol_get_hyphen_org_hyphen_secret(Operations.dependabot_sol_get_hyphen_org_hyphen_secret.Input(
+    public func dependabotGetOrgSecret(
+        path: Operations.DependabotGetOrgSecret.Input.Path,
+        headers: Operations.DependabotGetOrgSecret.Input.Headers = .init()
+    ) async throws -> Operations.DependabotGetOrgSecret.Output {
+        try await dependabotGetOrgSecret(Operations.DependabotGetOrgSecret.Input(
             path: path,
             headers: headers
         ))
@@ -310,12 +310,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/dependabot/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/put(dependabot/create-or-update-org-secret)`.
-    public func dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret(
-        path: Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret.Input.Path,
-        headers: Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret.Input.Headers = .init(),
-        body: Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret.Input.Body
-    ) async throws -> Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret.Output {
-        try await dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret(Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret.Input(
+    public func dependabotCreateOrUpdateOrgSecret(
+        path: Operations.DependabotCreateOrUpdateOrgSecret.Input.Path,
+        headers: Operations.DependabotCreateOrUpdateOrgSecret.Input.Headers = .init(),
+        body: Operations.DependabotCreateOrUpdateOrgSecret.Input.Body
+    ) async throws -> Operations.DependabotCreateOrUpdateOrgSecret.Output {
+        try await dependabotCreateOrUpdateOrgSecret(Operations.DependabotCreateOrUpdateOrgSecret.Input(
             path: path,
             headers: headers,
             body: body
@@ -329,8 +329,8 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/dependabot/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/delete(dependabot/delete-org-secret)`.
-    public func dependabot_sol_delete_hyphen_org_hyphen_secret(path: Operations.dependabot_sol_delete_hyphen_org_hyphen_secret.Input.Path) async throws -> Operations.dependabot_sol_delete_hyphen_org_hyphen_secret.Output {
-        try await dependabot_sol_delete_hyphen_org_hyphen_secret(Operations.dependabot_sol_delete_hyphen_org_hyphen_secret.Input(path: path))
+    public func dependabotDeleteOrgSecret(path: Operations.DependabotDeleteOrgSecret.Input.Path) async throws -> Operations.DependabotDeleteOrgSecret.Output {
+        try await dependabotDeleteOrgSecret(Operations.DependabotDeleteOrgSecret.Input(path: path))
     }
     /// List selected repositories for an organization secret
     ///
@@ -341,12 +341,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/dependabot/secrets/{secret_name}/repositories`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/repositories/get(dependabot/list-selected-repos-for-org-secret)`.
-    public func dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret(
-        path: Operations.dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret.Input.Path,
-        query: Operations.dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret.Input.Query = .init(),
-        headers: Operations.dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret.Input.Headers = .init()
-    ) async throws -> Operations.dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret.Output {
-        try await dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret(Operations.dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret.Input(
+    public func dependabotListSelectedReposForOrgSecret(
+        path: Operations.DependabotListSelectedReposForOrgSecret.Input.Path,
+        query: Operations.DependabotListSelectedReposForOrgSecret.Input.Query = .init(),
+        headers: Operations.DependabotListSelectedReposForOrgSecret.Input.Headers = .init()
+    ) async throws -> Operations.DependabotListSelectedReposForOrgSecret.Output {
+        try await dependabotListSelectedReposForOrgSecret(Operations.DependabotListSelectedReposForOrgSecret.Input(
             path: path,
             query: query,
             headers: headers
@@ -362,11 +362,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/dependabot/secrets/{secret_name}/repositories`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/repositories/put(dependabot/set-selected-repos-for-org-secret)`.
-    public func dependabot_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret(
-        path: Operations.dependabot_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret.Input.Path,
-        body: Operations.dependabot_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret.Input.Body
-    ) async throws -> Operations.dependabot_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret.Output {
-        try await dependabot_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret(Operations.dependabot_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret.Input(
+    public func dependabotSetSelectedReposForOrgSecret(
+        path: Operations.DependabotSetSelectedReposForOrgSecret.Input.Path,
+        body: Operations.DependabotSetSelectedReposForOrgSecret.Input.Body
+    ) async throws -> Operations.DependabotSetSelectedReposForOrgSecret.Output {
+        try await dependabotSetSelectedReposForOrgSecret(Operations.DependabotSetSelectedReposForOrgSecret.Input(
             path: path,
             body: body
         ))
@@ -381,8 +381,8 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}/put(dependabot/add-selected-repo-to-org-secret)`.
-    public func dependabot_sol_add_hyphen_selected_hyphen_repo_hyphen_to_hyphen_org_hyphen_secret(path: Operations.dependabot_sol_add_hyphen_selected_hyphen_repo_hyphen_to_hyphen_org_hyphen_secret.Input.Path) async throws -> Operations.dependabot_sol_add_hyphen_selected_hyphen_repo_hyphen_to_hyphen_org_hyphen_secret.Output {
-        try await dependabot_sol_add_hyphen_selected_hyphen_repo_hyphen_to_hyphen_org_hyphen_secret(Operations.dependabot_sol_add_hyphen_selected_hyphen_repo_hyphen_to_hyphen_org_hyphen_secret.Input(path: path))
+    public func dependabotAddSelectedRepoToOrgSecret(path: Operations.DependabotAddSelectedRepoToOrgSecret.Input.Path) async throws -> Operations.DependabotAddSelectedRepoToOrgSecret.Output {
+        try await dependabotAddSelectedRepoToOrgSecret(Operations.DependabotAddSelectedRepoToOrgSecret.Input(path: path))
     }
     /// Remove selected repository from an organization secret
     ///
@@ -394,8 +394,8 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}/delete(dependabot/remove-selected-repo-from-org-secret)`.
-    public func dependabot_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_secret(path: Operations.dependabot_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_secret.Input.Path) async throws -> Operations.dependabot_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_secret.Output {
-        try await dependabot_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_secret(Operations.dependabot_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_secret.Input(path: path))
+    public func dependabotRemoveSelectedRepoFromOrgSecret(path: Operations.DependabotRemoveSelectedRepoFromOrgSecret.Input.Path) async throws -> Operations.DependabotRemoveSelectedRepoFromOrgSecret.Output {
+        try await dependabotRemoveSelectedRepoFromOrgSecret(Operations.DependabotRemoveSelectedRepoFromOrgSecret.Input(path: path))
     }
     /// List Dependabot alerts for a repository
     ///
@@ -403,12 +403,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/dependabot/alerts`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/alerts/get(dependabot/list-alerts-for-repo)`.
-    public func dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_repo(
-        path: Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Input.Path,
-        query: Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Input.Query = .init(),
-        headers: Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Input.Headers = .init()
-    ) async throws -> Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Output {
-        try await dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_repo(Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Input(
+    public func dependabotListAlertsForRepo(
+        path: Operations.DependabotListAlertsForRepo.Input.Path,
+        query: Operations.DependabotListAlertsForRepo.Input.Query = .init(),
+        headers: Operations.DependabotListAlertsForRepo.Input.Headers = .init()
+    ) async throws -> Operations.DependabotListAlertsForRepo.Output {
+        try await dependabotListAlertsForRepo(Operations.DependabotListAlertsForRepo.Input(
             path: path,
             query: query,
             headers: headers
@@ -420,11 +420,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/dependabot/alerts/{alert_number}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/alerts/{alert_number}/get(dependabot/get-alert)`.
-    public func dependabot_sol_get_hyphen_alert(
-        path: Operations.dependabot_sol_get_hyphen_alert.Input.Path,
-        headers: Operations.dependabot_sol_get_hyphen_alert.Input.Headers = .init()
-    ) async throws -> Operations.dependabot_sol_get_hyphen_alert.Output {
-        try await dependabot_sol_get_hyphen_alert(Operations.dependabot_sol_get_hyphen_alert.Input(
+    public func dependabotGetAlert(
+        path: Operations.DependabotGetAlert.Input.Path,
+        headers: Operations.DependabotGetAlert.Input.Headers = .init()
+    ) async throws -> Operations.DependabotGetAlert.Output {
+        try await dependabotGetAlert(Operations.DependabotGetAlert.Input(
             path: path,
             headers: headers
         ))
@@ -437,12 +437,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/dependabot/alerts/{alert_number}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/alerts/{alert_number}/patch(dependabot/update-alert)`.
-    public func dependabot_sol_update_hyphen_alert(
-        path: Operations.dependabot_sol_update_hyphen_alert.Input.Path,
-        headers: Operations.dependabot_sol_update_hyphen_alert.Input.Headers = .init(),
-        body: Operations.dependabot_sol_update_hyphen_alert.Input.Body
-    ) async throws -> Operations.dependabot_sol_update_hyphen_alert.Output {
-        try await dependabot_sol_update_hyphen_alert(Operations.dependabot_sol_update_hyphen_alert.Input(
+    public func dependabotUpdateAlert(
+        path: Operations.DependabotUpdateAlert.Input.Path,
+        headers: Operations.DependabotUpdateAlert.Input.Headers = .init(),
+        body: Operations.DependabotUpdateAlert.Input.Body
+    ) async throws -> Operations.DependabotUpdateAlert.Output {
+        try await dependabotUpdateAlert(Operations.DependabotUpdateAlert.Input(
             path: path,
             headers: headers,
             body: body
@@ -457,12 +457,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/dependabot/secrets`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/secrets/get(dependabot/list-repo-secrets)`.
-    public func dependabot_sol_list_hyphen_repo_hyphen_secrets(
-        path: Operations.dependabot_sol_list_hyphen_repo_hyphen_secrets.Input.Path,
-        query: Operations.dependabot_sol_list_hyphen_repo_hyphen_secrets.Input.Query = .init(),
-        headers: Operations.dependabot_sol_list_hyphen_repo_hyphen_secrets.Input.Headers = .init()
-    ) async throws -> Operations.dependabot_sol_list_hyphen_repo_hyphen_secrets.Output {
-        try await dependabot_sol_list_hyphen_repo_hyphen_secrets(Operations.dependabot_sol_list_hyphen_repo_hyphen_secrets.Input(
+    public func dependabotListRepoSecrets(
+        path: Operations.DependabotListRepoSecrets.Input.Path,
+        query: Operations.DependabotListRepoSecrets.Input.Query = .init(),
+        headers: Operations.DependabotListRepoSecrets.Input.Headers = .init()
+    ) async throws -> Operations.DependabotListRepoSecrets.Output {
+        try await dependabotListRepoSecrets(Operations.DependabotListRepoSecrets.Input(
             path: path,
             query: query,
             headers: headers
@@ -478,11 +478,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/dependabot/secrets/public-key`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/secrets/public-key/get(dependabot/get-repo-public-key)`.
-    public func dependabot_sol_get_hyphen_repo_hyphen_public_hyphen_key(
-        path: Operations.dependabot_sol_get_hyphen_repo_hyphen_public_hyphen_key.Input.Path,
-        headers: Operations.dependabot_sol_get_hyphen_repo_hyphen_public_hyphen_key.Input.Headers = .init()
-    ) async throws -> Operations.dependabot_sol_get_hyphen_repo_hyphen_public_hyphen_key.Output {
-        try await dependabot_sol_get_hyphen_repo_hyphen_public_hyphen_key(Operations.dependabot_sol_get_hyphen_repo_hyphen_public_hyphen_key.Input(
+    public func dependabotGetRepoPublicKey(
+        path: Operations.DependabotGetRepoPublicKey.Input.Path,
+        headers: Operations.DependabotGetRepoPublicKey.Input.Headers = .init()
+    ) async throws -> Operations.DependabotGetRepoPublicKey.Output {
+        try await dependabotGetRepoPublicKey(Operations.DependabotGetRepoPublicKey.Input(
             path: path,
             headers: headers
         ))
@@ -495,11 +495,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/dependabot/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/secrets/{secret_name}/get(dependabot/get-repo-secret)`.
-    public func dependabot_sol_get_hyphen_repo_hyphen_secret(
-        path: Operations.dependabot_sol_get_hyphen_repo_hyphen_secret.Input.Path,
-        headers: Operations.dependabot_sol_get_hyphen_repo_hyphen_secret.Input.Headers = .init()
-    ) async throws -> Operations.dependabot_sol_get_hyphen_repo_hyphen_secret.Output {
-        try await dependabot_sol_get_hyphen_repo_hyphen_secret(Operations.dependabot_sol_get_hyphen_repo_hyphen_secret.Input(
+    public func dependabotGetRepoSecret(
+        path: Operations.DependabotGetRepoSecret.Input.Path,
+        headers: Operations.DependabotGetRepoSecret.Input.Headers = .init()
+    ) async throws -> Operations.DependabotGetRepoSecret.Output {
+        try await dependabotGetRepoSecret(Operations.DependabotGetRepoSecret.Input(
             path: path,
             headers: headers
         ))
@@ -513,12 +513,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/dependabot/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/secrets/{secret_name}/put(dependabot/create-or-update-repo-secret)`.
-    public func dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret(
-        path: Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret.Input.Path,
-        headers: Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret.Input.Headers = .init(),
-        body: Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret.Input.Body
-    ) async throws -> Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret.Output {
-        try await dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret(Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret.Input(
+    public func dependabotCreateOrUpdateRepoSecret(
+        path: Operations.DependabotCreateOrUpdateRepoSecret.Input.Path,
+        headers: Operations.DependabotCreateOrUpdateRepoSecret.Input.Headers = .init(),
+        body: Operations.DependabotCreateOrUpdateRepoSecret.Input.Body
+    ) async throws -> Operations.DependabotCreateOrUpdateRepoSecret.Output {
+        try await dependabotCreateOrUpdateRepoSecret(Operations.DependabotCreateOrUpdateRepoSecret.Input(
             path: path,
             headers: headers,
             body: body
@@ -532,13 +532,22 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/dependabot/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/secrets/{secret_name}/delete(dependabot/delete-repo-secret)`.
-    public func dependabot_sol_delete_hyphen_repo_hyphen_secret(path: Operations.dependabot_sol_delete_hyphen_repo_hyphen_secret.Input.Path) async throws -> Operations.dependabot_sol_delete_hyphen_repo_hyphen_secret.Output {
-        try await dependabot_sol_delete_hyphen_repo_hyphen_secret(Operations.dependabot_sol_delete_hyphen_repo_hyphen_secret.Input(path: path))
+    public func dependabotDeleteRepoSecret(path: Operations.DependabotDeleteRepoSecret.Input.Path) async throws -> Operations.DependabotDeleteRepoSecret.Output {
+        try await dependabotDeleteRepoSecret(Operations.DependabotDeleteRepoSecret.Input(path: path))
     }
 }
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -552,91 +561,91 @@ public enum Components {
     /// Types generated from the `#/components/schemas` section of the OpenAPI document.
     public enum Schemas {
         /// - Remark: Generated from `#/components/schemas/cvss-severities`.
-        public struct cvss_hyphen_severities: Codable, Hashable, Sendable {
+        public struct CvssSeverities: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/cvss-severities/cvss_v3`.
-            public struct cvss_v3Payload: Codable, Hashable, Sendable {
+            public struct CvssV3Payload: Codable, Hashable, Sendable {
                 /// The CVSS 3 vector string.
                 ///
                 /// - Remark: Generated from `#/components/schemas/cvss-severities/cvss_v3/vector_string`.
-                public var vector_string: Swift.String?
+                public var vectorString: Swift.String?
                 /// The CVSS 3 score.
                 ///
                 /// - Remark: Generated from `#/components/schemas/cvss-severities/cvss_v3/score`.
                 public var score: Swift.Double?
-                /// Creates a new `cvss_v3Payload`.
+                /// Creates a new `CvssV3Payload`.
                 ///
                 /// - Parameters:
-                ///   - vector_string: The CVSS 3 vector string.
+                ///   - vectorString: The CVSS 3 vector string.
                 ///   - score: The CVSS 3 score.
                 public init(
-                    vector_string: Swift.String? = nil,
+                    vectorString: Swift.String? = nil,
                     score: Swift.Double? = nil
                 ) {
-                    self.vector_string = vector_string
+                    self.vectorString = vectorString
                     self.score = score
                 }
                 public enum CodingKeys: String, CodingKey {
-                    case vector_string
+                    case vectorString = "vector_string"
                     case score
                 }
             }
             /// - Remark: Generated from `#/components/schemas/cvss-severities/cvss_v3`.
-            public var cvss_v3: Components.Schemas.cvss_hyphen_severities.cvss_v3Payload?
+            public var cvssV3: Components.Schemas.CvssSeverities.CvssV3Payload?
             /// - Remark: Generated from `#/components/schemas/cvss-severities/cvss_v4`.
-            public struct cvss_v4Payload: Codable, Hashable, Sendable {
+            public struct CvssV4Payload: Codable, Hashable, Sendable {
                 /// The CVSS 4 vector string.
                 ///
                 /// - Remark: Generated from `#/components/schemas/cvss-severities/cvss_v4/vector_string`.
-                public var vector_string: Swift.String?
+                public var vectorString: Swift.String?
                 /// The CVSS 4 score.
                 ///
                 /// - Remark: Generated from `#/components/schemas/cvss-severities/cvss_v4/score`.
                 public var score: Swift.Double?
-                /// Creates a new `cvss_v4Payload`.
+                /// Creates a new `CvssV4Payload`.
                 ///
                 /// - Parameters:
-                ///   - vector_string: The CVSS 4 vector string.
+                ///   - vectorString: The CVSS 4 vector string.
                 ///   - score: The CVSS 4 score.
                 public init(
-                    vector_string: Swift.String? = nil,
+                    vectorString: Swift.String? = nil,
                     score: Swift.Double? = nil
                 ) {
-                    self.vector_string = vector_string
+                    self.vectorString = vectorString
                     self.score = score
                 }
                 public enum CodingKeys: String, CodingKey {
-                    case vector_string
+                    case vectorString = "vector_string"
                     case score
                 }
             }
             /// - Remark: Generated from `#/components/schemas/cvss-severities/cvss_v4`.
-            public var cvss_v4: Components.Schemas.cvss_hyphen_severities.cvss_v4Payload?
-            /// Creates a new `cvss_hyphen_severities`.
+            public var cvssV4: Components.Schemas.CvssSeverities.CvssV4Payload?
+            /// Creates a new `CvssSeverities`.
             ///
             /// - Parameters:
-            ///   - cvss_v3:
-            ///   - cvss_v4:
+            ///   - cvssV3:
+            ///   - cvssV4:
             public init(
-                cvss_v3: Components.Schemas.cvss_hyphen_severities.cvss_v3Payload? = nil,
-                cvss_v4: Components.Schemas.cvss_hyphen_severities.cvss_v4Payload? = nil
+                cvssV3: Components.Schemas.CvssSeverities.CvssV3Payload? = nil,
+                cvssV4: Components.Schemas.CvssSeverities.CvssV4Payload? = nil
             ) {
-                self.cvss_v3 = cvss_v3
-                self.cvss_v4 = cvss_v4
+                self.cvssV3 = cvssV3
+                self.cvssV4 = cvssV4
             }
             public enum CodingKeys: String, CodingKey {
-                case cvss_v3
-                case cvss_v4
+                case cvssV3 = "cvss_v3"
+                case cvssV4 = "cvss_v4"
             }
         }
         /// The EPSS scores as calculated by the [Exploit Prediction Scoring System](https://www.first.org/epss).
         ///
         /// - Remark: Generated from `#/components/schemas/security-advisory-epss`.
-        public struct security_hyphen_advisory_hyphen_epss: Codable, Hashable, Sendable {
+        public struct SecurityAdvisoryEpss: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/security-advisory-epss/percentage`.
             public var percentage: Swift.Double?
             /// - Remark: Generated from `#/components/schemas/security-advisory-epss/percentile`.
             public var percentile: Swift.Double?
-            /// Creates a new `security_hyphen_advisory_hyphen_epss`.
+            /// Creates a new `SecurityAdvisoryEpss`.
             ///
             /// - Parameters:
             ///   - percentage:
@@ -656,7 +665,7 @@ public enum Components {
         /// A GitHub user.
         ///
         /// - Remark: Generated from `#/components/schemas/simple-user`.
-        public struct simple_hyphen_user: Codable, Hashable, Sendable {
+        public struct SimpleUser: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/simple-user/name`.
             public var name: Swift.String?
             /// - Remark: Generated from `#/components/schemas/simple-user/email`.
@@ -666,171 +675,171 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/simple-user/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/simple-user/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/avatar_url`.
-            public var avatar_url: Swift.String
+            public var avatarUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/gravatar_id`.
-            public var gravatar_id: Swift.String?
+            public var gravatarId: Swift.String?
             /// - Remark: Generated from `#/components/schemas/simple-user/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/followers_url`.
-            public var followers_url: Swift.String
+            public var followersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/following_url`.
-            public var following_url: Swift.String
+            public var followingUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/gists_url`.
-            public var gists_url: Swift.String
+            public var gistsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/starred_url`.
-            public var starred_url: Swift.String
+            public var starredUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/subscriptions_url`.
-            public var subscriptions_url: Swift.String
+            public var subscriptionsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/organizations_url`.
-            public var organizations_url: Swift.String
+            public var organizationsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/repos_url`.
-            public var repos_url: Swift.String
+            public var reposUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/events_url`.
-            public var events_url: Swift.String
+            public var eventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/received_events_url`.
-            public var received_events_url: Swift.String
+            public var receivedEventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/type`.
             public var _type: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/site_admin`.
-            public var site_admin: Swift.Bool
+            public var siteAdmin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/simple-user/starred_at`.
-            public var starred_at: Swift.String?
+            public var starredAt: Swift.String?
             /// - Remark: Generated from `#/components/schemas/simple-user/user_view_type`.
-            public var user_view_type: Swift.String?
-            /// Creates a new `simple_hyphen_user`.
+            public var userViewType: Swift.String?
+            /// Creates a new `SimpleUser`.
             ///
             /// - Parameters:
             ///   - name:
             ///   - email:
             ///   - login:
             ///   - id:
-            ///   - node_id:
-            ///   - avatar_url:
-            ///   - gravatar_id:
+            ///   - nodeId:
+            ///   - avatarUrl:
+            ///   - gravatarId:
             ///   - url:
-            ///   - html_url:
-            ///   - followers_url:
-            ///   - following_url:
-            ///   - gists_url:
-            ///   - starred_url:
-            ///   - subscriptions_url:
-            ///   - organizations_url:
-            ///   - repos_url:
-            ///   - events_url:
-            ///   - received_events_url:
+            ///   - htmlUrl:
+            ///   - followersUrl:
+            ///   - followingUrl:
+            ///   - gistsUrl:
+            ///   - starredUrl:
+            ///   - subscriptionsUrl:
+            ///   - organizationsUrl:
+            ///   - reposUrl:
+            ///   - eventsUrl:
+            ///   - receivedEventsUrl:
             ///   - _type:
-            ///   - site_admin:
-            ///   - starred_at:
-            ///   - user_view_type:
+            ///   - siteAdmin:
+            ///   - starredAt:
+            ///   - userViewType:
             public init(
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
                 login: Swift.String,
                 id: Swift.Int64,
-                node_id: Swift.String,
-                avatar_url: Swift.String,
-                gravatar_id: Swift.String? = nil,
+                nodeId: Swift.String,
+                avatarUrl: Swift.String,
+                gravatarId: Swift.String? = nil,
                 url: Swift.String,
-                html_url: Swift.String,
-                followers_url: Swift.String,
-                following_url: Swift.String,
-                gists_url: Swift.String,
-                starred_url: Swift.String,
-                subscriptions_url: Swift.String,
-                organizations_url: Swift.String,
-                repos_url: Swift.String,
-                events_url: Swift.String,
-                received_events_url: Swift.String,
+                htmlUrl: Swift.String,
+                followersUrl: Swift.String,
+                followingUrl: Swift.String,
+                gistsUrl: Swift.String,
+                starredUrl: Swift.String,
+                subscriptionsUrl: Swift.String,
+                organizationsUrl: Swift.String,
+                reposUrl: Swift.String,
+                eventsUrl: Swift.String,
+                receivedEventsUrl: Swift.String,
                 _type: Swift.String,
-                site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil,
-                user_view_type: Swift.String? = nil
+                siteAdmin: Swift.Bool,
+                starredAt: Swift.String? = nil,
+                userViewType: Swift.String? = nil
             ) {
                 self.name = name
                 self.email = email
                 self.login = login
                 self.id = id
-                self.node_id = node_id
-                self.avatar_url = avatar_url
-                self.gravatar_id = gravatar_id
+                self.nodeId = nodeId
+                self.avatarUrl = avatarUrl
+                self.gravatarId = gravatarId
                 self.url = url
-                self.html_url = html_url
-                self.followers_url = followers_url
-                self.following_url = following_url
-                self.gists_url = gists_url
-                self.starred_url = starred_url
-                self.subscriptions_url = subscriptions_url
-                self.organizations_url = organizations_url
-                self.repos_url = repos_url
-                self.events_url = events_url
-                self.received_events_url = received_events_url
+                self.htmlUrl = htmlUrl
+                self.followersUrl = followersUrl
+                self.followingUrl = followingUrl
+                self.gistsUrl = gistsUrl
+                self.starredUrl = starredUrl
+                self.subscriptionsUrl = subscriptionsUrl
+                self.organizationsUrl = organizationsUrl
+                self.reposUrl = reposUrl
+                self.eventsUrl = eventsUrl
+                self.receivedEventsUrl = receivedEventsUrl
                 self._type = _type
-                self.site_admin = site_admin
-                self.starred_at = starred_at
-                self.user_view_type = user_view_type
+                self.siteAdmin = siteAdmin
+                self.starredAt = starredAt
+                self.userViewType = userViewType
             }
             public enum CodingKeys: String, CodingKey {
                 case name
                 case email
                 case login
                 case id
-                case node_id
-                case avatar_url
-                case gravatar_id
+                case nodeId = "node_id"
+                case avatarUrl = "avatar_url"
+                case gravatarId = "gravatar_id"
                 case url
-                case html_url
-                case followers_url
-                case following_url
-                case gists_url
-                case starred_url
-                case subscriptions_url
-                case organizations_url
-                case repos_url
-                case events_url
-                case received_events_url
+                case htmlUrl = "html_url"
+                case followersUrl = "followers_url"
+                case followingUrl = "following_url"
+                case gistsUrl = "gists_url"
+                case starredUrl = "starred_url"
+                case subscriptionsUrl = "subscriptions_url"
+                case organizationsUrl = "organizations_url"
+                case reposUrl = "repos_url"
+                case eventsUrl = "events_url"
+                case receivedEventsUrl = "received_events_url"
                 case _type = "type"
-                case site_admin
-                case starred_at
-                case user_view_type
+                case siteAdmin = "site_admin"
+                case starredAt = "starred_at"
+                case userViewType = "user_view_type"
             }
         }
         /// Basic Error
         ///
         /// - Remark: Generated from `#/components/schemas/basic-error`.
-        public struct basic_hyphen_error: Codable, Hashable, Sendable {
+        public struct BasicError: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/basic-error/message`.
             public var message: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/documentation_url`.
-            public var documentation_url: Swift.String?
+            public var documentationUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/url`.
             public var url: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/status`.
             public var status: Swift.String?
-            /// Creates a new `basic_hyphen_error`.
+            /// Creates a new `BasicError`.
             ///
             /// - Parameters:
             ///   - message:
-            ///   - documentation_url:
+            ///   - documentationUrl:
             ///   - url:
             ///   - status:
             public init(
                 message: Swift.String? = nil,
-                documentation_url: Swift.String? = nil,
+                documentationUrl: Swift.String? = nil,
                 url: Swift.String? = nil,
                 status: Swift.String? = nil
             ) {
                 self.message = message
-                self.documentation_url = documentation_url
+                self.documentationUrl = documentationUrl
                 self.url = url
                 self.status = status
             }
             public enum CodingKeys: String, CodingKey {
                 case message
-                case documentation_url
+                case documentationUrl = "documentation_url"
                 case url
                 case status
             }
@@ -838,42 +847,42 @@ public enum Components {
         /// Validation Error Simple
         ///
         /// - Remark: Generated from `#/components/schemas/validation-error-simple`.
-        public struct validation_hyphen_error_hyphen_simple: Codable, Hashable, Sendable {
+        public struct ValidationErrorSimple: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/validation-error-simple/message`.
             public var message: Swift.String
             /// - Remark: Generated from `#/components/schemas/validation-error-simple/documentation_url`.
-            public var documentation_url: Swift.String
+            public var documentationUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/validation-error-simple/errors`.
             public var errors: [Swift.String]?
-            /// Creates a new `validation_hyphen_error_hyphen_simple`.
+            /// Creates a new `ValidationErrorSimple`.
             ///
             /// - Parameters:
             ///   - message:
-            ///   - documentation_url:
+            ///   - documentationUrl:
             ///   - errors:
             public init(
                 message: Swift.String,
-                documentation_url: Swift.String,
+                documentationUrl: Swift.String,
                 errors: [Swift.String]? = nil
             ) {
                 self.message = message
-                self.documentation_url = documentation_url
+                self.documentationUrl = documentationUrl
                 self.errors = errors
             }
             public enum CodingKeys: String, CodingKey {
                 case message
-                case documentation_url
+                case documentationUrl = "documentation_url"
                 case errors
             }
         }
         /// Scim Error
         ///
         /// - Remark: Generated from `#/components/schemas/scim-error`.
-        public struct scim_hyphen_error: Codable, Hashable, Sendable {
+        public struct ScimError: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/scim-error/message`.
             public var message: Swift.String?
             /// - Remark: Generated from `#/components/schemas/scim-error/documentation_url`.
-            public var documentation_url: Swift.String?
+            public var documentationUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/scim-error/detail`.
             public var detail: Swift.String?
             /// - Remark: Generated from `#/components/schemas/scim-error/status`.
@@ -882,25 +891,25 @@ public enum Components {
             public var scimType: Swift.String?
             /// - Remark: Generated from `#/components/schemas/scim-error/schemas`.
             public var schemas: [Swift.String]?
-            /// Creates a new `scim_hyphen_error`.
+            /// Creates a new `ScimError`.
             ///
             /// - Parameters:
             ///   - message:
-            ///   - documentation_url:
+            ///   - documentationUrl:
             ///   - detail:
             ///   - status:
             ///   - scimType:
             ///   - schemas:
             public init(
                 message: Swift.String? = nil,
-                documentation_url: Swift.String? = nil,
+                documentationUrl: Swift.String? = nil,
                 detail: Swift.String? = nil,
                 status: Swift.Int? = nil,
                 scimType: Swift.String? = nil,
                 schemas: [Swift.String]? = nil
             ) {
                 self.message = message
-                self.documentation_url = documentation_url
+                self.documentationUrl = documentationUrl
                 self.detail = detail
                 self.status = status
                 self.scimType = scimType
@@ -908,7 +917,7 @@ public enum Components {
             }
             public enum CodingKeys: String, CodingKey {
                 case message
-                case documentation_url
+                case documentationUrl = "documentation_url"
                 case detail
                 case status
                 case scimType
@@ -918,7 +927,7 @@ public enum Components {
         /// A GitHub user.
         ///
         /// - Remark: Generated from `#/components/schemas/nullable-simple-user`.
-        public struct nullable_hyphen_simple_hyphen_user: Codable, Hashable, Sendable {
+        public struct NullableSimpleUser: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/name`.
             public var name: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/email`.
@@ -928,142 +937,142 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/avatar_url`.
-            public var avatar_url: Swift.String
+            public var avatarUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/gravatar_id`.
-            public var gravatar_id: Swift.String?
+            public var gravatarId: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/followers_url`.
-            public var followers_url: Swift.String
+            public var followersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/following_url`.
-            public var following_url: Swift.String
+            public var followingUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/gists_url`.
-            public var gists_url: Swift.String
+            public var gistsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/starred_url`.
-            public var starred_url: Swift.String
+            public var starredUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/subscriptions_url`.
-            public var subscriptions_url: Swift.String
+            public var subscriptionsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/organizations_url`.
-            public var organizations_url: Swift.String
+            public var organizationsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/repos_url`.
-            public var repos_url: Swift.String
+            public var reposUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/events_url`.
-            public var events_url: Swift.String
+            public var eventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/received_events_url`.
-            public var received_events_url: Swift.String
+            public var receivedEventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/type`.
             public var _type: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/site_admin`.
-            public var site_admin: Swift.Bool
+            public var siteAdmin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/starred_at`.
-            public var starred_at: Swift.String?
+            public var starredAt: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/user_view_type`.
-            public var user_view_type: Swift.String?
-            /// Creates a new `nullable_hyphen_simple_hyphen_user`.
+            public var userViewType: Swift.String?
+            /// Creates a new `NullableSimpleUser`.
             ///
             /// - Parameters:
             ///   - name:
             ///   - email:
             ///   - login:
             ///   - id:
-            ///   - node_id:
-            ///   - avatar_url:
-            ///   - gravatar_id:
+            ///   - nodeId:
+            ///   - avatarUrl:
+            ///   - gravatarId:
             ///   - url:
-            ///   - html_url:
-            ///   - followers_url:
-            ///   - following_url:
-            ///   - gists_url:
-            ///   - starred_url:
-            ///   - subscriptions_url:
-            ///   - organizations_url:
-            ///   - repos_url:
-            ///   - events_url:
-            ///   - received_events_url:
+            ///   - htmlUrl:
+            ///   - followersUrl:
+            ///   - followingUrl:
+            ///   - gistsUrl:
+            ///   - starredUrl:
+            ///   - subscriptionsUrl:
+            ///   - organizationsUrl:
+            ///   - reposUrl:
+            ///   - eventsUrl:
+            ///   - receivedEventsUrl:
             ///   - _type:
-            ///   - site_admin:
-            ///   - starred_at:
-            ///   - user_view_type:
+            ///   - siteAdmin:
+            ///   - starredAt:
+            ///   - userViewType:
             public init(
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
                 login: Swift.String,
                 id: Swift.Int64,
-                node_id: Swift.String,
-                avatar_url: Swift.String,
-                gravatar_id: Swift.String? = nil,
+                nodeId: Swift.String,
+                avatarUrl: Swift.String,
+                gravatarId: Swift.String? = nil,
                 url: Swift.String,
-                html_url: Swift.String,
-                followers_url: Swift.String,
-                following_url: Swift.String,
-                gists_url: Swift.String,
-                starred_url: Swift.String,
-                subscriptions_url: Swift.String,
-                organizations_url: Swift.String,
-                repos_url: Swift.String,
-                events_url: Swift.String,
-                received_events_url: Swift.String,
+                htmlUrl: Swift.String,
+                followersUrl: Swift.String,
+                followingUrl: Swift.String,
+                gistsUrl: Swift.String,
+                starredUrl: Swift.String,
+                subscriptionsUrl: Swift.String,
+                organizationsUrl: Swift.String,
+                reposUrl: Swift.String,
+                eventsUrl: Swift.String,
+                receivedEventsUrl: Swift.String,
                 _type: Swift.String,
-                site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil,
-                user_view_type: Swift.String? = nil
+                siteAdmin: Swift.Bool,
+                starredAt: Swift.String? = nil,
+                userViewType: Swift.String? = nil
             ) {
                 self.name = name
                 self.email = email
                 self.login = login
                 self.id = id
-                self.node_id = node_id
-                self.avatar_url = avatar_url
-                self.gravatar_id = gravatar_id
+                self.nodeId = nodeId
+                self.avatarUrl = avatarUrl
+                self.gravatarId = gravatarId
                 self.url = url
-                self.html_url = html_url
-                self.followers_url = followers_url
-                self.following_url = following_url
-                self.gists_url = gists_url
-                self.starred_url = starred_url
-                self.subscriptions_url = subscriptions_url
-                self.organizations_url = organizations_url
-                self.repos_url = repos_url
-                self.events_url = events_url
-                self.received_events_url = received_events_url
+                self.htmlUrl = htmlUrl
+                self.followersUrl = followersUrl
+                self.followingUrl = followingUrl
+                self.gistsUrl = gistsUrl
+                self.starredUrl = starredUrl
+                self.subscriptionsUrl = subscriptionsUrl
+                self.organizationsUrl = organizationsUrl
+                self.reposUrl = reposUrl
+                self.eventsUrl = eventsUrl
+                self.receivedEventsUrl = receivedEventsUrl
                 self._type = _type
-                self.site_admin = site_admin
-                self.starred_at = starred_at
-                self.user_view_type = user_view_type
+                self.siteAdmin = siteAdmin
+                self.starredAt = starredAt
+                self.userViewType = userViewType
             }
             public enum CodingKeys: String, CodingKey {
                 case name
                 case email
                 case login
                 case id
-                case node_id
-                case avatar_url
-                case gravatar_id
+                case nodeId = "node_id"
+                case avatarUrl = "avatar_url"
+                case gravatarId = "gravatar_id"
                 case url
-                case html_url
-                case followers_url
-                case following_url
-                case gists_url
-                case starred_url
-                case subscriptions_url
-                case organizations_url
-                case repos_url
-                case events_url
-                case received_events_url
+                case htmlUrl = "html_url"
+                case followersUrl = "followers_url"
+                case followingUrl = "following_url"
+                case gistsUrl = "gists_url"
+                case starredUrl = "starred_url"
+                case subscriptionsUrl = "subscriptions_url"
+                case organizationsUrl = "organizations_url"
+                case reposUrl = "repos_url"
+                case eventsUrl = "events_url"
+                case receivedEventsUrl = "received_events_url"
                 case _type = "type"
-                case site_admin
-                case starred_at
-                case user_view_type
+                case siteAdmin = "site_admin"
+                case starredAt = "starred_at"
+                case userViewType = "user_view_type"
             }
         }
         /// Code Of Conduct
         ///
         /// - Remark: Generated from `#/components/schemas/code-of-conduct`.
-        public struct code_hyphen_of_hyphen_conduct: Codable, Hashable, Sendable {
+        public struct CodeOfConduct: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/code-of-conduct/key`.
             public var key: Swift.String
             /// - Remark: Generated from `#/components/schemas/code-of-conduct/name`.
@@ -1073,40 +1082,40 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/code-of-conduct/body`.
             public var body: Swift.String?
             /// - Remark: Generated from `#/components/schemas/code-of-conduct/html_url`.
-            public var html_url: Swift.String?
-            /// Creates a new `code_hyphen_of_hyphen_conduct`.
+            public var htmlUrl: Swift.String?
+            /// Creates a new `CodeOfConduct`.
             ///
             /// - Parameters:
             ///   - key:
             ///   - name:
             ///   - url:
             ///   - body:
-            ///   - html_url:
+            ///   - htmlUrl:
             public init(
                 key: Swift.String,
                 name: Swift.String,
                 url: Swift.String,
                 body: Swift.String? = nil,
-                html_url: Swift.String? = nil
+                htmlUrl: Swift.String? = nil
             ) {
                 self.key = key
                 self.name = name
                 self.url = url
                 self.body = body
-                self.html_url = html_url
+                self.htmlUrl = htmlUrl
             }
             public enum CodingKeys: String, CodingKey {
                 case key
                 case name
                 case url
                 case body
-                case html_url
+                case htmlUrl = "html_url"
             }
         }
         /// A GitHub repository.
         ///
         /// - Remark: Generated from `#/components/schemas/simple-repository`.
-        public struct simple_hyphen_repository: Codable, Hashable, Sendable {
+        public struct SimpleRepository: Codable, Hashable, Sendable {
             /// A unique identifier of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/id`.
@@ -1114,7 +1123,7 @@ public enum Components {
             /// The GraphQL identifier of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// The name of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/name`.
@@ -1122,9 +1131,9 @@ public enum Components {
             /// The full, globally unique, name of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/full_name`.
-            public var full_name: Swift.String
+            public var fullName: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-repository/owner`.
-            public var owner: Components.Schemas.simple_hyphen_user
+            public var owner: Components.Schemas.SimpleUser
             /// Whether the repository is private.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/private`.
@@ -1132,7 +1141,7 @@ public enum Components {
             /// The URL to view the repository on GitHub.com.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// The repository description.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/description`.
@@ -1148,348 +1157,348 @@ public enum Components {
             /// A template for the API URL to download the repository as an archive.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/archive_url`.
-            public var archive_url: Swift.String
+            public var archiveUrl: Swift.String
             /// A template for the API URL to list the available assignees for issues in the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/assignees_url`.
-            public var assignees_url: Swift.String
+            public var assigneesUrl: Swift.String
             /// A template for the API URL to create or retrieve a raw Git blob in the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/blobs_url`.
-            public var blobs_url: Swift.String
+            public var blobsUrl: Swift.String
             /// A template for the API URL to get information about branches in the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/branches_url`.
-            public var branches_url: Swift.String
+            public var branchesUrl: Swift.String
             /// A template for the API URL to get information about collaborators of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/collaborators_url`.
-            public var collaborators_url: Swift.String
+            public var collaboratorsUrl: Swift.String
             /// A template for the API URL to get information about comments on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/comments_url`.
-            public var comments_url: Swift.String
+            public var commentsUrl: Swift.String
             /// A template for the API URL to get information about commits on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/commits_url`.
-            public var commits_url: Swift.String
+            public var commitsUrl: Swift.String
             /// A template for the API URL to compare two commits or refs.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/compare_url`.
-            public var compare_url: Swift.String
+            public var compareUrl: Swift.String
             /// A template for the API URL to get the contents of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/contents_url`.
-            public var contents_url: Swift.String
+            public var contentsUrl: Swift.String
             /// A template for the API URL to list the contributors to the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/contributors_url`.
-            public var contributors_url: Swift.String
+            public var contributorsUrl: Swift.String
             /// The API URL to list the deployments of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/deployments_url`.
-            public var deployments_url: Swift.String
+            public var deploymentsUrl: Swift.String
             /// The API URL to list the downloads on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/downloads_url`.
-            public var downloads_url: Swift.String
+            public var downloadsUrl: Swift.String
             /// The API URL to list the events of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/events_url`.
-            public var events_url: Swift.String
+            public var eventsUrl: Swift.String
             /// The API URL to list the forks of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/forks_url`.
-            public var forks_url: Swift.String
+            public var forksUrl: Swift.String
             /// A template for the API URL to get information about Git commits of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/git_commits_url`.
-            public var git_commits_url: Swift.String
+            public var gitCommitsUrl: Swift.String
             /// A template for the API URL to get information about Git refs of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/git_refs_url`.
-            public var git_refs_url: Swift.String
+            public var gitRefsUrl: Swift.String
             /// A template for the API URL to get information about Git tags of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/git_tags_url`.
-            public var git_tags_url: Swift.String
+            public var gitTagsUrl: Swift.String
             /// A template for the API URL to get information about issue comments on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/issue_comment_url`.
-            public var issue_comment_url: Swift.String
+            public var issueCommentUrl: Swift.String
             /// A template for the API URL to get information about issue events on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/issue_events_url`.
-            public var issue_events_url: Swift.String
+            public var issueEventsUrl: Swift.String
             /// A template for the API URL to get information about issues on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/issues_url`.
-            public var issues_url: Swift.String
+            public var issuesUrl: Swift.String
             /// A template for the API URL to get information about deploy keys on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/keys_url`.
-            public var keys_url: Swift.String
+            public var keysUrl: Swift.String
             /// A template for the API URL to get information about labels of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/labels_url`.
-            public var labels_url: Swift.String
+            public var labelsUrl: Swift.String
             /// The API URL to get information about the languages of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/languages_url`.
-            public var languages_url: Swift.String
+            public var languagesUrl: Swift.String
             /// The API URL to merge branches in the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/merges_url`.
-            public var merges_url: Swift.String
+            public var mergesUrl: Swift.String
             /// A template for the API URL to get information about milestones of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/milestones_url`.
-            public var milestones_url: Swift.String
+            public var milestonesUrl: Swift.String
             /// A template for the API URL to get information about notifications on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/notifications_url`.
-            public var notifications_url: Swift.String
+            public var notificationsUrl: Swift.String
             /// A template for the API URL to get information about pull requests on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/pulls_url`.
-            public var pulls_url: Swift.String
+            public var pullsUrl: Swift.String
             /// A template for the API URL to get information about releases on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/releases_url`.
-            public var releases_url: Swift.String
+            public var releasesUrl: Swift.String
             /// The API URL to list the stargazers on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/stargazers_url`.
-            public var stargazers_url: Swift.String
+            public var stargazersUrl: Swift.String
             /// A template for the API URL to get information about statuses of a commit.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/statuses_url`.
-            public var statuses_url: Swift.String
+            public var statusesUrl: Swift.String
             /// The API URL to list the subscribers on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/subscribers_url`.
-            public var subscribers_url: Swift.String
+            public var subscribersUrl: Swift.String
             /// The API URL to subscribe to notifications for this repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/subscription_url`.
-            public var subscription_url: Swift.String
+            public var subscriptionUrl: Swift.String
             /// The API URL to get information about tags on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/tags_url`.
-            public var tags_url: Swift.String
+            public var tagsUrl: Swift.String
             /// The API URL to list the teams on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/teams_url`.
-            public var teams_url: Swift.String
+            public var teamsUrl: Swift.String
             /// A template for the API URL to create or retrieve a raw Git tree of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/trees_url`.
-            public var trees_url: Swift.String
+            public var treesUrl: Swift.String
             /// The API URL to list the hooks on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/hooks_url`.
-            public var hooks_url: Swift.String
-            /// Creates a new `simple_hyphen_repository`.
+            public var hooksUrl: Swift.String
+            /// Creates a new `SimpleRepository`.
             ///
             /// - Parameters:
             ///   - id: A unique identifier of the repository.
-            ///   - node_id: The GraphQL identifier of the repository.
+            ///   - nodeId: The GraphQL identifier of the repository.
             ///   - name: The name of the repository.
-            ///   - full_name: The full, globally unique, name of the repository.
+            ///   - fullName: The full, globally unique, name of the repository.
             ///   - owner:
             ///   - _private: Whether the repository is private.
-            ///   - html_url: The URL to view the repository on GitHub.com.
+            ///   - htmlUrl: The URL to view the repository on GitHub.com.
             ///   - description: The repository description.
             ///   - fork: Whether the repository is a fork.
             ///   - url: The URL to get more information about the repository from the GitHub API.
-            ///   - archive_url: A template for the API URL to download the repository as an archive.
-            ///   - assignees_url: A template for the API URL to list the available assignees for issues in the repository.
-            ///   - blobs_url: A template for the API URL to create or retrieve a raw Git blob in the repository.
-            ///   - branches_url: A template for the API URL to get information about branches in the repository.
-            ///   - collaborators_url: A template for the API URL to get information about collaborators of the repository.
-            ///   - comments_url: A template for the API URL to get information about comments on the repository.
-            ///   - commits_url: A template for the API URL to get information about commits on the repository.
-            ///   - compare_url: A template for the API URL to compare two commits or refs.
-            ///   - contents_url: A template for the API URL to get the contents of the repository.
-            ///   - contributors_url: A template for the API URL to list the contributors to the repository.
-            ///   - deployments_url: The API URL to list the deployments of the repository.
-            ///   - downloads_url: The API URL to list the downloads on the repository.
-            ///   - events_url: The API URL to list the events of the repository.
-            ///   - forks_url: The API URL to list the forks of the repository.
-            ///   - git_commits_url: A template for the API URL to get information about Git commits of the repository.
-            ///   - git_refs_url: A template for the API URL to get information about Git refs of the repository.
-            ///   - git_tags_url: A template for the API URL to get information about Git tags of the repository.
-            ///   - issue_comment_url: A template for the API URL to get information about issue comments on the repository.
-            ///   - issue_events_url: A template for the API URL to get information about issue events on the repository.
-            ///   - issues_url: A template for the API URL to get information about issues on the repository.
-            ///   - keys_url: A template for the API URL to get information about deploy keys on the repository.
-            ///   - labels_url: A template for the API URL to get information about labels of the repository.
-            ///   - languages_url: The API URL to get information about the languages of the repository.
-            ///   - merges_url: The API URL to merge branches in the repository.
-            ///   - milestones_url: A template for the API URL to get information about milestones of the repository.
-            ///   - notifications_url: A template for the API URL to get information about notifications on the repository.
-            ///   - pulls_url: A template for the API URL to get information about pull requests on the repository.
-            ///   - releases_url: A template for the API URL to get information about releases on the repository.
-            ///   - stargazers_url: The API URL to list the stargazers on the repository.
-            ///   - statuses_url: A template for the API URL to get information about statuses of a commit.
-            ///   - subscribers_url: The API URL to list the subscribers on the repository.
-            ///   - subscription_url: The API URL to subscribe to notifications for this repository.
-            ///   - tags_url: The API URL to get information about tags on the repository.
-            ///   - teams_url: The API URL to list the teams on the repository.
-            ///   - trees_url: A template for the API URL to create or retrieve a raw Git tree of the repository.
-            ///   - hooks_url: The API URL to list the hooks on the repository.
+            ///   - archiveUrl: A template for the API URL to download the repository as an archive.
+            ///   - assigneesUrl: A template for the API URL to list the available assignees for issues in the repository.
+            ///   - blobsUrl: A template for the API URL to create or retrieve a raw Git blob in the repository.
+            ///   - branchesUrl: A template for the API URL to get information about branches in the repository.
+            ///   - collaboratorsUrl: A template for the API URL to get information about collaborators of the repository.
+            ///   - commentsUrl: A template for the API URL to get information about comments on the repository.
+            ///   - commitsUrl: A template for the API URL to get information about commits on the repository.
+            ///   - compareUrl: A template for the API URL to compare two commits or refs.
+            ///   - contentsUrl: A template for the API URL to get the contents of the repository.
+            ///   - contributorsUrl: A template for the API URL to list the contributors to the repository.
+            ///   - deploymentsUrl: The API URL to list the deployments of the repository.
+            ///   - downloadsUrl: The API URL to list the downloads on the repository.
+            ///   - eventsUrl: The API URL to list the events of the repository.
+            ///   - forksUrl: The API URL to list the forks of the repository.
+            ///   - gitCommitsUrl: A template for the API URL to get information about Git commits of the repository.
+            ///   - gitRefsUrl: A template for the API URL to get information about Git refs of the repository.
+            ///   - gitTagsUrl: A template for the API URL to get information about Git tags of the repository.
+            ///   - issueCommentUrl: A template for the API URL to get information about issue comments on the repository.
+            ///   - issueEventsUrl: A template for the API URL to get information about issue events on the repository.
+            ///   - issuesUrl: A template for the API URL to get information about issues on the repository.
+            ///   - keysUrl: A template for the API URL to get information about deploy keys on the repository.
+            ///   - labelsUrl: A template for the API URL to get information about labels of the repository.
+            ///   - languagesUrl: The API URL to get information about the languages of the repository.
+            ///   - mergesUrl: The API URL to merge branches in the repository.
+            ///   - milestonesUrl: A template for the API URL to get information about milestones of the repository.
+            ///   - notificationsUrl: A template for the API URL to get information about notifications on the repository.
+            ///   - pullsUrl: A template for the API URL to get information about pull requests on the repository.
+            ///   - releasesUrl: A template for the API URL to get information about releases on the repository.
+            ///   - stargazersUrl: The API URL to list the stargazers on the repository.
+            ///   - statusesUrl: A template for the API URL to get information about statuses of a commit.
+            ///   - subscribersUrl: The API URL to list the subscribers on the repository.
+            ///   - subscriptionUrl: The API URL to subscribe to notifications for this repository.
+            ///   - tagsUrl: The API URL to get information about tags on the repository.
+            ///   - teamsUrl: The API URL to list the teams on the repository.
+            ///   - treesUrl: A template for the API URL to create or retrieve a raw Git tree of the repository.
+            ///   - hooksUrl: The API URL to list the hooks on the repository.
             public init(
                 id: Swift.Int64,
-                node_id: Swift.String,
+                nodeId: Swift.String,
                 name: Swift.String,
-                full_name: Swift.String,
-                owner: Components.Schemas.simple_hyphen_user,
+                fullName: Swift.String,
+                owner: Components.Schemas.SimpleUser,
                 _private: Swift.Bool,
-                html_url: Swift.String,
+                htmlUrl: Swift.String,
                 description: Swift.String? = nil,
                 fork: Swift.Bool,
                 url: Swift.String,
-                archive_url: Swift.String,
-                assignees_url: Swift.String,
-                blobs_url: Swift.String,
-                branches_url: Swift.String,
-                collaborators_url: Swift.String,
-                comments_url: Swift.String,
-                commits_url: Swift.String,
-                compare_url: Swift.String,
-                contents_url: Swift.String,
-                contributors_url: Swift.String,
-                deployments_url: Swift.String,
-                downloads_url: Swift.String,
-                events_url: Swift.String,
-                forks_url: Swift.String,
-                git_commits_url: Swift.String,
-                git_refs_url: Swift.String,
-                git_tags_url: Swift.String,
-                issue_comment_url: Swift.String,
-                issue_events_url: Swift.String,
-                issues_url: Swift.String,
-                keys_url: Swift.String,
-                labels_url: Swift.String,
-                languages_url: Swift.String,
-                merges_url: Swift.String,
-                milestones_url: Swift.String,
-                notifications_url: Swift.String,
-                pulls_url: Swift.String,
-                releases_url: Swift.String,
-                stargazers_url: Swift.String,
-                statuses_url: Swift.String,
-                subscribers_url: Swift.String,
-                subscription_url: Swift.String,
-                tags_url: Swift.String,
-                teams_url: Swift.String,
-                trees_url: Swift.String,
-                hooks_url: Swift.String
+                archiveUrl: Swift.String,
+                assigneesUrl: Swift.String,
+                blobsUrl: Swift.String,
+                branchesUrl: Swift.String,
+                collaboratorsUrl: Swift.String,
+                commentsUrl: Swift.String,
+                commitsUrl: Swift.String,
+                compareUrl: Swift.String,
+                contentsUrl: Swift.String,
+                contributorsUrl: Swift.String,
+                deploymentsUrl: Swift.String,
+                downloadsUrl: Swift.String,
+                eventsUrl: Swift.String,
+                forksUrl: Swift.String,
+                gitCommitsUrl: Swift.String,
+                gitRefsUrl: Swift.String,
+                gitTagsUrl: Swift.String,
+                issueCommentUrl: Swift.String,
+                issueEventsUrl: Swift.String,
+                issuesUrl: Swift.String,
+                keysUrl: Swift.String,
+                labelsUrl: Swift.String,
+                languagesUrl: Swift.String,
+                mergesUrl: Swift.String,
+                milestonesUrl: Swift.String,
+                notificationsUrl: Swift.String,
+                pullsUrl: Swift.String,
+                releasesUrl: Swift.String,
+                stargazersUrl: Swift.String,
+                statusesUrl: Swift.String,
+                subscribersUrl: Swift.String,
+                subscriptionUrl: Swift.String,
+                tagsUrl: Swift.String,
+                teamsUrl: Swift.String,
+                treesUrl: Swift.String,
+                hooksUrl: Swift.String
             ) {
                 self.id = id
-                self.node_id = node_id
+                self.nodeId = nodeId
                 self.name = name
-                self.full_name = full_name
+                self.fullName = fullName
                 self.owner = owner
                 self._private = _private
-                self.html_url = html_url
+                self.htmlUrl = htmlUrl
                 self.description = description
                 self.fork = fork
                 self.url = url
-                self.archive_url = archive_url
-                self.assignees_url = assignees_url
-                self.blobs_url = blobs_url
-                self.branches_url = branches_url
-                self.collaborators_url = collaborators_url
-                self.comments_url = comments_url
-                self.commits_url = commits_url
-                self.compare_url = compare_url
-                self.contents_url = contents_url
-                self.contributors_url = contributors_url
-                self.deployments_url = deployments_url
-                self.downloads_url = downloads_url
-                self.events_url = events_url
-                self.forks_url = forks_url
-                self.git_commits_url = git_commits_url
-                self.git_refs_url = git_refs_url
-                self.git_tags_url = git_tags_url
-                self.issue_comment_url = issue_comment_url
-                self.issue_events_url = issue_events_url
-                self.issues_url = issues_url
-                self.keys_url = keys_url
-                self.labels_url = labels_url
-                self.languages_url = languages_url
-                self.merges_url = merges_url
-                self.milestones_url = milestones_url
-                self.notifications_url = notifications_url
-                self.pulls_url = pulls_url
-                self.releases_url = releases_url
-                self.stargazers_url = stargazers_url
-                self.statuses_url = statuses_url
-                self.subscribers_url = subscribers_url
-                self.subscription_url = subscription_url
-                self.tags_url = tags_url
-                self.teams_url = teams_url
-                self.trees_url = trees_url
-                self.hooks_url = hooks_url
+                self.archiveUrl = archiveUrl
+                self.assigneesUrl = assigneesUrl
+                self.blobsUrl = blobsUrl
+                self.branchesUrl = branchesUrl
+                self.collaboratorsUrl = collaboratorsUrl
+                self.commentsUrl = commentsUrl
+                self.commitsUrl = commitsUrl
+                self.compareUrl = compareUrl
+                self.contentsUrl = contentsUrl
+                self.contributorsUrl = contributorsUrl
+                self.deploymentsUrl = deploymentsUrl
+                self.downloadsUrl = downloadsUrl
+                self.eventsUrl = eventsUrl
+                self.forksUrl = forksUrl
+                self.gitCommitsUrl = gitCommitsUrl
+                self.gitRefsUrl = gitRefsUrl
+                self.gitTagsUrl = gitTagsUrl
+                self.issueCommentUrl = issueCommentUrl
+                self.issueEventsUrl = issueEventsUrl
+                self.issuesUrl = issuesUrl
+                self.keysUrl = keysUrl
+                self.labelsUrl = labelsUrl
+                self.languagesUrl = languagesUrl
+                self.mergesUrl = mergesUrl
+                self.milestonesUrl = milestonesUrl
+                self.notificationsUrl = notificationsUrl
+                self.pullsUrl = pullsUrl
+                self.releasesUrl = releasesUrl
+                self.stargazersUrl = stargazersUrl
+                self.statusesUrl = statusesUrl
+                self.subscribersUrl = subscribersUrl
+                self.subscriptionUrl = subscriptionUrl
+                self.tagsUrl = tagsUrl
+                self.teamsUrl = teamsUrl
+                self.treesUrl = treesUrl
+                self.hooksUrl = hooksUrl
             }
             public enum CodingKeys: String, CodingKey {
                 case id
-                case node_id
+                case nodeId = "node_id"
                 case name
-                case full_name
+                case fullName = "full_name"
                 case owner
                 case _private = "private"
-                case html_url
+                case htmlUrl = "html_url"
                 case description
                 case fork
                 case url
-                case archive_url
-                case assignees_url
-                case blobs_url
-                case branches_url
-                case collaborators_url
-                case comments_url
-                case commits_url
-                case compare_url
-                case contents_url
-                case contributors_url
-                case deployments_url
-                case downloads_url
-                case events_url
-                case forks_url
-                case git_commits_url
-                case git_refs_url
-                case git_tags_url
-                case issue_comment_url
-                case issue_events_url
-                case issues_url
-                case keys_url
-                case labels_url
-                case languages_url
-                case merges_url
-                case milestones_url
-                case notifications_url
-                case pulls_url
-                case releases_url
-                case stargazers_url
-                case statuses_url
-                case subscribers_url
-                case subscription_url
-                case tags_url
-                case teams_url
-                case trees_url
-                case hooks_url
+                case archiveUrl = "archive_url"
+                case assigneesUrl = "assignees_url"
+                case blobsUrl = "blobs_url"
+                case branchesUrl = "branches_url"
+                case collaboratorsUrl = "collaborators_url"
+                case commentsUrl = "comments_url"
+                case commitsUrl = "commits_url"
+                case compareUrl = "compare_url"
+                case contentsUrl = "contents_url"
+                case contributorsUrl = "contributors_url"
+                case deploymentsUrl = "deployments_url"
+                case downloadsUrl = "downloads_url"
+                case eventsUrl = "events_url"
+                case forksUrl = "forks_url"
+                case gitCommitsUrl = "git_commits_url"
+                case gitRefsUrl = "git_refs_url"
+                case gitTagsUrl = "git_tags_url"
+                case issueCommentUrl = "issue_comment_url"
+                case issueEventsUrl = "issue_events_url"
+                case issuesUrl = "issues_url"
+                case keysUrl = "keys_url"
+                case labelsUrl = "labels_url"
+                case languagesUrl = "languages_url"
+                case mergesUrl = "merges_url"
+                case milestonesUrl = "milestones_url"
+                case notificationsUrl = "notifications_url"
+                case pullsUrl = "pulls_url"
+                case releasesUrl = "releases_url"
+                case stargazersUrl = "stargazers_url"
+                case statusesUrl = "statuses_url"
+                case subscribersUrl = "subscribers_url"
+                case subscriptionUrl = "subscription_url"
+                case tagsUrl = "tags_url"
+                case teamsUrl = "teams_url"
+                case treesUrl = "trees_url"
+                case hooksUrl = "hooks_url"
             }
         }
         /// The security alert number.
         ///
         /// - Remark: Generated from `#/components/schemas/alert-number`.
-        public typealias alert_hyphen_number = Swift.Int
+        public typealias AlertNumber = Swift.Int
         /// Details for the vulnerable package.
         ///
         /// - Remark: Generated from `#/components/schemas/dependabot-alert-package`.
-        public struct dependabot_hyphen_alert_hyphen_package: Codable, Hashable, Sendable {
+        public struct DependabotAlertPackage: Codable, Hashable, Sendable {
             /// The package's language or package management ecosystem.
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-package/ecosystem`.
@@ -1498,7 +1507,7 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-package/name`.
             public var name: Swift.String
-            /// Creates a new `dependabot_hyphen_alert_hyphen_package`.
+            /// Creates a new `DependabotAlertPackage`.
             ///
             /// - Parameters:
             ///   - ecosystem: The package's language or package management ecosystem.
@@ -1516,11 +1525,11 @@ public enum Components {
             }
             public init(from decoder: any Decoder) throws {
                 let container = try decoder.container(keyedBy: CodingKeys.self)
-                ecosystem = try container.decode(
+                self.ecosystem = try container.decode(
                     Swift.String.self,
                     forKey: .ecosystem
                 )
-                name = try container.decode(
+                self.name = try container.decode(
                     Swift.String.self,
                     forKey: .name
                 )
@@ -1533,13 +1542,13 @@ public enum Components {
         /// Details pertaining to one vulnerable version range for the advisory.
         ///
         /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-vulnerability`.
-        public struct dependabot_hyphen_alert_hyphen_security_hyphen_vulnerability: Codable, Hashable, Sendable {
+        public struct DependabotAlertSecurityVulnerability: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-vulnerability/package`.
-            public var package: Components.Schemas.dependabot_hyphen_alert_hyphen_package
+            public var package: Components.Schemas.DependabotAlertPackage
             /// The severity of the vulnerability.
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-vulnerability/severity`.
-            @frozen public enum severityPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum SeverityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case low = "low"
                 case medium = "medium"
                 case high = "high"
@@ -1548,20 +1557,20 @@ public enum Components {
             /// The severity of the vulnerability.
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-vulnerability/severity`.
-            public var severity: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_vulnerability.severityPayload
+            public var severity: Components.Schemas.DependabotAlertSecurityVulnerability.SeverityPayload
             /// Conditions that identify vulnerable versions of this vulnerability's package.
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-vulnerability/vulnerable_version_range`.
-            public var vulnerable_version_range: Swift.String
+            public var vulnerableVersionRange: Swift.String
             /// Details pertaining to the package version that patches this vulnerability.
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-vulnerability/first_patched_version`.
-            public struct first_patched_versionPayload: Codable, Hashable, Sendable {
+            public struct FirstPatchedVersionPayload: Codable, Hashable, Sendable {
                 /// The package version that patches this vulnerability.
                 ///
                 /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-vulnerability/first_patched_version/identifier`.
                 public var identifier: Swift.String
-                /// Creates a new `first_patched_versionPayload`.
+                /// Creates a new `FirstPatchedVersionPayload`.
                 ///
                 /// - Parameters:
                 ///   - identifier: The package version that patches this vulnerability.
@@ -1573,7 +1582,7 @@ public enum Components {
                 }
                 public init(from decoder: any Decoder) throws {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
-                    identifier = try container.decode(
+                    self.identifier = try container.decode(
                         Swift.String.self,
                         forKey: .identifier
                     )
@@ -1585,48 +1594,48 @@ public enum Components {
             /// Details pertaining to the package version that patches this vulnerability.
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-vulnerability/first_patched_version`.
-            public var first_patched_version: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_vulnerability.first_patched_versionPayload?
-            /// Creates a new `dependabot_hyphen_alert_hyphen_security_hyphen_vulnerability`.
+            public var firstPatchedVersion: Components.Schemas.DependabotAlertSecurityVulnerability.FirstPatchedVersionPayload?
+            /// Creates a new `DependabotAlertSecurityVulnerability`.
             ///
             /// - Parameters:
             ///   - package:
             ///   - severity: The severity of the vulnerability.
-            ///   - vulnerable_version_range: Conditions that identify vulnerable versions of this vulnerability's package.
-            ///   - first_patched_version: Details pertaining to the package version that patches this vulnerability.
+            ///   - vulnerableVersionRange: Conditions that identify vulnerable versions of this vulnerability's package.
+            ///   - firstPatchedVersion: Details pertaining to the package version that patches this vulnerability.
             public init(
-                package: Components.Schemas.dependabot_hyphen_alert_hyphen_package,
-                severity: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_vulnerability.severityPayload,
-                vulnerable_version_range: Swift.String,
-                first_patched_version: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_vulnerability.first_patched_versionPayload? = nil
+                package: Components.Schemas.DependabotAlertPackage,
+                severity: Components.Schemas.DependabotAlertSecurityVulnerability.SeverityPayload,
+                vulnerableVersionRange: Swift.String,
+                firstPatchedVersion: Components.Schemas.DependabotAlertSecurityVulnerability.FirstPatchedVersionPayload? = nil
             ) {
                 self.package = package
                 self.severity = severity
-                self.vulnerable_version_range = vulnerable_version_range
-                self.first_patched_version = first_patched_version
+                self.vulnerableVersionRange = vulnerableVersionRange
+                self.firstPatchedVersion = firstPatchedVersion
             }
             public enum CodingKeys: String, CodingKey {
                 case package
                 case severity
-                case vulnerable_version_range
-                case first_patched_version
+                case vulnerableVersionRange = "vulnerable_version_range"
+                case firstPatchedVersion = "first_patched_version"
             }
             public init(from decoder: any Decoder) throws {
                 let container = try decoder.container(keyedBy: CodingKeys.self)
-                package = try container.decode(
-                    Components.Schemas.dependabot_hyphen_alert_hyphen_package.self,
+                self.package = try container.decode(
+                    Components.Schemas.DependabotAlertPackage.self,
                     forKey: .package
                 )
-                severity = try container.decode(
-                    Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_vulnerability.severityPayload.self,
+                self.severity = try container.decode(
+                    Components.Schemas.DependabotAlertSecurityVulnerability.SeverityPayload.self,
                     forKey: .severity
                 )
-                vulnerable_version_range = try container.decode(
+                self.vulnerableVersionRange = try container.decode(
                     Swift.String.self,
-                    forKey: .vulnerable_version_range
+                    forKey: .vulnerableVersionRange
                 )
-                first_patched_version = try container.decodeIfPresent(
-                    Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_vulnerability.first_patched_versionPayload.self,
-                    forKey: .first_patched_version
+                self.firstPatchedVersion = try container.decodeIfPresent(
+                    Components.Schemas.DependabotAlertSecurityVulnerability.FirstPatchedVersionPayload.self,
+                    forKey: .firstPatchedVersion
                 )
                 try decoder.ensureNoAdditionalProperties(knownKeys: [
                     "package",
@@ -1639,15 +1648,15 @@ public enum Components {
         /// Details for the GitHub Security Advisory.
         ///
         /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory`.
-        public struct dependabot_hyphen_alert_hyphen_security_hyphen_advisory: Codable, Hashable, Sendable {
+        public struct DependabotAlertSecurityAdvisory: Codable, Hashable, Sendable {
             /// The unique GitHub Security Advisory ID assigned to the advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/ghsa_id`.
-            public var ghsa_id: Swift.String
+            public var ghsaId: Swift.String
             /// The unique CVE ID assigned to the advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/cve_id`.
-            public var cve_id: Swift.String?
+            public var cveId: Swift.String?
             /// A short, plain text summary of the advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/summary`.
@@ -1659,11 +1668,11 @@ public enum Components {
             /// Vulnerable version range information for the advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/vulnerabilities`.
-            public var vulnerabilities: [Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_vulnerability]
+            public var vulnerabilities: [Components.Schemas.DependabotAlertSecurityVulnerability]
             /// The severity of the advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/severity`.
-            @frozen public enum severityPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum SeverityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case low = "low"
                 case medium = "medium"
                 case high = "high"
@@ -1672,11 +1681,11 @@ public enum Components {
             /// The severity of the advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/severity`.
-            public var severity: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.severityPayload
+            public var severity: Components.Schemas.DependabotAlertSecurityAdvisory.SeverityPayload
             /// Details for the advisory pertaining to the Common Vulnerability Scoring System.
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/cvss`.
-            public struct cvssPayload: Codable, Hashable, Sendable {
+            public struct CvssPayload: Codable, Hashable, Sendable {
                 /// The overall CVSS score of the advisory.
                 ///
                 /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/cvss/score`.
@@ -1684,32 +1693,32 @@ public enum Components {
                 /// The full CVSS vector string for the advisory.
                 ///
                 /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/cvss/vector_string`.
-                public var vector_string: Swift.String?
-                /// Creates a new `cvssPayload`.
+                public var vectorString: Swift.String?
+                /// Creates a new `CvssPayload`.
                 ///
                 /// - Parameters:
                 ///   - score: The overall CVSS score of the advisory.
-                ///   - vector_string: The full CVSS vector string for the advisory.
+                ///   - vectorString: The full CVSS vector string for the advisory.
                 public init(
                     score: Swift.Double,
-                    vector_string: Swift.String? = nil
+                    vectorString: Swift.String? = nil
                 ) {
                     self.score = score
-                    self.vector_string = vector_string
+                    self.vectorString = vectorString
                 }
                 public enum CodingKeys: String, CodingKey {
                     case score
-                    case vector_string
+                    case vectorString = "vector_string"
                 }
                 public init(from decoder: any Decoder) throws {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
-                    score = try container.decode(
+                    self.score = try container.decode(
                         Swift.Double.self,
                         forKey: .score
                     )
-                    vector_string = try container.decodeIfPresent(
+                    self.vectorString = try container.decodeIfPresent(
                         Swift.String.self,
-                        forKey: .vector_string
+                        forKey: .vectorString
                     )
                     try decoder.ensureNoAdditionalProperties(knownKeys: [
                         "score",
@@ -1720,46 +1729,46 @@ public enum Components {
             /// Details for the advisory pertaining to the Common Vulnerability Scoring System.
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/cvss`.
-            public var cvss: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.cvssPayload
+            public var cvss: Components.Schemas.DependabotAlertSecurityAdvisory.CvssPayload
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/cvss_severities`.
-            public var cvss_severities: Components.Schemas.cvss_hyphen_severities?
+            public var cvssSeverities: Components.Schemas.CvssSeverities?
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/epss`.
-            public var epss: Components.Schemas.security_hyphen_advisory_hyphen_epss?
+            public var epss: Components.Schemas.SecurityAdvisoryEpss?
             /// A CWE weakness assigned to the advisory.
             ///
-            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/cwesPayload`.
-            public struct cwesPayloadPayload: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/CwesPayload`.
+            public struct CwesPayloadPayload: Codable, Hashable, Sendable {
                 /// The unique CWE ID.
                 ///
-                /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/cwesPayload/cwe_id`.
-                public var cwe_id: Swift.String
+                /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/CwesPayload/cwe_id`.
+                public var cweId: Swift.String
                 /// The short, plain text name of the CWE.
                 ///
-                /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/cwesPayload/name`.
+                /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/CwesPayload/name`.
                 public var name: Swift.String
-                /// Creates a new `cwesPayloadPayload`.
+                /// Creates a new `CwesPayloadPayload`.
                 ///
                 /// - Parameters:
-                ///   - cwe_id: The unique CWE ID.
+                ///   - cweId: The unique CWE ID.
                 ///   - name: The short, plain text name of the CWE.
                 public init(
-                    cwe_id: Swift.String,
+                    cweId: Swift.String,
                     name: Swift.String
                 ) {
-                    self.cwe_id = cwe_id
+                    self.cweId = cweId
                     self.name = name
                 }
                 public enum CodingKeys: String, CodingKey {
-                    case cwe_id
+                    case cweId = "cwe_id"
                     case name
                 }
                 public init(from decoder: any Decoder) throws {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
-                    cwe_id = try container.decode(
+                    self.cweId = try container.decode(
                         Swift.String.self,
-                        forKey: .cwe_id
+                        forKey: .cweId
                     )
-                    name = try container.decode(
+                    self.name = try container.decode(
                         Swift.String.self,
                         forKey: .name
                     )
@@ -1772,37 +1781,37 @@ public enum Components {
             /// Details for the advisory pertaining to Common Weakness Enumeration.
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/cwes`.
-            public typealias cwesPayload = [Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.cwesPayloadPayload]
+            public typealias CwesPayload = [Components.Schemas.DependabotAlertSecurityAdvisory.CwesPayloadPayload]
             /// Details for the advisory pertaining to Common Weakness Enumeration.
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/cwes`.
-            public var cwes: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.cwesPayload
+            public var cwes: Components.Schemas.DependabotAlertSecurityAdvisory.CwesPayload
             /// An advisory identifier.
             ///
-            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/identifiersPayload`.
-            public struct identifiersPayloadPayload: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/IdentifiersPayload`.
+            public struct IdentifiersPayloadPayload: Codable, Hashable, Sendable {
                 /// The type of advisory identifier.
                 ///
-                /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/identifiersPayload/type`.
-                @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
-                    case CVE = "CVE"
-                    case GHSA = "GHSA"
+                /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/IdentifiersPayload/type`.
+                @frozen public enum _TypePayload: String, Codable, Hashable, Sendable, CaseIterable {
+                    case cve = "CVE"
+                    case ghsa = "GHSA"
                 }
                 /// The type of advisory identifier.
                 ///
-                /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/identifiersPayload/type`.
-                public var _type: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.identifiersPayloadPayload._typePayload
+                /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/IdentifiersPayload/type`.
+                public var _type: Components.Schemas.DependabotAlertSecurityAdvisory.IdentifiersPayloadPayload._TypePayload
                 /// The value of the advisory identifer.
                 ///
-                /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/identifiersPayload/value`.
+                /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/IdentifiersPayload/value`.
                 public var value: Swift.String
-                /// Creates a new `identifiersPayloadPayload`.
+                /// Creates a new `IdentifiersPayloadPayload`.
                 ///
                 /// - Parameters:
                 ///   - _type: The type of advisory identifier.
                 ///   - value: The value of the advisory identifer.
                 public init(
-                    _type: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.identifiersPayloadPayload._typePayload,
+                    _type: Components.Schemas.DependabotAlertSecurityAdvisory.IdentifiersPayloadPayload._TypePayload,
                     value: Swift.String
                 ) {
                     self._type = _type
@@ -1814,11 +1823,11 @@ public enum Components {
                 }
                 public init(from decoder: any Decoder) throws {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
-                    _type = try container.decode(
-                        Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.identifiersPayloadPayload._typePayload.self,
+                    self._type = try container.decode(
+                        Components.Schemas.DependabotAlertSecurityAdvisory.IdentifiersPayloadPayload._TypePayload.self,
                         forKey: ._type
                     )
-                    value = try container.decode(
+                    self.value = try container.decode(
                         Swift.String.self,
                         forKey: .value
                     )
@@ -1831,20 +1840,20 @@ public enum Components {
             /// Values that identify this advisory among security information sources.
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/identifiers`.
-            public typealias identifiersPayload = [Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.identifiersPayloadPayload]
+            public typealias IdentifiersPayload = [Components.Schemas.DependabotAlertSecurityAdvisory.IdentifiersPayloadPayload]
             /// Values that identify this advisory among security information sources.
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/identifiers`.
-            public var identifiers: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.identifiersPayload
+            public var identifiers: Components.Schemas.DependabotAlertSecurityAdvisory.IdentifiersPayload
             /// A link to additional advisory information.
             ///
-            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/referencesPayload`.
-            public struct referencesPayloadPayload: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/ReferencesPayload`.
+            public struct ReferencesPayloadPayload: Codable, Hashable, Sendable {
                 /// The URL of the reference.
                 ///
-                /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/referencesPayload/url`.
+                /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/ReferencesPayload/url`.
                 public var url: Swift.String
-                /// Creates a new `referencesPayloadPayload`.
+                /// Creates a new `ReferencesPayloadPayload`.
                 ///
                 /// - Parameters:
                 ///   - url: The URL of the reference.
@@ -1856,7 +1865,7 @@ public enum Components {
                 }
                 public init(from decoder: any Decoder) throws {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
-                    url = try container.decode(
+                    self.url = try container.decode(
                         Swift.String.self,
                         forKey: .url
                     )
@@ -1868,152 +1877,152 @@ public enum Components {
             /// Links to additional advisory information.
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/references`.
-            public typealias referencesPayload = [Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.referencesPayloadPayload]
+            public typealias ReferencesPayload = [Components.Schemas.DependabotAlertSecurityAdvisory.ReferencesPayloadPayload]
             /// Links to additional advisory information.
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/references`.
-            public var references: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.referencesPayload
+            public var references: Components.Schemas.DependabotAlertSecurityAdvisory.ReferencesPayload
             /// The time that the advisory was published in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/published_at`.
-            public var published_at: Foundation.Date
+            public var publishedAt: Foundation.Date
             /// The time that the advisory was last modified in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/updated_at`.
-            public var updated_at: Foundation.Date
+            public var updatedAt: Foundation.Date
             /// The time that the advisory was withdrawn in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/withdrawn_at`.
-            public var withdrawn_at: Foundation.Date?
-            /// Creates a new `dependabot_hyphen_alert_hyphen_security_hyphen_advisory`.
+            public var withdrawnAt: Foundation.Date?
+            /// Creates a new `DependabotAlertSecurityAdvisory`.
             ///
             /// - Parameters:
-            ///   - ghsa_id: The unique GitHub Security Advisory ID assigned to the advisory.
-            ///   - cve_id: The unique CVE ID assigned to the advisory.
+            ///   - ghsaId: The unique GitHub Security Advisory ID assigned to the advisory.
+            ///   - cveId: The unique CVE ID assigned to the advisory.
             ///   - summary: A short, plain text summary of the advisory.
             ///   - description: A long-form Markdown-supported description of the advisory.
             ///   - vulnerabilities: Vulnerable version range information for the advisory.
             ///   - severity: The severity of the advisory.
             ///   - cvss: Details for the advisory pertaining to the Common Vulnerability Scoring System.
-            ///   - cvss_severities:
+            ///   - cvssSeverities:
             ///   - epss:
             ///   - cwes: Details for the advisory pertaining to Common Weakness Enumeration.
             ///   - identifiers: Values that identify this advisory among security information sources.
             ///   - references: Links to additional advisory information.
-            ///   - published_at: The time that the advisory was published in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
-            ///   - updated_at: The time that the advisory was last modified in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
-            ///   - withdrawn_at: The time that the advisory was withdrawn in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
+            ///   - publishedAt: The time that the advisory was published in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
+            ///   - updatedAt: The time that the advisory was last modified in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
+            ///   - withdrawnAt: The time that the advisory was withdrawn in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
             public init(
-                ghsa_id: Swift.String,
-                cve_id: Swift.String? = nil,
+                ghsaId: Swift.String,
+                cveId: Swift.String? = nil,
                 summary: Swift.String,
                 description: Swift.String,
-                vulnerabilities: [Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_vulnerability],
-                severity: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.severityPayload,
-                cvss: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.cvssPayload,
-                cvss_severities: Components.Schemas.cvss_hyphen_severities? = nil,
-                epss: Components.Schemas.security_hyphen_advisory_hyphen_epss? = nil,
-                cwes: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.cwesPayload,
-                identifiers: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.identifiersPayload,
-                references: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.referencesPayload,
-                published_at: Foundation.Date,
-                updated_at: Foundation.Date,
-                withdrawn_at: Foundation.Date? = nil
+                vulnerabilities: [Components.Schemas.DependabotAlertSecurityVulnerability],
+                severity: Components.Schemas.DependabotAlertSecurityAdvisory.SeverityPayload,
+                cvss: Components.Schemas.DependabotAlertSecurityAdvisory.CvssPayload,
+                cvssSeverities: Components.Schemas.CvssSeverities? = nil,
+                epss: Components.Schemas.SecurityAdvisoryEpss? = nil,
+                cwes: Components.Schemas.DependabotAlertSecurityAdvisory.CwesPayload,
+                identifiers: Components.Schemas.DependabotAlertSecurityAdvisory.IdentifiersPayload,
+                references: Components.Schemas.DependabotAlertSecurityAdvisory.ReferencesPayload,
+                publishedAt: Foundation.Date,
+                updatedAt: Foundation.Date,
+                withdrawnAt: Foundation.Date? = nil
             ) {
-                self.ghsa_id = ghsa_id
-                self.cve_id = cve_id
+                self.ghsaId = ghsaId
+                self.cveId = cveId
                 self.summary = summary
                 self.description = description
                 self.vulnerabilities = vulnerabilities
                 self.severity = severity
                 self.cvss = cvss
-                self.cvss_severities = cvss_severities
+                self.cvssSeverities = cvssSeverities
                 self.epss = epss
                 self.cwes = cwes
                 self.identifiers = identifiers
                 self.references = references
-                self.published_at = published_at
-                self.updated_at = updated_at
-                self.withdrawn_at = withdrawn_at
+                self.publishedAt = publishedAt
+                self.updatedAt = updatedAt
+                self.withdrawnAt = withdrawnAt
             }
             public enum CodingKeys: String, CodingKey {
-                case ghsa_id
-                case cve_id
+                case ghsaId = "ghsa_id"
+                case cveId = "cve_id"
                 case summary
                 case description
                 case vulnerabilities
                 case severity
                 case cvss
-                case cvss_severities
+                case cvssSeverities = "cvss_severities"
                 case epss
                 case cwes
                 case identifiers
                 case references
-                case published_at
-                case updated_at
-                case withdrawn_at
+                case publishedAt = "published_at"
+                case updatedAt = "updated_at"
+                case withdrawnAt = "withdrawn_at"
             }
             public init(from decoder: any Decoder) throws {
                 let container = try decoder.container(keyedBy: CodingKeys.self)
-                ghsa_id = try container.decode(
+                self.ghsaId = try container.decode(
                     Swift.String.self,
-                    forKey: .ghsa_id
+                    forKey: .ghsaId
                 )
-                cve_id = try container.decodeIfPresent(
+                self.cveId = try container.decodeIfPresent(
                     Swift.String.self,
-                    forKey: .cve_id
+                    forKey: .cveId
                 )
-                summary = try container.decode(
+                self.summary = try container.decode(
                     Swift.String.self,
                     forKey: .summary
                 )
-                description = try container.decode(
+                self.description = try container.decode(
                     Swift.String.self,
                     forKey: .description
                 )
-                vulnerabilities = try container.decode(
-                    [Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_vulnerability].self,
+                self.vulnerabilities = try container.decode(
+                    [Components.Schemas.DependabotAlertSecurityVulnerability].self,
                     forKey: .vulnerabilities
                 )
-                severity = try container.decode(
-                    Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.severityPayload.self,
+                self.severity = try container.decode(
+                    Components.Schemas.DependabotAlertSecurityAdvisory.SeverityPayload.self,
                     forKey: .severity
                 )
-                cvss = try container.decode(
-                    Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.cvssPayload.self,
+                self.cvss = try container.decode(
+                    Components.Schemas.DependabotAlertSecurityAdvisory.CvssPayload.self,
                     forKey: .cvss
                 )
-                cvss_severities = try container.decodeIfPresent(
-                    Components.Schemas.cvss_hyphen_severities.self,
-                    forKey: .cvss_severities
+                self.cvssSeverities = try container.decodeIfPresent(
+                    Components.Schemas.CvssSeverities.self,
+                    forKey: .cvssSeverities
                 )
-                epss = try container.decodeIfPresent(
-                    Components.Schemas.security_hyphen_advisory_hyphen_epss.self,
+                self.epss = try container.decodeIfPresent(
+                    Components.Schemas.SecurityAdvisoryEpss.self,
                     forKey: .epss
                 )
-                cwes = try container.decode(
-                    Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.cwesPayload.self,
+                self.cwes = try container.decode(
+                    Components.Schemas.DependabotAlertSecurityAdvisory.CwesPayload.self,
                     forKey: .cwes
                 )
-                identifiers = try container.decode(
-                    Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.identifiersPayload.self,
+                self.identifiers = try container.decode(
+                    Components.Schemas.DependabotAlertSecurityAdvisory.IdentifiersPayload.self,
                     forKey: .identifiers
                 )
-                references = try container.decode(
-                    Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.referencesPayload.self,
+                self.references = try container.decode(
+                    Components.Schemas.DependabotAlertSecurityAdvisory.ReferencesPayload.self,
                     forKey: .references
                 )
-                published_at = try container.decode(
+                self.publishedAt = try container.decode(
                     Foundation.Date.self,
-                    forKey: .published_at
+                    forKey: .publishedAt
                 )
-                updated_at = try container.decode(
+                self.updatedAt = try container.decode(
                     Foundation.Date.self,
-                    forKey: .updated_at
+                    forKey: .updatedAt
                 )
-                withdrawn_at = try container.decodeIfPresent(
+                self.withdrawnAt = try container.decodeIfPresent(
                     Foundation.Date.self,
-                    forKey: .withdrawn_at
+                    forKey: .withdrawnAt
                 )
                 try decoder.ensureNoAdditionalProperties(knownKeys: [
                     "ghsa_id",
@@ -2037,42 +2046,42 @@ public enum Components {
         /// The REST API URL of the alert resource.
         ///
         /// - Remark: Generated from `#/components/schemas/alert-url`.
-        public typealias alert_hyphen_url = Swift.String
+        public typealias AlertUrl = Swift.String
         /// The GitHub URL of the alert resource.
         ///
         /// - Remark: Generated from `#/components/schemas/alert-html-url`.
-        public typealias alert_hyphen_html_hyphen_url = Swift.String
+        public typealias AlertHtmlUrl = Swift.String
         /// The time that the alert was created in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
         ///
         /// - Remark: Generated from `#/components/schemas/alert-created-at`.
-        public typealias alert_hyphen_created_hyphen_at = Foundation.Date
+        public typealias AlertCreatedAt = Foundation.Date
         /// The time that the alert was last updated in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
         ///
         /// - Remark: Generated from `#/components/schemas/alert-updated-at`.
-        public typealias alert_hyphen_updated_hyphen_at = Foundation.Date
+        public typealias AlertUpdatedAt = Foundation.Date
         /// The time that the alert was dismissed in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
         ///
         /// - Remark: Generated from `#/components/schemas/alert-dismissed-at`.
-        public typealias alert_hyphen_dismissed_hyphen_at = Foundation.Date
+        public typealias AlertDismissedAt = Foundation.Date
         /// The time that the alert was no longer detected and was considered fixed in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
         ///
         /// - Remark: Generated from `#/components/schemas/alert-fixed-at`.
-        public typealias alert_hyphen_fixed_hyphen_at = Foundation.Date
+        public typealias AlertFixedAt = Foundation.Date
         /// The time that the alert was auto-dismissed in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
         ///
         /// - Remark: Generated from `#/components/schemas/alert-auto-dismissed-at`.
-        public typealias alert_hyphen_auto_hyphen_dismissed_hyphen_at = Foundation.Date
+        public typealias AlertAutoDismissedAt = Foundation.Date
         /// A Dependabot alert.
         ///
         /// - Remark: Generated from `#/components/schemas/dependabot-alert-with-repository`.
-        public struct dependabot_hyphen_alert_hyphen_with_hyphen_repository: Codable, Hashable, Sendable {
+        public struct DependabotAlertWithRepository: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-with-repository/number`.
-            public var number: Components.Schemas.alert_hyphen_number
+            public var number: Components.Schemas.AlertNumber
             /// The state of the Dependabot alert.
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-with-repository/state`.
-            @frozen public enum statePayload: String, Codable, Hashable, Sendable {
-                case auto_dismissed = "auto_dismissed"
+            @frozen public enum StatePayload: String, Codable, Hashable, Sendable, CaseIterable {
+                case autoDismissed = "auto_dismissed"
                 case dismissed = "dismissed"
                 case fixed = "fixed"
                 case open = "open"
@@ -2080,28 +2089,28 @@ public enum Components {
             /// The state of the Dependabot alert.
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-with-repository/state`.
-            public var state: Components.Schemas.dependabot_hyphen_alert_hyphen_with_hyphen_repository.statePayload
+            public var state: Components.Schemas.DependabotAlertWithRepository.StatePayload
             /// Details for the vulnerable dependency.
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-with-repository/dependency`.
-            public struct dependencyPayload: Codable, Hashable, Sendable {
+            public struct DependencyPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/dependabot-alert-with-repository/dependency/package`.
-                public var package: Components.Schemas.dependabot_hyphen_alert_hyphen_package?
+                public var package: Components.Schemas.DependabotAlertPackage?
                 /// The full path to the dependency manifest file, relative to the root of the repository.
                 ///
                 /// - Remark: Generated from `#/components/schemas/dependabot-alert-with-repository/dependency/manifest_path`.
-                public var manifest_path: Swift.String?
+                public var manifestPath: Swift.String?
                 /// The execution scope of the vulnerable dependency.
                 ///
                 /// - Remark: Generated from `#/components/schemas/dependabot-alert-with-repository/dependency/scope`.
-                @frozen public enum scopePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum ScopePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case development = "development"
                     case runtime = "runtime"
                 }
                 /// The execution scope of the vulnerable dependency.
                 ///
                 /// - Remark: Generated from `#/components/schemas/dependabot-alert-with-repository/dependency/scope`.
-                public var scope: Components.Schemas.dependabot_hyphen_alert_hyphen_with_hyphen_repository.dependencyPayload.scopePayload?
+                public var scope: Components.Schemas.DependabotAlertWithRepository.DependencyPayload.ScopePayload?
                 /// The vulnerable dependency's relationship to your project.
                 ///
                 /// > [!NOTE]
@@ -2109,7 +2118,7 @@ public enum Components {
                 ///
                 ///
                 /// - Remark: Generated from `#/components/schemas/dependabot-alert-with-repository/dependency/relationship`.
-                @frozen public enum relationshipPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum RelationshipPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case unknown = "unknown"
                     case direct = "direct"
                     case transitive = "transitive"
@@ -2121,28 +2130,28 @@ public enum Components {
                 ///
                 ///
                 /// - Remark: Generated from `#/components/schemas/dependabot-alert-with-repository/dependency/relationship`.
-                public var relationship: Components.Schemas.dependabot_hyphen_alert_hyphen_with_hyphen_repository.dependencyPayload.relationshipPayload?
-                /// Creates a new `dependencyPayload`.
+                public var relationship: Components.Schemas.DependabotAlertWithRepository.DependencyPayload.RelationshipPayload?
+                /// Creates a new `DependencyPayload`.
                 ///
                 /// - Parameters:
                 ///   - package:
-                ///   - manifest_path: The full path to the dependency manifest file, relative to the root of the repository.
+                ///   - manifestPath: The full path to the dependency manifest file, relative to the root of the repository.
                 ///   - scope: The execution scope of the vulnerable dependency.
                 ///   - relationship: The vulnerable dependency's relationship to your project.
                 public init(
-                    package: Components.Schemas.dependabot_hyphen_alert_hyphen_package? = nil,
-                    manifest_path: Swift.String? = nil,
-                    scope: Components.Schemas.dependabot_hyphen_alert_hyphen_with_hyphen_repository.dependencyPayload.scopePayload? = nil,
-                    relationship: Components.Schemas.dependabot_hyphen_alert_hyphen_with_hyphen_repository.dependencyPayload.relationshipPayload? = nil
+                    package: Components.Schemas.DependabotAlertPackage? = nil,
+                    manifestPath: Swift.String? = nil,
+                    scope: Components.Schemas.DependabotAlertWithRepository.DependencyPayload.ScopePayload? = nil,
+                    relationship: Components.Schemas.DependabotAlertWithRepository.DependencyPayload.RelationshipPayload? = nil
                 ) {
                     self.package = package
-                    self.manifest_path = manifest_path
+                    self.manifestPath = manifestPath
                     self.scope = scope
                     self.relationship = relationship
                 }
                 public enum CodingKeys: String, CodingKey {
                     case package
-                    case manifest_path
+                    case manifestPath = "manifest_path"
                     case scope
                     case relationship
                 }
@@ -2150,183 +2159,183 @@ public enum Components {
             /// Details for the vulnerable dependency.
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-with-repository/dependency`.
-            public var dependency: Components.Schemas.dependabot_hyphen_alert_hyphen_with_hyphen_repository.dependencyPayload
+            public var dependency: Components.Schemas.DependabotAlertWithRepository.DependencyPayload
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-with-repository/security_advisory`.
-            public var security_advisory: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory
+            public var securityAdvisory: Components.Schemas.DependabotAlertSecurityAdvisory
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-with-repository/security_vulnerability`.
-            public var security_vulnerability: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_vulnerability
+            public var securityVulnerability: Components.Schemas.DependabotAlertSecurityVulnerability
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-with-repository/url`.
-            public var url: Components.Schemas.alert_hyphen_url
+            public var url: Components.Schemas.AlertUrl
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-with-repository/html_url`.
-            public var html_url: Components.Schemas.alert_hyphen_html_hyphen_url
+            public var htmlUrl: Components.Schemas.AlertHtmlUrl
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-with-repository/created_at`.
-            public var created_at: Components.Schemas.alert_hyphen_created_hyphen_at
+            public var createdAt: Components.Schemas.AlertCreatedAt
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-with-repository/updated_at`.
-            public var updated_at: Components.Schemas.alert_hyphen_updated_hyphen_at
+            public var updatedAt: Components.Schemas.AlertUpdatedAt
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-with-repository/dismissed_at`.
-            public var dismissed_at: Components.Schemas.alert_hyphen_dismissed_hyphen_at?
+            public var dismissedAt: Components.Schemas.AlertDismissedAt?
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-with-repository/dismissed_by`.
-            public var dismissed_by: Components.Schemas.nullable_hyphen_simple_hyphen_user?
+            public var dismissedBy: Components.Schemas.NullableSimpleUser?
             /// The reason that the alert was dismissed.
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-with-repository/dismissed_reason`.
-            @frozen public enum dismissed_reasonPayload: String, Codable, Hashable, Sendable {
-                case fix_started = "fix_started"
+            @frozen public enum DismissedReasonPayload: String, Codable, Hashable, Sendable, CaseIterable {
+                case fixStarted = "fix_started"
                 case inaccurate = "inaccurate"
-                case no_bandwidth = "no_bandwidth"
-                case not_used = "not_used"
-                case tolerable_risk = "tolerable_risk"
+                case noBandwidth = "no_bandwidth"
+                case notUsed = "not_used"
+                case tolerableRisk = "tolerable_risk"
             }
             /// The reason that the alert was dismissed.
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-with-repository/dismissed_reason`.
-            public var dismissed_reason: Components.Schemas.dependabot_hyphen_alert_hyphen_with_hyphen_repository.dismissed_reasonPayload?
+            public var dismissedReason: Components.Schemas.DependabotAlertWithRepository.DismissedReasonPayload?
             /// An optional comment associated with the alert's dismissal.
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-with-repository/dismissed_comment`.
-            public var dismissed_comment: Swift.String?
+            public var dismissedComment: Swift.String?
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-with-repository/fixed_at`.
-            public var fixed_at: Components.Schemas.alert_hyphen_fixed_hyphen_at?
+            public var fixedAt: Components.Schemas.AlertFixedAt?
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-with-repository/auto_dismissed_at`.
-            public var auto_dismissed_at: Components.Schemas.alert_hyphen_auto_hyphen_dismissed_hyphen_at?
+            public var autoDismissedAt: Components.Schemas.AlertAutoDismissedAt?
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-with-repository/repository`.
-            public var repository: Components.Schemas.simple_hyphen_repository
-            /// Creates a new `dependabot_hyphen_alert_hyphen_with_hyphen_repository`.
+            public var repository: Components.Schemas.SimpleRepository
+            /// Creates a new `DependabotAlertWithRepository`.
             ///
             /// - Parameters:
             ///   - number:
             ///   - state: The state of the Dependabot alert.
             ///   - dependency: Details for the vulnerable dependency.
-            ///   - security_advisory:
-            ///   - security_vulnerability:
+            ///   - securityAdvisory:
+            ///   - securityVulnerability:
             ///   - url:
-            ///   - html_url:
-            ///   - created_at:
-            ///   - updated_at:
-            ///   - dismissed_at:
-            ///   - dismissed_by:
-            ///   - dismissed_reason: The reason that the alert was dismissed.
-            ///   - dismissed_comment: An optional comment associated with the alert's dismissal.
-            ///   - fixed_at:
-            ///   - auto_dismissed_at:
+            ///   - htmlUrl:
+            ///   - createdAt:
+            ///   - updatedAt:
+            ///   - dismissedAt:
+            ///   - dismissedBy:
+            ///   - dismissedReason: The reason that the alert was dismissed.
+            ///   - dismissedComment: An optional comment associated with the alert's dismissal.
+            ///   - fixedAt:
+            ///   - autoDismissedAt:
             ///   - repository:
             public init(
-                number: Components.Schemas.alert_hyphen_number,
-                state: Components.Schemas.dependabot_hyphen_alert_hyphen_with_hyphen_repository.statePayload,
-                dependency: Components.Schemas.dependabot_hyphen_alert_hyphen_with_hyphen_repository.dependencyPayload,
-                security_advisory: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory,
-                security_vulnerability: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_vulnerability,
-                url: Components.Schemas.alert_hyphen_url,
-                html_url: Components.Schemas.alert_hyphen_html_hyphen_url,
-                created_at: Components.Schemas.alert_hyphen_created_hyphen_at,
-                updated_at: Components.Schemas.alert_hyphen_updated_hyphen_at,
-                dismissed_at: Components.Schemas.alert_hyphen_dismissed_hyphen_at? = nil,
-                dismissed_by: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
-                dismissed_reason: Components.Schemas.dependabot_hyphen_alert_hyphen_with_hyphen_repository.dismissed_reasonPayload? = nil,
-                dismissed_comment: Swift.String? = nil,
-                fixed_at: Components.Schemas.alert_hyphen_fixed_hyphen_at? = nil,
-                auto_dismissed_at: Components.Schemas.alert_hyphen_auto_hyphen_dismissed_hyphen_at? = nil,
-                repository: Components.Schemas.simple_hyphen_repository
+                number: Components.Schemas.AlertNumber,
+                state: Components.Schemas.DependabotAlertWithRepository.StatePayload,
+                dependency: Components.Schemas.DependabotAlertWithRepository.DependencyPayload,
+                securityAdvisory: Components.Schemas.DependabotAlertSecurityAdvisory,
+                securityVulnerability: Components.Schemas.DependabotAlertSecurityVulnerability,
+                url: Components.Schemas.AlertUrl,
+                htmlUrl: Components.Schemas.AlertHtmlUrl,
+                createdAt: Components.Schemas.AlertCreatedAt,
+                updatedAt: Components.Schemas.AlertUpdatedAt,
+                dismissedAt: Components.Schemas.AlertDismissedAt? = nil,
+                dismissedBy: Components.Schemas.NullableSimpleUser? = nil,
+                dismissedReason: Components.Schemas.DependabotAlertWithRepository.DismissedReasonPayload? = nil,
+                dismissedComment: Swift.String? = nil,
+                fixedAt: Components.Schemas.AlertFixedAt? = nil,
+                autoDismissedAt: Components.Schemas.AlertAutoDismissedAt? = nil,
+                repository: Components.Schemas.SimpleRepository
             ) {
                 self.number = number
                 self.state = state
                 self.dependency = dependency
-                self.security_advisory = security_advisory
-                self.security_vulnerability = security_vulnerability
+                self.securityAdvisory = securityAdvisory
+                self.securityVulnerability = securityVulnerability
                 self.url = url
-                self.html_url = html_url
-                self.created_at = created_at
-                self.updated_at = updated_at
-                self.dismissed_at = dismissed_at
-                self.dismissed_by = dismissed_by
-                self.dismissed_reason = dismissed_reason
-                self.dismissed_comment = dismissed_comment
-                self.fixed_at = fixed_at
-                self.auto_dismissed_at = auto_dismissed_at
+                self.htmlUrl = htmlUrl
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
+                self.dismissedAt = dismissedAt
+                self.dismissedBy = dismissedBy
+                self.dismissedReason = dismissedReason
+                self.dismissedComment = dismissedComment
+                self.fixedAt = fixedAt
+                self.autoDismissedAt = autoDismissedAt
                 self.repository = repository
             }
             public enum CodingKeys: String, CodingKey {
                 case number
                 case state
                 case dependency
-                case security_advisory
-                case security_vulnerability
+                case securityAdvisory = "security_advisory"
+                case securityVulnerability = "security_vulnerability"
                 case url
-                case html_url
-                case created_at
-                case updated_at
-                case dismissed_at
-                case dismissed_by
-                case dismissed_reason
-                case dismissed_comment
-                case fixed_at
-                case auto_dismissed_at
+                case htmlUrl = "html_url"
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
+                case dismissedAt = "dismissed_at"
+                case dismissedBy = "dismissed_by"
+                case dismissedReason = "dismissed_reason"
+                case dismissedComment = "dismissed_comment"
+                case fixedAt = "fixed_at"
+                case autoDismissedAt = "auto_dismissed_at"
                 case repository
             }
             public init(from decoder: any Decoder) throws {
                 let container = try decoder.container(keyedBy: CodingKeys.self)
-                number = try container.decode(
-                    Components.Schemas.alert_hyphen_number.self,
+                self.number = try container.decode(
+                    Components.Schemas.AlertNumber.self,
                     forKey: .number
                 )
-                state = try container.decode(
-                    Components.Schemas.dependabot_hyphen_alert_hyphen_with_hyphen_repository.statePayload.self,
+                self.state = try container.decode(
+                    Components.Schemas.DependabotAlertWithRepository.StatePayload.self,
                     forKey: .state
                 )
-                dependency = try container.decode(
-                    Components.Schemas.dependabot_hyphen_alert_hyphen_with_hyphen_repository.dependencyPayload.self,
+                self.dependency = try container.decode(
+                    Components.Schemas.DependabotAlertWithRepository.DependencyPayload.self,
                     forKey: .dependency
                 )
-                security_advisory = try container.decode(
-                    Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.self,
-                    forKey: .security_advisory
+                self.securityAdvisory = try container.decode(
+                    Components.Schemas.DependabotAlertSecurityAdvisory.self,
+                    forKey: .securityAdvisory
                 )
-                security_vulnerability = try container.decode(
-                    Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_vulnerability.self,
-                    forKey: .security_vulnerability
+                self.securityVulnerability = try container.decode(
+                    Components.Schemas.DependabotAlertSecurityVulnerability.self,
+                    forKey: .securityVulnerability
                 )
-                url = try container.decode(
-                    Components.Schemas.alert_hyphen_url.self,
+                self.url = try container.decode(
+                    Components.Schemas.AlertUrl.self,
                     forKey: .url
                 )
-                html_url = try container.decode(
-                    Components.Schemas.alert_hyphen_html_hyphen_url.self,
-                    forKey: .html_url
+                self.htmlUrl = try container.decode(
+                    Components.Schemas.AlertHtmlUrl.self,
+                    forKey: .htmlUrl
                 )
-                created_at = try container.decode(
-                    Components.Schemas.alert_hyphen_created_hyphen_at.self,
-                    forKey: .created_at
+                self.createdAt = try container.decode(
+                    Components.Schemas.AlertCreatedAt.self,
+                    forKey: .createdAt
                 )
-                updated_at = try container.decode(
-                    Components.Schemas.alert_hyphen_updated_hyphen_at.self,
-                    forKey: .updated_at
+                self.updatedAt = try container.decode(
+                    Components.Schemas.AlertUpdatedAt.self,
+                    forKey: .updatedAt
                 )
-                dismissed_at = try container.decodeIfPresent(
-                    Components.Schemas.alert_hyphen_dismissed_hyphen_at.self,
-                    forKey: .dismissed_at
+                self.dismissedAt = try container.decodeIfPresent(
+                    Components.Schemas.AlertDismissedAt.self,
+                    forKey: .dismissedAt
                 )
-                dismissed_by = try container.decodeIfPresent(
-                    Components.Schemas.nullable_hyphen_simple_hyphen_user.self,
-                    forKey: .dismissed_by
+                self.dismissedBy = try container.decodeIfPresent(
+                    Components.Schemas.NullableSimpleUser.self,
+                    forKey: .dismissedBy
                 )
-                dismissed_reason = try container.decodeIfPresent(
-                    Components.Schemas.dependabot_hyphen_alert_hyphen_with_hyphen_repository.dismissed_reasonPayload.self,
-                    forKey: .dismissed_reason
+                self.dismissedReason = try container.decodeIfPresent(
+                    Components.Schemas.DependabotAlertWithRepository.DismissedReasonPayload.self,
+                    forKey: .dismissedReason
                 )
-                dismissed_comment = try container.decodeIfPresent(
+                self.dismissedComment = try container.decodeIfPresent(
                     Swift.String.self,
-                    forKey: .dismissed_comment
+                    forKey: .dismissedComment
                 )
-                fixed_at = try container.decodeIfPresent(
-                    Components.Schemas.alert_hyphen_fixed_hyphen_at.self,
-                    forKey: .fixed_at
+                self.fixedAt = try container.decodeIfPresent(
+                    Components.Schemas.AlertFixedAt.self,
+                    forKey: .fixedAt
                 )
-                auto_dismissed_at = try container.decodeIfPresent(
-                    Components.Schemas.alert_hyphen_auto_hyphen_dismissed_hyphen_at.self,
-                    forKey: .auto_dismissed_at
+                self.autoDismissedAt = try container.decodeIfPresent(
+                    Components.Schemas.AlertAutoDismissedAt.self,
+                    forKey: .autoDismissedAt
                 )
-                repository = try container.decode(
-                    Components.Schemas.simple_hyphen_repository.self,
+                self.repository = try container.decode(
+                    Components.Schemas.SimpleRepository.self,
                     forKey: .repository
                 )
                 try decoder.ensureNoAdditionalProperties(knownKeys: [
@@ -2350,21 +2359,21 @@ public enum Components {
             }
         }
         /// - Remark: Generated from `#/components/schemas/security-and-analysis`.
-        public struct security_hyphen_and_hyphen_analysis: Codable, Hashable, Sendable {
+        public struct SecurityAndAnalysis: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security`.
-            public struct advanced_securityPayload: Codable, Hashable, Sendable {
+            public struct AdvancedSecurityPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security/status`.
-                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.advanced_securityPayload.statusPayload?
-                /// Creates a new `advanced_securityPayload`.
+                public var status: Components.Schemas.SecurityAndAnalysis.AdvancedSecurityPayload.StatusPayload?
+                /// Creates a new `AdvancedSecurityPayload`.
                 ///
                 /// - Parameters:
                 ///   - status:
-                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.advanced_securityPayload.statusPayload? = nil) {
+                public init(status: Components.Schemas.SecurityAndAnalysis.AdvancedSecurityPayload.StatusPayload? = nil) {
                     self.status = status
                 }
                 public enum CodingKeys: String, CodingKey {
@@ -2372,21 +2381,21 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security`.
-            public var advanced_security: Components.Schemas.security_hyphen_and_hyphen_analysis.advanced_securityPayload?
+            public var advancedSecurity: Components.Schemas.SecurityAndAnalysis.AdvancedSecurityPayload?
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security`.
-            public struct code_securityPayload: Codable, Hashable, Sendable {
+            public struct CodeSecurityPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security/status`.
-                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.code_securityPayload.statusPayload?
-                /// Creates a new `code_securityPayload`.
+                public var status: Components.Schemas.SecurityAndAnalysis.CodeSecurityPayload.StatusPayload?
+                /// Creates a new `CodeSecurityPayload`.
                 ///
                 /// - Parameters:
                 ///   - status:
-                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.code_securityPayload.statusPayload? = nil) {
+                public init(status: Components.Schemas.SecurityAndAnalysis.CodeSecurityPayload.StatusPayload? = nil) {
                     self.status = status
                 }
                 public enum CodingKeys: String, CodingKey {
@@ -2394,27 +2403,27 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security`.
-            public var code_security: Components.Schemas.security_hyphen_and_hyphen_analysis.code_securityPayload?
+            public var codeSecurity: Components.Schemas.SecurityAndAnalysis.CodeSecurityPayload?
             /// Enable or disable Dependabot security updates for the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/dependabot_security_updates`.
-            public struct dependabot_security_updatesPayload: Codable, Hashable, Sendable {
+            public struct DependabotSecurityUpdatesPayload: Codable, Hashable, Sendable {
                 /// The enablement status of Dependabot security updates for the repository.
                 ///
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/dependabot_security_updates/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
                 /// The enablement status of Dependabot security updates for the repository.
                 ///
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/dependabot_security_updates/status`.
-                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.dependabot_security_updatesPayload.statusPayload?
-                /// Creates a new `dependabot_security_updatesPayload`.
+                public var status: Components.Schemas.SecurityAndAnalysis.DependabotSecurityUpdatesPayload.StatusPayload?
+                /// Creates a new `DependabotSecurityUpdatesPayload`.
                 ///
                 /// - Parameters:
                 ///   - status: The enablement status of Dependabot security updates for the repository.
-                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.dependabot_security_updatesPayload.statusPayload? = nil) {
+                public init(status: Components.Schemas.SecurityAndAnalysis.DependabotSecurityUpdatesPayload.StatusPayload? = nil) {
                     self.status = status
                 }
                 public enum CodingKeys: String, CodingKey {
@@ -2424,21 +2433,21 @@ public enum Components {
             /// Enable or disable Dependabot security updates for the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/dependabot_security_updates`.
-            public var dependabot_security_updates: Components.Schemas.security_hyphen_and_hyphen_analysis.dependabot_security_updatesPayload?
+            public var dependabotSecurityUpdates: Components.Schemas.SecurityAndAnalysis.DependabotSecurityUpdatesPayload?
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning`.
-            public struct secret_scanningPayload: Codable, Hashable, Sendable {
+            public struct SecretScanningPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning/status`.
-                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanningPayload.statusPayload?
-                /// Creates a new `secret_scanningPayload`.
+                public var status: Components.Schemas.SecurityAndAnalysis.SecretScanningPayload.StatusPayload?
+                /// Creates a new `SecretScanningPayload`.
                 ///
                 /// - Parameters:
                 ///   - status:
-                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanningPayload.statusPayload? = nil) {
+                public init(status: Components.Schemas.SecurityAndAnalysis.SecretScanningPayload.StatusPayload? = nil) {
                     self.status = status
                 }
                 public enum CodingKeys: String, CodingKey {
@@ -2446,21 +2455,21 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning`.
-            public var secret_scanning: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanningPayload?
+            public var secretScanning: Components.Schemas.SecurityAndAnalysis.SecretScanningPayload?
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_push_protection`.
-            public struct secret_scanning_push_protectionPayload: Codable, Hashable, Sendable {
+            public struct SecretScanningPushProtectionPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_push_protection/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_push_protection/status`.
-                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_push_protectionPayload.statusPayload?
-                /// Creates a new `secret_scanning_push_protectionPayload`.
+                public var status: Components.Schemas.SecurityAndAnalysis.SecretScanningPushProtectionPayload.StatusPayload?
+                /// Creates a new `SecretScanningPushProtectionPayload`.
                 ///
                 /// - Parameters:
                 ///   - status:
-                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_push_protectionPayload.statusPayload? = nil) {
+                public init(status: Components.Schemas.SecurityAndAnalysis.SecretScanningPushProtectionPayload.StatusPayload? = nil) {
                     self.status = status
                 }
                 public enum CodingKeys: String, CodingKey {
@@ -2468,21 +2477,21 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_push_protection`.
-            public var secret_scanning_push_protection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_push_protectionPayload?
+            public var secretScanningPushProtection: Components.Schemas.SecurityAndAnalysis.SecretScanningPushProtectionPayload?
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns`.
-            public struct secret_scanning_non_provider_patternsPayload: Codable, Hashable, Sendable {
+            public struct SecretScanningNonProviderPatternsPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns/status`.
-                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_non_provider_patternsPayload.statusPayload?
-                /// Creates a new `secret_scanning_non_provider_patternsPayload`.
+                public var status: Components.Schemas.SecurityAndAnalysis.SecretScanningNonProviderPatternsPayload.StatusPayload?
+                /// Creates a new `SecretScanningNonProviderPatternsPayload`.
                 ///
                 /// - Parameters:
                 ///   - status:
-                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_non_provider_patternsPayload.statusPayload? = nil) {
+                public init(status: Components.Schemas.SecurityAndAnalysis.SecretScanningNonProviderPatternsPayload.StatusPayload? = nil) {
                     self.status = status
                 }
                 public enum CodingKeys: String, CodingKey {
@@ -2490,21 +2499,21 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns`.
-            public var secret_scanning_non_provider_patterns: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_non_provider_patternsPayload?
+            public var secretScanningNonProviderPatterns: Components.Schemas.SecurityAndAnalysis.SecretScanningNonProviderPatternsPayload?
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection`.
-            public struct secret_scanning_ai_detectionPayload: Codable, Hashable, Sendable {
+            public struct SecretScanningAiDetectionPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection/status`.
-                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload.statusPayload?
-                /// Creates a new `secret_scanning_ai_detectionPayload`.
+                public var status: Components.Schemas.SecurityAndAnalysis.SecretScanningAiDetectionPayload.StatusPayload?
+                /// Creates a new `SecretScanningAiDetectionPayload`.
                 ///
                 /// - Parameters:
                 ///   - status:
-                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload.statusPayload? = nil) {
+                public init(status: Components.Schemas.SecurityAndAnalysis.SecretScanningAiDetectionPayload.StatusPayload? = nil) {
                     self.status = status
                 }
                 public enum CodingKeys: String, CodingKey {
@@ -2512,62 +2521,62 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection`.
-            public var secret_scanning_ai_detection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload?
-            /// Creates a new `security_hyphen_and_hyphen_analysis`.
+            public var secretScanningAiDetection: Components.Schemas.SecurityAndAnalysis.SecretScanningAiDetectionPayload?
+            /// Creates a new `SecurityAndAnalysis`.
             ///
             /// - Parameters:
-            ///   - advanced_security:
-            ///   - code_security:
-            ///   - dependabot_security_updates: Enable or disable Dependabot security updates for the repository.
-            ///   - secret_scanning:
-            ///   - secret_scanning_push_protection:
-            ///   - secret_scanning_non_provider_patterns:
-            ///   - secret_scanning_ai_detection:
+            ///   - advancedSecurity:
+            ///   - codeSecurity:
+            ///   - dependabotSecurityUpdates: Enable or disable Dependabot security updates for the repository.
+            ///   - secretScanning:
+            ///   - secretScanningPushProtection:
+            ///   - secretScanningNonProviderPatterns:
+            ///   - secretScanningAiDetection:
             public init(
-                advanced_security: Components.Schemas.security_hyphen_and_hyphen_analysis.advanced_securityPayload? = nil,
-                code_security: Components.Schemas.security_hyphen_and_hyphen_analysis.code_securityPayload? = nil,
-                dependabot_security_updates: Components.Schemas.security_hyphen_and_hyphen_analysis.dependabot_security_updatesPayload? = nil,
-                secret_scanning: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanningPayload? = nil,
-                secret_scanning_push_protection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_push_protectionPayload? = nil,
-                secret_scanning_non_provider_patterns: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_non_provider_patternsPayload? = nil,
-                secret_scanning_ai_detection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload? = nil
+                advancedSecurity: Components.Schemas.SecurityAndAnalysis.AdvancedSecurityPayload? = nil,
+                codeSecurity: Components.Schemas.SecurityAndAnalysis.CodeSecurityPayload? = nil,
+                dependabotSecurityUpdates: Components.Schemas.SecurityAndAnalysis.DependabotSecurityUpdatesPayload? = nil,
+                secretScanning: Components.Schemas.SecurityAndAnalysis.SecretScanningPayload? = nil,
+                secretScanningPushProtection: Components.Schemas.SecurityAndAnalysis.SecretScanningPushProtectionPayload? = nil,
+                secretScanningNonProviderPatterns: Components.Schemas.SecurityAndAnalysis.SecretScanningNonProviderPatternsPayload? = nil,
+                secretScanningAiDetection: Components.Schemas.SecurityAndAnalysis.SecretScanningAiDetectionPayload? = nil
             ) {
-                self.advanced_security = advanced_security
-                self.code_security = code_security
-                self.dependabot_security_updates = dependabot_security_updates
-                self.secret_scanning = secret_scanning
-                self.secret_scanning_push_protection = secret_scanning_push_protection
-                self.secret_scanning_non_provider_patterns = secret_scanning_non_provider_patterns
-                self.secret_scanning_ai_detection = secret_scanning_ai_detection
+                self.advancedSecurity = advancedSecurity
+                self.codeSecurity = codeSecurity
+                self.dependabotSecurityUpdates = dependabotSecurityUpdates
+                self.secretScanning = secretScanning
+                self.secretScanningPushProtection = secretScanningPushProtection
+                self.secretScanningNonProviderPatterns = secretScanningNonProviderPatterns
+                self.secretScanningAiDetection = secretScanningAiDetection
             }
             public enum CodingKeys: String, CodingKey {
-                case advanced_security
-                case code_security
-                case dependabot_security_updates
-                case secret_scanning
-                case secret_scanning_push_protection
-                case secret_scanning_non_provider_patterns
-                case secret_scanning_ai_detection
+                case advancedSecurity = "advanced_security"
+                case codeSecurity = "code_security"
+                case dependabotSecurityUpdates = "dependabot_security_updates"
+                case secretScanning = "secret_scanning"
+                case secretScanningPushProtection = "secret_scanning_push_protection"
+                case secretScanningNonProviderPatterns = "secret_scanning_non_provider_patterns"
+                case secretScanningAiDetection = "secret_scanning_ai_detection"
             }
         }
         /// Minimal Repository
         ///
         /// - Remark: Generated from `#/components/schemas/minimal-repository`.
-        public struct minimal_hyphen_repository: Codable, Hashable, Sendable {
+        public struct MinimalRepository: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/minimal-repository/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/minimal-repository/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/name`.
             public var name: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/full_name`.
-            public var full_name: Swift.String
+            public var fullName: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/owner`.
-            public var owner: Components.Schemas.simple_hyphen_user
+            public var owner: Components.Schemas.SimpleUser
             /// - Remark: Generated from `#/components/schemas/minimal-repository/private`.
             public var _private: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/minimal-repository/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/description`.
             public var description: Swift.String?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/fork`.
@@ -2575,121 +2584,121 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/minimal-repository/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/archive_url`.
-            public var archive_url: Swift.String
+            public var archiveUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/assignees_url`.
-            public var assignees_url: Swift.String
+            public var assigneesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/blobs_url`.
-            public var blobs_url: Swift.String
+            public var blobsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/branches_url`.
-            public var branches_url: Swift.String
+            public var branchesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/collaborators_url`.
-            public var collaborators_url: Swift.String
+            public var collaboratorsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/comments_url`.
-            public var comments_url: Swift.String
+            public var commentsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/commits_url`.
-            public var commits_url: Swift.String
+            public var commitsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/compare_url`.
-            public var compare_url: Swift.String
+            public var compareUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/contents_url`.
-            public var contents_url: Swift.String
+            public var contentsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/contributors_url`.
-            public var contributors_url: Swift.String
+            public var contributorsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/deployments_url`.
-            public var deployments_url: Swift.String
+            public var deploymentsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/downloads_url`.
-            public var downloads_url: Swift.String
+            public var downloadsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/events_url`.
-            public var events_url: Swift.String
+            public var eventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/forks_url`.
-            public var forks_url: Swift.String
+            public var forksUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/git_commits_url`.
-            public var git_commits_url: Swift.String
+            public var gitCommitsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/git_refs_url`.
-            public var git_refs_url: Swift.String
+            public var gitRefsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/git_tags_url`.
-            public var git_tags_url: Swift.String
+            public var gitTagsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/git_url`.
-            public var git_url: Swift.String?
+            public var gitUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/issue_comment_url`.
-            public var issue_comment_url: Swift.String
+            public var issueCommentUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/issue_events_url`.
-            public var issue_events_url: Swift.String
+            public var issueEventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/issues_url`.
-            public var issues_url: Swift.String
+            public var issuesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/keys_url`.
-            public var keys_url: Swift.String
+            public var keysUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/labels_url`.
-            public var labels_url: Swift.String
+            public var labelsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/languages_url`.
-            public var languages_url: Swift.String
+            public var languagesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/merges_url`.
-            public var merges_url: Swift.String
+            public var mergesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/milestones_url`.
-            public var milestones_url: Swift.String
+            public var milestonesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/notifications_url`.
-            public var notifications_url: Swift.String
+            public var notificationsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/pulls_url`.
-            public var pulls_url: Swift.String
+            public var pullsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/releases_url`.
-            public var releases_url: Swift.String
+            public var releasesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/ssh_url`.
-            public var ssh_url: Swift.String?
+            public var sshUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/stargazers_url`.
-            public var stargazers_url: Swift.String
+            public var stargazersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/statuses_url`.
-            public var statuses_url: Swift.String
+            public var statusesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/subscribers_url`.
-            public var subscribers_url: Swift.String
+            public var subscribersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/subscription_url`.
-            public var subscription_url: Swift.String
+            public var subscriptionUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/tags_url`.
-            public var tags_url: Swift.String
+            public var tagsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/teams_url`.
-            public var teams_url: Swift.String
+            public var teamsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/trees_url`.
-            public var trees_url: Swift.String
+            public var treesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/clone_url`.
-            public var clone_url: Swift.String?
+            public var cloneUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/mirror_url`.
-            public var mirror_url: Swift.String?
+            public var mirrorUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/hooks_url`.
-            public var hooks_url: Swift.String
+            public var hooksUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/svn_url`.
-            public var svn_url: Swift.String?
+            public var svnUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/homepage`.
             public var homepage: Swift.String?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/language`.
             public var language: Swift.String?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/forks_count`.
-            public var forks_count: Swift.Int?
+            public var forksCount: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/stargazers_count`.
-            public var stargazers_count: Swift.Int?
+            public var stargazersCount: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/watchers_count`.
-            public var watchers_count: Swift.Int?
+            public var watchersCount: Swift.Int?
             /// The size of the repository, in kilobytes. Size is calculated hourly. When a repository is initially created, the size is 0.
             ///
             /// - Remark: Generated from `#/components/schemas/minimal-repository/size`.
             public var size: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/default_branch`.
-            public var default_branch: Swift.String?
+            public var defaultBranch: Swift.String?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/open_issues_count`.
-            public var open_issues_count: Swift.Int?
+            public var openIssuesCount: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/is_template`.
-            public var is_template: Swift.Bool?
+            public var isTemplate: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/topics`.
             public var topics: [Swift.String]?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/has_issues`.
-            public var has_issues: Swift.Bool?
+            public var hasIssues: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/has_projects`.
-            public var has_projects: Swift.Bool?
+            public var hasProjects: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/has_wiki`.
-            public var has_wiki: Swift.Bool?
+            public var hasWiki: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/has_pages`.
-            public var has_pages: Swift.Bool?
+            public var hasPages: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/has_downloads`.
-            public var has_downloads: Swift.Bool?
+            public var hasDownloads: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/has_discussions`.
-            public var has_discussions: Swift.Bool?
+            public var hasDiscussions: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/archived`.
             public var archived: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/disabled`.
@@ -2697,13 +2706,13 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/minimal-repository/visibility`.
             public var visibility: Swift.String?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/pushed_at`.
-            public var pushed_at: Foundation.Date?
+            public var pushedAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/created_at`.
-            public var created_at: Foundation.Date?
+            public var createdAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/updated_at`.
-            public var updated_at: Foundation.Date?
+            public var updatedAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/permissions`.
-            public struct permissionsPayload: Codable, Hashable, Sendable {
+            public struct PermissionsPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/minimal-repository/permissions/admin`.
                 public var admin: Swift.Bool?
                 /// - Remark: Generated from `#/components/schemas/minimal-repository/permissions/maintain`.
@@ -2714,7 +2723,7 @@ public enum Components {
                 public var triage: Swift.Bool?
                 /// - Remark: Generated from `#/components/schemas/minimal-repository/permissions/pull`.
                 public var pull: Swift.Bool?
-                /// Creates a new `permissionsPayload`.
+                /// Creates a new `PermissionsPayload`.
                 ///
                 /// - Parameters:
                 ///   - admin:
@@ -2744,436 +2753,436 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/minimal-repository/permissions`.
-            public var permissions: Components.Schemas.minimal_hyphen_repository.permissionsPayload?
+            public var permissions: Components.Schemas.MinimalRepository.PermissionsPayload?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/role_name`.
-            public var role_name: Swift.String?
+            public var roleName: Swift.String?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/temp_clone_token`.
-            public var temp_clone_token: Swift.String?
+            public var tempCloneToken: Swift.String?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/delete_branch_on_merge`.
-            public var delete_branch_on_merge: Swift.Bool?
+            public var deleteBranchOnMerge: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/subscribers_count`.
-            public var subscribers_count: Swift.Int?
+            public var subscribersCount: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/network_count`.
-            public var network_count: Swift.Int?
+            public var networkCount: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/code_of_conduct`.
-            public var code_of_conduct: Components.Schemas.code_hyphen_of_hyphen_conduct?
+            public var codeOfConduct: Components.Schemas.CodeOfConduct?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/license`.
-            public struct licensePayload: Codable, Hashable, Sendable {
+            public struct LicensePayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/minimal-repository/license/key`.
                 public var key: Swift.String?
                 /// - Remark: Generated from `#/components/schemas/minimal-repository/license/name`.
                 public var name: Swift.String?
                 /// - Remark: Generated from `#/components/schemas/minimal-repository/license/spdx_id`.
-                public var spdx_id: Swift.String?
+                public var spdxId: Swift.String?
                 /// - Remark: Generated from `#/components/schemas/minimal-repository/license/url`.
                 public var url: Swift.String?
                 /// - Remark: Generated from `#/components/schemas/minimal-repository/license/node_id`.
-                public var node_id: Swift.String?
-                /// Creates a new `licensePayload`.
+                public var nodeId: Swift.String?
+                /// Creates a new `LicensePayload`.
                 ///
                 /// - Parameters:
                 ///   - key:
                 ///   - name:
-                ///   - spdx_id:
+                ///   - spdxId:
                 ///   - url:
-                ///   - node_id:
+                ///   - nodeId:
                 public init(
                     key: Swift.String? = nil,
                     name: Swift.String? = nil,
-                    spdx_id: Swift.String? = nil,
+                    spdxId: Swift.String? = nil,
                     url: Swift.String? = nil,
-                    node_id: Swift.String? = nil
+                    nodeId: Swift.String? = nil
                 ) {
                     self.key = key
                     self.name = name
-                    self.spdx_id = spdx_id
+                    self.spdxId = spdxId
                     self.url = url
-                    self.node_id = node_id
+                    self.nodeId = nodeId
                 }
                 public enum CodingKeys: String, CodingKey {
                     case key
                     case name
-                    case spdx_id
+                    case spdxId = "spdx_id"
                     case url
-                    case node_id
+                    case nodeId = "node_id"
                 }
             }
             /// - Remark: Generated from `#/components/schemas/minimal-repository/license`.
-            public var license: Components.Schemas.minimal_hyphen_repository.licensePayload?
+            public var license: Components.Schemas.MinimalRepository.LicensePayload?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/forks`.
             public var forks: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/open_issues`.
-            public var open_issues: Swift.Int?
+            public var openIssues: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/watchers`.
             public var watchers: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/allow_forking`.
-            public var allow_forking: Swift.Bool?
+            public var allowForking: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/web_commit_signoff_required`.
-            public var web_commit_signoff_required: Swift.Bool?
+            public var webCommitSignoffRequired: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/security_and_analysis`.
-            public var security_and_analysis: Components.Schemas.security_hyphen_and_hyphen_analysis?
-            /// Creates a new `minimal_hyphen_repository`.
+            public var securityAndAnalysis: Components.Schemas.SecurityAndAnalysis?
+            /// Creates a new `MinimalRepository`.
             ///
             /// - Parameters:
             ///   - id:
-            ///   - node_id:
+            ///   - nodeId:
             ///   - name:
-            ///   - full_name:
+            ///   - fullName:
             ///   - owner:
             ///   - _private:
-            ///   - html_url:
+            ///   - htmlUrl:
             ///   - description:
             ///   - fork:
             ///   - url:
-            ///   - archive_url:
-            ///   - assignees_url:
-            ///   - blobs_url:
-            ///   - branches_url:
-            ///   - collaborators_url:
-            ///   - comments_url:
-            ///   - commits_url:
-            ///   - compare_url:
-            ///   - contents_url:
-            ///   - contributors_url:
-            ///   - deployments_url:
-            ///   - downloads_url:
-            ///   - events_url:
-            ///   - forks_url:
-            ///   - git_commits_url:
-            ///   - git_refs_url:
-            ///   - git_tags_url:
-            ///   - git_url:
-            ///   - issue_comment_url:
-            ///   - issue_events_url:
-            ///   - issues_url:
-            ///   - keys_url:
-            ///   - labels_url:
-            ///   - languages_url:
-            ///   - merges_url:
-            ///   - milestones_url:
-            ///   - notifications_url:
-            ///   - pulls_url:
-            ///   - releases_url:
-            ///   - ssh_url:
-            ///   - stargazers_url:
-            ///   - statuses_url:
-            ///   - subscribers_url:
-            ///   - subscription_url:
-            ///   - tags_url:
-            ///   - teams_url:
-            ///   - trees_url:
-            ///   - clone_url:
-            ///   - mirror_url:
-            ///   - hooks_url:
-            ///   - svn_url:
+            ///   - archiveUrl:
+            ///   - assigneesUrl:
+            ///   - blobsUrl:
+            ///   - branchesUrl:
+            ///   - collaboratorsUrl:
+            ///   - commentsUrl:
+            ///   - commitsUrl:
+            ///   - compareUrl:
+            ///   - contentsUrl:
+            ///   - contributorsUrl:
+            ///   - deploymentsUrl:
+            ///   - downloadsUrl:
+            ///   - eventsUrl:
+            ///   - forksUrl:
+            ///   - gitCommitsUrl:
+            ///   - gitRefsUrl:
+            ///   - gitTagsUrl:
+            ///   - gitUrl:
+            ///   - issueCommentUrl:
+            ///   - issueEventsUrl:
+            ///   - issuesUrl:
+            ///   - keysUrl:
+            ///   - labelsUrl:
+            ///   - languagesUrl:
+            ///   - mergesUrl:
+            ///   - milestonesUrl:
+            ///   - notificationsUrl:
+            ///   - pullsUrl:
+            ///   - releasesUrl:
+            ///   - sshUrl:
+            ///   - stargazersUrl:
+            ///   - statusesUrl:
+            ///   - subscribersUrl:
+            ///   - subscriptionUrl:
+            ///   - tagsUrl:
+            ///   - teamsUrl:
+            ///   - treesUrl:
+            ///   - cloneUrl:
+            ///   - mirrorUrl:
+            ///   - hooksUrl:
+            ///   - svnUrl:
             ///   - homepage:
             ///   - language:
-            ///   - forks_count:
-            ///   - stargazers_count:
-            ///   - watchers_count:
+            ///   - forksCount:
+            ///   - stargazersCount:
+            ///   - watchersCount:
             ///   - size: The size of the repository, in kilobytes. Size is calculated hourly. When a repository is initially created, the size is 0.
-            ///   - default_branch:
-            ///   - open_issues_count:
-            ///   - is_template:
+            ///   - defaultBranch:
+            ///   - openIssuesCount:
+            ///   - isTemplate:
             ///   - topics:
-            ///   - has_issues:
-            ///   - has_projects:
-            ///   - has_wiki:
-            ///   - has_pages:
-            ///   - has_downloads:
-            ///   - has_discussions:
+            ///   - hasIssues:
+            ///   - hasProjects:
+            ///   - hasWiki:
+            ///   - hasPages:
+            ///   - hasDownloads:
+            ///   - hasDiscussions:
             ///   - archived:
             ///   - disabled:
             ///   - visibility:
-            ///   - pushed_at:
-            ///   - created_at:
-            ///   - updated_at:
+            ///   - pushedAt:
+            ///   - createdAt:
+            ///   - updatedAt:
             ///   - permissions:
-            ///   - role_name:
-            ///   - temp_clone_token:
-            ///   - delete_branch_on_merge:
-            ///   - subscribers_count:
-            ///   - network_count:
-            ///   - code_of_conduct:
+            ///   - roleName:
+            ///   - tempCloneToken:
+            ///   - deleteBranchOnMerge:
+            ///   - subscribersCount:
+            ///   - networkCount:
+            ///   - codeOfConduct:
             ///   - license:
             ///   - forks:
-            ///   - open_issues:
+            ///   - openIssues:
             ///   - watchers:
-            ///   - allow_forking:
-            ///   - web_commit_signoff_required:
-            ///   - security_and_analysis:
+            ///   - allowForking:
+            ///   - webCommitSignoffRequired:
+            ///   - securityAndAnalysis:
             public init(
                 id: Swift.Int64,
-                node_id: Swift.String,
+                nodeId: Swift.String,
                 name: Swift.String,
-                full_name: Swift.String,
-                owner: Components.Schemas.simple_hyphen_user,
+                fullName: Swift.String,
+                owner: Components.Schemas.SimpleUser,
                 _private: Swift.Bool,
-                html_url: Swift.String,
+                htmlUrl: Swift.String,
                 description: Swift.String? = nil,
                 fork: Swift.Bool,
                 url: Swift.String,
-                archive_url: Swift.String,
-                assignees_url: Swift.String,
-                blobs_url: Swift.String,
-                branches_url: Swift.String,
-                collaborators_url: Swift.String,
-                comments_url: Swift.String,
-                commits_url: Swift.String,
-                compare_url: Swift.String,
-                contents_url: Swift.String,
-                contributors_url: Swift.String,
-                deployments_url: Swift.String,
-                downloads_url: Swift.String,
-                events_url: Swift.String,
-                forks_url: Swift.String,
-                git_commits_url: Swift.String,
-                git_refs_url: Swift.String,
-                git_tags_url: Swift.String,
-                git_url: Swift.String? = nil,
-                issue_comment_url: Swift.String,
-                issue_events_url: Swift.String,
-                issues_url: Swift.String,
-                keys_url: Swift.String,
-                labels_url: Swift.String,
-                languages_url: Swift.String,
-                merges_url: Swift.String,
-                milestones_url: Swift.String,
-                notifications_url: Swift.String,
-                pulls_url: Swift.String,
-                releases_url: Swift.String,
-                ssh_url: Swift.String? = nil,
-                stargazers_url: Swift.String,
-                statuses_url: Swift.String,
-                subscribers_url: Swift.String,
-                subscription_url: Swift.String,
-                tags_url: Swift.String,
-                teams_url: Swift.String,
-                trees_url: Swift.String,
-                clone_url: Swift.String? = nil,
-                mirror_url: Swift.String? = nil,
-                hooks_url: Swift.String,
-                svn_url: Swift.String? = nil,
+                archiveUrl: Swift.String,
+                assigneesUrl: Swift.String,
+                blobsUrl: Swift.String,
+                branchesUrl: Swift.String,
+                collaboratorsUrl: Swift.String,
+                commentsUrl: Swift.String,
+                commitsUrl: Swift.String,
+                compareUrl: Swift.String,
+                contentsUrl: Swift.String,
+                contributorsUrl: Swift.String,
+                deploymentsUrl: Swift.String,
+                downloadsUrl: Swift.String,
+                eventsUrl: Swift.String,
+                forksUrl: Swift.String,
+                gitCommitsUrl: Swift.String,
+                gitRefsUrl: Swift.String,
+                gitTagsUrl: Swift.String,
+                gitUrl: Swift.String? = nil,
+                issueCommentUrl: Swift.String,
+                issueEventsUrl: Swift.String,
+                issuesUrl: Swift.String,
+                keysUrl: Swift.String,
+                labelsUrl: Swift.String,
+                languagesUrl: Swift.String,
+                mergesUrl: Swift.String,
+                milestonesUrl: Swift.String,
+                notificationsUrl: Swift.String,
+                pullsUrl: Swift.String,
+                releasesUrl: Swift.String,
+                sshUrl: Swift.String? = nil,
+                stargazersUrl: Swift.String,
+                statusesUrl: Swift.String,
+                subscribersUrl: Swift.String,
+                subscriptionUrl: Swift.String,
+                tagsUrl: Swift.String,
+                teamsUrl: Swift.String,
+                treesUrl: Swift.String,
+                cloneUrl: Swift.String? = nil,
+                mirrorUrl: Swift.String? = nil,
+                hooksUrl: Swift.String,
+                svnUrl: Swift.String? = nil,
                 homepage: Swift.String? = nil,
                 language: Swift.String? = nil,
-                forks_count: Swift.Int? = nil,
-                stargazers_count: Swift.Int? = nil,
-                watchers_count: Swift.Int? = nil,
+                forksCount: Swift.Int? = nil,
+                stargazersCount: Swift.Int? = nil,
+                watchersCount: Swift.Int? = nil,
                 size: Swift.Int? = nil,
-                default_branch: Swift.String? = nil,
-                open_issues_count: Swift.Int? = nil,
-                is_template: Swift.Bool? = nil,
+                defaultBranch: Swift.String? = nil,
+                openIssuesCount: Swift.Int? = nil,
+                isTemplate: Swift.Bool? = nil,
                 topics: [Swift.String]? = nil,
-                has_issues: Swift.Bool? = nil,
-                has_projects: Swift.Bool? = nil,
-                has_wiki: Swift.Bool? = nil,
-                has_pages: Swift.Bool? = nil,
-                has_downloads: Swift.Bool? = nil,
-                has_discussions: Swift.Bool? = nil,
+                hasIssues: Swift.Bool? = nil,
+                hasProjects: Swift.Bool? = nil,
+                hasWiki: Swift.Bool? = nil,
+                hasPages: Swift.Bool? = nil,
+                hasDownloads: Swift.Bool? = nil,
+                hasDiscussions: Swift.Bool? = nil,
                 archived: Swift.Bool? = nil,
                 disabled: Swift.Bool? = nil,
                 visibility: Swift.String? = nil,
-                pushed_at: Foundation.Date? = nil,
-                created_at: Foundation.Date? = nil,
-                updated_at: Foundation.Date? = nil,
-                permissions: Components.Schemas.minimal_hyphen_repository.permissionsPayload? = nil,
-                role_name: Swift.String? = nil,
-                temp_clone_token: Swift.String? = nil,
-                delete_branch_on_merge: Swift.Bool? = nil,
-                subscribers_count: Swift.Int? = nil,
-                network_count: Swift.Int? = nil,
-                code_of_conduct: Components.Schemas.code_hyphen_of_hyphen_conduct? = nil,
-                license: Components.Schemas.minimal_hyphen_repository.licensePayload? = nil,
+                pushedAt: Foundation.Date? = nil,
+                createdAt: Foundation.Date? = nil,
+                updatedAt: Foundation.Date? = nil,
+                permissions: Components.Schemas.MinimalRepository.PermissionsPayload? = nil,
+                roleName: Swift.String? = nil,
+                tempCloneToken: Swift.String? = nil,
+                deleteBranchOnMerge: Swift.Bool? = nil,
+                subscribersCount: Swift.Int? = nil,
+                networkCount: Swift.Int? = nil,
+                codeOfConduct: Components.Schemas.CodeOfConduct? = nil,
+                license: Components.Schemas.MinimalRepository.LicensePayload? = nil,
                 forks: Swift.Int? = nil,
-                open_issues: Swift.Int? = nil,
+                openIssues: Swift.Int? = nil,
                 watchers: Swift.Int? = nil,
-                allow_forking: Swift.Bool? = nil,
-                web_commit_signoff_required: Swift.Bool? = nil,
-                security_and_analysis: Components.Schemas.security_hyphen_and_hyphen_analysis? = nil
+                allowForking: Swift.Bool? = nil,
+                webCommitSignoffRequired: Swift.Bool? = nil,
+                securityAndAnalysis: Components.Schemas.SecurityAndAnalysis? = nil
             ) {
                 self.id = id
-                self.node_id = node_id
+                self.nodeId = nodeId
                 self.name = name
-                self.full_name = full_name
+                self.fullName = fullName
                 self.owner = owner
                 self._private = _private
-                self.html_url = html_url
+                self.htmlUrl = htmlUrl
                 self.description = description
                 self.fork = fork
                 self.url = url
-                self.archive_url = archive_url
-                self.assignees_url = assignees_url
-                self.blobs_url = blobs_url
-                self.branches_url = branches_url
-                self.collaborators_url = collaborators_url
-                self.comments_url = comments_url
-                self.commits_url = commits_url
-                self.compare_url = compare_url
-                self.contents_url = contents_url
-                self.contributors_url = contributors_url
-                self.deployments_url = deployments_url
-                self.downloads_url = downloads_url
-                self.events_url = events_url
-                self.forks_url = forks_url
-                self.git_commits_url = git_commits_url
-                self.git_refs_url = git_refs_url
-                self.git_tags_url = git_tags_url
-                self.git_url = git_url
-                self.issue_comment_url = issue_comment_url
-                self.issue_events_url = issue_events_url
-                self.issues_url = issues_url
-                self.keys_url = keys_url
-                self.labels_url = labels_url
-                self.languages_url = languages_url
-                self.merges_url = merges_url
-                self.milestones_url = milestones_url
-                self.notifications_url = notifications_url
-                self.pulls_url = pulls_url
-                self.releases_url = releases_url
-                self.ssh_url = ssh_url
-                self.stargazers_url = stargazers_url
-                self.statuses_url = statuses_url
-                self.subscribers_url = subscribers_url
-                self.subscription_url = subscription_url
-                self.tags_url = tags_url
-                self.teams_url = teams_url
-                self.trees_url = trees_url
-                self.clone_url = clone_url
-                self.mirror_url = mirror_url
-                self.hooks_url = hooks_url
-                self.svn_url = svn_url
+                self.archiveUrl = archiveUrl
+                self.assigneesUrl = assigneesUrl
+                self.blobsUrl = blobsUrl
+                self.branchesUrl = branchesUrl
+                self.collaboratorsUrl = collaboratorsUrl
+                self.commentsUrl = commentsUrl
+                self.commitsUrl = commitsUrl
+                self.compareUrl = compareUrl
+                self.contentsUrl = contentsUrl
+                self.contributorsUrl = contributorsUrl
+                self.deploymentsUrl = deploymentsUrl
+                self.downloadsUrl = downloadsUrl
+                self.eventsUrl = eventsUrl
+                self.forksUrl = forksUrl
+                self.gitCommitsUrl = gitCommitsUrl
+                self.gitRefsUrl = gitRefsUrl
+                self.gitTagsUrl = gitTagsUrl
+                self.gitUrl = gitUrl
+                self.issueCommentUrl = issueCommentUrl
+                self.issueEventsUrl = issueEventsUrl
+                self.issuesUrl = issuesUrl
+                self.keysUrl = keysUrl
+                self.labelsUrl = labelsUrl
+                self.languagesUrl = languagesUrl
+                self.mergesUrl = mergesUrl
+                self.milestonesUrl = milestonesUrl
+                self.notificationsUrl = notificationsUrl
+                self.pullsUrl = pullsUrl
+                self.releasesUrl = releasesUrl
+                self.sshUrl = sshUrl
+                self.stargazersUrl = stargazersUrl
+                self.statusesUrl = statusesUrl
+                self.subscribersUrl = subscribersUrl
+                self.subscriptionUrl = subscriptionUrl
+                self.tagsUrl = tagsUrl
+                self.teamsUrl = teamsUrl
+                self.treesUrl = treesUrl
+                self.cloneUrl = cloneUrl
+                self.mirrorUrl = mirrorUrl
+                self.hooksUrl = hooksUrl
+                self.svnUrl = svnUrl
                 self.homepage = homepage
                 self.language = language
-                self.forks_count = forks_count
-                self.stargazers_count = stargazers_count
-                self.watchers_count = watchers_count
+                self.forksCount = forksCount
+                self.stargazersCount = stargazersCount
+                self.watchersCount = watchersCount
                 self.size = size
-                self.default_branch = default_branch
-                self.open_issues_count = open_issues_count
-                self.is_template = is_template
+                self.defaultBranch = defaultBranch
+                self.openIssuesCount = openIssuesCount
+                self.isTemplate = isTemplate
                 self.topics = topics
-                self.has_issues = has_issues
-                self.has_projects = has_projects
-                self.has_wiki = has_wiki
-                self.has_pages = has_pages
-                self.has_downloads = has_downloads
-                self.has_discussions = has_discussions
+                self.hasIssues = hasIssues
+                self.hasProjects = hasProjects
+                self.hasWiki = hasWiki
+                self.hasPages = hasPages
+                self.hasDownloads = hasDownloads
+                self.hasDiscussions = hasDiscussions
                 self.archived = archived
                 self.disabled = disabled
                 self.visibility = visibility
-                self.pushed_at = pushed_at
-                self.created_at = created_at
-                self.updated_at = updated_at
+                self.pushedAt = pushedAt
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
                 self.permissions = permissions
-                self.role_name = role_name
-                self.temp_clone_token = temp_clone_token
-                self.delete_branch_on_merge = delete_branch_on_merge
-                self.subscribers_count = subscribers_count
-                self.network_count = network_count
-                self.code_of_conduct = code_of_conduct
+                self.roleName = roleName
+                self.tempCloneToken = tempCloneToken
+                self.deleteBranchOnMerge = deleteBranchOnMerge
+                self.subscribersCount = subscribersCount
+                self.networkCount = networkCount
+                self.codeOfConduct = codeOfConduct
                 self.license = license
                 self.forks = forks
-                self.open_issues = open_issues
+                self.openIssues = openIssues
                 self.watchers = watchers
-                self.allow_forking = allow_forking
-                self.web_commit_signoff_required = web_commit_signoff_required
-                self.security_and_analysis = security_and_analysis
+                self.allowForking = allowForking
+                self.webCommitSignoffRequired = webCommitSignoffRequired
+                self.securityAndAnalysis = securityAndAnalysis
             }
             public enum CodingKeys: String, CodingKey {
                 case id
-                case node_id
+                case nodeId = "node_id"
                 case name
-                case full_name
+                case fullName = "full_name"
                 case owner
                 case _private = "private"
-                case html_url
+                case htmlUrl = "html_url"
                 case description
                 case fork
                 case url
-                case archive_url
-                case assignees_url
-                case blobs_url
-                case branches_url
-                case collaborators_url
-                case comments_url
-                case commits_url
-                case compare_url
-                case contents_url
-                case contributors_url
-                case deployments_url
-                case downloads_url
-                case events_url
-                case forks_url
-                case git_commits_url
-                case git_refs_url
-                case git_tags_url
-                case git_url
-                case issue_comment_url
-                case issue_events_url
-                case issues_url
-                case keys_url
-                case labels_url
-                case languages_url
-                case merges_url
-                case milestones_url
-                case notifications_url
-                case pulls_url
-                case releases_url
-                case ssh_url
-                case stargazers_url
-                case statuses_url
-                case subscribers_url
-                case subscription_url
-                case tags_url
-                case teams_url
-                case trees_url
-                case clone_url
-                case mirror_url
-                case hooks_url
-                case svn_url
+                case archiveUrl = "archive_url"
+                case assigneesUrl = "assignees_url"
+                case blobsUrl = "blobs_url"
+                case branchesUrl = "branches_url"
+                case collaboratorsUrl = "collaborators_url"
+                case commentsUrl = "comments_url"
+                case commitsUrl = "commits_url"
+                case compareUrl = "compare_url"
+                case contentsUrl = "contents_url"
+                case contributorsUrl = "contributors_url"
+                case deploymentsUrl = "deployments_url"
+                case downloadsUrl = "downloads_url"
+                case eventsUrl = "events_url"
+                case forksUrl = "forks_url"
+                case gitCommitsUrl = "git_commits_url"
+                case gitRefsUrl = "git_refs_url"
+                case gitTagsUrl = "git_tags_url"
+                case gitUrl = "git_url"
+                case issueCommentUrl = "issue_comment_url"
+                case issueEventsUrl = "issue_events_url"
+                case issuesUrl = "issues_url"
+                case keysUrl = "keys_url"
+                case labelsUrl = "labels_url"
+                case languagesUrl = "languages_url"
+                case mergesUrl = "merges_url"
+                case milestonesUrl = "milestones_url"
+                case notificationsUrl = "notifications_url"
+                case pullsUrl = "pulls_url"
+                case releasesUrl = "releases_url"
+                case sshUrl = "ssh_url"
+                case stargazersUrl = "stargazers_url"
+                case statusesUrl = "statuses_url"
+                case subscribersUrl = "subscribers_url"
+                case subscriptionUrl = "subscription_url"
+                case tagsUrl = "tags_url"
+                case teamsUrl = "teams_url"
+                case treesUrl = "trees_url"
+                case cloneUrl = "clone_url"
+                case mirrorUrl = "mirror_url"
+                case hooksUrl = "hooks_url"
+                case svnUrl = "svn_url"
                 case homepage
                 case language
-                case forks_count
-                case stargazers_count
-                case watchers_count
+                case forksCount = "forks_count"
+                case stargazersCount = "stargazers_count"
+                case watchersCount = "watchers_count"
                 case size
-                case default_branch
-                case open_issues_count
-                case is_template
+                case defaultBranch = "default_branch"
+                case openIssuesCount = "open_issues_count"
+                case isTemplate = "is_template"
                 case topics
-                case has_issues
-                case has_projects
-                case has_wiki
-                case has_pages
-                case has_downloads
-                case has_discussions
+                case hasIssues = "has_issues"
+                case hasProjects = "has_projects"
+                case hasWiki = "has_wiki"
+                case hasPages = "has_pages"
+                case hasDownloads = "has_downloads"
+                case hasDiscussions = "has_discussions"
                 case archived
                 case disabled
                 case visibility
-                case pushed_at
-                case created_at
-                case updated_at
+                case pushedAt = "pushed_at"
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
                 case permissions
-                case role_name
-                case temp_clone_token
-                case delete_branch_on_merge
-                case subscribers_count
-                case network_count
-                case code_of_conduct
+                case roleName = "role_name"
+                case tempCloneToken = "temp_clone_token"
+                case deleteBranchOnMerge = "delete_branch_on_merge"
+                case subscribersCount = "subscribers_count"
+                case networkCount = "network_count"
+                case codeOfConduct = "code_of_conduct"
                 case license
                 case forks
-                case open_issues
+                case openIssues = "open_issues"
                 case watchers
-                case allow_forking
-                case web_commit_signoff_required
-                case security_and_analysis
+                case allowForking = "allow_forking"
+                case webCommitSignoffRequired = "web_commit_signoff_required"
+                case securityAndAnalysis = "security_and_analysis"
             }
         }
         /// An object without any properties.
         ///
         /// - Remark: Generated from `#/components/schemas/empty-object`.
-        public struct empty_hyphen_object: Codable, Hashable, Sendable {
-            /// Creates a new `empty_hyphen_object`.
+        public struct EmptyObject: Codable, Hashable, Sendable {
+            /// Creates a new `EmptyObject`.
             public init() {}
             public init(from decoder: any Decoder) throws {
                 try decoder.ensureNoAdditionalProperties(knownKeys: [])
@@ -3182,19 +3191,19 @@ public enum Components {
         /// Secrets for GitHub Dependabot for an organization.
         ///
         /// - Remark: Generated from `#/components/schemas/organization-dependabot-secret`.
-        public struct organization_hyphen_dependabot_hyphen_secret: Codable, Hashable, Sendable {
+        public struct OrganizationDependabotSecret: Codable, Hashable, Sendable {
             /// The name of the secret.
             ///
             /// - Remark: Generated from `#/components/schemas/organization-dependabot-secret/name`.
             public var name: Swift.String
             /// - Remark: Generated from `#/components/schemas/organization-dependabot-secret/created_at`.
-            public var created_at: Foundation.Date
+            public var createdAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/organization-dependabot-secret/updated_at`.
-            public var updated_at: Foundation.Date
+            public var updatedAt: Foundation.Date
             /// Visibility of a secret
             ///
             /// - Remark: Generated from `#/components/schemas/organization-dependabot-secret/visibility`.
-            @frozen public enum visibilityPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum VisibilityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case all = "all"
                 case _private = "private"
                 case selected = "selected"
@@ -3202,78 +3211,78 @@ public enum Components {
             /// Visibility of a secret
             ///
             /// - Remark: Generated from `#/components/schemas/organization-dependabot-secret/visibility`.
-            public var visibility: Components.Schemas.organization_hyphen_dependabot_hyphen_secret.visibilityPayload
+            public var visibility: Components.Schemas.OrganizationDependabotSecret.VisibilityPayload
             /// - Remark: Generated from `#/components/schemas/organization-dependabot-secret/selected_repositories_url`.
-            public var selected_repositories_url: Swift.String?
-            /// Creates a new `organization_hyphen_dependabot_hyphen_secret`.
+            public var selectedRepositoriesUrl: Swift.String?
+            /// Creates a new `OrganizationDependabotSecret`.
             ///
             /// - Parameters:
             ///   - name: The name of the secret.
-            ///   - created_at:
-            ///   - updated_at:
+            ///   - createdAt:
+            ///   - updatedAt:
             ///   - visibility: Visibility of a secret
-            ///   - selected_repositories_url:
+            ///   - selectedRepositoriesUrl:
             public init(
                 name: Swift.String,
-                created_at: Foundation.Date,
-                updated_at: Foundation.Date,
-                visibility: Components.Schemas.organization_hyphen_dependabot_hyphen_secret.visibilityPayload,
-                selected_repositories_url: Swift.String? = nil
+                createdAt: Foundation.Date,
+                updatedAt: Foundation.Date,
+                visibility: Components.Schemas.OrganizationDependabotSecret.VisibilityPayload,
+                selectedRepositoriesUrl: Swift.String? = nil
             ) {
                 self.name = name
-                self.created_at = created_at
-                self.updated_at = updated_at
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
                 self.visibility = visibility
-                self.selected_repositories_url = selected_repositories_url
+                self.selectedRepositoriesUrl = selectedRepositoriesUrl
             }
             public enum CodingKeys: String, CodingKey {
                 case name
-                case created_at
-                case updated_at
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
                 case visibility
-                case selected_repositories_url
+                case selectedRepositoriesUrl = "selected_repositories_url"
             }
         }
         /// The public key used for setting Dependabot Secrets.
         ///
         /// - Remark: Generated from `#/components/schemas/dependabot-public-key`.
-        public struct dependabot_hyphen_public_hyphen_key: Codable, Hashable, Sendable {
+        public struct DependabotPublicKey: Codable, Hashable, Sendable {
             /// The identifier for the key.
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-public-key/key_id`.
-            public var key_id: Swift.String
+            public var keyId: Swift.String
             /// The Base64 encoded public key.
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-public-key/key`.
             public var key: Swift.String
-            /// Creates a new `dependabot_hyphen_public_hyphen_key`.
+            /// Creates a new `DependabotPublicKey`.
             ///
             /// - Parameters:
-            ///   - key_id: The identifier for the key.
+            ///   - keyId: The identifier for the key.
             ///   - key: The Base64 encoded public key.
             public init(
-                key_id: Swift.String,
+                keyId: Swift.String,
                 key: Swift.String
             ) {
-                self.key_id = key_id
+                self.keyId = keyId
                 self.key = key
             }
             public enum CodingKeys: String, CodingKey {
-                case key_id
+                case keyId = "key_id"
                 case key
             }
         }
         /// A Dependabot alert.
         ///
         /// - Remark: Generated from `#/components/schemas/dependabot-alert`.
-        public struct dependabot_hyphen_alert: Codable, Hashable, Sendable {
+        public struct DependabotAlert: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/dependabot-alert/number`.
-            public var number: Components.Schemas.alert_hyphen_number
+            public var number: Components.Schemas.AlertNumber
             /// The state of the Dependabot alert.
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-alert/state`.
-            @frozen public enum statePayload: String, Codable, Hashable, Sendable {
-                case auto_dismissed = "auto_dismissed"
+            @frozen public enum StatePayload: String, Codable, Hashable, Sendable, CaseIterable {
+                case autoDismissed = "auto_dismissed"
                 case dismissed = "dismissed"
                 case fixed = "fixed"
                 case open = "open"
@@ -3281,28 +3290,28 @@ public enum Components {
             /// The state of the Dependabot alert.
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-alert/state`.
-            public var state: Components.Schemas.dependabot_hyphen_alert.statePayload
+            public var state: Components.Schemas.DependabotAlert.StatePayload
             /// Details for the vulnerable dependency.
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-alert/dependency`.
-            public struct dependencyPayload: Codable, Hashable, Sendable {
+            public struct DependencyPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/dependabot-alert/dependency/package`.
-                public var package: Components.Schemas.dependabot_hyphen_alert_hyphen_package?
+                public var package: Components.Schemas.DependabotAlertPackage?
                 /// The full path to the dependency manifest file, relative to the root of the repository.
                 ///
                 /// - Remark: Generated from `#/components/schemas/dependabot-alert/dependency/manifest_path`.
-                public var manifest_path: Swift.String?
+                public var manifestPath: Swift.String?
                 /// The execution scope of the vulnerable dependency.
                 ///
                 /// - Remark: Generated from `#/components/schemas/dependabot-alert/dependency/scope`.
-                @frozen public enum scopePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum ScopePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case development = "development"
                     case runtime = "runtime"
                 }
                 /// The execution scope of the vulnerable dependency.
                 ///
                 /// - Remark: Generated from `#/components/schemas/dependabot-alert/dependency/scope`.
-                public var scope: Components.Schemas.dependabot_hyphen_alert.dependencyPayload.scopePayload?
+                public var scope: Components.Schemas.DependabotAlert.DependencyPayload.ScopePayload?
                 /// The vulnerable dependency's relationship to your project.
                 ///
                 /// > [!NOTE]
@@ -3310,7 +3319,7 @@ public enum Components {
                 ///
                 ///
                 /// - Remark: Generated from `#/components/schemas/dependabot-alert/dependency/relationship`.
-                @frozen public enum relationshipPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum RelationshipPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case unknown = "unknown"
                     case direct = "direct"
                     case transitive = "transitive"
@@ -3322,28 +3331,28 @@ public enum Components {
                 ///
                 ///
                 /// - Remark: Generated from `#/components/schemas/dependabot-alert/dependency/relationship`.
-                public var relationship: Components.Schemas.dependabot_hyphen_alert.dependencyPayload.relationshipPayload?
-                /// Creates a new `dependencyPayload`.
+                public var relationship: Components.Schemas.DependabotAlert.DependencyPayload.RelationshipPayload?
+                /// Creates a new `DependencyPayload`.
                 ///
                 /// - Parameters:
                 ///   - package:
-                ///   - manifest_path: The full path to the dependency manifest file, relative to the root of the repository.
+                ///   - manifestPath: The full path to the dependency manifest file, relative to the root of the repository.
                 ///   - scope: The execution scope of the vulnerable dependency.
                 ///   - relationship: The vulnerable dependency's relationship to your project.
                 public init(
-                    package: Components.Schemas.dependabot_hyphen_alert_hyphen_package? = nil,
-                    manifest_path: Swift.String? = nil,
-                    scope: Components.Schemas.dependabot_hyphen_alert.dependencyPayload.scopePayload? = nil,
-                    relationship: Components.Schemas.dependabot_hyphen_alert.dependencyPayload.relationshipPayload? = nil
+                    package: Components.Schemas.DependabotAlertPackage? = nil,
+                    manifestPath: Swift.String? = nil,
+                    scope: Components.Schemas.DependabotAlert.DependencyPayload.ScopePayload? = nil,
+                    relationship: Components.Schemas.DependabotAlert.DependencyPayload.RelationshipPayload? = nil
                 ) {
                     self.package = package
-                    self.manifest_path = manifest_path
+                    self.manifestPath = manifestPath
                     self.scope = scope
                     self.relationship = relationship
                 }
                 public enum CodingKeys: String, CodingKey {
                     case package
-                    case manifest_path
+                    case manifestPath = "manifest_path"
                     case scope
                     case relationship
                 }
@@ -3351,174 +3360,174 @@ public enum Components {
             /// Details for the vulnerable dependency.
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-alert/dependency`.
-            public var dependency: Components.Schemas.dependabot_hyphen_alert.dependencyPayload
+            public var dependency: Components.Schemas.DependabotAlert.DependencyPayload
             /// - Remark: Generated from `#/components/schemas/dependabot-alert/security_advisory`.
-            public var security_advisory: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory
+            public var securityAdvisory: Components.Schemas.DependabotAlertSecurityAdvisory
             /// - Remark: Generated from `#/components/schemas/dependabot-alert/security_vulnerability`.
-            public var security_vulnerability: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_vulnerability
+            public var securityVulnerability: Components.Schemas.DependabotAlertSecurityVulnerability
             /// - Remark: Generated from `#/components/schemas/dependabot-alert/url`.
-            public var url: Components.Schemas.alert_hyphen_url
+            public var url: Components.Schemas.AlertUrl
             /// - Remark: Generated from `#/components/schemas/dependabot-alert/html_url`.
-            public var html_url: Components.Schemas.alert_hyphen_html_hyphen_url
+            public var htmlUrl: Components.Schemas.AlertHtmlUrl
             /// - Remark: Generated from `#/components/schemas/dependabot-alert/created_at`.
-            public var created_at: Components.Schemas.alert_hyphen_created_hyphen_at
+            public var createdAt: Components.Schemas.AlertCreatedAt
             /// - Remark: Generated from `#/components/schemas/dependabot-alert/updated_at`.
-            public var updated_at: Components.Schemas.alert_hyphen_updated_hyphen_at
+            public var updatedAt: Components.Schemas.AlertUpdatedAt
             /// - Remark: Generated from `#/components/schemas/dependabot-alert/dismissed_at`.
-            public var dismissed_at: Components.Schemas.alert_hyphen_dismissed_hyphen_at?
+            public var dismissedAt: Components.Schemas.AlertDismissedAt?
             /// - Remark: Generated from `#/components/schemas/dependabot-alert/dismissed_by`.
-            public var dismissed_by: Components.Schemas.nullable_hyphen_simple_hyphen_user?
+            public var dismissedBy: Components.Schemas.NullableSimpleUser?
             /// The reason that the alert was dismissed.
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-alert/dismissed_reason`.
-            @frozen public enum dismissed_reasonPayload: String, Codable, Hashable, Sendable {
-                case fix_started = "fix_started"
+            @frozen public enum DismissedReasonPayload: String, Codable, Hashable, Sendable, CaseIterable {
+                case fixStarted = "fix_started"
                 case inaccurate = "inaccurate"
-                case no_bandwidth = "no_bandwidth"
-                case not_used = "not_used"
-                case tolerable_risk = "tolerable_risk"
+                case noBandwidth = "no_bandwidth"
+                case notUsed = "not_used"
+                case tolerableRisk = "tolerable_risk"
             }
             /// The reason that the alert was dismissed.
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-alert/dismissed_reason`.
-            public var dismissed_reason: Components.Schemas.dependabot_hyphen_alert.dismissed_reasonPayload?
+            public var dismissedReason: Components.Schemas.DependabotAlert.DismissedReasonPayload?
             /// An optional comment associated with the alert's dismissal.
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-alert/dismissed_comment`.
-            public var dismissed_comment: Swift.String?
+            public var dismissedComment: Swift.String?
             /// - Remark: Generated from `#/components/schemas/dependabot-alert/fixed_at`.
-            public var fixed_at: Components.Schemas.alert_hyphen_fixed_hyphen_at?
+            public var fixedAt: Components.Schemas.AlertFixedAt?
             /// - Remark: Generated from `#/components/schemas/dependabot-alert/auto_dismissed_at`.
-            public var auto_dismissed_at: Components.Schemas.alert_hyphen_auto_hyphen_dismissed_hyphen_at?
-            /// Creates a new `dependabot_hyphen_alert`.
+            public var autoDismissedAt: Components.Schemas.AlertAutoDismissedAt?
+            /// Creates a new `DependabotAlert`.
             ///
             /// - Parameters:
             ///   - number:
             ///   - state: The state of the Dependabot alert.
             ///   - dependency: Details for the vulnerable dependency.
-            ///   - security_advisory:
-            ///   - security_vulnerability:
+            ///   - securityAdvisory:
+            ///   - securityVulnerability:
             ///   - url:
-            ///   - html_url:
-            ///   - created_at:
-            ///   - updated_at:
-            ///   - dismissed_at:
-            ///   - dismissed_by:
-            ///   - dismissed_reason: The reason that the alert was dismissed.
-            ///   - dismissed_comment: An optional comment associated with the alert's dismissal.
-            ///   - fixed_at:
-            ///   - auto_dismissed_at:
+            ///   - htmlUrl:
+            ///   - createdAt:
+            ///   - updatedAt:
+            ///   - dismissedAt:
+            ///   - dismissedBy:
+            ///   - dismissedReason: The reason that the alert was dismissed.
+            ///   - dismissedComment: An optional comment associated with the alert's dismissal.
+            ///   - fixedAt:
+            ///   - autoDismissedAt:
             public init(
-                number: Components.Schemas.alert_hyphen_number,
-                state: Components.Schemas.dependabot_hyphen_alert.statePayload,
-                dependency: Components.Schemas.dependabot_hyphen_alert.dependencyPayload,
-                security_advisory: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory,
-                security_vulnerability: Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_vulnerability,
-                url: Components.Schemas.alert_hyphen_url,
-                html_url: Components.Schemas.alert_hyphen_html_hyphen_url,
-                created_at: Components.Schemas.alert_hyphen_created_hyphen_at,
-                updated_at: Components.Schemas.alert_hyphen_updated_hyphen_at,
-                dismissed_at: Components.Schemas.alert_hyphen_dismissed_hyphen_at? = nil,
-                dismissed_by: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
-                dismissed_reason: Components.Schemas.dependabot_hyphen_alert.dismissed_reasonPayload? = nil,
-                dismissed_comment: Swift.String? = nil,
-                fixed_at: Components.Schemas.alert_hyphen_fixed_hyphen_at? = nil,
-                auto_dismissed_at: Components.Schemas.alert_hyphen_auto_hyphen_dismissed_hyphen_at? = nil
+                number: Components.Schemas.AlertNumber,
+                state: Components.Schemas.DependabotAlert.StatePayload,
+                dependency: Components.Schemas.DependabotAlert.DependencyPayload,
+                securityAdvisory: Components.Schemas.DependabotAlertSecurityAdvisory,
+                securityVulnerability: Components.Schemas.DependabotAlertSecurityVulnerability,
+                url: Components.Schemas.AlertUrl,
+                htmlUrl: Components.Schemas.AlertHtmlUrl,
+                createdAt: Components.Schemas.AlertCreatedAt,
+                updatedAt: Components.Schemas.AlertUpdatedAt,
+                dismissedAt: Components.Schemas.AlertDismissedAt? = nil,
+                dismissedBy: Components.Schemas.NullableSimpleUser? = nil,
+                dismissedReason: Components.Schemas.DependabotAlert.DismissedReasonPayload? = nil,
+                dismissedComment: Swift.String? = nil,
+                fixedAt: Components.Schemas.AlertFixedAt? = nil,
+                autoDismissedAt: Components.Schemas.AlertAutoDismissedAt? = nil
             ) {
                 self.number = number
                 self.state = state
                 self.dependency = dependency
-                self.security_advisory = security_advisory
-                self.security_vulnerability = security_vulnerability
+                self.securityAdvisory = securityAdvisory
+                self.securityVulnerability = securityVulnerability
                 self.url = url
-                self.html_url = html_url
-                self.created_at = created_at
-                self.updated_at = updated_at
-                self.dismissed_at = dismissed_at
-                self.dismissed_by = dismissed_by
-                self.dismissed_reason = dismissed_reason
-                self.dismissed_comment = dismissed_comment
-                self.fixed_at = fixed_at
-                self.auto_dismissed_at = auto_dismissed_at
+                self.htmlUrl = htmlUrl
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
+                self.dismissedAt = dismissedAt
+                self.dismissedBy = dismissedBy
+                self.dismissedReason = dismissedReason
+                self.dismissedComment = dismissedComment
+                self.fixedAt = fixedAt
+                self.autoDismissedAt = autoDismissedAt
             }
             public enum CodingKeys: String, CodingKey {
                 case number
                 case state
                 case dependency
-                case security_advisory
-                case security_vulnerability
+                case securityAdvisory = "security_advisory"
+                case securityVulnerability = "security_vulnerability"
                 case url
-                case html_url
-                case created_at
-                case updated_at
-                case dismissed_at
-                case dismissed_by
-                case dismissed_reason
-                case dismissed_comment
-                case fixed_at
-                case auto_dismissed_at
+                case htmlUrl = "html_url"
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
+                case dismissedAt = "dismissed_at"
+                case dismissedBy = "dismissed_by"
+                case dismissedReason = "dismissed_reason"
+                case dismissedComment = "dismissed_comment"
+                case fixedAt = "fixed_at"
+                case autoDismissedAt = "auto_dismissed_at"
             }
             public init(from decoder: any Decoder) throws {
                 let container = try decoder.container(keyedBy: CodingKeys.self)
-                number = try container.decode(
-                    Components.Schemas.alert_hyphen_number.self,
+                self.number = try container.decode(
+                    Components.Schemas.AlertNumber.self,
                     forKey: .number
                 )
-                state = try container.decode(
-                    Components.Schemas.dependabot_hyphen_alert.statePayload.self,
+                self.state = try container.decode(
+                    Components.Schemas.DependabotAlert.StatePayload.self,
                     forKey: .state
                 )
-                dependency = try container.decode(
-                    Components.Schemas.dependabot_hyphen_alert.dependencyPayload.self,
+                self.dependency = try container.decode(
+                    Components.Schemas.DependabotAlert.DependencyPayload.self,
                     forKey: .dependency
                 )
-                security_advisory = try container.decode(
-                    Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.self,
-                    forKey: .security_advisory
+                self.securityAdvisory = try container.decode(
+                    Components.Schemas.DependabotAlertSecurityAdvisory.self,
+                    forKey: .securityAdvisory
                 )
-                security_vulnerability = try container.decode(
-                    Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_vulnerability.self,
-                    forKey: .security_vulnerability
+                self.securityVulnerability = try container.decode(
+                    Components.Schemas.DependabotAlertSecurityVulnerability.self,
+                    forKey: .securityVulnerability
                 )
-                url = try container.decode(
-                    Components.Schemas.alert_hyphen_url.self,
+                self.url = try container.decode(
+                    Components.Schemas.AlertUrl.self,
                     forKey: .url
                 )
-                html_url = try container.decode(
-                    Components.Schemas.alert_hyphen_html_hyphen_url.self,
-                    forKey: .html_url
+                self.htmlUrl = try container.decode(
+                    Components.Schemas.AlertHtmlUrl.self,
+                    forKey: .htmlUrl
                 )
-                created_at = try container.decode(
-                    Components.Schemas.alert_hyphen_created_hyphen_at.self,
-                    forKey: .created_at
+                self.createdAt = try container.decode(
+                    Components.Schemas.AlertCreatedAt.self,
+                    forKey: .createdAt
                 )
-                updated_at = try container.decode(
-                    Components.Schemas.alert_hyphen_updated_hyphen_at.self,
-                    forKey: .updated_at
+                self.updatedAt = try container.decode(
+                    Components.Schemas.AlertUpdatedAt.self,
+                    forKey: .updatedAt
                 )
-                dismissed_at = try container.decodeIfPresent(
-                    Components.Schemas.alert_hyphen_dismissed_hyphen_at.self,
-                    forKey: .dismissed_at
+                self.dismissedAt = try container.decodeIfPresent(
+                    Components.Schemas.AlertDismissedAt.self,
+                    forKey: .dismissedAt
                 )
-                dismissed_by = try container.decodeIfPresent(
-                    Components.Schemas.nullable_hyphen_simple_hyphen_user.self,
-                    forKey: .dismissed_by
+                self.dismissedBy = try container.decodeIfPresent(
+                    Components.Schemas.NullableSimpleUser.self,
+                    forKey: .dismissedBy
                 )
-                dismissed_reason = try container.decodeIfPresent(
-                    Components.Schemas.dependabot_hyphen_alert.dismissed_reasonPayload.self,
-                    forKey: .dismissed_reason
+                self.dismissedReason = try container.decodeIfPresent(
+                    Components.Schemas.DependabotAlert.DismissedReasonPayload.self,
+                    forKey: .dismissedReason
                 )
-                dismissed_comment = try container.decodeIfPresent(
+                self.dismissedComment = try container.decodeIfPresent(
                     Swift.String.self,
-                    forKey: .dismissed_comment
+                    forKey: .dismissedComment
                 )
-                fixed_at = try container.decodeIfPresent(
-                    Components.Schemas.alert_hyphen_fixed_hyphen_at.self,
-                    forKey: .fixed_at
+                self.fixedAt = try container.decodeIfPresent(
+                    Components.Schemas.AlertFixedAt.self,
+                    forKey: .fixedAt
                 )
-                auto_dismissed_at = try container.decodeIfPresent(
-                    Components.Schemas.alert_hyphen_auto_hyphen_dismissed_hyphen_at.self,
-                    forKey: .auto_dismissed_at
+                self.autoDismissedAt = try container.decodeIfPresent(
+                    Components.Schemas.AlertAutoDismissedAt.self,
+                    forKey: .autoDismissedAt
                 )
                 try decoder.ensureNoAdditionalProperties(knownKeys: [
                     "number",
@@ -3542,34 +3551,34 @@ public enum Components {
         /// Set secrets for Dependabot.
         ///
         /// - Remark: Generated from `#/components/schemas/dependabot-secret`.
-        public struct dependabot_hyphen_secret: Codable, Hashable, Sendable {
+        public struct DependabotSecret: Codable, Hashable, Sendable {
             /// The name of the secret.
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-secret/name`.
             public var name: Swift.String
             /// - Remark: Generated from `#/components/schemas/dependabot-secret/created_at`.
-            public var created_at: Foundation.Date
+            public var createdAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/dependabot-secret/updated_at`.
-            public var updated_at: Foundation.Date
-            /// Creates a new `dependabot_hyphen_secret`.
+            public var updatedAt: Foundation.Date
+            /// Creates a new `DependabotSecret`.
             ///
             /// - Parameters:
             ///   - name: The name of the secret.
-            ///   - created_at:
-            ///   - updated_at:
+            ///   - createdAt:
+            ///   - updatedAt:
             public init(
                 name: Swift.String,
-                created_at: Foundation.Date,
-                updated_at: Foundation.Date
+                createdAt: Foundation.Date,
+                updatedAt: Foundation.Date
             ) {
                 self.name = name
-                self.created_at = created_at
-                self.updated_at = updated_at
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
             }
             public enum CodingKeys: String, CodingKey {
                 case name
-                case created_at
-                case updated_at
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
             }
         }
     }
@@ -3578,52 +3587,52 @@ public enum Components {
         /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/pagination-before`.
-        public typealias pagination_hyphen_before = Swift.String
+        public typealias PaginationBefore = Swift.String
         /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/pagination-after`.
-        public typealias pagination_hyphen_after = Swift.String
+        public typealias PaginationAfter = Swift.String
         /// The direction to sort the results by.
         ///
         /// - Remark: Generated from `#/components/parameters/direction`.
-        @frozen public enum direction: String, Codable, Hashable, Sendable {
+        @frozen public enum Direction: String, Codable, Hashable, Sendable, CaseIterable {
             case asc = "asc"
             case desc = "desc"
         }
         /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/per-page`.
-        public typealias per_hyphen_page = Swift.Int
+        public typealias PerPage = Swift.Int
         /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/page`.
-        public typealias page = Swift.Int
+        public typealias Page = Swift.Int
         /// The slug version of the enterprise name. You can also substitute this value with the enterprise id.
         ///
         /// - Remark: Generated from `#/components/parameters/enterprise`.
-        public typealias enterprise = Swift.String
+        public typealias Enterprise = Swift.String
         /// A comma-separated list of states. If specified, only alerts with these states will be returned.
         ///
         /// Can be: `auto_dismissed`, `dismissed`, `fixed`, `open`
         ///
         /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-states`.
-        public typealias dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_states = Swift.String
+        public typealias DependabotAlertCommaSeparatedStates = Swift.String
         /// A comma-separated list of severities. If specified, only alerts with these severities will be returned.
         ///
         /// Can be: `low`, `medium`, `high`, `critical`
         ///
         /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-severities`.
-        public typealias dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_severities = Swift.String
+        public typealias DependabotAlertCommaSeparatedSeverities = Swift.String
         /// A comma-separated list of ecosystems. If specified, only alerts for these ecosystems will be returned.
         ///
         /// Can be: `composer`, `go`, `maven`, `npm`, `nuget`, `pip`, `pub`, `rubygems`, `rust`
         ///
         /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-ecosystems`.
-        public typealias dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_ecosystems = Swift.String
+        public typealias DependabotAlertCommaSeparatedEcosystems = Swift.String
         /// A comma-separated list of package names. If specified, only alerts for these packages will be returned.
         ///
         /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-packages`.
-        public typealias dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_packages = Swift.String
+        public typealias DependabotAlertCommaSeparatedPackages = Swift.String
         /// CVE Exploit Prediction Scoring System (EPSS) percentage. Can be specified as:
         /// - An exact number (`n`)
         /// - Comparators such as `>n`, `<n`, `>=n`, `<=n`
@@ -3632,22 +3641,22 @@ public enum Components {
         /// Filters the list of alerts based on EPSS percentages. If specified, only alerts with the provided EPSS percentages will be returned.
         ///
         /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-epss`.
-        public typealias dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_epss = Swift.String
-        /// Filters the list of alerts based on whether the alert has a patch. If specified, only alerts with a patch will be returned.
-        /// Multiple `has` filters can be chained to check if multiple properties are present.
+        public typealias DependabotAlertCommaSeparatedEpss = Swift.String
+        /// Filters the list of alerts based on whether the alert has the given value. If specified, only alerts meeting this criterion will be returned.
+        /// Multiple `has` filters can be passed to filter for alerts that have all of the values. Currently, only `patch` is supported.
         ///
         /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has`.
-        @frozen public enum dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_has: Codable, Hashable, Sendable {
+        @frozen public enum DependabotAlertCommaSeparatedHas: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has/case1`.
             case case1(Swift.String)
             /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has/Case2Payload`.
-            @frozen public enum Case2PayloadPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum Case2PayloadPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case patch = "patch"
             }
             /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has/case2`.
-            public typealias Case2Payload = [Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_has.Case2PayloadPayload]
+            public typealias Case2Payload = [Components.Parameters.DependabotAlertCommaSeparatedHas.Case2PayloadPayload]
             /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has/case2`.
-            case case2(Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_has.Case2Payload)
+            case case2(Components.Parameters.DependabotAlertCommaSeparatedHas.Case2Payload)
             public init(from decoder: any Decoder) throws {
                 var errors: [any Error] = []
                 do {
@@ -3680,7 +3689,7 @@ public enum Components {
         /// The scope of the vulnerable dependency. If specified, only alerts with this scope will be returned.
         ///
         /// - Remark: Generated from `#/components/parameters/dependabot-alert-scope`.
-        @frozen public enum dependabot_hyphen_alert_hyphen_scope: String, Codable, Hashable, Sendable {
+        @frozen public enum DependabotAlertScope: String, Codable, Hashable, Sendable, CaseIterable {
             case development = "development"
             case runtime = "runtime"
         }
@@ -3690,65 +3699,65 @@ public enum Components {
         /// `epss_percentage` sorts alerts by the Exploit Prediction Scoring System (EPSS) percentage.
         ///
         /// - Remark: Generated from `#/components/parameters/dependabot-alert-sort`.
-        @frozen public enum dependabot_hyphen_alert_hyphen_sort: String, Codable, Hashable, Sendable {
+        @frozen public enum DependabotAlertSort: String, Codable, Hashable, Sendable, CaseIterable {
             case created = "created"
             case updated = "updated"
-            case epss_percentage = "epss_percentage"
+            case epssPercentage = "epss_percentage"
         }
         /// **Deprecated**. The number of results per page (max 100), starting from the first matching result.
         /// This parameter must not be used in combination with `last`.
         /// Instead, use `per_page` in combination with `after` to fetch the first page of results.
         ///
         /// - Remark: Generated from `#/components/parameters/pagination-first`.
-        public typealias pagination_hyphen_first = Swift.Int
+        public typealias PaginationFirst = Swift.Int
         /// **Deprecated**. The number of results per page (max 100), starting from the last matching result.
         /// This parameter must not be used in combination with `first`.
         /// Instead, use `per_page` in combination with `before` to fetch the last page of results.
         ///
         /// - Remark: Generated from `#/components/parameters/pagination-last`.
-        public typealias pagination_hyphen_last = Swift.Int
+        public typealias PaginationLast = Swift.Int
         /// The account owner of the repository. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/owner`.
-        public typealias owner = Swift.String
+        public typealias Owner = Swift.String
         /// The name of the repository without the `.git` extension. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/repo`.
-        public typealias repo = Swift.String
+        public typealias Repo = Swift.String
         /// The organization name. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/org`.
-        public typealias org = Swift.String
+        public typealias Org = Swift.String
         /// The name of the secret.
         ///
         /// - Remark: Generated from `#/components/parameters/secret-name`.
-        public typealias secret_hyphen_name = Swift.String
+        public typealias SecretName = Swift.String
         /// A comma-separated list of full manifest paths. If specified, only alerts for these manifests will be returned.
         ///
         /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-manifests`.
-        public typealias dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_manifests = Swift.String
+        public typealias DependabotAlertCommaSeparatedManifests = Swift.String
         /// The number that identifies a Dependabot alert in its repository.
         /// You can find this at the end of the URL for a Dependabot alert within GitHub,
         /// or in `number` fields in the response from the
         /// `GET /repos/{owner}/{repo}/dependabot/alerts` operation.
         ///
         /// - Remark: Generated from `#/components/parameters/dependabot-alert-number`.
-        public typealias dependabot_hyphen_alert_hyphen_number = Components.Schemas.alert_hyphen_number
+        public typealias DependabotAlertNumber = Components.Schemas.AlertNumber
     }
     /// Types generated from the `#/components/requestBodies` section of the OpenAPI document.
     public enum RequestBodies {}
     /// Types generated from the `#/components/responses` section of the OpenAPI document.
     public enum Responses {
-        public struct validation_failed_simple: Sendable, Hashable {
+        public struct ValidationFailedSimple: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/validation_failed_simple/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/validation_failed_simple/content/application\/json`.
-                case json(Components.Schemas.validation_hyphen_error_hyphen_simple)
+                case json(Components.Schemas.ValidationErrorSimple)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.validation_hyphen_error_hyphen_simple {
+                public var json: Components.Schemas.ValidationErrorSimple {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -3758,25 +3767,25 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.validation_failed_simple.Body
-            /// Creates a new `validation_failed_simple`.
+            public var body: Components.Responses.ValidationFailedSimple.Body
+            /// Creates a new `ValidationFailedSimple`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.validation_failed_simple.Body) {
+            public init(body: Components.Responses.ValidationFailedSimple.Body) {
                 self.body = body
             }
         }
-        public struct not_found: Sendable, Hashable {
+        public struct NotFound: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/not_found/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/not_found/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -3786,25 +3795,25 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.not_found.Body
-            /// Creates a new `not_found`.
+            public var body: Components.Responses.NotFound.Body
+            /// Creates a new `NotFound`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.not_found.Body) {
+            public init(body: Components.Responses.NotFound.Body) {
                 self.body = body
             }
         }
-        public struct bad_request: Sendable, Hashable {
+        public struct BadRequest: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/bad_request/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/bad_request/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -3818,15 +3827,15 @@ public enum Components {
                     }
                 }
                 /// - Remark: Generated from `#/components/responses/bad_request/content/application\/scim+json`.
-                case application_scim_plus_json(Components.Schemas.scim_hyphen_error)
-                /// The associated value of the enum case if `self` is `.application_scim_plus_json`.
+                case applicationScimJson(Components.Schemas.ScimError)
+                /// The associated value of the enum case if `self` is `.applicationScimJson`.
                 ///
-                /// - Throws: An error if `self` is not `.application_scim_plus_json`.
-                /// - SeeAlso: `.application_scim_plus_json`.
-                public var application_scim_plus_json: Components.Schemas.scim_hyphen_error {
+                /// - Throws: An error if `self` is not `.applicationScimJson`.
+                /// - SeeAlso: `.applicationScimJson`.
+                public var applicationScimJson: Components.Schemas.ScimError {
                     get throws {
                         switch self {
-                        case let .application_scim_plus_json(body):
+                        case let .applicationScimJson(body):
                             return body
                         default:
                             try throwUnexpectedResponseBody(
@@ -3838,29 +3847,29 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.bad_request.Body
-            /// Creates a new `bad_request`.
+            public var body: Components.Responses.BadRequest.Body
+            /// Creates a new `BadRequest`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.bad_request.Body) {
+            public init(body: Components.Responses.BadRequest.Body) {
                 self.body = body
             }
         }
-        public struct not_modified: Sendable, Hashable {
-            /// Creates a new `not_modified`.
+        public struct NotModified: Sendable, Hashable {
+            /// Creates a new `NotModified`.
             public init() {}
         }
-        public struct forbidden: Sendable, Hashable {
+        public struct Forbidden: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/forbidden/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/forbidden/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -3870,25 +3879,25 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.forbidden.Body
-            /// Creates a new `forbidden`.
+            public var body: Components.Responses.Forbidden.Body
+            /// Creates a new `Forbidden`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.forbidden.Body) {
+            public init(body: Components.Responses.Forbidden.Body) {
                 self.body = body
             }
         }
-        public struct conflict: Sendable, Hashable {
+        public struct Conflict: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/conflict/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/conflict/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -3898,12 +3907,12 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.conflict.Body
-            /// Creates a new `conflict`.
+            public var body: Components.Responses.Conflict.Body
+            /// Creates a new `Conflict`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.conflict.Body) {
+            public init(body: Components.Responses.Conflict.Body) {
                 self.body = body
             }
         }
@@ -3911,7 +3920,7 @@ public enum Components {
     /// Types generated from the `#/components/headers` section of the OpenAPI document.
     public enum Headers {
         /// - Remark: Generated from `#/components/headers/link`.
-        public typealias link = Swift.String
+        public typealias Link = Swift.String
     }
 }
 
@@ -3929,7 +3938,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /enterprises/{enterprise}/dependabot/alerts`.
     /// - Remark: Generated from `#/paths//enterprises/{enterprise}/dependabot/alerts/get(dependabot/list-alerts-for-enterprise)`.
-    public enum dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise {
+    public enum DependabotListAlertsForEnterprise {
         public static let id: Swift.String = "dependabot/list-alerts-for-enterprise"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/enterprises/{enterprise}/dependabot/alerts/GET/path`.
@@ -3937,16 +3946,16 @@ public enum Operations {
                 /// The slug version of the enterprise name. You can also substitute this value with the enterprise id.
                 ///
                 /// - Remark: Generated from `#/paths/enterprises/{enterprise}/dependabot/alerts/GET/path/enterprise`.
-                public var enterprise: Components.Parameters.enterprise
+                public var enterprise: Components.Parameters.Enterprise
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - enterprise: The slug version of the enterprise name. You can also substitute this value with the enterprise id.
-                public init(enterprise: Components.Parameters.enterprise) {
+                public init(enterprise: Components.Parameters.Enterprise) {
                     self.enterprise = enterprise
                 }
             }
-            public var path: Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.Input.Path
+            public var path: Operations.DependabotListAlertsForEnterprise.Input.Path
             /// - Remark: Generated from `#/paths/enterprises/{enterprise}/dependabot/alerts/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// A comma-separated list of states. If specified, only alerts with these states will be returned.
@@ -3954,23 +3963,23 @@ public enum Operations {
                 /// Can be: `auto_dismissed`, `dismissed`, `fixed`, `open`
                 ///
                 /// - Remark: Generated from `#/paths/enterprises/{enterprise}/dependabot/alerts/GET/query/state`.
-                public var state: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_states?
+                public var state: Components.Parameters.DependabotAlertCommaSeparatedStates?
                 /// A comma-separated list of severities. If specified, only alerts with these severities will be returned.
                 ///
                 /// Can be: `low`, `medium`, `high`, `critical`
                 ///
                 /// - Remark: Generated from `#/paths/enterprises/{enterprise}/dependabot/alerts/GET/query/severity`.
-                public var severity: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_severities?
+                public var severity: Components.Parameters.DependabotAlertCommaSeparatedSeverities?
                 /// A comma-separated list of ecosystems. If specified, only alerts for these ecosystems will be returned.
                 ///
                 /// Can be: `composer`, `go`, `maven`, `npm`, `nuget`, `pip`, `pub`, `rubygems`, `rust`
                 ///
                 /// - Remark: Generated from `#/paths/enterprises/{enterprise}/dependabot/alerts/GET/query/ecosystem`.
-                public var ecosystem: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_ecosystems?
+                public var ecosystem: Components.Parameters.DependabotAlertCommaSeparatedEcosystems?
                 /// A comma-separated list of package names. If specified, only alerts for these packages will be returned.
                 ///
                 /// - Remark: Generated from `#/paths/enterprises/{enterprise}/dependabot/alerts/GET/query/package`.
-                public var package: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_packages?
+                public var package: Components.Parameters.DependabotAlertCommaSeparatedPackages?
                 /// CVE Exploit Prediction Scoring System (EPSS) percentage. Can be specified as:
                 /// - An exact number (`n`)
                 /// - Comparators such as `>n`, `<n`, `>=n`, `<=n`
@@ -3979,19 +3988,19 @@ public enum Operations {
                 /// Filters the list of alerts based on EPSS percentages. If specified, only alerts with the provided EPSS percentages will be returned.
                 ///
                 /// - Remark: Generated from `#/paths/enterprises/{enterprise}/dependabot/alerts/GET/query/epss_percentage`.
-                public var epss_percentage: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_epss?
+                public var epssPercentage: Components.Parameters.DependabotAlertCommaSeparatedEpss?
                 /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has`.
-                @frozen public enum dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_has: Codable, Hashable, Sendable {
+                @frozen public enum DependabotAlertCommaSeparatedHas: Codable, Hashable, Sendable {
                     /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has/case1`.
                     case case1(Swift.String)
                     /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has/Case2Payload`.
-                    @frozen public enum Case2PayloadPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum Case2PayloadPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case patch = "patch"
                     }
                     /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has/case2`.
-                    public typealias Case2Payload = [Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_has.Case2PayloadPayload]
+                    public typealias Case2Payload = [Components.Parameters.DependabotAlertCommaSeparatedHas.Case2PayloadPayload]
                     /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has/case2`.
-                    case case2(Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_has.Case2Payload)
+                    case case2(Components.Parameters.DependabotAlertCommaSeparatedHas.Case2Payload)
                     public init(from decoder: any Decoder) throws {
                         var errors: [any Error] = []
                         do {
@@ -4021,25 +4030,25 @@ public enum Operations {
                         }
                     }
                 }
-                /// Filters the list of alerts based on whether the alert has a patch. If specified, only alerts with a patch will be returned.
-                /// Multiple `has` filters can be chained to check if multiple properties are present.
+                /// Filters the list of alerts based on whether the alert has the given value. If specified, only alerts meeting this criterion will be returned.
+                /// Multiple `has` filters can be passed to filter for alerts that have all of the values. Currently, only `patch` is supported.
                 ///
                 /// - Remark: Generated from `#/paths/enterprises/{enterprise}/dependabot/alerts/GET/query/has`.
-                public var has: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_has?
+                public var has: Components.Parameters.DependabotAlertCommaSeparatedHas?
                 /// - Remark: Generated from `#/components/parameters/dependabot-alert-scope`.
-                @frozen public enum dependabot_hyphen_alert_hyphen_scope: String, Codable, Hashable, Sendable {
+                @frozen public enum DependabotAlertScope: String, Codable, Hashable, Sendable, CaseIterable {
                     case development = "development"
                     case runtime = "runtime"
                 }
                 /// The scope of the vulnerable dependency. If specified, only alerts with this scope will be returned.
                 ///
                 /// - Remark: Generated from `#/paths/enterprises/{enterprise}/dependabot/alerts/GET/query/scope`.
-                public var scope: Components.Parameters.dependabot_hyphen_alert_hyphen_scope?
+                public var scope: Components.Parameters.DependabotAlertScope?
                 /// - Remark: Generated from `#/components/parameters/dependabot-alert-sort`.
-                @frozen public enum dependabot_hyphen_alert_hyphen_sort: String, Codable, Hashable, Sendable {
+                @frozen public enum DependabotAlertSort: String, Codable, Hashable, Sendable, CaseIterable {
                     case created = "created"
                     case updated = "updated"
-                    case epss_percentage = "epss_percentage"
+                    case epssPercentage = "epss_percentage"
                 }
                 /// The property by which to sort the results.
                 /// `created` means when the alert was created.
@@ -4047,40 +4056,40 @@ public enum Operations {
                 /// `epss_percentage` sorts alerts by the Exploit Prediction Scoring System (EPSS) percentage.
                 ///
                 /// - Remark: Generated from `#/paths/enterprises/{enterprise}/dependabot/alerts/GET/query/sort`.
-                public var sort: Components.Parameters.dependabot_hyphen_alert_hyphen_sort?
+                public var sort: Components.Parameters.DependabotAlertSort?
                 /// - Remark: Generated from `#/components/parameters/direction`.
-                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                @frozen public enum Direction: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
                 /// The direction to sort the results by.
                 ///
                 /// - Remark: Generated from `#/paths/enterprises/{enterprise}/dependabot/alerts/GET/query/direction`.
-                public var direction: Components.Parameters.direction?
+                public var direction: Components.Parameters.Direction?
                 /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/enterprises/{enterprise}/dependabot/alerts/GET/query/before`.
-                public var before: Components.Parameters.pagination_hyphen_before?
+                public var before: Components.Parameters.PaginationBefore?
                 /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/enterprises/{enterprise}/dependabot/alerts/GET/query/after`.
-                public var after: Components.Parameters.pagination_hyphen_after?
+                public var after: Components.Parameters.PaginationAfter?
                 /// **Deprecated**. The number of results per page (max 100), starting from the first matching result.
                 /// This parameter must not be used in combination with `last`.
                 /// Instead, use `per_page` in combination with `after` to fetch the first page of results.
                 ///
                 /// - Remark: Generated from `#/paths/enterprises/{enterprise}/dependabot/alerts/GET/query/first`.
-                public var first: Components.Parameters.pagination_hyphen_first?
+                public var first: Components.Parameters.PaginationFirst?
                 /// **Deprecated**. The number of results per page (max 100), starting from the last matching result.
                 /// This parameter must not be used in combination with `first`.
                 /// Instead, use `per_page` in combination with `before` to fetch the last page of results.
                 ///
                 /// - Remark: Generated from `#/paths/enterprises/{enterprise}/dependabot/alerts/GET/query/last`.
-                public var last: Components.Parameters.pagination_hyphen_last?
+                public var last: Components.Parameters.PaginationLast?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/enterprises/{enterprise}/dependabot/alerts/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
@@ -4088,8 +4097,8 @@ public enum Operations {
                 ///   - severity: A comma-separated list of severities. If specified, only alerts with these severities will be returned.
                 ///   - ecosystem: A comma-separated list of ecosystems. If specified, only alerts for these ecosystems will be returned.
                 ///   - package: A comma-separated list of package names. If specified, only alerts for these packages will be returned.
-                ///   - epss_percentage: CVE Exploit Prediction Scoring System (EPSS) percentage. Can be specified as:
-                ///   - has: Filters the list of alerts based on whether the alert has a patch. If specified, only alerts with a patch will be returned.
+                ///   - epssPercentage: CVE Exploit Prediction Scoring System (EPSS) percentage. Can be specified as:
+                ///   - has: Filters the list of alerts based on whether the alert has the given value. If specified, only alerts meeting this criterion will be returned.
                 ///   - scope: The scope of the vulnerable dependency. If specified, only alerts with this scope will be returned.
                 ///   - sort: The property by which to sort the results.
                 ///   - direction: The direction to sort the results by.
@@ -4097,28 +4106,28 @@ public enum Operations {
                 ///   - after: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - first: **Deprecated**. The number of results per page (max 100), starting from the first matching result.
                 ///   - last: **Deprecated**. The number of results per page (max 100), starting from the last matching result.
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    state: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_states? = nil,
-                    severity: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_severities? = nil,
-                    ecosystem: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_ecosystems? = nil,
-                    package: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_packages? = nil,
-                    epss_percentage: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_epss? = nil,
-                    has: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_has? = nil,
-                    scope: Components.Parameters.dependabot_hyphen_alert_hyphen_scope? = nil,
-                    sort: Components.Parameters.dependabot_hyphen_alert_hyphen_sort? = nil,
-                    direction: Components.Parameters.direction? = nil,
-                    before: Components.Parameters.pagination_hyphen_before? = nil,
-                    after: Components.Parameters.pagination_hyphen_after? = nil,
-                    first: Components.Parameters.pagination_hyphen_first? = nil,
-                    last: Components.Parameters.pagination_hyphen_last? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil
+                    state: Components.Parameters.DependabotAlertCommaSeparatedStates? = nil,
+                    severity: Components.Parameters.DependabotAlertCommaSeparatedSeverities? = nil,
+                    ecosystem: Components.Parameters.DependabotAlertCommaSeparatedEcosystems? = nil,
+                    package: Components.Parameters.DependabotAlertCommaSeparatedPackages? = nil,
+                    epssPercentage: Components.Parameters.DependabotAlertCommaSeparatedEpss? = nil,
+                    has: Components.Parameters.DependabotAlertCommaSeparatedHas? = nil,
+                    scope: Components.Parameters.DependabotAlertScope? = nil,
+                    sort: Components.Parameters.DependabotAlertSort? = nil,
+                    direction: Components.Parameters.Direction? = nil,
+                    before: Components.Parameters.PaginationBefore? = nil,
+                    after: Components.Parameters.PaginationAfter? = nil,
+                    first: Components.Parameters.PaginationFirst? = nil,
+                    last: Components.Parameters.PaginationLast? = nil,
+                    perPage: Components.Parameters.PerPage? = nil
                 ) {
                     self.state = state
                     self.severity = severity
                     self.ecosystem = ecosystem
                     self.package = package
-                    self.epss_percentage = epss_percentage
+                    self.epssPercentage = epssPercentage
                     self.has = has
                     self.scope = scope
                     self.sort = sort
@@ -4127,22 +4136,22 @@ public enum Operations {
                     self.after = after
                     self.first = first
                     self.last = last
-                    self.per_page = per_page
+                    self.perPage = perPage
                 }
             }
-            public var query: Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.Input.Query
+            public var query: Operations.DependabotListAlertsForEnterprise.Input.Query
             /// - Remark: Generated from `#/paths/enterprises/{enterprise}/dependabot/alerts/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.DependabotListAlertsForEnterprise.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.DependabotListAlertsForEnterprise.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.Input.Headers
+            public var headers: Operations.DependabotListAlertsForEnterprise.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -4150,9 +4159,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.Input.Path,
-                query: Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.Input.Query = .init(),
-                headers: Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.Input.Headers = .init()
+                path: Operations.DependabotListAlertsForEnterprise.Input.Path,
+                query: Operations.DependabotListAlertsForEnterprise.Input.Query = .init(),
+                headers: Operations.DependabotListAlertsForEnterprise.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -4164,12 +4173,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/enterprises/{enterprise}/dependabot/alerts/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/enterprises/{enterprise}/dependabot/alerts/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.dependabot_hyphen_alert_hyphen_with_hyphen_repository])
+                    case json([Components.Schemas.DependabotAlertWithRepository])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.dependabot_hyphen_alert_hyphen_with_hyphen_repository] {
+                    public var json: [Components.Schemas.DependabotAlertWithRepository] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -4179,12 +4188,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.Output.Ok.Body
+                public var body: Operations.DependabotListAlertsForEnterprise.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.Output.Ok.Body) {
+                public init(body: Operations.DependabotListAlertsForEnterprise.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -4193,12 +4202,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//enterprises/{enterprise}/dependabot/alerts/get(dependabot/list-alerts-for-enterprise)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.Output.Ok)
+            case ok(Operations.DependabotListAlertsForEnterprise.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.Output.Ok {
+            public var ok: Operations.DependabotListAlertsForEnterprise.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -4216,12 +4225,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//enterprises/{enterprise}/dependabot/alerts/get(dependabot/list-alerts-for-enterprise)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//enterprises/{enterprise}/dependabot/alerts/get(dependabot/list-alerts-for-enterprise)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -4239,12 +4256,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//enterprises/{enterprise}/dependabot/alerts/get(dependabot/list-alerts-for-enterprise)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -4262,12 +4279,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//enterprises/{enterprise}/dependabot/alerts/get(dependabot/list-alerts-for-enterprise)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -4285,12 +4302,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//enterprises/{enterprise}/dependabot/alerts/get(dependabot/list-alerts-for-enterprise)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed_simple)
+            case unprocessableContent(Components.Responses.ValidationFailedSimple)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed_simple {
+            public var unprocessableContent: Components.Responses.ValidationFailedSimple {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -4344,7 +4361,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/dependabot/alerts`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/alerts/get(dependabot/list-alerts-for-org)`.
-    public enum dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_org {
+    public enum DependabotListAlertsForOrg {
         public static let id: Swift.String = "dependabot/list-alerts-for-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/alerts/GET/path`.
@@ -4352,16 +4369,16 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/alerts/GET/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                public init(org: Components.Parameters.org) {
+                public init(org: Components.Parameters.Org) {
                     self.org = org
                 }
             }
-            public var path: Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Input.Path
+            public var path: Operations.DependabotListAlertsForOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/alerts/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// A comma-separated list of states. If specified, only alerts with these states will be returned.
@@ -4369,23 +4386,23 @@ public enum Operations {
                 /// Can be: `auto_dismissed`, `dismissed`, `fixed`, `open`
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/alerts/GET/query/state`.
-                public var state: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_states?
+                public var state: Components.Parameters.DependabotAlertCommaSeparatedStates?
                 /// A comma-separated list of severities. If specified, only alerts with these severities will be returned.
                 ///
                 /// Can be: `low`, `medium`, `high`, `critical`
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/alerts/GET/query/severity`.
-                public var severity: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_severities?
+                public var severity: Components.Parameters.DependabotAlertCommaSeparatedSeverities?
                 /// A comma-separated list of ecosystems. If specified, only alerts for these ecosystems will be returned.
                 ///
                 /// Can be: `composer`, `go`, `maven`, `npm`, `nuget`, `pip`, `pub`, `rubygems`, `rust`
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/alerts/GET/query/ecosystem`.
-                public var ecosystem: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_ecosystems?
+                public var ecosystem: Components.Parameters.DependabotAlertCommaSeparatedEcosystems?
                 /// A comma-separated list of package names. If specified, only alerts for these packages will be returned.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/alerts/GET/query/package`.
-                public var package: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_packages?
+                public var package: Components.Parameters.DependabotAlertCommaSeparatedPackages?
                 /// CVE Exploit Prediction Scoring System (EPSS) percentage. Can be specified as:
                 /// - An exact number (`n`)
                 /// - Comparators such as `>n`, `<n`, `>=n`, `<=n`
@@ -4394,19 +4411,19 @@ public enum Operations {
                 /// Filters the list of alerts based on EPSS percentages. If specified, only alerts with the provided EPSS percentages will be returned.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/alerts/GET/query/epss_percentage`.
-                public var epss_percentage: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_epss?
+                public var epssPercentage: Components.Parameters.DependabotAlertCommaSeparatedEpss?
                 /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has`.
-                @frozen public enum dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_has: Codable, Hashable, Sendable {
+                @frozen public enum DependabotAlertCommaSeparatedHas: Codable, Hashable, Sendable {
                     /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has/case1`.
                     case case1(Swift.String)
                     /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has/Case2Payload`.
-                    @frozen public enum Case2PayloadPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum Case2PayloadPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case patch = "patch"
                     }
                     /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has/case2`.
-                    public typealias Case2Payload = [Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_has.Case2PayloadPayload]
+                    public typealias Case2Payload = [Components.Parameters.DependabotAlertCommaSeparatedHas.Case2PayloadPayload]
                     /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has/case2`.
-                    case case2(Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_has.Case2Payload)
+                    case case2(Components.Parameters.DependabotAlertCommaSeparatedHas.Case2Payload)
                     public init(from decoder: any Decoder) throws {
                         var errors: [any Error] = []
                         do {
@@ -4436,25 +4453,25 @@ public enum Operations {
                         }
                     }
                 }
-                /// Filters the list of alerts based on whether the alert has a patch. If specified, only alerts with a patch will be returned.
-                /// Multiple `has` filters can be chained to check if multiple properties are present.
+                /// Filters the list of alerts based on whether the alert has the given value. If specified, only alerts meeting this criterion will be returned.
+                /// Multiple `has` filters can be passed to filter for alerts that have all of the values. Currently, only `patch` is supported.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/alerts/GET/query/has`.
-                public var has: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_has?
+                public var has: Components.Parameters.DependabotAlertCommaSeparatedHas?
                 /// - Remark: Generated from `#/components/parameters/dependabot-alert-scope`.
-                @frozen public enum dependabot_hyphen_alert_hyphen_scope: String, Codable, Hashable, Sendable {
+                @frozen public enum DependabotAlertScope: String, Codable, Hashable, Sendable, CaseIterable {
                     case development = "development"
                     case runtime = "runtime"
                 }
                 /// The scope of the vulnerable dependency. If specified, only alerts with this scope will be returned.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/alerts/GET/query/scope`.
-                public var scope: Components.Parameters.dependabot_hyphen_alert_hyphen_scope?
+                public var scope: Components.Parameters.DependabotAlertScope?
                 /// - Remark: Generated from `#/components/parameters/dependabot-alert-sort`.
-                @frozen public enum dependabot_hyphen_alert_hyphen_sort: String, Codable, Hashable, Sendable {
+                @frozen public enum DependabotAlertSort: String, Codable, Hashable, Sendable, CaseIterable {
                     case created = "created"
                     case updated = "updated"
-                    case epss_percentage = "epss_percentage"
+                    case epssPercentage = "epss_percentage"
                 }
                 /// The property by which to sort the results.
                 /// `created` means when the alert was created.
@@ -4462,40 +4479,40 @@ public enum Operations {
                 /// `epss_percentage` sorts alerts by the Exploit Prediction Scoring System (EPSS) percentage.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/alerts/GET/query/sort`.
-                public var sort: Components.Parameters.dependabot_hyphen_alert_hyphen_sort?
+                public var sort: Components.Parameters.DependabotAlertSort?
                 /// - Remark: Generated from `#/components/parameters/direction`.
-                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                @frozen public enum Direction: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
                 /// The direction to sort the results by.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/alerts/GET/query/direction`.
-                public var direction: Components.Parameters.direction?
+                public var direction: Components.Parameters.Direction?
                 /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/alerts/GET/query/before`.
-                public var before: Components.Parameters.pagination_hyphen_before?
+                public var before: Components.Parameters.PaginationBefore?
                 /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/alerts/GET/query/after`.
-                public var after: Components.Parameters.pagination_hyphen_after?
+                public var after: Components.Parameters.PaginationAfter?
                 /// **Deprecated**. The number of results per page (max 100), starting from the first matching result.
                 /// This parameter must not be used in combination with `last`.
                 /// Instead, use `per_page` in combination with `after` to fetch the first page of results.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/alerts/GET/query/first`.
-                public var first: Components.Parameters.pagination_hyphen_first?
+                public var first: Components.Parameters.PaginationFirst?
                 /// **Deprecated**. The number of results per page (max 100), starting from the last matching result.
                 /// This parameter must not be used in combination with `first`.
                 /// Instead, use `per_page` in combination with `before` to fetch the last page of results.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/alerts/GET/query/last`.
-                public var last: Components.Parameters.pagination_hyphen_last?
+                public var last: Components.Parameters.PaginationLast?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/alerts/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
@@ -4503,8 +4520,8 @@ public enum Operations {
                 ///   - severity: A comma-separated list of severities. If specified, only alerts with these severities will be returned.
                 ///   - ecosystem: A comma-separated list of ecosystems. If specified, only alerts for these ecosystems will be returned.
                 ///   - package: A comma-separated list of package names. If specified, only alerts for these packages will be returned.
-                ///   - epss_percentage: CVE Exploit Prediction Scoring System (EPSS) percentage. Can be specified as:
-                ///   - has: Filters the list of alerts based on whether the alert has a patch. If specified, only alerts with a patch will be returned.
+                ///   - epssPercentage: CVE Exploit Prediction Scoring System (EPSS) percentage. Can be specified as:
+                ///   - has: Filters the list of alerts based on whether the alert has the given value. If specified, only alerts meeting this criterion will be returned.
                 ///   - scope: The scope of the vulnerable dependency. If specified, only alerts with this scope will be returned.
                 ///   - sort: The property by which to sort the results.
                 ///   - direction: The direction to sort the results by.
@@ -4512,28 +4529,28 @@ public enum Operations {
                 ///   - after: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - first: **Deprecated**. The number of results per page (max 100), starting from the first matching result.
                 ///   - last: **Deprecated**. The number of results per page (max 100), starting from the last matching result.
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    state: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_states? = nil,
-                    severity: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_severities? = nil,
-                    ecosystem: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_ecosystems? = nil,
-                    package: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_packages? = nil,
-                    epss_percentage: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_epss? = nil,
-                    has: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_has? = nil,
-                    scope: Components.Parameters.dependabot_hyphen_alert_hyphen_scope? = nil,
-                    sort: Components.Parameters.dependabot_hyphen_alert_hyphen_sort? = nil,
-                    direction: Components.Parameters.direction? = nil,
-                    before: Components.Parameters.pagination_hyphen_before? = nil,
-                    after: Components.Parameters.pagination_hyphen_after? = nil,
-                    first: Components.Parameters.pagination_hyphen_first? = nil,
-                    last: Components.Parameters.pagination_hyphen_last? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil
+                    state: Components.Parameters.DependabotAlertCommaSeparatedStates? = nil,
+                    severity: Components.Parameters.DependabotAlertCommaSeparatedSeverities? = nil,
+                    ecosystem: Components.Parameters.DependabotAlertCommaSeparatedEcosystems? = nil,
+                    package: Components.Parameters.DependabotAlertCommaSeparatedPackages? = nil,
+                    epssPercentage: Components.Parameters.DependabotAlertCommaSeparatedEpss? = nil,
+                    has: Components.Parameters.DependabotAlertCommaSeparatedHas? = nil,
+                    scope: Components.Parameters.DependabotAlertScope? = nil,
+                    sort: Components.Parameters.DependabotAlertSort? = nil,
+                    direction: Components.Parameters.Direction? = nil,
+                    before: Components.Parameters.PaginationBefore? = nil,
+                    after: Components.Parameters.PaginationAfter? = nil,
+                    first: Components.Parameters.PaginationFirst? = nil,
+                    last: Components.Parameters.PaginationLast? = nil,
+                    perPage: Components.Parameters.PerPage? = nil
                 ) {
                     self.state = state
                     self.severity = severity
                     self.ecosystem = ecosystem
                     self.package = package
-                    self.epss_percentage = epss_percentage
+                    self.epssPercentage = epssPercentage
                     self.has = has
                     self.scope = scope
                     self.sort = sort
@@ -4542,22 +4559,22 @@ public enum Operations {
                     self.after = after
                     self.first = first
                     self.last = last
-                    self.per_page = per_page
+                    self.perPage = perPage
                 }
             }
-            public var query: Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Input.Query
+            public var query: Operations.DependabotListAlertsForOrg.Input.Query
             /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/alerts/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.DependabotListAlertsForOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.DependabotListAlertsForOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Input.Headers
+            public var headers: Operations.DependabotListAlertsForOrg.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -4565,9 +4582,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Input.Path,
-                query: Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Input.Query = .init(),
-                headers: Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Input.Headers = .init()
+                path: Operations.DependabotListAlertsForOrg.Input.Path,
+                query: Operations.DependabotListAlertsForOrg.Input.Query = .init(),
+                headers: Operations.DependabotListAlertsForOrg.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -4579,12 +4596,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/alerts/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/alerts/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.dependabot_hyphen_alert_hyphen_with_hyphen_repository])
+                    case json([Components.Schemas.DependabotAlertWithRepository])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.dependabot_hyphen_alert_hyphen_with_hyphen_repository] {
+                    public var json: [Components.Schemas.DependabotAlertWithRepository] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -4594,12 +4611,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Output.Ok.Body
+                public var body: Operations.DependabotListAlertsForOrg.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Output.Ok.Body) {
+                public init(body: Operations.DependabotListAlertsForOrg.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -4608,12 +4625,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/alerts/get(dependabot/list-alerts-for-org)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Output.Ok)
+            case ok(Operations.DependabotListAlertsForOrg.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Output.Ok {
+            public var ok: Operations.DependabotListAlertsForOrg.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -4631,12 +4648,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/alerts/get(dependabot/list-alerts-for-org)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/alerts/get(dependabot/list-alerts-for-org)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -4654,12 +4679,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/alerts/get(dependabot/list-alerts-for-org)/responses/400`.
             ///
             /// HTTP response code: `400 badRequest`.
-            case badRequest(Components.Responses.bad_request)
+            case badRequest(Components.Responses.BadRequest)
             /// The associated value of the enum case if `self` is `.badRequest`.
             ///
             /// - Throws: An error if `self` is not `.badRequest`.
             /// - SeeAlso: `.badRequest`.
-            public var badRequest: Components.Responses.bad_request {
+            public var badRequest: Components.Responses.BadRequest {
                 get throws {
                     switch self {
                     case let .badRequest(response):
@@ -4677,12 +4702,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/alerts/get(dependabot/list-alerts-for-org)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -4700,12 +4725,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/alerts/get(dependabot/list-alerts-for-org)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -4723,12 +4748,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/alerts/get(dependabot/list-alerts-for-org)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed_simple)
+            case unprocessableContent(Components.Responses.ValidationFailedSimple)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed_simple {
+            public var unprocessableContent: Components.Responses.ValidationFailedSimple {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -4748,14 +4773,14 @@ public enum Operations {
         }
         @frozen public enum AcceptableContentType: AcceptableProtocol {
             case json
-            case application_scim_plus_json
+            case applicationScimJson
             case other(Swift.String)
             public init?(rawValue: Swift.String) {
                 switch rawValue.lowercased() {
                 case "application/json":
                     self = .json
                 case "application/scim+json":
-                    self = .application_scim_plus_json
+                    self = .applicationScimJson
                 default:
                     self = .other(rawValue)
                 }
@@ -4766,14 +4791,14 @@ public enum Operations {
                     return string
                 case .json:
                     return "application/json"
-                case .application_scim_plus_json:
+                case .applicationScimJson:
                     return "application/scim+json"
                 }
             }
             public static var allCases: [Self] {
                 [
                     .json,
-                    .application_scim_plus_json
+                    .applicationScimJson
                 ]
             }
         }
@@ -4787,7 +4812,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/dependabot/secrets`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/get(dependabot/list-org-secrets)`.
-    public enum dependabot_sol_list_hyphen_org_hyphen_secrets {
+    public enum DependabotListOrgSecrets {
         public static let id: Swift.String = "dependabot/list-org-secrets"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/GET/path`.
@@ -4795,52 +4820,52 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/GET/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                public init(org: Components.Parameters.org) {
+                public init(org: Components.Parameters.Org) {
                     self.org = org
                 }
             }
-            public var path: Operations.dependabot_sol_list_hyphen_org_hyphen_secrets.Input.Path
+            public var path: Operations.DependabotListOrgSecrets.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.dependabot_sol_list_hyphen_org_hyphen_secrets.Input.Query
+            public var query: Operations.DependabotListOrgSecrets.Input.Query
             /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.dependabot_sol_list_hyphen_org_hyphen_secrets.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.DependabotListOrgSecrets.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.dependabot_sol_list_hyphen_org_hyphen_secrets.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.DependabotListOrgSecrets.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.dependabot_sol_list_hyphen_org_hyphen_secrets.Input.Headers
+            public var headers: Operations.DependabotListOrgSecrets.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -4848,9 +4873,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.dependabot_sol_list_hyphen_org_hyphen_secrets.Input.Path,
-                query: Operations.dependabot_sol_list_hyphen_org_hyphen_secrets.Input.Query = .init(),
-                headers: Operations.dependabot_sol_list_hyphen_org_hyphen_secrets.Input.Headers = .init()
+                path: Operations.DependabotListOrgSecrets.Input.Path,
+                query: Operations.DependabotListOrgSecrets.Input.Query = .init(),
+                headers: Operations.DependabotListOrgSecrets.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -4862,49 +4887,49 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.dependabot_sol_list_hyphen_org_hyphen_secrets.Output.Ok.Headers
+                public var headers: Operations.DependabotListOrgSecrets.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/GET/responses/200/content/json`.
-                    public struct jsonPayload: Codable, Hashable, Sendable {
+                    public struct JsonPayload: Codable, Hashable, Sendable {
                         /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/GET/responses/200/content/json/total_count`.
-                        public var total_count: Swift.Int
+                        public var totalCount: Swift.Int
                         /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/GET/responses/200/content/json/secrets`.
-                        public var secrets: [Components.Schemas.organization_hyphen_dependabot_hyphen_secret]
-                        /// Creates a new `jsonPayload`.
+                        public var secrets: [Components.Schemas.OrganizationDependabotSecret]
+                        /// Creates a new `JsonPayload`.
                         ///
                         /// - Parameters:
-                        ///   - total_count:
+                        ///   - totalCount:
                         ///   - secrets:
                         public init(
-                            total_count: Swift.Int,
-                            secrets: [Components.Schemas.organization_hyphen_dependabot_hyphen_secret]
+                            totalCount: Swift.Int,
+                            secrets: [Components.Schemas.OrganizationDependabotSecret]
                         ) {
-                            self.total_count = total_count
+                            self.totalCount = totalCount
                             self.secrets = secrets
                         }
                         public enum CodingKeys: String, CodingKey {
-                            case total_count
+                            case totalCount = "total_count"
                             case secrets
                         }
                     }
                     /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/GET/responses/200/content/application\/json`.
-                    case json(Operations.dependabot_sol_list_hyphen_org_hyphen_secrets.Output.Ok.Body.jsonPayload)
+                    case json(Operations.DependabotListOrgSecrets.Output.Ok.Body.JsonPayload)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Operations.dependabot_sol_list_hyphen_org_hyphen_secrets.Output.Ok.Body.jsonPayload {
+                    public var json: Operations.DependabotListOrgSecrets.Output.Ok.Body.JsonPayload {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -4914,15 +4939,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.dependabot_sol_list_hyphen_org_hyphen_secrets.Output.Ok.Body
+                public var body: Operations.DependabotListOrgSecrets.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.dependabot_sol_list_hyphen_org_hyphen_secrets.Output.Ok.Headers = .init(),
-                    body: Operations.dependabot_sol_list_hyphen_org_hyphen_secrets.Output.Ok.Body
+                    headers: Operations.DependabotListOrgSecrets.Output.Ok.Headers = .init(),
+                    body: Operations.DependabotListOrgSecrets.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -4933,12 +4958,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/get(dependabot/list-org-secrets)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.dependabot_sol_list_hyphen_org_hyphen_secrets.Output.Ok)
+            case ok(Operations.DependabotListOrgSecrets.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.dependabot_sol_list_hyphen_org_hyphen_secrets.Output.Ok {
+            public var ok: Operations.DependabotListOrgSecrets.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -4991,7 +5016,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/dependabot/secrets/public-key`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/public-key/get(dependabot/get-org-public-key)`.
-    public enum dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key {
+    public enum DependabotGetOrgPublicKey {
         public static let id: Swift.String = "dependabot/get-org-public-key"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/public-key/GET/path`.
@@ -4999,36 +5024,36 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/public-key/GET/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                public init(org: Components.Parameters.org) {
+                public init(org: Components.Parameters.Org) {
                     self.org = org
                 }
             }
-            public var path: Operations.dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key.Input.Path
+            public var path: Operations.DependabotGetOrgPublicKey.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/public-key/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.DependabotGetOrgPublicKey.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.DependabotGetOrgPublicKey.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key.Input.Headers
+            public var headers: Operations.DependabotGetOrgPublicKey.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key.Input.Path,
-                headers: Operations.dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key.Input.Headers = .init()
+                path: Operations.DependabotGetOrgPublicKey.Input.Path,
+                headers: Operations.DependabotGetOrgPublicKey.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -5039,12 +5064,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/public-key/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/public-key/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.dependabot_hyphen_public_hyphen_key)
+                    case json(Components.Schemas.DependabotPublicKey)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.dependabot_hyphen_public_hyphen_key {
+                    public var json: Components.Schemas.DependabotPublicKey {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -5054,12 +5079,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key.Output.Ok.Body
+                public var body: Operations.DependabotGetOrgPublicKey.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key.Output.Ok.Body) {
+                public init(body: Operations.DependabotGetOrgPublicKey.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -5068,12 +5093,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/public-key/get(dependabot/get-org-public-key)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key.Output.Ok)
+            case ok(Operations.DependabotGetOrgPublicKey.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key.Output.Ok {
+            public var ok: Operations.DependabotGetOrgPublicKey.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -5125,7 +5150,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/dependabot/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/get(dependabot/get-org-secret)`.
-    public enum dependabot_sol_get_hyphen_org_hyphen_secret {
+    public enum DependabotGetOrgSecret {
         public static let id: Swift.String = "dependabot/get-org-secret"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/GET/path`.
@@ -5133,45 +5158,45 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/GET/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The name of the secret.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/GET/path/secret_name`.
-                public var secret_name: Components.Parameters.secret_hyphen_name
+                public var secretName: Components.Parameters.SecretName
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - secret_name: The name of the secret.
+                ///   - secretName: The name of the secret.
                 public init(
-                    org: Components.Parameters.org,
-                    secret_name: Components.Parameters.secret_hyphen_name
+                    org: Components.Parameters.Org,
+                    secretName: Components.Parameters.SecretName
                 ) {
                     self.org = org
-                    self.secret_name = secret_name
+                    self.secretName = secretName
                 }
             }
-            public var path: Operations.dependabot_sol_get_hyphen_org_hyphen_secret.Input.Path
+            public var path: Operations.DependabotGetOrgSecret.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.dependabot_sol_get_hyphen_org_hyphen_secret.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.DependabotGetOrgSecret.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.dependabot_sol_get_hyphen_org_hyphen_secret.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.DependabotGetOrgSecret.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.dependabot_sol_get_hyphen_org_hyphen_secret.Input.Headers
+            public var headers: Operations.DependabotGetOrgSecret.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.dependabot_sol_get_hyphen_org_hyphen_secret.Input.Path,
-                headers: Operations.dependabot_sol_get_hyphen_org_hyphen_secret.Input.Headers = .init()
+                path: Operations.DependabotGetOrgSecret.Input.Path,
+                headers: Operations.DependabotGetOrgSecret.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -5182,12 +5207,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.organization_hyphen_dependabot_hyphen_secret)
+                    case json(Components.Schemas.OrganizationDependabotSecret)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.organization_hyphen_dependabot_hyphen_secret {
+                    public var json: Components.Schemas.OrganizationDependabotSecret {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -5197,12 +5222,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.dependabot_sol_get_hyphen_org_hyphen_secret.Output.Ok.Body
+                public var body: Operations.DependabotGetOrgSecret.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.dependabot_sol_get_hyphen_org_hyphen_secret.Output.Ok.Body) {
+                public init(body: Operations.DependabotGetOrgSecret.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -5211,12 +5236,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/get(dependabot/get-org-secret)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.dependabot_sol_get_hyphen_org_hyphen_secret.Output.Ok)
+            case ok(Operations.DependabotGetOrgSecret.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.dependabot_sol_get_hyphen_org_hyphen_secret.Output.Ok {
+            public var ok: Operations.DependabotGetOrgSecret.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -5269,7 +5294,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/dependabot/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/put(dependabot/create-or-update-org-secret)`.
-    public enum dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret {
+    public enum DependabotCreateOrUpdateOrgSecret {
         public static let id: Swift.String = "dependabot/create-or-update-org-secret"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/PUT/path`.
@@ -5277,53 +5302,53 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/PUT/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The name of the secret.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/PUT/path/secret_name`.
-                public var secret_name: Components.Parameters.secret_hyphen_name
+                public var secretName: Components.Parameters.SecretName
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - secret_name: The name of the secret.
+                ///   - secretName: The name of the secret.
                 public init(
-                    org: Components.Parameters.org,
-                    secret_name: Components.Parameters.secret_hyphen_name
+                    org: Components.Parameters.Org,
+                    secretName: Components.Parameters.SecretName
                 ) {
                     self.org = org
-                    self.secret_name = secret_name
+                    self.secretName = secretName
                 }
             }
-            public var path: Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret.Input.Path
+            public var path: Operations.DependabotCreateOrUpdateOrgSecret.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/PUT/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.DependabotCreateOrUpdateOrgSecret.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.DependabotCreateOrUpdateOrgSecret.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret.Input.Headers
+            public var headers: Operations.DependabotCreateOrUpdateOrgSecret.Input.Headers
             /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/PUT/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/PUT/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// Value for your secret, encrypted with [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages) using the public key retrieved from the [Get an organization public key](https://docs.github.com/rest/dependabot/secrets#get-an-organization-public-key) endpoint.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/PUT/requestBody/json/encrypted_value`.
-                    public var encrypted_value: Swift.String?
+                    public var encryptedValue: Swift.String?
                     /// ID of the key you used to encrypt the secret.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/PUT/requestBody/json/key_id`.
-                    public var key_id: Swift.String?
+                    public var keyId: Swift.String?
                     /// Which type of organization repositories have access to the organization secret. `selected` means only the repositories specified by `selected_repository_ids` can access the secret.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/PUT/requestBody/json/visibility`.
-                    @frozen public enum visibilityPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum VisibilityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case all = "all"
                         case _private = "private"
                         case selected = "selected"
@@ -5331,40 +5356,40 @@ public enum Operations {
                     /// Which type of organization repositories have access to the organization secret. `selected` means only the repositories specified by `selected_repository_ids` can access the secret.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/PUT/requestBody/json/visibility`.
-                    public var visibility: Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret.Input.Body.jsonPayload.visibilityPayload
+                    public var visibility: Operations.DependabotCreateOrUpdateOrgSecret.Input.Body.JsonPayload.VisibilityPayload
                     /// An array of repository ids that can access the organization secret. You can only provide a list of repository ids when the `visibility` is set to `selected`. You can manage the list of selected repositories using the [List selected repositories for an organization secret](https://docs.github.com/rest/dependabot/secrets#list-selected-repositories-for-an-organization-secret), [Set selected repositories for an organization secret](https://docs.github.com/rest/dependabot/secrets#set-selected-repositories-for-an-organization-secret), and [Remove selected repository from an organization secret](https://docs.github.com/rest/dependabot/secrets#remove-selected-repository-from-an-organization-secret) endpoints.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/PUT/requestBody/json/selected_repository_ids`.
-                    public var selected_repository_ids: [Swift.String]?
-                    /// Creates a new `jsonPayload`.
+                    public var selectedRepositoryIds: [Swift.String]?
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
-                    ///   - encrypted_value: Value for your secret, encrypted with [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages) using the public key retrieved from the [Get an organization public key](https://docs.github.com/rest/dependabot/secrets#get-an-organization-public-key) endpoint.
-                    ///   - key_id: ID of the key you used to encrypt the secret.
+                    ///   - encryptedValue: Value for your secret, encrypted with [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages) using the public key retrieved from the [Get an organization public key](https://docs.github.com/rest/dependabot/secrets#get-an-organization-public-key) endpoint.
+                    ///   - keyId: ID of the key you used to encrypt the secret.
                     ///   - visibility: Which type of organization repositories have access to the organization secret. `selected` means only the repositories specified by `selected_repository_ids` can access the secret.
-                    ///   - selected_repository_ids: An array of repository ids that can access the organization secret. You can only provide a list of repository ids when the `visibility` is set to `selected`. You can manage the list of selected repositories using the [List selected repositories for an organization secret](https://docs.github.com/rest/dependabot/secrets#list-selected-repositories-for-an-organization-secret), [Set selected repositories for an organization secret](https://docs.github.com/rest/dependabot/secrets#set-selected-repositories-for-an-organization-secret), and [Remove selected repository from an organization secret](https://docs.github.com/rest/dependabot/secrets#remove-selected-repository-from-an-organization-secret) endpoints.
+                    ///   - selectedRepositoryIds: An array of repository ids that can access the organization secret. You can only provide a list of repository ids when the `visibility` is set to `selected`. You can manage the list of selected repositories using the [List selected repositories for an organization secret](https://docs.github.com/rest/dependabot/secrets#list-selected-repositories-for-an-organization-secret), [Set selected repositories for an organization secret](https://docs.github.com/rest/dependabot/secrets#set-selected-repositories-for-an-organization-secret), and [Remove selected repository from an organization secret](https://docs.github.com/rest/dependabot/secrets#remove-selected-repository-from-an-organization-secret) endpoints.
                     public init(
-                        encrypted_value: Swift.String? = nil,
-                        key_id: Swift.String? = nil,
-                        visibility: Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret.Input.Body.jsonPayload.visibilityPayload,
-                        selected_repository_ids: [Swift.String]? = nil
+                        encryptedValue: Swift.String? = nil,
+                        keyId: Swift.String? = nil,
+                        visibility: Operations.DependabotCreateOrUpdateOrgSecret.Input.Body.JsonPayload.VisibilityPayload,
+                        selectedRepositoryIds: [Swift.String]? = nil
                     ) {
-                        self.encrypted_value = encrypted_value
-                        self.key_id = key_id
+                        self.encryptedValue = encryptedValue
+                        self.keyId = keyId
                         self.visibility = visibility
-                        self.selected_repository_ids = selected_repository_ids
+                        self.selectedRepositoryIds = selectedRepositoryIds
                     }
                     public enum CodingKeys: String, CodingKey {
-                        case encrypted_value
-                        case key_id
+                        case encryptedValue = "encrypted_value"
+                        case keyId = "key_id"
                         case visibility
-                        case selected_repository_ids
+                        case selectedRepositoryIds = "selected_repository_ids"
                     }
                 }
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/PUT/requestBody/content/application\/json`.
-                case json(Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret.Input.Body.jsonPayload)
+                case json(Operations.DependabotCreateOrUpdateOrgSecret.Input.Body.JsonPayload)
             }
-            public var body: Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret.Input.Body
+            public var body: Operations.DependabotCreateOrUpdateOrgSecret.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -5372,9 +5397,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret.Input.Path,
-                headers: Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret.Input.Headers = .init(),
-                body: Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret.Input.Body
+                path: Operations.DependabotCreateOrUpdateOrgSecret.Input.Path,
+                headers: Operations.DependabotCreateOrUpdateOrgSecret.Input.Headers = .init(),
+                body: Operations.DependabotCreateOrUpdateOrgSecret.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -5386,12 +5411,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/PUT/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/PUT/responses/201/content/application\/json`.
-                    case json(Components.Schemas.empty_hyphen_object)
+                    case json(Components.Schemas.EmptyObject)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.empty_hyphen_object {
+                    public var json: Components.Schemas.EmptyObject {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -5401,12 +5426,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret.Output.Created.Body
+                public var body: Operations.DependabotCreateOrUpdateOrgSecret.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret.Output.Created.Body) {
+                public init(body: Operations.DependabotCreateOrUpdateOrgSecret.Output.Created.Body) {
                     self.body = body
                 }
             }
@@ -5415,12 +5440,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/put(dependabot/create-or-update-org-secret)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret.Output.Created)
+            case created(Operations.DependabotCreateOrUpdateOrgSecret.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret.Output.Created {
+            public var created: Operations.DependabotCreateOrUpdateOrgSecret.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -5442,12 +5467,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/put(dependabot/create-or-update-org-secret)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret.Output.NoContent)
+            case noContent(Operations.DependabotCreateOrUpdateOrgSecret.Output.NoContent)
+            /// Response when updating a secret
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/put(dependabot/create-or-update-org-secret)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret.Output.NoContent {
+            public var noContent: Operations.DependabotCreateOrUpdateOrgSecret.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -5499,7 +5532,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/dependabot/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/delete(dependabot/delete-org-secret)`.
-    public enum dependabot_sol_delete_hyphen_org_hyphen_secret {
+    public enum DependabotDeleteOrgSecret {
         public static let id: Swift.String = "dependabot/delete-org-secret"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/DELETE/path`.
@@ -5507,30 +5540,30 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/DELETE/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The name of the secret.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/DELETE/path/secret_name`.
-                public var secret_name: Components.Parameters.secret_hyphen_name
+                public var secretName: Components.Parameters.SecretName
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - secret_name: The name of the secret.
+                ///   - secretName: The name of the secret.
                 public init(
-                    org: Components.Parameters.org,
-                    secret_name: Components.Parameters.secret_hyphen_name
+                    org: Components.Parameters.Org,
+                    secretName: Components.Parameters.SecretName
                 ) {
                     self.org = org
-                    self.secret_name = secret_name
+                    self.secretName = secretName
                 }
             }
-            public var path: Operations.dependabot_sol_delete_hyphen_org_hyphen_secret.Input.Path
+            public var path: Operations.DependabotDeleteOrgSecret.Input.Path
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
-            public init(path: Operations.dependabot_sol_delete_hyphen_org_hyphen_secret.Input.Path) {
+            public init(path: Operations.DependabotDeleteOrgSecret.Input.Path) {
                 self.path = path
             }
         }
@@ -5544,12 +5577,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/delete(dependabot/delete-org-secret)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.dependabot_sol_delete_hyphen_org_hyphen_secret.Output.NoContent)
+            case noContent(Operations.DependabotDeleteOrgSecret.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/delete(dependabot/delete-org-secret)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.dependabot_sol_delete_hyphen_org_hyphen_secret.Output.NoContent {
+            public var noContent: Operations.DependabotDeleteOrgSecret.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -5577,7 +5618,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/dependabot/secrets/{secret_name}/repositories`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/repositories/get(dependabot/list-selected-repos-for-org-secret)`.
-    public enum dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret {
+    public enum DependabotListSelectedReposForOrgSecret {
         public static let id: Swift.String = "dependabot/list-selected-repos-for-org-secret"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/repositories/GET/path`.
@@ -5585,61 +5626,61 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/repositories/GET/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The name of the secret.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/repositories/GET/path/secret_name`.
-                public var secret_name: Components.Parameters.secret_hyphen_name
+                public var secretName: Components.Parameters.SecretName
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - secret_name: The name of the secret.
+                ///   - secretName: The name of the secret.
                 public init(
-                    org: Components.Parameters.org,
-                    secret_name: Components.Parameters.secret_hyphen_name
+                    org: Components.Parameters.Org,
+                    secretName: Components.Parameters.SecretName
                 ) {
                     self.org = org
-                    self.secret_name = secret_name
+                    self.secretName = secretName
                 }
             }
-            public var path: Operations.dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret.Input.Path
+            public var path: Operations.DependabotListSelectedReposForOrgSecret.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/repositories/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/repositories/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/repositories/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    page: Components.Parameters.page? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil
+                    page: Components.Parameters.Page? = nil,
+                    perPage: Components.Parameters.PerPage? = nil
                 ) {
                     self.page = page
-                    self.per_page = per_page
+                    self.perPage = perPage
                 }
             }
-            public var query: Operations.dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret.Input.Query
+            public var query: Operations.DependabotListSelectedReposForOrgSecret.Input.Query
             /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/repositories/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.DependabotListSelectedReposForOrgSecret.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.DependabotListSelectedReposForOrgSecret.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret.Input.Headers
+            public var headers: Operations.DependabotListSelectedReposForOrgSecret.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -5647,9 +5688,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret.Input.Path,
-                query: Operations.dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret.Input.Query = .init(),
-                headers: Operations.dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret.Input.Headers = .init()
+                path: Operations.DependabotListSelectedReposForOrgSecret.Input.Path,
+                query: Operations.DependabotListSelectedReposForOrgSecret.Input.Query = .init(),
+                headers: Operations.DependabotListSelectedReposForOrgSecret.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -5661,35 +5702,35 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/repositories/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/repositories/GET/responses/200/content/json`.
-                    public struct jsonPayload: Codable, Hashable, Sendable {
+                    public struct JsonPayload: Codable, Hashable, Sendable {
                         /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/repositories/GET/responses/200/content/json/total_count`.
-                        public var total_count: Swift.Int
+                        public var totalCount: Swift.Int
                         /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/repositories/GET/responses/200/content/json/repositories`.
-                        public var repositories: [Components.Schemas.minimal_hyphen_repository]
-                        /// Creates a new `jsonPayload`.
+                        public var repositories: [Components.Schemas.MinimalRepository]
+                        /// Creates a new `JsonPayload`.
                         ///
                         /// - Parameters:
-                        ///   - total_count:
+                        ///   - totalCount:
                         ///   - repositories:
                         public init(
-                            total_count: Swift.Int,
-                            repositories: [Components.Schemas.minimal_hyphen_repository]
+                            totalCount: Swift.Int,
+                            repositories: [Components.Schemas.MinimalRepository]
                         ) {
-                            self.total_count = total_count
+                            self.totalCount = totalCount
                             self.repositories = repositories
                         }
                         public enum CodingKeys: String, CodingKey {
-                            case total_count
+                            case totalCount = "total_count"
                             case repositories
                         }
                     }
                     /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/repositories/GET/responses/200/content/application\/json`.
-                    case json(Operations.dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret.Output.Ok.Body.jsonPayload)
+                    case json(Operations.DependabotListSelectedReposForOrgSecret.Output.Ok.Body.JsonPayload)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Operations.dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret.Output.Ok.Body.jsonPayload {
+                    public var json: Operations.DependabotListSelectedReposForOrgSecret.Output.Ok.Body.JsonPayload {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -5699,12 +5740,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret.Output.Ok.Body
+                public var body: Operations.DependabotListSelectedReposForOrgSecret.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret.Output.Ok.Body) {
+                public init(body: Operations.DependabotListSelectedReposForOrgSecret.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -5713,12 +5754,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/repositories/get(dependabot/list-selected-repos-for-org-secret)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret.Output.Ok)
+            case ok(Operations.DependabotListSelectedReposForOrgSecret.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret.Output.Ok {
+            public var ok: Operations.DependabotListSelectedReposForOrgSecret.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -5772,7 +5813,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/dependabot/secrets/{secret_name}/repositories`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/repositories/put(dependabot/set-selected-repos-for-org-secret)`.
-    public enum dependabot_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret {
+    public enum DependabotSetSelectedReposForOrgSecret {
         public static let id: Swift.String = "dependabot/set-selected-repos-for-org-secret"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/repositories/PUT/path`.
@@ -5780,56 +5821,56 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/repositories/PUT/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The name of the secret.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/repositories/PUT/path/secret_name`.
-                public var secret_name: Components.Parameters.secret_hyphen_name
+                public var secretName: Components.Parameters.SecretName
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - secret_name: The name of the secret.
+                ///   - secretName: The name of the secret.
                 public init(
-                    org: Components.Parameters.org,
-                    secret_name: Components.Parameters.secret_hyphen_name
+                    org: Components.Parameters.Org,
+                    secretName: Components.Parameters.SecretName
                 ) {
                     self.org = org
-                    self.secret_name = secret_name
+                    self.secretName = secretName
                 }
             }
-            public var path: Operations.dependabot_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret.Input.Path
+            public var path: Operations.DependabotSetSelectedReposForOrgSecret.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/repositories/PUT/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/repositories/PUT/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// An array of repository ids that can access the organization secret. You can only provide a list of repository ids when the `visibility` is set to `selected`. You can add and remove individual repositories using the [Set selected repositories for an organization secret](https://docs.github.com/rest/dependabot/secrets#set-selected-repositories-for-an-organization-secret) and [Remove selected repository from an organization secret](https://docs.github.com/rest/dependabot/secrets#remove-selected-repository-from-an-organization-secret) endpoints.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/repositories/PUT/requestBody/json/selected_repository_ids`.
-                    public var selected_repository_ids: [Swift.Int]
-                    /// Creates a new `jsonPayload`.
+                    public var selectedRepositoryIds: [Swift.Int]
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
-                    ///   - selected_repository_ids: An array of repository ids that can access the organization secret. You can only provide a list of repository ids when the `visibility` is set to `selected`. You can add and remove individual repositories using the [Set selected repositories for an organization secret](https://docs.github.com/rest/dependabot/secrets#set-selected-repositories-for-an-organization-secret) and [Remove selected repository from an organization secret](https://docs.github.com/rest/dependabot/secrets#remove-selected-repository-from-an-organization-secret) endpoints.
-                    public init(selected_repository_ids: [Swift.Int]) {
-                        self.selected_repository_ids = selected_repository_ids
+                    ///   - selectedRepositoryIds: An array of repository ids that can access the organization secret. You can only provide a list of repository ids when the `visibility` is set to `selected`. You can add and remove individual repositories using the [Set selected repositories for an organization secret](https://docs.github.com/rest/dependabot/secrets#set-selected-repositories-for-an-organization-secret) and [Remove selected repository from an organization secret](https://docs.github.com/rest/dependabot/secrets#remove-selected-repository-from-an-organization-secret) endpoints.
+                    public init(selectedRepositoryIds: [Swift.Int]) {
+                        self.selectedRepositoryIds = selectedRepositoryIds
                     }
                     public enum CodingKeys: String, CodingKey {
-                        case selected_repository_ids
+                        case selectedRepositoryIds = "selected_repository_ids"
                     }
                 }
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/repositories/PUT/requestBody/content/application\/json`.
-                case json(Operations.dependabot_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret.Input.Body.jsonPayload)
+                case json(Operations.DependabotSetSelectedReposForOrgSecret.Input.Body.JsonPayload)
             }
-            public var body: Operations.dependabot_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret.Input.Body
+            public var body: Operations.DependabotSetSelectedReposForOrgSecret.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - body:
             public init(
-                path: Operations.dependabot_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret.Input.Path,
-                body: Operations.dependabot_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret.Input.Body
+                path: Operations.DependabotSetSelectedReposForOrgSecret.Input.Path,
+                body: Operations.DependabotSetSelectedReposForOrgSecret.Input.Body
             ) {
                 self.path = path
                 self.body = body
@@ -5845,12 +5886,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/repositories/put(dependabot/set-selected-repos-for-org-secret)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.dependabot_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret.Output.NoContent)
+            case noContent(Operations.DependabotSetSelectedReposForOrgSecret.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/repositories/put(dependabot/set-selected-repos-for-org-secret)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.dependabot_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret.Output.NoContent {
+            public var noContent: Operations.DependabotSetSelectedReposForOrgSecret.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -5879,7 +5928,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}/put(dependabot/add-selected-repo-to-org-secret)`.
-    public enum dependabot_sol_add_hyphen_selected_hyphen_repo_hyphen_to_hyphen_org_hyphen_secret {
+    public enum DependabotAddSelectedRepoToOrgSecret {
         public static let id: Swift.String = "dependabot/add-selected-repo-to-org-secret"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}/PUT/path`.
@@ -5887,35 +5936,35 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}/PUT/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The name of the secret.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}/PUT/path/secret_name`.
-                public var secret_name: Components.Parameters.secret_hyphen_name
+                public var secretName: Components.Parameters.SecretName
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}/PUT/path/repository_id`.
-                public var repository_id: Swift.Int
+                public var repositoryId: Swift.Int
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - secret_name: The name of the secret.
-                ///   - repository_id:
+                ///   - secretName: The name of the secret.
+                ///   - repositoryId:
                 public init(
-                    org: Components.Parameters.org,
-                    secret_name: Components.Parameters.secret_hyphen_name,
-                    repository_id: Swift.Int
+                    org: Components.Parameters.Org,
+                    secretName: Components.Parameters.SecretName,
+                    repositoryId: Swift.Int
                 ) {
                     self.org = org
-                    self.secret_name = secret_name
-                    self.repository_id = repository_id
+                    self.secretName = secretName
+                    self.repositoryId = repositoryId
                 }
             }
-            public var path: Operations.dependabot_sol_add_hyphen_selected_hyphen_repo_hyphen_to_hyphen_org_hyphen_secret.Input.Path
+            public var path: Operations.DependabotAddSelectedRepoToOrgSecret.Input.Path
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
-            public init(path: Operations.dependabot_sol_add_hyphen_selected_hyphen_repo_hyphen_to_hyphen_org_hyphen_secret.Input.Path) {
+            public init(path: Operations.DependabotAddSelectedRepoToOrgSecret.Input.Path) {
                 self.path = path
             }
         }
@@ -5929,12 +5978,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}/put(dependabot/add-selected-repo-to-org-secret)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.dependabot_sol_add_hyphen_selected_hyphen_repo_hyphen_to_hyphen_org_hyphen_secret.Output.NoContent)
+            case noContent(Operations.DependabotAddSelectedRepoToOrgSecret.Output.NoContent)
+            /// No Content when repository was added to the selected list
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}/put(dependabot/add-selected-repo-to-org-secret)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.dependabot_sol_add_hyphen_selected_hyphen_repo_hyphen_to_hyphen_org_hyphen_secret.Output.NoContent {
+            public var noContent: Operations.DependabotAddSelectedRepoToOrgSecret.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -5956,12 +6013,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}/put(dependabot/add-selected-repo-to-org-secret)/responses/409`.
             ///
             /// HTTP response code: `409 conflict`.
-            case conflict(Operations.dependabot_sol_add_hyphen_selected_hyphen_repo_hyphen_to_hyphen_org_hyphen_secret.Output.Conflict)
+            case conflict(Operations.DependabotAddSelectedRepoToOrgSecret.Output.Conflict)
+            /// Conflict when visibility type is not set to selected
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}/put(dependabot/add-selected-repo-to-org-secret)/responses/409`.
+            ///
+            /// HTTP response code: `409 conflict`.
+            public static var conflict: Self {
+                .conflict(.init())
+            }
             /// The associated value of the enum case if `self` is `.conflict`.
             ///
             /// - Throws: An error if `self` is not `.conflict`.
             /// - SeeAlso: `.conflict`.
-            public var conflict: Operations.dependabot_sol_add_hyphen_selected_hyphen_repo_hyphen_to_hyphen_org_hyphen_secret.Output.Conflict {
+            public var conflict: Operations.DependabotAddSelectedRepoToOrgSecret.Output.Conflict {
                 get throws {
                     switch self {
                     case let .conflict(response):
@@ -5990,7 +6055,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}/delete(dependabot/remove-selected-repo-from-org-secret)`.
-    public enum dependabot_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_secret {
+    public enum DependabotRemoveSelectedRepoFromOrgSecret {
         public static let id: Swift.String = "dependabot/remove-selected-repo-from-org-secret"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}/DELETE/path`.
@@ -5998,35 +6063,35 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}/DELETE/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The name of the secret.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}/DELETE/path/secret_name`.
-                public var secret_name: Components.Parameters.secret_hyphen_name
+                public var secretName: Components.Parameters.SecretName
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}/DELETE/path/repository_id`.
-                public var repository_id: Swift.Int
+                public var repositoryId: Swift.Int
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - secret_name: The name of the secret.
-                ///   - repository_id:
+                ///   - secretName: The name of the secret.
+                ///   - repositoryId:
                 public init(
-                    org: Components.Parameters.org,
-                    secret_name: Components.Parameters.secret_hyphen_name,
-                    repository_id: Swift.Int
+                    org: Components.Parameters.Org,
+                    secretName: Components.Parameters.SecretName,
+                    repositoryId: Swift.Int
                 ) {
                     self.org = org
-                    self.secret_name = secret_name
-                    self.repository_id = repository_id
+                    self.secretName = secretName
+                    self.repositoryId = repositoryId
                 }
             }
-            public var path: Operations.dependabot_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_secret.Input.Path
+            public var path: Operations.DependabotRemoveSelectedRepoFromOrgSecret.Input.Path
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
-            public init(path: Operations.dependabot_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_secret.Input.Path) {
+            public init(path: Operations.DependabotRemoveSelectedRepoFromOrgSecret.Input.Path) {
                 self.path = path
             }
         }
@@ -6040,12 +6105,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}/delete(dependabot/remove-selected-repo-from-org-secret)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.dependabot_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_secret.Output.NoContent)
+            case noContent(Operations.DependabotRemoveSelectedRepoFromOrgSecret.Output.NoContent)
+            /// Response when repository was removed from the selected list
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}/delete(dependabot/remove-selected-repo-from-org-secret)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.dependabot_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_secret.Output.NoContent {
+            public var noContent: Operations.DependabotRemoveSelectedRepoFromOrgSecret.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -6067,12 +6140,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}/delete(dependabot/remove-selected-repo-from-org-secret)/responses/409`.
             ///
             /// HTTP response code: `409 conflict`.
-            case conflict(Operations.dependabot_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_secret.Output.Conflict)
+            case conflict(Operations.DependabotRemoveSelectedRepoFromOrgSecret.Output.Conflict)
+            /// Conflict when visibility type not set to selected
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}/delete(dependabot/remove-selected-repo-from-org-secret)/responses/409`.
+            ///
+            /// HTTP response code: `409 conflict`.
+            public static var conflict: Self {
+                .conflict(.init())
+            }
             /// The associated value of the enum case if `self` is `.conflict`.
             ///
             /// - Throws: An error if `self` is not `.conflict`.
             /// - SeeAlso: `.conflict`.
-            public var conflict: Operations.dependabot_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_secret.Output.Conflict {
+            public var conflict: Operations.DependabotRemoveSelectedRepoFromOrgSecret.Output.Conflict {
                 get throws {
                     switch self {
                     case let .conflict(response):
@@ -6097,7 +6178,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/dependabot/alerts`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/alerts/get(dependabot/list-alerts-for-repo)`.
-    public enum dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_repo {
+    public enum DependabotListAlertsForRepo {
         public static let id: Swift.String = "dependabot/list-alerts-for-repo"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/GET/path`.
@@ -6105,25 +6186,25 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Input.Path
+            public var path: Operations.DependabotListAlertsForRepo.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// A comma-separated list of states. If specified, only alerts with these states will be returned.
@@ -6131,27 +6212,27 @@ public enum Operations {
                 /// Can be: `auto_dismissed`, `dismissed`, `fixed`, `open`
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/GET/query/state`.
-                public var state: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_states?
+                public var state: Components.Parameters.DependabotAlertCommaSeparatedStates?
                 /// A comma-separated list of severities. If specified, only alerts with these severities will be returned.
                 ///
                 /// Can be: `low`, `medium`, `high`, `critical`
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/GET/query/severity`.
-                public var severity: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_severities?
+                public var severity: Components.Parameters.DependabotAlertCommaSeparatedSeverities?
                 /// A comma-separated list of ecosystems. If specified, only alerts for these ecosystems will be returned.
                 ///
                 /// Can be: `composer`, `go`, `maven`, `npm`, `nuget`, `pip`, `pub`, `rubygems`, `rust`
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/GET/query/ecosystem`.
-                public var ecosystem: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_ecosystems?
+                public var ecosystem: Components.Parameters.DependabotAlertCommaSeparatedEcosystems?
                 /// A comma-separated list of package names. If specified, only alerts for these packages will be returned.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/GET/query/package`.
-                public var package: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_packages?
+                public var package: Components.Parameters.DependabotAlertCommaSeparatedPackages?
                 /// A comma-separated list of full manifest paths. If specified, only alerts for these manifests will be returned.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/GET/query/manifest`.
-                public var manifest: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_manifests?
+                public var manifest: Components.Parameters.DependabotAlertCommaSeparatedManifests?
                 /// CVE Exploit Prediction Scoring System (EPSS) percentage. Can be specified as:
                 /// - An exact number (`n`)
                 /// - Comparators such as `>n`, `<n`, `>=n`, `<=n`
@@ -6160,19 +6241,19 @@ public enum Operations {
                 /// Filters the list of alerts based on EPSS percentages. If specified, only alerts with the provided EPSS percentages will be returned.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/GET/query/epss_percentage`.
-                public var epss_percentage: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_epss?
+                public var epssPercentage: Components.Parameters.DependabotAlertCommaSeparatedEpss?
                 /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has`.
-                @frozen public enum dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_has: Codable, Hashable, Sendable {
+                @frozen public enum DependabotAlertCommaSeparatedHas: Codable, Hashable, Sendable {
                     /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has/case1`.
                     case case1(Swift.String)
                     /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has/Case2Payload`.
-                    @frozen public enum Case2PayloadPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum Case2PayloadPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case patch = "patch"
                     }
                     /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has/case2`.
-                    public typealias Case2Payload = [Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_has.Case2PayloadPayload]
+                    public typealias Case2Payload = [Components.Parameters.DependabotAlertCommaSeparatedHas.Case2PayloadPayload]
                     /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has/case2`.
-                    case case2(Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_has.Case2Payload)
+                    case case2(Components.Parameters.DependabotAlertCommaSeparatedHas.Case2Payload)
                     public init(from decoder: any Decoder) throws {
                         var errors: [any Error] = []
                         do {
@@ -6202,25 +6283,25 @@ public enum Operations {
                         }
                     }
                 }
-                /// Filters the list of alerts based on whether the alert has a patch. If specified, only alerts with a patch will be returned.
-                /// Multiple `has` filters can be chained to check if multiple properties are present.
+                /// Filters the list of alerts based on whether the alert has the given value. If specified, only alerts meeting this criterion will be returned.
+                /// Multiple `has` filters can be passed to filter for alerts that have all of the values. Currently, only `patch` is supported.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/GET/query/has`.
-                public var has: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_has?
+                public var has: Components.Parameters.DependabotAlertCommaSeparatedHas?
                 /// - Remark: Generated from `#/components/parameters/dependabot-alert-scope`.
-                @frozen public enum dependabot_hyphen_alert_hyphen_scope: String, Codable, Hashable, Sendable {
+                @frozen public enum DependabotAlertScope: String, Codable, Hashable, Sendable, CaseIterable {
                     case development = "development"
                     case runtime = "runtime"
                 }
                 /// The scope of the vulnerable dependency. If specified, only alerts with this scope will be returned.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/GET/query/scope`.
-                public var scope: Components.Parameters.dependabot_hyphen_alert_hyphen_scope?
+                public var scope: Components.Parameters.DependabotAlertScope?
                 /// - Remark: Generated from `#/components/parameters/dependabot-alert-sort`.
-                @frozen public enum dependabot_hyphen_alert_hyphen_sort: String, Codable, Hashable, Sendable {
+                @frozen public enum DependabotAlertSort: String, Codable, Hashable, Sendable, CaseIterable {
                     case created = "created"
                     case updated = "updated"
-                    case epss_percentage = "epss_percentage"
+                    case epssPercentage = "epss_percentage"
                 }
                 /// The property by which to sort the results.
                 /// `created` means when the alert was created.
@@ -6228,16 +6309,16 @@ public enum Operations {
                 /// `epss_percentage` sorts alerts by the Exploit Prediction Scoring System (EPSS) percentage.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/GET/query/sort`.
-                public var sort: Components.Parameters.dependabot_hyphen_alert_hyphen_sort?
+                public var sort: Components.Parameters.DependabotAlertSort?
                 /// - Remark: Generated from `#/components/parameters/direction`.
-                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                @frozen public enum Direction: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
                 /// The direction to sort the results by.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/GET/query/direction`.
-                public var direction: Components.Parameters.direction?
+                public var direction: Components.Parameters.Direction?
                 /// **Closing down notice**. Page number of the results to fetch. Use cursor-based pagination with `before` or `after` instead.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/GET/query/page`.
@@ -6247,27 +6328,27 @@ public enum Operations {
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/GET/query/per_page`.
                 @available(*, deprecated)
-                public var per_page: Swift.Int?
+                public var perPage: Swift.Int?
                 /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/GET/query/before`.
-                public var before: Components.Parameters.pagination_hyphen_before?
+                public var before: Components.Parameters.PaginationBefore?
                 /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/GET/query/after`.
-                public var after: Components.Parameters.pagination_hyphen_after?
+                public var after: Components.Parameters.PaginationAfter?
                 /// **Deprecated**. The number of results per page (max 100), starting from the first matching result.
                 /// This parameter must not be used in combination with `last`.
                 /// Instead, use `per_page` in combination with `after` to fetch the first page of results.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/GET/query/first`.
-                public var first: Components.Parameters.pagination_hyphen_first?
+                public var first: Components.Parameters.PaginationFirst?
                 /// **Deprecated**. The number of results per page (max 100), starting from the last matching result.
                 /// This parameter must not be used in combination with `first`.
                 /// Instead, use `per_page` in combination with `before` to fetch the last page of results.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/GET/query/last`.
-                public var last: Components.Parameters.pagination_hyphen_last?
+                public var last: Components.Parameters.PaginationLast?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
@@ -6276,66 +6357,66 @@ public enum Operations {
                 ///   - ecosystem: A comma-separated list of ecosystems. If specified, only alerts for these ecosystems will be returned.
                 ///   - package: A comma-separated list of package names. If specified, only alerts for these packages will be returned.
                 ///   - manifest: A comma-separated list of full manifest paths. If specified, only alerts for these manifests will be returned.
-                ///   - epss_percentage: CVE Exploit Prediction Scoring System (EPSS) percentage. Can be specified as:
-                ///   - has: Filters the list of alerts based on whether the alert has a patch. If specified, only alerts with a patch will be returned.
+                ///   - epssPercentage: CVE Exploit Prediction Scoring System (EPSS) percentage. Can be specified as:
+                ///   - has: Filters the list of alerts based on whether the alert has the given value. If specified, only alerts meeting this criterion will be returned.
                 ///   - scope: The scope of the vulnerable dependency. If specified, only alerts with this scope will be returned.
                 ///   - sort: The property by which to sort the results.
                 ///   - direction: The direction to sort the results by.
                 ///   - page: **Closing down notice**. Page number of the results to fetch. Use cursor-based pagination with `before` or `after` instead.
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - before: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - after: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - first: **Deprecated**. The number of results per page (max 100), starting from the first matching result.
                 ///   - last: **Deprecated**. The number of results per page (max 100), starting from the last matching result.
                 public init(
-                    state: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_states? = nil,
-                    severity: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_severities? = nil,
-                    ecosystem: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_ecosystems? = nil,
-                    package: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_packages? = nil,
-                    manifest: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_manifests? = nil,
-                    epss_percentage: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_epss? = nil,
-                    has: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_has? = nil,
-                    scope: Components.Parameters.dependabot_hyphen_alert_hyphen_scope? = nil,
-                    sort: Components.Parameters.dependabot_hyphen_alert_hyphen_sort? = nil,
-                    direction: Components.Parameters.direction? = nil,
+                    state: Components.Parameters.DependabotAlertCommaSeparatedStates? = nil,
+                    severity: Components.Parameters.DependabotAlertCommaSeparatedSeverities? = nil,
+                    ecosystem: Components.Parameters.DependabotAlertCommaSeparatedEcosystems? = nil,
+                    package: Components.Parameters.DependabotAlertCommaSeparatedPackages? = nil,
+                    manifest: Components.Parameters.DependabotAlertCommaSeparatedManifests? = nil,
+                    epssPercentage: Components.Parameters.DependabotAlertCommaSeparatedEpss? = nil,
+                    has: Components.Parameters.DependabotAlertCommaSeparatedHas? = nil,
+                    scope: Components.Parameters.DependabotAlertScope? = nil,
+                    sort: Components.Parameters.DependabotAlertSort? = nil,
+                    direction: Components.Parameters.Direction? = nil,
                     page: Swift.Int? = nil,
-                    per_page: Swift.Int? = nil,
-                    before: Components.Parameters.pagination_hyphen_before? = nil,
-                    after: Components.Parameters.pagination_hyphen_after? = nil,
-                    first: Components.Parameters.pagination_hyphen_first? = nil,
-                    last: Components.Parameters.pagination_hyphen_last? = nil
+                    perPage: Swift.Int? = nil,
+                    before: Components.Parameters.PaginationBefore? = nil,
+                    after: Components.Parameters.PaginationAfter? = nil,
+                    first: Components.Parameters.PaginationFirst? = nil,
+                    last: Components.Parameters.PaginationLast? = nil
                 ) {
                     self.state = state
                     self.severity = severity
                     self.ecosystem = ecosystem
                     self.package = package
                     self.manifest = manifest
-                    self.epss_percentage = epss_percentage
+                    self.epssPercentage = epssPercentage
                     self.has = has
                     self.scope = scope
                     self.sort = sort
                     self.direction = direction
                     self.page = page
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.before = before
                     self.after = after
                     self.first = first
                     self.last = last
                 }
             }
-            public var query: Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Input.Query
+            public var query: Operations.DependabotListAlertsForRepo.Input.Query
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.DependabotListAlertsForRepo.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.DependabotListAlertsForRepo.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Input.Headers
+            public var headers: Operations.DependabotListAlertsForRepo.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -6343,9 +6424,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Input.Path,
-                query: Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Input.Query = .init(),
-                headers: Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Input.Headers = .init()
+                path: Operations.DependabotListAlertsForRepo.Input.Path,
+                query: Operations.DependabotListAlertsForRepo.Input.Query = .init(),
+                headers: Operations.DependabotListAlertsForRepo.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -6357,12 +6438,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.dependabot_hyphen_alert])
+                    case json([Components.Schemas.DependabotAlert])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.dependabot_hyphen_alert] {
+                    public var json: [Components.Schemas.DependabotAlert] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -6372,12 +6453,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Output.Ok.Body
+                public var body: Operations.DependabotListAlertsForRepo.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Output.Ok.Body) {
+                public init(body: Operations.DependabotListAlertsForRepo.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -6386,12 +6467,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/alerts/get(dependabot/list-alerts-for-repo)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Output.Ok)
+            case ok(Operations.DependabotListAlertsForRepo.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Output.Ok {
+            public var ok: Operations.DependabotListAlertsForRepo.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -6409,12 +6490,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/alerts/get(dependabot/list-alerts-for-repo)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/alerts/get(dependabot/list-alerts-for-repo)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -6432,12 +6521,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/alerts/get(dependabot/list-alerts-for-repo)/responses/400`.
             ///
             /// HTTP response code: `400 badRequest`.
-            case badRequest(Components.Responses.bad_request)
+            case badRequest(Components.Responses.BadRequest)
             /// The associated value of the enum case if `self` is `.badRequest`.
             ///
             /// - Throws: An error if `self` is not `.badRequest`.
             /// - SeeAlso: `.badRequest`.
-            public var badRequest: Components.Responses.bad_request {
+            public var badRequest: Components.Responses.BadRequest {
                 get throws {
                     switch self {
                     case let .badRequest(response):
@@ -6455,12 +6544,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/alerts/get(dependabot/list-alerts-for-repo)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -6478,12 +6567,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/alerts/get(dependabot/list-alerts-for-repo)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -6501,12 +6590,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/alerts/get(dependabot/list-alerts-for-repo)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed_simple)
+            case unprocessableContent(Components.Responses.ValidationFailedSimple)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed_simple {
+            public var unprocessableContent: Components.Responses.ValidationFailedSimple {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -6526,14 +6615,14 @@ public enum Operations {
         }
         @frozen public enum AcceptableContentType: AcceptableProtocol {
             case json
-            case application_scim_plus_json
+            case applicationScimJson
             case other(Swift.String)
             public init?(rawValue: Swift.String) {
                 switch rawValue.lowercased() {
                 case "application/json":
                     self = .json
                 case "application/scim+json":
-                    self = .application_scim_plus_json
+                    self = .applicationScimJson
                 default:
                     self = .other(rawValue)
                 }
@@ -6544,14 +6633,14 @@ public enum Operations {
                     return string
                 case .json:
                     return "application/json"
-                case .application_scim_plus_json:
+                case .applicationScimJson:
                     return "application/scim+json"
                 }
             }
             public static var allCases: [Self] {
                 [
                     .json,
-                    .application_scim_plus_json
+                    .applicationScimJson
                 ]
             }
         }
@@ -6562,7 +6651,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/dependabot/alerts/{alert_number}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/alerts/{alert_number}/get(dependabot/get-alert)`.
-    public enum dependabot_sol_get_hyphen_alert {
+    public enum DependabotGetAlert {
         public static let id: Swift.String = "dependabot/get-alert"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/{alert_number}/GET/path`.
@@ -6570,55 +6659,55 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/{alert_number}/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/{alert_number}/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The number that identifies a Dependabot alert in its repository.
                 /// You can find this at the end of the URL for a Dependabot alert within GitHub,
                 /// or in `number` fields in the response from the
                 /// `GET /repos/{owner}/{repo}/dependabot/alerts` operation.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/{alert_number}/GET/path/alert_number`.
-                public var alert_number: Components.Parameters.dependabot_hyphen_alert_hyphen_number
+                public var alertNumber: Components.Parameters.DependabotAlertNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - alert_number: The number that identifies a Dependabot alert in its repository.
+                ///   - alertNumber: The number that identifies a Dependabot alert in its repository.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    alert_number: Components.Parameters.dependabot_hyphen_alert_hyphen_number
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    alertNumber: Components.Parameters.DependabotAlertNumber
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.alert_number = alert_number
+                    self.alertNumber = alertNumber
                 }
             }
-            public var path: Operations.dependabot_sol_get_hyphen_alert.Input.Path
+            public var path: Operations.DependabotGetAlert.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/{alert_number}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.dependabot_sol_get_hyphen_alert.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.DependabotGetAlert.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.dependabot_sol_get_hyphen_alert.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.DependabotGetAlert.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.dependabot_sol_get_hyphen_alert.Input.Headers
+            public var headers: Operations.DependabotGetAlert.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.dependabot_sol_get_hyphen_alert.Input.Path,
-                headers: Operations.dependabot_sol_get_hyphen_alert.Input.Headers = .init()
+                path: Operations.DependabotGetAlert.Input.Path,
+                headers: Operations.DependabotGetAlert.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -6629,12 +6718,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/{alert_number}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/{alert_number}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.dependabot_hyphen_alert)
+                    case json(Components.Schemas.DependabotAlert)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.dependabot_hyphen_alert {
+                    public var json: Components.Schemas.DependabotAlert {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -6644,12 +6733,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.dependabot_sol_get_hyphen_alert.Output.Ok.Body
+                public var body: Operations.DependabotGetAlert.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.dependabot_sol_get_hyphen_alert.Output.Ok.Body) {
+                public init(body: Operations.DependabotGetAlert.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -6658,12 +6747,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/alerts/{alert_number}/get(dependabot/get-alert)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.dependabot_sol_get_hyphen_alert.Output.Ok)
+            case ok(Operations.DependabotGetAlert.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.dependabot_sol_get_hyphen_alert.Output.Ok {
+            public var ok: Operations.DependabotGetAlert.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -6681,12 +6770,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/alerts/{alert_number}/get(dependabot/get-alert)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/alerts/{alert_number}/get(dependabot/get-alert)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -6704,12 +6801,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/alerts/{alert_number}/get(dependabot/get-alert)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -6727,12 +6824,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/alerts/{alert_number}/get(dependabot/get-alert)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -6784,7 +6881,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/dependabot/alerts/{alert_number}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/alerts/{alert_number}/patch(dependabot/update-alert)`.
-    public enum dependabot_sol_update_hyphen_alert {
+    public enum DependabotUpdateAlert {
         public static let id: Swift.String = "dependabot/update-alert"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/{alert_number}/PATCH/path`.
@@ -6792,56 +6889,56 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/{alert_number}/PATCH/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/{alert_number}/PATCH/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The number that identifies a Dependabot alert in its repository.
                 /// You can find this at the end of the URL for a Dependabot alert within GitHub,
                 /// or in `number` fields in the response from the
                 /// `GET /repos/{owner}/{repo}/dependabot/alerts` operation.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/{alert_number}/PATCH/path/alert_number`.
-                public var alert_number: Components.Parameters.dependabot_hyphen_alert_hyphen_number
+                public var alertNumber: Components.Parameters.DependabotAlertNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - alert_number: The number that identifies a Dependabot alert in its repository.
+                ///   - alertNumber: The number that identifies a Dependabot alert in its repository.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    alert_number: Components.Parameters.dependabot_hyphen_alert_hyphen_number
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    alertNumber: Components.Parameters.DependabotAlertNumber
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.alert_number = alert_number
+                    self.alertNumber = alertNumber
                 }
             }
-            public var path: Operations.dependabot_sol_update_hyphen_alert.Input.Path
+            public var path: Operations.DependabotUpdateAlert.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/{alert_number}/PATCH/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.dependabot_sol_update_hyphen_alert.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.DependabotUpdateAlert.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.dependabot_sol_update_hyphen_alert.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.DependabotUpdateAlert.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.dependabot_sol_update_hyphen_alert.Input.Headers
+            public var headers: Operations.DependabotUpdateAlert.Input.Headers
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/{alert_number}/PATCH/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/{alert_number}/PATCH/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The state of the Dependabot alert.
                     /// A `dismissed_reason` must be provided when setting the state to `dismissed`.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/{alert_number}/PATCH/requestBody/json/state`.
-                    @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum StatePayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case dismissed = "dismissed"
                         case open = "open"
                     }
@@ -6849,58 +6946,58 @@ public enum Operations {
                     /// A `dismissed_reason` must be provided when setting the state to `dismissed`.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/{alert_number}/PATCH/requestBody/json/state`.
-                    public var state: Operations.dependabot_sol_update_hyphen_alert.Input.Body.jsonPayload.statePayload
+                    public var state: Operations.DependabotUpdateAlert.Input.Body.JsonPayload.StatePayload
                     /// **Required when `state` is `dismissed`.** A reason for dismissing the alert.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/{alert_number}/PATCH/requestBody/json/dismissed_reason`.
-                    @frozen public enum dismissed_reasonPayload: String, Codable, Hashable, Sendable {
-                        case fix_started = "fix_started"
+                    @frozen public enum DismissedReasonPayload: String, Codable, Hashable, Sendable, CaseIterable {
+                        case fixStarted = "fix_started"
                         case inaccurate = "inaccurate"
-                        case no_bandwidth = "no_bandwidth"
-                        case not_used = "not_used"
-                        case tolerable_risk = "tolerable_risk"
+                        case noBandwidth = "no_bandwidth"
+                        case notUsed = "not_used"
+                        case tolerableRisk = "tolerable_risk"
                     }
                     /// **Required when `state` is `dismissed`.** A reason for dismissing the alert.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/{alert_number}/PATCH/requestBody/json/dismissed_reason`.
-                    public var dismissed_reason: Operations.dependabot_sol_update_hyphen_alert.Input.Body.jsonPayload.dismissed_reasonPayload?
+                    public var dismissedReason: Operations.DependabotUpdateAlert.Input.Body.JsonPayload.DismissedReasonPayload?
                     /// An optional comment associated with dismissing the alert.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/{alert_number}/PATCH/requestBody/json/dismissed_comment`.
-                    public var dismissed_comment: Swift.String?
-                    /// Creates a new `jsonPayload`.
+                    public var dismissedComment: Swift.String?
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - state: The state of the Dependabot alert.
-                    ///   - dismissed_reason: **Required when `state` is `dismissed`.** A reason for dismissing the alert.
-                    ///   - dismissed_comment: An optional comment associated with dismissing the alert.
+                    ///   - dismissedReason: **Required when `state` is `dismissed`.** A reason for dismissing the alert.
+                    ///   - dismissedComment: An optional comment associated with dismissing the alert.
                     public init(
-                        state: Operations.dependabot_sol_update_hyphen_alert.Input.Body.jsonPayload.statePayload,
-                        dismissed_reason: Operations.dependabot_sol_update_hyphen_alert.Input.Body.jsonPayload.dismissed_reasonPayload? = nil,
-                        dismissed_comment: Swift.String? = nil
+                        state: Operations.DependabotUpdateAlert.Input.Body.JsonPayload.StatePayload,
+                        dismissedReason: Operations.DependabotUpdateAlert.Input.Body.JsonPayload.DismissedReasonPayload? = nil,
+                        dismissedComment: Swift.String? = nil
                     ) {
                         self.state = state
-                        self.dismissed_reason = dismissed_reason
-                        self.dismissed_comment = dismissed_comment
+                        self.dismissedReason = dismissedReason
+                        self.dismissedComment = dismissedComment
                     }
                     public enum CodingKeys: String, CodingKey {
                         case state
-                        case dismissed_reason
-                        case dismissed_comment
+                        case dismissedReason = "dismissed_reason"
+                        case dismissedComment = "dismissed_comment"
                     }
                     public init(from decoder: any Decoder) throws {
                         let container = try decoder.container(keyedBy: CodingKeys.self)
-                        state = try container.decode(
-                            Operations.dependabot_sol_update_hyphen_alert.Input.Body.jsonPayload.statePayload.self,
+                        self.state = try container.decode(
+                            Operations.DependabotUpdateAlert.Input.Body.JsonPayload.StatePayload.self,
                             forKey: .state
                         )
-                        dismissed_reason = try container.decodeIfPresent(
-                            Operations.dependabot_sol_update_hyphen_alert.Input.Body.jsonPayload.dismissed_reasonPayload.self,
-                            forKey: .dismissed_reason
+                        self.dismissedReason = try container.decodeIfPresent(
+                            Operations.DependabotUpdateAlert.Input.Body.JsonPayload.DismissedReasonPayload.self,
+                            forKey: .dismissedReason
                         )
-                        dismissed_comment = try container.decodeIfPresent(
+                        self.dismissedComment = try container.decodeIfPresent(
                             Swift.String.self,
-                            forKey: .dismissed_comment
+                            forKey: .dismissedComment
                         )
                         try decoder.ensureNoAdditionalProperties(knownKeys: [
                             "state",
@@ -6910,9 +7007,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/{alert_number}/PATCH/requestBody/content/application\/json`.
-                case json(Operations.dependabot_sol_update_hyphen_alert.Input.Body.jsonPayload)
+                case json(Operations.DependabotUpdateAlert.Input.Body.JsonPayload)
             }
-            public var body: Operations.dependabot_sol_update_hyphen_alert.Input.Body
+            public var body: Operations.DependabotUpdateAlert.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -6920,9 +7017,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.dependabot_sol_update_hyphen_alert.Input.Path,
-                headers: Operations.dependabot_sol_update_hyphen_alert.Input.Headers = .init(),
-                body: Operations.dependabot_sol_update_hyphen_alert.Input.Body
+                path: Operations.DependabotUpdateAlert.Input.Path,
+                headers: Operations.DependabotUpdateAlert.Input.Headers = .init(),
+                body: Operations.DependabotUpdateAlert.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -6934,12 +7031,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/{alert_number}/PATCH/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/{alert_number}/PATCH/responses/200/content/application\/json`.
-                    case json(Components.Schemas.dependabot_hyphen_alert)
+                    case json(Components.Schemas.DependabotAlert)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.dependabot_hyphen_alert {
+                    public var json: Components.Schemas.DependabotAlert {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -6949,12 +7046,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.dependabot_sol_update_hyphen_alert.Output.Ok.Body
+                public var body: Operations.DependabotUpdateAlert.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.dependabot_sol_update_hyphen_alert.Output.Ok.Body) {
+                public init(body: Operations.DependabotUpdateAlert.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -6963,12 +7060,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/alerts/{alert_number}/patch(dependabot/update-alert)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.dependabot_sol_update_hyphen_alert.Output.Ok)
+            case ok(Operations.DependabotUpdateAlert.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.dependabot_sol_update_hyphen_alert.Output.Ok {
+            public var ok: Operations.DependabotUpdateAlert.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -6986,12 +7083,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/alerts/{alert_number}/patch(dependabot/update-alert)/responses/400`.
             ///
             /// HTTP response code: `400 badRequest`.
-            case badRequest(Components.Responses.bad_request)
+            case badRequest(Components.Responses.BadRequest)
             /// The associated value of the enum case if `self` is `.badRequest`.
             ///
             /// - Throws: An error if `self` is not `.badRequest`.
             /// - SeeAlso: `.badRequest`.
-            public var badRequest: Components.Responses.bad_request {
+            public var badRequest: Components.Responses.BadRequest {
                 get throws {
                     switch self {
                     case let .badRequest(response):
@@ -7009,12 +7106,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/alerts/{alert_number}/patch(dependabot/update-alert)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -7032,12 +7129,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/alerts/{alert_number}/patch(dependabot/update-alert)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -7055,12 +7152,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/alerts/{alert_number}/patch(dependabot/update-alert)/responses/409`.
             ///
             /// HTTP response code: `409 conflict`.
-            case conflict(Components.Responses.conflict)
+            case conflict(Components.Responses.Conflict)
             /// The associated value of the enum case if `self` is `.conflict`.
             ///
             /// - Throws: An error if `self` is not `.conflict`.
             /// - SeeAlso: `.conflict`.
-            public var conflict: Components.Responses.conflict {
+            public var conflict: Components.Responses.Conflict {
                 get throws {
                     switch self {
                     case let .conflict(response):
@@ -7078,12 +7175,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/alerts/{alert_number}/patch(dependabot/update-alert)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed_simple)
+            case unprocessableContent(Components.Responses.ValidationFailedSimple)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed_simple {
+            public var unprocessableContent: Components.Responses.ValidationFailedSimple {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -7103,14 +7200,14 @@ public enum Operations {
         }
         @frozen public enum AcceptableContentType: AcceptableProtocol {
             case json
-            case application_scim_plus_json
+            case applicationScimJson
             case other(Swift.String)
             public init?(rawValue: Swift.String) {
                 switch rawValue.lowercased() {
                 case "application/json":
                     self = .json
                 case "application/scim+json":
-                    self = .application_scim_plus_json
+                    self = .applicationScimJson
                 default:
                     self = .other(rawValue)
                 }
@@ -7121,14 +7218,14 @@ public enum Operations {
                     return string
                 case .json:
                     return "application/json"
-                case .application_scim_plus_json:
+                case .applicationScimJson:
                     return "application/scim+json"
                 }
             }
             public static var allCases: [Self] {
                 [
                     .json,
-                    .application_scim_plus_json
+                    .applicationScimJson
                 ]
             }
         }
@@ -7142,7 +7239,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/dependabot/secrets`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/secrets/get(dependabot/list-repo-secrets)`.
-    public enum dependabot_sol_list_hyphen_repo_hyphen_secrets {
+    public enum DependabotListRepoSecrets {
         public static let id: Swift.String = "dependabot/list-repo-secrets"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/secrets/GET/path`.
@@ -7150,61 +7247,61 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/secrets/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/secrets/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.dependabot_sol_list_hyphen_repo_hyphen_secrets.Input.Path
+            public var path: Operations.DependabotListRepoSecrets.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/secrets/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/secrets/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/secrets/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.dependabot_sol_list_hyphen_repo_hyphen_secrets.Input.Query
+            public var query: Operations.DependabotListRepoSecrets.Input.Query
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/secrets/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.dependabot_sol_list_hyphen_repo_hyphen_secrets.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.DependabotListRepoSecrets.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.dependabot_sol_list_hyphen_repo_hyphen_secrets.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.DependabotListRepoSecrets.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.dependabot_sol_list_hyphen_repo_hyphen_secrets.Input.Headers
+            public var headers: Operations.DependabotListRepoSecrets.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -7212,9 +7309,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.dependabot_sol_list_hyphen_repo_hyphen_secrets.Input.Path,
-                query: Operations.dependabot_sol_list_hyphen_repo_hyphen_secrets.Input.Query = .init(),
-                headers: Operations.dependabot_sol_list_hyphen_repo_hyphen_secrets.Input.Headers = .init()
+                path: Operations.DependabotListRepoSecrets.Input.Path,
+                query: Operations.DependabotListRepoSecrets.Input.Query = .init(),
+                headers: Operations.DependabotListRepoSecrets.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -7226,49 +7323,49 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/secrets/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/secrets/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.dependabot_sol_list_hyphen_repo_hyphen_secrets.Output.Ok.Headers
+                public var headers: Operations.DependabotListRepoSecrets.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/secrets/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/secrets/GET/responses/200/content/json`.
-                    public struct jsonPayload: Codable, Hashable, Sendable {
+                    public struct JsonPayload: Codable, Hashable, Sendable {
                         /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/secrets/GET/responses/200/content/json/total_count`.
-                        public var total_count: Swift.Int
+                        public var totalCount: Swift.Int
                         /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/secrets/GET/responses/200/content/json/secrets`.
-                        public var secrets: [Components.Schemas.dependabot_hyphen_secret]
-                        /// Creates a new `jsonPayload`.
+                        public var secrets: [Components.Schemas.DependabotSecret]
+                        /// Creates a new `JsonPayload`.
                         ///
                         /// - Parameters:
-                        ///   - total_count:
+                        ///   - totalCount:
                         ///   - secrets:
                         public init(
-                            total_count: Swift.Int,
-                            secrets: [Components.Schemas.dependabot_hyphen_secret]
+                            totalCount: Swift.Int,
+                            secrets: [Components.Schemas.DependabotSecret]
                         ) {
-                            self.total_count = total_count
+                            self.totalCount = totalCount
                             self.secrets = secrets
                         }
                         public enum CodingKeys: String, CodingKey {
-                            case total_count
+                            case totalCount = "total_count"
                             case secrets
                         }
                     }
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/secrets/GET/responses/200/content/application\/json`.
-                    case json(Operations.dependabot_sol_list_hyphen_repo_hyphen_secrets.Output.Ok.Body.jsonPayload)
+                    case json(Operations.DependabotListRepoSecrets.Output.Ok.Body.JsonPayload)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Operations.dependabot_sol_list_hyphen_repo_hyphen_secrets.Output.Ok.Body.jsonPayload {
+                    public var json: Operations.DependabotListRepoSecrets.Output.Ok.Body.JsonPayload {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -7278,15 +7375,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.dependabot_sol_list_hyphen_repo_hyphen_secrets.Output.Ok.Body
+                public var body: Operations.DependabotListRepoSecrets.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.dependabot_sol_list_hyphen_repo_hyphen_secrets.Output.Ok.Headers = .init(),
-                    body: Operations.dependabot_sol_list_hyphen_repo_hyphen_secrets.Output.Ok.Body
+                    headers: Operations.DependabotListRepoSecrets.Output.Ok.Headers = .init(),
+                    body: Operations.DependabotListRepoSecrets.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -7297,12 +7394,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/secrets/get(dependabot/list-repo-secrets)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.dependabot_sol_list_hyphen_repo_hyphen_secrets.Output.Ok)
+            case ok(Operations.DependabotListRepoSecrets.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.dependabot_sol_list_hyphen_repo_hyphen_secrets.Output.Ok {
+            public var ok: Operations.DependabotListRepoSecrets.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -7356,7 +7453,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/dependabot/secrets/public-key`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/secrets/public-key/get(dependabot/get-repo-public-key)`.
-    public enum dependabot_sol_get_hyphen_repo_hyphen_public_hyphen_key {
+    public enum DependabotGetRepoPublicKey {
         public static let id: Swift.String = "dependabot/get-repo-public-key"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/secrets/public-key/GET/path`.
@@ -7364,45 +7461,45 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/secrets/public-key/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/secrets/public-key/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.dependabot_sol_get_hyphen_repo_hyphen_public_hyphen_key.Input.Path
+            public var path: Operations.DependabotGetRepoPublicKey.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/secrets/public-key/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.dependabot_sol_get_hyphen_repo_hyphen_public_hyphen_key.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.DependabotGetRepoPublicKey.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.dependabot_sol_get_hyphen_repo_hyphen_public_hyphen_key.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.DependabotGetRepoPublicKey.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.dependabot_sol_get_hyphen_repo_hyphen_public_hyphen_key.Input.Headers
+            public var headers: Operations.DependabotGetRepoPublicKey.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.dependabot_sol_get_hyphen_repo_hyphen_public_hyphen_key.Input.Path,
-                headers: Operations.dependabot_sol_get_hyphen_repo_hyphen_public_hyphen_key.Input.Headers = .init()
+                path: Operations.DependabotGetRepoPublicKey.Input.Path,
+                headers: Operations.DependabotGetRepoPublicKey.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -7413,12 +7510,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/secrets/public-key/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/secrets/public-key/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.dependabot_hyphen_public_hyphen_key)
+                    case json(Components.Schemas.DependabotPublicKey)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.dependabot_hyphen_public_hyphen_key {
+                    public var json: Components.Schemas.DependabotPublicKey {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -7428,12 +7525,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.dependabot_sol_get_hyphen_repo_hyphen_public_hyphen_key.Output.Ok.Body
+                public var body: Operations.DependabotGetRepoPublicKey.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.dependabot_sol_get_hyphen_repo_hyphen_public_hyphen_key.Output.Ok.Body) {
+                public init(body: Operations.DependabotGetRepoPublicKey.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -7442,12 +7539,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/secrets/public-key/get(dependabot/get-repo-public-key)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.dependabot_sol_get_hyphen_repo_hyphen_public_hyphen_key.Output.Ok)
+            case ok(Operations.DependabotGetRepoPublicKey.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.dependabot_sol_get_hyphen_repo_hyphen_public_hyphen_key.Output.Ok {
+            public var ok: Operations.DependabotGetRepoPublicKey.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -7499,7 +7596,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/dependabot/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/secrets/{secret_name}/get(dependabot/get-repo-secret)`.
-    public enum dependabot_sol_get_hyphen_repo_hyphen_secret {
+    public enum DependabotGetRepoSecret {
         public static let id: Swift.String = "dependabot/get-repo-secret"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/secrets/{secret_name}/GET/path`.
@@ -7507,52 +7604,52 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/secrets/{secret_name}/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/secrets/{secret_name}/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The name of the secret.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/secrets/{secret_name}/GET/path/secret_name`.
-                public var secret_name: Components.Parameters.secret_hyphen_name
+                public var secretName: Components.Parameters.SecretName
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - secret_name: The name of the secret.
+                ///   - secretName: The name of the secret.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    secret_name: Components.Parameters.secret_hyphen_name
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    secretName: Components.Parameters.SecretName
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.secret_name = secret_name
+                    self.secretName = secretName
                 }
             }
-            public var path: Operations.dependabot_sol_get_hyphen_repo_hyphen_secret.Input.Path
+            public var path: Operations.DependabotGetRepoSecret.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/secrets/{secret_name}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.dependabot_sol_get_hyphen_repo_hyphen_secret.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.DependabotGetRepoSecret.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.dependabot_sol_get_hyphen_repo_hyphen_secret.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.DependabotGetRepoSecret.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.dependabot_sol_get_hyphen_repo_hyphen_secret.Input.Headers
+            public var headers: Operations.DependabotGetRepoSecret.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.dependabot_sol_get_hyphen_repo_hyphen_secret.Input.Path,
-                headers: Operations.dependabot_sol_get_hyphen_repo_hyphen_secret.Input.Headers = .init()
+                path: Operations.DependabotGetRepoSecret.Input.Path,
+                headers: Operations.DependabotGetRepoSecret.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -7563,12 +7660,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/secrets/{secret_name}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/secrets/{secret_name}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.dependabot_hyphen_secret)
+                    case json(Components.Schemas.DependabotSecret)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.dependabot_hyphen_secret {
+                    public var json: Components.Schemas.DependabotSecret {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -7578,12 +7675,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.dependabot_sol_get_hyphen_repo_hyphen_secret.Output.Ok.Body
+                public var body: Operations.DependabotGetRepoSecret.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.dependabot_sol_get_hyphen_repo_hyphen_secret.Output.Ok.Body) {
+                public init(body: Operations.DependabotGetRepoSecret.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -7592,12 +7689,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/secrets/{secret_name}/get(dependabot/get-repo-secret)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.dependabot_sol_get_hyphen_repo_hyphen_secret.Output.Ok)
+            case ok(Operations.DependabotGetRepoSecret.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.dependabot_sol_get_hyphen_repo_hyphen_secret.Output.Ok {
+            public var ok: Operations.DependabotGetRepoSecret.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -7650,7 +7747,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/dependabot/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/secrets/{secret_name}/put(dependabot/create-or-update-repo-secret)`.
-    public enum dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret {
+    public enum DependabotCreateOrUpdateRepoSecret {
         public static let id: Swift.String = "dependabot/create-or-update-repo-secret"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/secrets/{secret_name}/PUT/path`.
@@ -7658,77 +7755,77 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/secrets/{secret_name}/PUT/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/secrets/{secret_name}/PUT/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The name of the secret.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/secrets/{secret_name}/PUT/path/secret_name`.
-                public var secret_name: Components.Parameters.secret_hyphen_name
+                public var secretName: Components.Parameters.SecretName
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - secret_name: The name of the secret.
+                ///   - secretName: The name of the secret.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    secret_name: Components.Parameters.secret_hyphen_name
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    secretName: Components.Parameters.SecretName
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.secret_name = secret_name
+                    self.secretName = secretName
                 }
             }
-            public var path: Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret.Input.Path
+            public var path: Operations.DependabotCreateOrUpdateRepoSecret.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/secrets/{secret_name}/PUT/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.DependabotCreateOrUpdateRepoSecret.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.DependabotCreateOrUpdateRepoSecret.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret.Input.Headers
+            public var headers: Operations.DependabotCreateOrUpdateRepoSecret.Input.Headers
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/secrets/{secret_name}/PUT/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/secrets/{secret_name}/PUT/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// Value for your secret, encrypted with [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages) using the public key retrieved from the [Get a repository public key](https://docs.github.com/rest/dependabot/secrets#get-a-repository-public-key) endpoint.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/secrets/{secret_name}/PUT/requestBody/json/encrypted_value`.
-                    public var encrypted_value: Swift.String?
+                    public var encryptedValue: Swift.String?
                     /// ID of the key you used to encrypt the secret.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/secrets/{secret_name}/PUT/requestBody/json/key_id`.
-                    public var key_id: Swift.String?
-                    /// Creates a new `jsonPayload`.
+                    public var keyId: Swift.String?
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
-                    ///   - encrypted_value: Value for your secret, encrypted with [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages) using the public key retrieved from the [Get a repository public key](https://docs.github.com/rest/dependabot/secrets#get-a-repository-public-key) endpoint.
-                    ///   - key_id: ID of the key you used to encrypt the secret.
+                    ///   - encryptedValue: Value for your secret, encrypted with [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages) using the public key retrieved from the [Get a repository public key](https://docs.github.com/rest/dependabot/secrets#get-a-repository-public-key) endpoint.
+                    ///   - keyId: ID of the key you used to encrypt the secret.
                     public init(
-                        encrypted_value: Swift.String? = nil,
-                        key_id: Swift.String? = nil
+                        encryptedValue: Swift.String? = nil,
+                        keyId: Swift.String? = nil
                     ) {
-                        self.encrypted_value = encrypted_value
-                        self.key_id = key_id
+                        self.encryptedValue = encryptedValue
+                        self.keyId = keyId
                     }
                     public enum CodingKeys: String, CodingKey {
-                        case encrypted_value
-                        case key_id
+                        case encryptedValue = "encrypted_value"
+                        case keyId = "key_id"
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/secrets/{secret_name}/PUT/requestBody/content/application\/json`.
-                case json(Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret.Input.Body.jsonPayload)
+                case json(Operations.DependabotCreateOrUpdateRepoSecret.Input.Body.JsonPayload)
             }
-            public var body: Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret.Input.Body
+            public var body: Operations.DependabotCreateOrUpdateRepoSecret.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -7736,9 +7833,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret.Input.Path,
-                headers: Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret.Input.Headers = .init(),
-                body: Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret.Input.Body
+                path: Operations.DependabotCreateOrUpdateRepoSecret.Input.Path,
+                headers: Operations.DependabotCreateOrUpdateRepoSecret.Input.Headers = .init(),
+                body: Operations.DependabotCreateOrUpdateRepoSecret.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -7750,12 +7847,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/secrets/{secret_name}/PUT/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/secrets/{secret_name}/PUT/responses/201/content/application\/json`.
-                    case json(Components.Schemas.empty_hyphen_object)
+                    case json(Components.Schemas.EmptyObject)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.empty_hyphen_object {
+                    public var json: Components.Schemas.EmptyObject {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -7765,12 +7862,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret.Output.Created.Body
+                public var body: Operations.DependabotCreateOrUpdateRepoSecret.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret.Output.Created.Body) {
+                public init(body: Operations.DependabotCreateOrUpdateRepoSecret.Output.Created.Body) {
                     self.body = body
                 }
             }
@@ -7779,12 +7876,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/secrets/{secret_name}/put(dependabot/create-or-update-repo-secret)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret.Output.Created)
+            case created(Operations.DependabotCreateOrUpdateRepoSecret.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret.Output.Created {
+            public var created: Operations.DependabotCreateOrUpdateRepoSecret.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -7806,12 +7903,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/secrets/{secret_name}/put(dependabot/create-or-update-repo-secret)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret.Output.NoContent)
+            case noContent(Operations.DependabotCreateOrUpdateRepoSecret.Output.NoContent)
+            /// Response when updating a secret
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/secrets/{secret_name}/put(dependabot/create-or-update-repo-secret)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret.Output.NoContent {
+            public var noContent: Operations.DependabotCreateOrUpdateRepoSecret.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -7863,7 +7968,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/dependabot/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/secrets/{secret_name}/delete(dependabot/delete-repo-secret)`.
-    public enum dependabot_sol_delete_hyphen_repo_hyphen_secret {
+    public enum DependabotDeleteRepoSecret {
         public static let id: Swift.String = "dependabot/delete-repo-secret"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/secrets/{secret_name}/DELETE/path`.
@@ -7871,37 +7976,37 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/secrets/{secret_name}/DELETE/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/secrets/{secret_name}/DELETE/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The name of the secret.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/secrets/{secret_name}/DELETE/path/secret_name`.
-                public var secret_name: Components.Parameters.secret_hyphen_name
+                public var secretName: Components.Parameters.SecretName
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - secret_name: The name of the secret.
+                ///   - secretName: The name of the secret.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    secret_name: Components.Parameters.secret_hyphen_name
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    secretName: Components.Parameters.SecretName
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.secret_name = secret_name
+                    self.secretName = secretName
                 }
             }
-            public var path: Operations.dependabot_sol_delete_hyphen_repo_hyphen_secret.Input.Path
+            public var path: Operations.DependabotDeleteRepoSecret.Input.Path
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
-            public init(path: Operations.dependabot_sol_delete_hyphen_repo_hyphen_secret.Input.Path) {
+            public init(path: Operations.DependabotDeleteRepoSecret.Input.Path) {
                 self.path = path
             }
         }
@@ -7915,12 +8020,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/secrets/{secret_name}/delete(dependabot/delete-repo-secret)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.dependabot_sol_delete_hyphen_repo_hyphen_secret.Output.NoContent)
+            case noContent(Operations.DependabotDeleteRepoSecret.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/secrets/{secret_name}/delete(dependabot/delete-repo-secret)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.dependabot_sol_delete_hyphen_repo_hyphen_secret.Output.NoContent {
+            public var noContent: Operations.DependabotDeleteRepoSecret.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):

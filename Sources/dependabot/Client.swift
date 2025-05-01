@@ -50,10 +50,10 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /enterprises/{enterprise}/dependabot/alerts`.
     /// - Remark: Generated from `#/paths//enterprises/{enterprise}/dependabot/alerts/get(dependabot/list-alerts-for-enterprise)`.
-    public func dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise(_ input: Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.Input) async throws -> Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.Output {
+    public func dependabotListAlertsForEnterprise(_ input: Operations.DependabotListAlertsForEnterprise.Input) async throws -> Operations.DependabotListAlertsForEnterprise.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.id,
+            forOperation: Operations.DependabotListAlertsForEnterprise.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/enterprises/{}/dependabot/alerts",
@@ -99,7 +99,7 @@ public struct Client: APIProtocol {
                     style: .form,
                     explode: true,
                     name: "epss_percentage",
-                    value: input.query.epss_percentage
+                    value: input.query.epssPercentage
                 )
                 try converter.setQueryItemAsURI(
                     in: &request,
@@ -162,7 +162,7 @@ public struct Client: APIProtocol {
                     style: .form,
                     explode: true,
                     name: "per_page",
-                    value: input.query.per_page
+                    value: input.query.perPage
                 )
                 converter.setAcceptHeader(
                     in: &request.headerFields,
@@ -174,7 +174,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.Output.Ok.Body
+                    let body: Operations.DependabotListAlertsForEnterprise.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -184,7 +184,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            [Components.Schemas.dependabot_hyphen_alert_hyphen_with_hyphen_repository].self,
+                            [Components.Schemas.DependabotAlertWithRepository].self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -198,7 +198,7 @@ public struct Client: APIProtocol {
                     return .notModified(.init())
                 case 403:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.forbidden.Body
+                    let body: Components.Responses.Forbidden.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -208,7 +208,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -220,7 +220,7 @@ public struct Client: APIProtocol {
                     return .forbidden(.init(body: body))
                 case 404:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.not_found.Body
+                    let body: Components.Responses.NotFound.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -230,7 +230,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -242,7 +242,7 @@ public struct Client: APIProtocol {
                     return .notFound(.init(body: body))
                 case 422:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.validation_failed_simple.Body
+                    let body: Components.Responses.ValidationFailedSimple.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -252,7 +252,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.validation_hyphen_error_hyphen_simple.self,
+                            Components.Schemas.ValidationErrorSimple.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -284,10 +284,10 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/dependabot/alerts`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/alerts/get(dependabot/list-alerts-for-org)`.
-    public func dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_org(_ input: Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Input) async throws -> Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Output {
+    public func dependabotListAlertsForOrg(_ input: Operations.DependabotListAlertsForOrg.Input) async throws -> Operations.DependabotListAlertsForOrg.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_org.id,
+            forOperation: Operations.DependabotListAlertsForOrg.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/dependabot/alerts",
@@ -333,7 +333,7 @@ public struct Client: APIProtocol {
                     style: .form,
                     explode: true,
                     name: "epss_percentage",
-                    value: input.query.epss_percentage
+                    value: input.query.epssPercentage
                 )
                 try converter.setQueryItemAsURI(
                     in: &request,
@@ -396,7 +396,7 @@ public struct Client: APIProtocol {
                     style: .form,
                     explode: true,
                     name: "per_page",
-                    value: input.query.per_page
+                    value: input.query.perPage
                 )
                 converter.setAcceptHeader(
                     in: &request.headerFields,
@@ -408,7 +408,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Output.Ok.Body
+                    let body: Operations.DependabotListAlertsForOrg.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -418,7 +418,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            [Components.Schemas.dependabot_hyphen_alert_hyphen_with_hyphen_repository].self,
+                            [Components.Schemas.DependabotAlertWithRepository].self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -432,7 +432,7 @@ public struct Client: APIProtocol {
                     return .notModified(.init())
                 case 400:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.bad_request.Body
+                    let body: Components.Responses.BadRequest.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -443,7 +443,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -451,10 +451,10 @@ public struct Client: APIProtocol {
                         )
                     case "application/scim+json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.scim_hyphen_error.self,
+                            Components.Schemas.ScimError.self,
                             from: responseBody,
                             transforming: { value in
-                                .application_scim_plus_json(value)
+                                .applicationScimJson(value)
                             }
                         )
                     default:
@@ -463,7 +463,7 @@ public struct Client: APIProtocol {
                     return .badRequest(.init(body: body))
                 case 403:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.forbidden.Body
+                    let body: Components.Responses.Forbidden.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -473,7 +473,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -485,7 +485,7 @@ public struct Client: APIProtocol {
                     return .forbidden(.init(body: body))
                 case 404:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.not_found.Body
+                    let body: Components.Responses.NotFound.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -495,7 +495,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -507,7 +507,7 @@ public struct Client: APIProtocol {
                     return .notFound(.init(body: body))
                 case 422:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.validation_failed_simple.Body
+                    let body: Components.Responses.ValidationFailedSimple.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -517,7 +517,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.validation_hyphen_error_hyphen_simple.self,
+                            Components.Schemas.ValidationErrorSimple.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -548,10 +548,10 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/dependabot/secrets`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/get(dependabot/list-org-secrets)`.
-    public func dependabot_sol_list_hyphen_org_hyphen_secrets(_ input: Operations.dependabot_sol_list_hyphen_org_hyphen_secrets.Input) async throws -> Operations.dependabot_sol_list_hyphen_org_hyphen_secrets.Output {
+    public func dependabotListOrgSecrets(_ input: Operations.DependabotListOrgSecrets.Input) async throws -> Operations.DependabotListOrgSecrets.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.dependabot_sol_list_hyphen_org_hyphen_secrets.id,
+            forOperation: Operations.DependabotListOrgSecrets.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/dependabot/secrets",
@@ -569,7 +569,7 @@ public struct Client: APIProtocol {
                     style: .form,
                     explode: true,
                     name: "per_page",
-                    value: input.query.per_page
+                    value: input.query.perPage
                 )
                 try converter.setQueryItemAsURI(
                     in: &request,
@@ -587,13 +587,13 @@ public struct Client: APIProtocol {
             deserializer: { response, responseBody in
                 switch response.status.code {
                 case 200:
-                    let headers: Operations.dependabot_sol_list_hyphen_org_hyphen_secrets.Output.Ok.Headers = .init(Link: try converter.getOptionalHeaderFieldAsURI(
+                    let headers: Operations.DependabotListOrgSecrets.Output.Ok.Headers = .init(link: try converter.getOptionalHeaderFieldAsURI(
                         in: response.headerFields,
                         name: "Link",
-                        as: Components.Headers.link.self
+                        as: Components.Headers.Link.self
                     ))
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.dependabot_sol_list_hyphen_org_hyphen_secrets.Output.Ok.Body
+                    let body: Operations.DependabotListOrgSecrets.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -603,7 +603,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Operations.dependabot_sol_list_hyphen_org_hyphen_secrets.Output.Ok.Body.jsonPayload.self,
+                            Operations.DependabotListOrgSecrets.Output.Ok.Body.JsonPayload.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -637,10 +637,10 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/dependabot/secrets/public-key`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/public-key/get(dependabot/get-org-public-key)`.
-    public func dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key(_ input: Operations.dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key.Input) async throws -> Operations.dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key.Output {
+    public func dependabotGetOrgPublicKey(_ input: Operations.DependabotGetOrgPublicKey.Input) async throws -> Operations.DependabotGetOrgPublicKey.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key.id,
+            forOperation: Operations.DependabotGetOrgPublicKey.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/dependabot/secrets/public-key",
@@ -663,7 +663,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key.Output.Ok.Body
+                    let body: Operations.DependabotGetOrgPublicKey.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -673,7 +673,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.dependabot_hyphen_public_hyphen_key.self,
+                            Components.Schemas.DependabotPublicKey.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -703,16 +703,16 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/dependabot/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/get(dependabot/get-org-secret)`.
-    public func dependabot_sol_get_hyphen_org_hyphen_secret(_ input: Operations.dependabot_sol_get_hyphen_org_hyphen_secret.Input) async throws -> Operations.dependabot_sol_get_hyphen_org_hyphen_secret.Output {
+    public func dependabotGetOrgSecret(_ input: Operations.DependabotGetOrgSecret.Input) async throws -> Operations.DependabotGetOrgSecret.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.dependabot_sol_get_hyphen_org_hyphen_secret.id,
+            forOperation: Operations.DependabotGetOrgSecret.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/dependabot/secrets/{}",
                     parameters: [
                         input.path.org,
-                        input.path.secret_name
+                        input.path.secretName
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -730,7 +730,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.dependabot_sol_get_hyphen_org_hyphen_secret.Output.Ok.Body
+                    let body: Operations.DependabotGetOrgSecret.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -740,7 +740,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.organization_hyphen_dependabot_hyphen_secret.self,
+                            Components.Schemas.OrganizationDependabotSecret.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -771,16 +771,16 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/dependabot/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/put(dependabot/create-or-update-org-secret)`.
-    public func dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret(_ input: Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret.Input) async throws -> Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret.Output {
+    public func dependabotCreateOrUpdateOrgSecret(_ input: Operations.DependabotCreateOrUpdateOrgSecret.Input) async throws -> Operations.DependabotCreateOrUpdateOrgSecret.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret.id,
+            forOperation: Operations.DependabotCreateOrUpdateOrgSecret.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/dependabot/secrets/{}",
                     parameters: [
                         input.path.org,
-                        input.path.secret_name
+                        input.path.secretName
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -807,7 +807,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 201:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret.Output.Created.Body
+                    let body: Operations.DependabotCreateOrUpdateOrgSecret.Output.Created.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -817,7 +817,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.empty_hyphen_object.self,
+                            Components.Schemas.EmptyObject.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -849,16 +849,16 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/dependabot/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/delete(dependabot/delete-org-secret)`.
-    public func dependabot_sol_delete_hyphen_org_hyphen_secret(_ input: Operations.dependabot_sol_delete_hyphen_org_hyphen_secret.Input) async throws -> Operations.dependabot_sol_delete_hyphen_org_hyphen_secret.Output {
+    public func dependabotDeleteOrgSecret(_ input: Operations.DependabotDeleteOrgSecret.Input) async throws -> Operations.DependabotDeleteOrgSecret.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.dependabot_sol_delete_hyphen_org_hyphen_secret.id,
+            forOperation: Operations.DependabotDeleteOrgSecret.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/dependabot/secrets/{}",
                     parameters: [
                         input.path.org,
-                        input.path.secret_name
+                        input.path.secretName
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -893,16 +893,16 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/dependabot/secrets/{secret_name}/repositories`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/repositories/get(dependabot/list-selected-repos-for-org-secret)`.
-    public func dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret(_ input: Operations.dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret.Input) async throws -> Operations.dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret.Output {
+    public func dependabotListSelectedReposForOrgSecret(_ input: Operations.DependabotListSelectedReposForOrgSecret.Input) async throws -> Operations.DependabotListSelectedReposForOrgSecret.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret.id,
+            forOperation: Operations.DependabotListSelectedReposForOrgSecret.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/dependabot/secrets/{}/repositories",
                     parameters: [
                         input.path.org,
-                        input.path.secret_name
+                        input.path.secretName
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -922,7 +922,7 @@ public struct Client: APIProtocol {
                     style: .form,
                     explode: true,
                     name: "per_page",
-                    value: input.query.per_page
+                    value: input.query.perPage
                 )
                 converter.setAcceptHeader(
                     in: &request.headerFields,
@@ -934,7 +934,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret.Output.Ok.Body
+                    let body: Operations.DependabotListSelectedReposForOrgSecret.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -944,7 +944,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Operations.dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret.Output.Ok.Body.jsonPayload.self,
+                            Operations.DependabotListSelectedReposForOrgSecret.Output.Ok.Body.JsonPayload.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -976,16 +976,16 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/dependabot/secrets/{secret_name}/repositories`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/repositories/put(dependabot/set-selected-repos-for-org-secret)`.
-    public func dependabot_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret(_ input: Operations.dependabot_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret.Input) async throws -> Operations.dependabot_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret.Output {
+    public func dependabotSetSelectedReposForOrgSecret(_ input: Operations.DependabotSetSelectedReposForOrgSecret.Input) async throws -> Operations.DependabotSetSelectedReposForOrgSecret.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.dependabot_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret.id,
+            forOperation: Operations.DependabotSetSelectedReposForOrgSecret.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/dependabot/secrets/{}/repositories",
                     parameters: [
                         input.path.org,
-                        input.path.secret_name
+                        input.path.secretName
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -1030,17 +1030,17 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}/put(dependabot/add-selected-repo-to-org-secret)`.
-    public func dependabot_sol_add_hyphen_selected_hyphen_repo_hyphen_to_hyphen_org_hyphen_secret(_ input: Operations.dependabot_sol_add_hyphen_selected_hyphen_repo_hyphen_to_hyphen_org_hyphen_secret.Input) async throws -> Operations.dependabot_sol_add_hyphen_selected_hyphen_repo_hyphen_to_hyphen_org_hyphen_secret.Output {
+    public func dependabotAddSelectedRepoToOrgSecret(_ input: Operations.DependabotAddSelectedRepoToOrgSecret.Input) async throws -> Operations.DependabotAddSelectedRepoToOrgSecret.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.dependabot_sol_add_hyphen_selected_hyphen_repo_hyphen_to_hyphen_org_hyphen_secret.id,
+            forOperation: Operations.DependabotAddSelectedRepoToOrgSecret.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/dependabot/secrets/{}/repositories/{}",
                     parameters: [
                         input.path.org,
-                        input.path.secret_name,
-                        input.path.repository_id
+                        input.path.secretName,
+                        input.path.repositoryId
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -1078,17 +1078,17 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}/delete(dependabot/remove-selected-repo-from-org-secret)`.
-    public func dependabot_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_secret(_ input: Operations.dependabot_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_secret.Input) async throws -> Operations.dependabot_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_secret.Output {
+    public func dependabotRemoveSelectedRepoFromOrgSecret(_ input: Operations.DependabotRemoveSelectedRepoFromOrgSecret.Input) async throws -> Operations.DependabotRemoveSelectedRepoFromOrgSecret.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.dependabot_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_secret.id,
+            forOperation: Operations.DependabotRemoveSelectedRepoFromOrgSecret.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/dependabot/secrets/{}/repositories/{}",
                     parameters: [
                         input.path.org,
-                        input.path.secret_name,
-                        input.path.repository_id
+                        input.path.secretName,
+                        input.path.repositoryId
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -1122,10 +1122,10 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/dependabot/alerts`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/alerts/get(dependabot/list-alerts-for-repo)`.
-    public func dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_repo(_ input: Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Input) async throws -> Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Output {
+    public func dependabotListAlertsForRepo(_ input: Operations.DependabotListAlertsForRepo.Input) async throws -> Operations.DependabotListAlertsForRepo.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.id,
+            forOperation: Operations.DependabotListAlertsForRepo.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/repos/{}/{}/dependabot/alerts",
@@ -1179,7 +1179,7 @@ public struct Client: APIProtocol {
                     style: .form,
                     explode: true,
                     name: "epss_percentage",
-                    value: input.query.epss_percentage
+                    value: input.query.epssPercentage
                 )
                 try converter.setQueryItemAsURI(
                     in: &request,
@@ -1221,7 +1221,7 @@ public struct Client: APIProtocol {
                     style: .form,
                     explode: true,
                     name: "per_page",
-                    value: input.query.per_page
+                    value: input.query.perPage
                 )
                 try converter.setQueryItemAsURI(
                     in: &request,
@@ -1261,7 +1261,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Output.Ok.Body
+                    let body: Operations.DependabotListAlertsForRepo.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -1271,7 +1271,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            [Components.Schemas.dependabot_hyphen_alert].self,
+                            [Components.Schemas.DependabotAlert].self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -1285,7 +1285,7 @@ public struct Client: APIProtocol {
                     return .notModified(.init())
                 case 400:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.bad_request.Body
+                    let body: Components.Responses.BadRequest.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -1296,7 +1296,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -1304,10 +1304,10 @@ public struct Client: APIProtocol {
                         )
                     case "application/scim+json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.scim_hyphen_error.self,
+                            Components.Schemas.ScimError.self,
                             from: responseBody,
                             transforming: { value in
-                                .application_scim_plus_json(value)
+                                .applicationScimJson(value)
                             }
                         )
                     default:
@@ -1316,7 +1316,7 @@ public struct Client: APIProtocol {
                     return .badRequest(.init(body: body))
                 case 403:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.forbidden.Body
+                    let body: Components.Responses.Forbidden.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -1326,7 +1326,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -1338,7 +1338,7 @@ public struct Client: APIProtocol {
                     return .forbidden(.init(body: body))
                 case 404:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.not_found.Body
+                    let body: Components.Responses.NotFound.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -1348,7 +1348,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -1360,7 +1360,7 @@ public struct Client: APIProtocol {
                     return .notFound(.init(body: body))
                 case 422:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.validation_failed_simple.Body
+                    let body: Components.Responses.ValidationFailedSimple.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -1370,7 +1370,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.validation_hyphen_error_hyphen_simple.self,
+                            Components.Schemas.ValidationErrorSimple.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -1398,17 +1398,17 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/dependabot/alerts/{alert_number}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/alerts/{alert_number}/get(dependabot/get-alert)`.
-    public func dependabot_sol_get_hyphen_alert(_ input: Operations.dependabot_sol_get_hyphen_alert.Input) async throws -> Operations.dependabot_sol_get_hyphen_alert.Output {
+    public func dependabotGetAlert(_ input: Operations.DependabotGetAlert.Input) async throws -> Operations.DependabotGetAlert.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.dependabot_sol_get_hyphen_alert.id,
+            forOperation: Operations.DependabotGetAlert.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/repos/{}/{}/dependabot/alerts/{}",
                     parameters: [
                         input.path.owner,
                         input.path.repo,
-                        input.path.alert_number
+                        input.path.alertNumber
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -1426,7 +1426,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.dependabot_sol_get_hyphen_alert.Output.Ok.Body
+                    let body: Operations.DependabotGetAlert.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -1436,7 +1436,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.dependabot_hyphen_alert.self,
+                            Components.Schemas.DependabotAlert.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -1450,7 +1450,7 @@ public struct Client: APIProtocol {
                     return .notModified(.init())
                 case 403:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.forbidden.Body
+                    let body: Components.Responses.Forbidden.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -1460,7 +1460,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -1472,7 +1472,7 @@ public struct Client: APIProtocol {
                     return .forbidden(.init(body: body))
                 case 404:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.not_found.Body
+                    let body: Components.Responses.NotFound.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -1482,7 +1482,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -1512,17 +1512,17 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/dependabot/alerts/{alert_number}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/alerts/{alert_number}/patch(dependabot/update-alert)`.
-    public func dependabot_sol_update_hyphen_alert(_ input: Operations.dependabot_sol_update_hyphen_alert.Input) async throws -> Operations.dependabot_sol_update_hyphen_alert.Output {
+    public func dependabotUpdateAlert(_ input: Operations.DependabotUpdateAlert.Input) async throws -> Operations.DependabotUpdateAlert.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.dependabot_sol_update_hyphen_alert.id,
+            forOperation: Operations.DependabotUpdateAlert.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/repos/{}/{}/dependabot/alerts/{}",
                     parameters: [
                         input.path.owner,
                         input.path.repo,
-                        input.path.alert_number
+                        input.path.alertNumber
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -1549,7 +1549,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.dependabot_sol_update_hyphen_alert.Output.Ok.Body
+                    let body: Operations.DependabotUpdateAlert.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -1559,7 +1559,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.dependabot_hyphen_alert.self,
+                            Components.Schemas.DependabotAlert.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -1571,7 +1571,7 @@ public struct Client: APIProtocol {
                     return .ok(.init(body: body))
                 case 400:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.bad_request.Body
+                    let body: Components.Responses.BadRequest.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -1582,7 +1582,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -1590,10 +1590,10 @@ public struct Client: APIProtocol {
                         )
                     case "application/scim+json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.scim_hyphen_error.self,
+                            Components.Schemas.ScimError.self,
                             from: responseBody,
                             transforming: { value in
-                                .application_scim_plus_json(value)
+                                .applicationScimJson(value)
                             }
                         )
                     default:
@@ -1602,7 +1602,7 @@ public struct Client: APIProtocol {
                     return .badRequest(.init(body: body))
                 case 403:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.forbidden.Body
+                    let body: Components.Responses.Forbidden.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -1612,7 +1612,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -1624,7 +1624,7 @@ public struct Client: APIProtocol {
                     return .forbidden(.init(body: body))
                 case 404:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.not_found.Body
+                    let body: Components.Responses.NotFound.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -1634,7 +1634,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -1646,7 +1646,7 @@ public struct Client: APIProtocol {
                     return .notFound(.init(body: body))
                 case 409:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.conflict.Body
+                    let body: Components.Responses.Conflict.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -1656,7 +1656,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -1668,7 +1668,7 @@ public struct Client: APIProtocol {
                     return .conflict(.init(body: body))
                 case 422:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.validation_failed_simple.Body
+                    let body: Components.Responses.ValidationFailedSimple.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -1678,7 +1678,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.validation_hyphen_error_hyphen_simple.self,
+                            Components.Schemas.ValidationErrorSimple.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -1709,10 +1709,10 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/dependabot/secrets`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/secrets/get(dependabot/list-repo-secrets)`.
-    public func dependabot_sol_list_hyphen_repo_hyphen_secrets(_ input: Operations.dependabot_sol_list_hyphen_repo_hyphen_secrets.Input) async throws -> Operations.dependabot_sol_list_hyphen_repo_hyphen_secrets.Output {
+    public func dependabotListRepoSecrets(_ input: Operations.DependabotListRepoSecrets.Input) async throws -> Operations.DependabotListRepoSecrets.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.dependabot_sol_list_hyphen_repo_hyphen_secrets.id,
+            forOperation: Operations.DependabotListRepoSecrets.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/repos/{}/{}/dependabot/secrets",
@@ -1731,7 +1731,7 @@ public struct Client: APIProtocol {
                     style: .form,
                     explode: true,
                     name: "per_page",
-                    value: input.query.per_page
+                    value: input.query.perPage
                 )
                 try converter.setQueryItemAsURI(
                     in: &request,
@@ -1749,13 +1749,13 @@ public struct Client: APIProtocol {
             deserializer: { response, responseBody in
                 switch response.status.code {
                 case 200:
-                    let headers: Operations.dependabot_sol_list_hyphen_repo_hyphen_secrets.Output.Ok.Headers = .init(Link: try converter.getOptionalHeaderFieldAsURI(
+                    let headers: Operations.DependabotListRepoSecrets.Output.Ok.Headers = .init(link: try converter.getOptionalHeaderFieldAsURI(
                         in: response.headerFields,
                         name: "Link",
-                        as: Components.Headers.link.self
+                        as: Components.Headers.Link.self
                     ))
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.dependabot_sol_list_hyphen_repo_hyphen_secrets.Output.Ok.Body
+                    let body: Operations.DependabotListRepoSecrets.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -1765,7 +1765,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Operations.dependabot_sol_list_hyphen_repo_hyphen_secrets.Output.Ok.Body.jsonPayload.self,
+                            Operations.DependabotListRepoSecrets.Output.Ok.Body.JsonPayload.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -1800,10 +1800,10 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/dependabot/secrets/public-key`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/secrets/public-key/get(dependabot/get-repo-public-key)`.
-    public func dependabot_sol_get_hyphen_repo_hyphen_public_hyphen_key(_ input: Operations.dependabot_sol_get_hyphen_repo_hyphen_public_hyphen_key.Input) async throws -> Operations.dependabot_sol_get_hyphen_repo_hyphen_public_hyphen_key.Output {
+    public func dependabotGetRepoPublicKey(_ input: Operations.DependabotGetRepoPublicKey.Input) async throws -> Operations.DependabotGetRepoPublicKey.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.dependabot_sol_get_hyphen_repo_hyphen_public_hyphen_key.id,
+            forOperation: Operations.DependabotGetRepoPublicKey.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/repos/{}/{}/dependabot/secrets/public-key",
@@ -1827,7 +1827,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.dependabot_sol_get_hyphen_repo_hyphen_public_hyphen_key.Output.Ok.Body
+                    let body: Operations.DependabotGetRepoPublicKey.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -1837,7 +1837,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.dependabot_hyphen_public_hyphen_key.self,
+                            Components.Schemas.DependabotPublicKey.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -1867,17 +1867,17 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/dependabot/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/secrets/{secret_name}/get(dependabot/get-repo-secret)`.
-    public func dependabot_sol_get_hyphen_repo_hyphen_secret(_ input: Operations.dependabot_sol_get_hyphen_repo_hyphen_secret.Input) async throws -> Operations.dependabot_sol_get_hyphen_repo_hyphen_secret.Output {
+    public func dependabotGetRepoSecret(_ input: Operations.DependabotGetRepoSecret.Input) async throws -> Operations.DependabotGetRepoSecret.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.dependabot_sol_get_hyphen_repo_hyphen_secret.id,
+            forOperation: Operations.DependabotGetRepoSecret.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/repos/{}/{}/dependabot/secrets/{}",
                     parameters: [
                         input.path.owner,
                         input.path.repo,
-                        input.path.secret_name
+                        input.path.secretName
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -1895,7 +1895,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.dependabot_sol_get_hyphen_repo_hyphen_secret.Output.Ok.Body
+                    let body: Operations.DependabotGetRepoSecret.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -1905,7 +1905,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.dependabot_hyphen_secret.self,
+                            Components.Schemas.DependabotSecret.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -1936,17 +1936,17 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/dependabot/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/secrets/{secret_name}/put(dependabot/create-or-update-repo-secret)`.
-    public func dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret(_ input: Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret.Input) async throws -> Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret.Output {
+    public func dependabotCreateOrUpdateRepoSecret(_ input: Operations.DependabotCreateOrUpdateRepoSecret.Input) async throws -> Operations.DependabotCreateOrUpdateRepoSecret.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret.id,
+            forOperation: Operations.DependabotCreateOrUpdateRepoSecret.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/repos/{}/{}/dependabot/secrets/{}",
                     parameters: [
                         input.path.owner,
                         input.path.repo,
-                        input.path.secret_name
+                        input.path.secretName
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -1973,7 +1973,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 201:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret.Output.Created.Body
+                    let body: Operations.DependabotCreateOrUpdateRepoSecret.Output.Created.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -1983,7 +1983,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.empty_hyphen_object.self,
+                            Components.Schemas.EmptyObject.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -2015,17 +2015,17 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/dependabot/secrets/{secret_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/secrets/{secret_name}/delete(dependabot/delete-repo-secret)`.
-    public func dependabot_sol_delete_hyphen_repo_hyphen_secret(_ input: Operations.dependabot_sol_delete_hyphen_repo_hyphen_secret.Input) async throws -> Operations.dependabot_sol_delete_hyphen_repo_hyphen_secret.Output {
+    public func dependabotDeleteRepoSecret(_ input: Operations.DependabotDeleteRepoSecret.Input) async throws -> Operations.DependabotDeleteRepoSecret.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.dependabot_sol_delete_hyphen_repo_hyphen_secret.id,
+            forOperation: Operations.DependabotDeleteRepoSecret.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/repos/{}/{}/dependabot/secrets/{}",
                     parameters: [
                         input.path.owner,
                         input.path.repo,
-                        input.path.secret_name
+                        input.path.secretName
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
