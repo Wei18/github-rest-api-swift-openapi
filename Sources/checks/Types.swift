@@ -24,7 +24,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/check-runs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-runs/post(checks/create)`.
-    func checks_sol_create(_ input: Operations.checks_sol_create.Input) async throws -> Operations.checks_sol_create.Output
+    func checksCreate(_ input: Operations.ChecksCreate.Input) async throws -> Operations.ChecksCreate.Output
     /// Get a check run
     ///
     /// Gets a single check run using its `id`.
@@ -36,7 +36,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/check-runs/{check_run_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-runs/{check_run_id}/get(checks/get)`.
-    func checks_sol_get(_ input: Operations.checks_sol_get.Input) async throws -> Operations.checks_sol_get.Output
+    func checksGet(_ input: Operations.ChecksGet.Input) async throws -> Operations.ChecksGet.Output
     /// Update a check run
     ///
     /// Updates a check run for a specific commit in a repository.
@@ -48,7 +48,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/check-runs/{check_run_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-runs/{check_run_id}/patch(checks/update)`.
-    func checks_sol_update(_ input: Operations.checks_sol_update.Input) async throws -> Operations.checks_sol_update.Output
+    func checksUpdate(_ input: Operations.ChecksUpdate.Input) async throws -> Operations.ChecksUpdate.Output
     /// List check run annotations
     ///
     /// Lists annotations for a check run using the annotation `id`.
@@ -57,7 +57,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/check-runs/{check_run_id}/annotations`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-runs/{check_run_id}/annotations/get(checks/list-annotations)`.
-    func checks_sol_list_hyphen_annotations(_ input: Operations.checks_sol_list_hyphen_annotations.Input) async throws -> Operations.checks_sol_list_hyphen_annotations.Output
+    func checksListAnnotations(_ input: Operations.ChecksListAnnotations.Input) async throws -> Operations.ChecksListAnnotations.Output
     /// Rerequest a check run
     ///
     /// Triggers GitHub to rerequest an existing check run, without pushing new code to a repository. This endpoint will trigger the [`check_run` webhook](https://docs.github.com/webhooks/event-payloads/#check_run) event with the action `rerequested`. When a check run is `rerequested`, the `status` of the check suite it belongs to is reset to `queued` and the `conclusion` is cleared. The check run itself is not updated. GitHub apps recieving the [`check_run` webhook](https://docs.github.com/webhooks/event-payloads/#check_run) with the `rerequested` action should then decide if the check run should be reset or updated and call the [update `check_run` endpoint](https://docs.github.com/rest/checks/runs#update-a-check-run) to update the check_run if desired.
@@ -66,7 +66,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/check-runs/{check_run_id}/rerequest`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-runs/{check_run_id}/rerequest/post(checks/rerequest-run)`.
-    func checks_sol_rerequest_hyphen_run(_ input: Operations.checks_sol_rerequest_hyphen_run.Input) async throws -> Operations.checks_sol_rerequest_hyphen_run.Output
+    func checksRerequestRun(_ input: Operations.ChecksRerequestRun.Input) async throws -> Operations.ChecksRerequestRun.Output
     /// Create a check suite
     ///
     /// Creates a check suite manually. By default, check suites are automatically created when you create a [check run](https://docs.github.com/rest/checks/runs). You only need to use this endpoint for manually creating check suites when you've disabled automatic creation using "[Update repository preferences for check suites](https://docs.github.com/rest/checks/suites#update-repository-preferences-for-check-suites)".
@@ -78,7 +78,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/check-suites`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-suites/post(checks/create-suite)`.
-    func checks_sol_create_hyphen_suite(_ input: Operations.checks_sol_create_hyphen_suite.Input) async throws -> Operations.checks_sol_create_hyphen_suite.Output
+    func checksCreateSuite(_ input: Operations.ChecksCreateSuite.Input) async throws -> Operations.ChecksCreateSuite.Output
     /// Update repository preferences for check suites
     ///
     /// Changes the default automatic flow when creating check suites. By default, a check suite is automatically created each time code is pushed to a repository. When you disable the automatic creation of check suites, you can manually [Create a check suite](https://docs.github.com/rest/checks/suites#create-a-check-suite).
@@ -86,7 +86,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/check-suites/preferences`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-suites/preferences/patch(checks/set-suites-preferences)`.
-    func checks_sol_set_hyphen_suites_hyphen_preferences(_ input: Operations.checks_sol_set_hyphen_suites_hyphen_preferences.Input) async throws -> Operations.checks_sol_set_hyphen_suites_hyphen_preferences.Output
+    func checksSetSuitesPreferences(_ input: Operations.ChecksSetSuitesPreferences.Input) async throws -> Operations.ChecksSetSuitesPreferences.Output
     /// Get a check suite
     ///
     /// Gets a single check suite using its `id`.
@@ -98,7 +98,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/check-suites/{check_suite_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-suites/{check_suite_id}/get(checks/get-suite)`.
-    func checks_sol_get_hyphen_suite(_ input: Operations.checks_sol_get_hyphen_suite.Input) async throws -> Operations.checks_sol_get_hyphen_suite.Output
+    func checksGetSuite(_ input: Operations.ChecksGetSuite.Input) async throws -> Operations.ChecksGetSuite.Output
     /// List check runs in a check suite
     ///
     /// Lists check runs for a check suite using its `id`.
@@ -110,14 +110,14 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/check-suites/{check_suite_id}/check-runs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-suites/{check_suite_id}/check-runs/get(checks/list-for-suite)`.
-    func checks_sol_list_hyphen_for_hyphen_suite(_ input: Operations.checks_sol_list_hyphen_for_hyphen_suite.Input) async throws -> Operations.checks_sol_list_hyphen_for_hyphen_suite.Output
+    func checksListForSuite(_ input: Operations.ChecksListForSuite.Input) async throws -> Operations.ChecksListForSuite.Output
     /// Rerequest a check suite
     ///
     /// Triggers GitHub to rerequest an existing check suite, without pushing new code to a repository. This endpoint will trigger the [`check_suite` webhook](https://docs.github.com/webhooks/event-payloads/#check_suite) event with the action `rerequested`. When a check suite is `rerequested`, its `status` is reset to `queued` and the `conclusion` is cleared.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/check-suites/{check_suite_id}/rerequest`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-suites/{check_suite_id}/rerequest/post(checks/rerequest-suite)`.
-    func checks_sol_rerequest_hyphen_suite(_ input: Operations.checks_sol_rerequest_hyphen_suite.Input) async throws -> Operations.checks_sol_rerequest_hyphen_suite.Output
+    func checksRerequestSuite(_ input: Operations.ChecksRerequestSuite.Input) async throws -> Operations.ChecksRerequestSuite.Output
     /// List check runs for a Git reference
     ///
     /// Lists check runs for a commit ref. The `ref` can be a SHA, branch name, or a tag name.
@@ -131,7 +131,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/commits/{ref}/check-runs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/commits/{ref}/check-runs/get(checks/list-for-ref)`.
-    func checks_sol_list_hyphen_for_hyphen_ref(_ input: Operations.checks_sol_list_hyphen_for_hyphen_ref.Input) async throws -> Operations.checks_sol_list_hyphen_for_hyphen_ref.Output
+    func checksListForRef(_ input: Operations.ChecksListForRef.Input) async throws -> Operations.ChecksListForRef.Output
     /// List check suites for a Git reference
     ///
     /// Lists check suites for a commit `ref`. The `ref` can be a SHA, branch name, or a tag name.
@@ -143,7 +143,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/commits/{ref}/check-suites`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/commits/{ref}/check-suites/get(checks/list-suites-for-ref)`.
-    func checks_sol_list_hyphen_suites_hyphen_for_hyphen_ref(_ input: Operations.checks_sol_list_hyphen_suites_hyphen_for_hyphen_ref.Input) async throws -> Operations.checks_sol_list_hyphen_suites_hyphen_for_hyphen_ref.Output
+    func checksListSuitesForRef(_ input: Operations.ChecksListSuitesForRef.Input) async throws -> Operations.ChecksListSuitesForRef.Output
 }
 
 /// Convenience overloads for operation inputs.
@@ -161,12 +161,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/check-runs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-runs/post(checks/create)`.
-    public func checks_sol_create(
-        path: Operations.checks_sol_create.Input.Path,
-        headers: Operations.checks_sol_create.Input.Headers = .init(),
-        body: Operations.checks_sol_create.Input.Body
-    ) async throws -> Operations.checks_sol_create.Output {
-        try await checks_sol_create(Operations.checks_sol_create.Input(
+    public func checksCreate(
+        path: Operations.ChecksCreate.Input.Path,
+        headers: Operations.ChecksCreate.Input.Headers = .init(),
+        body: Operations.ChecksCreate.Input.Body
+    ) async throws -> Operations.ChecksCreate.Output {
+        try await checksCreate(Operations.ChecksCreate.Input(
             path: path,
             headers: headers,
             body: body
@@ -183,11 +183,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/check-runs/{check_run_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-runs/{check_run_id}/get(checks/get)`.
-    public func checks_sol_get(
-        path: Operations.checks_sol_get.Input.Path,
-        headers: Operations.checks_sol_get.Input.Headers = .init()
-    ) async throws -> Operations.checks_sol_get.Output {
-        try await checks_sol_get(Operations.checks_sol_get.Input(
+    public func checksGet(
+        path: Operations.ChecksGet.Input.Path,
+        headers: Operations.ChecksGet.Input.Headers = .init()
+    ) async throws -> Operations.ChecksGet.Output {
+        try await checksGet(Operations.ChecksGet.Input(
             path: path,
             headers: headers
         ))
@@ -203,12 +203,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/check-runs/{check_run_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-runs/{check_run_id}/patch(checks/update)`.
-    public func checks_sol_update(
-        path: Operations.checks_sol_update.Input.Path,
-        headers: Operations.checks_sol_update.Input.Headers = .init(),
-        body: Operations.checks_sol_update.Input.Body
-    ) async throws -> Operations.checks_sol_update.Output {
-        try await checks_sol_update(Operations.checks_sol_update.Input(
+    public func checksUpdate(
+        path: Operations.ChecksUpdate.Input.Path,
+        headers: Operations.ChecksUpdate.Input.Headers = .init(),
+        body: Operations.ChecksUpdate.Input.Body
+    ) async throws -> Operations.ChecksUpdate.Output {
+        try await checksUpdate(Operations.ChecksUpdate.Input(
             path: path,
             headers: headers,
             body: body
@@ -222,12 +222,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/check-runs/{check_run_id}/annotations`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-runs/{check_run_id}/annotations/get(checks/list-annotations)`.
-    public func checks_sol_list_hyphen_annotations(
-        path: Operations.checks_sol_list_hyphen_annotations.Input.Path,
-        query: Operations.checks_sol_list_hyphen_annotations.Input.Query = .init(),
-        headers: Operations.checks_sol_list_hyphen_annotations.Input.Headers = .init()
-    ) async throws -> Operations.checks_sol_list_hyphen_annotations.Output {
-        try await checks_sol_list_hyphen_annotations(Operations.checks_sol_list_hyphen_annotations.Input(
+    public func checksListAnnotations(
+        path: Operations.ChecksListAnnotations.Input.Path,
+        query: Operations.ChecksListAnnotations.Input.Query = .init(),
+        headers: Operations.ChecksListAnnotations.Input.Headers = .init()
+    ) async throws -> Operations.ChecksListAnnotations.Output {
+        try await checksListAnnotations(Operations.ChecksListAnnotations.Input(
             path: path,
             query: query,
             headers: headers
@@ -241,11 +241,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/check-runs/{check_run_id}/rerequest`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-runs/{check_run_id}/rerequest/post(checks/rerequest-run)`.
-    public func checks_sol_rerequest_hyphen_run(
-        path: Operations.checks_sol_rerequest_hyphen_run.Input.Path,
-        headers: Operations.checks_sol_rerequest_hyphen_run.Input.Headers = .init()
-    ) async throws -> Operations.checks_sol_rerequest_hyphen_run.Output {
-        try await checks_sol_rerequest_hyphen_run(Operations.checks_sol_rerequest_hyphen_run.Input(
+    public func checksRerequestRun(
+        path: Operations.ChecksRerequestRun.Input.Path,
+        headers: Operations.ChecksRerequestRun.Input.Headers = .init()
+    ) async throws -> Operations.ChecksRerequestRun.Output {
+        try await checksRerequestRun(Operations.ChecksRerequestRun.Input(
             path: path,
             headers: headers
         ))
@@ -261,12 +261,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/check-suites`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-suites/post(checks/create-suite)`.
-    public func checks_sol_create_hyphen_suite(
-        path: Operations.checks_sol_create_hyphen_suite.Input.Path,
-        headers: Operations.checks_sol_create_hyphen_suite.Input.Headers = .init(),
-        body: Operations.checks_sol_create_hyphen_suite.Input.Body
-    ) async throws -> Operations.checks_sol_create_hyphen_suite.Output {
-        try await checks_sol_create_hyphen_suite(Operations.checks_sol_create_hyphen_suite.Input(
+    public func checksCreateSuite(
+        path: Operations.ChecksCreateSuite.Input.Path,
+        headers: Operations.ChecksCreateSuite.Input.Headers = .init(),
+        body: Operations.ChecksCreateSuite.Input.Body
+    ) async throws -> Operations.ChecksCreateSuite.Output {
+        try await checksCreateSuite(Operations.ChecksCreateSuite.Input(
             path: path,
             headers: headers,
             body: body
@@ -279,12 +279,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/check-suites/preferences`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-suites/preferences/patch(checks/set-suites-preferences)`.
-    public func checks_sol_set_hyphen_suites_hyphen_preferences(
-        path: Operations.checks_sol_set_hyphen_suites_hyphen_preferences.Input.Path,
-        headers: Operations.checks_sol_set_hyphen_suites_hyphen_preferences.Input.Headers = .init(),
-        body: Operations.checks_sol_set_hyphen_suites_hyphen_preferences.Input.Body
-    ) async throws -> Operations.checks_sol_set_hyphen_suites_hyphen_preferences.Output {
-        try await checks_sol_set_hyphen_suites_hyphen_preferences(Operations.checks_sol_set_hyphen_suites_hyphen_preferences.Input(
+    public func checksSetSuitesPreferences(
+        path: Operations.ChecksSetSuitesPreferences.Input.Path,
+        headers: Operations.ChecksSetSuitesPreferences.Input.Headers = .init(),
+        body: Operations.ChecksSetSuitesPreferences.Input.Body
+    ) async throws -> Operations.ChecksSetSuitesPreferences.Output {
+        try await checksSetSuitesPreferences(Operations.ChecksSetSuitesPreferences.Input(
             path: path,
             headers: headers,
             body: body
@@ -301,11 +301,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/check-suites/{check_suite_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-suites/{check_suite_id}/get(checks/get-suite)`.
-    public func checks_sol_get_hyphen_suite(
-        path: Operations.checks_sol_get_hyphen_suite.Input.Path,
-        headers: Operations.checks_sol_get_hyphen_suite.Input.Headers = .init()
-    ) async throws -> Operations.checks_sol_get_hyphen_suite.Output {
-        try await checks_sol_get_hyphen_suite(Operations.checks_sol_get_hyphen_suite.Input(
+    public func checksGetSuite(
+        path: Operations.ChecksGetSuite.Input.Path,
+        headers: Operations.ChecksGetSuite.Input.Headers = .init()
+    ) async throws -> Operations.ChecksGetSuite.Output {
+        try await checksGetSuite(Operations.ChecksGetSuite.Input(
             path: path,
             headers: headers
         ))
@@ -321,12 +321,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/check-suites/{check_suite_id}/check-runs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-suites/{check_suite_id}/check-runs/get(checks/list-for-suite)`.
-    public func checks_sol_list_hyphen_for_hyphen_suite(
-        path: Operations.checks_sol_list_hyphen_for_hyphen_suite.Input.Path,
-        query: Operations.checks_sol_list_hyphen_for_hyphen_suite.Input.Query = .init(),
-        headers: Operations.checks_sol_list_hyphen_for_hyphen_suite.Input.Headers = .init()
-    ) async throws -> Operations.checks_sol_list_hyphen_for_hyphen_suite.Output {
-        try await checks_sol_list_hyphen_for_hyphen_suite(Operations.checks_sol_list_hyphen_for_hyphen_suite.Input(
+    public func checksListForSuite(
+        path: Operations.ChecksListForSuite.Input.Path,
+        query: Operations.ChecksListForSuite.Input.Query = .init(),
+        headers: Operations.ChecksListForSuite.Input.Headers = .init()
+    ) async throws -> Operations.ChecksListForSuite.Output {
+        try await checksListForSuite(Operations.ChecksListForSuite.Input(
             path: path,
             query: query,
             headers: headers
@@ -338,11 +338,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/check-suites/{check_suite_id}/rerequest`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-suites/{check_suite_id}/rerequest/post(checks/rerequest-suite)`.
-    public func checks_sol_rerequest_hyphen_suite(
-        path: Operations.checks_sol_rerequest_hyphen_suite.Input.Path,
-        headers: Operations.checks_sol_rerequest_hyphen_suite.Input.Headers = .init()
-    ) async throws -> Operations.checks_sol_rerequest_hyphen_suite.Output {
-        try await checks_sol_rerequest_hyphen_suite(Operations.checks_sol_rerequest_hyphen_suite.Input(
+    public func checksRerequestSuite(
+        path: Operations.ChecksRerequestSuite.Input.Path,
+        headers: Operations.ChecksRerequestSuite.Input.Headers = .init()
+    ) async throws -> Operations.ChecksRerequestSuite.Output {
+        try await checksRerequestSuite(Operations.ChecksRerequestSuite.Input(
             path: path,
             headers: headers
         ))
@@ -360,12 +360,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/commits/{ref}/check-runs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/commits/{ref}/check-runs/get(checks/list-for-ref)`.
-    public func checks_sol_list_hyphen_for_hyphen_ref(
-        path: Operations.checks_sol_list_hyphen_for_hyphen_ref.Input.Path,
-        query: Operations.checks_sol_list_hyphen_for_hyphen_ref.Input.Query = .init(),
-        headers: Operations.checks_sol_list_hyphen_for_hyphen_ref.Input.Headers = .init()
-    ) async throws -> Operations.checks_sol_list_hyphen_for_hyphen_ref.Output {
-        try await checks_sol_list_hyphen_for_hyphen_ref(Operations.checks_sol_list_hyphen_for_hyphen_ref.Input(
+    public func checksListForRef(
+        path: Operations.ChecksListForRef.Input.Path,
+        query: Operations.ChecksListForRef.Input.Query = .init(),
+        headers: Operations.ChecksListForRef.Input.Headers = .init()
+    ) async throws -> Operations.ChecksListForRef.Output {
+        try await checksListForRef(Operations.ChecksListForRef.Input(
             path: path,
             query: query,
             headers: headers
@@ -382,12 +382,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/commits/{ref}/check-suites`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/commits/{ref}/check-suites/get(checks/list-suites-for-ref)`.
-    public func checks_sol_list_hyphen_suites_hyphen_for_hyphen_ref(
-        path: Operations.checks_sol_list_hyphen_suites_hyphen_for_hyphen_ref.Input.Path,
-        query: Operations.checks_sol_list_hyphen_suites_hyphen_for_hyphen_ref.Input.Query = .init(),
-        headers: Operations.checks_sol_list_hyphen_suites_hyphen_for_hyphen_ref.Input.Headers = .init()
-    ) async throws -> Operations.checks_sol_list_hyphen_suites_hyphen_for_hyphen_ref.Output {
-        try await checks_sol_list_hyphen_suites_hyphen_for_hyphen_ref(Operations.checks_sol_list_hyphen_suites_hyphen_for_hyphen_ref.Input(
+    public func checksListSuitesForRef(
+        path: Operations.ChecksListSuitesForRef.Input.Path,
+        query: Operations.ChecksListSuitesForRef.Input.Query = .init(),
+        headers: Operations.ChecksListSuitesForRef.Input.Headers = .init()
+    ) async throws -> Operations.ChecksListSuitesForRef.Output {
+        try await checksListSuitesForRef(Operations.ChecksListSuitesForRef.Input(
             path: path,
             query: query,
             headers: headers
@@ -397,6 +397,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -412,7 +421,7 @@ public enum Components {
         /// A GitHub user.
         ///
         /// - Remark: Generated from `#/components/schemas/simple-user`.
-        public struct simple_hyphen_user: Codable, Hashable, Sendable {
+        public struct SimpleUser: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/simple-user/name`.
             public var name: Swift.String?
             /// - Remark: Generated from `#/components/schemas/simple-user/email`.
@@ -422,171 +431,171 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/simple-user/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/simple-user/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/avatar_url`.
-            public var avatar_url: Swift.String
+            public var avatarUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/gravatar_id`.
-            public var gravatar_id: Swift.String?
+            public var gravatarId: Swift.String?
             /// - Remark: Generated from `#/components/schemas/simple-user/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/followers_url`.
-            public var followers_url: Swift.String
+            public var followersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/following_url`.
-            public var following_url: Swift.String
+            public var followingUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/gists_url`.
-            public var gists_url: Swift.String
+            public var gistsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/starred_url`.
-            public var starred_url: Swift.String
+            public var starredUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/subscriptions_url`.
-            public var subscriptions_url: Swift.String
+            public var subscriptionsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/organizations_url`.
-            public var organizations_url: Swift.String
+            public var organizationsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/repos_url`.
-            public var repos_url: Swift.String
+            public var reposUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/events_url`.
-            public var events_url: Swift.String
+            public var eventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/received_events_url`.
-            public var received_events_url: Swift.String
+            public var receivedEventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/type`.
             public var _type: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/site_admin`.
-            public var site_admin: Swift.Bool
+            public var siteAdmin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/simple-user/starred_at`.
-            public var starred_at: Swift.String?
+            public var starredAt: Swift.String?
             /// - Remark: Generated from `#/components/schemas/simple-user/user_view_type`.
-            public var user_view_type: Swift.String?
-            /// Creates a new `simple_hyphen_user`.
+            public var userViewType: Swift.String?
+            /// Creates a new `SimpleUser`.
             ///
             /// - Parameters:
             ///   - name:
             ///   - email:
             ///   - login:
             ///   - id:
-            ///   - node_id:
-            ///   - avatar_url:
-            ///   - gravatar_id:
+            ///   - nodeId:
+            ///   - avatarUrl:
+            ///   - gravatarId:
             ///   - url:
-            ///   - html_url:
-            ///   - followers_url:
-            ///   - following_url:
-            ///   - gists_url:
-            ///   - starred_url:
-            ///   - subscriptions_url:
-            ///   - organizations_url:
-            ///   - repos_url:
-            ///   - events_url:
-            ///   - received_events_url:
+            ///   - htmlUrl:
+            ///   - followersUrl:
+            ///   - followingUrl:
+            ///   - gistsUrl:
+            ///   - starredUrl:
+            ///   - subscriptionsUrl:
+            ///   - organizationsUrl:
+            ///   - reposUrl:
+            ///   - eventsUrl:
+            ///   - receivedEventsUrl:
             ///   - _type:
-            ///   - site_admin:
-            ///   - starred_at:
-            ///   - user_view_type:
+            ///   - siteAdmin:
+            ///   - starredAt:
+            ///   - userViewType:
             public init(
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
                 login: Swift.String,
                 id: Swift.Int64,
-                node_id: Swift.String,
-                avatar_url: Swift.String,
-                gravatar_id: Swift.String? = nil,
+                nodeId: Swift.String,
+                avatarUrl: Swift.String,
+                gravatarId: Swift.String? = nil,
                 url: Swift.String,
-                html_url: Swift.String,
-                followers_url: Swift.String,
-                following_url: Swift.String,
-                gists_url: Swift.String,
-                starred_url: Swift.String,
-                subscriptions_url: Swift.String,
-                organizations_url: Swift.String,
-                repos_url: Swift.String,
-                events_url: Swift.String,
-                received_events_url: Swift.String,
+                htmlUrl: Swift.String,
+                followersUrl: Swift.String,
+                followingUrl: Swift.String,
+                gistsUrl: Swift.String,
+                starredUrl: Swift.String,
+                subscriptionsUrl: Swift.String,
+                organizationsUrl: Swift.String,
+                reposUrl: Swift.String,
+                eventsUrl: Swift.String,
+                receivedEventsUrl: Swift.String,
                 _type: Swift.String,
-                site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil,
-                user_view_type: Swift.String? = nil
+                siteAdmin: Swift.Bool,
+                starredAt: Swift.String? = nil,
+                userViewType: Swift.String? = nil
             ) {
                 self.name = name
                 self.email = email
                 self.login = login
                 self.id = id
-                self.node_id = node_id
-                self.avatar_url = avatar_url
-                self.gravatar_id = gravatar_id
+                self.nodeId = nodeId
+                self.avatarUrl = avatarUrl
+                self.gravatarId = gravatarId
                 self.url = url
-                self.html_url = html_url
-                self.followers_url = followers_url
-                self.following_url = following_url
-                self.gists_url = gists_url
-                self.starred_url = starred_url
-                self.subscriptions_url = subscriptions_url
-                self.organizations_url = organizations_url
-                self.repos_url = repos_url
-                self.events_url = events_url
-                self.received_events_url = received_events_url
+                self.htmlUrl = htmlUrl
+                self.followersUrl = followersUrl
+                self.followingUrl = followingUrl
+                self.gistsUrl = gistsUrl
+                self.starredUrl = starredUrl
+                self.subscriptionsUrl = subscriptionsUrl
+                self.organizationsUrl = organizationsUrl
+                self.reposUrl = reposUrl
+                self.eventsUrl = eventsUrl
+                self.receivedEventsUrl = receivedEventsUrl
                 self._type = _type
-                self.site_admin = site_admin
-                self.starred_at = starred_at
-                self.user_view_type = user_view_type
+                self.siteAdmin = siteAdmin
+                self.starredAt = starredAt
+                self.userViewType = userViewType
             }
             public enum CodingKeys: String, CodingKey {
                 case name
                 case email
                 case login
                 case id
-                case node_id
-                case avatar_url
-                case gravatar_id
+                case nodeId = "node_id"
+                case avatarUrl = "avatar_url"
+                case gravatarId = "gravatar_id"
                 case url
-                case html_url
-                case followers_url
-                case following_url
-                case gists_url
-                case starred_url
-                case subscriptions_url
-                case organizations_url
-                case repos_url
-                case events_url
-                case received_events_url
+                case htmlUrl = "html_url"
+                case followersUrl = "followers_url"
+                case followingUrl = "following_url"
+                case gistsUrl = "gists_url"
+                case starredUrl = "starred_url"
+                case subscriptionsUrl = "subscriptions_url"
+                case organizationsUrl = "organizations_url"
+                case reposUrl = "repos_url"
+                case eventsUrl = "events_url"
+                case receivedEventsUrl = "received_events_url"
                 case _type = "type"
-                case site_admin
-                case starred_at
-                case user_view_type
+                case siteAdmin = "site_admin"
+                case starredAt = "starred_at"
+                case userViewType = "user_view_type"
             }
         }
         /// Basic Error
         ///
         /// - Remark: Generated from `#/components/schemas/basic-error`.
-        public struct basic_hyphen_error: Codable, Hashable, Sendable {
+        public struct BasicError: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/basic-error/message`.
             public var message: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/documentation_url`.
-            public var documentation_url: Swift.String?
+            public var documentationUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/url`.
             public var url: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/status`.
             public var status: Swift.String?
-            /// Creates a new `basic_hyphen_error`.
+            /// Creates a new `BasicError`.
             ///
             /// - Parameters:
             ///   - message:
-            ///   - documentation_url:
+            ///   - documentationUrl:
             ///   - url:
             ///   - status:
             public init(
                 message: Swift.String? = nil,
-                documentation_url: Swift.String? = nil,
+                documentationUrl: Swift.String? = nil,
                 url: Swift.String? = nil,
                 status: Swift.String? = nil
             ) {
                 self.message = message
-                self.documentation_url = documentation_url
+                self.documentationUrl = documentationUrl
                 self.url = url
                 self.status = status
             }
             public enum CodingKeys: String, CodingKey {
                 case message
-                case documentation_url
+                case documentationUrl = "documentation_url"
                 case url
                 case status
             }
@@ -594,23 +603,23 @@ public enum Components {
         /// An enterprise on GitHub.
         ///
         /// - Remark: Generated from `#/components/schemas/enterprise`.
-        public struct enterprise: Codable, Hashable, Sendable {
+        public struct Enterprise: Codable, Hashable, Sendable {
             /// A short description of the enterprise.
             ///
             /// - Remark: Generated from `#/components/schemas/enterprise/description`.
             public var description: Swift.String?
             /// - Remark: Generated from `#/components/schemas/enterprise/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// The enterprise's website URL.
             ///
             /// - Remark: Generated from `#/components/schemas/enterprise/website_url`.
-            public var website_url: Swift.String?
+            public var websiteUrl: Swift.String?
             /// Unique identifier of the enterprise
             ///
             /// - Remark: Generated from `#/components/schemas/enterprise/id`.
             public var id: Swift.Int
             /// - Remark: Generated from `#/components/schemas/enterprise/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// The name of the enterprise.
             ///
             /// - Remark: Generated from `#/components/schemas/enterprise/name`.
@@ -620,64 +629,64 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/enterprise/slug`.
             public var slug: Swift.String
             /// - Remark: Generated from `#/components/schemas/enterprise/created_at`.
-            public var created_at: Foundation.Date?
+            public var createdAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/enterprise/updated_at`.
-            public var updated_at: Foundation.Date?
+            public var updatedAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/enterprise/avatar_url`.
-            public var avatar_url: Swift.String
-            /// Creates a new `enterprise`.
+            public var avatarUrl: Swift.String
+            /// Creates a new `Enterprise`.
             ///
             /// - Parameters:
             ///   - description: A short description of the enterprise.
-            ///   - html_url:
-            ///   - website_url: The enterprise's website URL.
+            ///   - htmlUrl:
+            ///   - websiteUrl: The enterprise's website URL.
             ///   - id: Unique identifier of the enterprise
-            ///   - node_id:
+            ///   - nodeId:
             ///   - name: The name of the enterprise.
             ///   - slug: The slug url identifier for the enterprise.
-            ///   - created_at:
-            ///   - updated_at:
-            ///   - avatar_url:
+            ///   - createdAt:
+            ///   - updatedAt:
+            ///   - avatarUrl:
             public init(
                 description: Swift.String? = nil,
-                html_url: Swift.String,
-                website_url: Swift.String? = nil,
+                htmlUrl: Swift.String,
+                websiteUrl: Swift.String? = nil,
                 id: Swift.Int,
-                node_id: Swift.String,
+                nodeId: Swift.String,
                 name: Swift.String,
                 slug: Swift.String,
-                created_at: Foundation.Date? = nil,
-                updated_at: Foundation.Date? = nil,
-                avatar_url: Swift.String
+                createdAt: Foundation.Date? = nil,
+                updatedAt: Foundation.Date? = nil,
+                avatarUrl: Swift.String
             ) {
                 self.description = description
-                self.html_url = html_url
-                self.website_url = website_url
+                self.htmlUrl = htmlUrl
+                self.websiteUrl = websiteUrl
                 self.id = id
-                self.node_id = node_id
+                self.nodeId = nodeId
                 self.name = name
                 self.slug = slug
-                self.created_at = created_at
-                self.updated_at = updated_at
-                self.avatar_url = avatar_url
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
+                self.avatarUrl = avatarUrl
             }
             public enum CodingKeys: String, CodingKey {
                 case description
-                case html_url
-                case website_url
+                case htmlUrl = "html_url"
+                case websiteUrl = "website_url"
                 case id
-                case node_id
+                case nodeId = "node_id"
                 case name
                 case slug
-                case created_at
-                case updated_at
-                case avatar_url
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
+                case avatarUrl = "avatar_url"
             }
         }
         /// Code Of Conduct
         ///
         /// - Remark: Generated from `#/components/schemas/code-of-conduct`.
-        public struct code_hyphen_of_hyphen_conduct: Codable, Hashable, Sendable {
+        public struct CodeOfConduct: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/code-of-conduct/key`.
             public var key: Swift.String
             /// - Remark: Generated from `#/components/schemas/code-of-conduct/name`.
@@ -687,40 +696,40 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/code-of-conduct/body`.
             public var body: Swift.String?
             /// - Remark: Generated from `#/components/schemas/code-of-conduct/html_url`.
-            public var html_url: Swift.String?
-            /// Creates a new `code_hyphen_of_hyphen_conduct`.
+            public var htmlUrl: Swift.String?
+            /// Creates a new `CodeOfConduct`.
             ///
             /// - Parameters:
             ///   - key:
             ///   - name:
             ///   - url:
             ///   - body:
-            ///   - html_url:
+            ///   - htmlUrl:
             public init(
                 key: Swift.String,
                 name: Swift.String,
                 url: Swift.String,
                 body: Swift.String? = nil,
-                html_url: Swift.String? = nil
+                htmlUrl: Swift.String? = nil
             ) {
                 self.key = key
                 self.name = name
                 self.url = url
                 self.body = body
-                self.html_url = html_url
+                self.htmlUrl = htmlUrl
             }
             public enum CodingKeys: String, CodingKey {
                 case key
                 case name
                 case url
                 case body
-                case html_url
+                case htmlUrl = "html_url"
             }
         }
         /// GitHub apps are a new way to extend GitHub. They can be installed directly on organizations and user accounts and granted access to specific repositories. They come with granular permissions and built-in webhooks. GitHub apps are first class actors within GitHub.
         ///
         /// - Remark: Generated from `#/components/schemas/nullable-integration`.
-        public struct nullable_hyphen_integration: Codable, Hashable, Sendable {
+        public struct NullableIntegration: Codable, Hashable, Sendable {
             /// Unique identifier of the GitHub app
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-integration/id`.
@@ -730,25 +739,25 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/nullable-integration/slug`.
             public var slug: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-integration/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-integration/client_id`.
-            public var client_id: Swift.String?
+            public var clientId: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-integration/owner`.
-            @frozen public enum ownerPayload: Codable, Hashable, Sendable {
+            @frozen public enum OwnerPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/nullable-integration/owner/case1`.
-                case simple_hyphen_user(Components.Schemas.simple_hyphen_user)
+                case SimpleUser(Components.Schemas.SimpleUser)
                 /// - Remark: Generated from `#/components/schemas/nullable-integration/owner/case2`.
-                case enterprise(Components.Schemas.enterprise)
+                case Enterprise(Components.Schemas.Enterprise)
                 public init(from decoder: any Decoder) throws {
                     var errors: [any Error] = []
                     do {
-                        self = .simple_hyphen_user(try .init(from: decoder))
+                        self = .SimpleUser(try .init(from: decoder))
                         return
                     } catch {
                         errors.append(error)
                     }
                     do {
-                        self = .enterprise(try .init(from: decoder))
+                        self = .Enterprise(try .init(from: decoder))
                         return
                     } catch {
                         errors.append(error)
@@ -761,15 +770,15 @@ public enum Components {
                 }
                 public func encode(to encoder: any Encoder) throws {
                     switch self {
-                    case let .simple_hyphen_user(value):
+                    case let .SimpleUser(value):
                         try value.encode(to: encoder)
-                    case let .enterprise(value):
+                    case let .Enterprise(value):
                         try value.encode(to: encoder)
                     }
                 }
             }
             /// - Remark: Generated from `#/components/schemas/nullable-integration/owner`.
-            public var owner: Components.Schemas.nullable_hyphen_integration.ownerPayload
+            public var owner: Components.Schemas.NullableIntegration.OwnerPayload
             /// The name of the GitHub app
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-integration/name`.
@@ -777,17 +786,17 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/nullable-integration/description`.
             public var description: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-integration/external_url`.
-            public var external_url: Swift.String
+            public var externalUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-integration/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-integration/created_at`.
-            public var created_at: Foundation.Date
+            public var createdAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/nullable-integration/updated_at`.
-            public var updated_at: Foundation.Date
+            public var updatedAt: Foundation.Date
             /// The set of permissions for the GitHub app
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-integration/permissions`.
-            public struct permissionsPayload: Codable, Hashable, Sendable {
+            public struct PermissionsPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/nullable-integration/permissions/issues`.
                 public var issues: Swift.String?
                 /// - Remark: Generated from `#/components/schemas/nullable-integration/permissions/checks`.
@@ -800,7 +809,7 @@ public enum Components {
                 public var deployments: Swift.String?
                 /// A container of undocumented properties.
                 public var additionalProperties: [String: Swift.String]
-                /// Creates a new `permissionsPayload`.
+                /// Creates a new `PermissionsPayload`.
                 ///
                 /// - Parameters:
                 ///   - issues:
@@ -833,23 +842,23 @@ public enum Components {
                 }
                 public init(from decoder: any Decoder) throws {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
-                    issues = try container.decodeIfPresent(
+                    self.issues = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .issues
                     )
-                    checks = try container.decodeIfPresent(
+                    self.checks = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .checks
                     )
-                    metadata = try container.decodeIfPresent(
+                    self.metadata = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .metadata
                     )
-                    contents = try container.decodeIfPresent(
+                    self.contents = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .contents
                     )
-                    deployments = try container.decodeIfPresent(
+                    self.deployments = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .deployments
                     )
@@ -864,23 +873,23 @@ public enum Components {
                 public func encode(to encoder: any Encoder) throws {
                     var container = encoder.container(keyedBy: CodingKeys.self)
                     try container.encodeIfPresent(
-                        issues,
+                        self.issues,
                         forKey: .issues
                     )
                     try container.encodeIfPresent(
-                        checks,
+                        self.checks,
                         forKey: .checks
                     )
                     try container.encodeIfPresent(
-                        metadata,
+                        self.metadata,
                         forKey: .metadata
                     )
                     try container.encodeIfPresent(
-                        contents,
+                        self.contents,
                         forKey: .contents
                     )
                     try container.encodeIfPresent(
-                        deployments,
+                        self.deployments,
                         forKey: .deployments
                     )
                     try encoder.encodeAdditionalProperties(additionalProperties)
@@ -889,7 +898,7 @@ public enum Components {
             /// The set of permissions for the GitHub app
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-integration/permissions`.
-            public var permissions: Components.Schemas.nullable_hyphen_integration.permissionsPayload
+            public var permissions: Components.Schemas.NullableIntegration.PermissionsPayload
             /// The list of events for the GitHub app
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-integration/events`.
@@ -897,106 +906,106 @@ public enum Components {
             /// The number of installations associated with the GitHub app
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-integration/installations_count`.
-            public var installations_count: Swift.Int?
+            public var installationsCount: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/nullable-integration/client_secret`.
-            public var client_secret: Swift.String?
+            public var clientSecret: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-integration/webhook_secret`.
-            public var webhook_secret: Swift.String?
+            public var webhookSecret: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-integration/pem`.
             public var pem: Swift.String?
-            /// Creates a new `nullable_hyphen_integration`.
+            /// Creates a new `NullableIntegration`.
             ///
             /// - Parameters:
             ///   - id: Unique identifier of the GitHub app
             ///   - slug: The slug name of the GitHub app
-            ///   - node_id:
-            ///   - client_id:
+            ///   - nodeId:
+            ///   - clientId:
             ///   - owner:
             ///   - name: The name of the GitHub app
             ///   - description:
-            ///   - external_url:
-            ///   - html_url:
-            ///   - created_at:
-            ///   - updated_at:
+            ///   - externalUrl:
+            ///   - htmlUrl:
+            ///   - createdAt:
+            ///   - updatedAt:
             ///   - permissions: The set of permissions for the GitHub app
             ///   - events: The list of events for the GitHub app
-            ///   - installations_count: The number of installations associated with the GitHub app
-            ///   - client_secret:
-            ///   - webhook_secret:
+            ///   - installationsCount: The number of installations associated with the GitHub app
+            ///   - clientSecret:
+            ///   - webhookSecret:
             ///   - pem:
             public init(
                 id: Swift.Int,
                 slug: Swift.String? = nil,
-                node_id: Swift.String,
-                client_id: Swift.String? = nil,
-                owner: Components.Schemas.nullable_hyphen_integration.ownerPayload,
+                nodeId: Swift.String,
+                clientId: Swift.String? = nil,
+                owner: Components.Schemas.NullableIntegration.OwnerPayload,
                 name: Swift.String,
                 description: Swift.String? = nil,
-                external_url: Swift.String,
-                html_url: Swift.String,
-                created_at: Foundation.Date,
-                updated_at: Foundation.Date,
-                permissions: Components.Schemas.nullable_hyphen_integration.permissionsPayload,
+                externalUrl: Swift.String,
+                htmlUrl: Swift.String,
+                createdAt: Foundation.Date,
+                updatedAt: Foundation.Date,
+                permissions: Components.Schemas.NullableIntegration.PermissionsPayload,
                 events: [Swift.String],
-                installations_count: Swift.Int? = nil,
-                client_secret: Swift.String? = nil,
-                webhook_secret: Swift.String? = nil,
+                installationsCount: Swift.Int? = nil,
+                clientSecret: Swift.String? = nil,
+                webhookSecret: Swift.String? = nil,
                 pem: Swift.String? = nil
             ) {
                 self.id = id
                 self.slug = slug
-                self.node_id = node_id
-                self.client_id = client_id
+                self.nodeId = nodeId
+                self.clientId = clientId
                 self.owner = owner
                 self.name = name
                 self.description = description
-                self.external_url = external_url
-                self.html_url = html_url
-                self.created_at = created_at
-                self.updated_at = updated_at
+                self.externalUrl = externalUrl
+                self.htmlUrl = htmlUrl
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
                 self.permissions = permissions
                 self.events = events
-                self.installations_count = installations_count
-                self.client_secret = client_secret
-                self.webhook_secret = webhook_secret
+                self.installationsCount = installationsCount
+                self.clientSecret = clientSecret
+                self.webhookSecret = webhookSecret
                 self.pem = pem
             }
             public enum CodingKeys: String, CodingKey {
                 case id
                 case slug
-                case node_id
-                case client_id
+                case nodeId = "node_id"
+                case clientId = "client_id"
                 case owner
                 case name
                 case description
-                case external_url
-                case html_url
-                case created_at
-                case updated_at
+                case externalUrl = "external_url"
+                case htmlUrl = "html_url"
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
                 case permissions
                 case events
-                case installations_count
-                case client_secret
-                case webhook_secret
+                case installationsCount = "installations_count"
+                case clientSecret = "client_secret"
+                case webhookSecret = "webhook_secret"
                 case pem
             }
         }
         /// - Remark: Generated from `#/components/schemas/security-and-analysis`.
-        public struct security_hyphen_and_hyphen_analysis: Codable, Hashable, Sendable {
+        public struct SecurityAndAnalysis: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security`.
-            public struct advanced_securityPayload: Codable, Hashable, Sendable {
+            public struct AdvancedSecurityPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security/status`.
-                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.advanced_securityPayload.statusPayload?
-                /// Creates a new `advanced_securityPayload`.
+                public var status: Components.Schemas.SecurityAndAnalysis.AdvancedSecurityPayload.StatusPayload?
+                /// Creates a new `AdvancedSecurityPayload`.
                 ///
                 /// - Parameters:
                 ///   - status:
-                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.advanced_securityPayload.statusPayload? = nil) {
+                public init(status: Components.Schemas.SecurityAndAnalysis.AdvancedSecurityPayload.StatusPayload? = nil) {
                     self.status = status
                 }
                 public enum CodingKeys: String, CodingKey {
@@ -1004,21 +1013,21 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security`.
-            public var advanced_security: Components.Schemas.security_hyphen_and_hyphen_analysis.advanced_securityPayload?
+            public var advancedSecurity: Components.Schemas.SecurityAndAnalysis.AdvancedSecurityPayload?
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security`.
-            public struct code_securityPayload: Codable, Hashable, Sendable {
+            public struct CodeSecurityPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security/status`.
-                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.code_securityPayload.statusPayload?
-                /// Creates a new `code_securityPayload`.
+                public var status: Components.Schemas.SecurityAndAnalysis.CodeSecurityPayload.StatusPayload?
+                /// Creates a new `CodeSecurityPayload`.
                 ///
                 /// - Parameters:
                 ///   - status:
-                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.code_securityPayload.statusPayload? = nil) {
+                public init(status: Components.Schemas.SecurityAndAnalysis.CodeSecurityPayload.StatusPayload? = nil) {
                     self.status = status
                 }
                 public enum CodingKeys: String, CodingKey {
@@ -1026,27 +1035,27 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security`.
-            public var code_security: Components.Schemas.security_hyphen_and_hyphen_analysis.code_securityPayload?
+            public var codeSecurity: Components.Schemas.SecurityAndAnalysis.CodeSecurityPayload?
             /// Enable or disable Dependabot security updates for the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/dependabot_security_updates`.
-            public struct dependabot_security_updatesPayload: Codable, Hashable, Sendable {
+            public struct DependabotSecurityUpdatesPayload: Codable, Hashable, Sendable {
                 /// The enablement status of Dependabot security updates for the repository.
                 ///
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/dependabot_security_updates/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
                 /// The enablement status of Dependabot security updates for the repository.
                 ///
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/dependabot_security_updates/status`.
-                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.dependabot_security_updatesPayload.statusPayload?
-                /// Creates a new `dependabot_security_updatesPayload`.
+                public var status: Components.Schemas.SecurityAndAnalysis.DependabotSecurityUpdatesPayload.StatusPayload?
+                /// Creates a new `DependabotSecurityUpdatesPayload`.
                 ///
                 /// - Parameters:
                 ///   - status: The enablement status of Dependabot security updates for the repository.
-                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.dependabot_security_updatesPayload.statusPayload? = nil) {
+                public init(status: Components.Schemas.SecurityAndAnalysis.DependabotSecurityUpdatesPayload.StatusPayload? = nil) {
                     self.status = status
                 }
                 public enum CodingKeys: String, CodingKey {
@@ -1056,21 +1065,21 @@ public enum Components {
             /// Enable or disable Dependabot security updates for the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/dependabot_security_updates`.
-            public var dependabot_security_updates: Components.Schemas.security_hyphen_and_hyphen_analysis.dependabot_security_updatesPayload?
+            public var dependabotSecurityUpdates: Components.Schemas.SecurityAndAnalysis.DependabotSecurityUpdatesPayload?
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning`.
-            public struct secret_scanningPayload: Codable, Hashable, Sendable {
+            public struct SecretScanningPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning/status`.
-                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanningPayload.statusPayload?
-                /// Creates a new `secret_scanningPayload`.
+                public var status: Components.Schemas.SecurityAndAnalysis.SecretScanningPayload.StatusPayload?
+                /// Creates a new `SecretScanningPayload`.
                 ///
                 /// - Parameters:
                 ///   - status:
-                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanningPayload.statusPayload? = nil) {
+                public init(status: Components.Schemas.SecurityAndAnalysis.SecretScanningPayload.StatusPayload? = nil) {
                     self.status = status
                 }
                 public enum CodingKeys: String, CodingKey {
@@ -1078,21 +1087,21 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning`.
-            public var secret_scanning: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanningPayload?
+            public var secretScanning: Components.Schemas.SecurityAndAnalysis.SecretScanningPayload?
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_push_protection`.
-            public struct secret_scanning_push_protectionPayload: Codable, Hashable, Sendable {
+            public struct SecretScanningPushProtectionPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_push_protection/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_push_protection/status`.
-                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_push_protectionPayload.statusPayload?
-                /// Creates a new `secret_scanning_push_protectionPayload`.
+                public var status: Components.Schemas.SecurityAndAnalysis.SecretScanningPushProtectionPayload.StatusPayload?
+                /// Creates a new `SecretScanningPushProtectionPayload`.
                 ///
                 /// - Parameters:
                 ///   - status:
-                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_push_protectionPayload.statusPayload? = nil) {
+                public init(status: Components.Schemas.SecurityAndAnalysis.SecretScanningPushProtectionPayload.StatusPayload? = nil) {
                     self.status = status
                 }
                 public enum CodingKeys: String, CodingKey {
@@ -1100,21 +1109,21 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_push_protection`.
-            public var secret_scanning_push_protection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_push_protectionPayload?
+            public var secretScanningPushProtection: Components.Schemas.SecurityAndAnalysis.SecretScanningPushProtectionPayload?
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns`.
-            public struct secret_scanning_non_provider_patternsPayload: Codable, Hashable, Sendable {
+            public struct SecretScanningNonProviderPatternsPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns/status`.
-                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_non_provider_patternsPayload.statusPayload?
-                /// Creates a new `secret_scanning_non_provider_patternsPayload`.
+                public var status: Components.Schemas.SecurityAndAnalysis.SecretScanningNonProviderPatternsPayload.StatusPayload?
+                /// Creates a new `SecretScanningNonProviderPatternsPayload`.
                 ///
                 /// - Parameters:
                 ///   - status:
-                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_non_provider_patternsPayload.statusPayload? = nil) {
+                public init(status: Components.Schemas.SecurityAndAnalysis.SecretScanningNonProviderPatternsPayload.StatusPayload? = nil) {
                     self.status = status
                 }
                 public enum CodingKeys: String, CodingKey {
@@ -1122,21 +1131,21 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns`.
-            public var secret_scanning_non_provider_patterns: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_non_provider_patternsPayload?
+            public var secretScanningNonProviderPatterns: Components.Schemas.SecurityAndAnalysis.SecretScanningNonProviderPatternsPayload?
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection`.
-            public struct secret_scanning_ai_detectionPayload: Codable, Hashable, Sendable {
+            public struct SecretScanningAiDetectionPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection/status`.
-                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload.statusPayload?
-                /// Creates a new `secret_scanning_ai_detectionPayload`.
+                public var status: Components.Schemas.SecurityAndAnalysis.SecretScanningAiDetectionPayload.StatusPayload?
+                /// Creates a new `SecretScanningAiDetectionPayload`.
                 ///
                 /// - Parameters:
                 ///   - status:
-                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload.statusPayload? = nil) {
+                public init(status: Components.Schemas.SecurityAndAnalysis.SecretScanningAiDetectionPayload.StatusPayload? = nil) {
                     self.status = status
                 }
                 public enum CodingKeys: String, CodingKey {
@@ -1144,62 +1153,62 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection`.
-            public var secret_scanning_ai_detection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload?
-            /// Creates a new `security_hyphen_and_hyphen_analysis`.
+            public var secretScanningAiDetection: Components.Schemas.SecurityAndAnalysis.SecretScanningAiDetectionPayload?
+            /// Creates a new `SecurityAndAnalysis`.
             ///
             /// - Parameters:
-            ///   - advanced_security:
-            ///   - code_security:
-            ///   - dependabot_security_updates: Enable or disable Dependabot security updates for the repository.
-            ///   - secret_scanning:
-            ///   - secret_scanning_push_protection:
-            ///   - secret_scanning_non_provider_patterns:
-            ///   - secret_scanning_ai_detection:
+            ///   - advancedSecurity:
+            ///   - codeSecurity:
+            ///   - dependabotSecurityUpdates: Enable or disable Dependabot security updates for the repository.
+            ///   - secretScanning:
+            ///   - secretScanningPushProtection:
+            ///   - secretScanningNonProviderPatterns:
+            ///   - secretScanningAiDetection:
             public init(
-                advanced_security: Components.Schemas.security_hyphen_and_hyphen_analysis.advanced_securityPayload? = nil,
-                code_security: Components.Schemas.security_hyphen_and_hyphen_analysis.code_securityPayload? = nil,
-                dependabot_security_updates: Components.Schemas.security_hyphen_and_hyphen_analysis.dependabot_security_updatesPayload? = nil,
-                secret_scanning: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanningPayload? = nil,
-                secret_scanning_push_protection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_push_protectionPayload? = nil,
-                secret_scanning_non_provider_patterns: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_non_provider_patternsPayload? = nil,
-                secret_scanning_ai_detection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload? = nil
+                advancedSecurity: Components.Schemas.SecurityAndAnalysis.AdvancedSecurityPayload? = nil,
+                codeSecurity: Components.Schemas.SecurityAndAnalysis.CodeSecurityPayload? = nil,
+                dependabotSecurityUpdates: Components.Schemas.SecurityAndAnalysis.DependabotSecurityUpdatesPayload? = nil,
+                secretScanning: Components.Schemas.SecurityAndAnalysis.SecretScanningPayload? = nil,
+                secretScanningPushProtection: Components.Schemas.SecurityAndAnalysis.SecretScanningPushProtectionPayload? = nil,
+                secretScanningNonProviderPatterns: Components.Schemas.SecurityAndAnalysis.SecretScanningNonProviderPatternsPayload? = nil,
+                secretScanningAiDetection: Components.Schemas.SecurityAndAnalysis.SecretScanningAiDetectionPayload? = nil
             ) {
-                self.advanced_security = advanced_security
-                self.code_security = code_security
-                self.dependabot_security_updates = dependabot_security_updates
-                self.secret_scanning = secret_scanning
-                self.secret_scanning_push_protection = secret_scanning_push_protection
-                self.secret_scanning_non_provider_patterns = secret_scanning_non_provider_patterns
-                self.secret_scanning_ai_detection = secret_scanning_ai_detection
+                self.advancedSecurity = advancedSecurity
+                self.codeSecurity = codeSecurity
+                self.dependabotSecurityUpdates = dependabotSecurityUpdates
+                self.secretScanning = secretScanning
+                self.secretScanningPushProtection = secretScanningPushProtection
+                self.secretScanningNonProviderPatterns = secretScanningNonProviderPatterns
+                self.secretScanningAiDetection = secretScanningAiDetection
             }
             public enum CodingKeys: String, CodingKey {
-                case advanced_security
-                case code_security
-                case dependabot_security_updates
-                case secret_scanning
-                case secret_scanning_push_protection
-                case secret_scanning_non_provider_patterns
-                case secret_scanning_ai_detection
+                case advancedSecurity = "advanced_security"
+                case codeSecurity = "code_security"
+                case dependabotSecurityUpdates = "dependabot_security_updates"
+                case secretScanning = "secret_scanning"
+                case secretScanningPushProtection = "secret_scanning_push_protection"
+                case secretScanningNonProviderPatterns = "secret_scanning_non_provider_patterns"
+                case secretScanningAiDetection = "secret_scanning_ai_detection"
             }
         }
         /// Minimal Repository
         ///
         /// - Remark: Generated from `#/components/schemas/minimal-repository`.
-        public struct minimal_hyphen_repository: Codable, Hashable, Sendable {
+        public struct MinimalRepository: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/minimal-repository/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/minimal-repository/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/name`.
             public var name: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/full_name`.
-            public var full_name: Swift.String
+            public var fullName: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/owner`.
-            public var owner: Components.Schemas.simple_hyphen_user
+            public var owner: Components.Schemas.SimpleUser
             /// - Remark: Generated from `#/components/schemas/minimal-repository/private`.
             public var _private: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/minimal-repository/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/description`.
             public var description: Swift.String?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/fork`.
@@ -1207,121 +1216,121 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/minimal-repository/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/archive_url`.
-            public var archive_url: Swift.String
+            public var archiveUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/assignees_url`.
-            public var assignees_url: Swift.String
+            public var assigneesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/blobs_url`.
-            public var blobs_url: Swift.String
+            public var blobsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/branches_url`.
-            public var branches_url: Swift.String
+            public var branchesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/collaborators_url`.
-            public var collaborators_url: Swift.String
+            public var collaboratorsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/comments_url`.
-            public var comments_url: Swift.String
+            public var commentsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/commits_url`.
-            public var commits_url: Swift.String
+            public var commitsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/compare_url`.
-            public var compare_url: Swift.String
+            public var compareUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/contents_url`.
-            public var contents_url: Swift.String
+            public var contentsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/contributors_url`.
-            public var contributors_url: Swift.String
+            public var contributorsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/deployments_url`.
-            public var deployments_url: Swift.String
+            public var deploymentsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/downloads_url`.
-            public var downloads_url: Swift.String
+            public var downloadsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/events_url`.
-            public var events_url: Swift.String
+            public var eventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/forks_url`.
-            public var forks_url: Swift.String
+            public var forksUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/git_commits_url`.
-            public var git_commits_url: Swift.String
+            public var gitCommitsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/git_refs_url`.
-            public var git_refs_url: Swift.String
+            public var gitRefsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/git_tags_url`.
-            public var git_tags_url: Swift.String
+            public var gitTagsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/git_url`.
-            public var git_url: Swift.String?
+            public var gitUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/issue_comment_url`.
-            public var issue_comment_url: Swift.String
+            public var issueCommentUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/issue_events_url`.
-            public var issue_events_url: Swift.String
+            public var issueEventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/issues_url`.
-            public var issues_url: Swift.String
+            public var issuesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/keys_url`.
-            public var keys_url: Swift.String
+            public var keysUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/labels_url`.
-            public var labels_url: Swift.String
+            public var labelsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/languages_url`.
-            public var languages_url: Swift.String
+            public var languagesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/merges_url`.
-            public var merges_url: Swift.String
+            public var mergesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/milestones_url`.
-            public var milestones_url: Swift.String
+            public var milestonesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/notifications_url`.
-            public var notifications_url: Swift.String
+            public var notificationsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/pulls_url`.
-            public var pulls_url: Swift.String
+            public var pullsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/releases_url`.
-            public var releases_url: Swift.String
+            public var releasesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/ssh_url`.
-            public var ssh_url: Swift.String?
+            public var sshUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/stargazers_url`.
-            public var stargazers_url: Swift.String
+            public var stargazersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/statuses_url`.
-            public var statuses_url: Swift.String
+            public var statusesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/subscribers_url`.
-            public var subscribers_url: Swift.String
+            public var subscribersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/subscription_url`.
-            public var subscription_url: Swift.String
+            public var subscriptionUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/tags_url`.
-            public var tags_url: Swift.String
+            public var tagsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/teams_url`.
-            public var teams_url: Swift.String
+            public var teamsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/trees_url`.
-            public var trees_url: Swift.String
+            public var treesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/clone_url`.
-            public var clone_url: Swift.String?
+            public var cloneUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/mirror_url`.
-            public var mirror_url: Swift.String?
+            public var mirrorUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/hooks_url`.
-            public var hooks_url: Swift.String
+            public var hooksUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/svn_url`.
-            public var svn_url: Swift.String?
+            public var svnUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/homepage`.
             public var homepage: Swift.String?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/language`.
             public var language: Swift.String?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/forks_count`.
-            public var forks_count: Swift.Int?
+            public var forksCount: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/stargazers_count`.
-            public var stargazers_count: Swift.Int?
+            public var stargazersCount: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/watchers_count`.
-            public var watchers_count: Swift.Int?
+            public var watchersCount: Swift.Int?
             /// The size of the repository, in kilobytes. Size is calculated hourly. When a repository is initially created, the size is 0.
             ///
             /// - Remark: Generated from `#/components/schemas/minimal-repository/size`.
             public var size: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/default_branch`.
-            public var default_branch: Swift.String?
+            public var defaultBranch: Swift.String?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/open_issues_count`.
-            public var open_issues_count: Swift.Int?
+            public var openIssuesCount: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/is_template`.
-            public var is_template: Swift.Bool?
+            public var isTemplate: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/topics`.
             public var topics: [Swift.String]?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/has_issues`.
-            public var has_issues: Swift.Bool?
+            public var hasIssues: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/has_projects`.
-            public var has_projects: Swift.Bool?
+            public var hasProjects: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/has_wiki`.
-            public var has_wiki: Swift.Bool?
+            public var hasWiki: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/has_pages`.
-            public var has_pages: Swift.Bool?
+            public var hasPages: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/has_downloads`.
-            public var has_downloads: Swift.Bool?
+            public var hasDownloads: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/has_discussions`.
-            public var has_discussions: Swift.Bool?
+            public var hasDiscussions: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/archived`.
             public var archived: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/disabled`.
@@ -1329,13 +1338,13 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/minimal-repository/visibility`.
             public var visibility: Swift.String?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/pushed_at`.
-            public var pushed_at: Foundation.Date?
+            public var pushedAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/created_at`.
-            public var created_at: Foundation.Date?
+            public var createdAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/updated_at`.
-            public var updated_at: Foundation.Date?
+            public var updatedAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/permissions`.
-            public struct permissionsPayload: Codable, Hashable, Sendable {
+            public struct PermissionsPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/minimal-repository/permissions/admin`.
                 public var admin: Swift.Bool?
                 /// - Remark: Generated from `#/components/schemas/minimal-repository/permissions/maintain`.
@@ -1346,7 +1355,7 @@ public enum Components {
                 public var triage: Swift.Bool?
                 /// - Remark: Generated from `#/components/schemas/minimal-repository/permissions/pull`.
                 public var pull: Swift.Bool?
-                /// Creates a new `permissionsPayload`.
+                /// Creates a new `PermissionsPayload`.
                 ///
                 /// - Parameters:
                 ///   - admin:
@@ -1376,443 +1385,443 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/minimal-repository/permissions`.
-            public var permissions: Components.Schemas.minimal_hyphen_repository.permissionsPayload?
+            public var permissions: Components.Schemas.MinimalRepository.PermissionsPayload?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/role_name`.
-            public var role_name: Swift.String?
+            public var roleName: Swift.String?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/temp_clone_token`.
-            public var temp_clone_token: Swift.String?
+            public var tempCloneToken: Swift.String?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/delete_branch_on_merge`.
-            public var delete_branch_on_merge: Swift.Bool?
+            public var deleteBranchOnMerge: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/subscribers_count`.
-            public var subscribers_count: Swift.Int?
+            public var subscribersCount: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/network_count`.
-            public var network_count: Swift.Int?
+            public var networkCount: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/code_of_conduct`.
-            public var code_of_conduct: Components.Schemas.code_hyphen_of_hyphen_conduct?
+            public var codeOfConduct: Components.Schemas.CodeOfConduct?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/license`.
-            public struct licensePayload: Codable, Hashable, Sendable {
+            public struct LicensePayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/minimal-repository/license/key`.
                 public var key: Swift.String?
                 /// - Remark: Generated from `#/components/schemas/minimal-repository/license/name`.
                 public var name: Swift.String?
                 /// - Remark: Generated from `#/components/schemas/minimal-repository/license/spdx_id`.
-                public var spdx_id: Swift.String?
+                public var spdxId: Swift.String?
                 /// - Remark: Generated from `#/components/schemas/minimal-repository/license/url`.
                 public var url: Swift.String?
                 /// - Remark: Generated from `#/components/schemas/minimal-repository/license/node_id`.
-                public var node_id: Swift.String?
-                /// Creates a new `licensePayload`.
+                public var nodeId: Swift.String?
+                /// Creates a new `LicensePayload`.
                 ///
                 /// - Parameters:
                 ///   - key:
                 ///   - name:
-                ///   - spdx_id:
+                ///   - spdxId:
                 ///   - url:
-                ///   - node_id:
+                ///   - nodeId:
                 public init(
                     key: Swift.String? = nil,
                     name: Swift.String? = nil,
-                    spdx_id: Swift.String? = nil,
+                    spdxId: Swift.String? = nil,
                     url: Swift.String? = nil,
-                    node_id: Swift.String? = nil
+                    nodeId: Swift.String? = nil
                 ) {
                     self.key = key
                     self.name = name
-                    self.spdx_id = spdx_id
+                    self.spdxId = spdxId
                     self.url = url
-                    self.node_id = node_id
+                    self.nodeId = nodeId
                 }
                 public enum CodingKeys: String, CodingKey {
                     case key
                     case name
-                    case spdx_id
+                    case spdxId = "spdx_id"
                     case url
-                    case node_id
+                    case nodeId = "node_id"
                 }
             }
             /// - Remark: Generated from `#/components/schemas/minimal-repository/license`.
-            public var license: Components.Schemas.minimal_hyphen_repository.licensePayload?
+            public var license: Components.Schemas.MinimalRepository.LicensePayload?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/forks`.
             public var forks: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/open_issues`.
-            public var open_issues: Swift.Int?
+            public var openIssues: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/watchers`.
             public var watchers: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/allow_forking`.
-            public var allow_forking: Swift.Bool?
+            public var allowForking: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/web_commit_signoff_required`.
-            public var web_commit_signoff_required: Swift.Bool?
+            public var webCommitSignoffRequired: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/security_and_analysis`.
-            public var security_and_analysis: Components.Schemas.security_hyphen_and_hyphen_analysis?
-            /// Creates a new `minimal_hyphen_repository`.
+            public var securityAndAnalysis: Components.Schemas.SecurityAndAnalysis?
+            /// Creates a new `MinimalRepository`.
             ///
             /// - Parameters:
             ///   - id:
-            ///   - node_id:
+            ///   - nodeId:
             ///   - name:
-            ///   - full_name:
+            ///   - fullName:
             ///   - owner:
             ///   - _private:
-            ///   - html_url:
+            ///   - htmlUrl:
             ///   - description:
             ///   - fork:
             ///   - url:
-            ///   - archive_url:
-            ///   - assignees_url:
-            ///   - blobs_url:
-            ///   - branches_url:
-            ///   - collaborators_url:
-            ///   - comments_url:
-            ///   - commits_url:
-            ///   - compare_url:
-            ///   - contents_url:
-            ///   - contributors_url:
-            ///   - deployments_url:
-            ///   - downloads_url:
-            ///   - events_url:
-            ///   - forks_url:
-            ///   - git_commits_url:
-            ///   - git_refs_url:
-            ///   - git_tags_url:
-            ///   - git_url:
-            ///   - issue_comment_url:
-            ///   - issue_events_url:
-            ///   - issues_url:
-            ///   - keys_url:
-            ///   - labels_url:
-            ///   - languages_url:
-            ///   - merges_url:
-            ///   - milestones_url:
-            ///   - notifications_url:
-            ///   - pulls_url:
-            ///   - releases_url:
-            ///   - ssh_url:
-            ///   - stargazers_url:
-            ///   - statuses_url:
-            ///   - subscribers_url:
-            ///   - subscription_url:
-            ///   - tags_url:
-            ///   - teams_url:
-            ///   - trees_url:
-            ///   - clone_url:
-            ///   - mirror_url:
-            ///   - hooks_url:
-            ///   - svn_url:
+            ///   - archiveUrl:
+            ///   - assigneesUrl:
+            ///   - blobsUrl:
+            ///   - branchesUrl:
+            ///   - collaboratorsUrl:
+            ///   - commentsUrl:
+            ///   - commitsUrl:
+            ///   - compareUrl:
+            ///   - contentsUrl:
+            ///   - contributorsUrl:
+            ///   - deploymentsUrl:
+            ///   - downloadsUrl:
+            ///   - eventsUrl:
+            ///   - forksUrl:
+            ///   - gitCommitsUrl:
+            ///   - gitRefsUrl:
+            ///   - gitTagsUrl:
+            ///   - gitUrl:
+            ///   - issueCommentUrl:
+            ///   - issueEventsUrl:
+            ///   - issuesUrl:
+            ///   - keysUrl:
+            ///   - labelsUrl:
+            ///   - languagesUrl:
+            ///   - mergesUrl:
+            ///   - milestonesUrl:
+            ///   - notificationsUrl:
+            ///   - pullsUrl:
+            ///   - releasesUrl:
+            ///   - sshUrl:
+            ///   - stargazersUrl:
+            ///   - statusesUrl:
+            ///   - subscribersUrl:
+            ///   - subscriptionUrl:
+            ///   - tagsUrl:
+            ///   - teamsUrl:
+            ///   - treesUrl:
+            ///   - cloneUrl:
+            ///   - mirrorUrl:
+            ///   - hooksUrl:
+            ///   - svnUrl:
             ///   - homepage:
             ///   - language:
-            ///   - forks_count:
-            ///   - stargazers_count:
-            ///   - watchers_count:
+            ///   - forksCount:
+            ///   - stargazersCount:
+            ///   - watchersCount:
             ///   - size: The size of the repository, in kilobytes. Size is calculated hourly. When a repository is initially created, the size is 0.
-            ///   - default_branch:
-            ///   - open_issues_count:
-            ///   - is_template:
+            ///   - defaultBranch:
+            ///   - openIssuesCount:
+            ///   - isTemplate:
             ///   - topics:
-            ///   - has_issues:
-            ///   - has_projects:
-            ///   - has_wiki:
-            ///   - has_pages:
-            ///   - has_downloads:
-            ///   - has_discussions:
+            ///   - hasIssues:
+            ///   - hasProjects:
+            ///   - hasWiki:
+            ///   - hasPages:
+            ///   - hasDownloads:
+            ///   - hasDiscussions:
             ///   - archived:
             ///   - disabled:
             ///   - visibility:
-            ///   - pushed_at:
-            ///   - created_at:
-            ///   - updated_at:
+            ///   - pushedAt:
+            ///   - createdAt:
+            ///   - updatedAt:
             ///   - permissions:
-            ///   - role_name:
-            ///   - temp_clone_token:
-            ///   - delete_branch_on_merge:
-            ///   - subscribers_count:
-            ///   - network_count:
-            ///   - code_of_conduct:
+            ///   - roleName:
+            ///   - tempCloneToken:
+            ///   - deleteBranchOnMerge:
+            ///   - subscribersCount:
+            ///   - networkCount:
+            ///   - codeOfConduct:
             ///   - license:
             ///   - forks:
-            ///   - open_issues:
+            ///   - openIssues:
             ///   - watchers:
-            ///   - allow_forking:
-            ///   - web_commit_signoff_required:
-            ///   - security_and_analysis:
+            ///   - allowForking:
+            ///   - webCommitSignoffRequired:
+            ///   - securityAndAnalysis:
             public init(
                 id: Swift.Int64,
-                node_id: Swift.String,
+                nodeId: Swift.String,
                 name: Swift.String,
-                full_name: Swift.String,
-                owner: Components.Schemas.simple_hyphen_user,
+                fullName: Swift.String,
+                owner: Components.Schemas.SimpleUser,
                 _private: Swift.Bool,
-                html_url: Swift.String,
+                htmlUrl: Swift.String,
                 description: Swift.String? = nil,
                 fork: Swift.Bool,
                 url: Swift.String,
-                archive_url: Swift.String,
-                assignees_url: Swift.String,
-                blobs_url: Swift.String,
-                branches_url: Swift.String,
-                collaborators_url: Swift.String,
-                comments_url: Swift.String,
-                commits_url: Swift.String,
-                compare_url: Swift.String,
-                contents_url: Swift.String,
-                contributors_url: Swift.String,
-                deployments_url: Swift.String,
-                downloads_url: Swift.String,
-                events_url: Swift.String,
-                forks_url: Swift.String,
-                git_commits_url: Swift.String,
-                git_refs_url: Swift.String,
-                git_tags_url: Swift.String,
-                git_url: Swift.String? = nil,
-                issue_comment_url: Swift.String,
-                issue_events_url: Swift.String,
-                issues_url: Swift.String,
-                keys_url: Swift.String,
-                labels_url: Swift.String,
-                languages_url: Swift.String,
-                merges_url: Swift.String,
-                milestones_url: Swift.String,
-                notifications_url: Swift.String,
-                pulls_url: Swift.String,
-                releases_url: Swift.String,
-                ssh_url: Swift.String? = nil,
-                stargazers_url: Swift.String,
-                statuses_url: Swift.String,
-                subscribers_url: Swift.String,
-                subscription_url: Swift.String,
-                tags_url: Swift.String,
-                teams_url: Swift.String,
-                trees_url: Swift.String,
-                clone_url: Swift.String? = nil,
-                mirror_url: Swift.String? = nil,
-                hooks_url: Swift.String,
-                svn_url: Swift.String? = nil,
+                archiveUrl: Swift.String,
+                assigneesUrl: Swift.String,
+                blobsUrl: Swift.String,
+                branchesUrl: Swift.String,
+                collaboratorsUrl: Swift.String,
+                commentsUrl: Swift.String,
+                commitsUrl: Swift.String,
+                compareUrl: Swift.String,
+                contentsUrl: Swift.String,
+                contributorsUrl: Swift.String,
+                deploymentsUrl: Swift.String,
+                downloadsUrl: Swift.String,
+                eventsUrl: Swift.String,
+                forksUrl: Swift.String,
+                gitCommitsUrl: Swift.String,
+                gitRefsUrl: Swift.String,
+                gitTagsUrl: Swift.String,
+                gitUrl: Swift.String? = nil,
+                issueCommentUrl: Swift.String,
+                issueEventsUrl: Swift.String,
+                issuesUrl: Swift.String,
+                keysUrl: Swift.String,
+                labelsUrl: Swift.String,
+                languagesUrl: Swift.String,
+                mergesUrl: Swift.String,
+                milestonesUrl: Swift.String,
+                notificationsUrl: Swift.String,
+                pullsUrl: Swift.String,
+                releasesUrl: Swift.String,
+                sshUrl: Swift.String? = nil,
+                stargazersUrl: Swift.String,
+                statusesUrl: Swift.String,
+                subscribersUrl: Swift.String,
+                subscriptionUrl: Swift.String,
+                tagsUrl: Swift.String,
+                teamsUrl: Swift.String,
+                treesUrl: Swift.String,
+                cloneUrl: Swift.String? = nil,
+                mirrorUrl: Swift.String? = nil,
+                hooksUrl: Swift.String,
+                svnUrl: Swift.String? = nil,
                 homepage: Swift.String? = nil,
                 language: Swift.String? = nil,
-                forks_count: Swift.Int? = nil,
-                stargazers_count: Swift.Int? = nil,
-                watchers_count: Swift.Int? = nil,
+                forksCount: Swift.Int? = nil,
+                stargazersCount: Swift.Int? = nil,
+                watchersCount: Swift.Int? = nil,
                 size: Swift.Int? = nil,
-                default_branch: Swift.String? = nil,
-                open_issues_count: Swift.Int? = nil,
-                is_template: Swift.Bool? = nil,
+                defaultBranch: Swift.String? = nil,
+                openIssuesCount: Swift.Int? = nil,
+                isTemplate: Swift.Bool? = nil,
                 topics: [Swift.String]? = nil,
-                has_issues: Swift.Bool? = nil,
-                has_projects: Swift.Bool? = nil,
-                has_wiki: Swift.Bool? = nil,
-                has_pages: Swift.Bool? = nil,
-                has_downloads: Swift.Bool? = nil,
-                has_discussions: Swift.Bool? = nil,
+                hasIssues: Swift.Bool? = nil,
+                hasProjects: Swift.Bool? = nil,
+                hasWiki: Swift.Bool? = nil,
+                hasPages: Swift.Bool? = nil,
+                hasDownloads: Swift.Bool? = nil,
+                hasDiscussions: Swift.Bool? = nil,
                 archived: Swift.Bool? = nil,
                 disabled: Swift.Bool? = nil,
                 visibility: Swift.String? = nil,
-                pushed_at: Foundation.Date? = nil,
-                created_at: Foundation.Date? = nil,
-                updated_at: Foundation.Date? = nil,
-                permissions: Components.Schemas.minimal_hyphen_repository.permissionsPayload? = nil,
-                role_name: Swift.String? = nil,
-                temp_clone_token: Swift.String? = nil,
-                delete_branch_on_merge: Swift.Bool? = nil,
-                subscribers_count: Swift.Int? = nil,
-                network_count: Swift.Int? = nil,
-                code_of_conduct: Components.Schemas.code_hyphen_of_hyphen_conduct? = nil,
-                license: Components.Schemas.minimal_hyphen_repository.licensePayload? = nil,
+                pushedAt: Foundation.Date? = nil,
+                createdAt: Foundation.Date? = nil,
+                updatedAt: Foundation.Date? = nil,
+                permissions: Components.Schemas.MinimalRepository.PermissionsPayload? = nil,
+                roleName: Swift.String? = nil,
+                tempCloneToken: Swift.String? = nil,
+                deleteBranchOnMerge: Swift.Bool? = nil,
+                subscribersCount: Swift.Int? = nil,
+                networkCount: Swift.Int? = nil,
+                codeOfConduct: Components.Schemas.CodeOfConduct? = nil,
+                license: Components.Schemas.MinimalRepository.LicensePayload? = nil,
                 forks: Swift.Int? = nil,
-                open_issues: Swift.Int? = nil,
+                openIssues: Swift.Int? = nil,
                 watchers: Swift.Int? = nil,
-                allow_forking: Swift.Bool? = nil,
-                web_commit_signoff_required: Swift.Bool? = nil,
-                security_and_analysis: Components.Schemas.security_hyphen_and_hyphen_analysis? = nil
+                allowForking: Swift.Bool? = nil,
+                webCommitSignoffRequired: Swift.Bool? = nil,
+                securityAndAnalysis: Components.Schemas.SecurityAndAnalysis? = nil
             ) {
                 self.id = id
-                self.node_id = node_id
+                self.nodeId = nodeId
                 self.name = name
-                self.full_name = full_name
+                self.fullName = fullName
                 self.owner = owner
                 self._private = _private
-                self.html_url = html_url
+                self.htmlUrl = htmlUrl
                 self.description = description
                 self.fork = fork
                 self.url = url
-                self.archive_url = archive_url
-                self.assignees_url = assignees_url
-                self.blobs_url = blobs_url
-                self.branches_url = branches_url
-                self.collaborators_url = collaborators_url
-                self.comments_url = comments_url
-                self.commits_url = commits_url
-                self.compare_url = compare_url
-                self.contents_url = contents_url
-                self.contributors_url = contributors_url
-                self.deployments_url = deployments_url
-                self.downloads_url = downloads_url
-                self.events_url = events_url
-                self.forks_url = forks_url
-                self.git_commits_url = git_commits_url
-                self.git_refs_url = git_refs_url
-                self.git_tags_url = git_tags_url
-                self.git_url = git_url
-                self.issue_comment_url = issue_comment_url
-                self.issue_events_url = issue_events_url
-                self.issues_url = issues_url
-                self.keys_url = keys_url
-                self.labels_url = labels_url
-                self.languages_url = languages_url
-                self.merges_url = merges_url
-                self.milestones_url = milestones_url
-                self.notifications_url = notifications_url
-                self.pulls_url = pulls_url
-                self.releases_url = releases_url
-                self.ssh_url = ssh_url
-                self.stargazers_url = stargazers_url
-                self.statuses_url = statuses_url
-                self.subscribers_url = subscribers_url
-                self.subscription_url = subscription_url
-                self.tags_url = tags_url
-                self.teams_url = teams_url
-                self.trees_url = trees_url
-                self.clone_url = clone_url
-                self.mirror_url = mirror_url
-                self.hooks_url = hooks_url
-                self.svn_url = svn_url
+                self.archiveUrl = archiveUrl
+                self.assigneesUrl = assigneesUrl
+                self.blobsUrl = blobsUrl
+                self.branchesUrl = branchesUrl
+                self.collaboratorsUrl = collaboratorsUrl
+                self.commentsUrl = commentsUrl
+                self.commitsUrl = commitsUrl
+                self.compareUrl = compareUrl
+                self.contentsUrl = contentsUrl
+                self.contributorsUrl = contributorsUrl
+                self.deploymentsUrl = deploymentsUrl
+                self.downloadsUrl = downloadsUrl
+                self.eventsUrl = eventsUrl
+                self.forksUrl = forksUrl
+                self.gitCommitsUrl = gitCommitsUrl
+                self.gitRefsUrl = gitRefsUrl
+                self.gitTagsUrl = gitTagsUrl
+                self.gitUrl = gitUrl
+                self.issueCommentUrl = issueCommentUrl
+                self.issueEventsUrl = issueEventsUrl
+                self.issuesUrl = issuesUrl
+                self.keysUrl = keysUrl
+                self.labelsUrl = labelsUrl
+                self.languagesUrl = languagesUrl
+                self.mergesUrl = mergesUrl
+                self.milestonesUrl = milestonesUrl
+                self.notificationsUrl = notificationsUrl
+                self.pullsUrl = pullsUrl
+                self.releasesUrl = releasesUrl
+                self.sshUrl = sshUrl
+                self.stargazersUrl = stargazersUrl
+                self.statusesUrl = statusesUrl
+                self.subscribersUrl = subscribersUrl
+                self.subscriptionUrl = subscriptionUrl
+                self.tagsUrl = tagsUrl
+                self.teamsUrl = teamsUrl
+                self.treesUrl = treesUrl
+                self.cloneUrl = cloneUrl
+                self.mirrorUrl = mirrorUrl
+                self.hooksUrl = hooksUrl
+                self.svnUrl = svnUrl
                 self.homepage = homepage
                 self.language = language
-                self.forks_count = forks_count
-                self.stargazers_count = stargazers_count
-                self.watchers_count = watchers_count
+                self.forksCount = forksCount
+                self.stargazersCount = stargazersCount
+                self.watchersCount = watchersCount
                 self.size = size
-                self.default_branch = default_branch
-                self.open_issues_count = open_issues_count
-                self.is_template = is_template
+                self.defaultBranch = defaultBranch
+                self.openIssuesCount = openIssuesCount
+                self.isTemplate = isTemplate
                 self.topics = topics
-                self.has_issues = has_issues
-                self.has_projects = has_projects
-                self.has_wiki = has_wiki
-                self.has_pages = has_pages
-                self.has_downloads = has_downloads
-                self.has_discussions = has_discussions
+                self.hasIssues = hasIssues
+                self.hasProjects = hasProjects
+                self.hasWiki = hasWiki
+                self.hasPages = hasPages
+                self.hasDownloads = hasDownloads
+                self.hasDiscussions = hasDiscussions
                 self.archived = archived
                 self.disabled = disabled
                 self.visibility = visibility
-                self.pushed_at = pushed_at
-                self.created_at = created_at
-                self.updated_at = updated_at
+                self.pushedAt = pushedAt
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
                 self.permissions = permissions
-                self.role_name = role_name
-                self.temp_clone_token = temp_clone_token
-                self.delete_branch_on_merge = delete_branch_on_merge
-                self.subscribers_count = subscribers_count
-                self.network_count = network_count
-                self.code_of_conduct = code_of_conduct
+                self.roleName = roleName
+                self.tempCloneToken = tempCloneToken
+                self.deleteBranchOnMerge = deleteBranchOnMerge
+                self.subscribersCount = subscribersCount
+                self.networkCount = networkCount
+                self.codeOfConduct = codeOfConduct
                 self.license = license
                 self.forks = forks
-                self.open_issues = open_issues
+                self.openIssues = openIssues
                 self.watchers = watchers
-                self.allow_forking = allow_forking
-                self.web_commit_signoff_required = web_commit_signoff_required
-                self.security_and_analysis = security_and_analysis
+                self.allowForking = allowForking
+                self.webCommitSignoffRequired = webCommitSignoffRequired
+                self.securityAndAnalysis = securityAndAnalysis
             }
             public enum CodingKeys: String, CodingKey {
                 case id
-                case node_id
+                case nodeId = "node_id"
                 case name
-                case full_name
+                case fullName = "full_name"
                 case owner
                 case _private = "private"
-                case html_url
+                case htmlUrl = "html_url"
                 case description
                 case fork
                 case url
-                case archive_url
-                case assignees_url
-                case blobs_url
-                case branches_url
-                case collaborators_url
-                case comments_url
-                case commits_url
-                case compare_url
-                case contents_url
-                case contributors_url
-                case deployments_url
-                case downloads_url
-                case events_url
-                case forks_url
-                case git_commits_url
-                case git_refs_url
-                case git_tags_url
-                case git_url
-                case issue_comment_url
-                case issue_events_url
-                case issues_url
-                case keys_url
-                case labels_url
-                case languages_url
-                case merges_url
-                case milestones_url
-                case notifications_url
-                case pulls_url
-                case releases_url
-                case ssh_url
-                case stargazers_url
-                case statuses_url
-                case subscribers_url
-                case subscription_url
-                case tags_url
-                case teams_url
-                case trees_url
-                case clone_url
-                case mirror_url
-                case hooks_url
-                case svn_url
+                case archiveUrl = "archive_url"
+                case assigneesUrl = "assignees_url"
+                case blobsUrl = "blobs_url"
+                case branchesUrl = "branches_url"
+                case collaboratorsUrl = "collaborators_url"
+                case commentsUrl = "comments_url"
+                case commitsUrl = "commits_url"
+                case compareUrl = "compare_url"
+                case contentsUrl = "contents_url"
+                case contributorsUrl = "contributors_url"
+                case deploymentsUrl = "deployments_url"
+                case downloadsUrl = "downloads_url"
+                case eventsUrl = "events_url"
+                case forksUrl = "forks_url"
+                case gitCommitsUrl = "git_commits_url"
+                case gitRefsUrl = "git_refs_url"
+                case gitTagsUrl = "git_tags_url"
+                case gitUrl = "git_url"
+                case issueCommentUrl = "issue_comment_url"
+                case issueEventsUrl = "issue_events_url"
+                case issuesUrl = "issues_url"
+                case keysUrl = "keys_url"
+                case labelsUrl = "labels_url"
+                case languagesUrl = "languages_url"
+                case mergesUrl = "merges_url"
+                case milestonesUrl = "milestones_url"
+                case notificationsUrl = "notifications_url"
+                case pullsUrl = "pulls_url"
+                case releasesUrl = "releases_url"
+                case sshUrl = "ssh_url"
+                case stargazersUrl = "stargazers_url"
+                case statusesUrl = "statuses_url"
+                case subscribersUrl = "subscribers_url"
+                case subscriptionUrl = "subscription_url"
+                case tagsUrl = "tags_url"
+                case teamsUrl = "teams_url"
+                case treesUrl = "trees_url"
+                case cloneUrl = "clone_url"
+                case mirrorUrl = "mirror_url"
+                case hooksUrl = "hooks_url"
+                case svnUrl = "svn_url"
                 case homepage
                 case language
-                case forks_count
-                case stargazers_count
-                case watchers_count
+                case forksCount = "forks_count"
+                case stargazersCount = "stargazers_count"
+                case watchersCount = "watchers_count"
                 case size
-                case default_branch
-                case open_issues_count
-                case is_template
+                case defaultBranch = "default_branch"
+                case openIssuesCount = "open_issues_count"
+                case isTemplate = "is_template"
                 case topics
-                case has_issues
-                case has_projects
-                case has_wiki
-                case has_pages
-                case has_downloads
-                case has_discussions
+                case hasIssues = "has_issues"
+                case hasProjects = "has_projects"
+                case hasWiki = "has_wiki"
+                case hasPages = "has_pages"
+                case hasDownloads = "has_downloads"
+                case hasDiscussions = "has_discussions"
                 case archived
                 case disabled
                 case visibility
-                case pushed_at
-                case created_at
-                case updated_at
+                case pushedAt = "pushed_at"
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
                 case permissions
-                case role_name
-                case temp_clone_token
-                case delete_branch_on_merge
-                case subscribers_count
-                case network_count
-                case code_of_conduct
+                case roleName = "role_name"
+                case tempCloneToken = "temp_clone_token"
+                case deleteBranchOnMerge = "delete_branch_on_merge"
+                case subscribersCount = "subscribers_count"
+                case networkCount = "network_count"
+                case codeOfConduct = "code_of_conduct"
                 case license
                 case forks
-                case open_issues
+                case openIssues = "open_issues"
                 case watchers
-                case allow_forking
-                case web_commit_signoff_required
-                case security_and_analysis
+                case allowForking = "allow_forking"
+                case webCommitSignoffRequired = "web_commit_signoff_required"
+                case securityAndAnalysis = "security_and_analysis"
             }
         }
         /// An object without any properties.
         ///
         /// - Remark: Generated from `#/components/schemas/empty-object`.
-        public struct empty_hyphen_object: Codable, Hashable, Sendable {
-            /// Creates a new `empty_hyphen_object`.
+        public struct EmptyObject: Codable, Hashable, Sendable {
+            /// Creates a new `EmptyObject`.
             public init() {}
             public init(from decoder: any Decoder) throws {
                 try decoder.ensureNoAdditionalProperties(knownKeys: [])
             }
         }
         /// - Remark: Generated from `#/components/schemas/pull-request-minimal`.
-        public struct pull_hyphen_request_hyphen_minimal: Codable, Hashable, Sendable {
+        public struct PullRequestMinimal: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/pull-request-minimal/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/pull-request-minimal/number`.
@@ -1820,20 +1829,20 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/pull-request-minimal/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/pull-request-minimal/head`.
-            public struct headPayload: Codable, Hashable, Sendable {
+            public struct HeadPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/pull-request-minimal/head/ref`.
                 public var ref: Swift.String
                 /// - Remark: Generated from `#/components/schemas/pull-request-minimal/head/sha`.
                 public var sha: Swift.String
                 /// - Remark: Generated from `#/components/schemas/pull-request-minimal/head/repo`.
-                public struct repoPayload: Codable, Hashable, Sendable {
+                public struct RepoPayload: Codable, Hashable, Sendable {
                     /// - Remark: Generated from `#/components/schemas/pull-request-minimal/head/repo/id`.
                     public var id: Swift.Int64
                     /// - Remark: Generated from `#/components/schemas/pull-request-minimal/head/repo/url`.
                     public var url: Swift.String
                     /// - Remark: Generated from `#/components/schemas/pull-request-minimal/head/repo/name`.
                     public var name: Swift.String
-                    /// Creates a new `repoPayload`.
+                    /// Creates a new `RepoPayload`.
                     ///
                     /// - Parameters:
                     ///   - id:
@@ -1855,8 +1864,8 @@ public enum Components {
                     }
                 }
                 /// - Remark: Generated from `#/components/schemas/pull-request-minimal/head/repo`.
-                public var repo: Components.Schemas.pull_hyphen_request_hyphen_minimal.headPayload.repoPayload
-                /// Creates a new `headPayload`.
+                public var repo: Components.Schemas.PullRequestMinimal.HeadPayload.RepoPayload
+                /// Creates a new `HeadPayload`.
                 ///
                 /// - Parameters:
                 ///   - ref:
@@ -1865,7 +1874,7 @@ public enum Components {
                 public init(
                     ref: Swift.String,
                     sha: Swift.String,
-                    repo: Components.Schemas.pull_hyphen_request_hyphen_minimal.headPayload.repoPayload
+                    repo: Components.Schemas.PullRequestMinimal.HeadPayload.RepoPayload
                 ) {
                     self.ref = ref
                     self.sha = sha
@@ -1878,22 +1887,22 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/pull-request-minimal/head`.
-            public var head: Components.Schemas.pull_hyphen_request_hyphen_minimal.headPayload
+            public var head: Components.Schemas.PullRequestMinimal.HeadPayload
             /// - Remark: Generated from `#/components/schemas/pull-request-minimal/base`.
-            public struct basePayload: Codable, Hashable, Sendable {
+            public struct BasePayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/pull-request-minimal/base/ref`.
                 public var ref: Swift.String
                 /// - Remark: Generated from `#/components/schemas/pull-request-minimal/base/sha`.
                 public var sha: Swift.String
                 /// - Remark: Generated from `#/components/schemas/pull-request-minimal/base/repo`.
-                public struct repoPayload: Codable, Hashable, Sendable {
+                public struct RepoPayload: Codable, Hashable, Sendable {
                     /// - Remark: Generated from `#/components/schemas/pull-request-minimal/base/repo/id`.
                     public var id: Swift.Int64
                     /// - Remark: Generated from `#/components/schemas/pull-request-minimal/base/repo/url`.
                     public var url: Swift.String
                     /// - Remark: Generated from `#/components/schemas/pull-request-minimal/base/repo/name`.
                     public var name: Swift.String
-                    /// Creates a new `repoPayload`.
+                    /// Creates a new `RepoPayload`.
                     ///
                     /// - Parameters:
                     ///   - id:
@@ -1915,8 +1924,8 @@ public enum Components {
                     }
                 }
                 /// - Remark: Generated from `#/components/schemas/pull-request-minimal/base/repo`.
-                public var repo: Components.Schemas.pull_hyphen_request_hyphen_minimal.basePayload.repoPayload
-                /// Creates a new `basePayload`.
+                public var repo: Components.Schemas.PullRequestMinimal.BasePayload.RepoPayload
+                /// Creates a new `BasePayload`.
                 ///
                 /// - Parameters:
                 ///   - ref:
@@ -1925,7 +1934,7 @@ public enum Components {
                 public init(
                     ref: Swift.String,
                     sha: Swift.String,
-                    repo: Components.Schemas.pull_hyphen_request_hyphen_minimal.basePayload.repoPayload
+                    repo: Components.Schemas.PullRequestMinimal.BasePayload.RepoPayload
                 ) {
                     self.ref = ref
                     self.sha = sha
@@ -1938,8 +1947,8 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/pull-request-minimal/base`.
-            public var base: Components.Schemas.pull_hyphen_request_hyphen_minimal.basePayload
-            /// Creates a new `pull_hyphen_request_hyphen_minimal`.
+            public var base: Components.Schemas.PullRequestMinimal.BasePayload
+            /// Creates a new `PullRequestMinimal`.
             ///
             /// - Parameters:
             ///   - id:
@@ -1951,8 +1960,8 @@ public enum Components {
                 id: Swift.Int64,
                 number: Swift.Int,
                 url: Swift.String,
-                head: Components.Schemas.pull_hyphen_request_hyphen_minimal.headPayload,
-                base: Components.Schemas.pull_hyphen_request_hyphen_minimal.basePayload
+                head: Components.Schemas.PullRequestMinimal.HeadPayload,
+                base: Components.Schemas.PullRequestMinimal.BasePayload
             ) {
                 self.id = id
                 self.number = number
@@ -1971,7 +1980,7 @@ public enum Components {
         /// A deployment created as the result of an Actions check run from a workflow that references an environment
         ///
         /// - Remark: Generated from `#/components/schemas/deployment-simple`.
-        public struct deployment_hyphen_simple: Codable, Hashable, Sendable {
+        public struct DeploymentSimple: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/deployment-simple/url`.
             public var url: Swift.String
             /// Unique identifier of the deployment
@@ -1979,13 +1988,13 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/deployment-simple/id`.
             public var id: Swift.Int
             /// - Remark: Generated from `#/components/schemas/deployment-simple/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// Parameter to specify a task to execute
             ///
             /// - Remark: Generated from `#/components/schemas/deployment-simple/task`.
             public var task: Swift.String
             /// - Remark: Generated from `#/components/schemas/deployment-simple/original_environment`.
-            public var original_environment: Swift.String?
+            public var originalEnvironment: Swift.String?
             /// Name for the target deployment environment.
             ///
             /// - Remark: Generated from `#/components/schemas/deployment-simple/environment`.
@@ -1993,92 +2002,92 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/deployment-simple/description`.
             public var description: Swift.String?
             /// - Remark: Generated from `#/components/schemas/deployment-simple/created_at`.
-            public var created_at: Foundation.Date
+            public var createdAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/deployment-simple/updated_at`.
-            public var updated_at: Foundation.Date
+            public var updatedAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/deployment-simple/statuses_url`.
-            public var statuses_url: Swift.String
+            public var statusesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/deployment-simple/repository_url`.
-            public var repository_url: Swift.String
+            public var repositoryUrl: Swift.String
             /// Specifies if the given environment is will no longer exist at some point in the future. Default: false.
             ///
             /// - Remark: Generated from `#/components/schemas/deployment-simple/transient_environment`.
-            public var transient_environment: Swift.Bool?
+            public var transientEnvironment: Swift.Bool?
             /// Specifies if the given environment is one that end-users directly interact with. Default: false.
             ///
             /// - Remark: Generated from `#/components/schemas/deployment-simple/production_environment`.
-            public var production_environment: Swift.Bool?
+            public var productionEnvironment: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/deployment-simple/performed_via_github_app`.
-            public var performed_via_github_app: Components.Schemas.nullable_hyphen_integration?
-            /// Creates a new `deployment_hyphen_simple`.
+            public var performedViaGithubApp: Components.Schemas.NullableIntegration?
+            /// Creates a new `DeploymentSimple`.
             ///
             /// - Parameters:
             ///   - url:
             ///   - id: Unique identifier of the deployment
-            ///   - node_id:
+            ///   - nodeId:
             ///   - task: Parameter to specify a task to execute
-            ///   - original_environment:
+            ///   - originalEnvironment:
             ///   - environment: Name for the target deployment environment.
             ///   - description:
-            ///   - created_at:
-            ///   - updated_at:
-            ///   - statuses_url:
-            ///   - repository_url:
-            ///   - transient_environment: Specifies if the given environment is will no longer exist at some point in the future. Default: false.
-            ///   - production_environment: Specifies if the given environment is one that end-users directly interact with. Default: false.
-            ///   - performed_via_github_app:
+            ///   - createdAt:
+            ///   - updatedAt:
+            ///   - statusesUrl:
+            ///   - repositoryUrl:
+            ///   - transientEnvironment: Specifies if the given environment is will no longer exist at some point in the future. Default: false.
+            ///   - productionEnvironment: Specifies if the given environment is one that end-users directly interact with. Default: false.
+            ///   - performedViaGithubApp:
             public init(
                 url: Swift.String,
                 id: Swift.Int,
-                node_id: Swift.String,
+                nodeId: Swift.String,
                 task: Swift.String,
-                original_environment: Swift.String? = nil,
+                originalEnvironment: Swift.String? = nil,
                 environment: Swift.String,
                 description: Swift.String? = nil,
-                created_at: Foundation.Date,
-                updated_at: Foundation.Date,
-                statuses_url: Swift.String,
-                repository_url: Swift.String,
-                transient_environment: Swift.Bool? = nil,
-                production_environment: Swift.Bool? = nil,
-                performed_via_github_app: Components.Schemas.nullable_hyphen_integration? = nil
+                createdAt: Foundation.Date,
+                updatedAt: Foundation.Date,
+                statusesUrl: Swift.String,
+                repositoryUrl: Swift.String,
+                transientEnvironment: Swift.Bool? = nil,
+                productionEnvironment: Swift.Bool? = nil,
+                performedViaGithubApp: Components.Schemas.NullableIntegration? = nil
             ) {
                 self.url = url
                 self.id = id
-                self.node_id = node_id
+                self.nodeId = nodeId
                 self.task = task
-                self.original_environment = original_environment
+                self.originalEnvironment = originalEnvironment
                 self.environment = environment
                 self.description = description
-                self.created_at = created_at
-                self.updated_at = updated_at
-                self.statuses_url = statuses_url
-                self.repository_url = repository_url
-                self.transient_environment = transient_environment
-                self.production_environment = production_environment
-                self.performed_via_github_app = performed_via_github_app
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
+                self.statusesUrl = statusesUrl
+                self.repositoryUrl = repositoryUrl
+                self.transientEnvironment = transientEnvironment
+                self.productionEnvironment = productionEnvironment
+                self.performedViaGithubApp = performedViaGithubApp
             }
             public enum CodingKeys: String, CodingKey {
                 case url
                 case id
-                case node_id
+                case nodeId = "node_id"
                 case task
-                case original_environment
+                case originalEnvironment = "original_environment"
                 case environment
                 case description
-                case created_at
-                case updated_at
-                case statuses_url
-                case repository_url
-                case transient_environment
-                case production_environment
-                case performed_via_github_app
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
+                case statusesUrl = "statuses_url"
+                case repositoryUrl = "repository_url"
+                case transientEnvironment = "transient_environment"
+                case productionEnvironment = "production_environment"
+                case performedViaGithubApp = "performed_via_github_app"
             }
         }
         /// A check performed on the code of a given code change
         ///
         /// - Remark: Generated from `#/components/schemas/check-run`.
-        public struct check_hyphen_run: Codable, Hashable, Sendable {
+        public struct CheckRun: Codable, Hashable, Sendable {
             /// The id of the check.
             ///
             /// - Remark: Generated from `#/components/schemas/check-run/id`.
@@ -2086,23 +2095,23 @@ public enum Components {
             /// The SHA of the commit that is being checked.
             ///
             /// - Remark: Generated from `#/components/schemas/check-run/head_sha`.
-            public var head_sha: Swift.String
+            public var headSha: Swift.String
             /// - Remark: Generated from `#/components/schemas/check-run/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/check-run/external_id`.
-            public var external_id: Swift.String?
+            public var externalId: Swift.String?
             /// - Remark: Generated from `#/components/schemas/check-run/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/check-run/html_url`.
-            public var html_url: Swift.String?
+            public var htmlUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/check-run/details_url`.
-            public var details_url: Swift.String?
+            public var detailsUrl: Swift.String?
             /// The phase of the lifecycle that the check is currently in. Statuses of waiting, requested, and pending are reserved for GitHub Actions check runs.
             ///
             /// - Remark: Generated from `#/components/schemas/check-run/status`.
-            @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum StatusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case queued = "queued"
-                case in_progress = "in_progress"
+                case inProgress = "in_progress"
                 case completed = "completed"
                 case waiting = "waiting"
                 case requested = "requested"
@@ -2111,25 +2120,25 @@ public enum Components {
             /// The phase of the lifecycle that the check is currently in. Statuses of waiting, requested, and pending are reserved for GitHub Actions check runs.
             ///
             /// - Remark: Generated from `#/components/schemas/check-run/status`.
-            public var status: Components.Schemas.check_hyphen_run.statusPayload
+            public var status: Components.Schemas.CheckRun.StatusPayload
             /// - Remark: Generated from `#/components/schemas/check-run/conclusion`.
-            @frozen public enum conclusionPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum ConclusionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case success = "success"
                 case failure = "failure"
                 case neutral = "neutral"
                 case cancelled = "cancelled"
                 case skipped = "skipped"
-                case timed_out = "timed_out"
-                case action_required = "action_required"
+                case timedOut = "timed_out"
+                case actionRequired = "action_required"
             }
             /// - Remark: Generated from `#/components/schemas/check-run/conclusion`.
-            public var conclusion: Components.Schemas.check_hyphen_run.conclusionPayload?
+            public var conclusion: Components.Schemas.CheckRun.ConclusionPayload?
             /// - Remark: Generated from `#/components/schemas/check-run/started_at`.
-            public var started_at: Foundation.Date?
+            public var startedAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/check-run/completed_at`.
-            public var completed_at: Foundation.Date?
+            public var completedAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/check-run/output`.
-            public struct outputPayload: Codable, Hashable, Sendable {
+            public struct OutputPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/check-run/output/title`.
                 public var title: Swift.String?
                 /// - Remark: Generated from `#/components/schemas/check-run/output/summary`.
@@ -2137,49 +2146,49 @@ public enum Components {
                 /// - Remark: Generated from `#/components/schemas/check-run/output/text`.
                 public var text: Swift.String?
                 /// - Remark: Generated from `#/components/schemas/check-run/output/annotations_count`.
-                public var annotations_count: Swift.Int
+                public var annotationsCount: Swift.Int
                 /// - Remark: Generated from `#/components/schemas/check-run/output/annotations_url`.
-                public var annotations_url: Swift.String
-                /// Creates a new `outputPayload`.
+                public var annotationsUrl: Swift.String
+                /// Creates a new `OutputPayload`.
                 ///
                 /// - Parameters:
                 ///   - title:
                 ///   - summary:
                 ///   - text:
-                ///   - annotations_count:
-                ///   - annotations_url:
+                ///   - annotationsCount:
+                ///   - annotationsUrl:
                 public init(
                     title: Swift.String? = nil,
                     summary: Swift.String? = nil,
                     text: Swift.String? = nil,
-                    annotations_count: Swift.Int,
-                    annotations_url: Swift.String
+                    annotationsCount: Swift.Int,
+                    annotationsUrl: Swift.String
                 ) {
                     self.title = title
                     self.summary = summary
                     self.text = text
-                    self.annotations_count = annotations_count
-                    self.annotations_url = annotations_url
+                    self.annotationsCount = annotationsCount
+                    self.annotationsUrl = annotationsUrl
                 }
                 public enum CodingKeys: String, CodingKey {
                     case title
                     case summary
                     case text
-                    case annotations_count
-                    case annotations_url
+                    case annotationsCount = "annotations_count"
+                    case annotationsUrl = "annotations_url"
                 }
             }
             /// - Remark: Generated from `#/components/schemas/check-run/output`.
-            public var output: Components.Schemas.check_hyphen_run.outputPayload
+            public var output: Components.Schemas.CheckRun.OutputPayload
             /// The name of the check.
             ///
             /// - Remark: Generated from `#/components/schemas/check-run/name`.
             public var name: Swift.String
             /// - Remark: Generated from `#/components/schemas/check-run/check_suite`.
-            public struct check_suitePayload: Codable, Hashable, Sendable {
+            public struct CheckSuitePayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/check-run/check_suite/id`.
                 public var id: Swift.Int
-                /// Creates a new `check_suitePayload`.
+                /// Creates a new `CheckSuitePayload`.
                 ///
                 /// - Parameters:
                 ///   - id:
@@ -2191,169 +2200,169 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/check-run/check_suite`.
-            public var check_suite: Components.Schemas.check_hyphen_run.check_suitePayload?
+            public var checkSuite: Components.Schemas.CheckRun.CheckSuitePayload?
             /// - Remark: Generated from `#/components/schemas/check-run/app`.
-            public var app: Components.Schemas.nullable_hyphen_integration?
+            public var app: Components.Schemas.NullableIntegration?
             /// Pull requests that are open with a `head_sha` or `head_branch` that matches the check. The returned pull requests do not necessarily indicate pull requests that triggered the check.
             ///
             /// - Remark: Generated from `#/components/schemas/check-run/pull_requests`.
-            public var pull_requests: [Components.Schemas.pull_hyphen_request_hyphen_minimal]
+            public var pullRequests: [Components.Schemas.PullRequestMinimal]
             /// - Remark: Generated from `#/components/schemas/check-run/deployment`.
-            public var deployment: Components.Schemas.deployment_hyphen_simple?
-            /// Creates a new `check_hyphen_run`.
+            public var deployment: Components.Schemas.DeploymentSimple?
+            /// Creates a new `CheckRun`.
             ///
             /// - Parameters:
             ///   - id: The id of the check.
-            ///   - head_sha: The SHA of the commit that is being checked.
-            ///   - node_id:
-            ///   - external_id:
+            ///   - headSha: The SHA of the commit that is being checked.
+            ///   - nodeId:
+            ///   - externalId:
             ///   - url:
-            ///   - html_url:
-            ///   - details_url:
+            ///   - htmlUrl:
+            ///   - detailsUrl:
             ///   - status: The phase of the lifecycle that the check is currently in. Statuses of waiting, requested, and pending are reserved for GitHub Actions check runs.
             ///   - conclusion:
-            ///   - started_at:
-            ///   - completed_at:
+            ///   - startedAt:
+            ///   - completedAt:
             ///   - output:
             ///   - name: The name of the check.
-            ///   - check_suite:
+            ///   - checkSuite:
             ///   - app:
-            ///   - pull_requests: Pull requests that are open with a `head_sha` or `head_branch` that matches the check. The returned pull requests do not necessarily indicate pull requests that triggered the check.
+            ///   - pullRequests: Pull requests that are open with a `head_sha` or `head_branch` that matches the check. The returned pull requests do not necessarily indicate pull requests that triggered the check.
             ///   - deployment:
             public init(
                 id: Swift.Int64,
-                head_sha: Swift.String,
-                node_id: Swift.String,
-                external_id: Swift.String? = nil,
+                headSha: Swift.String,
+                nodeId: Swift.String,
+                externalId: Swift.String? = nil,
                 url: Swift.String,
-                html_url: Swift.String? = nil,
-                details_url: Swift.String? = nil,
-                status: Components.Schemas.check_hyphen_run.statusPayload,
-                conclusion: Components.Schemas.check_hyphen_run.conclusionPayload? = nil,
-                started_at: Foundation.Date? = nil,
-                completed_at: Foundation.Date? = nil,
-                output: Components.Schemas.check_hyphen_run.outputPayload,
+                htmlUrl: Swift.String? = nil,
+                detailsUrl: Swift.String? = nil,
+                status: Components.Schemas.CheckRun.StatusPayload,
+                conclusion: Components.Schemas.CheckRun.ConclusionPayload? = nil,
+                startedAt: Foundation.Date? = nil,
+                completedAt: Foundation.Date? = nil,
+                output: Components.Schemas.CheckRun.OutputPayload,
                 name: Swift.String,
-                check_suite: Components.Schemas.check_hyphen_run.check_suitePayload? = nil,
-                app: Components.Schemas.nullable_hyphen_integration? = nil,
-                pull_requests: [Components.Schemas.pull_hyphen_request_hyphen_minimal],
-                deployment: Components.Schemas.deployment_hyphen_simple? = nil
+                checkSuite: Components.Schemas.CheckRun.CheckSuitePayload? = nil,
+                app: Components.Schemas.NullableIntegration? = nil,
+                pullRequests: [Components.Schemas.PullRequestMinimal],
+                deployment: Components.Schemas.DeploymentSimple? = nil
             ) {
                 self.id = id
-                self.head_sha = head_sha
-                self.node_id = node_id
-                self.external_id = external_id
+                self.headSha = headSha
+                self.nodeId = nodeId
+                self.externalId = externalId
                 self.url = url
-                self.html_url = html_url
-                self.details_url = details_url
+                self.htmlUrl = htmlUrl
+                self.detailsUrl = detailsUrl
                 self.status = status
                 self.conclusion = conclusion
-                self.started_at = started_at
-                self.completed_at = completed_at
+                self.startedAt = startedAt
+                self.completedAt = completedAt
                 self.output = output
                 self.name = name
-                self.check_suite = check_suite
+                self.checkSuite = checkSuite
                 self.app = app
-                self.pull_requests = pull_requests
+                self.pullRequests = pullRequests
                 self.deployment = deployment
             }
             public enum CodingKeys: String, CodingKey {
                 case id
-                case head_sha
-                case node_id
-                case external_id
+                case headSha = "head_sha"
+                case nodeId = "node_id"
+                case externalId = "external_id"
                 case url
-                case html_url
-                case details_url
+                case htmlUrl = "html_url"
+                case detailsUrl = "details_url"
                 case status
                 case conclusion
-                case started_at
-                case completed_at
+                case startedAt = "started_at"
+                case completedAt = "completed_at"
                 case output
                 case name
-                case check_suite
+                case checkSuite = "check_suite"
                 case app
-                case pull_requests
+                case pullRequests = "pull_requests"
                 case deployment
             }
         }
         /// Check Annotation
         ///
         /// - Remark: Generated from `#/components/schemas/check-annotation`.
-        public struct check_hyphen_annotation: Codable, Hashable, Sendable {
+        public struct CheckAnnotation: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/check-annotation/path`.
             public var path: Swift.String
             /// - Remark: Generated from `#/components/schemas/check-annotation/start_line`.
-            public var start_line: Swift.Int
+            public var startLine: Swift.Int
             /// - Remark: Generated from `#/components/schemas/check-annotation/end_line`.
-            public var end_line: Swift.Int
+            public var endLine: Swift.Int
             /// - Remark: Generated from `#/components/schemas/check-annotation/start_column`.
-            public var start_column: Swift.Int?
+            public var startColumn: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/check-annotation/end_column`.
-            public var end_column: Swift.Int?
+            public var endColumn: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/check-annotation/annotation_level`.
-            public var annotation_level: Swift.String?
+            public var annotationLevel: Swift.String?
             /// - Remark: Generated from `#/components/schemas/check-annotation/title`.
             public var title: Swift.String?
             /// - Remark: Generated from `#/components/schemas/check-annotation/message`.
             public var message: Swift.String?
             /// - Remark: Generated from `#/components/schemas/check-annotation/raw_details`.
-            public var raw_details: Swift.String?
+            public var rawDetails: Swift.String?
             /// - Remark: Generated from `#/components/schemas/check-annotation/blob_href`.
-            public var blob_href: Swift.String
-            /// Creates a new `check_hyphen_annotation`.
+            public var blobHref: Swift.String
+            /// Creates a new `CheckAnnotation`.
             ///
             /// - Parameters:
             ///   - path:
-            ///   - start_line:
-            ///   - end_line:
-            ///   - start_column:
-            ///   - end_column:
-            ///   - annotation_level:
+            ///   - startLine:
+            ///   - endLine:
+            ///   - startColumn:
+            ///   - endColumn:
+            ///   - annotationLevel:
             ///   - title:
             ///   - message:
-            ///   - raw_details:
-            ///   - blob_href:
+            ///   - rawDetails:
+            ///   - blobHref:
             public init(
                 path: Swift.String,
-                start_line: Swift.Int,
-                end_line: Swift.Int,
-                start_column: Swift.Int? = nil,
-                end_column: Swift.Int? = nil,
-                annotation_level: Swift.String? = nil,
+                startLine: Swift.Int,
+                endLine: Swift.Int,
+                startColumn: Swift.Int? = nil,
+                endColumn: Swift.Int? = nil,
+                annotationLevel: Swift.String? = nil,
                 title: Swift.String? = nil,
                 message: Swift.String? = nil,
-                raw_details: Swift.String? = nil,
-                blob_href: Swift.String
+                rawDetails: Swift.String? = nil,
+                blobHref: Swift.String
             ) {
                 self.path = path
-                self.start_line = start_line
-                self.end_line = end_line
-                self.start_column = start_column
-                self.end_column = end_column
-                self.annotation_level = annotation_level
+                self.startLine = startLine
+                self.endLine = endLine
+                self.startColumn = startColumn
+                self.endColumn = endColumn
+                self.annotationLevel = annotationLevel
                 self.title = title
                 self.message = message
-                self.raw_details = raw_details
-                self.blob_href = blob_href
+                self.rawDetails = rawDetails
+                self.blobHref = blobHref
             }
             public enum CodingKeys: String, CodingKey {
                 case path
-                case start_line
-                case end_line
-                case start_column
-                case end_column
-                case annotation_level
+                case startLine = "start_line"
+                case endLine = "end_line"
+                case startColumn = "start_column"
+                case endColumn = "end_column"
+                case annotationLevel = "annotation_level"
                 case title
                 case message
-                case raw_details
-                case blob_href
+                case rawDetails = "raw_details"
+                case blobHref = "blob_href"
             }
         }
         /// A commit.
         ///
         /// - Remark: Generated from `#/components/schemas/simple-commit`.
-        public struct simple_hyphen_commit: Codable, Hashable, Sendable {
+        public struct SimpleCommit: Codable, Hashable, Sendable {
             /// SHA for the commit
             ///
             /// - Remark: Generated from `#/components/schemas/simple-commit/id`.
@@ -2361,7 +2370,7 @@ public enum Components {
             /// SHA for the commit's tree
             ///
             /// - Remark: Generated from `#/components/schemas/simple-commit/tree_id`.
-            public var tree_id: Swift.String
+            public var treeId: Swift.String
             /// Message describing the purpose of the commit
             ///
             /// - Remark: Generated from `#/components/schemas/simple-commit/message`.
@@ -2373,7 +2382,7 @@ public enum Components {
             /// Information about the Git author
             ///
             /// - Remark: Generated from `#/components/schemas/simple-commit/author`.
-            public struct authorPayload: Codable, Hashable, Sendable {
+            public struct AuthorPayload: Codable, Hashable, Sendable {
                 /// Name of the commit's author
                 ///
                 /// - Remark: Generated from `#/components/schemas/simple-commit/author/name`.
@@ -2382,7 +2391,7 @@ public enum Components {
                 ///
                 /// - Remark: Generated from `#/components/schemas/simple-commit/author/email`.
                 public var email: Swift.String
-                /// Creates a new `authorPayload`.
+                /// Creates a new `AuthorPayload`.
                 ///
                 /// - Parameters:
                 ///   - name: Name of the commit's author
@@ -2402,11 +2411,11 @@ public enum Components {
             /// Information about the Git author
             ///
             /// - Remark: Generated from `#/components/schemas/simple-commit/author`.
-            public var author: Components.Schemas.simple_hyphen_commit.authorPayload?
+            public var author: Components.Schemas.SimpleCommit.AuthorPayload?
             /// Information about the Git committer
             ///
             /// - Remark: Generated from `#/components/schemas/simple-commit/committer`.
-            public struct committerPayload: Codable, Hashable, Sendable {
+            public struct CommitterPayload: Codable, Hashable, Sendable {
                 /// Name of the commit's committer
                 ///
                 /// - Remark: Generated from `#/components/schemas/simple-commit/committer/name`.
@@ -2415,7 +2424,7 @@ public enum Components {
                 ///
                 /// - Remark: Generated from `#/components/schemas/simple-commit/committer/email`.
                 public var email: Swift.String
-                /// Creates a new `committerPayload`.
+                /// Creates a new `CommitterPayload`.
                 ///
                 /// - Parameters:
                 ///   - name: Name of the commit's committer
@@ -2435,26 +2444,26 @@ public enum Components {
             /// Information about the Git committer
             ///
             /// - Remark: Generated from `#/components/schemas/simple-commit/committer`.
-            public var committer: Components.Schemas.simple_hyphen_commit.committerPayload?
-            /// Creates a new `simple_hyphen_commit`.
+            public var committer: Components.Schemas.SimpleCommit.CommitterPayload?
+            /// Creates a new `SimpleCommit`.
             ///
             /// - Parameters:
             ///   - id: SHA for the commit
-            ///   - tree_id: SHA for the commit's tree
+            ///   - treeId: SHA for the commit's tree
             ///   - message: Message describing the purpose of the commit
             ///   - timestamp: Timestamp of the commit
             ///   - author: Information about the Git author
             ///   - committer: Information about the Git committer
             public init(
                 id: Swift.String,
-                tree_id: Swift.String,
+                treeId: Swift.String,
                 message: Swift.String,
                 timestamp: Foundation.Date,
-                author: Components.Schemas.simple_hyphen_commit.authorPayload? = nil,
-                committer: Components.Schemas.simple_hyphen_commit.committerPayload? = nil
+                author: Components.Schemas.SimpleCommit.AuthorPayload? = nil,
+                committer: Components.Schemas.SimpleCommit.CommitterPayload? = nil
             ) {
                 self.id = id
-                self.tree_id = tree_id
+                self.treeId = treeId
                 self.message = message
                 self.timestamp = timestamp
                 self.author = author
@@ -2462,7 +2471,7 @@ public enum Components {
             }
             public enum CodingKeys: String, CodingKey {
                 case id
-                case tree_id
+                case treeId = "tree_id"
                 case message
                 case timestamp
                 case author
@@ -2472,23 +2481,23 @@ public enum Components {
         /// A suite of checks performed on the code of a given code change
         ///
         /// - Remark: Generated from `#/components/schemas/check-suite`.
-        public struct check_hyphen_suite: Codable, Hashable, Sendable {
+        public struct CheckSuite: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/check-suite/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/check-suite/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/check-suite/head_branch`.
-            public var head_branch: Swift.String?
+            public var headBranch: Swift.String?
             /// The SHA of the head commit that is being checked.
             ///
             /// - Remark: Generated from `#/components/schemas/check-suite/head_sha`.
-            public var head_sha: Swift.String
+            public var headSha: Swift.String
             /// The phase of the lifecycle that the check suite is currently in. Statuses of waiting, requested, and pending are reserved for GitHub Actions check suites.
             ///
             /// - Remark: Generated from `#/components/schemas/check-suite/status`.
-            @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum StatusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case queued = "queued"
-                case in_progress = "in_progress"
+                case inProgress = "in_progress"
                 case completed = "completed"
                 case waiting = "waiting"
                 case requested = "requested"
@@ -2497,22 +2506,22 @@ public enum Components {
             /// The phase of the lifecycle that the check suite is currently in. Statuses of waiting, requested, and pending are reserved for GitHub Actions check suites.
             ///
             /// - Remark: Generated from `#/components/schemas/check-suite/status`.
-            public var status: Components.Schemas.check_hyphen_suite.statusPayload?
+            public var status: Components.Schemas.CheckSuite.StatusPayload?
             /// - Remark: Generated from `#/components/schemas/check-suite/conclusion`.
-            @frozen public enum conclusionPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum ConclusionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case success = "success"
                 case failure = "failure"
                 case neutral = "neutral"
                 case cancelled = "cancelled"
                 case skipped = "skipped"
-                case timed_out = "timed_out"
-                case action_required = "action_required"
-                case startup_failure = "startup_failure"
+                case timedOut = "timed_out"
+                case actionRequired = "action_required"
+                case startupFailure = "startup_failure"
                 case stale = "stale"
-                case _empty = ""
+                case _empty_ = ""
             }
             /// - Remark: Generated from `#/components/schemas/check-suite/conclusion`.
-            public var conclusion: Components.Schemas.check_hyphen_suite.conclusionPayload?
+            public var conclusion: Components.Schemas.CheckSuite.ConclusionPayload?
             /// - Remark: Generated from `#/components/schemas/check-suite/url`.
             public var url: Swift.String?
             /// - Remark: Generated from `#/components/schemas/check-suite/before`.
@@ -2520,166 +2529,166 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/check-suite/after`.
             public var after: Swift.String?
             /// - Remark: Generated from `#/components/schemas/check-suite/pull_requests`.
-            public var pull_requests: [Components.Schemas.pull_hyphen_request_hyphen_minimal]?
+            public var pullRequests: [Components.Schemas.PullRequestMinimal]?
             /// - Remark: Generated from `#/components/schemas/check-suite/app`.
-            public var app: Components.Schemas.nullable_hyphen_integration?
+            public var app: Components.Schemas.NullableIntegration?
             /// - Remark: Generated from `#/components/schemas/check-suite/repository`.
-            public var repository: Components.Schemas.minimal_hyphen_repository
+            public var repository: Components.Schemas.MinimalRepository
             /// - Remark: Generated from `#/components/schemas/check-suite/created_at`.
-            public var created_at: Foundation.Date?
+            public var createdAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/check-suite/updated_at`.
-            public var updated_at: Foundation.Date?
+            public var updatedAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/check-suite/head_commit`.
-            public var head_commit: Components.Schemas.simple_hyphen_commit
+            public var headCommit: Components.Schemas.SimpleCommit
             /// - Remark: Generated from `#/components/schemas/check-suite/latest_check_runs_count`.
-            public var latest_check_runs_count: Swift.Int
+            public var latestCheckRunsCount: Swift.Int
             /// - Remark: Generated from `#/components/schemas/check-suite/check_runs_url`.
-            public var check_runs_url: Swift.String
+            public var checkRunsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/check-suite/rerequestable`.
             public var rerequestable: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/check-suite/runs_rerequestable`.
-            public var runs_rerequestable: Swift.Bool?
-            /// Creates a new `check_hyphen_suite`.
+            public var runsRerequestable: Swift.Bool?
+            /// Creates a new `CheckSuite`.
             ///
             /// - Parameters:
             ///   - id:
-            ///   - node_id:
-            ///   - head_branch:
-            ///   - head_sha: The SHA of the head commit that is being checked.
+            ///   - nodeId:
+            ///   - headBranch:
+            ///   - headSha: The SHA of the head commit that is being checked.
             ///   - status: The phase of the lifecycle that the check suite is currently in. Statuses of waiting, requested, and pending are reserved for GitHub Actions check suites.
             ///   - conclusion:
             ///   - url:
             ///   - before:
             ///   - after:
-            ///   - pull_requests:
+            ///   - pullRequests:
             ///   - app:
             ///   - repository:
-            ///   - created_at:
-            ///   - updated_at:
-            ///   - head_commit:
-            ///   - latest_check_runs_count:
-            ///   - check_runs_url:
+            ///   - createdAt:
+            ///   - updatedAt:
+            ///   - headCommit:
+            ///   - latestCheckRunsCount:
+            ///   - checkRunsUrl:
             ///   - rerequestable:
-            ///   - runs_rerequestable:
+            ///   - runsRerequestable:
             public init(
                 id: Swift.Int64,
-                node_id: Swift.String,
-                head_branch: Swift.String? = nil,
-                head_sha: Swift.String,
-                status: Components.Schemas.check_hyphen_suite.statusPayload? = nil,
-                conclusion: Components.Schemas.check_hyphen_suite.conclusionPayload? = nil,
+                nodeId: Swift.String,
+                headBranch: Swift.String? = nil,
+                headSha: Swift.String,
+                status: Components.Schemas.CheckSuite.StatusPayload? = nil,
+                conclusion: Components.Schemas.CheckSuite.ConclusionPayload? = nil,
                 url: Swift.String? = nil,
                 before: Swift.String? = nil,
                 after: Swift.String? = nil,
-                pull_requests: [Components.Schemas.pull_hyphen_request_hyphen_minimal]? = nil,
-                app: Components.Schemas.nullable_hyphen_integration? = nil,
-                repository: Components.Schemas.minimal_hyphen_repository,
-                created_at: Foundation.Date? = nil,
-                updated_at: Foundation.Date? = nil,
-                head_commit: Components.Schemas.simple_hyphen_commit,
-                latest_check_runs_count: Swift.Int,
-                check_runs_url: Swift.String,
+                pullRequests: [Components.Schemas.PullRequestMinimal]? = nil,
+                app: Components.Schemas.NullableIntegration? = nil,
+                repository: Components.Schemas.MinimalRepository,
+                createdAt: Foundation.Date? = nil,
+                updatedAt: Foundation.Date? = nil,
+                headCommit: Components.Schemas.SimpleCommit,
+                latestCheckRunsCount: Swift.Int,
+                checkRunsUrl: Swift.String,
                 rerequestable: Swift.Bool? = nil,
-                runs_rerequestable: Swift.Bool? = nil
+                runsRerequestable: Swift.Bool? = nil
             ) {
                 self.id = id
-                self.node_id = node_id
-                self.head_branch = head_branch
-                self.head_sha = head_sha
+                self.nodeId = nodeId
+                self.headBranch = headBranch
+                self.headSha = headSha
                 self.status = status
                 self.conclusion = conclusion
                 self.url = url
                 self.before = before
                 self.after = after
-                self.pull_requests = pull_requests
+                self.pullRequests = pullRequests
                 self.app = app
                 self.repository = repository
-                self.created_at = created_at
-                self.updated_at = updated_at
-                self.head_commit = head_commit
-                self.latest_check_runs_count = latest_check_runs_count
-                self.check_runs_url = check_runs_url
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
+                self.headCommit = headCommit
+                self.latestCheckRunsCount = latestCheckRunsCount
+                self.checkRunsUrl = checkRunsUrl
                 self.rerequestable = rerequestable
-                self.runs_rerequestable = runs_rerequestable
+                self.runsRerequestable = runsRerequestable
             }
             public enum CodingKeys: String, CodingKey {
                 case id
-                case node_id
-                case head_branch
-                case head_sha
+                case nodeId = "node_id"
+                case headBranch = "head_branch"
+                case headSha = "head_sha"
                 case status
                 case conclusion
                 case url
                 case before
                 case after
-                case pull_requests
+                case pullRequests = "pull_requests"
                 case app
                 case repository
-                case created_at
-                case updated_at
-                case head_commit
-                case latest_check_runs_count
-                case check_runs_url
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
+                case headCommit = "head_commit"
+                case latestCheckRunsCount = "latest_check_runs_count"
+                case checkRunsUrl = "check_runs_url"
                 case rerequestable
-                case runs_rerequestable
+                case runsRerequestable = "runs_rerequestable"
             }
         }
         /// Check suite configuration preferences for a repository.
         ///
         /// - Remark: Generated from `#/components/schemas/check-suite-preference`.
-        public struct check_hyphen_suite_hyphen_preference: Codable, Hashable, Sendable {
+        public struct CheckSuitePreference: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/check-suite-preference/preferences`.
-            public struct preferencesPayload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/check-suite-preference/preferences/auto_trigger_checksPayload`.
-                public struct auto_trigger_checksPayloadPayload: Codable, Hashable, Sendable {
-                    /// - Remark: Generated from `#/components/schemas/check-suite-preference/preferences/auto_trigger_checksPayload/app_id`.
-                    public var app_id: Swift.Int
-                    /// - Remark: Generated from `#/components/schemas/check-suite-preference/preferences/auto_trigger_checksPayload/setting`.
+            public struct PreferencesPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/check-suite-preference/preferences/AutoTriggerChecksPayload`.
+                public struct AutoTriggerChecksPayloadPayload: Codable, Hashable, Sendable {
+                    /// - Remark: Generated from `#/components/schemas/check-suite-preference/preferences/AutoTriggerChecksPayload/app_id`.
+                    public var appId: Swift.Int
+                    /// - Remark: Generated from `#/components/schemas/check-suite-preference/preferences/AutoTriggerChecksPayload/setting`.
                     public var setting: Swift.Bool
-                    /// Creates a new `auto_trigger_checksPayloadPayload`.
+                    /// Creates a new `AutoTriggerChecksPayloadPayload`.
                     ///
                     /// - Parameters:
-                    ///   - app_id:
+                    ///   - appId:
                     ///   - setting:
                     public init(
-                        app_id: Swift.Int,
+                        appId: Swift.Int,
                         setting: Swift.Bool
                     ) {
-                        self.app_id = app_id
+                        self.appId = appId
                         self.setting = setting
                     }
                     public enum CodingKeys: String, CodingKey {
-                        case app_id
+                        case appId = "app_id"
                         case setting
                     }
                 }
                 /// - Remark: Generated from `#/components/schemas/check-suite-preference/preferences/auto_trigger_checks`.
-                public typealias auto_trigger_checksPayload = [Components.Schemas.check_hyphen_suite_hyphen_preference.preferencesPayload.auto_trigger_checksPayloadPayload]
+                public typealias AutoTriggerChecksPayload = [Components.Schemas.CheckSuitePreference.PreferencesPayload.AutoTriggerChecksPayloadPayload]
                 /// - Remark: Generated from `#/components/schemas/check-suite-preference/preferences/auto_trigger_checks`.
-                public var auto_trigger_checks: Components.Schemas.check_hyphen_suite_hyphen_preference.preferencesPayload.auto_trigger_checksPayload?
-                /// Creates a new `preferencesPayload`.
+                public var autoTriggerChecks: Components.Schemas.CheckSuitePreference.PreferencesPayload.AutoTriggerChecksPayload?
+                /// Creates a new `PreferencesPayload`.
                 ///
                 /// - Parameters:
-                ///   - auto_trigger_checks:
-                public init(auto_trigger_checks: Components.Schemas.check_hyphen_suite_hyphen_preference.preferencesPayload.auto_trigger_checksPayload? = nil) {
-                    self.auto_trigger_checks = auto_trigger_checks
+                ///   - autoTriggerChecks:
+                public init(autoTriggerChecks: Components.Schemas.CheckSuitePreference.PreferencesPayload.AutoTriggerChecksPayload? = nil) {
+                    self.autoTriggerChecks = autoTriggerChecks
                 }
                 public enum CodingKeys: String, CodingKey {
-                    case auto_trigger_checks
+                    case autoTriggerChecks = "auto_trigger_checks"
                 }
             }
             /// - Remark: Generated from `#/components/schemas/check-suite-preference/preferences`.
-            public var preferences: Components.Schemas.check_hyphen_suite_hyphen_preference.preferencesPayload
+            public var preferences: Components.Schemas.CheckSuitePreference.PreferencesPayload
             /// - Remark: Generated from `#/components/schemas/check-suite-preference/repository`.
-            public var repository: Components.Schemas.minimal_hyphen_repository
-            /// Creates a new `check_hyphen_suite_hyphen_preference`.
+            public var repository: Components.Schemas.MinimalRepository
+            /// Creates a new `CheckSuitePreference`.
             ///
             /// - Parameters:
             ///   - preferences:
             ///   - repository:
             public init(
-                preferences: Components.Schemas.check_hyphen_suite_hyphen_preference.preferencesPayload,
-                repository: Components.Schemas.minimal_hyphen_repository
+                preferences: Components.Schemas.CheckSuitePreference.PreferencesPayload,
+                repository: Components.Schemas.MinimalRepository
             ) {
                 self.preferences = preferences
                 self.repository = repository
@@ -2695,58 +2704,58 @@ public enum Components {
         /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/per-page`.
-        public typealias per_hyphen_page = Swift.Int
+        public typealias PerPage = Swift.Int
         /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/page`.
-        public typealias page = Swift.Int
+        public typealias Page = Swift.Int
         /// The account owner of the repository. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/owner`.
-        public typealias owner = Swift.String
+        public typealias Owner = Swift.String
         /// The name of the repository without the `.git` extension. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/repo`.
-        public typealias repo = Swift.String
+        public typealias Repo = Swift.String
         /// The unique identifier of the check run.
         ///
         /// - Remark: Generated from `#/components/parameters/check-run-id`.
-        public typealias check_hyphen_run_hyphen_id = Swift.Int
+        public typealias CheckRunId = Swift.Int
         /// The unique identifier of the check suite.
         ///
         /// - Remark: Generated from `#/components/parameters/check-suite-id`.
-        public typealias check_hyphen_suite_hyphen_id = Swift.Int
+        public typealias CheckSuiteId = Swift.Int
         /// Returns check runs with the specified `name`.
         ///
         /// - Remark: Generated from `#/components/parameters/check-name`.
-        public typealias check_hyphen_name = Swift.String
+        public typealias CheckName = Swift.String
         /// Returns check runs with the specified `status`.
         ///
         /// - Remark: Generated from `#/components/parameters/status`.
-        @frozen public enum status: String, Codable, Hashable, Sendable {
+        @frozen public enum Status: String, Codable, Hashable, Sendable, CaseIterable {
             case queued = "queued"
-            case in_progress = "in_progress"
+            case inProgress = "in_progress"
             case completed = "completed"
         }
         /// The commit reference. Can be a commit SHA, branch name (`heads/BRANCH_NAME`), or tag name (`tags/TAG_NAME`). For more information, see "[Git References](https://git-scm.com/book/en/v2/Git-Internals-Git-References)" in the Git documentation.
         ///
         /// - Remark: Generated from `#/components/parameters/commit-ref`.
-        public typealias commit_hyphen_ref = Swift.String
+        public typealias CommitRef = Swift.String
     }
     /// Types generated from the `#/components/requestBodies` section of the OpenAPI document.
     public enum RequestBodies {}
     /// Types generated from the `#/components/responses` section of the OpenAPI document.
     public enum Responses {
-        public struct not_found: Sendable, Hashable {
+        public struct NotFound: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/not_found/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/not_found/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -2756,12 +2765,12 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.not_found.Body
-            /// Creates a new `not_found`.
+            public var body: Components.Responses.NotFound.Body
+            /// Creates a new `NotFound`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.not_found.Body) {
+            public init(body: Components.Responses.NotFound.Body) {
                 self.body = body
             }
         }
@@ -2769,7 +2778,7 @@ public enum Components {
     /// Types generated from the `#/components/headers` section of the OpenAPI document.
     public enum Headers {
         /// - Remark: Generated from `#/components/headers/link`.
-        public typealias link = Swift.String
+        public typealias Link = Swift.String
     }
 }
 
@@ -2788,7 +2797,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/check-runs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-runs/post(checks/create)`.
-    public enum checks_sol_create {
+    public enum ChecksCreate {
         public static let id: Swift.String = "checks/create"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/POST/path`.
@@ -2796,41 +2805,41 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/POST/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/POST/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.checks_sol_create.Input.Path
+            public var path: Operations.ChecksCreate.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.checks_sol_create.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ChecksCreate.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.checks_sol_create.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ChecksCreate.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.checks_sol_create.Input.Headers
+            public var headers: Operations.ChecksCreate.Input.Headers
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/POST/requestBody/json`.
-                @frozen public enum jsonPayload: Codable, Hashable, Sendable {
+                @frozen public enum JsonPayload: Codable, Hashable, Sendable {
                     public enum CodingKeys: String, CodingKey {
                         case status
                     }
@@ -2855,9 +2864,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/POST/requestBody/content/application\/json`.
-                case json(Operations.checks_sol_create.Input.Body.jsonPayload)
+                case json(Operations.ChecksCreate.Input.Body.JsonPayload)
             }
-            public var body: Operations.checks_sol_create.Input.Body
+            public var body: Operations.ChecksCreate.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -2865,9 +2874,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.checks_sol_create.Input.Path,
-                headers: Operations.checks_sol_create.Input.Headers = .init(),
-                body: Operations.checks_sol_create.Input.Body
+                path: Operations.ChecksCreate.Input.Path,
+                headers: Operations.ChecksCreate.Input.Headers = .init(),
+                body: Operations.ChecksCreate.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -2879,12 +2888,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/POST/responses/201/content/application\/json`.
-                    case json(Components.Schemas.check_hyphen_run)
+                    case json(Components.Schemas.CheckRun)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.check_hyphen_run {
+                    public var json: Components.Schemas.CheckRun {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -2894,12 +2903,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.checks_sol_create.Output.Created.Body
+                public var body: Operations.ChecksCreate.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.checks_sol_create.Output.Created.Body) {
+                public init(body: Operations.ChecksCreate.Output.Created.Body) {
                     self.body = body
                 }
             }
@@ -2908,12 +2917,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-runs/post(checks/create)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.checks_sol_create.Output.Created)
+            case created(Operations.ChecksCreate.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.checks_sol_create.Output.Created {
+            public var created: Operations.ChecksCreate.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -2968,7 +2977,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/check-runs/{check_run_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-runs/{check_run_id}/get(checks/get)`.
-    public enum checks_sol_get {
+    public enum ChecksGet {
         public static let id: Swift.String = "checks/get"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/{check_run_id}/GET/path`.
@@ -2976,52 +2985,52 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/{check_run_id}/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/{check_run_id}/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The unique identifier of the check run.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/{check_run_id}/GET/path/check_run_id`.
-                public var check_run_id: Components.Parameters.check_hyphen_run_hyphen_id
+                public var checkRunId: Components.Parameters.CheckRunId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - check_run_id: The unique identifier of the check run.
+                ///   - checkRunId: The unique identifier of the check run.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    check_run_id: Components.Parameters.check_hyphen_run_hyphen_id
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    checkRunId: Components.Parameters.CheckRunId
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.check_run_id = check_run_id
+                    self.checkRunId = checkRunId
                 }
             }
-            public var path: Operations.checks_sol_get.Input.Path
+            public var path: Operations.ChecksGet.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/{check_run_id}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.checks_sol_get.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ChecksGet.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.checks_sol_get.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ChecksGet.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.checks_sol_get.Input.Headers
+            public var headers: Operations.ChecksGet.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.checks_sol_get.Input.Path,
-                headers: Operations.checks_sol_get.Input.Headers = .init()
+                path: Operations.ChecksGet.Input.Path,
+                headers: Operations.ChecksGet.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -3032,12 +3041,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/{check_run_id}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/{check_run_id}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.check_hyphen_run)
+                    case json(Components.Schemas.CheckRun)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.check_hyphen_run {
+                    public var json: Components.Schemas.CheckRun {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -3047,12 +3056,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.checks_sol_get.Output.Ok.Body
+                public var body: Operations.ChecksGet.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.checks_sol_get.Output.Ok.Body) {
+                public init(body: Operations.ChecksGet.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -3061,12 +3070,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-runs/{check_run_id}/get(checks/get)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.checks_sol_get.Output.Ok)
+            case ok(Operations.ChecksGet.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.checks_sol_get.Output.Ok {
+            public var ok: Operations.ChecksGet.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -3121,7 +3130,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/check-runs/{check_run_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-runs/{check_run_id}/patch(checks/update)`.
-    public enum checks_sol_update {
+    public enum ChecksUpdate {
         public static let id: Swift.String = "checks/update"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/{check_run_id}/PATCH/path`.
@@ -3129,48 +3138,48 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/{check_run_id}/PATCH/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/{check_run_id}/PATCH/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The unique identifier of the check run.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/{check_run_id}/PATCH/path/check_run_id`.
-                public var check_run_id: Components.Parameters.check_hyphen_run_hyphen_id
+                public var checkRunId: Components.Parameters.CheckRunId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - check_run_id: The unique identifier of the check run.
+                ///   - checkRunId: The unique identifier of the check run.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    check_run_id: Components.Parameters.check_hyphen_run_hyphen_id
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    checkRunId: Components.Parameters.CheckRunId
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.check_run_id = check_run_id
+                    self.checkRunId = checkRunId
                 }
             }
-            public var path: Operations.checks_sol_update.Input.Path
+            public var path: Operations.ChecksUpdate.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/{check_run_id}/PATCH/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.checks_sol_update.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ChecksUpdate.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.checks_sol_update.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ChecksUpdate.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.checks_sol_update.Input.Headers
+            public var headers: Operations.ChecksUpdate.Input.Headers
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/{check_run_id}/PATCH/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/{check_run_id}/PATCH/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/{check_run_id}/PATCH/requestBody/json/value1`.
                     public struct Value1Payload: Codable, Hashable, Sendable {
                         /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/{check_run_id}/PATCH/requestBody/json/value1/status`.
@@ -3194,7 +3203,7 @@ public enum Operations {
                         }
                         public init(from decoder: any Decoder) throws {
                             let container = try decoder.container(keyedBy: CodingKeys.self)
-                            status = try container.decodeIfPresent(
+                            self.status = try container.decodeIfPresent(
                                 OpenAPIRuntime.OpenAPIValueContainer.self,
                                 forKey: .status
                             )
@@ -3205,14 +3214,14 @@ public enum Operations {
                         public func encode(to encoder: any Encoder) throws {
                             var container = encoder.container(keyedBy: CodingKeys.self)
                             try container.encodeIfPresent(
-                                status,
+                                self.status,
                                 forKey: .status
                             )
                             try encoder.encodeAdditionalProperties(additionalProperties)
                         }
                     }
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/{check_run_id}/PATCH/requestBody/json/value1`.
-                    public var value1: Operations.checks_sol_update.Input.Body.jsonPayload.Value1Payload?
+                    public var value1: Operations.ChecksUpdate.Input.Body.JsonPayload.Value1Payload?
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/{check_run_id}/PATCH/requestBody/json/value2`.
                     public struct Value2Payload: Codable, Hashable, Sendable {
                         /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/{check_run_id}/PATCH/requestBody/json/value2/status`.
@@ -3236,7 +3245,7 @@ public enum Operations {
                         }
                         public init(from decoder: any Decoder) throws {
                             let container = try decoder.container(keyedBy: CodingKeys.self)
-                            status = try container.decodeIfPresent(
+                            self.status = try container.decodeIfPresent(
                                 OpenAPIRuntime.OpenAPIValueContainer.self,
                                 forKey: .status
                             )
@@ -3247,22 +3256,22 @@ public enum Operations {
                         public func encode(to encoder: any Encoder) throws {
                             var container = encoder.container(keyedBy: CodingKeys.self)
                             try container.encodeIfPresent(
-                                status,
+                                self.status,
                                 forKey: .status
                             )
                             try encoder.encodeAdditionalProperties(additionalProperties)
                         }
                     }
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/{check_run_id}/PATCH/requestBody/json/value2`.
-                    public var value2: Operations.checks_sol_update.Input.Body.jsonPayload.Value2Payload?
-                    /// Creates a new `jsonPayload`.
+                    public var value2: Operations.ChecksUpdate.Input.Body.JsonPayload.Value2Payload?
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - value1:
                     ///   - value2:
                     public init(
-                        value1: Operations.checks_sol_update.Input.Body.jsonPayload.Value1Payload? = nil,
-                        value2: Operations.checks_sol_update.Input.Body.jsonPayload.Value2Payload? = nil
+                        value1: Operations.ChecksUpdate.Input.Body.JsonPayload.Value1Payload? = nil,
+                        value2: Operations.ChecksUpdate.Input.Body.JsonPayload.Value2Payload? = nil
                     ) {
                         self.value1 = value1
                         self.value2 = value2
@@ -3270,19 +3279,19 @@ public enum Operations {
                     public init(from decoder: any Decoder) throws {
                         var errors: [any Error] = []
                         do {
-                            value1 = try .init(from: decoder)
+                            self.value1 = try .init(from: decoder)
                         } catch {
                             errors.append(error)
                         }
                         do {
-                            value2 = try .init(from: decoder)
+                            self.value2 = try .init(from: decoder)
                         } catch {
                             errors.append(error)
                         }
                         try Swift.DecodingError.verifyAtLeastOneSchemaIsNotNil(
                             [
-                                value1,
-                                value2
+                                self.value1,
+                                self.value2
                             ],
                             type: Self.self,
                             codingPath: decoder.codingPath,
@@ -3290,14 +3299,14 @@ public enum Operations {
                         )
                     }
                     public func encode(to encoder: any Encoder) throws {
-                        try value1?.encode(to: encoder)
-                        try value2?.encode(to: encoder)
+                        try self.value1?.encode(to: encoder)
+                        try self.value2?.encode(to: encoder)
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/{check_run_id}/PATCH/requestBody/content/application\/json`.
-                case json(Operations.checks_sol_update.Input.Body.jsonPayload)
+                case json(Operations.ChecksUpdate.Input.Body.JsonPayload)
             }
-            public var body: Operations.checks_sol_update.Input.Body
+            public var body: Operations.ChecksUpdate.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -3305,9 +3314,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.checks_sol_update.Input.Path,
-                headers: Operations.checks_sol_update.Input.Headers = .init(),
-                body: Operations.checks_sol_update.Input.Body
+                path: Operations.ChecksUpdate.Input.Path,
+                headers: Operations.ChecksUpdate.Input.Headers = .init(),
+                body: Operations.ChecksUpdate.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -3319,12 +3328,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/{check_run_id}/PATCH/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/{check_run_id}/PATCH/responses/200/content/application\/json`.
-                    case json(Components.Schemas.check_hyphen_run)
+                    case json(Components.Schemas.CheckRun)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.check_hyphen_run {
+                    public var json: Components.Schemas.CheckRun {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -3334,12 +3343,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.checks_sol_update.Output.Ok.Body
+                public var body: Operations.ChecksUpdate.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.checks_sol_update.Output.Ok.Body) {
+                public init(body: Operations.ChecksUpdate.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -3348,12 +3357,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-runs/{check_run_id}/patch(checks/update)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.checks_sol_update.Output.Ok)
+            case ok(Operations.ChecksUpdate.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.checks_sol_update.Output.Ok {
+            public var ok: Operations.ChecksUpdate.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -3405,7 +3414,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/check-runs/{check_run_id}/annotations`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-runs/{check_run_id}/annotations/get(checks/list-annotations)`.
-    public enum checks_sol_list_hyphen_annotations {
+    public enum ChecksListAnnotations {
         public static let id: Swift.String = "checks/list-annotations"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/{check_run_id}/annotations/GET/path`.
@@ -3413,68 +3422,68 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/{check_run_id}/annotations/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/{check_run_id}/annotations/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The unique identifier of the check run.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/{check_run_id}/annotations/GET/path/check_run_id`.
-                public var check_run_id: Components.Parameters.check_hyphen_run_hyphen_id
+                public var checkRunId: Components.Parameters.CheckRunId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - check_run_id: The unique identifier of the check run.
+                ///   - checkRunId: The unique identifier of the check run.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    check_run_id: Components.Parameters.check_hyphen_run_hyphen_id
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    checkRunId: Components.Parameters.CheckRunId
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.check_run_id = check_run_id
+                    self.checkRunId = checkRunId
                 }
             }
-            public var path: Operations.checks_sol_list_hyphen_annotations.Input.Path
+            public var path: Operations.ChecksListAnnotations.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/{check_run_id}/annotations/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/{check_run_id}/annotations/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/{check_run_id}/annotations/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.checks_sol_list_hyphen_annotations.Input.Query
+            public var query: Operations.ChecksListAnnotations.Input.Query
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/{check_run_id}/annotations/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.checks_sol_list_hyphen_annotations.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ChecksListAnnotations.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.checks_sol_list_hyphen_annotations.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ChecksListAnnotations.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.checks_sol_list_hyphen_annotations.Input.Headers
+            public var headers: Operations.ChecksListAnnotations.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -3482,9 +3491,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.checks_sol_list_hyphen_annotations.Input.Path,
-                query: Operations.checks_sol_list_hyphen_annotations.Input.Query = .init(),
-                headers: Operations.checks_sol_list_hyphen_annotations.Input.Headers = .init()
+                path: Operations.ChecksListAnnotations.Input.Path,
+                query: Operations.ChecksListAnnotations.Input.Query = .init(),
+                headers: Operations.ChecksListAnnotations.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -3496,26 +3505,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/{check_run_id}/annotations/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/{check_run_id}/annotations/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.checks_sol_list_hyphen_annotations.Output.Ok.Headers
+                public var headers: Operations.ChecksListAnnotations.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/{check_run_id}/annotations/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/{check_run_id}/annotations/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.check_hyphen_annotation])
+                    case json([Components.Schemas.CheckAnnotation])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.check_hyphen_annotation] {
+                    public var json: [Components.Schemas.CheckAnnotation] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -3525,15 +3534,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.checks_sol_list_hyphen_annotations.Output.Ok.Body
+                public var body: Operations.ChecksListAnnotations.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.checks_sol_list_hyphen_annotations.Output.Ok.Headers = .init(),
-                    body: Operations.checks_sol_list_hyphen_annotations.Output.Ok.Body
+                    headers: Operations.ChecksListAnnotations.Output.Ok.Headers = .init(),
+                    body: Operations.ChecksListAnnotations.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -3544,12 +3553,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-runs/{check_run_id}/annotations/get(checks/list-annotations)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.checks_sol_list_hyphen_annotations.Output.Ok)
+            case ok(Operations.ChecksListAnnotations.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.checks_sol_list_hyphen_annotations.Output.Ok {
+            public var ok: Operations.ChecksListAnnotations.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -3601,7 +3610,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/check-runs/{check_run_id}/rerequest`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-runs/{check_run_id}/rerequest/post(checks/rerequest-run)`.
-    public enum checks_sol_rerequest_hyphen_run {
+    public enum ChecksRerequestRun {
         public static let id: Swift.String = "checks/rerequest-run"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/{check_run_id}/rerequest/POST/path`.
@@ -3609,52 +3618,52 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/{check_run_id}/rerequest/POST/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/{check_run_id}/rerequest/POST/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The unique identifier of the check run.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/{check_run_id}/rerequest/POST/path/check_run_id`.
-                public var check_run_id: Components.Parameters.check_hyphen_run_hyphen_id
+                public var checkRunId: Components.Parameters.CheckRunId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - check_run_id: The unique identifier of the check run.
+                ///   - checkRunId: The unique identifier of the check run.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    check_run_id: Components.Parameters.check_hyphen_run_hyphen_id
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    checkRunId: Components.Parameters.CheckRunId
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.check_run_id = check_run_id
+                    self.checkRunId = checkRunId
                 }
             }
-            public var path: Operations.checks_sol_rerequest_hyphen_run.Input.Path
+            public var path: Operations.ChecksRerequestRun.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/{check_run_id}/rerequest/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.checks_sol_rerequest_hyphen_run.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ChecksRerequestRun.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.checks_sol_rerequest_hyphen_run.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ChecksRerequestRun.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.checks_sol_rerequest_hyphen_run.Input.Headers
+            public var headers: Operations.ChecksRerequestRun.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.checks_sol_rerequest_hyphen_run.Input.Path,
-                headers: Operations.checks_sol_rerequest_hyphen_run.Input.Headers = .init()
+                path: Operations.ChecksRerequestRun.Input.Path,
+                headers: Operations.ChecksRerequestRun.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -3665,12 +3674,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/{check_run_id}/rerequest/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/{check_run_id}/rerequest/POST/responses/201/content/application\/json`.
-                    case json(Components.Schemas.empty_hyphen_object)
+                    case json(Components.Schemas.EmptyObject)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.empty_hyphen_object {
+                    public var json: Components.Schemas.EmptyObject {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -3680,12 +3689,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.checks_sol_rerequest_hyphen_run.Output.Created.Body
+                public var body: Operations.ChecksRerequestRun.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.checks_sol_rerequest_hyphen_run.Output.Created.Body) {
+                public init(body: Operations.ChecksRerequestRun.Output.Created.Body) {
                     self.body = body
                 }
             }
@@ -3694,12 +3703,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-runs/{check_run_id}/rerequest/post(checks/rerequest-run)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.checks_sol_rerequest_hyphen_run.Output.Created)
+            case created(Operations.ChecksRerequestRun.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.checks_sol_rerequest_hyphen_run.Output.Created {
+            public var created: Operations.ChecksRerequestRun.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -3716,12 +3725,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/{check_run_id}/rerequest/POST/responses/403/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/{check_run_id}/rerequest/POST/responses/403/content/application\/json`.
-                    case json(Components.Schemas.basic_hyphen_error)
+                    case json(Components.Schemas.BasicError)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.basic_hyphen_error {
+                    public var json: Components.Schemas.BasicError {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -3731,12 +3740,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.checks_sol_rerequest_hyphen_run.Output.Forbidden.Body
+                public var body: Operations.ChecksRerequestRun.Output.Forbidden.Body
                 /// Creates a new `Forbidden`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.checks_sol_rerequest_hyphen_run.Output.Forbidden.Body) {
+                public init(body: Operations.ChecksRerequestRun.Output.Forbidden.Body) {
                     self.body = body
                 }
             }
@@ -3745,12 +3754,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-runs/{check_run_id}/rerequest/post(checks/rerequest-run)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Operations.checks_sol_rerequest_hyphen_run.Output.Forbidden)
+            case forbidden(Operations.ChecksRerequestRun.Output.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Operations.checks_sol_rerequest_hyphen_run.Output.Forbidden {
+            public var forbidden: Operations.ChecksRerequestRun.Output.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -3767,12 +3776,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/{check_run_id}/rerequest/POST/responses/422/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/{check_run_id}/rerequest/POST/responses/422/content/application\/json`.
-                    case json(Components.Schemas.basic_hyphen_error)
+                    case json(Components.Schemas.BasicError)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.basic_hyphen_error {
+                    public var json: Components.Schemas.BasicError {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -3782,12 +3791,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.checks_sol_rerequest_hyphen_run.Output.UnprocessableContent.Body
+                public var body: Operations.ChecksRerequestRun.Output.UnprocessableContent.Body
                 /// Creates a new `UnprocessableContent`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.checks_sol_rerequest_hyphen_run.Output.UnprocessableContent.Body) {
+                public init(body: Operations.ChecksRerequestRun.Output.UnprocessableContent.Body) {
                     self.body = body
                 }
             }
@@ -3796,12 +3805,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-runs/{check_run_id}/rerequest/post(checks/rerequest-run)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Operations.checks_sol_rerequest_hyphen_run.Output.UnprocessableContent)
+            case unprocessableContent(Operations.ChecksRerequestRun.Output.UnprocessableContent)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Operations.checks_sol_rerequest_hyphen_run.Output.UnprocessableContent {
+            public var unprocessableContent: Operations.ChecksRerequestRun.Output.UnprocessableContent {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -3819,12 +3828,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-runs/{check_run_id}/rerequest/post(checks/rerequest-run)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -3879,7 +3888,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/check-suites`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-suites/post(checks/create-suite)`.
-    public enum checks_sol_create_hyphen_suite {
+    public enum ChecksCreateSuite {
         public static let id: Swift.String = "checks/create-suite"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/POST/path`.
@@ -3887,60 +3896,60 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/POST/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/POST/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.checks_sol_create_hyphen_suite.Input.Path
+            public var path: Operations.ChecksCreateSuite.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.checks_sol_create_hyphen_suite.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ChecksCreateSuite.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.checks_sol_create_hyphen_suite.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ChecksCreateSuite.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.checks_sol_create_hyphen_suite.Input.Headers
+            public var headers: Operations.ChecksCreateSuite.Input.Headers
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The sha of the head commit.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/POST/requestBody/json/head_sha`.
-                    public var head_sha: Swift.String
-                    /// Creates a new `jsonPayload`.
+                    public var headSha: Swift.String
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
-                    ///   - head_sha: The sha of the head commit.
-                    public init(head_sha: Swift.String) {
-                        self.head_sha = head_sha
+                    ///   - headSha: The sha of the head commit.
+                    public init(headSha: Swift.String) {
+                        self.headSha = headSha
                     }
                     public enum CodingKeys: String, CodingKey {
-                        case head_sha
+                        case headSha = "head_sha"
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/POST/requestBody/content/application\/json`.
-                case json(Operations.checks_sol_create_hyphen_suite.Input.Body.jsonPayload)
+                case json(Operations.ChecksCreateSuite.Input.Body.JsonPayload)
             }
-            public var body: Operations.checks_sol_create_hyphen_suite.Input.Body
+            public var body: Operations.ChecksCreateSuite.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -3948,9 +3957,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.checks_sol_create_hyphen_suite.Input.Path,
-                headers: Operations.checks_sol_create_hyphen_suite.Input.Headers = .init(),
-                body: Operations.checks_sol_create_hyphen_suite.Input.Body
+                path: Operations.ChecksCreateSuite.Input.Path,
+                headers: Operations.ChecksCreateSuite.Input.Headers = .init(),
+                body: Operations.ChecksCreateSuite.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -3962,12 +3971,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/POST/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/POST/responses/200/content/application\/json`.
-                    case json(Components.Schemas.check_hyphen_suite)
+                    case json(Components.Schemas.CheckSuite)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.check_hyphen_suite {
+                    public var json: Components.Schemas.CheckSuite {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -3977,12 +3986,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.checks_sol_create_hyphen_suite.Output.Ok.Body
+                public var body: Operations.ChecksCreateSuite.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.checks_sol_create_hyphen_suite.Output.Ok.Body) {
+                public init(body: Operations.ChecksCreateSuite.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -3991,12 +4000,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-suites/post(checks/create-suite)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.checks_sol_create_hyphen_suite.Output.Ok)
+            case ok(Operations.ChecksCreateSuite.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.checks_sol_create_hyphen_suite.Output.Ok {
+            public var ok: Operations.ChecksCreateSuite.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -4013,12 +4022,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/POST/responses/201/content/application\/json`.
-                    case json(Components.Schemas.check_hyphen_suite)
+                    case json(Components.Schemas.CheckSuite)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.check_hyphen_suite {
+                    public var json: Components.Schemas.CheckSuite {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -4028,12 +4037,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.checks_sol_create_hyphen_suite.Output.Created.Body
+                public var body: Operations.ChecksCreateSuite.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.checks_sol_create_hyphen_suite.Output.Created.Body) {
+                public init(body: Operations.ChecksCreateSuite.Output.Created.Body) {
                     self.body = body
                 }
             }
@@ -4042,12 +4051,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-suites/post(checks/create-suite)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.checks_sol_create_hyphen_suite.Output.Created)
+            case created(Operations.ChecksCreateSuite.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.checks_sol_create_hyphen_suite.Output.Created {
+            public var created: Operations.ChecksCreateSuite.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -4098,7 +4107,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/check-suites/preferences`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-suites/preferences/patch(checks/set-suites-preferences)`.
-    public enum checks_sol_set_hyphen_suites_hyphen_preferences {
+    public enum ChecksSetSuitesPreferences {
         public static let id: Swift.String = "checks/set-suites-preferences"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/preferences/PATCH/path`.
@@ -4106,91 +4115,91 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/preferences/PATCH/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/preferences/PATCH/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.checks_sol_set_hyphen_suites_hyphen_preferences.Input.Path
+            public var path: Operations.ChecksSetSuitesPreferences.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/preferences/PATCH/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.checks_sol_set_hyphen_suites_hyphen_preferences.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ChecksSetSuitesPreferences.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.checks_sol_set_hyphen_suites_hyphen_preferences.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ChecksSetSuitesPreferences.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.checks_sol_set_hyphen_suites_hyphen_preferences.Input.Headers
+            public var headers: Operations.ChecksSetSuitesPreferences.Input.Headers
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/preferences/PATCH/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/preferences/PATCH/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
-                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/preferences/PATCH/requestBody/json/auto_trigger_checksPayload`.
-                    public struct auto_trigger_checksPayloadPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/preferences/PATCH/requestBody/json/AutoTriggerChecksPayload`.
+                    public struct AutoTriggerChecksPayloadPayload: Codable, Hashable, Sendable {
                         /// The `id` of the GitHub App.
                         ///
-                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/preferences/PATCH/requestBody/json/auto_trigger_checksPayload/app_id`.
-                        public var app_id: Swift.Int
+                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/preferences/PATCH/requestBody/json/AutoTriggerChecksPayload/app_id`.
+                        public var appId: Swift.Int
                         /// Set to `true` to enable automatic creation of CheckSuite events upon pushes to the repository, or `false` to disable them.
                         ///
-                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/preferences/PATCH/requestBody/json/auto_trigger_checksPayload/setting`.
+                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/preferences/PATCH/requestBody/json/AutoTriggerChecksPayload/setting`.
                         public var setting: Swift.Bool
-                        /// Creates a new `auto_trigger_checksPayloadPayload`.
+                        /// Creates a new `AutoTriggerChecksPayloadPayload`.
                         ///
                         /// - Parameters:
-                        ///   - app_id: The `id` of the GitHub App.
+                        ///   - appId: The `id` of the GitHub App.
                         ///   - setting: Set to `true` to enable automatic creation of CheckSuite events upon pushes to the repository, or `false` to disable them.
                         public init(
-                            app_id: Swift.Int,
+                            appId: Swift.Int,
                             setting: Swift.Bool
                         ) {
-                            self.app_id = app_id
+                            self.appId = appId
                             self.setting = setting
                         }
                         public enum CodingKeys: String, CodingKey {
-                            case app_id
+                            case appId = "app_id"
                             case setting
                         }
                     }
                     /// Enables or disables automatic creation of CheckSuite events upon pushes to the repository. Enabled by default.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/preferences/PATCH/requestBody/json/auto_trigger_checks`.
-                    public typealias auto_trigger_checksPayload = [Operations.checks_sol_set_hyphen_suites_hyphen_preferences.Input.Body.jsonPayload.auto_trigger_checksPayloadPayload]
+                    public typealias AutoTriggerChecksPayload = [Operations.ChecksSetSuitesPreferences.Input.Body.JsonPayload.AutoTriggerChecksPayloadPayload]
                     /// Enables or disables automatic creation of CheckSuite events upon pushes to the repository. Enabled by default.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/preferences/PATCH/requestBody/json/auto_trigger_checks`.
-                    public var auto_trigger_checks: Operations.checks_sol_set_hyphen_suites_hyphen_preferences.Input.Body.jsonPayload.auto_trigger_checksPayload?
-                    /// Creates a new `jsonPayload`.
+                    public var autoTriggerChecks: Operations.ChecksSetSuitesPreferences.Input.Body.JsonPayload.AutoTriggerChecksPayload?
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
-                    ///   - auto_trigger_checks: Enables or disables automatic creation of CheckSuite events upon pushes to the repository. Enabled by default.
-                    public init(auto_trigger_checks: Operations.checks_sol_set_hyphen_suites_hyphen_preferences.Input.Body.jsonPayload.auto_trigger_checksPayload? = nil) {
-                        self.auto_trigger_checks = auto_trigger_checks
+                    ///   - autoTriggerChecks: Enables or disables automatic creation of CheckSuite events upon pushes to the repository. Enabled by default.
+                    public init(autoTriggerChecks: Operations.ChecksSetSuitesPreferences.Input.Body.JsonPayload.AutoTriggerChecksPayload? = nil) {
+                        self.autoTriggerChecks = autoTriggerChecks
                     }
                     public enum CodingKeys: String, CodingKey {
-                        case auto_trigger_checks
+                        case autoTriggerChecks = "auto_trigger_checks"
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/preferences/PATCH/requestBody/content/application\/json`.
-                case json(Operations.checks_sol_set_hyphen_suites_hyphen_preferences.Input.Body.jsonPayload)
+                case json(Operations.ChecksSetSuitesPreferences.Input.Body.JsonPayload)
             }
-            public var body: Operations.checks_sol_set_hyphen_suites_hyphen_preferences.Input.Body
+            public var body: Operations.ChecksSetSuitesPreferences.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -4198,9 +4207,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.checks_sol_set_hyphen_suites_hyphen_preferences.Input.Path,
-                headers: Operations.checks_sol_set_hyphen_suites_hyphen_preferences.Input.Headers = .init(),
-                body: Operations.checks_sol_set_hyphen_suites_hyphen_preferences.Input.Body
+                path: Operations.ChecksSetSuitesPreferences.Input.Path,
+                headers: Operations.ChecksSetSuitesPreferences.Input.Headers = .init(),
+                body: Operations.ChecksSetSuitesPreferences.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -4212,12 +4221,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/preferences/PATCH/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/preferences/PATCH/responses/200/content/application\/json`.
-                    case json(Components.Schemas.check_hyphen_suite_hyphen_preference)
+                    case json(Components.Schemas.CheckSuitePreference)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.check_hyphen_suite_hyphen_preference {
+                    public var json: Components.Schemas.CheckSuitePreference {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -4227,12 +4236,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.checks_sol_set_hyphen_suites_hyphen_preferences.Output.Ok.Body
+                public var body: Operations.ChecksSetSuitesPreferences.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.checks_sol_set_hyphen_suites_hyphen_preferences.Output.Ok.Body) {
+                public init(body: Operations.ChecksSetSuitesPreferences.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -4241,12 +4250,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-suites/preferences/patch(checks/set-suites-preferences)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.checks_sol_set_hyphen_suites_hyphen_preferences.Output.Ok)
+            case ok(Operations.ChecksSetSuitesPreferences.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.checks_sol_set_hyphen_suites_hyphen_preferences.Output.Ok {
+            public var ok: Operations.ChecksSetSuitesPreferences.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -4301,7 +4310,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/check-suites/{check_suite_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-suites/{check_suite_id}/get(checks/get-suite)`.
-    public enum checks_sol_get_hyphen_suite {
+    public enum ChecksGetSuite {
         public static let id: Swift.String = "checks/get-suite"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/{check_suite_id}/GET/path`.
@@ -4309,52 +4318,52 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/{check_suite_id}/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/{check_suite_id}/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The unique identifier of the check suite.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/{check_suite_id}/GET/path/check_suite_id`.
-                public var check_suite_id: Components.Parameters.check_hyphen_suite_hyphen_id
+                public var checkSuiteId: Components.Parameters.CheckSuiteId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - check_suite_id: The unique identifier of the check suite.
+                ///   - checkSuiteId: The unique identifier of the check suite.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    check_suite_id: Components.Parameters.check_hyphen_suite_hyphen_id
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    checkSuiteId: Components.Parameters.CheckSuiteId
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.check_suite_id = check_suite_id
+                    self.checkSuiteId = checkSuiteId
                 }
             }
-            public var path: Operations.checks_sol_get_hyphen_suite.Input.Path
+            public var path: Operations.ChecksGetSuite.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/{check_suite_id}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.checks_sol_get_hyphen_suite.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ChecksGetSuite.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.checks_sol_get_hyphen_suite.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ChecksGetSuite.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.checks_sol_get_hyphen_suite.Input.Headers
+            public var headers: Operations.ChecksGetSuite.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.checks_sol_get_hyphen_suite.Input.Path,
-                headers: Operations.checks_sol_get_hyphen_suite.Input.Headers = .init()
+                path: Operations.ChecksGetSuite.Input.Path,
+                headers: Operations.ChecksGetSuite.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -4365,12 +4374,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/{check_suite_id}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/{check_suite_id}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.check_hyphen_suite)
+                    case json(Components.Schemas.CheckSuite)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.check_hyphen_suite {
+                    public var json: Components.Schemas.CheckSuite {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -4380,12 +4389,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.checks_sol_get_hyphen_suite.Output.Ok.Body
+                public var body: Operations.ChecksGetSuite.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.checks_sol_get_hyphen_suite.Output.Ok.Body) {
+                public init(body: Operations.ChecksGetSuite.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -4394,12 +4403,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-suites/{check_suite_id}/get(checks/get-suite)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.checks_sol_get_hyphen_suite.Output.Ok)
+            case ok(Operations.ChecksGetSuite.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.checks_sol_get_hyphen_suite.Output.Ok {
+            public var ok: Operations.ChecksGetSuite.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -4454,7 +4463,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/check-suites/{check_suite_id}/check-runs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-suites/{check_suite_id}/check-runs/get(checks/list-for-suite)`.
-    public enum checks_sol_list_hyphen_for_hyphen_suite {
+    public enum ChecksListForSuite {
         public static let id: Swift.String = "checks/list-for-suite"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/{check_suite_id}/check-runs/GET/path`.
@@ -4462,100 +4471,100 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/{check_suite_id}/check-runs/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/{check_suite_id}/check-runs/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The unique identifier of the check suite.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/{check_suite_id}/check-runs/GET/path/check_suite_id`.
-                public var check_suite_id: Components.Parameters.check_hyphen_suite_hyphen_id
+                public var checkSuiteId: Components.Parameters.CheckSuiteId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - check_suite_id: The unique identifier of the check suite.
+                ///   - checkSuiteId: The unique identifier of the check suite.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    check_suite_id: Components.Parameters.check_hyphen_suite_hyphen_id
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    checkSuiteId: Components.Parameters.CheckSuiteId
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.check_suite_id = check_suite_id
+                    self.checkSuiteId = checkSuiteId
                 }
             }
-            public var path: Operations.checks_sol_list_hyphen_for_hyphen_suite.Input.Path
+            public var path: Operations.ChecksListForSuite.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/{check_suite_id}/check-runs/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// Returns check runs with the specified `name`.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/{check_suite_id}/check-runs/GET/query/check_name`.
-                public var check_name: Components.Parameters.check_hyphen_name?
+                public var checkName: Components.Parameters.CheckName?
                 /// - Remark: Generated from `#/components/parameters/status`.
-                @frozen public enum status: String, Codable, Hashable, Sendable {
+                @frozen public enum Status: String, Codable, Hashable, Sendable, CaseIterable {
                     case queued = "queued"
-                    case in_progress = "in_progress"
+                    case inProgress = "in_progress"
                     case completed = "completed"
                 }
                 /// Returns check runs with the specified `status`.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/{check_suite_id}/check-runs/GET/query/status`.
-                public var status: Components.Parameters.status?
+                public var status: Components.Parameters.Status?
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/{check_suite_id}/check-runs/GET/query/filter`.
-                @frozen public enum filterPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum FilterPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case latest = "latest"
                     case all = "all"
                 }
                 /// Filters check runs by their `completed_at` timestamp. `latest` returns the most recent check runs.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/{check_suite_id}/check-runs/GET/query/filter`.
-                public var filter: Operations.checks_sol_list_hyphen_for_hyphen_suite.Input.Query.filterPayload?
+                public var filter: Operations.ChecksListForSuite.Input.Query.FilterPayload?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/{check_suite_id}/check-runs/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/{check_suite_id}/check-runs/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - check_name: Returns check runs with the specified `name`.
+                ///   - checkName: Returns check runs with the specified `name`.
                 ///   - status: Returns check runs with the specified `status`.
                 ///   - filter: Filters check runs by their `completed_at` timestamp. `latest` returns the most recent check runs.
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    check_name: Components.Parameters.check_hyphen_name? = nil,
-                    status: Components.Parameters.status? = nil,
-                    filter: Operations.checks_sol_list_hyphen_for_hyphen_suite.Input.Query.filterPayload? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    checkName: Components.Parameters.CheckName? = nil,
+                    status: Components.Parameters.Status? = nil,
+                    filter: Operations.ChecksListForSuite.Input.Query.FilterPayload? = nil,
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.check_name = check_name
+                    self.checkName = checkName
                     self.status = status
                     self.filter = filter
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.checks_sol_list_hyphen_for_hyphen_suite.Input.Query
+            public var query: Operations.ChecksListForSuite.Input.Query
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/{check_suite_id}/check-runs/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.checks_sol_list_hyphen_for_hyphen_suite.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ChecksListForSuite.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.checks_sol_list_hyphen_for_hyphen_suite.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ChecksListForSuite.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.checks_sol_list_hyphen_for_hyphen_suite.Input.Headers
+            public var headers: Operations.ChecksListForSuite.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -4563,9 +4572,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.checks_sol_list_hyphen_for_hyphen_suite.Input.Path,
-                query: Operations.checks_sol_list_hyphen_for_hyphen_suite.Input.Query = .init(),
-                headers: Operations.checks_sol_list_hyphen_for_hyphen_suite.Input.Headers = .init()
+                path: Operations.ChecksListForSuite.Input.Path,
+                query: Operations.ChecksListForSuite.Input.Query = .init(),
+                headers: Operations.ChecksListForSuite.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -4577,49 +4586,49 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/{check_suite_id}/check-runs/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/{check_suite_id}/check-runs/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.checks_sol_list_hyphen_for_hyphen_suite.Output.Ok.Headers
+                public var headers: Operations.ChecksListForSuite.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/{check_suite_id}/check-runs/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/{check_suite_id}/check-runs/GET/responses/200/content/json`.
-                    public struct jsonPayload: Codable, Hashable, Sendable {
+                    public struct JsonPayload: Codable, Hashable, Sendable {
                         /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/{check_suite_id}/check-runs/GET/responses/200/content/json/total_count`.
-                        public var total_count: Swift.Int
+                        public var totalCount: Swift.Int
                         /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/{check_suite_id}/check-runs/GET/responses/200/content/json/check_runs`.
-                        public var check_runs: [Components.Schemas.check_hyphen_run]
-                        /// Creates a new `jsonPayload`.
+                        public var checkRuns: [Components.Schemas.CheckRun]
+                        /// Creates a new `JsonPayload`.
                         ///
                         /// - Parameters:
-                        ///   - total_count:
-                        ///   - check_runs:
+                        ///   - totalCount:
+                        ///   - checkRuns:
                         public init(
-                            total_count: Swift.Int,
-                            check_runs: [Components.Schemas.check_hyphen_run]
+                            totalCount: Swift.Int,
+                            checkRuns: [Components.Schemas.CheckRun]
                         ) {
-                            self.total_count = total_count
-                            self.check_runs = check_runs
+                            self.totalCount = totalCount
+                            self.checkRuns = checkRuns
                         }
                         public enum CodingKeys: String, CodingKey {
-                            case total_count
-                            case check_runs
+                            case totalCount = "total_count"
+                            case checkRuns = "check_runs"
                         }
                     }
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/{check_suite_id}/check-runs/GET/responses/200/content/application\/json`.
-                    case json(Operations.checks_sol_list_hyphen_for_hyphen_suite.Output.Ok.Body.jsonPayload)
+                    case json(Operations.ChecksListForSuite.Output.Ok.Body.JsonPayload)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Operations.checks_sol_list_hyphen_for_hyphen_suite.Output.Ok.Body.jsonPayload {
+                    public var json: Operations.ChecksListForSuite.Output.Ok.Body.JsonPayload {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -4629,15 +4638,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.checks_sol_list_hyphen_for_hyphen_suite.Output.Ok.Body
+                public var body: Operations.ChecksListForSuite.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.checks_sol_list_hyphen_for_hyphen_suite.Output.Ok.Headers = .init(),
-                    body: Operations.checks_sol_list_hyphen_for_hyphen_suite.Output.Ok.Body
+                    headers: Operations.ChecksListForSuite.Output.Ok.Headers = .init(),
+                    body: Operations.ChecksListForSuite.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -4648,12 +4657,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-suites/{check_suite_id}/check-runs/get(checks/list-for-suite)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.checks_sol_list_hyphen_for_hyphen_suite.Output.Ok)
+            case ok(Operations.ChecksListForSuite.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.checks_sol_list_hyphen_for_hyphen_suite.Output.Ok {
+            public var ok: Operations.ChecksListForSuite.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -4703,7 +4712,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/check-suites/{check_suite_id}/rerequest`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-suites/{check_suite_id}/rerequest/post(checks/rerequest-suite)`.
-    public enum checks_sol_rerequest_hyphen_suite {
+    public enum ChecksRerequestSuite {
         public static let id: Swift.String = "checks/rerequest-suite"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/{check_suite_id}/rerequest/POST/path`.
@@ -4711,52 +4720,52 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/{check_suite_id}/rerequest/POST/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/{check_suite_id}/rerequest/POST/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The unique identifier of the check suite.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/{check_suite_id}/rerequest/POST/path/check_suite_id`.
-                public var check_suite_id: Components.Parameters.check_hyphen_suite_hyphen_id
+                public var checkSuiteId: Components.Parameters.CheckSuiteId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - check_suite_id: The unique identifier of the check suite.
+                ///   - checkSuiteId: The unique identifier of the check suite.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    check_suite_id: Components.Parameters.check_hyphen_suite_hyphen_id
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    checkSuiteId: Components.Parameters.CheckSuiteId
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.check_suite_id = check_suite_id
+                    self.checkSuiteId = checkSuiteId
                 }
             }
-            public var path: Operations.checks_sol_rerequest_hyphen_suite.Input.Path
+            public var path: Operations.ChecksRerequestSuite.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/{check_suite_id}/rerequest/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.checks_sol_rerequest_hyphen_suite.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ChecksRerequestSuite.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.checks_sol_rerequest_hyphen_suite.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ChecksRerequestSuite.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.checks_sol_rerequest_hyphen_suite.Input.Headers
+            public var headers: Operations.ChecksRerequestSuite.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.checks_sol_rerequest_hyphen_suite.Input.Path,
-                headers: Operations.checks_sol_rerequest_hyphen_suite.Input.Headers = .init()
+                path: Operations.ChecksRerequestSuite.Input.Path,
+                headers: Operations.ChecksRerequestSuite.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -4767,12 +4776,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/{check_suite_id}/rerequest/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/{check_suite_id}/rerequest/POST/responses/201/content/application\/json`.
-                    case json(Components.Schemas.empty_hyphen_object)
+                    case json(Components.Schemas.EmptyObject)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.empty_hyphen_object {
+                    public var json: Components.Schemas.EmptyObject {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -4782,12 +4791,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.checks_sol_rerequest_hyphen_suite.Output.Created.Body
+                public var body: Operations.ChecksRerequestSuite.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.checks_sol_rerequest_hyphen_suite.Output.Created.Body) {
+                public init(body: Operations.ChecksRerequestSuite.Output.Created.Body) {
                     self.body = body
                 }
             }
@@ -4796,12 +4805,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/check-suites/{check_suite_id}/rerequest/post(checks/rerequest-suite)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.checks_sol_rerequest_hyphen_suite.Output.Created)
+            case created(Operations.ChecksRerequestSuite.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.checks_sol_rerequest_hyphen_suite.Output.Created {
+            public var created: Operations.ChecksRerequestSuite.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -4858,7 +4867,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/commits/{ref}/check-runs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/commits/{ref}/check-runs/get(checks/list-for-ref)`.
-    public enum checks_sol_list_hyphen_for_hyphen_ref {
+    public enum ChecksListForRef {
         public static let id: Swift.String = "checks/list-for-ref"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/check-runs/GET/path`.
@@ -4866,15 +4875,15 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/check-runs/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/check-runs/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The commit reference. Can be a commit SHA, branch name (`heads/BRANCH_NAME`), or tag name (`tags/TAG_NAME`). For more information, see "[Git References](https://git-scm.com/book/en/v2/Git-Internals-Git-References)" in the Git documentation.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/check-runs/GET/path/ref`.
-                public var ref: Components.Parameters.commit_hyphen_ref
+                public var ref: Components.Parameters.CommitRef
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
@@ -4882,89 +4891,89 @@ public enum Operations {
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///   - ref: The commit reference. Can be a commit SHA, branch name (`heads/BRANCH_NAME`), or tag name (`tags/TAG_NAME`). For more information, see "[Git References](https://git-scm.com/book/en/v2/Git-Internals-Git-References)" in the Git documentation.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    ref: Components.Parameters.commit_hyphen_ref
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    ref: Components.Parameters.CommitRef
                 ) {
                     self.owner = owner
                     self.repo = repo
                     self.ref = ref
                 }
             }
-            public var path: Operations.checks_sol_list_hyphen_for_hyphen_ref.Input.Path
+            public var path: Operations.ChecksListForRef.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/check-runs/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// Returns check runs with the specified `name`.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/check-runs/GET/query/check_name`.
-                public var check_name: Components.Parameters.check_hyphen_name?
+                public var checkName: Components.Parameters.CheckName?
                 /// - Remark: Generated from `#/components/parameters/status`.
-                @frozen public enum status: String, Codable, Hashable, Sendable {
+                @frozen public enum Status: String, Codable, Hashable, Sendable, CaseIterable {
                     case queued = "queued"
-                    case in_progress = "in_progress"
+                    case inProgress = "in_progress"
                     case completed = "completed"
                 }
                 /// Returns check runs with the specified `status`.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/check-runs/GET/query/status`.
-                public var status: Components.Parameters.status?
+                public var status: Components.Parameters.Status?
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/check-runs/GET/query/filter`.
-                @frozen public enum filterPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum FilterPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case latest = "latest"
                     case all = "all"
                 }
                 /// Filters check runs by their `completed_at` timestamp. `latest` returns the most recent check runs.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/check-runs/GET/query/filter`.
-                public var filter: Operations.checks_sol_list_hyphen_for_hyphen_ref.Input.Query.filterPayload?
+                public var filter: Operations.ChecksListForRef.Input.Query.FilterPayload?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/check-runs/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/check-runs/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/check-runs/GET/query/app_id`.
-                public var app_id: Swift.Int?
+                public var appId: Swift.Int?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - check_name: Returns check runs with the specified `name`.
+                ///   - checkName: Returns check runs with the specified `name`.
                 ///   - status: Returns check runs with the specified `status`.
                 ///   - filter: Filters check runs by their `completed_at` timestamp. `latest` returns the most recent check runs.
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
-                ///   - app_id:
+                ///   - appId:
                 public init(
-                    check_name: Components.Parameters.check_hyphen_name? = nil,
-                    status: Components.Parameters.status? = nil,
-                    filter: Operations.checks_sol_list_hyphen_for_hyphen_ref.Input.Query.filterPayload? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil,
-                    app_id: Swift.Int? = nil
+                    checkName: Components.Parameters.CheckName? = nil,
+                    status: Components.Parameters.Status? = nil,
+                    filter: Operations.ChecksListForRef.Input.Query.FilterPayload? = nil,
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil,
+                    appId: Swift.Int? = nil
                 ) {
-                    self.check_name = check_name
+                    self.checkName = checkName
                     self.status = status
                     self.filter = filter
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
-                    self.app_id = app_id
+                    self.appId = appId
                 }
             }
-            public var query: Operations.checks_sol_list_hyphen_for_hyphen_ref.Input.Query
+            public var query: Operations.ChecksListForRef.Input.Query
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/check-runs/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.checks_sol_list_hyphen_for_hyphen_ref.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ChecksListForRef.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.checks_sol_list_hyphen_for_hyphen_ref.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ChecksListForRef.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.checks_sol_list_hyphen_for_hyphen_ref.Input.Headers
+            public var headers: Operations.ChecksListForRef.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -4972,9 +4981,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.checks_sol_list_hyphen_for_hyphen_ref.Input.Path,
-                query: Operations.checks_sol_list_hyphen_for_hyphen_ref.Input.Query = .init(),
-                headers: Operations.checks_sol_list_hyphen_for_hyphen_ref.Input.Headers = .init()
+                path: Operations.ChecksListForRef.Input.Path,
+                query: Operations.ChecksListForRef.Input.Query = .init(),
+                headers: Operations.ChecksListForRef.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -4986,49 +4995,49 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/check-runs/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/check-runs/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.checks_sol_list_hyphen_for_hyphen_ref.Output.Ok.Headers
+                public var headers: Operations.ChecksListForRef.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/check-runs/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/check-runs/GET/responses/200/content/json`.
-                    public struct jsonPayload: Codable, Hashable, Sendable {
+                    public struct JsonPayload: Codable, Hashable, Sendable {
                         /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/check-runs/GET/responses/200/content/json/total_count`.
-                        public var total_count: Swift.Int
+                        public var totalCount: Swift.Int
                         /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/check-runs/GET/responses/200/content/json/check_runs`.
-                        public var check_runs: [Components.Schemas.check_hyphen_run]
-                        /// Creates a new `jsonPayload`.
+                        public var checkRuns: [Components.Schemas.CheckRun]
+                        /// Creates a new `JsonPayload`.
                         ///
                         /// - Parameters:
-                        ///   - total_count:
-                        ///   - check_runs:
+                        ///   - totalCount:
+                        ///   - checkRuns:
                         public init(
-                            total_count: Swift.Int,
-                            check_runs: [Components.Schemas.check_hyphen_run]
+                            totalCount: Swift.Int,
+                            checkRuns: [Components.Schemas.CheckRun]
                         ) {
-                            self.total_count = total_count
-                            self.check_runs = check_runs
+                            self.totalCount = totalCount
+                            self.checkRuns = checkRuns
                         }
                         public enum CodingKeys: String, CodingKey {
-                            case total_count
-                            case check_runs
+                            case totalCount = "total_count"
+                            case checkRuns = "check_runs"
                         }
                     }
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/check-runs/GET/responses/200/content/application\/json`.
-                    case json(Operations.checks_sol_list_hyphen_for_hyphen_ref.Output.Ok.Body.jsonPayload)
+                    case json(Operations.ChecksListForRef.Output.Ok.Body.JsonPayload)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Operations.checks_sol_list_hyphen_for_hyphen_ref.Output.Ok.Body.jsonPayload {
+                    public var json: Operations.ChecksListForRef.Output.Ok.Body.JsonPayload {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -5038,15 +5047,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.checks_sol_list_hyphen_for_hyphen_ref.Output.Ok.Body
+                public var body: Operations.ChecksListForRef.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.checks_sol_list_hyphen_for_hyphen_ref.Output.Ok.Headers = .init(),
-                    body: Operations.checks_sol_list_hyphen_for_hyphen_ref.Output.Ok.Body
+                    headers: Operations.ChecksListForRef.Output.Ok.Headers = .init(),
+                    body: Operations.ChecksListForRef.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -5057,12 +5066,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/commits/{ref}/check-runs/get(checks/list-for-ref)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.checks_sol_list_hyphen_for_hyphen_ref.Output.Ok)
+            case ok(Operations.ChecksListForRef.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.checks_sol_list_hyphen_for_hyphen_ref.Output.Ok {
+            public var ok: Operations.ChecksListForRef.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -5117,7 +5126,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/commits/{ref}/check-suites`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/commits/{ref}/check-suites/get(checks/list-suites-for-ref)`.
-    public enum checks_sol_list_hyphen_suites_hyphen_for_hyphen_ref {
+    public enum ChecksListSuitesForRef {
         public static let id: Swift.String = "checks/list-suites-for-ref"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/check-suites/GET/path`.
@@ -5125,15 +5134,15 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/check-suites/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/check-suites/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The commit reference. Can be a commit SHA, branch name (`heads/BRANCH_NAME`), or tag name (`tags/TAG_NAME`). For more information, see "[Git References](https://git-scm.com/book/en/v2/Git-Internals-Git-References)" in the Git documentation.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/check-suites/GET/path/ref`.
-                public var ref: Components.Parameters.commit_hyphen_ref
+                public var ref: Components.Parameters.CommitRef
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
@@ -5141,66 +5150,66 @@ public enum Operations {
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///   - ref: The commit reference. Can be a commit SHA, branch name (`heads/BRANCH_NAME`), or tag name (`tags/TAG_NAME`). For more information, see "[Git References](https://git-scm.com/book/en/v2/Git-Internals-Git-References)" in the Git documentation.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    ref: Components.Parameters.commit_hyphen_ref
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    ref: Components.Parameters.CommitRef
                 ) {
                     self.owner = owner
                     self.repo = repo
                     self.ref = ref
                 }
             }
-            public var path: Operations.checks_sol_list_hyphen_suites_hyphen_for_hyphen_ref.Input.Path
+            public var path: Operations.ChecksListSuitesForRef.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/check-suites/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// Filters check suites by GitHub App `id`.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/check-suites/GET/query/app_id`.
-                public var app_id: Swift.Int?
+                public var appId: Swift.Int?
                 /// Returns check runs with the specified `name`.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/check-suites/GET/query/check_name`.
-                public var check_name: Components.Parameters.check_hyphen_name?
+                public var checkName: Components.Parameters.CheckName?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/check-suites/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/check-suites/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - app_id: Filters check suites by GitHub App `id`.
-                ///   - check_name: Returns check runs with the specified `name`.
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - appId: Filters check suites by GitHub App `id`.
+                ///   - checkName: Returns check runs with the specified `name`.
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    app_id: Swift.Int? = nil,
-                    check_name: Components.Parameters.check_hyphen_name? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    appId: Swift.Int? = nil,
+                    checkName: Components.Parameters.CheckName? = nil,
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.app_id = app_id
-                    self.check_name = check_name
-                    self.per_page = per_page
+                    self.appId = appId
+                    self.checkName = checkName
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.checks_sol_list_hyphen_suites_hyphen_for_hyphen_ref.Input.Query
+            public var query: Operations.ChecksListSuitesForRef.Input.Query
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/check-suites/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.checks_sol_list_hyphen_suites_hyphen_for_hyphen_ref.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ChecksListSuitesForRef.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.checks_sol_list_hyphen_suites_hyphen_for_hyphen_ref.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ChecksListSuitesForRef.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.checks_sol_list_hyphen_suites_hyphen_for_hyphen_ref.Input.Headers
+            public var headers: Operations.ChecksListSuitesForRef.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -5208,9 +5217,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.checks_sol_list_hyphen_suites_hyphen_for_hyphen_ref.Input.Path,
-                query: Operations.checks_sol_list_hyphen_suites_hyphen_for_hyphen_ref.Input.Query = .init(),
-                headers: Operations.checks_sol_list_hyphen_suites_hyphen_for_hyphen_ref.Input.Headers = .init()
+                path: Operations.ChecksListSuitesForRef.Input.Path,
+                query: Operations.ChecksListSuitesForRef.Input.Query = .init(),
+                headers: Operations.ChecksListSuitesForRef.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -5222,49 +5231,49 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/check-suites/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/check-suites/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.checks_sol_list_hyphen_suites_hyphen_for_hyphen_ref.Output.Ok.Headers
+                public var headers: Operations.ChecksListSuitesForRef.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/check-suites/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/check-suites/GET/responses/200/content/json`.
-                    public struct jsonPayload: Codable, Hashable, Sendable {
+                    public struct JsonPayload: Codable, Hashable, Sendable {
                         /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/check-suites/GET/responses/200/content/json/total_count`.
-                        public var total_count: Swift.Int
+                        public var totalCount: Swift.Int
                         /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/check-suites/GET/responses/200/content/json/check_suites`.
-                        public var check_suites: [Components.Schemas.check_hyphen_suite]
-                        /// Creates a new `jsonPayload`.
+                        public var checkSuites: [Components.Schemas.CheckSuite]
+                        /// Creates a new `JsonPayload`.
                         ///
                         /// - Parameters:
-                        ///   - total_count:
-                        ///   - check_suites:
+                        ///   - totalCount:
+                        ///   - checkSuites:
                         public init(
-                            total_count: Swift.Int,
-                            check_suites: [Components.Schemas.check_hyphen_suite]
+                            totalCount: Swift.Int,
+                            checkSuites: [Components.Schemas.CheckSuite]
                         ) {
-                            self.total_count = total_count
-                            self.check_suites = check_suites
+                            self.totalCount = totalCount
+                            self.checkSuites = checkSuites
                         }
                         public enum CodingKeys: String, CodingKey {
-                            case total_count
-                            case check_suites
+                            case totalCount = "total_count"
+                            case checkSuites = "check_suites"
                         }
                     }
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/check-suites/GET/responses/200/content/application\/json`.
-                    case json(Operations.checks_sol_list_hyphen_suites_hyphen_for_hyphen_ref.Output.Ok.Body.jsonPayload)
+                    case json(Operations.ChecksListSuitesForRef.Output.Ok.Body.JsonPayload)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Operations.checks_sol_list_hyphen_suites_hyphen_for_hyphen_ref.Output.Ok.Body.jsonPayload {
+                    public var json: Operations.ChecksListSuitesForRef.Output.Ok.Body.JsonPayload {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -5274,15 +5283,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.checks_sol_list_hyphen_suites_hyphen_for_hyphen_ref.Output.Ok.Body
+                public var body: Operations.ChecksListSuitesForRef.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.checks_sol_list_hyphen_suites_hyphen_for_hyphen_ref.Output.Ok.Headers = .init(),
-                    body: Operations.checks_sol_list_hyphen_suites_hyphen_for_hyphen_ref.Output.Ok.Body
+                    headers: Operations.ChecksListSuitesForRef.Output.Ok.Headers = .init(),
+                    body: Operations.ChecksListSuitesForRef.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -5293,12 +5302,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/commits/{ref}/check-suites/get(checks/list-suites-for-ref)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.checks_sol_list_hyphen_suites_hyphen_for_hyphen_ref.Output.Ok)
+            case ok(Operations.ChecksListSuitesForRef.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.checks_sol_list_hyphen_suites_hyphen_for_hyphen_ref.Output.Ok {
+            public var ok: Operations.ChecksListSuitesForRef.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
