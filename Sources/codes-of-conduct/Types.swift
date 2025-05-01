@@ -17,14 +17,14 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /codes_of_conduct`.
     /// - Remark: Generated from `#/paths//codes_of_conduct/get(codes-of-conduct/get-all-codes-of-conduct)`.
-    func codes_hyphen_of_hyphen_conduct_sol_get_hyphen_all_hyphen_codes_hyphen_of_hyphen_conduct(_ input: Operations.codes_hyphen_of_hyphen_conduct_sol_get_hyphen_all_hyphen_codes_hyphen_of_hyphen_conduct.Input) async throws -> Operations.codes_hyphen_of_hyphen_conduct_sol_get_hyphen_all_hyphen_codes_hyphen_of_hyphen_conduct.Output
+    func codesOfConductGetAllCodesOfConduct(_ input: Operations.CodesOfConductGetAllCodesOfConduct.Input) async throws -> Operations.CodesOfConductGetAllCodesOfConduct.Output
     /// Get a code of conduct
     ///
     /// Returns information about the specified GitHub code of conduct.
     ///
     /// - Remark: HTTP `GET /codes_of_conduct/{key}`.
     /// - Remark: Generated from `#/paths//codes_of_conduct/{key}/get(codes-of-conduct/get-conduct-code)`.
-    func codes_hyphen_of_hyphen_conduct_sol_get_hyphen_conduct_hyphen_code(_ input: Operations.codes_hyphen_of_hyphen_conduct_sol_get_hyphen_conduct_hyphen_code.Input) async throws -> Operations.codes_hyphen_of_hyphen_conduct_sol_get_hyphen_conduct_hyphen_code.Output
+    func codesOfConductGetConductCode(_ input: Operations.CodesOfConductGetConductCode.Input) async throws -> Operations.CodesOfConductGetConductCode.Output
 }
 
 /// Convenience overloads for operation inputs.
@@ -35,8 +35,8 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /codes_of_conduct`.
     /// - Remark: Generated from `#/paths//codes_of_conduct/get(codes-of-conduct/get-all-codes-of-conduct)`.
-    public func codes_hyphen_of_hyphen_conduct_sol_get_hyphen_all_hyphen_codes_hyphen_of_hyphen_conduct(headers: Operations.codes_hyphen_of_hyphen_conduct_sol_get_hyphen_all_hyphen_codes_hyphen_of_hyphen_conduct.Input.Headers = .init()) async throws -> Operations.codes_hyphen_of_hyphen_conduct_sol_get_hyphen_all_hyphen_codes_hyphen_of_hyphen_conduct.Output {
-        try await codes_hyphen_of_hyphen_conduct_sol_get_hyphen_all_hyphen_codes_hyphen_of_hyphen_conduct(Operations.codes_hyphen_of_hyphen_conduct_sol_get_hyphen_all_hyphen_codes_hyphen_of_hyphen_conduct.Input(headers: headers))
+    public func codesOfConductGetAllCodesOfConduct(headers: Operations.CodesOfConductGetAllCodesOfConduct.Input.Headers = .init()) async throws -> Operations.CodesOfConductGetAllCodesOfConduct.Output {
+        try await codesOfConductGetAllCodesOfConduct(Operations.CodesOfConductGetAllCodesOfConduct.Input(headers: headers))
     }
     /// Get a code of conduct
     ///
@@ -44,11 +44,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /codes_of_conduct/{key}`.
     /// - Remark: Generated from `#/paths//codes_of_conduct/{key}/get(codes-of-conduct/get-conduct-code)`.
-    public func codes_hyphen_of_hyphen_conduct_sol_get_hyphen_conduct_hyphen_code(
-        path: Operations.codes_hyphen_of_hyphen_conduct_sol_get_hyphen_conduct_hyphen_code.Input.Path,
-        headers: Operations.codes_hyphen_of_hyphen_conduct_sol_get_hyphen_conduct_hyphen_code.Input.Headers = .init()
-    ) async throws -> Operations.codes_hyphen_of_hyphen_conduct_sol_get_hyphen_conduct_hyphen_code.Output {
-        try await codes_hyphen_of_hyphen_conduct_sol_get_hyphen_conduct_hyphen_code(Operations.codes_hyphen_of_hyphen_conduct_sol_get_hyphen_conduct_hyphen_code.Input(
+    public func codesOfConductGetConductCode(
+        path: Operations.CodesOfConductGetConductCode.Input.Path,
+        headers: Operations.CodesOfConductGetConductCode.Input.Headers = .init()
+    ) async throws -> Operations.CodesOfConductGetConductCode.Output {
+        try await codesOfConductGetConductCode(Operations.CodesOfConductGetConductCode.Input(
             path: path,
             headers: headers
         ))
@@ -57,6 +57,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -72,36 +81,36 @@ public enum Components {
         /// Basic Error
         ///
         /// - Remark: Generated from `#/components/schemas/basic-error`.
-        public struct basic_hyphen_error: Codable, Hashable, Sendable {
+        public struct BasicError: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/basic-error/message`.
             public var message: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/documentation_url`.
-            public var documentation_url: Swift.String?
+            public var documentationUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/url`.
             public var url: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/status`.
             public var status: Swift.String?
-            /// Creates a new `basic_hyphen_error`.
+            /// Creates a new `BasicError`.
             ///
             /// - Parameters:
             ///   - message:
-            ///   - documentation_url:
+            ///   - documentationUrl:
             ///   - url:
             ///   - status:
             public init(
                 message: Swift.String? = nil,
-                documentation_url: Swift.String? = nil,
+                documentationUrl: Swift.String? = nil,
                 url: Swift.String? = nil,
                 status: Swift.String? = nil
             ) {
                 self.message = message
-                self.documentation_url = documentation_url
+                self.documentationUrl = documentationUrl
                 self.url = url
                 self.status = status
             }
             public enum CodingKeys: String, CodingKey {
                 case message
-                case documentation_url
+                case documentationUrl = "documentation_url"
                 case url
                 case status
             }
@@ -109,7 +118,7 @@ public enum Components {
         /// Code Of Conduct
         ///
         /// - Remark: Generated from `#/components/schemas/code-of-conduct`.
-        public struct code_hyphen_of_hyphen_conduct: Codable, Hashable, Sendable {
+        public struct CodeOfConduct: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/code-of-conduct/key`.
             public var key: Swift.String
             /// - Remark: Generated from `#/components/schemas/code-of-conduct/name`.
@@ -119,34 +128,34 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/code-of-conduct/body`.
             public var body: Swift.String?
             /// - Remark: Generated from `#/components/schemas/code-of-conduct/html_url`.
-            public var html_url: Swift.String?
-            /// Creates a new `code_hyphen_of_hyphen_conduct`.
+            public var htmlUrl: Swift.String?
+            /// Creates a new `CodeOfConduct`.
             ///
             /// - Parameters:
             ///   - key:
             ///   - name:
             ///   - url:
             ///   - body:
-            ///   - html_url:
+            ///   - htmlUrl:
             public init(
                 key: Swift.String,
                 name: Swift.String,
                 url: Swift.String,
                 body: Swift.String? = nil,
-                html_url: Swift.String? = nil
+                htmlUrl: Swift.String? = nil
             ) {
                 self.key = key
                 self.name = name
                 self.url = url
                 self.body = body
-                self.html_url = html_url
+                self.htmlUrl = htmlUrl
             }
             public enum CodingKeys: String, CodingKey {
                 case key
                 case name
                 case url
                 case body
-                case html_url
+                case htmlUrl = "html_url"
             }
         }
     }
@@ -156,16 +165,16 @@ public enum Components {
     public enum RequestBodies {}
     /// Types generated from the `#/components/responses` section of the OpenAPI document.
     public enum Responses {
-        public struct not_found: Sendable, Hashable {
+        public struct NotFound: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/not_found/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/not_found/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -175,17 +184,17 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.not_found.Body
-            /// Creates a new `not_found`.
+            public var body: Components.Responses.NotFound.Body
+            /// Creates a new `NotFound`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.not_found.Body) {
+            public init(body: Components.Responses.NotFound.Body) {
                 self.body = body
             }
         }
-        public struct not_modified: Sendable, Hashable {
-            /// Creates a new `not_modified`.
+        public struct NotModified: Sendable, Hashable {
+            /// Creates a new `NotModified`.
             public init() {}
         }
     }
@@ -201,26 +210,26 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /codes_of_conduct`.
     /// - Remark: Generated from `#/paths//codes_of_conduct/get(codes-of-conduct/get-all-codes-of-conduct)`.
-    public enum codes_hyphen_of_hyphen_conduct_sol_get_hyphen_all_hyphen_codes_hyphen_of_hyphen_conduct {
+    public enum CodesOfConductGetAllCodesOfConduct {
         public static let id: Swift.String = "codes-of-conduct/get-all-codes-of-conduct"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/codes_of_conduct/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.codes_hyphen_of_hyphen_conduct_sol_get_hyphen_all_hyphen_codes_hyphen_of_hyphen_conduct.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CodesOfConductGetAllCodesOfConduct.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.codes_hyphen_of_hyphen_conduct_sol_get_hyphen_all_hyphen_codes_hyphen_of_hyphen_conduct.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CodesOfConductGetAllCodesOfConduct.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.codes_hyphen_of_hyphen_conduct_sol_get_hyphen_all_hyphen_codes_hyphen_of_hyphen_conduct.Input.Headers
+            public var headers: Operations.CodesOfConductGetAllCodesOfConduct.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - headers:
-            public init(headers: Operations.codes_hyphen_of_hyphen_conduct_sol_get_hyphen_all_hyphen_codes_hyphen_of_hyphen_conduct.Input.Headers = .init()) {
+            public init(headers: Operations.CodesOfConductGetAllCodesOfConduct.Input.Headers = .init()) {
                 self.headers = headers
             }
         }
@@ -229,12 +238,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/codes_of_conduct/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/codes_of_conduct/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.code_hyphen_of_hyphen_conduct])
+                    case json([Components.Schemas.CodeOfConduct])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.code_hyphen_of_hyphen_conduct] {
+                    public var json: [Components.Schemas.CodeOfConduct] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -244,12 +253,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.codes_hyphen_of_hyphen_conduct_sol_get_hyphen_all_hyphen_codes_hyphen_of_hyphen_conduct.Output.Ok.Body
+                public var body: Operations.CodesOfConductGetAllCodesOfConduct.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.codes_hyphen_of_hyphen_conduct_sol_get_hyphen_all_hyphen_codes_hyphen_of_hyphen_conduct.Output.Ok.Body) {
+                public init(body: Operations.CodesOfConductGetAllCodesOfConduct.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -258,12 +267,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//codes_of_conduct/get(codes-of-conduct/get-all-codes-of-conduct)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.codes_hyphen_of_hyphen_conduct_sol_get_hyphen_all_hyphen_codes_hyphen_of_hyphen_conduct.Output.Ok)
+            case ok(Operations.CodesOfConductGetAllCodesOfConduct.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.codes_hyphen_of_hyphen_conduct_sol_get_hyphen_all_hyphen_codes_hyphen_of_hyphen_conduct.Output.Ok {
+            public var ok: Operations.CodesOfConductGetAllCodesOfConduct.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -281,12 +290,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//codes_of_conduct/get(codes-of-conduct/get-all-codes-of-conduct)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//codes_of_conduct/get(codes-of-conduct/get-all-codes-of-conduct)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -336,7 +353,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /codes_of_conduct/{key}`.
     /// - Remark: Generated from `#/paths//codes_of_conduct/{key}/get(codes-of-conduct/get-conduct-code)`.
-    public enum codes_hyphen_of_hyphen_conduct_sol_get_hyphen_conduct_hyphen_code {
+    public enum CodesOfConductGetConductCode {
         public static let id: Swift.String = "codes-of-conduct/get-conduct-code"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/codes_of_conduct/{key}/GET/path`.
@@ -351,27 +368,27 @@ public enum Operations {
                     self.key = key
                 }
             }
-            public var path: Operations.codes_hyphen_of_hyphen_conduct_sol_get_hyphen_conduct_hyphen_code.Input.Path
+            public var path: Operations.CodesOfConductGetConductCode.Input.Path
             /// - Remark: Generated from `#/paths/codes_of_conduct/{key}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.codes_hyphen_of_hyphen_conduct_sol_get_hyphen_conduct_hyphen_code.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CodesOfConductGetConductCode.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.codes_hyphen_of_hyphen_conduct_sol_get_hyphen_conduct_hyphen_code.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CodesOfConductGetConductCode.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.codes_hyphen_of_hyphen_conduct_sol_get_hyphen_conduct_hyphen_code.Input.Headers
+            public var headers: Operations.CodesOfConductGetConductCode.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.codes_hyphen_of_hyphen_conduct_sol_get_hyphen_conduct_hyphen_code.Input.Path,
-                headers: Operations.codes_hyphen_of_hyphen_conduct_sol_get_hyphen_conduct_hyphen_code.Input.Headers = .init()
+                path: Operations.CodesOfConductGetConductCode.Input.Path,
+                headers: Operations.CodesOfConductGetConductCode.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -382,12 +399,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/codes_of_conduct/{key}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/codes_of_conduct/{key}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.code_hyphen_of_hyphen_conduct)
+                    case json(Components.Schemas.CodeOfConduct)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.code_hyphen_of_hyphen_conduct {
+                    public var json: Components.Schemas.CodeOfConduct {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -397,12 +414,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.codes_hyphen_of_hyphen_conduct_sol_get_hyphen_conduct_hyphen_code.Output.Ok.Body
+                public var body: Operations.CodesOfConductGetConductCode.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.codes_hyphen_of_hyphen_conduct_sol_get_hyphen_conduct_hyphen_code.Output.Ok.Body) {
+                public init(body: Operations.CodesOfConductGetConductCode.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -411,12 +428,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//codes_of_conduct/{key}/get(codes-of-conduct/get-conduct-code)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.codes_hyphen_of_hyphen_conduct_sol_get_hyphen_conduct_hyphen_code.Output.Ok)
+            case ok(Operations.CodesOfConductGetConductCode.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.codes_hyphen_of_hyphen_conduct_sol_get_hyphen_conduct_hyphen_code.Output.Ok {
+            public var ok: Operations.CodesOfConductGetConductCode.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -434,12 +451,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//codes_of_conduct/{key}/get(codes-of-conduct/get-conduct-code)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -457,12 +474,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//codes_of_conduct/{key}/get(codes-of-conduct/get-conduct-code)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//codes_of_conduct/{key}/get(codes-of-conduct/get-conduct-code)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
