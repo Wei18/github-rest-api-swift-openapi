@@ -57,10 +57,10 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/get(pulls/list)`.
-    public func pulls_sol_list(_ input: Operations.pulls_sol_list.Input) async throws -> Operations.pulls_sol_list.Output {
+    public func pullsList(_ input: Operations.PullsList.Input) async throws -> Operations.PullsList.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.pulls_sol_list.id,
+            forOperation: Operations.PullsList.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/repos/{}/{}/pulls",
@@ -114,7 +114,7 @@ public struct Client: APIProtocol {
                     style: .form,
                     explode: true,
                     name: "per_page",
-                    value: input.query.per_page
+                    value: input.query.perPage
                 )
                 try converter.setQueryItemAsURI(
                     in: &request,
@@ -132,13 +132,13 @@ public struct Client: APIProtocol {
             deserializer: { response, responseBody in
                 switch response.status.code {
                 case 200:
-                    let headers: Operations.pulls_sol_list.Output.Ok.Headers = .init(Link: try converter.getOptionalHeaderFieldAsURI(
+                    let headers: Operations.PullsList.Output.Ok.Headers = .init(link: try converter.getOptionalHeaderFieldAsURI(
                         in: response.headerFields,
                         name: "Link",
-                        as: Components.Headers.link.self
+                        as: Components.Headers.Link.self
                     ))
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.pulls_sol_list.Output.Ok.Body
+                    let body: Operations.PullsList.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -148,7 +148,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            [Components.Schemas.pull_hyphen_request_hyphen_simple].self,
+                            [Components.Schemas.PullRequestSimple].self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -165,7 +165,7 @@ public struct Client: APIProtocol {
                     return .notModified(.init())
                 case 422:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.validation_failed.Body
+                    let body: Components.Responses.ValidationFailed.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -175,7 +175,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.validation_hyphen_error.self,
+                            Components.Schemas.ValidationError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -214,10 +214,10 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/pulls`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/post(pulls/create)`.
-    public func pulls_sol_create(_ input: Operations.pulls_sol_create.Input) async throws -> Operations.pulls_sol_create.Output {
+    public func pullsCreate(_ input: Operations.PullsCreate.Input) async throws -> Operations.PullsCreate.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.pulls_sol_create.id,
+            forOperation: Operations.PullsCreate.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/repos/{}/{}/pulls",
@@ -249,13 +249,13 @@ public struct Client: APIProtocol {
             deserializer: { response, responseBody in
                 switch response.status.code {
                 case 201:
-                    let headers: Operations.pulls_sol_create.Output.Created.Headers = .init(Location: try converter.getOptionalHeaderFieldAsURI(
+                    let headers: Operations.PullsCreate.Output.Created.Headers = .init(location: try converter.getOptionalHeaderFieldAsURI(
                         in: response.headerFields,
                         name: "Location",
                         as: Swift.String.self
                     ))
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.pulls_sol_create.Output.Created.Body
+                    let body: Operations.PullsCreate.Output.Created.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -265,7 +265,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.pull_hyphen_request.self,
+                            Components.Schemas.PullRequest.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -280,7 +280,7 @@ public struct Client: APIProtocol {
                     ))
                 case 403:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.forbidden.Body
+                    let body: Components.Responses.Forbidden.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -290,7 +290,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -302,7 +302,7 @@ public struct Client: APIProtocol {
                     return .forbidden(.init(body: body))
                 case 422:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.validation_failed.Body
+                    let body: Components.Responses.ValidationFailed.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -312,7 +312,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.validation_hyphen_error.self,
+                            Components.Schemas.ValidationError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -348,10 +348,10 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/comments`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/comments/get(pulls/list-review-comments-for-repo)`.
-    public func pulls_sol_list_hyphen_review_hyphen_comments_hyphen_for_hyphen_repo(_ input: Operations.pulls_sol_list_hyphen_review_hyphen_comments_hyphen_for_hyphen_repo.Input) async throws -> Operations.pulls_sol_list_hyphen_review_hyphen_comments_hyphen_for_hyphen_repo.Output {
+    public func pullsListReviewCommentsForRepo(_ input: Operations.PullsListReviewCommentsForRepo.Input) async throws -> Operations.PullsListReviewCommentsForRepo.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.pulls_sol_list_hyphen_review_hyphen_comments_hyphen_for_hyphen_repo.id,
+            forOperation: Operations.PullsListReviewCommentsForRepo.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/repos/{}/{}/pulls/comments",
@@ -391,7 +391,7 @@ public struct Client: APIProtocol {
                     style: .form,
                     explode: true,
                     name: "per_page",
-                    value: input.query.per_page
+                    value: input.query.perPage
                 )
                 try converter.setQueryItemAsURI(
                     in: &request,
@@ -409,13 +409,13 @@ public struct Client: APIProtocol {
             deserializer: { response, responseBody in
                 switch response.status.code {
                 case 200:
-                    let headers: Operations.pulls_sol_list_hyphen_review_hyphen_comments_hyphen_for_hyphen_repo.Output.Ok.Headers = .init(Link: try converter.getOptionalHeaderFieldAsURI(
+                    let headers: Operations.PullsListReviewCommentsForRepo.Output.Ok.Headers = .init(link: try converter.getOptionalHeaderFieldAsURI(
                         in: response.headerFields,
                         name: "Link",
-                        as: Components.Headers.link.self
+                        as: Components.Headers.Link.self
                     ))
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.pulls_sol_list_hyphen_review_hyphen_comments_hyphen_for_hyphen_repo.Output.Ok.Body
+                    let body: Operations.PullsListReviewCommentsForRepo.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -425,7 +425,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            [Components.Schemas.pull_hyphen_request_hyphen_review_hyphen_comment].self,
+                            [Components.Schemas.PullRequestReviewComment].self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -463,17 +463,17 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/comments/{comment_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/comments/{comment_id}/get(pulls/get-review-comment)`.
-    public func pulls_sol_get_hyphen_review_hyphen_comment(_ input: Operations.pulls_sol_get_hyphen_review_hyphen_comment.Input) async throws -> Operations.pulls_sol_get_hyphen_review_hyphen_comment.Output {
+    public func pullsGetReviewComment(_ input: Operations.PullsGetReviewComment.Input) async throws -> Operations.PullsGetReviewComment.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.pulls_sol_get_hyphen_review_hyphen_comment.id,
+            forOperation: Operations.PullsGetReviewComment.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/repos/{}/{}/pulls/comments/{}",
                     parameters: [
                         input.path.owner,
                         input.path.repo,
-                        input.path.comment_id
+                        input.path.commentId
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -491,7 +491,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.pulls_sol_get_hyphen_review_hyphen_comment.Output.Ok.Body
+                    let body: Operations.PullsGetReviewComment.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -501,7 +501,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.pull_hyphen_request_hyphen_review_hyphen_comment.self,
+                            Components.Schemas.PullRequestReviewComment.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -513,7 +513,7 @@ public struct Client: APIProtocol {
                     return .ok(.init(body: body))
                 case 404:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.not_found.Body
+                    let body: Components.Responses.NotFound.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -523,7 +523,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -558,17 +558,17 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/pulls/comments/{comment_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/comments/{comment_id}/patch(pulls/update-review-comment)`.
-    public func pulls_sol_update_hyphen_review_hyphen_comment(_ input: Operations.pulls_sol_update_hyphen_review_hyphen_comment.Input) async throws -> Operations.pulls_sol_update_hyphen_review_hyphen_comment.Output {
+    public func pullsUpdateReviewComment(_ input: Operations.PullsUpdateReviewComment.Input) async throws -> Operations.PullsUpdateReviewComment.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.pulls_sol_update_hyphen_review_hyphen_comment.id,
+            forOperation: Operations.PullsUpdateReviewComment.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/repos/{}/{}/pulls/comments/{}",
                     parameters: [
                         input.path.owner,
                         input.path.repo,
-                        input.path.comment_id
+                        input.path.commentId
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -595,7 +595,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.pulls_sol_update_hyphen_review_hyphen_comment.Output.Ok.Body
+                    let body: Operations.PullsUpdateReviewComment.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -605,7 +605,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.pull_hyphen_request_hyphen_review_hyphen_comment.self,
+                            Components.Schemas.PullRequestReviewComment.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -633,17 +633,17 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/pulls/comments/{comment_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/comments/{comment_id}/delete(pulls/delete-review-comment)`.
-    public func pulls_sol_delete_hyphen_review_hyphen_comment(_ input: Operations.pulls_sol_delete_hyphen_review_hyphen_comment.Input) async throws -> Operations.pulls_sol_delete_hyphen_review_hyphen_comment.Output {
+    public func pullsDeleteReviewComment(_ input: Operations.PullsDeleteReviewComment.Input) async throws -> Operations.PullsDeleteReviewComment.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.pulls_sol_delete_hyphen_review_hyphen_comment.id,
+            forOperation: Operations.PullsDeleteReviewComment.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/repos/{}/{}/pulls/comments/{}",
                     parameters: [
                         input.path.owner,
                         input.path.repo,
-                        input.path.comment_id
+                        input.path.commentId
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -663,7 +663,7 @@ public struct Client: APIProtocol {
                     return .noContent(.init())
                 case 404:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.not_found.Body
+                    let body: Components.Responses.NotFound.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -673,7 +673,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -723,17 +723,17 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/{pull_number}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/get(pulls/get)`.
-    public func pulls_sol_get(_ input: Operations.pulls_sol_get.Input) async throws -> Operations.pulls_sol_get.Output {
+    public func pullsGet(_ input: Operations.PullsGet.Input) async throws -> Operations.PullsGet.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.pulls_sol_get.id,
+            forOperation: Operations.PullsGet.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/repos/{}/{}/pulls/{}",
                     parameters: [
                         input.path.owner,
                         input.path.repo,
-                        input.path.pull_number
+                        input.path.pullNumber
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -751,7 +751,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.pulls_sol_get.Output.Ok.Body
+                    let body: Operations.PullsGet.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -761,7 +761,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.pull_hyphen_request.self,
+                            Components.Schemas.PullRequest.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -775,7 +775,7 @@ public struct Client: APIProtocol {
                     return .notModified(.init())
                 case 404:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.not_found.Body
+                    let body: Components.Responses.NotFound.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -785,7 +785,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -797,7 +797,7 @@ public struct Client: APIProtocol {
                     return .notFound(.init(body: body))
                 case 406:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.unacceptable.Body
+                    let body: Components.Responses.Unacceptable.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -807,7 +807,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -819,7 +819,7 @@ public struct Client: APIProtocol {
                     return .notAcceptable(.init(body: body))
                 case 500:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.internal_error.Body
+                    let body: Components.Responses.InternalError.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -829,7 +829,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -841,7 +841,7 @@ public struct Client: APIProtocol {
                     return .internalServerError(.init(body: body))
                 case 503:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.service_unavailable.Body
+                    let body: Components.Responses.ServiceUnavailable.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -851,7 +851,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Responses.service_unavailable.Body.jsonPayload.self,
+                            Components.Responses.ServiceUnavailable.Body.JsonPayload.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -888,17 +888,17 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/pulls/{pull_number}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/patch(pulls/update)`.
-    public func pulls_sol_update(_ input: Operations.pulls_sol_update.Input) async throws -> Operations.pulls_sol_update.Output {
+    public func pullsUpdate(_ input: Operations.PullsUpdate.Input) async throws -> Operations.PullsUpdate.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.pulls_sol_update.id,
+            forOperation: Operations.PullsUpdate.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/repos/{}/{}/pulls/{}",
                     parameters: [
                         input.path.owner,
                         input.path.repo,
-                        input.path.pull_number
+                        input.path.pullNumber
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -927,7 +927,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.pulls_sol_update.Output.Ok.Body
+                    let body: Operations.PullsUpdate.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -937,7 +937,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.pull_hyphen_request.self,
+                            Components.Schemas.PullRequest.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -949,7 +949,7 @@ public struct Client: APIProtocol {
                     return .ok(.init(body: body))
                 case 422:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.validation_failed.Body
+                    let body: Components.Responses.ValidationFailed.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -959,7 +959,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.validation_hyphen_error.self,
+                            Components.Schemas.ValidationError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -971,7 +971,7 @@ public struct Client: APIProtocol {
                     return .unprocessableContent(.init(body: body))
                 case 403:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.forbidden.Body
+                    let body: Components.Responses.Forbidden.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -981,7 +981,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -1017,17 +1017,17 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/{pull_number}/comments`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/comments/get(pulls/list-review-comments)`.
-    public func pulls_sol_list_hyphen_review_hyphen_comments(_ input: Operations.pulls_sol_list_hyphen_review_hyphen_comments.Input) async throws -> Operations.pulls_sol_list_hyphen_review_hyphen_comments.Output {
+    public func pullsListReviewComments(_ input: Operations.PullsListReviewComments.Input) async throws -> Operations.PullsListReviewComments.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.pulls_sol_list_hyphen_review_hyphen_comments.id,
+            forOperation: Operations.PullsListReviewComments.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/repos/{}/{}/pulls/{}/comments",
                     parameters: [
                         input.path.owner,
                         input.path.repo,
-                        input.path.pull_number
+                        input.path.pullNumber
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -1061,7 +1061,7 @@ public struct Client: APIProtocol {
                     style: .form,
                     explode: true,
                     name: "per_page",
-                    value: input.query.per_page
+                    value: input.query.perPage
                 )
                 try converter.setQueryItemAsURI(
                     in: &request,
@@ -1079,13 +1079,13 @@ public struct Client: APIProtocol {
             deserializer: { response, responseBody in
                 switch response.status.code {
                 case 200:
-                    let headers: Operations.pulls_sol_list_hyphen_review_hyphen_comments.Output.Ok.Headers = .init(Link: try converter.getOptionalHeaderFieldAsURI(
+                    let headers: Operations.PullsListReviewComments.Output.Ok.Headers = .init(link: try converter.getOptionalHeaderFieldAsURI(
                         in: response.headerFields,
                         name: "Link",
-                        as: Components.Headers.link.self
+                        as: Components.Headers.Link.self
                     ))
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.pulls_sol_list_hyphen_review_hyphen_comments.Output.Ok.Body
+                    let body: Operations.PullsListReviewComments.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -1095,7 +1095,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            [Components.Schemas.pull_hyphen_request_hyphen_review_hyphen_comment].self,
+                            [Components.Schemas.PullRequestReviewComment].self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -1140,17 +1140,17 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/pulls/{pull_number}/comments`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/comments/post(pulls/create-review-comment)`.
-    public func pulls_sol_create_hyphen_review_hyphen_comment(_ input: Operations.pulls_sol_create_hyphen_review_hyphen_comment.Input) async throws -> Operations.pulls_sol_create_hyphen_review_hyphen_comment.Output {
+    public func pullsCreateReviewComment(_ input: Operations.PullsCreateReviewComment.Input) async throws -> Operations.PullsCreateReviewComment.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.pulls_sol_create_hyphen_review_hyphen_comment.id,
+            forOperation: Operations.PullsCreateReviewComment.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/repos/{}/{}/pulls/{}/comments",
                     parameters: [
                         input.path.owner,
                         input.path.repo,
-                        input.path.pull_number
+                        input.path.pullNumber
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -1176,13 +1176,13 @@ public struct Client: APIProtocol {
             deserializer: { response, responseBody in
                 switch response.status.code {
                 case 201:
-                    let headers: Operations.pulls_sol_create_hyphen_review_hyphen_comment.Output.Created.Headers = .init(Location: try converter.getOptionalHeaderFieldAsURI(
+                    let headers: Operations.PullsCreateReviewComment.Output.Created.Headers = .init(location: try converter.getOptionalHeaderFieldAsURI(
                         in: response.headerFields,
                         name: "Location",
                         as: Swift.String.self
                     ))
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.pulls_sol_create_hyphen_review_hyphen_comment.Output.Created.Body
+                    let body: Operations.PullsCreateReviewComment.Output.Created.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -1192,7 +1192,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.pull_hyphen_request_hyphen_review_hyphen_comment.self,
+                            Components.Schemas.PullRequestReviewComment.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -1207,7 +1207,7 @@ public struct Client: APIProtocol {
                     ))
                 case 422:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.validation_failed.Body
+                    let body: Components.Responses.ValidationFailed.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -1217,7 +1217,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.validation_hyphen_error.self,
+                            Components.Schemas.ValidationError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -1229,7 +1229,7 @@ public struct Client: APIProtocol {
                     return .unprocessableContent(.init(body: body))
                 case 403:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.forbidden.Body
+                    let body: Components.Responses.Forbidden.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -1239,7 +1239,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -1277,18 +1277,18 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/pulls/{pull_number}/comments/{comment_id}/replies`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/comments/{comment_id}/replies/post(pulls/create-reply-for-review-comment)`.
-    public func pulls_sol_create_hyphen_reply_hyphen_for_hyphen_review_hyphen_comment(_ input: Operations.pulls_sol_create_hyphen_reply_hyphen_for_hyphen_review_hyphen_comment.Input) async throws -> Operations.pulls_sol_create_hyphen_reply_hyphen_for_hyphen_review_hyphen_comment.Output {
+    public func pullsCreateReplyForReviewComment(_ input: Operations.PullsCreateReplyForReviewComment.Input) async throws -> Operations.PullsCreateReplyForReviewComment.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.pulls_sol_create_hyphen_reply_hyphen_for_hyphen_review_hyphen_comment.id,
+            forOperation: Operations.PullsCreateReplyForReviewComment.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/repos/{}/{}/pulls/{}/comments/{}/replies",
                     parameters: [
                         input.path.owner,
                         input.path.repo,
-                        input.path.pull_number,
-                        input.path.comment_id
+                        input.path.pullNumber,
+                        input.path.commentId
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -1314,13 +1314,13 @@ public struct Client: APIProtocol {
             deserializer: { response, responseBody in
                 switch response.status.code {
                 case 201:
-                    let headers: Operations.pulls_sol_create_hyphen_reply_hyphen_for_hyphen_review_hyphen_comment.Output.Created.Headers = .init(Location: try converter.getOptionalHeaderFieldAsURI(
+                    let headers: Operations.PullsCreateReplyForReviewComment.Output.Created.Headers = .init(location: try converter.getOptionalHeaderFieldAsURI(
                         in: response.headerFields,
                         name: "Location",
                         as: Swift.String.self
                     ))
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.pulls_sol_create_hyphen_reply_hyphen_for_hyphen_review_hyphen_comment.Output.Created.Body
+                    let body: Operations.PullsCreateReplyForReviewComment.Output.Created.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -1330,7 +1330,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.pull_hyphen_request_hyphen_review_hyphen_comment.self,
+                            Components.Schemas.PullRequestReviewComment.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -1345,7 +1345,7 @@ public struct Client: APIProtocol {
                     ))
                 case 404:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.not_found.Body
+                    let body: Components.Responses.NotFound.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -1355,7 +1355,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -1392,17 +1392,17 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/{pull_number}/commits`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/commits/get(pulls/list-commits)`.
-    public func pulls_sol_list_hyphen_commits(_ input: Operations.pulls_sol_list_hyphen_commits.Input) async throws -> Operations.pulls_sol_list_hyphen_commits.Output {
+    public func pullsListCommits(_ input: Operations.PullsListCommits.Input) async throws -> Operations.PullsListCommits.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.pulls_sol_list_hyphen_commits.id,
+            forOperation: Operations.PullsListCommits.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/repos/{}/{}/pulls/{}/commits",
                     parameters: [
                         input.path.owner,
                         input.path.repo,
-                        input.path.pull_number
+                        input.path.pullNumber
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -1415,7 +1415,7 @@ public struct Client: APIProtocol {
                     style: .form,
                     explode: true,
                     name: "per_page",
-                    value: input.query.per_page
+                    value: input.query.perPage
                 )
                 try converter.setQueryItemAsURI(
                     in: &request,
@@ -1433,13 +1433,13 @@ public struct Client: APIProtocol {
             deserializer: { response, responseBody in
                 switch response.status.code {
                 case 200:
-                    let headers: Operations.pulls_sol_list_hyphen_commits.Output.Ok.Headers = .init(Link: try converter.getOptionalHeaderFieldAsURI(
+                    let headers: Operations.PullsListCommits.Output.Ok.Headers = .init(link: try converter.getOptionalHeaderFieldAsURI(
                         in: response.headerFields,
                         name: "Link",
-                        as: Components.Headers.link.self
+                        as: Components.Headers.Link.self
                     ))
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.pulls_sol_list_hyphen_commits.Output.Ok.Body
+                    let body: Operations.PullsListCommits.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -1449,7 +1449,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            [Components.Schemas.commit].self,
+                            [Components.Schemas.Commit].self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -1490,17 +1490,17 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/{pull_number}/files`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/files/get(pulls/list-files)`.
-    public func pulls_sol_list_hyphen_files(_ input: Operations.pulls_sol_list_hyphen_files.Input) async throws -> Operations.pulls_sol_list_hyphen_files.Output {
+    public func pullsListFiles(_ input: Operations.PullsListFiles.Input) async throws -> Operations.PullsListFiles.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.pulls_sol_list_hyphen_files.id,
+            forOperation: Operations.PullsListFiles.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/repos/{}/{}/pulls/{}/files",
                     parameters: [
                         input.path.owner,
                         input.path.repo,
-                        input.path.pull_number
+                        input.path.pullNumber
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -1513,7 +1513,7 @@ public struct Client: APIProtocol {
                     style: .form,
                     explode: true,
                     name: "per_page",
-                    value: input.query.per_page
+                    value: input.query.perPage
                 )
                 try converter.setQueryItemAsURI(
                     in: &request,
@@ -1531,13 +1531,13 @@ public struct Client: APIProtocol {
             deserializer: { response, responseBody in
                 switch response.status.code {
                 case 200:
-                    let headers: Operations.pulls_sol_list_hyphen_files.Output.Ok.Headers = .init(Link: try converter.getOptionalHeaderFieldAsURI(
+                    let headers: Operations.PullsListFiles.Output.Ok.Headers = .init(link: try converter.getOptionalHeaderFieldAsURI(
                         in: response.headerFields,
                         name: "Link",
-                        as: Components.Headers.link.self
+                        as: Components.Headers.Link.self
                     ))
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.pulls_sol_list_hyphen_files.Output.Ok.Body
+                    let body: Operations.PullsListFiles.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -1547,7 +1547,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            [Components.Schemas.diff_hyphen_entry].self,
+                            [Components.Schemas.DiffEntry].self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -1562,7 +1562,7 @@ public struct Client: APIProtocol {
                     ))
                 case 422:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.validation_failed.Body
+                    let body: Components.Responses.ValidationFailed.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -1572,7 +1572,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.validation_hyphen_error.self,
+                            Components.Schemas.ValidationError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -1584,7 +1584,7 @@ public struct Client: APIProtocol {
                     return .unprocessableContent(.init(body: body))
                 case 500:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.internal_error.Body
+                    let body: Components.Responses.InternalError.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -1594,7 +1594,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -1606,7 +1606,7 @@ public struct Client: APIProtocol {
                     return .internalServerError(.init(body: body))
                 case 503:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.service_unavailable.Body
+                    let body: Components.Responses.ServiceUnavailable.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -1616,7 +1616,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Responses.service_unavailable.Body.jsonPayload.self,
+                            Components.Responses.ServiceUnavailable.Body.JsonPayload.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -1644,17 +1644,17 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/{pull_number}/merge`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/merge/get(pulls/check-if-merged)`.
-    public func pulls_sol_check_hyphen_if_hyphen_merged(_ input: Operations.pulls_sol_check_hyphen_if_hyphen_merged.Input) async throws -> Operations.pulls_sol_check_hyphen_if_hyphen_merged.Output {
+    public func pullsCheckIfMerged(_ input: Operations.PullsCheckIfMerged.Input) async throws -> Operations.PullsCheckIfMerged.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.pulls_sol_check_hyphen_if_hyphen_merged.id,
+            forOperation: Operations.PullsCheckIfMerged.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/repos/{}/{}/pulls/{}/merge",
                     parameters: [
                         input.path.owner,
                         input.path.repo,
-                        input.path.pull_number
+                        input.path.pullNumber
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -1689,17 +1689,17 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/pulls/{pull_number}/merge`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/merge/put(pulls/merge)`.
-    public func pulls_sol_merge(_ input: Operations.pulls_sol_merge.Input) async throws -> Operations.pulls_sol_merge.Output {
+    public func pullsMerge(_ input: Operations.PullsMerge.Input) async throws -> Operations.PullsMerge.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.pulls_sol_merge.id,
+            forOperation: Operations.PullsMerge.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/repos/{}/{}/pulls/{}/merge",
                     parameters: [
                         input.path.owner,
                         input.path.repo,
-                        input.path.pull_number
+                        input.path.pullNumber
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -1728,7 +1728,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.pulls_sol_merge.Output.Ok.Body
+                    let body: Operations.PullsMerge.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -1738,7 +1738,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.pull_hyphen_request_hyphen_merge_hyphen_result.self,
+                            Components.Schemas.PullRequestMergeResult.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -1750,7 +1750,7 @@ public struct Client: APIProtocol {
                     return .ok(.init(body: body))
                 case 405:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.pulls_sol_merge.Output.MethodNotAllowed.Body
+                    let body: Operations.PullsMerge.Output.MethodNotAllowed.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -1760,7 +1760,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Operations.pulls_sol_merge.Output.MethodNotAllowed.Body.jsonPayload.self,
+                            Operations.PullsMerge.Output.MethodNotAllowed.Body.JsonPayload.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -1772,7 +1772,7 @@ public struct Client: APIProtocol {
                     return .methodNotAllowed(.init(body: body))
                 case 409:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.pulls_sol_merge.Output.Conflict.Body
+                    let body: Operations.PullsMerge.Output.Conflict.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -1782,7 +1782,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Operations.pulls_sol_merge.Output.Conflict.Body.jsonPayload.self,
+                            Operations.PullsMerge.Output.Conflict.Body.JsonPayload.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -1794,7 +1794,7 @@ public struct Client: APIProtocol {
                     return .conflict(.init(body: body))
                 case 422:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.validation_failed.Body
+                    let body: Components.Responses.ValidationFailed.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -1804,7 +1804,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.validation_hyphen_error.self,
+                            Components.Schemas.ValidationError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -1816,7 +1816,7 @@ public struct Client: APIProtocol {
                     return .unprocessableContent(.init(body: body))
                 case 403:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.forbidden.Body
+                    let body: Components.Responses.Forbidden.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -1826,7 +1826,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -1838,7 +1838,7 @@ public struct Client: APIProtocol {
                     return .forbidden(.init(body: body))
                 case 404:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.not_found.Body
+                    let body: Components.Responses.NotFound.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -1848,7 +1848,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -1876,17 +1876,17 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/get(pulls/list-requested-reviewers)`.
-    public func pulls_sol_list_hyphen_requested_hyphen_reviewers(_ input: Operations.pulls_sol_list_hyphen_requested_hyphen_reviewers.Input) async throws -> Operations.pulls_sol_list_hyphen_requested_hyphen_reviewers.Output {
+    public func pullsListRequestedReviewers(_ input: Operations.PullsListRequestedReviewers.Input) async throws -> Operations.PullsListRequestedReviewers.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.pulls_sol_list_hyphen_requested_hyphen_reviewers.id,
+            forOperation: Operations.PullsListRequestedReviewers.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/repos/{}/{}/pulls/{}/requested_reviewers",
                     parameters: [
                         input.path.owner,
                         input.path.repo,
-                        input.path.pull_number
+                        input.path.pullNumber
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -1903,13 +1903,13 @@ public struct Client: APIProtocol {
             deserializer: { response, responseBody in
                 switch response.status.code {
                 case 200:
-                    let headers: Operations.pulls_sol_list_hyphen_requested_hyphen_reviewers.Output.Ok.Headers = .init(Link: try converter.getOptionalHeaderFieldAsURI(
+                    let headers: Operations.PullsListRequestedReviewers.Output.Ok.Headers = .init(link: try converter.getOptionalHeaderFieldAsURI(
                         in: response.headerFields,
                         name: "Link",
-                        as: Components.Headers.link.self
+                        as: Components.Headers.Link.self
                     ))
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.pulls_sol_list_hyphen_requested_hyphen_reviewers.Output.Ok.Body
+                    let body: Operations.PullsListRequestedReviewers.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -1919,7 +1919,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.pull_hyphen_request_hyphen_review_hyphen_request.self,
+                            Components.Schemas.PullRequestReviewRequest.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -1951,17 +1951,17 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/post(pulls/request-reviewers)`.
-    public func pulls_sol_request_hyphen_reviewers(_ input: Operations.pulls_sol_request_hyphen_reviewers.Input) async throws -> Operations.pulls_sol_request_hyphen_reviewers.Output {
+    public func pullsRequestReviewers(_ input: Operations.PullsRequestReviewers.Input) async throws -> Operations.PullsRequestReviewers.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.pulls_sol_request_hyphen_reviewers.id,
+            forOperation: Operations.PullsRequestReviewers.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/repos/{}/{}/pulls/{}/requested_reviewers",
                     parameters: [
                         input.path.owner,
                         input.path.repo,
-                        input.path.pull_number
+                        input.path.pullNumber
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -1990,7 +1990,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 201:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.pulls_sol_request_hyphen_reviewers.Output.Created.Body
+                    let body: Operations.PullsRequestReviewers.Output.Created.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -2000,7 +2000,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.pull_hyphen_request_hyphen_simple.self,
+                            Components.Schemas.PullRequestSimple.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -2014,7 +2014,7 @@ public struct Client: APIProtocol {
                     return .unprocessableContent(.init())
                 case 403:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.forbidden.Body
+                    let body: Components.Responses.Forbidden.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -2024,7 +2024,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -2052,17 +2052,17 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/delete(pulls/remove-requested-reviewers)`.
-    public func pulls_sol_remove_hyphen_requested_hyphen_reviewers(_ input: Operations.pulls_sol_remove_hyphen_requested_hyphen_reviewers.Input) async throws -> Operations.pulls_sol_remove_hyphen_requested_hyphen_reviewers.Output {
+    public func pullsRemoveRequestedReviewers(_ input: Operations.PullsRemoveRequestedReviewers.Input) async throws -> Operations.PullsRemoveRequestedReviewers.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.pulls_sol_remove_hyphen_requested_hyphen_reviewers.id,
+            forOperation: Operations.PullsRemoveRequestedReviewers.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/repos/{}/{}/pulls/{}/requested_reviewers",
                     parameters: [
                         input.path.owner,
                         input.path.repo,
-                        input.path.pull_number
+                        input.path.pullNumber
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -2089,7 +2089,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.pulls_sol_remove_hyphen_requested_hyphen_reviewers.Output.Ok.Body
+                    let body: Operations.PullsRemoveRequestedReviewers.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -2099,7 +2099,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.pull_hyphen_request_hyphen_simple.self,
+                            Components.Schemas.PullRequestSimple.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -2111,7 +2111,7 @@ public struct Client: APIProtocol {
                     return .ok(.init(body: body))
                 case 422:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.validation_failed.Body
+                    let body: Components.Responses.ValidationFailed.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -2121,7 +2121,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.validation_hyphen_error.self,
+                            Components.Schemas.ValidationError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -2156,17 +2156,17 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/{pull_number}/reviews`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/get(pulls/list-reviews)`.
-    public func pulls_sol_list_hyphen_reviews(_ input: Operations.pulls_sol_list_hyphen_reviews.Input) async throws -> Operations.pulls_sol_list_hyphen_reviews.Output {
+    public func pullsListReviews(_ input: Operations.PullsListReviews.Input) async throws -> Operations.PullsListReviews.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.pulls_sol_list_hyphen_reviews.id,
+            forOperation: Operations.PullsListReviews.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/repos/{}/{}/pulls/{}/reviews",
                     parameters: [
                         input.path.owner,
                         input.path.repo,
-                        input.path.pull_number
+                        input.path.pullNumber
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -2179,7 +2179,7 @@ public struct Client: APIProtocol {
                     style: .form,
                     explode: true,
                     name: "per_page",
-                    value: input.query.per_page
+                    value: input.query.perPage
                 )
                 try converter.setQueryItemAsURI(
                     in: &request,
@@ -2197,13 +2197,13 @@ public struct Client: APIProtocol {
             deserializer: { response, responseBody in
                 switch response.status.code {
                 case 200:
-                    let headers: Operations.pulls_sol_list_hyphen_reviews.Output.Ok.Headers = .init(Link: try converter.getOptionalHeaderFieldAsURI(
+                    let headers: Operations.PullsListReviews.Output.Ok.Headers = .init(link: try converter.getOptionalHeaderFieldAsURI(
                         in: response.headerFields,
                         name: "Link",
-                        as: Components.Headers.link.self
+                        as: Components.Headers.Link.self
                     ))
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.pulls_sol_list_hyphen_reviews.Output.Ok.Body
+                    let body: Operations.PullsListReviews.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -2213,7 +2213,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            [Components.Schemas.pull_hyphen_request_hyphen_review].self,
+                            [Components.Schemas.PullRequestReview].self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -2260,17 +2260,17 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/pulls/{pull_number}/reviews`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/post(pulls/create-review)`.
-    public func pulls_sol_create_hyphen_review(_ input: Operations.pulls_sol_create_hyphen_review.Input) async throws -> Operations.pulls_sol_create_hyphen_review.Output {
+    public func pullsCreateReview(_ input: Operations.PullsCreateReview.Input) async throws -> Operations.PullsCreateReview.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.pulls_sol_create_hyphen_review.id,
+            forOperation: Operations.PullsCreateReview.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/repos/{}/{}/pulls/{}/reviews",
                     parameters: [
                         input.path.owner,
                         input.path.repo,
-                        input.path.pull_number
+                        input.path.pullNumber
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -2299,7 +2299,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.pulls_sol_create_hyphen_review.Output.Ok.Body
+                    let body: Operations.PullsCreateReview.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -2309,7 +2309,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.pull_hyphen_request_hyphen_review.self,
+                            Components.Schemas.PullRequestReview.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -2321,7 +2321,7 @@ public struct Client: APIProtocol {
                     return .ok(.init(body: body))
                 case 422:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.validation_failed_simple.Body
+                    let body: Components.Responses.ValidationFailedSimple.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -2331,7 +2331,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.validation_hyphen_error_hyphen_simple.self,
+                            Components.Schemas.ValidationErrorSimple.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -2343,7 +2343,7 @@ public struct Client: APIProtocol {
                     return .unprocessableContent(.init(body: body))
                 case 403:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.forbidden.Body
+                    let body: Components.Responses.Forbidden.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -2353,7 +2353,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -2388,18 +2388,18 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/get(pulls/get-review)`.
-    public func pulls_sol_get_hyphen_review(_ input: Operations.pulls_sol_get_hyphen_review.Input) async throws -> Operations.pulls_sol_get_hyphen_review.Output {
+    public func pullsGetReview(_ input: Operations.PullsGetReview.Input) async throws -> Operations.PullsGetReview.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.pulls_sol_get_hyphen_review.id,
+            forOperation: Operations.PullsGetReview.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/repos/{}/{}/pulls/{}/reviews/{}",
                     parameters: [
                         input.path.owner,
                         input.path.repo,
-                        input.path.pull_number,
-                        input.path.review_id
+                        input.path.pullNumber,
+                        input.path.reviewId
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -2417,7 +2417,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.pulls_sol_get_hyphen_review.Output.Ok.Body
+                    let body: Operations.PullsGetReview.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -2427,7 +2427,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.pull_hyphen_request_hyphen_review.self,
+                            Components.Schemas.PullRequestReview.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -2439,7 +2439,7 @@ public struct Client: APIProtocol {
                     return .ok(.init(body: body))
                 case 404:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.not_found.Body
+                    let body: Components.Responses.NotFound.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -2449,7 +2449,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -2484,18 +2484,18 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/put(pulls/update-review)`.
-    public func pulls_sol_update_hyphen_review(_ input: Operations.pulls_sol_update_hyphen_review.Input) async throws -> Operations.pulls_sol_update_hyphen_review.Output {
+    public func pullsUpdateReview(_ input: Operations.PullsUpdateReview.Input) async throws -> Operations.PullsUpdateReview.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.pulls_sol_update_hyphen_review.id,
+            forOperation: Operations.PullsUpdateReview.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/repos/{}/{}/pulls/{}/reviews/{}",
                     parameters: [
                         input.path.owner,
                         input.path.repo,
-                        input.path.pull_number,
-                        input.path.review_id
+                        input.path.pullNumber,
+                        input.path.reviewId
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -2522,7 +2522,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.pulls_sol_update_hyphen_review.Output.Ok.Body
+                    let body: Operations.PullsUpdateReview.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -2532,7 +2532,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.pull_hyphen_request_hyphen_review.self,
+                            Components.Schemas.PullRequestReview.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -2544,7 +2544,7 @@ public struct Client: APIProtocol {
                     return .ok(.init(body: body))
                 case 422:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.validation_failed_simple.Body
+                    let body: Components.Responses.ValidationFailedSimple.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -2554,7 +2554,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.validation_hyphen_error_hyphen_simple.self,
+                            Components.Schemas.ValidationErrorSimple.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -2589,18 +2589,18 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/delete(pulls/delete-pending-review)`.
-    public func pulls_sol_delete_hyphen_pending_hyphen_review(_ input: Operations.pulls_sol_delete_hyphen_pending_hyphen_review.Input) async throws -> Operations.pulls_sol_delete_hyphen_pending_hyphen_review.Output {
+    public func pullsDeletePendingReview(_ input: Operations.PullsDeletePendingReview.Input) async throws -> Operations.PullsDeletePendingReview.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.pulls_sol_delete_hyphen_pending_hyphen_review.id,
+            forOperation: Operations.PullsDeletePendingReview.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/repos/{}/{}/pulls/{}/reviews/{}",
                     parameters: [
                         input.path.owner,
                         input.path.repo,
-                        input.path.pull_number,
-                        input.path.review_id
+                        input.path.pullNumber,
+                        input.path.reviewId
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -2618,7 +2618,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.pulls_sol_delete_hyphen_pending_hyphen_review.Output.Ok.Body
+                    let body: Operations.PullsDeletePendingReview.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -2628,7 +2628,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.pull_hyphen_request_hyphen_review.self,
+                            Components.Schemas.PullRequestReview.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -2640,7 +2640,7 @@ public struct Client: APIProtocol {
                     return .ok(.init(body: body))
                 case 422:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.validation_failed_simple.Body
+                    let body: Components.Responses.ValidationFailedSimple.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -2650,7 +2650,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.validation_hyphen_error_hyphen_simple.self,
+                            Components.Schemas.ValidationErrorSimple.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -2662,7 +2662,7 @@ public struct Client: APIProtocol {
                     return .unprocessableContent(.init(body: body))
                 case 404:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.not_found.Body
+                    let body: Components.Responses.NotFound.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -2672,7 +2672,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -2707,18 +2707,18 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/comments`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/comments/get(pulls/list-comments-for-review)`.
-    public func pulls_sol_list_hyphen_comments_hyphen_for_hyphen_review(_ input: Operations.pulls_sol_list_hyphen_comments_hyphen_for_hyphen_review.Input) async throws -> Operations.pulls_sol_list_hyphen_comments_hyphen_for_hyphen_review.Output {
+    public func pullsListCommentsForReview(_ input: Operations.PullsListCommentsForReview.Input) async throws -> Operations.PullsListCommentsForReview.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.pulls_sol_list_hyphen_comments_hyphen_for_hyphen_review.id,
+            forOperation: Operations.PullsListCommentsForReview.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/repos/{}/{}/pulls/{}/reviews/{}/comments",
                     parameters: [
                         input.path.owner,
                         input.path.repo,
-                        input.path.pull_number,
-                        input.path.review_id
+                        input.path.pullNumber,
+                        input.path.reviewId
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -2731,7 +2731,7 @@ public struct Client: APIProtocol {
                     style: .form,
                     explode: true,
                     name: "per_page",
-                    value: input.query.per_page
+                    value: input.query.perPage
                 )
                 try converter.setQueryItemAsURI(
                     in: &request,
@@ -2749,13 +2749,13 @@ public struct Client: APIProtocol {
             deserializer: { response, responseBody in
                 switch response.status.code {
                 case 200:
-                    let headers: Operations.pulls_sol_list_hyphen_comments_hyphen_for_hyphen_review.Output.Ok.Headers = .init(Link: try converter.getOptionalHeaderFieldAsURI(
+                    let headers: Operations.PullsListCommentsForReview.Output.Ok.Headers = .init(link: try converter.getOptionalHeaderFieldAsURI(
                         in: response.headerFields,
                         name: "Link",
-                        as: Components.Headers.link.self
+                        as: Components.Headers.Link.self
                     ))
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.pulls_sol_list_hyphen_comments_hyphen_for_hyphen_review.Output.Ok.Body
+                    let body: Operations.PullsListCommentsForReview.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -2765,7 +2765,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            [Components.Schemas.review_hyphen_comment].self,
+                            [Components.Schemas.ReviewComment].self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -2780,7 +2780,7 @@ public struct Client: APIProtocol {
                     ))
                 case 404:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.not_found.Body
+                    let body: Components.Responses.NotFound.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -2790,7 +2790,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -2828,18 +2828,18 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/dismissals`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/dismissals/put(pulls/dismiss-review)`.
-    public func pulls_sol_dismiss_hyphen_review(_ input: Operations.pulls_sol_dismiss_hyphen_review.Input) async throws -> Operations.pulls_sol_dismiss_hyphen_review.Output {
+    public func pullsDismissReview(_ input: Operations.PullsDismissReview.Input) async throws -> Operations.PullsDismissReview.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.pulls_sol_dismiss_hyphen_review.id,
+            forOperation: Operations.PullsDismissReview.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/repos/{}/{}/pulls/{}/reviews/{}/dismissals",
                     parameters: [
                         input.path.owner,
                         input.path.repo,
-                        input.path.pull_number,
-                        input.path.review_id
+                        input.path.pullNumber,
+                        input.path.reviewId
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -2866,7 +2866,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.pulls_sol_dismiss_hyphen_review.Output.Ok.Body
+                    let body: Operations.PullsDismissReview.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -2876,7 +2876,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.pull_hyphen_request_hyphen_review.self,
+                            Components.Schemas.PullRequestReview.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -2888,7 +2888,7 @@ public struct Client: APIProtocol {
                     return .ok(.init(body: body))
                 case 404:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.not_found.Body
+                    let body: Components.Responses.NotFound.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -2898,7 +2898,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -2910,7 +2910,7 @@ public struct Client: APIProtocol {
                     return .notFound(.init(body: body))
                 case 422:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.validation_failed_simple.Body
+                    let body: Components.Responses.ValidationFailedSimple.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -2920,7 +2920,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.validation_hyphen_error_hyphen_simple.self,
+                            Components.Schemas.ValidationErrorSimple.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -2955,18 +2955,18 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/events`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/events/post(pulls/submit-review)`.
-    public func pulls_sol_submit_hyphen_review(_ input: Operations.pulls_sol_submit_hyphen_review.Input) async throws -> Operations.pulls_sol_submit_hyphen_review.Output {
+    public func pullsSubmitReview(_ input: Operations.PullsSubmitReview.Input) async throws -> Operations.PullsSubmitReview.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.pulls_sol_submit_hyphen_review.id,
+            forOperation: Operations.PullsSubmitReview.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/repos/{}/{}/pulls/{}/reviews/{}/events",
                     parameters: [
                         input.path.owner,
                         input.path.repo,
-                        input.path.pull_number,
-                        input.path.review_id
+                        input.path.pullNumber,
+                        input.path.reviewId
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -2993,7 +2993,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.pulls_sol_submit_hyphen_review.Output.Ok.Body
+                    let body: Operations.PullsSubmitReview.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -3003,7 +3003,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.pull_hyphen_request_hyphen_review.self,
+                            Components.Schemas.PullRequestReview.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -3015,7 +3015,7 @@ public struct Client: APIProtocol {
                     return .ok(.init(body: body))
                 case 404:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.not_found.Body
+                    let body: Components.Responses.NotFound.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -3025,7 +3025,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -3037,7 +3037,7 @@ public struct Client: APIProtocol {
                     return .notFound(.init(body: body))
                 case 422:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.validation_failed_simple.Body
+                    let body: Components.Responses.ValidationFailedSimple.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -3047,7 +3047,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.validation_hyphen_error_hyphen_simple.self,
+                            Components.Schemas.ValidationErrorSimple.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -3059,7 +3059,7 @@ public struct Client: APIProtocol {
                     return .unprocessableContent(.init(body: body))
                 case 403:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.forbidden.Body
+                    let body: Components.Responses.Forbidden.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -3069,7 +3069,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -3098,17 +3098,17 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/pulls/{pull_number}/update-branch`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/update-branch/put(pulls/update-branch)`.
-    public func pulls_sol_update_hyphen_branch(_ input: Operations.pulls_sol_update_hyphen_branch.Input) async throws -> Operations.pulls_sol_update_hyphen_branch.Output {
+    public func pullsUpdateBranch(_ input: Operations.PullsUpdateBranch.Input) async throws -> Operations.PullsUpdateBranch.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.pulls_sol_update_hyphen_branch.id,
+            forOperation: Operations.PullsUpdateBranch.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/repos/{}/{}/pulls/{}/update-branch",
                     parameters: [
                         input.path.owner,
                         input.path.repo,
-                        input.path.pull_number
+                        input.path.pullNumber
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -3137,7 +3137,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 202:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.pulls_sol_update_hyphen_branch.Output.Accepted.Body
+                    let body: Operations.PullsUpdateBranch.Output.Accepted.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -3147,7 +3147,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Operations.pulls_sol_update_hyphen_branch.Output.Accepted.Body.jsonPayload.self,
+                            Operations.PullsUpdateBranch.Output.Accepted.Body.JsonPayload.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -3159,7 +3159,7 @@ public struct Client: APIProtocol {
                     return .accepted(.init(body: body))
                 case 422:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.validation_failed.Body
+                    let body: Components.Responses.ValidationFailed.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -3169,7 +3169,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.validation_hyphen_error.self,
+                            Components.Schemas.ValidationError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -3181,7 +3181,7 @@ public struct Client: APIProtocol {
                     return .unprocessableContent(.init(body: body))
                 case 403:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.forbidden.Body
+                    let body: Components.Responses.Forbidden.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -3191,7 +3191,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
