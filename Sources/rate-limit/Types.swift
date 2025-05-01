@@ -32,7 +32,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /rate_limit`.
     /// - Remark: Generated from `#/paths//rate_limit/get(rate-limit/get)`.
-    func rate_hyphen_limit_sol_get(_ input: Operations.rate_hyphen_limit_sol_get.Input) async throws -> Operations.rate_hyphen_limit_sol_get.Output
+    func rateLimitGet(_ input: Operations.RateLimitGet.Input) async throws -> Operations.RateLimitGet.Output
 }
 
 /// Convenience overloads for operation inputs.
@@ -58,13 +58,22 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /rate_limit`.
     /// - Remark: Generated from `#/paths//rate_limit/get(rate-limit/get)`.
-    public func rate_hyphen_limit_sol_get(headers: Operations.rate_hyphen_limit_sol_get.Input.Headers = .init()) async throws -> Operations.rate_hyphen_limit_sol_get.Output {
-        try await rate_hyphen_limit_sol_get(Operations.rate_hyphen_limit_sol_get.Input(headers: headers))
+    public func rateLimitGet(headers: Operations.RateLimitGet.Input.Headers = .init()) async throws -> Operations.RateLimitGet.Output {
+        try await rateLimitGet(Operations.RateLimitGet.Input(headers: headers))
     }
 }
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -80,42 +89,42 @@ public enum Components {
         /// Basic Error
         ///
         /// - Remark: Generated from `#/components/schemas/basic-error`.
-        public struct basic_hyphen_error: Codable, Hashable, Sendable {
+        public struct BasicError: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/basic-error/message`.
             public var message: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/documentation_url`.
-            public var documentation_url: Swift.String?
+            public var documentationUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/url`.
             public var url: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/status`.
             public var status: Swift.String?
-            /// Creates a new `basic_hyphen_error`.
+            /// Creates a new `BasicError`.
             ///
             /// - Parameters:
             ///   - message:
-            ///   - documentation_url:
+            ///   - documentationUrl:
             ///   - url:
             ///   - status:
             public init(
                 message: Swift.String? = nil,
-                documentation_url: Swift.String? = nil,
+                documentationUrl: Swift.String? = nil,
                 url: Swift.String? = nil,
                 status: Swift.String? = nil
             ) {
                 self.message = message
-                self.documentation_url = documentation_url
+                self.documentationUrl = documentationUrl
                 self.url = url
                 self.status = status
             }
             public enum CodingKeys: String, CodingKey {
                 case message
-                case documentation_url
+                case documentationUrl = "documentation_url"
                 case url
                 case status
             }
         }
         /// - Remark: Generated from `#/components/schemas/rate-limit`.
-        public struct rate_hyphen_limit: Codable, Hashable, Sendable {
+        public struct RateLimit: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/rate-limit/limit`.
             public var limit: Swift.Int
             /// - Remark: Generated from `#/components/schemas/rate-limit/remaining`.
@@ -124,7 +133,7 @@ public enum Components {
             public var reset: Swift.Int
             /// - Remark: Generated from `#/components/schemas/rate-limit/used`.
             public var used: Swift.Int
-            /// Creates a new `rate_hyphen_limit`.
+            /// Creates a new `RateLimit`.
             ///
             /// - Parameters:
             ///   - limit:
@@ -152,96 +161,96 @@ public enum Components {
         /// Rate Limit Overview
         ///
         /// - Remark: Generated from `#/components/schemas/rate-limit-overview`.
-        public struct rate_hyphen_limit_hyphen_overview: Codable, Hashable, Sendable {
+        public struct RateLimitOverview: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/rate-limit-overview/resources`.
-            public struct resourcesPayload: Codable, Hashable, Sendable {
+            public struct ResourcesPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/rate-limit-overview/resources/core`.
-                public var core: Components.Schemas.rate_hyphen_limit
+                public var core: Components.Schemas.RateLimit
                 /// - Remark: Generated from `#/components/schemas/rate-limit-overview/resources/graphql`.
-                public var graphql: Components.Schemas.rate_hyphen_limit?
+                public var graphql: Components.Schemas.RateLimit?
                 /// - Remark: Generated from `#/components/schemas/rate-limit-overview/resources/search`.
-                public var search: Components.Schemas.rate_hyphen_limit
+                public var search: Components.Schemas.RateLimit
                 /// - Remark: Generated from `#/components/schemas/rate-limit-overview/resources/code_search`.
-                public var code_search: Components.Schemas.rate_hyphen_limit?
+                public var codeSearch: Components.Schemas.RateLimit?
                 /// - Remark: Generated from `#/components/schemas/rate-limit-overview/resources/source_import`.
-                public var source_import: Components.Schemas.rate_hyphen_limit?
+                public var sourceImport: Components.Schemas.RateLimit?
                 /// - Remark: Generated from `#/components/schemas/rate-limit-overview/resources/integration_manifest`.
-                public var integration_manifest: Components.Schemas.rate_hyphen_limit?
+                public var integrationManifest: Components.Schemas.RateLimit?
                 /// - Remark: Generated from `#/components/schemas/rate-limit-overview/resources/code_scanning_upload`.
-                public var code_scanning_upload: Components.Schemas.rate_hyphen_limit?
+                public var codeScanningUpload: Components.Schemas.RateLimit?
                 /// - Remark: Generated from `#/components/schemas/rate-limit-overview/resources/actions_runner_registration`.
-                public var actions_runner_registration: Components.Schemas.rate_hyphen_limit?
+                public var actionsRunnerRegistration: Components.Schemas.RateLimit?
                 /// - Remark: Generated from `#/components/schemas/rate-limit-overview/resources/scim`.
-                public var scim: Components.Schemas.rate_hyphen_limit?
+                public var scim: Components.Schemas.RateLimit?
                 /// - Remark: Generated from `#/components/schemas/rate-limit-overview/resources/dependency_snapshots`.
-                public var dependency_snapshots: Components.Schemas.rate_hyphen_limit?
+                public var dependencySnapshots: Components.Schemas.RateLimit?
                 /// - Remark: Generated from `#/components/schemas/rate-limit-overview/resources/code_scanning_autofix`.
-                public var code_scanning_autofix: Components.Schemas.rate_hyphen_limit?
-                /// Creates a new `resourcesPayload`.
+                public var codeScanningAutofix: Components.Schemas.RateLimit?
+                /// Creates a new `ResourcesPayload`.
                 ///
                 /// - Parameters:
                 ///   - core:
                 ///   - graphql:
                 ///   - search:
-                ///   - code_search:
-                ///   - source_import:
-                ///   - integration_manifest:
-                ///   - code_scanning_upload:
-                ///   - actions_runner_registration:
+                ///   - codeSearch:
+                ///   - sourceImport:
+                ///   - integrationManifest:
+                ///   - codeScanningUpload:
+                ///   - actionsRunnerRegistration:
                 ///   - scim:
-                ///   - dependency_snapshots:
-                ///   - code_scanning_autofix:
+                ///   - dependencySnapshots:
+                ///   - codeScanningAutofix:
                 public init(
-                    core: Components.Schemas.rate_hyphen_limit,
-                    graphql: Components.Schemas.rate_hyphen_limit? = nil,
-                    search: Components.Schemas.rate_hyphen_limit,
-                    code_search: Components.Schemas.rate_hyphen_limit? = nil,
-                    source_import: Components.Schemas.rate_hyphen_limit? = nil,
-                    integration_manifest: Components.Schemas.rate_hyphen_limit? = nil,
-                    code_scanning_upload: Components.Schemas.rate_hyphen_limit? = nil,
-                    actions_runner_registration: Components.Schemas.rate_hyphen_limit? = nil,
-                    scim: Components.Schemas.rate_hyphen_limit? = nil,
-                    dependency_snapshots: Components.Schemas.rate_hyphen_limit? = nil,
-                    code_scanning_autofix: Components.Schemas.rate_hyphen_limit? = nil
+                    core: Components.Schemas.RateLimit,
+                    graphql: Components.Schemas.RateLimit? = nil,
+                    search: Components.Schemas.RateLimit,
+                    codeSearch: Components.Schemas.RateLimit? = nil,
+                    sourceImport: Components.Schemas.RateLimit? = nil,
+                    integrationManifest: Components.Schemas.RateLimit? = nil,
+                    codeScanningUpload: Components.Schemas.RateLimit? = nil,
+                    actionsRunnerRegistration: Components.Schemas.RateLimit? = nil,
+                    scim: Components.Schemas.RateLimit? = nil,
+                    dependencySnapshots: Components.Schemas.RateLimit? = nil,
+                    codeScanningAutofix: Components.Schemas.RateLimit? = nil
                 ) {
                     self.core = core
                     self.graphql = graphql
                     self.search = search
-                    self.code_search = code_search
-                    self.source_import = source_import
-                    self.integration_manifest = integration_manifest
-                    self.code_scanning_upload = code_scanning_upload
-                    self.actions_runner_registration = actions_runner_registration
+                    self.codeSearch = codeSearch
+                    self.sourceImport = sourceImport
+                    self.integrationManifest = integrationManifest
+                    self.codeScanningUpload = codeScanningUpload
+                    self.actionsRunnerRegistration = actionsRunnerRegistration
                     self.scim = scim
-                    self.dependency_snapshots = dependency_snapshots
-                    self.code_scanning_autofix = code_scanning_autofix
+                    self.dependencySnapshots = dependencySnapshots
+                    self.codeScanningAutofix = codeScanningAutofix
                 }
                 public enum CodingKeys: String, CodingKey {
                     case core
                     case graphql
                     case search
-                    case code_search
-                    case source_import
-                    case integration_manifest
-                    case code_scanning_upload
-                    case actions_runner_registration
+                    case codeSearch = "code_search"
+                    case sourceImport = "source_import"
+                    case integrationManifest = "integration_manifest"
+                    case codeScanningUpload = "code_scanning_upload"
+                    case actionsRunnerRegistration = "actions_runner_registration"
                     case scim
-                    case dependency_snapshots
-                    case code_scanning_autofix
+                    case dependencySnapshots = "dependency_snapshots"
+                    case codeScanningAutofix = "code_scanning_autofix"
                 }
             }
             /// - Remark: Generated from `#/components/schemas/rate-limit-overview/resources`.
-            public var resources: Components.Schemas.rate_hyphen_limit_hyphen_overview.resourcesPayload
+            public var resources: Components.Schemas.RateLimitOverview.ResourcesPayload
             /// - Remark: Generated from `#/components/schemas/rate-limit-overview/rate`.
-            public var rate: Components.Schemas.rate_hyphen_limit
-            /// Creates a new `rate_hyphen_limit_hyphen_overview`.
+            public var rate: Components.Schemas.RateLimit
+            /// Creates a new `RateLimitOverview`.
             ///
             /// - Parameters:
             ///   - resources:
             ///   - rate:
             public init(
-                resources: Components.Schemas.rate_hyphen_limit_hyphen_overview.resourcesPayload,
-                rate: Components.Schemas.rate_hyphen_limit
+                resources: Components.Schemas.RateLimitOverview.ResourcesPayload,
+                rate: Components.Schemas.RateLimit
             ) {
                 self.resources = resources
                 self.rate = rate
@@ -258,16 +267,16 @@ public enum Components {
     public enum RequestBodies {}
     /// Types generated from the `#/components/responses` section of the OpenAPI document.
     public enum Responses {
-        public struct not_found: Sendable, Hashable {
+        public struct NotFound: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/not_found/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/not_found/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -277,28 +286,28 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.not_found.Body
-            /// Creates a new `not_found`.
+            public var body: Components.Responses.NotFound.Body
+            /// Creates a new `NotFound`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.not_found.Body) {
+            public init(body: Components.Responses.NotFound.Body) {
                 self.body = body
             }
         }
-        public struct not_modified: Sendable, Hashable {
-            /// Creates a new `not_modified`.
+        public struct NotModified: Sendable, Hashable {
+            /// Creates a new `NotModified`.
             public init() {}
         }
     }
     /// Types generated from the `#/components/headers` section of the OpenAPI document.
     public enum Headers {
         /// - Remark: Generated from `#/components/headers/x-rate-limit-limit`.
-        public typealias x_hyphen_rate_hyphen_limit_hyphen_limit = Swift.Int
+        public typealias XRateLimitLimit = Swift.Int
         /// - Remark: Generated from `#/components/headers/x-rate-limit-remaining`.
-        public typealias x_hyphen_rate_hyphen_limit_hyphen_remaining = Swift.Int
+        public typealias XRateLimitRemaining = Swift.Int
         /// - Remark: Generated from `#/components/headers/x-rate-limit-reset`.
-        public typealias x_hyphen_rate_hyphen_limit_hyphen_reset = Swift.Int
+        public typealias XRateLimitReset = Swift.Int
     }
 }
 
@@ -325,26 +334,26 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /rate_limit`.
     /// - Remark: Generated from `#/paths//rate_limit/get(rate-limit/get)`.
-    public enum rate_hyphen_limit_sol_get {
+    public enum RateLimitGet {
         public static let id: Swift.String = "rate-limit/get"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/rate_limit/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.rate_hyphen_limit_sol_get.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.RateLimitGet.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.rate_hyphen_limit_sol_get.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.RateLimitGet.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.rate_hyphen_limit_sol_get.Input.Headers
+            public var headers: Operations.RateLimitGet.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - headers:
-            public init(headers: Operations.rate_hyphen_limit_sol_get.Input.Headers = .init()) {
+            public init(headers: Operations.RateLimitGet.Input.Headers = .init()) {
                 self.headers = headers
             }
         }
@@ -353,38 +362,38 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/rate_limit/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/rate_limit/GET/responses/200/headers/X-RateLimit-Limit`.
-                    public var X_hyphen_RateLimit_hyphen_Limit: Components.Headers.x_hyphen_rate_hyphen_limit_hyphen_limit?
+                    public var xRateLimitLimit: Components.Headers.XRateLimitLimit?
                     /// - Remark: Generated from `#/paths/rate_limit/GET/responses/200/headers/X-RateLimit-Remaining`.
-                    public var X_hyphen_RateLimit_hyphen_Remaining: Components.Headers.x_hyphen_rate_hyphen_limit_hyphen_remaining?
+                    public var xRateLimitRemaining: Components.Headers.XRateLimitRemaining?
                     /// - Remark: Generated from `#/paths/rate_limit/GET/responses/200/headers/X-RateLimit-Reset`.
-                    public var X_hyphen_RateLimit_hyphen_Reset: Components.Headers.x_hyphen_rate_hyphen_limit_hyphen_reset?
+                    public var xRateLimitReset: Components.Headers.XRateLimitReset?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - X_hyphen_RateLimit_hyphen_Limit:
-                    ///   - X_hyphen_RateLimit_hyphen_Remaining:
-                    ///   - X_hyphen_RateLimit_hyphen_Reset:
+                    ///   - xRateLimitLimit:
+                    ///   - xRateLimitRemaining:
+                    ///   - xRateLimitReset:
                     public init(
-                        X_hyphen_RateLimit_hyphen_Limit: Components.Headers.x_hyphen_rate_hyphen_limit_hyphen_limit? = nil,
-                        X_hyphen_RateLimit_hyphen_Remaining: Components.Headers.x_hyphen_rate_hyphen_limit_hyphen_remaining? = nil,
-                        X_hyphen_RateLimit_hyphen_Reset: Components.Headers.x_hyphen_rate_hyphen_limit_hyphen_reset? = nil
+                        xRateLimitLimit: Components.Headers.XRateLimitLimit? = nil,
+                        xRateLimitRemaining: Components.Headers.XRateLimitRemaining? = nil,
+                        xRateLimitReset: Components.Headers.XRateLimitReset? = nil
                     ) {
-                        self.X_hyphen_RateLimit_hyphen_Limit = X_hyphen_RateLimit_hyphen_Limit
-                        self.X_hyphen_RateLimit_hyphen_Remaining = X_hyphen_RateLimit_hyphen_Remaining
-                        self.X_hyphen_RateLimit_hyphen_Reset = X_hyphen_RateLimit_hyphen_Reset
+                        self.xRateLimitLimit = xRateLimitLimit
+                        self.xRateLimitRemaining = xRateLimitRemaining
+                        self.xRateLimitReset = xRateLimitReset
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.rate_hyphen_limit_sol_get.Output.Ok.Headers
+                public var headers: Operations.RateLimitGet.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/rate_limit/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/rate_limit/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.rate_hyphen_limit_hyphen_overview)
+                    case json(Components.Schemas.RateLimitOverview)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.rate_hyphen_limit_hyphen_overview {
+                    public var json: Components.Schemas.RateLimitOverview {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -394,15 +403,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.rate_hyphen_limit_sol_get.Output.Ok.Body
+                public var body: Operations.RateLimitGet.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.rate_hyphen_limit_sol_get.Output.Ok.Headers = .init(),
-                    body: Operations.rate_hyphen_limit_sol_get.Output.Ok.Body
+                    headers: Operations.RateLimitGet.Output.Ok.Headers = .init(),
+                    body: Operations.RateLimitGet.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -413,12 +422,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//rate_limit/get(rate-limit/get)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.rate_hyphen_limit_sol_get.Output.Ok)
+            case ok(Operations.RateLimitGet.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.rate_hyphen_limit_sol_get.Output.Ok {
+            public var ok: Operations.RateLimitGet.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -436,12 +445,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//rate_limit/get(rate-limit/get)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//rate_limit/get(rate-limit/get)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -459,12 +476,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//rate_limit/get(rate-limit/get)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
