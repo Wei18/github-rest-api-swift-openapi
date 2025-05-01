@@ -21,7 +21,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/campaigns`.
     /// - Remark: Generated from `#/paths//orgs/{org}/campaigns/get(campaigns/list-org-campaigns)`.
-    func campaigns_sol_list_hyphen_org_hyphen_campaigns(_ input: Operations.campaigns_sol_list_hyphen_org_hyphen_campaigns.Input) async throws -> Operations.campaigns_sol_list_hyphen_org_hyphen_campaigns.Output
+    func campaignsListOrgCampaigns(_ input: Operations.CampaignsListOrgCampaigns.Input) async throws -> Operations.CampaignsListOrgCampaigns.Output
     /// Create a campaign for an organization
     ///
     /// Create a campaign for an organization.
@@ -35,7 +35,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `POST /orgs/{org}/campaigns`.
     /// - Remark: Generated from `#/paths//orgs/{org}/campaigns/post(campaigns/create-campaign)`.
-    func campaigns_sol_create_hyphen_campaign(_ input: Operations.campaigns_sol_create_hyphen_campaign.Input) async throws -> Operations.campaigns_sol_create_hyphen_campaign.Output
+    func campaignsCreateCampaign(_ input: Operations.CampaignsCreateCampaign.Input) async throws -> Operations.CampaignsCreateCampaign.Output
     /// Get a campaign for an organization
     ///
     /// Gets a campaign for an organization.
@@ -46,7 +46,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/campaigns/{campaign_number}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/campaigns/{campaign_number}/get(campaigns/get-campaign-summary)`.
-    func campaigns_sol_get_hyphen_campaign_hyphen_summary(_ input: Operations.campaigns_sol_get_hyphen_campaign_hyphen_summary.Input) async throws -> Operations.campaigns_sol_get_hyphen_campaign_hyphen_summary.Output
+    func campaignsGetCampaignSummary(_ input: Operations.CampaignsGetCampaignSummary.Input) async throws -> Operations.CampaignsGetCampaignSummary.Output
     /// Update a campaign
     ///
     /// Updates a campaign in an organization.
@@ -57,7 +57,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `PATCH /orgs/{org}/campaigns/{campaign_number}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/campaigns/{campaign_number}/patch(campaigns/update-campaign)`.
-    func campaigns_sol_update_hyphen_campaign(_ input: Operations.campaigns_sol_update_hyphen_campaign.Input) async throws -> Operations.campaigns_sol_update_hyphen_campaign.Output
+    func campaignsUpdateCampaign(_ input: Operations.CampaignsUpdateCampaign.Input) async throws -> Operations.CampaignsUpdateCampaign.Output
     /// Delete a campaign for an organization
     ///
     /// Deletes a campaign in an organization.
@@ -68,7 +68,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/campaigns/{campaign_number}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/campaigns/{campaign_number}/delete(campaigns/delete-campaign)`.
-    func campaigns_sol_delete_hyphen_campaign(_ input: Operations.campaigns_sol_delete_hyphen_campaign.Input) async throws -> Operations.campaigns_sol_delete_hyphen_campaign.Output
+    func campaignsDeleteCampaign(_ input: Operations.CampaignsDeleteCampaign.Input) async throws -> Operations.CampaignsDeleteCampaign.Output
 }
 
 /// Convenience overloads for operation inputs.
@@ -83,12 +83,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/campaigns`.
     /// - Remark: Generated from `#/paths//orgs/{org}/campaigns/get(campaigns/list-org-campaigns)`.
-    public func campaigns_sol_list_hyphen_org_hyphen_campaigns(
-        path: Operations.campaigns_sol_list_hyphen_org_hyphen_campaigns.Input.Path,
-        query: Operations.campaigns_sol_list_hyphen_org_hyphen_campaigns.Input.Query = .init(),
-        headers: Operations.campaigns_sol_list_hyphen_org_hyphen_campaigns.Input.Headers = .init()
-    ) async throws -> Operations.campaigns_sol_list_hyphen_org_hyphen_campaigns.Output {
-        try await campaigns_sol_list_hyphen_org_hyphen_campaigns(Operations.campaigns_sol_list_hyphen_org_hyphen_campaigns.Input(
+    public func campaignsListOrgCampaigns(
+        path: Operations.CampaignsListOrgCampaigns.Input.Path,
+        query: Operations.CampaignsListOrgCampaigns.Input.Query = .init(),
+        headers: Operations.CampaignsListOrgCampaigns.Input.Headers = .init()
+    ) async throws -> Operations.CampaignsListOrgCampaigns.Output {
+        try await campaignsListOrgCampaigns(Operations.CampaignsListOrgCampaigns.Input(
             path: path,
             query: query,
             headers: headers
@@ -107,12 +107,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /orgs/{org}/campaigns`.
     /// - Remark: Generated from `#/paths//orgs/{org}/campaigns/post(campaigns/create-campaign)`.
-    public func campaigns_sol_create_hyphen_campaign(
-        path: Operations.campaigns_sol_create_hyphen_campaign.Input.Path,
-        headers: Operations.campaigns_sol_create_hyphen_campaign.Input.Headers = .init(),
-        body: Operations.campaigns_sol_create_hyphen_campaign.Input.Body
-    ) async throws -> Operations.campaigns_sol_create_hyphen_campaign.Output {
-        try await campaigns_sol_create_hyphen_campaign(Operations.campaigns_sol_create_hyphen_campaign.Input(
+    public func campaignsCreateCampaign(
+        path: Operations.CampaignsCreateCampaign.Input.Path,
+        headers: Operations.CampaignsCreateCampaign.Input.Headers = .init(),
+        body: Operations.CampaignsCreateCampaign.Input.Body
+    ) async throws -> Operations.CampaignsCreateCampaign.Output {
+        try await campaignsCreateCampaign(Operations.CampaignsCreateCampaign.Input(
             path: path,
             headers: headers,
             body: body
@@ -128,11 +128,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/campaigns/{campaign_number}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/campaigns/{campaign_number}/get(campaigns/get-campaign-summary)`.
-    public func campaigns_sol_get_hyphen_campaign_hyphen_summary(
-        path: Operations.campaigns_sol_get_hyphen_campaign_hyphen_summary.Input.Path,
-        headers: Operations.campaigns_sol_get_hyphen_campaign_hyphen_summary.Input.Headers = .init()
-    ) async throws -> Operations.campaigns_sol_get_hyphen_campaign_hyphen_summary.Output {
-        try await campaigns_sol_get_hyphen_campaign_hyphen_summary(Operations.campaigns_sol_get_hyphen_campaign_hyphen_summary.Input(
+    public func campaignsGetCampaignSummary(
+        path: Operations.CampaignsGetCampaignSummary.Input.Path,
+        headers: Operations.CampaignsGetCampaignSummary.Input.Headers = .init()
+    ) async throws -> Operations.CampaignsGetCampaignSummary.Output {
+        try await campaignsGetCampaignSummary(Operations.CampaignsGetCampaignSummary.Input(
             path: path,
             headers: headers
         ))
@@ -147,12 +147,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `PATCH /orgs/{org}/campaigns/{campaign_number}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/campaigns/{campaign_number}/patch(campaigns/update-campaign)`.
-    public func campaigns_sol_update_hyphen_campaign(
-        path: Operations.campaigns_sol_update_hyphen_campaign.Input.Path,
-        headers: Operations.campaigns_sol_update_hyphen_campaign.Input.Headers = .init(),
-        body: Operations.campaigns_sol_update_hyphen_campaign.Input.Body
-    ) async throws -> Operations.campaigns_sol_update_hyphen_campaign.Output {
-        try await campaigns_sol_update_hyphen_campaign(Operations.campaigns_sol_update_hyphen_campaign.Input(
+    public func campaignsUpdateCampaign(
+        path: Operations.CampaignsUpdateCampaign.Input.Path,
+        headers: Operations.CampaignsUpdateCampaign.Input.Headers = .init(),
+        body: Operations.CampaignsUpdateCampaign.Input.Body
+    ) async throws -> Operations.CampaignsUpdateCampaign.Output {
+        try await campaignsUpdateCampaign(Operations.CampaignsUpdateCampaign.Input(
             path: path,
             headers: headers,
             body: body
@@ -168,11 +168,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/campaigns/{campaign_number}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/campaigns/{campaign_number}/delete(campaigns/delete-campaign)`.
-    public func campaigns_sol_delete_hyphen_campaign(
-        path: Operations.campaigns_sol_delete_hyphen_campaign.Input.Path,
-        headers: Operations.campaigns_sol_delete_hyphen_campaign.Input.Headers = .init()
-    ) async throws -> Operations.campaigns_sol_delete_hyphen_campaign.Output {
-        try await campaigns_sol_delete_hyphen_campaign(Operations.campaigns_sol_delete_hyphen_campaign.Input(
+    public func campaignsDeleteCampaign(
+        path: Operations.CampaignsDeleteCampaign.Input.Path,
+        headers: Operations.CampaignsDeleteCampaign.Input.Headers = .init()
+    ) async throws -> Operations.CampaignsDeleteCampaign.Output {
+        try await campaignsDeleteCampaign(Operations.CampaignsDeleteCampaign.Input(
             path: path,
             headers: headers
         ))
@@ -181,6 +181,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -196,7 +205,7 @@ public enum Components {
         /// A GitHub user.
         ///
         /// - Remark: Generated from `#/components/schemas/simple-user`.
-        public struct simple_hyphen_user: Codable, Hashable, Sendable {
+        public struct SimpleUser: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/simple-user/name`.
             public var name: Swift.String?
             /// - Remark: Generated from `#/components/schemas/simple-user/email`.
@@ -206,171 +215,171 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/simple-user/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/simple-user/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/avatar_url`.
-            public var avatar_url: Swift.String
+            public var avatarUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/gravatar_id`.
-            public var gravatar_id: Swift.String?
+            public var gravatarId: Swift.String?
             /// - Remark: Generated from `#/components/schemas/simple-user/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/followers_url`.
-            public var followers_url: Swift.String
+            public var followersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/following_url`.
-            public var following_url: Swift.String
+            public var followingUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/gists_url`.
-            public var gists_url: Swift.String
+            public var gistsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/starred_url`.
-            public var starred_url: Swift.String
+            public var starredUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/subscriptions_url`.
-            public var subscriptions_url: Swift.String
+            public var subscriptionsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/organizations_url`.
-            public var organizations_url: Swift.String
+            public var organizationsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/repos_url`.
-            public var repos_url: Swift.String
+            public var reposUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/events_url`.
-            public var events_url: Swift.String
+            public var eventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/received_events_url`.
-            public var received_events_url: Swift.String
+            public var receivedEventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/type`.
             public var _type: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/site_admin`.
-            public var site_admin: Swift.Bool
+            public var siteAdmin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/simple-user/starred_at`.
-            public var starred_at: Swift.String?
+            public var starredAt: Swift.String?
             /// - Remark: Generated from `#/components/schemas/simple-user/user_view_type`.
-            public var user_view_type: Swift.String?
-            /// Creates a new `simple_hyphen_user`.
+            public var userViewType: Swift.String?
+            /// Creates a new `SimpleUser`.
             ///
             /// - Parameters:
             ///   - name:
             ///   - email:
             ///   - login:
             ///   - id:
-            ///   - node_id:
-            ///   - avatar_url:
-            ///   - gravatar_id:
+            ///   - nodeId:
+            ///   - avatarUrl:
+            ///   - gravatarId:
             ///   - url:
-            ///   - html_url:
-            ///   - followers_url:
-            ///   - following_url:
-            ///   - gists_url:
-            ///   - starred_url:
-            ///   - subscriptions_url:
-            ///   - organizations_url:
-            ///   - repos_url:
-            ///   - events_url:
-            ///   - received_events_url:
+            ///   - htmlUrl:
+            ///   - followersUrl:
+            ///   - followingUrl:
+            ///   - gistsUrl:
+            ///   - starredUrl:
+            ///   - subscriptionsUrl:
+            ///   - organizationsUrl:
+            ///   - reposUrl:
+            ///   - eventsUrl:
+            ///   - receivedEventsUrl:
             ///   - _type:
-            ///   - site_admin:
-            ///   - starred_at:
-            ///   - user_view_type:
+            ///   - siteAdmin:
+            ///   - starredAt:
+            ///   - userViewType:
             public init(
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
                 login: Swift.String,
                 id: Swift.Int64,
-                node_id: Swift.String,
-                avatar_url: Swift.String,
-                gravatar_id: Swift.String? = nil,
+                nodeId: Swift.String,
+                avatarUrl: Swift.String,
+                gravatarId: Swift.String? = nil,
                 url: Swift.String,
-                html_url: Swift.String,
-                followers_url: Swift.String,
-                following_url: Swift.String,
-                gists_url: Swift.String,
-                starred_url: Swift.String,
-                subscriptions_url: Swift.String,
-                organizations_url: Swift.String,
-                repos_url: Swift.String,
-                events_url: Swift.String,
-                received_events_url: Swift.String,
+                htmlUrl: Swift.String,
+                followersUrl: Swift.String,
+                followingUrl: Swift.String,
+                gistsUrl: Swift.String,
+                starredUrl: Swift.String,
+                subscriptionsUrl: Swift.String,
+                organizationsUrl: Swift.String,
+                reposUrl: Swift.String,
+                eventsUrl: Swift.String,
+                receivedEventsUrl: Swift.String,
                 _type: Swift.String,
-                site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil,
-                user_view_type: Swift.String? = nil
+                siteAdmin: Swift.Bool,
+                starredAt: Swift.String? = nil,
+                userViewType: Swift.String? = nil
             ) {
                 self.name = name
                 self.email = email
                 self.login = login
                 self.id = id
-                self.node_id = node_id
-                self.avatar_url = avatar_url
-                self.gravatar_id = gravatar_id
+                self.nodeId = nodeId
+                self.avatarUrl = avatarUrl
+                self.gravatarId = gravatarId
                 self.url = url
-                self.html_url = html_url
-                self.followers_url = followers_url
-                self.following_url = following_url
-                self.gists_url = gists_url
-                self.starred_url = starred_url
-                self.subscriptions_url = subscriptions_url
-                self.organizations_url = organizations_url
-                self.repos_url = repos_url
-                self.events_url = events_url
-                self.received_events_url = received_events_url
+                self.htmlUrl = htmlUrl
+                self.followersUrl = followersUrl
+                self.followingUrl = followingUrl
+                self.gistsUrl = gistsUrl
+                self.starredUrl = starredUrl
+                self.subscriptionsUrl = subscriptionsUrl
+                self.organizationsUrl = organizationsUrl
+                self.reposUrl = reposUrl
+                self.eventsUrl = eventsUrl
+                self.receivedEventsUrl = receivedEventsUrl
                 self._type = _type
-                self.site_admin = site_admin
-                self.starred_at = starred_at
-                self.user_view_type = user_view_type
+                self.siteAdmin = siteAdmin
+                self.starredAt = starredAt
+                self.userViewType = userViewType
             }
             public enum CodingKeys: String, CodingKey {
                 case name
                 case email
                 case login
                 case id
-                case node_id
-                case avatar_url
-                case gravatar_id
+                case nodeId = "node_id"
+                case avatarUrl = "avatar_url"
+                case gravatarId = "gravatar_id"
                 case url
-                case html_url
-                case followers_url
-                case following_url
-                case gists_url
-                case starred_url
-                case subscriptions_url
-                case organizations_url
-                case repos_url
-                case events_url
-                case received_events_url
+                case htmlUrl = "html_url"
+                case followersUrl = "followers_url"
+                case followingUrl = "following_url"
+                case gistsUrl = "gists_url"
+                case starredUrl = "starred_url"
+                case subscriptionsUrl = "subscriptions_url"
+                case organizationsUrl = "organizations_url"
+                case reposUrl = "repos_url"
+                case eventsUrl = "events_url"
+                case receivedEventsUrl = "received_events_url"
                 case _type = "type"
-                case site_admin
-                case starred_at
-                case user_view_type
+                case siteAdmin = "site_admin"
+                case starredAt = "starred_at"
+                case userViewType = "user_view_type"
             }
         }
         /// Basic Error
         ///
         /// - Remark: Generated from `#/components/schemas/basic-error`.
-        public struct basic_hyphen_error: Codable, Hashable, Sendable {
+        public struct BasicError: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/basic-error/message`.
             public var message: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/documentation_url`.
-            public var documentation_url: Swift.String?
+            public var documentationUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/url`.
             public var url: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/status`.
             public var status: Swift.String?
-            /// Creates a new `basic_hyphen_error`.
+            /// Creates a new `BasicError`.
             ///
             /// - Parameters:
             ///   - message:
-            ///   - documentation_url:
+            ///   - documentationUrl:
             ///   - url:
             ///   - status:
             public init(
                 message: Swift.String? = nil,
-                documentation_url: Swift.String? = nil,
+                documentationUrl: Swift.String? = nil,
                 url: Swift.String? = nil,
                 status: Swift.String? = nil
             ) {
                 self.message = message
-                self.documentation_url = documentation_url
+                self.documentationUrl = documentationUrl
                 self.url = url
                 self.status = status
             }
             public enum CodingKeys: String, CodingKey {
                 case message
-                case documentation_url
+                case documentationUrl = "documentation_url"
                 case url
                 case status
             }
@@ -378,26 +387,26 @@ public enum Components {
         /// Indicates whether a campaign is open or closed
         ///
         /// - Remark: Generated from `#/components/schemas/campaign-state`.
-        @frozen public enum campaign_hyphen_state: String, Codable, Hashable, Sendable {
+        @frozen public enum CampaignState: String, Codable, Hashable, Sendable, CaseIterable {
             case open = "open"
             case closed = "closed"
         }
         /// Groups of organization members that gives permissions on specified repositories.
         ///
         /// - Remark: Generated from `#/components/schemas/nullable-team-simple`.
-        public struct nullable_hyphen_team_hyphen_simple: Codable, Hashable, Sendable {
+        public struct NullableTeamSimple: Codable, Hashable, Sendable {
             /// Unique identifier of the team
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-team-simple/id`.
             public var id: Swift.Int
             /// - Remark: Generated from `#/components/schemas/nullable-team-simple/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// URL for the team
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-team-simple/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-team-simple/members_url`.
-            public var members_url: Swift.String
+            public var membersUrl: Swift.String
             /// Name of the team
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-team-simple/name`.
@@ -417,86 +426,86 @@ public enum Components {
             /// The notification setting the team has set
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-team-simple/notification_setting`.
-            public var notification_setting: Swift.String?
+            public var notificationSetting: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-team-simple/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-team-simple/repositories_url`.
-            public var repositories_url: Swift.String
+            public var repositoriesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-team-simple/slug`.
             public var slug: Swift.String
             /// Distinguished Name (DN) that team maps to within LDAP environment
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-team-simple/ldap_dn`.
-            public var ldap_dn: Swift.String?
-            /// Creates a new `nullable_hyphen_team_hyphen_simple`.
+            public var ldapDn: Swift.String?
+            /// Creates a new `NullableTeamSimple`.
             ///
             /// - Parameters:
             ///   - id: Unique identifier of the team
-            ///   - node_id:
+            ///   - nodeId:
             ///   - url: URL for the team
-            ///   - members_url:
+            ///   - membersUrl:
             ///   - name: Name of the team
             ///   - description: Description of the team
             ///   - permission: Permission that the team will have for its repositories
             ///   - privacy: The level of privacy this team should have
-            ///   - notification_setting: The notification setting the team has set
-            ///   - html_url:
-            ///   - repositories_url:
+            ///   - notificationSetting: The notification setting the team has set
+            ///   - htmlUrl:
+            ///   - repositoriesUrl:
             ///   - slug:
-            ///   - ldap_dn: Distinguished Name (DN) that team maps to within LDAP environment
+            ///   - ldapDn: Distinguished Name (DN) that team maps to within LDAP environment
             public init(
                 id: Swift.Int,
-                node_id: Swift.String,
+                nodeId: Swift.String,
                 url: Swift.String,
-                members_url: Swift.String,
+                membersUrl: Swift.String,
                 name: Swift.String,
                 description: Swift.String? = nil,
                 permission: Swift.String,
                 privacy: Swift.String? = nil,
-                notification_setting: Swift.String? = nil,
-                html_url: Swift.String,
-                repositories_url: Swift.String,
+                notificationSetting: Swift.String? = nil,
+                htmlUrl: Swift.String,
+                repositoriesUrl: Swift.String,
                 slug: Swift.String,
-                ldap_dn: Swift.String? = nil
+                ldapDn: Swift.String? = nil
             ) {
                 self.id = id
-                self.node_id = node_id
+                self.nodeId = nodeId
                 self.url = url
-                self.members_url = members_url
+                self.membersUrl = membersUrl
                 self.name = name
                 self.description = description
                 self.permission = permission
                 self.privacy = privacy
-                self.notification_setting = notification_setting
-                self.html_url = html_url
-                self.repositories_url = repositories_url
+                self.notificationSetting = notificationSetting
+                self.htmlUrl = htmlUrl
+                self.repositoriesUrl = repositoriesUrl
                 self.slug = slug
-                self.ldap_dn = ldap_dn
+                self.ldapDn = ldapDn
             }
             public enum CodingKeys: String, CodingKey {
                 case id
-                case node_id
+                case nodeId = "node_id"
                 case url
-                case members_url
+                case membersUrl = "members_url"
                 case name
                 case description
                 case permission
                 case privacy
-                case notification_setting
-                case html_url
-                case repositories_url
+                case notificationSetting = "notification_setting"
+                case htmlUrl = "html_url"
+                case repositoriesUrl = "repositories_url"
                 case slug
-                case ldap_dn
+                case ldapDn = "ldap_dn"
             }
         }
         /// Groups of organization members that gives permissions on specified repositories.
         ///
         /// - Remark: Generated from `#/components/schemas/team`.
-        public struct team: Codable, Hashable, Sendable {
+        public struct Team: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/team/id`.
             public var id: Swift.Int
             /// - Remark: Generated from `#/components/schemas/team/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/team/name`.
             public var name: Swift.String
             /// - Remark: Generated from `#/components/schemas/team/slug`.
@@ -506,11 +515,11 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/team/privacy`.
             public var privacy: Swift.String?
             /// - Remark: Generated from `#/components/schemas/team/notification_setting`.
-            public var notification_setting: Swift.String?
+            public var notificationSetting: Swift.String?
             /// - Remark: Generated from `#/components/schemas/team/permission`.
             public var permission: Swift.String
             /// - Remark: Generated from `#/components/schemas/team/permissions`.
-            public struct permissionsPayload: Codable, Hashable, Sendable {
+            public struct PermissionsPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/team/permissions/pull`.
                 public var pull: Swift.Bool
                 /// - Remark: Generated from `#/components/schemas/team/permissions/triage`.
@@ -521,7 +530,7 @@ public enum Components {
                 public var maintain: Swift.Bool
                 /// - Remark: Generated from `#/components/schemas/team/permissions/admin`.
                 public var admin: Swift.Bool
-                /// Creates a new `permissionsPayload`.
+                /// Creates a new `PermissionsPayload`.
                 ///
                 /// - Parameters:
                 ///   - pull:
@@ -551,86 +560,86 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/team/permissions`.
-            public var permissions: Components.Schemas.team.permissionsPayload?
+            public var permissions: Components.Schemas.Team.PermissionsPayload?
             /// - Remark: Generated from `#/components/schemas/team/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/team/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team/members_url`.
-            public var members_url: Swift.String
+            public var membersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team/repositories_url`.
-            public var repositories_url: Swift.String
+            public var repositoriesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team/parent`.
-            public var parent: Components.Schemas.nullable_hyphen_team_hyphen_simple?
-            /// Creates a new `team`.
+            public var parent: Components.Schemas.NullableTeamSimple?
+            /// Creates a new `Team`.
             ///
             /// - Parameters:
             ///   - id:
-            ///   - node_id:
+            ///   - nodeId:
             ///   - name:
             ///   - slug:
             ///   - description:
             ///   - privacy:
-            ///   - notification_setting:
+            ///   - notificationSetting:
             ///   - permission:
             ///   - permissions:
             ///   - url:
-            ///   - html_url:
-            ///   - members_url:
-            ///   - repositories_url:
+            ///   - htmlUrl:
+            ///   - membersUrl:
+            ///   - repositoriesUrl:
             ///   - parent:
             public init(
                 id: Swift.Int,
-                node_id: Swift.String,
+                nodeId: Swift.String,
                 name: Swift.String,
                 slug: Swift.String,
                 description: Swift.String? = nil,
                 privacy: Swift.String? = nil,
-                notification_setting: Swift.String? = nil,
+                notificationSetting: Swift.String? = nil,
                 permission: Swift.String,
-                permissions: Components.Schemas.team.permissionsPayload? = nil,
+                permissions: Components.Schemas.Team.PermissionsPayload? = nil,
                 url: Swift.String,
-                html_url: Swift.String,
-                members_url: Swift.String,
-                repositories_url: Swift.String,
-                parent: Components.Schemas.nullable_hyphen_team_hyphen_simple? = nil
+                htmlUrl: Swift.String,
+                membersUrl: Swift.String,
+                repositoriesUrl: Swift.String,
+                parent: Components.Schemas.NullableTeamSimple? = nil
             ) {
                 self.id = id
-                self.node_id = node_id
+                self.nodeId = nodeId
                 self.name = name
                 self.slug = slug
                 self.description = description
                 self.privacy = privacy
-                self.notification_setting = notification_setting
+                self.notificationSetting = notificationSetting
                 self.permission = permission
                 self.permissions = permissions
                 self.url = url
-                self.html_url = html_url
-                self.members_url = members_url
-                self.repositories_url = repositories_url
+                self.htmlUrl = htmlUrl
+                self.membersUrl = membersUrl
+                self.repositoriesUrl = repositoriesUrl
                 self.parent = parent
             }
             public enum CodingKeys: String, CodingKey {
                 case id
-                case node_id
+                case nodeId = "node_id"
                 case name
                 case slug
                 case description
                 case privacy
-                case notification_setting
+                case notificationSetting = "notification_setting"
                 case permission
                 case permissions
                 case url
-                case html_url
-                case members_url
-                case repositories_url
+                case htmlUrl = "html_url"
+                case membersUrl = "members_url"
+                case repositoriesUrl = "repositories_url"
                 case parent
             }
         }
         /// The campaign metadata and alert stats.
         ///
         /// - Remark: Generated from `#/components/schemas/campaign-summary`.
-        public struct campaign_hyphen_summary: Codable, Hashable, Sendable {
+        public struct CampaignSummary: Codable, Hashable, Sendable {
             /// The number of the newly created campaign
             ///
             /// - Remark: Generated from `#/components/schemas/campaign-summary/number`.
@@ -638,11 +647,11 @@ public enum Components {
             /// The date and time the campaign was created, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
             ///
             /// - Remark: Generated from `#/components/schemas/campaign-summary/created_at`.
-            public var created_at: Foundation.Date
+            public var createdAt: Foundation.Date
             /// The date and time the campaign was last updated, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
             ///
             /// - Remark: Generated from `#/components/schemas/campaign-summary/updated_at`.
-            public var updated_at: Foundation.Date
+            public var updatedAt: Foundation.Date
             /// The campaign name
             ///
             /// - Remark: Generated from `#/components/schemas/campaign-summary/name`.
@@ -654,76 +663,76 @@ public enum Components {
             /// The campaign managers
             ///
             /// - Remark: Generated from `#/components/schemas/campaign-summary/managers`.
-            public var managers: [Components.Schemas.simple_hyphen_user]
+            public var managers: [Components.Schemas.SimpleUser]
             /// The campaign team managers
             ///
             /// - Remark: Generated from `#/components/schemas/campaign-summary/team_managers`.
-            public var team_managers: [Components.Schemas.team]?
+            public var teamManagers: [Components.Schemas.Team]?
             /// The date and time the campaign was published, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
             ///
             /// - Remark: Generated from `#/components/schemas/campaign-summary/published_at`.
-            public var published_at: Foundation.Date?
+            public var publishedAt: Foundation.Date?
             /// The date and time the campaign has ended, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
             ///
             /// - Remark: Generated from `#/components/schemas/campaign-summary/ends_at`.
-            public var ends_at: Foundation.Date
+            public var endsAt: Foundation.Date
             /// The date and time the campaign was closed, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ. Will be null if the campaign is still open.
             ///
             /// - Remark: Generated from `#/components/schemas/campaign-summary/closed_at`.
-            public var closed_at: Foundation.Date?
+            public var closedAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/campaign-summary/state`.
-            public var state: Components.Schemas.campaign_hyphen_state
+            public var state: Components.Schemas.CampaignState
             /// The contact link of the campaign.
             ///
             /// - Remark: Generated from `#/components/schemas/campaign-summary/contact_link`.
-            public var contact_link: Swift.String?
+            public var contactLink: Swift.String?
             /// - Remark: Generated from `#/components/schemas/campaign-summary/alert_stats`.
-            public struct alert_statsPayload: Codable, Hashable, Sendable {
+            public struct AlertStatsPayload: Codable, Hashable, Sendable {
                 /// The number of open alerts
                 ///
                 /// - Remark: Generated from `#/components/schemas/campaign-summary/alert_stats/open_count`.
-                public var open_count: Swift.Int
+                public var openCount: Swift.Int
                 /// The number of closed alerts
                 ///
                 /// - Remark: Generated from `#/components/schemas/campaign-summary/alert_stats/closed_count`.
-                public var closed_count: Swift.Int
+                public var closedCount: Swift.Int
                 /// The number of in-progress alerts
                 ///
                 /// - Remark: Generated from `#/components/schemas/campaign-summary/alert_stats/in_progress_count`.
-                public var in_progress_count: Swift.Int
-                /// Creates a new `alert_statsPayload`.
+                public var inProgressCount: Swift.Int
+                /// Creates a new `AlertStatsPayload`.
                 ///
                 /// - Parameters:
-                ///   - open_count: The number of open alerts
-                ///   - closed_count: The number of closed alerts
-                ///   - in_progress_count: The number of in-progress alerts
+                ///   - openCount: The number of open alerts
+                ///   - closedCount: The number of closed alerts
+                ///   - inProgressCount: The number of in-progress alerts
                 public init(
-                    open_count: Swift.Int,
-                    closed_count: Swift.Int,
-                    in_progress_count: Swift.Int
+                    openCount: Swift.Int,
+                    closedCount: Swift.Int,
+                    inProgressCount: Swift.Int
                 ) {
-                    self.open_count = open_count
-                    self.closed_count = closed_count
-                    self.in_progress_count = in_progress_count
+                    self.openCount = openCount
+                    self.closedCount = closedCount
+                    self.inProgressCount = inProgressCount
                 }
                 public enum CodingKeys: String, CodingKey {
-                    case open_count
-                    case closed_count
-                    case in_progress_count
+                    case openCount = "open_count"
+                    case closedCount = "closed_count"
+                    case inProgressCount = "in_progress_count"
                 }
                 public init(from decoder: any Decoder) throws {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
-                    open_count = try container.decode(
+                    self.openCount = try container.decode(
                         Swift.Int.self,
-                        forKey: .open_count
+                        forKey: .openCount
                     )
-                    closed_count = try container.decode(
+                    self.closedCount = try container.decode(
                         Swift.Int.self,
-                        forKey: .closed_count
+                        forKey: .closedCount
                     )
-                    in_progress_count = try container.decode(
+                    self.inProgressCount = try container.decode(
                         Swift.Int.self,
-                        forKey: .in_progress_count
+                        forKey: .inProgressCount
                     )
                     try decoder.ensureNoAdditionalProperties(knownKeys: [
                         "open_count",
@@ -733,66 +742,66 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/campaign-summary/alert_stats`.
-            public var alert_stats: Components.Schemas.campaign_hyphen_summary.alert_statsPayload?
-            /// Creates a new `campaign_hyphen_summary`.
+            public var alertStats: Components.Schemas.CampaignSummary.AlertStatsPayload?
+            /// Creates a new `CampaignSummary`.
             ///
             /// - Parameters:
             ///   - number: The number of the newly created campaign
-            ///   - created_at: The date and time the campaign was created, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
-            ///   - updated_at: The date and time the campaign was last updated, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
+            ///   - createdAt: The date and time the campaign was created, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
+            ///   - updatedAt: The date and time the campaign was last updated, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
             ///   - name: The campaign name
             ///   - description: The campaign description
             ///   - managers: The campaign managers
-            ///   - team_managers: The campaign team managers
-            ///   - published_at: The date and time the campaign was published, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
-            ///   - ends_at: The date and time the campaign has ended, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
-            ///   - closed_at: The date and time the campaign was closed, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ. Will be null if the campaign is still open.
+            ///   - teamManagers: The campaign team managers
+            ///   - publishedAt: The date and time the campaign was published, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
+            ///   - endsAt: The date and time the campaign has ended, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
+            ///   - closedAt: The date and time the campaign was closed, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ. Will be null if the campaign is still open.
             ///   - state:
-            ///   - contact_link: The contact link of the campaign.
-            ///   - alert_stats:
+            ///   - contactLink: The contact link of the campaign.
+            ///   - alertStats:
             public init(
                 number: Swift.Int,
-                created_at: Foundation.Date,
-                updated_at: Foundation.Date,
+                createdAt: Foundation.Date,
+                updatedAt: Foundation.Date,
                 name: Swift.String? = nil,
                 description: Swift.String,
-                managers: [Components.Schemas.simple_hyphen_user],
-                team_managers: [Components.Schemas.team]? = nil,
-                published_at: Foundation.Date? = nil,
-                ends_at: Foundation.Date,
-                closed_at: Foundation.Date? = nil,
-                state: Components.Schemas.campaign_hyphen_state,
-                contact_link: Swift.String? = nil,
-                alert_stats: Components.Schemas.campaign_hyphen_summary.alert_statsPayload? = nil
+                managers: [Components.Schemas.SimpleUser],
+                teamManagers: [Components.Schemas.Team]? = nil,
+                publishedAt: Foundation.Date? = nil,
+                endsAt: Foundation.Date,
+                closedAt: Foundation.Date? = nil,
+                state: Components.Schemas.CampaignState,
+                contactLink: Swift.String? = nil,
+                alertStats: Components.Schemas.CampaignSummary.AlertStatsPayload? = nil
             ) {
                 self.number = number
-                self.created_at = created_at
-                self.updated_at = updated_at
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
                 self.name = name
                 self.description = description
                 self.managers = managers
-                self.team_managers = team_managers
-                self.published_at = published_at
-                self.ends_at = ends_at
-                self.closed_at = closed_at
+                self.teamManagers = teamManagers
+                self.publishedAt = publishedAt
+                self.endsAt = endsAt
+                self.closedAt = closedAt
                 self.state = state
-                self.contact_link = contact_link
-                self.alert_stats = alert_stats
+                self.contactLink = contactLink
+                self.alertStats = alertStats
             }
             public enum CodingKeys: String, CodingKey {
                 case number
-                case created_at
-                case updated_at
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
                 case name
                 case description
                 case managers
-                case team_managers
-                case published_at
-                case ends_at
-                case closed_at
+                case teamManagers = "team_managers"
+                case publishedAt = "published_at"
+                case endsAt = "ends_at"
+                case closedAt = "closed_at"
                 case state
-                case contact_link
-                case alert_stats
+                case contactLink = "contact_link"
+                case alertStats = "alert_stats"
             }
         }
     }
@@ -801,37 +810,37 @@ public enum Components {
         /// The direction to sort the results by.
         ///
         /// - Remark: Generated from `#/components/parameters/direction`.
-        @frozen public enum direction: String, Codable, Hashable, Sendable {
+        @frozen public enum Direction: String, Codable, Hashable, Sendable, CaseIterable {
             case asc = "asc"
             case desc = "desc"
         }
         /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/per-page`.
-        public typealias per_hyphen_page = Swift.Int
+        public typealias PerPage = Swift.Int
         /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/page`.
-        public typealias page = Swift.Int
+        public typealias Page = Swift.Int
         /// The organization name. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/org`.
-        public typealias org = Swift.String
+        public typealias Org = Swift.String
     }
     /// Types generated from the `#/components/requestBodies` section of the OpenAPI document.
     public enum RequestBodies {}
     /// Types generated from the `#/components/responses` section of the OpenAPI document.
     public enum Responses {
-        public struct not_found: Sendable, Hashable {
+        public struct NotFound: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/not_found/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/not_found/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -841,54 +850,54 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.not_found.Body
-            /// Creates a new `not_found`.
+            public var body: Components.Responses.NotFound.Body
+            /// Creates a new `NotFound`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.not_found.Body) {
+            public init(body: Components.Responses.NotFound.Body) {
                 self.body = body
             }
         }
-        public struct service_unavailable: Sendable, Hashable {
+        public struct ServiceUnavailable: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/service_unavailable/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/service_unavailable/content/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// - Remark: Generated from `#/components/responses/service_unavailable/content/json/code`.
                     public var code: Swift.String?
                     /// - Remark: Generated from `#/components/responses/service_unavailable/content/json/message`.
                     public var message: Swift.String?
                     /// - Remark: Generated from `#/components/responses/service_unavailable/content/json/documentation_url`.
-                    public var documentation_url: Swift.String?
-                    /// Creates a new `jsonPayload`.
+                    public var documentationUrl: Swift.String?
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - code:
                     ///   - message:
-                    ///   - documentation_url:
+                    ///   - documentationUrl:
                     public init(
                         code: Swift.String? = nil,
                         message: Swift.String? = nil,
-                        documentation_url: Swift.String? = nil
+                        documentationUrl: Swift.String? = nil
                     ) {
                         self.code = code
                         self.message = message
-                        self.documentation_url = documentation_url
+                        self.documentationUrl = documentationUrl
                     }
                     public enum CodingKeys: String, CodingKey {
                         case code
                         case message
-                        case documentation_url
+                        case documentationUrl = "documentation_url"
                     }
                 }
                 /// - Remark: Generated from `#/components/responses/service_unavailable/content/application\/json`.
-                case json(Components.Responses.service_unavailable.Body.jsonPayload)
+                case json(Components.Responses.ServiceUnavailable.Body.JsonPayload)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Responses.service_unavailable.Body.jsonPayload {
+                public var json: Components.Responses.ServiceUnavailable.Body.JsonPayload {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -898,12 +907,12 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.service_unavailable.Body
-            /// Creates a new `service_unavailable`.
+            public var body: Components.Responses.ServiceUnavailable.Body
+            /// Creates a new `ServiceUnavailable`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.service_unavailable.Body) {
+            public init(body: Components.Responses.ServiceUnavailable.Body) {
                 self.body = body
             }
         }
@@ -911,7 +920,7 @@ public enum Components {
     /// Types generated from the `#/components/headers` section of the OpenAPI document.
     public enum Headers {
         /// - Remark: Generated from `#/components/headers/link`.
-        public typealias link = Swift.String
+        public typealias Link = Swift.String
     }
 }
 
@@ -927,7 +936,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/campaigns`.
     /// - Remark: Generated from `#/paths//orgs/{org}/campaigns/get(campaigns/list-org-campaigns)`.
-    public enum campaigns_sol_list_hyphen_org_hyphen_campaigns {
+    public enum CampaignsListOrgCampaigns {
         public static let id: Swift.String = "campaigns/list-org-campaigns"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/GET/path`.
@@ -935,85 +944,85 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/GET/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                public init(org: Components.Parameters.org) {
+                public init(org: Components.Parameters.Org) {
                     self.org = org
                 }
             }
-            public var path: Operations.campaigns_sol_list_hyphen_org_hyphen_campaigns.Input.Path
+            public var path: Operations.CampaignsListOrgCampaigns.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// - Remark: Generated from `#/components/parameters/direction`.
-                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                @frozen public enum Direction: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
                 /// The direction to sort the results by.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/GET/query/direction`.
-                public var direction: Components.Parameters.direction?
+                public var direction: Components.Parameters.Direction?
                 /// If specified, only campaigns with this state will be returned.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/GET/query/state`.
-                public var state: Components.Schemas.campaign_hyphen_state?
+                public var state: Components.Schemas.CampaignState?
                 /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/GET/query/sort`.
-                @frozen public enum sortPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum SortPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case created = "created"
                     case updated = "updated"
-                    case ends_at = "ends_at"
+                    case endsAt = "ends_at"
                     case published = "published"
                 }
                 /// The property by which to sort the results.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/GET/query/sort`.
-                public var sort: Operations.campaigns_sol_list_hyphen_org_hyphen_campaigns.Input.Query.sortPayload?
+                public var sort: Operations.CampaignsListOrgCampaigns.Input.Query.SortPayload?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - direction: The direction to sort the results by.
                 ///   - state: If specified, only campaigns with this state will be returned.
                 ///   - sort: The property by which to sort the results.
                 public init(
-                    page: Components.Parameters.page? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    direction: Components.Parameters.direction? = nil,
-                    state: Components.Schemas.campaign_hyphen_state? = nil,
-                    sort: Operations.campaigns_sol_list_hyphen_org_hyphen_campaigns.Input.Query.sortPayload? = nil
+                    page: Components.Parameters.Page? = nil,
+                    perPage: Components.Parameters.PerPage? = nil,
+                    direction: Components.Parameters.Direction? = nil,
+                    state: Components.Schemas.CampaignState? = nil,
+                    sort: Operations.CampaignsListOrgCampaigns.Input.Query.SortPayload? = nil
                 ) {
                     self.page = page
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.direction = direction
                     self.state = state
                     self.sort = sort
                 }
             }
-            public var query: Operations.campaigns_sol_list_hyphen_org_hyphen_campaigns.Input.Query
+            public var query: Operations.CampaignsListOrgCampaigns.Input.Query
             /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.campaigns_sol_list_hyphen_org_hyphen_campaigns.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CampaignsListOrgCampaigns.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.campaigns_sol_list_hyphen_org_hyphen_campaigns.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CampaignsListOrgCampaigns.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.campaigns_sol_list_hyphen_org_hyphen_campaigns.Input.Headers
+            public var headers: Operations.CampaignsListOrgCampaigns.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -1021,9 +1030,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.campaigns_sol_list_hyphen_org_hyphen_campaigns.Input.Path,
-                query: Operations.campaigns_sol_list_hyphen_org_hyphen_campaigns.Input.Query = .init(),
-                headers: Operations.campaigns_sol_list_hyphen_org_hyphen_campaigns.Input.Headers = .init()
+                path: Operations.CampaignsListOrgCampaigns.Input.Path,
+                query: Operations.CampaignsListOrgCampaigns.Input.Query = .init(),
+                headers: Operations.CampaignsListOrgCampaigns.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -1035,26 +1044,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.campaigns_sol_list_hyphen_org_hyphen_campaigns.Output.Ok.Headers
+                public var headers: Operations.CampaignsListOrgCampaigns.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.campaign_hyphen_summary])
+                    case json([Components.Schemas.CampaignSummary])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.campaign_hyphen_summary] {
+                    public var json: [Components.Schemas.CampaignSummary] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -1064,15 +1073,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.campaigns_sol_list_hyphen_org_hyphen_campaigns.Output.Ok.Body
+                public var body: Operations.CampaignsListOrgCampaigns.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.campaigns_sol_list_hyphen_org_hyphen_campaigns.Output.Ok.Headers = .init(),
-                    body: Operations.campaigns_sol_list_hyphen_org_hyphen_campaigns.Output.Ok.Body
+                    headers: Operations.CampaignsListOrgCampaigns.Output.Ok.Headers = .init(),
+                    body: Operations.CampaignsListOrgCampaigns.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -1083,12 +1092,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/campaigns/get(campaigns/list-org-campaigns)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.campaigns_sol_list_hyphen_org_hyphen_campaigns.Output.Ok)
+            case ok(Operations.CampaignsListOrgCampaigns.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.campaigns_sol_list_hyphen_org_hyphen_campaigns.Output.Ok {
+            public var ok: Operations.CampaignsListOrgCampaigns.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -1106,12 +1115,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/campaigns/get(campaigns/list-org-campaigns)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -1129,12 +1138,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/campaigns/get(campaigns/list-org-campaigns)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
-            case serviceUnavailable(Components.Responses.service_unavailable)
+            case serviceUnavailable(Components.Responses.ServiceUnavailable)
             /// The associated value of the enum case if `self` is `.serviceUnavailable`.
             ///
             /// - Throws: An error if `self` is not `.serviceUnavailable`.
             /// - SeeAlso: `.serviceUnavailable`.
-            public var serviceUnavailable: Components.Responses.service_unavailable {
+            public var serviceUnavailable: Components.Responses.ServiceUnavailable {
                 get throws {
                     switch self {
                     case let .serviceUnavailable(response):
@@ -1191,7 +1200,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /orgs/{org}/campaigns`.
     /// - Remark: Generated from `#/paths//orgs/{org}/campaigns/post(campaigns/create-campaign)`.
-    public enum campaigns_sol_create_hyphen_campaign {
+    public enum CampaignsCreateCampaign {
         public static let id: Swift.String = "campaigns/create-campaign"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/POST/path`.
@@ -1199,32 +1208,32 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/POST/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                public init(org: Components.Parameters.org) {
+                public init(org: Components.Parameters.Org) {
                     self.org = org
                 }
             }
-            public var path: Operations.campaigns_sol_create_hyphen_campaign.Input.Path
+            public var path: Operations.CampaignsCreateCampaign.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.campaigns_sol_create_hyphen_campaign.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CampaignsCreateCampaign.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.campaigns_sol_create_hyphen_campaign.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CampaignsCreateCampaign.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.campaigns_sol_create_hyphen_campaign.Input.Headers
+            public var headers: Operations.CampaignsCreateCampaign.Input.Headers
             /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The name of the campaign
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/POST/requestBody/json/name`.
@@ -1240,50 +1249,50 @@ public enum Operations {
                     /// The slugs of the teams to set as the campaign managers.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/POST/requestBody/json/team_managers`.
-                    public var team_managers: [Swift.String]?
+                    public var teamManagers: [Swift.String]?
                     /// The end date and time of the campaign. The date must be in the future.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/POST/requestBody/json/ends_at`.
-                    public var ends_at: Foundation.Date
+                    public var endsAt: Foundation.Date
                     /// The contact link of the campaign. Must be a URI.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/POST/requestBody/json/contact_link`.
-                    public var contact_link: Swift.String?
-                    /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/POST/requestBody/json/code_scanning_alertsPayload`.
-                    public struct code_scanning_alertsPayloadPayload: Codable, Hashable, Sendable {
+                    public var contactLink: Swift.String?
+                    /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/POST/requestBody/json/CodeScanningAlertsPayload`.
+                    public struct CodeScanningAlertsPayloadPayload: Codable, Hashable, Sendable {
                         /// The repository id
                         ///
-                        /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/POST/requestBody/json/code_scanning_alertsPayload/repository_id`.
-                        public var repository_id: Swift.Int
+                        /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/POST/requestBody/json/CodeScanningAlertsPayload/repository_id`.
+                        public var repositoryId: Swift.Int
                         /// The alert numbers
                         ///
-                        /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/POST/requestBody/json/code_scanning_alertsPayload/alert_numbers`.
-                        public var alert_numbers: [Swift.Int]
-                        /// Creates a new `code_scanning_alertsPayloadPayload`.
+                        /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/POST/requestBody/json/CodeScanningAlertsPayload/alert_numbers`.
+                        public var alertNumbers: [Swift.Int]
+                        /// Creates a new `CodeScanningAlertsPayloadPayload`.
                         ///
                         /// - Parameters:
-                        ///   - repository_id: The repository id
-                        ///   - alert_numbers: The alert numbers
+                        ///   - repositoryId: The repository id
+                        ///   - alertNumbers: The alert numbers
                         public init(
-                            repository_id: Swift.Int,
-                            alert_numbers: [Swift.Int]
+                            repositoryId: Swift.Int,
+                            alertNumbers: [Swift.Int]
                         ) {
-                            self.repository_id = repository_id
-                            self.alert_numbers = alert_numbers
+                            self.repositoryId = repositoryId
+                            self.alertNumbers = alertNumbers
                         }
                         public enum CodingKeys: String, CodingKey {
-                            case repository_id
-                            case alert_numbers
+                            case repositoryId = "repository_id"
+                            case alertNumbers = "alert_numbers"
                         }
                         public init(from decoder: any Decoder) throws {
                             let container = try decoder.container(keyedBy: CodingKeys.self)
-                            repository_id = try container.decode(
+                            self.repositoryId = try container.decode(
                                 Swift.Int.self,
-                                forKey: .repository_id
+                                forKey: .repositoryId
                             )
-                            alert_numbers = try container.decode(
+                            self.alertNumbers = try container.decode(
                                 [Swift.Int].self,
-                                forKey: .alert_numbers
+                                forKey: .alertNumbers
                             )
                             try decoder.ensureNoAdditionalProperties(knownKeys: [
                                 "repository_id",
@@ -1294,88 +1303,88 @@ public enum Operations {
                     /// The code scanning alerts to include in this campaign
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/POST/requestBody/json/code_scanning_alerts`.
-                    public typealias code_scanning_alertsPayload = [Operations.campaigns_sol_create_hyphen_campaign.Input.Body.jsonPayload.code_scanning_alertsPayloadPayload]
+                    public typealias CodeScanningAlertsPayload = [Operations.CampaignsCreateCampaign.Input.Body.JsonPayload.CodeScanningAlertsPayloadPayload]
                     /// The code scanning alerts to include in this campaign
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/POST/requestBody/json/code_scanning_alerts`.
-                    public var code_scanning_alerts: Operations.campaigns_sol_create_hyphen_campaign.Input.Body.jsonPayload.code_scanning_alertsPayload
+                    public var codeScanningAlerts: Operations.CampaignsCreateCampaign.Input.Body.JsonPayload.CodeScanningAlertsPayload
                     /// If true, will automatically generate issues for the campaign. The default is false.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/POST/requestBody/json/generate_issues`.
-                    public var generate_issues: Swift.Bool?
-                    /// Creates a new `jsonPayload`.
+                    public var generateIssues: Swift.Bool?
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - name: The name of the campaign
                     ///   - description: A description for the campaign
                     ///   - managers: The logins of the users to set as the campaign managers. At this time, only a single manager can be supplied.
-                    ///   - team_managers: The slugs of the teams to set as the campaign managers.
-                    ///   - ends_at: The end date and time of the campaign. The date must be in the future.
-                    ///   - contact_link: The contact link of the campaign. Must be a URI.
-                    ///   - code_scanning_alerts: The code scanning alerts to include in this campaign
-                    ///   - generate_issues: If true, will automatically generate issues for the campaign. The default is false.
+                    ///   - teamManagers: The slugs of the teams to set as the campaign managers.
+                    ///   - endsAt: The end date and time of the campaign. The date must be in the future.
+                    ///   - contactLink: The contact link of the campaign. Must be a URI.
+                    ///   - codeScanningAlerts: The code scanning alerts to include in this campaign
+                    ///   - generateIssues: If true, will automatically generate issues for the campaign. The default is false.
                     public init(
                         name: Swift.String,
                         description: Swift.String,
                         managers: [Swift.String]? = nil,
-                        team_managers: [Swift.String]? = nil,
-                        ends_at: Foundation.Date,
-                        contact_link: Swift.String? = nil,
-                        code_scanning_alerts: Operations.campaigns_sol_create_hyphen_campaign.Input.Body.jsonPayload.code_scanning_alertsPayload,
-                        generate_issues: Swift.Bool? = nil
+                        teamManagers: [Swift.String]? = nil,
+                        endsAt: Foundation.Date,
+                        contactLink: Swift.String? = nil,
+                        codeScanningAlerts: Operations.CampaignsCreateCampaign.Input.Body.JsonPayload.CodeScanningAlertsPayload,
+                        generateIssues: Swift.Bool? = nil
                     ) {
                         self.name = name
                         self.description = description
                         self.managers = managers
-                        self.team_managers = team_managers
-                        self.ends_at = ends_at
-                        self.contact_link = contact_link
-                        self.code_scanning_alerts = code_scanning_alerts
-                        self.generate_issues = generate_issues
+                        self.teamManagers = teamManagers
+                        self.endsAt = endsAt
+                        self.contactLink = contactLink
+                        self.codeScanningAlerts = codeScanningAlerts
+                        self.generateIssues = generateIssues
                     }
                     public enum CodingKeys: String, CodingKey {
                         case name
                         case description
                         case managers
-                        case team_managers
-                        case ends_at
-                        case contact_link
-                        case code_scanning_alerts
-                        case generate_issues
+                        case teamManagers = "team_managers"
+                        case endsAt = "ends_at"
+                        case contactLink = "contact_link"
+                        case codeScanningAlerts = "code_scanning_alerts"
+                        case generateIssues = "generate_issues"
                     }
                     public init(from decoder: any Decoder) throws {
                         let container = try decoder.container(keyedBy: CodingKeys.self)
-                        name = try container.decode(
+                        self.name = try container.decode(
                             Swift.String.self,
                             forKey: .name
                         )
-                        description = try container.decode(
+                        self.description = try container.decode(
                             Swift.String.self,
                             forKey: .description
                         )
-                        managers = try container.decodeIfPresent(
+                        self.managers = try container.decodeIfPresent(
                             [Swift.String].self,
                             forKey: .managers
                         )
-                        team_managers = try container.decodeIfPresent(
+                        self.teamManagers = try container.decodeIfPresent(
                             [Swift.String].self,
-                            forKey: .team_managers
+                            forKey: .teamManagers
                         )
-                        ends_at = try container.decode(
+                        self.endsAt = try container.decode(
                             Foundation.Date.self,
-                            forKey: .ends_at
+                            forKey: .endsAt
                         )
-                        contact_link = try container.decodeIfPresent(
+                        self.contactLink = try container.decodeIfPresent(
                             Swift.String.self,
-                            forKey: .contact_link
+                            forKey: .contactLink
                         )
-                        code_scanning_alerts = try container.decode(
-                            Operations.campaigns_sol_create_hyphen_campaign.Input.Body.jsonPayload.code_scanning_alertsPayload.self,
-                            forKey: .code_scanning_alerts
+                        self.codeScanningAlerts = try container.decode(
+                            Operations.CampaignsCreateCampaign.Input.Body.JsonPayload.CodeScanningAlertsPayload.self,
+                            forKey: .codeScanningAlerts
                         )
-                        generate_issues = try container.decodeIfPresent(
+                        self.generateIssues = try container.decodeIfPresent(
                             Swift.Bool.self,
-                            forKey: .generate_issues
+                            forKey: .generateIssues
                         )
                         try decoder.ensureNoAdditionalProperties(knownKeys: [
                             "name",
@@ -1390,9 +1399,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/POST/requestBody/content/application\/json`.
-                case json(Operations.campaigns_sol_create_hyphen_campaign.Input.Body.jsonPayload)
+                case json(Operations.CampaignsCreateCampaign.Input.Body.JsonPayload)
             }
-            public var body: Operations.campaigns_sol_create_hyphen_campaign.Input.Body
+            public var body: Operations.CampaignsCreateCampaign.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -1400,9 +1409,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.campaigns_sol_create_hyphen_campaign.Input.Path,
-                headers: Operations.campaigns_sol_create_hyphen_campaign.Input.Headers = .init(),
-                body: Operations.campaigns_sol_create_hyphen_campaign.Input.Body
+                path: Operations.CampaignsCreateCampaign.Input.Path,
+                headers: Operations.CampaignsCreateCampaign.Input.Headers = .init(),
+                body: Operations.CampaignsCreateCampaign.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -1414,12 +1423,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/POST/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/POST/responses/200/content/application\/json`.
-                    case json(Components.Schemas.campaign_hyphen_summary)
+                    case json(Components.Schemas.CampaignSummary)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.campaign_hyphen_summary {
+                    public var json: Components.Schemas.CampaignSummary {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -1429,12 +1438,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.campaigns_sol_create_hyphen_campaign.Output.Ok.Body
+                public var body: Operations.CampaignsCreateCampaign.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.campaigns_sol_create_hyphen_campaign.Output.Ok.Body) {
+                public init(body: Operations.CampaignsCreateCampaign.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -1443,12 +1452,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/campaigns/post(campaigns/create-campaign)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.campaigns_sol_create_hyphen_campaign.Output.Ok)
+            case ok(Operations.CampaignsCreateCampaign.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.campaigns_sol_create_hyphen_campaign.Output.Ok {
+            public var ok: Operations.CampaignsCreateCampaign.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -1465,12 +1474,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/POST/responses/400/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/POST/responses/400/content/application\/json`.
-                    case json(Components.Schemas.basic_hyphen_error)
+                    case json(Components.Schemas.BasicError)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.basic_hyphen_error {
+                    public var json: Components.Schemas.BasicError {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -1480,12 +1489,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.campaigns_sol_create_hyphen_campaign.Output.BadRequest.Body
+                public var body: Operations.CampaignsCreateCampaign.Output.BadRequest.Body
                 /// Creates a new `BadRequest`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.campaigns_sol_create_hyphen_campaign.Output.BadRequest.Body) {
+                public init(body: Operations.CampaignsCreateCampaign.Output.BadRequest.Body) {
                     self.body = body
                 }
             }
@@ -1494,12 +1503,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/campaigns/post(campaigns/create-campaign)/responses/400`.
             ///
             /// HTTP response code: `400 badRequest`.
-            case badRequest(Operations.campaigns_sol_create_hyphen_campaign.Output.BadRequest)
+            case badRequest(Operations.CampaignsCreateCampaign.Output.BadRequest)
             /// The associated value of the enum case if `self` is `.badRequest`.
             ///
             /// - Throws: An error if `self` is not `.badRequest`.
             /// - SeeAlso: `.badRequest`.
-            public var badRequest: Operations.campaigns_sol_create_hyphen_campaign.Output.BadRequest {
+            public var badRequest: Operations.CampaignsCreateCampaign.Output.BadRequest {
                 get throws {
                     switch self {
                     case let .badRequest(response):
@@ -1517,12 +1526,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/campaigns/post(campaigns/create-campaign)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -1539,12 +1548,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/POST/responses/422/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/POST/responses/422/content/application\/json`.
-                    case json(Components.Schemas.basic_hyphen_error)
+                    case json(Components.Schemas.BasicError)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.basic_hyphen_error {
+                    public var json: Components.Schemas.BasicError {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -1554,12 +1563,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.campaigns_sol_create_hyphen_campaign.Output.UnprocessableContent.Body
+                public var body: Operations.CampaignsCreateCampaign.Output.UnprocessableContent.Body
                 /// Creates a new `UnprocessableContent`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.campaigns_sol_create_hyphen_campaign.Output.UnprocessableContent.Body) {
+                public init(body: Operations.CampaignsCreateCampaign.Output.UnprocessableContent.Body) {
                     self.body = body
                 }
             }
@@ -1568,12 +1577,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/campaigns/post(campaigns/create-campaign)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Operations.campaigns_sol_create_hyphen_campaign.Output.UnprocessableContent)
+            case unprocessableContent(Operations.CampaignsCreateCampaign.Output.UnprocessableContent)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Operations.campaigns_sol_create_hyphen_campaign.Output.UnprocessableContent {
+            public var unprocessableContent: Operations.CampaignsCreateCampaign.Output.UnprocessableContent {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -1595,12 +1604,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/campaigns/post(campaigns/create-campaign)/responses/429`.
             ///
             /// HTTP response code: `429 tooManyRequests`.
-            case tooManyRequests(Operations.campaigns_sol_create_hyphen_campaign.Output.TooManyRequests)
+            case tooManyRequests(Operations.CampaignsCreateCampaign.Output.TooManyRequests)
+            /// Too Many Requests
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/campaigns/post(campaigns/create-campaign)/responses/429`.
+            ///
+            /// HTTP response code: `429 tooManyRequests`.
+            public static var tooManyRequests: Self {
+                .tooManyRequests(.init())
+            }
             /// The associated value of the enum case if `self` is `.tooManyRequests`.
             ///
             /// - Throws: An error if `self` is not `.tooManyRequests`.
             /// - SeeAlso: `.tooManyRequests`.
-            public var tooManyRequests: Operations.campaigns_sol_create_hyphen_campaign.Output.TooManyRequests {
+            public var tooManyRequests: Operations.CampaignsCreateCampaign.Output.TooManyRequests {
                 get throws {
                     switch self {
                     case let .tooManyRequests(response):
@@ -1618,12 +1635,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/campaigns/post(campaigns/create-campaign)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
-            case serviceUnavailable(Components.Responses.service_unavailable)
+            case serviceUnavailable(Components.Responses.ServiceUnavailable)
             /// The associated value of the enum case if `self` is `.serviceUnavailable`.
             ///
             /// - Throws: An error if `self` is not `.serviceUnavailable`.
             /// - SeeAlso: `.serviceUnavailable`.
-            public var serviceUnavailable: Components.Responses.service_unavailable {
+            public var serviceUnavailable: Components.Responses.ServiceUnavailable {
                 get throws {
                     switch self {
                     case let .serviceUnavailable(response):
@@ -1677,7 +1694,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/campaigns/{campaign_number}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/campaigns/{campaign_number}/get(campaigns/get-campaign-summary)`.
-    public enum campaigns_sol_get_hyphen_campaign_hyphen_summary {
+    public enum CampaignsGetCampaignSummary {
         public static let id: Swift.String = "campaigns/get-campaign-summary"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/{campaign_number}/GET/path`.
@@ -1685,45 +1702,45 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/{campaign_number}/GET/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The campaign number.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/{campaign_number}/GET/path/campaign_number`.
-                public var campaign_number: Swift.Int
+                public var campaignNumber: Swift.Int
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - campaign_number: The campaign number.
+                ///   - campaignNumber: The campaign number.
                 public init(
-                    org: Components.Parameters.org,
-                    campaign_number: Swift.Int
+                    org: Components.Parameters.Org,
+                    campaignNumber: Swift.Int
                 ) {
                     self.org = org
-                    self.campaign_number = campaign_number
+                    self.campaignNumber = campaignNumber
                 }
             }
-            public var path: Operations.campaigns_sol_get_hyphen_campaign_hyphen_summary.Input.Path
+            public var path: Operations.CampaignsGetCampaignSummary.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/{campaign_number}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.campaigns_sol_get_hyphen_campaign_hyphen_summary.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CampaignsGetCampaignSummary.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.campaigns_sol_get_hyphen_campaign_hyphen_summary.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CampaignsGetCampaignSummary.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.campaigns_sol_get_hyphen_campaign_hyphen_summary.Input.Headers
+            public var headers: Operations.CampaignsGetCampaignSummary.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.campaigns_sol_get_hyphen_campaign_hyphen_summary.Input.Path,
-                headers: Operations.campaigns_sol_get_hyphen_campaign_hyphen_summary.Input.Headers = .init()
+                path: Operations.CampaignsGetCampaignSummary.Input.Path,
+                headers: Operations.CampaignsGetCampaignSummary.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -1734,12 +1751,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/{campaign_number}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/{campaign_number}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.campaign_hyphen_summary)
+                    case json(Components.Schemas.CampaignSummary)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.campaign_hyphen_summary {
+                    public var json: Components.Schemas.CampaignSummary {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -1749,12 +1766,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.campaigns_sol_get_hyphen_campaign_hyphen_summary.Output.Ok.Body
+                public var body: Operations.CampaignsGetCampaignSummary.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.campaigns_sol_get_hyphen_campaign_hyphen_summary.Output.Ok.Body) {
+                public init(body: Operations.CampaignsGetCampaignSummary.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -1763,12 +1780,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/campaigns/{campaign_number}/get(campaigns/get-campaign-summary)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.campaigns_sol_get_hyphen_campaign_hyphen_summary.Output.Ok)
+            case ok(Operations.CampaignsGetCampaignSummary.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.campaigns_sol_get_hyphen_campaign_hyphen_summary.Output.Ok {
+            public var ok: Operations.CampaignsGetCampaignSummary.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -1786,12 +1803,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/campaigns/{campaign_number}/get(campaigns/get-campaign-summary)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -1808,12 +1825,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/{campaign_number}/GET/responses/422/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/{campaign_number}/GET/responses/422/content/application\/json`.
-                    case json(Components.Schemas.basic_hyphen_error)
+                    case json(Components.Schemas.BasicError)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.basic_hyphen_error {
+                    public var json: Components.Schemas.BasicError {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -1823,12 +1840,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.campaigns_sol_get_hyphen_campaign_hyphen_summary.Output.UnprocessableContent.Body
+                public var body: Operations.CampaignsGetCampaignSummary.Output.UnprocessableContent.Body
                 /// Creates a new `UnprocessableContent`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.campaigns_sol_get_hyphen_campaign_hyphen_summary.Output.UnprocessableContent.Body) {
+                public init(body: Operations.CampaignsGetCampaignSummary.Output.UnprocessableContent.Body) {
                     self.body = body
                 }
             }
@@ -1837,12 +1854,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/campaigns/{campaign_number}/get(campaigns/get-campaign-summary)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Operations.campaigns_sol_get_hyphen_campaign_hyphen_summary.Output.UnprocessableContent)
+            case unprocessableContent(Operations.CampaignsGetCampaignSummary.Output.UnprocessableContent)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Operations.campaigns_sol_get_hyphen_campaign_hyphen_summary.Output.UnprocessableContent {
+            public var unprocessableContent: Operations.CampaignsGetCampaignSummary.Output.UnprocessableContent {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -1860,12 +1877,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/campaigns/{campaign_number}/get(campaigns/get-campaign-summary)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
-            case serviceUnavailable(Components.Responses.service_unavailable)
+            case serviceUnavailable(Components.Responses.ServiceUnavailable)
             /// The associated value of the enum case if `self` is `.serviceUnavailable`.
             ///
             /// - Throws: An error if `self` is not `.serviceUnavailable`.
             /// - SeeAlso: `.serviceUnavailable`.
-            public var serviceUnavailable: Components.Responses.service_unavailable {
+            public var serviceUnavailable: Components.Responses.ServiceUnavailable {
                 get throws {
                     switch self {
                     case let .serviceUnavailable(response):
@@ -1919,7 +1936,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PATCH /orgs/{org}/campaigns/{campaign_number}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/campaigns/{campaign_number}/patch(campaigns/update-campaign)`.
-    public enum campaigns_sol_update_hyphen_campaign {
+    public enum CampaignsUpdateCampaign {
         public static let id: Swift.String = "campaigns/update-campaign"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/{campaign_number}/PATCH/path`.
@@ -1927,41 +1944,41 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/{campaign_number}/PATCH/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The campaign number.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/{campaign_number}/PATCH/path/campaign_number`.
-                public var campaign_number: Swift.Int
+                public var campaignNumber: Swift.Int
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - campaign_number: The campaign number.
+                ///   - campaignNumber: The campaign number.
                 public init(
-                    org: Components.Parameters.org,
-                    campaign_number: Swift.Int
+                    org: Components.Parameters.Org,
+                    campaignNumber: Swift.Int
                 ) {
                     self.org = org
-                    self.campaign_number = campaign_number
+                    self.campaignNumber = campaignNumber
                 }
             }
-            public var path: Operations.campaigns_sol_update_hyphen_campaign.Input.Path
+            public var path: Operations.CampaignsUpdateCampaign.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/{campaign_number}/PATCH/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.campaigns_sol_update_hyphen_campaign.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CampaignsUpdateCampaign.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.campaigns_sol_update_hyphen_campaign.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CampaignsUpdateCampaign.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.campaigns_sol_update_hyphen_campaign.Input.Headers
+            public var headers: Operations.CampaignsUpdateCampaign.Input.Headers
             /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/{campaign_number}/PATCH/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/{campaign_number}/PATCH/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The name of the campaign
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/{campaign_number}/PATCH/requestBody/json/name`.
@@ -1977,81 +1994,81 @@ public enum Operations {
                     /// The slugs of the teams to set as the campaign managers.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/{campaign_number}/PATCH/requestBody/json/team_managers`.
-                    public var team_managers: [Swift.String]?
+                    public var teamManagers: [Swift.String]?
                     /// The end date and time of the campaign, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/{campaign_number}/PATCH/requestBody/json/ends_at`.
-                    public var ends_at: Foundation.Date?
+                    public var endsAt: Foundation.Date?
                     /// The contact link of the campaign. Must be a URI.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/{campaign_number}/PATCH/requestBody/json/contact_link`.
-                    public var contact_link: Swift.String?
+                    public var contactLink: Swift.String?
                     /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/{campaign_number}/PATCH/requestBody/json/state`.
-                    public var state: Components.Schemas.campaign_hyphen_state?
-                    /// Creates a new `jsonPayload`.
+                    public var state: Components.Schemas.CampaignState?
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - name: The name of the campaign
                     ///   - description: A description for the campaign
                     ///   - managers: The logins of the users to set as the campaign managers. At this time, only a single manager can be supplied.
-                    ///   - team_managers: The slugs of the teams to set as the campaign managers.
-                    ///   - ends_at: The end date and time of the campaign, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
-                    ///   - contact_link: The contact link of the campaign. Must be a URI.
+                    ///   - teamManagers: The slugs of the teams to set as the campaign managers.
+                    ///   - endsAt: The end date and time of the campaign, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
+                    ///   - contactLink: The contact link of the campaign. Must be a URI.
                     ///   - state:
                     public init(
                         name: Swift.String? = nil,
                         description: Swift.String? = nil,
                         managers: [Swift.String]? = nil,
-                        team_managers: [Swift.String]? = nil,
-                        ends_at: Foundation.Date? = nil,
-                        contact_link: Swift.String? = nil,
-                        state: Components.Schemas.campaign_hyphen_state? = nil
+                        teamManagers: [Swift.String]? = nil,
+                        endsAt: Foundation.Date? = nil,
+                        contactLink: Swift.String? = nil,
+                        state: Components.Schemas.CampaignState? = nil
                     ) {
                         self.name = name
                         self.description = description
                         self.managers = managers
-                        self.team_managers = team_managers
-                        self.ends_at = ends_at
-                        self.contact_link = contact_link
+                        self.teamManagers = teamManagers
+                        self.endsAt = endsAt
+                        self.contactLink = contactLink
                         self.state = state
                     }
                     public enum CodingKeys: String, CodingKey {
                         case name
                         case description
                         case managers
-                        case team_managers
-                        case ends_at
-                        case contact_link
+                        case teamManagers = "team_managers"
+                        case endsAt = "ends_at"
+                        case contactLink = "contact_link"
                         case state
                     }
                     public init(from decoder: any Decoder) throws {
                         let container = try decoder.container(keyedBy: CodingKeys.self)
-                        name = try container.decodeIfPresent(
+                        self.name = try container.decodeIfPresent(
                             Swift.String.self,
                             forKey: .name
                         )
-                        description = try container.decodeIfPresent(
+                        self.description = try container.decodeIfPresent(
                             Swift.String.self,
                             forKey: .description
                         )
-                        managers = try container.decodeIfPresent(
+                        self.managers = try container.decodeIfPresent(
                             [Swift.String].self,
                             forKey: .managers
                         )
-                        team_managers = try container.decodeIfPresent(
+                        self.teamManagers = try container.decodeIfPresent(
                             [Swift.String].self,
-                            forKey: .team_managers
+                            forKey: .teamManagers
                         )
-                        ends_at = try container.decodeIfPresent(
+                        self.endsAt = try container.decodeIfPresent(
                             Foundation.Date.self,
-                            forKey: .ends_at
+                            forKey: .endsAt
                         )
-                        contact_link = try container.decodeIfPresent(
+                        self.contactLink = try container.decodeIfPresent(
                             Swift.String.self,
-                            forKey: .contact_link
+                            forKey: .contactLink
                         )
-                        state = try container.decodeIfPresent(
-                            Components.Schemas.campaign_hyphen_state.self,
+                        self.state = try container.decodeIfPresent(
+                            Components.Schemas.CampaignState.self,
                             forKey: .state
                         )
                         try decoder.ensureNoAdditionalProperties(knownKeys: [
@@ -2066,9 +2083,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/{campaign_number}/PATCH/requestBody/content/application\/json`.
-                case json(Operations.campaigns_sol_update_hyphen_campaign.Input.Body.jsonPayload)
+                case json(Operations.CampaignsUpdateCampaign.Input.Body.JsonPayload)
             }
-            public var body: Operations.campaigns_sol_update_hyphen_campaign.Input.Body
+            public var body: Operations.CampaignsUpdateCampaign.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -2076,9 +2093,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.campaigns_sol_update_hyphen_campaign.Input.Path,
-                headers: Operations.campaigns_sol_update_hyphen_campaign.Input.Headers = .init(),
-                body: Operations.campaigns_sol_update_hyphen_campaign.Input.Body
+                path: Operations.CampaignsUpdateCampaign.Input.Path,
+                headers: Operations.CampaignsUpdateCampaign.Input.Headers = .init(),
+                body: Operations.CampaignsUpdateCampaign.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -2090,12 +2107,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/{campaign_number}/PATCH/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/{campaign_number}/PATCH/responses/200/content/application\/json`.
-                    case json(Components.Schemas.campaign_hyphen_summary)
+                    case json(Components.Schemas.CampaignSummary)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.campaign_hyphen_summary {
+                    public var json: Components.Schemas.CampaignSummary {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -2105,12 +2122,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.campaigns_sol_update_hyphen_campaign.Output.Ok.Body
+                public var body: Operations.CampaignsUpdateCampaign.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.campaigns_sol_update_hyphen_campaign.Output.Ok.Body) {
+                public init(body: Operations.CampaignsUpdateCampaign.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -2119,12 +2136,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/campaigns/{campaign_number}/patch(campaigns/update-campaign)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.campaigns_sol_update_hyphen_campaign.Output.Ok)
+            case ok(Operations.CampaignsUpdateCampaign.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.campaigns_sol_update_hyphen_campaign.Output.Ok {
+            public var ok: Operations.CampaignsUpdateCampaign.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -2141,12 +2158,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/{campaign_number}/PATCH/responses/400/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/{campaign_number}/PATCH/responses/400/content/application\/json`.
-                    case json(Components.Schemas.basic_hyphen_error)
+                    case json(Components.Schemas.BasicError)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.basic_hyphen_error {
+                    public var json: Components.Schemas.BasicError {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -2156,12 +2173,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.campaigns_sol_update_hyphen_campaign.Output.BadRequest.Body
+                public var body: Operations.CampaignsUpdateCampaign.Output.BadRequest.Body
                 /// Creates a new `BadRequest`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.campaigns_sol_update_hyphen_campaign.Output.BadRequest.Body) {
+                public init(body: Operations.CampaignsUpdateCampaign.Output.BadRequest.Body) {
                     self.body = body
                 }
             }
@@ -2170,12 +2187,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/campaigns/{campaign_number}/patch(campaigns/update-campaign)/responses/400`.
             ///
             /// HTTP response code: `400 badRequest`.
-            case badRequest(Operations.campaigns_sol_update_hyphen_campaign.Output.BadRequest)
+            case badRequest(Operations.CampaignsUpdateCampaign.Output.BadRequest)
             /// The associated value of the enum case if `self` is `.badRequest`.
             ///
             /// - Throws: An error if `self` is not `.badRequest`.
             /// - SeeAlso: `.badRequest`.
-            public var badRequest: Operations.campaigns_sol_update_hyphen_campaign.Output.BadRequest {
+            public var badRequest: Operations.CampaignsUpdateCampaign.Output.BadRequest {
                 get throws {
                     switch self {
                     case let .badRequest(response):
@@ -2193,12 +2210,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/campaigns/{campaign_number}/patch(campaigns/update-campaign)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -2215,12 +2232,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/{campaign_number}/PATCH/responses/422/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/{campaign_number}/PATCH/responses/422/content/application\/json`.
-                    case json(Components.Schemas.basic_hyphen_error)
+                    case json(Components.Schemas.BasicError)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.basic_hyphen_error {
+                    public var json: Components.Schemas.BasicError {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -2230,12 +2247,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.campaigns_sol_update_hyphen_campaign.Output.UnprocessableContent.Body
+                public var body: Operations.CampaignsUpdateCampaign.Output.UnprocessableContent.Body
                 /// Creates a new `UnprocessableContent`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.campaigns_sol_update_hyphen_campaign.Output.UnprocessableContent.Body) {
+                public init(body: Operations.CampaignsUpdateCampaign.Output.UnprocessableContent.Body) {
                     self.body = body
                 }
             }
@@ -2244,12 +2261,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/campaigns/{campaign_number}/patch(campaigns/update-campaign)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Operations.campaigns_sol_update_hyphen_campaign.Output.UnprocessableContent)
+            case unprocessableContent(Operations.CampaignsUpdateCampaign.Output.UnprocessableContent)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Operations.campaigns_sol_update_hyphen_campaign.Output.UnprocessableContent {
+            public var unprocessableContent: Operations.CampaignsUpdateCampaign.Output.UnprocessableContent {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -2267,12 +2284,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/campaigns/{campaign_number}/patch(campaigns/update-campaign)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
-            case serviceUnavailable(Components.Responses.service_unavailable)
+            case serviceUnavailable(Components.Responses.ServiceUnavailable)
             /// The associated value of the enum case if `self` is `.serviceUnavailable`.
             ///
             /// - Throws: An error if `self` is not `.serviceUnavailable`.
             /// - SeeAlso: `.serviceUnavailable`.
-            public var serviceUnavailable: Components.Responses.service_unavailable {
+            public var serviceUnavailable: Components.Responses.ServiceUnavailable {
                 get throws {
                     switch self {
                     case let .serviceUnavailable(response):
@@ -2326,7 +2343,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/campaigns/{campaign_number}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/campaigns/{campaign_number}/delete(campaigns/delete-campaign)`.
-    public enum campaigns_sol_delete_hyphen_campaign {
+    public enum CampaignsDeleteCampaign {
         public static let id: Swift.String = "campaigns/delete-campaign"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/{campaign_number}/DELETE/path`.
@@ -2334,45 +2351,45 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/{campaign_number}/DELETE/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The campaign number.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/{campaign_number}/DELETE/path/campaign_number`.
-                public var campaign_number: Swift.Int
+                public var campaignNumber: Swift.Int
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - campaign_number: The campaign number.
+                ///   - campaignNumber: The campaign number.
                 public init(
-                    org: Components.Parameters.org,
-                    campaign_number: Swift.Int
+                    org: Components.Parameters.Org,
+                    campaignNumber: Swift.Int
                 ) {
                     self.org = org
-                    self.campaign_number = campaign_number
+                    self.campaignNumber = campaignNumber
                 }
             }
-            public var path: Operations.campaigns_sol_delete_hyphen_campaign.Input.Path
+            public var path: Operations.CampaignsDeleteCampaign.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/{campaign_number}/DELETE/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.campaigns_sol_delete_hyphen_campaign.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CampaignsDeleteCampaign.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.campaigns_sol_delete_hyphen_campaign.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CampaignsDeleteCampaign.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.campaigns_sol_delete_hyphen_campaign.Input.Headers
+            public var headers: Operations.CampaignsDeleteCampaign.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.campaigns_sol_delete_hyphen_campaign.Input.Path,
-                headers: Operations.campaigns_sol_delete_hyphen_campaign.Input.Headers = .init()
+                path: Operations.CampaignsDeleteCampaign.Input.Path,
+                headers: Operations.CampaignsDeleteCampaign.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -2388,12 +2405,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/campaigns/{campaign_number}/delete(campaigns/delete-campaign)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.campaigns_sol_delete_hyphen_campaign.Output.NoContent)
+            case noContent(Operations.CampaignsDeleteCampaign.Output.NoContent)
+            /// Deletion successful
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/campaigns/{campaign_number}/delete(campaigns/delete-campaign)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.campaigns_sol_delete_hyphen_campaign.Output.NoContent {
+            public var noContent: Operations.CampaignsDeleteCampaign.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -2411,12 +2436,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/campaigns/{campaign_number}/delete(campaigns/delete-campaign)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -2434,12 +2459,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/campaigns/{campaign_number}/delete(campaigns/delete-campaign)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
-            case serviceUnavailable(Components.Responses.service_unavailable)
+            case serviceUnavailable(Components.Responses.ServiceUnavailable)
             /// The associated value of the enum case if `self` is `.serviceUnavailable`.
             ///
             /// - Throws: An error if `self` is not `.serviceUnavailable`.
             /// - SeeAlso: `.serviceUnavailable`.
-            public var serviceUnavailable: Components.Responses.service_unavailable {
+            public var serviceUnavailable: Components.Responses.ServiceUnavailable {
                 get throws {
                     switch self {
                     case let .serviceUnavailable(response):
