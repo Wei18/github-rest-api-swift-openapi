@@ -46,10 +46,10 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /organizations/{org}/settings/billing/usage`.
     /// - Remark: Generated from `#/paths//organizations/{org}/settings/billing/usage/get(billing/get-github-billing-usage-report-org)`.
-    public func billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org(_ input: Operations.billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org.Input) async throws -> Operations.billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org.Output {
+    public func billingGetGithubBillingUsageReportOrg(_ input: Operations.BillingGetGithubBillingUsageReportOrg.Input) async throws -> Operations.BillingGetGithubBillingUsageReportOrg.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org.id,
+            forOperation: Operations.BillingGetGithubBillingUsageReportOrg.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/organizations/{}/settings/billing/usage",
@@ -100,7 +100,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.billing_usage_report_org.Body
+                    let body: Components.Responses.BillingUsageReportOrg.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -110,7 +110,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.billing_hyphen_usage_hyphen_report.self,
+                            Components.Schemas.BillingUsageReport.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -122,7 +122,7 @@ public struct Client: APIProtocol {
                     return .ok(.init(body: body))
                 case 400:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.bad_request.Body
+                    let body: Components.Responses.BadRequest.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -133,7 +133,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -141,10 +141,10 @@ public struct Client: APIProtocol {
                         )
                     case "application/scim+json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.scim_hyphen_error.self,
+                            Components.Schemas.ScimError.self,
                             from: responseBody,
                             transforming: { value in
-                                .application_scim_plus_json(value)
+                                .applicationScimJson(value)
                             }
                         )
                     default:
@@ -153,7 +153,7 @@ public struct Client: APIProtocol {
                     return .badRequest(.init(body: body))
                 case 403:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.forbidden.Body
+                    let body: Components.Responses.Forbidden.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -163,7 +163,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -175,7 +175,7 @@ public struct Client: APIProtocol {
                     return .forbidden(.init(body: body))
                 case 500:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.internal_error.Body
+                    let body: Components.Responses.InternalError.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -185,7 +185,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -197,7 +197,7 @@ public struct Client: APIProtocol {
                     return .internalServerError(.init(body: body))
                 case 503:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.service_unavailable.Body
+                    let body: Components.Responses.ServiceUnavailable.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -207,7 +207,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Responses.service_unavailable.Body.jsonPayload.self,
+                            Components.Responses.ServiceUnavailable.Body.JsonPayload.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -239,10 +239,10 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/settings/billing/actions`.
     /// - Remark: Generated from `#/paths//orgs/{org}/settings/billing/actions/get(billing/get-github-actions-billing-org)`.
-    public func billing_sol_get_hyphen_github_hyphen_actions_hyphen_billing_hyphen_org(_ input: Operations.billing_sol_get_hyphen_github_hyphen_actions_hyphen_billing_hyphen_org.Input) async throws -> Operations.billing_sol_get_hyphen_github_hyphen_actions_hyphen_billing_hyphen_org.Output {
+    public func billingGetGithubActionsBillingOrg(_ input: Operations.BillingGetGithubActionsBillingOrg.Input) async throws -> Operations.BillingGetGithubActionsBillingOrg.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.billing_sol_get_hyphen_github_hyphen_actions_hyphen_billing_hyphen_org.id,
+            forOperation: Operations.BillingGetGithubActionsBillingOrg.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/settings/billing/actions",
@@ -265,7 +265,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.billing_sol_get_hyphen_github_hyphen_actions_hyphen_billing_hyphen_org.Output.Ok.Body
+                    let body: Operations.BillingGetGithubActionsBillingOrg.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -275,7 +275,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.actions_hyphen_billing_hyphen_usage.self,
+                            Components.Schemas.ActionsBillingUsage.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -307,10 +307,10 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/settings/billing/packages`.
     /// - Remark: Generated from `#/paths//orgs/{org}/settings/billing/packages/get(billing/get-github-packages-billing-org)`.
-    public func billing_sol_get_hyphen_github_hyphen_packages_hyphen_billing_hyphen_org(_ input: Operations.billing_sol_get_hyphen_github_hyphen_packages_hyphen_billing_hyphen_org.Input) async throws -> Operations.billing_sol_get_hyphen_github_hyphen_packages_hyphen_billing_hyphen_org.Output {
+    public func billingGetGithubPackagesBillingOrg(_ input: Operations.BillingGetGithubPackagesBillingOrg.Input) async throws -> Operations.BillingGetGithubPackagesBillingOrg.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.billing_sol_get_hyphen_github_hyphen_packages_hyphen_billing_hyphen_org.id,
+            forOperation: Operations.BillingGetGithubPackagesBillingOrg.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/settings/billing/packages",
@@ -333,7 +333,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.billing_sol_get_hyphen_github_hyphen_packages_hyphen_billing_hyphen_org.Output.Ok.Body
+                    let body: Operations.BillingGetGithubPackagesBillingOrg.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -343,7 +343,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.packages_hyphen_billing_hyphen_usage.self,
+                            Components.Schemas.PackagesBillingUsage.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -375,10 +375,10 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/settings/billing/shared-storage`.
     /// - Remark: Generated from `#/paths//orgs/{org}/settings/billing/shared-storage/get(billing/get-shared-storage-billing-org)`.
-    public func billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org(_ input: Operations.billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org.Input) async throws -> Operations.billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org.Output {
+    public func billingGetSharedStorageBillingOrg(_ input: Operations.BillingGetSharedStorageBillingOrg.Input) async throws -> Operations.BillingGetSharedStorageBillingOrg.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org.id,
+            forOperation: Operations.BillingGetSharedStorageBillingOrg.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/settings/billing/shared-storage",
@@ -401,7 +401,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org.Output.Ok.Body
+                    let body: Operations.BillingGetSharedStorageBillingOrg.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -411,7 +411,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.combined_hyphen_billing_hyphen_usage.self,
+                            Components.Schemas.CombinedBillingUsage.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -443,10 +443,10 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /users/{username}/settings/billing/actions`.
     /// - Remark: Generated from `#/paths//users/{username}/settings/billing/actions/get(billing/get-github-actions-billing-user)`.
-    public func billing_sol_get_hyphen_github_hyphen_actions_hyphen_billing_hyphen_user(_ input: Operations.billing_sol_get_hyphen_github_hyphen_actions_hyphen_billing_hyphen_user.Input) async throws -> Operations.billing_sol_get_hyphen_github_hyphen_actions_hyphen_billing_hyphen_user.Output {
+    public func billingGetGithubActionsBillingUser(_ input: Operations.BillingGetGithubActionsBillingUser.Input) async throws -> Operations.BillingGetGithubActionsBillingUser.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.billing_sol_get_hyphen_github_hyphen_actions_hyphen_billing_hyphen_user.id,
+            forOperation: Operations.BillingGetGithubActionsBillingUser.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/users/{}/settings/billing/actions",
@@ -469,7 +469,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.billing_sol_get_hyphen_github_hyphen_actions_hyphen_billing_hyphen_user.Output.Ok.Body
+                    let body: Operations.BillingGetGithubActionsBillingUser.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -479,7 +479,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.actions_hyphen_billing_hyphen_usage.self,
+                            Components.Schemas.ActionsBillingUsage.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -511,10 +511,10 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /users/{username}/settings/billing/packages`.
     /// - Remark: Generated from `#/paths//users/{username}/settings/billing/packages/get(billing/get-github-packages-billing-user)`.
-    public func billing_sol_get_hyphen_github_hyphen_packages_hyphen_billing_hyphen_user(_ input: Operations.billing_sol_get_hyphen_github_hyphen_packages_hyphen_billing_hyphen_user.Input) async throws -> Operations.billing_sol_get_hyphen_github_hyphen_packages_hyphen_billing_hyphen_user.Output {
+    public func billingGetGithubPackagesBillingUser(_ input: Operations.BillingGetGithubPackagesBillingUser.Input) async throws -> Operations.BillingGetGithubPackagesBillingUser.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.billing_sol_get_hyphen_github_hyphen_packages_hyphen_billing_hyphen_user.id,
+            forOperation: Operations.BillingGetGithubPackagesBillingUser.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/users/{}/settings/billing/packages",
@@ -537,7 +537,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.billing_sol_get_hyphen_github_hyphen_packages_hyphen_billing_hyphen_user.Output.Ok.Body
+                    let body: Operations.BillingGetGithubPackagesBillingUser.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -547,7 +547,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.packages_hyphen_billing_hyphen_usage.self,
+                            Components.Schemas.PackagesBillingUsage.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -579,10 +579,10 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /users/{username}/settings/billing/shared-storage`.
     /// - Remark: Generated from `#/paths//users/{username}/settings/billing/shared-storage/get(billing/get-shared-storage-billing-user)`.
-    public func billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_user(_ input: Operations.billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_user.Input) async throws -> Operations.billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_user.Output {
+    public func billingGetSharedStorageBillingUser(_ input: Operations.BillingGetSharedStorageBillingUser.Input) async throws -> Operations.BillingGetSharedStorageBillingUser.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_user.id,
+            forOperation: Operations.BillingGetSharedStorageBillingUser.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/users/{}/settings/billing/shared-storage",
@@ -605,7 +605,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_user.Output.Ok.Body
+                    let body: Operations.BillingGetSharedStorageBillingUser.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -615,7 +615,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.combined_hyphen_billing_hyphen_usage.self,
+                            Components.Schemas.CombinedBillingUsage.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
