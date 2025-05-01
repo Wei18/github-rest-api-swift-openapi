@@ -44,10 +44,10 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/get(teams/list)`.
-    public func teams_sol_list(_ input: Operations.teams_sol_list.Input) async throws -> Operations.teams_sol_list.Output {
+    public func teamsList(_ input: Operations.TeamsList.Input) async throws -> Operations.TeamsList.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_list.id,
+            forOperation: Operations.TeamsList.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/teams",
@@ -65,7 +65,7 @@ public struct Client: APIProtocol {
                     style: .form,
                     explode: true,
                     name: "per_page",
-                    value: input.query.per_page
+                    value: input.query.perPage
                 )
                 try converter.setQueryItemAsURI(
                     in: &request,
@@ -83,13 +83,13 @@ public struct Client: APIProtocol {
             deserializer: { response, responseBody in
                 switch response.status.code {
                 case 200:
-                    let headers: Operations.teams_sol_list.Output.Ok.Headers = .init(Link: try converter.getOptionalHeaderFieldAsURI(
+                    let headers: Operations.TeamsList.Output.Ok.Headers = .init(link: try converter.getOptionalHeaderFieldAsURI(
                         in: response.headerFields,
                         name: "Link",
-                        as: Components.Headers.link.self
+                        as: Components.Headers.Link.self
                     ))
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.teams_sol_list.Output.Ok.Body
+                    let body: Operations.TeamsList.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -99,7 +99,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            [Components.Schemas.team].self,
+                            [Components.Schemas.Team].self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -114,7 +114,7 @@ public struct Client: APIProtocol {
                     ))
                 case 403:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.forbidden.Body
+                    let body: Components.Responses.Forbidden.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -124,7 +124,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -154,10 +154,10 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `POST /orgs/{org}/teams`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/post(teams/create)`.
-    public func teams_sol_create(_ input: Operations.teams_sol_create.Input) async throws -> Operations.teams_sol_create.Output {
+    public func teamsCreate(_ input: Operations.TeamsCreate.Input) async throws -> Operations.TeamsCreate.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_create.id,
+            forOperation: Operations.TeamsCreate.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/teams",
@@ -189,7 +189,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 201:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.teams_sol_create.Output.Created.Body
+                    let body: Operations.TeamsCreate.Output.Created.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -199,7 +199,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.team_hyphen_full.self,
+                            Components.Schemas.TeamFull.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -211,7 +211,7 @@ public struct Client: APIProtocol {
                     return .created(.init(body: body))
                 case 422:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.validation_failed.Body
+                    let body: Components.Responses.ValidationFailed.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -221,7 +221,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.validation_hyphen_error.self,
+                            Components.Schemas.ValidationError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -233,7 +233,7 @@ public struct Client: APIProtocol {
                     return .unprocessableContent(.init(body: body))
                 case 403:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.forbidden.Body
+                    let body: Components.Responses.Forbidden.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -243,7 +243,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -274,16 +274,16 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/get(teams/get-by-name)`.
-    public func teams_sol_get_hyphen_by_hyphen_name(_ input: Operations.teams_sol_get_hyphen_by_hyphen_name.Input) async throws -> Operations.teams_sol_get_hyphen_by_hyphen_name.Output {
+    public func teamsGetByName(_ input: Operations.TeamsGetByName.Input) async throws -> Operations.TeamsGetByName.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_get_hyphen_by_hyphen_name.id,
+            forOperation: Operations.TeamsGetByName.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/teams/{}",
                     parameters: [
                         input.path.org,
-                        input.path.team_slug
+                        input.path.teamSlug
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -301,7 +301,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.teams_sol_get_hyphen_by_hyphen_name.Output.Ok.Body
+                    let body: Operations.TeamsGetByName.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -311,7 +311,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.team_hyphen_full.self,
+                            Components.Schemas.TeamFull.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -323,7 +323,7 @@ public struct Client: APIProtocol {
                     return .ok(.init(body: body))
                 case 404:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.not_found.Body
+                    let body: Components.Responses.NotFound.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -333,7 +333,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -364,16 +364,16 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `PATCH /orgs/{org}/teams/{team_slug}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/patch(teams/update-in-org)`.
-    public func teams_sol_update_hyphen_in_hyphen_org(_ input: Operations.teams_sol_update_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_update_hyphen_in_hyphen_org.Output {
+    public func teamsUpdateInOrg(_ input: Operations.TeamsUpdateInOrg.Input) async throws -> Operations.TeamsUpdateInOrg.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_update_hyphen_in_hyphen_org.id,
+            forOperation: Operations.TeamsUpdateInOrg.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/teams/{}",
                     parameters: [
                         input.path.org,
-                        input.path.team_slug
+                        input.path.teamSlug
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -402,7 +402,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.teams_sol_update_hyphen_in_hyphen_org.Output.Ok.Body
+                    let body: Operations.TeamsUpdateInOrg.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -412,7 +412,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.team_hyphen_full.self,
+                            Components.Schemas.TeamFull.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -424,7 +424,7 @@ public struct Client: APIProtocol {
                     return .ok(.init(body: body))
                 case 201:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.teams_sol_update_hyphen_in_hyphen_org.Output.Created.Body
+                    let body: Operations.TeamsUpdateInOrg.Output.Created.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -434,7 +434,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.team_hyphen_full.self,
+                            Components.Schemas.TeamFull.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -446,7 +446,7 @@ public struct Client: APIProtocol {
                     return .created(.init(body: body))
                 case 404:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.not_found.Body
+                    let body: Components.Responses.NotFound.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -456,7 +456,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -468,7 +468,7 @@ public struct Client: APIProtocol {
                     return .notFound(.init(body: body))
                 case 422:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.validation_failed.Body
+                    let body: Components.Responses.ValidationFailed.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -478,7 +478,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.validation_hyphen_error.self,
+                            Components.Schemas.ValidationError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -490,7 +490,7 @@ public struct Client: APIProtocol {
                     return .unprocessableContent(.init(body: body))
                 case 403:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.forbidden.Body
+                    let body: Components.Responses.Forbidden.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -500,7 +500,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -533,16 +533,16 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/teams/{team_slug}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/delete(teams/delete-in-org)`.
-    public func teams_sol_delete_hyphen_in_hyphen_org(_ input: Operations.teams_sol_delete_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_delete_hyphen_in_hyphen_org.Output {
+    public func teamsDeleteInOrg(_ input: Operations.TeamsDeleteInOrg.Input) async throws -> Operations.TeamsDeleteInOrg.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_delete_hyphen_in_hyphen_org.id,
+            forOperation: Operations.TeamsDeleteInOrg.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/teams/{}",
                     parameters: [
                         input.path.org,
-                        input.path.team_slug
+                        input.path.teamSlug
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -579,16 +579,16 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/discussions`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/get(teams/list-discussions-in-org)`.
-    public func teams_sol_list_hyphen_discussions_hyphen_in_hyphen_org(_ input: Operations.teams_sol_list_hyphen_discussions_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_list_hyphen_discussions_hyphen_in_hyphen_org.Output {
+    public func teamsListDiscussionsInOrg(_ input: Operations.TeamsListDiscussionsInOrg.Input) async throws -> Operations.TeamsListDiscussionsInOrg.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_list_hyphen_discussions_hyphen_in_hyphen_org.id,
+            forOperation: Operations.TeamsListDiscussionsInOrg.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/teams/{}/discussions",
                     parameters: [
                         input.path.org,
-                        input.path.team_slug
+                        input.path.teamSlug
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -608,7 +608,7 @@ public struct Client: APIProtocol {
                     style: .form,
                     explode: true,
                     name: "per_page",
-                    value: input.query.per_page
+                    value: input.query.perPage
                 )
                 try converter.setQueryItemAsURI(
                     in: &request,
@@ -633,13 +633,13 @@ public struct Client: APIProtocol {
             deserializer: { response, responseBody in
                 switch response.status.code {
                 case 200:
-                    let headers: Operations.teams_sol_list_hyphen_discussions_hyphen_in_hyphen_org.Output.Ok.Headers = .init(Link: try converter.getOptionalHeaderFieldAsURI(
+                    let headers: Operations.TeamsListDiscussionsInOrg.Output.Ok.Headers = .init(link: try converter.getOptionalHeaderFieldAsURI(
                         in: response.headerFields,
                         name: "Link",
-                        as: Components.Headers.link.self
+                        as: Components.Headers.Link.self
                     ))
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.teams_sol_list_hyphen_discussions_hyphen_in_hyphen_org.Output.Ok.Body
+                    let body: Operations.TeamsListDiscussionsInOrg.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -649,7 +649,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            [Components.Schemas.team_hyphen_discussion].self,
+                            [Components.Schemas.TeamDiscussion].self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -687,16 +687,16 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `POST /orgs/{org}/teams/{team_slug}/discussions`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/post(teams/create-discussion-in-org)`.
-    public func teams_sol_create_hyphen_discussion_hyphen_in_hyphen_org(_ input: Operations.teams_sol_create_hyphen_discussion_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_create_hyphen_discussion_hyphen_in_hyphen_org.Output {
+    public func teamsCreateDiscussionInOrg(_ input: Operations.TeamsCreateDiscussionInOrg.Input) async throws -> Operations.TeamsCreateDiscussionInOrg.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_create_hyphen_discussion_hyphen_in_hyphen_org.id,
+            forOperation: Operations.TeamsCreateDiscussionInOrg.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/teams/{}/discussions",
                     parameters: [
                         input.path.org,
-                        input.path.team_slug
+                        input.path.teamSlug
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -723,7 +723,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 201:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.teams_sol_create_hyphen_discussion_hyphen_in_hyphen_org.Output.Created.Body
+                    let body: Operations.TeamsCreateDiscussionInOrg.Output.Created.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -733,7 +733,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.team_hyphen_discussion.self,
+                            Components.Schemas.TeamDiscussion.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -766,17 +766,17 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/get(teams/get-discussion-in-org)`.
-    public func teams_sol_get_hyphen_discussion_hyphen_in_hyphen_org(_ input: Operations.teams_sol_get_hyphen_discussion_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_get_hyphen_discussion_hyphen_in_hyphen_org.Output {
+    public func teamsGetDiscussionInOrg(_ input: Operations.TeamsGetDiscussionInOrg.Input) async throws -> Operations.TeamsGetDiscussionInOrg.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_get_hyphen_discussion_hyphen_in_hyphen_org.id,
+            forOperation: Operations.TeamsGetDiscussionInOrg.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/teams/{}/discussions/{}",
                     parameters: [
                         input.path.org,
-                        input.path.team_slug,
-                        input.path.discussion_number
+                        input.path.teamSlug,
+                        input.path.discussionNumber
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -794,7 +794,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.teams_sol_get_hyphen_discussion_hyphen_in_hyphen_org.Output.Ok.Body
+                    let body: Operations.TeamsGetDiscussionInOrg.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -804,7 +804,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.team_hyphen_discussion.self,
+                            Components.Schemas.TeamDiscussion.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -837,17 +837,17 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `PATCH /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/patch(teams/update-discussion-in-org)`.
-    public func teams_sol_update_hyphen_discussion_hyphen_in_hyphen_org(_ input: Operations.teams_sol_update_hyphen_discussion_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_update_hyphen_discussion_hyphen_in_hyphen_org.Output {
+    public func teamsUpdateDiscussionInOrg(_ input: Operations.TeamsUpdateDiscussionInOrg.Input) async throws -> Operations.TeamsUpdateDiscussionInOrg.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_update_hyphen_discussion_hyphen_in_hyphen_org.id,
+            forOperation: Operations.TeamsUpdateDiscussionInOrg.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/teams/{}/discussions/{}",
                     parameters: [
                         input.path.org,
-                        input.path.team_slug,
-                        input.path.discussion_number
+                        input.path.teamSlug,
+                        input.path.discussionNumber
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -876,7 +876,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.teams_sol_update_hyphen_discussion_hyphen_in_hyphen_org.Output.Ok.Body
+                    let body: Operations.TeamsUpdateDiscussionInOrg.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -886,7 +886,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.team_hyphen_discussion.self,
+                            Components.Schemas.TeamDiscussion.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -919,17 +919,17 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/delete(teams/delete-discussion-in-org)`.
-    public func teams_sol_delete_hyphen_discussion_hyphen_in_hyphen_org(_ input: Operations.teams_sol_delete_hyphen_discussion_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_delete_hyphen_discussion_hyphen_in_hyphen_org.Output {
+    public func teamsDeleteDiscussionInOrg(_ input: Operations.TeamsDeleteDiscussionInOrg.Input) async throws -> Operations.TeamsDeleteDiscussionInOrg.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_delete_hyphen_discussion_hyphen_in_hyphen_org.id,
+            forOperation: Operations.TeamsDeleteDiscussionInOrg.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/teams/{}/discussions/{}",
                     parameters: [
                         input.path.org,
-                        input.path.team_slug,
-                        input.path.discussion_number
+                        input.path.teamSlug,
+                        input.path.discussionNumber
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -966,17 +966,17 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/get(teams/list-discussion-comments-in-org)`.
-    public func teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_in_hyphen_org(_ input: Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_in_hyphen_org.Output {
+    public func teamsListDiscussionCommentsInOrg(_ input: Operations.TeamsListDiscussionCommentsInOrg.Input) async throws -> Operations.TeamsListDiscussionCommentsInOrg.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_in_hyphen_org.id,
+            forOperation: Operations.TeamsListDiscussionCommentsInOrg.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/teams/{}/discussions/{}/comments",
                     parameters: [
                         input.path.org,
-                        input.path.team_slug,
-                        input.path.discussion_number
+                        input.path.teamSlug,
+                        input.path.discussionNumber
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -996,7 +996,7 @@ public struct Client: APIProtocol {
                     style: .form,
                     explode: true,
                     name: "per_page",
-                    value: input.query.per_page
+                    value: input.query.perPage
                 )
                 try converter.setQueryItemAsURI(
                     in: &request,
@@ -1014,13 +1014,13 @@ public struct Client: APIProtocol {
             deserializer: { response, responseBody in
                 switch response.status.code {
                 case 200:
-                    let headers: Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_in_hyphen_org.Output.Ok.Headers = .init(Link: try converter.getOptionalHeaderFieldAsURI(
+                    let headers: Operations.TeamsListDiscussionCommentsInOrg.Output.Ok.Headers = .init(link: try converter.getOptionalHeaderFieldAsURI(
                         in: response.headerFields,
                         name: "Link",
-                        as: Components.Headers.link.self
+                        as: Components.Headers.Link.self
                     ))
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_in_hyphen_org.Output.Ok.Body
+                    let body: Operations.TeamsListDiscussionCommentsInOrg.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -1030,7 +1030,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            [Components.Schemas.team_hyphen_discussion_hyphen_comment].self,
+                            [Components.Schemas.TeamDiscussionComment].self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -1068,17 +1068,17 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `POST /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/post(teams/create-discussion-comment-in-org)`.
-    public func teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org(_ input: Operations.teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Output {
+    public func teamsCreateDiscussionCommentInOrg(_ input: Operations.TeamsCreateDiscussionCommentInOrg.Input) async throws -> Operations.TeamsCreateDiscussionCommentInOrg.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.id,
+            forOperation: Operations.TeamsCreateDiscussionCommentInOrg.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/teams/{}/discussions/{}/comments",
                     parameters: [
                         input.path.org,
-                        input.path.team_slug,
-                        input.path.discussion_number
+                        input.path.teamSlug,
+                        input.path.discussionNumber
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -1105,7 +1105,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 201:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Output.Created.Body
+                    let body: Operations.TeamsCreateDiscussionCommentInOrg.Output.Created.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -1115,7 +1115,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.team_hyphen_discussion_hyphen_comment.self,
+                            Components.Schemas.TeamDiscussionComment.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -1148,18 +1148,18 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/get(teams/get-discussion-comment-in-org)`.
-    public func teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org(_ input: Operations.teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Output {
+    public func teamsGetDiscussionCommentInOrg(_ input: Operations.TeamsGetDiscussionCommentInOrg.Input) async throws -> Operations.TeamsGetDiscussionCommentInOrg.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.id,
+            forOperation: Operations.TeamsGetDiscussionCommentInOrg.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/teams/{}/discussions/{}/comments/{}",
                     parameters: [
                         input.path.org,
-                        input.path.team_slug,
-                        input.path.discussion_number,
-                        input.path.comment_number
+                        input.path.teamSlug,
+                        input.path.discussionNumber,
+                        input.path.commentNumber
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -1177,7 +1177,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Output.Ok.Body
+                    let body: Operations.TeamsGetDiscussionCommentInOrg.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -1187,7 +1187,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.team_hyphen_discussion_hyphen_comment.self,
+                            Components.Schemas.TeamDiscussionComment.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -1220,18 +1220,18 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `PATCH /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/patch(teams/update-discussion-comment-in-org)`.
-    public func teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org(_ input: Operations.teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Output {
+    public func teamsUpdateDiscussionCommentInOrg(_ input: Operations.TeamsUpdateDiscussionCommentInOrg.Input) async throws -> Operations.TeamsUpdateDiscussionCommentInOrg.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.id,
+            forOperation: Operations.TeamsUpdateDiscussionCommentInOrg.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/teams/{}/discussions/{}/comments/{}",
                     parameters: [
                         input.path.org,
-                        input.path.team_slug,
-                        input.path.discussion_number,
-                        input.path.comment_number
+                        input.path.teamSlug,
+                        input.path.discussionNumber,
+                        input.path.commentNumber
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -1258,7 +1258,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Output.Ok.Body
+                    let body: Operations.TeamsUpdateDiscussionCommentInOrg.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -1268,7 +1268,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.team_hyphen_discussion_hyphen_comment.self,
+                            Components.Schemas.TeamDiscussionComment.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -1301,18 +1301,18 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/delete(teams/delete-discussion-comment-in-org)`.
-    public func teams_sol_delete_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org(_ input: Operations.teams_sol_delete_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_delete_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Output {
+    public func teamsDeleteDiscussionCommentInOrg(_ input: Operations.TeamsDeleteDiscussionCommentInOrg.Input) async throws -> Operations.TeamsDeleteDiscussionCommentInOrg.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_delete_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.id,
+            forOperation: Operations.TeamsDeleteDiscussionCommentInOrg.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/teams/{}/discussions/{}/comments/{}",
                     parameters: [
                         input.path.org,
-                        input.path.team_slug,
-                        input.path.discussion_number,
-                        input.path.comment_number
+                        input.path.teamSlug,
+                        input.path.discussionNumber,
+                        input.path.commentNumber
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -1347,16 +1347,16 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/invitations`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/invitations/get(teams/list-pending-invitations-in-org)`.
-    public func teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_in_hyphen_org(_ input: Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_in_hyphen_org.Output {
+    public func teamsListPendingInvitationsInOrg(_ input: Operations.TeamsListPendingInvitationsInOrg.Input) async throws -> Operations.TeamsListPendingInvitationsInOrg.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_in_hyphen_org.id,
+            forOperation: Operations.TeamsListPendingInvitationsInOrg.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/teams/{}/invitations",
                     parameters: [
                         input.path.org,
-                        input.path.team_slug
+                        input.path.teamSlug
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -1369,7 +1369,7 @@ public struct Client: APIProtocol {
                     style: .form,
                     explode: true,
                     name: "per_page",
-                    value: input.query.per_page
+                    value: input.query.perPage
                 )
                 try converter.setQueryItemAsURI(
                     in: &request,
@@ -1387,13 +1387,13 @@ public struct Client: APIProtocol {
             deserializer: { response, responseBody in
                 switch response.status.code {
                 case 200:
-                    let headers: Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_in_hyphen_org.Output.Ok.Headers = .init(Link: try converter.getOptionalHeaderFieldAsURI(
+                    let headers: Operations.TeamsListPendingInvitationsInOrg.Output.Ok.Headers = .init(link: try converter.getOptionalHeaderFieldAsURI(
                         in: response.headerFields,
                         name: "Link",
-                        as: Components.Headers.link.self
+                        as: Components.Headers.Link.self
                     ))
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_in_hyphen_org.Output.Ok.Body
+                    let body: Operations.TeamsListPendingInvitationsInOrg.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -1403,7 +1403,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            [Components.Schemas.organization_hyphen_invitation].self,
+                            [Components.Schemas.OrganizationInvitation].self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -1436,16 +1436,16 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/members`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/members/get(teams/list-members-in-org)`.
-    public func teams_sol_list_hyphen_members_hyphen_in_hyphen_org(_ input: Operations.teams_sol_list_hyphen_members_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_list_hyphen_members_hyphen_in_hyphen_org.Output {
+    public func teamsListMembersInOrg(_ input: Operations.TeamsListMembersInOrg.Input) async throws -> Operations.TeamsListMembersInOrg.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_list_hyphen_members_hyphen_in_hyphen_org.id,
+            forOperation: Operations.TeamsListMembersInOrg.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/teams/{}/members",
                     parameters: [
                         input.path.org,
-                        input.path.team_slug
+                        input.path.teamSlug
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -1465,7 +1465,7 @@ public struct Client: APIProtocol {
                     style: .form,
                     explode: true,
                     name: "per_page",
-                    value: input.query.per_page
+                    value: input.query.perPage
                 )
                 try converter.setQueryItemAsURI(
                     in: &request,
@@ -1483,13 +1483,13 @@ public struct Client: APIProtocol {
             deserializer: { response, responseBody in
                 switch response.status.code {
                 case 200:
-                    let headers: Operations.teams_sol_list_hyphen_members_hyphen_in_hyphen_org.Output.Ok.Headers = .init(Link: try converter.getOptionalHeaderFieldAsURI(
+                    let headers: Operations.TeamsListMembersInOrg.Output.Ok.Headers = .init(link: try converter.getOptionalHeaderFieldAsURI(
                         in: response.headerFields,
                         name: "Link",
-                        as: Components.Headers.link.self
+                        as: Components.Headers.Link.self
                     ))
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.teams_sol_list_hyphen_members_hyphen_in_hyphen_org.Output.Ok.Body
+                    let body: Operations.TeamsListMembersInOrg.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -1499,7 +1499,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            [Components.Schemas.simple_hyphen_user].self,
+                            [Components.Schemas.SimpleUser].self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -1540,16 +1540,16 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/memberships/{username}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/memberships/{username}/get(teams/get-membership-for-user-in-org)`.
-    public func teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org(_ input: Operations.teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Output {
+    public func teamsGetMembershipForUserInOrg(_ input: Operations.TeamsGetMembershipForUserInOrg.Input) async throws -> Operations.TeamsGetMembershipForUserInOrg.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.id,
+            forOperation: Operations.TeamsGetMembershipForUserInOrg.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/teams/{}/memberships/{}",
                     parameters: [
                         input.path.org,
-                        input.path.team_slug,
+                        input.path.teamSlug,
                         input.path.username
                     ]
                 )
@@ -1568,7 +1568,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Output.Ok.Body
+                    let body: Operations.TeamsGetMembershipForUserInOrg.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -1578,7 +1578,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.team_hyphen_membership.self,
+                            Components.Schemas.TeamMembership.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -1620,16 +1620,16 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/teams/{team_slug}/memberships/{username}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/memberships/{username}/put(teams/add-or-update-membership-for-user-in-org)`.
-    public func teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org(_ input: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Output {
+    public func teamsAddOrUpdateMembershipForUserInOrg(_ input: Operations.TeamsAddOrUpdateMembershipForUserInOrg.Input) async throws -> Operations.TeamsAddOrUpdateMembershipForUserInOrg.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.id,
+            forOperation: Operations.TeamsAddOrUpdateMembershipForUserInOrg.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/teams/{}/memberships/{}",
                     parameters: [
                         input.path.org,
-                        input.path.team_slug,
+                        input.path.teamSlug,
                         input.path.username
                     ]
                 )
@@ -1659,7 +1659,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Output.Ok.Body
+                    let body: Operations.TeamsAddOrUpdateMembershipForUserInOrg.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -1669,7 +1669,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.team_hyphen_membership.self,
+                            Components.Schemas.TeamMembership.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -1709,16 +1709,16 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/teams/{team_slug}/memberships/{username}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/memberships/{username}/delete(teams/remove-membership-for-user-in-org)`.
-    public func teams_sol_remove_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org(_ input: Operations.teams_sol_remove_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_remove_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Output {
+    public func teamsRemoveMembershipForUserInOrg(_ input: Operations.TeamsRemoveMembershipForUserInOrg.Input) async throws -> Operations.TeamsRemoveMembershipForUserInOrg.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_remove_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.id,
+            forOperation: Operations.TeamsRemoveMembershipForUserInOrg.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/teams/{}/memberships/{}",
                     parameters: [
                         input.path.org,
-                        input.path.team_slug,
+                        input.path.teamSlug,
                         input.path.username
                     ]
                 )
@@ -1756,16 +1756,16 @@ public struct Client: APIProtocol {
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/projects`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/projects/get(teams/list-projects-in-org)`.
     @available(*, deprecated)
-    public func teams_sol_list_hyphen_projects_hyphen_in_hyphen_org(_ input: Operations.teams_sol_list_hyphen_projects_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_list_hyphen_projects_hyphen_in_hyphen_org.Output {
+    public func teamsListProjectsInOrg(_ input: Operations.TeamsListProjectsInOrg.Input) async throws -> Operations.TeamsListProjectsInOrg.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_list_hyphen_projects_hyphen_in_hyphen_org.id,
+            forOperation: Operations.TeamsListProjectsInOrg.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/teams/{}/projects",
                     parameters: [
                         input.path.org,
-                        input.path.team_slug
+                        input.path.teamSlug
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -1778,7 +1778,7 @@ public struct Client: APIProtocol {
                     style: .form,
                     explode: true,
                     name: "per_page",
-                    value: input.query.per_page
+                    value: input.query.perPage
                 )
                 try converter.setQueryItemAsURI(
                     in: &request,
@@ -1796,13 +1796,13 @@ public struct Client: APIProtocol {
             deserializer: { response, responseBody in
                 switch response.status.code {
                 case 200:
-                    let headers: Operations.teams_sol_list_hyphen_projects_hyphen_in_hyphen_org.Output.Ok.Headers = .init(Link: try converter.getOptionalHeaderFieldAsURI(
+                    let headers: Operations.TeamsListProjectsInOrg.Output.Ok.Headers = .init(link: try converter.getOptionalHeaderFieldAsURI(
                         in: response.headerFields,
                         name: "Link",
-                        as: Components.Headers.link.self
+                        as: Components.Headers.Link.self
                     ))
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.teams_sol_list_hyphen_projects_hyphen_in_hyphen_org.Output.Ok.Body
+                    let body: Operations.TeamsListProjectsInOrg.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -1812,7 +1812,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            [Components.Schemas.team_hyphen_project].self,
+                            [Components.Schemas.TeamProject].self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -1846,17 +1846,17 @@ public struct Client: APIProtocol {
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/projects/{project_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/projects/{project_id}/get(teams/check-permissions-for-project-in-org)`.
     @available(*, deprecated)
-    public func teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_in_hyphen_org(_ input: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_in_hyphen_org.Output {
+    public func teamsCheckPermissionsForProjectInOrg(_ input: Operations.TeamsCheckPermissionsForProjectInOrg.Input) async throws -> Operations.TeamsCheckPermissionsForProjectInOrg.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_in_hyphen_org.id,
+            forOperation: Operations.TeamsCheckPermissionsForProjectInOrg.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/teams/{}/projects/{}",
                     parameters: [
                         input.path.org,
-                        input.path.team_slug,
-                        input.path.project_id
+                        input.path.teamSlug,
+                        input.path.projectId
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -1874,7 +1874,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_in_hyphen_org.Output.Ok.Body
+                    let body: Operations.TeamsCheckPermissionsForProjectInOrg.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -1884,7 +1884,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.team_hyphen_project.self,
+                            Components.Schemas.TeamProject.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -1917,17 +1917,17 @@ public struct Client: APIProtocol {
     /// - Remark: HTTP `PUT /orgs/{org}/teams/{team_slug}/projects/{project_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/projects/{project_id}/put(teams/add-or-update-project-permissions-in-org)`.
     @available(*, deprecated)
-    public func teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_in_hyphen_org(_ input: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_in_hyphen_org.Output {
+    public func teamsAddOrUpdateProjectPermissionsInOrg(_ input: Operations.TeamsAddOrUpdateProjectPermissionsInOrg.Input) async throws -> Operations.TeamsAddOrUpdateProjectPermissionsInOrg.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_in_hyphen_org.id,
+            forOperation: Operations.TeamsAddOrUpdateProjectPermissionsInOrg.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/teams/{}/projects/{}",
                     parameters: [
                         input.path.org,
-                        input.path.team_slug,
-                        input.path.project_id
+                        input.path.teamSlug,
+                        input.path.projectId
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -1958,7 +1958,7 @@ public struct Client: APIProtocol {
                     return .noContent(.init())
                 case 403:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_in_hyphen_org.Output.Forbidden.Body
+                    let body: Operations.TeamsAddOrUpdateProjectPermissionsInOrg.Output.Forbidden.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -1968,7 +1968,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_in_hyphen_org.Output.Forbidden.Body.jsonPayload.self,
+                            Operations.TeamsAddOrUpdateProjectPermissionsInOrg.Output.Forbidden.Body.JsonPayload.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -1999,17 +1999,17 @@ public struct Client: APIProtocol {
     /// - Remark: HTTP `DELETE /orgs/{org}/teams/{team_slug}/projects/{project_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/projects/{project_id}/delete(teams/remove-project-in-org)`.
     @available(*, deprecated)
-    public func teams_sol_remove_hyphen_project_hyphen_in_hyphen_org(_ input: Operations.teams_sol_remove_hyphen_project_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_remove_hyphen_project_hyphen_in_hyphen_org.Output {
+    public func teamsRemoveProjectInOrg(_ input: Operations.TeamsRemoveProjectInOrg.Input) async throws -> Operations.TeamsRemoveProjectInOrg.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_remove_hyphen_project_hyphen_in_hyphen_org.id,
+            forOperation: Operations.TeamsRemoveProjectInOrg.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/teams/{}/projects/{}",
                     parameters: [
                         input.path.org,
-                        input.path.team_slug,
-                        input.path.project_id
+                        input.path.teamSlug,
+                        input.path.projectId
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -2044,16 +2044,16 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/repos`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/repos/get(teams/list-repos-in-org)`.
-    public func teams_sol_list_hyphen_repos_hyphen_in_hyphen_org(_ input: Operations.teams_sol_list_hyphen_repos_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_list_hyphen_repos_hyphen_in_hyphen_org.Output {
+    public func teamsListReposInOrg(_ input: Operations.TeamsListReposInOrg.Input) async throws -> Operations.TeamsListReposInOrg.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_list_hyphen_repos_hyphen_in_hyphen_org.id,
+            forOperation: Operations.TeamsListReposInOrg.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/teams/{}/repos",
                     parameters: [
                         input.path.org,
-                        input.path.team_slug
+                        input.path.teamSlug
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -2066,7 +2066,7 @@ public struct Client: APIProtocol {
                     style: .form,
                     explode: true,
                     name: "per_page",
-                    value: input.query.per_page
+                    value: input.query.perPage
                 )
                 try converter.setQueryItemAsURI(
                     in: &request,
@@ -2084,13 +2084,13 @@ public struct Client: APIProtocol {
             deserializer: { response, responseBody in
                 switch response.status.code {
                 case 200:
-                    let headers: Operations.teams_sol_list_hyphen_repos_hyphen_in_hyphen_org.Output.Ok.Headers = .init(Link: try converter.getOptionalHeaderFieldAsURI(
+                    let headers: Operations.TeamsListReposInOrg.Output.Ok.Headers = .init(link: try converter.getOptionalHeaderFieldAsURI(
                         in: response.headerFields,
                         name: "Link",
-                        as: Components.Headers.link.self
+                        as: Components.Headers.Link.self
                     ))
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.teams_sol_list_hyphen_repos_hyphen_in_hyphen_org.Output.Ok.Body
+                    let body: Operations.TeamsListReposInOrg.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -2100,7 +2100,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            [Components.Schemas.minimal_hyphen_repository].self,
+                            [Components.Schemas.MinimalRepository].self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -2140,16 +2140,16 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}/get(teams/check-permissions-for-repo-in-org)`.
-    public func teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_in_hyphen_org(_ input: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_in_hyphen_org.Output {
+    public func teamsCheckPermissionsForRepoInOrg(_ input: Operations.TeamsCheckPermissionsForRepoInOrg.Input) async throws -> Operations.TeamsCheckPermissionsForRepoInOrg.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_in_hyphen_org.id,
+            forOperation: Operations.TeamsCheckPermissionsForRepoInOrg.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/teams/{}/repos/{}/{}",
                     parameters: [
                         input.path.org,
-                        input.path.team_slug,
+                        input.path.teamSlug,
                         input.path.owner,
                         input.path.repo
                     ]
@@ -2169,7 +2169,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_in_hyphen_org.Output.Ok.Body
+                    let body: Operations.TeamsCheckPermissionsForRepoInOrg.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -2179,7 +2179,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.team_hyphen_repository.self,
+                            Components.Schemas.TeamRepository.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -2216,16 +2216,16 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}/put(teams/add-or-update-repo-permissions-in-org)`.
-    public func teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_in_hyphen_org(_ input: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_in_hyphen_org.Output {
+    public func teamsAddOrUpdateRepoPermissionsInOrg(_ input: Operations.TeamsAddOrUpdateRepoPermissionsInOrg.Input) async throws -> Operations.TeamsAddOrUpdateRepoPermissionsInOrg.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_in_hyphen_org.id,
+            forOperation: Operations.TeamsAddOrUpdateRepoPermissionsInOrg.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/teams/{}/repos/{}/{}",
                     parameters: [
                         input.path.org,
-                        input.path.team_slug,
+                        input.path.teamSlug,
                         input.path.owner,
                         input.path.repo
                     ]
@@ -2273,16 +2273,16 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}/delete(teams/remove-repo-in-org)`.
-    public func teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org(_ input: Operations.teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org.Output {
+    public func teamsRemoveRepoInOrg(_ input: Operations.TeamsRemoveRepoInOrg.Input) async throws -> Operations.TeamsRemoveRepoInOrg.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org.id,
+            forOperation: Operations.TeamsRemoveRepoInOrg.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/teams/{}/repos/{}/{}",
                     parameters: [
                         input.path.org,
-                        input.path.team_slug,
+                        input.path.teamSlug,
                         input.path.owner,
                         input.path.repo
                     ]
@@ -2319,16 +2319,16 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/teams`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/teams/get(teams/list-child-in-org)`.
-    public func teams_sol_list_hyphen_child_hyphen_in_hyphen_org(_ input: Operations.teams_sol_list_hyphen_child_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_list_hyphen_child_hyphen_in_hyphen_org.Output {
+    public func teamsListChildInOrg(_ input: Operations.TeamsListChildInOrg.Input) async throws -> Operations.TeamsListChildInOrg.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_list_hyphen_child_hyphen_in_hyphen_org.id,
+            forOperation: Operations.TeamsListChildInOrg.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/teams/{}/teams",
                     parameters: [
                         input.path.org,
-                        input.path.team_slug
+                        input.path.teamSlug
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -2341,7 +2341,7 @@ public struct Client: APIProtocol {
                     style: .form,
                     explode: true,
                     name: "per_page",
-                    value: input.query.per_page
+                    value: input.query.perPage
                 )
                 try converter.setQueryItemAsURI(
                     in: &request,
@@ -2359,13 +2359,13 @@ public struct Client: APIProtocol {
             deserializer: { response, responseBody in
                 switch response.status.code {
                 case 200:
-                    let headers: Operations.teams_sol_list_hyphen_child_hyphen_in_hyphen_org.Output.Ok.Headers = .init(Link: try converter.getOptionalHeaderFieldAsURI(
+                    let headers: Operations.TeamsListChildInOrg.Output.Ok.Headers = .init(link: try converter.getOptionalHeaderFieldAsURI(
                         in: response.headerFields,
                         name: "Link",
-                        as: Components.Headers.link.self
+                        as: Components.Headers.Link.self
                     ))
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.teams_sol_list_hyphen_child_hyphen_in_hyphen_org.Output.Ok.Body
+                    let body: Operations.TeamsListChildInOrg.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -2375,7 +2375,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            [Components.Schemas.team].self,
+                            [Components.Schemas.Team].self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -2408,15 +2408,15 @@ public struct Client: APIProtocol {
     /// - Remark: HTTP `GET /teams/{team_id}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/get(teams/get-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_get_hyphen_legacy(_ input: Operations.teams_sol_get_hyphen_legacy.Input) async throws -> Operations.teams_sol_get_hyphen_legacy.Output {
+    public func teamsGetLegacy(_ input: Operations.TeamsGetLegacy.Input) async throws -> Operations.TeamsGetLegacy.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_get_hyphen_legacy.id,
+            forOperation: Operations.TeamsGetLegacy.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/teams/{}",
                     parameters: [
-                        input.path.team_id
+                        input.path.teamId
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -2434,7 +2434,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.teams_sol_get_hyphen_legacy.Output.Ok.Body
+                    let body: Operations.TeamsGetLegacy.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -2444,7 +2444,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.team_hyphen_full.self,
+                            Components.Schemas.TeamFull.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -2456,7 +2456,7 @@ public struct Client: APIProtocol {
                     return .ok(.init(body: body))
                 case 404:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.not_found.Body
+                    let body: Components.Responses.NotFound.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -2466,7 +2466,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -2501,15 +2501,15 @@ public struct Client: APIProtocol {
     /// - Remark: HTTP `PATCH /teams/{team_id}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/patch(teams/update-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_update_hyphen_legacy(_ input: Operations.teams_sol_update_hyphen_legacy.Input) async throws -> Operations.teams_sol_update_hyphen_legacy.Output {
+    public func teamsUpdateLegacy(_ input: Operations.TeamsUpdateLegacy.Input) async throws -> Operations.TeamsUpdateLegacy.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_update_hyphen_legacy.id,
+            forOperation: Operations.TeamsUpdateLegacy.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/teams/{}",
                     parameters: [
-                        input.path.team_id
+                        input.path.teamId
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -2536,7 +2536,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.teams_sol_update_hyphen_legacy.Output.Ok.Body
+                    let body: Operations.TeamsUpdateLegacy.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -2546,7 +2546,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.team_hyphen_full.self,
+                            Components.Schemas.TeamFull.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -2558,7 +2558,7 @@ public struct Client: APIProtocol {
                     return .ok(.init(body: body))
                 case 201:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.teams_sol_update_hyphen_legacy.Output.Created.Body
+                    let body: Operations.TeamsUpdateLegacy.Output.Created.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -2568,7 +2568,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.team_hyphen_full.self,
+                            Components.Schemas.TeamFull.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -2580,7 +2580,7 @@ public struct Client: APIProtocol {
                     return .created(.init(body: body))
                 case 404:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.not_found.Body
+                    let body: Components.Responses.NotFound.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -2590,7 +2590,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -2602,7 +2602,7 @@ public struct Client: APIProtocol {
                     return .notFound(.init(body: body))
                 case 422:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.validation_failed.Body
+                    let body: Components.Responses.ValidationFailed.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -2612,7 +2612,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.validation_hyphen_error.self,
+                            Components.Schemas.ValidationError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -2624,7 +2624,7 @@ public struct Client: APIProtocol {
                     return .unprocessableContent(.init(body: body))
                 case 403:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.forbidden.Body
+                    let body: Components.Responses.Forbidden.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -2634,7 +2634,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -2668,15 +2668,15 @@ public struct Client: APIProtocol {
     /// - Remark: HTTP `DELETE /teams/{team_id}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/delete(teams/delete-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_delete_hyphen_legacy(_ input: Operations.teams_sol_delete_hyphen_legacy.Input) async throws -> Operations.teams_sol_delete_hyphen_legacy.Output {
+    public func teamsDeleteLegacy(_ input: Operations.TeamsDeleteLegacy.Input) async throws -> Operations.TeamsDeleteLegacy.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_delete_hyphen_legacy.id,
+            forOperation: Operations.TeamsDeleteLegacy.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/teams/{}",
                     parameters: [
-                        input.path.team_id
+                        input.path.teamId
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -2696,7 +2696,7 @@ public struct Client: APIProtocol {
                     return .noContent(.init())
                 case 404:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.not_found.Body
+                    let body: Components.Responses.NotFound.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -2706,7 +2706,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -2718,7 +2718,7 @@ public struct Client: APIProtocol {
                     return .notFound(.init(body: body))
                 case 422:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.validation_failed.Body
+                    let body: Components.Responses.ValidationFailed.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -2728,7 +2728,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.validation_hyphen_error.self,
+                            Components.Schemas.ValidationError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -2762,15 +2762,15 @@ public struct Client: APIProtocol {
     /// - Remark: HTTP `GET /teams/{team_id}/discussions`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/get(teams/list-discussions-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_list_hyphen_discussions_hyphen_legacy(_ input: Operations.teams_sol_list_hyphen_discussions_hyphen_legacy.Input) async throws -> Operations.teams_sol_list_hyphen_discussions_hyphen_legacy.Output {
+    public func teamsListDiscussionsLegacy(_ input: Operations.TeamsListDiscussionsLegacy.Input) async throws -> Operations.TeamsListDiscussionsLegacy.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_list_hyphen_discussions_hyphen_legacy.id,
+            forOperation: Operations.TeamsListDiscussionsLegacy.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/teams/{}/discussions",
                     parameters: [
-                        input.path.team_id
+                        input.path.teamId
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -2790,7 +2790,7 @@ public struct Client: APIProtocol {
                     style: .form,
                     explode: true,
                     name: "per_page",
-                    value: input.query.per_page
+                    value: input.query.perPage
                 )
                 try converter.setQueryItemAsURI(
                     in: &request,
@@ -2808,13 +2808,13 @@ public struct Client: APIProtocol {
             deserializer: { response, responseBody in
                 switch response.status.code {
                 case 200:
-                    let headers: Operations.teams_sol_list_hyphen_discussions_hyphen_legacy.Output.Ok.Headers = .init(Link: try converter.getOptionalHeaderFieldAsURI(
+                    let headers: Operations.TeamsListDiscussionsLegacy.Output.Ok.Headers = .init(link: try converter.getOptionalHeaderFieldAsURI(
                         in: response.headerFields,
                         name: "Link",
-                        as: Components.Headers.link.self
+                        as: Components.Headers.Link.self
                     ))
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.teams_sol_list_hyphen_discussions_hyphen_legacy.Output.Ok.Body
+                    let body: Operations.TeamsListDiscussionsLegacy.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -2824,7 +2824,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            [Components.Schemas.team_hyphen_discussion].self,
+                            [Components.Schemas.TeamDiscussion].self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -2863,15 +2863,15 @@ public struct Client: APIProtocol {
     /// - Remark: HTTP `POST /teams/{team_id}/discussions`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/post(teams/create-discussion-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_create_hyphen_discussion_hyphen_legacy(_ input: Operations.teams_sol_create_hyphen_discussion_hyphen_legacy.Input) async throws -> Operations.teams_sol_create_hyphen_discussion_hyphen_legacy.Output {
+    public func teamsCreateDiscussionLegacy(_ input: Operations.TeamsCreateDiscussionLegacy.Input) async throws -> Operations.TeamsCreateDiscussionLegacy.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_create_hyphen_discussion_hyphen_legacy.id,
+            forOperation: Operations.TeamsCreateDiscussionLegacy.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/teams/{}/discussions",
                     parameters: [
-                        input.path.team_id
+                        input.path.teamId
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -2898,7 +2898,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 201:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.teams_sol_create_hyphen_discussion_hyphen_legacy.Output.Created.Body
+                    let body: Operations.TeamsCreateDiscussionLegacy.Output.Created.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -2908,7 +2908,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.team_hyphen_discussion.self,
+                            Components.Schemas.TeamDiscussion.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -2942,16 +2942,16 @@ public struct Client: APIProtocol {
     /// - Remark: HTTP `GET /teams/{team_id}/discussions/{discussion_number}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/get(teams/get-discussion-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_get_hyphen_discussion_hyphen_legacy(_ input: Operations.teams_sol_get_hyphen_discussion_hyphen_legacy.Input) async throws -> Operations.teams_sol_get_hyphen_discussion_hyphen_legacy.Output {
+    public func teamsGetDiscussionLegacy(_ input: Operations.TeamsGetDiscussionLegacy.Input) async throws -> Operations.TeamsGetDiscussionLegacy.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_get_hyphen_discussion_hyphen_legacy.id,
+            forOperation: Operations.TeamsGetDiscussionLegacy.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/teams/{}/discussions/{}",
                     parameters: [
-                        input.path.team_id,
-                        input.path.discussion_number
+                        input.path.teamId,
+                        input.path.discussionNumber
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -2969,7 +2969,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.teams_sol_get_hyphen_discussion_hyphen_legacy.Output.Ok.Body
+                    let body: Operations.TeamsGetDiscussionLegacy.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -2979,7 +2979,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.team_hyphen_discussion.self,
+                            Components.Schemas.TeamDiscussion.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -3013,16 +3013,16 @@ public struct Client: APIProtocol {
     /// - Remark: HTTP `PATCH /teams/{team_id}/discussions/{discussion_number}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/patch(teams/update-discussion-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_update_hyphen_discussion_hyphen_legacy(_ input: Operations.teams_sol_update_hyphen_discussion_hyphen_legacy.Input) async throws -> Operations.teams_sol_update_hyphen_discussion_hyphen_legacy.Output {
+    public func teamsUpdateDiscussionLegacy(_ input: Operations.TeamsUpdateDiscussionLegacy.Input) async throws -> Operations.TeamsUpdateDiscussionLegacy.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_update_hyphen_discussion_hyphen_legacy.id,
+            forOperation: Operations.TeamsUpdateDiscussionLegacy.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/teams/{}/discussions/{}",
                     parameters: [
-                        input.path.team_id,
-                        input.path.discussion_number
+                        input.path.teamId,
+                        input.path.discussionNumber
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -3051,7 +3051,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.teams_sol_update_hyphen_discussion_hyphen_legacy.Output.Ok.Body
+                    let body: Operations.TeamsUpdateDiscussionLegacy.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -3061,7 +3061,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.team_hyphen_discussion.self,
+                            Components.Schemas.TeamDiscussion.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -3095,16 +3095,16 @@ public struct Client: APIProtocol {
     /// - Remark: HTTP `DELETE /teams/{team_id}/discussions/{discussion_number}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/delete(teams/delete-discussion-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_delete_hyphen_discussion_hyphen_legacy(_ input: Operations.teams_sol_delete_hyphen_discussion_hyphen_legacy.Input) async throws -> Operations.teams_sol_delete_hyphen_discussion_hyphen_legacy.Output {
+    public func teamsDeleteDiscussionLegacy(_ input: Operations.TeamsDeleteDiscussionLegacy.Input) async throws -> Operations.TeamsDeleteDiscussionLegacy.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_delete_hyphen_discussion_hyphen_legacy.id,
+            forOperation: Operations.TeamsDeleteDiscussionLegacy.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/teams/{}/discussions/{}",
                     parameters: [
-                        input.path.team_id,
-                        input.path.discussion_number
+                        input.path.teamId,
+                        input.path.discussionNumber
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -3142,16 +3142,16 @@ public struct Client: APIProtocol {
     /// - Remark: HTTP `GET /teams/{team_id}/discussions/{discussion_number}/comments`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/comments/get(teams/list-discussion-comments-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_legacy(_ input: Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_legacy.Input) async throws -> Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_legacy.Output {
+    public func teamsListDiscussionCommentsLegacy(_ input: Operations.TeamsListDiscussionCommentsLegacy.Input) async throws -> Operations.TeamsListDiscussionCommentsLegacy.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_legacy.id,
+            forOperation: Operations.TeamsListDiscussionCommentsLegacy.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/teams/{}/discussions/{}/comments",
                     parameters: [
-                        input.path.team_id,
-                        input.path.discussion_number
+                        input.path.teamId,
+                        input.path.discussionNumber
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -3171,7 +3171,7 @@ public struct Client: APIProtocol {
                     style: .form,
                     explode: true,
                     name: "per_page",
-                    value: input.query.per_page
+                    value: input.query.perPage
                 )
                 try converter.setQueryItemAsURI(
                     in: &request,
@@ -3189,13 +3189,13 @@ public struct Client: APIProtocol {
             deserializer: { response, responseBody in
                 switch response.status.code {
                 case 200:
-                    let headers: Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_legacy.Output.Ok.Headers = .init(Link: try converter.getOptionalHeaderFieldAsURI(
+                    let headers: Operations.TeamsListDiscussionCommentsLegacy.Output.Ok.Headers = .init(link: try converter.getOptionalHeaderFieldAsURI(
                         in: response.headerFields,
                         name: "Link",
-                        as: Components.Headers.link.self
+                        as: Components.Headers.Link.self
                     ))
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_legacy.Output.Ok.Body
+                    let body: Operations.TeamsListDiscussionCommentsLegacy.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -3205,7 +3205,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            [Components.Schemas.team_hyphen_discussion_hyphen_comment].self,
+                            [Components.Schemas.TeamDiscussionComment].self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -3244,16 +3244,16 @@ public struct Client: APIProtocol {
     /// - Remark: HTTP `POST /teams/{team_id}/discussions/{discussion_number}/comments`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/comments/post(teams/create-discussion-comment-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_legacy(_ input: Operations.teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_legacy.Input) async throws -> Operations.teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_legacy.Output {
+    public func teamsCreateDiscussionCommentLegacy(_ input: Operations.TeamsCreateDiscussionCommentLegacy.Input) async throws -> Operations.TeamsCreateDiscussionCommentLegacy.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_legacy.id,
+            forOperation: Operations.TeamsCreateDiscussionCommentLegacy.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/teams/{}/discussions/{}/comments",
                     parameters: [
-                        input.path.team_id,
-                        input.path.discussion_number
+                        input.path.teamId,
+                        input.path.discussionNumber
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -3280,7 +3280,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 201:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_legacy.Output.Created.Body
+                    let body: Operations.TeamsCreateDiscussionCommentLegacy.Output.Created.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -3290,7 +3290,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.team_hyphen_discussion_hyphen_comment.self,
+                            Components.Schemas.TeamDiscussionComment.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -3324,17 +3324,17 @@ public struct Client: APIProtocol {
     /// - Remark: HTTP `GET /teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/get(teams/get-discussion-comment-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_legacy(_ input: Operations.teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_legacy.Input) async throws -> Operations.teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_legacy.Output {
+    public func teamsGetDiscussionCommentLegacy(_ input: Operations.TeamsGetDiscussionCommentLegacy.Input) async throws -> Operations.TeamsGetDiscussionCommentLegacy.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_legacy.id,
+            forOperation: Operations.TeamsGetDiscussionCommentLegacy.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/teams/{}/discussions/{}/comments/{}",
                     parameters: [
-                        input.path.team_id,
-                        input.path.discussion_number,
-                        input.path.comment_number
+                        input.path.teamId,
+                        input.path.discussionNumber,
+                        input.path.commentNumber
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -3352,7 +3352,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_legacy.Output.Ok.Body
+                    let body: Operations.TeamsGetDiscussionCommentLegacy.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -3362,7 +3362,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.team_hyphen_discussion_hyphen_comment.self,
+                            Components.Schemas.TeamDiscussionComment.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -3396,17 +3396,17 @@ public struct Client: APIProtocol {
     /// - Remark: HTTP `PATCH /teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/patch(teams/update-discussion-comment-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_legacy(_ input: Operations.teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_legacy.Input) async throws -> Operations.teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_legacy.Output {
+    public func teamsUpdateDiscussionCommentLegacy(_ input: Operations.TeamsUpdateDiscussionCommentLegacy.Input) async throws -> Operations.TeamsUpdateDiscussionCommentLegacy.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_legacy.id,
+            forOperation: Operations.TeamsUpdateDiscussionCommentLegacy.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/teams/{}/discussions/{}/comments/{}",
                     parameters: [
-                        input.path.team_id,
-                        input.path.discussion_number,
-                        input.path.comment_number
+                        input.path.teamId,
+                        input.path.discussionNumber,
+                        input.path.commentNumber
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -3433,7 +3433,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_legacy.Output.Ok.Body
+                    let body: Operations.TeamsUpdateDiscussionCommentLegacy.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -3443,7 +3443,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.team_hyphen_discussion_hyphen_comment.self,
+                            Components.Schemas.TeamDiscussionComment.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -3477,17 +3477,17 @@ public struct Client: APIProtocol {
     /// - Remark: HTTP `DELETE /teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/delete(teams/delete-discussion-comment-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_delete_hyphen_discussion_hyphen_comment_hyphen_legacy(_ input: Operations.teams_sol_delete_hyphen_discussion_hyphen_comment_hyphen_legacy.Input) async throws -> Operations.teams_sol_delete_hyphen_discussion_hyphen_comment_hyphen_legacy.Output {
+    public func teamsDeleteDiscussionCommentLegacy(_ input: Operations.TeamsDeleteDiscussionCommentLegacy.Input) async throws -> Operations.TeamsDeleteDiscussionCommentLegacy.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_delete_hyphen_discussion_hyphen_comment_hyphen_legacy.id,
+            forOperation: Operations.TeamsDeleteDiscussionCommentLegacy.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/teams/{}/discussions/{}/comments/{}",
                     parameters: [
-                        input.path.team_id,
-                        input.path.discussion_number,
-                        input.path.comment_number
+                        input.path.teamId,
+                        input.path.discussionNumber,
+                        input.path.commentNumber
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -3523,15 +3523,15 @@ public struct Client: APIProtocol {
     /// - Remark: HTTP `GET /teams/{team_id}/invitations`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/invitations/get(teams/list-pending-invitations-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_legacy(_ input: Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_legacy.Input) async throws -> Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_legacy.Output {
+    public func teamsListPendingInvitationsLegacy(_ input: Operations.TeamsListPendingInvitationsLegacy.Input) async throws -> Operations.TeamsListPendingInvitationsLegacy.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_legacy.id,
+            forOperation: Operations.TeamsListPendingInvitationsLegacy.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/teams/{}/invitations",
                     parameters: [
-                        input.path.team_id
+                        input.path.teamId
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -3544,7 +3544,7 @@ public struct Client: APIProtocol {
                     style: .form,
                     explode: true,
                     name: "per_page",
-                    value: input.query.per_page
+                    value: input.query.perPage
                 )
                 try converter.setQueryItemAsURI(
                     in: &request,
@@ -3562,13 +3562,13 @@ public struct Client: APIProtocol {
             deserializer: { response, responseBody in
                 switch response.status.code {
                 case 200:
-                    let headers: Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_legacy.Output.Ok.Headers = .init(Link: try converter.getOptionalHeaderFieldAsURI(
+                    let headers: Operations.TeamsListPendingInvitationsLegacy.Output.Ok.Headers = .init(link: try converter.getOptionalHeaderFieldAsURI(
                         in: response.headerFields,
                         name: "Link",
-                        as: Components.Headers.link.self
+                        as: Components.Headers.Link.self
                     ))
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_legacy.Output.Ok.Body
+                    let body: Operations.TeamsListPendingInvitationsLegacy.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -3578,7 +3578,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            [Components.Schemas.organization_hyphen_invitation].self,
+                            [Components.Schemas.OrganizationInvitation].self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -3613,15 +3613,15 @@ public struct Client: APIProtocol {
     /// - Remark: HTTP `GET /teams/{team_id}/members`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/members/get(teams/list-members-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_list_hyphen_members_hyphen_legacy(_ input: Operations.teams_sol_list_hyphen_members_hyphen_legacy.Input) async throws -> Operations.teams_sol_list_hyphen_members_hyphen_legacy.Output {
+    public func teamsListMembersLegacy(_ input: Operations.TeamsListMembersLegacy.Input) async throws -> Operations.TeamsListMembersLegacy.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_list_hyphen_members_hyphen_legacy.id,
+            forOperation: Operations.TeamsListMembersLegacy.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/teams/{}/members",
                     parameters: [
-                        input.path.team_id
+                        input.path.teamId
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -3641,7 +3641,7 @@ public struct Client: APIProtocol {
                     style: .form,
                     explode: true,
                     name: "per_page",
-                    value: input.query.per_page
+                    value: input.query.perPage
                 )
                 try converter.setQueryItemAsURI(
                     in: &request,
@@ -3659,13 +3659,13 @@ public struct Client: APIProtocol {
             deserializer: { response, responseBody in
                 switch response.status.code {
                 case 200:
-                    let headers: Operations.teams_sol_list_hyphen_members_hyphen_legacy.Output.Ok.Headers = .init(Link: try converter.getOptionalHeaderFieldAsURI(
+                    let headers: Operations.TeamsListMembersLegacy.Output.Ok.Headers = .init(link: try converter.getOptionalHeaderFieldAsURI(
                         in: response.headerFields,
                         name: "Link",
-                        as: Components.Headers.link.self
+                        as: Components.Headers.Link.self
                     ))
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.teams_sol_list_hyphen_members_hyphen_legacy.Output.Ok.Body
+                    let body: Operations.TeamsListMembersLegacy.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -3675,7 +3675,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            [Components.Schemas.simple_hyphen_user].self,
+                            [Components.Schemas.SimpleUser].self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -3690,7 +3690,7 @@ public struct Client: APIProtocol {
                     ))
                 case 404:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.not_found.Body
+                    let body: Components.Responses.NotFound.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -3700,7 +3700,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -3733,15 +3733,15 @@ public struct Client: APIProtocol {
     /// - Remark: HTTP `GET /teams/{team_id}/members/{username}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/members/{username}/get(teams/get-member-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_get_hyphen_member_hyphen_legacy(_ input: Operations.teams_sol_get_hyphen_member_hyphen_legacy.Input) async throws -> Operations.teams_sol_get_hyphen_member_hyphen_legacy.Output {
+    public func teamsGetMemberLegacy(_ input: Operations.TeamsGetMemberLegacy.Input) async throws -> Operations.TeamsGetMemberLegacy.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_get_hyphen_member_hyphen_legacy.id,
+            forOperation: Operations.TeamsGetMemberLegacy.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/teams/{}/members/{}",
                     parameters: [
-                        input.path.team_id,
+                        input.path.teamId,
                         input.path.username
                     ]
                 )
@@ -3788,15 +3788,15 @@ public struct Client: APIProtocol {
     /// - Remark: HTTP `PUT /teams/{team_id}/members/{username}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/members/{username}/put(teams/add-member-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_add_hyphen_member_hyphen_legacy(_ input: Operations.teams_sol_add_hyphen_member_hyphen_legacy.Input) async throws -> Operations.teams_sol_add_hyphen_member_hyphen_legacy.Output {
+    public func teamsAddMemberLegacy(_ input: Operations.TeamsAddMemberLegacy.Input) async throws -> Operations.TeamsAddMemberLegacy.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_add_hyphen_member_hyphen_legacy.id,
+            forOperation: Operations.TeamsAddMemberLegacy.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/teams/{}/members/{}",
                     parameters: [
-                        input.path.team_id,
+                        input.path.teamId,
                         input.path.username
                     ]
                 )
@@ -3821,7 +3821,7 @@ public struct Client: APIProtocol {
                     return .unprocessableContent(.init())
                 case 403:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.forbidden.Body
+                    let body: Components.Responses.Forbidden.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -3831,7 +3831,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -3869,15 +3869,15 @@ public struct Client: APIProtocol {
     /// - Remark: HTTP `DELETE /teams/{team_id}/members/{username}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/members/{username}/delete(teams/remove-member-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_remove_hyphen_member_hyphen_legacy(_ input: Operations.teams_sol_remove_hyphen_member_hyphen_legacy.Input) async throws -> Operations.teams_sol_remove_hyphen_member_hyphen_legacy.Output {
+    public func teamsRemoveMemberLegacy(_ input: Operations.TeamsRemoveMemberLegacy.Input) async throws -> Operations.TeamsRemoveMemberLegacy.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_remove_hyphen_member_hyphen_legacy.id,
+            forOperation: Operations.TeamsRemoveMemberLegacy.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/teams/{}/members/{}",
                     parameters: [
-                        input.path.team_id,
+                        input.path.teamId,
                         input.path.username
                     ]
                 )
@@ -3923,15 +3923,15 @@ public struct Client: APIProtocol {
     /// - Remark: HTTP `GET /teams/{team_id}/memberships/{username}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/memberships/{username}/get(teams/get-membership-for-user-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy(_ input: Operations.teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Input) async throws -> Operations.teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Output {
+    public func teamsGetMembershipForUserLegacy(_ input: Operations.TeamsGetMembershipForUserLegacy.Input) async throws -> Operations.TeamsGetMembershipForUserLegacy.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.id,
+            forOperation: Operations.TeamsGetMembershipForUserLegacy.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/teams/{}/memberships/{}",
                     parameters: [
-                        input.path.team_id,
+                        input.path.teamId,
                         input.path.username
                     ]
                 )
@@ -3950,7 +3950,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Output.Ok.Body
+                    let body: Operations.TeamsGetMembershipForUserLegacy.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -3960,7 +3960,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.team_hyphen_membership.self,
+                            Components.Schemas.TeamMembership.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -3972,7 +3972,7 @@ public struct Client: APIProtocol {
                     return .ok(.init(body: body))
                 case 404:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.not_found.Body
+                    let body: Components.Responses.NotFound.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -3982,7 +3982,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -4023,15 +4023,15 @@ public struct Client: APIProtocol {
     /// - Remark: HTTP `PUT /teams/{team_id}/memberships/{username}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/memberships/{username}/put(teams/add-or-update-membership-for-user-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy(_ input: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Input) async throws -> Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Output {
+    public func teamsAddOrUpdateMembershipForUserLegacy(_ input: Operations.TeamsAddOrUpdateMembershipForUserLegacy.Input) async throws -> Operations.TeamsAddOrUpdateMembershipForUserLegacy.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.id,
+            forOperation: Operations.TeamsAddOrUpdateMembershipForUserLegacy.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/teams/{}/memberships/{}",
                     parameters: [
-                        input.path.team_id,
+                        input.path.teamId,
                         input.path.username
                     ]
                 )
@@ -4061,7 +4061,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Output.Ok.Body
+                    let body: Operations.TeamsAddOrUpdateMembershipForUserLegacy.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -4071,7 +4071,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.team_hyphen_membership.self,
+                            Components.Schemas.TeamMembership.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -4087,7 +4087,7 @@ public struct Client: APIProtocol {
                     return .unprocessableContent(.init())
                 case 404:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.not_found.Body
+                    let body: Components.Responses.NotFound.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -4097,7 +4097,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -4134,15 +4134,15 @@ public struct Client: APIProtocol {
     /// - Remark: HTTP `DELETE /teams/{team_id}/memberships/{username}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/memberships/{username}/delete(teams/remove-membership-for-user-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_remove_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy(_ input: Operations.teams_sol_remove_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Input) async throws -> Operations.teams_sol_remove_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Output {
+    public func teamsRemoveMembershipForUserLegacy(_ input: Operations.TeamsRemoveMembershipForUserLegacy.Input) async throws -> Operations.TeamsRemoveMembershipForUserLegacy.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_remove_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.id,
+            forOperation: Operations.TeamsRemoveMembershipForUserLegacy.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/teams/{}/memberships/{}",
                     parameters: [
-                        input.path.team_id,
+                        input.path.teamId,
                         input.path.username
                     ]
                 )
@@ -4180,15 +4180,15 @@ public struct Client: APIProtocol {
     /// - Remark: HTTP `GET /teams/{team_id}/projects`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/projects/get(teams/list-projects-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_list_hyphen_projects_hyphen_legacy(_ input: Operations.teams_sol_list_hyphen_projects_hyphen_legacy.Input) async throws -> Operations.teams_sol_list_hyphen_projects_hyphen_legacy.Output {
+    public func teamsListProjectsLegacy(_ input: Operations.TeamsListProjectsLegacy.Input) async throws -> Operations.TeamsListProjectsLegacy.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_list_hyphen_projects_hyphen_legacy.id,
+            forOperation: Operations.TeamsListProjectsLegacy.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/teams/{}/projects",
                     parameters: [
-                        input.path.team_id
+                        input.path.teamId
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -4201,7 +4201,7 @@ public struct Client: APIProtocol {
                     style: .form,
                     explode: true,
                     name: "per_page",
-                    value: input.query.per_page
+                    value: input.query.perPage
                 )
                 try converter.setQueryItemAsURI(
                     in: &request,
@@ -4219,13 +4219,13 @@ public struct Client: APIProtocol {
             deserializer: { response, responseBody in
                 switch response.status.code {
                 case 200:
-                    let headers: Operations.teams_sol_list_hyphen_projects_hyphen_legacy.Output.Ok.Headers = .init(Link: try converter.getOptionalHeaderFieldAsURI(
+                    let headers: Operations.TeamsListProjectsLegacy.Output.Ok.Headers = .init(link: try converter.getOptionalHeaderFieldAsURI(
                         in: response.headerFields,
                         name: "Link",
-                        as: Components.Headers.link.self
+                        as: Components.Headers.Link.self
                     ))
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.teams_sol_list_hyphen_projects_hyphen_legacy.Output.Ok.Body
+                    let body: Operations.TeamsListProjectsLegacy.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -4235,7 +4235,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            [Components.Schemas.team_hyphen_project].self,
+                            [Components.Schemas.TeamProject].self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -4250,7 +4250,7 @@ public struct Client: APIProtocol {
                     ))
                 case 404:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.not_found.Body
+                    let body: Components.Responses.NotFound.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -4260,7 +4260,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -4291,16 +4291,16 @@ public struct Client: APIProtocol {
     /// - Remark: HTTP `GET /teams/{team_id}/projects/{project_id}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/projects/{project_id}/get(teams/check-permissions-for-project-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_legacy(_ input: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_legacy.Input) async throws -> Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_legacy.Output {
+    public func teamsCheckPermissionsForProjectLegacy(_ input: Operations.TeamsCheckPermissionsForProjectLegacy.Input) async throws -> Operations.TeamsCheckPermissionsForProjectLegacy.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_legacy.id,
+            forOperation: Operations.TeamsCheckPermissionsForProjectLegacy.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/teams/{}/projects/{}",
                     parameters: [
-                        input.path.team_id,
-                        input.path.project_id
+                        input.path.teamId,
+                        input.path.projectId
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -4318,7 +4318,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_legacy.Output.Ok.Body
+                    let body: Operations.TeamsCheckPermissionsForProjectLegacy.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -4328,7 +4328,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.team_hyphen_project.self,
+                            Components.Schemas.TeamProject.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -4361,16 +4361,16 @@ public struct Client: APIProtocol {
     /// - Remark: HTTP `PUT /teams/{team_id}/projects/{project_id}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/projects/{project_id}/put(teams/add-or-update-project-permissions-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_legacy(_ input: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_legacy.Input) async throws -> Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_legacy.Output {
+    public func teamsAddOrUpdateProjectPermissionsLegacy(_ input: Operations.TeamsAddOrUpdateProjectPermissionsLegacy.Input) async throws -> Operations.TeamsAddOrUpdateProjectPermissionsLegacy.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_legacy.id,
+            forOperation: Operations.TeamsAddOrUpdateProjectPermissionsLegacy.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/teams/{}/projects/{}",
                     parameters: [
-                        input.path.team_id,
-                        input.path.project_id
+                        input.path.teamId,
+                        input.path.projectId
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -4401,7 +4401,7 @@ public struct Client: APIProtocol {
                     return .noContent(.init())
                 case 403:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_legacy.Output.Forbidden.Body
+                    let body: Operations.TeamsAddOrUpdateProjectPermissionsLegacy.Output.Forbidden.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -4411,7 +4411,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_legacy.Output.Forbidden.Body.jsonPayload.self,
+                            Operations.TeamsAddOrUpdateProjectPermissionsLegacy.Output.Forbidden.Body.JsonPayload.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -4423,7 +4423,7 @@ public struct Client: APIProtocol {
                     return .forbidden(.init(body: body))
                 case 404:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.not_found.Body
+                    let body: Components.Responses.NotFound.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -4433,7 +4433,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -4445,7 +4445,7 @@ public struct Client: APIProtocol {
                     return .notFound(.init(body: body))
                 case 422:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.validation_failed.Body
+                    let body: Components.Responses.ValidationFailed.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -4455,7 +4455,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.validation_hyphen_error.self,
+                            Components.Schemas.ValidationError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -4486,16 +4486,16 @@ public struct Client: APIProtocol {
     /// - Remark: HTTP `DELETE /teams/{team_id}/projects/{project_id}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/projects/{project_id}/delete(teams/remove-project-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_remove_hyphen_project_hyphen_legacy(_ input: Operations.teams_sol_remove_hyphen_project_hyphen_legacy.Input) async throws -> Operations.teams_sol_remove_hyphen_project_hyphen_legacy.Output {
+    public func teamsRemoveProjectLegacy(_ input: Operations.TeamsRemoveProjectLegacy.Input) async throws -> Operations.TeamsRemoveProjectLegacy.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_remove_hyphen_project_hyphen_legacy.id,
+            forOperation: Operations.TeamsRemoveProjectLegacy.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/teams/{}/projects/{}",
                     parameters: [
-                        input.path.team_id,
-                        input.path.project_id
+                        input.path.teamId,
+                        input.path.projectId
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -4515,7 +4515,7 @@ public struct Client: APIProtocol {
                     return .noContent(.init())
                 case 404:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.not_found.Body
+                    let body: Components.Responses.NotFound.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -4525,7 +4525,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -4537,7 +4537,7 @@ public struct Client: APIProtocol {
                     return .notFound(.init(body: body))
                 case 422:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.validation_failed.Body
+                    let body: Components.Responses.ValidationFailed.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -4547,7 +4547,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.validation_hyphen_error.self,
+                            Components.Schemas.ValidationError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -4577,15 +4577,15 @@ public struct Client: APIProtocol {
     /// - Remark: HTTP `GET /teams/{team_id}/repos`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/repos/get(teams/list-repos-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_list_hyphen_repos_hyphen_legacy(_ input: Operations.teams_sol_list_hyphen_repos_hyphen_legacy.Input) async throws -> Operations.teams_sol_list_hyphen_repos_hyphen_legacy.Output {
+    public func teamsListReposLegacy(_ input: Operations.TeamsListReposLegacy.Input) async throws -> Operations.TeamsListReposLegacy.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_list_hyphen_repos_hyphen_legacy.id,
+            forOperation: Operations.TeamsListReposLegacy.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/teams/{}/repos",
                     parameters: [
-                        input.path.team_id
+                        input.path.teamId
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -4598,7 +4598,7 @@ public struct Client: APIProtocol {
                     style: .form,
                     explode: true,
                     name: "per_page",
-                    value: input.query.per_page
+                    value: input.query.perPage
                 )
                 try converter.setQueryItemAsURI(
                     in: &request,
@@ -4616,13 +4616,13 @@ public struct Client: APIProtocol {
             deserializer: { response, responseBody in
                 switch response.status.code {
                 case 200:
-                    let headers: Operations.teams_sol_list_hyphen_repos_hyphen_legacy.Output.Ok.Headers = .init(Link: try converter.getOptionalHeaderFieldAsURI(
+                    let headers: Operations.TeamsListReposLegacy.Output.Ok.Headers = .init(link: try converter.getOptionalHeaderFieldAsURI(
                         in: response.headerFields,
                         name: "Link",
-                        as: Components.Headers.link.self
+                        as: Components.Headers.Link.self
                     ))
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.teams_sol_list_hyphen_repos_hyphen_legacy.Output.Ok.Body
+                    let body: Operations.TeamsListReposLegacy.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -4632,7 +4632,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            [Components.Schemas.minimal_hyphen_repository].self,
+                            [Components.Schemas.MinimalRepository].self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -4647,7 +4647,7 @@ public struct Client: APIProtocol {
                     ))
                 case 404:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.not_found.Body
+                    let body: Components.Responses.NotFound.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -4657,7 +4657,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -4692,15 +4692,15 @@ public struct Client: APIProtocol {
     /// - Remark: HTTP `GET /teams/{team_id}/repos/{owner}/{repo}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/repos/{owner}/{repo}/get(teams/check-permissions-for-repo-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_legacy(_ input: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_legacy.Input) async throws -> Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_legacy.Output {
+    public func teamsCheckPermissionsForRepoLegacy(_ input: Operations.TeamsCheckPermissionsForRepoLegacy.Input) async throws -> Operations.TeamsCheckPermissionsForRepoLegacy.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_legacy.id,
+            forOperation: Operations.TeamsCheckPermissionsForRepoLegacy.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/teams/{}/repos/{}/{}",
                     parameters: [
-                        input.path.team_id,
+                        input.path.teamId,
                         input.path.owner,
                         input.path.repo
                     ]
@@ -4720,7 +4720,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_legacy.Output.Ok.Body
+                    let body: Operations.TeamsCheckPermissionsForRepoLegacy.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -4730,7 +4730,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.team_hyphen_repository.self,
+                            Components.Schemas.TeamRepository.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -4768,15 +4768,15 @@ public struct Client: APIProtocol {
     /// - Remark: HTTP `PUT /teams/{team_id}/repos/{owner}/{repo}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/repos/{owner}/{repo}/put(teams/add-or-update-repo-permissions-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_legacy(_ input: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_legacy.Input) async throws -> Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_legacy.Output {
+    public func teamsAddOrUpdateRepoPermissionsLegacy(_ input: Operations.TeamsAddOrUpdateRepoPermissionsLegacy.Input) async throws -> Operations.TeamsAddOrUpdateRepoPermissionsLegacy.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_legacy.id,
+            forOperation: Operations.TeamsAddOrUpdateRepoPermissionsLegacy.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/teams/{}/repos/{}/{}",
                     parameters: [
-                        input.path.team_id,
+                        input.path.teamId,
                         input.path.owner,
                         input.path.repo
                     ]
@@ -4809,7 +4809,7 @@ public struct Client: APIProtocol {
                     return .noContent(.init())
                 case 403:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.forbidden.Body
+                    let body: Components.Responses.Forbidden.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -4819,7 +4819,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -4831,7 +4831,7 @@ public struct Client: APIProtocol {
                     return .forbidden(.init(body: body))
                 case 422:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.validation_failed.Body
+                    let body: Components.Responses.ValidationFailed.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -4841,7 +4841,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.validation_hyphen_error.self,
+                            Components.Schemas.ValidationError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -4873,15 +4873,15 @@ public struct Client: APIProtocol {
     /// - Remark: HTTP `DELETE /teams/{team_id}/repos/{owner}/{repo}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/repos/{owner}/{repo}/delete(teams/remove-repo-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_remove_hyphen_repo_hyphen_legacy(_ input: Operations.teams_sol_remove_hyphen_repo_hyphen_legacy.Input) async throws -> Operations.teams_sol_remove_hyphen_repo_hyphen_legacy.Output {
+    public func teamsRemoveRepoLegacy(_ input: Operations.TeamsRemoveRepoLegacy.Input) async throws -> Operations.TeamsRemoveRepoLegacy.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_remove_hyphen_repo_hyphen_legacy.id,
+            forOperation: Operations.TeamsRemoveRepoLegacy.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/teams/{}/repos/{}/{}",
                     parameters: [
-                        input.path.team_id,
+                        input.path.teamId,
                         input.path.owner,
                         input.path.repo
                     ]
@@ -4917,15 +4917,15 @@ public struct Client: APIProtocol {
     /// - Remark: HTTP `GET /teams/{team_id}/teams`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/teams/get(teams/list-child-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_list_hyphen_child_hyphen_legacy(_ input: Operations.teams_sol_list_hyphen_child_hyphen_legacy.Input) async throws -> Operations.teams_sol_list_hyphen_child_hyphen_legacy.Output {
+    public func teamsListChildLegacy(_ input: Operations.TeamsListChildLegacy.Input) async throws -> Operations.TeamsListChildLegacy.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_list_hyphen_child_hyphen_legacy.id,
+            forOperation: Operations.TeamsListChildLegacy.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/teams/{}/teams",
                     parameters: [
-                        input.path.team_id
+                        input.path.teamId
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -4938,7 +4938,7 @@ public struct Client: APIProtocol {
                     style: .form,
                     explode: true,
                     name: "per_page",
-                    value: input.query.per_page
+                    value: input.query.perPage
                 )
                 try converter.setQueryItemAsURI(
                     in: &request,
@@ -4956,13 +4956,13 @@ public struct Client: APIProtocol {
             deserializer: { response, responseBody in
                 switch response.status.code {
                 case 200:
-                    let headers: Operations.teams_sol_list_hyphen_child_hyphen_legacy.Output.Ok.Headers = .init(Link: try converter.getOptionalHeaderFieldAsURI(
+                    let headers: Operations.TeamsListChildLegacy.Output.Ok.Headers = .init(link: try converter.getOptionalHeaderFieldAsURI(
                         in: response.headerFields,
                         name: "Link",
-                        as: Components.Headers.link.self
+                        as: Components.Headers.Link.self
                     ))
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.teams_sol_list_hyphen_child_hyphen_legacy.Output.Ok.Body
+                    let body: Operations.TeamsListChildLegacy.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -4972,7 +4972,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            [Components.Schemas.team].self,
+                            [Components.Schemas.Team].self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -4987,7 +4987,7 @@ public struct Client: APIProtocol {
                     ))
                 case 404:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.not_found.Body
+                    let body: Components.Responses.NotFound.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -4997,7 +4997,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -5009,7 +5009,7 @@ public struct Client: APIProtocol {
                     return .notFound(.init(body: body))
                 case 403:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.forbidden.Body
+                    let body: Components.Responses.Forbidden.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -5019,7 +5019,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -5031,7 +5031,7 @@ public struct Client: APIProtocol {
                     return .forbidden(.init(body: body))
                 case 422:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.validation_failed.Body
+                    let body: Components.Responses.ValidationFailed.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -5041,7 +5041,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.validation_hyphen_error.self,
+                            Components.Schemas.ValidationError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -5074,10 +5074,10 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /user/teams`.
     /// - Remark: Generated from `#/paths//user/teams/get(teams/list-for-authenticated-user)`.
-    public func teams_sol_list_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.teams_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.teams_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.Output {
+    public func teamsListForAuthenticatedUser(_ input: Operations.TeamsListForAuthenticatedUser.Input) async throws -> Operations.TeamsListForAuthenticatedUser.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.teams_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.id,
+            forOperation: Operations.TeamsListForAuthenticatedUser.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/user/teams",
@@ -5093,7 +5093,7 @@ public struct Client: APIProtocol {
                     style: .form,
                     explode: true,
                     name: "per_page",
-                    value: input.query.per_page
+                    value: input.query.perPage
                 )
                 try converter.setQueryItemAsURI(
                     in: &request,
@@ -5111,13 +5111,13 @@ public struct Client: APIProtocol {
             deserializer: { response, responseBody in
                 switch response.status.code {
                 case 200:
-                    let headers: Operations.teams_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Headers = .init(Link: try converter.getOptionalHeaderFieldAsURI(
+                    let headers: Operations.TeamsListForAuthenticatedUser.Output.Ok.Headers = .init(link: try converter.getOptionalHeaderFieldAsURI(
                         in: response.headerFields,
                         name: "Link",
-                        as: Components.Headers.link.self
+                        as: Components.Headers.Link.self
                     ))
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.teams_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body
+                    let body: Operations.TeamsListForAuthenticatedUser.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -5127,7 +5127,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            [Components.Schemas.team_hyphen_full].self,
+                            [Components.Schemas.TeamFull].self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -5144,7 +5144,7 @@ public struct Client: APIProtocol {
                     return .notModified(.init())
                 case 404:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.not_found.Body
+                    let body: Components.Responses.NotFound.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -5154,7 +5154,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -5166,7 +5166,7 @@ public struct Client: APIProtocol {
                     return .notFound(.init(body: body))
                 case 403:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.forbidden.Body
+                    let body: Components.Responses.Forbidden.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -5176,7 +5176,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
