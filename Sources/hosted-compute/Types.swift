@@ -19,7 +19,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/settings/network-configurations`.
     /// - Remark: Generated from `#/paths//orgs/{org}/settings/network-configurations/get(hosted-compute/list-network-configurations-for-org)`.
-    func hosted_hyphen_compute_sol_list_hyphen_network_hyphen_configurations_hyphen_for_hyphen_org(_ input: Operations.hosted_hyphen_compute_sol_list_hyphen_network_hyphen_configurations_hyphen_for_hyphen_org.Input) async throws -> Operations.hosted_hyphen_compute_sol_list_hyphen_network_hyphen_configurations_hyphen_for_hyphen_org.Output
+    func hostedComputeListNetworkConfigurationsForOrg(_ input: Operations.HostedComputeListNetworkConfigurationsForOrg.Input) async throws -> Operations.HostedComputeListNetworkConfigurationsForOrg.Output
     /// Create a hosted compute network configuration for an organization
     ///
     /// Creates a hosted compute network configuration for an organization.
@@ -28,7 +28,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `POST /orgs/{org}/settings/network-configurations`.
     /// - Remark: Generated from `#/paths//orgs/{org}/settings/network-configurations/post(hosted-compute/create-network-configuration-for-org)`.
-    func hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org(_ input: Operations.hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Input) async throws -> Operations.hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Output
+    func hostedComputeCreateNetworkConfigurationForOrg(_ input: Operations.HostedComputeCreateNetworkConfigurationForOrg.Input) async throws -> Operations.HostedComputeCreateNetworkConfigurationForOrg.Output
     /// Get a hosted compute network configuration for an organization
     ///
     /// Gets a hosted compute network configuration configured in an organization.
@@ -37,7 +37,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/settings/network-configurations/{network_configuration_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/settings/network-configurations/{network_configuration_id}/get(hosted-compute/get-network-configuration-for-org)`.
-    func hosted_hyphen_compute_sol_get_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org(_ input: Operations.hosted_hyphen_compute_sol_get_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Input) async throws -> Operations.hosted_hyphen_compute_sol_get_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Output
+    func hostedComputeGetNetworkConfigurationForOrg(_ input: Operations.HostedComputeGetNetworkConfigurationForOrg.Input) async throws -> Operations.HostedComputeGetNetworkConfigurationForOrg.Output
     /// Update a hosted compute network configuration for an organization
     ///
     /// Updates a hosted compute network configuration for an organization.
@@ -46,7 +46,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `PATCH /orgs/{org}/settings/network-configurations/{network_configuration_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/settings/network-configurations/{network_configuration_id}/patch(hosted-compute/update-network-configuration-for-org)`.
-    func hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org(_ input: Operations.hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Input) async throws -> Operations.hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Output
+    func hostedComputeUpdateNetworkConfigurationForOrg(_ input: Operations.HostedComputeUpdateNetworkConfigurationForOrg.Input) async throws -> Operations.HostedComputeUpdateNetworkConfigurationForOrg.Output
     /// Delete a hosted compute network configuration from an organization
     ///
     /// Deletes a hosted compute network configuration from an organization.
@@ -55,7 +55,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/settings/network-configurations/{network_configuration_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/settings/network-configurations/{network_configuration_id}/delete(hosted-compute/delete-network-configuration-from-org)`.
-    func hosted_hyphen_compute_sol_delete_hyphen_network_hyphen_configuration_hyphen_from_hyphen_org(_ input: Operations.hosted_hyphen_compute_sol_delete_hyphen_network_hyphen_configuration_hyphen_from_hyphen_org.Input) async throws -> Operations.hosted_hyphen_compute_sol_delete_hyphen_network_hyphen_configuration_hyphen_from_hyphen_org.Output
+    func hostedComputeDeleteNetworkConfigurationFromOrg(_ input: Operations.HostedComputeDeleteNetworkConfigurationFromOrg.Input) async throws -> Operations.HostedComputeDeleteNetworkConfigurationFromOrg.Output
     /// Get a hosted compute network settings resource for an organization
     ///
     /// Gets a hosted compute network settings resource configured for an organization.
@@ -64,7 +64,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/settings/network-settings/{network_settings_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/settings/network-settings/{network_settings_id}/get(hosted-compute/get-network-settings-for-org)`.
-    func hosted_hyphen_compute_sol_get_hyphen_network_hyphen_settings_hyphen_for_hyphen_org(_ input: Operations.hosted_hyphen_compute_sol_get_hyphen_network_hyphen_settings_hyphen_for_hyphen_org.Input) async throws -> Operations.hosted_hyphen_compute_sol_get_hyphen_network_hyphen_settings_hyphen_for_hyphen_org.Output
+    func hostedComputeGetNetworkSettingsForOrg(_ input: Operations.HostedComputeGetNetworkSettingsForOrg.Input) async throws -> Operations.HostedComputeGetNetworkSettingsForOrg.Output
 }
 
 /// Convenience overloads for operation inputs.
@@ -77,12 +77,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/settings/network-configurations`.
     /// - Remark: Generated from `#/paths//orgs/{org}/settings/network-configurations/get(hosted-compute/list-network-configurations-for-org)`.
-    public func hosted_hyphen_compute_sol_list_hyphen_network_hyphen_configurations_hyphen_for_hyphen_org(
-        path: Operations.hosted_hyphen_compute_sol_list_hyphen_network_hyphen_configurations_hyphen_for_hyphen_org.Input.Path,
-        query: Operations.hosted_hyphen_compute_sol_list_hyphen_network_hyphen_configurations_hyphen_for_hyphen_org.Input.Query = .init(),
-        headers: Operations.hosted_hyphen_compute_sol_list_hyphen_network_hyphen_configurations_hyphen_for_hyphen_org.Input.Headers = .init()
-    ) async throws -> Operations.hosted_hyphen_compute_sol_list_hyphen_network_hyphen_configurations_hyphen_for_hyphen_org.Output {
-        try await hosted_hyphen_compute_sol_list_hyphen_network_hyphen_configurations_hyphen_for_hyphen_org(Operations.hosted_hyphen_compute_sol_list_hyphen_network_hyphen_configurations_hyphen_for_hyphen_org.Input(
+    public func hostedComputeListNetworkConfigurationsForOrg(
+        path: Operations.HostedComputeListNetworkConfigurationsForOrg.Input.Path,
+        query: Operations.HostedComputeListNetworkConfigurationsForOrg.Input.Query = .init(),
+        headers: Operations.HostedComputeListNetworkConfigurationsForOrg.Input.Headers = .init()
+    ) async throws -> Operations.HostedComputeListNetworkConfigurationsForOrg.Output {
+        try await hostedComputeListNetworkConfigurationsForOrg(Operations.HostedComputeListNetworkConfigurationsForOrg.Input(
             path: path,
             query: query,
             headers: headers
@@ -96,12 +96,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /orgs/{org}/settings/network-configurations`.
     /// - Remark: Generated from `#/paths//orgs/{org}/settings/network-configurations/post(hosted-compute/create-network-configuration-for-org)`.
-    public func hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org(
-        path: Operations.hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Input.Path,
-        headers: Operations.hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Input.Headers = .init(),
-        body: Operations.hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Input.Body
-    ) async throws -> Operations.hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Output {
-        try await hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org(Operations.hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Input(
+    public func hostedComputeCreateNetworkConfigurationForOrg(
+        path: Operations.HostedComputeCreateNetworkConfigurationForOrg.Input.Path,
+        headers: Operations.HostedComputeCreateNetworkConfigurationForOrg.Input.Headers = .init(),
+        body: Operations.HostedComputeCreateNetworkConfigurationForOrg.Input.Body
+    ) async throws -> Operations.HostedComputeCreateNetworkConfigurationForOrg.Output {
+        try await hostedComputeCreateNetworkConfigurationForOrg(Operations.HostedComputeCreateNetworkConfigurationForOrg.Input(
             path: path,
             headers: headers,
             body: body
@@ -115,11 +115,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/settings/network-configurations/{network_configuration_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/settings/network-configurations/{network_configuration_id}/get(hosted-compute/get-network-configuration-for-org)`.
-    public func hosted_hyphen_compute_sol_get_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org(
-        path: Operations.hosted_hyphen_compute_sol_get_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Input.Path,
-        headers: Operations.hosted_hyphen_compute_sol_get_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Input.Headers = .init()
-    ) async throws -> Operations.hosted_hyphen_compute_sol_get_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Output {
-        try await hosted_hyphen_compute_sol_get_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org(Operations.hosted_hyphen_compute_sol_get_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Input(
+    public func hostedComputeGetNetworkConfigurationForOrg(
+        path: Operations.HostedComputeGetNetworkConfigurationForOrg.Input.Path,
+        headers: Operations.HostedComputeGetNetworkConfigurationForOrg.Input.Headers = .init()
+    ) async throws -> Operations.HostedComputeGetNetworkConfigurationForOrg.Output {
+        try await hostedComputeGetNetworkConfigurationForOrg(Operations.HostedComputeGetNetworkConfigurationForOrg.Input(
             path: path,
             headers: headers
         ))
@@ -132,12 +132,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `PATCH /orgs/{org}/settings/network-configurations/{network_configuration_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/settings/network-configurations/{network_configuration_id}/patch(hosted-compute/update-network-configuration-for-org)`.
-    public func hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org(
-        path: Operations.hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Input.Path,
-        headers: Operations.hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Input.Headers = .init(),
-        body: Operations.hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Input.Body
-    ) async throws -> Operations.hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Output {
-        try await hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org(Operations.hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Input(
+    public func hostedComputeUpdateNetworkConfigurationForOrg(
+        path: Operations.HostedComputeUpdateNetworkConfigurationForOrg.Input.Path,
+        headers: Operations.HostedComputeUpdateNetworkConfigurationForOrg.Input.Headers = .init(),
+        body: Operations.HostedComputeUpdateNetworkConfigurationForOrg.Input.Body
+    ) async throws -> Operations.HostedComputeUpdateNetworkConfigurationForOrg.Output {
+        try await hostedComputeUpdateNetworkConfigurationForOrg(Operations.HostedComputeUpdateNetworkConfigurationForOrg.Input(
             path: path,
             headers: headers,
             body: body
@@ -151,8 +151,8 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/settings/network-configurations/{network_configuration_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/settings/network-configurations/{network_configuration_id}/delete(hosted-compute/delete-network-configuration-from-org)`.
-    public func hosted_hyphen_compute_sol_delete_hyphen_network_hyphen_configuration_hyphen_from_hyphen_org(path: Operations.hosted_hyphen_compute_sol_delete_hyphen_network_hyphen_configuration_hyphen_from_hyphen_org.Input.Path) async throws -> Operations.hosted_hyphen_compute_sol_delete_hyphen_network_hyphen_configuration_hyphen_from_hyphen_org.Output {
-        try await hosted_hyphen_compute_sol_delete_hyphen_network_hyphen_configuration_hyphen_from_hyphen_org(Operations.hosted_hyphen_compute_sol_delete_hyphen_network_hyphen_configuration_hyphen_from_hyphen_org.Input(path: path))
+    public func hostedComputeDeleteNetworkConfigurationFromOrg(path: Operations.HostedComputeDeleteNetworkConfigurationFromOrg.Input.Path) async throws -> Operations.HostedComputeDeleteNetworkConfigurationFromOrg.Output {
+        try await hostedComputeDeleteNetworkConfigurationFromOrg(Operations.HostedComputeDeleteNetworkConfigurationFromOrg.Input(path: path))
     }
     /// Get a hosted compute network settings resource for an organization
     ///
@@ -162,11 +162,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/settings/network-settings/{network_settings_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/settings/network-settings/{network_settings_id}/get(hosted-compute/get-network-settings-for-org)`.
-    public func hosted_hyphen_compute_sol_get_hyphen_network_hyphen_settings_hyphen_for_hyphen_org(
-        path: Operations.hosted_hyphen_compute_sol_get_hyphen_network_hyphen_settings_hyphen_for_hyphen_org.Input.Path,
-        headers: Operations.hosted_hyphen_compute_sol_get_hyphen_network_hyphen_settings_hyphen_for_hyphen_org.Input.Headers = .init()
-    ) async throws -> Operations.hosted_hyphen_compute_sol_get_hyphen_network_hyphen_settings_hyphen_for_hyphen_org.Output {
-        try await hosted_hyphen_compute_sol_get_hyphen_network_hyphen_settings_hyphen_for_hyphen_org(Operations.hosted_hyphen_compute_sol_get_hyphen_network_hyphen_settings_hyphen_for_hyphen_org.Input(
+    public func hostedComputeGetNetworkSettingsForOrg(
+        path: Operations.HostedComputeGetNetworkSettingsForOrg.Input.Path,
+        headers: Operations.HostedComputeGetNetworkSettingsForOrg.Input.Headers = .init()
+    ) async throws -> Operations.HostedComputeGetNetworkSettingsForOrg.Output {
+        try await hostedComputeGetNetworkSettingsForOrg(Operations.HostedComputeGetNetworkSettingsForOrg.Input(
             path: path,
             headers: headers
         ))
@@ -175,6 +175,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -190,7 +199,7 @@ public enum Components {
         /// A hosted compute network configuration.
         ///
         /// - Remark: Generated from `#/components/schemas/network-configuration`.
-        public struct network_hyphen_configuration: Codable, Hashable, Sendable {
+        public struct NetworkConfiguration: Codable, Hashable, Sendable {
             /// The unique identifier of the network configuration.
             ///
             /// - Remark: Generated from `#/components/schemas/network-configuration/id`.
@@ -202,7 +211,7 @@ public enum Components {
             /// The hosted compute service the network configuration supports.
             ///
             /// - Remark: Generated from `#/components/schemas/network-configuration/compute_service`.
-            @frozen public enum compute_servicePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum ComputeServicePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case none = "none"
                 case actions = "actions"
                 case codespaces = "codespaces"
@@ -210,48 +219,48 @@ public enum Components {
             /// The hosted compute service the network configuration supports.
             ///
             /// - Remark: Generated from `#/components/schemas/network-configuration/compute_service`.
-            public var compute_service: Components.Schemas.network_hyphen_configuration.compute_servicePayload?
+            public var computeService: Components.Schemas.NetworkConfiguration.ComputeServicePayload?
             /// The unique identifier of each network settings in the configuration.
             ///
             /// - Remark: Generated from `#/components/schemas/network-configuration/network_settings_ids`.
-            public var network_settings_ids: [Swift.String]?
+            public var networkSettingsIds: [Swift.String]?
             /// The time at which the network configuration was created, in ISO 8601 format.
             ///
             /// - Remark: Generated from `#/components/schemas/network-configuration/created_on`.
-            public var created_on: Foundation.Date?
-            /// Creates a new `network_hyphen_configuration`.
+            public var createdOn: Foundation.Date?
+            /// Creates a new `NetworkConfiguration`.
             ///
             /// - Parameters:
             ///   - id: The unique identifier of the network configuration.
             ///   - name: The name of the network configuration.
-            ///   - compute_service: The hosted compute service the network configuration supports.
-            ///   - network_settings_ids: The unique identifier of each network settings in the configuration.
-            ///   - created_on: The time at which the network configuration was created, in ISO 8601 format.
+            ///   - computeService: The hosted compute service the network configuration supports.
+            ///   - networkSettingsIds: The unique identifier of each network settings in the configuration.
+            ///   - createdOn: The time at which the network configuration was created, in ISO 8601 format.
             public init(
                 id: Swift.String,
                 name: Swift.String,
-                compute_service: Components.Schemas.network_hyphen_configuration.compute_servicePayload? = nil,
-                network_settings_ids: [Swift.String]? = nil,
-                created_on: Foundation.Date? = nil
+                computeService: Components.Schemas.NetworkConfiguration.ComputeServicePayload? = nil,
+                networkSettingsIds: [Swift.String]? = nil,
+                createdOn: Foundation.Date? = nil
             ) {
                 self.id = id
                 self.name = name
-                self.compute_service = compute_service
-                self.network_settings_ids = network_settings_ids
-                self.created_on = created_on
+                self.computeService = computeService
+                self.networkSettingsIds = networkSettingsIds
+                self.createdOn = createdOn
             }
             public enum CodingKeys: String, CodingKey {
                 case id
                 case name
-                case compute_service
-                case network_settings_ids
-                case created_on
+                case computeService = "compute_service"
+                case networkSettingsIds = "network_settings_ids"
+                case createdOn = "created_on"
             }
         }
         /// A hosted compute network settings resource.
         ///
         /// - Remark: Generated from `#/components/schemas/network-settings`.
-        public struct network_hyphen_settings: Codable, Hashable, Sendable {
+        public struct NetworkSettings: Codable, Hashable, Sendable {
             /// The unique identifier of the network settings resource.
             ///
             /// - Remark: Generated from `#/components/schemas/network-settings/id`.
@@ -259,7 +268,7 @@ public enum Components {
             /// The identifier of the network configuration that is using this settings resource.
             ///
             /// - Remark: Generated from `#/components/schemas/network-settings/network_configuration_id`.
-            public var network_configuration_id: Swift.String?
+            public var networkConfigurationId: Swift.String?
             /// The name of the network settings resource.
             ///
             /// - Remark: Generated from `#/components/schemas/network-settings/name`.
@@ -267,37 +276,37 @@ public enum Components {
             /// The subnet this network settings resource is configured for.
             ///
             /// - Remark: Generated from `#/components/schemas/network-settings/subnet_id`.
-            public var subnet_id: Swift.String
+            public var subnetId: Swift.String
             /// The location of the subnet this network settings resource is configured for.
             ///
             /// - Remark: Generated from `#/components/schemas/network-settings/region`.
             public var region: Swift.String
-            /// Creates a new `network_hyphen_settings`.
+            /// Creates a new `NetworkSettings`.
             ///
             /// - Parameters:
             ///   - id: The unique identifier of the network settings resource.
-            ///   - network_configuration_id: The identifier of the network configuration that is using this settings resource.
+            ///   - networkConfigurationId: The identifier of the network configuration that is using this settings resource.
             ///   - name: The name of the network settings resource.
-            ///   - subnet_id: The subnet this network settings resource is configured for.
+            ///   - subnetId: The subnet this network settings resource is configured for.
             ///   - region: The location of the subnet this network settings resource is configured for.
             public init(
                 id: Swift.String,
-                network_configuration_id: Swift.String? = nil,
+                networkConfigurationId: Swift.String? = nil,
                 name: Swift.String,
-                subnet_id: Swift.String,
+                subnetId: Swift.String,
                 region: Swift.String
             ) {
                 self.id = id
-                self.network_configuration_id = network_configuration_id
+                self.networkConfigurationId = networkConfigurationId
                 self.name = name
-                self.subnet_id = subnet_id
+                self.subnetId = subnetId
                 self.region = region
             }
             public enum CodingKeys: String, CodingKey {
                 case id
-                case network_configuration_id
+                case networkConfigurationId = "network_configuration_id"
                 case name
-                case subnet_id
+                case subnetId = "subnet_id"
                 case region
             }
         }
@@ -307,23 +316,23 @@ public enum Components {
         /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/per-page`.
-        public typealias per_hyphen_page = Swift.Int
+        public typealias PerPage = Swift.Int
         /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/page`.
-        public typealias page = Swift.Int
+        public typealias Page = Swift.Int
         /// The organization name. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/org`.
-        public typealias org = Swift.String
+        public typealias Org = Swift.String
         /// Unique identifier of the hosted compute network configuration.
         ///
         /// - Remark: Generated from `#/components/parameters/network-configuration-id`.
-        public typealias network_hyphen_configuration_hyphen_id = Swift.String
+        public typealias NetworkConfigurationId = Swift.String
         /// Unique identifier of the hosted compute network settings.
         ///
         /// - Remark: Generated from `#/components/parameters/network-settings-id`.
-        public typealias network_hyphen_settings_hyphen_id = Swift.String
+        public typealias NetworkSettingsId = Swift.String
     }
     /// Types generated from the `#/components/requestBodies` section of the OpenAPI document.
     public enum RequestBodies {}
@@ -332,7 +341,7 @@ public enum Components {
     /// Types generated from the `#/components/headers` section of the OpenAPI document.
     public enum Headers {
         /// - Remark: Generated from `#/components/headers/link`.
-        public typealias link = Swift.String
+        public typealias Link = Swift.String
     }
 }
 
@@ -346,7 +355,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/settings/network-configurations`.
     /// - Remark: Generated from `#/paths//orgs/{org}/settings/network-configurations/get(hosted-compute/list-network-configurations-for-org)`.
-    public enum hosted_hyphen_compute_sol_list_hyphen_network_hyphen_configurations_hyphen_for_hyphen_org {
+    public enum HostedComputeListNetworkConfigurationsForOrg {
         public static let id: Swift.String = "hosted-compute/list-network-configurations-for-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/GET/path`.
@@ -354,52 +363,52 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/GET/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                public init(org: Components.Parameters.org) {
+                public init(org: Components.Parameters.Org) {
                     self.org = org
                 }
             }
-            public var path: Operations.hosted_hyphen_compute_sol_list_hyphen_network_hyphen_configurations_hyphen_for_hyphen_org.Input.Path
+            public var path: Operations.HostedComputeListNetworkConfigurationsForOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.hosted_hyphen_compute_sol_list_hyphen_network_hyphen_configurations_hyphen_for_hyphen_org.Input.Query
+            public var query: Operations.HostedComputeListNetworkConfigurationsForOrg.Input.Query
             /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.hosted_hyphen_compute_sol_list_hyphen_network_hyphen_configurations_hyphen_for_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.HostedComputeListNetworkConfigurationsForOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.hosted_hyphen_compute_sol_list_hyphen_network_hyphen_configurations_hyphen_for_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.HostedComputeListNetworkConfigurationsForOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.hosted_hyphen_compute_sol_list_hyphen_network_hyphen_configurations_hyphen_for_hyphen_org.Input.Headers
+            public var headers: Operations.HostedComputeListNetworkConfigurationsForOrg.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -407,9 +416,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.hosted_hyphen_compute_sol_list_hyphen_network_hyphen_configurations_hyphen_for_hyphen_org.Input.Path,
-                query: Operations.hosted_hyphen_compute_sol_list_hyphen_network_hyphen_configurations_hyphen_for_hyphen_org.Input.Query = .init(),
-                headers: Operations.hosted_hyphen_compute_sol_list_hyphen_network_hyphen_configurations_hyphen_for_hyphen_org.Input.Headers = .init()
+                path: Operations.HostedComputeListNetworkConfigurationsForOrg.Input.Path,
+                query: Operations.HostedComputeListNetworkConfigurationsForOrg.Input.Query = .init(),
+                headers: Operations.HostedComputeListNetworkConfigurationsForOrg.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -421,49 +430,49 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.hosted_hyphen_compute_sol_list_hyphen_network_hyphen_configurations_hyphen_for_hyphen_org.Output.Ok.Headers
+                public var headers: Operations.HostedComputeListNetworkConfigurationsForOrg.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/GET/responses/200/content/json`.
-                    public struct jsonPayload: Codable, Hashable, Sendable {
+                    public struct JsonPayload: Codable, Hashable, Sendable {
                         /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/GET/responses/200/content/json/total_count`.
-                        public var total_count: Swift.Int
+                        public var totalCount: Swift.Int
                         /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/GET/responses/200/content/json/network_configurations`.
-                        public var network_configurations: [Components.Schemas.network_hyphen_configuration]
-                        /// Creates a new `jsonPayload`.
+                        public var networkConfigurations: [Components.Schemas.NetworkConfiguration]
+                        /// Creates a new `JsonPayload`.
                         ///
                         /// - Parameters:
-                        ///   - total_count:
-                        ///   - network_configurations:
+                        ///   - totalCount:
+                        ///   - networkConfigurations:
                         public init(
-                            total_count: Swift.Int,
-                            network_configurations: [Components.Schemas.network_hyphen_configuration]
+                            totalCount: Swift.Int,
+                            networkConfigurations: [Components.Schemas.NetworkConfiguration]
                         ) {
-                            self.total_count = total_count
-                            self.network_configurations = network_configurations
+                            self.totalCount = totalCount
+                            self.networkConfigurations = networkConfigurations
                         }
                         public enum CodingKeys: String, CodingKey {
-                            case total_count
-                            case network_configurations
+                            case totalCount = "total_count"
+                            case networkConfigurations = "network_configurations"
                         }
                     }
                     /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/GET/responses/200/content/application\/json`.
-                    case json(Operations.hosted_hyphen_compute_sol_list_hyphen_network_hyphen_configurations_hyphen_for_hyphen_org.Output.Ok.Body.jsonPayload)
+                    case json(Operations.HostedComputeListNetworkConfigurationsForOrg.Output.Ok.Body.JsonPayload)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Operations.hosted_hyphen_compute_sol_list_hyphen_network_hyphen_configurations_hyphen_for_hyphen_org.Output.Ok.Body.jsonPayload {
+                    public var json: Operations.HostedComputeListNetworkConfigurationsForOrg.Output.Ok.Body.JsonPayload {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -473,15 +482,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.hosted_hyphen_compute_sol_list_hyphen_network_hyphen_configurations_hyphen_for_hyphen_org.Output.Ok.Body
+                public var body: Operations.HostedComputeListNetworkConfigurationsForOrg.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.hosted_hyphen_compute_sol_list_hyphen_network_hyphen_configurations_hyphen_for_hyphen_org.Output.Ok.Headers = .init(),
-                    body: Operations.hosted_hyphen_compute_sol_list_hyphen_network_hyphen_configurations_hyphen_for_hyphen_org.Output.Ok.Body
+                    headers: Operations.HostedComputeListNetworkConfigurationsForOrg.Output.Ok.Headers = .init(),
+                    body: Operations.HostedComputeListNetworkConfigurationsForOrg.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -492,12 +501,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/settings/network-configurations/get(hosted-compute/list-network-configurations-for-org)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.hosted_hyphen_compute_sol_list_hyphen_network_hyphen_configurations_hyphen_for_hyphen_org.Output.Ok)
+            case ok(Operations.HostedComputeListNetworkConfigurationsForOrg.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.hosted_hyphen_compute_sol_list_hyphen_network_hyphen_configurations_hyphen_for_hyphen_org.Output.Ok {
+            public var ok: Operations.HostedComputeListNetworkConfigurationsForOrg.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -549,7 +558,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /orgs/{org}/settings/network-configurations`.
     /// - Remark: Generated from `#/paths//orgs/{org}/settings/network-configurations/post(hosted-compute/create-network-configuration-for-org)`.
-    public enum hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org {
+    public enum HostedComputeCreateNetworkConfigurationForOrg {
         public static let id: Swift.String = "hosted-compute/create-network-configuration-for-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/POST/path`.
@@ -557,32 +566,32 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/POST/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                public init(org: Components.Parameters.org) {
+                public init(org: Components.Parameters.Org) {
                     self.org = org
                 }
             }
-            public var path: Operations.hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Input.Path
+            public var path: Operations.HostedComputeCreateNetworkConfigurationForOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.HostedComputeCreateNetworkConfigurationForOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.HostedComputeCreateNetworkConfigurationForOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Input.Headers
+            public var headers: Operations.HostedComputeCreateNetworkConfigurationForOrg.Input.Headers
             /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// Name of the network configuration. Must be between 1 and 100 characters and may only contain upper and lowercase letters a-z, numbers 0-9, '.', '-', and '_'.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/POST/requestBody/json/name`.
@@ -590,43 +599,43 @@ public enum Operations {
                     /// The hosted compute service to use for the network configuration.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/POST/requestBody/json/compute_service`.
-                    @frozen public enum compute_servicePayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum ComputeServicePayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case none = "none"
                         case actions = "actions"
                     }
                     /// The hosted compute service to use for the network configuration.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/POST/requestBody/json/compute_service`.
-                    public var compute_service: Operations.hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Input.Body.jsonPayload.compute_servicePayload?
+                    public var computeService: Operations.HostedComputeCreateNetworkConfigurationForOrg.Input.Body.JsonPayload.ComputeServicePayload?
                     /// The identifier of the network settings to use for the network configuration. Exactly one network settings must be specified.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/POST/requestBody/json/network_settings_ids`.
-                    public var network_settings_ids: [Swift.String]
-                    /// Creates a new `jsonPayload`.
+                    public var networkSettingsIds: [Swift.String]
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - name: Name of the network configuration. Must be between 1 and 100 characters and may only contain upper and lowercase letters a-z, numbers 0-9, '.', '-', and '_'.
-                    ///   - compute_service: The hosted compute service to use for the network configuration.
-                    ///   - network_settings_ids: The identifier of the network settings to use for the network configuration. Exactly one network settings must be specified.
+                    ///   - computeService: The hosted compute service to use for the network configuration.
+                    ///   - networkSettingsIds: The identifier of the network settings to use for the network configuration. Exactly one network settings must be specified.
                     public init(
                         name: Swift.String,
-                        compute_service: Operations.hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Input.Body.jsonPayload.compute_servicePayload? = nil,
-                        network_settings_ids: [Swift.String]
+                        computeService: Operations.HostedComputeCreateNetworkConfigurationForOrg.Input.Body.JsonPayload.ComputeServicePayload? = nil,
+                        networkSettingsIds: [Swift.String]
                     ) {
                         self.name = name
-                        self.compute_service = compute_service
-                        self.network_settings_ids = network_settings_ids
+                        self.computeService = computeService
+                        self.networkSettingsIds = networkSettingsIds
                     }
                     public enum CodingKeys: String, CodingKey {
                         case name
-                        case compute_service
-                        case network_settings_ids
+                        case computeService = "compute_service"
+                        case networkSettingsIds = "network_settings_ids"
                     }
                 }
                 /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/POST/requestBody/content/application\/json`.
-                case json(Operations.hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Input.Body.jsonPayload)
+                case json(Operations.HostedComputeCreateNetworkConfigurationForOrg.Input.Body.JsonPayload)
             }
-            public var body: Operations.hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Input.Body
+            public var body: Operations.HostedComputeCreateNetworkConfigurationForOrg.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -634,9 +643,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Input.Path,
-                headers: Operations.hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Input.Headers = .init(),
-                body: Operations.hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Input.Body
+                path: Operations.HostedComputeCreateNetworkConfigurationForOrg.Input.Path,
+                headers: Operations.HostedComputeCreateNetworkConfigurationForOrg.Input.Headers = .init(),
+                body: Operations.HostedComputeCreateNetworkConfigurationForOrg.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -648,12 +657,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/POST/responses/201/content/application\/json`.
-                    case json(Components.Schemas.network_hyphen_configuration)
+                    case json(Components.Schemas.NetworkConfiguration)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.network_hyphen_configuration {
+                    public var json: Components.Schemas.NetworkConfiguration {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -663,12 +672,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Output.Created.Body
+                public var body: Operations.HostedComputeCreateNetworkConfigurationForOrg.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Output.Created.Body) {
+                public init(body: Operations.HostedComputeCreateNetworkConfigurationForOrg.Output.Created.Body) {
                     self.body = body
                 }
             }
@@ -677,12 +686,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/settings/network-configurations/post(hosted-compute/create-network-configuration-for-org)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Output.Created)
+            case created(Operations.HostedComputeCreateNetworkConfigurationForOrg.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Output.Created {
+            public var created: Operations.HostedComputeCreateNetworkConfigurationForOrg.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -734,7 +743,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/settings/network-configurations/{network_configuration_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/settings/network-configurations/{network_configuration_id}/get(hosted-compute/get-network-configuration-for-org)`.
-    public enum hosted_hyphen_compute_sol_get_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org {
+    public enum HostedComputeGetNetworkConfigurationForOrg {
         public static let id: Swift.String = "hosted-compute/get-network-configuration-for-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/{network_configuration_id}/GET/path`.
@@ -742,45 +751,45 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/{network_configuration_id}/GET/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// Unique identifier of the hosted compute network configuration.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/{network_configuration_id}/GET/path/network_configuration_id`.
-                public var network_configuration_id: Components.Parameters.network_hyphen_configuration_hyphen_id
+                public var networkConfigurationId: Components.Parameters.NetworkConfigurationId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - network_configuration_id: Unique identifier of the hosted compute network configuration.
+                ///   - networkConfigurationId: Unique identifier of the hosted compute network configuration.
                 public init(
-                    org: Components.Parameters.org,
-                    network_configuration_id: Components.Parameters.network_hyphen_configuration_hyphen_id
+                    org: Components.Parameters.Org,
+                    networkConfigurationId: Components.Parameters.NetworkConfigurationId
                 ) {
                     self.org = org
-                    self.network_configuration_id = network_configuration_id
+                    self.networkConfigurationId = networkConfigurationId
                 }
             }
-            public var path: Operations.hosted_hyphen_compute_sol_get_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Input.Path
+            public var path: Operations.HostedComputeGetNetworkConfigurationForOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/{network_configuration_id}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.hosted_hyphen_compute_sol_get_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.HostedComputeGetNetworkConfigurationForOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.hosted_hyphen_compute_sol_get_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.HostedComputeGetNetworkConfigurationForOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.hosted_hyphen_compute_sol_get_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Input.Headers
+            public var headers: Operations.HostedComputeGetNetworkConfigurationForOrg.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.hosted_hyphen_compute_sol_get_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Input.Path,
-                headers: Operations.hosted_hyphen_compute_sol_get_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Input.Headers = .init()
+                path: Operations.HostedComputeGetNetworkConfigurationForOrg.Input.Path,
+                headers: Operations.HostedComputeGetNetworkConfigurationForOrg.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -791,26 +800,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/{network_configuration_id}/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/{network_configuration_id}/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.hosted_hyphen_compute_sol_get_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Output.Ok.Headers
+                public var headers: Operations.HostedComputeGetNetworkConfigurationForOrg.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/{network_configuration_id}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/{network_configuration_id}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.network_hyphen_configuration)
+                    case json(Components.Schemas.NetworkConfiguration)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.network_hyphen_configuration {
+                    public var json: Components.Schemas.NetworkConfiguration {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -820,15 +829,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.hosted_hyphen_compute_sol_get_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Output.Ok.Body
+                public var body: Operations.HostedComputeGetNetworkConfigurationForOrg.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.hosted_hyphen_compute_sol_get_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Output.Ok.Headers = .init(),
-                    body: Operations.hosted_hyphen_compute_sol_get_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Output.Ok.Body
+                    headers: Operations.HostedComputeGetNetworkConfigurationForOrg.Output.Ok.Headers = .init(),
+                    body: Operations.HostedComputeGetNetworkConfigurationForOrg.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -839,12 +848,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/settings/network-configurations/{network_configuration_id}/get(hosted-compute/get-network-configuration-for-org)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.hosted_hyphen_compute_sol_get_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Output.Ok)
+            case ok(Operations.HostedComputeGetNetworkConfigurationForOrg.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.hosted_hyphen_compute_sol_get_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Output.Ok {
+            public var ok: Operations.HostedComputeGetNetworkConfigurationForOrg.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -896,7 +905,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PATCH /orgs/{org}/settings/network-configurations/{network_configuration_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/settings/network-configurations/{network_configuration_id}/patch(hosted-compute/update-network-configuration-for-org)`.
-    public enum hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org {
+    public enum HostedComputeUpdateNetworkConfigurationForOrg {
         public static let id: Swift.String = "hosted-compute/update-network-configuration-for-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/{network_configuration_id}/PATCH/path`.
@@ -904,41 +913,41 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/{network_configuration_id}/PATCH/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// Unique identifier of the hosted compute network configuration.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/{network_configuration_id}/PATCH/path/network_configuration_id`.
-                public var network_configuration_id: Components.Parameters.network_hyphen_configuration_hyphen_id
+                public var networkConfigurationId: Components.Parameters.NetworkConfigurationId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - network_configuration_id: Unique identifier of the hosted compute network configuration.
+                ///   - networkConfigurationId: Unique identifier of the hosted compute network configuration.
                 public init(
-                    org: Components.Parameters.org,
-                    network_configuration_id: Components.Parameters.network_hyphen_configuration_hyphen_id
+                    org: Components.Parameters.Org,
+                    networkConfigurationId: Components.Parameters.NetworkConfigurationId
                 ) {
                     self.org = org
-                    self.network_configuration_id = network_configuration_id
+                    self.networkConfigurationId = networkConfigurationId
                 }
             }
-            public var path: Operations.hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Input.Path
+            public var path: Operations.HostedComputeUpdateNetworkConfigurationForOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/{network_configuration_id}/PATCH/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.HostedComputeUpdateNetworkConfigurationForOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.HostedComputeUpdateNetworkConfigurationForOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Input.Headers
+            public var headers: Operations.HostedComputeUpdateNetworkConfigurationForOrg.Input.Headers
             /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/{network_configuration_id}/PATCH/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/{network_configuration_id}/PATCH/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// Name of the network configuration. Must be between 1 and 100 characters and may only contain upper and lowercase letters a-z, numbers 0-9, '.', '-', and '_'.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/{network_configuration_id}/PATCH/requestBody/json/name`.
@@ -946,43 +955,43 @@ public enum Operations {
                     /// The hosted compute service to use for the network configuration.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/{network_configuration_id}/PATCH/requestBody/json/compute_service`.
-                    @frozen public enum compute_servicePayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum ComputeServicePayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case none = "none"
                         case actions = "actions"
                     }
                     /// The hosted compute service to use for the network configuration.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/{network_configuration_id}/PATCH/requestBody/json/compute_service`.
-                    public var compute_service: Operations.hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Input.Body.jsonPayload.compute_servicePayload?
+                    public var computeService: Operations.HostedComputeUpdateNetworkConfigurationForOrg.Input.Body.JsonPayload.ComputeServicePayload?
                     /// The identifier of the network settings to use for the network configuration. Exactly one network settings must be specified.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/{network_configuration_id}/PATCH/requestBody/json/network_settings_ids`.
-                    public var network_settings_ids: [Swift.String]?
-                    /// Creates a new `jsonPayload`.
+                    public var networkSettingsIds: [Swift.String]?
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - name: Name of the network configuration. Must be between 1 and 100 characters and may only contain upper and lowercase letters a-z, numbers 0-9, '.', '-', and '_'.
-                    ///   - compute_service: The hosted compute service to use for the network configuration.
-                    ///   - network_settings_ids: The identifier of the network settings to use for the network configuration. Exactly one network settings must be specified.
+                    ///   - computeService: The hosted compute service to use for the network configuration.
+                    ///   - networkSettingsIds: The identifier of the network settings to use for the network configuration. Exactly one network settings must be specified.
                     public init(
                         name: Swift.String? = nil,
-                        compute_service: Operations.hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Input.Body.jsonPayload.compute_servicePayload? = nil,
-                        network_settings_ids: [Swift.String]? = nil
+                        computeService: Operations.HostedComputeUpdateNetworkConfigurationForOrg.Input.Body.JsonPayload.ComputeServicePayload? = nil,
+                        networkSettingsIds: [Swift.String]? = nil
                     ) {
                         self.name = name
-                        self.compute_service = compute_service
-                        self.network_settings_ids = network_settings_ids
+                        self.computeService = computeService
+                        self.networkSettingsIds = networkSettingsIds
                     }
                     public enum CodingKeys: String, CodingKey {
                         case name
-                        case compute_service
-                        case network_settings_ids
+                        case computeService = "compute_service"
+                        case networkSettingsIds = "network_settings_ids"
                     }
                 }
                 /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/{network_configuration_id}/PATCH/requestBody/content/application\/json`.
-                case json(Operations.hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Input.Body.jsonPayload)
+                case json(Operations.HostedComputeUpdateNetworkConfigurationForOrg.Input.Body.JsonPayload)
             }
-            public var body: Operations.hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Input.Body
+            public var body: Operations.HostedComputeUpdateNetworkConfigurationForOrg.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -990,9 +999,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Input.Path,
-                headers: Operations.hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Input.Headers = .init(),
-                body: Operations.hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Input.Body
+                path: Operations.HostedComputeUpdateNetworkConfigurationForOrg.Input.Path,
+                headers: Operations.HostedComputeUpdateNetworkConfigurationForOrg.Input.Headers = .init(),
+                body: Operations.HostedComputeUpdateNetworkConfigurationForOrg.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -1004,12 +1013,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/{network_configuration_id}/PATCH/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/{network_configuration_id}/PATCH/responses/200/content/application\/json`.
-                    case json(Components.Schemas.network_hyphen_configuration)
+                    case json(Components.Schemas.NetworkConfiguration)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.network_hyphen_configuration {
+                    public var json: Components.Schemas.NetworkConfiguration {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -1019,12 +1028,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Output.Ok.Body
+                public var body: Operations.HostedComputeUpdateNetworkConfigurationForOrg.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Output.Ok.Body) {
+                public init(body: Operations.HostedComputeUpdateNetworkConfigurationForOrg.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -1033,12 +1042,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/settings/network-configurations/{network_configuration_id}/patch(hosted-compute/update-network-configuration-for-org)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Output.Ok)
+            case ok(Operations.HostedComputeUpdateNetworkConfigurationForOrg.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Output.Ok {
+            public var ok: Operations.HostedComputeUpdateNetworkConfigurationForOrg.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -1090,7 +1099,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/settings/network-configurations/{network_configuration_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/settings/network-configurations/{network_configuration_id}/delete(hosted-compute/delete-network-configuration-from-org)`.
-    public enum hosted_hyphen_compute_sol_delete_hyphen_network_hyphen_configuration_hyphen_from_hyphen_org {
+    public enum HostedComputeDeleteNetworkConfigurationFromOrg {
         public static let id: Swift.String = "hosted-compute/delete-network-configuration-from-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/{network_configuration_id}/DELETE/path`.
@@ -1098,30 +1107,30 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/{network_configuration_id}/DELETE/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// Unique identifier of the hosted compute network configuration.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/{network_configuration_id}/DELETE/path/network_configuration_id`.
-                public var network_configuration_id: Components.Parameters.network_hyphen_configuration_hyphen_id
+                public var networkConfigurationId: Components.Parameters.NetworkConfigurationId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - network_configuration_id: Unique identifier of the hosted compute network configuration.
+                ///   - networkConfigurationId: Unique identifier of the hosted compute network configuration.
                 public init(
-                    org: Components.Parameters.org,
-                    network_configuration_id: Components.Parameters.network_hyphen_configuration_hyphen_id
+                    org: Components.Parameters.Org,
+                    networkConfigurationId: Components.Parameters.NetworkConfigurationId
                 ) {
                     self.org = org
-                    self.network_configuration_id = network_configuration_id
+                    self.networkConfigurationId = networkConfigurationId
                 }
             }
-            public var path: Operations.hosted_hyphen_compute_sol_delete_hyphen_network_hyphen_configuration_hyphen_from_hyphen_org.Input.Path
+            public var path: Operations.HostedComputeDeleteNetworkConfigurationFromOrg.Input.Path
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
-            public init(path: Operations.hosted_hyphen_compute_sol_delete_hyphen_network_hyphen_configuration_hyphen_from_hyphen_org.Input.Path) {
+            public init(path: Operations.HostedComputeDeleteNetworkConfigurationFromOrg.Input.Path) {
                 self.path = path
             }
         }
@@ -1135,12 +1144,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/settings/network-configurations/{network_configuration_id}/delete(hosted-compute/delete-network-configuration-from-org)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.hosted_hyphen_compute_sol_delete_hyphen_network_hyphen_configuration_hyphen_from_hyphen_org.Output.NoContent)
+            case noContent(Operations.HostedComputeDeleteNetworkConfigurationFromOrg.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/settings/network-configurations/{network_configuration_id}/delete(hosted-compute/delete-network-configuration-from-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.hosted_hyphen_compute_sol_delete_hyphen_network_hyphen_configuration_hyphen_from_hyphen_org.Output.NoContent {
+            public var noContent: Operations.HostedComputeDeleteNetworkConfigurationFromOrg.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -1167,7 +1184,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/settings/network-settings/{network_settings_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/settings/network-settings/{network_settings_id}/get(hosted-compute/get-network-settings-for-org)`.
-    public enum hosted_hyphen_compute_sol_get_hyphen_network_hyphen_settings_hyphen_for_hyphen_org {
+    public enum HostedComputeGetNetworkSettingsForOrg {
         public static let id: Swift.String = "hosted-compute/get-network-settings-for-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-settings/{network_settings_id}/GET/path`.
@@ -1175,45 +1192,45 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-settings/{network_settings_id}/GET/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// Unique identifier of the hosted compute network settings.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-settings/{network_settings_id}/GET/path/network_settings_id`.
-                public var network_settings_id: Components.Parameters.network_hyphen_settings_hyphen_id
+                public var networkSettingsId: Components.Parameters.NetworkSettingsId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - network_settings_id: Unique identifier of the hosted compute network settings.
+                ///   - networkSettingsId: Unique identifier of the hosted compute network settings.
                 public init(
-                    org: Components.Parameters.org,
-                    network_settings_id: Components.Parameters.network_hyphen_settings_hyphen_id
+                    org: Components.Parameters.Org,
+                    networkSettingsId: Components.Parameters.NetworkSettingsId
                 ) {
                     self.org = org
-                    self.network_settings_id = network_settings_id
+                    self.networkSettingsId = networkSettingsId
                 }
             }
-            public var path: Operations.hosted_hyphen_compute_sol_get_hyphen_network_hyphen_settings_hyphen_for_hyphen_org.Input.Path
+            public var path: Operations.HostedComputeGetNetworkSettingsForOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-settings/{network_settings_id}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.hosted_hyphen_compute_sol_get_hyphen_network_hyphen_settings_hyphen_for_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.HostedComputeGetNetworkSettingsForOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.hosted_hyphen_compute_sol_get_hyphen_network_hyphen_settings_hyphen_for_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.HostedComputeGetNetworkSettingsForOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.hosted_hyphen_compute_sol_get_hyphen_network_hyphen_settings_hyphen_for_hyphen_org.Input.Headers
+            public var headers: Operations.HostedComputeGetNetworkSettingsForOrg.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.hosted_hyphen_compute_sol_get_hyphen_network_hyphen_settings_hyphen_for_hyphen_org.Input.Path,
-                headers: Operations.hosted_hyphen_compute_sol_get_hyphen_network_hyphen_settings_hyphen_for_hyphen_org.Input.Headers = .init()
+                path: Operations.HostedComputeGetNetworkSettingsForOrg.Input.Path,
+                headers: Operations.HostedComputeGetNetworkSettingsForOrg.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -1224,26 +1241,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-settings/{network_settings_id}/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-settings/{network_settings_id}/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.hosted_hyphen_compute_sol_get_hyphen_network_hyphen_settings_hyphen_for_hyphen_org.Output.Ok.Headers
+                public var headers: Operations.HostedComputeGetNetworkSettingsForOrg.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-settings/{network_settings_id}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-settings/{network_settings_id}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.network_hyphen_settings)
+                    case json(Components.Schemas.NetworkSettings)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.network_hyphen_settings {
+                    public var json: Components.Schemas.NetworkSettings {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -1253,15 +1270,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.hosted_hyphen_compute_sol_get_hyphen_network_hyphen_settings_hyphen_for_hyphen_org.Output.Ok.Body
+                public var body: Operations.HostedComputeGetNetworkSettingsForOrg.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.hosted_hyphen_compute_sol_get_hyphen_network_hyphen_settings_hyphen_for_hyphen_org.Output.Ok.Headers = .init(),
-                    body: Operations.hosted_hyphen_compute_sol_get_hyphen_network_hyphen_settings_hyphen_for_hyphen_org.Output.Ok.Body
+                    headers: Operations.HostedComputeGetNetworkSettingsForOrg.Output.Ok.Headers = .init(),
+                    body: Operations.HostedComputeGetNetworkSettingsForOrg.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -1272,12 +1289,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/settings/network-settings/{network_settings_id}/get(hosted-compute/get-network-settings-for-org)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.hosted_hyphen_compute_sol_get_hyphen_network_hyphen_settings_hyphen_for_hyphen_org.Output.Ok)
+            case ok(Operations.HostedComputeGetNetworkSettingsForOrg.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.hosted_hyphen_compute_sol_get_hyphen_network_hyphen_settings_hyphen_for_hyphen_org.Output.Ok {
+            public var ok: Operations.HostedComputeGetNetworkSettingsForOrg.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
