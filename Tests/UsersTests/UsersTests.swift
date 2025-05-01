@@ -7,7 +7,7 @@ final class UsersTests: XCTestCase {
     
     func testUsersCountGreaterThanZero() async throws {
         let client = Client(
-            serverURL: try Servers.server1(),
+            serverURL: try Servers.Server1.url(),
             transport: URLSessionTransport()
         )
         let list = try await client.usersList()

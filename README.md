@@ -14,7 +14,7 @@ import GitHubRestAPIUsers
 import OpenAPIRuntime
 import OpenAPIURLSession
 
-let client = Client(serverURL: try Servers.server1(), transport: URLSessionTransport()) 
+let client = Client(serverURL: try Servers.Server1.url(), transport: URLSessionTransport())
 let users = try await client.usersList().ok.body.json 
 ```
 
@@ -91,7 +91,7 @@ struct GitHubRestAPIIssuesExtension {
         let newBody = "\(body)\n\n\(hidingContent)"
 
         let client = Client(
-            serverURL: try Servers.server1(),
+            serverURL: try Servers.Server1.url(),
             transport: URLSessionTransport(),
             middlewares: [AuthenticationMiddleware(token: nil)]
         )
@@ -130,7 +130,7 @@ import HTTPTypes
 let token: String = "***"
 
 let client = Client(
-    serverURL: try Servers.server1(),
+    serverURL: try Servers.Server1.url(),
     transport: URLSessionTransport(),
     middlewares: [AuthenticationMiddleware(token: token)]
 )
