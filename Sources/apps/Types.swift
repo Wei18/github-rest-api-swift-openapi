@@ -19,14 +19,14 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /app`.
     /// - Remark: Generated from `#/paths//app/get(apps/get-authenticated)`.
-    func apps_sol_get_hyphen_authenticated(_ input: Operations.apps_sol_get_hyphen_authenticated.Input) async throws -> Operations.apps_sol_get_hyphen_authenticated.Output
+    func appsGetAuthenticated(_ input: Operations.AppsGetAuthenticated.Input) async throws -> Operations.AppsGetAuthenticated.Output
     /// Create a GitHub App from a manifest
     ///
     /// Use this endpoint to complete the handshake necessary when implementing the [GitHub App Manifest flow](https://docs.github.com/apps/building-github-apps/creating-github-apps-from-a-manifest/). When you create a GitHub App with the manifest flow, you receive a temporary `code` used to retrieve the GitHub App's `id`, `pem` (private key), and `webhook_secret`.
     ///
     /// - Remark: HTTP `POST /app-manifests/{code}/conversions`.
     /// - Remark: Generated from `#/paths//app-manifests/{code}/conversions/post(apps/create-from-manifest)`.
-    func apps_sol_create_hyphen_from_hyphen_manifest(_ input: Operations.apps_sol_create_hyphen_from_hyphen_manifest.Input) async throws -> Operations.apps_sol_create_hyphen_from_hyphen_manifest.Output
+    func appsCreateFromManifest(_ input: Operations.AppsCreateFromManifest.Input) async throws -> Operations.AppsCreateFromManifest.Output
     /// Get a webhook configuration for an app
     ///
     /// Returns the webhook configuration for a GitHub App. For more information about configuring a webhook for your app, see "[Creating a GitHub App](/developers/apps/creating-a-github-app)."
@@ -35,7 +35,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /app/hook/config`.
     /// - Remark: Generated from `#/paths//app/hook/config/get(apps/get-webhook-config-for-app)`.
-    func apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app(_ input: Operations.apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app.Input) async throws -> Operations.apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app.Output
+    func appsGetWebhookConfigForApp(_ input: Operations.AppsGetWebhookConfigForApp.Input) async throws -> Operations.AppsGetWebhookConfigForApp.Output
     /// Update a webhook configuration for an app
     ///
     /// Updates the webhook configuration for a GitHub App. For more information about configuring a webhook for your app, see "[Creating a GitHub App](/developers/apps/creating-a-github-app)."
@@ -44,7 +44,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `PATCH /app/hook/config`.
     /// - Remark: Generated from `#/paths//app/hook/config/patch(apps/update-webhook-config-for-app)`.
-    func apps_sol_update_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app(_ input: Operations.apps_sol_update_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app.Input) async throws -> Operations.apps_sol_update_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app.Output
+    func appsUpdateWebhookConfigForApp(_ input: Operations.AppsUpdateWebhookConfigForApp.Input) async throws -> Operations.AppsUpdateWebhookConfigForApp.Output
     /// List deliveries for an app webhook
     ///
     /// Returns a list of webhook deliveries for the webhook configured for a GitHub App.
@@ -53,7 +53,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /app/hook/deliveries`.
     /// - Remark: Generated from `#/paths//app/hook/deliveries/get(apps/list-webhook-deliveries)`.
-    func apps_sol_list_hyphen_webhook_hyphen_deliveries(_ input: Operations.apps_sol_list_hyphen_webhook_hyphen_deliveries.Input) async throws -> Operations.apps_sol_list_hyphen_webhook_hyphen_deliveries.Output
+    func appsListWebhookDeliveries(_ input: Operations.AppsListWebhookDeliveries.Input) async throws -> Operations.AppsListWebhookDeliveries.Output
     /// Get a delivery for an app webhook
     ///
     /// Returns a delivery for the webhook configured for a GitHub App.
@@ -62,7 +62,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /app/hook/deliveries/{delivery_id}`.
     /// - Remark: Generated from `#/paths//app/hook/deliveries/{delivery_id}/get(apps/get-webhook-delivery)`.
-    func apps_sol_get_hyphen_webhook_hyphen_delivery(_ input: Operations.apps_sol_get_hyphen_webhook_hyphen_delivery.Input) async throws -> Operations.apps_sol_get_hyphen_webhook_hyphen_delivery.Output
+    func appsGetWebhookDelivery(_ input: Operations.AppsGetWebhookDelivery.Input) async throws -> Operations.AppsGetWebhookDelivery.Output
     /// Redeliver a delivery for an app webhook
     ///
     /// Redeliver a delivery for the webhook configured for a GitHub App.
@@ -71,14 +71,14 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `POST /app/hook/deliveries/{delivery_id}/attempts`.
     /// - Remark: Generated from `#/paths//app/hook/deliveries/{delivery_id}/attempts/post(apps/redeliver-webhook-delivery)`.
-    func apps_sol_redeliver_hyphen_webhook_hyphen_delivery(_ input: Operations.apps_sol_redeliver_hyphen_webhook_hyphen_delivery.Input) async throws -> Operations.apps_sol_redeliver_hyphen_webhook_hyphen_delivery.Output
+    func appsRedeliverWebhookDelivery(_ input: Operations.AppsRedeliverWebhookDelivery.Input) async throws -> Operations.AppsRedeliverWebhookDelivery.Output
     /// List installation requests for the authenticated app
     ///
     /// Lists all the pending installation requests for the authenticated GitHub App.
     ///
     /// - Remark: HTTP `GET /app/installation-requests`.
     /// - Remark: Generated from `#/paths//app/installation-requests/get(apps/list-installation-requests-for-authenticated-app)`.
-    func apps_sol_list_hyphen_installation_hyphen_requests_hyphen_for_hyphen_authenticated_hyphen_app(_ input: Operations.apps_sol_list_hyphen_installation_hyphen_requests_hyphen_for_hyphen_authenticated_hyphen_app.Input) async throws -> Operations.apps_sol_list_hyphen_installation_hyphen_requests_hyphen_for_hyphen_authenticated_hyphen_app.Output
+    func appsListInstallationRequestsForAuthenticatedApp(_ input: Operations.AppsListInstallationRequestsForAuthenticatedApp.Input) async throws -> Operations.AppsListInstallationRequestsForAuthenticatedApp.Output
     /// List installations for the authenticated app
     ///
     /// The permissions the installation has are included under the `permissions` key.
@@ -87,7 +87,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /app/installations`.
     /// - Remark: Generated from `#/paths//app/installations/get(apps/list-installations)`.
-    func apps_sol_list_hyphen_installations(_ input: Operations.apps_sol_list_hyphen_installations.Input) async throws -> Operations.apps_sol_list_hyphen_installations.Output
+    func appsListInstallations(_ input: Operations.AppsListInstallations.Input) async throws -> Operations.AppsListInstallations.Output
     /// Get an installation for the authenticated app
     ///
     /// Enables an authenticated GitHub App to find an installation's information using the installation id.
@@ -96,7 +96,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /app/installations/{installation_id}`.
     /// - Remark: Generated from `#/paths//app/installations/{installation_id}/get(apps/get-installation)`.
-    func apps_sol_get_hyphen_installation(_ input: Operations.apps_sol_get_hyphen_installation.Input) async throws -> Operations.apps_sol_get_hyphen_installation.Output
+    func appsGetInstallation(_ input: Operations.AppsGetInstallation.Input) async throws -> Operations.AppsGetInstallation.Output
     /// Delete an installation for the authenticated app
     ///
     /// Uninstalls a GitHub App on a user, organization, or business account. If you prefer to temporarily suspend an app's access to your account's resources, then we recommend the "[Suspend an app installation](https://docs.github.com/rest/apps/apps#suspend-an-app-installation)" endpoint.
@@ -105,7 +105,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `DELETE /app/installations/{installation_id}`.
     /// - Remark: Generated from `#/paths//app/installations/{installation_id}/delete(apps/delete-installation)`.
-    func apps_sol_delete_hyphen_installation(_ input: Operations.apps_sol_delete_hyphen_installation.Input) async throws -> Operations.apps_sol_delete_hyphen_installation.Output
+    func appsDeleteInstallation(_ input: Operations.AppsDeleteInstallation.Input) async throws -> Operations.AppsDeleteInstallation.Output
     /// Create an installation access token for an app
     ///
     /// Creates an installation access token that enables a GitHub App to make authenticated API requests for the app's installation on an organization or individual account. Installation tokens expire one hour from the time you create them. Using an expired token produces a status code of `401 - Unauthorized`, and requires creating a new installation token. By default the installation token has access to all repositories that the installation can access.
@@ -118,7 +118,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `POST /app/installations/{installation_id}/access_tokens`.
     /// - Remark: Generated from `#/paths//app/installations/{installation_id}/access_tokens/post(apps/create-installation-access-token)`.
-    func apps_sol_create_hyphen_installation_hyphen_access_hyphen_token(_ input: Operations.apps_sol_create_hyphen_installation_hyphen_access_hyphen_token.Input) async throws -> Operations.apps_sol_create_hyphen_installation_hyphen_access_hyphen_token.Output
+    func appsCreateInstallationAccessToken(_ input: Operations.AppsCreateInstallationAccessToken.Input) async throws -> Operations.AppsCreateInstallationAccessToken.Output
     /// Suspend an app installation
     ///
     /// Suspends a GitHub App on a user, organization, or business account, which blocks the app from accessing the account's resources. When a GitHub App is suspended, the app's access to the GitHub API or webhook events is blocked for that account.
@@ -127,7 +127,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `PUT /app/installations/{installation_id}/suspended`.
     /// - Remark: Generated from `#/paths//app/installations/{installation_id}/suspended/put(apps/suspend-installation)`.
-    func apps_sol_suspend_hyphen_installation(_ input: Operations.apps_sol_suspend_hyphen_installation.Input) async throws -> Operations.apps_sol_suspend_hyphen_installation.Output
+    func appsSuspendInstallation(_ input: Operations.AppsSuspendInstallation.Input) async throws -> Operations.AppsSuspendInstallation.Output
     /// Unsuspend an app installation
     ///
     /// Removes a GitHub App installation suspension.
@@ -136,7 +136,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `DELETE /app/installations/{installation_id}/suspended`.
     /// - Remark: Generated from `#/paths//app/installations/{installation_id}/suspended/delete(apps/unsuspend-installation)`.
-    func apps_sol_unsuspend_hyphen_installation(_ input: Operations.apps_sol_unsuspend_hyphen_installation.Input) async throws -> Operations.apps_sol_unsuspend_hyphen_installation.Output
+    func appsUnsuspendInstallation(_ input: Operations.AppsUnsuspendInstallation.Input) async throws -> Operations.AppsUnsuspendInstallation.Output
     /// Delete an app authorization
     ///
     /// OAuth and GitHub application owners can revoke a grant for their application and a specific user. You must provide a valid OAuth `access_token` as an input parameter and the grant for the token's owner will be deleted.
@@ -144,28 +144,28 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `DELETE /applications/{client_id}/grant`.
     /// - Remark: Generated from `#/paths//applications/{client_id}/grant/delete(apps/delete-authorization)`.
-    func apps_sol_delete_hyphen_authorization(_ input: Operations.apps_sol_delete_hyphen_authorization.Input) async throws -> Operations.apps_sol_delete_hyphen_authorization.Output
+    func appsDeleteAuthorization(_ input: Operations.AppsDeleteAuthorization.Input) async throws -> Operations.AppsDeleteAuthorization.Output
     /// Check a token
     ///
     /// OAuth applications and GitHub applications with OAuth authorizations can use this API method for checking OAuth token validity without exceeding the normal rate limits for failed login attempts. Authentication works differently with this particular endpoint. Invalid tokens will return `404 NOT FOUND`.
     ///
     /// - Remark: HTTP `POST /applications/{client_id}/token`.
     /// - Remark: Generated from `#/paths//applications/{client_id}/token/post(apps/check-token)`.
-    func apps_sol_check_hyphen_token(_ input: Operations.apps_sol_check_hyphen_token.Input) async throws -> Operations.apps_sol_check_hyphen_token.Output
+    func appsCheckToken(_ input: Operations.AppsCheckToken.Input) async throws -> Operations.AppsCheckToken.Output
     /// Reset a token
     ///
     /// OAuth applications and GitHub applications with OAuth authorizations can use this API method to reset a valid OAuth token without end-user involvement. Applications must save the "token" property in the response because changes take effect immediately. Invalid tokens will return `404 NOT FOUND`.
     ///
     /// - Remark: HTTP `PATCH /applications/{client_id}/token`.
     /// - Remark: Generated from `#/paths//applications/{client_id}/token/patch(apps/reset-token)`.
-    func apps_sol_reset_hyphen_token(_ input: Operations.apps_sol_reset_hyphen_token.Input) async throws -> Operations.apps_sol_reset_hyphen_token.Output
+    func appsResetToken(_ input: Operations.AppsResetToken.Input) async throws -> Operations.AppsResetToken.Output
     /// Delete an app token
     ///
     /// OAuth  or GitHub application owners can revoke a single token for an OAuth application or a GitHub application with an OAuth authorization.
     ///
     /// - Remark: HTTP `DELETE /applications/{client_id}/token`.
     /// - Remark: Generated from `#/paths//applications/{client_id}/token/delete(apps/delete-token)`.
-    func apps_sol_delete_hyphen_token(_ input: Operations.apps_sol_delete_hyphen_token.Input) async throws -> Operations.apps_sol_delete_hyphen_token.Output
+    func appsDeleteToken(_ input: Operations.AppsDeleteToken.Input) async throws -> Operations.AppsDeleteToken.Output
     /// Create a scoped access token
     ///
     /// Use a non-scoped user access token to create a repository-scoped and/or permission-scoped user access token. You can specify
@@ -176,7 +176,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `POST /applications/{client_id}/token/scoped`.
     /// - Remark: Generated from `#/paths//applications/{client_id}/token/scoped/post(apps/scope-token)`.
-    func apps_sol_scope_hyphen_token(_ input: Operations.apps_sol_scope_hyphen_token.Input) async throws -> Operations.apps_sol_scope_hyphen_token.Output
+    func appsScopeToken(_ input: Operations.AppsScopeToken.Input) async throws -> Operations.AppsScopeToken.Output
     /// Get an app
     ///
     /// > [!NOTE]
@@ -184,14 +184,14 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /apps/{app_slug}`.
     /// - Remark: Generated from `#/paths//apps/{app_slug}/get(apps/get-by-slug)`.
-    func apps_sol_get_hyphen_by_hyphen_slug(_ input: Operations.apps_sol_get_hyphen_by_hyphen_slug.Input) async throws -> Operations.apps_sol_get_hyphen_by_hyphen_slug.Output
+    func appsGetBySlug(_ input: Operations.AppsGetBySlug.Input) async throws -> Operations.AppsGetBySlug.Output
     /// List repositories accessible to the app installation
     ///
     /// List repositories that an app installation can access.
     ///
     /// - Remark: HTTP `GET /installation/repositories`.
     /// - Remark: Generated from `#/paths//installation/repositories/get(apps/list-repos-accessible-to-installation)`.
-    func apps_sol_list_hyphen_repos_hyphen_accessible_hyphen_to_hyphen_installation(_ input: Operations.apps_sol_list_hyphen_repos_hyphen_accessible_hyphen_to_hyphen_installation.Input) async throws -> Operations.apps_sol_list_hyphen_repos_hyphen_accessible_hyphen_to_hyphen_installation.Output
+    func appsListReposAccessibleToInstallation(_ input: Operations.AppsListReposAccessibleToInstallation.Input) async throws -> Operations.AppsListReposAccessibleToInstallation.Output
     /// Revoke an installation access token
     ///
     /// Revokes the installation token you're using to authenticate as an installation and access this endpoint.
@@ -200,7 +200,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `DELETE /installation/token`.
     /// - Remark: Generated from `#/paths//installation/token/delete(apps/revoke-installation-access-token)`.
-    func apps_sol_revoke_hyphen_installation_hyphen_access_hyphen_token(_ input: Operations.apps_sol_revoke_hyphen_installation_hyphen_access_hyphen_token.Input) async throws -> Operations.apps_sol_revoke_hyphen_installation_hyphen_access_hyphen_token.Output
+    func appsRevokeInstallationAccessToken(_ input: Operations.AppsRevokeInstallationAccessToken.Input) async throws -> Operations.AppsRevokeInstallationAccessToken.Output
     /// Get a subscription plan for an account
     ///
     /// Shows whether the user or organization account actively subscribes to a plan listed by the authenticated GitHub App. When someone submits a plan change that won't be processed until the end of their billing cycle, you will also see the upcoming pending change.
@@ -209,7 +209,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /marketplace_listing/accounts/{account_id}`.
     /// - Remark: Generated from `#/paths//marketplace_listing/accounts/{account_id}/get(apps/get-subscription-plan-for-account)`.
-    func apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account(_ input: Operations.apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account.Input) async throws -> Operations.apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account.Output
+    func appsGetSubscriptionPlanForAccount(_ input: Operations.AppsGetSubscriptionPlanForAccount.Input) async throws -> Operations.AppsGetSubscriptionPlanForAccount.Output
     /// List plans
     ///
     /// Lists all plans that are part of your GitHub Marketplace listing.
@@ -218,7 +218,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /marketplace_listing/plans`.
     /// - Remark: Generated from `#/paths//marketplace_listing/plans/get(apps/list-plans)`.
-    func apps_sol_list_hyphen_plans(_ input: Operations.apps_sol_list_hyphen_plans.Input) async throws -> Operations.apps_sol_list_hyphen_plans.Output
+    func appsListPlans(_ input: Operations.AppsListPlans.Input) async throws -> Operations.AppsListPlans.Output
     /// List accounts for a plan
     ///
     /// Returns user and organization accounts associated with the specified plan, including free plans. For per-seat pricing, you see the list of accounts that have purchased the plan, including the number of seats purchased. When someone submits a plan change that won't be processed until the end of their billing cycle, you will also see the upcoming pending change.
@@ -227,7 +227,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /marketplace_listing/plans/{plan_id}/accounts`.
     /// - Remark: Generated from `#/paths//marketplace_listing/plans/{plan_id}/accounts/get(apps/list-accounts-for-plan)`.
-    func apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan(_ input: Operations.apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan.Input) async throws -> Operations.apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan.Output
+    func appsListAccountsForPlan(_ input: Operations.AppsListAccountsForPlan.Input) async throws -> Operations.AppsListAccountsForPlan.Output
     /// Get a subscription plan for an account (stubbed)
     ///
     /// Shows whether the user or organization account actively subscribes to a plan listed by the authenticated GitHub App. When someone submits a plan change that won't be processed until the end of their billing cycle, you will also see the upcoming pending change.
@@ -236,7 +236,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /marketplace_listing/stubbed/accounts/{account_id}`.
     /// - Remark: Generated from `#/paths//marketplace_listing/stubbed/accounts/{account_id}/get(apps/get-subscription-plan-for-account-stubbed)`.
-    func apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account_hyphen_stubbed(_ input: Operations.apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account_hyphen_stubbed.Input) async throws -> Operations.apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account_hyphen_stubbed.Output
+    func appsGetSubscriptionPlanForAccountStubbed(_ input: Operations.AppsGetSubscriptionPlanForAccountStubbed.Input) async throws -> Operations.AppsGetSubscriptionPlanForAccountStubbed.Output
     /// List plans (stubbed)
     ///
     /// Lists all plans that are part of your GitHub Marketplace listing.
@@ -245,7 +245,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /marketplace_listing/stubbed/plans`.
     /// - Remark: Generated from `#/paths//marketplace_listing/stubbed/plans/get(apps/list-plans-stubbed)`.
-    func apps_sol_list_hyphen_plans_hyphen_stubbed(_ input: Operations.apps_sol_list_hyphen_plans_hyphen_stubbed.Input) async throws -> Operations.apps_sol_list_hyphen_plans_hyphen_stubbed.Output
+    func appsListPlansStubbed(_ input: Operations.AppsListPlansStubbed.Input) async throws -> Operations.AppsListPlansStubbed.Output
     /// List accounts for a plan (stubbed)
     ///
     /// Returns repository and organization accounts associated with the specified plan, including free plans. For per-seat pricing, you see the list of accounts that have purchased the plan, including the number of seats purchased. When someone submits a plan change that won't be processed until the end of their billing cycle, you will also see the upcoming pending change.
@@ -254,7 +254,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /marketplace_listing/stubbed/plans/{plan_id}/accounts`.
     /// - Remark: Generated from `#/paths//marketplace_listing/stubbed/plans/{plan_id}/accounts/get(apps/list-accounts-for-plan-stubbed)`.
-    func apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan_hyphen_stubbed(_ input: Operations.apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan_hyphen_stubbed.Input) async throws -> Operations.apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan_hyphen_stubbed.Output
+    func appsListAccountsForPlanStubbed(_ input: Operations.AppsListAccountsForPlanStubbed.Input) async throws -> Operations.AppsListAccountsForPlanStubbed.Output
     /// Get an organization installation for the authenticated app
     ///
     /// Enables an authenticated GitHub App to find the organization's installation information.
@@ -263,7 +263,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/installation`.
     /// - Remark: Generated from `#/paths//orgs/{org}/installation/get(apps/get-org-installation)`.
-    func apps_sol_get_hyphen_org_hyphen_installation(_ input: Operations.apps_sol_get_hyphen_org_hyphen_installation.Input) async throws -> Operations.apps_sol_get_hyphen_org_hyphen_installation.Output
+    func appsGetOrgInstallation(_ input: Operations.AppsGetOrgInstallation.Input) async throws -> Operations.AppsGetOrgInstallation.Output
     /// Get a repository installation for the authenticated app
     ///
     /// Enables an authenticated GitHub App to find the repository's installation information. The installation's account type will be either an organization or a user account, depending which account the repository belongs to.
@@ -272,7 +272,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/installation`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/installation/get(apps/get-repo-installation)`.
-    func apps_sol_get_hyphen_repo_hyphen_installation(_ input: Operations.apps_sol_get_hyphen_repo_hyphen_installation.Input) async throws -> Operations.apps_sol_get_hyphen_repo_hyphen_installation.Output
+    func appsGetRepoInstallation(_ input: Operations.AppsGetRepoInstallation.Input) async throws -> Operations.AppsGetRepoInstallation.Output
     /// List app installations accessible to the user access token
     ///
     /// Lists installations of your GitHub App that the authenticated user has explicit permission (`:read`, `:write`, or `:admin`) to access.
@@ -283,7 +283,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /user/installations`.
     /// - Remark: Generated from `#/paths//user/installations/get(apps/list-installations-for-authenticated-user)`.
-    func apps_sol_list_hyphen_installations_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.apps_sol_list_hyphen_installations_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.apps_sol_list_hyphen_installations_hyphen_for_hyphen_authenticated_hyphen_user.Output
+    func appsListInstallationsForAuthenticatedUser(_ input: Operations.AppsListInstallationsForAuthenticatedUser.Input) async throws -> Operations.AppsListInstallationsForAuthenticatedUser.Output
     /// List repositories accessible to the user access token
     ///
     /// List repositories that the authenticated user has explicit permission (`:read`, `:write`, or `:admin`) to access for an installation.
@@ -294,7 +294,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /user/installations/{installation_id}/repositories`.
     /// - Remark: Generated from `#/paths//user/installations/{installation_id}/repositories/get(apps/list-installation-repos-for-authenticated-user)`.
-    func apps_sol_list_hyphen_installation_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.apps_sol_list_hyphen_installation_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.apps_sol_list_hyphen_installation_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user.Output
+    func appsListInstallationReposForAuthenticatedUser(_ input: Operations.AppsListInstallationReposForAuthenticatedUser.Input) async throws -> Operations.AppsListInstallationReposForAuthenticatedUser.Output
     /// Add a repository to an app installation
     ///
     /// Add a single repository to an installation. The authenticated user must have admin access to the repository.    
@@ -303,7 +303,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `PUT /user/installations/{installation_id}/repositories/{repository_id}`.
     /// - Remark: Generated from `#/paths//user/installations/{installation_id}/repositories/{repository_id}/put(apps/add-repo-to-installation-for-authenticated-user)`.
-    func apps_sol_add_hyphen_repo_hyphen_to_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.apps_sol_add_hyphen_repo_hyphen_to_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.apps_sol_add_hyphen_repo_hyphen_to_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user.Output
+    func appsAddRepoToInstallationForAuthenticatedUser(_ input: Operations.AppsAddRepoToInstallationForAuthenticatedUser.Input) async throws -> Operations.AppsAddRepoToInstallationForAuthenticatedUser.Output
     /// Remove a repository from an app installation
     ///
     /// Remove a single repository from an installation. The authenticated user must have admin access to the repository. The installation must have the `repository_selection` of `selected`. 
@@ -312,21 +312,21 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `DELETE /user/installations/{installation_id}/repositories/{repository_id}`.
     /// - Remark: Generated from `#/paths//user/installations/{installation_id}/repositories/{repository_id}/delete(apps/remove-repo-from-installation-for-authenticated-user)`.
-    func apps_sol_remove_hyphen_repo_hyphen_from_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.apps_sol_remove_hyphen_repo_hyphen_from_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.apps_sol_remove_hyphen_repo_hyphen_from_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user.Output
+    func appsRemoveRepoFromInstallationForAuthenticatedUser(_ input: Operations.AppsRemoveRepoFromInstallationForAuthenticatedUser.Input) async throws -> Operations.AppsRemoveRepoFromInstallationForAuthenticatedUser.Output
     /// List subscriptions for the authenticated user
     ///
     /// Lists the active subscriptions for the authenticated user.
     ///
     /// - Remark: HTTP `GET /user/marketplace_purchases`.
     /// - Remark: Generated from `#/paths//user/marketplace_purchases/get(apps/list-subscriptions-for-authenticated-user)`.
-    func apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user.Output
+    func appsListSubscriptionsForAuthenticatedUser(_ input: Operations.AppsListSubscriptionsForAuthenticatedUser.Input) async throws -> Operations.AppsListSubscriptionsForAuthenticatedUser.Output
     /// List subscriptions for the authenticated user (stubbed)
     ///
     /// Lists the active subscriptions for the authenticated user.
     ///
     /// - Remark: HTTP `GET /user/marketplace_purchases/stubbed`.
     /// - Remark: Generated from `#/paths//user/marketplace_purchases/stubbed/get(apps/list-subscriptions-for-authenticated-user-stubbed)`.
-    func apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user_hyphen_stubbed(_ input: Operations.apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user_hyphen_stubbed.Input) async throws -> Operations.apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user_hyphen_stubbed.Output
+    func appsListSubscriptionsForAuthenticatedUserStubbed(_ input: Operations.AppsListSubscriptionsForAuthenticatedUserStubbed.Input) async throws -> Operations.AppsListSubscriptionsForAuthenticatedUserStubbed.Output
     /// Get a user installation for the authenticated app
     ///
     /// Enables an authenticated GitHub App to find the user’s installation information.
@@ -335,7 +335,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /users/{username}/installation`.
     /// - Remark: Generated from `#/paths//users/{username}/installation/get(apps/get-user-installation)`.
-    func apps_sol_get_hyphen_user_hyphen_installation(_ input: Operations.apps_sol_get_hyphen_user_hyphen_installation.Input) async throws -> Operations.apps_sol_get_hyphen_user_hyphen_installation.Output
+    func appsGetUserInstallation(_ input: Operations.AppsGetUserInstallation.Input) async throws -> Operations.AppsGetUserInstallation.Output
 }
 
 /// Convenience overloads for operation inputs.
@@ -348,8 +348,8 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /app`.
     /// - Remark: Generated from `#/paths//app/get(apps/get-authenticated)`.
-    public func apps_sol_get_hyphen_authenticated(headers: Operations.apps_sol_get_hyphen_authenticated.Input.Headers = .init()) async throws -> Operations.apps_sol_get_hyphen_authenticated.Output {
-        try await apps_sol_get_hyphen_authenticated(Operations.apps_sol_get_hyphen_authenticated.Input(headers: headers))
+    public func appsGetAuthenticated(headers: Operations.AppsGetAuthenticated.Input.Headers = .init()) async throws -> Operations.AppsGetAuthenticated.Output {
+        try await appsGetAuthenticated(Operations.AppsGetAuthenticated.Input(headers: headers))
     }
     /// Create a GitHub App from a manifest
     ///
@@ -357,11 +357,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /app-manifests/{code}/conversions`.
     /// - Remark: Generated from `#/paths//app-manifests/{code}/conversions/post(apps/create-from-manifest)`.
-    public func apps_sol_create_hyphen_from_hyphen_manifest(
-        path: Operations.apps_sol_create_hyphen_from_hyphen_manifest.Input.Path,
-        headers: Operations.apps_sol_create_hyphen_from_hyphen_manifest.Input.Headers = .init()
-    ) async throws -> Operations.apps_sol_create_hyphen_from_hyphen_manifest.Output {
-        try await apps_sol_create_hyphen_from_hyphen_manifest(Operations.apps_sol_create_hyphen_from_hyphen_manifest.Input(
+    public func appsCreateFromManifest(
+        path: Operations.AppsCreateFromManifest.Input.Path,
+        headers: Operations.AppsCreateFromManifest.Input.Headers = .init()
+    ) async throws -> Operations.AppsCreateFromManifest.Output {
+        try await appsCreateFromManifest(Operations.AppsCreateFromManifest.Input(
             path: path,
             headers: headers
         ))
@@ -374,8 +374,8 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /app/hook/config`.
     /// - Remark: Generated from `#/paths//app/hook/config/get(apps/get-webhook-config-for-app)`.
-    public func apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app(headers: Operations.apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app.Input.Headers = .init()) async throws -> Operations.apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app.Output {
-        try await apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app(Operations.apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app.Input(headers: headers))
+    public func appsGetWebhookConfigForApp(headers: Operations.AppsGetWebhookConfigForApp.Input.Headers = .init()) async throws -> Operations.AppsGetWebhookConfigForApp.Output {
+        try await appsGetWebhookConfigForApp(Operations.AppsGetWebhookConfigForApp.Input(headers: headers))
     }
     /// Update a webhook configuration for an app
     ///
@@ -385,11 +385,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `PATCH /app/hook/config`.
     /// - Remark: Generated from `#/paths//app/hook/config/patch(apps/update-webhook-config-for-app)`.
-    public func apps_sol_update_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app(
-        headers: Operations.apps_sol_update_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app.Input.Headers = .init(),
-        body: Operations.apps_sol_update_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app.Input.Body
-    ) async throws -> Operations.apps_sol_update_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app.Output {
-        try await apps_sol_update_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app(Operations.apps_sol_update_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app.Input(
+    public func appsUpdateWebhookConfigForApp(
+        headers: Operations.AppsUpdateWebhookConfigForApp.Input.Headers = .init(),
+        body: Operations.AppsUpdateWebhookConfigForApp.Input.Body
+    ) async throws -> Operations.AppsUpdateWebhookConfigForApp.Output {
+        try await appsUpdateWebhookConfigForApp(Operations.AppsUpdateWebhookConfigForApp.Input(
             headers: headers,
             body: body
         ))
@@ -402,11 +402,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /app/hook/deliveries`.
     /// - Remark: Generated from `#/paths//app/hook/deliveries/get(apps/list-webhook-deliveries)`.
-    public func apps_sol_list_hyphen_webhook_hyphen_deliveries(
-        query: Operations.apps_sol_list_hyphen_webhook_hyphen_deliveries.Input.Query = .init(),
-        headers: Operations.apps_sol_list_hyphen_webhook_hyphen_deliveries.Input.Headers = .init()
-    ) async throws -> Operations.apps_sol_list_hyphen_webhook_hyphen_deliveries.Output {
-        try await apps_sol_list_hyphen_webhook_hyphen_deliveries(Operations.apps_sol_list_hyphen_webhook_hyphen_deliveries.Input(
+    public func appsListWebhookDeliveries(
+        query: Operations.AppsListWebhookDeliveries.Input.Query = .init(),
+        headers: Operations.AppsListWebhookDeliveries.Input.Headers = .init()
+    ) async throws -> Operations.AppsListWebhookDeliveries.Output {
+        try await appsListWebhookDeliveries(Operations.AppsListWebhookDeliveries.Input(
             query: query,
             headers: headers
         ))
@@ -419,11 +419,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /app/hook/deliveries/{delivery_id}`.
     /// - Remark: Generated from `#/paths//app/hook/deliveries/{delivery_id}/get(apps/get-webhook-delivery)`.
-    public func apps_sol_get_hyphen_webhook_hyphen_delivery(
-        path: Operations.apps_sol_get_hyphen_webhook_hyphen_delivery.Input.Path,
-        headers: Operations.apps_sol_get_hyphen_webhook_hyphen_delivery.Input.Headers = .init()
-    ) async throws -> Operations.apps_sol_get_hyphen_webhook_hyphen_delivery.Output {
-        try await apps_sol_get_hyphen_webhook_hyphen_delivery(Operations.apps_sol_get_hyphen_webhook_hyphen_delivery.Input(
+    public func appsGetWebhookDelivery(
+        path: Operations.AppsGetWebhookDelivery.Input.Path,
+        headers: Operations.AppsGetWebhookDelivery.Input.Headers = .init()
+    ) async throws -> Operations.AppsGetWebhookDelivery.Output {
+        try await appsGetWebhookDelivery(Operations.AppsGetWebhookDelivery.Input(
             path: path,
             headers: headers
         ))
@@ -436,11 +436,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /app/hook/deliveries/{delivery_id}/attempts`.
     /// - Remark: Generated from `#/paths//app/hook/deliveries/{delivery_id}/attempts/post(apps/redeliver-webhook-delivery)`.
-    public func apps_sol_redeliver_hyphen_webhook_hyphen_delivery(
-        path: Operations.apps_sol_redeliver_hyphen_webhook_hyphen_delivery.Input.Path,
-        headers: Operations.apps_sol_redeliver_hyphen_webhook_hyphen_delivery.Input.Headers = .init()
-    ) async throws -> Operations.apps_sol_redeliver_hyphen_webhook_hyphen_delivery.Output {
-        try await apps_sol_redeliver_hyphen_webhook_hyphen_delivery(Operations.apps_sol_redeliver_hyphen_webhook_hyphen_delivery.Input(
+    public func appsRedeliverWebhookDelivery(
+        path: Operations.AppsRedeliverWebhookDelivery.Input.Path,
+        headers: Operations.AppsRedeliverWebhookDelivery.Input.Headers = .init()
+    ) async throws -> Operations.AppsRedeliverWebhookDelivery.Output {
+        try await appsRedeliverWebhookDelivery(Operations.AppsRedeliverWebhookDelivery.Input(
             path: path,
             headers: headers
         ))
@@ -451,11 +451,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /app/installation-requests`.
     /// - Remark: Generated from `#/paths//app/installation-requests/get(apps/list-installation-requests-for-authenticated-app)`.
-    public func apps_sol_list_hyphen_installation_hyphen_requests_hyphen_for_hyphen_authenticated_hyphen_app(
-        query: Operations.apps_sol_list_hyphen_installation_hyphen_requests_hyphen_for_hyphen_authenticated_hyphen_app.Input.Query = .init(),
-        headers: Operations.apps_sol_list_hyphen_installation_hyphen_requests_hyphen_for_hyphen_authenticated_hyphen_app.Input.Headers = .init()
-    ) async throws -> Operations.apps_sol_list_hyphen_installation_hyphen_requests_hyphen_for_hyphen_authenticated_hyphen_app.Output {
-        try await apps_sol_list_hyphen_installation_hyphen_requests_hyphen_for_hyphen_authenticated_hyphen_app(Operations.apps_sol_list_hyphen_installation_hyphen_requests_hyphen_for_hyphen_authenticated_hyphen_app.Input(
+    public func appsListInstallationRequestsForAuthenticatedApp(
+        query: Operations.AppsListInstallationRequestsForAuthenticatedApp.Input.Query = .init(),
+        headers: Operations.AppsListInstallationRequestsForAuthenticatedApp.Input.Headers = .init()
+    ) async throws -> Operations.AppsListInstallationRequestsForAuthenticatedApp.Output {
+        try await appsListInstallationRequestsForAuthenticatedApp(Operations.AppsListInstallationRequestsForAuthenticatedApp.Input(
             query: query,
             headers: headers
         ))
@@ -468,11 +468,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /app/installations`.
     /// - Remark: Generated from `#/paths//app/installations/get(apps/list-installations)`.
-    public func apps_sol_list_hyphen_installations(
-        query: Operations.apps_sol_list_hyphen_installations.Input.Query = .init(),
-        headers: Operations.apps_sol_list_hyphen_installations.Input.Headers = .init()
-    ) async throws -> Operations.apps_sol_list_hyphen_installations.Output {
-        try await apps_sol_list_hyphen_installations(Operations.apps_sol_list_hyphen_installations.Input(
+    public func appsListInstallations(
+        query: Operations.AppsListInstallations.Input.Query = .init(),
+        headers: Operations.AppsListInstallations.Input.Headers = .init()
+    ) async throws -> Operations.AppsListInstallations.Output {
+        try await appsListInstallations(Operations.AppsListInstallations.Input(
             query: query,
             headers: headers
         ))
@@ -485,11 +485,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /app/installations/{installation_id}`.
     /// - Remark: Generated from `#/paths//app/installations/{installation_id}/get(apps/get-installation)`.
-    public func apps_sol_get_hyphen_installation(
-        path: Operations.apps_sol_get_hyphen_installation.Input.Path,
-        headers: Operations.apps_sol_get_hyphen_installation.Input.Headers = .init()
-    ) async throws -> Operations.apps_sol_get_hyphen_installation.Output {
-        try await apps_sol_get_hyphen_installation(Operations.apps_sol_get_hyphen_installation.Input(
+    public func appsGetInstallation(
+        path: Operations.AppsGetInstallation.Input.Path,
+        headers: Operations.AppsGetInstallation.Input.Headers = .init()
+    ) async throws -> Operations.AppsGetInstallation.Output {
+        try await appsGetInstallation(Operations.AppsGetInstallation.Input(
             path: path,
             headers: headers
         ))
@@ -502,11 +502,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /app/installations/{installation_id}`.
     /// - Remark: Generated from `#/paths//app/installations/{installation_id}/delete(apps/delete-installation)`.
-    public func apps_sol_delete_hyphen_installation(
-        path: Operations.apps_sol_delete_hyphen_installation.Input.Path,
-        headers: Operations.apps_sol_delete_hyphen_installation.Input.Headers = .init()
-    ) async throws -> Operations.apps_sol_delete_hyphen_installation.Output {
-        try await apps_sol_delete_hyphen_installation(Operations.apps_sol_delete_hyphen_installation.Input(
+    public func appsDeleteInstallation(
+        path: Operations.AppsDeleteInstallation.Input.Path,
+        headers: Operations.AppsDeleteInstallation.Input.Headers = .init()
+    ) async throws -> Operations.AppsDeleteInstallation.Output {
+        try await appsDeleteInstallation(Operations.AppsDeleteInstallation.Input(
             path: path,
             headers: headers
         ))
@@ -523,12 +523,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /app/installations/{installation_id}/access_tokens`.
     /// - Remark: Generated from `#/paths//app/installations/{installation_id}/access_tokens/post(apps/create-installation-access-token)`.
-    public func apps_sol_create_hyphen_installation_hyphen_access_hyphen_token(
-        path: Operations.apps_sol_create_hyphen_installation_hyphen_access_hyphen_token.Input.Path,
-        headers: Operations.apps_sol_create_hyphen_installation_hyphen_access_hyphen_token.Input.Headers = .init(),
-        body: Operations.apps_sol_create_hyphen_installation_hyphen_access_hyphen_token.Input.Body? = nil
-    ) async throws -> Operations.apps_sol_create_hyphen_installation_hyphen_access_hyphen_token.Output {
-        try await apps_sol_create_hyphen_installation_hyphen_access_hyphen_token(Operations.apps_sol_create_hyphen_installation_hyphen_access_hyphen_token.Input(
+    public func appsCreateInstallationAccessToken(
+        path: Operations.AppsCreateInstallationAccessToken.Input.Path,
+        headers: Operations.AppsCreateInstallationAccessToken.Input.Headers = .init(),
+        body: Operations.AppsCreateInstallationAccessToken.Input.Body? = nil
+    ) async throws -> Operations.AppsCreateInstallationAccessToken.Output {
+        try await appsCreateInstallationAccessToken(Operations.AppsCreateInstallationAccessToken.Input(
             path: path,
             headers: headers,
             body: body
@@ -542,11 +542,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `PUT /app/installations/{installation_id}/suspended`.
     /// - Remark: Generated from `#/paths//app/installations/{installation_id}/suspended/put(apps/suspend-installation)`.
-    public func apps_sol_suspend_hyphen_installation(
-        path: Operations.apps_sol_suspend_hyphen_installation.Input.Path,
-        headers: Operations.apps_sol_suspend_hyphen_installation.Input.Headers = .init()
-    ) async throws -> Operations.apps_sol_suspend_hyphen_installation.Output {
-        try await apps_sol_suspend_hyphen_installation(Operations.apps_sol_suspend_hyphen_installation.Input(
+    public func appsSuspendInstallation(
+        path: Operations.AppsSuspendInstallation.Input.Path,
+        headers: Operations.AppsSuspendInstallation.Input.Headers = .init()
+    ) async throws -> Operations.AppsSuspendInstallation.Output {
+        try await appsSuspendInstallation(Operations.AppsSuspendInstallation.Input(
             path: path,
             headers: headers
         ))
@@ -559,11 +559,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /app/installations/{installation_id}/suspended`.
     /// - Remark: Generated from `#/paths//app/installations/{installation_id}/suspended/delete(apps/unsuspend-installation)`.
-    public func apps_sol_unsuspend_hyphen_installation(
-        path: Operations.apps_sol_unsuspend_hyphen_installation.Input.Path,
-        headers: Operations.apps_sol_unsuspend_hyphen_installation.Input.Headers = .init()
-    ) async throws -> Operations.apps_sol_unsuspend_hyphen_installation.Output {
-        try await apps_sol_unsuspend_hyphen_installation(Operations.apps_sol_unsuspend_hyphen_installation.Input(
+    public func appsUnsuspendInstallation(
+        path: Operations.AppsUnsuspendInstallation.Input.Path,
+        headers: Operations.AppsUnsuspendInstallation.Input.Headers = .init()
+    ) async throws -> Operations.AppsUnsuspendInstallation.Output {
+        try await appsUnsuspendInstallation(Operations.AppsUnsuspendInstallation.Input(
             path: path,
             headers: headers
         ))
@@ -575,12 +575,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /applications/{client_id}/grant`.
     /// - Remark: Generated from `#/paths//applications/{client_id}/grant/delete(apps/delete-authorization)`.
-    public func apps_sol_delete_hyphen_authorization(
-        path: Operations.apps_sol_delete_hyphen_authorization.Input.Path,
-        headers: Operations.apps_sol_delete_hyphen_authorization.Input.Headers = .init(),
-        body: Operations.apps_sol_delete_hyphen_authorization.Input.Body
-    ) async throws -> Operations.apps_sol_delete_hyphen_authorization.Output {
-        try await apps_sol_delete_hyphen_authorization(Operations.apps_sol_delete_hyphen_authorization.Input(
+    public func appsDeleteAuthorization(
+        path: Operations.AppsDeleteAuthorization.Input.Path,
+        headers: Operations.AppsDeleteAuthorization.Input.Headers = .init(),
+        body: Operations.AppsDeleteAuthorization.Input.Body
+    ) async throws -> Operations.AppsDeleteAuthorization.Output {
+        try await appsDeleteAuthorization(Operations.AppsDeleteAuthorization.Input(
             path: path,
             headers: headers,
             body: body
@@ -592,12 +592,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /applications/{client_id}/token`.
     /// - Remark: Generated from `#/paths//applications/{client_id}/token/post(apps/check-token)`.
-    public func apps_sol_check_hyphen_token(
-        path: Operations.apps_sol_check_hyphen_token.Input.Path,
-        headers: Operations.apps_sol_check_hyphen_token.Input.Headers = .init(),
-        body: Operations.apps_sol_check_hyphen_token.Input.Body
-    ) async throws -> Operations.apps_sol_check_hyphen_token.Output {
-        try await apps_sol_check_hyphen_token(Operations.apps_sol_check_hyphen_token.Input(
+    public func appsCheckToken(
+        path: Operations.AppsCheckToken.Input.Path,
+        headers: Operations.AppsCheckToken.Input.Headers = .init(),
+        body: Operations.AppsCheckToken.Input.Body
+    ) async throws -> Operations.AppsCheckToken.Output {
+        try await appsCheckToken(Operations.AppsCheckToken.Input(
             path: path,
             headers: headers,
             body: body
@@ -609,12 +609,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `PATCH /applications/{client_id}/token`.
     /// - Remark: Generated from `#/paths//applications/{client_id}/token/patch(apps/reset-token)`.
-    public func apps_sol_reset_hyphen_token(
-        path: Operations.apps_sol_reset_hyphen_token.Input.Path,
-        headers: Operations.apps_sol_reset_hyphen_token.Input.Headers = .init(),
-        body: Operations.apps_sol_reset_hyphen_token.Input.Body
-    ) async throws -> Operations.apps_sol_reset_hyphen_token.Output {
-        try await apps_sol_reset_hyphen_token(Operations.apps_sol_reset_hyphen_token.Input(
+    public func appsResetToken(
+        path: Operations.AppsResetToken.Input.Path,
+        headers: Operations.AppsResetToken.Input.Headers = .init(),
+        body: Operations.AppsResetToken.Input.Body
+    ) async throws -> Operations.AppsResetToken.Output {
+        try await appsResetToken(Operations.AppsResetToken.Input(
             path: path,
             headers: headers,
             body: body
@@ -626,12 +626,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /applications/{client_id}/token`.
     /// - Remark: Generated from `#/paths//applications/{client_id}/token/delete(apps/delete-token)`.
-    public func apps_sol_delete_hyphen_token(
-        path: Operations.apps_sol_delete_hyphen_token.Input.Path,
-        headers: Operations.apps_sol_delete_hyphen_token.Input.Headers = .init(),
-        body: Operations.apps_sol_delete_hyphen_token.Input.Body
-    ) async throws -> Operations.apps_sol_delete_hyphen_token.Output {
-        try await apps_sol_delete_hyphen_token(Operations.apps_sol_delete_hyphen_token.Input(
+    public func appsDeleteToken(
+        path: Operations.AppsDeleteToken.Input.Path,
+        headers: Operations.AppsDeleteToken.Input.Headers = .init(),
+        body: Operations.AppsDeleteToken.Input.Body
+    ) async throws -> Operations.AppsDeleteToken.Output {
+        try await appsDeleteToken(Operations.AppsDeleteToken.Input(
             path: path,
             headers: headers,
             body: body
@@ -647,12 +647,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /applications/{client_id}/token/scoped`.
     /// - Remark: Generated from `#/paths//applications/{client_id}/token/scoped/post(apps/scope-token)`.
-    public func apps_sol_scope_hyphen_token(
-        path: Operations.apps_sol_scope_hyphen_token.Input.Path,
-        headers: Operations.apps_sol_scope_hyphen_token.Input.Headers = .init(),
-        body: Operations.apps_sol_scope_hyphen_token.Input.Body
-    ) async throws -> Operations.apps_sol_scope_hyphen_token.Output {
-        try await apps_sol_scope_hyphen_token(Operations.apps_sol_scope_hyphen_token.Input(
+    public func appsScopeToken(
+        path: Operations.AppsScopeToken.Input.Path,
+        headers: Operations.AppsScopeToken.Input.Headers = .init(),
+        body: Operations.AppsScopeToken.Input.Body
+    ) async throws -> Operations.AppsScopeToken.Output {
+        try await appsScopeToken(Operations.AppsScopeToken.Input(
             path: path,
             headers: headers,
             body: body
@@ -665,11 +665,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /apps/{app_slug}`.
     /// - Remark: Generated from `#/paths//apps/{app_slug}/get(apps/get-by-slug)`.
-    public func apps_sol_get_hyphen_by_hyphen_slug(
-        path: Operations.apps_sol_get_hyphen_by_hyphen_slug.Input.Path,
-        headers: Operations.apps_sol_get_hyphen_by_hyphen_slug.Input.Headers = .init()
-    ) async throws -> Operations.apps_sol_get_hyphen_by_hyphen_slug.Output {
-        try await apps_sol_get_hyphen_by_hyphen_slug(Operations.apps_sol_get_hyphen_by_hyphen_slug.Input(
+    public func appsGetBySlug(
+        path: Operations.AppsGetBySlug.Input.Path,
+        headers: Operations.AppsGetBySlug.Input.Headers = .init()
+    ) async throws -> Operations.AppsGetBySlug.Output {
+        try await appsGetBySlug(Operations.AppsGetBySlug.Input(
             path: path,
             headers: headers
         ))
@@ -680,11 +680,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /installation/repositories`.
     /// - Remark: Generated from `#/paths//installation/repositories/get(apps/list-repos-accessible-to-installation)`.
-    public func apps_sol_list_hyphen_repos_hyphen_accessible_hyphen_to_hyphen_installation(
-        query: Operations.apps_sol_list_hyphen_repos_hyphen_accessible_hyphen_to_hyphen_installation.Input.Query = .init(),
-        headers: Operations.apps_sol_list_hyphen_repos_hyphen_accessible_hyphen_to_hyphen_installation.Input.Headers = .init()
-    ) async throws -> Operations.apps_sol_list_hyphen_repos_hyphen_accessible_hyphen_to_hyphen_installation.Output {
-        try await apps_sol_list_hyphen_repos_hyphen_accessible_hyphen_to_hyphen_installation(Operations.apps_sol_list_hyphen_repos_hyphen_accessible_hyphen_to_hyphen_installation.Input(
+    public func appsListReposAccessibleToInstallation(
+        query: Operations.AppsListReposAccessibleToInstallation.Input.Query = .init(),
+        headers: Operations.AppsListReposAccessibleToInstallation.Input.Headers = .init()
+    ) async throws -> Operations.AppsListReposAccessibleToInstallation.Output {
+        try await appsListReposAccessibleToInstallation(Operations.AppsListReposAccessibleToInstallation.Input(
             query: query,
             headers: headers
         ))
@@ -697,8 +697,8 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /installation/token`.
     /// - Remark: Generated from `#/paths//installation/token/delete(apps/revoke-installation-access-token)`.
-    public func apps_sol_revoke_hyphen_installation_hyphen_access_hyphen_token() async throws -> Operations.apps_sol_revoke_hyphen_installation_hyphen_access_hyphen_token.Output {
-        try await apps_sol_revoke_hyphen_installation_hyphen_access_hyphen_token(Operations.apps_sol_revoke_hyphen_installation_hyphen_access_hyphen_token.Input())
+    public func appsRevokeInstallationAccessToken() async throws -> Operations.AppsRevokeInstallationAccessToken.Output {
+        try await appsRevokeInstallationAccessToken(Operations.AppsRevokeInstallationAccessToken.Input())
     }
     /// Get a subscription plan for an account
     ///
@@ -708,11 +708,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /marketplace_listing/accounts/{account_id}`.
     /// - Remark: Generated from `#/paths//marketplace_listing/accounts/{account_id}/get(apps/get-subscription-plan-for-account)`.
-    public func apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account(
-        path: Operations.apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account.Input.Path,
-        headers: Operations.apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account.Input.Headers = .init()
-    ) async throws -> Operations.apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account.Output {
-        try await apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account(Operations.apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account.Input(
+    public func appsGetSubscriptionPlanForAccount(
+        path: Operations.AppsGetSubscriptionPlanForAccount.Input.Path,
+        headers: Operations.AppsGetSubscriptionPlanForAccount.Input.Headers = .init()
+    ) async throws -> Operations.AppsGetSubscriptionPlanForAccount.Output {
+        try await appsGetSubscriptionPlanForAccount(Operations.AppsGetSubscriptionPlanForAccount.Input(
             path: path,
             headers: headers
         ))
@@ -725,11 +725,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /marketplace_listing/plans`.
     /// - Remark: Generated from `#/paths//marketplace_listing/plans/get(apps/list-plans)`.
-    public func apps_sol_list_hyphen_plans(
-        query: Operations.apps_sol_list_hyphen_plans.Input.Query = .init(),
-        headers: Operations.apps_sol_list_hyphen_plans.Input.Headers = .init()
-    ) async throws -> Operations.apps_sol_list_hyphen_plans.Output {
-        try await apps_sol_list_hyphen_plans(Operations.apps_sol_list_hyphen_plans.Input(
+    public func appsListPlans(
+        query: Operations.AppsListPlans.Input.Query = .init(),
+        headers: Operations.AppsListPlans.Input.Headers = .init()
+    ) async throws -> Operations.AppsListPlans.Output {
+        try await appsListPlans(Operations.AppsListPlans.Input(
             query: query,
             headers: headers
         ))
@@ -742,12 +742,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /marketplace_listing/plans/{plan_id}/accounts`.
     /// - Remark: Generated from `#/paths//marketplace_listing/plans/{plan_id}/accounts/get(apps/list-accounts-for-plan)`.
-    public func apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan(
-        path: Operations.apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan.Input.Path,
-        query: Operations.apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan.Input.Query = .init(),
-        headers: Operations.apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan.Input.Headers = .init()
-    ) async throws -> Operations.apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan.Output {
-        try await apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan(Operations.apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan.Input(
+    public func appsListAccountsForPlan(
+        path: Operations.AppsListAccountsForPlan.Input.Path,
+        query: Operations.AppsListAccountsForPlan.Input.Query = .init(),
+        headers: Operations.AppsListAccountsForPlan.Input.Headers = .init()
+    ) async throws -> Operations.AppsListAccountsForPlan.Output {
+        try await appsListAccountsForPlan(Operations.AppsListAccountsForPlan.Input(
             path: path,
             query: query,
             headers: headers
@@ -761,11 +761,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /marketplace_listing/stubbed/accounts/{account_id}`.
     /// - Remark: Generated from `#/paths//marketplace_listing/stubbed/accounts/{account_id}/get(apps/get-subscription-plan-for-account-stubbed)`.
-    public func apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account_hyphen_stubbed(
-        path: Operations.apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account_hyphen_stubbed.Input.Path,
-        headers: Operations.apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account_hyphen_stubbed.Input.Headers = .init()
-    ) async throws -> Operations.apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account_hyphen_stubbed.Output {
-        try await apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account_hyphen_stubbed(Operations.apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account_hyphen_stubbed.Input(
+    public func appsGetSubscriptionPlanForAccountStubbed(
+        path: Operations.AppsGetSubscriptionPlanForAccountStubbed.Input.Path,
+        headers: Operations.AppsGetSubscriptionPlanForAccountStubbed.Input.Headers = .init()
+    ) async throws -> Operations.AppsGetSubscriptionPlanForAccountStubbed.Output {
+        try await appsGetSubscriptionPlanForAccountStubbed(Operations.AppsGetSubscriptionPlanForAccountStubbed.Input(
             path: path,
             headers: headers
         ))
@@ -778,11 +778,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /marketplace_listing/stubbed/plans`.
     /// - Remark: Generated from `#/paths//marketplace_listing/stubbed/plans/get(apps/list-plans-stubbed)`.
-    public func apps_sol_list_hyphen_plans_hyphen_stubbed(
-        query: Operations.apps_sol_list_hyphen_plans_hyphen_stubbed.Input.Query = .init(),
-        headers: Operations.apps_sol_list_hyphen_plans_hyphen_stubbed.Input.Headers = .init()
-    ) async throws -> Operations.apps_sol_list_hyphen_plans_hyphen_stubbed.Output {
-        try await apps_sol_list_hyphen_plans_hyphen_stubbed(Operations.apps_sol_list_hyphen_plans_hyphen_stubbed.Input(
+    public func appsListPlansStubbed(
+        query: Operations.AppsListPlansStubbed.Input.Query = .init(),
+        headers: Operations.AppsListPlansStubbed.Input.Headers = .init()
+    ) async throws -> Operations.AppsListPlansStubbed.Output {
+        try await appsListPlansStubbed(Operations.AppsListPlansStubbed.Input(
             query: query,
             headers: headers
         ))
@@ -795,12 +795,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /marketplace_listing/stubbed/plans/{plan_id}/accounts`.
     /// - Remark: Generated from `#/paths//marketplace_listing/stubbed/plans/{plan_id}/accounts/get(apps/list-accounts-for-plan-stubbed)`.
-    public func apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan_hyphen_stubbed(
-        path: Operations.apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan_hyphen_stubbed.Input.Path,
-        query: Operations.apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan_hyphen_stubbed.Input.Query = .init(),
-        headers: Operations.apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan_hyphen_stubbed.Input.Headers = .init()
-    ) async throws -> Operations.apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan_hyphen_stubbed.Output {
-        try await apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan_hyphen_stubbed(Operations.apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan_hyphen_stubbed.Input(
+    public func appsListAccountsForPlanStubbed(
+        path: Operations.AppsListAccountsForPlanStubbed.Input.Path,
+        query: Operations.AppsListAccountsForPlanStubbed.Input.Query = .init(),
+        headers: Operations.AppsListAccountsForPlanStubbed.Input.Headers = .init()
+    ) async throws -> Operations.AppsListAccountsForPlanStubbed.Output {
+        try await appsListAccountsForPlanStubbed(Operations.AppsListAccountsForPlanStubbed.Input(
             path: path,
             query: query,
             headers: headers
@@ -814,11 +814,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/installation`.
     /// - Remark: Generated from `#/paths//orgs/{org}/installation/get(apps/get-org-installation)`.
-    public func apps_sol_get_hyphen_org_hyphen_installation(
-        path: Operations.apps_sol_get_hyphen_org_hyphen_installation.Input.Path,
-        headers: Operations.apps_sol_get_hyphen_org_hyphen_installation.Input.Headers = .init()
-    ) async throws -> Operations.apps_sol_get_hyphen_org_hyphen_installation.Output {
-        try await apps_sol_get_hyphen_org_hyphen_installation(Operations.apps_sol_get_hyphen_org_hyphen_installation.Input(
+    public func appsGetOrgInstallation(
+        path: Operations.AppsGetOrgInstallation.Input.Path,
+        headers: Operations.AppsGetOrgInstallation.Input.Headers = .init()
+    ) async throws -> Operations.AppsGetOrgInstallation.Output {
+        try await appsGetOrgInstallation(Operations.AppsGetOrgInstallation.Input(
             path: path,
             headers: headers
         ))
@@ -831,11 +831,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/installation`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/installation/get(apps/get-repo-installation)`.
-    public func apps_sol_get_hyphen_repo_hyphen_installation(
-        path: Operations.apps_sol_get_hyphen_repo_hyphen_installation.Input.Path,
-        headers: Operations.apps_sol_get_hyphen_repo_hyphen_installation.Input.Headers = .init()
-    ) async throws -> Operations.apps_sol_get_hyphen_repo_hyphen_installation.Output {
-        try await apps_sol_get_hyphen_repo_hyphen_installation(Operations.apps_sol_get_hyphen_repo_hyphen_installation.Input(
+    public func appsGetRepoInstallation(
+        path: Operations.AppsGetRepoInstallation.Input.Path,
+        headers: Operations.AppsGetRepoInstallation.Input.Headers = .init()
+    ) async throws -> Operations.AppsGetRepoInstallation.Output {
+        try await appsGetRepoInstallation(Operations.AppsGetRepoInstallation.Input(
             path: path,
             headers: headers
         ))
@@ -850,11 +850,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /user/installations`.
     /// - Remark: Generated from `#/paths//user/installations/get(apps/list-installations-for-authenticated-user)`.
-    public func apps_sol_list_hyphen_installations_hyphen_for_hyphen_authenticated_hyphen_user(
-        query: Operations.apps_sol_list_hyphen_installations_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query = .init(),
-        headers: Operations.apps_sol_list_hyphen_installations_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.apps_sol_list_hyphen_installations_hyphen_for_hyphen_authenticated_hyphen_user.Output {
-        try await apps_sol_list_hyphen_installations_hyphen_for_hyphen_authenticated_hyphen_user(Operations.apps_sol_list_hyphen_installations_hyphen_for_hyphen_authenticated_hyphen_user.Input(
+    public func appsListInstallationsForAuthenticatedUser(
+        query: Operations.AppsListInstallationsForAuthenticatedUser.Input.Query = .init(),
+        headers: Operations.AppsListInstallationsForAuthenticatedUser.Input.Headers = .init()
+    ) async throws -> Operations.AppsListInstallationsForAuthenticatedUser.Output {
+        try await appsListInstallationsForAuthenticatedUser(Operations.AppsListInstallationsForAuthenticatedUser.Input(
             query: query,
             headers: headers
         ))
@@ -869,12 +869,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /user/installations/{installation_id}/repositories`.
     /// - Remark: Generated from `#/paths//user/installations/{installation_id}/repositories/get(apps/list-installation-repos-for-authenticated-user)`.
-    public func apps_sol_list_hyphen_installation_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user(
-        path: Operations.apps_sol_list_hyphen_installation_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path,
-        query: Operations.apps_sol_list_hyphen_installation_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query = .init(),
-        headers: Operations.apps_sol_list_hyphen_installation_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.apps_sol_list_hyphen_installation_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user.Output {
-        try await apps_sol_list_hyphen_installation_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user(Operations.apps_sol_list_hyphen_installation_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user.Input(
+    public func appsListInstallationReposForAuthenticatedUser(
+        path: Operations.AppsListInstallationReposForAuthenticatedUser.Input.Path,
+        query: Operations.AppsListInstallationReposForAuthenticatedUser.Input.Query = .init(),
+        headers: Operations.AppsListInstallationReposForAuthenticatedUser.Input.Headers = .init()
+    ) async throws -> Operations.AppsListInstallationReposForAuthenticatedUser.Output {
+        try await appsListInstallationReposForAuthenticatedUser(Operations.AppsListInstallationReposForAuthenticatedUser.Input(
             path: path,
             query: query,
             headers: headers
@@ -888,11 +888,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `PUT /user/installations/{installation_id}/repositories/{repository_id}`.
     /// - Remark: Generated from `#/paths//user/installations/{installation_id}/repositories/{repository_id}/put(apps/add-repo-to-installation-for-authenticated-user)`.
-    public func apps_sol_add_hyphen_repo_hyphen_to_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user(
-        path: Operations.apps_sol_add_hyphen_repo_hyphen_to_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path,
-        headers: Operations.apps_sol_add_hyphen_repo_hyphen_to_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.apps_sol_add_hyphen_repo_hyphen_to_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user.Output {
-        try await apps_sol_add_hyphen_repo_hyphen_to_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user(Operations.apps_sol_add_hyphen_repo_hyphen_to_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user.Input(
+    public func appsAddRepoToInstallationForAuthenticatedUser(
+        path: Operations.AppsAddRepoToInstallationForAuthenticatedUser.Input.Path,
+        headers: Operations.AppsAddRepoToInstallationForAuthenticatedUser.Input.Headers = .init()
+    ) async throws -> Operations.AppsAddRepoToInstallationForAuthenticatedUser.Output {
+        try await appsAddRepoToInstallationForAuthenticatedUser(Operations.AppsAddRepoToInstallationForAuthenticatedUser.Input(
             path: path,
             headers: headers
         ))
@@ -905,11 +905,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /user/installations/{installation_id}/repositories/{repository_id}`.
     /// - Remark: Generated from `#/paths//user/installations/{installation_id}/repositories/{repository_id}/delete(apps/remove-repo-from-installation-for-authenticated-user)`.
-    public func apps_sol_remove_hyphen_repo_hyphen_from_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user(
-        path: Operations.apps_sol_remove_hyphen_repo_hyphen_from_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path,
-        headers: Operations.apps_sol_remove_hyphen_repo_hyphen_from_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.apps_sol_remove_hyphen_repo_hyphen_from_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user.Output {
-        try await apps_sol_remove_hyphen_repo_hyphen_from_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user(Operations.apps_sol_remove_hyphen_repo_hyphen_from_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user.Input(
+    public func appsRemoveRepoFromInstallationForAuthenticatedUser(
+        path: Operations.AppsRemoveRepoFromInstallationForAuthenticatedUser.Input.Path,
+        headers: Operations.AppsRemoveRepoFromInstallationForAuthenticatedUser.Input.Headers = .init()
+    ) async throws -> Operations.AppsRemoveRepoFromInstallationForAuthenticatedUser.Output {
+        try await appsRemoveRepoFromInstallationForAuthenticatedUser(Operations.AppsRemoveRepoFromInstallationForAuthenticatedUser.Input(
             path: path,
             headers: headers
         ))
@@ -920,11 +920,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /user/marketplace_purchases`.
     /// - Remark: Generated from `#/paths//user/marketplace_purchases/get(apps/list-subscriptions-for-authenticated-user)`.
-    public func apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user(
-        query: Operations.apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query = .init(),
-        headers: Operations.apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user.Output {
-        try await apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user(Operations.apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user.Input(
+    public func appsListSubscriptionsForAuthenticatedUser(
+        query: Operations.AppsListSubscriptionsForAuthenticatedUser.Input.Query = .init(),
+        headers: Operations.AppsListSubscriptionsForAuthenticatedUser.Input.Headers = .init()
+    ) async throws -> Operations.AppsListSubscriptionsForAuthenticatedUser.Output {
+        try await appsListSubscriptionsForAuthenticatedUser(Operations.AppsListSubscriptionsForAuthenticatedUser.Input(
             query: query,
             headers: headers
         ))
@@ -935,11 +935,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /user/marketplace_purchases/stubbed`.
     /// - Remark: Generated from `#/paths//user/marketplace_purchases/stubbed/get(apps/list-subscriptions-for-authenticated-user-stubbed)`.
-    public func apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user_hyphen_stubbed(
-        query: Operations.apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user_hyphen_stubbed.Input.Query = .init(),
-        headers: Operations.apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user_hyphen_stubbed.Input.Headers = .init()
-    ) async throws -> Operations.apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user_hyphen_stubbed.Output {
-        try await apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user_hyphen_stubbed(Operations.apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user_hyphen_stubbed.Input(
+    public func appsListSubscriptionsForAuthenticatedUserStubbed(
+        query: Operations.AppsListSubscriptionsForAuthenticatedUserStubbed.Input.Query = .init(),
+        headers: Operations.AppsListSubscriptionsForAuthenticatedUserStubbed.Input.Headers = .init()
+    ) async throws -> Operations.AppsListSubscriptionsForAuthenticatedUserStubbed.Output {
+        try await appsListSubscriptionsForAuthenticatedUserStubbed(Operations.AppsListSubscriptionsForAuthenticatedUserStubbed.Input(
             query: query,
             headers: headers
         ))
@@ -952,11 +952,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /users/{username}/installation`.
     /// - Remark: Generated from `#/paths//users/{username}/installation/get(apps/get-user-installation)`.
-    public func apps_sol_get_hyphen_user_hyphen_installation(
-        path: Operations.apps_sol_get_hyphen_user_hyphen_installation.Input.Path,
-        headers: Operations.apps_sol_get_hyphen_user_hyphen_installation.Input.Headers = .init()
-    ) async throws -> Operations.apps_sol_get_hyphen_user_hyphen_installation.Output {
-        try await apps_sol_get_hyphen_user_hyphen_installation(Operations.apps_sol_get_hyphen_user_hyphen_installation.Input(
+    public func appsGetUserInstallation(
+        path: Operations.AppsGetUserInstallation.Input.Path,
+        headers: Operations.AppsGetUserInstallation.Input.Headers = .init()
+    ) async throws -> Operations.AppsGetUserInstallation.Output {
+        try await appsGetUserInstallation(Operations.AppsGetUserInstallation.Input(
             path: path,
             headers: headers
         ))
@@ -965,6 +965,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -980,7 +989,7 @@ public enum Components {
         /// A GitHub user.
         ///
         /// - Remark: Generated from `#/components/schemas/simple-user`.
-        public struct simple_hyphen_user: Codable, Hashable, Sendable {
+        public struct SimpleUser: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/simple-user/name`.
             public var name: Swift.String?
             /// - Remark: Generated from `#/components/schemas/simple-user/email`.
@@ -990,171 +999,171 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/simple-user/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/simple-user/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/avatar_url`.
-            public var avatar_url: Swift.String
+            public var avatarUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/gravatar_id`.
-            public var gravatar_id: Swift.String?
+            public var gravatarId: Swift.String?
             /// - Remark: Generated from `#/components/schemas/simple-user/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/followers_url`.
-            public var followers_url: Swift.String
+            public var followersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/following_url`.
-            public var following_url: Swift.String
+            public var followingUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/gists_url`.
-            public var gists_url: Swift.String
+            public var gistsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/starred_url`.
-            public var starred_url: Swift.String
+            public var starredUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/subscriptions_url`.
-            public var subscriptions_url: Swift.String
+            public var subscriptionsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/organizations_url`.
-            public var organizations_url: Swift.String
+            public var organizationsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/repos_url`.
-            public var repos_url: Swift.String
+            public var reposUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/events_url`.
-            public var events_url: Swift.String
+            public var eventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/received_events_url`.
-            public var received_events_url: Swift.String
+            public var receivedEventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/type`.
             public var _type: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/site_admin`.
-            public var site_admin: Swift.Bool
+            public var siteAdmin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/simple-user/starred_at`.
-            public var starred_at: Swift.String?
+            public var starredAt: Swift.String?
             /// - Remark: Generated from `#/components/schemas/simple-user/user_view_type`.
-            public var user_view_type: Swift.String?
-            /// Creates a new `simple_hyphen_user`.
+            public var userViewType: Swift.String?
+            /// Creates a new `SimpleUser`.
             ///
             /// - Parameters:
             ///   - name:
             ///   - email:
             ///   - login:
             ///   - id:
-            ///   - node_id:
-            ///   - avatar_url:
-            ///   - gravatar_id:
+            ///   - nodeId:
+            ///   - avatarUrl:
+            ///   - gravatarId:
             ///   - url:
-            ///   - html_url:
-            ///   - followers_url:
-            ///   - following_url:
-            ///   - gists_url:
-            ///   - starred_url:
-            ///   - subscriptions_url:
-            ///   - organizations_url:
-            ///   - repos_url:
-            ///   - events_url:
-            ///   - received_events_url:
+            ///   - htmlUrl:
+            ///   - followersUrl:
+            ///   - followingUrl:
+            ///   - gistsUrl:
+            ///   - starredUrl:
+            ///   - subscriptionsUrl:
+            ///   - organizationsUrl:
+            ///   - reposUrl:
+            ///   - eventsUrl:
+            ///   - receivedEventsUrl:
             ///   - _type:
-            ///   - site_admin:
-            ///   - starred_at:
-            ///   - user_view_type:
+            ///   - siteAdmin:
+            ///   - starredAt:
+            ///   - userViewType:
             public init(
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
                 login: Swift.String,
                 id: Swift.Int64,
-                node_id: Swift.String,
-                avatar_url: Swift.String,
-                gravatar_id: Swift.String? = nil,
+                nodeId: Swift.String,
+                avatarUrl: Swift.String,
+                gravatarId: Swift.String? = nil,
                 url: Swift.String,
-                html_url: Swift.String,
-                followers_url: Swift.String,
-                following_url: Swift.String,
-                gists_url: Swift.String,
-                starred_url: Swift.String,
-                subscriptions_url: Swift.String,
-                organizations_url: Swift.String,
-                repos_url: Swift.String,
-                events_url: Swift.String,
-                received_events_url: Swift.String,
+                htmlUrl: Swift.String,
+                followersUrl: Swift.String,
+                followingUrl: Swift.String,
+                gistsUrl: Swift.String,
+                starredUrl: Swift.String,
+                subscriptionsUrl: Swift.String,
+                organizationsUrl: Swift.String,
+                reposUrl: Swift.String,
+                eventsUrl: Swift.String,
+                receivedEventsUrl: Swift.String,
                 _type: Swift.String,
-                site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil,
-                user_view_type: Swift.String? = nil
+                siteAdmin: Swift.Bool,
+                starredAt: Swift.String? = nil,
+                userViewType: Swift.String? = nil
             ) {
                 self.name = name
                 self.email = email
                 self.login = login
                 self.id = id
-                self.node_id = node_id
-                self.avatar_url = avatar_url
-                self.gravatar_id = gravatar_id
+                self.nodeId = nodeId
+                self.avatarUrl = avatarUrl
+                self.gravatarId = gravatarId
                 self.url = url
-                self.html_url = html_url
-                self.followers_url = followers_url
-                self.following_url = following_url
-                self.gists_url = gists_url
-                self.starred_url = starred_url
-                self.subscriptions_url = subscriptions_url
-                self.organizations_url = organizations_url
-                self.repos_url = repos_url
-                self.events_url = events_url
-                self.received_events_url = received_events_url
+                self.htmlUrl = htmlUrl
+                self.followersUrl = followersUrl
+                self.followingUrl = followingUrl
+                self.gistsUrl = gistsUrl
+                self.starredUrl = starredUrl
+                self.subscriptionsUrl = subscriptionsUrl
+                self.organizationsUrl = organizationsUrl
+                self.reposUrl = reposUrl
+                self.eventsUrl = eventsUrl
+                self.receivedEventsUrl = receivedEventsUrl
                 self._type = _type
-                self.site_admin = site_admin
-                self.starred_at = starred_at
-                self.user_view_type = user_view_type
+                self.siteAdmin = siteAdmin
+                self.starredAt = starredAt
+                self.userViewType = userViewType
             }
             public enum CodingKeys: String, CodingKey {
                 case name
                 case email
                 case login
                 case id
-                case node_id
-                case avatar_url
-                case gravatar_id
+                case nodeId = "node_id"
+                case avatarUrl = "avatar_url"
+                case gravatarId = "gravatar_id"
                 case url
-                case html_url
-                case followers_url
-                case following_url
-                case gists_url
-                case starred_url
-                case subscriptions_url
-                case organizations_url
-                case repos_url
-                case events_url
-                case received_events_url
+                case htmlUrl = "html_url"
+                case followersUrl = "followers_url"
+                case followingUrl = "following_url"
+                case gistsUrl = "gists_url"
+                case starredUrl = "starred_url"
+                case subscriptionsUrl = "subscriptions_url"
+                case organizationsUrl = "organizations_url"
+                case reposUrl = "repos_url"
+                case eventsUrl = "events_url"
+                case receivedEventsUrl = "received_events_url"
                 case _type = "type"
-                case site_admin
-                case starred_at
-                case user_view_type
+                case siteAdmin = "site_admin"
+                case starredAt = "starred_at"
+                case userViewType = "user_view_type"
             }
         }
         /// Basic Error
         ///
         /// - Remark: Generated from `#/components/schemas/basic-error`.
-        public struct basic_hyphen_error: Codable, Hashable, Sendable {
+        public struct BasicError: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/basic-error/message`.
             public var message: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/documentation_url`.
-            public var documentation_url: Swift.String?
+            public var documentationUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/url`.
             public var url: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/status`.
             public var status: Swift.String?
-            /// Creates a new `basic_hyphen_error`.
+            /// Creates a new `BasicError`.
             ///
             /// - Parameters:
             ///   - message:
-            ///   - documentation_url:
+            ///   - documentationUrl:
             ///   - url:
             ///   - status:
             public init(
                 message: Swift.String? = nil,
-                documentation_url: Swift.String? = nil,
+                documentationUrl: Swift.String? = nil,
                 url: Swift.String? = nil,
                 status: Swift.String? = nil
             ) {
                 self.message = message
-                self.documentation_url = documentation_url
+                self.documentationUrl = documentationUrl
                 self.url = url
                 self.status = status
             }
             public enum CodingKeys: String, CodingKey {
                 case message
-                case documentation_url
+                case documentationUrl = "documentation_url"
                 case url
                 case status
             }
@@ -1162,54 +1171,54 @@ public enum Components {
         /// Validation Error Simple
         ///
         /// - Remark: Generated from `#/components/schemas/validation-error-simple`.
-        public struct validation_hyphen_error_hyphen_simple: Codable, Hashable, Sendable {
+        public struct ValidationErrorSimple: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/validation-error-simple/message`.
             public var message: Swift.String
             /// - Remark: Generated from `#/components/schemas/validation-error-simple/documentation_url`.
-            public var documentation_url: Swift.String
+            public var documentationUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/validation-error-simple/errors`.
             public var errors: [Swift.String]?
-            /// Creates a new `validation_hyphen_error_hyphen_simple`.
+            /// Creates a new `ValidationErrorSimple`.
             ///
             /// - Parameters:
             ///   - message:
-            ///   - documentation_url:
+            ///   - documentationUrl:
             ///   - errors:
             public init(
                 message: Swift.String,
-                documentation_url: Swift.String,
+                documentationUrl: Swift.String,
                 errors: [Swift.String]? = nil
             ) {
                 self.message = message
-                self.documentation_url = documentation_url
+                self.documentationUrl = documentationUrl
                 self.errors = errors
             }
             public enum CodingKeys: String, CodingKey {
                 case message
-                case documentation_url
+                case documentationUrl = "documentation_url"
                 case errors
             }
         }
         /// An enterprise on GitHub.
         ///
         /// - Remark: Generated from `#/components/schemas/enterprise`.
-        public struct enterprise: Codable, Hashable, Sendable {
+        public struct Enterprise: Codable, Hashable, Sendable {
             /// A short description of the enterprise.
             ///
             /// - Remark: Generated from `#/components/schemas/enterprise/description`.
             public var description: Swift.String?
             /// - Remark: Generated from `#/components/schemas/enterprise/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// The enterprise's website URL.
             ///
             /// - Remark: Generated from `#/components/schemas/enterprise/website_url`.
-            public var website_url: Swift.String?
+            public var websiteUrl: Swift.String?
             /// Unique identifier of the enterprise
             ///
             /// - Remark: Generated from `#/components/schemas/enterprise/id`.
             public var id: Swift.Int
             /// - Remark: Generated from `#/components/schemas/enterprise/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// The name of the enterprise.
             ///
             /// - Remark: Generated from `#/components/schemas/enterprise/name`.
@@ -1219,64 +1228,64 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/enterprise/slug`.
             public var slug: Swift.String
             /// - Remark: Generated from `#/components/schemas/enterprise/created_at`.
-            public var created_at: Foundation.Date?
+            public var createdAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/enterprise/updated_at`.
-            public var updated_at: Foundation.Date?
+            public var updatedAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/enterprise/avatar_url`.
-            public var avatar_url: Swift.String
-            /// Creates a new `enterprise`.
+            public var avatarUrl: Swift.String
+            /// Creates a new `Enterprise`.
             ///
             /// - Parameters:
             ///   - description: A short description of the enterprise.
-            ///   - html_url:
-            ///   - website_url: The enterprise's website URL.
+            ///   - htmlUrl:
+            ///   - websiteUrl: The enterprise's website URL.
             ///   - id: Unique identifier of the enterprise
-            ///   - node_id:
+            ///   - nodeId:
             ///   - name: The name of the enterprise.
             ///   - slug: The slug url identifier for the enterprise.
-            ///   - created_at:
-            ///   - updated_at:
-            ///   - avatar_url:
+            ///   - createdAt:
+            ///   - updatedAt:
+            ///   - avatarUrl:
             public init(
                 description: Swift.String? = nil,
-                html_url: Swift.String,
-                website_url: Swift.String? = nil,
+                htmlUrl: Swift.String,
+                websiteUrl: Swift.String? = nil,
                 id: Swift.Int,
-                node_id: Swift.String,
+                nodeId: Swift.String,
                 name: Swift.String,
                 slug: Swift.String,
-                created_at: Foundation.Date? = nil,
-                updated_at: Foundation.Date? = nil,
-                avatar_url: Swift.String
+                createdAt: Foundation.Date? = nil,
+                updatedAt: Foundation.Date? = nil,
+                avatarUrl: Swift.String
             ) {
                 self.description = description
-                self.html_url = html_url
-                self.website_url = website_url
+                self.htmlUrl = htmlUrl
+                self.websiteUrl = websiteUrl
                 self.id = id
-                self.node_id = node_id
+                self.nodeId = nodeId
                 self.name = name
                 self.slug = slug
-                self.created_at = created_at
-                self.updated_at = updated_at
-                self.avatar_url = avatar_url
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
+                self.avatarUrl = avatarUrl
             }
             public enum CodingKeys: String, CodingKey {
                 case description
-                case html_url
-                case website_url
+                case htmlUrl = "html_url"
+                case websiteUrl = "website_url"
                 case id
-                case node_id
+                case nodeId = "node_id"
                 case name
                 case slug
-                case created_at
-                case updated_at
-                case avatar_url
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
+                case avatarUrl = "avatar_url"
             }
         }
         /// GitHub apps are a new way to extend GitHub. They can be installed directly on organizations and user accounts and granted access to specific repositories. They come with granular permissions and built-in webhooks. GitHub apps are first class actors within GitHub.
         ///
         /// - Remark: Generated from `#/components/schemas/integration`.
-        public struct integration: Codable, Hashable, Sendable {
+        public struct Integration: Codable, Hashable, Sendable {
             /// Unique identifier of the GitHub app
             ///
             /// - Remark: Generated from `#/components/schemas/integration/id`.
@@ -1286,25 +1295,25 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/integration/slug`.
             public var slug: Swift.String?
             /// - Remark: Generated from `#/components/schemas/integration/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/integration/client_id`.
-            public var client_id: Swift.String?
+            public var clientId: Swift.String?
             /// - Remark: Generated from `#/components/schemas/integration/owner`.
-            @frozen public enum ownerPayload: Codable, Hashable, Sendable {
+            @frozen public enum OwnerPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/integration/owner/case1`.
-                case simple_hyphen_user(Components.Schemas.simple_hyphen_user)
+                case SimpleUser(Components.Schemas.SimpleUser)
                 /// - Remark: Generated from `#/components/schemas/integration/owner/case2`.
-                case enterprise(Components.Schemas.enterprise)
+                case Enterprise(Components.Schemas.Enterprise)
                 public init(from decoder: any Decoder) throws {
                     var errors: [any Error] = []
                     do {
-                        self = .simple_hyphen_user(try .init(from: decoder))
+                        self = .SimpleUser(try .init(from: decoder))
                         return
                     } catch {
                         errors.append(error)
                     }
                     do {
-                        self = .enterprise(try .init(from: decoder))
+                        self = .Enterprise(try .init(from: decoder))
                         return
                     } catch {
                         errors.append(error)
@@ -1317,15 +1326,15 @@ public enum Components {
                 }
                 public func encode(to encoder: any Encoder) throws {
                     switch self {
-                    case let .simple_hyphen_user(value):
+                    case let .SimpleUser(value):
                         try value.encode(to: encoder)
-                    case let .enterprise(value):
+                    case let .Enterprise(value):
                         try value.encode(to: encoder)
                     }
                 }
             }
             /// - Remark: Generated from `#/components/schemas/integration/owner`.
-            public var owner: Components.Schemas.integration.ownerPayload
+            public var owner: Components.Schemas.Integration.OwnerPayload
             /// The name of the GitHub app
             ///
             /// - Remark: Generated from `#/components/schemas/integration/name`.
@@ -1333,17 +1342,17 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/integration/description`.
             public var description: Swift.String?
             /// - Remark: Generated from `#/components/schemas/integration/external_url`.
-            public var external_url: Swift.String
+            public var externalUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/integration/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/integration/created_at`.
-            public var created_at: Foundation.Date
+            public var createdAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/integration/updated_at`.
-            public var updated_at: Foundation.Date
+            public var updatedAt: Foundation.Date
             /// The set of permissions for the GitHub app
             ///
             /// - Remark: Generated from `#/components/schemas/integration/permissions`.
-            public struct permissionsPayload: Codable, Hashable, Sendable {
+            public struct PermissionsPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/integration/permissions/issues`.
                 public var issues: Swift.String?
                 /// - Remark: Generated from `#/components/schemas/integration/permissions/checks`.
@@ -1356,7 +1365,7 @@ public enum Components {
                 public var deployments: Swift.String?
                 /// A container of undocumented properties.
                 public var additionalProperties: [String: Swift.String]
-                /// Creates a new `permissionsPayload`.
+                /// Creates a new `PermissionsPayload`.
                 ///
                 /// - Parameters:
                 ///   - issues:
@@ -1389,23 +1398,23 @@ public enum Components {
                 }
                 public init(from decoder: any Decoder) throws {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
-                    issues = try container.decodeIfPresent(
+                    self.issues = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .issues
                     )
-                    checks = try container.decodeIfPresent(
+                    self.checks = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .checks
                     )
-                    metadata = try container.decodeIfPresent(
+                    self.metadata = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .metadata
                     )
-                    contents = try container.decodeIfPresent(
+                    self.contents = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .contents
                     )
-                    deployments = try container.decodeIfPresent(
+                    self.deployments = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .deployments
                     )
@@ -1420,23 +1429,23 @@ public enum Components {
                 public func encode(to encoder: any Encoder) throws {
                     var container = encoder.container(keyedBy: CodingKeys.self)
                     try container.encodeIfPresent(
-                        issues,
+                        self.issues,
                         forKey: .issues
                     )
                     try container.encodeIfPresent(
-                        checks,
+                        self.checks,
                         forKey: .checks
                     )
                     try container.encodeIfPresent(
-                        metadata,
+                        self.metadata,
                         forKey: .metadata
                     )
                     try container.encodeIfPresent(
-                        contents,
+                        self.contents,
                         forKey: .contents
                     )
                     try container.encodeIfPresent(
-                        deployments,
+                        self.deployments,
                         forKey: .deployments
                     )
                     try encoder.encodeAdditionalProperties(additionalProperties)
@@ -1445,7 +1454,7 @@ public enum Components {
             /// The set of permissions for the GitHub app
             ///
             /// - Remark: Generated from `#/components/schemas/integration/permissions`.
-            public var permissions: Components.Schemas.integration.permissionsPayload
+            public var permissions: Components.Schemas.Integration.PermissionsPayload
             /// The list of events for the GitHub app
             ///
             /// - Remark: Generated from `#/components/schemas/integration/events`.
@@ -1453,104 +1462,104 @@ public enum Components {
             /// The number of installations associated with the GitHub app
             ///
             /// - Remark: Generated from `#/components/schemas/integration/installations_count`.
-            public var installations_count: Swift.Int?
+            public var installationsCount: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/integration/client_secret`.
-            public var client_secret: Swift.String?
+            public var clientSecret: Swift.String?
             /// - Remark: Generated from `#/components/schemas/integration/webhook_secret`.
-            public var webhook_secret: Swift.String?
+            public var webhookSecret: Swift.String?
             /// - Remark: Generated from `#/components/schemas/integration/pem`.
             public var pem: Swift.String?
-            /// Creates a new `integration`.
+            /// Creates a new `Integration`.
             ///
             /// - Parameters:
             ///   - id: Unique identifier of the GitHub app
             ///   - slug: The slug name of the GitHub app
-            ///   - node_id:
-            ///   - client_id:
+            ///   - nodeId:
+            ///   - clientId:
             ///   - owner:
             ///   - name: The name of the GitHub app
             ///   - description:
-            ///   - external_url:
-            ///   - html_url:
-            ///   - created_at:
-            ///   - updated_at:
+            ///   - externalUrl:
+            ///   - htmlUrl:
+            ///   - createdAt:
+            ///   - updatedAt:
             ///   - permissions: The set of permissions for the GitHub app
             ///   - events: The list of events for the GitHub app
-            ///   - installations_count: The number of installations associated with the GitHub app
-            ///   - client_secret:
-            ///   - webhook_secret:
+            ///   - installationsCount: The number of installations associated with the GitHub app
+            ///   - clientSecret:
+            ///   - webhookSecret:
             ///   - pem:
             public init(
                 id: Swift.Int,
                 slug: Swift.String? = nil,
-                node_id: Swift.String,
-                client_id: Swift.String? = nil,
-                owner: Components.Schemas.integration.ownerPayload,
+                nodeId: Swift.String,
+                clientId: Swift.String? = nil,
+                owner: Components.Schemas.Integration.OwnerPayload,
                 name: Swift.String,
                 description: Swift.String? = nil,
-                external_url: Swift.String,
-                html_url: Swift.String,
-                created_at: Foundation.Date,
-                updated_at: Foundation.Date,
-                permissions: Components.Schemas.integration.permissionsPayload,
+                externalUrl: Swift.String,
+                htmlUrl: Swift.String,
+                createdAt: Foundation.Date,
+                updatedAt: Foundation.Date,
+                permissions: Components.Schemas.Integration.PermissionsPayload,
                 events: [Swift.String],
-                installations_count: Swift.Int? = nil,
-                client_secret: Swift.String? = nil,
-                webhook_secret: Swift.String? = nil,
+                installationsCount: Swift.Int? = nil,
+                clientSecret: Swift.String? = nil,
+                webhookSecret: Swift.String? = nil,
                 pem: Swift.String? = nil
             ) {
                 self.id = id
                 self.slug = slug
-                self.node_id = node_id
-                self.client_id = client_id
+                self.nodeId = nodeId
+                self.clientId = clientId
                 self.owner = owner
                 self.name = name
                 self.description = description
-                self.external_url = external_url
-                self.html_url = html_url
-                self.created_at = created_at
-                self.updated_at = updated_at
+                self.externalUrl = externalUrl
+                self.htmlUrl = htmlUrl
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
                 self.permissions = permissions
                 self.events = events
-                self.installations_count = installations_count
-                self.client_secret = client_secret
-                self.webhook_secret = webhook_secret
+                self.installationsCount = installationsCount
+                self.clientSecret = clientSecret
+                self.webhookSecret = webhookSecret
                 self.pem = pem
             }
             public enum CodingKeys: String, CodingKey {
                 case id
                 case slug
-                case node_id
-                case client_id
+                case nodeId = "node_id"
+                case clientId = "client_id"
                 case owner
                 case name
                 case description
-                case external_url
-                case html_url
-                case created_at
-                case updated_at
+                case externalUrl = "external_url"
+                case htmlUrl = "html_url"
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
                 case permissions
                 case events
-                case installations_count
-                case client_secret
-                case webhook_secret
+                case installationsCount = "installations_count"
+                case clientSecret = "client_secret"
+                case webhookSecret = "webhook_secret"
                 case pem
             }
         }
         /// The URL to which the payloads will be delivered.
         ///
         /// - Remark: Generated from `#/components/schemas/webhook-config-url`.
-        public typealias webhook_hyphen_config_hyphen_url = Swift.String
+        public typealias WebhookConfigUrl = Swift.String
         /// The media type used to serialize the payloads. Supported values include `json` and `form`. The default is `form`.
         ///
         /// - Remark: Generated from `#/components/schemas/webhook-config-content-type`.
-        public typealias webhook_hyphen_config_hyphen_content_hyphen_type = Swift.String
+        public typealias WebhookConfigContentType = Swift.String
         /// If provided, the `secret` will be used as the `key` to generate the HMAC hex digest value for [delivery signature headers](https://docs.github.com/webhooks/event-payloads/#delivery-headers).
         ///
         /// - Remark: Generated from `#/components/schemas/webhook-config-secret`.
-        public typealias webhook_hyphen_config_hyphen_secret = Swift.String
+        public typealias WebhookConfigSecret = Swift.String
         /// - Remark: Generated from `#/components/schemas/webhook-config-insecure-ssl`.
-        @frozen public enum webhook_hyphen_config_hyphen_insecure_hyphen_ssl: Codable, Hashable, Sendable {
+        @frozen public enum WebhookConfigInsecureSsl: Codable, Hashable, Sendable {
             /// Determines whether the SSL certificate of the host for `url` will be verified when delivering payloads. Supported values include `0` (verification is performed) and `1` (verification is not performed). The default is `0`. **We strongly recommend not setting this to `1` as you are subject to man-in-the-middle and other attacks.**
             ///
             /// - Remark: Generated from `#/components/schemas/webhook-config-insecure-ssl/case1`.
@@ -1589,44 +1598,44 @@ public enum Components {
         /// Configuration object of the webhook
         ///
         /// - Remark: Generated from `#/components/schemas/webhook-config`.
-        public struct webhook_hyphen_config: Codable, Hashable, Sendable {
+        public struct WebhookConfig: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/webhook-config/url`.
-            public var url: Components.Schemas.webhook_hyphen_config_hyphen_url?
+            public var url: Components.Schemas.WebhookConfigUrl?
             /// - Remark: Generated from `#/components/schemas/webhook-config/content_type`.
-            public var content_type: Components.Schemas.webhook_hyphen_config_hyphen_content_hyphen_type?
+            public var contentType: Components.Schemas.WebhookConfigContentType?
             /// - Remark: Generated from `#/components/schemas/webhook-config/secret`.
-            public var secret: Components.Schemas.webhook_hyphen_config_hyphen_secret?
+            public var secret: Components.Schemas.WebhookConfigSecret?
             /// - Remark: Generated from `#/components/schemas/webhook-config/insecure_ssl`.
-            public var insecure_ssl: Components.Schemas.webhook_hyphen_config_hyphen_insecure_hyphen_ssl?
-            /// Creates a new `webhook_hyphen_config`.
+            public var insecureSsl: Components.Schemas.WebhookConfigInsecureSsl?
+            /// Creates a new `WebhookConfig`.
             ///
             /// - Parameters:
             ///   - url:
-            ///   - content_type:
+            ///   - contentType:
             ///   - secret:
-            ///   - insecure_ssl:
+            ///   - insecureSsl:
             public init(
-                url: Components.Schemas.webhook_hyphen_config_hyphen_url? = nil,
-                content_type: Components.Schemas.webhook_hyphen_config_hyphen_content_hyphen_type? = nil,
-                secret: Components.Schemas.webhook_hyphen_config_hyphen_secret? = nil,
-                insecure_ssl: Components.Schemas.webhook_hyphen_config_hyphen_insecure_hyphen_ssl? = nil
+                url: Components.Schemas.WebhookConfigUrl? = nil,
+                contentType: Components.Schemas.WebhookConfigContentType? = nil,
+                secret: Components.Schemas.WebhookConfigSecret? = nil,
+                insecureSsl: Components.Schemas.WebhookConfigInsecureSsl? = nil
             ) {
                 self.url = url
-                self.content_type = content_type
+                self.contentType = contentType
                 self.secret = secret
-                self.insecure_ssl = insecure_ssl
+                self.insecureSsl = insecureSsl
             }
             public enum CodingKeys: String, CodingKey {
                 case url
-                case content_type
+                case contentType = "content_type"
                 case secret
-                case insecure_ssl
+                case insecureSsl = "insecure_ssl"
             }
         }
         /// Delivery made by a webhook, without request and response information.
         ///
         /// - Remark: Generated from `#/components/schemas/hook-delivery-item`.
-        public struct hook_hyphen_delivery_hyphen_item: Codable, Hashable, Sendable {
+        public struct HookDeliveryItem: Codable, Hashable, Sendable {
             /// Unique identifier of the webhook delivery.
             ///
             /// - Remark: Generated from `#/components/schemas/hook-delivery-item/id`.
@@ -1638,7 +1647,7 @@ public enum Components {
             /// Time when the webhook delivery occurred.
             ///
             /// - Remark: Generated from `#/components/schemas/hook-delivery-item/delivered_at`.
-            public var delivered_at: Foundation.Date
+            public var deliveredAt: Foundation.Date
             /// Whether the webhook delivery is a redelivery.
             ///
             /// - Remark: Generated from `#/components/schemas/hook-delivery-item/redelivery`.
@@ -1654,7 +1663,7 @@ public enum Components {
             /// Status code received when delivery was made.
             ///
             /// - Remark: Generated from `#/components/schemas/hook-delivery-item/status_code`.
-            public var status_code: Swift.Int
+            public var statusCode: Swift.Int
             /// The event that triggered the delivery.
             ///
             /// - Remark: Generated from `#/components/schemas/hook-delivery-item/event`.
@@ -1666,80 +1675,80 @@ public enum Components {
             /// The id of the GitHub App installation associated with this event.
             ///
             /// - Remark: Generated from `#/components/schemas/hook-delivery-item/installation_id`.
-            public var installation_id: Swift.Int64?
+            public var installationId: Swift.Int64?
             /// The id of the repository associated with this event.
             ///
             /// - Remark: Generated from `#/components/schemas/hook-delivery-item/repository_id`.
-            public var repository_id: Swift.Int64?
+            public var repositoryId: Swift.Int64?
             /// Time when the webhook delivery was throttled.
             ///
             /// - Remark: Generated from `#/components/schemas/hook-delivery-item/throttled_at`.
-            public var throttled_at: Foundation.Date?
-            /// Creates a new `hook_hyphen_delivery_hyphen_item`.
+            public var throttledAt: Foundation.Date?
+            /// Creates a new `HookDeliveryItem`.
             ///
             /// - Parameters:
             ///   - id: Unique identifier of the webhook delivery.
             ///   - guid: Unique identifier for the event (shared with all deliveries for all webhooks that subscribe to this event).
-            ///   - delivered_at: Time when the webhook delivery occurred.
+            ///   - deliveredAt: Time when the webhook delivery occurred.
             ///   - redelivery: Whether the webhook delivery is a redelivery.
             ///   - duration: Time spent delivering.
             ///   - status: Describes the response returned after attempting the delivery.
-            ///   - status_code: Status code received when delivery was made.
+            ///   - statusCode: Status code received when delivery was made.
             ///   - event: The event that triggered the delivery.
             ///   - action: The type of activity for the event that triggered the delivery.
-            ///   - installation_id: The id of the GitHub App installation associated with this event.
-            ///   - repository_id: The id of the repository associated with this event.
-            ///   - throttled_at: Time when the webhook delivery was throttled.
+            ///   - installationId: The id of the GitHub App installation associated with this event.
+            ///   - repositoryId: The id of the repository associated with this event.
+            ///   - throttledAt: Time when the webhook delivery was throttled.
             public init(
                 id: Swift.Int64,
                 guid: Swift.String,
-                delivered_at: Foundation.Date,
+                deliveredAt: Foundation.Date,
                 redelivery: Swift.Bool,
                 duration: Swift.Double,
                 status: Swift.String,
-                status_code: Swift.Int,
+                statusCode: Swift.Int,
                 event: Swift.String,
                 action: Swift.String? = nil,
-                installation_id: Swift.Int64? = nil,
-                repository_id: Swift.Int64? = nil,
-                throttled_at: Foundation.Date? = nil
+                installationId: Swift.Int64? = nil,
+                repositoryId: Swift.Int64? = nil,
+                throttledAt: Foundation.Date? = nil
             ) {
                 self.id = id
                 self.guid = guid
-                self.delivered_at = delivered_at
+                self.deliveredAt = deliveredAt
                 self.redelivery = redelivery
                 self.duration = duration
                 self.status = status
-                self.status_code = status_code
+                self.statusCode = statusCode
                 self.event = event
                 self.action = action
-                self.installation_id = installation_id
-                self.repository_id = repository_id
-                self.throttled_at = throttled_at
+                self.installationId = installationId
+                self.repositoryId = repositoryId
+                self.throttledAt = throttledAt
             }
             public enum CodingKeys: String, CodingKey {
                 case id
                 case guid
-                case delivered_at
+                case deliveredAt = "delivered_at"
                 case redelivery
                 case duration
                 case status
-                case status_code
+                case statusCode = "status_code"
                 case event
                 case action
-                case installation_id
-                case repository_id
-                case throttled_at
+                case installationId = "installation_id"
+                case repositoryId = "repository_id"
+                case throttledAt = "throttled_at"
             }
         }
         /// Scim Error
         ///
         /// - Remark: Generated from `#/components/schemas/scim-error`.
-        public struct scim_hyphen_error: Codable, Hashable, Sendable {
+        public struct ScimError: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/scim-error/message`.
             public var message: Swift.String?
             /// - Remark: Generated from `#/components/schemas/scim-error/documentation_url`.
-            public var documentation_url: Swift.String?
+            public var documentationUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/scim-error/detail`.
             public var detail: Swift.String?
             /// - Remark: Generated from `#/components/schemas/scim-error/status`.
@@ -1748,25 +1757,25 @@ public enum Components {
             public var scimType: Swift.String?
             /// - Remark: Generated from `#/components/schemas/scim-error/schemas`.
             public var schemas: [Swift.String]?
-            /// Creates a new `scim_hyphen_error`.
+            /// Creates a new `ScimError`.
             ///
             /// - Parameters:
             ///   - message:
-            ///   - documentation_url:
+            ///   - documentationUrl:
             ///   - detail:
             ///   - status:
             ///   - scimType:
             ///   - schemas:
             public init(
                 message: Swift.String? = nil,
-                documentation_url: Swift.String? = nil,
+                documentationUrl: Swift.String? = nil,
                 detail: Swift.String? = nil,
                 status: Swift.Int? = nil,
                 scimType: Swift.String? = nil,
                 schemas: [Swift.String]? = nil
             ) {
                 self.message = message
-                self.documentation_url = documentation_url
+                self.documentationUrl = documentationUrl
                 self.detail = detail
                 self.status = status
                 self.scimType = scimType
@@ -1774,7 +1783,7 @@ public enum Components {
             }
             public enum CodingKeys: String, CodingKey {
                 case message
-                case documentation_url
+                case documentationUrl = "documentation_url"
                 case detail
                 case status
                 case scimType
@@ -1784,30 +1793,30 @@ public enum Components {
         /// Validation Error
         ///
         /// - Remark: Generated from `#/components/schemas/validation-error`.
-        public struct validation_hyphen_error: Codable, Hashable, Sendable {
+        public struct ValidationError: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/validation-error/message`.
             public var message: Swift.String
             /// - Remark: Generated from `#/components/schemas/validation-error/documentation_url`.
-            public var documentation_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload`.
-            public struct errorsPayloadPayload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/resource`.
+            public var documentationUrl: Swift.String
+            /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload`.
+            public struct ErrorsPayloadPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/resource`.
                 public var resource: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/field`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/field`.
                 public var field: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/message`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/message`.
                 public var message: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/code`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/code`.
                 public var code: Swift.String
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/index`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/index`.
                 public var index: Swift.Int?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value`.
-                @frozen public enum valuePayload: Codable, Hashable, Sendable {
-                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case1`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value`.
+                @frozen public enum ValuePayload: Codable, Hashable, Sendable {
+                    /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value/case1`.
                     case case1(Swift.String?)
-                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case2`.
+                    /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value/case2`.
                     case case2(Swift.Int?)
-                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case3`.
+                    /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value/case3`.
                     case case3([Swift.String]?)
                     public init(from decoder: any Decoder) throws {
                         var errors: [any Error] = []
@@ -1846,9 +1855,9 @@ public enum Components {
                         }
                     }
                 }
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value`.
-                public var value: Components.Schemas.validation_hyphen_error.errorsPayloadPayload.valuePayload?
-                /// Creates a new `errorsPayloadPayload`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value`.
+                public var value: Components.Schemas.ValidationError.ErrorsPayloadPayload.ValuePayload?
+                /// Creates a new `ErrorsPayloadPayload`.
                 ///
                 /// - Parameters:
                 ///   - resource:
@@ -1863,7 +1872,7 @@ public enum Components {
                     message: Swift.String? = nil,
                     code: Swift.String,
                     index: Swift.Int? = nil,
-                    value: Components.Schemas.validation_hyphen_error.errorsPayloadPayload.valuePayload? = nil
+                    value: Components.Schemas.ValidationError.ErrorsPayloadPayload.ValuePayload? = nil
                 ) {
                     self.resource = resource
                     self.field = field
@@ -1882,34 +1891,34 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/validation-error/errors`.
-            public typealias errorsPayload = [Components.Schemas.validation_hyphen_error.errorsPayloadPayload]
+            public typealias ErrorsPayload = [Components.Schemas.ValidationError.ErrorsPayloadPayload]
             /// - Remark: Generated from `#/components/schemas/validation-error/errors`.
-            public var errors: Components.Schemas.validation_hyphen_error.errorsPayload?
-            /// Creates a new `validation_hyphen_error`.
+            public var errors: Components.Schemas.ValidationError.ErrorsPayload?
+            /// Creates a new `ValidationError`.
             ///
             /// - Parameters:
             ///   - message:
-            ///   - documentation_url:
+            ///   - documentationUrl:
             ///   - errors:
             public init(
                 message: Swift.String,
-                documentation_url: Swift.String,
-                errors: Components.Schemas.validation_hyphen_error.errorsPayload? = nil
+                documentationUrl: Swift.String,
+                errors: Components.Schemas.ValidationError.ErrorsPayload? = nil
             ) {
                 self.message = message
-                self.documentation_url = documentation_url
+                self.documentationUrl = documentationUrl
                 self.errors = errors
             }
             public enum CodingKeys: String, CodingKey {
                 case message
-                case documentation_url
+                case documentationUrl = "documentation_url"
                 case errors
             }
         }
         /// Delivery made by a webhook.
         ///
         /// - Remark: Generated from `#/components/schemas/hook-delivery`.
-        public struct hook_hyphen_delivery: Codable, Hashable, Sendable {
+        public struct HookDelivery: Codable, Hashable, Sendable {
             /// Unique identifier of the delivery.
             ///
             /// - Remark: Generated from `#/components/schemas/hook-delivery/id`.
@@ -1921,7 +1930,7 @@ public enum Components {
             /// Time when the delivery was delivered.
             ///
             /// - Remark: Generated from `#/components/schemas/hook-delivery/delivered_at`.
-            public var delivered_at: Foundation.Date
+            public var deliveredAt: Foundation.Date
             /// Whether the delivery is a redelivery.
             ///
             /// - Remark: Generated from `#/components/schemas/hook-delivery/redelivery`.
@@ -1937,7 +1946,7 @@ public enum Components {
             /// Status code received when delivery was made.
             ///
             /// - Remark: Generated from `#/components/schemas/hook-delivery/status_code`.
-            public var status_code: Swift.Int
+            public var statusCode: Swift.Int
             /// The event that triggered the delivery.
             ///
             /// - Remark: Generated from `#/components/schemas/hook-delivery/event`.
@@ -1949,28 +1958,28 @@ public enum Components {
             /// The id of the GitHub App installation associated with this event.
             ///
             /// - Remark: Generated from `#/components/schemas/hook-delivery/installation_id`.
-            public var installation_id: Swift.Int?
+            public var installationId: Swift.Int?
             /// The id of the repository associated with this event.
             ///
             /// - Remark: Generated from `#/components/schemas/hook-delivery/repository_id`.
-            public var repository_id: Swift.Int?
+            public var repositoryId: Swift.Int?
             /// Time when the webhook delivery was throttled.
             ///
             /// - Remark: Generated from `#/components/schemas/hook-delivery/throttled_at`.
-            public var throttled_at: Foundation.Date?
+            public var throttledAt: Foundation.Date?
             /// The URL target of the delivery.
             ///
             /// - Remark: Generated from `#/components/schemas/hook-delivery/url`.
             public var url: Swift.String?
             /// - Remark: Generated from `#/components/schemas/hook-delivery/request`.
-            public struct requestPayload: Codable, Hashable, Sendable {
+            public struct RequestPayload: Codable, Hashable, Sendable {
                 /// The request headers sent with the webhook delivery.
                 ///
                 /// - Remark: Generated from `#/components/schemas/hook-delivery/request/headers`.
-                public struct headersPayload: Codable, Hashable, Sendable {
+                public struct HeadersPayload: Codable, Hashable, Sendable {
                     /// A container of undocumented properties.
                     public var additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer
-                    /// Creates a new `headersPayload`.
+                    /// Creates a new `HeadersPayload`.
                     ///
                     /// - Parameters:
                     ///   - additionalProperties: A container of undocumented properties.
@@ -1987,14 +1996,14 @@ public enum Components {
                 /// The request headers sent with the webhook delivery.
                 ///
                 /// - Remark: Generated from `#/components/schemas/hook-delivery/request/headers`.
-                public var headers: Components.Schemas.hook_hyphen_delivery.requestPayload.headersPayload?
+                public var headers: Components.Schemas.HookDelivery.RequestPayload.HeadersPayload?
                 /// The webhook payload.
                 ///
                 /// - Remark: Generated from `#/components/schemas/hook-delivery/request/payload`.
-                public struct payloadPayload: Codable, Hashable, Sendable {
+                public struct PayloadPayload: Codable, Hashable, Sendable {
                     /// A container of undocumented properties.
                     public var additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer
-                    /// Creates a new `payloadPayload`.
+                    /// Creates a new `PayloadPayload`.
                     ///
                     /// - Parameters:
                     ///   - additionalProperties: A container of undocumented properties.
@@ -2011,15 +2020,15 @@ public enum Components {
                 /// The webhook payload.
                 ///
                 /// - Remark: Generated from `#/components/schemas/hook-delivery/request/payload`.
-                public var payload: Components.Schemas.hook_hyphen_delivery.requestPayload.payloadPayload?
-                /// Creates a new `requestPayload`.
+                public var payload: Components.Schemas.HookDelivery.RequestPayload.PayloadPayload?
+                /// Creates a new `RequestPayload`.
                 ///
                 /// - Parameters:
                 ///   - headers: The request headers sent with the webhook delivery.
                 ///   - payload: The webhook payload.
                 public init(
-                    headers: Components.Schemas.hook_hyphen_delivery.requestPayload.headersPayload? = nil,
-                    payload: Components.Schemas.hook_hyphen_delivery.requestPayload.payloadPayload? = nil
+                    headers: Components.Schemas.HookDelivery.RequestPayload.HeadersPayload? = nil,
+                    payload: Components.Schemas.HookDelivery.RequestPayload.PayloadPayload? = nil
                 ) {
                     self.headers = headers
                     self.payload = payload
@@ -2030,16 +2039,16 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/hook-delivery/request`.
-            public var request: Components.Schemas.hook_hyphen_delivery.requestPayload
+            public var request: Components.Schemas.HookDelivery.RequestPayload
             /// - Remark: Generated from `#/components/schemas/hook-delivery/response`.
-            public struct responsePayload: Codable, Hashable, Sendable {
+            public struct ResponsePayload: Codable, Hashable, Sendable {
                 /// The response headers received when the delivery was made.
                 ///
                 /// - Remark: Generated from `#/components/schemas/hook-delivery/response/headers`.
-                public struct headersPayload: Codable, Hashable, Sendable {
+                public struct HeadersPayload: Codable, Hashable, Sendable {
                     /// A container of undocumented properties.
                     public var additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer
-                    /// Creates a new `headersPayload`.
+                    /// Creates a new `HeadersPayload`.
                     ///
                     /// - Parameters:
                     ///   - additionalProperties: A container of undocumented properties.
@@ -2056,18 +2065,18 @@ public enum Components {
                 /// The response headers received when the delivery was made.
                 ///
                 /// - Remark: Generated from `#/components/schemas/hook-delivery/response/headers`.
-                public var headers: Components.Schemas.hook_hyphen_delivery.responsePayload.headersPayload?
+                public var headers: Components.Schemas.HookDelivery.ResponsePayload.HeadersPayload?
                 /// The response payload received.
                 ///
                 /// - Remark: Generated from `#/components/schemas/hook-delivery/response/payload`.
                 public var payload: Swift.String?
-                /// Creates a new `responsePayload`.
+                /// Creates a new `ResponsePayload`.
                 ///
                 /// - Parameters:
                 ///   - headers: The response headers received when the delivery was made.
                 ///   - payload: The response payload received.
                 public init(
-                    headers: Components.Schemas.hook_hyphen_delivery.responsePayload.headersPayload? = nil,
+                    headers: Components.Schemas.HookDelivery.ResponsePayload.HeadersPayload? = nil,
                     payload: Swift.String? = nil
                 ) {
                     self.headers = headers
@@ -2079,54 +2088,54 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/hook-delivery/response`.
-            public var response: Components.Schemas.hook_hyphen_delivery.responsePayload
-            /// Creates a new `hook_hyphen_delivery`.
+            public var response: Components.Schemas.HookDelivery.ResponsePayload
+            /// Creates a new `HookDelivery`.
             ///
             /// - Parameters:
             ///   - id: Unique identifier of the delivery.
             ///   - guid: Unique identifier for the event (shared with all deliveries for all webhooks that subscribe to this event).
-            ///   - delivered_at: Time when the delivery was delivered.
+            ///   - deliveredAt: Time when the delivery was delivered.
             ///   - redelivery: Whether the delivery is a redelivery.
             ///   - duration: Time spent delivering.
             ///   - status: Description of the status of the attempted delivery
-            ///   - status_code: Status code received when delivery was made.
+            ///   - statusCode: Status code received when delivery was made.
             ///   - event: The event that triggered the delivery.
             ///   - action: The type of activity for the event that triggered the delivery.
-            ///   - installation_id: The id of the GitHub App installation associated with this event.
-            ///   - repository_id: The id of the repository associated with this event.
-            ///   - throttled_at: Time when the webhook delivery was throttled.
+            ///   - installationId: The id of the GitHub App installation associated with this event.
+            ///   - repositoryId: The id of the repository associated with this event.
+            ///   - throttledAt: Time when the webhook delivery was throttled.
             ///   - url: The URL target of the delivery.
             ///   - request:
             ///   - response:
             public init(
                 id: Swift.Int,
                 guid: Swift.String,
-                delivered_at: Foundation.Date,
+                deliveredAt: Foundation.Date,
                 redelivery: Swift.Bool,
                 duration: Swift.Double,
                 status: Swift.String,
-                status_code: Swift.Int,
+                statusCode: Swift.Int,
                 event: Swift.String,
                 action: Swift.String? = nil,
-                installation_id: Swift.Int? = nil,
-                repository_id: Swift.Int? = nil,
-                throttled_at: Foundation.Date? = nil,
+                installationId: Swift.Int? = nil,
+                repositoryId: Swift.Int? = nil,
+                throttledAt: Foundation.Date? = nil,
                 url: Swift.String? = nil,
-                request: Components.Schemas.hook_hyphen_delivery.requestPayload,
-                response: Components.Schemas.hook_hyphen_delivery.responsePayload
+                request: Components.Schemas.HookDelivery.RequestPayload,
+                response: Components.Schemas.HookDelivery.ResponsePayload
             ) {
                 self.id = id
                 self.guid = guid
-                self.delivered_at = delivered_at
+                self.deliveredAt = deliveredAt
                 self.redelivery = redelivery
                 self.duration = duration
                 self.status = status
-                self.status_code = status_code
+                self.statusCode = statusCode
                 self.event = event
                 self.action = action
-                self.installation_id = installation_id
-                self.repository_id = repository_id
-                self.throttled_at = throttled_at
+                self.installationId = installationId
+                self.repositoryId = repositoryId
+                self.throttledAt = throttledAt
                 self.url = url
                 self.request = request
                 self.response = response
@@ -2134,16 +2143,16 @@ public enum Components {
             public enum CodingKeys: String, CodingKey {
                 case id
                 case guid
-                case delivered_at
+                case deliveredAt = "delivered_at"
                 case redelivery
                 case duration
                 case status
-                case status_code
+                case statusCode = "status_code"
                 case event
                 case action
-                case installation_id
-                case repository_id
-                case throttled_at
+                case installationId = "installation_id"
+                case repositoryId = "repository_id"
+                case throttledAt = "throttled_at"
                 case url
                 case request
                 case response
@@ -2152,27 +2161,27 @@ public enum Components {
         /// Request to install an integration on a target
         ///
         /// - Remark: Generated from `#/components/schemas/integration-installation-request`.
-        public struct integration_hyphen_installation_hyphen_request: Codable, Hashable, Sendable {
+        public struct IntegrationInstallationRequest: Codable, Hashable, Sendable {
             /// Unique identifier of the request installation.
             ///
             /// - Remark: Generated from `#/components/schemas/integration-installation-request/id`.
             public var id: Swift.Int
             /// - Remark: Generated from `#/components/schemas/integration-installation-request/node_id`.
-            public var node_id: Swift.String?
+            public var nodeId: Swift.String?
             /// - Remark: Generated from `#/components/schemas/integration-installation-request/account`.
-            public struct accountPayload: Codable, Hashable, Sendable {
+            public struct AccountPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/integration-installation-request/account/value1`.
-                public var value1: Components.Schemas.simple_hyphen_user?
+                public var value1: Components.Schemas.SimpleUser?
                 /// - Remark: Generated from `#/components/schemas/integration-installation-request/account/value2`.
-                public var value2: Components.Schemas.enterprise?
-                /// Creates a new `accountPayload`.
+                public var value2: Components.Schemas.Enterprise?
+                /// Creates a new `AccountPayload`.
                 ///
                 /// - Parameters:
                 ///   - value1:
                 ///   - value2:
                 public init(
-                    value1: Components.Schemas.simple_hyphen_user? = nil,
-                    value2: Components.Schemas.enterprise? = nil
+                    value1: Components.Schemas.SimpleUser? = nil,
+                    value2: Components.Schemas.Enterprise? = nil
                 ) {
                     self.value1 = value1
                     self.value2 = value2
@@ -2180,19 +2189,19 @@ public enum Components {
                 public init(from decoder: any Decoder) throws {
                     var errors: [any Error] = []
                     do {
-                        value1 = try .init(from: decoder)
+                        self.value1 = try .init(from: decoder)
                     } catch {
                         errors.append(error)
                     }
                     do {
-                        value2 = try .init(from: decoder)
+                        self.value2 = try .init(from: decoder)
                     } catch {
                         errors.append(error)
                     }
                     try Swift.DecodingError.verifyAtLeastOneSchemaIsNotNil(
                         [
-                            value1,
-                            value2
+                            self.value1,
+                            self.value2
                         ],
                         type: Self.self,
                         codingPath: decoder.codingPath,
@@ -2200,218 +2209,218 @@ public enum Components {
                     )
                 }
                 public func encode(to encoder: any Encoder) throws {
-                    try value1?.encode(to: encoder)
-                    try value2?.encode(to: encoder)
+                    try self.value1?.encode(to: encoder)
+                    try self.value2?.encode(to: encoder)
                 }
             }
             /// - Remark: Generated from `#/components/schemas/integration-installation-request/account`.
-            public var account: Components.Schemas.integration_hyphen_installation_hyphen_request.accountPayload
+            public var account: Components.Schemas.IntegrationInstallationRequest.AccountPayload
             /// - Remark: Generated from `#/components/schemas/integration-installation-request/requester`.
-            public var requester: Components.Schemas.simple_hyphen_user
+            public var requester: Components.Schemas.SimpleUser
             /// - Remark: Generated from `#/components/schemas/integration-installation-request/created_at`.
-            public var created_at: Foundation.Date
-            /// Creates a new `integration_hyphen_installation_hyphen_request`.
+            public var createdAt: Foundation.Date
+            /// Creates a new `IntegrationInstallationRequest`.
             ///
             /// - Parameters:
             ///   - id: Unique identifier of the request installation.
-            ///   - node_id:
+            ///   - nodeId:
             ///   - account:
             ///   - requester:
-            ///   - created_at:
+            ///   - createdAt:
             public init(
                 id: Swift.Int,
-                node_id: Swift.String? = nil,
-                account: Components.Schemas.integration_hyphen_installation_hyphen_request.accountPayload,
-                requester: Components.Schemas.simple_hyphen_user,
-                created_at: Foundation.Date
+                nodeId: Swift.String? = nil,
+                account: Components.Schemas.IntegrationInstallationRequest.AccountPayload,
+                requester: Components.Schemas.SimpleUser,
+                createdAt: Foundation.Date
             ) {
                 self.id = id
-                self.node_id = node_id
+                self.nodeId = nodeId
                 self.account = account
                 self.requester = requester
-                self.created_at = created_at
+                self.createdAt = createdAt
             }
             public enum CodingKeys: String, CodingKey {
                 case id
-                case node_id
+                case nodeId = "node_id"
                 case account
                 case requester
-                case created_at
+                case createdAt = "created_at"
             }
         }
         /// The permissions granted to the user access token.
         ///
         /// - Remark: Generated from `#/components/schemas/app-permissions`.
-        public struct app_hyphen_permissions: Codable, Hashable, Sendable {
+        public struct AppPermissions: Codable, Hashable, Sendable {
             /// The level of permission to grant the access token for GitHub Actions workflows, workflow runs, and artifacts.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/actions`.
-            @frozen public enum actionsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum ActionsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
             /// The level of permission to grant the access token for GitHub Actions workflows, workflow runs, and artifacts.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/actions`.
-            public var actions: Components.Schemas.app_hyphen_permissions.actionsPayload?
+            public var actions: Components.Schemas.AppPermissions.ActionsPayload?
             /// The level of permission to grant the access token for repository creation, deletion, settings, teams, and collaborators creation.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/administration`.
-            @frozen public enum administrationPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum AdministrationPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
             /// The level of permission to grant the access token for repository creation, deletion, settings, teams, and collaborators creation.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/administration`.
-            public var administration: Components.Schemas.app_hyphen_permissions.administrationPayload?
+            public var administration: Components.Schemas.AppPermissions.AdministrationPayload?
             /// The level of permission to grant the access token for checks on code.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/checks`.
-            @frozen public enum checksPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum ChecksPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
             /// The level of permission to grant the access token for checks on code.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/checks`.
-            public var checks: Components.Schemas.app_hyphen_permissions.checksPayload?
+            public var checks: Components.Schemas.AppPermissions.ChecksPayload?
             /// The level of permission to grant the access token to create, edit, delete, and list Codespaces.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/codespaces`.
-            @frozen public enum codespacesPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum CodespacesPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
             /// The level of permission to grant the access token to create, edit, delete, and list Codespaces.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/codespaces`.
-            public var codespaces: Components.Schemas.app_hyphen_permissions.codespacesPayload?
+            public var codespaces: Components.Schemas.AppPermissions.CodespacesPayload?
             /// The level of permission to grant the access token for repository contents, commits, branches, downloads, releases, and merges.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/contents`.
-            @frozen public enum contentsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum ContentsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
             /// The level of permission to grant the access token for repository contents, commits, branches, downloads, releases, and merges.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/contents`.
-            public var contents: Components.Schemas.app_hyphen_permissions.contentsPayload?
+            public var contents: Components.Schemas.AppPermissions.ContentsPayload?
             /// The level of permission to grant the access token to manage Dependabot secrets.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/dependabot_secrets`.
-            @frozen public enum dependabot_secretsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum DependabotSecretsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
             /// The level of permission to grant the access token to manage Dependabot secrets.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/dependabot_secrets`.
-            public var dependabot_secrets: Components.Schemas.app_hyphen_permissions.dependabot_secretsPayload?
+            public var dependabotSecrets: Components.Schemas.AppPermissions.DependabotSecretsPayload?
             /// The level of permission to grant the access token for deployments and deployment statuses.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/deployments`.
-            @frozen public enum deploymentsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum DeploymentsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
             /// The level of permission to grant the access token for deployments and deployment statuses.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/deployments`.
-            public var deployments: Components.Schemas.app_hyphen_permissions.deploymentsPayload?
+            public var deployments: Components.Schemas.AppPermissions.DeploymentsPayload?
             /// The level of permission to grant the access token for managing repository environments.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/environments`.
-            @frozen public enum environmentsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum EnvironmentsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
             /// The level of permission to grant the access token for managing repository environments.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/environments`.
-            public var environments: Components.Schemas.app_hyphen_permissions.environmentsPayload?
+            public var environments: Components.Schemas.AppPermissions.EnvironmentsPayload?
             /// The level of permission to grant the access token for issues and related comments, assignees, labels, and milestones.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/issues`.
-            @frozen public enum issuesPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum IssuesPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
             /// The level of permission to grant the access token for issues and related comments, assignees, labels, and milestones.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/issues`.
-            public var issues: Components.Schemas.app_hyphen_permissions.issuesPayload?
+            public var issues: Components.Schemas.AppPermissions.IssuesPayload?
             /// The level of permission to grant the access token to search repositories, list collaborators, and access repository metadata.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/metadata`.
-            @frozen public enum metadataPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum MetadataPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
             /// The level of permission to grant the access token to search repositories, list collaborators, and access repository metadata.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/metadata`.
-            public var metadata: Components.Schemas.app_hyphen_permissions.metadataPayload?
+            public var metadata: Components.Schemas.AppPermissions.MetadataPayload?
             /// The level of permission to grant the access token for packages published to GitHub Packages.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/packages`.
-            @frozen public enum packagesPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum PackagesPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
             /// The level of permission to grant the access token for packages published to GitHub Packages.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/packages`.
-            public var packages: Components.Schemas.app_hyphen_permissions.packagesPayload?
+            public var packages: Components.Schemas.AppPermissions.PackagesPayload?
             /// The level of permission to grant the access token to retrieve Pages statuses, configuration, and builds, as well as create new builds.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/pages`.
-            @frozen public enum pagesPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum PagesPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
             /// The level of permission to grant the access token to retrieve Pages statuses, configuration, and builds, as well as create new builds.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/pages`.
-            public var pages: Components.Schemas.app_hyphen_permissions.pagesPayload?
+            public var pages: Components.Schemas.AppPermissions.PagesPayload?
             /// The level of permission to grant the access token for pull requests and related comments, assignees, labels, milestones, and merges.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/pull_requests`.
-            @frozen public enum pull_requestsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum PullRequestsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
             /// The level of permission to grant the access token for pull requests and related comments, assignees, labels, milestones, and merges.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/pull_requests`.
-            public var pull_requests: Components.Schemas.app_hyphen_permissions.pull_requestsPayload?
+            public var pullRequests: Components.Schemas.AppPermissions.PullRequestsPayload?
             /// The level of permission to grant the access token to view and edit custom properties for a repository, when allowed by the property.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/repository_custom_properties`.
-            @frozen public enum repository_custom_propertiesPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum RepositoryCustomPropertiesPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
             /// The level of permission to grant the access token to view and edit custom properties for a repository, when allowed by the property.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/repository_custom_properties`.
-            public var repository_custom_properties: Components.Schemas.app_hyphen_permissions.repository_custom_propertiesPayload?
+            public var repositoryCustomProperties: Components.Schemas.AppPermissions.RepositoryCustomPropertiesPayload?
             /// The level of permission to grant the access token to manage the post-receive hooks for a repository.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/repository_hooks`.
-            @frozen public enum repository_hooksPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum RepositoryHooksPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
             /// The level of permission to grant the access token to manage the post-receive hooks for a repository.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/repository_hooks`.
-            public var repository_hooks: Components.Schemas.app_hyphen_permissions.repository_hooksPayload?
+            public var repositoryHooks: Components.Schemas.AppPermissions.RepositoryHooksPayload?
             /// The level of permission to grant the access token to manage repository projects, columns, and cards.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/repository_projects`.
-            @frozen public enum repository_projectsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum RepositoryProjectsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
                 case admin = "admin"
@@ -2419,131 +2428,131 @@ public enum Components {
             /// The level of permission to grant the access token to manage repository projects, columns, and cards.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/repository_projects`.
-            public var repository_projects: Components.Schemas.app_hyphen_permissions.repository_projectsPayload?
+            public var repositoryProjects: Components.Schemas.AppPermissions.RepositoryProjectsPayload?
             /// The level of permission to grant the access token to view and manage secret scanning alerts.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/secret_scanning_alerts`.
-            @frozen public enum secret_scanning_alertsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum SecretScanningAlertsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
             /// The level of permission to grant the access token to view and manage secret scanning alerts.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/secret_scanning_alerts`.
-            public var secret_scanning_alerts: Components.Schemas.app_hyphen_permissions.secret_scanning_alertsPayload?
+            public var secretScanningAlerts: Components.Schemas.AppPermissions.SecretScanningAlertsPayload?
             /// The level of permission to grant the access token to manage repository secrets.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/secrets`.
-            @frozen public enum secretsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum SecretsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
             /// The level of permission to grant the access token to manage repository secrets.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/secrets`.
-            public var secrets: Components.Schemas.app_hyphen_permissions.secretsPayload?
+            public var secrets: Components.Schemas.AppPermissions.SecretsPayload?
             /// The level of permission to grant the access token to view and manage security events like code scanning alerts.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/security_events`.
-            @frozen public enum security_eventsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum SecurityEventsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
             /// The level of permission to grant the access token to view and manage security events like code scanning alerts.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/security_events`.
-            public var security_events: Components.Schemas.app_hyphen_permissions.security_eventsPayload?
+            public var securityEvents: Components.Schemas.AppPermissions.SecurityEventsPayload?
             /// The level of permission to grant the access token to manage just a single file.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/single_file`.
-            @frozen public enum single_filePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum SingleFilePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
             /// The level of permission to grant the access token to manage just a single file.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/single_file`.
-            public var single_file: Components.Schemas.app_hyphen_permissions.single_filePayload?
+            public var singleFile: Components.Schemas.AppPermissions.SingleFilePayload?
             /// The level of permission to grant the access token for commit statuses.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/statuses`.
-            @frozen public enum statusesPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum StatusesPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
             /// The level of permission to grant the access token for commit statuses.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/statuses`.
-            public var statuses: Components.Schemas.app_hyphen_permissions.statusesPayload?
+            public var statuses: Components.Schemas.AppPermissions.StatusesPayload?
             /// The level of permission to grant the access token to manage Dependabot alerts.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/vulnerability_alerts`.
-            @frozen public enum vulnerability_alertsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum VulnerabilityAlertsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
             /// The level of permission to grant the access token to manage Dependabot alerts.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/vulnerability_alerts`.
-            public var vulnerability_alerts: Components.Schemas.app_hyphen_permissions.vulnerability_alertsPayload?
+            public var vulnerabilityAlerts: Components.Schemas.AppPermissions.VulnerabilityAlertsPayload?
             /// The level of permission to grant the access token to update GitHub Actions workflow files.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/workflows`.
-            @frozen public enum workflowsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum WorkflowsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case write = "write"
             }
             /// The level of permission to grant the access token to update GitHub Actions workflow files.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/workflows`.
-            public var workflows: Components.Schemas.app_hyphen_permissions.workflowsPayload?
+            public var workflows: Components.Schemas.AppPermissions.WorkflowsPayload?
             /// The level of permission to grant the access token for organization teams and members.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/members`.
-            @frozen public enum membersPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum MembersPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
             /// The level of permission to grant the access token for organization teams and members.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/members`.
-            public var members: Components.Schemas.app_hyphen_permissions.membersPayload?
+            public var members: Components.Schemas.AppPermissions.MembersPayload?
             /// The level of permission to grant the access token to manage access to an organization.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_administration`.
-            @frozen public enum organization_administrationPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum OrganizationAdministrationPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
             /// The level of permission to grant the access token to manage access to an organization.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_administration`.
-            public var organization_administration: Components.Schemas.app_hyphen_permissions.organization_administrationPayload?
+            public var organizationAdministration: Components.Schemas.AppPermissions.OrganizationAdministrationPayload?
             /// The level of permission to grant the access token for custom repository roles management.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_custom_roles`.
-            @frozen public enum organization_custom_rolesPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum OrganizationCustomRolesPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
             /// The level of permission to grant the access token for custom repository roles management.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_custom_roles`.
-            public var organization_custom_roles: Components.Schemas.app_hyphen_permissions.organization_custom_rolesPayload?
+            public var organizationCustomRoles: Components.Schemas.AppPermissions.OrganizationCustomRolesPayload?
             /// The level of permission to grant the access token for custom organization roles management.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_custom_org_roles`.
-            @frozen public enum organization_custom_org_rolesPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum OrganizationCustomOrgRolesPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
             /// The level of permission to grant the access token for custom organization roles management.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_custom_org_roles`.
-            public var organization_custom_org_roles: Components.Schemas.app_hyphen_permissions.organization_custom_org_rolesPayload?
+            public var organizationCustomOrgRoles: Components.Schemas.AppPermissions.OrganizationCustomOrgRolesPayload?
             /// The level of permission to grant the access token for custom property management.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_custom_properties`.
-            @frozen public enum organization_custom_propertiesPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum OrganizationCustomPropertiesPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
                 case admin = "admin"
@@ -2551,85 +2560,85 @@ public enum Components {
             /// The level of permission to grant the access token for custom property management.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_custom_properties`.
-            public var organization_custom_properties: Components.Schemas.app_hyphen_permissions.organization_custom_propertiesPayload?
+            public var organizationCustomProperties: Components.Schemas.AppPermissions.OrganizationCustomPropertiesPayload?
             /// The level of permission to grant the access token for managing access to GitHub Copilot for members of an organization with a Copilot Business subscription. This property is in public preview and is subject to change.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_copilot_seat_management`.
-            @frozen public enum organization_copilot_seat_managementPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum OrganizationCopilotSeatManagementPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case write = "write"
             }
             /// The level of permission to grant the access token for managing access to GitHub Copilot for members of an organization with a Copilot Business subscription. This property is in public preview and is subject to change.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_copilot_seat_management`.
-            public var organization_copilot_seat_management: Components.Schemas.app_hyphen_permissions.organization_copilot_seat_managementPayload?
+            public var organizationCopilotSeatManagement: Components.Schemas.AppPermissions.OrganizationCopilotSeatManagementPayload?
             /// The level of permission to grant the access token to view and manage announcement banners for an organization.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_announcement_banners`.
-            @frozen public enum organization_announcement_bannersPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum OrganizationAnnouncementBannersPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
             /// The level of permission to grant the access token to view and manage announcement banners for an organization.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_announcement_banners`.
-            public var organization_announcement_banners: Components.Schemas.app_hyphen_permissions.organization_announcement_bannersPayload?
+            public var organizationAnnouncementBanners: Components.Schemas.AppPermissions.OrganizationAnnouncementBannersPayload?
             /// The level of permission to grant the access token to view events triggered by an activity in an organization.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_events`.
-            @frozen public enum organization_eventsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum OrganizationEventsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
             }
             /// The level of permission to grant the access token to view events triggered by an activity in an organization.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_events`.
-            public var organization_events: Components.Schemas.app_hyphen_permissions.organization_eventsPayload?
+            public var organizationEvents: Components.Schemas.AppPermissions.OrganizationEventsPayload?
             /// The level of permission to grant the access token to manage the post-receive hooks for an organization.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_hooks`.
-            @frozen public enum organization_hooksPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum OrganizationHooksPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
             /// The level of permission to grant the access token to manage the post-receive hooks for an organization.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_hooks`.
-            public var organization_hooks: Components.Schemas.app_hyphen_permissions.organization_hooksPayload?
+            public var organizationHooks: Components.Schemas.AppPermissions.OrganizationHooksPayload?
             /// The level of permission to grant the access token for viewing and managing fine-grained personal access token requests to an organization.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_personal_access_tokens`.
-            @frozen public enum organization_personal_access_tokensPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum OrganizationPersonalAccessTokensPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
             /// The level of permission to grant the access token for viewing and managing fine-grained personal access token requests to an organization.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_personal_access_tokens`.
-            public var organization_personal_access_tokens: Components.Schemas.app_hyphen_permissions.organization_personal_access_tokensPayload?
+            public var organizationPersonalAccessTokens: Components.Schemas.AppPermissions.OrganizationPersonalAccessTokensPayload?
             /// The level of permission to grant the access token for viewing and managing fine-grained personal access tokens that have been approved by an organization.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_personal_access_token_requests`.
-            @frozen public enum organization_personal_access_token_requestsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum OrganizationPersonalAccessTokenRequestsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
             /// The level of permission to grant the access token for viewing and managing fine-grained personal access tokens that have been approved by an organization.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_personal_access_token_requests`.
-            public var organization_personal_access_token_requests: Components.Schemas.app_hyphen_permissions.organization_personal_access_token_requestsPayload?
+            public var organizationPersonalAccessTokenRequests: Components.Schemas.AppPermissions.OrganizationPersonalAccessTokenRequestsPayload?
             /// The level of permission to grant the access token for viewing an organization's plan.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_plan`.
-            @frozen public enum organization_planPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum OrganizationPlanPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
             }
             /// The level of permission to grant the access token for viewing an organization's plan.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_plan`.
-            public var organization_plan: Components.Schemas.app_hyphen_permissions.organization_planPayload?
+            public var organizationPlan: Components.Schemas.AppPermissions.OrganizationPlanPayload?
             /// The level of permission to grant the access token to manage organization projects and projects public preview (where available).
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_projects`.
-            @frozen public enum organization_projectsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum OrganizationProjectsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
                 case admin = "admin"
@@ -2637,139 +2646,139 @@ public enum Components {
             /// The level of permission to grant the access token to manage organization projects and projects public preview (where available).
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_projects`.
-            public var organization_projects: Components.Schemas.app_hyphen_permissions.organization_projectsPayload?
+            public var organizationProjects: Components.Schemas.AppPermissions.OrganizationProjectsPayload?
             /// The level of permission to grant the access token for organization packages published to GitHub Packages.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_packages`.
-            @frozen public enum organization_packagesPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum OrganizationPackagesPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
             /// The level of permission to grant the access token for organization packages published to GitHub Packages.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_packages`.
-            public var organization_packages: Components.Schemas.app_hyphen_permissions.organization_packagesPayload?
+            public var organizationPackages: Components.Schemas.AppPermissions.OrganizationPackagesPayload?
             /// The level of permission to grant the access token to manage organization secrets.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_secrets`.
-            @frozen public enum organization_secretsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum OrganizationSecretsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
             /// The level of permission to grant the access token to manage organization secrets.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_secrets`.
-            public var organization_secrets: Components.Schemas.app_hyphen_permissions.organization_secretsPayload?
+            public var organizationSecrets: Components.Schemas.AppPermissions.OrganizationSecretsPayload?
             /// The level of permission to grant the access token to view and manage GitHub Actions self-hosted runners available to an organization.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_self_hosted_runners`.
-            @frozen public enum organization_self_hosted_runnersPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum OrganizationSelfHostedRunnersPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
             /// The level of permission to grant the access token to view and manage GitHub Actions self-hosted runners available to an organization.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_self_hosted_runners`.
-            public var organization_self_hosted_runners: Components.Schemas.app_hyphen_permissions.organization_self_hosted_runnersPayload?
+            public var organizationSelfHostedRunners: Components.Schemas.AppPermissions.OrganizationSelfHostedRunnersPayload?
             /// The level of permission to grant the access token to view and manage users blocked by the organization.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_user_blocking`.
-            @frozen public enum organization_user_blockingPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum OrganizationUserBlockingPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
             /// The level of permission to grant the access token to view and manage users blocked by the organization.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_user_blocking`.
-            public var organization_user_blocking: Components.Schemas.app_hyphen_permissions.organization_user_blockingPayload?
+            public var organizationUserBlocking: Components.Schemas.AppPermissions.OrganizationUserBlockingPayload?
             /// The level of permission to grant the access token to manage team discussions and related comments.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/team_discussions`.
-            @frozen public enum team_discussionsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum TeamDiscussionsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
             /// The level of permission to grant the access token to manage team discussions and related comments.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/team_discussions`.
-            public var team_discussions: Components.Schemas.app_hyphen_permissions.team_discussionsPayload?
+            public var teamDiscussions: Components.Schemas.AppPermissions.TeamDiscussionsPayload?
             /// The level of permission to grant the access token to manage the email addresses belonging to a user.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/email_addresses`.
-            @frozen public enum email_addressesPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum EmailAddressesPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
             /// The level of permission to grant the access token to manage the email addresses belonging to a user.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/email_addresses`.
-            public var email_addresses: Components.Schemas.app_hyphen_permissions.email_addressesPayload?
+            public var emailAddresses: Components.Schemas.AppPermissions.EmailAddressesPayload?
             /// The level of permission to grant the access token to manage the followers belonging to a user.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/followers`.
-            @frozen public enum followersPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum FollowersPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
             /// The level of permission to grant the access token to manage the followers belonging to a user.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/followers`.
-            public var followers: Components.Schemas.app_hyphen_permissions.followersPayload?
+            public var followers: Components.Schemas.AppPermissions.FollowersPayload?
             /// The level of permission to grant the access token to manage git SSH keys.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/git_ssh_keys`.
-            @frozen public enum git_ssh_keysPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum GitSshKeysPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
             /// The level of permission to grant the access token to manage git SSH keys.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/git_ssh_keys`.
-            public var git_ssh_keys: Components.Schemas.app_hyphen_permissions.git_ssh_keysPayload?
+            public var gitSshKeys: Components.Schemas.AppPermissions.GitSshKeysPayload?
             /// The level of permission to grant the access token to view and manage GPG keys belonging to a user.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/gpg_keys`.
-            @frozen public enum gpg_keysPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum GpgKeysPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
             /// The level of permission to grant the access token to view and manage GPG keys belonging to a user.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/gpg_keys`.
-            public var gpg_keys: Components.Schemas.app_hyphen_permissions.gpg_keysPayload?
+            public var gpgKeys: Components.Schemas.AppPermissions.GpgKeysPayload?
             /// The level of permission to grant the access token to view and manage interaction limits on a repository.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/interaction_limits`.
-            @frozen public enum interaction_limitsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum InteractionLimitsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
             /// The level of permission to grant the access token to view and manage interaction limits on a repository.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/interaction_limits`.
-            public var interaction_limits: Components.Schemas.app_hyphen_permissions.interaction_limitsPayload?
+            public var interactionLimits: Components.Schemas.AppPermissions.InteractionLimitsPayload?
             /// The level of permission to grant the access token to manage the profile settings belonging to a user.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/profile`.
-            @frozen public enum profilePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum ProfilePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case write = "write"
             }
             /// The level of permission to grant the access token to manage the profile settings belonging to a user.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/profile`.
-            public var profile: Components.Schemas.app_hyphen_permissions.profilePayload?
+            public var profile: Components.Schemas.AppPermissions.ProfilePayload?
             /// The level of permission to grant the access token to list and manage repositories a user is starring.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/starring`.
-            @frozen public enum starringPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum StarringPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
             /// The level of permission to grant the access token to list and manage repositories a user is starring.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/starring`.
-            public var starring: Components.Schemas.app_hyphen_permissions.starringPayload?
-            /// Creates a new `app_hyphen_permissions`.
+            public var starring: Components.Schemas.AppPermissions.StarringPayload?
+            /// Creates a new `AppPermissions`.
             ///
             /// - Parameters:
             ///   - actions: The level of permission to grant the access token for GitHub Actions workflows, workflow runs, and artifacts.
@@ -2777,145 +2786,145 @@ public enum Components {
             ///   - checks: The level of permission to grant the access token for checks on code.
             ///   - codespaces: The level of permission to grant the access token to create, edit, delete, and list Codespaces.
             ///   - contents: The level of permission to grant the access token for repository contents, commits, branches, downloads, releases, and merges.
-            ///   - dependabot_secrets: The level of permission to grant the access token to manage Dependabot secrets.
+            ///   - dependabotSecrets: The level of permission to grant the access token to manage Dependabot secrets.
             ///   - deployments: The level of permission to grant the access token for deployments and deployment statuses.
             ///   - environments: The level of permission to grant the access token for managing repository environments.
             ///   - issues: The level of permission to grant the access token for issues and related comments, assignees, labels, and milestones.
             ///   - metadata: The level of permission to grant the access token to search repositories, list collaborators, and access repository metadata.
             ///   - packages: The level of permission to grant the access token for packages published to GitHub Packages.
             ///   - pages: The level of permission to grant the access token to retrieve Pages statuses, configuration, and builds, as well as create new builds.
-            ///   - pull_requests: The level of permission to grant the access token for pull requests and related comments, assignees, labels, milestones, and merges.
-            ///   - repository_custom_properties: The level of permission to grant the access token to view and edit custom properties for a repository, when allowed by the property.
-            ///   - repository_hooks: The level of permission to grant the access token to manage the post-receive hooks for a repository.
-            ///   - repository_projects: The level of permission to grant the access token to manage repository projects, columns, and cards.
-            ///   - secret_scanning_alerts: The level of permission to grant the access token to view and manage secret scanning alerts.
+            ///   - pullRequests: The level of permission to grant the access token for pull requests and related comments, assignees, labels, milestones, and merges.
+            ///   - repositoryCustomProperties: The level of permission to grant the access token to view and edit custom properties for a repository, when allowed by the property.
+            ///   - repositoryHooks: The level of permission to grant the access token to manage the post-receive hooks for a repository.
+            ///   - repositoryProjects: The level of permission to grant the access token to manage repository projects, columns, and cards.
+            ///   - secretScanningAlerts: The level of permission to grant the access token to view and manage secret scanning alerts.
             ///   - secrets: The level of permission to grant the access token to manage repository secrets.
-            ///   - security_events: The level of permission to grant the access token to view and manage security events like code scanning alerts.
-            ///   - single_file: The level of permission to grant the access token to manage just a single file.
+            ///   - securityEvents: The level of permission to grant the access token to view and manage security events like code scanning alerts.
+            ///   - singleFile: The level of permission to grant the access token to manage just a single file.
             ///   - statuses: The level of permission to grant the access token for commit statuses.
-            ///   - vulnerability_alerts: The level of permission to grant the access token to manage Dependabot alerts.
+            ///   - vulnerabilityAlerts: The level of permission to grant the access token to manage Dependabot alerts.
             ///   - workflows: The level of permission to grant the access token to update GitHub Actions workflow files.
             ///   - members: The level of permission to grant the access token for organization teams and members.
-            ///   - organization_administration: The level of permission to grant the access token to manage access to an organization.
-            ///   - organization_custom_roles: The level of permission to grant the access token for custom repository roles management.
-            ///   - organization_custom_org_roles: The level of permission to grant the access token for custom organization roles management.
-            ///   - organization_custom_properties: The level of permission to grant the access token for custom property management.
-            ///   - organization_copilot_seat_management: The level of permission to grant the access token for managing access to GitHub Copilot for members of an organization with a Copilot Business subscription. This property is in public preview and is subject to change.
-            ///   - organization_announcement_banners: The level of permission to grant the access token to view and manage announcement banners for an organization.
-            ///   - organization_events: The level of permission to grant the access token to view events triggered by an activity in an organization.
-            ///   - organization_hooks: The level of permission to grant the access token to manage the post-receive hooks for an organization.
-            ///   - organization_personal_access_tokens: The level of permission to grant the access token for viewing and managing fine-grained personal access token requests to an organization.
-            ///   - organization_personal_access_token_requests: The level of permission to grant the access token for viewing and managing fine-grained personal access tokens that have been approved by an organization.
-            ///   - organization_plan: The level of permission to grant the access token for viewing an organization's plan.
-            ///   - organization_projects: The level of permission to grant the access token to manage organization projects and projects public preview (where available).
-            ///   - organization_packages: The level of permission to grant the access token for organization packages published to GitHub Packages.
-            ///   - organization_secrets: The level of permission to grant the access token to manage organization secrets.
-            ///   - organization_self_hosted_runners: The level of permission to grant the access token to view and manage GitHub Actions self-hosted runners available to an organization.
-            ///   - organization_user_blocking: The level of permission to grant the access token to view and manage users blocked by the organization.
-            ///   - team_discussions: The level of permission to grant the access token to manage team discussions and related comments.
-            ///   - email_addresses: The level of permission to grant the access token to manage the email addresses belonging to a user.
+            ///   - organizationAdministration: The level of permission to grant the access token to manage access to an organization.
+            ///   - organizationCustomRoles: The level of permission to grant the access token for custom repository roles management.
+            ///   - organizationCustomOrgRoles: The level of permission to grant the access token for custom organization roles management.
+            ///   - organizationCustomProperties: The level of permission to grant the access token for custom property management.
+            ///   - organizationCopilotSeatManagement: The level of permission to grant the access token for managing access to GitHub Copilot for members of an organization with a Copilot Business subscription. This property is in public preview and is subject to change.
+            ///   - organizationAnnouncementBanners: The level of permission to grant the access token to view and manage announcement banners for an organization.
+            ///   - organizationEvents: The level of permission to grant the access token to view events triggered by an activity in an organization.
+            ///   - organizationHooks: The level of permission to grant the access token to manage the post-receive hooks for an organization.
+            ///   - organizationPersonalAccessTokens: The level of permission to grant the access token for viewing and managing fine-grained personal access token requests to an organization.
+            ///   - organizationPersonalAccessTokenRequests: The level of permission to grant the access token for viewing and managing fine-grained personal access tokens that have been approved by an organization.
+            ///   - organizationPlan: The level of permission to grant the access token for viewing an organization's plan.
+            ///   - organizationProjects: The level of permission to grant the access token to manage organization projects and projects public preview (where available).
+            ///   - organizationPackages: The level of permission to grant the access token for organization packages published to GitHub Packages.
+            ///   - organizationSecrets: The level of permission to grant the access token to manage organization secrets.
+            ///   - organizationSelfHostedRunners: The level of permission to grant the access token to view and manage GitHub Actions self-hosted runners available to an organization.
+            ///   - organizationUserBlocking: The level of permission to grant the access token to view and manage users blocked by the organization.
+            ///   - teamDiscussions: The level of permission to grant the access token to manage team discussions and related comments.
+            ///   - emailAddresses: The level of permission to grant the access token to manage the email addresses belonging to a user.
             ///   - followers: The level of permission to grant the access token to manage the followers belonging to a user.
-            ///   - git_ssh_keys: The level of permission to grant the access token to manage git SSH keys.
-            ///   - gpg_keys: The level of permission to grant the access token to view and manage GPG keys belonging to a user.
-            ///   - interaction_limits: The level of permission to grant the access token to view and manage interaction limits on a repository.
+            ///   - gitSshKeys: The level of permission to grant the access token to manage git SSH keys.
+            ///   - gpgKeys: The level of permission to grant the access token to view and manage GPG keys belonging to a user.
+            ///   - interactionLimits: The level of permission to grant the access token to view and manage interaction limits on a repository.
             ///   - profile: The level of permission to grant the access token to manage the profile settings belonging to a user.
             ///   - starring: The level of permission to grant the access token to list and manage repositories a user is starring.
             public init(
-                actions: Components.Schemas.app_hyphen_permissions.actionsPayload? = nil,
-                administration: Components.Schemas.app_hyphen_permissions.administrationPayload? = nil,
-                checks: Components.Schemas.app_hyphen_permissions.checksPayload? = nil,
-                codespaces: Components.Schemas.app_hyphen_permissions.codespacesPayload? = nil,
-                contents: Components.Schemas.app_hyphen_permissions.contentsPayload? = nil,
-                dependabot_secrets: Components.Schemas.app_hyphen_permissions.dependabot_secretsPayload? = nil,
-                deployments: Components.Schemas.app_hyphen_permissions.deploymentsPayload? = nil,
-                environments: Components.Schemas.app_hyphen_permissions.environmentsPayload? = nil,
-                issues: Components.Schemas.app_hyphen_permissions.issuesPayload? = nil,
-                metadata: Components.Schemas.app_hyphen_permissions.metadataPayload? = nil,
-                packages: Components.Schemas.app_hyphen_permissions.packagesPayload? = nil,
-                pages: Components.Schemas.app_hyphen_permissions.pagesPayload? = nil,
-                pull_requests: Components.Schemas.app_hyphen_permissions.pull_requestsPayload? = nil,
-                repository_custom_properties: Components.Schemas.app_hyphen_permissions.repository_custom_propertiesPayload? = nil,
-                repository_hooks: Components.Schemas.app_hyphen_permissions.repository_hooksPayload? = nil,
-                repository_projects: Components.Schemas.app_hyphen_permissions.repository_projectsPayload? = nil,
-                secret_scanning_alerts: Components.Schemas.app_hyphen_permissions.secret_scanning_alertsPayload? = nil,
-                secrets: Components.Schemas.app_hyphen_permissions.secretsPayload? = nil,
-                security_events: Components.Schemas.app_hyphen_permissions.security_eventsPayload? = nil,
-                single_file: Components.Schemas.app_hyphen_permissions.single_filePayload? = nil,
-                statuses: Components.Schemas.app_hyphen_permissions.statusesPayload? = nil,
-                vulnerability_alerts: Components.Schemas.app_hyphen_permissions.vulnerability_alertsPayload? = nil,
-                workflows: Components.Schemas.app_hyphen_permissions.workflowsPayload? = nil,
-                members: Components.Schemas.app_hyphen_permissions.membersPayload? = nil,
-                organization_administration: Components.Schemas.app_hyphen_permissions.organization_administrationPayload? = nil,
-                organization_custom_roles: Components.Schemas.app_hyphen_permissions.organization_custom_rolesPayload? = nil,
-                organization_custom_org_roles: Components.Schemas.app_hyphen_permissions.organization_custom_org_rolesPayload? = nil,
-                organization_custom_properties: Components.Schemas.app_hyphen_permissions.organization_custom_propertiesPayload? = nil,
-                organization_copilot_seat_management: Components.Schemas.app_hyphen_permissions.organization_copilot_seat_managementPayload? = nil,
-                organization_announcement_banners: Components.Schemas.app_hyphen_permissions.organization_announcement_bannersPayload? = nil,
-                organization_events: Components.Schemas.app_hyphen_permissions.organization_eventsPayload? = nil,
-                organization_hooks: Components.Schemas.app_hyphen_permissions.organization_hooksPayload? = nil,
-                organization_personal_access_tokens: Components.Schemas.app_hyphen_permissions.organization_personal_access_tokensPayload? = nil,
-                organization_personal_access_token_requests: Components.Schemas.app_hyphen_permissions.organization_personal_access_token_requestsPayload? = nil,
-                organization_plan: Components.Schemas.app_hyphen_permissions.organization_planPayload? = nil,
-                organization_projects: Components.Schemas.app_hyphen_permissions.organization_projectsPayload? = nil,
-                organization_packages: Components.Schemas.app_hyphen_permissions.organization_packagesPayload? = nil,
-                organization_secrets: Components.Schemas.app_hyphen_permissions.organization_secretsPayload? = nil,
-                organization_self_hosted_runners: Components.Schemas.app_hyphen_permissions.organization_self_hosted_runnersPayload? = nil,
-                organization_user_blocking: Components.Schemas.app_hyphen_permissions.organization_user_blockingPayload? = nil,
-                team_discussions: Components.Schemas.app_hyphen_permissions.team_discussionsPayload? = nil,
-                email_addresses: Components.Schemas.app_hyphen_permissions.email_addressesPayload? = nil,
-                followers: Components.Schemas.app_hyphen_permissions.followersPayload? = nil,
-                git_ssh_keys: Components.Schemas.app_hyphen_permissions.git_ssh_keysPayload? = nil,
-                gpg_keys: Components.Schemas.app_hyphen_permissions.gpg_keysPayload? = nil,
-                interaction_limits: Components.Schemas.app_hyphen_permissions.interaction_limitsPayload? = nil,
-                profile: Components.Schemas.app_hyphen_permissions.profilePayload? = nil,
-                starring: Components.Schemas.app_hyphen_permissions.starringPayload? = nil
+                actions: Components.Schemas.AppPermissions.ActionsPayload? = nil,
+                administration: Components.Schemas.AppPermissions.AdministrationPayload? = nil,
+                checks: Components.Schemas.AppPermissions.ChecksPayload? = nil,
+                codespaces: Components.Schemas.AppPermissions.CodespacesPayload? = nil,
+                contents: Components.Schemas.AppPermissions.ContentsPayload? = nil,
+                dependabotSecrets: Components.Schemas.AppPermissions.DependabotSecretsPayload? = nil,
+                deployments: Components.Schemas.AppPermissions.DeploymentsPayload? = nil,
+                environments: Components.Schemas.AppPermissions.EnvironmentsPayload? = nil,
+                issues: Components.Schemas.AppPermissions.IssuesPayload? = nil,
+                metadata: Components.Schemas.AppPermissions.MetadataPayload? = nil,
+                packages: Components.Schemas.AppPermissions.PackagesPayload? = nil,
+                pages: Components.Schemas.AppPermissions.PagesPayload? = nil,
+                pullRequests: Components.Schemas.AppPermissions.PullRequestsPayload? = nil,
+                repositoryCustomProperties: Components.Schemas.AppPermissions.RepositoryCustomPropertiesPayload? = nil,
+                repositoryHooks: Components.Schemas.AppPermissions.RepositoryHooksPayload? = nil,
+                repositoryProjects: Components.Schemas.AppPermissions.RepositoryProjectsPayload? = nil,
+                secretScanningAlerts: Components.Schemas.AppPermissions.SecretScanningAlertsPayload? = nil,
+                secrets: Components.Schemas.AppPermissions.SecretsPayload? = nil,
+                securityEvents: Components.Schemas.AppPermissions.SecurityEventsPayload? = nil,
+                singleFile: Components.Schemas.AppPermissions.SingleFilePayload? = nil,
+                statuses: Components.Schemas.AppPermissions.StatusesPayload? = nil,
+                vulnerabilityAlerts: Components.Schemas.AppPermissions.VulnerabilityAlertsPayload? = nil,
+                workflows: Components.Schemas.AppPermissions.WorkflowsPayload? = nil,
+                members: Components.Schemas.AppPermissions.MembersPayload? = nil,
+                organizationAdministration: Components.Schemas.AppPermissions.OrganizationAdministrationPayload? = nil,
+                organizationCustomRoles: Components.Schemas.AppPermissions.OrganizationCustomRolesPayload? = nil,
+                organizationCustomOrgRoles: Components.Schemas.AppPermissions.OrganizationCustomOrgRolesPayload? = nil,
+                organizationCustomProperties: Components.Schemas.AppPermissions.OrganizationCustomPropertiesPayload? = nil,
+                organizationCopilotSeatManagement: Components.Schemas.AppPermissions.OrganizationCopilotSeatManagementPayload? = nil,
+                organizationAnnouncementBanners: Components.Schemas.AppPermissions.OrganizationAnnouncementBannersPayload? = nil,
+                organizationEvents: Components.Schemas.AppPermissions.OrganizationEventsPayload? = nil,
+                organizationHooks: Components.Schemas.AppPermissions.OrganizationHooksPayload? = nil,
+                organizationPersonalAccessTokens: Components.Schemas.AppPermissions.OrganizationPersonalAccessTokensPayload? = nil,
+                organizationPersonalAccessTokenRequests: Components.Schemas.AppPermissions.OrganizationPersonalAccessTokenRequestsPayload? = nil,
+                organizationPlan: Components.Schemas.AppPermissions.OrganizationPlanPayload? = nil,
+                organizationProjects: Components.Schemas.AppPermissions.OrganizationProjectsPayload? = nil,
+                organizationPackages: Components.Schemas.AppPermissions.OrganizationPackagesPayload? = nil,
+                organizationSecrets: Components.Schemas.AppPermissions.OrganizationSecretsPayload? = nil,
+                organizationSelfHostedRunners: Components.Schemas.AppPermissions.OrganizationSelfHostedRunnersPayload? = nil,
+                organizationUserBlocking: Components.Schemas.AppPermissions.OrganizationUserBlockingPayload? = nil,
+                teamDiscussions: Components.Schemas.AppPermissions.TeamDiscussionsPayload? = nil,
+                emailAddresses: Components.Schemas.AppPermissions.EmailAddressesPayload? = nil,
+                followers: Components.Schemas.AppPermissions.FollowersPayload? = nil,
+                gitSshKeys: Components.Schemas.AppPermissions.GitSshKeysPayload? = nil,
+                gpgKeys: Components.Schemas.AppPermissions.GpgKeysPayload? = nil,
+                interactionLimits: Components.Schemas.AppPermissions.InteractionLimitsPayload? = nil,
+                profile: Components.Schemas.AppPermissions.ProfilePayload? = nil,
+                starring: Components.Schemas.AppPermissions.StarringPayload? = nil
             ) {
                 self.actions = actions
                 self.administration = administration
                 self.checks = checks
                 self.codespaces = codespaces
                 self.contents = contents
-                self.dependabot_secrets = dependabot_secrets
+                self.dependabotSecrets = dependabotSecrets
                 self.deployments = deployments
                 self.environments = environments
                 self.issues = issues
                 self.metadata = metadata
                 self.packages = packages
                 self.pages = pages
-                self.pull_requests = pull_requests
-                self.repository_custom_properties = repository_custom_properties
-                self.repository_hooks = repository_hooks
-                self.repository_projects = repository_projects
-                self.secret_scanning_alerts = secret_scanning_alerts
+                self.pullRequests = pullRequests
+                self.repositoryCustomProperties = repositoryCustomProperties
+                self.repositoryHooks = repositoryHooks
+                self.repositoryProjects = repositoryProjects
+                self.secretScanningAlerts = secretScanningAlerts
                 self.secrets = secrets
-                self.security_events = security_events
-                self.single_file = single_file
+                self.securityEvents = securityEvents
+                self.singleFile = singleFile
                 self.statuses = statuses
-                self.vulnerability_alerts = vulnerability_alerts
+                self.vulnerabilityAlerts = vulnerabilityAlerts
                 self.workflows = workflows
                 self.members = members
-                self.organization_administration = organization_administration
-                self.organization_custom_roles = organization_custom_roles
-                self.organization_custom_org_roles = organization_custom_org_roles
-                self.organization_custom_properties = organization_custom_properties
-                self.organization_copilot_seat_management = organization_copilot_seat_management
-                self.organization_announcement_banners = organization_announcement_banners
-                self.organization_events = organization_events
-                self.organization_hooks = organization_hooks
-                self.organization_personal_access_tokens = organization_personal_access_tokens
-                self.organization_personal_access_token_requests = organization_personal_access_token_requests
-                self.organization_plan = organization_plan
-                self.organization_projects = organization_projects
-                self.organization_packages = organization_packages
-                self.organization_secrets = organization_secrets
-                self.organization_self_hosted_runners = organization_self_hosted_runners
-                self.organization_user_blocking = organization_user_blocking
-                self.team_discussions = team_discussions
-                self.email_addresses = email_addresses
+                self.organizationAdministration = organizationAdministration
+                self.organizationCustomRoles = organizationCustomRoles
+                self.organizationCustomOrgRoles = organizationCustomOrgRoles
+                self.organizationCustomProperties = organizationCustomProperties
+                self.organizationCopilotSeatManagement = organizationCopilotSeatManagement
+                self.organizationAnnouncementBanners = organizationAnnouncementBanners
+                self.organizationEvents = organizationEvents
+                self.organizationHooks = organizationHooks
+                self.organizationPersonalAccessTokens = organizationPersonalAccessTokens
+                self.organizationPersonalAccessTokenRequests = organizationPersonalAccessTokenRequests
+                self.organizationPlan = organizationPlan
+                self.organizationProjects = organizationProjects
+                self.organizationPackages = organizationPackages
+                self.organizationSecrets = organizationSecrets
+                self.organizationSelfHostedRunners = organizationSelfHostedRunners
+                self.organizationUserBlocking = organizationUserBlocking
+                self.teamDiscussions = teamDiscussions
+                self.emailAddresses = emailAddresses
                 self.followers = followers
-                self.git_ssh_keys = git_ssh_keys
-                self.gpg_keys = gpg_keys
-                self.interaction_limits = interaction_limits
+                self.gitSshKeys = gitSshKeys
+                self.gpgKeys = gpgKeys
+                self.interactionLimits = interactionLimits
                 self.profile = profile
                 self.starring = starring
             }
@@ -2925,47 +2934,47 @@ public enum Components {
                 case checks
                 case codespaces
                 case contents
-                case dependabot_secrets
+                case dependabotSecrets = "dependabot_secrets"
                 case deployments
                 case environments
                 case issues
                 case metadata
                 case packages
                 case pages
-                case pull_requests
-                case repository_custom_properties
-                case repository_hooks
-                case repository_projects
-                case secret_scanning_alerts
+                case pullRequests = "pull_requests"
+                case repositoryCustomProperties = "repository_custom_properties"
+                case repositoryHooks = "repository_hooks"
+                case repositoryProjects = "repository_projects"
+                case secretScanningAlerts = "secret_scanning_alerts"
                 case secrets
-                case security_events
-                case single_file
+                case securityEvents = "security_events"
+                case singleFile = "single_file"
                 case statuses
-                case vulnerability_alerts
+                case vulnerabilityAlerts = "vulnerability_alerts"
                 case workflows
                 case members
-                case organization_administration
-                case organization_custom_roles
-                case organization_custom_org_roles
-                case organization_custom_properties
-                case organization_copilot_seat_management
-                case organization_announcement_banners
-                case organization_events
-                case organization_hooks
-                case organization_personal_access_tokens
-                case organization_personal_access_token_requests
-                case organization_plan
-                case organization_projects
-                case organization_packages
-                case organization_secrets
-                case organization_self_hosted_runners
-                case organization_user_blocking
-                case team_discussions
-                case email_addresses
+                case organizationAdministration = "organization_administration"
+                case organizationCustomRoles = "organization_custom_roles"
+                case organizationCustomOrgRoles = "organization_custom_org_roles"
+                case organizationCustomProperties = "organization_custom_properties"
+                case organizationCopilotSeatManagement = "organization_copilot_seat_management"
+                case organizationAnnouncementBanners = "organization_announcement_banners"
+                case organizationEvents = "organization_events"
+                case organizationHooks = "organization_hooks"
+                case organizationPersonalAccessTokens = "organization_personal_access_tokens"
+                case organizationPersonalAccessTokenRequests = "organization_personal_access_token_requests"
+                case organizationPlan = "organization_plan"
+                case organizationProjects = "organization_projects"
+                case organizationPackages = "organization_packages"
+                case organizationSecrets = "organization_secrets"
+                case organizationSelfHostedRunners = "organization_self_hosted_runners"
+                case organizationUserBlocking = "organization_user_blocking"
+                case teamDiscussions = "team_discussions"
+                case emailAddresses = "email_addresses"
                 case followers
-                case git_ssh_keys
-                case gpg_keys
-                case interaction_limits
+                case gitSshKeys = "git_ssh_keys"
+                case gpgKeys = "gpg_keys"
+                case interactionLimits = "interaction_limits"
                 case profile
                 case starring
             }
@@ -2973,7 +2982,7 @@ public enum Components {
         /// A GitHub user.
         ///
         /// - Remark: Generated from `#/components/schemas/nullable-simple-user`.
-        public struct nullable_hyphen_simple_hyphen_user: Codable, Hashable, Sendable {
+        public struct NullableSimpleUser: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/name`.
             public var name: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/email`.
@@ -2983,160 +2992,160 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/avatar_url`.
-            public var avatar_url: Swift.String
+            public var avatarUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/gravatar_id`.
-            public var gravatar_id: Swift.String?
+            public var gravatarId: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/followers_url`.
-            public var followers_url: Swift.String
+            public var followersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/following_url`.
-            public var following_url: Swift.String
+            public var followingUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/gists_url`.
-            public var gists_url: Swift.String
+            public var gistsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/starred_url`.
-            public var starred_url: Swift.String
+            public var starredUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/subscriptions_url`.
-            public var subscriptions_url: Swift.String
+            public var subscriptionsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/organizations_url`.
-            public var organizations_url: Swift.String
+            public var organizationsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/repos_url`.
-            public var repos_url: Swift.String
+            public var reposUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/events_url`.
-            public var events_url: Swift.String
+            public var eventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/received_events_url`.
-            public var received_events_url: Swift.String
+            public var receivedEventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/type`.
             public var _type: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/site_admin`.
-            public var site_admin: Swift.Bool
+            public var siteAdmin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/starred_at`.
-            public var starred_at: Swift.String?
+            public var starredAt: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/user_view_type`.
-            public var user_view_type: Swift.String?
-            /// Creates a new `nullable_hyphen_simple_hyphen_user`.
+            public var userViewType: Swift.String?
+            /// Creates a new `NullableSimpleUser`.
             ///
             /// - Parameters:
             ///   - name:
             ///   - email:
             ///   - login:
             ///   - id:
-            ///   - node_id:
-            ///   - avatar_url:
-            ///   - gravatar_id:
+            ///   - nodeId:
+            ///   - avatarUrl:
+            ///   - gravatarId:
             ///   - url:
-            ///   - html_url:
-            ///   - followers_url:
-            ///   - following_url:
-            ///   - gists_url:
-            ///   - starred_url:
-            ///   - subscriptions_url:
-            ///   - organizations_url:
-            ///   - repos_url:
-            ///   - events_url:
-            ///   - received_events_url:
+            ///   - htmlUrl:
+            ///   - followersUrl:
+            ///   - followingUrl:
+            ///   - gistsUrl:
+            ///   - starredUrl:
+            ///   - subscriptionsUrl:
+            ///   - organizationsUrl:
+            ///   - reposUrl:
+            ///   - eventsUrl:
+            ///   - receivedEventsUrl:
             ///   - _type:
-            ///   - site_admin:
-            ///   - starred_at:
-            ///   - user_view_type:
+            ///   - siteAdmin:
+            ///   - starredAt:
+            ///   - userViewType:
             public init(
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
                 login: Swift.String,
                 id: Swift.Int64,
-                node_id: Swift.String,
-                avatar_url: Swift.String,
-                gravatar_id: Swift.String? = nil,
+                nodeId: Swift.String,
+                avatarUrl: Swift.String,
+                gravatarId: Swift.String? = nil,
                 url: Swift.String,
-                html_url: Swift.String,
-                followers_url: Swift.String,
-                following_url: Swift.String,
-                gists_url: Swift.String,
-                starred_url: Swift.String,
-                subscriptions_url: Swift.String,
-                organizations_url: Swift.String,
-                repos_url: Swift.String,
-                events_url: Swift.String,
-                received_events_url: Swift.String,
+                htmlUrl: Swift.String,
+                followersUrl: Swift.String,
+                followingUrl: Swift.String,
+                gistsUrl: Swift.String,
+                starredUrl: Swift.String,
+                subscriptionsUrl: Swift.String,
+                organizationsUrl: Swift.String,
+                reposUrl: Swift.String,
+                eventsUrl: Swift.String,
+                receivedEventsUrl: Swift.String,
                 _type: Swift.String,
-                site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil,
-                user_view_type: Swift.String? = nil
+                siteAdmin: Swift.Bool,
+                starredAt: Swift.String? = nil,
+                userViewType: Swift.String? = nil
             ) {
                 self.name = name
                 self.email = email
                 self.login = login
                 self.id = id
-                self.node_id = node_id
-                self.avatar_url = avatar_url
-                self.gravatar_id = gravatar_id
+                self.nodeId = nodeId
+                self.avatarUrl = avatarUrl
+                self.gravatarId = gravatarId
                 self.url = url
-                self.html_url = html_url
-                self.followers_url = followers_url
-                self.following_url = following_url
-                self.gists_url = gists_url
-                self.starred_url = starred_url
-                self.subscriptions_url = subscriptions_url
-                self.organizations_url = organizations_url
-                self.repos_url = repos_url
-                self.events_url = events_url
-                self.received_events_url = received_events_url
+                self.htmlUrl = htmlUrl
+                self.followersUrl = followersUrl
+                self.followingUrl = followingUrl
+                self.gistsUrl = gistsUrl
+                self.starredUrl = starredUrl
+                self.subscriptionsUrl = subscriptionsUrl
+                self.organizationsUrl = organizationsUrl
+                self.reposUrl = reposUrl
+                self.eventsUrl = eventsUrl
+                self.receivedEventsUrl = receivedEventsUrl
                 self._type = _type
-                self.site_admin = site_admin
-                self.starred_at = starred_at
-                self.user_view_type = user_view_type
+                self.siteAdmin = siteAdmin
+                self.starredAt = starredAt
+                self.userViewType = userViewType
             }
             public enum CodingKeys: String, CodingKey {
                 case name
                 case email
                 case login
                 case id
-                case node_id
-                case avatar_url
-                case gravatar_id
+                case nodeId = "node_id"
+                case avatarUrl = "avatar_url"
+                case gravatarId = "gravatar_id"
                 case url
-                case html_url
-                case followers_url
-                case following_url
-                case gists_url
-                case starred_url
-                case subscriptions_url
-                case organizations_url
-                case repos_url
-                case events_url
-                case received_events_url
+                case htmlUrl = "html_url"
+                case followersUrl = "followers_url"
+                case followingUrl = "following_url"
+                case gistsUrl = "gists_url"
+                case starredUrl = "starred_url"
+                case subscriptionsUrl = "subscriptions_url"
+                case organizationsUrl = "organizations_url"
+                case reposUrl = "repos_url"
+                case eventsUrl = "events_url"
+                case receivedEventsUrl = "received_events_url"
                 case _type = "type"
-                case site_admin
-                case starred_at
-                case user_view_type
+                case siteAdmin = "site_admin"
+                case starredAt = "starred_at"
+                case userViewType = "user_view_type"
             }
         }
         /// Installation
         ///
         /// - Remark: Generated from `#/components/schemas/installation`.
-        public struct installation: Codable, Hashable, Sendable {
+        public struct Installation: Codable, Hashable, Sendable {
             /// The ID of the installation.
             ///
             /// - Remark: Generated from `#/components/schemas/installation/id`.
             public var id: Swift.Int
             /// - Remark: Generated from `#/components/schemas/installation/account`.
-            public struct accountPayload: Codable, Hashable, Sendable {
+            public struct AccountPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/installation/account/value1`.
-                public var value1: Components.Schemas.simple_hyphen_user?
+                public var value1: Components.Schemas.SimpleUser?
                 /// - Remark: Generated from `#/components/schemas/installation/account/value2`.
-                public var value2: Components.Schemas.enterprise?
-                /// Creates a new `accountPayload`.
+                public var value2: Components.Schemas.Enterprise?
+                /// Creates a new `AccountPayload`.
                 ///
                 /// - Parameters:
                 ///   - value1:
                 ///   - value2:
                 public init(
-                    value1: Components.Schemas.simple_hyphen_user? = nil,
-                    value2: Components.Schemas.enterprise? = nil
+                    value1: Components.Schemas.SimpleUser? = nil,
+                    value2: Components.Schemas.Enterprise? = nil
                 ) {
                     self.value1 = value1
                     self.value2 = value2
@@ -3144,19 +3153,19 @@ public enum Components {
                 public init(from decoder: any Decoder) throws {
                     var errors: [any Error] = []
                     do {
-                        value1 = try .init(from: decoder)
+                        self.value1 = try .init(from: decoder)
                     } catch {
                         errors.append(error)
                     }
                     do {
-                        value2 = try .init(from: decoder)
+                        self.value2 = try .init(from: decoder)
                     } catch {
                         errors.append(error)
                     }
                     try Swift.DecodingError.verifyAtLeastOneSchemaIsNotNil(
                         [
-                            value1,
-                            value2
+                            self.value1,
+                            self.value2
                         ],
                         type: Self.self,
                         codingPath: decoder.codingPath,
@@ -3164,152 +3173,152 @@ public enum Components {
                     )
                 }
                 public func encode(to encoder: any Encoder) throws {
-                    try value1?.encode(to: encoder)
-                    try value2?.encode(to: encoder)
+                    try self.value1?.encode(to: encoder)
+                    try self.value2?.encode(to: encoder)
                 }
             }
             /// - Remark: Generated from `#/components/schemas/installation/account`.
-            public var account: Components.Schemas.installation.accountPayload?
+            public var account: Components.Schemas.Installation.AccountPayload?
             /// Describe whether all repositories have been selected or there's a selection involved
             ///
             /// - Remark: Generated from `#/components/schemas/installation/repository_selection`.
-            @frozen public enum repository_selectionPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum RepositorySelectionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case all = "all"
                 case selected = "selected"
             }
             /// Describe whether all repositories have been selected or there's a selection involved
             ///
             /// - Remark: Generated from `#/components/schemas/installation/repository_selection`.
-            public var repository_selection: Components.Schemas.installation.repository_selectionPayload
+            public var repositorySelection: Components.Schemas.Installation.RepositorySelectionPayload
             /// - Remark: Generated from `#/components/schemas/installation/access_tokens_url`.
-            public var access_tokens_url: Swift.String
+            public var accessTokensUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/installation/repositories_url`.
-            public var repositories_url: Swift.String
+            public var repositoriesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/installation/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/installation/app_id`.
-            public var app_id: Swift.Int
+            public var appId: Swift.Int
             /// The ID of the user or organization this token is being scoped to.
             ///
             /// - Remark: Generated from `#/components/schemas/installation/target_id`.
-            public var target_id: Swift.Int
+            public var targetId: Swift.Int
             /// - Remark: Generated from `#/components/schemas/installation/target_type`.
-            public var target_type: Swift.String
+            public var targetType: Swift.String
             /// - Remark: Generated from `#/components/schemas/installation/permissions`.
-            public var permissions: Components.Schemas.app_hyphen_permissions
+            public var permissions: Components.Schemas.AppPermissions
             /// - Remark: Generated from `#/components/schemas/installation/events`.
             public var events: [Swift.String]
             /// - Remark: Generated from `#/components/schemas/installation/created_at`.
-            public var created_at: Foundation.Date
+            public var createdAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/installation/updated_at`.
-            public var updated_at: Foundation.Date
+            public var updatedAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/installation/single_file_name`.
-            public var single_file_name: Swift.String?
+            public var singleFileName: Swift.String?
             /// - Remark: Generated from `#/components/schemas/installation/has_multiple_single_files`.
-            public var has_multiple_single_files: Swift.Bool?
+            public var hasMultipleSingleFiles: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/installation/single_file_paths`.
-            public var single_file_paths: [Swift.String]?
+            public var singleFilePaths: [Swift.String]?
             /// - Remark: Generated from `#/components/schemas/installation/app_slug`.
-            public var app_slug: Swift.String
+            public var appSlug: Swift.String
             /// - Remark: Generated from `#/components/schemas/installation/suspended_by`.
-            public var suspended_by: Components.Schemas.nullable_hyphen_simple_hyphen_user?
+            public var suspendedBy: Components.Schemas.NullableSimpleUser?
             /// - Remark: Generated from `#/components/schemas/installation/suspended_at`.
-            public var suspended_at: Foundation.Date?
+            public var suspendedAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/installation/contact_email`.
-            public var contact_email: Swift.String?
-            /// Creates a new `installation`.
+            public var contactEmail: Swift.String?
+            /// Creates a new `Installation`.
             ///
             /// - Parameters:
             ///   - id: The ID of the installation.
             ///   - account:
-            ///   - repository_selection: Describe whether all repositories have been selected or there's a selection involved
-            ///   - access_tokens_url:
-            ///   - repositories_url:
-            ///   - html_url:
-            ///   - app_id:
-            ///   - target_id: The ID of the user or organization this token is being scoped to.
-            ///   - target_type:
+            ///   - repositorySelection: Describe whether all repositories have been selected or there's a selection involved
+            ///   - accessTokensUrl:
+            ///   - repositoriesUrl:
+            ///   - htmlUrl:
+            ///   - appId:
+            ///   - targetId: The ID of the user or organization this token is being scoped to.
+            ///   - targetType:
             ///   - permissions:
             ///   - events:
-            ///   - created_at:
-            ///   - updated_at:
-            ///   - single_file_name:
-            ///   - has_multiple_single_files:
-            ///   - single_file_paths:
-            ///   - app_slug:
-            ///   - suspended_by:
-            ///   - suspended_at:
-            ///   - contact_email:
+            ///   - createdAt:
+            ///   - updatedAt:
+            ///   - singleFileName:
+            ///   - hasMultipleSingleFiles:
+            ///   - singleFilePaths:
+            ///   - appSlug:
+            ///   - suspendedBy:
+            ///   - suspendedAt:
+            ///   - contactEmail:
             public init(
                 id: Swift.Int,
-                account: Components.Schemas.installation.accountPayload? = nil,
-                repository_selection: Components.Schemas.installation.repository_selectionPayload,
-                access_tokens_url: Swift.String,
-                repositories_url: Swift.String,
-                html_url: Swift.String,
-                app_id: Swift.Int,
-                target_id: Swift.Int,
-                target_type: Swift.String,
-                permissions: Components.Schemas.app_hyphen_permissions,
+                account: Components.Schemas.Installation.AccountPayload? = nil,
+                repositorySelection: Components.Schemas.Installation.RepositorySelectionPayload,
+                accessTokensUrl: Swift.String,
+                repositoriesUrl: Swift.String,
+                htmlUrl: Swift.String,
+                appId: Swift.Int,
+                targetId: Swift.Int,
+                targetType: Swift.String,
+                permissions: Components.Schemas.AppPermissions,
                 events: [Swift.String],
-                created_at: Foundation.Date,
-                updated_at: Foundation.Date,
-                single_file_name: Swift.String? = nil,
-                has_multiple_single_files: Swift.Bool? = nil,
-                single_file_paths: [Swift.String]? = nil,
-                app_slug: Swift.String,
-                suspended_by: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
-                suspended_at: Foundation.Date? = nil,
-                contact_email: Swift.String? = nil
+                createdAt: Foundation.Date,
+                updatedAt: Foundation.Date,
+                singleFileName: Swift.String? = nil,
+                hasMultipleSingleFiles: Swift.Bool? = nil,
+                singleFilePaths: [Swift.String]? = nil,
+                appSlug: Swift.String,
+                suspendedBy: Components.Schemas.NullableSimpleUser? = nil,
+                suspendedAt: Foundation.Date? = nil,
+                contactEmail: Swift.String? = nil
             ) {
                 self.id = id
                 self.account = account
-                self.repository_selection = repository_selection
-                self.access_tokens_url = access_tokens_url
-                self.repositories_url = repositories_url
-                self.html_url = html_url
-                self.app_id = app_id
-                self.target_id = target_id
-                self.target_type = target_type
+                self.repositorySelection = repositorySelection
+                self.accessTokensUrl = accessTokensUrl
+                self.repositoriesUrl = repositoriesUrl
+                self.htmlUrl = htmlUrl
+                self.appId = appId
+                self.targetId = targetId
+                self.targetType = targetType
                 self.permissions = permissions
                 self.events = events
-                self.created_at = created_at
-                self.updated_at = updated_at
-                self.single_file_name = single_file_name
-                self.has_multiple_single_files = has_multiple_single_files
-                self.single_file_paths = single_file_paths
-                self.app_slug = app_slug
-                self.suspended_by = suspended_by
-                self.suspended_at = suspended_at
-                self.contact_email = contact_email
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
+                self.singleFileName = singleFileName
+                self.hasMultipleSingleFiles = hasMultipleSingleFiles
+                self.singleFilePaths = singleFilePaths
+                self.appSlug = appSlug
+                self.suspendedBy = suspendedBy
+                self.suspendedAt = suspendedAt
+                self.contactEmail = contactEmail
             }
             public enum CodingKeys: String, CodingKey {
                 case id
                 case account
-                case repository_selection
-                case access_tokens_url
-                case repositories_url
-                case html_url
-                case app_id
-                case target_id
-                case target_type
+                case repositorySelection = "repository_selection"
+                case accessTokensUrl = "access_tokens_url"
+                case repositoriesUrl = "repositories_url"
+                case htmlUrl = "html_url"
+                case appId = "app_id"
+                case targetId = "target_id"
+                case targetType = "target_type"
                 case permissions
                 case events
-                case created_at
-                case updated_at
-                case single_file_name
-                case has_multiple_single_files
-                case single_file_paths
-                case app_slug
-                case suspended_by
-                case suspended_at
-                case contact_email
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
+                case singleFileName = "single_file_name"
+                case hasMultipleSingleFiles = "has_multiple_single_files"
+                case singleFilePaths = "single_file_paths"
+                case appSlug = "app_slug"
+                case suspendedBy = "suspended_by"
+                case suspendedAt = "suspended_at"
+                case contactEmail = "contact_email"
             }
         }
         /// License Simple
         ///
         /// - Remark: Generated from `#/components/schemas/nullable-license-simple`.
-        public struct nullable_hyphen_license_hyphen_simple: Codable, Hashable, Sendable {
+        public struct NullableLicenseSimple: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/nullable-license-simple/key`.
             public var key: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-license-simple/name`.
@@ -3317,66 +3326,66 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/nullable-license-simple/url`.
             public var url: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-license-simple/spdx_id`.
-            public var spdx_id: Swift.String?
+            public var spdxId: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-license-simple/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-license-simple/html_url`.
-            public var html_url: Swift.String?
-            /// Creates a new `nullable_hyphen_license_hyphen_simple`.
+            public var htmlUrl: Swift.String?
+            /// Creates a new `NullableLicenseSimple`.
             ///
             /// - Parameters:
             ///   - key:
             ///   - name:
             ///   - url:
-            ///   - spdx_id:
-            ///   - node_id:
-            ///   - html_url:
+            ///   - spdxId:
+            ///   - nodeId:
+            ///   - htmlUrl:
             public init(
                 key: Swift.String,
                 name: Swift.String,
                 url: Swift.String? = nil,
-                spdx_id: Swift.String? = nil,
-                node_id: Swift.String,
-                html_url: Swift.String? = nil
+                spdxId: Swift.String? = nil,
+                nodeId: Swift.String,
+                htmlUrl: Swift.String? = nil
             ) {
                 self.key = key
                 self.name = name
                 self.url = url
-                self.spdx_id = spdx_id
-                self.node_id = node_id
-                self.html_url = html_url
+                self.spdxId = spdxId
+                self.nodeId = nodeId
+                self.htmlUrl = htmlUrl
             }
             public enum CodingKeys: String, CodingKey {
                 case key
                 case name
                 case url
-                case spdx_id
-                case node_id
-                case html_url
+                case spdxId = "spdx_id"
+                case nodeId = "node_id"
+                case htmlUrl = "html_url"
             }
         }
         /// A repository on GitHub.
         ///
         /// - Remark: Generated from `#/components/schemas/repository`.
-        public struct repository: Codable, Hashable, Sendable {
+        public struct Repository: Codable, Hashable, Sendable {
             /// Unique identifier of the repository
             ///
             /// - Remark: Generated from `#/components/schemas/repository/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/repository/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// The name of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/name`.
             public var name: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/full_name`.
-            public var full_name: Swift.String
+            public var fullName: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/license`.
-            public var license: Components.Schemas.nullable_hyphen_license_hyphen_simple?
+            public var license: Components.Schemas.NullableLicenseSimple?
             /// - Remark: Generated from `#/components/schemas/repository/forks`.
             public var forks: Swift.Int
             /// - Remark: Generated from `#/components/schemas/repository/permissions`.
-            public struct permissionsPayload: Codable, Hashable, Sendable {
+            public struct PermissionsPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/repository/permissions/admin`.
                 public var admin: Swift.Bool
                 /// - Remark: Generated from `#/components/schemas/repository/permissions/pull`.
@@ -3387,7 +3396,7 @@ public enum Components {
                 public var push: Swift.Bool
                 /// - Remark: Generated from `#/components/schemas/repository/permissions/maintain`.
                 public var maintain: Swift.Bool?
-                /// Creates a new `permissionsPayload`.
+                /// Creates a new `PermissionsPayload`.
                 ///
                 /// - Parameters:
                 ///   - admin:
@@ -3417,15 +3426,15 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/repository/permissions`.
-            public var permissions: Components.Schemas.repository.permissionsPayload?
+            public var permissions: Components.Schemas.Repository.PermissionsPayload?
             /// - Remark: Generated from `#/components/schemas/repository/owner`.
-            public var owner: Components.Schemas.simple_hyphen_user
+            public var owner: Components.Schemas.SimpleUser
             /// Whether the repository is private or public.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/private`.
             public var _private: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/repository/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/description`.
             public var description: Swift.String?
             /// - Remark: Generated from `#/components/schemas/repository/fork`.
@@ -3433,97 +3442,97 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/repository/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/archive_url`.
-            public var archive_url: Swift.String
+            public var archiveUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/assignees_url`.
-            public var assignees_url: Swift.String
+            public var assigneesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/blobs_url`.
-            public var blobs_url: Swift.String
+            public var blobsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/branches_url`.
-            public var branches_url: Swift.String
+            public var branchesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/collaborators_url`.
-            public var collaborators_url: Swift.String
+            public var collaboratorsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/comments_url`.
-            public var comments_url: Swift.String
+            public var commentsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/commits_url`.
-            public var commits_url: Swift.String
+            public var commitsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/compare_url`.
-            public var compare_url: Swift.String
+            public var compareUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/contents_url`.
-            public var contents_url: Swift.String
+            public var contentsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/contributors_url`.
-            public var contributors_url: Swift.String
+            public var contributorsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/deployments_url`.
-            public var deployments_url: Swift.String
+            public var deploymentsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/downloads_url`.
-            public var downloads_url: Swift.String
+            public var downloadsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/events_url`.
-            public var events_url: Swift.String
+            public var eventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/forks_url`.
-            public var forks_url: Swift.String
+            public var forksUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/git_commits_url`.
-            public var git_commits_url: Swift.String
+            public var gitCommitsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/git_refs_url`.
-            public var git_refs_url: Swift.String
+            public var gitRefsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/git_tags_url`.
-            public var git_tags_url: Swift.String
+            public var gitTagsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/git_url`.
-            public var git_url: Swift.String
+            public var gitUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/issue_comment_url`.
-            public var issue_comment_url: Swift.String
+            public var issueCommentUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/issue_events_url`.
-            public var issue_events_url: Swift.String
+            public var issueEventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/issues_url`.
-            public var issues_url: Swift.String
+            public var issuesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/keys_url`.
-            public var keys_url: Swift.String
+            public var keysUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/labels_url`.
-            public var labels_url: Swift.String
+            public var labelsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/languages_url`.
-            public var languages_url: Swift.String
+            public var languagesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/merges_url`.
-            public var merges_url: Swift.String
+            public var mergesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/milestones_url`.
-            public var milestones_url: Swift.String
+            public var milestonesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/notifications_url`.
-            public var notifications_url: Swift.String
+            public var notificationsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/pulls_url`.
-            public var pulls_url: Swift.String
+            public var pullsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/releases_url`.
-            public var releases_url: Swift.String
+            public var releasesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/ssh_url`.
-            public var ssh_url: Swift.String
+            public var sshUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/stargazers_url`.
-            public var stargazers_url: Swift.String
+            public var stargazersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/statuses_url`.
-            public var statuses_url: Swift.String
+            public var statusesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/subscribers_url`.
-            public var subscribers_url: Swift.String
+            public var subscribersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/subscription_url`.
-            public var subscription_url: Swift.String
+            public var subscriptionUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/tags_url`.
-            public var tags_url: Swift.String
+            public var tagsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/teams_url`.
-            public var teams_url: Swift.String
+            public var teamsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/trees_url`.
-            public var trees_url: Swift.String
+            public var treesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/clone_url`.
-            public var clone_url: Swift.String
+            public var cloneUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/mirror_url`.
-            public var mirror_url: Swift.String?
+            public var mirrorUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/repository/hooks_url`.
-            public var hooks_url: Swift.String
+            public var hooksUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/svn_url`.
-            public var svn_url: Swift.String
+            public var svnUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/homepage`.
             public var homepage: Swift.String?
             /// - Remark: Generated from `#/components/schemas/repository/language`.
             public var language: Swift.String?
             /// - Remark: Generated from `#/components/schemas/repository/forks_count`.
-            public var forks_count: Swift.Int
+            public var forksCount: Swift.Int
             /// - Remark: Generated from `#/components/schemas/repository/stargazers_count`.
-            public var stargazers_count: Swift.Int
+            public var stargazersCount: Swift.Int
             /// - Remark: Generated from `#/components/schemas/repository/watchers_count`.
-            public var watchers_count: Swift.Int
+            public var watchersCount: Swift.Int
             /// The size of the repository, in kilobytes. Size is calculated hourly. When a repository is initially created, the size is 0.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/size`.
@@ -3531,38 +3540,38 @@ public enum Components {
             /// The default branch of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/default_branch`.
-            public var default_branch: Swift.String
+            public var defaultBranch: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/open_issues_count`.
-            public var open_issues_count: Swift.Int
+            public var openIssuesCount: Swift.Int
             /// Whether this repository acts as a template that can be used to generate new repositories.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/is_template`.
-            public var is_template: Swift.Bool?
+            public var isTemplate: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/repository/topics`.
             public var topics: [Swift.String]?
             /// Whether issues are enabled.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/has_issues`.
-            public var has_issues: Swift.Bool
+            public var hasIssues: Swift.Bool
             /// Whether projects are enabled.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/has_projects`.
-            public var has_projects: Swift.Bool
+            public var hasProjects: Swift.Bool
             /// Whether the wiki is enabled.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/has_wiki`.
-            public var has_wiki: Swift.Bool
+            public var hasWiki: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/repository/has_pages`.
-            public var has_pages: Swift.Bool
+            public var hasPages: Swift.Bool
             /// Whether downloads are enabled.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/has_downloads`.
             @available(*, deprecated)
-            public var has_downloads: Swift.Bool
+            public var hasDownloads: Swift.Bool
             /// Whether discussions are enabled.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/has_discussions`.
-            public var has_discussions: Swift.Bool?
+            public var hasDiscussions: Swift.Bool?
             /// Whether the repository is archived.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/archived`.
@@ -3576,47 +3585,47 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/repository/visibility`.
             public var visibility: Swift.String?
             /// - Remark: Generated from `#/components/schemas/repository/pushed_at`.
-            public var pushed_at: Foundation.Date?
+            public var pushedAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/repository/created_at`.
-            public var created_at: Foundation.Date?
+            public var createdAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/repository/updated_at`.
-            public var updated_at: Foundation.Date?
+            public var updatedAt: Foundation.Date?
             /// Whether to allow rebase merges for pull requests.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/allow_rebase_merge`.
-            public var allow_rebase_merge: Swift.Bool?
+            public var allowRebaseMerge: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/repository/temp_clone_token`.
-            public var temp_clone_token: Swift.String?
+            public var tempCloneToken: Swift.String?
             /// Whether to allow squash merges for pull requests.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/allow_squash_merge`.
-            public var allow_squash_merge: Swift.Bool?
+            public var allowSquashMerge: Swift.Bool?
             /// Whether to allow Auto-merge to be used on pull requests.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/allow_auto_merge`.
-            public var allow_auto_merge: Swift.Bool?
+            public var allowAutoMerge: Swift.Bool?
             /// Whether to delete head branches when pull requests are merged
             ///
             /// - Remark: Generated from `#/components/schemas/repository/delete_branch_on_merge`.
-            public var delete_branch_on_merge: Swift.Bool?
+            public var deleteBranchOnMerge: Swift.Bool?
             /// Whether or not a pull request head branch that is behind its base branch can always be updated even if it is not required to be up to date before merging.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/allow_update_branch`.
-            public var allow_update_branch: Swift.Bool?
+            public var allowUpdateBranch: Swift.Bool?
             /// Whether a squash merge commit can use the pull request title as default. **This property is closing down. Please use `squash_merge_commit_title` instead.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/use_squash_pr_title_as_default`.
             @available(*, deprecated)
-            public var use_squash_pr_title_as_default: Swift.Bool?
+            public var useSquashPrTitleAsDefault: Swift.Bool?
             /// The default value for a squash merge commit title:
             ///
             /// - `PR_TITLE` - default to the pull request's title.
             /// - `COMMIT_OR_PR_TITLE` - default to the commit's title (if only one commit) or the pull request's title (when more than one commit).
             ///
             /// - Remark: Generated from `#/components/schemas/repository/squash_merge_commit_title`.
-            @frozen public enum squash_merge_commit_titlePayload: String, Codable, Hashable, Sendable {
-                case PR_TITLE = "PR_TITLE"
-                case COMMIT_OR_PR_TITLE = "COMMIT_OR_PR_TITLE"
+            @frozen public enum SquashMergeCommitTitlePayload: String, Codable, Hashable, Sendable, CaseIterable {
+                case prTitle = "PR_TITLE"
+                case commitOrPrTitle = "COMMIT_OR_PR_TITLE"
             }
             /// The default value for a squash merge commit title:
             ///
@@ -3624,7 +3633,7 @@ public enum Components {
             /// - `COMMIT_OR_PR_TITLE` - default to the commit's title (if only one commit) or the pull request's title (when more than one commit).
             ///
             /// - Remark: Generated from `#/components/schemas/repository/squash_merge_commit_title`.
-            public var squash_merge_commit_title: Components.Schemas.repository.squash_merge_commit_titlePayload?
+            public var squashMergeCommitTitle: Components.Schemas.Repository.SquashMergeCommitTitlePayload?
             /// The default value for a squash merge commit message:
             ///
             /// - `PR_BODY` - default to the pull request's body.
@@ -3632,10 +3641,10 @@ public enum Components {
             /// - `BLANK` - default to a blank commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/squash_merge_commit_message`.
-            @frozen public enum squash_merge_commit_messagePayload: String, Codable, Hashable, Sendable {
-                case PR_BODY = "PR_BODY"
-                case COMMIT_MESSAGES = "COMMIT_MESSAGES"
-                case BLANK = "BLANK"
+            @frozen public enum SquashMergeCommitMessagePayload: String, Codable, Hashable, Sendable, CaseIterable {
+                case prBody = "PR_BODY"
+                case commitMessages = "COMMIT_MESSAGES"
+                case blank = "BLANK"
             }
             /// The default value for a squash merge commit message:
             ///
@@ -3644,16 +3653,16 @@ public enum Components {
             /// - `BLANK` - default to a blank commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/squash_merge_commit_message`.
-            public var squash_merge_commit_message: Components.Schemas.repository.squash_merge_commit_messagePayload?
+            public var squashMergeCommitMessage: Components.Schemas.Repository.SquashMergeCommitMessagePayload?
             /// The default value for a merge commit title.
             ///
             /// - `PR_TITLE` - default to the pull request's title.
             /// - `MERGE_MESSAGE` - default to the classic title for a merge message (e.g., Merge pull request #123 from branch-name).
             ///
             /// - Remark: Generated from `#/components/schemas/repository/merge_commit_title`.
-            @frozen public enum merge_commit_titlePayload: String, Codable, Hashable, Sendable {
-                case PR_TITLE = "PR_TITLE"
-                case MERGE_MESSAGE = "MERGE_MESSAGE"
+            @frozen public enum MergeCommitTitlePayload: String, Codable, Hashable, Sendable, CaseIterable {
+                case prTitle = "PR_TITLE"
+                case mergeMessage = "MERGE_MESSAGE"
             }
             /// The default value for a merge commit title.
             ///
@@ -3661,7 +3670,7 @@ public enum Components {
             /// - `MERGE_MESSAGE` - default to the classic title for a merge message (e.g., Merge pull request #123 from branch-name).
             ///
             /// - Remark: Generated from `#/components/schemas/repository/merge_commit_title`.
-            public var merge_commit_title: Components.Schemas.repository.merge_commit_titlePayload?
+            public var mergeCommitTitle: Components.Schemas.Repository.MergeCommitTitlePayload?
             /// The default value for a merge commit message.
             ///
             /// - `PR_TITLE` - default to the pull request's title.
@@ -3669,10 +3678,10 @@ public enum Components {
             /// - `BLANK` - default to a blank commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/merge_commit_message`.
-            @frozen public enum merge_commit_messagePayload: String, Codable, Hashable, Sendable {
-                case PR_BODY = "PR_BODY"
-                case PR_TITLE = "PR_TITLE"
-                case BLANK = "BLANK"
+            @frozen public enum MergeCommitMessagePayload: String, Codable, Hashable, Sendable, CaseIterable {
+                case prBody = "PR_BODY"
+                case prTitle = "PR_TITLE"
+                case blank = "BLANK"
             }
             /// The default value for a merge commit message.
             ///
@@ -3681,552 +3690,552 @@ public enum Components {
             /// - `BLANK` - default to a blank commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/merge_commit_message`.
-            public var merge_commit_message: Components.Schemas.repository.merge_commit_messagePayload?
+            public var mergeCommitMessage: Components.Schemas.Repository.MergeCommitMessagePayload?
             /// Whether to allow merge commits for pull requests.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/allow_merge_commit`.
-            public var allow_merge_commit: Swift.Bool?
+            public var allowMergeCommit: Swift.Bool?
             /// Whether to allow forking this repo
             ///
             /// - Remark: Generated from `#/components/schemas/repository/allow_forking`.
-            public var allow_forking: Swift.Bool?
+            public var allowForking: Swift.Bool?
             /// Whether to require contributors to sign off on web-based commits
             ///
             /// - Remark: Generated from `#/components/schemas/repository/web_commit_signoff_required`.
-            public var web_commit_signoff_required: Swift.Bool?
+            public var webCommitSignoffRequired: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/repository/open_issues`.
-            public var open_issues: Swift.Int
+            public var openIssues: Swift.Int
             /// - Remark: Generated from `#/components/schemas/repository/watchers`.
             public var watchers: Swift.Int
             /// - Remark: Generated from `#/components/schemas/repository/master_branch`.
-            public var master_branch: Swift.String?
+            public var masterBranch: Swift.String?
             /// - Remark: Generated from `#/components/schemas/repository/starred_at`.
-            public var starred_at: Swift.String?
+            public var starredAt: Swift.String?
             /// Whether anonymous git access is enabled for this repository
             ///
             /// - Remark: Generated from `#/components/schemas/repository/anonymous_access_enabled`.
-            public var anonymous_access_enabled: Swift.Bool?
-            /// Creates a new `repository`.
+            public var anonymousAccessEnabled: Swift.Bool?
+            /// Creates a new `Repository`.
             ///
             /// - Parameters:
             ///   - id: Unique identifier of the repository
-            ///   - node_id:
+            ///   - nodeId:
             ///   - name: The name of the repository.
-            ///   - full_name:
+            ///   - fullName:
             ///   - license:
             ///   - forks:
             ///   - permissions:
             ///   - owner:
             ///   - _private: Whether the repository is private or public.
-            ///   - html_url:
+            ///   - htmlUrl:
             ///   - description:
             ///   - fork:
             ///   - url:
-            ///   - archive_url:
-            ///   - assignees_url:
-            ///   - blobs_url:
-            ///   - branches_url:
-            ///   - collaborators_url:
-            ///   - comments_url:
-            ///   - commits_url:
-            ///   - compare_url:
-            ///   - contents_url:
-            ///   - contributors_url:
-            ///   - deployments_url:
-            ///   - downloads_url:
-            ///   - events_url:
-            ///   - forks_url:
-            ///   - git_commits_url:
-            ///   - git_refs_url:
-            ///   - git_tags_url:
-            ///   - git_url:
-            ///   - issue_comment_url:
-            ///   - issue_events_url:
-            ///   - issues_url:
-            ///   - keys_url:
-            ///   - labels_url:
-            ///   - languages_url:
-            ///   - merges_url:
-            ///   - milestones_url:
-            ///   - notifications_url:
-            ///   - pulls_url:
-            ///   - releases_url:
-            ///   - ssh_url:
-            ///   - stargazers_url:
-            ///   - statuses_url:
-            ///   - subscribers_url:
-            ///   - subscription_url:
-            ///   - tags_url:
-            ///   - teams_url:
-            ///   - trees_url:
-            ///   - clone_url:
-            ///   - mirror_url:
-            ///   - hooks_url:
-            ///   - svn_url:
+            ///   - archiveUrl:
+            ///   - assigneesUrl:
+            ///   - blobsUrl:
+            ///   - branchesUrl:
+            ///   - collaboratorsUrl:
+            ///   - commentsUrl:
+            ///   - commitsUrl:
+            ///   - compareUrl:
+            ///   - contentsUrl:
+            ///   - contributorsUrl:
+            ///   - deploymentsUrl:
+            ///   - downloadsUrl:
+            ///   - eventsUrl:
+            ///   - forksUrl:
+            ///   - gitCommitsUrl:
+            ///   - gitRefsUrl:
+            ///   - gitTagsUrl:
+            ///   - gitUrl:
+            ///   - issueCommentUrl:
+            ///   - issueEventsUrl:
+            ///   - issuesUrl:
+            ///   - keysUrl:
+            ///   - labelsUrl:
+            ///   - languagesUrl:
+            ///   - mergesUrl:
+            ///   - milestonesUrl:
+            ///   - notificationsUrl:
+            ///   - pullsUrl:
+            ///   - releasesUrl:
+            ///   - sshUrl:
+            ///   - stargazersUrl:
+            ///   - statusesUrl:
+            ///   - subscribersUrl:
+            ///   - subscriptionUrl:
+            ///   - tagsUrl:
+            ///   - teamsUrl:
+            ///   - treesUrl:
+            ///   - cloneUrl:
+            ///   - mirrorUrl:
+            ///   - hooksUrl:
+            ///   - svnUrl:
             ///   - homepage:
             ///   - language:
-            ///   - forks_count:
-            ///   - stargazers_count:
-            ///   - watchers_count:
+            ///   - forksCount:
+            ///   - stargazersCount:
+            ///   - watchersCount:
             ///   - size: The size of the repository, in kilobytes. Size is calculated hourly. When a repository is initially created, the size is 0.
-            ///   - default_branch: The default branch of the repository.
-            ///   - open_issues_count:
-            ///   - is_template: Whether this repository acts as a template that can be used to generate new repositories.
+            ///   - defaultBranch: The default branch of the repository.
+            ///   - openIssuesCount:
+            ///   - isTemplate: Whether this repository acts as a template that can be used to generate new repositories.
             ///   - topics:
-            ///   - has_issues: Whether issues are enabled.
-            ///   - has_projects: Whether projects are enabled.
-            ///   - has_wiki: Whether the wiki is enabled.
-            ///   - has_pages:
-            ///   - has_downloads: Whether downloads are enabled.
-            ///   - has_discussions: Whether discussions are enabled.
+            ///   - hasIssues: Whether issues are enabled.
+            ///   - hasProjects: Whether projects are enabled.
+            ///   - hasWiki: Whether the wiki is enabled.
+            ///   - hasPages:
+            ///   - hasDownloads: Whether downloads are enabled.
+            ///   - hasDiscussions: Whether discussions are enabled.
             ///   - archived: Whether the repository is archived.
             ///   - disabled: Returns whether or not this repository disabled.
             ///   - visibility: The repository visibility: public, private, or internal.
-            ///   - pushed_at:
-            ///   - created_at:
-            ///   - updated_at:
-            ///   - allow_rebase_merge: Whether to allow rebase merges for pull requests.
-            ///   - temp_clone_token:
-            ///   - allow_squash_merge: Whether to allow squash merges for pull requests.
-            ///   - allow_auto_merge: Whether to allow Auto-merge to be used on pull requests.
-            ///   - delete_branch_on_merge: Whether to delete head branches when pull requests are merged
-            ///   - allow_update_branch: Whether or not a pull request head branch that is behind its base branch can always be updated even if it is not required to be up to date before merging.
-            ///   - use_squash_pr_title_as_default: Whether a squash merge commit can use the pull request title as default. **This property is closing down. Please use `squash_merge_commit_title` instead.
-            ///   - squash_merge_commit_title: The default value for a squash merge commit title:
-            ///   - squash_merge_commit_message: The default value for a squash merge commit message:
-            ///   - merge_commit_title: The default value for a merge commit title.
-            ///   - merge_commit_message: The default value for a merge commit message.
-            ///   - allow_merge_commit: Whether to allow merge commits for pull requests.
-            ///   - allow_forking: Whether to allow forking this repo
-            ///   - web_commit_signoff_required: Whether to require contributors to sign off on web-based commits
-            ///   - open_issues:
+            ///   - pushedAt:
+            ///   - createdAt:
+            ///   - updatedAt:
+            ///   - allowRebaseMerge: Whether to allow rebase merges for pull requests.
+            ///   - tempCloneToken:
+            ///   - allowSquashMerge: Whether to allow squash merges for pull requests.
+            ///   - allowAutoMerge: Whether to allow Auto-merge to be used on pull requests.
+            ///   - deleteBranchOnMerge: Whether to delete head branches when pull requests are merged
+            ///   - allowUpdateBranch: Whether or not a pull request head branch that is behind its base branch can always be updated even if it is not required to be up to date before merging.
+            ///   - useSquashPrTitleAsDefault: Whether a squash merge commit can use the pull request title as default. **This property is closing down. Please use `squash_merge_commit_title` instead.
+            ///   - squashMergeCommitTitle: The default value for a squash merge commit title:
+            ///   - squashMergeCommitMessage: The default value for a squash merge commit message:
+            ///   - mergeCommitTitle: The default value for a merge commit title.
+            ///   - mergeCommitMessage: The default value for a merge commit message.
+            ///   - allowMergeCommit: Whether to allow merge commits for pull requests.
+            ///   - allowForking: Whether to allow forking this repo
+            ///   - webCommitSignoffRequired: Whether to require contributors to sign off on web-based commits
+            ///   - openIssues:
             ///   - watchers:
-            ///   - master_branch:
-            ///   - starred_at:
-            ///   - anonymous_access_enabled: Whether anonymous git access is enabled for this repository
+            ///   - masterBranch:
+            ///   - starredAt:
+            ///   - anonymousAccessEnabled: Whether anonymous git access is enabled for this repository
             public init(
                 id: Swift.Int64,
-                node_id: Swift.String,
+                nodeId: Swift.String,
                 name: Swift.String,
-                full_name: Swift.String,
-                license: Components.Schemas.nullable_hyphen_license_hyphen_simple? = nil,
+                fullName: Swift.String,
+                license: Components.Schemas.NullableLicenseSimple? = nil,
                 forks: Swift.Int,
-                permissions: Components.Schemas.repository.permissionsPayload? = nil,
-                owner: Components.Schemas.simple_hyphen_user,
+                permissions: Components.Schemas.Repository.PermissionsPayload? = nil,
+                owner: Components.Schemas.SimpleUser,
                 _private: Swift.Bool,
-                html_url: Swift.String,
+                htmlUrl: Swift.String,
                 description: Swift.String? = nil,
                 fork: Swift.Bool,
                 url: Swift.String,
-                archive_url: Swift.String,
-                assignees_url: Swift.String,
-                blobs_url: Swift.String,
-                branches_url: Swift.String,
-                collaborators_url: Swift.String,
-                comments_url: Swift.String,
-                commits_url: Swift.String,
-                compare_url: Swift.String,
-                contents_url: Swift.String,
-                contributors_url: Swift.String,
-                deployments_url: Swift.String,
-                downloads_url: Swift.String,
-                events_url: Swift.String,
-                forks_url: Swift.String,
-                git_commits_url: Swift.String,
-                git_refs_url: Swift.String,
-                git_tags_url: Swift.String,
-                git_url: Swift.String,
-                issue_comment_url: Swift.String,
-                issue_events_url: Swift.String,
-                issues_url: Swift.String,
-                keys_url: Swift.String,
-                labels_url: Swift.String,
-                languages_url: Swift.String,
-                merges_url: Swift.String,
-                milestones_url: Swift.String,
-                notifications_url: Swift.String,
-                pulls_url: Swift.String,
-                releases_url: Swift.String,
-                ssh_url: Swift.String,
-                stargazers_url: Swift.String,
-                statuses_url: Swift.String,
-                subscribers_url: Swift.String,
-                subscription_url: Swift.String,
-                tags_url: Swift.String,
-                teams_url: Swift.String,
-                trees_url: Swift.String,
-                clone_url: Swift.String,
-                mirror_url: Swift.String? = nil,
-                hooks_url: Swift.String,
-                svn_url: Swift.String,
+                archiveUrl: Swift.String,
+                assigneesUrl: Swift.String,
+                blobsUrl: Swift.String,
+                branchesUrl: Swift.String,
+                collaboratorsUrl: Swift.String,
+                commentsUrl: Swift.String,
+                commitsUrl: Swift.String,
+                compareUrl: Swift.String,
+                contentsUrl: Swift.String,
+                contributorsUrl: Swift.String,
+                deploymentsUrl: Swift.String,
+                downloadsUrl: Swift.String,
+                eventsUrl: Swift.String,
+                forksUrl: Swift.String,
+                gitCommitsUrl: Swift.String,
+                gitRefsUrl: Swift.String,
+                gitTagsUrl: Swift.String,
+                gitUrl: Swift.String,
+                issueCommentUrl: Swift.String,
+                issueEventsUrl: Swift.String,
+                issuesUrl: Swift.String,
+                keysUrl: Swift.String,
+                labelsUrl: Swift.String,
+                languagesUrl: Swift.String,
+                mergesUrl: Swift.String,
+                milestonesUrl: Swift.String,
+                notificationsUrl: Swift.String,
+                pullsUrl: Swift.String,
+                releasesUrl: Swift.String,
+                sshUrl: Swift.String,
+                stargazersUrl: Swift.String,
+                statusesUrl: Swift.String,
+                subscribersUrl: Swift.String,
+                subscriptionUrl: Swift.String,
+                tagsUrl: Swift.String,
+                teamsUrl: Swift.String,
+                treesUrl: Swift.String,
+                cloneUrl: Swift.String,
+                mirrorUrl: Swift.String? = nil,
+                hooksUrl: Swift.String,
+                svnUrl: Swift.String,
                 homepage: Swift.String? = nil,
                 language: Swift.String? = nil,
-                forks_count: Swift.Int,
-                stargazers_count: Swift.Int,
-                watchers_count: Swift.Int,
+                forksCount: Swift.Int,
+                stargazersCount: Swift.Int,
+                watchersCount: Swift.Int,
                 size: Swift.Int,
-                default_branch: Swift.String,
-                open_issues_count: Swift.Int,
-                is_template: Swift.Bool? = nil,
+                defaultBranch: Swift.String,
+                openIssuesCount: Swift.Int,
+                isTemplate: Swift.Bool? = nil,
                 topics: [Swift.String]? = nil,
-                has_issues: Swift.Bool,
-                has_projects: Swift.Bool,
-                has_wiki: Swift.Bool,
-                has_pages: Swift.Bool,
-                has_downloads: Swift.Bool,
-                has_discussions: Swift.Bool? = nil,
+                hasIssues: Swift.Bool,
+                hasProjects: Swift.Bool,
+                hasWiki: Swift.Bool,
+                hasPages: Swift.Bool,
+                hasDownloads: Swift.Bool,
+                hasDiscussions: Swift.Bool? = nil,
                 archived: Swift.Bool,
                 disabled: Swift.Bool,
                 visibility: Swift.String? = nil,
-                pushed_at: Foundation.Date? = nil,
-                created_at: Foundation.Date? = nil,
-                updated_at: Foundation.Date? = nil,
-                allow_rebase_merge: Swift.Bool? = nil,
-                temp_clone_token: Swift.String? = nil,
-                allow_squash_merge: Swift.Bool? = nil,
-                allow_auto_merge: Swift.Bool? = nil,
-                delete_branch_on_merge: Swift.Bool? = nil,
-                allow_update_branch: Swift.Bool? = nil,
-                use_squash_pr_title_as_default: Swift.Bool? = nil,
-                squash_merge_commit_title: Components.Schemas.repository.squash_merge_commit_titlePayload? = nil,
-                squash_merge_commit_message: Components.Schemas.repository.squash_merge_commit_messagePayload? = nil,
-                merge_commit_title: Components.Schemas.repository.merge_commit_titlePayload? = nil,
-                merge_commit_message: Components.Schemas.repository.merge_commit_messagePayload? = nil,
-                allow_merge_commit: Swift.Bool? = nil,
-                allow_forking: Swift.Bool? = nil,
-                web_commit_signoff_required: Swift.Bool? = nil,
-                open_issues: Swift.Int,
+                pushedAt: Foundation.Date? = nil,
+                createdAt: Foundation.Date? = nil,
+                updatedAt: Foundation.Date? = nil,
+                allowRebaseMerge: Swift.Bool? = nil,
+                tempCloneToken: Swift.String? = nil,
+                allowSquashMerge: Swift.Bool? = nil,
+                allowAutoMerge: Swift.Bool? = nil,
+                deleteBranchOnMerge: Swift.Bool? = nil,
+                allowUpdateBranch: Swift.Bool? = nil,
+                useSquashPrTitleAsDefault: Swift.Bool? = nil,
+                squashMergeCommitTitle: Components.Schemas.Repository.SquashMergeCommitTitlePayload? = nil,
+                squashMergeCommitMessage: Components.Schemas.Repository.SquashMergeCommitMessagePayload? = nil,
+                mergeCommitTitle: Components.Schemas.Repository.MergeCommitTitlePayload? = nil,
+                mergeCommitMessage: Components.Schemas.Repository.MergeCommitMessagePayload? = nil,
+                allowMergeCommit: Swift.Bool? = nil,
+                allowForking: Swift.Bool? = nil,
+                webCommitSignoffRequired: Swift.Bool? = nil,
+                openIssues: Swift.Int,
                 watchers: Swift.Int,
-                master_branch: Swift.String? = nil,
-                starred_at: Swift.String? = nil,
-                anonymous_access_enabled: Swift.Bool? = nil
+                masterBranch: Swift.String? = nil,
+                starredAt: Swift.String? = nil,
+                anonymousAccessEnabled: Swift.Bool? = nil
             ) {
                 self.id = id
-                self.node_id = node_id
+                self.nodeId = nodeId
                 self.name = name
-                self.full_name = full_name
+                self.fullName = fullName
                 self.license = license
                 self.forks = forks
                 self.permissions = permissions
                 self.owner = owner
                 self._private = _private
-                self.html_url = html_url
+                self.htmlUrl = htmlUrl
                 self.description = description
                 self.fork = fork
                 self.url = url
-                self.archive_url = archive_url
-                self.assignees_url = assignees_url
-                self.blobs_url = blobs_url
-                self.branches_url = branches_url
-                self.collaborators_url = collaborators_url
-                self.comments_url = comments_url
-                self.commits_url = commits_url
-                self.compare_url = compare_url
-                self.contents_url = contents_url
-                self.contributors_url = contributors_url
-                self.deployments_url = deployments_url
-                self.downloads_url = downloads_url
-                self.events_url = events_url
-                self.forks_url = forks_url
-                self.git_commits_url = git_commits_url
-                self.git_refs_url = git_refs_url
-                self.git_tags_url = git_tags_url
-                self.git_url = git_url
-                self.issue_comment_url = issue_comment_url
-                self.issue_events_url = issue_events_url
-                self.issues_url = issues_url
-                self.keys_url = keys_url
-                self.labels_url = labels_url
-                self.languages_url = languages_url
-                self.merges_url = merges_url
-                self.milestones_url = milestones_url
-                self.notifications_url = notifications_url
-                self.pulls_url = pulls_url
-                self.releases_url = releases_url
-                self.ssh_url = ssh_url
-                self.stargazers_url = stargazers_url
-                self.statuses_url = statuses_url
-                self.subscribers_url = subscribers_url
-                self.subscription_url = subscription_url
-                self.tags_url = tags_url
-                self.teams_url = teams_url
-                self.trees_url = trees_url
-                self.clone_url = clone_url
-                self.mirror_url = mirror_url
-                self.hooks_url = hooks_url
-                self.svn_url = svn_url
+                self.archiveUrl = archiveUrl
+                self.assigneesUrl = assigneesUrl
+                self.blobsUrl = blobsUrl
+                self.branchesUrl = branchesUrl
+                self.collaboratorsUrl = collaboratorsUrl
+                self.commentsUrl = commentsUrl
+                self.commitsUrl = commitsUrl
+                self.compareUrl = compareUrl
+                self.contentsUrl = contentsUrl
+                self.contributorsUrl = contributorsUrl
+                self.deploymentsUrl = deploymentsUrl
+                self.downloadsUrl = downloadsUrl
+                self.eventsUrl = eventsUrl
+                self.forksUrl = forksUrl
+                self.gitCommitsUrl = gitCommitsUrl
+                self.gitRefsUrl = gitRefsUrl
+                self.gitTagsUrl = gitTagsUrl
+                self.gitUrl = gitUrl
+                self.issueCommentUrl = issueCommentUrl
+                self.issueEventsUrl = issueEventsUrl
+                self.issuesUrl = issuesUrl
+                self.keysUrl = keysUrl
+                self.labelsUrl = labelsUrl
+                self.languagesUrl = languagesUrl
+                self.mergesUrl = mergesUrl
+                self.milestonesUrl = milestonesUrl
+                self.notificationsUrl = notificationsUrl
+                self.pullsUrl = pullsUrl
+                self.releasesUrl = releasesUrl
+                self.sshUrl = sshUrl
+                self.stargazersUrl = stargazersUrl
+                self.statusesUrl = statusesUrl
+                self.subscribersUrl = subscribersUrl
+                self.subscriptionUrl = subscriptionUrl
+                self.tagsUrl = tagsUrl
+                self.teamsUrl = teamsUrl
+                self.treesUrl = treesUrl
+                self.cloneUrl = cloneUrl
+                self.mirrorUrl = mirrorUrl
+                self.hooksUrl = hooksUrl
+                self.svnUrl = svnUrl
                 self.homepage = homepage
                 self.language = language
-                self.forks_count = forks_count
-                self.stargazers_count = stargazers_count
-                self.watchers_count = watchers_count
+                self.forksCount = forksCount
+                self.stargazersCount = stargazersCount
+                self.watchersCount = watchersCount
                 self.size = size
-                self.default_branch = default_branch
-                self.open_issues_count = open_issues_count
-                self.is_template = is_template
+                self.defaultBranch = defaultBranch
+                self.openIssuesCount = openIssuesCount
+                self.isTemplate = isTemplate
                 self.topics = topics
-                self.has_issues = has_issues
-                self.has_projects = has_projects
-                self.has_wiki = has_wiki
-                self.has_pages = has_pages
-                self.has_downloads = has_downloads
-                self.has_discussions = has_discussions
+                self.hasIssues = hasIssues
+                self.hasProjects = hasProjects
+                self.hasWiki = hasWiki
+                self.hasPages = hasPages
+                self.hasDownloads = hasDownloads
+                self.hasDiscussions = hasDiscussions
                 self.archived = archived
                 self.disabled = disabled
                 self.visibility = visibility
-                self.pushed_at = pushed_at
-                self.created_at = created_at
-                self.updated_at = updated_at
-                self.allow_rebase_merge = allow_rebase_merge
-                self.temp_clone_token = temp_clone_token
-                self.allow_squash_merge = allow_squash_merge
-                self.allow_auto_merge = allow_auto_merge
-                self.delete_branch_on_merge = delete_branch_on_merge
-                self.allow_update_branch = allow_update_branch
-                self.use_squash_pr_title_as_default = use_squash_pr_title_as_default
-                self.squash_merge_commit_title = squash_merge_commit_title
-                self.squash_merge_commit_message = squash_merge_commit_message
-                self.merge_commit_title = merge_commit_title
-                self.merge_commit_message = merge_commit_message
-                self.allow_merge_commit = allow_merge_commit
-                self.allow_forking = allow_forking
-                self.web_commit_signoff_required = web_commit_signoff_required
-                self.open_issues = open_issues
+                self.pushedAt = pushedAt
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
+                self.allowRebaseMerge = allowRebaseMerge
+                self.tempCloneToken = tempCloneToken
+                self.allowSquashMerge = allowSquashMerge
+                self.allowAutoMerge = allowAutoMerge
+                self.deleteBranchOnMerge = deleteBranchOnMerge
+                self.allowUpdateBranch = allowUpdateBranch
+                self.useSquashPrTitleAsDefault = useSquashPrTitleAsDefault
+                self.squashMergeCommitTitle = squashMergeCommitTitle
+                self.squashMergeCommitMessage = squashMergeCommitMessage
+                self.mergeCommitTitle = mergeCommitTitle
+                self.mergeCommitMessage = mergeCommitMessage
+                self.allowMergeCommit = allowMergeCommit
+                self.allowForking = allowForking
+                self.webCommitSignoffRequired = webCommitSignoffRequired
+                self.openIssues = openIssues
                 self.watchers = watchers
-                self.master_branch = master_branch
-                self.starred_at = starred_at
-                self.anonymous_access_enabled = anonymous_access_enabled
+                self.masterBranch = masterBranch
+                self.starredAt = starredAt
+                self.anonymousAccessEnabled = anonymousAccessEnabled
             }
             public enum CodingKeys: String, CodingKey {
                 case id
-                case node_id
+                case nodeId = "node_id"
                 case name
-                case full_name
+                case fullName = "full_name"
                 case license
                 case forks
                 case permissions
                 case owner
                 case _private = "private"
-                case html_url
+                case htmlUrl = "html_url"
                 case description
                 case fork
                 case url
-                case archive_url
-                case assignees_url
-                case blobs_url
-                case branches_url
-                case collaborators_url
-                case comments_url
-                case commits_url
-                case compare_url
-                case contents_url
-                case contributors_url
-                case deployments_url
-                case downloads_url
-                case events_url
-                case forks_url
-                case git_commits_url
-                case git_refs_url
-                case git_tags_url
-                case git_url
-                case issue_comment_url
-                case issue_events_url
-                case issues_url
-                case keys_url
-                case labels_url
-                case languages_url
-                case merges_url
-                case milestones_url
-                case notifications_url
-                case pulls_url
-                case releases_url
-                case ssh_url
-                case stargazers_url
-                case statuses_url
-                case subscribers_url
-                case subscription_url
-                case tags_url
-                case teams_url
-                case trees_url
-                case clone_url
-                case mirror_url
-                case hooks_url
-                case svn_url
+                case archiveUrl = "archive_url"
+                case assigneesUrl = "assignees_url"
+                case blobsUrl = "blobs_url"
+                case branchesUrl = "branches_url"
+                case collaboratorsUrl = "collaborators_url"
+                case commentsUrl = "comments_url"
+                case commitsUrl = "commits_url"
+                case compareUrl = "compare_url"
+                case contentsUrl = "contents_url"
+                case contributorsUrl = "contributors_url"
+                case deploymentsUrl = "deployments_url"
+                case downloadsUrl = "downloads_url"
+                case eventsUrl = "events_url"
+                case forksUrl = "forks_url"
+                case gitCommitsUrl = "git_commits_url"
+                case gitRefsUrl = "git_refs_url"
+                case gitTagsUrl = "git_tags_url"
+                case gitUrl = "git_url"
+                case issueCommentUrl = "issue_comment_url"
+                case issueEventsUrl = "issue_events_url"
+                case issuesUrl = "issues_url"
+                case keysUrl = "keys_url"
+                case labelsUrl = "labels_url"
+                case languagesUrl = "languages_url"
+                case mergesUrl = "merges_url"
+                case milestonesUrl = "milestones_url"
+                case notificationsUrl = "notifications_url"
+                case pullsUrl = "pulls_url"
+                case releasesUrl = "releases_url"
+                case sshUrl = "ssh_url"
+                case stargazersUrl = "stargazers_url"
+                case statusesUrl = "statuses_url"
+                case subscribersUrl = "subscribers_url"
+                case subscriptionUrl = "subscription_url"
+                case tagsUrl = "tags_url"
+                case teamsUrl = "teams_url"
+                case treesUrl = "trees_url"
+                case cloneUrl = "clone_url"
+                case mirrorUrl = "mirror_url"
+                case hooksUrl = "hooks_url"
+                case svnUrl = "svn_url"
                 case homepage
                 case language
-                case forks_count
-                case stargazers_count
-                case watchers_count
+                case forksCount = "forks_count"
+                case stargazersCount = "stargazers_count"
+                case watchersCount = "watchers_count"
                 case size
-                case default_branch
-                case open_issues_count
-                case is_template
+                case defaultBranch = "default_branch"
+                case openIssuesCount = "open_issues_count"
+                case isTemplate = "is_template"
                 case topics
-                case has_issues
-                case has_projects
-                case has_wiki
-                case has_pages
-                case has_downloads
-                case has_discussions
+                case hasIssues = "has_issues"
+                case hasProjects = "has_projects"
+                case hasWiki = "has_wiki"
+                case hasPages = "has_pages"
+                case hasDownloads = "has_downloads"
+                case hasDiscussions = "has_discussions"
                 case archived
                 case disabled
                 case visibility
-                case pushed_at
-                case created_at
-                case updated_at
-                case allow_rebase_merge
-                case temp_clone_token
-                case allow_squash_merge
-                case allow_auto_merge
-                case delete_branch_on_merge
-                case allow_update_branch
-                case use_squash_pr_title_as_default
-                case squash_merge_commit_title
-                case squash_merge_commit_message
-                case merge_commit_title
-                case merge_commit_message
-                case allow_merge_commit
-                case allow_forking
-                case web_commit_signoff_required
-                case open_issues
+                case pushedAt = "pushed_at"
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
+                case allowRebaseMerge = "allow_rebase_merge"
+                case tempCloneToken = "temp_clone_token"
+                case allowSquashMerge = "allow_squash_merge"
+                case allowAutoMerge = "allow_auto_merge"
+                case deleteBranchOnMerge = "delete_branch_on_merge"
+                case allowUpdateBranch = "allow_update_branch"
+                case useSquashPrTitleAsDefault = "use_squash_pr_title_as_default"
+                case squashMergeCommitTitle = "squash_merge_commit_title"
+                case squashMergeCommitMessage = "squash_merge_commit_message"
+                case mergeCommitTitle = "merge_commit_title"
+                case mergeCommitMessage = "merge_commit_message"
+                case allowMergeCommit = "allow_merge_commit"
+                case allowForking = "allow_forking"
+                case webCommitSignoffRequired = "web_commit_signoff_required"
+                case openIssues = "open_issues"
                 case watchers
-                case master_branch
-                case starred_at
-                case anonymous_access_enabled
+                case masterBranch = "master_branch"
+                case starredAt = "starred_at"
+                case anonymousAccessEnabled = "anonymous_access_enabled"
             }
         }
         /// Authentication token for a GitHub App installed on a user or org.
         ///
         /// - Remark: Generated from `#/components/schemas/installation-token`.
-        public struct installation_hyphen_token: Codable, Hashable, Sendable {
+        public struct InstallationToken: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/installation-token/token`.
             public var token: Swift.String
             /// - Remark: Generated from `#/components/schemas/installation-token/expires_at`.
-            public var expires_at: Swift.String
+            public var expiresAt: Swift.String
             /// - Remark: Generated from `#/components/schemas/installation-token/permissions`.
-            public var permissions: Components.Schemas.app_hyphen_permissions?
+            public var permissions: Components.Schemas.AppPermissions?
             /// - Remark: Generated from `#/components/schemas/installation-token/repository_selection`.
-            @frozen public enum repository_selectionPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum RepositorySelectionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case all = "all"
                 case selected = "selected"
             }
             /// - Remark: Generated from `#/components/schemas/installation-token/repository_selection`.
-            public var repository_selection: Components.Schemas.installation_hyphen_token.repository_selectionPayload?
+            public var repositorySelection: Components.Schemas.InstallationToken.RepositorySelectionPayload?
             /// - Remark: Generated from `#/components/schemas/installation-token/repositories`.
-            public var repositories: [Components.Schemas.repository]?
+            public var repositories: [Components.Schemas.Repository]?
             /// - Remark: Generated from `#/components/schemas/installation-token/single_file`.
-            public var single_file: Swift.String?
+            public var singleFile: Swift.String?
             /// - Remark: Generated from `#/components/schemas/installation-token/has_multiple_single_files`.
-            public var has_multiple_single_files: Swift.Bool?
+            public var hasMultipleSingleFiles: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/installation-token/single_file_paths`.
-            public var single_file_paths: [Swift.String]?
-            /// Creates a new `installation_hyphen_token`.
+            public var singleFilePaths: [Swift.String]?
+            /// Creates a new `InstallationToken`.
             ///
             /// - Parameters:
             ///   - token:
-            ///   - expires_at:
+            ///   - expiresAt:
             ///   - permissions:
-            ///   - repository_selection:
+            ///   - repositorySelection:
             ///   - repositories:
-            ///   - single_file:
-            ///   - has_multiple_single_files:
-            ///   - single_file_paths:
+            ///   - singleFile:
+            ///   - hasMultipleSingleFiles:
+            ///   - singleFilePaths:
             public init(
                 token: Swift.String,
-                expires_at: Swift.String,
-                permissions: Components.Schemas.app_hyphen_permissions? = nil,
-                repository_selection: Components.Schemas.installation_hyphen_token.repository_selectionPayload? = nil,
-                repositories: [Components.Schemas.repository]? = nil,
-                single_file: Swift.String? = nil,
-                has_multiple_single_files: Swift.Bool? = nil,
-                single_file_paths: [Swift.String]? = nil
+                expiresAt: Swift.String,
+                permissions: Components.Schemas.AppPermissions? = nil,
+                repositorySelection: Components.Schemas.InstallationToken.RepositorySelectionPayload? = nil,
+                repositories: [Components.Schemas.Repository]? = nil,
+                singleFile: Swift.String? = nil,
+                hasMultipleSingleFiles: Swift.Bool? = nil,
+                singleFilePaths: [Swift.String]? = nil
             ) {
                 self.token = token
-                self.expires_at = expires_at
+                self.expiresAt = expiresAt
                 self.permissions = permissions
-                self.repository_selection = repository_selection
+                self.repositorySelection = repositorySelection
                 self.repositories = repositories
-                self.single_file = single_file
-                self.has_multiple_single_files = has_multiple_single_files
-                self.single_file_paths = single_file_paths
+                self.singleFile = singleFile
+                self.hasMultipleSingleFiles = hasMultipleSingleFiles
+                self.singleFilePaths = singleFilePaths
             }
             public enum CodingKeys: String, CodingKey {
                 case token
-                case expires_at
+                case expiresAt = "expires_at"
                 case permissions
-                case repository_selection
+                case repositorySelection = "repository_selection"
                 case repositories
-                case single_file
-                case has_multiple_single_files
-                case single_file_paths
+                case singleFile = "single_file"
+                case hasMultipleSingleFiles = "has_multiple_single_files"
+                case singleFilePaths = "single_file_paths"
             }
         }
         /// - Remark: Generated from `#/components/schemas/nullable-scoped-installation`.
-        public struct nullable_hyphen_scoped_hyphen_installation: Codable, Hashable, Sendable {
+        public struct NullableScopedInstallation: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/nullable-scoped-installation/permissions`.
-            public var permissions: Components.Schemas.app_hyphen_permissions
+            public var permissions: Components.Schemas.AppPermissions
             /// Describe whether all repositories have been selected or there's a selection involved
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-scoped-installation/repository_selection`.
-            @frozen public enum repository_selectionPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum RepositorySelectionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case all = "all"
                 case selected = "selected"
             }
             /// Describe whether all repositories have been selected or there's a selection involved
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-scoped-installation/repository_selection`.
-            public var repository_selection: Components.Schemas.nullable_hyphen_scoped_hyphen_installation.repository_selectionPayload
+            public var repositorySelection: Components.Schemas.NullableScopedInstallation.RepositorySelectionPayload
             /// - Remark: Generated from `#/components/schemas/nullable-scoped-installation/single_file_name`.
-            public var single_file_name: Swift.String?
+            public var singleFileName: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-scoped-installation/has_multiple_single_files`.
-            public var has_multiple_single_files: Swift.Bool?
+            public var hasMultipleSingleFiles: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/nullable-scoped-installation/single_file_paths`.
-            public var single_file_paths: [Swift.String]?
+            public var singleFilePaths: [Swift.String]?
             /// - Remark: Generated from `#/components/schemas/nullable-scoped-installation/repositories_url`.
-            public var repositories_url: Swift.String
+            public var repositoriesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-scoped-installation/account`.
-            public var account: Components.Schemas.simple_hyphen_user
-            /// Creates a new `nullable_hyphen_scoped_hyphen_installation`.
+            public var account: Components.Schemas.SimpleUser
+            /// Creates a new `NullableScopedInstallation`.
             ///
             /// - Parameters:
             ///   - permissions:
-            ///   - repository_selection: Describe whether all repositories have been selected or there's a selection involved
-            ///   - single_file_name:
-            ///   - has_multiple_single_files:
-            ///   - single_file_paths:
-            ///   - repositories_url:
+            ///   - repositorySelection: Describe whether all repositories have been selected or there's a selection involved
+            ///   - singleFileName:
+            ///   - hasMultipleSingleFiles:
+            ///   - singleFilePaths:
+            ///   - repositoriesUrl:
             ///   - account:
             public init(
-                permissions: Components.Schemas.app_hyphen_permissions,
-                repository_selection: Components.Schemas.nullable_hyphen_scoped_hyphen_installation.repository_selectionPayload,
-                single_file_name: Swift.String? = nil,
-                has_multiple_single_files: Swift.Bool? = nil,
-                single_file_paths: [Swift.String]? = nil,
-                repositories_url: Swift.String,
-                account: Components.Schemas.simple_hyphen_user
+                permissions: Components.Schemas.AppPermissions,
+                repositorySelection: Components.Schemas.NullableScopedInstallation.RepositorySelectionPayload,
+                singleFileName: Swift.String? = nil,
+                hasMultipleSingleFiles: Swift.Bool? = nil,
+                singleFilePaths: [Swift.String]? = nil,
+                repositoriesUrl: Swift.String,
+                account: Components.Schemas.SimpleUser
             ) {
                 self.permissions = permissions
-                self.repository_selection = repository_selection
-                self.single_file_name = single_file_name
-                self.has_multiple_single_files = has_multiple_single_files
-                self.single_file_paths = single_file_paths
-                self.repositories_url = repositories_url
+                self.repositorySelection = repositorySelection
+                self.singleFileName = singleFileName
+                self.hasMultipleSingleFiles = hasMultipleSingleFiles
+                self.singleFilePaths = singleFilePaths
+                self.repositoriesUrl = repositoriesUrl
                 self.account = account
             }
             public enum CodingKeys: String, CodingKey {
                 case permissions
-                case repository_selection
-                case single_file_name
-                case has_multiple_single_files
-                case single_file_paths
-                case repositories_url
+                case repositorySelection = "repository_selection"
+                case singleFileName = "single_file_name"
+                case hasMultipleSingleFiles = "has_multiple_single_files"
+                case singleFilePaths = "single_file_paths"
+                case repositoriesUrl = "repositories_url"
                 case account
             }
         }
         /// The authorization for an OAuth app, GitHub App, or a Personal Access Token.
         ///
         /// - Remark: Generated from `#/components/schemas/authorization`.
-        public struct authorization: Codable, Hashable, Sendable {
+        public struct Authorization: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/authorization/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/authorization/url`.
@@ -4238,133 +4247,133 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/authorization/token`.
             public var token: Swift.String
             /// - Remark: Generated from `#/components/schemas/authorization/token_last_eight`.
-            public var token_last_eight: Swift.String?
+            public var tokenLastEight: Swift.String?
             /// - Remark: Generated from `#/components/schemas/authorization/hashed_token`.
-            public var hashed_token: Swift.String?
+            public var hashedToken: Swift.String?
             /// - Remark: Generated from `#/components/schemas/authorization/app`.
-            public struct appPayload: Codable, Hashable, Sendable {
+            public struct AppPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/authorization/app/client_id`.
-                public var client_id: Swift.String
+                public var clientId: Swift.String
                 /// - Remark: Generated from `#/components/schemas/authorization/app/name`.
                 public var name: Swift.String
                 /// - Remark: Generated from `#/components/schemas/authorization/app/url`.
                 public var url: Swift.String
-                /// Creates a new `appPayload`.
+                /// Creates a new `AppPayload`.
                 ///
                 /// - Parameters:
-                ///   - client_id:
+                ///   - clientId:
                 ///   - name:
                 ///   - url:
                 public init(
-                    client_id: Swift.String,
+                    clientId: Swift.String,
                     name: Swift.String,
                     url: Swift.String
                 ) {
-                    self.client_id = client_id
+                    self.clientId = clientId
                     self.name = name
                     self.url = url
                 }
                 public enum CodingKeys: String, CodingKey {
-                    case client_id
+                    case clientId = "client_id"
                     case name
                     case url
                 }
             }
             /// - Remark: Generated from `#/components/schemas/authorization/app`.
-            public var app: Components.Schemas.authorization.appPayload
+            public var app: Components.Schemas.Authorization.AppPayload
             /// - Remark: Generated from `#/components/schemas/authorization/note`.
             public var note: Swift.String?
             /// - Remark: Generated from `#/components/schemas/authorization/note_url`.
-            public var note_url: Swift.String?
+            public var noteUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/authorization/updated_at`.
-            public var updated_at: Foundation.Date
+            public var updatedAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/authorization/created_at`.
-            public var created_at: Foundation.Date
+            public var createdAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/authorization/fingerprint`.
             public var fingerprint: Swift.String?
             /// - Remark: Generated from `#/components/schemas/authorization/user`.
-            public var user: Components.Schemas.nullable_hyphen_simple_hyphen_user?
+            public var user: Components.Schemas.NullableSimpleUser?
             /// - Remark: Generated from `#/components/schemas/authorization/installation`.
-            public var installation: Components.Schemas.nullable_hyphen_scoped_hyphen_installation?
+            public var installation: Components.Schemas.NullableScopedInstallation?
             /// - Remark: Generated from `#/components/schemas/authorization/expires_at`.
-            public var expires_at: Foundation.Date?
-            /// Creates a new `authorization`.
+            public var expiresAt: Foundation.Date?
+            /// Creates a new `Authorization`.
             ///
             /// - Parameters:
             ///   - id:
             ///   - url:
             ///   - scopes: A list of scopes that this authorization is in.
             ///   - token:
-            ///   - token_last_eight:
-            ///   - hashed_token:
+            ///   - tokenLastEight:
+            ///   - hashedToken:
             ///   - app:
             ///   - note:
-            ///   - note_url:
-            ///   - updated_at:
-            ///   - created_at:
+            ///   - noteUrl:
+            ///   - updatedAt:
+            ///   - createdAt:
             ///   - fingerprint:
             ///   - user:
             ///   - installation:
-            ///   - expires_at:
+            ///   - expiresAt:
             public init(
                 id: Swift.Int64,
                 url: Swift.String,
                 scopes: [Swift.String]? = nil,
                 token: Swift.String,
-                token_last_eight: Swift.String? = nil,
-                hashed_token: Swift.String? = nil,
-                app: Components.Schemas.authorization.appPayload,
+                tokenLastEight: Swift.String? = nil,
+                hashedToken: Swift.String? = nil,
+                app: Components.Schemas.Authorization.AppPayload,
                 note: Swift.String? = nil,
-                note_url: Swift.String? = nil,
-                updated_at: Foundation.Date,
-                created_at: Foundation.Date,
+                noteUrl: Swift.String? = nil,
+                updatedAt: Foundation.Date,
+                createdAt: Foundation.Date,
                 fingerprint: Swift.String? = nil,
-                user: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
-                installation: Components.Schemas.nullable_hyphen_scoped_hyphen_installation? = nil,
-                expires_at: Foundation.Date? = nil
+                user: Components.Schemas.NullableSimpleUser? = nil,
+                installation: Components.Schemas.NullableScopedInstallation? = nil,
+                expiresAt: Foundation.Date? = nil
             ) {
                 self.id = id
                 self.url = url
                 self.scopes = scopes
                 self.token = token
-                self.token_last_eight = token_last_eight
-                self.hashed_token = hashed_token
+                self.tokenLastEight = tokenLastEight
+                self.hashedToken = hashedToken
                 self.app = app
                 self.note = note
-                self.note_url = note_url
-                self.updated_at = updated_at
-                self.created_at = created_at
+                self.noteUrl = noteUrl
+                self.updatedAt = updatedAt
+                self.createdAt = createdAt
                 self.fingerprint = fingerprint
                 self.user = user
                 self.installation = installation
-                self.expires_at = expires_at
+                self.expiresAt = expiresAt
             }
             public enum CodingKeys: String, CodingKey {
                 case id
                 case url
                 case scopes
                 case token
-                case token_last_eight
-                case hashed_token
+                case tokenLastEight = "token_last_eight"
+                case hashedToken = "hashed_token"
                 case app
                 case note
-                case note_url
-                case updated_at
-                case created_at
+                case noteUrl = "note_url"
+                case updatedAt = "updated_at"
+                case createdAt = "created_at"
                 case fingerprint
                 case user
                 case installation
-                case expires_at
+                case expiresAt = "expires_at"
             }
         }
         /// Marketplace Listing Plan
         ///
         /// - Remark: Generated from `#/components/schemas/marketplace-listing-plan`.
-        public struct marketplace_hyphen_listing_hyphen_plan: Codable, Hashable, Sendable {
+        public struct MarketplaceListingPlan: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/marketplace-listing-plan/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/marketplace-listing-plan/accounts_url`.
-            public var accounts_url: Swift.String
+            public var accountsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/marketplace-listing-plan/id`.
             public var id: Swift.Int
             /// - Remark: Generated from `#/components/schemas/marketplace-listing-plan/number`.
@@ -4374,82 +4383,82 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/marketplace-listing-plan/description`.
             public var description: Swift.String
             /// - Remark: Generated from `#/components/schemas/marketplace-listing-plan/monthly_price_in_cents`.
-            public var monthly_price_in_cents: Swift.Int
+            public var monthlyPriceInCents: Swift.Int
             /// - Remark: Generated from `#/components/schemas/marketplace-listing-plan/yearly_price_in_cents`.
-            public var yearly_price_in_cents: Swift.Int
+            public var yearlyPriceInCents: Swift.Int
             /// - Remark: Generated from `#/components/schemas/marketplace-listing-plan/price_model`.
-            @frozen public enum price_modelPayload: String, Codable, Hashable, Sendable {
-                case FREE = "FREE"
-                case FLAT_RATE = "FLAT_RATE"
-                case PER_UNIT = "PER_UNIT"
+            @frozen public enum PriceModelPayload: String, Codable, Hashable, Sendable, CaseIterable {
+                case free = "FREE"
+                case flatRate = "FLAT_RATE"
+                case perUnit = "PER_UNIT"
             }
             /// - Remark: Generated from `#/components/schemas/marketplace-listing-plan/price_model`.
-            public var price_model: Components.Schemas.marketplace_hyphen_listing_hyphen_plan.price_modelPayload
+            public var priceModel: Components.Schemas.MarketplaceListingPlan.PriceModelPayload
             /// - Remark: Generated from `#/components/schemas/marketplace-listing-plan/has_free_trial`.
-            public var has_free_trial: Swift.Bool
+            public var hasFreeTrial: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/marketplace-listing-plan/unit_name`.
-            public var unit_name: Swift.String?
+            public var unitName: Swift.String?
             /// - Remark: Generated from `#/components/schemas/marketplace-listing-plan/state`.
             public var state: Swift.String
             /// - Remark: Generated from `#/components/schemas/marketplace-listing-plan/bullets`.
             public var bullets: [Swift.String]
-            /// Creates a new `marketplace_hyphen_listing_hyphen_plan`.
+            /// Creates a new `MarketplaceListingPlan`.
             ///
             /// - Parameters:
             ///   - url:
-            ///   - accounts_url:
+            ///   - accountsUrl:
             ///   - id:
             ///   - number:
             ///   - name:
             ///   - description:
-            ///   - monthly_price_in_cents:
-            ///   - yearly_price_in_cents:
-            ///   - price_model:
-            ///   - has_free_trial:
-            ///   - unit_name:
+            ///   - monthlyPriceInCents:
+            ///   - yearlyPriceInCents:
+            ///   - priceModel:
+            ///   - hasFreeTrial:
+            ///   - unitName:
             ///   - state:
             ///   - bullets:
             public init(
                 url: Swift.String,
-                accounts_url: Swift.String,
+                accountsUrl: Swift.String,
                 id: Swift.Int,
                 number: Swift.Int,
                 name: Swift.String,
                 description: Swift.String,
-                monthly_price_in_cents: Swift.Int,
-                yearly_price_in_cents: Swift.Int,
-                price_model: Components.Schemas.marketplace_hyphen_listing_hyphen_plan.price_modelPayload,
-                has_free_trial: Swift.Bool,
-                unit_name: Swift.String? = nil,
+                monthlyPriceInCents: Swift.Int,
+                yearlyPriceInCents: Swift.Int,
+                priceModel: Components.Schemas.MarketplaceListingPlan.PriceModelPayload,
+                hasFreeTrial: Swift.Bool,
+                unitName: Swift.String? = nil,
                 state: Swift.String,
                 bullets: [Swift.String]
             ) {
                 self.url = url
-                self.accounts_url = accounts_url
+                self.accountsUrl = accountsUrl
                 self.id = id
                 self.number = number
                 self.name = name
                 self.description = description
-                self.monthly_price_in_cents = monthly_price_in_cents
-                self.yearly_price_in_cents = yearly_price_in_cents
-                self.price_model = price_model
-                self.has_free_trial = has_free_trial
-                self.unit_name = unit_name
+                self.monthlyPriceInCents = monthlyPriceInCents
+                self.yearlyPriceInCents = yearlyPriceInCents
+                self.priceModel = priceModel
+                self.hasFreeTrial = hasFreeTrial
+                self.unitName = unitName
                 self.state = state
                 self.bullets = bullets
             }
             public enum CodingKeys: String, CodingKey {
                 case url
-                case accounts_url
+                case accountsUrl = "accounts_url"
                 case id
                 case number
                 case name
                 case description
-                case monthly_price_in_cents
-                case yearly_price_in_cents
-                case price_model
-                case has_free_trial
-                case unit_name
+                case monthlyPriceInCents = "monthly_price_in_cents"
+                case yearlyPriceInCents = "yearly_price_in_cents"
+                case priceModel = "price_model"
+                case hasFreeTrial = "has_free_trial"
+                case unitName = "unit_name"
                 case state
                 case bullets
             }
@@ -4457,7 +4466,7 @@ public enum Components {
         /// Marketplace Purchase
         ///
         /// - Remark: Generated from `#/components/schemas/marketplace-purchase`.
-        public struct marketplace_hyphen_purchase: Codable, Hashable, Sendable {
+        public struct MarketplacePurchase: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/marketplace-purchase/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/marketplace-purchase/type`.
@@ -4467,156 +4476,156 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/marketplace-purchase/login`.
             public var login: Swift.String
             /// - Remark: Generated from `#/components/schemas/marketplace-purchase/organization_billing_email`.
-            public var organization_billing_email: Swift.String?
+            public var organizationBillingEmail: Swift.String?
             /// - Remark: Generated from `#/components/schemas/marketplace-purchase/email`.
             public var email: Swift.String?
             /// - Remark: Generated from `#/components/schemas/marketplace-purchase/marketplace_pending_change`.
-            public struct marketplace_pending_changePayload: Codable, Hashable, Sendable {
+            public struct MarketplacePendingChangePayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/marketplace-purchase/marketplace_pending_change/is_installed`.
-                public var is_installed: Swift.Bool?
+                public var isInstalled: Swift.Bool?
                 /// - Remark: Generated from `#/components/schemas/marketplace-purchase/marketplace_pending_change/effective_date`.
-                public var effective_date: Swift.String?
+                public var effectiveDate: Swift.String?
                 /// - Remark: Generated from `#/components/schemas/marketplace-purchase/marketplace_pending_change/unit_count`.
-                public var unit_count: Swift.Int?
+                public var unitCount: Swift.Int?
                 /// - Remark: Generated from `#/components/schemas/marketplace-purchase/marketplace_pending_change/id`.
                 public var id: Swift.Int?
                 /// - Remark: Generated from `#/components/schemas/marketplace-purchase/marketplace_pending_change/plan`.
-                public var plan: Components.Schemas.marketplace_hyphen_listing_hyphen_plan?
-                /// Creates a new `marketplace_pending_changePayload`.
+                public var plan: Components.Schemas.MarketplaceListingPlan?
+                /// Creates a new `MarketplacePendingChangePayload`.
                 ///
                 /// - Parameters:
-                ///   - is_installed:
-                ///   - effective_date:
-                ///   - unit_count:
+                ///   - isInstalled:
+                ///   - effectiveDate:
+                ///   - unitCount:
                 ///   - id:
                 ///   - plan:
                 public init(
-                    is_installed: Swift.Bool? = nil,
-                    effective_date: Swift.String? = nil,
-                    unit_count: Swift.Int? = nil,
+                    isInstalled: Swift.Bool? = nil,
+                    effectiveDate: Swift.String? = nil,
+                    unitCount: Swift.Int? = nil,
                     id: Swift.Int? = nil,
-                    plan: Components.Schemas.marketplace_hyphen_listing_hyphen_plan? = nil
+                    plan: Components.Schemas.MarketplaceListingPlan? = nil
                 ) {
-                    self.is_installed = is_installed
-                    self.effective_date = effective_date
-                    self.unit_count = unit_count
+                    self.isInstalled = isInstalled
+                    self.effectiveDate = effectiveDate
+                    self.unitCount = unitCount
                     self.id = id
                     self.plan = plan
                 }
                 public enum CodingKeys: String, CodingKey {
-                    case is_installed
-                    case effective_date
-                    case unit_count
+                    case isInstalled = "is_installed"
+                    case effectiveDate = "effective_date"
+                    case unitCount = "unit_count"
                     case id
                     case plan
                 }
             }
             /// - Remark: Generated from `#/components/schemas/marketplace-purchase/marketplace_pending_change`.
-            public var marketplace_pending_change: Components.Schemas.marketplace_hyphen_purchase.marketplace_pending_changePayload?
+            public var marketplacePendingChange: Components.Schemas.MarketplacePurchase.MarketplacePendingChangePayload?
             /// - Remark: Generated from `#/components/schemas/marketplace-purchase/marketplace_purchase`.
-            public struct marketplace_purchasePayload: Codable, Hashable, Sendable {
+            public struct MarketplacePurchasePayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/marketplace-purchase/marketplace_purchase/billing_cycle`.
-                public var billing_cycle: Swift.String?
+                public var billingCycle: Swift.String?
                 /// - Remark: Generated from `#/components/schemas/marketplace-purchase/marketplace_purchase/next_billing_date`.
-                public var next_billing_date: Swift.String?
+                public var nextBillingDate: Swift.String?
                 /// - Remark: Generated from `#/components/schemas/marketplace-purchase/marketplace_purchase/is_installed`.
-                public var is_installed: Swift.Bool?
+                public var isInstalled: Swift.Bool?
                 /// - Remark: Generated from `#/components/schemas/marketplace-purchase/marketplace_purchase/unit_count`.
-                public var unit_count: Swift.Int?
+                public var unitCount: Swift.Int?
                 /// - Remark: Generated from `#/components/schemas/marketplace-purchase/marketplace_purchase/on_free_trial`.
-                public var on_free_trial: Swift.Bool?
+                public var onFreeTrial: Swift.Bool?
                 /// - Remark: Generated from `#/components/schemas/marketplace-purchase/marketplace_purchase/free_trial_ends_on`.
-                public var free_trial_ends_on: Swift.String?
+                public var freeTrialEndsOn: Swift.String?
                 /// - Remark: Generated from `#/components/schemas/marketplace-purchase/marketplace_purchase/updated_at`.
-                public var updated_at: Swift.String?
+                public var updatedAt: Swift.String?
                 /// - Remark: Generated from `#/components/schemas/marketplace-purchase/marketplace_purchase/plan`.
-                public var plan: Components.Schemas.marketplace_hyphen_listing_hyphen_plan?
-                /// Creates a new `marketplace_purchasePayload`.
+                public var plan: Components.Schemas.MarketplaceListingPlan?
+                /// Creates a new `MarketplacePurchasePayload`.
                 ///
                 /// - Parameters:
-                ///   - billing_cycle:
-                ///   - next_billing_date:
-                ///   - is_installed:
-                ///   - unit_count:
-                ///   - on_free_trial:
-                ///   - free_trial_ends_on:
-                ///   - updated_at:
+                ///   - billingCycle:
+                ///   - nextBillingDate:
+                ///   - isInstalled:
+                ///   - unitCount:
+                ///   - onFreeTrial:
+                ///   - freeTrialEndsOn:
+                ///   - updatedAt:
                 ///   - plan:
                 public init(
-                    billing_cycle: Swift.String? = nil,
-                    next_billing_date: Swift.String? = nil,
-                    is_installed: Swift.Bool? = nil,
-                    unit_count: Swift.Int? = nil,
-                    on_free_trial: Swift.Bool? = nil,
-                    free_trial_ends_on: Swift.String? = nil,
-                    updated_at: Swift.String? = nil,
-                    plan: Components.Schemas.marketplace_hyphen_listing_hyphen_plan? = nil
+                    billingCycle: Swift.String? = nil,
+                    nextBillingDate: Swift.String? = nil,
+                    isInstalled: Swift.Bool? = nil,
+                    unitCount: Swift.Int? = nil,
+                    onFreeTrial: Swift.Bool? = nil,
+                    freeTrialEndsOn: Swift.String? = nil,
+                    updatedAt: Swift.String? = nil,
+                    plan: Components.Schemas.MarketplaceListingPlan? = nil
                 ) {
-                    self.billing_cycle = billing_cycle
-                    self.next_billing_date = next_billing_date
-                    self.is_installed = is_installed
-                    self.unit_count = unit_count
-                    self.on_free_trial = on_free_trial
-                    self.free_trial_ends_on = free_trial_ends_on
-                    self.updated_at = updated_at
+                    self.billingCycle = billingCycle
+                    self.nextBillingDate = nextBillingDate
+                    self.isInstalled = isInstalled
+                    self.unitCount = unitCount
+                    self.onFreeTrial = onFreeTrial
+                    self.freeTrialEndsOn = freeTrialEndsOn
+                    self.updatedAt = updatedAt
                     self.plan = plan
                 }
                 public enum CodingKeys: String, CodingKey {
-                    case billing_cycle
-                    case next_billing_date
-                    case is_installed
-                    case unit_count
-                    case on_free_trial
-                    case free_trial_ends_on
-                    case updated_at
+                    case billingCycle = "billing_cycle"
+                    case nextBillingDate = "next_billing_date"
+                    case isInstalled = "is_installed"
+                    case unitCount = "unit_count"
+                    case onFreeTrial = "on_free_trial"
+                    case freeTrialEndsOn = "free_trial_ends_on"
+                    case updatedAt = "updated_at"
                     case plan
                 }
             }
             /// - Remark: Generated from `#/components/schemas/marketplace-purchase/marketplace_purchase`.
-            public var marketplace_purchase: Components.Schemas.marketplace_hyphen_purchase.marketplace_purchasePayload
-            /// Creates a new `marketplace_hyphen_purchase`.
+            public var marketplacePurchase: Components.Schemas.MarketplacePurchase.MarketplacePurchasePayload
+            /// Creates a new `MarketplacePurchase`.
             ///
             /// - Parameters:
             ///   - url:
             ///   - _type:
             ///   - id:
             ///   - login:
-            ///   - organization_billing_email:
+            ///   - organizationBillingEmail:
             ///   - email:
-            ///   - marketplace_pending_change:
-            ///   - marketplace_purchase:
+            ///   - marketplacePendingChange:
+            ///   - marketplacePurchase:
             public init(
                 url: Swift.String,
                 _type: Swift.String,
                 id: Swift.Int,
                 login: Swift.String,
-                organization_billing_email: Swift.String? = nil,
+                organizationBillingEmail: Swift.String? = nil,
                 email: Swift.String? = nil,
-                marketplace_pending_change: Components.Schemas.marketplace_hyphen_purchase.marketplace_pending_changePayload? = nil,
-                marketplace_purchase: Components.Schemas.marketplace_hyphen_purchase.marketplace_purchasePayload
+                marketplacePendingChange: Components.Schemas.MarketplacePurchase.MarketplacePendingChangePayload? = nil,
+                marketplacePurchase: Components.Schemas.MarketplacePurchase.MarketplacePurchasePayload
             ) {
                 self.url = url
                 self._type = _type
                 self.id = id
                 self.login = login
-                self.organization_billing_email = organization_billing_email
+                self.organizationBillingEmail = organizationBillingEmail
                 self.email = email
-                self.marketplace_pending_change = marketplace_pending_change
-                self.marketplace_purchase = marketplace_purchase
+                self.marketplacePendingChange = marketplacePendingChange
+                self.marketplacePurchase = marketplacePurchase
             }
             public enum CodingKeys: String, CodingKey {
                 case url
                 case _type = "type"
                 case id
                 case login
-                case organization_billing_email
+                case organizationBillingEmail = "organization_billing_email"
                 case email
-                case marketplace_pending_change
-                case marketplace_purchase
+                case marketplacePendingChange = "marketplace_pending_change"
+                case marketplacePurchase = "marketplace_purchase"
             }
         }
         /// - Remark: Generated from `#/components/schemas/marketplace-account`.
-        public struct marketplace_hyphen_account: Codable, Hashable, Sendable {
+        public struct MarketplaceAccount: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/marketplace-account/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/marketplace-account/id`.
@@ -4624,107 +4633,107 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/marketplace-account/type`.
             public var _type: Swift.String
             /// - Remark: Generated from `#/components/schemas/marketplace-account/node_id`.
-            public var node_id: Swift.String?
+            public var nodeId: Swift.String?
             /// - Remark: Generated from `#/components/schemas/marketplace-account/login`.
             public var login: Swift.String
             /// - Remark: Generated from `#/components/schemas/marketplace-account/email`.
             public var email: Swift.String?
             /// - Remark: Generated from `#/components/schemas/marketplace-account/organization_billing_email`.
-            public var organization_billing_email: Swift.String?
-            /// Creates a new `marketplace_hyphen_account`.
+            public var organizationBillingEmail: Swift.String?
+            /// Creates a new `MarketplaceAccount`.
             ///
             /// - Parameters:
             ///   - url:
             ///   - id:
             ///   - _type:
-            ///   - node_id:
+            ///   - nodeId:
             ///   - login:
             ///   - email:
-            ///   - organization_billing_email:
+            ///   - organizationBillingEmail:
             public init(
                 url: Swift.String,
                 id: Swift.Int,
                 _type: Swift.String,
-                node_id: Swift.String? = nil,
+                nodeId: Swift.String? = nil,
                 login: Swift.String,
                 email: Swift.String? = nil,
-                organization_billing_email: Swift.String? = nil
+                organizationBillingEmail: Swift.String? = nil
             ) {
                 self.url = url
                 self.id = id
                 self._type = _type
-                self.node_id = node_id
+                self.nodeId = nodeId
                 self.login = login
                 self.email = email
-                self.organization_billing_email = organization_billing_email
+                self.organizationBillingEmail = organizationBillingEmail
             }
             public enum CodingKeys: String, CodingKey {
                 case url
                 case id
                 case _type = "type"
-                case node_id
+                case nodeId = "node_id"
                 case login
                 case email
-                case organization_billing_email
+                case organizationBillingEmail = "organization_billing_email"
             }
         }
         /// User Marketplace Purchase
         ///
         /// - Remark: Generated from `#/components/schemas/user-marketplace-purchase`.
-        public struct user_hyphen_marketplace_hyphen_purchase: Codable, Hashable, Sendable {
+        public struct UserMarketplacePurchase: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/user-marketplace-purchase/billing_cycle`.
-            public var billing_cycle: Swift.String
+            public var billingCycle: Swift.String
             /// - Remark: Generated from `#/components/schemas/user-marketplace-purchase/next_billing_date`.
-            public var next_billing_date: Foundation.Date?
+            public var nextBillingDate: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/user-marketplace-purchase/unit_count`.
-            public var unit_count: Swift.Int?
+            public var unitCount: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/user-marketplace-purchase/on_free_trial`.
-            public var on_free_trial: Swift.Bool
+            public var onFreeTrial: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/user-marketplace-purchase/free_trial_ends_on`.
-            public var free_trial_ends_on: Foundation.Date?
+            public var freeTrialEndsOn: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/user-marketplace-purchase/updated_at`.
-            public var updated_at: Foundation.Date?
+            public var updatedAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/user-marketplace-purchase/account`.
-            public var account: Components.Schemas.marketplace_hyphen_account
+            public var account: Components.Schemas.MarketplaceAccount
             /// - Remark: Generated from `#/components/schemas/user-marketplace-purchase/plan`.
-            public var plan: Components.Schemas.marketplace_hyphen_listing_hyphen_plan
-            /// Creates a new `user_hyphen_marketplace_hyphen_purchase`.
+            public var plan: Components.Schemas.MarketplaceListingPlan
+            /// Creates a new `UserMarketplacePurchase`.
             ///
             /// - Parameters:
-            ///   - billing_cycle:
-            ///   - next_billing_date:
-            ///   - unit_count:
-            ///   - on_free_trial:
-            ///   - free_trial_ends_on:
-            ///   - updated_at:
+            ///   - billingCycle:
+            ///   - nextBillingDate:
+            ///   - unitCount:
+            ///   - onFreeTrial:
+            ///   - freeTrialEndsOn:
+            ///   - updatedAt:
             ///   - account:
             ///   - plan:
             public init(
-                billing_cycle: Swift.String,
-                next_billing_date: Foundation.Date? = nil,
-                unit_count: Swift.Int? = nil,
-                on_free_trial: Swift.Bool,
-                free_trial_ends_on: Foundation.Date? = nil,
-                updated_at: Foundation.Date? = nil,
-                account: Components.Schemas.marketplace_hyphen_account,
-                plan: Components.Schemas.marketplace_hyphen_listing_hyphen_plan
+                billingCycle: Swift.String,
+                nextBillingDate: Foundation.Date? = nil,
+                unitCount: Swift.Int? = nil,
+                onFreeTrial: Swift.Bool,
+                freeTrialEndsOn: Foundation.Date? = nil,
+                updatedAt: Foundation.Date? = nil,
+                account: Components.Schemas.MarketplaceAccount,
+                plan: Components.Schemas.MarketplaceListingPlan
             ) {
-                self.billing_cycle = billing_cycle
-                self.next_billing_date = next_billing_date
-                self.unit_count = unit_count
-                self.on_free_trial = on_free_trial
-                self.free_trial_ends_on = free_trial_ends_on
-                self.updated_at = updated_at
+                self.billingCycle = billingCycle
+                self.nextBillingDate = nextBillingDate
+                self.unitCount = unitCount
+                self.onFreeTrial = onFreeTrial
+                self.freeTrialEndsOn = freeTrialEndsOn
+                self.updatedAt = updatedAt
                 self.account = account
                 self.plan = plan
             }
             public enum CodingKeys: String, CodingKey {
-                case billing_cycle
-                case next_billing_date
-                case unit_count
-                case on_free_trial
-                case free_trial_ends_on
-                case updated_at
+                case billingCycle = "billing_cycle"
+                case nextBillingDate = "next_billing_date"
+                case unitCount = "unit_count"
+                case onFreeTrial = "on_free_trial"
+                case freeTrialEndsOn = "free_trial_ends_on"
+                case updatedAt = "updated_at"
                 case account
                 case plan
             }
@@ -4735,81 +4744,81 @@ public enum Components {
         /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/per-page`.
-        public typealias per_hyphen_page = Swift.Int
+        public typealias PerPage = Swift.Int
         /// Used for pagination: the starting delivery from which the page of deliveries is fetched. Refer to the `link` header for the next and previous page cursors.
         ///
         /// - Remark: Generated from `#/components/parameters/cursor`.
-        public typealias cursor = Swift.String
+        public typealias Cursor = Swift.String
         /// - Remark: Generated from `#/components/parameters/delivery-id`.
-        public typealias delivery_hyphen_id = Swift.Int
+        public typealias DeliveryId = Swift.Int
         /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/page`.
-        public typealias page = Swift.Int
+        public typealias Page = Swift.Int
         /// Only show results that were last updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
         ///
         /// - Remark: Generated from `#/components/parameters/since`.
-        public typealias since = Foundation.Date
+        public typealias Since = Foundation.Date
         /// The unique identifier of the installation.
         ///
         /// - Remark: Generated from `#/components/parameters/installation-id`.
-        public typealias installation_hyphen_id = Swift.Int
+        public typealias InstallationId = Swift.Int
         /// The client ID of the GitHub app.
         ///
         /// - Remark: Generated from `#/components/parameters/client-id`.
-        public typealias client_hyphen_id = Swift.String
+        public typealias ClientId = Swift.String
         /// - Remark: Generated from `#/components/parameters/app-slug`.
-        public typealias app_hyphen_slug = Swift.String
+        public typealias AppSlug = Swift.String
         /// account_id parameter
         ///
         /// - Remark: Generated from `#/components/parameters/account-id`.
-        public typealias account_hyphen_id = Swift.Int
+        public typealias AccountId = Swift.Int
         /// The unique identifier of the plan.
         ///
         /// - Remark: Generated from `#/components/parameters/plan-id`.
-        public typealias plan_hyphen_id = Swift.Int
+        public typealias PlanId = Swift.Int
         /// The property to sort the results by.
         ///
         /// - Remark: Generated from `#/components/parameters/sort`.
-        @frozen public enum sort: String, Codable, Hashable, Sendable {
+        @frozen public enum Sort: String, Codable, Hashable, Sendable, CaseIterable {
             case created = "created"
             case updated = "updated"
         }
         /// The account owner of the repository. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/owner`.
-        public typealias owner = Swift.String
+        public typealias Owner = Swift.String
         /// The name of the repository without the `.git` extension. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/repo`.
-        public typealias repo = Swift.String
+        public typealias Repo = Swift.String
         /// The organization name. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/org`.
-        public typealias org = Swift.String
+        public typealias Org = Swift.String
         /// The unique identifier of the repository.
         ///
         /// - Remark: Generated from `#/components/parameters/repository-id`.
-        public typealias repository_hyphen_id = Swift.Int
+        public typealias RepositoryId = Swift.Int
         /// The handle for the GitHub user account.
         ///
         /// - Remark: Generated from `#/components/parameters/username`.
-        public typealias username = Swift.String
+        public typealias Username = Swift.String
     }
     /// Types generated from the `#/components/requestBodies` section of the OpenAPI document.
     public enum RequestBodies {}
     /// Types generated from the `#/components/responses` section of the OpenAPI document.
     public enum Responses {
-        public struct validation_failed_simple: Sendable, Hashable {
+        public struct ValidationFailedSimple: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/validation_failed_simple/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/validation_failed_simple/content/application\/json`.
-                case json(Components.Schemas.validation_hyphen_error_hyphen_simple)
+                case json(Components.Schemas.ValidationErrorSimple)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.validation_hyphen_error_hyphen_simple {
+                public var json: Components.Schemas.ValidationErrorSimple {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -4819,25 +4828,25 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.validation_failed_simple.Body
-            /// Creates a new `validation_failed_simple`.
+            public var body: Components.Responses.ValidationFailedSimple.Body
+            /// Creates a new `ValidationFailedSimple`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.validation_failed_simple.Body) {
+            public init(body: Components.Responses.ValidationFailedSimple.Body) {
                 self.body = body
             }
         }
-        public struct not_found: Sendable, Hashable {
+        public struct NotFound: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/not_found/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/not_found/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -4847,25 +4856,25 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.not_found.Body
-            /// Creates a new `not_found`.
+            public var body: Components.Responses.NotFound.Body
+            /// Creates a new `NotFound`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.not_found.Body) {
+            public init(body: Components.Responses.NotFound.Body) {
                 self.body = body
             }
         }
-        public struct bad_request: Sendable, Hashable {
+        public struct BadRequest: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/bad_request/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/bad_request/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -4879,15 +4888,15 @@ public enum Components {
                     }
                 }
                 /// - Remark: Generated from `#/components/responses/bad_request/content/application\/scim+json`.
-                case application_scim_plus_json(Components.Schemas.scim_hyphen_error)
-                /// The associated value of the enum case if `self` is `.application_scim_plus_json`.
+                case applicationScimJson(Components.Schemas.ScimError)
+                /// The associated value of the enum case if `self` is `.applicationScimJson`.
                 ///
-                /// - Throws: An error if `self` is not `.application_scim_plus_json`.
-                /// - SeeAlso: `.application_scim_plus_json`.
-                public var application_scim_plus_json: Components.Schemas.scim_hyphen_error {
+                /// - Throws: An error if `self` is not `.applicationScimJson`.
+                /// - SeeAlso: `.applicationScimJson`.
+                public var applicationScimJson: Components.Schemas.ScimError {
                     get throws {
                         switch self {
-                        case let .application_scim_plus_json(body):
+                        case let .applicationScimJson(body):
                             return body
                         default:
                             try throwUnexpectedResponseBody(
@@ -4899,25 +4908,25 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.bad_request.Body
-            /// Creates a new `bad_request`.
+            public var body: Components.Responses.BadRequest.Body
+            /// Creates a new `BadRequest`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.bad_request.Body) {
+            public init(body: Components.Responses.BadRequest.Body) {
                 self.body = body
             }
         }
-        public struct validation_failed: Sendable, Hashable {
+        public struct ValidationFailed: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/validation_failed/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/validation_failed/content/application\/json`.
-                case json(Components.Schemas.validation_hyphen_error)
+                case json(Components.Schemas.ValidationError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.validation_hyphen_error {
+                public var json: Components.Schemas.ValidationError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -4927,16 +4936,16 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.validation_failed.Body
-            /// Creates a new `validation_failed`.
+            public var body: Components.Responses.ValidationFailed.Body
+            /// Creates a new `ValidationFailed`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.validation_failed.Body) {
+            public init(body: Components.Responses.ValidationFailed.Body) {
                 self.body = body
             }
         }
-        public struct accepted: Sendable, Hashable {
+        public struct Accepted: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/accepted/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/accepted/content/application\/json`.
@@ -4955,29 +4964,29 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.accepted.Body
-            /// Creates a new `accepted`.
+            public var body: Components.Responses.Accepted.Body
+            /// Creates a new `Accepted`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.accepted.Body) {
+            public init(body: Components.Responses.Accepted.Body) {
                 self.body = body
             }
         }
-        public struct not_modified: Sendable, Hashable {
-            /// Creates a new `not_modified`.
+        public struct NotModified: Sendable, Hashable {
+            /// Creates a new `NotModified`.
             public init() {}
         }
-        public struct requires_authentication: Sendable, Hashable {
+        public struct RequiresAuthentication: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/requires_authentication/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/requires_authentication/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -4987,25 +4996,25 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.requires_authentication.Body
-            /// Creates a new `requires_authentication`.
+            public var body: Components.Responses.RequiresAuthentication.Body
+            /// Creates a new `RequiresAuthentication`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.requires_authentication.Body) {
+            public init(body: Components.Responses.RequiresAuthentication.Body) {
                 self.body = body
             }
         }
-        public struct forbidden: Sendable, Hashable {
+        public struct Forbidden: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/forbidden/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/forbidden/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -5015,25 +5024,25 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.forbidden.Body
-            /// Creates a new `forbidden`.
+            public var body: Components.Responses.Forbidden.Body
+            /// Creates a new `Forbidden`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.forbidden.Body) {
+            public init(body: Components.Responses.Forbidden.Body) {
                 self.body = body
             }
         }
-        public struct moved_permanently: Sendable, Hashable {
+        public struct MovedPermanently: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/moved_permanently/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/moved_permanently/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -5043,12 +5052,12 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.moved_permanently.Body
-            /// Creates a new `moved_permanently`.
+            public var body: Components.Responses.MovedPermanently.Body
+            /// Creates a new `MovedPermanently`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.moved_permanently.Body) {
+            public init(body: Components.Responses.MovedPermanently.Body) {
                 self.body = body
             }
         }
@@ -5056,7 +5065,7 @@ public enum Components {
     /// Types generated from the `#/components/headers` section of the OpenAPI document.
     public enum Headers {
         /// - Remark: Generated from `#/components/headers/link`.
-        public typealias link = Swift.String
+        public typealias Link = Swift.String
     }
 }
 
@@ -5070,26 +5079,26 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /app`.
     /// - Remark: Generated from `#/paths//app/get(apps/get-authenticated)`.
-    public enum apps_sol_get_hyphen_authenticated {
+    public enum AppsGetAuthenticated {
         public static let id: Swift.String = "apps/get-authenticated"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/app/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_get_hyphen_authenticated.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsGetAuthenticated.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_get_hyphen_authenticated.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsGetAuthenticated.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.apps_sol_get_hyphen_authenticated.Input.Headers
+            public var headers: Operations.AppsGetAuthenticated.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - headers:
-            public init(headers: Operations.apps_sol_get_hyphen_authenticated.Input.Headers = .init()) {
+            public init(headers: Operations.AppsGetAuthenticated.Input.Headers = .init()) {
                 self.headers = headers
             }
         }
@@ -5098,12 +5107,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/app/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/app/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.integration)
+                    case json(Components.Schemas.Integration)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.integration {
+                    public var json: Components.Schemas.Integration {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -5113,12 +5122,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.apps_sol_get_hyphen_authenticated.Output.Ok.Body
+                public var body: Operations.AppsGetAuthenticated.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.apps_sol_get_hyphen_authenticated.Output.Ok.Body) {
+                public init(body: Operations.AppsGetAuthenticated.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -5127,12 +5136,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//app/get(apps/get-authenticated)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.apps_sol_get_hyphen_authenticated.Output.Ok)
+            case ok(Operations.AppsGetAuthenticated.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.apps_sol_get_hyphen_authenticated.Output.Ok {
+            public var ok: Operations.AppsGetAuthenticated.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -5182,7 +5191,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /app-manifests/{code}/conversions`.
     /// - Remark: Generated from `#/paths//app-manifests/{code}/conversions/post(apps/create-from-manifest)`.
-    public enum apps_sol_create_hyphen_from_hyphen_manifest {
+    public enum AppsCreateFromManifest {
         public static let id: Swift.String = "apps/create-from-manifest"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/app-manifests/{code}/conversions/POST/path`.
@@ -5197,27 +5206,27 @@ public enum Operations {
                     self.code = code
                 }
             }
-            public var path: Operations.apps_sol_create_hyphen_from_hyphen_manifest.Input.Path
+            public var path: Operations.AppsCreateFromManifest.Input.Path
             /// - Remark: Generated from `#/paths/app-manifests/{code}/conversions/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_create_hyphen_from_hyphen_manifest.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsCreateFromManifest.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_create_hyphen_from_hyphen_manifest.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsCreateFromManifest.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.apps_sol_create_hyphen_from_hyphen_manifest.Input.Headers
+            public var headers: Operations.AppsCreateFromManifest.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.apps_sol_create_hyphen_from_hyphen_manifest.Input.Path,
-                headers: Operations.apps_sol_create_hyphen_from_hyphen_manifest.Input.Headers = .init()
+                path: Operations.AppsCreateFromManifest.Input.Path,
+                headers: Operations.AppsCreateFromManifest.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -5228,17 +5237,17 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/app-manifests/{code}/conversions/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/app-manifests/{code}/conversions/POST/responses/201/content/json`.
-                    public struct jsonPayload: Codable, Hashable, Sendable {
+                    public struct JsonPayload: Codable, Hashable, Sendable {
                         /// - Remark: Generated from `#/paths/app-manifests/{code}/conversions/POST/responses/201/content/json/value1`.
-                        public var value1: Components.Schemas.integration
+                        public var value1: Components.Schemas.Integration
                         /// - Remark: Generated from `#/paths/app-manifests/{code}/conversions/POST/responses/201/content/json/value2`.
                         public struct Value2Payload: Codable, Hashable, Sendable {
                             /// - Remark: Generated from `#/paths/app-manifests/{code}/conversions/POST/responses/201/content/json/value2/client_id`.
-                            public var client_id: Swift.String
+                            public var clientId: Swift.String
                             /// - Remark: Generated from `#/paths/app-manifests/{code}/conversions/POST/responses/201/content/json/value2/client_secret`.
-                            public var client_secret: Swift.String
+                            public var clientSecret: Swift.String
                             /// - Remark: Generated from `#/paths/app-manifests/{code}/conversions/POST/responses/201/content/json/value2/webhook_secret`.
-                            public var webhook_secret: Swift.String?
+                            public var webhookSecret: Swift.String?
                             /// - Remark: Generated from `#/paths/app-manifests/{code}/conversions/POST/responses/201/content/json/value2/pem`.
                             public var pem: Swift.String
                             /// A container of undocumented properties.
@@ -5246,45 +5255,45 @@ public enum Operations {
                             /// Creates a new `Value2Payload`.
                             ///
                             /// - Parameters:
-                            ///   - client_id:
-                            ///   - client_secret:
-                            ///   - webhook_secret:
+                            ///   - clientId:
+                            ///   - clientSecret:
+                            ///   - webhookSecret:
                             ///   - pem:
                             ///   - additionalProperties: A container of undocumented properties.
                             public init(
-                                client_id: Swift.String,
-                                client_secret: Swift.String,
-                                webhook_secret: Swift.String? = nil,
+                                clientId: Swift.String,
+                                clientSecret: Swift.String,
+                                webhookSecret: Swift.String? = nil,
                                 pem: Swift.String,
                                 additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer = .init()
                             ) {
-                                self.client_id = client_id
-                                self.client_secret = client_secret
-                                self.webhook_secret = webhook_secret
+                                self.clientId = clientId
+                                self.clientSecret = clientSecret
+                                self.webhookSecret = webhookSecret
                                 self.pem = pem
                                 self.additionalProperties = additionalProperties
                             }
                             public enum CodingKeys: String, CodingKey {
-                                case client_id
-                                case client_secret
-                                case webhook_secret
+                                case clientId = "client_id"
+                                case clientSecret = "client_secret"
+                                case webhookSecret = "webhook_secret"
                                 case pem
                             }
                             public init(from decoder: any Decoder) throws {
                                 let container = try decoder.container(keyedBy: CodingKeys.self)
-                                client_id = try container.decode(
+                                self.clientId = try container.decode(
                                     Swift.String.self,
-                                    forKey: .client_id
+                                    forKey: .clientId
                                 )
-                                client_secret = try container.decode(
+                                self.clientSecret = try container.decode(
                                     Swift.String.self,
-                                    forKey: .client_secret
+                                    forKey: .clientSecret
                                 )
-                                webhook_secret = try container.decodeIfPresent(
+                                self.webhookSecret = try container.decodeIfPresent(
                                     Swift.String.self,
-                                    forKey: .webhook_secret
+                                    forKey: .webhookSecret
                                 )
-                                pem = try container.decode(
+                                self.pem = try container.decode(
                                     Swift.String.self,
                                     forKey: .pem
                                 )
@@ -5298,54 +5307,54 @@ public enum Operations {
                             public func encode(to encoder: any Encoder) throws {
                                 var container = encoder.container(keyedBy: CodingKeys.self)
                                 try container.encode(
-                                    client_id,
-                                    forKey: .client_id
+                                    self.clientId,
+                                    forKey: .clientId
                                 )
                                 try container.encode(
-                                    client_secret,
-                                    forKey: .client_secret
+                                    self.clientSecret,
+                                    forKey: .clientSecret
                                 )
                                 try container.encodeIfPresent(
-                                    webhook_secret,
-                                    forKey: .webhook_secret
+                                    self.webhookSecret,
+                                    forKey: .webhookSecret
                                 )
                                 try container.encode(
-                                    pem,
+                                    self.pem,
                                     forKey: .pem
                                 )
                                 try encoder.encodeAdditionalProperties(additionalProperties)
                             }
                         }
                         /// - Remark: Generated from `#/paths/app-manifests/{code}/conversions/POST/responses/201/content/json/value2`.
-                        public var value2: Operations.apps_sol_create_hyphen_from_hyphen_manifest.Output.Created.Body.jsonPayload.Value2Payload
-                        /// Creates a new `jsonPayload`.
+                        public var value2: Operations.AppsCreateFromManifest.Output.Created.Body.JsonPayload.Value2Payload
+                        /// Creates a new `JsonPayload`.
                         ///
                         /// - Parameters:
                         ///   - value1:
                         ///   - value2:
                         public init(
-                            value1: Components.Schemas.integration,
-                            value2: Operations.apps_sol_create_hyphen_from_hyphen_manifest.Output.Created.Body.jsonPayload.Value2Payload
+                            value1: Components.Schemas.Integration,
+                            value2: Operations.AppsCreateFromManifest.Output.Created.Body.JsonPayload.Value2Payload
                         ) {
                             self.value1 = value1
                             self.value2 = value2
                         }
                         public init(from decoder: any Decoder) throws {
-                            value1 = try .init(from: decoder)
-                            value2 = try .init(from: decoder)
+                            self.value1 = try .init(from: decoder)
+                            self.value2 = try .init(from: decoder)
                         }
                         public func encode(to encoder: any Encoder) throws {
-                            try value1.encode(to: encoder)
-                            try value2.encode(to: encoder)
+                            try self.value1.encode(to: encoder)
+                            try self.value2.encode(to: encoder)
                         }
                     }
                     /// - Remark: Generated from `#/paths/app-manifests/{code}/conversions/POST/responses/201/content/application\/json`.
-                    case json(Operations.apps_sol_create_hyphen_from_hyphen_manifest.Output.Created.Body.jsonPayload)
+                    case json(Operations.AppsCreateFromManifest.Output.Created.Body.JsonPayload)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Operations.apps_sol_create_hyphen_from_hyphen_manifest.Output.Created.Body.jsonPayload {
+                    public var json: Operations.AppsCreateFromManifest.Output.Created.Body.JsonPayload {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -5355,12 +5364,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.apps_sol_create_hyphen_from_hyphen_manifest.Output.Created.Body
+                public var body: Operations.AppsCreateFromManifest.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.apps_sol_create_hyphen_from_hyphen_manifest.Output.Created.Body) {
+                public init(body: Operations.AppsCreateFromManifest.Output.Created.Body) {
                     self.body = body
                 }
             }
@@ -5369,12 +5378,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//app-manifests/{code}/conversions/post(apps/create-from-manifest)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.apps_sol_create_hyphen_from_hyphen_manifest.Output.Created)
+            case created(Operations.AppsCreateFromManifest.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.apps_sol_create_hyphen_from_hyphen_manifest.Output.Created {
+            public var created: Operations.AppsCreateFromManifest.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -5392,12 +5401,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//app-manifests/{code}/conversions/post(apps/create-from-manifest)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -5415,12 +5424,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//app-manifests/{code}/conversions/post(apps/create-from-manifest)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed_simple)
+            case unprocessableContent(Components.Responses.ValidationFailedSimple)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed_simple {
+            public var unprocessableContent: Components.Responses.ValidationFailedSimple {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -5472,26 +5481,26 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /app/hook/config`.
     /// - Remark: Generated from `#/paths//app/hook/config/get(apps/get-webhook-config-for-app)`.
-    public enum apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app {
+    public enum AppsGetWebhookConfigForApp {
         public static let id: Swift.String = "apps/get-webhook-config-for-app"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/app/hook/config/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsGetWebhookConfigForApp.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsGetWebhookConfigForApp.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app.Input.Headers
+            public var headers: Operations.AppsGetWebhookConfigForApp.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - headers:
-            public init(headers: Operations.apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app.Input.Headers = .init()) {
+            public init(headers: Operations.AppsGetWebhookConfigForApp.Input.Headers = .init()) {
                 self.headers = headers
             }
         }
@@ -5500,12 +5509,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/app/hook/config/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/app/hook/config/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.webhook_hyphen_config)
+                    case json(Components.Schemas.WebhookConfig)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.webhook_hyphen_config {
+                    public var json: Components.Schemas.WebhookConfig {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -5515,12 +5524,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app.Output.Ok.Body
+                public var body: Operations.AppsGetWebhookConfigForApp.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app.Output.Ok.Body) {
+                public init(body: Operations.AppsGetWebhookConfigForApp.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -5529,12 +5538,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//app/hook/config/get(apps/get-webhook-config-for-app)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app.Output.Ok)
+            case ok(Operations.AppsGetWebhookConfigForApp.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app.Output.Ok {
+            public var ok: Operations.AppsGetWebhookConfigForApp.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -5586,70 +5595,70 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PATCH /app/hook/config`.
     /// - Remark: Generated from `#/paths//app/hook/config/patch(apps/update-webhook-config-for-app)`.
-    public enum apps_sol_update_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app {
+    public enum AppsUpdateWebhookConfigForApp {
         public static let id: Swift.String = "apps/update-webhook-config-for-app"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/app/hook/config/PATCH/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_update_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsUpdateWebhookConfigForApp.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_update_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsUpdateWebhookConfigForApp.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.apps_sol_update_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app.Input.Headers
+            public var headers: Operations.AppsUpdateWebhookConfigForApp.Input.Headers
             /// - Remark: Generated from `#/paths/app/hook/config/PATCH/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/app/hook/config/PATCH/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// - Remark: Generated from `#/paths/app/hook/config/PATCH/requestBody/json/url`.
-                    public var url: Components.Schemas.webhook_hyphen_config_hyphen_url?
+                    public var url: Components.Schemas.WebhookConfigUrl?
                     /// - Remark: Generated from `#/paths/app/hook/config/PATCH/requestBody/json/content_type`.
-                    public var content_type: Components.Schemas.webhook_hyphen_config_hyphen_content_hyphen_type?
+                    public var contentType: Components.Schemas.WebhookConfigContentType?
                     /// - Remark: Generated from `#/paths/app/hook/config/PATCH/requestBody/json/secret`.
-                    public var secret: Components.Schemas.webhook_hyphen_config_hyphen_secret?
+                    public var secret: Components.Schemas.WebhookConfigSecret?
                     /// - Remark: Generated from `#/paths/app/hook/config/PATCH/requestBody/json/insecure_ssl`.
-                    public var insecure_ssl: Components.Schemas.webhook_hyphen_config_hyphen_insecure_hyphen_ssl?
-                    /// Creates a new `jsonPayload`.
+                    public var insecureSsl: Components.Schemas.WebhookConfigInsecureSsl?
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - url:
-                    ///   - content_type:
+                    ///   - contentType:
                     ///   - secret:
-                    ///   - insecure_ssl:
+                    ///   - insecureSsl:
                     public init(
-                        url: Components.Schemas.webhook_hyphen_config_hyphen_url? = nil,
-                        content_type: Components.Schemas.webhook_hyphen_config_hyphen_content_hyphen_type? = nil,
-                        secret: Components.Schemas.webhook_hyphen_config_hyphen_secret? = nil,
-                        insecure_ssl: Components.Schemas.webhook_hyphen_config_hyphen_insecure_hyphen_ssl? = nil
+                        url: Components.Schemas.WebhookConfigUrl? = nil,
+                        contentType: Components.Schemas.WebhookConfigContentType? = nil,
+                        secret: Components.Schemas.WebhookConfigSecret? = nil,
+                        insecureSsl: Components.Schemas.WebhookConfigInsecureSsl? = nil
                     ) {
                         self.url = url
-                        self.content_type = content_type
+                        self.contentType = contentType
                         self.secret = secret
-                        self.insecure_ssl = insecure_ssl
+                        self.insecureSsl = insecureSsl
                     }
                     public enum CodingKeys: String, CodingKey {
                         case url
-                        case content_type
+                        case contentType = "content_type"
                         case secret
-                        case insecure_ssl
+                        case insecureSsl = "insecure_ssl"
                     }
                 }
                 /// - Remark: Generated from `#/paths/app/hook/config/PATCH/requestBody/content/application\/json`.
-                case json(Operations.apps_sol_update_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app.Input.Body.jsonPayload)
+                case json(Operations.AppsUpdateWebhookConfigForApp.Input.Body.JsonPayload)
             }
-            public var body: Operations.apps_sol_update_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app.Input.Body
+            public var body: Operations.AppsUpdateWebhookConfigForApp.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - headers:
             ///   - body:
             public init(
-                headers: Operations.apps_sol_update_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app.Input.Headers = .init(),
-                body: Operations.apps_sol_update_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app.Input.Body
+                headers: Operations.AppsUpdateWebhookConfigForApp.Input.Headers = .init(),
+                body: Operations.AppsUpdateWebhookConfigForApp.Input.Body
             ) {
                 self.headers = headers
                 self.body = body
@@ -5660,12 +5669,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/app/hook/config/PATCH/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/app/hook/config/PATCH/responses/200/content/application\/json`.
-                    case json(Components.Schemas.webhook_hyphen_config)
+                    case json(Components.Schemas.WebhookConfig)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.webhook_hyphen_config {
+                    public var json: Components.Schemas.WebhookConfig {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -5675,12 +5684,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.apps_sol_update_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app.Output.Ok.Body
+                public var body: Operations.AppsUpdateWebhookConfigForApp.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.apps_sol_update_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app.Output.Ok.Body) {
+                public init(body: Operations.AppsUpdateWebhookConfigForApp.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -5689,12 +5698,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//app/hook/config/patch(apps/update-webhook-config-for-app)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.apps_sol_update_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app.Output.Ok)
+            case ok(Operations.AppsUpdateWebhookConfigForApp.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.apps_sol_update_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app.Output.Ok {
+            public var ok: Operations.AppsUpdateWebhookConfigForApp.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -5746,7 +5755,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /app/hook/deliveries`.
     /// - Remark: Generated from `#/paths//app/hook/deliveries/get(apps/list-webhook-deliveries)`.
-    public enum apps_sol_list_hyphen_webhook_hyphen_deliveries {
+    public enum AppsListWebhookDeliveries {
         public static let id: Swift.String = "apps/list-webhook-deliveries"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/app/hook/deliveries/GET/query`.
@@ -5754,45 +5763,45 @@ public enum Operations {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/app/hook/deliveries/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// Used for pagination: the starting delivery from which the page of deliveries is fetched. Refer to the `link` header for the next and previous page cursors.
                 ///
                 /// - Remark: Generated from `#/paths/app/hook/deliveries/GET/query/cursor`.
-                public var cursor: Components.Parameters.cursor?
+                public var cursor: Components.Parameters.Cursor?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - cursor: Used for pagination: the starting delivery from which the page of deliveries is fetched. Refer to the `link` header for the next and previous page cursors.
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    cursor: Components.Parameters.cursor? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    cursor: Components.Parameters.Cursor? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.cursor = cursor
                 }
             }
-            public var query: Operations.apps_sol_list_hyphen_webhook_hyphen_deliveries.Input.Query
+            public var query: Operations.AppsListWebhookDeliveries.Input.Query
             /// - Remark: Generated from `#/paths/app/hook/deliveries/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_list_hyphen_webhook_hyphen_deliveries.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsListWebhookDeliveries.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_list_hyphen_webhook_hyphen_deliveries.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsListWebhookDeliveries.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.apps_sol_list_hyphen_webhook_hyphen_deliveries.Input.Headers
+            public var headers: Operations.AppsListWebhookDeliveries.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - query:
             ///   - headers:
             public init(
-                query: Operations.apps_sol_list_hyphen_webhook_hyphen_deliveries.Input.Query = .init(),
-                headers: Operations.apps_sol_list_hyphen_webhook_hyphen_deliveries.Input.Headers = .init()
+                query: Operations.AppsListWebhookDeliveries.Input.Query = .init(),
+                headers: Operations.AppsListWebhookDeliveries.Input.Headers = .init()
             ) {
                 self.query = query
                 self.headers = headers
@@ -5803,12 +5812,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/app/hook/deliveries/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/app/hook/deliveries/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.hook_hyphen_delivery_hyphen_item])
+                    case json([Components.Schemas.HookDeliveryItem])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.hook_hyphen_delivery_hyphen_item] {
+                    public var json: [Components.Schemas.HookDeliveryItem] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -5818,12 +5827,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.apps_sol_list_hyphen_webhook_hyphen_deliveries.Output.Ok.Body
+                public var body: Operations.AppsListWebhookDeliveries.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.apps_sol_list_hyphen_webhook_hyphen_deliveries.Output.Ok.Body) {
+                public init(body: Operations.AppsListWebhookDeliveries.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -5832,12 +5841,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//app/hook/deliveries/get(apps/list-webhook-deliveries)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.apps_sol_list_hyphen_webhook_hyphen_deliveries.Output.Ok)
+            case ok(Operations.AppsListWebhookDeliveries.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.apps_sol_list_hyphen_webhook_hyphen_deliveries.Output.Ok {
+            public var ok: Operations.AppsListWebhookDeliveries.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -5855,12 +5864,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//app/hook/deliveries/get(apps/list-webhook-deliveries)/responses/400`.
             ///
             /// HTTP response code: `400 badRequest`.
-            case badRequest(Components.Responses.bad_request)
+            case badRequest(Components.Responses.BadRequest)
             /// The associated value of the enum case if `self` is `.badRequest`.
             ///
             /// - Throws: An error if `self` is not `.badRequest`.
             /// - SeeAlso: `.badRequest`.
-            public var badRequest: Components.Responses.bad_request {
+            public var badRequest: Components.Responses.BadRequest {
                 get throws {
                     switch self {
                     case let .badRequest(response):
@@ -5878,12 +5887,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//app/hook/deliveries/get(apps/list-webhook-deliveries)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -5903,14 +5912,14 @@ public enum Operations {
         }
         @frozen public enum AcceptableContentType: AcceptableProtocol {
             case json
-            case application_scim_plus_json
+            case applicationScimJson
             case other(Swift.String)
             public init?(rawValue: Swift.String) {
                 switch rawValue.lowercased() {
                 case "application/json":
                     self = .json
                 case "application/scim+json":
-                    self = .application_scim_plus_json
+                    self = .applicationScimJson
                 default:
                     self = .other(rawValue)
                 }
@@ -5921,14 +5930,14 @@ public enum Operations {
                     return string
                 case .json:
                     return "application/json"
-                case .application_scim_plus_json:
+                case .applicationScimJson:
                     return "application/scim+json"
                 }
             }
             public static var allCases: [Self] {
                 [
                     .json,
-                    .application_scim_plus_json
+                    .applicationScimJson
                 ]
             }
         }
@@ -5941,42 +5950,42 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /app/hook/deliveries/{delivery_id}`.
     /// - Remark: Generated from `#/paths//app/hook/deliveries/{delivery_id}/get(apps/get-webhook-delivery)`.
-    public enum apps_sol_get_hyphen_webhook_hyphen_delivery {
+    public enum AppsGetWebhookDelivery {
         public static let id: Swift.String = "apps/get-webhook-delivery"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/app/hook/deliveries/{delivery_id}/GET/path`.
             public struct Path: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/app/hook/deliveries/{delivery_id}/GET/path/delivery_id`.
-                public var delivery_id: Components.Parameters.delivery_hyphen_id
+                public var deliveryId: Components.Parameters.DeliveryId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - delivery_id:
-                public init(delivery_id: Components.Parameters.delivery_hyphen_id) {
-                    self.delivery_id = delivery_id
+                ///   - deliveryId:
+                public init(deliveryId: Components.Parameters.DeliveryId) {
+                    self.deliveryId = deliveryId
                 }
             }
-            public var path: Operations.apps_sol_get_hyphen_webhook_hyphen_delivery.Input.Path
+            public var path: Operations.AppsGetWebhookDelivery.Input.Path
             /// - Remark: Generated from `#/paths/app/hook/deliveries/{delivery_id}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_get_hyphen_webhook_hyphen_delivery.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsGetWebhookDelivery.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_get_hyphen_webhook_hyphen_delivery.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsGetWebhookDelivery.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.apps_sol_get_hyphen_webhook_hyphen_delivery.Input.Headers
+            public var headers: Operations.AppsGetWebhookDelivery.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.apps_sol_get_hyphen_webhook_hyphen_delivery.Input.Path,
-                headers: Operations.apps_sol_get_hyphen_webhook_hyphen_delivery.Input.Headers = .init()
+                path: Operations.AppsGetWebhookDelivery.Input.Path,
+                headers: Operations.AppsGetWebhookDelivery.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -5987,12 +5996,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/app/hook/deliveries/{delivery_id}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/app/hook/deliveries/{delivery_id}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.hook_hyphen_delivery)
+                    case json(Components.Schemas.HookDelivery)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.hook_hyphen_delivery {
+                    public var json: Components.Schemas.HookDelivery {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -6002,12 +6011,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.apps_sol_get_hyphen_webhook_hyphen_delivery.Output.Ok.Body
+                public var body: Operations.AppsGetWebhookDelivery.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.apps_sol_get_hyphen_webhook_hyphen_delivery.Output.Ok.Body) {
+                public init(body: Operations.AppsGetWebhookDelivery.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -6016,12 +6025,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//app/hook/deliveries/{delivery_id}/get(apps/get-webhook-delivery)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.apps_sol_get_hyphen_webhook_hyphen_delivery.Output.Ok)
+            case ok(Operations.AppsGetWebhookDelivery.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.apps_sol_get_hyphen_webhook_hyphen_delivery.Output.Ok {
+            public var ok: Operations.AppsGetWebhookDelivery.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -6039,12 +6048,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//app/hook/deliveries/{delivery_id}/get(apps/get-webhook-delivery)/responses/400`.
             ///
             /// HTTP response code: `400 badRequest`.
-            case badRequest(Components.Responses.bad_request)
+            case badRequest(Components.Responses.BadRequest)
             /// The associated value of the enum case if `self` is `.badRequest`.
             ///
             /// - Throws: An error if `self` is not `.badRequest`.
             /// - SeeAlso: `.badRequest`.
-            public var badRequest: Components.Responses.bad_request {
+            public var badRequest: Components.Responses.BadRequest {
                 get throws {
                     switch self {
                     case let .badRequest(response):
@@ -6062,12 +6071,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//app/hook/deliveries/{delivery_id}/get(apps/get-webhook-delivery)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -6087,14 +6096,14 @@ public enum Operations {
         }
         @frozen public enum AcceptableContentType: AcceptableProtocol {
             case json
-            case application_scim_plus_json
+            case applicationScimJson
             case other(Swift.String)
             public init?(rawValue: Swift.String) {
                 switch rawValue.lowercased() {
                 case "application/json":
                     self = .json
                 case "application/scim+json":
-                    self = .application_scim_plus_json
+                    self = .applicationScimJson
                 default:
                     self = .other(rawValue)
                 }
@@ -6105,14 +6114,14 @@ public enum Operations {
                     return string
                 case .json:
                     return "application/json"
-                case .application_scim_plus_json:
+                case .applicationScimJson:
                     return "application/scim+json"
                 }
             }
             public static var allCases: [Self] {
                 [
                     .json,
-                    .application_scim_plus_json
+                    .applicationScimJson
                 ]
             }
         }
@@ -6125,42 +6134,42 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /app/hook/deliveries/{delivery_id}/attempts`.
     /// - Remark: Generated from `#/paths//app/hook/deliveries/{delivery_id}/attempts/post(apps/redeliver-webhook-delivery)`.
-    public enum apps_sol_redeliver_hyphen_webhook_hyphen_delivery {
+    public enum AppsRedeliverWebhookDelivery {
         public static let id: Swift.String = "apps/redeliver-webhook-delivery"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/app/hook/deliveries/{delivery_id}/attempts/POST/path`.
             public struct Path: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/app/hook/deliveries/{delivery_id}/attempts/POST/path/delivery_id`.
-                public var delivery_id: Components.Parameters.delivery_hyphen_id
+                public var deliveryId: Components.Parameters.DeliveryId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - delivery_id:
-                public init(delivery_id: Components.Parameters.delivery_hyphen_id) {
-                    self.delivery_id = delivery_id
+                ///   - deliveryId:
+                public init(deliveryId: Components.Parameters.DeliveryId) {
+                    self.deliveryId = deliveryId
                 }
             }
-            public var path: Operations.apps_sol_redeliver_hyphen_webhook_hyphen_delivery.Input.Path
+            public var path: Operations.AppsRedeliverWebhookDelivery.Input.Path
             /// - Remark: Generated from `#/paths/app/hook/deliveries/{delivery_id}/attempts/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_redeliver_hyphen_webhook_hyphen_delivery.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsRedeliverWebhookDelivery.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_redeliver_hyphen_webhook_hyphen_delivery.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsRedeliverWebhookDelivery.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.apps_sol_redeliver_hyphen_webhook_hyphen_delivery.Input.Headers
+            public var headers: Operations.AppsRedeliverWebhookDelivery.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.apps_sol_redeliver_hyphen_webhook_hyphen_delivery.Input.Path,
-                headers: Operations.apps_sol_redeliver_hyphen_webhook_hyphen_delivery.Input.Headers = .init()
+                path: Operations.AppsRedeliverWebhookDelivery.Input.Path,
+                headers: Operations.AppsRedeliverWebhookDelivery.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -6172,12 +6181,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//app/hook/deliveries/{delivery_id}/attempts/post(apps/redeliver-webhook-delivery)/responses/202`.
             ///
             /// HTTP response code: `202 accepted`.
-            case accepted(Components.Responses.accepted)
+            case accepted(Components.Responses.Accepted)
             /// The associated value of the enum case if `self` is `.accepted`.
             ///
             /// - Throws: An error if `self` is not `.accepted`.
             /// - SeeAlso: `.accepted`.
-            public var accepted: Components.Responses.accepted {
+            public var accepted: Components.Responses.Accepted {
                 get throws {
                     switch self {
                     case let .accepted(response):
@@ -6195,12 +6204,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//app/hook/deliveries/{delivery_id}/attempts/post(apps/redeliver-webhook-delivery)/responses/400`.
             ///
             /// HTTP response code: `400 badRequest`.
-            case badRequest(Components.Responses.bad_request)
+            case badRequest(Components.Responses.BadRequest)
             /// The associated value of the enum case if `self` is `.badRequest`.
             ///
             /// - Throws: An error if `self` is not `.badRequest`.
             /// - SeeAlso: `.badRequest`.
-            public var badRequest: Components.Responses.bad_request {
+            public var badRequest: Components.Responses.BadRequest {
                 get throws {
                     switch self {
                     case let .badRequest(response):
@@ -6218,12 +6227,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//app/hook/deliveries/{delivery_id}/attempts/post(apps/redeliver-webhook-delivery)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -6243,14 +6252,14 @@ public enum Operations {
         }
         @frozen public enum AcceptableContentType: AcceptableProtocol {
             case json
-            case application_scim_plus_json
+            case applicationScimJson
             case other(Swift.String)
             public init?(rawValue: Swift.String) {
                 switch rawValue.lowercased() {
                 case "application/json":
                     self = .json
                 case "application/scim+json":
-                    self = .application_scim_plus_json
+                    self = .applicationScimJson
                 default:
                     self = .other(rawValue)
                 }
@@ -6261,14 +6270,14 @@ public enum Operations {
                     return string
                 case .json:
                     return "application/json"
-                case .application_scim_plus_json:
+                case .applicationScimJson:
                     return "application/scim+json"
                 }
             }
             public static var allCases: [Self] {
                 [
                     .json,
-                    .application_scim_plus_json
+                    .applicationScimJson
                 ]
             }
         }
@@ -6279,7 +6288,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /app/installation-requests`.
     /// - Remark: Generated from `#/paths//app/installation-requests/get(apps/list-installation-requests-for-authenticated-app)`.
-    public enum apps_sol_list_hyphen_installation_hyphen_requests_hyphen_for_hyphen_authenticated_hyphen_app {
+    public enum AppsListInstallationRequestsForAuthenticatedApp {
         public static let id: Swift.String = "apps/list-installation-requests-for-authenticated-app"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/app/installation-requests/GET/query`.
@@ -6287,45 +6296,45 @@ public enum Operations {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/app/installation-requests/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/app/installation-requests/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.apps_sol_list_hyphen_installation_hyphen_requests_hyphen_for_hyphen_authenticated_hyphen_app.Input.Query
+            public var query: Operations.AppsListInstallationRequestsForAuthenticatedApp.Input.Query
             /// - Remark: Generated from `#/paths/app/installation-requests/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_list_hyphen_installation_hyphen_requests_hyphen_for_hyphen_authenticated_hyphen_app.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsListInstallationRequestsForAuthenticatedApp.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_list_hyphen_installation_hyphen_requests_hyphen_for_hyphen_authenticated_hyphen_app.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsListInstallationRequestsForAuthenticatedApp.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.apps_sol_list_hyphen_installation_hyphen_requests_hyphen_for_hyphen_authenticated_hyphen_app.Input.Headers
+            public var headers: Operations.AppsListInstallationRequestsForAuthenticatedApp.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - query:
             ///   - headers:
             public init(
-                query: Operations.apps_sol_list_hyphen_installation_hyphen_requests_hyphen_for_hyphen_authenticated_hyphen_app.Input.Query = .init(),
-                headers: Operations.apps_sol_list_hyphen_installation_hyphen_requests_hyphen_for_hyphen_authenticated_hyphen_app.Input.Headers = .init()
+                query: Operations.AppsListInstallationRequestsForAuthenticatedApp.Input.Query = .init(),
+                headers: Operations.AppsListInstallationRequestsForAuthenticatedApp.Input.Headers = .init()
             ) {
                 self.query = query
                 self.headers = headers
@@ -6336,12 +6345,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/app/installation-requests/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/app/installation-requests/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.integration_hyphen_installation_hyphen_request])
+                    case json([Components.Schemas.IntegrationInstallationRequest])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.integration_hyphen_installation_hyphen_request] {
+                    public var json: [Components.Schemas.IntegrationInstallationRequest] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -6351,12 +6360,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.apps_sol_list_hyphen_installation_hyphen_requests_hyphen_for_hyphen_authenticated_hyphen_app.Output.Ok.Body
+                public var body: Operations.AppsListInstallationRequestsForAuthenticatedApp.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.apps_sol_list_hyphen_installation_hyphen_requests_hyphen_for_hyphen_authenticated_hyphen_app.Output.Ok.Body) {
+                public init(body: Operations.AppsListInstallationRequestsForAuthenticatedApp.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -6365,12 +6374,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//app/installation-requests/get(apps/list-installation-requests-for-authenticated-app)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.apps_sol_list_hyphen_installation_hyphen_requests_hyphen_for_hyphen_authenticated_hyphen_app.Output.Ok)
+            case ok(Operations.AppsListInstallationRequestsForAuthenticatedApp.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.apps_sol_list_hyphen_installation_hyphen_requests_hyphen_for_hyphen_authenticated_hyphen_app.Output.Ok {
+            public var ok: Operations.AppsListInstallationRequestsForAuthenticatedApp.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -6388,12 +6397,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//app/installation-requests/get(apps/list-installation-requests-for-authenticated-app)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//app/installation-requests/get(apps/list-installation-requests-for-authenticated-app)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -6411,12 +6428,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//app/installation-requests/get(apps/list-installation-requests-for-authenticated-app)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -6468,7 +6485,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /app/installations`.
     /// - Remark: Generated from `#/paths//app/installations/get(apps/list-installations)`.
-    public enum apps_sol_list_hyphen_installations {
+    public enum AppsListInstallations {
         public static let id: Swift.String = "apps/list-installations"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/app/installations/GET/query`.
@@ -6476,57 +6493,57 @@ public enum Operations {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/app/installations/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/app/installations/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Only show results that were last updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
                 ///
                 /// - Remark: Generated from `#/paths/app/installations/GET/query/since`.
-                public var since: Components.Parameters.since?
+                public var since: Components.Parameters.Since?
                 /// - Remark: Generated from `#/paths/app/installations/GET/query/outdated`.
                 public var outdated: Swift.String?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - since: Only show results that were last updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
                 ///   - outdated:
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil,
-                    since: Components.Parameters.since? = nil,
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil,
+                    since: Components.Parameters.Since? = nil,
                     outdated: Swift.String? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                     self.since = since
                     self.outdated = outdated
                 }
             }
-            public var query: Operations.apps_sol_list_hyphen_installations.Input.Query
+            public var query: Operations.AppsListInstallations.Input.Query
             /// - Remark: Generated from `#/paths/app/installations/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_list_hyphen_installations.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsListInstallations.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_list_hyphen_installations.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsListInstallations.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.apps_sol_list_hyphen_installations.Input.Headers
+            public var headers: Operations.AppsListInstallations.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - query:
             ///   - headers:
             public init(
-                query: Operations.apps_sol_list_hyphen_installations.Input.Query = .init(),
-                headers: Operations.apps_sol_list_hyphen_installations.Input.Headers = .init()
+                query: Operations.AppsListInstallations.Input.Query = .init(),
+                headers: Operations.AppsListInstallations.Input.Headers = .init()
             ) {
                 self.query = query
                 self.headers = headers
@@ -6537,26 +6554,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/app/installations/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/app/installations/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.apps_sol_list_hyphen_installations.Output.Ok.Headers
+                public var headers: Operations.AppsListInstallations.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/app/installations/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/app/installations/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.installation])
+                    case json([Components.Schemas.Installation])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.installation] {
+                    public var json: [Components.Schemas.Installation] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -6566,15 +6583,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.apps_sol_list_hyphen_installations.Output.Ok.Body
+                public var body: Operations.AppsListInstallations.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.apps_sol_list_hyphen_installations.Output.Ok.Headers = .init(),
-                    body: Operations.apps_sol_list_hyphen_installations.Output.Ok.Body
+                    headers: Operations.AppsListInstallations.Output.Ok.Headers = .init(),
+                    body: Operations.AppsListInstallations.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -6585,12 +6602,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//app/installations/get(apps/list-installations)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.apps_sol_list_hyphen_installations.Output.Ok)
+            case ok(Operations.AppsListInstallations.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.apps_sol_list_hyphen_installations.Output.Ok {
+            public var ok: Operations.AppsListInstallations.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -6642,7 +6659,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /app/installations/{installation_id}`.
     /// - Remark: Generated from `#/paths//app/installations/{installation_id}/get(apps/get-installation)`.
-    public enum apps_sol_get_hyphen_installation {
+    public enum AppsGetInstallation {
         public static let id: Swift.String = "apps/get-installation"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/app/installations/{installation_id}/GET/path`.
@@ -6650,36 +6667,36 @@ public enum Operations {
                 /// The unique identifier of the installation.
                 ///
                 /// - Remark: Generated from `#/paths/app/installations/{installation_id}/GET/path/installation_id`.
-                public var installation_id: Components.Parameters.installation_hyphen_id
+                public var installationId: Components.Parameters.InstallationId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - installation_id: The unique identifier of the installation.
-                public init(installation_id: Components.Parameters.installation_hyphen_id) {
-                    self.installation_id = installation_id
+                ///   - installationId: The unique identifier of the installation.
+                public init(installationId: Components.Parameters.InstallationId) {
+                    self.installationId = installationId
                 }
             }
-            public var path: Operations.apps_sol_get_hyphen_installation.Input.Path
+            public var path: Operations.AppsGetInstallation.Input.Path
             /// - Remark: Generated from `#/paths/app/installations/{installation_id}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_get_hyphen_installation.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsGetInstallation.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_get_hyphen_installation.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsGetInstallation.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.apps_sol_get_hyphen_installation.Input.Headers
+            public var headers: Operations.AppsGetInstallation.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.apps_sol_get_hyphen_installation.Input.Path,
-                headers: Operations.apps_sol_get_hyphen_installation.Input.Headers = .init()
+                path: Operations.AppsGetInstallation.Input.Path,
+                headers: Operations.AppsGetInstallation.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -6690,12 +6707,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/app/installations/{installation_id}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/app/installations/{installation_id}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.installation)
+                    case json(Components.Schemas.Installation)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.installation {
+                    public var json: Components.Schemas.Installation {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -6705,12 +6722,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.apps_sol_get_hyphen_installation.Output.Ok.Body
+                public var body: Operations.AppsGetInstallation.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.apps_sol_get_hyphen_installation.Output.Ok.Body) {
+                public init(body: Operations.AppsGetInstallation.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -6719,12 +6736,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//app/installations/{installation_id}/get(apps/get-installation)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.apps_sol_get_hyphen_installation.Output.Ok)
+            case ok(Operations.AppsGetInstallation.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.apps_sol_get_hyphen_installation.Output.Ok {
+            public var ok: Operations.AppsGetInstallation.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -6742,12 +6759,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//app/installations/{installation_id}/get(apps/get-installation)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -6799,7 +6816,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /app/installations/{installation_id}`.
     /// - Remark: Generated from `#/paths//app/installations/{installation_id}/delete(apps/delete-installation)`.
-    public enum apps_sol_delete_hyphen_installation {
+    public enum AppsDeleteInstallation {
         public static let id: Swift.String = "apps/delete-installation"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/app/installations/{installation_id}/DELETE/path`.
@@ -6807,36 +6824,36 @@ public enum Operations {
                 /// The unique identifier of the installation.
                 ///
                 /// - Remark: Generated from `#/paths/app/installations/{installation_id}/DELETE/path/installation_id`.
-                public var installation_id: Components.Parameters.installation_hyphen_id
+                public var installationId: Components.Parameters.InstallationId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - installation_id: The unique identifier of the installation.
-                public init(installation_id: Components.Parameters.installation_hyphen_id) {
-                    self.installation_id = installation_id
+                ///   - installationId: The unique identifier of the installation.
+                public init(installationId: Components.Parameters.InstallationId) {
+                    self.installationId = installationId
                 }
             }
-            public var path: Operations.apps_sol_delete_hyphen_installation.Input.Path
+            public var path: Operations.AppsDeleteInstallation.Input.Path
             /// - Remark: Generated from `#/paths/app/installations/{installation_id}/DELETE/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_delete_hyphen_installation.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsDeleteInstallation.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_delete_hyphen_installation.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsDeleteInstallation.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.apps_sol_delete_hyphen_installation.Input.Headers
+            public var headers: Operations.AppsDeleteInstallation.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.apps_sol_delete_hyphen_installation.Input.Path,
-                headers: Operations.apps_sol_delete_hyphen_installation.Input.Headers = .init()
+                path: Operations.AppsDeleteInstallation.Input.Path,
+                headers: Operations.AppsDeleteInstallation.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -6852,12 +6869,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//app/installations/{installation_id}/delete(apps/delete-installation)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.apps_sol_delete_hyphen_installation.Output.NoContent)
+            case noContent(Operations.AppsDeleteInstallation.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//app/installations/{installation_id}/delete(apps/delete-installation)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.apps_sol_delete_hyphen_installation.Output.NoContent {
+            public var noContent: Operations.AppsDeleteInstallation.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -6875,12 +6900,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//app/installations/{installation_id}/delete(apps/delete-installation)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -6936,7 +6961,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /app/installations/{installation_id}/access_tokens`.
     /// - Remark: Generated from `#/paths//app/installations/{installation_id}/access_tokens/post(apps/create-installation-access-token)`.
-    public enum apps_sol_create_hyphen_installation_hyphen_access_hyphen_token {
+    public enum AppsCreateInstallationAccessToken {
         public static let id: Swift.String = "apps/create-installation-access-token"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/app/installations/{installation_id}/access_tokens/POST/path`.
@@ -6944,32 +6969,32 @@ public enum Operations {
                 /// The unique identifier of the installation.
                 ///
                 /// - Remark: Generated from `#/paths/app/installations/{installation_id}/access_tokens/POST/path/installation_id`.
-                public var installation_id: Components.Parameters.installation_hyphen_id
+                public var installationId: Components.Parameters.InstallationId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - installation_id: The unique identifier of the installation.
-                public init(installation_id: Components.Parameters.installation_hyphen_id) {
-                    self.installation_id = installation_id
+                ///   - installationId: The unique identifier of the installation.
+                public init(installationId: Components.Parameters.InstallationId) {
+                    self.installationId = installationId
                 }
             }
-            public var path: Operations.apps_sol_create_hyphen_installation_hyphen_access_hyphen_token.Input.Path
+            public var path: Operations.AppsCreateInstallationAccessToken.Input.Path
             /// - Remark: Generated from `#/paths/app/installations/{installation_id}/access_tokens/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_create_hyphen_installation_hyphen_access_hyphen_token.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsCreateInstallationAccessToken.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_create_hyphen_installation_hyphen_access_hyphen_token.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsCreateInstallationAccessToken.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.apps_sol_create_hyphen_installation_hyphen_access_hyphen_token.Input.Headers
+            public var headers: Operations.AppsCreateInstallationAccessToken.Input.Headers
             /// - Remark: Generated from `#/paths/app/installations/{installation_id}/access_tokens/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/app/installations/{installation_id}/access_tokens/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// List of repository names that the token should have access to
                     ///
                     /// - Remark: Generated from `#/paths/app/installations/{installation_id}/access_tokens/POST/requestBody/json/repositories`.
@@ -6977,34 +7002,34 @@ public enum Operations {
                     /// List of repository IDs that the token should have access to
                     ///
                     /// - Remark: Generated from `#/paths/app/installations/{installation_id}/access_tokens/POST/requestBody/json/repository_ids`.
-                    public var repository_ids: [Swift.Int]?
+                    public var repositoryIds: [Swift.Int]?
                     /// - Remark: Generated from `#/paths/app/installations/{installation_id}/access_tokens/POST/requestBody/json/permissions`.
-                    public var permissions: Components.Schemas.app_hyphen_permissions?
-                    /// Creates a new `jsonPayload`.
+                    public var permissions: Components.Schemas.AppPermissions?
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - repositories: List of repository names that the token should have access to
-                    ///   - repository_ids: List of repository IDs that the token should have access to
+                    ///   - repositoryIds: List of repository IDs that the token should have access to
                     ///   - permissions:
                     public init(
                         repositories: [Swift.String]? = nil,
-                        repository_ids: [Swift.Int]? = nil,
-                        permissions: Components.Schemas.app_hyphen_permissions? = nil
+                        repositoryIds: [Swift.Int]? = nil,
+                        permissions: Components.Schemas.AppPermissions? = nil
                     ) {
                         self.repositories = repositories
-                        self.repository_ids = repository_ids
+                        self.repositoryIds = repositoryIds
                         self.permissions = permissions
                     }
                     public enum CodingKeys: String, CodingKey {
                         case repositories
-                        case repository_ids
+                        case repositoryIds = "repository_ids"
                         case permissions
                     }
                 }
                 /// - Remark: Generated from `#/paths/app/installations/{installation_id}/access_tokens/POST/requestBody/content/application\/json`.
-                case json(Operations.apps_sol_create_hyphen_installation_hyphen_access_hyphen_token.Input.Body.jsonPayload)
+                case json(Operations.AppsCreateInstallationAccessToken.Input.Body.JsonPayload)
             }
-            public var body: Operations.apps_sol_create_hyphen_installation_hyphen_access_hyphen_token.Input.Body?
+            public var body: Operations.AppsCreateInstallationAccessToken.Input.Body?
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -7012,9 +7037,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.apps_sol_create_hyphen_installation_hyphen_access_hyphen_token.Input.Path,
-                headers: Operations.apps_sol_create_hyphen_installation_hyphen_access_hyphen_token.Input.Headers = .init(),
-                body: Operations.apps_sol_create_hyphen_installation_hyphen_access_hyphen_token.Input.Body? = nil
+                path: Operations.AppsCreateInstallationAccessToken.Input.Path,
+                headers: Operations.AppsCreateInstallationAccessToken.Input.Headers = .init(),
+                body: Operations.AppsCreateInstallationAccessToken.Input.Body? = nil
             ) {
                 self.path = path
                 self.headers = headers
@@ -7026,12 +7051,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/app/installations/{installation_id}/access_tokens/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/app/installations/{installation_id}/access_tokens/POST/responses/201/content/application\/json`.
-                    case json(Components.Schemas.installation_hyphen_token)
+                    case json(Components.Schemas.InstallationToken)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.installation_hyphen_token {
+                    public var json: Components.Schemas.InstallationToken {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -7041,12 +7066,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.apps_sol_create_hyphen_installation_hyphen_access_hyphen_token.Output.Created.Body
+                public var body: Operations.AppsCreateInstallationAccessToken.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.apps_sol_create_hyphen_installation_hyphen_access_hyphen_token.Output.Created.Body) {
+                public init(body: Operations.AppsCreateInstallationAccessToken.Output.Created.Body) {
                     self.body = body
                 }
             }
@@ -7055,12 +7080,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//app/installations/{installation_id}/access_tokens/post(apps/create-installation-access-token)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.apps_sol_create_hyphen_installation_hyphen_access_hyphen_token.Output.Created)
+            case created(Operations.AppsCreateInstallationAccessToken.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.apps_sol_create_hyphen_installation_hyphen_access_hyphen_token.Output.Created {
+            public var created: Operations.AppsCreateInstallationAccessToken.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -7078,12 +7103,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//app/installations/{installation_id}/access_tokens/post(apps/create-installation-access-token)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -7101,12 +7126,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//app/installations/{installation_id}/access_tokens/post(apps/create-installation-access-token)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -7124,12 +7149,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//app/installations/{installation_id}/access_tokens/post(apps/create-installation-access-token)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -7147,12 +7172,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//app/installations/{installation_id}/access_tokens/post(apps/create-installation-access-token)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -7204,7 +7229,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PUT /app/installations/{installation_id}/suspended`.
     /// - Remark: Generated from `#/paths//app/installations/{installation_id}/suspended/put(apps/suspend-installation)`.
-    public enum apps_sol_suspend_hyphen_installation {
+    public enum AppsSuspendInstallation {
         public static let id: Swift.String = "apps/suspend-installation"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/app/installations/{installation_id}/suspended/PUT/path`.
@@ -7212,36 +7237,36 @@ public enum Operations {
                 /// The unique identifier of the installation.
                 ///
                 /// - Remark: Generated from `#/paths/app/installations/{installation_id}/suspended/PUT/path/installation_id`.
-                public var installation_id: Components.Parameters.installation_hyphen_id
+                public var installationId: Components.Parameters.InstallationId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - installation_id: The unique identifier of the installation.
-                public init(installation_id: Components.Parameters.installation_hyphen_id) {
-                    self.installation_id = installation_id
+                ///   - installationId: The unique identifier of the installation.
+                public init(installationId: Components.Parameters.InstallationId) {
+                    self.installationId = installationId
                 }
             }
-            public var path: Operations.apps_sol_suspend_hyphen_installation.Input.Path
+            public var path: Operations.AppsSuspendInstallation.Input.Path
             /// - Remark: Generated from `#/paths/app/installations/{installation_id}/suspended/PUT/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_suspend_hyphen_installation.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsSuspendInstallation.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_suspend_hyphen_installation.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsSuspendInstallation.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.apps_sol_suspend_hyphen_installation.Input.Headers
+            public var headers: Operations.AppsSuspendInstallation.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.apps_sol_suspend_hyphen_installation.Input.Path,
-                headers: Operations.apps_sol_suspend_hyphen_installation.Input.Headers = .init()
+                path: Operations.AppsSuspendInstallation.Input.Path,
+                headers: Operations.AppsSuspendInstallation.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -7257,12 +7282,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//app/installations/{installation_id}/suspended/put(apps/suspend-installation)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.apps_sol_suspend_hyphen_installation.Output.NoContent)
+            case noContent(Operations.AppsSuspendInstallation.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//app/installations/{installation_id}/suspended/put(apps/suspend-installation)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.apps_sol_suspend_hyphen_installation.Output.NoContent {
+            public var noContent: Operations.AppsSuspendInstallation.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -7280,12 +7313,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//app/installations/{installation_id}/suspended/put(apps/suspend-installation)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -7337,7 +7370,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /app/installations/{installation_id}/suspended`.
     /// - Remark: Generated from `#/paths//app/installations/{installation_id}/suspended/delete(apps/unsuspend-installation)`.
-    public enum apps_sol_unsuspend_hyphen_installation {
+    public enum AppsUnsuspendInstallation {
         public static let id: Swift.String = "apps/unsuspend-installation"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/app/installations/{installation_id}/suspended/DELETE/path`.
@@ -7345,36 +7378,36 @@ public enum Operations {
                 /// The unique identifier of the installation.
                 ///
                 /// - Remark: Generated from `#/paths/app/installations/{installation_id}/suspended/DELETE/path/installation_id`.
-                public var installation_id: Components.Parameters.installation_hyphen_id
+                public var installationId: Components.Parameters.InstallationId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - installation_id: The unique identifier of the installation.
-                public init(installation_id: Components.Parameters.installation_hyphen_id) {
-                    self.installation_id = installation_id
+                ///   - installationId: The unique identifier of the installation.
+                public init(installationId: Components.Parameters.InstallationId) {
+                    self.installationId = installationId
                 }
             }
-            public var path: Operations.apps_sol_unsuspend_hyphen_installation.Input.Path
+            public var path: Operations.AppsUnsuspendInstallation.Input.Path
             /// - Remark: Generated from `#/paths/app/installations/{installation_id}/suspended/DELETE/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_unsuspend_hyphen_installation.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsUnsuspendInstallation.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_unsuspend_hyphen_installation.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsUnsuspendInstallation.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.apps_sol_unsuspend_hyphen_installation.Input.Headers
+            public var headers: Operations.AppsUnsuspendInstallation.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.apps_sol_unsuspend_hyphen_installation.Input.Path,
-                headers: Operations.apps_sol_unsuspend_hyphen_installation.Input.Headers = .init()
+                path: Operations.AppsUnsuspendInstallation.Input.Path,
+                headers: Operations.AppsUnsuspendInstallation.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -7390,12 +7423,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//app/installations/{installation_id}/suspended/delete(apps/unsuspend-installation)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.apps_sol_unsuspend_hyphen_installation.Output.NoContent)
+            case noContent(Operations.AppsUnsuspendInstallation.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//app/installations/{installation_id}/suspended/delete(apps/unsuspend-installation)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.apps_sol_unsuspend_hyphen_installation.Output.NoContent {
+            public var noContent: Operations.AppsUnsuspendInstallation.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -7413,12 +7454,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//app/installations/{installation_id}/suspended/delete(apps/unsuspend-installation)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -7469,7 +7510,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /applications/{client_id}/grant`.
     /// - Remark: Generated from `#/paths//applications/{client_id}/grant/delete(apps/delete-authorization)`.
-    public enum apps_sol_delete_hyphen_authorization {
+    public enum AppsDeleteAuthorization {
         public static let id: Swift.String = "apps/delete-authorization"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/applications/{client_id}/grant/DELETE/path`.
@@ -7477,51 +7518,51 @@ public enum Operations {
                 /// The client ID of the GitHub app.
                 ///
                 /// - Remark: Generated from `#/paths/applications/{client_id}/grant/DELETE/path/client_id`.
-                public var client_id: Components.Parameters.client_hyphen_id
+                public var clientId: Components.Parameters.ClientId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - client_id: The client ID of the GitHub app.
-                public init(client_id: Components.Parameters.client_hyphen_id) {
-                    self.client_id = client_id
+                ///   - clientId: The client ID of the GitHub app.
+                public init(clientId: Components.Parameters.ClientId) {
+                    self.clientId = clientId
                 }
             }
-            public var path: Operations.apps_sol_delete_hyphen_authorization.Input.Path
+            public var path: Operations.AppsDeleteAuthorization.Input.Path
             /// - Remark: Generated from `#/paths/applications/{client_id}/grant/DELETE/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_delete_hyphen_authorization.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsDeleteAuthorization.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_delete_hyphen_authorization.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsDeleteAuthorization.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.apps_sol_delete_hyphen_authorization.Input.Headers
+            public var headers: Operations.AppsDeleteAuthorization.Input.Headers
             /// - Remark: Generated from `#/paths/applications/{client_id}/grant/DELETE/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/applications/{client_id}/grant/DELETE/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The OAuth access token used to authenticate to the GitHub API.
                     ///
                     /// - Remark: Generated from `#/paths/applications/{client_id}/grant/DELETE/requestBody/json/access_token`.
-                    public var access_token: Swift.String
-                    /// Creates a new `jsonPayload`.
+                    public var accessToken: Swift.String
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
-                    ///   - access_token: The OAuth access token used to authenticate to the GitHub API.
-                    public init(access_token: Swift.String) {
-                        self.access_token = access_token
+                    ///   - accessToken: The OAuth access token used to authenticate to the GitHub API.
+                    public init(accessToken: Swift.String) {
+                        self.accessToken = accessToken
                     }
                     public enum CodingKeys: String, CodingKey {
-                        case access_token
+                        case accessToken = "access_token"
                     }
                 }
                 /// - Remark: Generated from `#/paths/applications/{client_id}/grant/DELETE/requestBody/content/application\/json`.
-                case json(Operations.apps_sol_delete_hyphen_authorization.Input.Body.jsonPayload)
+                case json(Operations.AppsDeleteAuthorization.Input.Body.JsonPayload)
             }
-            public var body: Operations.apps_sol_delete_hyphen_authorization.Input.Body
+            public var body: Operations.AppsDeleteAuthorization.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -7529,9 +7570,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.apps_sol_delete_hyphen_authorization.Input.Path,
-                headers: Operations.apps_sol_delete_hyphen_authorization.Input.Headers = .init(),
-                body: Operations.apps_sol_delete_hyphen_authorization.Input.Body
+                path: Operations.AppsDeleteAuthorization.Input.Path,
+                headers: Operations.AppsDeleteAuthorization.Input.Headers = .init(),
+                body: Operations.AppsDeleteAuthorization.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -7548,12 +7589,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//applications/{client_id}/grant/delete(apps/delete-authorization)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.apps_sol_delete_hyphen_authorization.Output.NoContent)
+            case noContent(Operations.AppsDeleteAuthorization.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//applications/{client_id}/grant/delete(apps/delete-authorization)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.apps_sol_delete_hyphen_authorization.Output.NoContent {
+            public var noContent: Operations.AppsDeleteAuthorization.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -7571,12 +7620,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//applications/{client_id}/grant/delete(apps/delete-authorization)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -7626,7 +7675,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /applications/{client_id}/token`.
     /// - Remark: Generated from `#/paths//applications/{client_id}/token/post(apps/check-token)`.
-    public enum apps_sol_check_hyphen_token {
+    public enum AppsCheckToken {
         public static let id: Swift.String = "apps/check-token"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/applications/{client_id}/token/POST/path`.
@@ -7634,51 +7683,51 @@ public enum Operations {
                 /// The client ID of the GitHub app.
                 ///
                 /// - Remark: Generated from `#/paths/applications/{client_id}/token/POST/path/client_id`.
-                public var client_id: Components.Parameters.client_hyphen_id
+                public var clientId: Components.Parameters.ClientId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - client_id: The client ID of the GitHub app.
-                public init(client_id: Components.Parameters.client_hyphen_id) {
-                    self.client_id = client_id
+                ///   - clientId: The client ID of the GitHub app.
+                public init(clientId: Components.Parameters.ClientId) {
+                    self.clientId = clientId
                 }
             }
-            public var path: Operations.apps_sol_check_hyphen_token.Input.Path
+            public var path: Operations.AppsCheckToken.Input.Path
             /// - Remark: Generated from `#/paths/applications/{client_id}/token/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_check_hyphen_token.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsCheckToken.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_check_hyphen_token.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsCheckToken.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.apps_sol_check_hyphen_token.Input.Headers
+            public var headers: Operations.AppsCheckToken.Input.Headers
             /// - Remark: Generated from `#/paths/applications/{client_id}/token/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/applications/{client_id}/token/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The access_token of the OAuth or GitHub application.
                     ///
                     /// - Remark: Generated from `#/paths/applications/{client_id}/token/POST/requestBody/json/access_token`.
-                    public var access_token: Swift.String
-                    /// Creates a new `jsonPayload`.
+                    public var accessToken: Swift.String
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
-                    ///   - access_token: The access_token of the OAuth or GitHub application.
-                    public init(access_token: Swift.String) {
-                        self.access_token = access_token
+                    ///   - accessToken: The access_token of the OAuth or GitHub application.
+                    public init(accessToken: Swift.String) {
+                        self.accessToken = accessToken
                     }
                     public enum CodingKeys: String, CodingKey {
-                        case access_token
+                        case accessToken = "access_token"
                     }
                 }
                 /// - Remark: Generated from `#/paths/applications/{client_id}/token/POST/requestBody/content/application\/json`.
-                case json(Operations.apps_sol_check_hyphen_token.Input.Body.jsonPayload)
+                case json(Operations.AppsCheckToken.Input.Body.JsonPayload)
             }
-            public var body: Operations.apps_sol_check_hyphen_token.Input.Body
+            public var body: Operations.AppsCheckToken.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -7686,9 +7735,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.apps_sol_check_hyphen_token.Input.Path,
-                headers: Operations.apps_sol_check_hyphen_token.Input.Headers = .init(),
-                body: Operations.apps_sol_check_hyphen_token.Input.Body
+                path: Operations.AppsCheckToken.Input.Path,
+                headers: Operations.AppsCheckToken.Input.Headers = .init(),
+                body: Operations.AppsCheckToken.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -7700,12 +7749,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/applications/{client_id}/token/POST/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/applications/{client_id}/token/POST/responses/200/content/application\/json`.
-                    case json(Components.Schemas.authorization)
+                    case json(Components.Schemas.Authorization)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.authorization {
+                    public var json: Components.Schemas.Authorization {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -7715,12 +7764,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.apps_sol_check_hyphen_token.Output.Ok.Body
+                public var body: Operations.AppsCheckToken.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.apps_sol_check_hyphen_token.Output.Ok.Body) {
+                public init(body: Operations.AppsCheckToken.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -7729,12 +7778,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//applications/{client_id}/token/post(apps/check-token)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.apps_sol_check_hyphen_token.Output.Ok)
+            case ok(Operations.AppsCheckToken.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.apps_sol_check_hyphen_token.Output.Ok {
+            public var ok: Operations.AppsCheckToken.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -7752,12 +7801,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//applications/{client_id}/token/post(apps/check-token)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -7775,12 +7824,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//applications/{client_id}/token/post(apps/check-token)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -7830,7 +7879,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PATCH /applications/{client_id}/token`.
     /// - Remark: Generated from `#/paths//applications/{client_id}/token/patch(apps/reset-token)`.
-    public enum apps_sol_reset_hyphen_token {
+    public enum AppsResetToken {
         public static let id: Swift.String = "apps/reset-token"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/applications/{client_id}/token/PATCH/path`.
@@ -7838,51 +7887,51 @@ public enum Operations {
                 /// The client ID of the GitHub app.
                 ///
                 /// - Remark: Generated from `#/paths/applications/{client_id}/token/PATCH/path/client_id`.
-                public var client_id: Components.Parameters.client_hyphen_id
+                public var clientId: Components.Parameters.ClientId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - client_id: The client ID of the GitHub app.
-                public init(client_id: Components.Parameters.client_hyphen_id) {
-                    self.client_id = client_id
+                ///   - clientId: The client ID of the GitHub app.
+                public init(clientId: Components.Parameters.ClientId) {
+                    self.clientId = clientId
                 }
             }
-            public var path: Operations.apps_sol_reset_hyphen_token.Input.Path
+            public var path: Operations.AppsResetToken.Input.Path
             /// - Remark: Generated from `#/paths/applications/{client_id}/token/PATCH/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_reset_hyphen_token.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsResetToken.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_reset_hyphen_token.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsResetToken.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.apps_sol_reset_hyphen_token.Input.Headers
+            public var headers: Operations.AppsResetToken.Input.Headers
             /// - Remark: Generated from `#/paths/applications/{client_id}/token/PATCH/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/applications/{client_id}/token/PATCH/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The access_token of the OAuth or GitHub application.
                     ///
                     /// - Remark: Generated from `#/paths/applications/{client_id}/token/PATCH/requestBody/json/access_token`.
-                    public var access_token: Swift.String
-                    /// Creates a new `jsonPayload`.
+                    public var accessToken: Swift.String
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
-                    ///   - access_token: The access_token of the OAuth or GitHub application.
-                    public init(access_token: Swift.String) {
-                        self.access_token = access_token
+                    ///   - accessToken: The access_token of the OAuth or GitHub application.
+                    public init(accessToken: Swift.String) {
+                        self.accessToken = accessToken
                     }
                     public enum CodingKeys: String, CodingKey {
-                        case access_token
+                        case accessToken = "access_token"
                     }
                 }
                 /// - Remark: Generated from `#/paths/applications/{client_id}/token/PATCH/requestBody/content/application\/json`.
-                case json(Operations.apps_sol_reset_hyphen_token.Input.Body.jsonPayload)
+                case json(Operations.AppsResetToken.Input.Body.JsonPayload)
             }
-            public var body: Operations.apps_sol_reset_hyphen_token.Input.Body
+            public var body: Operations.AppsResetToken.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -7890,9 +7939,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.apps_sol_reset_hyphen_token.Input.Path,
-                headers: Operations.apps_sol_reset_hyphen_token.Input.Headers = .init(),
-                body: Operations.apps_sol_reset_hyphen_token.Input.Body
+                path: Operations.AppsResetToken.Input.Path,
+                headers: Operations.AppsResetToken.Input.Headers = .init(),
+                body: Operations.AppsResetToken.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -7904,12 +7953,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/applications/{client_id}/token/PATCH/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/applications/{client_id}/token/PATCH/responses/200/content/application\/json`.
-                    case json(Components.Schemas.authorization)
+                    case json(Components.Schemas.Authorization)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.authorization {
+                    public var json: Components.Schemas.Authorization {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -7919,12 +7968,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.apps_sol_reset_hyphen_token.Output.Ok.Body
+                public var body: Operations.AppsResetToken.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.apps_sol_reset_hyphen_token.Output.Ok.Body) {
+                public init(body: Operations.AppsResetToken.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -7933,12 +7982,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//applications/{client_id}/token/patch(apps/reset-token)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.apps_sol_reset_hyphen_token.Output.Ok)
+            case ok(Operations.AppsResetToken.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.apps_sol_reset_hyphen_token.Output.Ok {
+            public var ok: Operations.AppsResetToken.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -7956,12 +8005,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//applications/{client_id}/token/patch(apps/reset-token)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -8011,7 +8060,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /applications/{client_id}/token`.
     /// - Remark: Generated from `#/paths//applications/{client_id}/token/delete(apps/delete-token)`.
-    public enum apps_sol_delete_hyphen_token {
+    public enum AppsDeleteToken {
         public static let id: Swift.String = "apps/delete-token"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/applications/{client_id}/token/DELETE/path`.
@@ -8019,51 +8068,51 @@ public enum Operations {
                 /// The client ID of the GitHub app.
                 ///
                 /// - Remark: Generated from `#/paths/applications/{client_id}/token/DELETE/path/client_id`.
-                public var client_id: Components.Parameters.client_hyphen_id
+                public var clientId: Components.Parameters.ClientId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - client_id: The client ID of the GitHub app.
-                public init(client_id: Components.Parameters.client_hyphen_id) {
-                    self.client_id = client_id
+                ///   - clientId: The client ID of the GitHub app.
+                public init(clientId: Components.Parameters.ClientId) {
+                    self.clientId = clientId
                 }
             }
-            public var path: Operations.apps_sol_delete_hyphen_token.Input.Path
+            public var path: Operations.AppsDeleteToken.Input.Path
             /// - Remark: Generated from `#/paths/applications/{client_id}/token/DELETE/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_delete_hyphen_token.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsDeleteToken.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_delete_hyphen_token.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsDeleteToken.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.apps_sol_delete_hyphen_token.Input.Headers
+            public var headers: Operations.AppsDeleteToken.Input.Headers
             /// - Remark: Generated from `#/paths/applications/{client_id}/token/DELETE/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/applications/{client_id}/token/DELETE/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The OAuth access token used to authenticate to the GitHub API.
                     ///
                     /// - Remark: Generated from `#/paths/applications/{client_id}/token/DELETE/requestBody/json/access_token`.
-                    public var access_token: Swift.String
-                    /// Creates a new `jsonPayload`.
+                    public var accessToken: Swift.String
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
-                    ///   - access_token: The OAuth access token used to authenticate to the GitHub API.
-                    public init(access_token: Swift.String) {
-                        self.access_token = access_token
+                    ///   - accessToken: The OAuth access token used to authenticate to the GitHub API.
+                    public init(accessToken: Swift.String) {
+                        self.accessToken = accessToken
                     }
                     public enum CodingKeys: String, CodingKey {
-                        case access_token
+                        case accessToken = "access_token"
                     }
                 }
                 /// - Remark: Generated from `#/paths/applications/{client_id}/token/DELETE/requestBody/content/application\/json`.
-                case json(Operations.apps_sol_delete_hyphen_token.Input.Body.jsonPayload)
+                case json(Operations.AppsDeleteToken.Input.Body.JsonPayload)
             }
-            public var body: Operations.apps_sol_delete_hyphen_token.Input.Body
+            public var body: Operations.AppsDeleteToken.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -8071,9 +8120,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.apps_sol_delete_hyphen_token.Input.Path,
-                headers: Operations.apps_sol_delete_hyphen_token.Input.Headers = .init(),
-                body: Operations.apps_sol_delete_hyphen_token.Input.Body
+                path: Operations.AppsDeleteToken.Input.Path,
+                headers: Operations.AppsDeleteToken.Input.Headers = .init(),
+                body: Operations.AppsDeleteToken.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -8090,12 +8139,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//applications/{client_id}/token/delete(apps/delete-token)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.apps_sol_delete_hyphen_token.Output.NoContent)
+            case noContent(Operations.AppsDeleteToken.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//applications/{client_id}/token/delete(apps/delete-token)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.apps_sol_delete_hyphen_token.Output.NoContent {
+            public var noContent: Operations.AppsDeleteToken.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -8113,12 +8170,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//applications/{client_id}/token/delete(apps/delete-token)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -8172,7 +8229,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /applications/{client_id}/token/scoped`.
     /// - Remark: Generated from `#/paths//applications/{client_id}/token/scoped/post(apps/scope-token)`.
-    public enum apps_sol_scope_hyphen_token {
+    public enum AppsScopeToken {
         public static let id: Swift.String = "apps/scope-token"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/applications/{client_id}/token/scoped/POST/path`.
@@ -8180,36 +8237,36 @@ public enum Operations {
                 /// The client ID of the GitHub app.
                 ///
                 /// - Remark: Generated from `#/paths/applications/{client_id}/token/scoped/POST/path/client_id`.
-                public var client_id: Components.Parameters.client_hyphen_id
+                public var clientId: Components.Parameters.ClientId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - client_id: The client ID of the GitHub app.
-                public init(client_id: Components.Parameters.client_hyphen_id) {
-                    self.client_id = client_id
+                ///   - clientId: The client ID of the GitHub app.
+                public init(clientId: Components.Parameters.ClientId) {
+                    self.clientId = clientId
                 }
             }
-            public var path: Operations.apps_sol_scope_hyphen_token.Input.Path
+            public var path: Operations.AppsScopeToken.Input.Path
             /// - Remark: Generated from `#/paths/applications/{client_id}/token/scoped/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_scope_hyphen_token.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsScopeToken.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_scope_hyphen_token.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsScopeToken.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.apps_sol_scope_hyphen_token.Input.Headers
+            public var headers: Operations.AppsScopeToken.Input.Headers
             /// - Remark: Generated from `#/paths/applications/{client_id}/token/scoped/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/applications/{client_id}/token/scoped/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The access token used to authenticate to the GitHub API.
                     ///
                     /// - Remark: Generated from `#/paths/applications/{client_id}/token/scoped/POST/requestBody/json/access_token`.
-                    public var access_token: Swift.String
+                    public var accessToken: Swift.String
                     /// The name of the user or organization to scope the user access token to. **Required** unless `target_id` is specified.
                     ///
                     /// - Remark: Generated from `#/paths/applications/{client_id}/token/scoped/POST/requestBody/json/target`.
@@ -8217,7 +8274,7 @@ public enum Operations {
                     /// The ID of the user or organization to scope the user access token to. **Required** unless `target` is specified.
                     ///
                     /// - Remark: Generated from `#/paths/applications/{client_id}/token/scoped/POST/requestBody/json/target_id`.
-                    public var target_id: Swift.Int?
+                    public var targetId: Swift.Int?
                     /// The list of repository names to scope the user access token to. `repositories` may not be specified if `repository_ids` is specified.
                     ///
                     /// - Remark: Generated from `#/paths/applications/{client_id}/token/scoped/POST/requestBody/json/repositories`.
@@ -8225,46 +8282,46 @@ public enum Operations {
                     /// The list of repository IDs to scope the user access token to. `repository_ids` may not be specified if `repositories` is specified.
                     ///
                     /// - Remark: Generated from `#/paths/applications/{client_id}/token/scoped/POST/requestBody/json/repository_ids`.
-                    public var repository_ids: [Swift.Int]?
+                    public var repositoryIds: [Swift.Int]?
                     /// - Remark: Generated from `#/paths/applications/{client_id}/token/scoped/POST/requestBody/json/permissions`.
-                    public var permissions: Components.Schemas.app_hyphen_permissions?
-                    /// Creates a new `jsonPayload`.
+                    public var permissions: Components.Schemas.AppPermissions?
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
-                    ///   - access_token: The access token used to authenticate to the GitHub API.
+                    ///   - accessToken: The access token used to authenticate to the GitHub API.
                     ///   - target: The name of the user or organization to scope the user access token to. **Required** unless `target_id` is specified.
-                    ///   - target_id: The ID of the user or organization to scope the user access token to. **Required** unless `target` is specified.
+                    ///   - targetId: The ID of the user or organization to scope the user access token to. **Required** unless `target` is specified.
                     ///   - repositories: The list of repository names to scope the user access token to. `repositories` may not be specified if `repository_ids` is specified.
-                    ///   - repository_ids: The list of repository IDs to scope the user access token to. `repository_ids` may not be specified if `repositories` is specified.
+                    ///   - repositoryIds: The list of repository IDs to scope the user access token to. `repository_ids` may not be specified if `repositories` is specified.
                     ///   - permissions:
                     public init(
-                        access_token: Swift.String,
+                        accessToken: Swift.String,
                         target: Swift.String? = nil,
-                        target_id: Swift.Int? = nil,
+                        targetId: Swift.Int? = nil,
                         repositories: [Swift.String]? = nil,
-                        repository_ids: [Swift.Int]? = nil,
-                        permissions: Components.Schemas.app_hyphen_permissions? = nil
+                        repositoryIds: [Swift.Int]? = nil,
+                        permissions: Components.Schemas.AppPermissions? = nil
                     ) {
-                        self.access_token = access_token
+                        self.accessToken = accessToken
                         self.target = target
-                        self.target_id = target_id
+                        self.targetId = targetId
                         self.repositories = repositories
-                        self.repository_ids = repository_ids
+                        self.repositoryIds = repositoryIds
                         self.permissions = permissions
                     }
                     public enum CodingKeys: String, CodingKey {
-                        case access_token
+                        case accessToken = "access_token"
                         case target
-                        case target_id
+                        case targetId = "target_id"
                         case repositories
-                        case repository_ids
+                        case repositoryIds = "repository_ids"
                         case permissions
                     }
                 }
                 /// - Remark: Generated from `#/paths/applications/{client_id}/token/scoped/POST/requestBody/content/application\/json`.
-                case json(Operations.apps_sol_scope_hyphen_token.Input.Body.jsonPayload)
+                case json(Operations.AppsScopeToken.Input.Body.JsonPayload)
             }
-            public var body: Operations.apps_sol_scope_hyphen_token.Input.Body
+            public var body: Operations.AppsScopeToken.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -8272,9 +8329,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.apps_sol_scope_hyphen_token.Input.Path,
-                headers: Operations.apps_sol_scope_hyphen_token.Input.Headers = .init(),
-                body: Operations.apps_sol_scope_hyphen_token.Input.Body
+                path: Operations.AppsScopeToken.Input.Path,
+                headers: Operations.AppsScopeToken.Input.Headers = .init(),
+                body: Operations.AppsScopeToken.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -8286,12 +8343,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/applications/{client_id}/token/scoped/POST/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/applications/{client_id}/token/scoped/POST/responses/200/content/application\/json`.
-                    case json(Components.Schemas.authorization)
+                    case json(Components.Schemas.Authorization)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.authorization {
+                    public var json: Components.Schemas.Authorization {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -8301,12 +8358,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.apps_sol_scope_hyphen_token.Output.Ok.Body
+                public var body: Operations.AppsScopeToken.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.apps_sol_scope_hyphen_token.Output.Ok.Body) {
+                public init(body: Operations.AppsScopeToken.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -8315,12 +8372,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//applications/{client_id}/token/scoped/post(apps/scope-token)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.apps_sol_scope_hyphen_token.Output.Ok)
+            case ok(Operations.AppsScopeToken.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.apps_sol_scope_hyphen_token.Output.Ok {
+            public var ok: Operations.AppsScopeToken.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -8338,12 +8395,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//applications/{client_id}/token/scoped/post(apps/scope-token)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -8361,12 +8418,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//applications/{client_id}/token/scoped/post(apps/scope-token)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -8384,12 +8441,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//applications/{client_id}/token/scoped/post(apps/scope-token)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -8407,12 +8464,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//applications/{client_id}/token/scoped/post(apps/scope-token)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -8463,42 +8520,42 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /apps/{app_slug}`.
     /// - Remark: Generated from `#/paths//apps/{app_slug}/get(apps/get-by-slug)`.
-    public enum apps_sol_get_hyphen_by_hyphen_slug {
+    public enum AppsGetBySlug {
         public static let id: Swift.String = "apps/get-by-slug"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/apps/{app_slug}/GET/path`.
             public struct Path: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/apps/{app_slug}/GET/path/app_slug`.
-                public var app_slug: Components.Parameters.app_hyphen_slug
+                public var appSlug: Components.Parameters.AppSlug
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - app_slug:
-                public init(app_slug: Components.Parameters.app_hyphen_slug) {
-                    self.app_slug = app_slug
+                ///   - appSlug:
+                public init(appSlug: Components.Parameters.AppSlug) {
+                    self.appSlug = appSlug
                 }
             }
-            public var path: Operations.apps_sol_get_hyphen_by_hyphen_slug.Input.Path
+            public var path: Operations.AppsGetBySlug.Input.Path
             /// - Remark: Generated from `#/paths/apps/{app_slug}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_get_hyphen_by_hyphen_slug.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsGetBySlug.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_get_hyphen_by_hyphen_slug.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsGetBySlug.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.apps_sol_get_hyphen_by_hyphen_slug.Input.Headers
+            public var headers: Operations.AppsGetBySlug.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.apps_sol_get_hyphen_by_hyphen_slug.Input.Path,
-                headers: Operations.apps_sol_get_hyphen_by_hyphen_slug.Input.Headers = .init()
+                path: Operations.AppsGetBySlug.Input.Path,
+                headers: Operations.AppsGetBySlug.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -8509,12 +8566,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/apps/{app_slug}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/apps/{app_slug}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.integration)
+                    case json(Components.Schemas.Integration)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.integration {
+                    public var json: Components.Schemas.Integration {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -8524,12 +8581,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.apps_sol_get_hyphen_by_hyphen_slug.Output.Ok.Body
+                public var body: Operations.AppsGetBySlug.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.apps_sol_get_hyphen_by_hyphen_slug.Output.Ok.Body) {
+                public init(body: Operations.AppsGetBySlug.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -8538,12 +8595,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//apps/{app_slug}/get(apps/get-by-slug)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.apps_sol_get_hyphen_by_hyphen_slug.Output.Ok)
+            case ok(Operations.AppsGetBySlug.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.apps_sol_get_hyphen_by_hyphen_slug.Output.Ok {
+            public var ok: Operations.AppsGetBySlug.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -8561,12 +8618,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//apps/{app_slug}/get(apps/get-by-slug)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -8584,12 +8641,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//apps/{app_slug}/get(apps/get-by-slug)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -8639,7 +8696,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /installation/repositories`.
     /// - Remark: Generated from `#/paths//installation/repositories/get(apps/list-repos-accessible-to-installation)`.
-    public enum apps_sol_list_hyphen_repos_hyphen_accessible_hyphen_to_hyphen_installation {
+    public enum AppsListReposAccessibleToInstallation {
         public static let id: Swift.String = "apps/list-repos-accessible-to-installation"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/installation/repositories/GET/query`.
@@ -8647,45 +8704,45 @@ public enum Operations {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/installation/repositories/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/installation/repositories/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.apps_sol_list_hyphen_repos_hyphen_accessible_hyphen_to_hyphen_installation.Input.Query
+            public var query: Operations.AppsListReposAccessibleToInstallation.Input.Query
             /// - Remark: Generated from `#/paths/installation/repositories/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_list_hyphen_repos_hyphen_accessible_hyphen_to_hyphen_installation.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsListReposAccessibleToInstallation.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_list_hyphen_repos_hyphen_accessible_hyphen_to_hyphen_installation.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsListReposAccessibleToInstallation.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.apps_sol_list_hyphen_repos_hyphen_accessible_hyphen_to_hyphen_installation.Input.Headers
+            public var headers: Operations.AppsListReposAccessibleToInstallation.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - query:
             ///   - headers:
             public init(
-                query: Operations.apps_sol_list_hyphen_repos_hyphen_accessible_hyphen_to_hyphen_installation.Input.Query = .init(),
-                headers: Operations.apps_sol_list_hyphen_repos_hyphen_accessible_hyphen_to_hyphen_installation.Input.Headers = .init()
+                query: Operations.AppsListReposAccessibleToInstallation.Input.Query = .init(),
+                headers: Operations.AppsListReposAccessibleToInstallation.Input.Headers = .init()
             ) {
                 self.query = query
                 self.headers = headers
@@ -8696,55 +8753,55 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/installation/repositories/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/installation/repositories/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.apps_sol_list_hyphen_repos_hyphen_accessible_hyphen_to_hyphen_installation.Output.Ok.Headers
+                public var headers: Operations.AppsListReposAccessibleToInstallation.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/installation/repositories/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/installation/repositories/GET/responses/200/content/json`.
-                    public struct jsonPayload: Codable, Hashable, Sendable {
+                    public struct JsonPayload: Codable, Hashable, Sendable {
                         /// - Remark: Generated from `#/paths/installation/repositories/GET/responses/200/content/json/total_count`.
-                        public var total_count: Swift.Int
+                        public var totalCount: Swift.Int
                         /// - Remark: Generated from `#/paths/installation/repositories/GET/responses/200/content/json/repositories`.
-                        public var repositories: [Components.Schemas.repository]
+                        public var repositories: [Components.Schemas.Repository]
                         /// - Remark: Generated from `#/paths/installation/repositories/GET/responses/200/content/json/repository_selection`.
-                        public var repository_selection: Swift.String?
-                        /// Creates a new `jsonPayload`.
+                        public var repositorySelection: Swift.String?
+                        /// Creates a new `JsonPayload`.
                         ///
                         /// - Parameters:
-                        ///   - total_count:
+                        ///   - totalCount:
                         ///   - repositories:
-                        ///   - repository_selection:
+                        ///   - repositorySelection:
                         public init(
-                            total_count: Swift.Int,
-                            repositories: [Components.Schemas.repository],
-                            repository_selection: Swift.String? = nil
+                            totalCount: Swift.Int,
+                            repositories: [Components.Schemas.Repository],
+                            repositorySelection: Swift.String? = nil
                         ) {
-                            self.total_count = total_count
+                            self.totalCount = totalCount
                             self.repositories = repositories
-                            self.repository_selection = repository_selection
+                            self.repositorySelection = repositorySelection
                         }
                         public enum CodingKeys: String, CodingKey {
-                            case total_count
+                            case totalCount = "total_count"
                             case repositories
-                            case repository_selection
+                            case repositorySelection = "repository_selection"
                         }
                     }
                     /// - Remark: Generated from `#/paths/installation/repositories/GET/responses/200/content/application\/json`.
-                    case json(Operations.apps_sol_list_hyphen_repos_hyphen_accessible_hyphen_to_hyphen_installation.Output.Ok.Body.jsonPayload)
+                    case json(Operations.AppsListReposAccessibleToInstallation.Output.Ok.Body.JsonPayload)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Operations.apps_sol_list_hyphen_repos_hyphen_accessible_hyphen_to_hyphen_installation.Output.Ok.Body.jsonPayload {
+                    public var json: Operations.AppsListReposAccessibleToInstallation.Output.Ok.Body.JsonPayload {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -8754,15 +8811,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.apps_sol_list_hyphen_repos_hyphen_accessible_hyphen_to_hyphen_installation.Output.Ok.Body
+                public var body: Operations.AppsListReposAccessibleToInstallation.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.apps_sol_list_hyphen_repos_hyphen_accessible_hyphen_to_hyphen_installation.Output.Ok.Headers = .init(),
-                    body: Operations.apps_sol_list_hyphen_repos_hyphen_accessible_hyphen_to_hyphen_installation.Output.Ok.Body
+                    headers: Operations.AppsListReposAccessibleToInstallation.Output.Ok.Headers = .init(),
+                    body: Operations.AppsListReposAccessibleToInstallation.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -8773,12 +8830,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//installation/repositories/get(apps/list-repos-accessible-to-installation)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.apps_sol_list_hyphen_repos_hyphen_accessible_hyphen_to_hyphen_installation.Output.Ok)
+            case ok(Operations.AppsListReposAccessibleToInstallation.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.apps_sol_list_hyphen_repos_hyphen_accessible_hyphen_to_hyphen_installation.Output.Ok {
+            public var ok: Operations.AppsListReposAccessibleToInstallation.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -8796,12 +8853,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//installation/repositories/get(apps/list-repos-accessible-to-installation)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -8819,12 +8876,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//installation/repositories/get(apps/list-repos-accessible-to-installation)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//installation/repositories/get(apps/list-repos-accessible-to-installation)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -8842,12 +8907,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//installation/repositories/get(apps/list-repos-accessible-to-installation)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -8899,7 +8964,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /installation/token`.
     /// - Remark: Generated from `#/paths//installation/token/delete(apps/revoke-installation-access-token)`.
-    public enum apps_sol_revoke_hyphen_installation_hyphen_access_hyphen_token {
+    public enum AppsRevokeInstallationAccessToken {
         public static let id: Swift.String = "apps/revoke-installation-access-token"
         public struct Input: Sendable, Hashable {
             /// Creates a new `Input`.
@@ -8915,12 +8980,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//installation/token/delete(apps/revoke-installation-access-token)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.apps_sol_revoke_hyphen_installation_hyphen_access_hyphen_token.Output.NoContent)
+            case noContent(Operations.AppsRevokeInstallationAccessToken.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//installation/token/delete(apps/revoke-installation-access-token)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.apps_sol_revoke_hyphen_installation_hyphen_access_hyphen_token.Output.NoContent {
+            public var noContent: Operations.AppsRevokeInstallationAccessToken.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -8947,7 +9020,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /marketplace_listing/accounts/{account_id}`.
     /// - Remark: Generated from `#/paths//marketplace_listing/accounts/{account_id}/get(apps/get-subscription-plan-for-account)`.
-    public enum apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account {
+    public enum AppsGetSubscriptionPlanForAccount {
         public static let id: Swift.String = "apps/get-subscription-plan-for-account"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/marketplace_listing/accounts/{account_id}/GET/path`.
@@ -8955,36 +9028,36 @@ public enum Operations {
                 /// account_id parameter
                 ///
                 /// - Remark: Generated from `#/paths/marketplace_listing/accounts/{account_id}/GET/path/account_id`.
-                public var account_id: Components.Parameters.account_hyphen_id
+                public var accountId: Components.Parameters.AccountId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - account_id: account_id parameter
-                public init(account_id: Components.Parameters.account_hyphen_id) {
-                    self.account_id = account_id
+                ///   - accountId: account_id parameter
+                public init(accountId: Components.Parameters.AccountId) {
+                    self.accountId = accountId
                 }
             }
-            public var path: Operations.apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account.Input.Path
+            public var path: Operations.AppsGetSubscriptionPlanForAccount.Input.Path
             /// - Remark: Generated from `#/paths/marketplace_listing/accounts/{account_id}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsGetSubscriptionPlanForAccount.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsGetSubscriptionPlanForAccount.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account.Input.Headers
+            public var headers: Operations.AppsGetSubscriptionPlanForAccount.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account.Input.Path,
-                headers: Operations.apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account.Input.Headers = .init()
+                path: Operations.AppsGetSubscriptionPlanForAccount.Input.Path,
+                headers: Operations.AppsGetSubscriptionPlanForAccount.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -8995,12 +9068,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/marketplace_listing/accounts/{account_id}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/marketplace_listing/accounts/{account_id}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.marketplace_hyphen_purchase)
+                    case json(Components.Schemas.MarketplacePurchase)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.marketplace_hyphen_purchase {
+                    public var json: Components.Schemas.MarketplacePurchase {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -9010,12 +9083,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account.Output.Ok.Body
+                public var body: Operations.AppsGetSubscriptionPlanForAccount.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account.Output.Ok.Body) {
+                public init(body: Operations.AppsGetSubscriptionPlanForAccount.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -9024,12 +9097,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//marketplace_listing/accounts/{account_id}/get(apps/get-subscription-plan-for-account)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account.Output.Ok)
+            case ok(Operations.AppsGetSubscriptionPlanForAccount.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account.Output.Ok {
+            public var ok: Operations.AppsGetSubscriptionPlanForAccount.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -9046,12 +9119,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/marketplace_listing/accounts/{account_id}/GET/responses/404/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/marketplace_listing/accounts/{account_id}/GET/responses/404/content/application\/json`.
-                    case json(Components.Schemas.basic_hyphen_error)
+                    case json(Components.Schemas.BasicError)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.basic_hyphen_error {
+                    public var json: Components.Schemas.BasicError {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -9061,12 +9134,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account.Output.NotFound.Body
+                public var body: Operations.AppsGetSubscriptionPlanForAccount.Output.NotFound.Body
                 /// Creates a new `NotFound`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account.Output.NotFound.Body) {
+                public init(body: Operations.AppsGetSubscriptionPlanForAccount.Output.NotFound.Body) {
                     self.body = body
                 }
             }
@@ -9075,12 +9148,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//marketplace_listing/accounts/{account_id}/get(apps/get-subscription-plan-for-account)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Operations.apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account.Output.NotFound)
+            case notFound(Operations.AppsGetSubscriptionPlanForAccount.Output.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Operations.apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account.Output.NotFound {
+            public var notFound: Operations.AppsGetSubscriptionPlanForAccount.Output.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -9098,12 +9171,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//marketplace_listing/accounts/{account_id}/get(apps/get-subscription-plan-for-account)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -9155,7 +9228,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /marketplace_listing/plans`.
     /// - Remark: Generated from `#/paths//marketplace_listing/plans/get(apps/list-plans)`.
-    public enum apps_sol_list_hyphen_plans {
+    public enum AppsListPlans {
         public static let id: Swift.String = "apps/list-plans"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/marketplace_listing/plans/GET/query`.
@@ -9163,45 +9236,45 @@ public enum Operations {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/marketplace_listing/plans/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/marketplace_listing/plans/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.apps_sol_list_hyphen_plans.Input.Query
+            public var query: Operations.AppsListPlans.Input.Query
             /// - Remark: Generated from `#/paths/marketplace_listing/plans/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_list_hyphen_plans.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsListPlans.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_list_hyphen_plans.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsListPlans.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.apps_sol_list_hyphen_plans.Input.Headers
+            public var headers: Operations.AppsListPlans.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - query:
             ///   - headers:
             public init(
-                query: Operations.apps_sol_list_hyphen_plans.Input.Query = .init(),
-                headers: Operations.apps_sol_list_hyphen_plans.Input.Headers = .init()
+                query: Operations.AppsListPlans.Input.Query = .init(),
+                headers: Operations.AppsListPlans.Input.Headers = .init()
             ) {
                 self.query = query
                 self.headers = headers
@@ -9212,26 +9285,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/marketplace_listing/plans/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/marketplace_listing/plans/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.apps_sol_list_hyphen_plans.Output.Ok.Headers
+                public var headers: Operations.AppsListPlans.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/marketplace_listing/plans/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/marketplace_listing/plans/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.marketplace_hyphen_listing_hyphen_plan])
+                    case json([Components.Schemas.MarketplaceListingPlan])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.marketplace_hyphen_listing_hyphen_plan] {
+                    public var json: [Components.Schemas.MarketplaceListingPlan] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -9241,15 +9314,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.apps_sol_list_hyphen_plans.Output.Ok.Body
+                public var body: Operations.AppsListPlans.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.apps_sol_list_hyphen_plans.Output.Ok.Headers = .init(),
-                    body: Operations.apps_sol_list_hyphen_plans.Output.Ok.Body
+                    headers: Operations.AppsListPlans.Output.Ok.Headers = .init(),
+                    body: Operations.AppsListPlans.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -9260,12 +9333,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//marketplace_listing/plans/get(apps/list-plans)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.apps_sol_list_hyphen_plans.Output.Ok)
+            case ok(Operations.AppsListPlans.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.apps_sol_list_hyphen_plans.Output.Ok {
+            public var ok: Operations.AppsListPlans.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -9283,12 +9356,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//marketplace_listing/plans/get(apps/list-plans)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -9306,12 +9379,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//marketplace_listing/plans/get(apps/list-plans)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -9363,7 +9436,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /marketplace_listing/plans/{plan_id}/accounts`.
     /// - Remark: Generated from `#/paths//marketplace_listing/plans/{plan_id}/accounts/get(apps/list-accounts-for-plan)`.
-    public enum apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan {
+    public enum AppsListAccountsForPlan {
         public static let id: Swift.String = "apps/list-accounts-for-plan"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/marketplace_listing/plans/{plan_id}/accounts/GET/path`.
@@ -9371,76 +9444,76 @@ public enum Operations {
                 /// The unique identifier of the plan.
                 ///
                 /// - Remark: Generated from `#/paths/marketplace_listing/plans/{plan_id}/accounts/GET/path/plan_id`.
-                public var plan_id: Components.Parameters.plan_hyphen_id
+                public var planId: Components.Parameters.PlanId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - plan_id: The unique identifier of the plan.
-                public init(plan_id: Components.Parameters.plan_hyphen_id) {
-                    self.plan_id = plan_id
+                ///   - planId: The unique identifier of the plan.
+                public init(planId: Components.Parameters.PlanId) {
+                    self.planId = planId
                 }
             }
-            public var path: Operations.apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan.Input.Path
+            public var path: Operations.AppsListAccountsForPlan.Input.Path
             /// - Remark: Generated from `#/paths/marketplace_listing/plans/{plan_id}/accounts/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/sort`.
-                @frozen public enum sort: String, Codable, Hashable, Sendable {
+                @frozen public enum Sort: String, Codable, Hashable, Sendable, CaseIterable {
                     case created = "created"
                     case updated = "updated"
                 }
                 /// The property to sort the results by.
                 ///
                 /// - Remark: Generated from `#/paths/marketplace_listing/plans/{plan_id}/accounts/GET/query/sort`.
-                public var sort: Components.Parameters.sort?
+                public var sort: Components.Parameters.Sort?
                 /// - Remark: Generated from `#/paths/marketplace_listing/plans/{plan_id}/accounts/GET/query/direction`.
-                @frozen public enum directionPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum DirectionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
                 /// To return the oldest accounts first, set to `asc`. Ignored without the `sort` parameter.
                 ///
                 /// - Remark: Generated from `#/paths/marketplace_listing/plans/{plan_id}/accounts/GET/query/direction`.
-                public var direction: Operations.apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan.Input.Query.directionPayload?
+                public var direction: Operations.AppsListAccountsForPlan.Input.Query.DirectionPayload?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/marketplace_listing/plans/{plan_id}/accounts/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/marketplace_listing/plans/{plan_id}/accounts/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - sort: The property to sort the results by.
                 ///   - direction: To return the oldest accounts first, set to `asc`. Ignored without the `sort` parameter.
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    sort: Components.Parameters.sort? = nil,
-                    direction: Operations.apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan.Input.Query.directionPayload? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    sort: Components.Parameters.Sort? = nil,
+                    direction: Operations.AppsListAccountsForPlan.Input.Query.DirectionPayload? = nil,
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
                     self.sort = sort
                     self.direction = direction
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan.Input.Query
+            public var query: Operations.AppsListAccountsForPlan.Input.Query
             /// - Remark: Generated from `#/paths/marketplace_listing/plans/{plan_id}/accounts/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsListAccountsForPlan.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsListAccountsForPlan.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan.Input.Headers
+            public var headers: Operations.AppsListAccountsForPlan.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -9448,9 +9521,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan.Input.Path,
-                query: Operations.apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan.Input.Query = .init(),
-                headers: Operations.apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan.Input.Headers = .init()
+                path: Operations.AppsListAccountsForPlan.Input.Path,
+                query: Operations.AppsListAccountsForPlan.Input.Query = .init(),
+                headers: Operations.AppsListAccountsForPlan.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -9462,26 +9535,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/marketplace_listing/plans/{plan_id}/accounts/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/marketplace_listing/plans/{plan_id}/accounts/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan.Output.Ok.Headers
+                public var headers: Operations.AppsListAccountsForPlan.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/marketplace_listing/plans/{plan_id}/accounts/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/marketplace_listing/plans/{plan_id}/accounts/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.marketplace_hyphen_purchase])
+                    case json([Components.Schemas.MarketplacePurchase])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.marketplace_hyphen_purchase] {
+                    public var json: [Components.Schemas.MarketplacePurchase] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -9491,15 +9564,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan.Output.Ok.Body
+                public var body: Operations.AppsListAccountsForPlan.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan.Output.Ok.Headers = .init(),
-                    body: Operations.apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan.Output.Ok.Body
+                    headers: Operations.AppsListAccountsForPlan.Output.Ok.Headers = .init(),
+                    body: Operations.AppsListAccountsForPlan.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -9510,12 +9583,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//marketplace_listing/plans/{plan_id}/accounts/get(apps/list-accounts-for-plan)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan.Output.Ok)
+            case ok(Operations.AppsListAccountsForPlan.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan.Output.Ok {
+            public var ok: Operations.AppsListAccountsForPlan.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -9533,12 +9606,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//marketplace_listing/plans/{plan_id}/accounts/get(apps/list-accounts-for-plan)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -9556,12 +9629,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//marketplace_listing/plans/{plan_id}/accounts/get(apps/list-accounts-for-plan)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -9579,12 +9652,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//marketplace_listing/plans/{plan_id}/accounts/get(apps/list-accounts-for-plan)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -9636,7 +9709,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /marketplace_listing/stubbed/accounts/{account_id}`.
     /// - Remark: Generated from `#/paths//marketplace_listing/stubbed/accounts/{account_id}/get(apps/get-subscription-plan-for-account-stubbed)`.
-    public enum apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account_hyphen_stubbed {
+    public enum AppsGetSubscriptionPlanForAccountStubbed {
         public static let id: Swift.String = "apps/get-subscription-plan-for-account-stubbed"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/marketplace_listing/stubbed/accounts/{account_id}/GET/path`.
@@ -9644,36 +9717,36 @@ public enum Operations {
                 /// account_id parameter
                 ///
                 /// - Remark: Generated from `#/paths/marketplace_listing/stubbed/accounts/{account_id}/GET/path/account_id`.
-                public var account_id: Components.Parameters.account_hyphen_id
+                public var accountId: Components.Parameters.AccountId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - account_id: account_id parameter
-                public init(account_id: Components.Parameters.account_hyphen_id) {
-                    self.account_id = account_id
+                ///   - accountId: account_id parameter
+                public init(accountId: Components.Parameters.AccountId) {
+                    self.accountId = accountId
                 }
             }
-            public var path: Operations.apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account_hyphen_stubbed.Input.Path
+            public var path: Operations.AppsGetSubscriptionPlanForAccountStubbed.Input.Path
             /// - Remark: Generated from `#/paths/marketplace_listing/stubbed/accounts/{account_id}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account_hyphen_stubbed.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsGetSubscriptionPlanForAccountStubbed.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account_hyphen_stubbed.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsGetSubscriptionPlanForAccountStubbed.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account_hyphen_stubbed.Input.Headers
+            public var headers: Operations.AppsGetSubscriptionPlanForAccountStubbed.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account_hyphen_stubbed.Input.Path,
-                headers: Operations.apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account_hyphen_stubbed.Input.Headers = .init()
+                path: Operations.AppsGetSubscriptionPlanForAccountStubbed.Input.Path,
+                headers: Operations.AppsGetSubscriptionPlanForAccountStubbed.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -9684,12 +9757,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/marketplace_listing/stubbed/accounts/{account_id}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/marketplace_listing/stubbed/accounts/{account_id}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.marketplace_hyphen_purchase)
+                    case json(Components.Schemas.MarketplacePurchase)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.marketplace_hyphen_purchase {
+                    public var json: Components.Schemas.MarketplacePurchase {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -9699,12 +9772,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account_hyphen_stubbed.Output.Ok.Body
+                public var body: Operations.AppsGetSubscriptionPlanForAccountStubbed.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account_hyphen_stubbed.Output.Ok.Body) {
+                public init(body: Operations.AppsGetSubscriptionPlanForAccountStubbed.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -9713,12 +9786,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//marketplace_listing/stubbed/accounts/{account_id}/get(apps/get-subscription-plan-for-account-stubbed)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account_hyphen_stubbed.Output.Ok)
+            case ok(Operations.AppsGetSubscriptionPlanForAccountStubbed.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account_hyphen_stubbed.Output.Ok {
+            public var ok: Operations.AppsGetSubscriptionPlanForAccountStubbed.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -9740,12 +9813,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//marketplace_listing/stubbed/accounts/{account_id}/get(apps/get-subscription-plan-for-account-stubbed)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Operations.apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account_hyphen_stubbed.Output.NotFound)
+            case notFound(Operations.AppsGetSubscriptionPlanForAccountStubbed.Output.NotFound)
+            /// Not Found when the account has not purchased the listing
+            ///
+            /// - Remark: Generated from `#/paths//marketplace_listing/stubbed/accounts/{account_id}/get(apps/get-subscription-plan-for-account-stubbed)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Operations.apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account_hyphen_stubbed.Output.NotFound {
+            public var notFound: Operations.AppsGetSubscriptionPlanForAccountStubbed.Output.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -9763,12 +9844,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//marketplace_listing/stubbed/accounts/{account_id}/get(apps/get-subscription-plan-for-account-stubbed)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -9820,7 +9901,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /marketplace_listing/stubbed/plans`.
     /// - Remark: Generated from `#/paths//marketplace_listing/stubbed/plans/get(apps/list-plans-stubbed)`.
-    public enum apps_sol_list_hyphen_plans_hyphen_stubbed {
+    public enum AppsListPlansStubbed {
         public static let id: Swift.String = "apps/list-plans-stubbed"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/marketplace_listing/stubbed/plans/GET/query`.
@@ -9828,45 +9909,45 @@ public enum Operations {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/marketplace_listing/stubbed/plans/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/marketplace_listing/stubbed/plans/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.apps_sol_list_hyphen_plans_hyphen_stubbed.Input.Query
+            public var query: Operations.AppsListPlansStubbed.Input.Query
             /// - Remark: Generated from `#/paths/marketplace_listing/stubbed/plans/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_list_hyphen_plans_hyphen_stubbed.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsListPlansStubbed.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_list_hyphen_plans_hyphen_stubbed.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsListPlansStubbed.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.apps_sol_list_hyphen_plans_hyphen_stubbed.Input.Headers
+            public var headers: Operations.AppsListPlansStubbed.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - query:
             ///   - headers:
             public init(
-                query: Operations.apps_sol_list_hyphen_plans_hyphen_stubbed.Input.Query = .init(),
-                headers: Operations.apps_sol_list_hyphen_plans_hyphen_stubbed.Input.Headers = .init()
+                query: Operations.AppsListPlansStubbed.Input.Query = .init(),
+                headers: Operations.AppsListPlansStubbed.Input.Headers = .init()
             ) {
                 self.query = query
                 self.headers = headers
@@ -9877,26 +9958,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/marketplace_listing/stubbed/plans/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/marketplace_listing/stubbed/plans/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.apps_sol_list_hyphen_plans_hyphen_stubbed.Output.Ok.Headers
+                public var headers: Operations.AppsListPlansStubbed.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/marketplace_listing/stubbed/plans/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/marketplace_listing/stubbed/plans/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.marketplace_hyphen_listing_hyphen_plan])
+                    case json([Components.Schemas.MarketplaceListingPlan])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.marketplace_hyphen_listing_hyphen_plan] {
+                    public var json: [Components.Schemas.MarketplaceListingPlan] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -9906,15 +9987,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.apps_sol_list_hyphen_plans_hyphen_stubbed.Output.Ok.Body
+                public var body: Operations.AppsListPlansStubbed.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.apps_sol_list_hyphen_plans_hyphen_stubbed.Output.Ok.Headers = .init(),
-                    body: Operations.apps_sol_list_hyphen_plans_hyphen_stubbed.Output.Ok.Body
+                    headers: Operations.AppsListPlansStubbed.Output.Ok.Headers = .init(),
+                    body: Operations.AppsListPlansStubbed.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -9925,12 +10006,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//marketplace_listing/stubbed/plans/get(apps/list-plans-stubbed)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.apps_sol_list_hyphen_plans_hyphen_stubbed.Output.Ok)
+            case ok(Operations.AppsListPlansStubbed.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.apps_sol_list_hyphen_plans_hyphen_stubbed.Output.Ok {
+            public var ok: Operations.AppsListPlansStubbed.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -9948,12 +10029,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//marketplace_listing/stubbed/plans/get(apps/list-plans-stubbed)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -10005,7 +10086,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /marketplace_listing/stubbed/plans/{plan_id}/accounts`.
     /// - Remark: Generated from `#/paths//marketplace_listing/stubbed/plans/{plan_id}/accounts/get(apps/list-accounts-for-plan-stubbed)`.
-    public enum apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan_hyphen_stubbed {
+    public enum AppsListAccountsForPlanStubbed {
         public static let id: Swift.String = "apps/list-accounts-for-plan-stubbed"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/marketplace_listing/stubbed/plans/{plan_id}/accounts/GET/path`.
@@ -10013,76 +10094,76 @@ public enum Operations {
                 /// The unique identifier of the plan.
                 ///
                 /// - Remark: Generated from `#/paths/marketplace_listing/stubbed/plans/{plan_id}/accounts/GET/path/plan_id`.
-                public var plan_id: Components.Parameters.plan_hyphen_id
+                public var planId: Components.Parameters.PlanId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - plan_id: The unique identifier of the plan.
-                public init(plan_id: Components.Parameters.plan_hyphen_id) {
-                    self.plan_id = plan_id
+                ///   - planId: The unique identifier of the plan.
+                public init(planId: Components.Parameters.PlanId) {
+                    self.planId = planId
                 }
             }
-            public var path: Operations.apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan_hyphen_stubbed.Input.Path
+            public var path: Operations.AppsListAccountsForPlanStubbed.Input.Path
             /// - Remark: Generated from `#/paths/marketplace_listing/stubbed/plans/{plan_id}/accounts/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/sort`.
-                @frozen public enum sort: String, Codable, Hashable, Sendable {
+                @frozen public enum Sort: String, Codable, Hashable, Sendable, CaseIterable {
                     case created = "created"
                     case updated = "updated"
                 }
                 /// The property to sort the results by.
                 ///
                 /// - Remark: Generated from `#/paths/marketplace_listing/stubbed/plans/{plan_id}/accounts/GET/query/sort`.
-                public var sort: Components.Parameters.sort?
+                public var sort: Components.Parameters.Sort?
                 /// - Remark: Generated from `#/paths/marketplace_listing/stubbed/plans/{plan_id}/accounts/GET/query/direction`.
-                @frozen public enum directionPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum DirectionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
                 /// To return the oldest accounts first, set to `asc`. Ignored without the `sort` parameter.
                 ///
                 /// - Remark: Generated from `#/paths/marketplace_listing/stubbed/plans/{plan_id}/accounts/GET/query/direction`.
-                public var direction: Operations.apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan_hyphen_stubbed.Input.Query.directionPayload?
+                public var direction: Operations.AppsListAccountsForPlanStubbed.Input.Query.DirectionPayload?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/marketplace_listing/stubbed/plans/{plan_id}/accounts/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/marketplace_listing/stubbed/plans/{plan_id}/accounts/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - sort: The property to sort the results by.
                 ///   - direction: To return the oldest accounts first, set to `asc`. Ignored without the `sort` parameter.
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    sort: Components.Parameters.sort? = nil,
-                    direction: Operations.apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan_hyphen_stubbed.Input.Query.directionPayload? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    sort: Components.Parameters.Sort? = nil,
+                    direction: Operations.AppsListAccountsForPlanStubbed.Input.Query.DirectionPayload? = nil,
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
                     self.sort = sort
                     self.direction = direction
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan_hyphen_stubbed.Input.Query
+            public var query: Operations.AppsListAccountsForPlanStubbed.Input.Query
             /// - Remark: Generated from `#/paths/marketplace_listing/stubbed/plans/{plan_id}/accounts/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan_hyphen_stubbed.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsListAccountsForPlanStubbed.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan_hyphen_stubbed.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsListAccountsForPlanStubbed.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan_hyphen_stubbed.Input.Headers
+            public var headers: Operations.AppsListAccountsForPlanStubbed.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -10090,9 +10171,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan_hyphen_stubbed.Input.Path,
-                query: Operations.apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan_hyphen_stubbed.Input.Query = .init(),
-                headers: Operations.apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan_hyphen_stubbed.Input.Headers = .init()
+                path: Operations.AppsListAccountsForPlanStubbed.Input.Path,
+                query: Operations.AppsListAccountsForPlanStubbed.Input.Query = .init(),
+                headers: Operations.AppsListAccountsForPlanStubbed.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -10104,26 +10185,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/marketplace_listing/stubbed/plans/{plan_id}/accounts/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/marketplace_listing/stubbed/plans/{plan_id}/accounts/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan_hyphen_stubbed.Output.Ok.Headers
+                public var headers: Operations.AppsListAccountsForPlanStubbed.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/marketplace_listing/stubbed/plans/{plan_id}/accounts/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/marketplace_listing/stubbed/plans/{plan_id}/accounts/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.marketplace_hyphen_purchase])
+                    case json([Components.Schemas.MarketplacePurchase])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.marketplace_hyphen_purchase] {
+                    public var json: [Components.Schemas.MarketplacePurchase] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -10133,15 +10214,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan_hyphen_stubbed.Output.Ok.Body
+                public var body: Operations.AppsListAccountsForPlanStubbed.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan_hyphen_stubbed.Output.Ok.Headers = .init(),
-                    body: Operations.apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan_hyphen_stubbed.Output.Ok.Body
+                    headers: Operations.AppsListAccountsForPlanStubbed.Output.Ok.Headers = .init(),
+                    body: Operations.AppsListAccountsForPlanStubbed.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -10152,12 +10233,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//marketplace_listing/stubbed/plans/{plan_id}/accounts/get(apps/list-accounts-for-plan-stubbed)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan_hyphen_stubbed.Output.Ok)
+            case ok(Operations.AppsListAccountsForPlanStubbed.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan_hyphen_stubbed.Output.Ok {
+            public var ok: Operations.AppsListAccountsForPlanStubbed.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -10175,12 +10256,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//marketplace_listing/stubbed/plans/{plan_id}/accounts/get(apps/list-accounts-for-plan-stubbed)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -10232,7 +10313,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/installation`.
     /// - Remark: Generated from `#/paths//orgs/{org}/installation/get(apps/get-org-installation)`.
-    public enum apps_sol_get_hyphen_org_hyphen_installation {
+    public enum AppsGetOrgInstallation {
         public static let id: Swift.String = "apps/get-org-installation"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/installation/GET/path`.
@@ -10240,36 +10321,36 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/installation/GET/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                public init(org: Components.Parameters.org) {
+                public init(org: Components.Parameters.Org) {
                     self.org = org
                 }
             }
-            public var path: Operations.apps_sol_get_hyphen_org_hyphen_installation.Input.Path
+            public var path: Operations.AppsGetOrgInstallation.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/installation/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_get_hyphen_org_hyphen_installation.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsGetOrgInstallation.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_get_hyphen_org_hyphen_installation.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsGetOrgInstallation.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.apps_sol_get_hyphen_org_hyphen_installation.Input.Headers
+            public var headers: Operations.AppsGetOrgInstallation.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.apps_sol_get_hyphen_org_hyphen_installation.Input.Path,
-                headers: Operations.apps_sol_get_hyphen_org_hyphen_installation.Input.Headers = .init()
+                path: Operations.AppsGetOrgInstallation.Input.Path,
+                headers: Operations.AppsGetOrgInstallation.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -10280,12 +10361,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/installation/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/installation/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.installation)
+                    case json(Components.Schemas.Installation)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.installation {
+                    public var json: Components.Schemas.Installation {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -10295,12 +10376,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.apps_sol_get_hyphen_org_hyphen_installation.Output.Ok.Body
+                public var body: Operations.AppsGetOrgInstallation.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.apps_sol_get_hyphen_org_hyphen_installation.Output.Ok.Body) {
+                public init(body: Operations.AppsGetOrgInstallation.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -10309,12 +10390,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/installation/get(apps/get-org-installation)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.apps_sol_get_hyphen_org_hyphen_installation.Output.Ok)
+            case ok(Operations.AppsGetOrgInstallation.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.apps_sol_get_hyphen_org_hyphen_installation.Output.Ok {
+            public var ok: Operations.AppsGetOrgInstallation.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -10366,7 +10447,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/installation`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/installation/get(apps/get-repo-installation)`.
-    public enum apps_sol_get_hyphen_repo_hyphen_installation {
+    public enum AppsGetRepoInstallation {
         public static let id: Swift.String = "apps/get-repo-installation"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/installation/GET/path`.
@@ -10374,45 +10455,45 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/installation/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/installation/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.apps_sol_get_hyphen_repo_hyphen_installation.Input.Path
+            public var path: Operations.AppsGetRepoInstallation.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/installation/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_get_hyphen_repo_hyphen_installation.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsGetRepoInstallation.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_get_hyphen_repo_hyphen_installation.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsGetRepoInstallation.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.apps_sol_get_hyphen_repo_hyphen_installation.Input.Headers
+            public var headers: Operations.AppsGetRepoInstallation.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.apps_sol_get_hyphen_repo_hyphen_installation.Input.Path,
-                headers: Operations.apps_sol_get_hyphen_repo_hyphen_installation.Input.Headers = .init()
+                path: Operations.AppsGetRepoInstallation.Input.Path,
+                headers: Operations.AppsGetRepoInstallation.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -10423,12 +10504,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/installation/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/installation/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.installation)
+                    case json(Components.Schemas.Installation)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.installation {
+                    public var json: Components.Schemas.Installation {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -10438,12 +10519,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.apps_sol_get_hyphen_repo_hyphen_installation.Output.Ok.Body
+                public var body: Operations.AppsGetRepoInstallation.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.apps_sol_get_hyphen_repo_hyphen_installation.Output.Ok.Body) {
+                public init(body: Operations.AppsGetRepoInstallation.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -10452,12 +10533,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/installation/get(apps/get-repo-installation)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.apps_sol_get_hyphen_repo_hyphen_installation.Output.Ok)
+            case ok(Operations.AppsGetRepoInstallation.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.apps_sol_get_hyphen_repo_hyphen_installation.Output.Ok {
+            public var ok: Operations.AppsGetRepoInstallation.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -10475,12 +10556,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/installation/get(apps/get-repo-installation)/responses/301`.
             ///
             /// HTTP response code: `301 movedPermanently`.
-            case movedPermanently(Components.Responses.moved_permanently)
+            case movedPermanently(Components.Responses.MovedPermanently)
             /// The associated value of the enum case if `self` is `.movedPermanently`.
             ///
             /// - Throws: An error if `self` is not `.movedPermanently`.
             /// - SeeAlso: `.movedPermanently`.
-            public var movedPermanently: Components.Responses.moved_permanently {
+            public var movedPermanently: Components.Responses.MovedPermanently {
                 get throws {
                     switch self {
                     case let .movedPermanently(response):
@@ -10498,12 +10579,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/installation/get(apps/get-repo-installation)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -10557,7 +10638,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /user/installations`.
     /// - Remark: Generated from `#/paths//user/installations/get(apps/list-installations-for-authenticated-user)`.
-    public enum apps_sol_list_hyphen_installations_hyphen_for_hyphen_authenticated_hyphen_user {
+    public enum AppsListInstallationsForAuthenticatedUser {
         public static let id: Swift.String = "apps/list-installations-for-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/installations/GET/query`.
@@ -10565,45 +10646,45 @@ public enum Operations {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/user/installations/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/user/installations/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.apps_sol_list_hyphen_installations_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query
+            public var query: Operations.AppsListInstallationsForAuthenticatedUser.Input.Query
             /// - Remark: Generated from `#/paths/user/installations/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_list_hyphen_installations_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsListInstallationsForAuthenticatedUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_list_hyphen_installations_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsListInstallationsForAuthenticatedUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.apps_sol_list_hyphen_installations_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers
+            public var headers: Operations.AppsListInstallationsForAuthenticatedUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - query:
             ///   - headers:
             public init(
-                query: Operations.apps_sol_list_hyphen_installations_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query = .init(),
-                headers: Operations.apps_sol_list_hyphen_installations_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
+                query: Operations.AppsListInstallationsForAuthenticatedUser.Input.Query = .init(),
+                headers: Operations.AppsListInstallationsForAuthenticatedUser.Input.Headers = .init()
             ) {
                 self.query = query
                 self.headers = headers
@@ -10614,49 +10695,49 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/installations/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/installations/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.apps_sol_list_hyphen_installations_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Headers
+                public var headers: Operations.AppsListInstallationsForAuthenticatedUser.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/user/installations/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/installations/GET/responses/200/content/json`.
-                    public struct jsonPayload: Codable, Hashable, Sendable {
+                    public struct JsonPayload: Codable, Hashable, Sendable {
                         /// - Remark: Generated from `#/paths/user/installations/GET/responses/200/content/json/total_count`.
-                        public var total_count: Swift.Int
+                        public var totalCount: Swift.Int
                         /// - Remark: Generated from `#/paths/user/installations/GET/responses/200/content/json/installations`.
-                        public var installations: [Components.Schemas.installation]
-                        /// Creates a new `jsonPayload`.
+                        public var installations: [Components.Schemas.Installation]
+                        /// Creates a new `JsonPayload`.
                         ///
                         /// - Parameters:
-                        ///   - total_count:
+                        ///   - totalCount:
                         ///   - installations:
                         public init(
-                            total_count: Swift.Int,
-                            installations: [Components.Schemas.installation]
+                            totalCount: Swift.Int,
+                            installations: [Components.Schemas.Installation]
                         ) {
-                            self.total_count = total_count
+                            self.totalCount = totalCount
                             self.installations = installations
                         }
                         public enum CodingKeys: String, CodingKey {
-                            case total_count
+                            case totalCount = "total_count"
                             case installations
                         }
                     }
                     /// - Remark: Generated from `#/paths/user/installations/GET/responses/200/content/application\/json`.
-                    case json(Operations.apps_sol_list_hyphen_installations_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body.jsonPayload)
+                    case json(Operations.AppsListInstallationsForAuthenticatedUser.Output.Ok.Body.JsonPayload)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Operations.apps_sol_list_hyphen_installations_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body.jsonPayload {
+                    public var json: Operations.AppsListInstallationsForAuthenticatedUser.Output.Ok.Body.JsonPayload {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -10666,15 +10747,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.apps_sol_list_hyphen_installations_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body
+                public var body: Operations.AppsListInstallationsForAuthenticatedUser.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.apps_sol_list_hyphen_installations_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Headers = .init(),
-                    body: Operations.apps_sol_list_hyphen_installations_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body
+                    headers: Operations.AppsListInstallationsForAuthenticatedUser.Output.Ok.Headers = .init(),
+                    body: Operations.AppsListInstallationsForAuthenticatedUser.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -10685,12 +10766,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/installations/get(apps/list-installations-for-authenticated-user)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.apps_sol_list_hyphen_installations_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok)
+            case ok(Operations.AppsListInstallationsForAuthenticatedUser.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.apps_sol_list_hyphen_installations_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok {
+            public var ok: Operations.AppsListInstallationsForAuthenticatedUser.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -10708,12 +10789,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/installations/get(apps/list-installations-for-authenticated-user)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/installations/get(apps/list-installations-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -10731,12 +10820,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/installations/get(apps/list-installations-for-authenticated-user)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -10754,12 +10843,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/installations/get(apps/list-installations-for-authenticated-user)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -10813,7 +10902,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /user/installations/{installation_id}/repositories`.
     /// - Remark: Generated from `#/paths//user/installations/{installation_id}/repositories/get(apps/list-installation-repos-for-authenticated-user)`.
-    public enum apps_sol_list_hyphen_installation_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user {
+    public enum AppsListInstallationReposForAuthenticatedUser {
         public static let id: Swift.String = "apps/list-installation-repos-for-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/installations/{installation_id}/repositories/GET/path`.
@@ -10821,52 +10910,52 @@ public enum Operations {
                 /// The unique identifier of the installation.
                 ///
                 /// - Remark: Generated from `#/paths/user/installations/{installation_id}/repositories/GET/path/installation_id`.
-                public var installation_id: Components.Parameters.installation_hyphen_id
+                public var installationId: Components.Parameters.InstallationId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - installation_id: The unique identifier of the installation.
-                public init(installation_id: Components.Parameters.installation_hyphen_id) {
-                    self.installation_id = installation_id
+                ///   - installationId: The unique identifier of the installation.
+                public init(installationId: Components.Parameters.InstallationId) {
+                    self.installationId = installationId
                 }
             }
-            public var path: Operations.apps_sol_list_hyphen_installation_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path
+            public var path: Operations.AppsListInstallationReposForAuthenticatedUser.Input.Path
             /// - Remark: Generated from `#/paths/user/installations/{installation_id}/repositories/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/user/installations/{installation_id}/repositories/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/user/installations/{installation_id}/repositories/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.apps_sol_list_hyphen_installation_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query
+            public var query: Operations.AppsListInstallationReposForAuthenticatedUser.Input.Query
             /// - Remark: Generated from `#/paths/user/installations/{installation_id}/repositories/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_list_hyphen_installation_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsListInstallationReposForAuthenticatedUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_list_hyphen_installation_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsListInstallationReposForAuthenticatedUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.apps_sol_list_hyphen_installation_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers
+            public var headers: Operations.AppsListInstallationReposForAuthenticatedUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -10874,9 +10963,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.apps_sol_list_hyphen_installation_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path,
-                query: Operations.apps_sol_list_hyphen_installation_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query = .init(),
-                headers: Operations.apps_sol_list_hyphen_installation_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
+                path: Operations.AppsListInstallationReposForAuthenticatedUser.Input.Path,
+                query: Operations.AppsListInstallationReposForAuthenticatedUser.Input.Query = .init(),
+                headers: Operations.AppsListInstallationReposForAuthenticatedUser.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -10888,55 +10977,55 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/installations/{installation_id}/repositories/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/installations/{installation_id}/repositories/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.apps_sol_list_hyphen_installation_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Headers
+                public var headers: Operations.AppsListInstallationReposForAuthenticatedUser.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/user/installations/{installation_id}/repositories/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/installations/{installation_id}/repositories/GET/responses/200/content/json`.
-                    public struct jsonPayload: Codable, Hashable, Sendable {
+                    public struct JsonPayload: Codable, Hashable, Sendable {
                         /// - Remark: Generated from `#/paths/user/installations/{installation_id}/repositories/GET/responses/200/content/json/total_count`.
-                        public var total_count: Swift.Int
+                        public var totalCount: Swift.Int
                         /// - Remark: Generated from `#/paths/user/installations/{installation_id}/repositories/GET/responses/200/content/json/repository_selection`.
-                        public var repository_selection: Swift.String?
+                        public var repositorySelection: Swift.String?
                         /// - Remark: Generated from `#/paths/user/installations/{installation_id}/repositories/GET/responses/200/content/json/repositories`.
-                        public var repositories: [Components.Schemas.repository]
-                        /// Creates a new `jsonPayload`.
+                        public var repositories: [Components.Schemas.Repository]
+                        /// Creates a new `JsonPayload`.
                         ///
                         /// - Parameters:
-                        ///   - total_count:
-                        ///   - repository_selection:
+                        ///   - totalCount:
+                        ///   - repositorySelection:
                         ///   - repositories:
                         public init(
-                            total_count: Swift.Int,
-                            repository_selection: Swift.String? = nil,
-                            repositories: [Components.Schemas.repository]
+                            totalCount: Swift.Int,
+                            repositorySelection: Swift.String? = nil,
+                            repositories: [Components.Schemas.Repository]
                         ) {
-                            self.total_count = total_count
-                            self.repository_selection = repository_selection
+                            self.totalCount = totalCount
+                            self.repositorySelection = repositorySelection
                             self.repositories = repositories
                         }
                         public enum CodingKeys: String, CodingKey {
-                            case total_count
-                            case repository_selection
+                            case totalCount = "total_count"
+                            case repositorySelection = "repository_selection"
                             case repositories
                         }
                     }
                     /// - Remark: Generated from `#/paths/user/installations/{installation_id}/repositories/GET/responses/200/content/application\/json`.
-                    case json(Operations.apps_sol_list_hyphen_installation_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body.jsonPayload)
+                    case json(Operations.AppsListInstallationReposForAuthenticatedUser.Output.Ok.Body.JsonPayload)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Operations.apps_sol_list_hyphen_installation_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body.jsonPayload {
+                    public var json: Operations.AppsListInstallationReposForAuthenticatedUser.Output.Ok.Body.JsonPayload {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -10946,15 +11035,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.apps_sol_list_hyphen_installation_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body
+                public var body: Operations.AppsListInstallationReposForAuthenticatedUser.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.apps_sol_list_hyphen_installation_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Headers = .init(),
-                    body: Operations.apps_sol_list_hyphen_installation_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body
+                    headers: Operations.AppsListInstallationReposForAuthenticatedUser.Output.Ok.Headers = .init(),
+                    body: Operations.AppsListInstallationReposForAuthenticatedUser.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -10965,12 +11054,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/installations/{installation_id}/repositories/get(apps/list-installation-repos-for-authenticated-user)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.apps_sol_list_hyphen_installation_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok)
+            case ok(Operations.AppsListInstallationReposForAuthenticatedUser.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.apps_sol_list_hyphen_installation_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok {
+            public var ok: Operations.AppsListInstallationReposForAuthenticatedUser.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -10988,12 +11077,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/installations/{installation_id}/repositories/get(apps/list-installation-repos-for-authenticated-user)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -11011,12 +11100,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/installations/{installation_id}/repositories/get(apps/list-installation-repos-for-authenticated-user)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -11034,12 +11123,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/installations/{installation_id}/repositories/get(apps/list-installation-repos-for-authenticated-user)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/installations/{installation_id}/repositories/get(apps/list-installation-repos-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -11091,7 +11188,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PUT /user/installations/{installation_id}/repositories/{repository_id}`.
     /// - Remark: Generated from `#/paths//user/installations/{installation_id}/repositories/{repository_id}/put(apps/add-repo-to-installation-for-authenticated-user)`.
-    public enum apps_sol_add_hyphen_repo_hyphen_to_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user {
+    public enum AppsAddRepoToInstallationForAuthenticatedUser {
         public static let id: Swift.String = "apps/add-repo-to-installation-for-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/installations/{installation_id}/repositories/{repository_id}/PUT/path`.
@@ -11099,45 +11196,45 @@ public enum Operations {
                 /// The unique identifier of the installation.
                 ///
                 /// - Remark: Generated from `#/paths/user/installations/{installation_id}/repositories/{repository_id}/PUT/path/installation_id`.
-                public var installation_id: Components.Parameters.installation_hyphen_id
+                public var installationId: Components.Parameters.InstallationId
                 /// The unique identifier of the repository.
                 ///
                 /// - Remark: Generated from `#/paths/user/installations/{installation_id}/repositories/{repository_id}/PUT/path/repository_id`.
-                public var repository_id: Components.Parameters.repository_hyphen_id
+                public var repositoryId: Components.Parameters.RepositoryId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - installation_id: The unique identifier of the installation.
-                ///   - repository_id: The unique identifier of the repository.
+                ///   - installationId: The unique identifier of the installation.
+                ///   - repositoryId: The unique identifier of the repository.
                 public init(
-                    installation_id: Components.Parameters.installation_hyphen_id,
-                    repository_id: Components.Parameters.repository_hyphen_id
+                    installationId: Components.Parameters.InstallationId,
+                    repositoryId: Components.Parameters.RepositoryId
                 ) {
-                    self.installation_id = installation_id
-                    self.repository_id = repository_id
+                    self.installationId = installationId
+                    self.repositoryId = repositoryId
                 }
             }
-            public var path: Operations.apps_sol_add_hyphen_repo_hyphen_to_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path
+            public var path: Operations.AppsAddRepoToInstallationForAuthenticatedUser.Input.Path
             /// - Remark: Generated from `#/paths/user/installations/{installation_id}/repositories/{repository_id}/PUT/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_add_hyphen_repo_hyphen_to_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsAddRepoToInstallationForAuthenticatedUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_add_hyphen_repo_hyphen_to_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsAddRepoToInstallationForAuthenticatedUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.apps_sol_add_hyphen_repo_hyphen_to_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers
+            public var headers: Operations.AppsAddRepoToInstallationForAuthenticatedUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.apps_sol_add_hyphen_repo_hyphen_to_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path,
-                headers: Operations.apps_sol_add_hyphen_repo_hyphen_to_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
+                path: Operations.AppsAddRepoToInstallationForAuthenticatedUser.Input.Path,
+                headers: Operations.AppsAddRepoToInstallationForAuthenticatedUser.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -11153,12 +11250,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/installations/{installation_id}/repositories/{repository_id}/put(apps/add-repo-to-installation-for-authenticated-user)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.apps_sol_add_hyphen_repo_hyphen_to_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent)
+            case noContent(Operations.AppsAddRepoToInstallationForAuthenticatedUser.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//user/installations/{installation_id}/repositories/{repository_id}/put(apps/add-repo-to-installation-for-authenticated-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.apps_sol_add_hyphen_repo_hyphen_to_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent {
+            public var noContent: Operations.AppsAddRepoToInstallationForAuthenticatedUser.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -11176,12 +11281,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/installations/{installation_id}/repositories/{repository_id}/put(apps/add-repo-to-installation-for-authenticated-user)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -11199,12 +11304,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/installations/{installation_id}/repositories/{repository_id}/put(apps/add-repo-to-installation-for-authenticated-user)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/installations/{installation_id}/repositories/{repository_id}/put(apps/add-repo-to-installation-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -11222,12 +11335,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/installations/{installation_id}/repositories/{repository_id}/put(apps/add-repo-to-installation-for-authenticated-user)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -11279,7 +11392,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /user/installations/{installation_id}/repositories/{repository_id}`.
     /// - Remark: Generated from `#/paths//user/installations/{installation_id}/repositories/{repository_id}/delete(apps/remove-repo-from-installation-for-authenticated-user)`.
-    public enum apps_sol_remove_hyphen_repo_hyphen_from_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user {
+    public enum AppsRemoveRepoFromInstallationForAuthenticatedUser {
         public static let id: Swift.String = "apps/remove-repo-from-installation-for-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/installations/{installation_id}/repositories/{repository_id}/DELETE/path`.
@@ -11287,45 +11400,45 @@ public enum Operations {
                 /// The unique identifier of the installation.
                 ///
                 /// - Remark: Generated from `#/paths/user/installations/{installation_id}/repositories/{repository_id}/DELETE/path/installation_id`.
-                public var installation_id: Components.Parameters.installation_hyphen_id
+                public var installationId: Components.Parameters.InstallationId
                 /// The unique identifier of the repository.
                 ///
                 /// - Remark: Generated from `#/paths/user/installations/{installation_id}/repositories/{repository_id}/DELETE/path/repository_id`.
-                public var repository_id: Components.Parameters.repository_hyphen_id
+                public var repositoryId: Components.Parameters.RepositoryId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - installation_id: The unique identifier of the installation.
-                ///   - repository_id: The unique identifier of the repository.
+                ///   - installationId: The unique identifier of the installation.
+                ///   - repositoryId: The unique identifier of the repository.
                 public init(
-                    installation_id: Components.Parameters.installation_hyphen_id,
-                    repository_id: Components.Parameters.repository_hyphen_id
+                    installationId: Components.Parameters.InstallationId,
+                    repositoryId: Components.Parameters.RepositoryId
                 ) {
-                    self.installation_id = installation_id
-                    self.repository_id = repository_id
+                    self.installationId = installationId
+                    self.repositoryId = repositoryId
                 }
             }
-            public var path: Operations.apps_sol_remove_hyphen_repo_hyphen_from_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path
+            public var path: Operations.AppsRemoveRepoFromInstallationForAuthenticatedUser.Input.Path
             /// - Remark: Generated from `#/paths/user/installations/{installation_id}/repositories/{repository_id}/DELETE/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_remove_hyphen_repo_hyphen_from_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsRemoveRepoFromInstallationForAuthenticatedUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_remove_hyphen_repo_hyphen_from_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsRemoveRepoFromInstallationForAuthenticatedUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.apps_sol_remove_hyphen_repo_hyphen_from_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers
+            public var headers: Operations.AppsRemoveRepoFromInstallationForAuthenticatedUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.apps_sol_remove_hyphen_repo_hyphen_from_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path,
-                headers: Operations.apps_sol_remove_hyphen_repo_hyphen_from_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
+                path: Operations.AppsRemoveRepoFromInstallationForAuthenticatedUser.Input.Path,
+                headers: Operations.AppsRemoveRepoFromInstallationForAuthenticatedUser.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -11341,12 +11454,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/installations/{installation_id}/repositories/{repository_id}/delete(apps/remove-repo-from-installation-for-authenticated-user)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.apps_sol_remove_hyphen_repo_hyphen_from_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent)
+            case noContent(Operations.AppsRemoveRepoFromInstallationForAuthenticatedUser.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//user/installations/{installation_id}/repositories/{repository_id}/delete(apps/remove-repo-from-installation-for-authenticated-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.apps_sol_remove_hyphen_repo_hyphen_from_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent {
+            public var noContent: Operations.AppsRemoveRepoFromInstallationForAuthenticatedUser.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -11364,12 +11485,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/installations/{installation_id}/repositories/{repository_id}/delete(apps/remove-repo-from-installation-for-authenticated-user)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -11387,12 +11508,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/installations/{installation_id}/repositories/{repository_id}/delete(apps/remove-repo-from-installation-for-authenticated-user)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/installations/{installation_id}/repositories/{repository_id}/delete(apps/remove-repo-from-installation-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -11410,12 +11539,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/installations/{installation_id}/repositories/{repository_id}/delete(apps/remove-repo-from-installation-for-authenticated-user)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -11437,12 +11566,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/installations/{installation_id}/repositories/{repository_id}/delete(apps/remove-repo-from-installation-for-authenticated-user)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Operations.apps_sol_remove_hyphen_repo_hyphen_from_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user.Output.UnprocessableContent)
+            case unprocessableContent(Operations.AppsRemoveRepoFromInstallationForAuthenticatedUser.Output.UnprocessableContent)
+            /// Returned when the application is installed on `all` repositories in the organization, or if this request would remove the last repository that the application has access to in the organization.
+            ///
+            /// - Remark: Generated from `#/paths//user/installations/{installation_id}/repositories/{repository_id}/delete(apps/remove-repo-from-installation-for-authenticated-user)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            public static var unprocessableContent: Self {
+                .unprocessableContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Operations.apps_sol_remove_hyphen_repo_hyphen_from_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user.Output.UnprocessableContent {
+            public var unprocessableContent: Operations.AppsRemoveRepoFromInstallationForAuthenticatedUser.Output.UnprocessableContent {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -11492,7 +11629,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /user/marketplace_purchases`.
     /// - Remark: Generated from `#/paths//user/marketplace_purchases/get(apps/list-subscriptions-for-authenticated-user)`.
-    public enum apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user {
+    public enum AppsListSubscriptionsForAuthenticatedUser {
         public static let id: Swift.String = "apps/list-subscriptions-for-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/marketplace_purchases/GET/query`.
@@ -11500,45 +11637,45 @@ public enum Operations {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/user/marketplace_purchases/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/user/marketplace_purchases/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query
+            public var query: Operations.AppsListSubscriptionsForAuthenticatedUser.Input.Query
             /// - Remark: Generated from `#/paths/user/marketplace_purchases/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsListSubscriptionsForAuthenticatedUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsListSubscriptionsForAuthenticatedUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers
+            public var headers: Operations.AppsListSubscriptionsForAuthenticatedUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - query:
             ///   - headers:
             public init(
-                query: Operations.apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query = .init(),
-                headers: Operations.apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
+                query: Operations.AppsListSubscriptionsForAuthenticatedUser.Input.Query = .init(),
+                headers: Operations.AppsListSubscriptionsForAuthenticatedUser.Input.Headers = .init()
             ) {
                 self.query = query
                 self.headers = headers
@@ -11549,26 +11686,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/marketplace_purchases/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/marketplace_purchases/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Headers
+                public var headers: Operations.AppsListSubscriptionsForAuthenticatedUser.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/user/marketplace_purchases/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/marketplace_purchases/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.user_hyphen_marketplace_hyphen_purchase])
+                    case json([Components.Schemas.UserMarketplacePurchase])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.user_hyphen_marketplace_hyphen_purchase] {
+                    public var json: [Components.Schemas.UserMarketplacePurchase] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -11578,15 +11715,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body
+                public var body: Operations.AppsListSubscriptionsForAuthenticatedUser.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Headers = .init(),
-                    body: Operations.apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body
+                    headers: Operations.AppsListSubscriptionsForAuthenticatedUser.Output.Ok.Headers = .init(),
+                    body: Operations.AppsListSubscriptionsForAuthenticatedUser.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -11597,12 +11734,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/marketplace_purchases/get(apps/list-subscriptions-for-authenticated-user)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok)
+            case ok(Operations.AppsListSubscriptionsForAuthenticatedUser.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok {
+            public var ok: Operations.AppsListSubscriptionsForAuthenticatedUser.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -11620,12 +11757,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/marketplace_purchases/get(apps/list-subscriptions-for-authenticated-user)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/marketplace_purchases/get(apps/list-subscriptions-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -11643,12 +11788,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/marketplace_purchases/get(apps/list-subscriptions-for-authenticated-user)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -11666,12 +11811,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/marketplace_purchases/get(apps/list-subscriptions-for-authenticated-user)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -11721,7 +11866,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /user/marketplace_purchases/stubbed`.
     /// - Remark: Generated from `#/paths//user/marketplace_purchases/stubbed/get(apps/list-subscriptions-for-authenticated-user-stubbed)`.
-    public enum apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user_hyphen_stubbed {
+    public enum AppsListSubscriptionsForAuthenticatedUserStubbed {
         public static let id: Swift.String = "apps/list-subscriptions-for-authenticated-user-stubbed"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/marketplace_purchases/stubbed/GET/query`.
@@ -11729,45 +11874,45 @@ public enum Operations {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/user/marketplace_purchases/stubbed/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/user/marketplace_purchases/stubbed/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user_hyphen_stubbed.Input.Query
+            public var query: Operations.AppsListSubscriptionsForAuthenticatedUserStubbed.Input.Query
             /// - Remark: Generated from `#/paths/user/marketplace_purchases/stubbed/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user_hyphen_stubbed.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsListSubscriptionsForAuthenticatedUserStubbed.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user_hyphen_stubbed.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsListSubscriptionsForAuthenticatedUserStubbed.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user_hyphen_stubbed.Input.Headers
+            public var headers: Operations.AppsListSubscriptionsForAuthenticatedUserStubbed.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - query:
             ///   - headers:
             public init(
-                query: Operations.apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user_hyphen_stubbed.Input.Query = .init(),
-                headers: Operations.apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user_hyphen_stubbed.Input.Headers = .init()
+                query: Operations.AppsListSubscriptionsForAuthenticatedUserStubbed.Input.Query = .init(),
+                headers: Operations.AppsListSubscriptionsForAuthenticatedUserStubbed.Input.Headers = .init()
             ) {
                 self.query = query
                 self.headers = headers
@@ -11778,26 +11923,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/marketplace_purchases/stubbed/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/marketplace_purchases/stubbed/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user_hyphen_stubbed.Output.Ok.Headers
+                public var headers: Operations.AppsListSubscriptionsForAuthenticatedUserStubbed.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/user/marketplace_purchases/stubbed/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/marketplace_purchases/stubbed/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.user_hyphen_marketplace_hyphen_purchase])
+                    case json([Components.Schemas.UserMarketplacePurchase])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.user_hyphen_marketplace_hyphen_purchase] {
+                    public var json: [Components.Schemas.UserMarketplacePurchase] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -11807,15 +11952,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user_hyphen_stubbed.Output.Ok.Body
+                public var body: Operations.AppsListSubscriptionsForAuthenticatedUserStubbed.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user_hyphen_stubbed.Output.Ok.Headers = .init(),
-                    body: Operations.apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user_hyphen_stubbed.Output.Ok.Body
+                    headers: Operations.AppsListSubscriptionsForAuthenticatedUserStubbed.Output.Ok.Headers = .init(),
+                    body: Operations.AppsListSubscriptionsForAuthenticatedUserStubbed.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -11826,12 +11971,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/marketplace_purchases/stubbed/get(apps/list-subscriptions-for-authenticated-user-stubbed)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user_hyphen_stubbed.Output.Ok)
+            case ok(Operations.AppsListSubscriptionsForAuthenticatedUserStubbed.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user_hyphen_stubbed.Output.Ok {
+            public var ok: Operations.AppsListSubscriptionsForAuthenticatedUserStubbed.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -11849,12 +11994,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/marketplace_purchases/stubbed/get(apps/list-subscriptions-for-authenticated-user-stubbed)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/marketplace_purchases/stubbed/get(apps/list-subscriptions-for-authenticated-user-stubbed)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -11872,12 +12025,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/marketplace_purchases/stubbed/get(apps/list-subscriptions-for-authenticated-user-stubbed)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -11929,7 +12082,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /users/{username}/installation`.
     /// - Remark: Generated from `#/paths//users/{username}/installation/get(apps/get-user-installation)`.
-    public enum apps_sol_get_hyphen_user_hyphen_installation {
+    public enum AppsGetUserInstallation {
         public static let id: Swift.String = "apps/get-user-installation"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/users/{username}/installation/GET/path`.
@@ -11937,36 +12090,36 @@ public enum Operations {
                 /// The handle for the GitHub user account.
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/installation/GET/path/username`.
-                public var username: Components.Parameters.username
+                public var username: Components.Parameters.Username
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - username: The handle for the GitHub user account.
-                public init(username: Components.Parameters.username) {
+                public init(username: Components.Parameters.Username) {
                     self.username = username
                 }
             }
-            public var path: Operations.apps_sol_get_hyphen_user_hyphen_installation.Input.Path
+            public var path: Operations.AppsGetUserInstallation.Input.Path
             /// - Remark: Generated from `#/paths/users/{username}/installation/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_get_hyphen_user_hyphen_installation.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsGetUserInstallation.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.apps_sol_get_hyphen_user_hyphen_installation.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.AppsGetUserInstallation.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.apps_sol_get_hyphen_user_hyphen_installation.Input.Headers
+            public var headers: Operations.AppsGetUserInstallation.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.apps_sol_get_hyphen_user_hyphen_installation.Input.Path,
-                headers: Operations.apps_sol_get_hyphen_user_hyphen_installation.Input.Headers = .init()
+                path: Operations.AppsGetUserInstallation.Input.Path,
+                headers: Operations.AppsGetUserInstallation.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -11977,12 +12130,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/users/{username}/installation/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/users/{username}/installation/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.installation)
+                    case json(Components.Schemas.Installation)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.installation {
+                    public var json: Components.Schemas.Installation {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -11992,12 +12145,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.apps_sol_get_hyphen_user_hyphen_installation.Output.Ok.Body
+                public var body: Operations.AppsGetUserInstallation.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.apps_sol_get_hyphen_user_hyphen_installation.Output.Ok.Body) {
+                public init(body: Operations.AppsGetUserInstallation.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -12006,12 +12159,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/installation/get(apps/get-user-installation)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.apps_sol_get_hyphen_user_hyphen_installation.Output.Ok)
+            case ok(Operations.AppsGetUserInstallation.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.apps_sol_get_hyphen_user_hyphen_installation.Output.Ok {
+            public var ok: Operations.AppsGetUserInstallation.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
