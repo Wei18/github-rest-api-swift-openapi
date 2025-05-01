@@ -44,10 +44,10 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `POST /markdown`.
     /// - Remark: Generated from `#/paths//markdown/post(markdown/render)`.
-    public func markdown_sol_render(_ input: Operations.markdown_sol_render.Input) async throws -> Operations.markdown_sol_render.Output {
+    public func markdownRender(_ input: Operations.MarkdownRender.Input) async throws -> Operations.MarkdownRender.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.markdown_sol_render.id,
+            forOperation: Operations.MarkdownRender.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/markdown",
@@ -76,25 +76,25 @@ public struct Client: APIProtocol {
             deserializer: { response, responseBody in
                 switch response.status.code {
                 case 200:
-                    let headers: Operations.markdown_sol_render.Output.Ok.Headers = .init(
-                        Content_hyphen_Type: try converter.getOptionalHeaderFieldAsURI(
+                    let headers: Operations.MarkdownRender.Output.Ok.Headers = .init(
+                        contentType: try converter.getOptionalHeaderFieldAsURI(
                             in: response.headerFields,
                             name: "Content-Type",
-                            as: Components.Headers.content_hyphen_type.self
+                            as: Components.Headers.ContentType.self
                         ),
-                        Content_hyphen_Length: try converter.getOptionalHeaderFieldAsURI(
+                        contentLength: try converter.getOptionalHeaderFieldAsURI(
                             in: response.headerFields,
                             name: "Content-Length",
                             as: Swift.String.self
                         ),
-                        X_hyphen_CommonMarker_hyphen_Version: try converter.getOptionalHeaderFieldAsURI(
+                        xCommonMarkerVersion: try converter.getOptionalHeaderFieldAsURI(
                             in: response.headerFields,
                             name: "X-CommonMarker-Version",
-                            as: Components.Headers.x_hyphen_common_hyphen_marker_hyphen_version.self
+                            as: Components.Headers.XCommonMarkerVersion.self
                         )
                     )
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.markdown_sol_render.Output.Ok.Body
+                    let body: Operations.MarkdownRender.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -137,10 +137,10 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `POST /markdown/raw`.
     /// - Remark: Generated from `#/paths//markdown/raw/post(markdown/render-raw)`.
-    public func markdown_sol_render_hyphen_raw(_ input: Operations.markdown_sol_render_hyphen_raw.Input) async throws -> Operations.markdown_sol_render_hyphen_raw.Output {
+    public func markdownRenderRaw(_ input: Operations.MarkdownRenderRaw.Input) async throws -> Operations.MarkdownRenderRaw.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.markdown_sol_render_hyphen_raw.id,
+            forOperation: Operations.MarkdownRenderRaw.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/markdown/raw",
@@ -165,7 +165,7 @@ public struct Client: APIProtocol {
                         headerFields: &request.headerFields,
                         contentType: "text/plain"
                     )
-                case let .text_x_hyphen_markdown(value):
+                case let .textXMarkdown(value):
                     body = try converter.setOptionalRequestBodyAsBinary(
                         value,
                         headerFields: &request.headerFields,
@@ -177,13 +177,13 @@ public struct Client: APIProtocol {
             deserializer: { response, responseBody in
                 switch response.status.code {
                 case 200:
-                    let headers: Operations.markdown_sol_render_hyphen_raw.Output.Ok.Headers = .init(X_hyphen_CommonMarker_hyphen_Version: try converter.getOptionalHeaderFieldAsURI(
+                    let headers: Operations.MarkdownRenderRaw.Output.Ok.Headers = .init(xCommonMarkerVersion: try converter.getOptionalHeaderFieldAsURI(
                         in: response.headerFields,
                         name: "X-CommonMarker-Version",
-                        as: Components.Headers.x_hyphen_common_hyphen_marker_hyphen_version.self
+                        as: Components.Headers.XCommonMarkerVersion.self
                     ))
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.markdown_sol_render_hyphen_raw.Output.Ok.Body
+                    let body: Operations.MarkdownRenderRaw.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
